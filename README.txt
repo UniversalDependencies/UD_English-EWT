@@ -95,3 +95,9 @@ You are encouraged to cite this paper if you use the Universal Dependencies Engl
     Resources and Evaluation (LREC-2014)}
 }
 
+
+
+Documentation status: complete
+Data source: unknown
+Data available since: UD v1.0
+License: CC BY-SA 4.0
