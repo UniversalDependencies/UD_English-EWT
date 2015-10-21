@@ -98,6 +98,6 @@ You are encouraged to cite this paper if you use the Universal Dependencies Engl
 
 
 Documentation status: complete
-Data source: native UD annotation
+Data source: manual
 Data available since: UD v1.0
 License: CC BY-SA 4.0
