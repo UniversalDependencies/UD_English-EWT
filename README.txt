@@ -101,3 +101,4 @@ Documentation status: complete
 Data source: manual
 Data available since: UD v1.0
 License: CC BY-SA 4.0
+Genre: blog social
