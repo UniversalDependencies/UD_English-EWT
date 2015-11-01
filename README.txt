@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v1.0 -- 2015-01-19
+Universal Dependencies English Web Treebank v1.2 -- 2015-10-30
 https://github.com/UniversalDependencies/UD_English
 
 A Gold Standard Universal Dependencies Corpus for English,
@@ -38,29 +38,25 @@ have been single-annotated, and a limited portion of them have been double-annot
 interannotator agreement at approximately 96%.  
 
 This file is compatible with the CoNLL-U format defined for Universal Dependencies. See:
-http://universaldependencies.github.io/docs/format.html . However, at present the files do not
-include lemmas or morphological features for words. These may be added in a later release.  
+http://universaldependencies.github.io/docs/format.html
 
 The dependency taxonomy can be found on the Universal Dependencies web site:
 
     http://universaldependencies.github.io/docs/
-    http://universaldependencies.github.io/docs/#language-en
 
 
 DEVIATIONS FROM UD
 
-Version 1.1 of the English UD treebank conforms to the UD guidelines in
+Version 1.2 of the English UD treebank conforms to the UD guidelines in
 almost all respects, but there are a couple of remaining deviations:
- * The UD dependency 'name' is not used. Everything that would be a 'name is tagged 'compound'
- * Words that the Penn Treebank tag set would tag as 'DT', such as 'this' and 'that' are always
-   given the UD tag 'DET' rather than distinguishing whether they are used promonimally or as
-   a modifier
+ * The UD dependency 'name' is only used for person names.
 
 
 FIXES
 
-To help improve the corpus, please alert us to any errors you find in it;
-contact Christopher Manning at manning@stanford.edu.
+To help improve the corpus, please alert us to any errors you find in it.
+The best way to do this is to file a github issue at: 
+https://github.com/UniversalDependencies/UD_English/issues
 
 
 CONTRIBUTORS
@@ -77,6 +73,12 @@ Hanzhi Zhu
 Daniel Galbraith
 Christopher Manning
 John Bauer
+
+Creation of the CoNLL-U files, including calculating UPOS, feature, and lemma information
+was primarily done by 
+
+Sebastian Schuster
+Natalia Silveira
 
 The construction of the Universal Dependencies English Web Treebank was partially funded
 by a gift from Google, Inc., which we gratefully acknowledge.
