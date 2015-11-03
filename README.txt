@@ -9,21 +9,21 @@ LDC2012T13 (https://catalog.ldc.upenn.edu/LDC2012T13).
 
 LICENSE/COPYRIGHT
 
-Universal Dependencies English Web Treebank (c) 2013, 2014, 2015 by 
+Universal Dependencies English Web Treebank (c) 2013, 2014, 2015 by
 The Board of Trustees of The Leland Stanford Junior University.
 All Rights Reserved.
 
-The annotations and database rights of the Universal Dependencies 
-English Web Treebank are licensed under a 
+The annotations and database rights of the Universal Dependencies
+English Web Treebank are licensed under a
 Creative Commons Attribution-ShareAlike 4.0 International License.
 
 You should have received a copy of the license along with this
-work. If not, see <http://creativecommons.org/licenses/by-sa/4.0/>. 
+work. If not, see <http://creativecommons.org/licenses/by-sa/4.0/>.
 
-The underlying texts come from various sources collected for the 
+The underlying texts come from various sources collected for the
 LDC English Web Treebank. Some parts are in the public domain.
-Portions may be © 2012 Google Inc., © 2011 Yahoo! Inc., 
-© 2012 Trustees of the University of Pennsylvania and/or 
+Portions may be © 2012 Google Inc., © 2011 Yahoo! Inc.,
+© 2012 Trustees of the University of Pennsylvania and/or
 © other original authors.
 
 
@@ -31,11 +31,11 @@ STRUCTURE
 
 This directory contains a corpus of sentences annotated using Universal Dependencies annotation.
 The corpus comprises 254,830 words and 16,622 sentences, taken from various web media including
-weblogs, newsgroups, emails, reviews, and Yahoo! answers; see the LDC2012T13 documentation for 
+weblogs, newsgroups, emails, reviews, and Yahoo! answers; see the LDC2012T13 documentation for
 more details on the source of the sentences.  The trees were automatically converted into Stanford
 Dependencies and then hand-corrected to Universal Dependencies.  All the dependency annotations
 have been single-annotated, and a limited portion of them have been double-annotated with
-interannotator agreement at approximately 96%.  
+interannotator agreement at approximately 96%.
 
 This file is compatible with the CoNLL-U format defined for Universal Dependencies. See:
 http://universaldependencies.github.io/docs/format.html
@@ -55,7 +55,7 @@ almost all respects, but there are a couple of remaining deviations:
 FIXES
 
 To help improve the corpus, please alert us to any errors you find in it.
-The best way to do this is to file a github issue at: 
+The best way to do this is to file a github issue at:
 https://github.com/UniversalDependencies/UD_English/issues
 
 
@@ -75,7 +75,7 @@ Christopher Manning
 John Bauer
 
 Creation of the CoNLL-U files, including calculating UPOS, feature, and lemma information
-was primarily done by 
+was primarily done by
 
 Sebastian Schuster
 Natalia Silveira
@@ -104,3 +104,4 @@ Data source: manual
 Data available since: UD v1.0
 License: CC BY-SA 4.0
 Genre: blog social
+Contributors: Silveira, Natalia; Schuster, Sebastian; de Marneffe, Marie-Catherine; Dozat, Timothy; Manning, Christopher
