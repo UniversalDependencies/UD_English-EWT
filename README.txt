@@ -64,7 +64,7 @@ CONTRIBUTORS
 Annotation of the Universal Dependencies English Web Treebank was carried out by
 (in order of size of contribution):
 
-Natália Silveira
+Natalia Silveira
 Timothy Dozat
 Miriam Connor
 Marie-Catherine de Marneffe
@@ -104,4 +104,4 @@ Data source: manual
 Data available since: UD v1.0
 License: CC BY-SA 4.0
 Genre: blog social
-Contributors: Silveira, Natalia; Schuster, Sebastian; de Marneffe, Marie-Catherine; Dozat, Timothy; Manning, Christopher
+Contributors: Silveira, Natalia; Dozat, Timothy; Manning, Christopher; Bauer, John; Schuster, Sebastian; Connor, Miriam; de Marneffe, Marie-Catherine; Bowman, Sam; Zhu, Hanzhi; Galbraith, Daniel
