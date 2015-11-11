@@ -51,6 +51,17 @@ Version 1.2 of the English UD treebank conforms to the UD guidelines in
 almost all respects, but there are a couple of remaining deviations:
  * The UD dependency 'name' is only used for person names.
 
+CHANGELOG
+
+2015-11-15 v1.2
+-- Bugfix: removed _NFP suffix from some lemmas
+-- Fixed date annotations to adopt UD standard
+-- Improved precision of xcomp relation
+-- Improved recall of name relation
+-- Corrected lemmas for reduced auxiliaries
+-- Corrected UPOS tags of pronominal uses of this/that/these/those (now PRON)
+-- Corrected UPOS tags of subordinating conjunctions (now SCONJ)
+
 
 FIXES
 
