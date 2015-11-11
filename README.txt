@@ -59,9 +59,9 @@ CHANGELOG
 -- Improved precision of xcomp relation
 -- Improved recall of name relation
 -- Corrected lemmas for reduced auxiliaries
--- Corrected UPOS tags of pronominal uses of this/that/these/those (now PRON)
--- Corrected UPOS tags of subordinating conjunctions (now SCONJ)
-
+-- Corrected UPOS tags of pronominal uses of this/that/these/those (from DET to PRON)
+-- Corrected UPOS tags of subordinating conjunctions (from ADP to SCONJ)
+-- Corrected UPOS tags of some main verbs (from AUX to VERB)
 
 FIXES
 
