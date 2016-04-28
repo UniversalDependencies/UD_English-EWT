@@ -53,6 +53,14 @@ almost all respects, but there are a couple of remaining deviations:
 
 CHANGELOG
 
+2016-05-15 v1.3
+-- Improved mapping of WDT to UPOS
+-- Corrected lemma of "n't" to "not"
+-- Fixed some inconsistencies between advcl, ccomp and parataxis
+-- Fixed inconsistent analyses of sentences repeated between dev and train sets
+-- Fixed miscellaneous syntactic issues in a few sentences
+
+
 2015-11-15 v1.2
 -- Bugfix: removed _NFP suffix from some lemmas
 -- Fixed date annotations to adopt UD standard
