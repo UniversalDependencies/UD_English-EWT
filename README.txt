@@ -47,7 +47,7 @@ The dependency taxonomy can be found on the Universal Dependencies web site:
 
 DEVIATIONS FROM UD
 
-Version 1.2 of the English UD treebank conforms to the UD guidelines in
+Version 1.3 of the English UD treebank conforms to the UD guidelines in
 almost all respects, but there are a couple of remaining deviations:
  * The UD dependency 'name' is only used for person names.
 
