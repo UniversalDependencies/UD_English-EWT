@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v1.2 -- 2015-10-30
+Universal Dependencies English Web Treebank v1.3 -- 2016-05-15
 https://github.com/UniversalDependencies/UD_English
 
 A Gold Standard Universal Dependencies Corpus for English,
@@ -9,8 +9,8 @@ LDC2012T13 (https://catalog.ldc.upenn.edu/LDC2012T13).
 
 LICENSE/COPYRIGHT
 
-Universal Dependencies English Web Treebank (c) 2013, 2014, 2015 by
-The Board of Trustees of The Leland Stanford Junior University.
+Universal Dependencies English Web Treebank © 2013, 2014, 2015,
+2016 by The Board of Trustees of The Leland Stanford Junior University.
 All Rights Reserved.
 
 The annotations and database rights of the Universal Dependencies
