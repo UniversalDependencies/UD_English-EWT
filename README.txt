@@ -37,7 +37,7 @@ Dependencies and then hand-corrected to Universal Dependencies.  All the depende
 have been single-annotated, and a limited portion of them have been double-annotated with
 interannotator agreement at approximately 96%.
 
-This file is compatible with the CoNLL-U format defined for Universal Dependencies. See:
+This corpus is compatible with the CoNLL-U format defined for Universal Dependencies. See:
 http://universaldependencies.github.io/docs/format.html
 
 The dependency taxonomy can be found on the Universal Dependencies web site:
@@ -50,13 +50,14 @@ DEVIATIONS FROM UD
 Version 1.3 of the English UD treebank conforms to the UD guidelines in
 almost all respects, but there are a couple of remaining deviations:
  * The UD dependency 'name' is only used for person names.
+ * Person names are annotated right-headed whereas they should be left-headed.
 
 CHANGELOG
 
 2016-05-15 v1.3
 -- Improved mapping of WDT to UPOS
 -- Corrected lemma of "n't" to "not"
--- Fixed some inconsistencies between advcl, ccomp and parataxis
+-- Fixed some errors between advcl, ccomp and parataxis
 -- Fixed inconsistent analyses of sentences repeated between dev and train sets
 -- Fixed miscellaneous syntactic issues in a few sentences
 
@@ -64,6 +65,7 @@ CHANGELOG
 2015-11-15 v1.2
 -- Bugfix: removed _NFP suffix from some lemmas
 -- Fixed date annotations to adopt UD standard
+-- Remove escaping of ( and ) from word tokens (XPOSTAGs are still -LRB- and -RRB-)
 -- Improved precision of xcomp relation
 -- Improved recall of name relation
 -- Corrected lemmas for reduced auxiliaries
@@ -123,4 +125,4 @@ Data source: manual
 Data available since: UD v1.0
 License: CC BY-SA 4.0
 Genre: blog social reviews
-Contributors: Silveira, Natalia; Dozat, Timothy; Manning, Christopher; Bauer, John; Schuster, Sebastian; Connor, Miriam; de Marneffe, Marie-Catherine; Bowman, Sam; Zhu, Hanzhi; Galbraith, Daniel
+Contributors: Silveira, Natalia; Dozat, Timothy; Manning, Christopher; Schuster, Sebastian; Bauer, John; Connor, Miriam; de Marneffe, Marie-Catherine; Bowman, Sam; Zhu, Hanzhi; Galbraith, Daniel
