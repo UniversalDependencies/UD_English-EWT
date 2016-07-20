@@ -79,9 +79,6 @@ To help improve the corpus, please alert us to any errors you find in it.
 The best way to do this is to file a github issue at:
 https://github.com/UniversalDependencies/UD_English/issues
 
-We also welcome pull requests. If you want to make edits, please modify the trees
-in the idividual files in the sources directory instead of making direct changes
-to en-ud-{dev,test,train}.conllu.
 
 CONTRIBUTORS
 
