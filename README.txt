@@ -9,7 +9,7 @@ LDC2012T13 (https://catalog.ldc.upenn.edu/LDC2012T13).
 
 LICENSE/COPYRIGHT
 
-Universal Dependencies English Web Treebank © 2013, 2014, 2015, 2016 
+Universal Dependencies English Web Treebank © 2013, 2014, 2015, 2016
 by The Board of Trustees of The Leland Stanford Junior University.
 All Rights Reserved.
 
@@ -129,3 +129,4 @@ Data available since: UD v1.0
 License: CC BY-SA 4.0
 Genre: blog social reviews
 Contributors: Silveira, Natalia; Dozat, Timothy; Manning, Christopher; Schuster, Sebastian; Bauer, John; Connor, Miriam; de Marneffe, Marie-Catherine; Bowman, Sam; Zhu, Hanzhi; Galbraith, Daniel
+Contact:
