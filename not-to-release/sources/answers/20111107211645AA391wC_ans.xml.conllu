@@ -12,17 +12,17 @@
 # sentence-text: Depends of what.
 1	Depends	depend	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
 2	of	of	ADP	IN	_	3	case	_	_
-3	what	what	PRON	WP	PronType=Int	1	nmod	_	SpaceAfter=No
+3	what	what	PRON	WP	PronType=Int	1	obl	_	SpaceAfter=No
 4	.	.	PUNCT	.	_	1	punct	_	_
 
 # sentence-text: Ounces measure weight, pints measure volume.
 1	Ounces	ounce	NOUN	NNS	Number=Plur	2	nsubj	_	_
 2	measure	measure	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	weight	weight	NOUN	NN	Number=Sing	2	dobj	_	SpaceAfter=No
+3	weight	weight	NOUN	NN	Number=Sing	2	obj	_	SpaceAfter=No
 4	,	,	PUNCT	,	_	2	punct	_	_
 5	pints	pint	NOUN	NNS	Number=Plur	6	nsubj	_	_
 6	measure	measure	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	parataxis	_	_
-7	volume	volume	NOUN	NN	Number=Sing	6	dobj	_	SpaceAfter=No
+7	volume	volume	NOUN	NN	Number=Sing	6	obj	_	SpaceAfter=No
 8	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: If you mean fluid ounces, 20, as opposed to the 16 in America.
@@ -30,13 +30,13 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
 3	mean	mean	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	advcl	_	_
 4	fluid	fluid	ADJ	JJ	Degree=Pos	5	amod	_	_
-5	ounces	ounce	NOUN	NNS	Number=Plur	3	dobj	_	SpaceAfter=No
+5	ounces	ounce	NOUN	NNS	Number=Plur	3	obj	_	SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	_	_
 7	20	20	NUM	CD	NumType=Card	0	root	_	SpaceAfter=No
 8	,	,	PUNCT	,	_	7	punct	_	_
 9	as	as	ADP	IN	_	13	case	_	_
-10	opposed	oppose	VERB	VBN	Tense=Past|VerbForm=Part	9	mwe	_	_
-11	to	to	ADP	IN	_	9	mwe	_	_
+10	opposed	oppose	VERB	VBN	Tense=Past|VerbForm=Part	9	fixed	_	_
+11	to	to	ADP	IN	_	9	fixed	_	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
 13	16	16	NUM	CD	NumType=Card	7	nmod	_	_
 14	in	in	ADP	IN	_	15	case	_	_
@@ -52,7 +52,7 @@
 6	than	than	ADP	IN	_	9	case	_	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
 8	US	US	PROPN	NNP	Number=Sing	9	compound	_	_
-9	one	one	NOUN	NN	Number=Sing	5	nmod	_	SpaceAfter=No
+9	one	one	NOUN	NN	Number=Sing	5	obl	_	SpaceAfter=No
 10	.	.	PUNCT	.	_	5	punct	_	_
 
 # sentence-text: 20 fluid ounces in a Pint in Ireland
@@ -79,12 +79,12 @@
 11	in	in	ADP	IN	_	14	case	_	_
 12	an	a	DET	DT	Definite=Ind|PronType=Art	14	det	_	_
 13	American	american	ADJ	JJ	Degree=Pos	14	amod	_	_
-14	one	one	NOUN	NN	Number=Sing	8	nmod	_	SpaceAfter=No
+14	one	one	NOUN	NN	Number=Sing	8	obl	_	SpaceAfter=No
 15	.	.	PUNCT	.	_	8	punct	_	_
 
 # sentence-text: Know this well because I remember an 'irish' pub in the town in canada i grew up in used to advertise the cheapest pints of guinness in town, but they served them in american sized pints.
 1	Know	know	VERB	VB	VerbForm=Inf	0	root	_	_
-2	this	this	PRON	DT	Number=Sing|PronType=Dem	1	dobj	_	_
+2	this	this	PRON	DT	Number=Sing|PronType=Dem	1	obj	_	_
 3	well	well	ADV	RB	Degree=Pos	1	advmod	_	_
 4	because	because	SCONJ	IN	_	6	mark	_	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	_
@@ -102,33 +102,33 @@
 17	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	_	_
 18	grew	grow	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	14	acl:relcl	_	_
 19	up	up	ADP	RP	_	18	compound:prt	_	_
-20	in	in	ADP	IN	_	18	nmod	_	_
+20	in	in	ADP	IN	_	18	obl	_	_
 21	used	use	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	ccomp	_	_
 22	to	to	PART	TO	_	23	mark	_	_
 23	advertise	advertise	VERB	VB	VerbForm=Inf	21	xcomp	_	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	_	_
 25	cheapest	cheapest	ADJ	JJS	Degree=Sup	26	amod	_	_
-26	pints	pint	NOUN	NNS	Number=Plur	23	dobj	_	_
+26	pints	pint	NOUN	NNS	Number=Plur	23	obj	_	_
 27	of	of	ADP	IN	_	28	case	_	_
 28	guinness	guinness	PROPN	NNP	Number=Sing	26	nmod	_	_
 29	in	in	ADP	IN	_	30	case	_	_
 30	town	town	NOUN	NN	Number=Sing	26	nmod	_	SpaceAfter=No
-31	,	,	PUNCT	,	_	21	punct	_	_
-32	but	but	CONJ	CC	_	21	cc	_	_
+31	,	,	PUNCT	,	_	34	punct	_	_
+32	but	but	CCONJ	CC	_	34	cc	_	_
 33	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	34	nsubj	_	_
 34	served	serve	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	21	conj	_	_
-35	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	34	dobj	_	_
+35	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	34	obj	_	_
 36	in	in	ADP	IN	_	39	case	_	_
 37	american	american	ADJ	JJ	Degree=Pos	38	amod	_	_
 38	sized	sized	ADJ	JJ	Degree=Pos	39	amod	_	_
-39	pints	pint	NOUN	NNS	Number=Plur	34	nmod	_	SpaceAfter=No
+39	pints	pint	NOUN	NNS	Number=Plur	34	obl	_	SpaceAfter=No
 40	.	.	PUNCT	.	_	1	punct	_	_
 
 # sentence-text: That place didn't stay open too long :D
 1	That	that	DET	DT	Number=Sing|PronType=Dem	2	det	_	_
 2	place	place	NOUN	NN	Number=Sing	5	nsubj	_	_
 3	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	aux	_	SpaceAfter=No
-4	n't	not	PART	RB	_	5	neg	_	_
+4	n't	not	PART	RB	_	5	advmod	_	_
 5	stay	stay	VERB	VB	VerbForm=Inf	0	root	_	_
 6	open	open	ADJ	JJ	Degree=Pos	5	xcomp	_	_
 7	too	too	ADV	RB	_	8	advmod	_	_

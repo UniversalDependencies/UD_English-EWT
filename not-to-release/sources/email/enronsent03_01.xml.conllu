@@ -3,7 +3,7 @@
 2	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	_	_
 3	handling	handle	VERB	VBG	VerbForm=Ger	0	root	_	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
-5	afternoon	afternoon	NOUN	NN	Number=Sing	3	dobj	_	_
+5	afternoon	afternoon	NOUN	NN	Number=Sing	3	obj	_	_
 6	--	--	PUNCT	,	_	3	punct	_	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	_	_
 8	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	parataxis	_	_
@@ -22,7 +22,7 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
 3	cover	cover	VERB	VB	VerbForm=Inf	0	root	_	_
 4	for	for	ADP	IN	_	5	case	_	_
-5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	nmod	_	_
+5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	obl	_	_
 6	today	today	NOUN	NN	Number=Sing	3	nmod:tmod	_	SpaceAfter=No
 7	?	?	PUNCT	.	_	3	punct	_	_
 
@@ -37,20 +37,20 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
 2	left	leave	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
-4	voicemail	voicemail	NOUN	NN	Number=Sing	2	dobj	_	_
+4	voicemail	voicemail	NOUN	NN	Number=Sing	2	obj	_	_
 5	for	for	ADP	IN	_	7	case	_	_
-6	Sharon	Sharon	PROPN	NNP	Number=Sing	7	name	_	_
-7	Butcher	Butcher	PROPN	NNP	Number=Sing	2	nmod	_	SpaceAfter=No
+6	Sharon	Sharon	PROPN	NNP	Number=Sing	7	flat	_	_
+7	Butcher	Butcher	PROPN	NNP	Number=Sing	2	obl	_	SpaceAfter=No
 8	,	,	PUNCT	,	_	2	punct	_	_
 9	as	as	ADV	RB	_	2	advmod	_	_
-10	well	well	ADV	RB	Degree=Pos	9	mwe	_	SpaceAfter=No
+10	well	well	ADV	RB	Degree=Pos	9	fixed	_	SpaceAfter=No
 11	,	,	PUNCT	,	_	2	punct	_	_
 12	just	just	ADV	RB	_	14	advmod	_	_
 13	to	to	PART	TO	_	14	mark	_	_
 14	make	make	VERB	VB	VerbForm=Inf	2	advcl	_	_
 15	sure	sure	ADJ	JJ	Degree=Pos	14	xcomp	_	_
-16	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	nsubjpass	_	_
-17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	auxpass	_	_
+16	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	nsubj:pass	_	_
+17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux:pass	_	_
 18	handled	handle	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	15	ccomp	_	SpaceAfter=No
 19	.	.	PUNCT	.	_	2	punct	_	_
 
@@ -60,7 +60,7 @@
 3	shows	show	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
 4	an	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
 5	afternoon	afternoon	NOUN	NN	Number=Sing	6	compound	_	_
-6	session	session	NOUN	NN	Number=Sing	3	dobj	_	SpaceAfter=No
+6	session	session	NOUN	NN	Number=Sing	3	obj	_	SpaceAfter=No
 7	.	.	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: Do we have 2 sessions today?
@@ -68,7 +68,7 @@
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	_	_
 3	have	have	VERB	VB	VerbForm=Inf	0	root	_	_
 4	2	2	NUM	CD	NumType=Card	5	nummod	_	_
-5	sessions	session	NOUN	NNS	Number=Plur	3	dobj	_	_
+5	sessions	session	NOUN	NNS	Number=Plur	3	obj	_	_
 6	today	today	NOUN	NN	Number=Sing	3	nmod:tmod	_	SpaceAfter=No
 7	?	?	PUNCT	.	_	3	punct	_	_
 
@@ -81,7 +81,7 @@
 6	want	want	VERB	VB	VerbForm=Inf	0	root	_	_
 7	to	to	PART	TO	_	8	mark	_	_
 8	split	split	VERB	VB	VerbForm=Inf	6	xcomp	_	_
-9	and	and	CONJ	CC	_	8	cc	_	_
+9	and	and	CCONJ	CC	_	10	cc	_	_
 10	cover	cover	VERB	VB	VerbForm=Inf	8	conj	_	SpaceAfter=No
 11	.	.	PUNCT	.	_	6	punct	_	_
 
@@ -95,11 +95,11 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	_
 2	will	will	AUX	MD	VerbForm=Fin	3	aux	_	_
 3	take	take	VERB	VB	VerbForm=Inf	0	root	_	_
-4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	dobj	_	_
+4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	obj	_	_
 5	next	next	ADJ	JJ	Degree=Pos	6	amod	_	_
 6	one	one	NOUN	NN	Number=Sing	3	nmod:npmod	_	_
 7	in	in	ADP	IN	_	8	case	_	_
-8	August	August	PROPN	NNP	Number=Sing	3	nmod	_	SpaceAfter=No
+8	August	August	PROPN	NNP	Number=Sing	3	obl	_	SpaceAfter=No
 9	.	.	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: Thanks,
@@ -110,8 +110,8 @@
 1	Kriste	Kriste	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Kriste K. Sullivan Enron Corp. - Legal EB 4861 (713) 853-7557 Phone (713) 646-5847 Fax
-1	Kriste	Kriste	PROPN	NNP	Number=Sing	3	name	_	_
-2	K.	K.	PROPN	NNP	Number=Sing	3	name	_	_
+1	Kriste	Kriste	PROPN	NNP	Number=Sing	3	flat	_	_
+2	K.	K.	PROPN	NNP	Number=Sing	3	flat	_	_
 3	Sullivan	Sullivan	PROPN	NNP	Number=Sing	0	root	_	_
 4	Enron	Enron	PROPN	NNP	Number=Sing	5	compound	_	_
 5	Corp.	Corp.	PROPN	NNP	Number=Sing	3	appos	_	_
@@ -133,7 +133,7 @@
 # sentence-text: I got this.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
 2	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-3	this	this	PRON	DT	Number=Sing|PronType=Dem	2	dobj	_	SpaceAfter=No
+3	this	this	PRON	DT	Number=Sing|PronType=Dem	2	obj	_	SpaceAfter=No
 4	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: I assume this is 12:30 Central Time?
@@ -169,7 +169,7 @@
 20	Time	Time	PROPN	NNP	Number=Sing	10	nmod:npmod	_	_
 21	(	(	PUNCT	-LRB-	_	20	punct	_	SpaceAfter=No
 22	US	US	PROPN	NNP	Number=Sing	20	appos	_	_
-23	&	&	CONJ	CC	_	22	cc	_	_
+23	&	&	CCONJ	CC	_	24	cc	_	_
 24	Canada	Canada	PROPN	NNP	Number=Sing	22	conj	_	SpaceAfter=No
 25	)	)	PUNCT	-RRB-	_	20	punct	_	SpaceAfter=No
 26	;	;	PUNCT	,	_	20	punct	_	_
@@ -210,7 +210,7 @@
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
 4	overview	overview	NOUN	NN	Number=Sing	1	nsubj	_	_
 5	of	of	ADP	IN	_	10	case	_	_
-6	Bob	Bob	PROPN	NNP	Number=Sing	7	name	_	_
+6	Bob	Bob	PROPN	NNP	Number=Sing	7	flat	_	_
 7	Henderson	Henderson	PROPN	NNP	Number=Sing	10	nmod:poss	_	SpaceAfter=No
 8	's	's	PART	POS	_	7	case	_	_
 9	Employment	employment	NOUN	NN	Number=Sing	10	compound	_	_
@@ -218,7 +218,7 @@
 11	.	.	PUNCT	.	_	1	punct	_	_
 
 # sentence-text: What do you think?
-1	What	what	PRON	WP	PronType=Int	4	dobj	_	_
+1	What	what	PRON	WP	PronType=Int	4	obj	_	_
 2	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	_	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
 4	think	think	VERB	VB	VerbForm=Inf	0	root	_	SpaceAfter=No
@@ -240,27 +240,27 @@
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	_	_
 4	an	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
 5	email	email	NOUN	NN	Number=Sing	6	compound	_	_
-6	response	response	NOUN	NN	Number=Sing	2	dobj	_	_
+6	response	response	NOUN	NN	Number=Sing	2	obj	_	_
 7	about	about	SCONJ	IN	_	14	mark	_	_
 8	whether	whether	SCONJ	IN	_	14	mark	_	_
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	14	nsubj	_	_
-10	and	and	CONJ	CC	_	9	cc	_	_
-11	Michelle	Michelle	PROPN	NNP	Number=Sing	12	name	_	_
+10	and	and	CCONJ	CC	_	12	cc	_	_
+11	Michelle	Michelle	PROPN	NNP	Number=Sing	12	flat	_	_
 12	Cash	Cash	PROPN	NNP	Number=Sing	9	conj	_	_
 13	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	cop	_	_
 14	OK	ok	ADJ	JJ	Degree=Pos	6	acl	_	_
 15	with	with	SCONJ	IN	_	19	mark	_	_
-16	what	what	PRON	WP	PronType=Int	19	dobj	_	_
-17	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	nsubjpass	_	SpaceAfter=No
-18	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	auxpass	_	_
+16	what	what	PRON	WP	PronType=Int	19	obj	_	_
+17	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	nsubj:pass	_	SpaceAfter=No
+18	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	aux:pass	_	_
 19	written	write	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	advcl	_	SpaceAfter=No
 20	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: After that, what do we do?
 1	After	after	ADP	IN	_	2	case	_	_
-2	that	that	PRON	DT	Number=Sing|PronType=Dem	7	nmod	_	SpaceAfter=No
+2	that	that	PRON	DT	Number=Sing|PronType=Dem	7	obl	_	SpaceAfter=No
 3	,	,	PUNCT	,	_	7	punct	_	_
-4	what	what	PRON	WP	PronType=Int	7	dobj	_	_
+4	what	what	PRON	WP	PronType=Int	7	obj	_	_
 5	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	aux	_	_
 6	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	7	nsubj	_	_
 7	do	do	VERB	VB	VerbForm=Inf	0	root	_	SpaceAfter=No
@@ -272,18 +272,18 @@
 # sentence-text: After a conversation with Ryan Seleznov I herewith like disclose in writing my intentions in respect to Dealbench.
 1	After	after	ADP	IN	_	3	case	_	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
-3	conversation	conversation	NOUN	NN	Number=Sing	10	nmod	_	_
+3	conversation	conversation	NOUN	NN	Number=Sing	10	obl	_	_
 4	with	with	ADP	IN	_	6	case	_	_
-5	Ryan	Ryan	PROPN	NNP	Number=Sing	6	name	_	_
+5	Ryan	Ryan	PROPN	NNP	Number=Sing	6	flat	_	_
 6	Seleznov	Seleznov	PROPN	NNP	Number=Sing	3	nmod	_	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	_	_
 8	herewith	herewith	ADV	RB	_	10	advmod	_	_
 9	like	like	INTJ	UH	_	10	discourse	_	_
 10	disclose	disclose	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
 11	in	in	ADP	IN	_	12	case	_	_
-12	writing	writing	NOUN	NN	Number=Sing	10	nmod	_	_
+12	writing	writing	NOUN	NN	Number=Sing	10	obl	_	_
 13	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	_	_
-14	intentions	intention	NOUN	NNS	Number=Plur	10	dobj	_	_
+14	intentions	intention	NOUN	NNS	Number=Plur	10	obj	_	_
 15	in	in	ADP	IN	_	16	case	_	_
 16	respect	respect	NOUN	NN	Number=Sing	14	nmod	_	_
 17	to	to	ADP	IN	_	18	case	_	_
@@ -295,20 +295,20 @@
 2	see	see	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 3	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part	5	amod	_	_
 4	Word	Word	PROPN	NNP	Number=Sing	5	compound	_	_
-5	file	file	NOUN	NN	Number=Sing	2	dobj	_	_
+5	file	file	NOUN	NN	Number=Sing	2	obj	_	_
 
 # sentence-text: Best regards
 1	Best	best	ADJ	JJS	Degree=Sup	2	amod	_	_
 2	regards	regards	NOUN	NNS	Number=Plur	0	root	_	_
 
 # sentence-text: Tobias Munk
-1	Tobias	Tobias	PROPN	NNP	Number=Sing	2	name	_	_
+1	Tobias	Tobias	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Munk	Munk	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Please see the attached.
 1	Please	please	INTJ	UH	_	2	discourse	_	_
 2	see	see	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-3	the	the	DET	DT	Definite=Def|PronType=Art	2	dobj	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	2	obj	_	_
 4	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part	3	amod	_	SpaceAfter=No
 5	.	.	PUNCT	.	_	2	punct	_	_
 
@@ -318,16 +318,16 @@
 # sentence-text: Please send David Lund copies of our standard corporate services agreement and the standard assignment letter (use Bridgeline example -- with and without non-compete).
 1	Please	please	INTJ	UH	_	2	discourse	_	_
 2	send	send	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-3	David	David	PROPN	NNP	Number=Sing	4	name	_	_
+3	David	David	PROPN	NNP	Number=Sing	4	flat	_	_
 4	Lund	Lund	PROPN	NNP	Number=Sing	2	iobj	_	_
-5	copies	copy	NOUN	NNS	Number=Plur	2	dobj	_	_
+5	copies	copy	NOUN	NNS	Number=Plur	2	obj	_	_
 6	of	of	ADP	IN	_	11	case	_	_
 7	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	_	_
 8	standard	standard	ADJ	JJ	Degree=Pos	11	amod	_	_
 9	corporate	corporate	ADJ	JJ	Degree=Pos	10	amod	_	_
 10	services	service	NOUN	NNS	Number=Plur	11	compound	_	_
 11	agreement	agreement	NOUN	NN	Number=Sing	5	nmod	_	_
-12	and	and	CONJ	CC	_	11	cc	_	_
+12	and	and	CCONJ	CC	_	16	cc	_	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
 14	standard	standard	ADJ	JJ	Degree=Pos	16	amod	_	_
 15	assignment	assignment	NOUN	NN	Number=Sing	16	compound	_	_
@@ -335,12 +335,12 @@
 17	(	(	PUNCT	-LRB-	_	18	punct	_	SpaceAfter=No
 18	use	use	VERB	VB	Mood=Imp|VerbForm=Fin	5	parataxis	_	_
 19	Bridgeline	Bridgeline	PROPN	NNP	Number=Sing	20	compound	_	_
-20	example	example	NOUN	NN	Number=Sing	18	dobj	_	_
+20	example	example	NOUN	NN	Number=Sing	18	obj	_	_
 21	--	--	PUNCT	,	_	18	punct	_	_
 22	with	with	ADP	IN	_	25	case	_	_
-23	and	and	CONJ	CC	_	25	cc	_	_
+23	and	and	CCONJ	CC	_	24	cc	_	_
 24	without	without	ADP	IN	_	25	conj	_	_
-25	non-compete	non-compete	NOUN	NN	Number=Sing	18	nmod	_	SpaceAfter=No
+25	non-compete	non-compete	NOUN	NN	Number=Sing	18	obl	_	SpaceAfter=No
 26	)	)	PUNCT	-RRB-	_	18	punct	_	SpaceAfter=No
 27	.	.	PUNCT	.	_	2	punct	_	_
 
@@ -351,15 +351,15 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	_	SpaceAfter=No
 2	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	_	_
 3	formatting	format	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	_
-4	one	one	NUM	CD	NumType=Card	3	dobj	_	_
+4	one	one	NUM	CD	NumType=Card	3	obj	_	_
 5	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	_	_
 6	week	week	NOUN	NN	Number=Sing	3	nmod:tmod	_	SpaceAfter=No
-7	,	,	PUNCT	,	_	3	punct	_	_
-8	and	and	CONJ	CC	_	3	cc	_	_
+7	,	,	PUNCT	,	_	11	punct	_	_
+8	and	and	CCONJ	CC	_	11	cc	_	_
 9	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	11	nsubj	_	SpaceAfter=No
 10	'll	will	AUX	MD	VerbForm=Fin	11	aux	_	_
 11	send	send	VERB	VB	VerbForm=Inf	3	conj	_	_
-12	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	dobj	_	_
+12	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obj	_	_
 13	when	when	ADV	WRB	PronType=Int	16	mark	_	_
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	nsubj	_	SpaceAfter=No
 15	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	_	_
@@ -381,7 +381,7 @@
 3	also	also	ADV	RB	_	4	advmod	_	_
 4	have	have	VERB	VB	VerbForm=Inf	0	root	_	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
-6	SSD	ssd	NOUN	NN	Number=Sing	4	dobj	_	_
+6	SSD	ssd	NOUN	NN	Number=Sing	4	obj	_	_
 7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	9	nsubj	_	_
 8	can	can	AUX	MD	VerbForm=Fin	9	aux	_	_
 9	use	use	VERB	VB	VerbForm=Inf	6	acl:relcl	_	SpaceAfter=No
@@ -401,7 +401,7 @@
 8	Agreement	agreement	X	GW	_	2	appos	_	_
 9	for	for	X	GW	_	11	case	_	_
 10	Recruiting	recruiting	X	GW	_	11	compound	_	_
-11	Services.doc	services.doc	NOUN	NN	Number=Sing	8	nmod	_	_
+11	Services.doc	services.doc	NOUN	NN	Number=Sing	8	nmod	_	ManualCheck=Yes
 12	>>	>>	PUNCT	-RRB-	_	2	punct	_	_
 13	<<	<<	PUNCT	-LRB-	_	14	punct	_	_
 14	File	file	NOUN	NN	Number=Sing	2	parataxis	_	SpaceAfter=No
@@ -412,7 +412,7 @@
 19	Agreement	agreement	X	GW	_	14	appos	_	_
 20	for	for	X	GW	_	22	case	_	_
 21	Contract	contract	X	GW	_	22	compound	_	_
-22	Services.DOC	services.doc	NOUN	NN	Number=Sing	19	nmod	_	_
+22	Services.DOC	services.doc	NOUN	NN	Number=Sing	19	nmod	_	ManualCheck=Yes
 23	>>	>>	PUNCT	-RRB-	_	14	punct	_	_
 
 # sentence-text: Here are the sample Agreements.
@@ -431,7 +431,7 @@
 5	if	if	SCONJ	IN	_	7	mark	_	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	_	_
 7	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	advcl	_	_
-8	anything	anything	PRON	NN	Number=Sing	7	dobj	_	_
+8	anything	anything	PRON	NN	Number=Sing	7	obj	_	_
 9	else	else	ADJ	JJ	Degree=Pos	8	amod	_	SpaceAfter=No
 10	.	.	PUNCT	.	_	2	punct	_	_
 
@@ -449,16 +449,16 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
 2	agree	agree	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
 3	also	also	ADV	RB	_	2	advmod	_	SpaceAfter=No
-4	,	,	PUNCT	,	_	2	punct	_	_
-5	but	but	CONJ	CC	_	2	cc	_	_
+4	,	,	PUNCT	,	_	9	punct	_	_
+5	but	but	CCONJ	CC	_	9	cc	_	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	_	_
 7	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	aux	_	SpaceAfter=No
-8	n't	not	PART	RB	_	9	neg	_	_
+8	n't	not	PART	RB	_	9	advmod	_	_
 9	know	know	VERB	VB	VerbForm=Inf	2	conj	_	_
 10	all	all	DET	PDT	_	12	det:predet	_	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-12	parties	party	NOUN	NNS	Number=Plur	9	dobj	_	_
-13	or	or	CONJ	CC	_	12	cc	_	_
+12	parties	party	NOUN	NNS	Number=Plur	9	obj	_	_
+13	or	or	CCONJ	CC	_	14	cc	_	_
 14	complications	complication	NOUN	NNS	Number=Plur	12	conj	_	_
 15	involved	involved	ADJ	JJ	Degree=Pos	12	amod	_	SpaceAfter=No
 16	.	.	PUNCT	.	_	2	punct	_	_
@@ -483,7 +483,7 @@
 4	help	help	VERB	VB	VerbForm=Inf	0	root	_	_
 5	with	with	ADP	IN	_	7	case	_	_
 6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	_	_
-7	one	one	NOUN	NN	Number=Sing	4	nmod	_	SpaceAfter=No
+7	one	one	NOUN	NN	Number=Sing	4	obl	_	SpaceAfter=No
 8	?	?	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: I agree with what the concern is below.
@@ -501,9 +501,9 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	_	_
 2	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
 3	GIS	gis	NOUN	NN	Number=Sing	4	compound	_	_
-4	ids	id	NOUN	NNS	Number=Plur	2	dobj	_	SpaceAfter=No
-5	,	,	PUNCT	,	_	4	punct	_	_
-6	and	and	CONJ	CC	_	4	cc	_	_
+4	ids	id	NOUN	NNS	Number=Plur	2	obj	_	SpaceAfter=No
+5	,	,	PUNCT	,	_	7	punct	_	_
+6	and	and	CCONJ	CC	_	7	cc	_	_
 7	Eid	eid	NOUN	NN	Number=Sing	4	conj	_	_
 8	(	(	PUNCT	-LRB-	_	10	punct	_	SpaceAfter=No
 9	external	external	ADJ	JJ	Degree=Pos	10	amod	_	_
@@ -525,7 +525,7 @@
 6	to	to	PART	TO	_	7	mark	_	_
 7	migrate	migrate	VERB	VB	VerbForm=Inf	5	xcomp	_	_
 8	to	to	ADP	IN	_	9	case	_	_
-9	one	one	NUM	CD	NumType=Card	7	nmod	_	_
+9	one	one	NUM	CD	NumType=Card	7	obl	_	_
 10	of	of	ADP	IN	_	11	case	_	_
 11	these	these	PRON	DT	Number=Plur|PronType=Dem	9	nmod	_	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	_	_
@@ -536,7 +536,7 @@
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
 4	know	know	VERB	VB	VerbForm=Inf	2	ccomp	_	_
 5	what	what	DET	WDT	PronType=Int	6	det	_	_
-6	type	type	NOUN	NN	Number=Sing	11	dobj	_	_
+6	type	type	NOUN	NN	Number=Sing	11	obj	_	_
 7	of	of	ADP	IN	_	8	case	_	_
 8	statement	statement	NOUN	NN	Number=Sing	6	nmod	_	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
@@ -545,7 +545,7 @@
 12	back	back	ADV	RB	_	11	advmod	_	_
 13	to	to	ADP	IN	_	15	case	_	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
-15	customer	customer	NOUN	NN	Number=Sing	12	nmod	_	SpaceAfter=No
+15	customer	customer	NOUN	NN	Number=Sing	12	obl	_	SpaceAfter=No
 16	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: Thanks.
@@ -560,12 +560,12 @@
 1	Per	per	ADP	IN	_	4	case	_	_
 2	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	_	_
 3	voicemail	voicemail	NOUN	NN	Number=Sing	4	compound	_	_
-4	message	message	NOUN	NN	Number=Sing	7	nmod	_	SpaceAfter=No
+4	message	message	NOUN	NN	Number=Sing	7	obl	_	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	_	_
 6	please	please	INTJ	UH	_	7	discourse	_	_
 7	review	review	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
-9	note	note	NOUN	NN	Number=Sing	7	dobj	_	_
+9	note	note	NOUN	NN	Number=Sing	7	obj	_	_
 10	below	below	ADV	RB	_	9	advmod	_	SpaceAfter=No
 11	.	.	PUNCT	.	_	7	punct	_	_
 
@@ -576,10 +576,10 @@
 4	to	to	PART	TO	_	5	mark	_	_
 5	work	work	VERB	VB	VerbForm=Inf	3	xcomp	_	_
 6	with	with	ADP	IN	_	7	case	_	_
-7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	nmod	_	_
+7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	obl	_	_
 8	on	on	ADP	IN	_	10	case	_	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
-10	response	response	NOUN	NN	Number=Sing	5	nmod	_	_
+10	response	response	NOUN	NN	Number=Sing	5	obl	_	_
 11	to	to	ADP	IN	_	13	case	_	_
 12	this	this	DET	DT	Number=Sing|PronType=Dem	13	det	_	_
 13	customer	customer	NOUN	NN	Number=Sing	10	nmod	_	SpaceAfter=No
@@ -593,13 +593,13 @@
 1	Brandee	Brandee	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Brandee Sanborn I.S.C. Customer Care Design & Process Support http://isc.enron.com/site
-1	Brandee	Brandee	PROPN	NNP	Number=Sing	2	name	_	_
+1	Brandee	Brandee	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Sanborn	Sanborn	PROPN	NNP	Number=Sing	0	root	_	_
 3	I.S.C.	i.s.c.	NOUN	NN	Number=Sing	5	compound	_	_
 4	Customer	customer	NOUN	NN	Number=Sing	5	compound	_	_
 5	Care	care	NOUN	NN	Number=Sing	2	appos	_	_
 6	Design	design	NOUN	NN	Number=Sing	2	list	_	_
-7	&	&	CONJ	CC	_	6	cc	_	_
+7	&	&	CCONJ	CC	_	9	cc	_	_
 8	Process	process	NOUN	NN	Number=Sing	9	compound	_	_
 9	Support	support	NOUN	NN	Number=Sing	6	conj	_	_
 10	http://isc.enron.com/site	http://isc.enron.com/site	X	ADD	_	2	list	_	_
@@ -629,7 +629,7 @@
 
 # sentence-text: To Whom It May Concern:
 1	To	to	SCONJ	IN	_	5	mark	_	_
-2	Whom	whom	PRON	WP	PronType=Int	5	dobj	_	_
+2	Whom	whom	PRON	WP	PronType=Int	5	obj	_	_
 3	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	_	_
 4	May	may	AUX	MD	VerbForm=Fin	5	aux	_	_
 5	Concern	concern	VERB	VB	VerbForm=Inf	0	root	_	SpaceAfter=No
@@ -637,8 +637,8 @@
 
 # sentence-text: Through TV and newspapers , I hear constantly about identity fraud using stolen social security information.
 1	Through	through	ADP	IN	_	2	case	_	_
-2	TV	tv	NOUN	NN	Number=Sing	7	nmod	_	_
-3	and	and	CONJ	CC	_	2	cc	_	_
+2	TV	tv	NOUN	NN	Number=Sing	7	obl	_	_
+3	and	and	CCONJ	CC	_	4	cc	_	_
 4	newspapers	newspaper	NOUN	NNS	Number=Plur	2	conj	_	_
 5	,	,	PUNCT	,	_	7	punct	_	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	_	_
@@ -646,12 +646,12 @@
 8	constantly	constantly	ADV	RB	_	7	advmod	_	_
 9	about	about	ADP	IN	_	11	case	_	_
 10	identity	identity	NOUN	NN	Number=Sing	11	compound	_	_
-11	fraud	fraud	NOUN	NN	Number=Sing	7	nmod	_	_
+11	fraud	fraud	NOUN	NN	Number=Sing	7	obl	_	_
 12	using	use	VERB	VBG	VerbForm=Ger	11	acl	_	_
 13	stolen	steal	VERB	VBN	Tense=Past|VerbForm=Part	16	amod	_	_
 14	social	social	ADJ	JJ	Degree=Pos	15	amod	_	_
 15	security	security	NOUN	NN	Number=Sing	16	compound	_	_
-16	information	information	NOUN	NN	Number=Sing	12	dobj	_	SpaceAfter=No
+16	information	information	NOUN	NN	Number=Sing	12	obj	_	SpaceAfter=No
 17	.	.	PUNCT	.	_	7	punct	_	_
 
 # sentence-text: I am very concerned about this issue.
@@ -661,7 +661,7 @@
 4	concerned	concerned	ADJ	JJ	Degree=Pos	0	root	_	_
 5	about	about	ADP	IN	_	7	case	_	_
 6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	_	_
-7	issue	issue	NOUN	NN	Number=Sing	4	nmod	_	SpaceAfter=No
+7	issue	issue	NOUN	NN	Number=Sing	4	obl	_	SpaceAfter=No
 8	.	.	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: I have the following suggestion for our company.
@@ -669,7 +669,7 @@
 2	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
 4	following	follow	VERB	VBG	VerbForm=Ger	5	amod	_	_
-5	suggestion	suggestion	NOUN	NN	Number=Sing	2	dobj	_	_
+5	suggestion	suggestion	NOUN	NN	Number=Sing	2	obj	_	_
 6	for	for	ADP	IN	_	8	case	_	_
 7	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	_	_
 8	company	company	NOUN	NN	Number=Sing	5	nmod	_	SpaceAfter=No
@@ -679,18 +679,18 @@
 1	Since	since	SCONJ	IN	_	6	mark	_	_
 2	Enron	Enron	PROPN	NNP	Number=Sing	4	nmod:poss	_	SpaceAfter=No
 3	's	's	PART	POS	_	2	case	_	_
-4	employees	employee	NOUN	NNS	Number=Plur	6	nsubjpass	_	_
-5	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	auxpass	_	_
+4	employees	employee	NOUN	NNS	Number=Plur	6	nsubj:pass	_	_
+5	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	aux:pass	_	_
 6	assigned	assign	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	25	advcl	_	_
 7	an	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
 8	SAP	sap	NOUN	NN	Number=Sing	10	compound	_	_
 9	identification	identification	NOUN	NN	Number=Sing	10	compound	_	_
-10	numbers	number	NOUN	NNS	Number=Plur	6	dobj	_	_
+10	numbers	number	NOUN	NNS	Number=Plur	6	obj	_	_
 11	(	(	PUNCT	-LRB-	_	10	punct	_	SpaceAfter=No
 12	P	p	NOUN	NN	Number=Sing	13	compound	_	_
 13	number	number	NOUN	NN	Number=Sing	10	appos	_	SpaceAfter=No
 14	)	)	PUNCT	-RRB-	_	10	punct	_	_
-15	and	and	CONJ	CC	_	10	cc	_	_
+15	and	and	CCONJ	CC	_	18	cc	_	_
 16	an	a	DET	DT	Definite=Ind|PronType=Art	18	det	_	_
 17	HR	hr	NOUN	NN	Number=Sing	18	compound	_	_
 18	number	number	NOUN	NN	Number=Sing	10	conj	_	SpaceAfter=No
@@ -702,12 +702,12 @@
 24	company	company	NOUN	NN	Number=Sing	21	nmod	_	_
 25	use	use	VERB	VB	VerbForm=Inf	0	root	_	_
 26	these	these	DET	DT	Number=Plur|PronType=Dem	27	det	_	_
-27	IDs	id	NOUN	NNS	Number=Plur	25	dobj	_	_
+27	IDs	id	NOUN	NNS	Number=Plur	25	obj	_	_
 28	instead	instead	ADV	RB	_	32	case	_	_
-29	of	of	ADP	IN	_	28	mwe	_	_
+29	of	of	ADP	IN	_	28	fixed	_	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	32	det	_	_
 31	SS	ss	NOUN	NN	Number=Sing	32	compound	_	_
-32	numbers	number	NOUN	NNS	Number=Plur	25	nmod	_	SpaceAfter=No
+32	numbers	number	NOUN	NNS	Number=Plur	25	obl	_	SpaceAfter=No
 33	?	?	PUNCT	.	_	25	punct	_	_
 
 # sentence-text: This will be safer for all employees.
@@ -717,12 +717,12 @@
 4	safer	safer	ADJ	JJR	Degree=Cmp	0	root	_	_
 5	for	for	ADP	IN	_	7	case	_	_
 6	all	all	DET	DT	_	7	det	_	_
-7	employees	employee	NOUN	NNS	Number=Plur	4	nmod	_	SpaceAfter=No
+7	employees	employee	NOUN	NNS	Number=Plur	4	obl	_	SpaceAfter=No
 8	.	.	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: For example, I am concerned when I buy the monthly bus passes and I have to fill in my SS number.
 1	For	for	ADP	IN	_	2	case	_	_
-2	example	example	NOUN	NN	Number=Sing	6	nmod	_	SpaceAfter=No
+2	example	example	NOUN	NN	Number=Sing	6	obl	_	SpaceAfter=No
 3	,	,	PUNCT	,	_	6	punct	_	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	_
 5	am	be	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	cop	_	_
@@ -733,8 +733,8 @@
 10	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
 11	monthly	monthly	ADJ	JJ	Degree=Pos	13	amod	_	_
 12	bus	bus	NOUN	NN	Number=Sing	13	compound	_	_
-13	passes	pass	NOUN	NNS	Number=Plur	9	dobj	_	_
-14	and	and	CONJ	CC	_	9	cc	_	_
+13	passes	pass	NOUN	NNS	Number=Plur	9	obj	_	_
+14	and	and	CCONJ	CC	_	16	cc	_	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	_	_
 16	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	conj	_	_
 17	to	to	PART	TO	_	18	mark	_	_
@@ -742,25 +742,25 @@
 19	in	in	ADP	RP	_	18	compound:prt	_	_
 20	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	22	nmod:poss	_	_
 21	SS	ss	NOUN	NN	Number=Sing	22	compound	_	_
-22	number	number	NOUN	NN	Number=Sing	18	dobj	_	SpaceAfter=No
+22	number	number	NOUN	NN	Number=Sing	18	obj	_	SpaceAfter=No
 23	.	.	PUNCT	.	_	6	punct	_	_
 
 # sentence-text: I do not feel secure at all to see my SS in so many databases at Enron, especially when some databases are from third-parties (out-sourcing).
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
 2	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	_	_
-3	not	not	PART	RB	_	4	neg	_	_
+3	not	not	PART	RB	_	4	advmod	_	_
 4	feel	feel	VERB	VB	VerbForm=Inf	0	root	_	_
 5	secure	secure	ADJ	JJ	Degree=Pos	4	xcomp	_	_
 6	at	at	ADV	RB	_	7	case	_	_
-7	all	all	ADV	RB	_	4	nmod	_	_
+7	all	all	ADV	RB	_	4	obl	_	_
 8	to	to	PART	TO	_	9	mark	_	_
 9	see	see	VERB	VB	VerbForm=Inf	4	advcl	_	_
 10	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	_	_
-11	SS	ss	NOUN	NN	Number=Sing	9	dobj	_	_
+11	SS	ss	NOUN	NN	Number=Sing	9	obj	_	_
 12	in	in	ADP	IN	_	15	case	_	_
 13	so	so	ADV	RB	_	14	advmod	_	_
 14	many	many	ADJ	JJ	Degree=Pos	15	amod	_	_
-15	databases	database	NOUN	NNS	Number=Plur	9	nmod	_	_
+15	databases	database	NOUN	NNS	Number=Plur	9	obl	_	_
 16	at	at	ADP	IN	_	17	case	_	_
 17	Enron	Enron	PROPN	NNP	Number=Sing	15	nmod	_	SpaceAfter=No
 18	,	,	PUNCT	,	_	9	punct	_	_
@@ -786,12 +786,12 @@
 3	use	use	VERB	VB	VerbForm=Inf	0	root	_	_
 4	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	_	_
 5	badge	badge	NOUN	NN	Number=Sing	6	compound	_	_
-6	number	number	NOUN	NN	Number=Sing	3	dobj	_	_
+6	number	number	NOUN	NN	Number=Sing	3	obj	_	_
 7	there	there	ADV	RB	PronType=Dem	3	advmod	_	_
 8	instead	instead	ADV	RB	_	11	case	_	_
-9	of	of	ADP	IN	_	8	mwe	_	_
+9	of	of	ADP	IN	_	8	fixed	_	_
 10	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	_	_
-11	SS	ss	NOUN	NN	Number=Sing	3	nmod	_	SpaceAfter=No
+11	SS	ss	NOUN	NN	Number=Sing	3	obl	_	SpaceAfter=No
 12	.	.	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: Please let me know how your organization can help the Enron employees feel safer about the safeguard of their SS number.
@@ -811,7 +811,7 @@
 14	safer	safer	ADJ	JJR	Degree=Cmp	13	xcomp	_	_
 15	about	about	ADP	IN	_	17	case	_	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
-17	safeguard	safeguard	NOUN	NN	Number=Sing	14	nmod	_	_
+17	safeguard	safeguard	NOUN	NN	Number=Sing	14	obl	_	_
 18	of	of	ADP	IN	_	21	case	_	_
 19	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	21	nmod:poss	_	_
 20	SS	ss	NOUN	NN	Number=Sing	21	compound	_	_
@@ -821,11 +821,11 @@
 # sentence-text: Please calendar and print for my files on this meeting.
 1	Please	please	INTJ	UH	_	2	discourse	_	_
 2	calendar	calendar	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-3	and	and	CONJ	CC	_	2	cc	_	_
+3	and	and	CCONJ	CC	_	4	cc	_	_
 4	print	print	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	_	_
 5	for	for	ADP	IN	_	7	case	_	_
 6	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	_	_
-7	files	file	NOUN	NNS	Number=Plur	4	nmod	_	_
+7	files	file	NOUN	NNS	Number=Plur	4	obl	_	_
 8	on	on	ADP	IN	_	10	case	_	_
 9	this	this	DET	DT	Number=Sing|PronType=Dem	10	det	_	_
 10	meeting	meeting	NOUN	NN	Number=Sing	7	nmod	_	SpaceAfter=No
@@ -853,9 +853,9 @@
 8	Meeting	meeting	NOUN	NN	Number=Sing	10	nsubj	_	_
 9	will	will	AUX	MD	VerbForm=Fin	10	aux	_	_
 10	take	take	VERB	VB	VerbForm=Inf	2	acl	_	_
-11	place	place	NOUN	NN	Number=Sing	10	dobj	_	_
+11	place	place	NOUN	NN	Number=Sing	10	obj	_	_
 12	as	as	ADP	IN	_	13	case	_	_
-13	below	below	ADV	RB	_	10	nmod	_	SpaceAfter=No
+13	below	below	ADV	RB	_	10	obl	_	SpaceAfter=No
 14	:	:	PUNCT	:	_	2	punct	_	_
 
 # sentence-text: Thursday, 23rd August 3.30 pm - 5. 30 pm (EB46C1).
@@ -881,123 +881,123 @@
 4	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	cop	_	_
 5	responsible	responsible	ADJ	JJ	Degree=Pos	2	acl:relcl	_	_
 6	for	for	ADP	IN	_	7	case	_	_
-7	Associates	associate	NOUN	NNS	Number=Plur	5	nmod	_	_
+7	Associates	associate	NOUN	NNS	Number=Plur	5	obl	_	_
 8	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
 9	as	as	SCONJ	IN	_	10	mark	_	_
 10	follows	follow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	ccomp	_	SpaceAfter=No
 11	:	:	PUNCT	:	_	8	punct	_	_
 
 # sentence-text: Sunjay Arya
-1	Sunjay	Sunjay	PROPN	NNP	Number=Sing	2	name	_	_
+1	Sunjay	Sunjay	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Arya	Arya	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Gary Buck
-1	Gary	Gary	PROPN	NNP	Number=Sing	2	name	_	_
+1	Gary	Gary	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Buck	Buck	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Khymberly Booth
-1	Khymberly	Khymberly	PROPN	NNP	Number=Sing	2	name	_	_
+1	Khymberly	Khymberly	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Booth	Booth	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Ryan Seleznov
-1	Ryan	Ryan	PROPN	NNP	Number=Sing	2	name	_	_
+1	Ryan	Ryan	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Seleznov	Seleznov	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Mecole Brown
-1	Mecole	Mecole	PROPN	NNP	Number=Sing	2	name	_	_
+1	Mecole	Mecole	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Brown	Brown	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Tim O'Rourke
-1	Tim	Tim	PROPN	NNP	Number=Sing	2	name	_	_
+1	Tim	Tim	PROPN	NNP	Number=Sing	2	flat	_	_
 2	O'Rourke	O'Rourke	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Tana Cashion
-1	Tana	Tana	PROPN	NNP	Number=Sing	2	name	_	_
+1	Tana	Tana	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Cashion	Cashion	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Sheila Walton
-1	Sheila	Sheila	PROPN	NNP	Number=Sing	2	name	_	_
+1	Sheila	Sheila	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Walton	Walton	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Wendy Fincher
-1	Wendy	Wendy	PROPN	NNP	Number=Sing	2	name	_	_
+1	Wendy	Wendy	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Fincher	Fincher	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Sheila Knudsen
-1	Sheila	Sheila	PROPN	NNP	Number=Sing	2	name	_	_
+1	Sheila	Sheila	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Knudsen	Knudsen	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Karen Phillips
-1	Karen	Karen	PROPN	NNP	Number=Sing	2	name	_	_
+1	Karen	Karen	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Phillips	Phillips	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Neil Davies
-1	Neil	Neil	PROPN	NNP	Number=Sing	2	name	_	_
+1	Neil	Neil	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Davies	Davies	PROPN	NNPS	Number=Plur	0	root	_	_
 
 # sentence-text: Noel Ryan
-1	Noel	Noel	PROPN	NNP	Number=Sing	2	name	_	_
+1	Noel	Noel	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Ryan	Ryan	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Cindy Skinner
-1	Cindy	Cindy	PROPN	NNP	Number=Sing	2	name	_	_
+1	Cindy	Cindy	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Skinner	Skinner	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Simone Scott Walker
-1	Simone	Simone	PROPN	NNP	Number=Sing	3	name	_	_
-2	Scott	Scott	PROPN	NNP	Number=Sing	3	name	_	_
+1	Simone	Simone	PROPN	NNP	Number=Sing	3	flat	_	_
+2	Scott	Scott	PROPN	NNP	Number=Sing	3	flat	_	_
 3	Walker	Walker	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Shanna Funkhouser
-1	Shanna	Shanna	PROPN	NNP	Number=Sing	2	name	_	_
+1	Shanna	Shanna	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Funkhouser	Funkhouser	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Peer reviews are currently been gathered on the above.
 1	Peer	peer	NOUN	NN	Number=Sing	2	compound	_	_
-2	reviews	review	NOUN	NNS	Number=Plur	6	nsubjpass	_	_
-3	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	auxpass	_	_
+2	reviews	review	NOUN	NNS	Number=Plur	6	nsubj:pass	_	_
+3	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	aux:pass	_	_
 4	currently	currently	ADV	RB	_	6	advmod	_	_
-5	been	be	AUX	VBN	Tense=Past|VerbForm=Part	6	auxpass	_	_
+5	been	be	AUX	VBN	Tense=Past|VerbForm=Part	6	aux:pass	_	_
 6	gathered	gather	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	_
 7	on	on	ADP	IN	_	9	case	_	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
-9	above	above	ADJ	JJ	Degree=Pos	6	nmod	_	SpaceAfter=No
+9	above	above	ADJ	JJ	Degree=Pos	6	obl	_	SpaceAfter=No
 10	.	.	PUNCT	.	_	6	punct	_	_
 
 # sentence-text: Upon receipt, I shall forward to each of you a copy of the reviews for your respective associate.
 1	Upon	upon	ADP	IN	_	2	case	_	_
-2	receipt	receipt	NOUN	NN	Number=Sing	6	nmod	_	SpaceAfter=No
+2	receipt	receipt	NOUN	NN	Number=Sing	6	obl	_	SpaceAfter=No
 3	,	,	PUNCT	,	_	6	punct	_	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	_
 5	shall	shall	AUX	MD	VerbForm=Fin	6	aux	_	_
 6	forward	forward	VERB	VB	VerbForm=Inf	0	root	_	_
 7	to	to	ADP	IN	_	8	case	_	_
-8	each	each	DET	DT	_	6	nmod	_	_
+8	each	each	DET	DT	_	6	obl	_	_
 9	of	of	ADP	IN	_	10	case	_	_
 10	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	8	nmod	_	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	_	_
-12	copy	copy	NOUN	NN	Number=Sing	6	dobj	_	_
+12	copy	copy	NOUN	NN	Number=Sing	6	obj	_	_
 13	of	of	ADP	IN	_	15	case	_	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
 15	reviews	review	NOUN	NNS	Number=Plur	12	nmod	_	_
 16	for	for	ADP	IN	_	19	case	_	_
 17	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	19	nmod:poss	_	_
 18	respective	respective	ADJ	JJ	Degree=Pos	19	amod	_	_
-19	associate	associate	NOUN	NN	Number=Sing	6	nmod	_	SpaceAfter=No
+19	associate	associate	NOUN	NN	Number=Sing	6	obl	_	SpaceAfter=No
 20	.	.	PUNCT	.	_	6	punct	_	_
 
 # sentence-text: In addition they will be contacting you to discuss their participation in projects outside their rotation.
 1	In	in	ADP	IN	_	2	case	_	_
-2	addition	addition	NOUN	NN	Number=Sing	6	nmod	_	_
+2	addition	addition	NOUN	NN	Number=Sing	6	obl	_	_
 3	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	_	_
 4	will	will	AUX	MD	VerbForm=Fin	6	aux	_	_
 5	be	be	AUX	VB	VerbForm=Inf	6	aux	_	_
 6	contacting	contact	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	_
-7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	dobj	_	_
+7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	obj	_	_
 8	to	to	PART	TO	_	9	mark	_	_
 9	discuss	discuss	VERB	VB	VerbForm=Inf	6	advcl	_	_
 10	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	_	_
-11	participation	participation	NOUN	NN	Number=Sing	9	dobj	_	_
+11	participation	participation	NOUN	NN	Number=Sing	9	obj	_	_
 12	in	in	ADP	IN	_	13	case	_	_
 13	projects	project	NOUN	NNS	Number=Plur	11	nmod	_	_
 14	outside	outside	ADP	IN	_	16	case	_	_
@@ -1007,16 +1007,16 @@
 
 # sentence-text: Those who are not assigned an associate may also allocate points (a max of 150) at the meeting based on contribution to your areas for the first review period.
 1	Those	those	PRON	DT	Number=Plur|PronType=Dem	10	nsubj	_	_
-2	who	who	PRON	WP	PronType=Rel	5	nsubjpass	_	_
-3	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	auxpass	_	_
-4	not	not	PART	RB	_	5	neg	_	_
+2	who	who	PRON	WP	PronType=Rel	5	nsubj:pass	_	_
+3	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux:pass	_	_
+4	not	not	PART	RB	_	5	advmod	_	_
 5	assigned	assign	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	1	acl:relcl	_	_
 6	an	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
-7	associate	associate	NOUN	NN	Number=Sing	5	dobj	_	_
+7	associate	associate	NOUN	NN	Number=Sing	5	obj	_	_
 8	may	may	AUX	MD	VerbForm=Fin	10	aux	_	_
 9	also	also	ADV	RB	_	10	advmod	_	_
 10	allocate	allocate	VERB	VB	VerbForm=Inf	0	root	_	_
-11	points	point	NOUN	NNS	Number=Plur	10	dobj	_	_
+11	points	point	NOUN	NNS	Number=Plur	10	obj	_	_
 12	(	(	PUNCT	-LRB-	_	11	punct	_	SpaceAfter=No
 13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	_	_
 14	max	max	NOUN	NN	Number=Sing	11	appos	_	_
@@ -1025,10 +1025,10 @@
 17	)	)	PUNCT	-RRB-	_	11	punct	_	_
 18	at	at	ADP	IN	_	20	case	_	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	_	_
-20	meeting	meeting	NOUN	NN	Number=Sing	10	nmod	_	_
+20	meeting	meeting	NOUN	NN	Number=Sing	10	obl	_	_
 21	based	base	VERB	VBN	Tense=Past|VerbForm=Part	23	case	_	_
 22	on	on	ADP	IN	_	23	case	_	_
-23	contribution	contribution	NOUN	NN	Number=Sing	10	nmod	_	_
+23	contribution	contribution	NOUN	NN	Number=Sing	10	obl	_	_
 24	to	to	ADP	IN	_	26	case	_	_
 25	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	26	nmod:poss	_	_
 26	areas	area	NOUN	NNS	Number=Plur	23	nmod	_	_
@@ -1044,7 +1044,7 @@
 2	anyone	anyone	PRON	NN	Number=Sing	3	nsubj	_	_
 3	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	advcl	_	_
 4	any	any	DET	DT	_	5	det	_	_
-5	questions	question	NOUN	NNS	Number=Plur	3	dobj	_	_
+5	questions	question	NOUN	NNS	Number=Plur	3	obj	_	_
 6	on	on	ADP	IN	_	8	case	_	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
 8	above	above	ADJ	JJ	Degree=Pos	5	nmod	_	_
@@ -1070,10 +1070,10 @@
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
 4	spoke	speak	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
 5	with	with	ADP	IN	_	6	case	_	_
-6	Per	Per	PROPN	NNP	Number=Sing	4	nmod	_	_
+6	Per	Per	PROPN	NNP	Number=Sing	4	obl	_	_
 7	tonight	tonight	NOUN	NN	Number=Sing	4	nmod:tmod	_	_
 8	about	about	ADP	IN	_	9	case	_	_
-9	this	this	PRON	DT	Number=Sing|PronType=Dem	4	nmod	_	SpaceAfter=No
+9	this	this	PRON	DT	Number=Sing|PronType=Dem	4	obl	_	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: Let's talk tomorrow.
@@ -1097,7 +1097,7 @@
 4	background	background	NOUN	NN	Number=Sing	0	root	_	_
 5	to	to	ADP	IN	_	7	case	_	_
 6	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	_	_
-7	conversation	conversation	NOUN	NN	Number=Sing	4	nmod	_	_
+7	conversation	conversation	NOUN	NN	Number=Sing	4	nmod	_	ManualCheck=Yes
 8	with	with	ADP	IN	_	9	case	_	_
 9	Shanna	Shanna	PROPN	NNP	Number=Sing	7	nmod	_	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	_	_
@@ -1106,7 +1106,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
 2	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
-4	copy	copy	NOUN	NN	Number=Sing	2	dobj	_	_
+4	copy	copy	NOUN	NN	Number=Sing	2	obj	_	_
 5	of	of	ADP	IN	_	7	case	_	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
 7	document	document	NOUN	NN	Number=Sing	4	nmod	_	_
@@ -1114,7 +1114,7 @@
 9	can	can	AUX	MD	VerbForm=Fin	10	aux	_	_
 10	give	give	VERB	VB	VerbForm=Inf	7	acl:relcl	_	_
 11	to	to	ADP	IN	_	12	case	_	_
-12	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	10	nmod	_	_
+12	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	10	obl	_	_
 13	tomorrow	tomorrow	NOUN	NN	Number=Sing	10	nmod:tmod	_	SpaceAfter=No
 14	.	.	PUNCT	.	_	2	punct	_	_
 
@@ -1124,7 +1124,7 @@
 3	following	follow	VERB	VBG	VerbForm=Ger	1	acl	_	_
 4	up	up	ADP	RP	_	3	compound:prt	_	_
 5	on	on	ADP	IN	_	6	case	_	_
-6	this	this	PRON	DT	Number=Sing|PronType=Dem	3	nmod	_	SpaceAfter=No
+6	this	this	PRON	DT	Number=Sing|PronType=Dem	3	obl	_	SpaceAfter=No
 7	.	.	PUNCT	.	_	1	punct	_	_
 
 # sentence-text: Per
@@ -1137,12 +1137,12 @@
 # sentence-text: I did not hear back from Shanna or Sharon Butcher.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
 2	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	aux	_	_
-3	not	not	PART	RB	_	4	neg	_	_
+3	not	not	PART	RB	_	4	advmod	_	_
 4	hear	hear	VERB	VB	VerbForm=Inf	0	root	_	_
 5	back	back	ADV	RB	_	4	advmod	_	_
 6	from	from	ADP	IN	_	7	case	_	_
-7	Shanna	Shanna	PROPN	NNP	Number=Sing	4	nmod	_	_
-8	or	or	CONJ	CC	_	7	cc	_	_
+7	Shanna	Shanna	PROPN	NNP	Number=Sing	4	obl	_	_
+8	or	or	CCONJ	CC	_	10	cc	_	_
 9	Sharon	Sharon	PROPN	NNP	Number=Sing	10	compound	_	_
 10	Butcher	Butcher	PROPN	NNP	Number=Sing	7	conj	_	SpaceAfter=No
 11	.	.	PUNCT	.	_	4	punct	_	_
@@ -1152,28 +1152,28 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
 3	please	please	INTJ	UH	_	4	discourse	_	_
 4	ask	ask	VERB	VB	VerbForm=Inf	0	root	_	_
-5	Shanna	Shanna	PROPN	NNP	Number=Sing	4	dobj	_	_
+5	Shanna	Shanna	PROPN	NNP	Number=Sing	4	obj	_	_
 6	to	to	PART	TO	_	7	mark	_	_
 7	take	take	VERB	VB	VerbForm=Inf	4	xcomp	_	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	_	_
-9	situation	situation	NOUN	NN	Number=Sing	7	dobj	_	_
+9	situation	situation	NOUN	NN	Number=Sing	7	obj	_	_
 10	to	to	ADP	IN	_	11	case	_	_
-11	Sharon	Sharon	PROPN	NNP	Number=Sing	7	nmod	_	_
+11	Sharon	Sharon	PROPN	NNP	Number=Sing	7	obl	_	_
 12	tomorrow	tomorrow	NOUN	NN	Number=Sing	7	nmod:tmod	_	SpaceAfter=No
 13	?	?	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: John, Per and I discussed the hostile environment issue and we are both concerned that we may have some repercussions.
 1	John	John	PROPN	NNP	Number=Sing	6	nsubj	_	SpaceAfter=No
-2	,	,	PUNCT	,	_	1	punct	_	_
+2	,	,	PUNCT	,	_	3	punct	_	_
 3	Per	Per	PROPN	NNP	Number=Sing	1	conj	_	_
-4	and	and	CONJ	CC	_	1	cc	_	_
+4	and	and	CCONJ	CC	_	5	cc	_	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	1	conj	_	_
 6	discussed	discuss	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
 8	hostile	hostile	ADJ	JJ	Degree=Pos	9	amod	_	_
 9	environment	environment	NOUN	NN	Number=Sing	10	compound	_	_
-10	issue	issue	NOUN	NN	Number=Sing	6	dobj	_	_
-11	and	and	CONJ	CC	_	6	cc	_	_
+10	issue	issue	NOUN	NN	Number=Sing	6	obj	_	_
+11	and	and	CCONJ	CC	_	15	cc	_	_
 12	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	15	nsubj	_	_
 13	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	cop	_	_
 14	both	both	ADV	RB	_	15	advmod	_	_
@@ -1183,7 +1183,7 @@
 18	may	may	AUX	MD	VerbForm=Fin	19	aux	_	_
 19	have	have	VERB	VB	VerbForm=Inf	15	ccomp	_	_
 20	some	some	DET	DT	_	21	det	_	_
-21	repercussions	repercussion	NOUN	NNS	Number=Plur	19	dobj	_	SpaceAfter=No
+21	repercussions	repercussion	NOUN	NNS	Number=Plur	19	obj	_	SpaceAfter=No
 22	.	.	PUNCT	.	_	6	punct	_	_
 
 # sentence-text: I am vacation until the 22nd but Per is up to speed and I would like to make sure that you keep up with him and any HR / Legal activity that may occur.
@@ -1192,14 +1192,14 @@
 3	vacation	vacation	NOUN	NN	Number=Sing	0	root	_	_
 4	until	until	ADP	IN	_	6	case	_	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
-6	22nd	22nd	NOUN	NN	Number=Sing	3	nmod	_	_
-7	but	but	CONJ	CC	_	3	cc	_	_
+6	22nd	22nd	NOUN	NN	Number=Sing	3	nmod	_	ManualCheck=Yes
+7	but	but	CCONJ	CC	_	12	cc	_	_
 8	Per	Per	PROPN	NNP	Number=Sing	12	nsubj	_	_
 9	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	_	_
 10	up	up	ADP	IN	_	12	case	_	_
-11	to	to	ADP	IN	_	10	mwe	_	_
+11	to	to	ADP	IN	_	10	fixed	_	_
 12	speed	speed	NOUN	NN	Number=Sing	3	conj	_	_
-13	and	and	CONJ	CC	_	12	cc	_	_
+13	and	and	CCONJ	CC	_	16	cc	_	_
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	_	_
 15	would	would	AUX	MD	VerbForm=Fin	16	aux	_	_
 16	like	like	VERB	VB	VerbForm=Inf	12	conj	_	_
@@ -1211,8 +1211,8 @@
 22	keep	keep	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	ccomp	_	_
 23	up	up	ADP	RP	_	22	compound:prt	_	_
 24	with	with	ADP	IN	_	25	case	_	_
-25	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	22	nmod	_	_
-26	and	and	CONJ	CC	_	25	cc	_	_
+25	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	22	obl	_	_
+26	and	and	CCONJ	CC	_	31	cc	_	_
 27	any	any	DET	DT	_	31	det	_	_
 28	HR	hr	NOUN	NN	Number=Sing	31	compound	_	_
 29	/	/	PUNCT	,	_	28	punct	_	_
@@ -1225,7 +1225,7 @@
 
 # sentence-text: Thank you
 1	Thank	thank	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-2	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	dobj	_	_
+2	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	obj	_	_
 
 # sentence-text: Paula
 1	Paula	Paula	PROPN	NNP	Number=Sing	0	root	_	_
@@ -1235,8 +1235,8 @@
 2	's	's	PRON	PRP	_	3	nsubj	_	_
 3	discuss	discuss	VERB	VB	VerbForm=Inf	1	ccomp	_	_
 4	exactly	exactly	ADV	RB	_	5	advmod	_	_
-5	what	what	PRON	WP	PronType=Int	7	nsubjpass	_	_
-6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	auxpass	_	_
+5	what	what	PRON	WP	PronType=Int	7	nsubj:pass	_	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux:pass	_	_
 7	involved	involve	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	ccomp	_	_
 8	here	here	ADV	RB	PronType=Dem	7	advmod	_	_
 9	--	--	PUNCT	:	_	10	punct	_	_
@@ -1265,13 +1265,13 @@
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	_	_
 6	know	know	VERB	VB	VerbForm=Inf	4	ccomp	_	_
 7	about	about	ADP	IN	_	8	case	_	_
-8	this	this	PRON	DT	Number=Sing|PronType=Dem	6	nmod	_	_
+8	this	this	PRON	DT	Number=Sing|PronType=Dem	6	obl	_	_
 9	before	before	SCONJ	IN	_	11	mark	_	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 11	respond	respond	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	advcl	_	_
 12	to	to	ADP	IN	_	14	case	_	_
 13	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	_	_
-14	request	request	NOUN	NN	Number=Sing	11	nmod	_	SpaceAfter=No
+14	request	request	NOUN	NN	Number=Sing	11	obl	_	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: Let me know if you have any questions.
@@ -1282,7 +1282,7 @@
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	_	_
 6	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	advcl	_	_
 7	any	any	DET	DT	_	8	det	_	_
-8	questions	question	NOUN	NNS	Number=Plur	6	dobj	_	SpaceAfter=No
+8	questions	question	NOUN	NNS	Number=Plur	6	obj	_	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	_	_
 
 # sentence-text: Regards,
@@ -1293,19 +1293,19 @@
 1	Sandra	Sandra	PROPN	NNP	Number=Sing	0	root	_	_
 
 # sentence-text: Kathy McMahon suggested that I contact you in an effort to gather information on: Enron's Affirmative Action Policy and plans; as well as demographic analysis of workforce (gender, age, ethnic origin, nationality)
-1	Kathy	Kathy	PROPN	NNP	Number=Sing	2	name	_	_
+1	Kathy	Kathy	PROPN	NNP	Number=Sing	2	flat	_	_
 2	McMahon	McMahon	PROPN	NNP	Number=Sing	3	nsubj	_	_
 3	suggested	suggest	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
 4	that	that	SCONJ	IN	_	6	mark	_	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	_
 6	contact	contact	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	ccomp	_	_
-7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	dobj	_	_
+7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	obj	_	_
 8	in	in	ADP	IN	_	10	case	_	_
 9	an	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
-10	effort	effort	NOUN	NN	Number=Sing	6	nmod	_	_
+10	effort	effort	NOUN	NN	Number=Sing	6	obl	_	_
 11	to	to	PART	TO	_	12	mark	_	_
 12	gather	gather	VERB	VB	VerbForm=Inf	10	acl	_	_
-13	information	information	NOUN	NN	Number=Sing	12	dobj	_	_
+13	information	information	NOUN	NN	Number=Sing	12	obj	_	_
 14	on	on	ADP	IN	_	20	case	_	SpaceAfter=No
 15	:	:	PUNCT	:	_	20	punct	_	_
 16	Enron	Enron	PROPN	NNP	Number=Sing	20	nmod:poss	_	SpaceAfter=No
@@ -1313,29 +1313,29 @@
 18	Affirmative	affirmative	ADJ	JJ	Degree=Pos	19	amod	_	_
 19	Action	action	NOUN	NN	Number=Sing	20	compound	_	_
 20	Policy	policy	NOUN	NN	Number=Sing	13	nmod	_	_
-21	and	and	CONJ	CC	_	20	cc	_	_
+21	and	and	CCONJ	CC	_	22	cc	_	_
 22	plans	plan	NOUN	NNS	Number=Plur	20	conj	_	SpaceAfter=No
 23	;	;	PUNCT	,	_	20	punct	_	_
-24	as	as	ADV	RB	_	20	cc	_	_
-25	well	well	ADV	RB	Degree=Pos	24	mwe	_	_
-26	as	as	ADP	IN	_	24	mwe	_	_
+24	as	as	ADV	RB	_	28	cc	_	_
+25	well	well	ADV	RB	Degree=Pos	24	fixed	_	_
+26	as	as	ADP	IN	_	24	fixed	_	_
 27	demographic	demographic	ADJ	JJ	Degree=Pos	28	amod	_	_
 28	analysis	analysis	NOUN	NN	Number=Sing	20	conj	_	_
 29	of	of	ADP	IN	_	30	case	_	_
 30	workforce	workforce	NOUN	NN	Number=Sing	28	nmod	_	_
 31	(	(	PUNCT	-LRB-	_	28	punct	_	SpaceAfter=No
 32	gender	gender	NOUN	NN	Number=Sing	28	nmod:npmod	_	SpaceAfter=No
-33	,	,	PUNCT	,	_	32	punct	_	_
+33	,	,	PUNCT	,	_	34	punct	_	_
 34	age	age	NOUN	NN	Number=Sing	32	conj	_	SpaceAfter=No
-35	,	,	PUNCT	,	_	32	punct	_	_
+35	,	,	PUNCT	,	_	37	punct	_	_
 36	ethnic	ethnic	ADJ	JJ	Degree=Pos	37	amod	_	_
 37	origin	origin	NOUN	NN	Number=Sing	32	conj	_	SpaceAfter=No
-38	,	,	PUNCT	,	_	32	punct	_	_
+38	,	,	PUNCT	,	_	39	punct	_	_
 39	nationality	nationality	NOUN	NN	Number=Sing	32	conj	_	SpaceAfter=No
 40	)	)	PUNCT	-RRB-	_	28	punct	_	_
 
 # sentence-text: Jeff Skilling has agreed to work with Harvard Business School (HBS) on a 5-year case study called 'Modern Giants'.
-1	Jeff	Jeff	PROPN	NNP	Number=Sing	2	name	_	_
+1	Jeff	Jeff	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Skilling	Skilling	PROPN	NNP	Number=Sing	4	nsubj	_	_
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	_	_
 4	agreed	agree	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
@@ -1344,7 +1344,7 @@
 7	with	with	ADP	IN	_	10	case	_	_
 8	Harvard	Harvard	PROPN	NNP	Number=Sing	10	compound	_	_
 9	Business	Business	PROPN	NNP	Number=Sing	10	compound	_	_
-10	School	School	PROPN	NNP	Number=Sing	6	nmod	_	_
+10	School	School	PROPN	NNP	Number=Sing	6	obl	_	_
 11	(	(	PUNCT	-LRB-	_	10	punct	_	SpaceAfter=No
 12	HBS	HBS	PROPN	NNP	Number=Sing	10	appos	_	SpaceAfter=No
 13	)	)	PUNCT	-RRB-	_	10	punct	_	_
@@ -1354,11 +1354,11 @@
 17	-	-	PUNCT	HYPH	_	18	punct	_	SpaceAfter=No
 18	year	year	NOUN	NN	Number=Sing	20	compound	_	_
 19	case	case	NOUN	NN	Number=Sing	20	compound	_	_
-20	study	study	NOUN	NN	Number=Sing	6	nmod	_	_
+20	study	study	NOUN	NN	Number=Sing	6	obl	_	_
 21	called	call	VERB	VBN	Tense=Past|VerbForm=Part	20	acl	_	_
 22	'	'	PUNCT	``	_	24	punct	_	SpaceAfter=No
 23	Modern	modern	PROPN	JJ	Degree=Pos	24	amod	_	_
-24	Giants	Giants	PROPN	NNPS	Number=Plur	21	dobj	_	SpaceAfter=No
+24	Giants	Giants	PROPN	NNPS	Number=Plur	21	obj	_	SpaceAfter=No
 25	'	'	PUNCT	''	_	24	punct	_	SpaceAfter=No
 26	.	.	PUNCT	.	_	4	punct	_	_
 
@@ -1366,8 +1366,8 @@
 1	HBS	HBS	PROPN	NNP	Number=Sing	3	nsubj	_	_
 2	will	will	AUX	MD	VerbForm=Fin	3	aux	_	_
 3	shadow	shadow	VERB	VB	VerbForm=Inf	0	root	_	_
-4	Enron	Enron	PROPN	NNP	Number=Sing	3	dobj	_	_
-5	and	and	CONJ	CC	_	4	cc	_	_
+4	Enron	Enron	PROPN	NNP	Number=Sing	3	obj	_	_
+5	and	and	CCONJ	CC	_	7	cc	_	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
 7	number	number	NOUN	NN	Number=Sing	4	conj	_	_
 8	of	of	ADP	IN	_	10	case	_	_
@@ -1377,7 +1377,7 @@
 12	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
 13	next	next	ADJ	JJ	Degree=Pos	15	amod	_	_
 14	five	five	NUM	CD	NumType=Card	15	nummod	_	_
-15	years	year	NOUN	NNS	Number=Plur	3	nmod	_	_
+15	years	year	NOUN	NNS	Number=Plur	3	obl	_	_
 16	to	to	PART	TO	_	17	mark	_	_
 17	assess	assess	VERB	VB	VerbForm=Inf	3	advcl	_	_
 18	how	how	ADV	WRB	PronType=Int	20	advmod	_	_
@@ -1385,8 +1385,8 @@
 20	react	react	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	ccomp	_	_
 21	to	to	ADP	IN	_	23	case	_	_
 22	market	market	NOUN	NN	Number=Sing	23	compound	_	_
-23	changes	change	NOUN	NNS	Number=Plur	20	nmod	_	_
-24	and	and	CONJ	CC	_	17	cc	_	_
+23	changes	change	NOUN	NNS	Number=Plur	20	obl	_	_
+24	and	and	CCONJ	CC	_	26	cc	_	_
 25	to	to	PART	TO	_	26	mark	_	_
 26	see	see	VERB	VB	VerbForm=Inf	17	conj	_	_
 27	how	how	ADV	WRB	PronType=Int	29	advmod	_	_
@@ -1395,7 +1395,7 @@
 30	during	during	ADP	IN	_	33	case	_	_
 31	this	this	DET	DT	Number=Sing|PronType=Dem	33	det	_	_
 32	time	time	NOUN	NN	Number=Sing	33	compound	_	_
-33	period	period	NOUN	NN	Number=Sing	29	nmod	_	SpaceAfter=No
+33	period	period	NOUN	NN	Number=Sing	29	obl	_	SpaceAfter=No
 34	.	.	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: Please let me know at your earliest convience if you can help me.
@@ -1406,12 +1406,12 @@
 5	at	at	ADP	IN	_	8	case	_	_
 6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	_	_
 7	earliest	earliest	ADJ	JJS	Degree=Sup	8	amod	_	_
-8	convience	convience	NOUN	NN	Number=Sing	4	nmod	_	_
+8	convience	convience	NOUN	NN	Number=Sing	4	obl	_	_
 9	if	if	SCONJ	IN	_	12	mark	_	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	_	_
 11	can	can	AUX	MD	VerbForm=Fin	12	aux	_	_
 12	help	help	VERB	VB	VerbForm=Inf	4	advcl	_	_
-13	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	12	dobj	_	SpaceAfter=No
+13	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	12	obj	_	SpaceAfter=No
 14	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: Regards,
@@ -1425,9 +1425,9 @@
 1	please	please	INTJ	UH	_	2	discourse	_	_
 2	print	print	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 3	all	all	DET	PDT	_	4	det:predet	_	_
-4	these	these	DET	DT	Number=Plur|PronType=Dem	2	dobj	_	_
+4	these	these	DET	DT	Number=Plur|PronType=Dem	2	obj	_	_
 5	for	for	ADP	IN	_	6	case	_	_
-6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	nmod	_	SpaceAfter=No
+6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obl	_	SpaceAfter=No
 7	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: Thanks.
@@ -1443,7 +1443,7 @@
 
 # sentence-text: Try this.
 1	Try	try	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-2	this	this	PRON	DT	Number=Sing|PronType=Dem	1	dobj	_	SpaceAfter=No
+2	this	this	PRON	DT	Number=Sing|PronType=Dem	1	obj	_	SpaceAfter=No
 3	.	.	PUNCT	.	_	1	punct	_	_
 
 # sentence-text: bob k
@@ -1456,7 +1456,7 @@
 3	:	:	PUNCT	:	_	6	punct	_	_
 4	NEPCO	NEPCO	PROPN	NNP	Number=Sing	6	compound	_	_
 5	picketing	picketing	NOUN	NN	Number=Sing	6	compound	_	_
-6	issues	issue	NOUN	NNS	Number=Plur	1	nmod	_	SpaceAfter=No
+6	issues	issue	NOUN	NNS	Number=Plur	1	obl	_	SpaceAfter=No
 7	.	.	PUNCT	.	_	1	punct	_	_
 
 # sentence-text: Michelle
@@ -1490,9 +1490,9 @@
 14	Worth	Worth	PROPN	NNP	Number=Sing	17	compound	_	SpaceAfter=No
 15	,	,	PUNCT	,	_	14	punct	_	_
 16	Florida	Florida	PROPN	NNP	Number=Sing	14	appos	_	_
-17	project	project	NOUN	NN	Number=Sing	11	dobj	_	_
+17	project	project	NOUN	NN	Number=Sing	11	obj	_	_
 18	as	as	ADV	RB	_	11	advmod	_	_
-19	well	well	ADV	RB	Degree=Pos	18	mwe	_	SpaceAfter=No
+19	well	well	ADV	RB	Degree=Pos	18	fixed	_	SpaceAfter=No
 20	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: Our execution team needs to get some guidance and planning for this picketing should it interfere with the progress of the work.
@@ -1503,8 +1503,8 @@
 5	to	to	PART	TO	_	6	mark	_	_
 6	get	get	VERB	VB	VerbForm=Inf	4	xcomp	_	_
 7	some	some	DET	DT	_	8	det	_	_
-8	guidance	guidance	NOUN	NN	Number=Sing	6	dobj	_	_
-9	and	and	CONJ	CC	_	8	cc	_	_
+8	guidance	guidance	NOUN	NN	Number=Sing	6	obj	_	_
+9	and	and	CCONJ	CC	_	10	cc	_	_
 10	planning	planning	NOUN	NN	Number=Sing	8	conj	_	_
 11	for	for	ADP	IN	_	13	case	_	_
 12	this	this	DET	DT	Number=Sing|PronType=Dem	13	det	_	_
@@ -1514,7 +1514,7 @@
 16	interfere	interfere	VERB	VB	VerbForm=Inf	6	advcl	_	_
 17	with	with	ADP	IN	_	19	case	_	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	_	_
-19	progress	progress	NOUN	NN	Number=Sing	16	nmod	_	_
+19	progress	progress	NOUN	NN	Number=Sing	16	obl	_	_
 20	of	of	ADP	IN	_	22	case	_	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	_	_
 22	work	work	NOUN	NN	Number=Sing	19	nmod	_	SpaceAfter=No
@@ -1523,27 +1523,27 @@
 # sentence-text: In that respect, we need to dial in Rick Johnson and Olgletree to plan and communicate that plan to the execution team.
 1	In	in	ADP	IN	_	3	case	_	_
 2	that	that	DET	DT	Number=Sing|PronType=Dem	3	det	_	_
-3	respect	respect	NOUN	NN	Number=Sing	6	nmod	_	SpaceAfter=No
+3	respect	respect	NOUN	NN	Number=Sing	6	obl	_	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	_	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	_	_
 6	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
 7	to	to	PART	TO	_	8	mark	_	_
 8	dial	dial	VERB	VB	VerbForm=Inf	6	xcomp	_	_
 9	in	in	ADP	RP	_	8	compound:prt	_	_
-10	Rick	Rick	PROPN	NNP	Number=Sing	11	name	_	_
-11	Johnson	Johnson	PROPN	NNP	Number=Sing	8	dobj	_	_
-12	and	and	CONJ	CC	_	11	cc	_	_
+10	Rick	Rick	PROPN	NNP	Number=Sing	11	flat	_	_
+11	Johnson	Johnson	PROPN	NNP	Number=Sing	8	obj	_	_
+12	and	and	CCONJ	CC	_	13	cc	_	_
 13	Olgletree	Olgletree	PROPN	NNP	Number=Sing	11	conj	_	_
 14	to	to	PART	TO	_	15	mark	_	_
 15	plan	plan	VERB	VB	VerbForm=Inf	8	advcl	_	_
-16	and	and	CONJ	CC	_	15	cc	_	_
+16	and	and	CCONJ	CC	_	17	cc	_	_
 17	communicate	communicate	VERB	VB	VerbForm=Inf	15	conj	_	_
 18	that	that	DET	DT	Number=Sing|PronType=Dem	19	det	_	_
-19	plan	plan	NOUN	NN	Number=Sing	17	dobj	_	_
+19	plan	plan	NOUN	NN	Number=Sing	17	obj	_	_
 20	to	to	ADP	IN	_	23	case	_	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	23	det	_	_
 22	execution	execution	NOUN	NN	Number=Sing	23	compound	_	_
-23	team	team	NOUN	NN	Number=Sing	17	nmod	_	SpaceAfter=No
+23	team	team	NOUN	NN	Number=Sing	17	obl	_	SpaceAfter=No
 24	.	.	PUNCT	.	_	6	punct	_	_
 
 # sentence-text: I think the first step is a call between yourself, me, Mark Stubley and Mike Indivero.
@@ -1556,26 +1556,26 @@
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
 8	call	call	NOUN	NN	Number=Sing	2	ccomp	_	_
 9	between	between	ADP	IN	_	10	case	_	_
-10	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	8	nmod	_	SpaceAfter=No
-11	,	,	PUNCT	,	_	10	punct	_	_
+10	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	8	nmod	_	SpaceAfter=No|ManualCheck=Yes
+11	,	,	PUNCT	,	_	12	punct	_	_
 12	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	10	conj	_	SpaceAfter=No
-13	,	,	PUNCT	,	_	10	punct	_	_
-14	Mark	Mark	PROPN	NNP	Number=Sing	15	name	_	_
+13	,	,	PUNCT	,	_	15	punct	_	_
+14	Mark	Mark	PROPN	NNP	Number=Sing	15	flat	_	_
 15	Stubley	Stubley	PROPN	NNP	Number=Sing	10	conj	_	_
-16	and	and	CONJ	CC	_	10	cc	_	_
-17	Mike	Mike	PROPN	NNP	Number=Sing	18	name	_	_
+16	and	and	CCONJ	CC	_	18	cc	_	_
+17	Mike	Mike	PROPN	NNP	Number=Sing	18	flat	_	_
 18	Indivero	Indivero	PROPN	NNP	Number=Sing	10	conj	_	SpaceAfter=No
 19	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: And then another call with all folks or a meeting at the jobsite to lay out the plan.
-1	And	and	CONJ	CC	_	4	cc	_	_
+1	And	and	CCONJ	CC	_	10	cc	_	_
 2	then	then	ADV	RB	PronType=Dem	4	advmod	_	_
 3	another	another	DET	DT	_	4	det	_	_
 4	call	call	NOUN	NN	Number=Sing	0	root	_	_
 5	with	with	ADP	IN	_	7	case	_	_
 6	all	all	DET	DT	_	7	det	_	_
 7	folks	folk	NOUN	NNS	Number=Plur	4	nmod	_	_
-8	or	or	CONJ	CC	_	4	cc	_	_
+8	or	or	CCONJ	CC	_	10	cc	_	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
 10	meeting	meeting	NOUN	NN	Number=Sing	4	conj	_	_
 11	at	at	ADP	IN	_	13	case	_	_
@@ -1585,7 +1585,7 @@
 15	lay	lay	VERB	VB	VerbForm=Inf	4	advcl	_	_
 16	out	out	ADP	RP	_	15	compound:prt	_	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
-18	plan	plan	NOUN	NN	Number=Sing	15	dobj	_	SpaceAfter=No
+18	plan	plan	NOUN	NN	Number=Sing	15	obj	_	SpaceAfter=No
 19	.	.	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: Barbara, please organize a call for Mike, Michelle, Mark Stubley and me.
@@ -1594,15 +1594,15 @@
 3	please	please	INTJ	UH	_	4	discourse	_	_
 4	organize	organize	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
-6	call	call	NOUN	NN	Number=Sing	4	dobj	_	_
+6	call	call	NOUN	NN	Number=Sing	4	obj	_	_
 7	for	for	ADP	IN	_	8	case	_	_
 8	Mike	Mike	PROPN	NNP	Number=Sing	6	nmod	_	SpaceAfter=No
-9	,	,	PUNCT	,	_	8	punct	_	_
+9	,	,	PUNCT	,	_	10	punct	_	_
 10	Michelle	Michelle	PROPN	NNP	Number=Sing	8	conj	_	SpaceAfter=No
-11	,	,	PUNCT	,	_	8	punct	_	_
-12	Mark	Mark	PROPN	NNP	Number=Sing	13	name	_	_
+11	,	,	PUNCT	,	_	13	punct	_	_
+12	Mark	Mark	PROPN	NNP	Number=Sing	13	flat	_	_
 13	Stubley	Stubley	PROPN	NNP	Number=Sing	8	conj	_	_
-14	and	and	CONJ	CC	_	8	cc	_	_
+14	and	and	CCONJ	CC	_	15	cc	_	_
 15	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	conj	_	SpaceAfter=No
 16	.	.	PUNCT	.	_	4	punct	_	_
 
@@ -1615,17 +1615,17 @@
 2	,	,	PUNCT	,	_	1	punct	_	_
 
 # sentence-text: I have been advised by our Construction Manager, Mr. Joe Osler that while he was visiting the City of Lake Worth Building Planning and Zoning dept regarding our permit status he learned that the pipefitters have inquired about permit requirements to picket our site.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubjpass	_	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj:pass	_	_
 2	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	_	_
-3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	4	auxpass	_	_
+3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	4	aux:pass	_	_
 4	advised	advise	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	_
 5	by	by	ADP	IN	_	8	case	_	_
 6	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	_	_
 7	Construction	construction	NOUN	NN	Number=Sing	8	compound	_	_
-8	Manager	manager	NOUN	NN	Number=Sing	4	nmod	_	SpaceAfter=No
+8	Manager	manager	NOUN	NN	Number=Sing	4	obl	_	SpaceAfter=No
 9	,	,	PUNCT	,	_	8	punct	_	_
 10	Mr.	Mr.	PROPN	NNP	Number=Sing	12	compound	_	_
-11	Joe	Joe	PROPN	NNP	Number=Sing	12	name	_	_
+11	Joe	Joe	PROPN	NNP	Number=Sing	12	flat	_	_
 12	Osler	Osler	PROPN	NNP	Number=Sing	8	appos	_	_
 13	that	that	SCONJ	IN	_	33	mark	_	_
 14	while	while	SCONJ	IN	_	17	mark	_	_
@@ -1639,13 +1639,13 @@
 22	Worth	Worth	PROPN	NNP	Number=Sing	19	nmod	_	_
 23	Building	Building	PROPN	NNP	Number=Sing	24	compound	_	_
 24	Planning	Planning	PROPN	NNP	Number=Sing	27	compound	_	_
-25	and	and	CONJ	CC	_	24	cc	_	_
+25	and	and	CCONJ	CC	_	26	cc	_	_
 26	Zoning	Zoning	PROPN	NNP	Number=Sing	24	conj	_	_
-27	dept	dept	PROPN	NNP	Number=Sing	17	dobj	_	_
+27	dept	dept	PROPN	NNP	Number=Sing	17	obj	_	_
 28	regarding	regard	VERB	VBG	VerbForm=Ger	31	case	_	_
 29	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	31	nmod:poss	_	_
 30	permit	permit	NOUN	NN	Number=Sing	31	compound	_	_
-31	status	status	NOUN	NN	Number=Sing	17	nmod	_	_
+31	status	status	NOUN	NN	Number=Sing	17	obl	_	_
 32	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	33	nsubj	_	_
 33	learned	learn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	ccomp	_	_
 34	that	that	SCONJ	IN	_	38	mark	_	_
@@ -1655,11 +1655,11 @@
 38	inquired	inquire	VERB	VBN	Tense=Past|VerbForm=Part	33	ccomp	_	_
 39	about	about	ADP	IN	_	41	case	_	_
 40	permit	permit	NOUN	NN	Number=Sing	41	compound	_	_
-41	requirements	requirement	NOUN	NNS	Number=Plur	38	nmod	_	_
+41	requirements	requirement	NOUN	NNS	Number=Plur	38	obl	_	_
 42	to	to	PART	TO	_	43	mark	_	_
 43	picket	picket	VERB	VB	VerbForm=Inf	41	acl	_	_
 44	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	45	nmod:poss	_	_
-45	site	site	NOUN	NN	Number=Sing	43	dobj	_	SpaceAfter=No
+45	site	site	NOUN	NN	Number=Sing	43	obj	_	SpaceAfter=No
 46	.	.	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: Apparently the City informed them that no permit is required.
@@ -1667,11 +1667,11 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
 3	City	city	NOUN	NN	Number=Sing	4	nsubj	_	_
 4	informed	inform	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-5	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	4	dobj	_	_
+5	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	4	obj	_	_
 6	that	that	SCONJ	IN	_	10	mark	_	_
-7	no	no	DET	DT	_	8	neg	_	_
-8	permit	permit	NOUN	NN	Number=Sing	10	nsubjpass	_	_
-9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	auxpass	_	_
+7	no	no	DET	DT	_	8	det	_	_
+8	permit	permit	NOUN	NN	Number=Sing	10	nsubj:pass	_	_
+9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux:pass	_	_
 10	required	require	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	ccomp	_	SpaceAfter=No
 11	.	.	PUNCT	.	_	4	punct	_	_
 
@@ -1686,12 +1686,12 @@
 8	established	establish	VERB	VBN	Tense=Past|VerbForm=Part	3	ccomp	_	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	_	_
 10	picket	picket	NOUN	NN	Number=Sing	11	compound	_	_
-11	line	line	NOUN	NN	Number=Sing	8	dobj	_	_
+11	line	line	NOUN	NN	Number=Sing	8	obj	_	_
 12	at	at	ADP	IN	_	16	case	_	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
 14	Payne	Payne	PROPN	NNP	Number=Sing	15	compound	_	_
 15	Creek	Creek	PROPN	NNP	Number=Sing	16	compound	_	_
-16	site	site	NOUN	NN	Number=Sing	8	nmod	_	_
+16	site	site	NOUN	NN	Number=Sing	8	obl	_	_
 17	today	today	NOUN	NN	Number=Sing	8	nmod:tmod	_	SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	_	_
 
@@ -1701,24 +1701,24 @@
 3	need	need	VERB	VB	VerbForm=Inf	0	root	_	_
 4	local	local	ADJ	JJ	Degree=Pos	6	amod	_	_
 5	legal	legal	ADJ	JJ	Degree=Pos	6	amod	_	_
-6	counsel	counsel	NOUN	NN	Number=Sing	3	dobj	_	_
+6	counsel	counsel	NOUN	NN	Number=Sing	3	obj	_	_
 7	to	to	PART	TO	_	8	mark	_	_
 8	assist	assist	VERB	VB	VerbForm=Inf	3	advcl	_	_
-9	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	8	dobj	_	_
+9	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	8	obj	_	_
 10	in	in	ADP	IN	_	12	case	_	_
 11	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	_	_
-12	regard	regard	NOUN	NN	Number=Sing	8	nmod	_	SpaceAfter=No
+12	regard	regard	NOUN	NN	Number=Sing	8	obl	_	SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: Mike Indivero, I understand that Mr. Mike Croall's release date from NEPCO is Oct 31, 2001.
-1	Mike	Mike	PROPN	NNP	Number=Sing	2	name	_	_
+1	Mike	Mike	PROPN	NNP	Number=Sing	2	flat	_	_
 2	Indivero	Indivero	PROPN	NNP	Number=Sing	5	vocative	_	SpaceAfter=No
 3	,	,	PUNCT	,	_	5	punct	_	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
 5	understand	understand	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
 6	that	that	SCONJ	IN	_	16	mark	_	_
 7	Mr.	Mr.	PROPN	NNP	Number=Sing	9	compound	_	_
-8	Mike	Mike	PROPN	NNP	Number=Sing	9	name	_	_
+8	Mike	Mike	PROPN	NNP	Number=Sing	9	flat	_	_
 9	Croall	Croall	PROPN	NNP	Number=Sing	12	nmod:poss	_	SpaceAfter=No
 10	's	's	PART	POS	_	9	case	_	_
 11	release	release	NOUN	NN	Number=Sing	12	compound	_	_
@@ -1736,12 +1736,12 @@
 1	Please	please	INTJ	UH	_	2	discourse	_	_
 2	advise	advise	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 3	as	as	ADP	RB	_	5	mark	_	_
-4	to	to	ADP	IN	_	3	mwe	_	_
+4	to	to	ADP	IN	_	3	fixed	_	_
 5	who	who	PRON	WP	PronType=Int	2	advcl	_	_
 6	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	_	_
 7	replacement	replacement	NOUN	NN	Number=Sing	5	nsubj	_	_
 8	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	_
-9	and	and	CONJ	CC	_	5	cc	_	_
+9	and	and	CCONJ	CC	_	12	cc	_	_
 10	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	_	_
 11	report	report	NOUN	NN	Number=Sing	12	compound	_	_
 12	date	date	NOUN	NN	Number=Sing	5	conj	_	SpaceAfter=No
@@ -1752,8 +1752,8 @@
 2	,	,	PUNCT	,	_	1	punct	_	_
 
 # sentence-text: Galen J. Torneby Project Manager National Energy Production Corporation (NEPCO) 11831 North Creek Parkway North Bothell, WA 98011 USA Tel: 425-415-3052 Cell: 425-922-0475 Fax: 425-415-3098 email: <mailto:galent@nepco.com> mailto:galen.torneby@nepco.com
-1	Galen	Galen	PROPN	NNP	Number=Sing	3	name	_	_
-2	J.	J.	PROPN	NNP	Number=Sing	3	name	_	_
+1	Galen	Galen	PROPN	NNP	Number=Sing	3	flat	_	_
+2	J.	J.	PROPN	NNP	Number=Sing	3	flat	_	_
 3	Torneby	Torneby	PROPN	NNP	Number=Sing	0	root	_	_
 4	Project	project	NOUN	NN	Number=Sing	5	compound	_	_
 5	Manager	manager	NOUN	NN	Number=Sing	3	appos	_	_

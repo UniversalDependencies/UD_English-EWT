@@ -1,6 +1,6 @@
 # sentence-text: Believe me.
 1	Believe	believe	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-2	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	dobj	_	SpaceAfter=No
+2	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obj	_	SpaceAfter=No
 3	.	.	PUNCT	.	_	1	punct	_	_
 
 # sentence-text: This is THE premier university in Virginia.
@@ -10,7 +10,7 @@
 4	premier	premier	ADJ	JJ	Degree=Pos	5	amod	_	_
 5	university	university	NOUN	NN	Number=Sing	0	root	_	_
 6	in	in	ADP	IN	_	7	case	_	_
-7	Virginia	Virginia	PROPN	NNP	Number=Sing	5	nmod	_	SpaceAfter=No
+7	Virginia	Virginia	PROPN	NNP	Number=Sing	5	nmod	_	SpaceAfter=No|ManualCheck=Yes
 8	.	.	PUNCT	.	_	5	punct	_	_
 
 # sentence-text: It is also the largest.
@@ -26,18 +26,18 @@
 2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
 3	Pizza	Pizza	PROPN	NNP	Number=Sing	4	compound	_	_
 4	Hut	Hut	PROPN	NNP	Number=Sing	19	nsubj	_	SpaceAfter=No
-5	,	,	PUNCT	,	_	4	punct	_	_
+5	,	,	PUNCT	,	_	6	punct	_	_
 6	IHOP	IHOP	PROPN	NNP	Number=Sing	4	conj	_	SpaceAfter=No
-7	,	,	PUNCT	,	_	4	punct	_	_
+7	,	,	PUNCT	,	_	9	punct	_	_
 8	3	3	NUM	CD	NumType=Card	9	nummod	_	_
 9	Starbucks	Starbucks	PROPN	NNPS	Number=Plur	4	conj	_	SpaceAfter=No
-10	,	,	PUNCT	,	_	4	punct	_	_
+10	,	,	PUNCT	,	_	11	punct	_	_
 11	Chili	Chili	PROPN	NNP	Number=Sing	4	conj	_	SpaceAfter=No
 12	s	s	PART	POS	_	11	case	_	SpaceAfter=No
-13	,	,	PUNCT	,	_	4	punct	_	_
+13	,	,	PUNCT	,	_	14	punct	_	_
 14	Panera	Panera	PROPN	NNP	Number=Sing	4	conj	_	SpaceAfter=No
-15	,	,	PUNCT	,	_	4	punct	_	_
-16	and	and	CONJ	CC	_	4	cc	_	_
+15	,	,	PUNCT	,	_	17	punct	_	_
+16	and	and	CCONJ	CC	_	17	cc	_	_
 17	Chipotle	Chipotle	PROPN	NNP	Number=Sing	4	conj	_	_
 18	on	on	ADP	IN	_	19	case	_	_
 19	campus	campus	NOUN	NN	Number=Sing	23	advcl	_	_
@@ -45,7 +45,7 @@
 21	,	,	PUNCT	,	_	23	punct	_	_
 22	VCU	VCU	PROPN	NNP	Number=Sing	23	nsubj	_	_
 23	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-24	some	some	DET	DT	_	23	dobj	_	_
+24	some	some	DET	DT	_	23	obj	_	_
 25	of	of	ADP	IN	_	29	case	_	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	29	det	_	_
 27	best	best	ADJ	JJS	Degree=Sup	29	amod	_	_
@@ -62,17 +62,17 @@
 4	#	#	NOUN	NN	Number=Sing	7	compound	_	SpaceAfter=No
 5	1	1	NUM	CD	NumType=Card	4	nummod	_	_
 6	art	art	NOUN	NN	Number=Sing	7	compound	_	_
-7	school	school	NOUN	NN	Number=Sing	2	dobj	_	_
+7	school	school	NOUN	NN	Number=Sing	2	obj	_	_
 8	in	in	ADP	IN	_	9	case	_	_
 9	America	America	PROPN	NNP	Number=Sing	7	nmod	_	SpaceAfter=No
-10	,	,	PUNCT	,	_	2	punct	_	_
-11	and	and	CONJ	CC	_	2	cc	_	_
+10	,	,	PUNCT	,	_	12	punct	_	_
+11	and	and	CCONJ	CC	_	12	cc	_	_
 12	EXCELS	excel	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	_	_
 13	in	in	ADP	IN	_	17	case	_	_
 14	healthcare	healthcare	NOUN	NN	Number=Sing	17	compound	_	_
-15	and	and	CONJ	CC	_	14	cc	_	_
+15	and	and	CCONJ	CC	_	16	cc	_	_
 16	medical	medical	ADJ	JJ	Degree=Pos	14	conj	_	_
-17	schooling	schooling	NOUN	NN	Number=Sing	12	nmod	_	SpaceAfter=No
+17	schooling	schooling	NOUN	NN	Number=Sing	12	obl	_	SpaceAfter=No
 18	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: The Rams, the VCU sports team, also made the NCAA Final 4 this year, too!
@@ -87,7 +87,7 @@
 9	also	also	ADV	RB	_	10	advmod	_	_
 10	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-12	NCAA	NCAA	PROPN	NNP	Number=Sing	10	dobj	_	_
+12	NCAA	NCAA	PROPN	NNP	Number=Sing	10	obj	_	_
 13	Final	final	ADJ	JJ	Degree=Pos	12	amod	_	_
 14	4	4	NUM	CD	NumType=Card	12	nummod	_	_
 15	this	this	DET	DT	Number=Sing|PronType=Dem	16	det	_	_
@@ -103,16 +103,16 @@
 4	high	high	ADJ	JJ	Degree=Pos	6	amod	_	SpaceAfter=No
 5	-	-	PUNCT	HYPH	_	6	punct	_	SpaceAfter=No
 6	rise	rise	NOUN	NN	Number=Sing	7	compound	_	_
-7	living	living	NOUN	NN	Number=Sing	3	dobj	_	_
+7	living	living	NOUN	NN	Number=Sing	3	obj	_	_
 8	for	for	ADP	IN	_	9	case	_	_
 9	students	student	NOUN	NNS	Number=Plur	7	nmod	_	_
-10	and	and	CONJ	CC	_	9	cc	_	_
+10	and	and	CCONJ	CC	_	11	cc	_	_
 11	professors	professor	NOUN	NNS	Number=Plur	9	conj	_	SpaceAfter=No
-12	,	,	PUNCT	,	_	3	punct	_	_
-13	and	and	CONJ	CC	_	3	cc	_	_
+12	,	,	PUNCT	,	_	26	punct	_	_
+13	and	and	CCONJ	CC	_	26	cc	_	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	20	det	_	_
 15	historic	historic	ADJ	JJ	Degree=Pos	20	amod	_	_
-16	yet	yet	CONJ	CC	_	15	cc	_	_
+16	yet	yet	CCONJ	CC	_	17	cc	_	_
 17	fixed	fix	VERB	VBN	Tense=Past|VerbForm=Part	15	conj	_	SpaceAfter=No
 18	-	-	PUNCT	HYPH	_	17	punct	_	SpaceAfter=No
 19	up	up	ADP	RP	_	17	compound:prt	_	_
@@ -124,11 +124,11 @@
 25	also	also	ADV	RB	_	26	advmod	_	_
 26	available	available	ADJ	JJ	Degree=Pos	3	conj	_	_
 27	to	to	ADP	IN	_	28	case	_	_
-28	students	student	NOUN	NNS	Number=Plur	26	nmod	_	SpaceAfter=No
-29	,	,	PUNCT	,	_	28	punct	_	_
+28	students	student	NOUN	NNS	Number=Plur	26	obl	_	SpaceAfter=No
+29	,	,	PUNCT	,	_	30	punct	_	_
 30	professors	professor	NOUN	NNS	Number=Plur	28	conj	_	SpaceAfter=No
-31	,	,	PUNCT	,	_	28	punct	_	_
-32	or	or	CONJ	CC	_	28	cc	_	_
+31	,	,	PUNCT	,	_	34	punct	_	_
+32	or	or	CCONJ	CC	_	34	cc	_	_
 33	even	even	ADV	RB	_	34	advmod	_	_
 34	people	people	NOUN	NNS	Number=Plur	28	conj	_	_
 35	wanting	want	VERB	VBG	VerbForm=Ger	34	acl	_	_
@@ -139,7 +139,7 @@
 40	safe	safe	ADJ	JJ	Degree=Pos	43	amod	_	SpaceAfter=No
 41	,	,	PUNCT	,	_	43	punct	_	_
 42	viable	viable	ADJ	JJ	Degree=Pos	43	amod	_	_
-43	community	community	NOUN	NN	Number=Sing	37	nmod	_	SpaceAfter=No
+43	community	community	NOUN	NN	Number=Sing	37	obl	_	SpaceAfter=No
 44	.	.	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: VCU is also minutes from Downtown Richmond, Canal Walk, Carytown, Stony Point, Short Pump, and the VCU Medical Center.
@@ -150,19 +150,19 @@
 5	from	from	ADP	IN	_	7	case	_	_
 6	Downtown	downtown	NOUN	NN	Number=Sing	7	compound	_	_
 7	Richmond	Richmond	PROPN	NNP	Number=Sing	0	root	_	SpaceAfter=No
-8	,	,	PUNCT	,	_	7	punct	_	_
+8	,	,	PUNCT	,	_	10	punct	_	_
 9	Canal	Canal	PROPN	NNP	Number=Sing	10	compound	_	_
 10	Walk	Walk	PROPN	NNP	Number=Sing	7	conj	_	SpaceAfter=No
-11	,	,	PUNCT	,	_	7	punct	_	_
+11	,	,	PUNCT	,	_	12	punct	_	_
 12	Carytown	Carytown	PROPN	NNP	Number=Sing	7	conj	_	SpaceAfter=No
-13	,	,	PUNCT	,	_	7	punct	_	_
+13	,	,	PUNCT	,	_	15	punct	_	_
 14	Stony	Stony	PROPN	NNP	Number=Sing	15	compound	_	_
 15	Point	Point	PROPN	NNP	Number=Sing	7	conj	_	SpaceAfter=No
-16	,	,	PUNCT	,	_	7	punct	_	_
+16	,	,	PUNCT	,	_	18	punct	_	_
 17	Short	Short	PROPN	NNP	Number=Sing	18	compound	_	_
 18	Pump	Pump	PROPN	NNP	Number=Sing	7	conj	_	SpaceAfter=No
-19	,	,	PUNCT	,	_	7	punct	_	_
-20	and	and	CONJ	CC	_	7	cc	_	_
+19	,	,	PUNCT	,	_	24	punct	_	_
+20	and	and	CCONJ	CC	_	24	cc	_	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	24	det	_	_
 22	VCU	VCU	PROPN	NNP	Number=Sing	24	compound	_	_
 23	Medical	Medical	PROPN	NNP	Number=Sing	24	compound	_	_
@@ -176,22 +176,22 @@
 4	best	best	ADJ	JJS	Degree=Sup	5	amod	_	_
 5	university	university	NOUN	NN	Number=Sing	0	root	_	_
 6	in	in	ADP	IN	_	7	case	_	_
-7	Virginia	Virginia	PROPN	NNP	Number=Sing	5	nmod	_	_
-8	and	and	CONJ	CC	_	5	cc	_	_
+7	Virginia	Virginia	PROPN	NNP	Number=Sing	5	nmod	_	ManualCheck=Yes
+8	and	and	CCONJ	CC	_	10	cc	_	_
 9	continuously	continuously	ADV	RB	_	10	advmod	_	_
 10	receives	receive	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	conj	_	_
 11	rave	rave	ADJ	JJ	Degree=Pos	12	amod	_	_
-12	reviews	review	NOUN	NNS	Number=Plur	10	dobj	_	_
+12	reviews	review	NOUN	NNS	Number=Plur	10	obj	_	_
 13	every	every	DET	DT	_	14	det	_	_
 14	year	year	NOUN	NN	Number=Sing	10	nmod:tmod	_	SpaceAfter=No
 15	.	.	PUNCT	.	_	5	punct	_	_
 
 # sentence-text: The U of R is also recommended, too!
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
-2	U	U	PROPN	NNP	Number=Sing	7	nsubjpass	_	_
+2	U	U	PROPN	NNP	Number=Sing	7	nsubj:pass	_	_
 3	of	of	ADP	IN	_	4	case	_	_
 4	R	R	PROPN	NNP	Number=Sing	2	nmod	_	_
-5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	auxpass	_	_
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux:pass	_	_
 6	also	also	ADV	RB	_	7	advmod	_	_
 7	recommended	recommend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
 8	,	,	PUNCT	,	_	7	punct	_	_

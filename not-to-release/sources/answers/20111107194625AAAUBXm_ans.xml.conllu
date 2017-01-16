@@ -17,7 +17,7 @@
 4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
 5	VERY	very	ADV	RB	_	6	advmod	_	_
 6	long	long	ADJ	JJ	Degree=Pos	7	amod	_	_
-7	list	list	NOUN	NN	Number=Sing	3	dobj	_	_
+7	list	list	NOUN	NN	Number=Sing	3	obj	_	_
 8	of	of	ADP	IN	_	9	case	_	_
 9	people	people	NOUN	NNS	Number=Plur	7	nmod	_	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
@@ -25,9 +25,9 @@
 12	to	to	PART	TO	_	13	mark	_	_
 13	make	make	VERB	VB	VerbForm=Inf	11	xcomp	_	_
 14	Xmas	Xmas	PROPN	NNP	Number=Sing	15	compound	_	_
-15	gifts	gift	NOUN	NNS	Number=Plur	13	dobj	_	_
-16	for	for	ADP	IN	_	13	nmod	_	_
-17	and	and	CONJ	CC	_	3	cc	_	_
+15	gifts	gift	NOUN	NNS	Number=Plur	13	obj	_	_
+16	for	for	ADP	IN	_	13	obl	_	_
+17	and	and	CCONJ	CC	_	24	cc	_	_
 18	one	one	NUM	CD	NumType=Card	24	nsubj	_	_
 19	of	of	ADP	IN	_	20	case	_	_
 20	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	18	nmod	_	_
@@ -40,8 +40,8 @@
 # sentence-text: She loves giraffes and homemade things!
 1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	_
 2	loves	love	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	giraffes	giraffe	NOUN	NNS	Number=Plur	2	dobj	_	_
-4	and	and	CONJ	CC	_	3	cc	_	_
+3	giraffes	giraffe	NOUN	NNS	Number=Plur	2	obj	_	_
+4	and	and	CCONJ	CC	_	6	cc	_	_
 5	homemade	homemade	ADJ	JJ	Degree=Pos	6	amod	_	_
 6	things	thing	NOUN	NNS	Number=Plur	3	conj	_	SpaceAfter=No
 7	!	!	PUNCT	.	_	2	punct	_	_
@@ -62,16 +62,16 @@
 13	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	12	iobj	_	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	_	_
 15	giraffe	giraffe	NOUN	NN	Number=Sing	16	compound	_	_
-16	sculpture	sculpture	NOUN	NN	Number=Sing	12	dobj	_	SpaceAfter=No
+16	sculpture	sculpture	NOUN	NN	Number=Sing	12	obj	_	SpaceAfter=No
 17	.	.	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: I don't have much money so I bought Crayola Air-Dry Clay.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
 2	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	_	SpaceAfter=No
-3	n't	not	PART	RB	_	4	neg	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
 4	have	have	VERB	VB	VerbForm=Inf	0	root	_	_
 5	much	much	ADJ	JJ	Degree=Pos	6	amod	_	_
-6	money	money	NOUN	NN	Number=Sing	4	dobj	_	_
+6	money	money	NOUN	NN	Number=Sing	4	obj	_	_
 7	so	so	ADV	RB	_	9	advmod	_	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	_	_
 9	bought	buy	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	parataxis	_	_
@@ -79,7 +79,7 @@
 11	Air	air	NOUN	NN	Number=Sing	13	compound	_	SpaceAfter=No
 12	-	-	PUNCT	HYPH	_	13	punct	_	SpaceAfter=No
 13	Dry	dry	NOUN	NN	Number=Sing	14	compound	_	_
-14	Clay	clay	NOUN	NN	Number=Sing	9	dobj	_	SpaceAfter=No
+14	Clay	clay	NOUN	NN	Number=Sing	9	obj	_	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: I have sculpted the giraffe laying down.
@@ -87,7 +87,7 @@
 2	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	_	_
 3	sculpted	sculpt	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
-5	giraffe	giraffe	NOUN	NN	Number=Sing	3	dobj	_	_
+5	giraffe	giraffe	NOUN	NN	Number=Sing	3	obj	_	_
 6	laying	lay	VERB	VBG	VerbForm=Ger	5	acl	_	_
 7	down	down	ADV	RB	_	6	advmod	_	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	_	_
@@ -101,7 +101,7 @@
 6	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	ccomp	_	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
 8	few	few	ADJ	JJ	Degree=Pos	9	amod	_	_
-9	problems	problem	NOUN	NNS	Number=Plur	6	dobj	_	SpaceAfter=No
+9	problems	problem	NOUN	NNS	Number=Plur	6	obj	_	SpaceAfter=No
 10	:	:	PUNCT	:	_	3	punct	_	_
 
 # sentence-text: 1. I tested it out by making a figure boat
@@ -109,19 +109,19 @@
 2	.	.	PUNCT	.	_	1	punct	_	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
 4	tested	test	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-5	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	dobj	_	_
+5	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obj	_	_
 6	out	out	ADP	RP	_	4	compound:prt	_	_
 7	by	by	SCONJ	IN	_	8	mark	_	_
 8	making	make	VERB	VBG	VerbForm=Ger	4	advcl	_	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	_	_
 10	figure	figure	NOUN	NN	Number=Sing	11	compound	_	_
-11	boat	boat	NOUN	NN	Number=Sing	8	dobj	_	_
+11	boat	boat	NOUN	NN	Number=Sing	8	obj	_	_
 
 # sentence-text: And after 4 days when it dried it was very fragile!
-1	And	and	CONJ	CC	_	11	cc	_	_
+1	And	and	CCONJ	CC	_	11	cc	_	_
 2	after	after	ADP	IN	_	4	case	_	_
 3	4	4	NUM	CD	NumType=Card	4	nummod	_	_
-4	days	day	NOUN	NNS	Number=Plur	11	nmod	_	_
+4	days	day	NOUN	NNS	Number=Plur	11	obl	_	_
 5	when	when	ADV	WRB	PronType=Int	7	mark	_	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	nsubj	_	_
 7	dried	dry	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	advcl	_	_
@@ -135,7 +135,7 @@
 1	(	(	PUNCT	-LRB-	_	3	punct	_	SpaceAfter=No
 2	like	like	INTJ	UH	_	3	discourse	_	_
 3	VERY	very	ADV	RB	_	0	root	_	_
-4	not	not	PART	RB	_	8	neg	_	_
+4	not	not	PART	RB	_	8	advmod	_	_
 5	in	in	ADP	IN	_	8	case	_	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
 7	good	good	ADJ	JJ	Degree=Pos	8	amod	_	_
@@ -149,14 +149,14 @@
 4	way	way	NOUN	NN	Number=Sing	1	nsubj	_	_
 5	to	to	PART	TO	_	6	mark	_	_
 6	strengthen	strengthen	VERB	VB	VerbForm=Inf	4	acl	_	_
-7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	dobj	_	SpaceAfter=No
+7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	obj	_	SpaceAfter=No
 8	?	?	PUNCT	.	_	1	punct	_	_
 
 # sentence-text: 2. What kind of paint do I use to paint the giraffe?
 1	2	2	X	LS	_	9	nummod	_	SpaceAfter=No
 2	.	.	PUNCT	.	_	1	punct	_	_
 3	What	what	DET	WDT	PronType=Int	4	det	_	_
-4	kind	kind	NOUN	NN	Number=Sing	9	dobj	_	_
+4	kind	kind	NOUN	NN	Number=Sing	9	obj	_	_
 5	of	of	ADP	IN	_	6	case	_	_
 6	paint	paint	NOUN	NN	Number=Sing	4	nmod	_	_
 7	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	aux	_	_
@@ -165,7 +165,7 @@
 10	to	to	PART	TO	_	11	mark	_	_
 11	paint	paint	VERB	VB	VerbForm=Inf	9	advcl	_	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
-13	giraffe	giraffe	NOUN	NN	Number=Sing	11	dobj	_	SpaceAfter=No
+13	giraffe	giraffe	NOUN	NN	Number=Sing	11	obj	_	SpaceAfter=No
 14	?	?	PUNCT	.	_	9	punct	_	_
 
 # sentence-text: 3. Is there any cheap way to give it a shine like I made it in a kiln?
@@ -180,14 +180,14 @@
 9	give	give	VERB	VB	VerbForm=Inf	7	acl	_	_
 10	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	iobj	_	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	_	_
-12	shine	shine	NOUN	NN	Number=Sing	9	dobj	_	_
+12	shine	shine	NOUN	NN	Number=Sing	9	obj	_	_
 13	like	like	SCONJ	IN	_	15	mark	_	_
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	_	_
 15	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	advcl	_	_
-16	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	dobj	_	_
+16	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	obj	_	_
 17	in	in	ADP	IN	_	19	case	_	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	_	_
-19	kiln	kiln	NOUN	NN	Number=Sing	15	nmod	_	SpaceAfter=No
+19	kiln	kiln	NOUN	NN	Number=Sing	15	obl	_	SpaceAfter=No
 20	?	?	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: air dry clay works on armatures , the clay has a minor shrink percent, so you can leave the wire armature inside, paint with acrylic paint
@@ -196,7 +196,7 @@
 3	clay	clay	NOUN	NN	Number=Sing	4	nsubj	_	_
 4	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
 5	on	on	ADP	IN	_	6	case	_	_
-6	armatures	armature	NOUN	NNS	Number=Plur	4	nmod	_	_
+6	armatures	armature	NOUN	NNS	Number=Plur	4	obl	_	_
 7	,	,	PUNCT	,	_	4	punct	_	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
 9	clay	clay	NOUN	NN	Number=Sing	10	nsubj	_	_
@@ -204,7 +204,7 @@
 11	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	_	_
 12	minor	minor	ADJ	JJ	Degree=Pos	14	amod	_	_
 13	shrink	shrink	NOUN	NN	Number=Sing	14	compound	_	_
-14	percent	percent	NOUN	NN	Number=Sing	10	dobj	_	SpaceAfter=No
+14	percent	percent	NOUN	NN	Number=Sing	10	obj	_	SpaceAfter=No
 15	,	,	PUNCT	,	_	10	punct	_	_
 16	so	so	ADV	RB	_	19	advmod	_	_
 17	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	19	nsubj	_	_
@@ -212,11 +212,11 @@
 19	leave	leave	VERB	VB	VerbForm=Inf	10	parataxis	_	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	_	_
 21	wire	wire	NOUN	NN	Number=Sing	22	compound	_	_
-22	armature	armature	NOUN	NN	Number=Sing	19	dobj	_	_
+22	armature	armature	NOUN	NN	Number=Sing	19	obj	_	_
 23	inside	inside	ADV	RB	_	19	advmod	_	SpaceAfter=No
 24	,	,	PUNCT	,	_	4	punct	_	_
 25	paint	paint	VERB	VB	Mood=Imp|VerbForm=Fin	4	parataxis	_	_
 26	with	with	ADP	IN	_	28	case	_	_
 27	acrylic	acrylic	ADJ	JJ	Degree=Pos	28	amod	_	_
-28	paint	paint	NOUN	NN	Number=Sing	25	nmod	_	_
+28	paint	paint	NOUN	NN	Number=Sing	25	obl	_	_
 

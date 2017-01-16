@@ -17,16 +17,16 @@
 8	can	can	AUX	MD	VerbForm=Fin	9	aux	_	_
 9	buy	buy	VERB	VB	VerbForm=Inf	6	acl:relcl	_	_
 10	in	in	ADP	IN	_	11	case	_	_
-11	philadelphia	philadelphia	PROPN	NNP	Number=Sing	9	nmod	_	_
+11	philadelphia	philadelphia	PROPN	NNP	Number=Sing	9	obl	_	_
 12	pa	pa	PROPN	NNP	Number=Sing	11	appos	_	SpaceAfter=No
 13	?	?	PUNCT	.	_	6	punct	_	_
 
 # sentence-text: I need something reliable and good looking.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
 2	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	something	something	PRON	NN	Number=Sing	2	dobj	_	_
+3	something	something	PRON	NN	Number=Sing	2	obj	_	_
 4	reliable	reliable	ADJ	JJ	Degree=Pos	3	amod	_	_
-5	and	and	CONJ	CC	_	4	cc	_	_
+5	and	and	CCONJ	CC	_	7	cc	_	_
 6	good	good	ADJ	JJ	Degree=Pos	7	amod	_	_
 7	looking	looking	ADJ	JJ	Degree=Pos	4	conj	_	SpaceAfter=No
 8	.	.	PUNCT	.	_	2	punct	_	_
@@ -38,20 +38,20 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
 5	best	best	ADJ	JJS	Degree=Sup	7	amod	_	_
 6	pos	pos	NOUN	NN	Number=Sing	7	compound	_	_
-7	systems	system	NOUN	NNS	Number=Plur	3	dobj	_	SpaceAfter=No
+7	systems	system	NOUN	NNS	Number=Plur	3	obj	_	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: I use them for my restaurant and always get compliments on the sleek look of the mac system not to mention how good the support is.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
 2	use	use	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	2	dobj	_	_
+3	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	2	obj	_	_
 4	for	for	ADP	IN	_	6	case	_	_
 5	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	_	_
-6	restaurant	restaurant	NOUN	NN	Number=Sing	2	nmod	_	_
-7	and	and	CONJ	CC	_	2	cc	_	_
+6	restaurant	restaurant	NOUN	NN	Number=Sing	2	obl	_	_
+7	and	and	CCONJ	CC	_	9	cc	_	_
 8	always	always	ADV	RB	_	9	advmod	_	_
 9	get	get	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	_	_
-10	compliments	compliment	NOUN	NNS	Number=Plur	9	dobj	_	_
+10	compliments	compliment	NOUN	NNS	Number=Plur	9	obj	_	_
 11	on	on	ADP	IN	_	14	case	_	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
 13	sleek	sleek	ADJ	JJ	Degree=Pos	14	amod	_	_
@@ -60,9 +60,9 @@
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
 17	mac	mac	NOUN	NN	Number=Sing	18	compound	_	_
 18	system	system	NOUN	NN	Number=Sing	14	nmod	_	_
-19	not	not	ADV	RB	_	14	cc	_	_
-20	to	to	PART	TO	_	19	mwe	_	_
-21	mention	mention	VERB	VB	VerbForm=Inf	19	mwe	_	_
+19	not	not	ADV	RB	_	23	cc	_	_
+20	to	to	PART	TO	_	19	fixed	_	_
+21	mention	mention	VERB	VB	VerbForm=Inf	19	fixed	_	_
 22	how	how	ADV	WRB	PronType=Int	23	advmod	_	_
 23	good	good	ADJ	JJ	Degree=Pos	14	conj	_	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	_	_
@@ -74,12 +74,12 @@
 1	Do	do	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 2	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	1	iobj	_	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
-4	favor	favor	NOUN	NN	Number=Sing	1	dobj	_	_
-5	and	and	CONJ	CC	_	1	cc	_	_
+4	favor	favor	NOUN	NN	Number=Sing	1	obj	_	_
+5	and	and	CCONJ	CC	_	6	cc	_	_
 6	give	give	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	_	_
 7	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	6	iobj	_	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
-9	call	call	NOUN	NN	Number=Sing	6	dobj	_	SpaceAfter=No
+9	call	call	NOUN	NN	Number=Sing	6	obj	_	SpaceAfter=No
 10	.	.	PUNCT	.	_	1	punct	_	_
 
 # sentence-text: http://www.prosperitypos.com?p=ya

@@ -11,7 +11,7 @@
 4	.	.	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: What are you searching for?
-1	What	what	PRON	WP	PronType=Int	4	nmod	_	_
+1	What	what	PRON	WP	PronType=Int	4	obl	_	_
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	_	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
 4	searching	search	VERB	VBG	VerbForm=Ger	0	root	_	_
@@ -57,30 +57,30 @@
 7	part	part	NOUN	NN	Number=Sing	9	compound	_	SpaceAfter=No
 8	-	-	PUNCT	HYPH	_	9	punct	_	SpaceAfter=No
 9	time	time	NOUN	NN	Number=Sing	10	compound	_	_
-10	income	income	NOUN	NN	Number=Sing	4	nmod	_	_
+10	income	income	NOUN	NN	Number=Sing	4	obl	_	_
 11	to	to	PART	TO	_	12	mark	_	_
 12	help	help	VERB	VB	VerbForm=Inf	4	advcl	_	_
 13	pay	pay	VERB	VB	VerbForm=Inf	12	ccomp	_	_
 14	off	off	ADP	RP	_	13	compound:prt	_	_
 15	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	_	_
-16	debts	debt	NOUN	NNS	Number=Plur	13	dobj	_	_
-17	or	or	CONJ	CC	_	4	cc	_	_
+16	debts	debt	NOUN	NNS	Number=Plur	13	obj	_	_
+17	or	or	CCONJ	CC	_	20	cc	_	_
 18	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	_	_
 19	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	aux	_	_
 20	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	_	_
 21	for	for	ADP	IN	_	23	case	_	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	_	_
-23	freedom	freedom	NOUN	NN	Number=Sing	20	nmod	_	_
+23	freedom	freedom	NOUN	NN	Number=Sing	20	obl	_	_
 24	offered	offer	VERB	VBN	Tense=Past|VerbForm=Part	23	acl	_	_
 25	by	by	SCONJ	IN	_	26	mark	_	_
 26	working	work	VERB	VBG	VerbForm=Ger	24	advcl	_	_
 27	from	from	ADP	IN	_	28	case	_	_
-28	home	home	NOUN	NN	Number=Sing	26	nmod	_	_
+28	home	home	NOUN	NN	Number=Sing	26	obl	_	_
 29	on	on	ADP	IN	_	33	case	_	_
 30	a	a	DET	DT	Definite=Ind|PronType=Art	33	det	_	_
 31	full	full	ADJ	JJ	Degree=Pos	32	amod	_	_
 32	time	time	NOUN	NN	Number=Sing	33	compound	_	_
-33	basis	basis	NOUN	NN	Number=Sing	26	nmod	_	SpaceAfter=No
+33	basis	basis	NOUN	NN	Number=Sing	26	obl	_	SpaceAfter=No
 34	,	,	PUNCT	,	_	38	punct	_	_
 35	Agel	Agel	PROPN	NNP	Number=Sing	38	nsubj	_	_
 36	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	38	cop	_	_
@@ -99,8 +99,8 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	_
 4	new	new	ADJ	JJ	Degree=Pos	5	amod	_	_
 5	company	company	NOUN	NN	Number=Sing	0	root	_	_
-6	and	and	CONJ	CC	_	5	cc	_	_
-7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	auxpass	_	_
+6	and	and	CCONJ	CC	_	9	cc	_	_
+7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux:pass	_	_
 8	uniquely	uniquely	ADV	RB	_	9	advmod	_	_
 9	positioned	position	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	conj	_	_
 10	to	to	PART	TO	_	14	mark	_	_
@@ -112,7 +112,7 @@
 16	the	the	DET	DT	Definite=Def|PronType=Art	19	det	_	_
 17	network	network	NOUN	NN	Number=Sing	18	compound	_	_
 18	marketing	marketing	NOUN	NN	Number=Sing	19	compound	_	_
-19	industry	industry	NOUN	NN	Number=Sing	14	nmod	_	SpaceAfter=No
+19	industry	industry	NOUN	NN	Number=Sing	14	nmod	_	SpaceAfter=No|ManualCheck=Yes
 20	.	.	PUNCT	.	_	5	punct	_	_
 
 # sentence-text: The company has developed an entirely new category of products.
@@ -123,7 +123,7 @@
 5	an	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
 6	entirely	entirely	ADV	RB	_	7	advmod	_	_
 7	new	new	ADJ	JJ	Degree=Pos	8	amod	_	_
-8	category	category	NOUN	NN	Number=Sing	4	dobj	_	_
+8	category	category	NOUN	NN	Number=Sing	4	obj	_	_
 9	of	of	ADP	IN	_	10	case	_	_
 10	products	product	NOUN	NNS	Number=Plur	8	nmod	_	SpaceAfter=No
 11	.	.	PUNCT	.	_	4	punct	_	_
@@ -138,7 +138,7 @@
 7	industry	industry	NOUN	NN	Number=Sing	9	compound	_	SpaceAfter=No
 8	-	-	PUNCT	HYPH	_	9	punct	_	SpaceAfter=No
 9	changing	change	VERB	VBG	VerbForm=Ger	10	amod	_	_
-10	innovation	innovation	NOUN	NN	Number=Sing	3	nmod	_	SpaceAfter=No
+10	innovation	innovation	NOUN	NN	Number=Sing	3	nmod	_	SpaceAfter=No|ManualCheck=Yes
 11	.	.	PUNCT	.	_	1	punct	_	_
 
 # sentence-text: Innovative Products
@@ -151,11 +151,11 @@
 3	an	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
 4	entirely	entirely	ADV	RB	_	5	advmod	_	_
 5	new	new	ADJ	JJ	Degree=Pos	6	amod	_	_
-6	category	category	NOUN	NN	Number=Sing	2	dobj	_	_
+6	category	category	NOUN	NN	Number=Sing	2	obj	_	_
 7	of	of	ADP	IN	_	8	case	_	_
 8	products	product	NOUN	NNS	Number=Plur	6	nmod	_	_
 9	called	call	VERB	VBN	Tense=Past|VerbForm=Part	6	acl	_	_
-10	Gelceuticals	gelceutical	NOUN	NNS	Number=Plur	9	dobj	_	SpaceAfter=No
+10	Gelceuticals	gelceutical	NOUN	NNS	Number=Plur	9	obj	_	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: The company has developed a unique and innovative delivery mechanism for nutritional products.
@@ -165,10 +165,10 @@
 4	developed	develop	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
 6	unique	unique	ADJ	JJ	Degree=Pos	10	amod	_	_
-7	and	and	CONJ	CC	_	6	cc	_	_
+7	and	and	CCONJ	CC	_	8	cc	_	_
 8	innovative	innovative	ADJ	JJ	Degree=Pos	6	conj	_	_
 9	delivery	delivery	NOUN	NN	Number=Sing	10	compound	_	_
-10	mechanism	mechanism	NOUN	NN	Number=Sing	4	dobj	_	_
+10	mechanism	mechanism	NOUN	NN	Number=Sing	4	obj	_	_
 11	for	for	ADP	IN	_	13	case	_	_
 12	nutritional	nutritional	ADJ	JJ	Degree=Pos	13	amod	_	_
 13	products	product	NOUN	NNS	Number=Plur	10	nmod	_	SpaceAfter=No
@@ -184,7 +184,7 @@
 7	possible	possible	ADJ	JJ	Degree=Pos	6	xcomp	_	_
 8	single	single	ADJ	JJ	Degree=Pos	9	amod	_	_
 9	serving	serving	NOUN	NN	Number=Sing	10	compound	_	_
-10	packets	packet	NOUN	NNS	Number=Plur	6	dobj	_	_
+10	packets	packet	NOUN	NNS	Number=Plur	6	obj	_	_
 11	of	of	ADP	IN	_	12	case	_	_
 12	Gelceuticals	gelceutical	NOUN	NNS	Number=Plur	10	nmod	_	SpaceAfter=No
 13	.	.	PUNCT	.	_	6	punct	_	_
@@ -193,7 +193,7 @@
 1	In	in	ADP	IN	_	4	case	_	_
 2	this	this	DET	DT	Number=Sing|PronType=Dem	4	det	_	_
 3	delivery	delivery	NOUN	NN	Number=Sing	4	compound	_	_
-4	format	format	NOUN	NN	Number=Sing	10	nmod	_	SpaceAfter=No
+4	format	format	NOUN	NN	Number=Sing	10	obl	_	SpaceAfter=No
 5	,	,	PUNCT	,	_	10	punct	_	_
 6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	_	_
 7	body	body	NOUN	NN	Number=Sing	10	nsubj	_	_
@@ -202,26 +202,26 @@
 10	start	start	VERB	VB	VerbForm=Inf	0	root	_	_
 11	receiving	receive	VERB	VBG	VerbForm=Ger	10	xcomp	_	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
-13	benefits	benefit	NOUN	NNS	Number=Plur	11	dobj	_	_
+13	benefits	benefit	NOUN	NNS	Number=Plur	11	obj	_	_
 14	of	of	ADP	IN	_	17	case	_	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
 16	product	product	NOUN	NN	Number=Sing	17	compound	_	_
 17	components	component	NOUN	NNS	Number=Plur	13	nmod	_	_
 18	as	as	SCONJ	IN	_	28	mark	_	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	_	_
-20	absorption	absorption	NOUN	NN	Number=Sing	28	nsubjpass	_	_
+20	absorption	absorption	NOUN	NN	Number=Sing	28	nsubj:pass	_	_
 21	of	of	ADP	IN	_	22	case	_	_
 22	vitamins	vitamin	NOUN	NNS	Number=Plur	20	nmod	_	SpaceAfter=No
-23	,	,	PUNCT	,	_	22	punct	_	_
+23	,	,	PUNCT	,	_	24	punct	_	_
 24	minerals	mineral	NOUN	NNS	Number=Plur	22	conj	_	_
-25	and	and	CONJ	CC	_	22	cc	_	_
+25	and	and	CCONJ	CC	_	26	cc	_	_
 26	nutrients	nutrient	NOUN	NNS	Number=Plur	22	conj	_	_
-27	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	28	auxpass	_	_
+27	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	28	aux:pass	_	_
 28	maximized	maximize	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	advcl	_	SpaceAfter=No
 29	.	.	PUNCT	.	_	10	punct	_	_
 
 # sentence-text: Never before has such a convenient method been available for consuming nutritional products.
-1	Never	never	ADV	RB	_	2	neg	_	_
+1	Never	never	ADV	RB	_	2	advmod	_	_
 2	before	before	ADV	RB	_	9	advmod	_	_
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	_	_
 4	such	such	DET	PDT	_	7	det:predet	_	_
@@ -233,25 +233,25 @@
 10	for	for	SCONJ	IN	_	11	mark	_	_
 11	consuming	consume	VERB	VBG	VerbForm=Ger	9	advcl	_	_
 12	nutritional	nutritional	ADJ	JJ	Degree=Pos	13	amod	_	_
-13	products	product	NOUN	NNS	Number=Plur	11	dobj	_	SpaceAfter=No
+13	products	product	NOUN	NNS	Number=Plur	11	obj	_	SpaceAfter=No
 14	.	.	PUNCT	.	_	9	punct	_	_
 
 # sentence-text: Consider these convenience factors:
 1	Consider	consider	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 2	these	these	DET	DT	Number=Plur|PronType=Dem	4	det	_	_
 3	convenience	convenience	NOUN	NN	Number=Sing	4	compound	_	_
-4	factors	factor	NOUN	NNS	Number=Plur	1	dobj	_	SpaceAfter=No
+4	factors	factor	NOUN	NNS	Number=Plur	1	obj	_	SpaceAfter=No
 5	:	:	PUNCT	:	_	1	punct	_	_
 
 # sentence-text: No water needed (as with tablets or capsules)
-1	No	no	DET	DT	_	2	neg	_	_
+1	No	no	DET	DT	_	2	det	_	_
 2	water	water	NOUN	NN	Number=Sing	3	nsubj	_	_
 3	needed	need	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
 4	(	(	PUNCT	-LRB-	_	7	punct	_	SpaceAfter=No
 5	as	as	ADP	IN	_	7	case	_	_
 6	with	with	ADP	IN	_	7	case	_	_
-7	tablets	tablet	NOUN	NNS	Number=Plur	3	nmod	_	_
-8	or	or	CONJ	CC	_	7	cc	_	_
+7	tablets	tablet	NOUN	NNS	Number=Plur	3	obl	_	_
+8	or	or	CCONJ	CC	_	9	cc	_	_
 9	capsules	capsule	NOUN	NNS	Number=Plur	7	conj	_	SpaceAfter=No
 10	)	)	PUNCT	-RRB-	_	7	punct	_	_
 
@@ -264,9 +264,9 @@
 6	big	big	ADJ	JJ	Degree=Pos	7	amod	_	_
 7	bottle	bottle	NOUN	NN	Number=Sing	3	nmod	_	_
 8	(	(	PUNCT	-LRB-	_	13	punct	_	SpaceAfter=No
-9	no	no	DET	DT	_	13	neg	_	_
+9	no	no	DET	DT	_	13	det	_	_
 10	glass	glass	NOUN	NN	Number=Sing	13	compound	_	_
-11	and	and	CONJ	CC	_	10	cc	_	_
+11	and	and	CCONJ	CC	_	12	cc	_	_
 12	water	water	NOUN	NN	Number=Sing	10	conj	_	_
 13	weight	weight	NOUN	NN	Number=Sing	3	parataxis	_	SpaceAfter=No
 14	)	)	PUNCT	-RRB-	_	13	punct	_	_
@@ -279,18 +279,18 @@
 5	imagine	imagine	VERB	VB	Mood=Imp|VerbForm=Fin	3	parataxis	_	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
 7	sampling	sampling	NOUN	NN	Number=Sing	8	compound	_	_
-8	capabilities	capability	NOUN	NNS	Number=Plur	5	dobj	_	SpaceAfter=No
+8	capabilities	capability	NOUN	NNS	Number=Plur	5	obj	_	SpaceAfter=No
 9	)	)	PUNCT	-RRB-	_	5	punct	_	_
 
 # sentence-text: Perfect for those with difficulty swallowing tablets or capsules
 1	Perfect	perfect	ADJ	JJ	Degree=Pos	0	root	_	_
 2	for	for	ADP	IN	_	3	case	_	_
-3	those	those	PRON	DT	Number=Plur|PronType=Dem	1	nmod	_	_
+3	those	those	PRON	DT	Number=Plur|PronType=Dem	1	obl	_	_
 4	with	with	ADP	IN	_	5	case	_	_
 5	difficulty	difficulty	NOUN	NN	Number=Sing	3	nmod	_	_
 6	swallowing	swallow	VERB	VBG	VerbForm=Ger	5	acl	_	_
-7	tablets	tablet	NOUN	NNS	Number=Plur	6	dobj	_	_
-8	or	or	CONJ	CC	_	7	cc	_	_
+7	tablets	tablet	NOUN	NNS	Number=Plur	6	obj	_	_
+8	or	or	CCONJ	CC	_	9	cc	_	_
 9	capsules	capsule	NOUN	NNS	Number=Plur	7	conj	_	_
 
 # sentence-text: Faster, more efficient, delivery to the body Learn More
@@ -304,7 +304,7 @@
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
 9	body	body	NOUN	NN	Number=Sing	6	nmod	_	_
 10	Learn	learn	VERB	VB	Mood=Imp|VerbForm=Fin	6	parataxis	_	_
-11	More	more	ADJ	JJR	Degree=Cmp	10	dobj	_	_
+11	More	more	ADJ	JJR	Degree=Cmp	10	obj	_	_
 
 # sentence-text: Revolutionary Compensation
 1	Revolutionary	revolutionary	ADJ	JJ	Degree=Pos	2	amod	_	_
@@ -317,7 +317,7 @@
 4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
 5	new	new	ADJ	JJ	Degree=Pos	7	amod	_	_
 6	compensation	compensation	NOUN	NN	Number=Sing	7	compound	_	_
-7	structure	structure	NOUN	NN	Number=Sing	3	dobj	_	_
+7	structure	structure	NOUN	NN	Number=Sing	3	obj	_	_
 8	that	that	PRON	WDT	PronType=Rel	11	nsubj	_	_
 9	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	_	_
 10	truly	truly	ADV	RB	_	11	advmod	_	_
@@ -335,7 +335,7 @@
 8	plan	plan	NOUN	NN	Number=Sing	10	nsubj	_	_
 9	will	will	AUX	MD	VerbForm=Fin	10	aux	_	_
 10	produce	produce	VERB	VB	VerbForm=Inf	2	ccomp	_	_
-11	some	some	DET	DT	_	10	dobj	_	_
+11	some	some	DET	DT	_	10	obj	_	_
 12	of	of	ADP	IN	_	15	case	_	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
 14	largest	largest	ADJ	JJS	Degree=Sup	15	amod	_	_
@@ -348,22 +348,22 @@
 
 # sentence-text: The plan can't be described as a binary, a breakaway, a unilevel, or a forced matrix.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
-2	plan	plan	NOUN	NN	Number=Sing	6	nsubjpass	_	_
+2	plan	plan	NOUN	NN	Number=Sing	6	nsubj:pass	_	_
 3	ca	can	AUX	MD	VerbForm=Fin	6	aux	_	SpaceAfter=No
-4	n't	not	PART	RB	_	6	neg	_	_
-5	be	be	AUX	VB	VerbForm=Inf	6	auxpass	_	_
+4	n't	not	PART	RB	_	6	advmod	_	_
+5	be	be	AUX	VB	VerbForm=Inf	6	aux:pass	_	_
 6	described	describe	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	_
 7	as	as	ADP	IN	_	9	case	_	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
-9	binary	binary	NOUN	NN	Number=Sing	6	nmod	_	SpaceAfter=No
-10	,	,	PUNCT	,	_	9	punct	_	_
+9	binary	binary	NOUN	NN	Number=Sing	6	obl	_	SpaceAfter=No
+10	,	,	PUNCT	,	_	12	punct	_	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	_	_
 12	breakaway	breakaway	NOUN	NN	Number=Sing	9	conj	_	SpaceAfter=No
-13	,	,	PUNCT	,	_	9	punct	_	_
+13	,	,	PUNCT	,	_	15	punct	_	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	_	_
 15	unilevel	unilevel	NOUN	NN	Number=Sing	9	conj	_	SpaceAfter=No
-16	,	,	PUNCT	,	_	9	punct	_	_
-17	or	or	CONJ	CC	_	9	cc	_	_
+16	,	,	PUNCT	,	_	20	punct	_	_
+17	or	or	CCONJ	CC	_	20	cc	_	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	_	_
 19	forced	force	VERB	VBN	Tense=Past|VerbForm=Part	20	amod	_	_
 20	matrix	matrix	NOUN	NN	Number=Sing	9	conj	_	SpaceAfter=No
@@ -388,7 +388,7 @@
 # sentence-text: It is not just company longevity.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	_	_
 2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	_
-3	not	not	PART	RB	_	6	neg	_	_
+3	not	not	PART	RB	_	6	advmod	_	_
 4	just	just	ADV	RB	_	6	advmod	_	_
 5	company	company	NOUN	NN	Number=Sing	6	compound	_	_
 6	longevity	longevity	NOUN	NN	Number=Sing	0	root	_	SpaceAfter=No
@@ -400,20 +400,20 @@
 3	used	use	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	22	advcl	_	_
 4	to	to	PART	TO	_	5	mark	_	_
 5	make	make	VERB	VB	VerbForm=Inf	3	xcomp	_	_
-6	$	$	SYM	$	_	5	dobj	_	SpaceAfter=No
+6	$	$	SYM	$	_	5	obj	_	SpaceAfter=No
 7	100	100	NUM	CD	NumType=Card	6	compound	_	SpaceAfter=No
 8	k	k	NUM	CD	NumType=Card	6	compound	_	_
-9	and	and	CONJ	CC	_	3	cc	_	_
+9	and	and	CCONJ	CC	_	12	cc	_	_
 10	now	now	ADV	RB	_	12	advmod	_	_
 11	only	only	ADV	RB	_	12	advmod	_	_
 12	make	make	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	_	_
-13	$	$	SYM	$	_	12	dobj	_	SpaceAfter=No
+13	$	$	SYM	$	_	12	obj	_	SpaceAfter=No
 14	30	30	NUM	CD	NumType=Card	13	compound	_	SpaceAfter=No
 15	k	k	NUM	CD	NumType=Card	13	compound	_	SpaceAfter=No
 16	,	,	PUNCT	,	_	22	punct	_	_
 17	this	this	PRON	DT	Number=Sing|PronType=Dem	22	nsubj	_	_
 18	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	_	_
-19	not	not	PART	RB	_	22	neg	_	_
+19	not	not	PART	RB	_	22	advmod	_	_
 20	long	long	ADJ	JJ	Degree=Pos	21	amod	_	_
 21	term	term	NOUN	NN	Number=Sing	22	compound	_	_
 22	viability	viability	NOUN	NN	Number=Sing	0	root	_	SpaceAfter=No
@@ -430,12 +430,12 @@
 8	be	be	VERB	VB	VerbForm=Inf	10	cop	_	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
 10	same	same	ADJ	JJ	Degree=Pos	0	root	_	_
-11	or	or	CONJ	CC	_	10	cc	_	_
+11	or	or	CCONJ	CC	_	12	cc	_	_
 12	greater	greater	ADJ	JJR	Degree=Cmp	10	conj	_	SpaceAfter=No
 13	,	,	PUNCT	,	_	10	punct	_	_
 14	fulfilling	fulfil	VERB	VBG	VerbForm=Ger	10	advcl	_	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
-16	promise	promise	NOUN	NN	Number=Sing	14	dobj	_	_
+16	promise	promise	NOUN	NN	Number=Sing	14	obj	_	_
 17	of	of	ADP	IN	_	22	case	_	_
 18	long	long	ADJ	JJ	Degree=Pos	20	amod	_	SpaceAfter=No
 19	-	-	PUNCT	HYPH	_	20	punct	_	SpaceAfter=No
@@ -451,20 +451,20 @@
 4	plan	plan	NOUN	NN	Number=Sing	5	nsubj	_	_
 5	includes	include	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
-7	principles	principle	NOUN	NNS	Number=Plur	5	dobj	_	_
+7	principles	principle	NOUN	NNS	Number=Plur	5	obj	_	_
 8	that	that	PRON	WDT	PronType=Rel	9	nsubj	_	_
 9	ensure	ensure	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	acl:relcl	_	_
 10	that	that	DET	DT	Number=Sing|PronType=Dem	11	det	_	_
-11	promise	promise	NOUN	NN	Number=Sing	14	nsubjpass	_	_
+11	promise	promise	NOUN	NN	Number=Sing	14	nsubj:pass	_	_
 12	can	can	AUX	MD	VerbForm=Fin	14	aux	_	_
-13	be	be	AUX	VB	VerbForm=Inf	14	auxpass	_	_
+13	be	be	AUX	VB	VerbForm=Inf	14	aux:pass	_	_
 14	fulfilled	fulfil	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	ccomp	_	_
 15	for	for	ADP	IN	_	16	case	_	_
-16	those	those	PRON	DT	Number=Plur|PronType=Dem	14	nmod	_	_
+16	those	those	PRON	DT	Number=Plur|PronType=Dem	14	obl	_	_
 17	who	who	PRON	WP	PronType=Rel	18	nsubj	_	_
 18	work	work	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	acl:relcl	_	_
 19	at	at	ADP	IN	_	20	case	_	_
-20	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	nmod	_	SpaceAfter=No
+20	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obl	_	SpaceAfter=No
 21	.	.	PUNCT	.	_	5	punct	_	_
 
 # sentence-text: Are you unsure of Agel?
@@ -472,17 +472,17 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
 3	unsure	unsure	ADJ	JJ	Degree=Pos	0	root	_	_
 4	of	of	ADP	IN	_	5	case	_	_
-5	Agel	Agel	PROPN	NNP	Number=Sing	3	nmod	_	SpaceAfter=No
+5	Agel	Agel	PROPN	NNP	Number=Sing	3	obl	_	SpaceAfter=No
 6	?	?	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: Take time to discover the unlimited possibilities with Agel!
 1	Take	take	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-2	time	time	NOUN	NN	Number=Sing	1	dobj	_	_
+2	time	time	NOUN	NN	Number=Sing	1	obj	_	_
 3	to	to	PART	TO	_	4	mark	_	_
 4	discover	discover	VERB	VB	VerbForm=Inf	1	xcomp	_	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
 6	unlimited	unlimited	ADJ	JJ	Degree=Pos	7	amod	_	_
-7	possibilities	possibility	NOUN	NNS	Number=Plur	4	dobj	_	_
+7	possibilities	possibility	NOUN	NNS	Number=Plur	4	obj	_	_
 8	with	with	ADP	IN	_	9	case	_	_
 9	Agel	Agel	PROPN	NNP	Number=Sing	7	nmod	_	SpaceAfter=No
 10	!	!	PUNCT	.	_	1	punct	_	_
@@ -493,19 +493,19 @@
 3	will	will	AUX	MD	VerbForm=Fin	4	aux	_	_
 4	feature	feature	VERB	VB	VerbForm=Inf	0	root	_	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
-6	host	host	NOUN	NN	Number=Sing	4	dobj	_	_
+6	host	host	NOUN	NN	Number=Sing	4	obj	_	_
 7	of	of	ADP	IN	_	10	case	_	_
 8	other	other	ADJ	JJ	Degree=Pos	10	amod	_	_
 9	field	field	NOUN	NN	Number=Sing	10	compound	_	_
 10	leaders	leader	NOUN	NNS	Number=Plur	6	nmod	_	SpaceAfter=No
-11	,	,	PUNCT	,	_	6	punct	_	_
-12	and	and	CONJ	CC	_	6	cc	_	_
+11	,	,	PUNCT	,	_	14	punct	_	_
+12	and	and	CCONJ	CC	_	14	cc	_	_
 13	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	_	_
 14	founder	founder	NOUN	NN	Number=Sing	6	conj	_	_
-15	and	and	CONJ	CC	_	14	cc	_	_
+15	and	and	CCONJ	CC	_	16	cc	_	_
 16	CEO	ceo	NOUN	NN	Number=Sing	14	conj	_	SpaceAfter=No
 17	,	,	PUNCT	,	_	14	punct	_	_
-18	Glen	Glen	PROPN	NNP	Number=Sing	19	name	_	_
+18	Glen	Glen	PROPN	NNP	Number=Sing	19	flat	_	_
 19	Jensen	Jensen	PROPN	NNP	Number=Sing	14	appos	_	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	_	_
 
@@ -526,7 +526,7 @@
 7	to	to	PART	TO	_	8	mark	_	_
 8	Create	create	VERB	VB	VerbForm=Inf	3	ccomp	_	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
-10	Security	security	NOUN	NN	Number=Sing	8	dobj	_	_
+10	Security	security	NOUN	NN	Number=Sing	8	obj	_	_
 11	of	of	ADP	IN	_	13	case	_	_
 12	Residual	residual	ADJ	JJ	Degree=Pos	13	amod	_	_
 13	Income	income	NOUN	NN	Number=Sing	10	nmod	_	SpaceAfter=No
@@ -541,7 +541,7 @@
 22	to	to	PART	TO	_	23	mark	_	_
 23	Live	live	VERB	VB	VerbForm=Inf	21	acl	_	_
 24	Your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	25	nmod:poss	_	_
-25	Dreams	dream	NOUN	NNS	Number=Plur	23	dobj	_	SpaceAfter=No
+25	Dreams	dream	NOUN	NNS	Number=Plur	23	obj	_	SpaceAfter=No
 26	;	;	PUNCT	,	_	8	punct	_	_
 27	*	*	PUNCT	NFP	_	31	punct	_	_
 28	The	the	DET	DT	Definite=Def|PronType=Art	31	det	_	_
@@ -563,7 +563,7 @@
 44	Builds	build	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	conj	_	_
 45	Bigger	bigger	ADJ	JJR	Degree=Cmp	47	amod	_	_
 46	Bonus	bonus	NOUN	NN	Number=Sing	47	compound	_	_
-47	Checks	check	NOUN	NNS	Number=Plur	44	dobj	_	_
+47	Checks	check	NOUN	NNS	Number=Plur	44	obj	_	_
 48	Faster	faster	ADV	RBR	Degree=Cmp	44	advmod	_	SpaceAfter=No
 49	;	;	PUNCT	,	_	8	punct	_	_
 50	*	*	PUNCT	NFP	_	53	punct	_	_
@@ -578,7 +578,7 @@
 59	Build	build	VERB	VB	VerbForm=Inf	57	ccomp	_	_
 60	Stronger	stronger	ADV	RBR	_	59	advmod	_	SpaceAfter=No
 61	;	;	PUNCT	,	_	8	punct	_	_
-62	and	and	CONJ	CC	_	8	cc	_	_
+62	and	and	CCONJ	CC	_	65	cc	_	_
 63	*	*	PUNCT	NFP	_	65	punct	_	_
 64	The	the	DET	DT	Definite=Def|PronType=Art	65	det	_	_
 65	Secret	secret	NOUN	NN	Number=Sing	8	conj	_	_
@@ -589,7 +589,7 @@
 70	"	"	PUNCT	``	_	73	punct	_	SpaceAfter=No
 71	Legacy	legacy	NOUN	NN	Number=Sing	73	compound	_	SpaceAfter=No
 72	"	"	PUNCT	''	_	73	punct	_	_
-73	Position	position	NOUN	NN	Number=Sing	67	dobj	_	SpaceAfter=No
+73	Position	position	NOUN	NN	Number=Sing	67	obj	_	SpaceAfter=No
 74	!	!	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: Here are the numbers to call:
@@ -603,7 +603,7 @@
 
 # sentence-text: 620-294-4000 or 620-294-3000
 1	620-294-4000	620-294-4000	NUM	CD	NumType=Card	0	root	_	_
-2	or	or	CONJ	CC	_	1	cc	_	_
+2	or	or	CCONJ	CC	_	3	cc	_	_
 3	620-294-3000	620-294-3000	NUM	CD	NumType=Card	1	conj	_	_
 
 # sentence-text: The Passcode to participate is:5107
@@ -657,7 +657,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	SpaceAfter=No
 2	'll	will	AUX	MD	VerbForm=Fin	3	aux	_	_
 3	see	see	VERB	VB	VerbForm=Inf	0	root	_	_
-4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	dobj	_	_
+4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	obj	_	_
 5	there	there	ADV	RB	PronType=Dem	3	advmod	_	SpaceAfter=No
 6	!	!	PUNCT	.	_	3	punct	_	_
 

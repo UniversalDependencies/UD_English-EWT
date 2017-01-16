@@ -5,7 +5,7 @@
 # sentence-text: Run don't walk.
 1	Run	run	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 2	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	4	aux	_	SpaceAfter=No
-3	n't	not	PART	RB	_	4	neg	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
 4	walk	walk	VERB	VB	Mood=Imp|VerbForm=Fin	1	parataxis	_	SpaceAfter=No
 5	.	.	PUNCT	.	_	1	punct	_	_
 
@@ -20,8 +20,8 @@
 8	been	be	VERB	VBN	Tense=Past|VerbForm=Part	9	cop	_	_
 9	one	one	NUM	CD	NumType=Card	0	root	_	_
 10	of	of	ADP	IN	_	11	case	_	_
-11	disappointment	disappointment	NOUN	NN	Number=Sing	9	nmod	_	_
-12	and	and	CONJ	CC	_	11	cc	_	_
+11	disappointment	disappointment	NOUN	NN	Number=Sing	9	nmod	_	ManualCheck=Yes
+12	and	and	CCONJ	CC	_	13	cc	_	_
 13	anger	anger	NOUN	NN	Number=Sing	11	conj	_	SpaceAfter=No
 14	.	.	PUNCT	.	_	9	punct	_	_
 
@@ -33,7 +33,7 @@
 5	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	4	iobj	_	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
 7	lower	lower	ADJ	JJR	Degree=Cmp	8	amod	_	_
-8	rating	rating	NOUN	NN	Number=Sing	4	dobj	_	_
+8	rating	rating	NOUN	NN	Number=Sing	4	obj	_	_
 9	than	than	ADP	IN	_	10	case	_	_
 10	poor	poor	NOUN	NN	Number=Sing	8	nmod	_	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	_	_
@@ -42,30 +42,30 @@
 
 # sentence-text: On August 21st, 2009 I ordered furniture from Hickory Furniture Mart and contracted for HDS to deliver it.
 1	On	on	ADP	IN	_	2	case	_	_
-2	August	August	PROPN	NNP	Number=Sing	7	nmod	_	_
+2	August	August	PROPN	NNP	Number=Sing	7	obl	_	_
 3	21st	21st	NOUN	NN	Number=Sing	2	nummod	_	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	_	_
 5	2009	2009	NUM	CD	NumType=Card	2	nummod	_	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	_	_
 7	ordered	order	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-8	furniture	furniture	NOUN	NN	Number=Sing	7	dobj	_	_
+8	furniture	furniture	NOUN	NN	Number=Sing	7	obj	_	_
 9	from	from	ADP	IN	_	12	case	_	_
 10	Hickory	Hickory	PROPN	NNP	Number=Sing	12	compound	_	_
 11	Furniture	Furniture	PROPN	NNP	Number=Sing	12	compound	_	_
-12	Mart	Mart	PROPN	NNP	Number=Sing	7	nmod	_	_
-13	and	and	CONJ	CC	_	7	cc	_	_
+12	Mart	Mart	PROPN	NNP	Number=Sing	7	obl	_	_
+13	and	and	CCONJ	CC	_	14	cc	_	_
 14	contracted	contract	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	conj	_	_
 15	for	for	SCONJ	IN	_	18	mark	_	_
 16	HDS	HDS	PROPN	NNP	Number=Sing	18	nsubj	_	_
 17	to	to	PART	TO	_	18	mark	_	_
 18	deliver	deliver	VERB	VB	VerbForm=Inf	14	advcl	_	_
-19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	dobj	_	SpaceAfter=No
+19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obj	_	SpaceAfter=No
 20	.	.	PUNCT	.	_	7	punct	_	_
 
 # sentence-text: After seventeen days the delivery van showed up at my home minus two pieces.
 1	After	after	ADP	IN	_	3	case	_	_
 2	seventeen	seventeen	NUM	CD	NumType=Card	3	nummod	_	_
-3	days	day	NOUN	NNS	Number=Plur	7	nmod	_	_
+3	days	day	NOUN	NNS	Number=Plur	7	obl	_	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
 5	delivery	delivery	NOUN	NN	Number=Sing	6	compound	_	_
 6	van	van	NOUN	NN	Number=Sing	7	nsubj	_	_
@@ -73,76 +73,76 @@
 8	up	up	ADP	RP	_	7	compound:prt	_	_
 9	at	at	ADP	IN	_	11	case	_	_
 10	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	_	_
-11	home	home	NOUN	NN	Number=Sing	7	nmod	_	_
+11	home	home	NOUN	NN	Number=Sing	7	obl	_	_
 12	minus	minus	ADP	IN	_	14	case	_	_
 13	two	two	NUM	CD	NumType=Card	14	nummod	_	_
-14	pieces	piece	NOUN	NNS	Number=Plur	7	nmod	_	SpaceAfter=No
+14	pieces	piece	NOUN	NNS	Number=Plur	7	obl	_	SpaceAfter=No
 15	.	.	PUNCT	.	_	7	punct	_	_
 
 # sentence-text: I was later told they had been left at the warehouse and some future date they would be delivered.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubjpass	_	_
-2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	auxpass	_	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj:pass	_	_
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
 3	later	later	ADV	RBR	Degree=Cmp	4	advmod	_	_
 4	told	tell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	_
-5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubjpass	_	_
+5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj:pass	_	_
 6	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	aux	_	_
-7	been	be	AUX	VBN	Tense=Past|VerbForm=Part	8	auxpass	_	_
+7	been	be	AUX	VBN	Tense=Past|VerbForm=Part	8	aux:pass	_	_
 8	left	leave	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	ccomp	_	_
 9	at	at	ADP	IN	_	11	case	_	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
-11	warehouse	warehouse	NOUN	NN	Number=Sing	8	nmod	_	_
-12	and	and	CONJ	CC	_	8	cc	_	_
+11	warehouse	warehouse	NOUN	NN	Number=Sing	8	obl	_	_
+12	and	and	CCONJ	CC	_	19	cc	_	_
 13	some	some	DET	DT	_	15	det	_	_
 14	future	future	NOUN	NN	Number=Sing	15	compound	_	_
 15	date	date	NOUN	NN	Number=Sing	19	nmod:tmod	_	_
-16	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	19	nsubjpass	_	_
+16	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	19	nsubj:pass	_	_
 17	would	would	AUX	MD	VerbForm=Fin	19	aux	_	_
-18	be	be	AUX	VB	VerbForm=Inf	19	auxpass	_	_
+18	be	be	AUX	VB	VerbForm=Inf	19	aux:pass	_	_
 19	delivered	deliver	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	conj	_	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: No one will give me a date.
-1	No	no	DET	DT	_	2	neg	_	_
+1	No	no	DET	DT	_	2	det	_	_
 2	one	one	NUM	CD	NumType=Card	4	nsubj	_	_
 3	will	will	AUX	MD	VerbForm=Fin	4	aux	_	_
 4	give	give	VERB	VB	VerbForm=Inf	0	root	_	_
 5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	4	iobj	_	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
-7	date	date	NOUN	NN	Number=Sing	4	dobj	_	SpaceAfter=No
+7	date	date	NOUN	NN	Number=Sing	4	obj	_	SpaceAfter=No
 8	.	.	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: I spent $2300 on the bedroom suite, which was complete and excellent condition on the showroom floor.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
 2	spent	spend	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-3	$	$	SYM	$	_	2	dobj	_	SpaceAfter=No
+3	$	$	SYM	$	_	2	obj	_	SpaceAfter=No
 4	2300	2300	NUM	CD	NumType=Card	3	nummod	_	_
 5	on	on	ADP	IN	_	8	case	_	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
 7	bedroom	bedroom	NOUN	NN	Number=Sing	8	compound	_	_
-8	suite	suite	NOUN	NN	Number=Sing	2	nmod	_	SpaceAfter=No
+8	suite	suite	NOUN	NN	Number=Sing	2	obl	_	SpaceAfter=No
 9	,	,	PUNCT	,	_	8	punct	_	_
 10	which	which	PRON	WDT	PronType=Rel	12	nsubj	_	_
 11	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	_	_
 12	complete	complete	ADJ	JJ	Degree=Pos	8	acl:relcl	_	_
-13	and	and	CONJ	CC	_	12	cc	_	_
+13	and	and	CCONJ	CC	_	15	cc	_	_
 14	excellent	excellent	ADJ	JJ	Degree=Pos	15	amod	_	_
 15	condition	condition	NOUN	NN	Number=Sing	12	conj	_	_
 16	on	on	ADP	IN	_	19	case	_	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	_	_
 18	showroom	showroom	NOUN	NN	Number=Sing	19	compound	_	_
-19	floor	floor	NOUN	NN	Number=Sing	12	nmod	_	SpaceAfter=No
+19	floor	floor	NOUN	NN	Number=Sing	12	obl	_	SpaceAfter=No
 20	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: Upon delivery it was clear the entire set was damaged: a piece of wood was broke on the headboard; the chest of drawers was missing all four pieces necessary to attach the legs; the dresser back legs were pushed in causing the dresser to lean into the wall; and a nighstand was missing a drawer.
 1	Upon	upon	ADP	IN	_	2	case	_	_
-2	delivery	delivery	NOUN	NN	Number=Sing	5	nmod	_	_
+2	delivery	delivery	NOUN	NN	Number=Sing	5	obl	_	_
 3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	expl	_	_
 4	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	_	_
 5	clear	clear	ADJ	JJ	Degree=Pos	0	root	_	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
 7	entire	entire	ADJ	JJ	Degree=Pos	8	amod	_	_
-8	set	set	NOUN	NN	Number=Sing	10	nsubjpass	_	_
-9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	auxpass	_	_
+8	set	set	NOUN	NN	Number=Sing	10	nsubj:pass	_	_
+9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux:pass	_	_
 10	damaged	damage	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	csubj	_	SpaceAfter=No
 11	:	:	PUNCT	:	_	5	punct	_	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	_	_
@@ -153,7 +153,7 @@
 17	broke	broke	ADJ	JJ	Degree=Pos	5	parataxis	_	_
 18	on	on	ADP	IN	_	20	case	_	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	_	_
-20	headboard	headboard	NOUN	NN	Number=Sing	17	nmod	_	SpaceAfter=No
+20	headboard	headboard	NOUN	NN	Number=Sing	17	obl	_	SpaceAfter=No
 21	;	;	PUNCT	,	_	17	punct	_	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	_	_
 23	chest	chest	NOUN	NN	Number=Sing	27	nsubj	_	_
@@ -163,36 +163,36 @@
 27	missing	miss	VERB	VBG	Tense=Pres|VerbForm=Part	17	conj	_	_
 28	all	all	DET	PDT	_	30	det:predet	_	_
 29	four	four	NUM	CD	NumType=Card	30	nummod	_	_
-30	pieces	piece	NOUN	NNS	Number=Plur	27	dobj	_	_
+30	pieces	piece	NOUN	NNS	Number=Plur	27	obj	_	_
 31	necessary	necessary	ADJ	JJ	Degree=Pos	30	amod	_	_
 32	to	to	PART	TO	_	33	mark	_	_
 33	attach	attach	VERB	VB	VerbForm=Inf	31	advcl	_	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	_	_
-35	legs	leg	NOUN	NNS	Number=Plur	33	dobj	_	SpaceAfter=No
+35	legs	leg	NOUN	NNS	Number=Plur	33	obj	_	SpaceAfter=No
 36	;	;	PUNCT	,	_	17	punct	_	_
 37	the	the	DET	DT	Definite=Def|PronType=Art	40	det	_	_
 38	dresser	dresser	NOUN	NN	Number=Sing	40	compound	_	_
 39	back	back	ADJ	JJ	Degree=Pos	40	amod	_	_
-40	legs	leg	NOUN	NNS	Number=Plur	42	nsubjpass	_	_
-41	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	42	auxpass	_	_
+40	legs	leg	NOUN	NNS	Number=Plur	42	nsubj:pass	_	_
+41	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	42	aux:pass	_	_
 42	pushed	push	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	17	conj	_	_
 43	in	in	ADP	RP	_	42	compound:prt	_	_
 44	causing	cause	VERB	VBG	VerbForm=Ger	42	advcl	_	_
 45	the	the	DET	DT	Definite=Def|PronType=Art	46	det	_	_
-46	dresser	dresser	NOUN	NN	Number=Sing	44	dobj	_	_
+46	dresser	dresser	NOUN	NN	Number=Sing	44	obj	_	_
 47	to	to	PART	TO	_	48	mark	_	_
 48	lean	lean	VERB	VB	VerbForm=Inf	44	xcomp	_	_
 49	into	into	ADP	IN	_	51	case	_	_
 50	the	the	DET	DT	Definite=Def|PronType=Art	51	det	_	_
-51	wall	wall	NOUN	NN	Number=Sing	48	nmod	_	SpaceAfter=No
+51	wall	wall	NOUN	NN	Number=Sing	48	obl	_	SpaceAfter=No
 52	;	;	PUNCT	,	_	17	punct	_	_
-53	and	and	CONJ	CC	_	17	cc	_	_
+53	and	and	CCONJ	CC	_	57	cc	_	_
 54	a	a	DET	DT	Definite=Ind|PronType=Art	55	det	_	_
 55	nighstand	nighstand	NOUN	NN	Number=Sing	57	nsubj	_	_
 56	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	57	aux	_	_
 57	missing	miss	VERB	VBG	Tense=Pres|VerbForm=Part	17	conj	_	_
 58	a	a	DET	DT	Definite=Ind|PronType=Art	59	det	_	_
-59	drawer	drawer	NOUN	NN	Number=Sing	57	dobj	_	SpaceAfter=No
+59	drawer	drawer	NOUN	NN	Number=Sing	57	obj	_	SpaceAfter=No
 60	.	.	PUNCT	.	_	5	punct	_	_
 
 # sentence-text: How do you lose a drawer.
@@ -201,27 +201,27 @@
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
 4	lose	lose	VERB	VB	VerbForm=Inf	0	root	_	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
-6	drawer	drawer	NOUN	NN	Number=Sing	4	dobj	_	SpaceAfter=No
+6	drawer	drawer	NOUN	NN	Number=Sing	4	obj	_	SpaceAfter=No
 7	.	.	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: After complaining on September 10th to National Home Furnishings, Boyles, the Hickory Furniture Mart and Home Delivery Service the latter finally called me back and said they would be up to pick the dresser and chest of drawers at some future point and at some later point it would be professional repaired and at some later point it would be returned.
 1	After	after	SCONJ	IN	_	2	mark	_	_
 2	complaining	complain	VERB	VBG	VerbForm=Ger	24	advcl	_	_
 3	on	on	ADP	IN	_	4	case	_	_
-4	September	September	PROPN	NNP	Number=Sing	2	nmod	_	_
+4	September	September	PROPN	NNP	Number=Sing	2	obl	_	_
 5	10th	10th	NOUN	NN	Number=Sing	4	nummod	_	_
 6	to	to	ADP	IN	_	9	case	_	_
 7	National	National	PROPN	NNP	Number=Sing	9	compound	_	_
 8	Home	Home	PROPN	NNP	Number=Sing	9	compound	_	_
-9	Furnishings	Furnishings	PROPN	NNP	Number=Sing	2	nmod	_	SpaceAfter=No
-10	,	,	PUNCT	,	_	9	punct	_	_
+9	Furnishings	Furnishings	PROPN	NNP	Number=Sing	2	obl	_	SpaceAfter=No
+10	,	,	PUNCT	,	_	11	punct	_	_
 11	Boyles	Boyles	PROPN	NNPS	Number=Plur	9	conj	_	SpaceAfter=No
-12	,	,	PUNCT	,	_	9	punct	_	_
+12	,	,	PUNCT	,	_	16	punct	_	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
 14	Hickory	Hickory	PROPN	NNP	Number=Sing	16	compound	_	_
 15	Furniture	Furniture	PROPN	NNP	Number=Sing	16	compound	_	_
 16	Mart	Mart	PROPN	NNP	Number=Sing	9	conj	_	_
-17	and	and	CONJ	CC	_	9	cc	_	_
+17	and	and	CCONJ	CC	_	20	cc	_	_
 18	Home	Home	PROPN	NNP	Number=Sing	20	compound	_	_
 19	Delivery	Delivery	PROPN	NNP	Number=Sing	20	compound	_	_
 20	Service	Service	PROPN	NNP	Number=Sing	9	conj	_	_
@@ -229,9 +229,9 @@
 22	latter	latter	ADJ	JJ	Degree=Pos	24	nsubj	_	_
 23	finally	finally	ADV	RB	_	24	advmod	_	_
 24	called	call	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-25	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	24	dobj	_	_
+25	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	24	obj	_	_
 26	back	back	ADV	RB	_	24	advmod	_	_
-27	and	and	CONJ	CC	_	24	cc	_	_
+27	and	and	CCONJ	CC	_	28	cc	_	_
 28	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	24	conj	_	_
 29	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	31	nsubj	_	_
 30	would	would	AUX	MD	VerbForm=Fin	31	aux	_	_
@@ -240,33 +240,33 @@
 33	to	to	PART	TO	_	34	mark	_	_
 34	pick	pick	VERB	VB	VerbForm=Inf	31	advcl	_	_
 35	the	the	DET	DT	Definite=Def|PronType=Art	36	det	_	_
-36	dresser	dresser	NOUN	NN	Number=Sing	34	dobj	_	_
-37	and	and	CONJ	CC	_	36	cc	_	_
+36	dresser	dresser	NOUN	NN	Number=Sing	34	obj	_	_
+37	and	and	CCONJ	CC	_	38	cc	_	_
 38	chest	chest	NOUN	NN	Number=Sing	36	conj	_	_
 39	of	of	ADP	IN	_	40	case	_	_
 40	drawers	drawer	NOUN	NNS	Number=Plur	38	nmod	_	_
 41	at	at	ADP	IN	_	44	case	_	_
 42	some	some	DET	DT	_	44	det	_	_
 43	future	future	ADJ	JJ	Degree=Pos	44	amod	_	_
-44	point	point	NOUN	NN	Number=Sing	34	nmod	_	_
-45	and	and	CONJ	CC	_	31	cc	_	_
+44	point	point	NOUN	NN	Number=Sing	34	obl	_	_
+45	and	and	CCONJ	CC	_	54	cc	_	_
 46	at	at	ADP	IN	_	49	case	_	_
 47	some	some	DET	DT	_	49	det	_	_
 48	later	later	ADJ	JJR	Degree=Cmp	49	amod	_	_
-49	point	point	NOUN	NN	Number=Sing	54	nmod	_	_
-50	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	54	nsubjpass	_	_
+49	point	point	NOUN	NN	Number=Sing	54	obl	_	_
+50	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	54	nsubj:pass	_	_
 51	would	would	AUX	MD	VerbForm=Fin	54	aux	_	_
-52	be	be	AUX	VB	VerbForm=Inf	54	auxpass	_	_
+52	be	be	AUX	VB	VerbForm=Inf	54	aux:pass	_	_
 53	professional	professional	ADV	RB	_	54	advmod	_	_
 54	repaired	repair	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	31	conj	_	_
-55	and	and	CONJ	CC	_	31	cc	_	_
+55	and	and	CCONJ	CC	_	63	cc	_	_
 56	at	at	ADP	IN	_	59	case	_	_
 57	some	some	DET	DT	_	59	det	_	_
 58	later	later	ADJ	JJR	Degree=Cmp	59	amod	_	_
-59	point	point	NOUN	NN	Number=Sing	63	nmod	_	_
-60	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	63	nsubjpass	_	_
+59	point	point	NOUN	NN	Number=Sing	63	obl	_	_
+60	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	63	nsubj:pass	_	_
 61	would	would	AUX	MD	VerbForm=Fin	63	aux	_	_
-62	be	be	AUX	VB	VerbForm=Inf	63	auxpass	_	_
+62	be	be	AUX	VB	VerbForm=Inf	63	aux:pass	_	_
 63	returned	return	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	31	conj	_	SpaceAfter=No
 64	.	.	PUNCT	.	_	24	punct	_	_
 
@@ -280,15 +280,15 @@
 7	Service	Service	PROPN	NNP	Number=Sing	3	nmod	_	_
 8	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	_	_
 9	terrible	terrible	ADJ	JJ	Degree=Pos	0	root	_	_
-10	let	let	VERB	VB	VerbForm=Inf	9	cc	_	_
-11	alone	alone	ADV	RB	_	10	mwe	_	_
+10	let	let	VERB	VB	VerbForm=Inf	13	cc	_	_
+11	alone	alone	ADV	RB	_	10	fixed	_	_
 12	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	_	_
 13	promise	promise	NOUN	NN	Number=Sing	9	conj	_	_
 14	to	to	PART	TO	_	16	mark	_	_
 15	proper	proper	ADV	RB	_	16	advmod	_	_
 16	set	set	VERB	VB	VerbForm=Inf	13	acl	_	_
 17	up	up	ADP	RP	_	16	compound:prt	_	_
-18	furniture	furniture	NOUN	NN	Number=Sing	16	dobj	_	SpaceAfter=No
+18	furniture	furniture	NOUN	NN	Number=Sing	16	obj	_	SpaceAfter=No
 19	.	.	PUNCT	.	_	9	punct	_	_
 
 # sentence-text: So I am in limbo regarding a bedroom suite.
@@ -300,7 +300,7 @@
 6	regarding	regard	VERB	VBG	VerbForm=Ger	9	case	_	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
 8	bedroom	bedroom	NOUN	NN	Number=Sing	9	compound	_	_
-9	suite	suite	NOUN	NN	Number=Sing	5	nmod	_	SpaceAfter=No
+9	suite	suite	NOUN	NN	Number=Sing	5	nmod	_	SpaceAfter=No|ManualCheck=Yes
 10	.	.	PUNCT	.	_	5	punct	_	_
 
 # sentence-text: I hope the owners and employees of this store have broken bedroom suites in their homes and furniture sitting in someone's warehouse.
@@ -308,7 +308,7 @@
 2	hope	hope	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
 4	owners	owner	NOUN	NNS	Number=Plur	10	nsubj	_	_
-5	and	and	CONJ	CC	_	4	cc	_	_
+5	and	and	CCONJ	CC	_	6	cc	_	_
 6	employees	employee	NOUN	NNS	Number=Plur	4	conj	_	_
 7	of	of	ADP	IN	_	9	case	_	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	_	_
@@ -316,17 +316,17 @@
 10	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	ccomp	_	_
 11	broken	break	VERB	VBN	Tense=Past|VerbForm=Part	13	amod	_	_
 12	bedroom	bedroom	NOUN	NN	Number=Sing	13	compound	_	_
-13	suites	suite	NOUN	NNS	Number=Plur	10	dobj	_	_
+13	suites	suite	NOUN	NNS	Number=Plur	10	obj	_	_
 14	in	in	ADP	IN	_	16	case	_	_
 15	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	_	_
 16	homes	home	NOUN	NNS	Number=Plur	13	nmod	_	_
-17	and	and	CONJ	CC	_	13	cc	_	_
+17	and	and	CCONJ	CC	_	18	cc	_	_
 18	furniture	furniture	ADJ	JJ	Degree=Pos	13	conj	_	_
 19	sitting	sit	VERB	VBG	VerbForm=Ger	18	acl	_	_
 20	in	in	ADP	IN	_	23	case	_	_
 21	someone	someone	PRON	NN	Number=Sing	23	nmod:poss	_	SpaceAfter=No
 22	's	's	PART	POS	_	21	case	_	_
-23	warehouse	warehouse	NOUN	NN	Number=Sing	19	nmod	_	SpaceAfter=No
+23	warehouse	warehouse	NOUN	NN	Number=Sing	19	obl	_	SpaceAfter=No
 24	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: Maybe then they will begin to understand poor customer service and terrible sit up service.
@@ -339,8 +339,8 @@
 7	understand	understand	VERB	VB	VerbForm=Inf	5	xcomp	_	_
 8	poor	poor	ADJ	JJ	Degree=Pos	10	amod	_	_
 9	customer	customer	NOUN	NN	Number=Sing	10	compound	_	_
-10	service	service	NOUN	NN	Number=Sing	7	dobj	_	_
-11	and	and	CONJ	CC	_	10	cc	_	_
+10	service	service	NOUN	NN	Number=Sing	7	obj	_	_
+11	and	and	CCONJ	CC	_	15	cc	_	_
 12	terrible	terrible	ADJ	JJ	Degree=Pos	15	amod	_	_
 13	sit	sit	VERB	VB	VerbForm=Inf	15	amod	_	_
 14	up	up	ADP	RP	_	13	compound:prt	_	_

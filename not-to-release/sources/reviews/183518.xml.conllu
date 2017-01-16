@@ -8,7 +8,7 @@
 1	For	for	ADP	IN	_	4	case	_	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
 3	long	long	ADJ	JJ	Degree=Pos	4	amod	_	_
-4	time	time	NOUN	NN	Number=Sing	22	nmod	_	SpaceAfter=No
+4	time	time	NOUN	NN	Number=Sing	22	nmod	_	SpaceAfter=No|ManualCheck=Yes
 5	,	,	PUNCT	,	_	22	punct	_	_
 6	one	one	NUM	CD	NumType=Card	8	nummod	_	_
 7	big	big	ADJ	JJ	Degree=Pos	8	amod	_	_
@@ -20,7 +20,7 @@
 13	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
 14	Richmond	Richmond	PROPN	NNP	Number=Sing	16	compound	_	_
 15	City	city	NOUN	NN	Number=Sing	16	compound	_	_
-16	Limits	limit	NOUN	NNS	Number=Plur	11	nmod	_	_
+16	Limits	limit	NOUN	NNS	Number=Plur	11	obl	_	_
 17	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	cop	_	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	_	_
 19	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	21	amod	_	SpaceAfter=No
@@ -34,7 +34,7 @@
 2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	_
 3	filled	fill	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
 4	that	that	DET	DT	Number=Sing|PronType=Dem	5	det	_	_
-5	role	role	NOUN	NN	Number=Sing	3	dobj	_	_
+5	role	role	NOUN	NN	Number=Sing	3	obj	_	_
 6	nicely	nicely	ADV	RB	_	3	advmod	_	SpaceAfter=No
 7	.	.	PUNCT	.	_	3	punct	_	_
 
@@ -57,7 +57,7 @@
 16	the	the	DET	DT	Definite=Def|PronType=Art	19	det	_	_
 17	Flying	Flying	PROPN	NNP	Number=Sing	18	compound	_	_
 18	Squirrels	Squirrels	PROPN	NNPS	Number=Plur	19	compound	_	_
-19	stadium	stadium	NOUN	NN	Number=Sing	14	nmod	_	SpaceAfter=No
+19	stadium	stadium	NOUN	NN	Number=Sing	14	obl	_	SpaceAfter=No
 20	.	.	PUNCT	.	_	8	punct	_	_
 
 # sentence-text: The owners of Bowtie manged to add something new while preserving what was already there.
@@ -68,11 +68,11 @@
 5	manged	mang	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
 6	to	to	PART	TO	_	7	mark	_	_
 7	add	add	VERB	VB	VerbForm=Inf	5	xcomp	_	_
-8	something	something	PRON	NN	Number=Sing	7	dobj	_	_
+8	something	something	PRON	NN	Number=Sing	7	obj	_	_
 9	new	new	ADJ	JJ	Degree=Pos	8	amod	_	_
 10	while	while	SCONJ	IN	_	11	mark	_	_
 11	preserving	preserve	VERB	VBG	VerbForm=Ger	7	advcl	_	_
-12	what	what	PRON	WP	PronType=Int	11	dobj	_	_
+12	what	what	PRON	WP	PronType=Int	11	obj	_	_
 13	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	_	_
 14	already	already	ADV	RB	_	15	advmod	_	_
 15	there	there	ADV	RB	PronType=Dem	12	acl:relcl	_	SpaceAfter=No
@@ -86,7 +86,7 @@
 5	improved	improve	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
 7	surrounding	surround	VERB	VBG	VerbForm=Ger	8	amod	_	_
-8	neighborhood	neighborhood	NOUN	NN	Number=Sing	5	dobj	_	SpaceAfter=No
+8	neighborhood	neighborhood	NOUN	NN	Number=Sing	5	obj	_	SpaceAfter=No
 9	.	.	PUNCT	.	_	5	punct	_	_
 
 # sentence-text: There's plenty of parking, and I've never had an issue with audience members who won't stop talking or answering their cellphones.
@@ -95,36 +95,36 @@
 3	plenty	plenty	NOUN	NN	Number=Sing	2	nsubj	_	_
 4	of	of	ADP	IN	_	5	case	_	_
 5	parking	parking	NOUN	NN	Number=Sing	3	nmod	_	SpaceAfter=No
-6	,	,	PUNCT	,	_	2	punct	_	_
-7	and	and	CONJ	CC	_	2	cc	_	_
+6	,	,	PUNCT	,	_	11	punct	_	_
+7	and	and	CCONJ	CC	_	11	cc	_	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	SpaceAfter=No
 9	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	aux	_	_
-10	never	never	ADV	RB	_	11	neg	_	_
+10	never	never	ADV	RB	_	11	advmod	_	_
 11	had	have	VERB	VBN	Tense=Past|VerbForm=Part	2	conj	_	_
 12	an	a	DET	DT	Definite=Ind|PronType=Art	13	det	_	_
-13	issue	issue	NOUN	NN	Number=Sing	11	dobj	_	_
+13	issue	issue	NOUN	NN	Number=Sing	11	obj	_	_
 14	with	with	ADP	IN	_	16	case	_	_
 15	audience	audience	NOUN	NN	Number=Sing	16	compound	_	_
 16	members	member	NOUN	NNS	Number=Plur	13	nmod	_	_
 17	who	who	PRON	WP	PronType=Rel	20	nsubj	_	_
 18	wo	will	AUX	MD	VerbForm=Fin	20	aux	_	SpaceAfter=No
-19	n't	not	PART	RB	_	20	neg	_	_
+19	n't	not	PART	RB	_	20	advmod	_	_
 20	stop	stop	VERB	VB	VerbForm=Inf	16	acl:relcl	_	_
 21	talking	talk	VERB	VBG	VerbForm=Ger	20	xcomp	_	_
-22	or	or	CONJ	CC	_	21	cc	_	_
+22	or	or	CCONJ	CC	_	23	cc	_	_
 23	answering	answer	VERB	VBG	VerbForm=Ger	21	conj	_	_
 24	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	25	nmod:poss	_	_
-25	cellphones	cellphone	NOUN	NNS	Number=Plur	23	dobj	_	SpaceAfter=No
+25	cellphones	cellphone	NOUN	NNS	Number=Plur	23	obj	_	SpaceAfter=No
 26	.	.	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: Best of all, there are no ads!!!!!
 1	Best	best	ADV	RBS	Degree=Sup	6	advmod	_	_
 2	of	of	ADP	IN	_	3	case	_	_
-3	all	all	DET	DT	_	1	nmod	_	SpaceAfter=No
+3	all	all	DET	DT	_	1	obl	_	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	_	_
 5	there	there	PRON	EX	_	6	expl	_	_
 6	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-7	no	no	DET	DT	_	8	neg	_	_
+7	no	no	DET	DT	_	8	det	_	_
 8	ads	ad	NOUN	NNS	Number=Plur	6	nsubj	_	SpaceAfter=No
 9	!!!!	!!!!	PUNCT	.	_	6	punct	_	SpaceAfter=No
 10	!	!	PUNCT	.	_	6	punct	_	_
@@ -132,7 +132,7 @@
 # sentence-text: Just previews and the main feature.
 1	Just	just	ADV	RB	_	2	advmod	_	_
 2	previews	preview	NOUN	NNS	Number=Plur	0	root	_	_
-3	and	and	CONJ	CC	_	2	cc	_	_
+3	and	and	CCONJ	CC	_	6	cc	_	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
 5	main	main	ADJ	JJ	Degree=Pos	6	amod	_	_
 6	feature	feature	NOUN	NN	Number=Sing	2	conj	_	SpaceAfter=No
@@ -143,9 +143,9 @@
 2	to	to	PART	TO	_	3	mark	_	_
 3	pay	pay	VERB	VB	VerbForm=Inf	1	xcomp	_	_
 4	full	full	ADJ	JJ	Degree=Pos	5	amod	_	_
-5	price	price	NOUN	NN	Number=Sing	3	dobj	_	SpaceAfter=No
-6	,	,	PUNCT	,	_	1	punct	_	_
-7	and	and	CONJ	CC	_	1	cc	_	_
+5	price	price	NOUN	NN	Number=Sing	3	obj	_	SpaceAfter=No
+6	,	,	PUNCT	,	_	15	punct	_	_
+7	and	and	CCONJ	CC	_	15	cc	_	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
 9	theatres	theatre	NOUN	NNS	Number=Plur	15	nsubj	_	_
 10	themselves	themselves	PRON	PRP	Number=Plur|Person=3|PronType=Prs	9	nmod:npmod	_	_
@@ -157,19 +157,19 @@
 16	.	.	PUNCT	.	_	1	punct	_	_
 
 # sentence-text: But if you like going to the movies, you should love Bowtie.
-1	But	but	CONJ	CC	_	12	cc	_	_
+1	But	but	CCONJ	CC	_	12	cc	_	_
 2	if	if	SCONJ	IN	_	4	mark	_	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
 4	like	like	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	advcl	_	_
 5	going	go	VERB	VBG	VerbForm=Ger	4	xcomp	_	_
 6	to	to	ADP	IN	_	8	case	_	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
-8	movies	movie	NOUN	NNS	Number=Plur	5	nmod	_	SpaceAfter=No
+8	movies	movie	NOUN	NNS	Number=Plur	5	obl	_	SpaceAfter=No
 9	,	,	PUNCT	,	_	12	punct	_	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	_	_
 11	should	should	AUX	MD	VerbForm=Fin	12	aux	_	_
 12	love	love	VERB	VB	VerbForm=Inf	0	root	_	_
-13	Bowtie	Bowtie	PROPN	NNP	Number=Sing	12	dobj	_	SpaceAfter=No
+13	Bowtie	Bowtie	PROPN	NNP	Number=Sing	12	obj	_	SpaceAfter=No
 14	.	.	PUNCT	.	_	12	punct	_	_
 
 # sentence-text: The mangers also play a classic movies on Sundays, you can get a beer in the lobby, and repeat customers can get discounts if they have a member card.
@@ -179,31 +179,31 @@
 4	play	play	VERB	VB	VerbForm=Inf	0	root	_	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
 6	classic	classic	ADJ	JJ	Degree=Pos	7	amod	_	_
-7	movies	movie	NOUN	NNS	Number=Plur	4	dobj	_	_
+7	movies	movie	NOUN	NNS	Number=Plur	4	obj	_	_
 8	on	on	ADP	IN	_	9	case	_	_
-9	Sundays	Sundays	PROPN	NNPS	Number=Plur	4	nmod	_	SpaceAfter=No
-10	,	,	PUNCT	,	_	4	punct	_	_
+9	Sundays	Sundays	PROPN	NNPS	Number=Plur	4	obl	_	SpaceAfter=No
+10	,	,	PUNCT	,	_	24	punct	_	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	_	_
 12	can	can	AUX	MD	VerbForm=Fin	13	aux	_	_
 13	get	get	VERB	VB	VerbForm=Inf	4	parataxis	_	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	_	_
-15	beer	beer	NOUN	NN	Number=Sing	13	dobj	_	_
+15	beer	beer	NOUN	NN	Number=Sing	13	obj	_	_
 16	in	in	ADP	IN	_	18	case	_	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
-18	lobby	lobby	NOUN	NN	Number=Sing	13	nmod	_	SpaceAfter=No
-19	,	,	PUNCT	,	_	4	punct	_	_
-20	and	and	CONJ	CC	_	4	cc	_	_
+18	lobby	lobby	NOUN	NN	Number=Sing	13	obl	_	SpaceAfter=No
+19	,	,	PUNCT	,	_	24	punct	_	_
+20	and	and	CCONJ	CC	_	24	cc	_	_
 21	repeat	repeat	ADJ	JJ	Degree=Pos	22	amod	_	_
 22	customers	customer	NOUN	NNS	Number=Plur	24	nsubj	_	_
 23	can	can	AUX	MD	VerbForm=Fin	24	aux	_	_
 24	get	get	VERB	VB	VerbForm=Inf	4	conj	_	_
-25	discounts	discount	NOUN	NNS	Number=Plur	24	dobj	_	_
+25	discounts	discount	NOUN	NNS	Number=Plur	24	obj	_	_
 26	if	if	SCONJ	IN	_	28	mark	_	_
 27	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	28	nsubj	_	_
 28	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	24	advcl	_	_
 29	a	a	DET	DT	Definite=Ind|PronType=Art	31	det	_	_
 30	member	member	NOUN	NN	Number=Sing	31	compound	_	_
-31	card	card	NOUN	NN	Number=Sing	28	dobj	_	SpaceAfter=No
+31	card	card	NOUN	NN	Number=Sing	28	obj	_	SpaceAfter=No
 32	.	.	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: A great cinema in a great location.
@@ -218,8 +218,8 @@
 
 # sentence-text: Thank you, Bowtie!
 1	Thank	thank	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-2	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	dobj	_	SpaceAfter=No
+2	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	obj	_	SpaceAfter=No
 3	,	,	PUNCT	,	_	1	punct	_	_
-4	Bowtie	Bowtie	PROPN	NNP	Number=Sing	1	dobj	_	SpaceAfter=No
+4	Bowtie	Bowtie	PROPN	NNP	Number=Sing	1	obj	_	SpaceAfter=No
 5	!	!	PUNCT	.	_	1	punct	_	_
 

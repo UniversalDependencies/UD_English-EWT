@@ -13,15 +13,15 @@
 # sentence-text: "In Argentina, beef is revered, respected, and praised.
 1	"	"	PUNCT	``	_	7	punct	_	SpaceAfter=No
 2	In	in	ADP	IN	_	3	case	_	_
-3	Argentina	Argentina	PROPN	NNP	Number=Sing	7	nmod	_	SpaceAfter=No
-4	,	,	PUNCT	,	_	7	punct	_	_
-5	beef	beef	NOUN	NN	Number=Sing	7	nsubjpass	_	_
-6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	auxpass	_	_
+3	Argentina	Argentina	PROPN	NNP	Number=Sing	7	obl	_	SpaceAfter=No
+4	,	,	PUNCT	,	_	9	punct	_	_
+5	beef	beef	NOUN	NN	Number=Sing	7	nsubj:pass	_	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux:pass	_	_
 7	revered	revere	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	SpaceAfter=No
-8	,	,	PUNCT	,	_	7	punct	_	_
+8	,	,	PUNCT	,	_	9	punct	_	_
 9	respected	respect	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	_	SpaceAfter=No
-10	,	,	PUNCT	,	_	7	punct	_	_
-11	and	and	CONJ	CC	_	7	cc	_	_
+10	,	,	PUNCT	,	_	12	punct	_	_
+11	and	and	CCONJ	CC	_	12	cc	_	_
 12	praised	praise	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	_	SpaceAfter=No
 13	.	.	PUNCT	.	_	7	punct	_	_
 
@@ -32,7 +32,7 @@
 4	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	_	_
 5	continue	continue	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	ccomp	_	_
 6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	_	_
-7	tradition	tradition	NOUN	NN	Number=Sing	5	dobj	_	SpaceAfter=No
+7	tradition	tradition	NOUN	NN	Number=Sing	5	obj	_	SpaceAfter=No
 8	.	.	PUNCT	.	_	1	punct	_	SpaceAfter=No
 9	"	"	PUNCT	''	_	1	punct	_	_
 
@@ -51,7 +51,7 @@
 5	that	that	PRON	WDT	PronType=Rel	6	nsubj	_	_
 6	discuss	discuss	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	acl:relcl	_	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
-8	details	detail	NOUN	NNS	Number=Plur	6	dobj	_	_
+8	details	detail	NOUN	NNS	Number=Plur	6	obj	_	_
 9	of	of	ADP	IN	_	11	case	_	_
 10	slogan	slogan	NOUN	NN	Number=Sing	11	compound	_	_
 11	writing	writing	NOUN	NN	Number=Sing	8	nmod	_	SpaceAfter=No
@@ -62,24 +62,24 @@
 2	certain	certain	ADJ	JJ	Degree=Pos	3	amod	_	_
 3	slogans	slogan	NOUN	NNS	Number=Plur	4	nsubj	_	_
 4	work	work	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-5	and	and	CONJ	CC	_	4	cc	_	_
+5	and	and	CCONJ	CC	_	8	cc	_	_
 6	why	why	ADV	WRB	PronType=Int	8	advmod	_	_
 7	some	some	DET	DT	_	8	nsubj	_	_
 8	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	_	SpaceAfter=No
-9	n't	not	PART	RB	_	8	neg	_	SpaceAfter=No
+9	n't	not	PART	RB	_	8	advmod	_	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	_	_
 
 # sentence-text: You will find these helpful in writing a new slogan.
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
 2	will	will	AUX	MD	VerbForm=Fin	3	aux	_	_
 3	find	find	VERB	VB	VerbForm=Inf	0	root	_	_
-4	these	these	PRON	DT	Number=Plur|PronType=Dem	3	dobj	_	_
+4	these	these	PRON	DT	Number=Plur|PronType=Dem	3	obj	_	_
 5	helpful	helpful	ADJ	JJ	Degree=Pos	3	xcomp	_	_
 6	in	in	SCONJ	IN	_	7	mark	_	_
 7	writing	write	VERB	VBG	VerbForm=Ger	5	advcl	_	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
 9	new	new	ADJ	JJ	Degree=Pos	10	amod	_	_
-10	slogan	slogan	NOUN	NN	Number=Sing	7	dobj	_	SpaceAfter=No
+10	slogan	slogan	NOUN	NN	Number=Sing	7	obj	_	SpaceAfter=No
 11	.	.	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: A Look at Slogans - http://www.small-business-software.net/look-at-slogans.htm
@@ -103,7 +103,7 @@
 3	!	!	PUNCT	.	_	2	punct	_	_
 
 # sentence-text: No Mad Cow - - - Guaranteed!
-1	No	no	DET	DT	_	3	neg	_	_
+1	No	no	DET	DT	_	3	det	_	_
 2	Mad	mad	ADJ	JJ	Degree=Pos	3	amod	_	_
 3	Cow	cow	NOUN	NN	Number=Sing	0	root	_	_
 4	---	---	PUNCT	,	_	3	punct	_	_

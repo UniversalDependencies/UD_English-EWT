@@ -23,7 +23,7 @@
 11	through	through	ADP	IN	_	14	case	_	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
 13	majestic	majestic	ADJ	JJ	Degree=Pos	14	amod	_	_
-14	fields	field	NOUN	NNS	Number=Plur	10	nmod	_	_
+14	fields	field	NOUN	NNS	Number=Plur	10	obl	_	_
 15	of	of	ADP	IN	_	18	case	_	_
 16	this	this	DET	DT	Number=Sing|PronType=Dem	18	det	_	_
 17	particular	particular	ADJ	JJ	Degree=Pos	18	amod	_	_
@@ -37,7 +37,7 @@
 4	in	in	ADP	IN	_	6	case	_	_
 5	magnificent	magnificent	ADJ	JJ	Degree=Pos	6	amod	_	_
 6	shape	shape	NOUN	NN	Number=Sing	0	root	_	_
-7	and	and	CONJ	CC	_	6	cc	_	_
+7	and	and	CCONJ	CC	_	11	cc	_	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
 9	variety	variety	NOUN	NN	Number=Sing	11	nsubj	_	_
 10	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	_	_
@@ -49,7 +49,7 @@
 2	owners	owner	NOUN	NNS	Number=Plur	4	nsubj	_	_
 3	were	be	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	cop	_	_
 4	entertaining	entertaining	ADJ	JJ	Degree=Pos	0	root	_	_
-5	and	and	CONJ	CC	_	4	cc	_	_
+5	and	and	CCONJ	CC	_	6	cc	_	_
 6	gracious	gracious	ADJ	JJ	Degree=Pos	4	conj	_	SpaceAfter=No
 7	.	.	PUNCT	.	_	4	punct	_	_
 
@@ -60,8 +60,8 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
 5	Eco	eco	X	AFX	_	6	nmod:npmod	_	_
 6	friendly	friendly	ADJ	JJ	Degree=Pos	7	amod	_	_
-7	atmosphere	atmosphere	NOUN	NN	Number=Sing	3	dobj	_	_
-8	and	and	CONJ	CC	_	7	cc	_	_
+7	atmosphere	atmosphere	NOUN	NN	Number=Sing	3	obj	_	_
+8	and	and	CCONJ	CC	_	12	cc	_	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
 10	owner	owner	NOUN	NN	Number=Sing	12	nmod:poss	_	SpaceAfter=No
 11	s	s	PART	POS	_	10	case	_	_
@@ -78,19 +78,19 @@
 4	of	of	ADP	IN	_	7	case	_	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
 6	best	best	ADJ	JJS	Degree=Sup	7	amod	_	_
-7	farms	farm	NOUN	NNS	Number=Plur	3	nmod	_	_
+7	farms	farm	NOUN	NNS	Number=Plur	3	nmod	_	ManualCheck=Yes
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 9	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	aux	_	_
 10	ever	ever	ADV	RB	_	11	advmod	_	_
 11	been	be	VERB	VBN	Tense=Past|VerbForm=Part	7	acl:relcl	_	_
-12	too	too	ADP	IN	_	11	nmod	_	SpaceAfter=No
+12	too	too	ADP	IN	_	11	obl	_	SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: I would call it the Taj Mahal of the east coast!
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	_	_
 3	call	call	VERB	VB	VerbForm=Inf	0	root	_	_
-4	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	dobj	_	_
+4	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	obj	_	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
 6	Taj	Taj	PROPN	NNP	Number=Sing	7	compound	_	_
 7	Mahal	Mahal	PROPN	NNP	Number=Sing	3	xcomp	_	_
@@ -103,11 +103,11 @@
 # sentence-text: It put hair on my chest and thanks to the owners advice I invested vanguard, got myself a woman like Jerry, and became a republican.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	_
 2	put	put	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-3	hair	hair	NOUN	NN	Number=Sing	2	dobj	_	_
+3	hair	hair	NOUN	NN	Number=Sing	2	obj	_	_
 4	on	on	ADP	IN	_	6	case	_	_
 5	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	_	_
-6	chest	chest	NOUN	NN	Number=Sing	2	nmod	_	_
-7	and	and	CONJ	CC	_	2	cc	_	_
+6	chest	chest	NOUN	NN	Number=Sing	2	obl	_	_
+7	and	and	CCONJ	CC	_	15	cc	_	_
 8	thanks	thanks	NOUN	NN	Number=Sing	15	nmod:npmod	_	_
 9	to	to	ADP	IN	_	13	case	_	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
@@ -116,16 +116,16 @@
 13	advice	advice	NOUN	NN	Number=Sing	8	nmod	_	_
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	_	_
 15	invested	invest	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	_	_
-16	vanguard	vanguard	PROPN	NNP	Number=Sing	15	dobj	_	SpaceAfter=No
-17	,	,	PUNCT	,	_	15	punct	_	_
+16	vanguard	vanguard	PROPN	NNP	Number=Sing	15	obj	_	SpaceAfter=No
+17	,	,	PUNCT	,	_	18	punct	_	_
 18	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	conj	_	_
 19	myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs|Reflex=Yes	18	iobj	_	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	_	_
-21	woman	woman	NOUN	NN	Number=Sing	18	dobj	_	_
+21	woman	woman	NOUN	NN	Number=Sing	18	obj	_	_
 22	like	like	ADP	IN	_	23	case	_	_
 23	Jerry	Jerry	PROPN	NNP	Number=Sing	21	nmod	_	SpaceAfter=No
-24	,	,	PUNCT	,	_	15	punct	_	_
-25	and	and	CONJ	CC	_	15	cc	_	_
+24	,	,	PUNCT	,	_	26	punct	_	_
+25	and	and	CCONJ	CC	_	26	cc	_	_
 26	became	become	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	conj	_	_
 27	a	a	DET	DT	Definite=Ind|PronType=Art	28	det	_	_
 28	republican	republican	PROPN	NNP	Number=Sing	26	xcomp	_	SpaceAfter=No

@@ -1,7 +1,7 @@
 # sentence-text: Average food and deathly slow service
 1	Average	average	ADJ	JJ	Degree=Pos	2	amod	_	_
 2	food	food	NOUN	NN	Number=Sing	0	root	_	_
-3	and	and	CONJ	CC	_	2	cc	_	_
+3	and	and	CCONJ	CC	_	6	cc	_	_
 4	deathly	deathly	ADV	RB	_	5	advmod	_	_
 5	slow	slow	ADJ	JJ	Degree=Pos	6	amod	_	_
 6	service	service	NOUN	NN	Number=Sing	2	conj	_	_
@@ -13,7 +13,7 @@
 4	here	here	ADV	RB	PronType=Dem	3	advmod	_	_
 5	several	several	ADJ	JJ	Degree=Pos	6	amod	_	_
 6	times	time	NOUN	NNS	Number=Plur	3	nmod:tmod	_	_
-7	and	and	CONJ	CC	_	3	cc	_	_
+7	and	and	CCONJ	CC	_	13	cc	_	_
 8	every	every	DET	DT	_	9	det	_	SpaceAfter=No
 9	time	time	NOUN	NN	Number=Sing	13	nmod:tmod	_	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
@@ -21,7 +21,7 @@
 12	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	_	_
 13	slower	slower	ADJ	JJR	Degree=Cmp	3	conj	_	_
 14	than	than	ADP	IN	_	15	case	_	_
-15	slow	slow	ADJ	JJ	Degree=Pos	13	nmod	_	SpaceAfter=No
+15	slow	slow	ADJ	JJ	Degree=Pos	13	obl	_	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	_	_
 
 # sentence-text: One time we even left after sitting at the table for 20 minutes and not being greeted with a drink order.
@@ -34,18 +34,18 @@
 7	sitting	sit	VERB	VBG	VerbForm=Ger	5	advcl	_	_
 8	at	at	ADP	IN	_	10	case	_	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
-10	table	table	NOUN	NN	Number=Sing	7	nmod	_	_
+10	table	table	NOUN	NN	Number=Sing	7	obl	_	_
 11	for	for	ADP	IN	_	13	case	_	_
 12	20	20	NUM	CD	NumType=Card	13	nummod	_	_
-13	minutes	minute	NOUN	NNS	Number=Plur	7	nmod	_	_
-14	and	and	CONJ	CC	_	7	cc	_	_
-15	not	not	PART	RB	_	17	neg	_	_
-16	being	be	AUX	VBG	VerbForm=Ger	17	auxpass	_	_
+13	minutes	minute	NOUN	NNS	Number=Plur	7	obl	_	_
+14	and	and	CCONJ	CC	_	17	cc	_	_
+15	not	not	PART	RB	_	17	advmod	_	_
+16	being	be	AUX	VBG	VerbForm=Ger	17	aux:pass	_	_
 17	greeted	greet	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	_	_
 18	with	with	ADP	IN	_	21	case	_	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	_	_
 20	drink	drink	NOUN	NN	Number=Sing	21	compound	_	_
-21	order	order	NOUN	NN	Number=Sing	17	nmod	_	SpaceAfter=No
+21	order	order	NOUN	NN	Number=Sing	17	obl	_	SpaceAfter=No
 22	.	.	PUNCT	.	_	5	punct	_	_
 
 # sentence-text: Ridiculous.
@@ -61,6 +61,6 @@
 6	mexican	mexican	ADJ	JJ	Degree=Pos	7	amod	_	_
 7	place	place	NOUN	NN	Number=Sing	0	root	_	_
 8	in	in	ADP	IN	_	9	case	_	_
-9	Rockland	Rockland	PROPN	NNP	Number=Sing	7	nmod	_	SpaceAfter=No
+9	Rockland	Rockland	PROPN	NNP	Number=Sing	7	nmod	_	SpaceAfter=No|ManualCheck=Yes
 10	.	.	PUNCT	.	_	7	punct	_	_
 
