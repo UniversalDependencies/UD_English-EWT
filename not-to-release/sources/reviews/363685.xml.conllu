@@ -118,7 +118,7 @@
 21	innkeepers	innkeeper	NOUN	NNS	Number=Plur	17	ccomp	_	SpaceAfter=No
 22	,	,	PUNCT	,	_	24	punct	_	_
 23	not	not	ADV	RB	_	24	advmod	_	_
-24	longshoreman	longshoreman	NOUN	NN	Number=Sing	21	remnant	_	SpaceAfter=No
+24	longshoreman	longshoreman	NOUN	NN	Number=Sing	21	conj	_	SpaceAfter=No
 25	.	.	PUNCT	.	_	12	punct	_	_
 
 # sentence-text: In other words, they do not help with suitcases, but they promise totes to help.
@@ -347,13 +347,14 @@
 21	the	the	DET	DT	Definite=Def|PronType=Art	23	det	_	_
 22	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	23	amod	_	_
 23	hour	hour	NOUN	NN	Number=Sing	16	obl	_	SpaceAfter=No
-24	,	,	PUNCT	,	_	41	punct	_	_
-25	$	$	SYM	$	_	18	remnant	_	SpaceAfter=No
+24	,	,	PUNCT	,	_	25	punct	24.1:punct	_
+24.1	charge	charge	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	_	_	18:conj	_
+25	$	$	SYM	$	_	18	conj	24.1:obj	SpaceAfter=No
 26	25	25	NUM	CD	NumType=Card	25	nummod	_	_
 27	for	for	ADP	IN	_	30	case	_	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	30	det	_	_
 29	second	second	ADJ	JJ	Degree=Pos|NumType=Ord	30	amod	_	_
-30	hour	hour	NOUN	NN	Number=Sing	25	nmod	_	SpaceAfter=No
+30	hour	hour	NOUN	NN	Number=Sing	25	orphan	24.1:obl	SpaceAfter=No
 31	,	,	PUNCT	,	_	41	punct	_	_
 32	and	and	CCONJ	CC	_	41	cc	_	_
 33	after	after	ADP	IN	_	35	case	_	_
