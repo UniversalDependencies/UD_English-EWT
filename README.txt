@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v1.4 -- 2016-11-15
+Universal Dependencies English Web Treebank v2.0 -- 2017-02-15
 https://github.com/UniversalDependencies/UD_English
 
 A Gold Standard Universal Dependencies Corpus for English,
@@ -9,7 +9,7 @@ LDC2012T13 (https://catalog.ldc.upenn.edu/LDC2012T13).
 
 LICENSE/COPYRIGHT
 
-Universal Dependencies English Web Treebank © 2013, 2014, 2015, 2016
+Universal Dependencies English Web Treebank © 2013-2017
 by The Board of Trustees of The Leland Stanford Junior University.
 All Rights Reserved.
 
@@ -44,15 +44,22 @@ The dependency taxonomy can be found on the Universal Dependencies web site:
 
     http://universaldependencies.github.io/docs/
 
+For the conversion to v2, we performed an automatic conversion with extensive spot-checking,
+and manual adjudication of ambiguous cases.
 
 DEVIATIONS FROM UD
 
-Version 1.4 of the English UD treebank conforms to the UD guidelines in
-almost all respects, but there are a couple of remaining deviations:
- * The UD dependency 'name' is only used for person names.
- * Person names are annotated right-headed whereas they should be left-headed.
+Version 2.0 of the English UD treebank conforms to the UD guidelines in
+almost all respects, but there remains the following deviation:
+ * The UD dependency 'flat' is only used for person names.
 
 CHANGELOG
+
+2017-02-15 v2.0
+-- Updated treebank to conform to v2 guidelines
+-- Fixed some wrong lemmata
+-- Fixed miscellaneous syntactic issues
+-- Added empty nodes for gapped constructions in enhanced representation
 
 2016-11-15 v1.4
 -- Changed POS tag of fused det-noun pronouns (e.g., "somebody", "nothing") to PRON
@@ -96,6 +103,7 @@ Annotation of the Universal Dependencies English Web Treebank was carried out by
 
 Natalia Silveira
 Timothy Dozat
+Sebastian Schuster
 Miriam Connor
 Marie-Catherine de Marneffe
 Samuel Bowman
