@@ -9,7 +9,7 @@ LDC2012T13 (https://catalog.ldc.upenn.edu/LDC2012T13).
 
 LICENSE/COPYRIGHT
 
-Universal Dependencies English Web Treebank © 2013, 2014, 2015, 2016, 2017
+Universal Dependencies English Web Treebank © 2013-2017
 by The Board of Trustees of The Leland Stanford Junior University.
 All Rights Reserved.
 
