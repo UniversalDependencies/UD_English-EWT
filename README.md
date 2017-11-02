@@ -138,22 +138,22 @@ of making direct changes to `en-ud-{dev,test,train}.conllu`.
 Annotation of the Universal Dependencies English Web Treebank was carried out by
 (in order of size of contribution):
 
-Natalia Silveira
-Timothy Dozat
-Sebastian Schuster
-Miriam Connor
-Marie-Catherine de Marneffe
-Samuel Bowman
-Hanzhi Zhu
-Daniel Galbraith
-Christopher Manning
-John Bauer
+ - Natalia Silveira
+ - Timothy Dozat
+ - Sebastian Schuster
+ - Miriam Connor
+ - Marie-Catherine de Marneffe
+ - Samuel Bowman
+ - Hanzhi Zhu
+ - Daniel Galbraith
+ - Christopher Manning
+ - John Bauer
 
 Creation of the CoNLL-U files, including calculating UPOS, feature, and lemma
 information was primarily done by
 
-Sebastian Schuster
-Natalia Silveira
+ - Sebastian Schuster
+ - Natalia Silveira
 
 The construction of the Universal Dependencies English Web Treebank was
 partially funded by a gift from Google, Inc., which we gratefully acknowledge.
