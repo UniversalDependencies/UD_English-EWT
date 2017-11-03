@@ -183,8 +183,8 @@ Data available since: UD v1.0
 License: CC BY-SA 4.0
 Includes text: yes
 Genre: blog social reviews email
-Lemmas: automatic
-UPOS: converted from manual
+Lemmas: automatic with corrections
+UPOS: converted with corrections
 XPOS: manual native
 Features: automatic
 Relations: manual native
