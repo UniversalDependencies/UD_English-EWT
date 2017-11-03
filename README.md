@@ -189,7 +189,7 @@ XPOS: manual native
 Features: automatic
 Relations: manual native
 Contributors: Silveira, Natalia; Dozat, Timothy; Manning, Christopher; Schuster, Sebastian; Bauer, John; Connor, Miriam; de Marneffe, Marie-Catherine; Bowman, Sam; Zhu, Hanzhi; Galbraith, Daniel
-Contributing: elsewhere
+Contributing: here source
 Contact: syntacticdependencies@lists.stanford.edu
 ===============================================================================
 ```
