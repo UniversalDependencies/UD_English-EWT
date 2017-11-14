@@ -65,7 +65,7 @@ The dependency taxonomy can be found on the Universal Dependencies web site:
 For the conversion to v2, we performed an automatic conversion with extensive
 spot-checking, and manual adjudication of ambiguous cases.
 
-#Deviations from UD
+# Deviations from UD
 
 Version 2.1 of the English UD treebank conforms to the UD guidelines in
 almost all respects, but there remain the following deviations:
