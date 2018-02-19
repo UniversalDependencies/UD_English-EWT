@@ -1,6 +1,6 @@
 Universal Dependencies - English Dependency Treebank
 Universal Dependencies English Web Treebank v2.1 -- 2017-11-15
-https://github.com/UniversalDependencies/UD_English
+https://github.com/UniversalDependencies/UD_English-EWT
 
 # Summary
 
@@ -77,6 +77,9 @@ almost all respects, but there remain the following deviations:
 
 # Changelog
 
+* 2018-04-15 v2.2
+  * Repository renamed from UD_English to UD_English-EWT.
+
 **2017-11-15 v2.1**
 
  - Fixed some wrong lemmata, POS tags
@@ -85,14 +88,14 @@ almost all respects, but there remain the following deviations:
     format
 
 **2017-02-15 v2.0**
- 
+
  - Updated treebank to conform to v2 guidelines
  - Fixed some wrong lemmata
  - Fixed miscellaneous syntactic issues
  - Added empty nodes for gapped constructions in enhanced representation
 
 **2016-11-15 v1.4**
- 
+
  - Changed POS tag of fused det-noun pronouns (e.g., *"somebody"*, *"nothing"*)
     to `PRON`
  - Added original, untokenized sentences to CoNLL-U files
@@ -100,7 +103,7 @@ almost all respects, but there remain the following deviations:
  - Fixed miscellaneous syntactic issues in a few sentences
 
 **2016-05-15 v1.3**
- 
+
  - Improved mapping of `WDT` to UPOS
  - Corrected lemma of *"n't"* to *"not"*
  - Fixed some errors between `advcl`, `ccomp` and `parataxis`
@@ -127,13 +130,13 @@ almost all respects, but there remain the following deviations:
 To help improve the corpus, please alert us to any errors you find in it.
 The best way to do this is to file a github issue at:
 
-   https://github.com/UniversalDependencies/UD_English/issues
+   https://github.com/UniversalDependencies/UD_English-EWT/issues
 
 We also welcome pull requests. If you want to make edits, please modify the
 trees in the idividual files in the `not-to-release/sources` directory instead
 of making direct changes to `en-ud-{dev,test,train}.conllu`.
 
-# Acknowledgments 
+# Acknowledgments
 
 Annotation of the Universal Dependencies English Web Treebank was carried out by
 (in order of size of contribution):
@@ -167,8 +170,8 @@ English Web Treebank:
 
     @inproceedings{silveira14gold,
       year = {2014},
-      author = {Natalia Silveira and Timothy Dozat and Marie-Catherine de 
-		  Marneffe and Samuel Bowman and Miriam Connor and John Bauer and 
+      author = {Natalia Silveira and Timothy Dozat and Marie-Catherine de
+		  Marneffe and Samuel Bowman and Miriam Connor and John Bauer and
 		  Christopher D. Manning},
       title = {A Gold Standard Dependency Corpus for {E}nglish},
       booktitle = {Proceedings of the Ninth International Conference on Language
