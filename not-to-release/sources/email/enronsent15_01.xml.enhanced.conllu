@@ -34,18 +34,18 @@
 9	just	just	ADV	RB	_	10	advmod	10:advmod	_
 10	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	advcl	3:advcl:because	SpaceAfter=No
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
-12	Mom	mom	NOUN	NN	Number=Sing	10	conj	10:conj:and|3:advcl:because	SpaceAfter=No
+12	Mom	mom	NOUN	NN	Number=Sing	10	conj	3:advcl:because|10:conj:and	SpaceAfter=No
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
-14	Craig	Craig	PROPN	NNP	Number=Sing	10	conj	10:conj:and|3:advcl:because	_
+14	Craig	Craig	PROPN	NNP	Number=Sing	10	conj	3:advcl:because|10:conj:and	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	Danelia	Danelia	PROPN	NNP	Number=Sing	10	conj	10:conj:and|3:advcl:because	SpaceAfter=No
+16	Danelia	Danelia	PROPN	NNP	Number=Sing	10	conj	3:advcl:because|10:conj:and	SpaceAfter=No
 17	,	,	PUNCT	,	_	23	punct	23:punct	_
 18	and	and	CCONJ	CC	_	23	cc	23:cc	_
 19	Danelia	Danelia	PROPN	NNP	Number=Sing	23	nsubj	23:nsubj	_
 20	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	aux	23:aux	SpaceAfter=No
 21	n't	not	PART	RB	_	23	advmod	23:advmod	_
 22	really	really	ADV	RB	_	23	advmod	23:advmod	_
-23	like	like	VERB	VB	VerbForm=Inf	10	conj	10:conj:and|3:advcl:because	_
+23	like	like	VERB	VB	VerbForm=Inf	10	conj	3:advcl:because|10:conj:and	_
 24	roasted	roast	VERB	VBN	Tense=Past|VerbForm=Part	25	amod	25:amod	_
 25	turkey	turkey	NOUN	NN	Number=Sing	23	obj	23:obj	_
 26	or	or	CCONJ	CC	_	28	cc	28:cc	_
@@ -96,7 +96,7 @@
 2	played	play	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 4	new	new	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	version	version	NOUN	NN	Number=Sing	2	obj	15:nsubj:relsubj|17:nsubj:relsubj|2:obj|23:nsubj:relsubj	_
+5	version	version	NOUN	NN	Number=Sing	2	obj	2:obj|15:nsubj:relsubj|17:nsubj:relsubj|23:nsubj:relsubj	_
 6	of	of	ADP	IN	_	7	case	7:case	_
 7	Uno	Uno	PROPN	NNP	Number=Sing	5	nmod	5:nmod:of	_
 8	called	call	VERB	VBN	Tense=Past|VerbForm=Part	5	acl	5:acl	_
@@ -108,13 +108,13 @@
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
 15	complex	complex	ADJ	JJ	Degree=Pos	5	acl:relcl	5:acl:relcl	SpaceAfter=No
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
-17	fast	fast	ADJ	JJ	Degree=Pos	15	conj	15:conj:and|5:acl:relcl	_
+17	fast	fast	ADJ	JJ	Degree=Pos	15	conj	5:acl:relcl|15:conj:and	_
 18	and	and	CCONJ	CC	_	23	cc	23:cc	_
 19	at	at	ADP	IN	_	20	case	20:case	_
 20	times	time	NOUN	NNS	Number=Plur	23	obl	23:obl:at	SpaceAfter=No
 21	,	,	PUNCT	,	_	23	punct	23:punct	_
 22	physically	physically	ADV	RB	_	23	advmod	23:advmod	_
-23	challenging	challenging	ADJ	JJ	Degree=Pos	15	conj	15:conj:and|5:acl:relcl	SpaceAfter=No
+23	challenging	challenging	ADJ	JJ	Degree=Pos	15	conj	5:acl:relcl|15:conj:and	SpaceAfter=No
 24	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent15_01-0006
@@ -324,7 +324,7 @@
 11	in	in	ADP	IN	_	12	case	12:case	_
 12	March	March	PROPN	NNP	Number=Sing	7	obl	7:obl:in	_
 13	or	or	CCONJ	CC	_	14	cc	14:cc	_
-14	April	April	PROPN	NNP	Number=Sing	12	conj	12:conj:or|7:obl:in	_
+14	April	April	PROPN	NNP	Number=Sing	12	conj	7:obl:in|12:conj:or	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	see	see	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:to	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
@@ -363,7 +363,7 @@
 
 # sent_id = email-enronsent15_01-0018
 # text = It's got its own bathroom and tv, and is pretty cozy.
-1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj:pass	13:nsubj:pass|3:nsubj:pass	SpaceAfter=No
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj:pass	3:nsubj:pass|13:nsubj:pass	SpaceAfter=No
 2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	got	get	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
@@ -447,7 +447,7 @@
 
 # sent_id = email-enronsent15_01-0023
 # text = I leave the evening of the 21st, my flight comes in about 10 pm, and leave the morning of the 27th at 6 am.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	18:nsubj|2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|18:nsubj	_
 2	leave	leave	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	evening	evening	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	_
@@ -622,7 +622,7 @@
 20	as	as	ADP	IN	_	18	fixed	18:fixed	_
 21	C	C	PROPN	NNP	Number=Sing	16	conj	15:obj|16:conj:as_well_as	_
 22	&	&	CCONJ	CC	_	23	cc	23:cc	_
-23	D	D	PROPN	NNP	Number=Sing	21	conj	21:conj:&	SpaceAfter=No
+23	D	D	PROPN	NNP	Number=Sing	21	conj	21:conj	SpaceAfter=No
 24	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent15_01-0033
@@ -1004,7 +1004,7 @@
 1	If	if	SCONJ	IN	_	2	mark	2:mark	_
 2	so	so	ADV	RB	_	6	advcl	6:advcl:if	SpaceAfter=No
 3	,	,	PUNCT	,	_	6	punct	6:punct	_
-4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	15:nsubj|6:nsubj	SpaceAfter=No
+4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj|15:nsubj	SpaceAfter=No
 5	'll	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 6	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	obj	6:obj|8:nsubj:xsubj	_
@@ -1050,7 +1050,7 @@
 11	documents	document	NOUN	NNS	Number=Plur	10	obj	10:obj	_
 12	w/o	without	ADP	IN	Abbr=Yes	14	case	14:case	_
 13	special	special	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	authority	authority	NOUN	NN	Number=Sing	10	obl	10:obl:w/o	SpaceAfter=No
+14	authority	authority	NOUN	NN	Number=Sing	10	obl	10:obl:without	SpaceAfter=No
 15	...	...	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent15_01-0069
@@ -1108,7 +1108,7 @@
 9	any	any	DET	DT	_	12	det	12:det	_
 10	trading	trading	NOUN	NN	Number=Sing	11	obl:npmod	11:obl:npmod	_
 11	related	related	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	defaults	default	NOUN	NNS	Number=Plur	8	obj	15:nsubj:xsubj|8:obj	_
+12	defaults	default	NOUN	NNS	Number=Plur	8	obj	8:obj|15:nsubj:xsubj	_
 13	to	to	PART	TO	_	15	mark	15:mark	_
 14	ever	ever	ADV	RB	_	15	advmod	15:advmod	_
 15	trigger	trigger	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
@@ -1240,9 +1240,9 @@
 
 # sent_id = email-enronsent15_01-0076
 # text = Sara and Bill Bradford in Credit are supposed to talk to the DB Credit people about this remaining issue.
-1	Sara	Sara	PROPN	NNP	Number=Sing	8	nsubj	10:nsubj:xsubj|8:nsubj	_
+1	Sara	Sara	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	Bill	Bill	PROPN	NNP	Number=Sing	1	conj	1:conj:and|10:nsubj:xsubj|8:nsubj	_
+3	Bill	Bill	PROPN	NNP	Number=Sing	1	conj	1:conj:and|8:nsubj|10:nsubj:xsubj	_
 4	Bradford	Bradford	PROPN	NNP	Number=Sing	3	flat	3:flat	_
 5	in	in	ADP	IN	_	6	case	6:case	_
 6	Credit	credit	NOUN	NN	Number=Sing	1	nmod	1:nmod:in	_
@@ -1339,7 +1339,7 @@
 # sent_id = email-enronsent15_01-0082
 # text = can you please give me an update on where you are in the negotiations of the ISDA with the following counterparties and confirm which Enron entity you are negotiating on behalf of.
 1	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	23:nsubj|4:nsubj	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|23:nsubj	_
 3	please	please	INTJ	UH	_	4	discourse	4:discourse	_
 4	give	give	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	4	iobj	4:iobj	_

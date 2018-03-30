@@ -40,7 +40,7 @@
 5	after	after	ADP	IN	_	6	case	6:case	_
 6	friday	friday	PROPN	NNP	Number=Sing	10	obl	10:obl:after	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	saturday	saturday	PROPN	NNP	Number=Sing	6	conj	10:obl:after|6:conj:and	_
+8	saturday	saturday	PROPN	NNP	Number=Sing	6	conj	6:conj:and|10:obl:after	_
 9	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
 10	felt	feel	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	_
 11	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
@@ -163,7 +163,7 @@
 # sent_id = email-enronsent04_01-0009
 # text = If you are not the addressee indicated in this message (or responsible for delivery of the message to such person), you may not copy or deliver this message to anyone.
 1	If	if	SCONJ	IN	_	6	mark	6:mark	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	13:nsubj|6:nsubj	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj|13:nsubj	_
 3	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 4	not	not	PART	RB	_	6	advmod	6:advmod	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
@@ -174,7 +174,7 @@
 10	message	message	NOUN	NN	Number=Sing	7	obl	7:obl:in	_
 11	(	(	PUNCT	-LRB-	_	6	punct	6:punct	SpaceAfter=No
 12	or	or	CCONJ	CC	_	13	cc	13:cc	_
-13	responsible	responsible	ADJ	JJ	Degree=Pos	6	conj	27:advcl:if|6:conj:or	_
+13	responsible	responsible	ADJ	JJ	Degree=Pos	6	conj	6:conj:or|27:advcl:if	_
 14	for	for	ADP	IN	_	15	case	15:case	_
 15	delivery	delivery	NOUN	NN	Number=Sing	13	obl	13:obl:for	_
 16	of	of	ADP	IN	_	18	case	18:case	_
@@ -203,7 +203,7 @@
 2	such	such	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	case	case	NOUN	NN	Number=Sing	7	obl	7:obl:in	SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
-5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	12:nsubj|7:nsubj	_
+5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|12:nsubj	_
 6	should	should	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 7	destroy	destroy	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
@@ -227,7 +227,7 @@
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
 6	or	or	CCONJ	CC	_	8	cc	8:cc	_
 7	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	employer	employer	NOUN	NN	Number=Sing	5	conj	11:nsubj|5:conj:or	_
+8	employer	employer	NOUN	NN	Number=Sing	5	conj	5:conj:or|11:nsubj	_
 9	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
 10	not	not	PART	RB	_	11	advmod	11:advmod	_
 11	consent	consent	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:if	_
@@ -305,7 +305,7 @@
 3	$	$	SYM	$	_	1	appos	1:appos	SpaceAfter=No
 4	60000	60000	NUM	CD	NumType=Card	3	compound	3:compound	_
 5	-	-	SYM	SYM	_	6	case	6:case	_
-6	70000	70000	NUM	CD	NumType=Card	3	nmod	3:nmod:-	_
+6	70000	70000	NUM	CD	NumType=Card	3	nmod	3:nmod	_
 
 # sent_id = email-enronsent04_01-0017
 # text = Description:
@@ -356,11 +356,11 @@
 11	,	,	PUNCT	,	_	14	punct	14:punct	_
 12	comprehensive	comprehensive	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 13	benefits	benefit	NOUN	NNS	Number=Plur	14	compound	14:compound	_
-14	program	program	NOUN	NN	Number=Sing	10	conj	10:conj:and|6:nmod:including	SpaceAfter=No
+14	program	program	NOUN	NN	Number=Sing	10	conj	6:nmod:including|10:conj:and	SpaceAfter=No
 15	,	,	PUNCT	,	_	18	punct	18:punct	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	ample	ample	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	room	room	NOUN	NN	Number=Sing	10	conj	10:conj:and|6:nmod:including	_
+18	room	room	NOUN	NN	Number=Sing	10	conj	6:nmod:including|10:conj:and	_
 19	for	for	SCONJ	IN	_	22	mark	22:mark	_
 20	associates	associate	NOUN	NNS	Number=Plur	22	nsubj	22:nsubj	_
 21	to	to	PART	TO	_	22	mark	22:mark	_
@@ -390,7 +390,7 @@
 7	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 8	1	1	NUM	CD	NumType=Card	11	nummod	11:nummod	SpaceAfter=No
 9	-	-	SYM	SYM	_	10	case	10:case	SpaceAfter=No
-10	4	4	NUM	CD	NumType=Card	8	nmod	8:nmod:-	_
+10	4	4	NUM	CD	NumType=Card	8	nmod	8:nmod	_
 11	years	year	NOUN	NNS	Number=Plur	6	obj	6:obj	_
 12	of	of	ADP	IN	_	13	case	13:case	_
 13	experience	experience	NOUN	NN	Number=Sing	11	nmod	11:nmod:of	_
@@ -446,7 +446,7 @@
 
 # sent_id = email-enronsent04_01-0026
 # text = I've thought about you a few times in the last few months, didn't want to intrude upon an already bad situation with my bullshit questions.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	17:nsubj|19:nsubj:xsubj|3:nsubj	SpaceAfter=No
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|17:nsubj|19:nsubj:xsubj	SpaceAfter=No
 2	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	thought	think	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	about	about	ADP	IN	_	5	case	5:case	_
@@ -631,7 +631,7 @@
 8	ex	ex	X	AFX	_	11	amod	11:amod	_
 9	natural	natural	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	gas	gas	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	traders	trader	NOUN	NNS	Number=Plur	6	nmod	13:nsubj:relsubj|6:nmod:for	_
+11	traders	trader	NOUN	NNS	Number=Plur	6	nmod	6:nmod:for|13:nsubj:relsubj	_
 12	that	that	PRON	WDT	PronType=Rel	13	nsubj	11:ref	_
 13	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
 14	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
@@ -656,7 +656,7 @@
 3	how	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
 4	much	much	ADV	RB	_	8	advmod	8:advmod	_
 5	longer	longer	ADV	RBR	Degree=Cmp	4	advmod	4:advmod	_
-6	ene	ene	PROPN	NNP	Number=Sing	8	nsubj	11:nsubj:xsubj|8:nsubj	_
+6	ene	ene	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|11:nsubj:xsubj	_
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 8	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	2	ccomp	2:ccomp	_
 9	to	to	PART	TO	_	11	mark	11:mark	_

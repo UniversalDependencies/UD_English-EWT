@@ -135,7 +135,7 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	list	list	NOUN	NN	Number=Sing	0	root	0:root	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	countries	country	NOUN	NNS	Number=Plur	7	nmod	15:obl|7:nmod:of	_
+9	countries	country	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of|15:obl	_
 10	for	for	ADP	IN	_	11	case	11:case	_
 11	which	which	PRON	WDT	PronType=Rel	15	obl	9:ref	_
 12	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
@@ -147,7 +147,7 @@
 18	and	and	CCONJ	CC	_	20	cc	20:cc	SpaceAfter=No
 19	/	/	PUNCT	,	_	20	punct	20:punct	SpaceAfter=No
 20	or	or	CCONJ	CC	_	21	cc	21:cc	_
-21	inflation	inflation	NOUN	NN	Number=Sing	17	conj	17:conj:and_/_or|22:compound	_
+21	inflation	inflation	NOUN	NN	Number=Sing	17	conj	17:conj:and_or|22:compound	_
 22	curves	curve	NOUN	NNS	Number=Plur	15	obj	15:obj	SpaceAfter=No
 23	.	.	PUNCT	.	_	7	punct	7:punct	_
 
@@ -239,7 +239,7 @@
 
 # sent_id = email-enronsent19_01-0020
 # text = I am not certain about the needs for the London Underwriting/IV group but will request the information from them if you have not done so already.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	17:nsubj|4:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|17:nsubj	_
 2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	not	not	PART	RB	_	4	advmod	4:advmod	_
 4	certain	certain	ADJ	JJ	Degree=Pos	0	root	0:root	_
@@ -294,7 +294,7 @@
 5	list	list	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	curves	curve	NOUN	NNS	Number=Plur	5	nmod	12:obl:relobj|5:nmod:of	_
+8	curves	curve	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of|12:obl:relobj	_
 9	that	that	PRON	WDT	PronType=Rel	12	obj	8:ref	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
 11	will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
@@ -369,7 +369,7 @@
 7	up	up	ADP	RP	_	6	compound:prt	6:compound:prt	_
 8	on	on	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	email	email	NOUN	NN	Number=Sing	6	obl	13:obl:relobj|6:obl:on	_
+10	email	email	NOUN	NN	Number=Sing	6	obl	6:obl:on|13:obl:relobj	_
 11	that	that	PRON	WDT	PronType=Rel	13	obj	10:ref	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 13	sent	send	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
@@ -397,7 +397,7 @@
 35	on	on	ADP	IN	_	39	case	39:case	_
 36	20	20	NUM	CD	NumType=Card	39	nummod	39:nummod	_
 37	&	&	CCONJ	CC	_	38	cc	38:cc	_
-38	21	21	NUM	CD	NumType=Card	36	conj	36:conj:&|39:nummod	_
+38	21	21	NUM	CD	NumType=Card	36	conj	36:conj|39:nummod	_
 39	August	August	PROPN	NNP	Number=Sing	31	obl	31:obl:on	_
 40	2001	2001	NUM	CD	NumType=Card	39	nummod	39:nummod	SpaceAfter=No
 41	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -750,11 +750,11 @@
 5	compare	compare	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
 6	Elena	Elena	PROPN	NNP	Number=Sing	12	nmod:poss	12:nmod:poss	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	Sarah	Sarah	PROPN	NNP	Number=Sing	6	conj	12:nmod:poss|6:conj:and	SpaceAfter=No
+8	Sarah	Sarah	PROPN	NNP	Number=Sing	6	conj	6:conj:and|12:nmod:poss	SpaceAfter=No
 9	's	's	PART	POS	_	6	case	6:case	_
 10	duties	duty	NOUN	NNS	Number=Plur	5	obj	5:obj	SpaceAfter=No
 11	/	/	PUNCT	,	_	12	cc	12:cc	_
-12	level	level	NOUN	NN	Number=Sing	10	conj	10:conj:/|5:obj	_
+12	level	level	NOUN	NN	Number=Sing	10	conj	5:obj|10:conj	_
 13	to	to	ADP	IN	_	16	case	16:case	_
 14	other	other	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 15	Sr.	sr.	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
@@ -817,7 +817,7 @@
 24	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	28	cop	28:cop	_
 25	33	33	NUM	CD	NumType=Card	28	compound	28:compound	SpaceAfter=No
 26	-	-	SYM	SYM	_	27	case	27:case	SpaceAfter=No
-27	66	66	NUM	CD	NumType=Card	25	nmod	25:nmod:-	SpaceAfter=No
+27	66	66	NUM	CD	NumType=Card	25	nmod	25:nmod	SpaceAfter=No
 28	K	k	NUM	CD	NumType=Card	10	parataxis	10:parataxis	SpaceAfter=No
 29	)	)	PUNCT	-RRB-	_	28	punct	28:punct	SpaceAfter=No
 30	.	.	PUNCT	.	_	10	punct	10:punct	_

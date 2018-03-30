@@ -23,7 +23,7 @@
 9	questions	question	NOUN	NNS	Number=Plur	7	nmod	7:nmod:with	_
 10	removed	remove	VERB	VBN	Tense=Past|VerbForm=Part	9	acl	9:acl	SpaceAfter=No
 11	/	/	PUNCT	,	_	12	cc	12:cc	SpaceAfter=No
-12	blanks	blank	NOUN	NNS	Number=Plur	9	conj	7:nmod:with|9:conj:/	_
+12	blanks	blank	NOUN	NNS	Number=Plur	9	conj	7:nmod:with|9:conj	_
 13	filled	fill	VERB	VBN	Tense=Past|VerbForm=Part	12	acl	12:acl	_
 14	in	in	ADP	RP	_	13	compound:prt	13:compound:prt	SpaceAfter=No
 15	?	?	PUNCT	.	_	4	punct	4:punct	_
@@ -105,9 +105,9 @@
 12	name	name	NOUN	NN	Number=Sing	8	obl	8:obl:of	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	last	last	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	name	name	NOUN	NN	Number=Sing	12	conj	12:conj:and|8:obl:of	_
+15	name	name	NOUN	NN	Number=Sing	12	conj	8:obl:of|12:conj:and	_
 16	plus	plus	CCONJ	CC	_	17	cc	17:cc	_
-17	@paulhastings.com	@paulhastings.com	NOUN	NN	Number=Sing	12	conj	12:conj:and|8:obl:of	SpaceAfter=No
+17	@paulhastings.com	@paulhastings.com	NOUN	NN	Number=Sing	12	conj	8:obl:of|12:conj:and	SpaceAfter=No
 18	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = email-enronsent26_02-0012
@@ -145,16 +145,16 @@
 # text = "The information transmitted is intended only for the person or entity to which it is addressed and may contain confidential and/or privileged material.
 1	"	"	PUNCT	``	_	6	punct	6:punct	SpaceAfter=No
 2	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	information	information	NOUN	NN	Number=Sing	6	nsubj:pass	20:nsubj:pass|6:nsubj:pass	_
+3	information	information	NOUN	NN	Number=Sing	6	nsubj:pass	6:nsubj:pass|20:nsubj:pass	_
 4	transmitted	transmit	VERB	VBN	Tense=Past|VerbForm=Part	3	acl	3:acl	_
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux:pass	6:aux:pass	_
 6	intended	intend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 7	only	only	ADV	RB	_	10	advmod	10:advmod	_
 8	for	for	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	person	person	NOUN	NN	Number=Sing	6	obl	17:obl|6:obl:for	_
+10	person	person	NOUN	NN	Number=Sing	6	obl	6:obl:for|17:obl	_
 11	or	or	CCONJ	CC	_	12	cc	12:cc	_
-12	entity	entity	NOUN	NN	Number=Sing	10	conj	10:conj:or|17:obl:for|6:obl:for	_
+12	entity	entity	NOUN	NN	Number=Sing	10	conj	6:obl:for|10:conj:or|17:obl:for	_
 13	to	to	ADP	IN	_	14	case	14:case	_
 14	which	which	PRON	WDT	PronType=Rel	17	obl	10:ref	_
 15	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj:pass	17:nsubj:pass	_
@@ -166,8 +166,8 @@
 21	confidential	confidential	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
 22	and	and	CCONJ	CC	_	25	cc	25:cc	SpaceAfter=No
 23	/	/	PUNCT	,	_	24	cc	24:cc	SpaceAfter=No
-24	or	or	CCONJ	CC	_	22	conj	22:conj:/|25:cc	_
-25	privileged	privileged	ADJ	JJ	Degree=Pos	21	conj	21:conj:/_or|26:amod	_
+24	or	or	CCONJ	CC	_	22	conj	22:conj|25:cc	_
+25	privileged	privileged	ADJ	JJ	Degree=Pos	21	conj	21:conj:and_or|26:amod	_
 26	material	material	NOUN	NN	Number=Sing	20	obj	20:obj	SpaceAfter=No
 27	.	.	PUNCT	.	_	6	punct	6:punct	_
 

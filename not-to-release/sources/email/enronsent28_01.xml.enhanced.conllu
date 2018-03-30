@@ -242,7 +242,7 @@
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	gurus	guru	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	geniuses	genius	NOUN	NNS	Number=Plur	6	conj	13:nsubj|6:conj:and	_
+8	geniuses	genius	NOUN	NNS	Number=Plur	6	conj	6:conj:and|13:nsubj	_
 9	of	of	ADP	IN	_	11	case	11:case	_
 10	Wall	Wall	PROPN	NNP	Number=Sing	11	compound	11:compound	_
 11	Street	Street	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	_
@@ -318,9 +318,10 @@
 21	Wall	Wall	PROPN	NNP	Number=Sing	22	compound	22:compound	_
 22	Street	Street	PROPN	NNP	Number=Sing	20	obj	20:obj	SpaceAfter=No
 23	,	,	PUNCT	,	_	20	punct	20:punct	_|CheckAttachment=22
-24	many	many	ADJ	JJ	Degree=Pos	6	parataxis	6:parataxis	_|CheckAttachment=22|CheckReln=appos
+24	many	many	ADJ	JJ	Degree=Pos	6	parataxis	6:parataxis|24.1:nsubj	_|CheckAttachment=22|CheckReln=appos
+24.1	left	left	VERB	VBN	Tense=Past|VerbForm=Part	_	_	6:parataxis	CopyOf=6
 25	for	for	ADP	IN	_	26	case	26:case	_
-26	good	good	ADJ	JJ	Degree=Pos	24	orphan	24:orphan	SpaceAfter=No|CheckReln=nmod
+26	good	good	ADJ	JJ	Degree=Pos	24	orphan	24.1:obl:for	SpaceAfter=No|CheckReln=nmod
 27	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = email-enronsent28_01-0020
@@ -348,7 +349,7 @@
 
 # sent_id = email-enronsent28_01-0023
 # text = I will not be there at 7:30, but will see you arond 9:30 on Tuesday.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	11:nsubj|5:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|11:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 3	not	not	PART	RB	_	5	advmod	5:advmod	_
 4	be	be	AUX	VB	VerbForm=Inf	5	cop	5:cop	_
@@ -554,7 +555,7 @@
 7	reduction	reduction	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	22,101	22,101	NUM	CD	NumType=Card	10	nummod	10:nummod	SpaceAfter=No
-10	MMBTU	mmbtu	NOUN	NNS	Number=Plur	7	nmod	14:nsubj:relsubj|7:nmod:of	_
+10	MMBTU	mmbtu	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of|14:nsubj:relsubj	_
 11	which	which	PRON	WDT	PronType=Rel	14	nsubj	10:ref	_
 12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_

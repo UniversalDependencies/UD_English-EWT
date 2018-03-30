@@ -20,7 +20,7 @@
 7	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 8	Cross	Cross	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 9	or	or	CCONJ	CC	_	10	cc	10:cc	_
-10	Signac	Signac	PROPN	NNP	Number=Sing	8	conj	12:compound|8:conj:or	_
+10	Signac	Signac	PROPN	NNP	Number=Sing	8	conj	8:conj:or|12:compound	_
 11	impressionist	impressionist	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	lithograph	lithograph	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -145,7 +145,7 @@
 4	that	that	SCONJ	IN	_	9	mark	9:mark	_
 5	over	over	ADP	IN	_	6	case	6:case	SpaceAfter=No
 6	time	time	NOUN	NN	Number=Sing	9	obl	9:obl:over	_
-7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	11:nsubj:xsubj|9:nsubj	_
+7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj|11:nsubj:xsubj	_
 8	would	would	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 9	like	like	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
@@ -183,11 +183,11 @@
 8	mine	mine	PRON	PRP	_	13	parataxis	13:parataxis	_
 9	vs.	versus	ADP	IN	_	11	case	11:case	_
 10	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-11	wife	wife	NOUN	NN	Number=Sing	8	nmod	8:nmod:'s	SpaceAfter=No
+11	wife	wife	NOUN	NN	Number=Sing	8	nmod	8:nmod:versus	SpaceAfter=No
 12	's	's	PART	POS	_	11	case	11:case	_
 13	favorites	favorite	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	priorities	priority	NOUN	NNS	Number=Plur	13	conj	13:conj:and|3:nmod:of	SpaceAfter=No
+15	priorities	priority	NOUN	NNS	Number=Plur	13	conj	3:nmod:of|13:conj:and	SpaceAfter=No
 16	)	)	PUNCT	-RRB-	_	2	punct	2:punct	SpaceAfter=No
 17	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -396,7 +396,7 @@
 9	re-looking	re-look	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl:in	_
 10	at	at	ADP	IN	_	12	case	12:case	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
-12	Picasso	Picasso	PROPN	NNP	Number=Sing	9	obl	22:obl:relobj|9:obl:at	_
+12	Picasso	Picasso	PROPN	NNP	Number=Sing	9	obl	9:obl:at|22:obl:relobj	_
 13	(	(	PUNCT	-LRB-	_	16	punct	16:punct	SpaceAfter=No
 14	although	although	SCONJ	IN	_	16	mark	16:mark	_
 15	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
@@ -450,7 +450,7 @@
 
 # sent_id = email-enronsent27_01-0035
 # text = It was for sale in a couple of galleries in SF and was about $20,000.
-1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	15:nsubj|4:nsubj	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj|15:nsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
 3	for	for	ADP	IN	_	4	case	4:case	_
 4	sale	sale	NOUN	NN	Number=Sing	0	root	0:root	_
@@ -657,7 +657,7 @@
 4	all	all	DET	DT	_	5	det	5:det	_
 5	weekend	weekend	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
 6	and	and	CCONJ	CC	_	8	cc	8:cc	_
-7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	10:nsubj:xsubj|8:nsubj	_
+7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 8	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	have	have	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
@@ -685,7 +685,7 @@
 # text = Actually, I think we are in pretty good shape so I will probably be doing lunch but just don't be too mad if I have to cancel.
 1	Actually	actually	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	24:nsubj|4:nsubj	_
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|24:nsubj	_
 4	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 6	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
@@ -795,9 +795,9 @@
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
 8	make	make	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj:and	_
 9	any	any	DET	DT	_	10	det	10:det	_
-10	changes	change	NOUN	NNS	Number=Plur	8	obj	15:obl:relobj|8:obj	_
+10	changes	change	NOUN	NNS	Number=Plur	8	obj	8:obj|15:obl:relobj	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	additions	addition	NOUN	NNS	Number=Plur	10	conj	10:conj:and|15:obl:relobj|8:obj	_
+12	additions	addition	NOUN	NNS	Number=Plur	10	conj	8:obj|10:conj:and|15:obl:relobj	_
 13	that	that	PRON	WDT	PronType=Rel	15	obj	10:ref	_
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj|16:nsubj:xsubj	_
 15	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
@@ -901,7 +901,7 @@
 4	all	all	DET	DT	_	5	det	5:det	_
 5	weekend	weekend	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
 6	and	and	CCONJ	CC	_	8	cc	8:cc	_
-7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	10:nsubj:xsubj|8:nsubj	_
+7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 8	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	have	have	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
@@ -929,7 +929,7 @@
 # text = Actually, I think we are in pretty good shape so I will probably be doing lunch but just don't be too mad if I have to cancel.
 1	Actually	actually	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	24:nsubj|4:nsubj	_
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|24:nsubj	_
 4	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 6	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_

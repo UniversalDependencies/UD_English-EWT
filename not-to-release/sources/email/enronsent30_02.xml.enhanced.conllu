@@ -11,9 +11,9 @@
 8	seeking	seek	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl	_
 9	affectionate	affectionate	ADJ	JJ	Degree=Pos	14	amod	14:amod	SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
-11	satisfying	satisfying	ADJ	JJ	Degree=Pos	9	conj	14:amod|9:conj:and	_
+11	satisfying	satisfying	ADJ	JJ	Degree=Pos	9	conj	9:conj:and|14:amod	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	harmonious	harmonious	ADJ	JJ	Degree=Pos	9	conj	14:amod|9:conj:and	_
+13	harmonious	harmonious	ADJ	JJ	Degree=Pos	9	conj	9:conj:and|14:amod	_
 14	relationships	relationship	NOUN	NNS	Number=Plur	8	obj	8:obj	SpaceAfter=No
 15	.	.	PUNCT	.	_	7	punct	7:punct	_
 
@@ -29,7 +29,7 @@
 8	of	of	ADP	IN	_	11	case	11:case	_
 9	an	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	intimate	intimate	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	union	union	NOUN	NN	Number=Sing	7	nmod	16:obl|7:nmod:of	_
+11	union	union	NOUN	NN	Number=Sing	7	nmod	7:nmod:of|16:obl	_
 12	in	in	ADP	IN	_	13	case	13:case	_
 13	which	which	PRON	WDT	PronType=Rel	16	obl	11:ref	_
 14	there	there	PRON	EX	_	16	expl	16:expl	_
@@ -118,9 +118,9 @@
 8	sights	sight	NOUN	NNS	Number=Plur	6	obj	6:obj	_
 9	on	on	ADP	IN	_	11	case	11:case	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	position	position	NOUN	NN	Number=Sing	6	obl	16:nsubj:relsubj|6:obl:on	_
+11	position	position	NOUN	NN	Number=Sing	6	obl	6:obl:on|16:nsubj:relsubj	_
 12	or	or	CCONJ	CC	_	13	cc	13:cc	_
-13	situation	situation	NOUN	NN	Number=Sing	11	conj	11:conj:or|16:nsubj:relsubj|6:obl:on	_
+13	situation	situation	NOUN	NN	Number=Sing	11	conj	6:obl:on|11:conj:or|16:nsubj:relsubj	_
 14	that	that	PRON	WDT	PronType=Rel	16	nsubj	11:ref	_
 15	could	could	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 16	give	give	VERB	VB	VerbForm=Inf	11	acl:relcl	11:acl:relcl	_
@@ -212,7 +212,7 @@
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	do	do	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	SpaceAfter=No
 6	,	,	PUNCT	,	_	9	punct	9:punct	_
-7	something	something	PRON	NN	Number=Sing	9	nsubj	12:nsubj:xsubj|9:nsubj	_
+7	something	something	PRON	NN	Number=Sing	9	nsubj	9:nsubj|12:nsubj:xsubj	_
 8	always	always	ADV	RB	_	9	advmod	9:advmod	_
 9	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 10	to	to	PART	TO	_	12	mark	12:mark	_
@@ -252,7 +252,7 @@
 16	,	,	PUNCT	,	_	19	punct	19:punct	_
 17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
-19	partner	partner	NOUN	NN	Number=Sing	5	conj	23:obl:relobj|5:conj:and	_
+19	partner	partner	NOUN	NN	Number=Sing	5	conj	5:conj:and|23:obl:relobj	_
 20	whom	whom	PRON	WP	PronType=Rel	23	obj	19:ref	_
 21	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	23	nsubj	23:nsubj	_
 22	can	can	AUX	MD	VerbForm=Fin	23	aux	23:aux	_
@@ -348,7 +348,7 @@
 # text = In fact you just don't want to be involved in any arguments of any shape or form ...
 1	In	in	ADP	IN	_	2	case	2:case	_
 2	fact	fact	NOUN	NN	Number=Sing	7	obl	7:obl:in	_
-3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	10:nsubj:xsubj|7:nsubj	_
+3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|10:nsubj:xsubj	_
 4	just	just	ADV	RB	_	7	advmod	7:advmod	_
 5	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	aux	7:aux	SpaceAfter=No
 6	n't	not	PART	RB	_	7	advmod	7:advmod	_
@@ -384,7 +384,7 @@
 14	-	-	PUNCT	,	_	10	punct	10:punct	_
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
-17	leave	leave	VERB	VB	VerbForm=Inf	10	conj	10:conj:and|4:ccomp	_
+17	leave	leave	VERB	VB	VerbForm=Inf	10	conj	4:ccomp|10:conj:and	_
 18	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	17	obj	17:obj|19:nsubj:xsubj	_
 19	alone	alone	ADJ	JJ	Degree=Pos	17	xcomp	17:xcomp	SpaceAfter=No
 20	..	..	PUNCT	.	_	4	punct	4:punct	_
@@ -464,7 +464,7 @@
 6	historical	historical	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 7	nymex	nymex	NOUN	NN	Number=Sing	9	compound	9:compound	_
 8	settle	settle	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	file	file	NOUN	NN	Number=Sing	4	obj	12:obl:relobj|4:obj	_
+9	file	file	NOUN	NN	Number=Sing	4	obj	4:obj|12:obl:relobj	_
 10	that	that	PRON	WDT	PronType=Rel	12	obj	9:ref	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
 12	created	create	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
@@ -623,7 +623,7 @@
 4	that	that	SCONJ	IN	_	13	mark	13:mark	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
 6	or	or	CCONJ	CC	_	7	cc	7:cc	_
-7	somebody	somebody	PRON	NN	Number=Sing	5	conj	13:nsubj|5:conj:or	_
+7	somebody	somebody	PRON	NN	Number=Sing	5	conj	5:conj:or|13:nsubj	_
 8	else	else	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 9	in	in	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_

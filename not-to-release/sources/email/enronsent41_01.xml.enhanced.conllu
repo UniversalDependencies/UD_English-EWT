@@ -100,7 +100,7 @@
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	appropriate	appropriate	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	steps	step	NOUN	NNS	Number=Plur	3	ccomp	13:obl:relobj|3:ccomp	_
+9	steps	step	NOUN	NNS	Number=Plur	3	ccomp	3:ccomp|13:obl:relobj	_
 10	that	that	PRON	WDT	PronType=Rel	13	obj	9:ref	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj|15:nsubj:xsubj	_
 12	would	would	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
@@ -122,7 +122,7 @@
 # text = Sam & Stephanie,
 1	Sam	Sam	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	&	&	CCONJ	CC	_	3	cc	3:cc	_
-3	Stephanie	Stephanie	PROPN	NNP	Number=Sing	1	conj	1:conj:&	SpaceAfter=No
+3	Stephanie	Stephanie	PROPN	NNP	Number=Sing	1	conj	1:conj	SpaceAfter=No
 4	,	,	PUNCT	,	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent41_01-0010
@@ -406,7 +406,7 @@
 4	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
 5	or	or	CCONJ	CC	_	7	cc	7:cc	_
 6	start	start	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	date	date	NOUN	NN	Number=Sing	3	conj	11:nsubj|3:conj:or	SpaceAfter=No
+7	date	date	NOUN	NN	Number=Sing	3	conj	3:conj:or|11:nsubj	SpaceAfter=No
 8	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	01	01	NUM	CD	NumType=Card	11	nummod	11:nummod	_
@@ -422,7 +422,7 @@
 4	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
 5	or	or	CCONJ	CC	_	7	cc	7:cc	_
 6	end	end	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	date	date	NOUN	NN	Number=Sing	3	conj	11:nsubj|3:conj:or	SpaceAfter=No
+7	date	date	NOUN	NN	Number=Sing	3	conj	3:conj:or|11:nsubj	SpaceAfter=No
 8	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	31	31	NUM	CD	NumType=Card	11	nummod	11:nummod	_
@@ -457,7 +457,7 @@
 13	"	"	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	_
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
-16	width	width	NOUN	NN	Number=Sing	10	conj	10:conj:and|7:nmod:with	_
+16	width	width	NOUN	NN	Number=Sing	10	conj	7:nmod:with|10:conj:and	_
 17	of	of	ADP	IN	_	19	case	19:case	_
 18	72	72	NUM	CD	NumType=Card	19	nummod	19:nummod	_
 19	inches	inch	NOUN	NNS	Number=Plur	16	nmod	16:nmod:of	SpaceAfter=No
@@ -501,7 +501,7 @@
 17	up	up	ADP	IN	_	21	case	21:case	_
 18	to	to	ADP	IN	_	17	fixed	17:fixed	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	including	include	VERB	VBG	VerbForm=Ger	21	conj	10:obl:up_to|21:conj:and	_
+20	including	include	VERB	VBG	VerbForm=Ger	17	conj	17:conj:and|21:case	_
 21	delivery	delivery	NOUN	NN	Number=Sing	10	obl	10:obl:up_to	_
 22	in	in	ADP	IN	_	23	case	23:case	_
 23	warehouse	warehouse	NOUN	NN	Number=Sing	21	nmod	21:nmod:in	SpaceAfter=No
@@ -566,7 +566,7 @@
 
 # sent_id = email-enronsent41_01-0041
 # text = Enron will guarantee delivery by the 20th of each scheduled Dispatch Period and accept supply to the 15th of each scheduled Dispatch Period.
-1	Enron	Enron	PROPN	NNP	Number=Sing	3	nsubj	14:nsubj|3:nsubj	_
+1	Enron	Enron	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj|14:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	guarantee	guarantee	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	delivery	delivery	NOUN	NN	Number=Sing	3	obj	3:obj	_
@@ -652,7 +652,7 @@
 4	quoted	quote	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	US	US	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	Dollars	dollar	NOUN	NNS	Number=Plur	4	obl	18:nsubj:relsubj|4:obl:in	_
+7	Dollars	dollar	NOUN	NNS	Number=Plur	4	obl	4:obl:in|18:nsubj:relsubj	_
 8	per	per	ADP	IN	_	9	case	9:case	_
 9	unit	unit	NOUN	NN	Number=Sing	7	nmod	7:nmod:per	_
 10	of	of	ADP	IN	_	11	case	11:case	_
@@ -747,7 +747,7 @@
 3	USUAL	usual	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	LOGIN	login	NOUN	NN	Number=Sing	1	obl	1:obl:with	SpaceAfter=No
 5	/	/	PUNCT	,	_	6	cc	6:cc	SpaceAfter=No
-6	PASSWORD	password	NOUN	NN	Number=Sing	4	conj	1:obl:with|4:conj:/	_
+6	PASSWORD	password	NOUN	NN	Number=Sing	4	conj	1:obl:with|4:conj	_
 
 # sent_id = email-enronsent41_01-0053
 # text = click the Enron Online Production Cluster "START" button
@@ -781,7 +781,7 @@
 3	EOL	EOL	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4	LOGIN	login	NOUN	NN	Number=Sing	1	obl	1:obl:with	SpaceAfter=No
 5	/	/	PUNCT	,	_	6	cc	6:cc	SpaceAfter=No
-6	PASSWORD	password	NOUN	NN	Number=Sing	4	conj	1:obl:with|4:conj:/	_
+6	PASSWORD	password	NOUN	NN	Number=Sing	4	conj	1:obl:with|4:conj	_
 
 # sent_id = email-enronsent41_01-0056
 # text = click on the "+" for EnronOnLine
@@ -823,7 +823,7 @@
 13	OR	or	CCONJ	CC	_	16	cc	16:cc	_
 14	"	"	PUNCT	``	_	16	punct	16:punct	SpaceAfter=No
 15	Partially	partially	ADV	RB	_	16	advmod	16:advmod	_
-16	Approved	approve	VERB	VBN	Tense=Past|VerbForm=Part	9	conj	3:advcl:for|9:conj:OR	SpaceAfter=No
+16	Approved	approve	VERB	VBN	Tense=Past|VerbForm=Part	9	conj	3:advcl:for|9:conj:or	SpaceAfter=No
 17	"	"	PUNCT	''	_	16	punct	16:punct	SpaceAfter=No
 18	)	)	PUNCT	-RRB-	_	9	punct	9:punct	_
 
@@ -1086,7 +1086,7 @@
 7	use	use	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	same	same	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	name	name	NOUN	NN	Number=Sing	7	obj	15:obl:relobj|7:obj	_
+10	name	name	NOUN	NN	Number=Sing	7	obj	7:obj|15:obl:relobj	_
 11	that	that	PRON	WDT	PronType=Rel	15	obj	10:ref	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	customer	customer	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
@@ -1155,7 +1155,7 @@
 
 # sent_id = email-enronsent41_01-0076
 # text = I would appreciate it if you could get this one fixed today and, if you have any problem with changing the GCP procedure, please let me know.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	27:nsubj|3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|27:nsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	appreciate	appreciate	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	it	it	PRON	EX	_	3	expl	3:expl	_
@@ -1164,7 +1164,7 @@
 7	could	could	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 8	get	get	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
 9	this	this	DET	DT	Number=Sing|PronType=Dem	10	det	10:det	_
-10	one	one	NOUN	NN	Number=Sing	8	obj	11:nsubj:xsubj|8:obj	_
+10	one	one	NOUN	NN	Number=Sing	8	obj	8:obj|11:nsubj:xsubj	_
 11	fixed	fix	VERB	VBN	Tense=Past|VerbForm=Part	8	xcomp	8:xcomp	_
 12	today	today	NOUN	NN	Number=Sing	8	obl:tmod	8:obl:tmod	_
 13	and	and	CCONJ	CC	_	27	cc	27:cc	SpaceAfter=No
@@ -1244,7 +1244,7 @@
 # text = Cargill Ferrous International is the full name of this division and setup as such in GCP with a Sub-to-Legal Link to Cargill, Inc. per GCP procedure.
 1	Cargill	Cargill	PROPN	NNP	Number=Sing	2	compound	2:compound	_
 2	Ferrous	Ferrous	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	International	International	PROPN	NNP	Number=Sing	7	nsubj	12:nsubj|7:nsubj	_
+3	International	International	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj|12:nsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	full	full	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
@@ -1378,7 +1378,7 @@
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	create	create	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
 6	Counterparty	counterparty	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	names	name	NOUN	NNS	Number=Plur	5	obj	21:nsubj:relsubj|5:obj|9:nsubj:relsubj	_
+7	names	name	NOUN	NNS	Number=Plur	5	obj	5:obj|9:nsubj:relsubj|20.1:nsubj:relsubj|21:nsubj:relsubj	_
 8	that	that	PRON	WDT	PronType=Rel	9	nsubj	7:ref	_
 9	reflect	reflect	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
 10	either	either	CCONJ	CC	_	12	cc:preconj	12:cc:preconj	_
@@ -1386,14 +1386,15 @@
 12	Tradename	tradename	NOUN	NN	Number=Sing	9	obj	9:obj	_
 13	/	/	PUNCT	,	_	12	punct	12:punct	_
 14	Division	division	NOUN	NN	Number=Sing	15	compound	15:compound	_
-15	name	name	NOUN	NN	Number=Sing	12	conj	12:conj:or|9:obj	_
+15	name	name	NOUN	NN	Number=Sing	12	conj	9:obj|12:conj:or	_
 16	or	or	CCONJ	CC	_	18	cc	18:cc	_
 17	Parent	parent	NOUN	NN	Number=Sing	18	compound	18:compound	_
-18	Name	name	NOUN	NN	Number=Sing	12	conj	12:conj:or|9:obj	_
+18	Name	name	NOUN	NN	Number=Sing	12	conj	9:obj|12:conj:or	_
 19	--	--	PUNCT	,	_	12	punct	12:punct	_
-20	not	not	ADV	RB	_	21	advmod	21:advmod	_
-21	both	both	DET	DT	_	9	conj	7:acl:relcl|9:conj	_
-22	simultaneously	simultaneously	ADV	RB	_	21	orphan	21:orphan	SpaceAfter=No
+20	not	not	ADV	RB	_	21	advmod	20.1:advmod|21:advmod	_
+20.1	reflect	reflect	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	_	_	7:acl:relcl|9:conj	CopyOf=9
+21	both	both	DET	DT	_	9	conj	7:acl:relcl|9:conj|20.1:obj	_
+22	simultaneously	simultaneously	ADV	RB	_	21	orphan	20.1:advmod	SpaceAfter=No
 23	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent41_01-0092
@@ -1537,7 +1538,7 @@
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	appropriate	appropriate	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	steps	step	NOUN	NNS	Number=Plur	3	ccomp	13:obl:relobj|3:ccomp	_
+9	steps	step	NOUN	NNS	Number=Plur	3	ccomp	3:ccomp|13:obl:relobj	_
 10	that	that	PRON	WDT	PronType=Rel	13	obj	9:ref	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj|15:nsubj:xsubj	_
 12	would	would	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
@@ -1559,7 +1560,7 @@
 # text = Sam & Stephanie,
 1	Sam	Sam	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	&	&	CCONJ	CC	_	3	cc	3:cc	_
-3	Stephanie	Stephanie	PROPN	NNP	Number=Sing	1	conj	1:conj:&	SpaceAfter=No
+3	Stephanie	Stephanie	PROPN	NNP	Number=Sing	1	conj	1:conj	SpaceAfter=No
 4	,	,	PUNCT	,	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent41_01-0105

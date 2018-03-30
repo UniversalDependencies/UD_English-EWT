@@ -34,7 +34,7 @@
 9	sale	sale	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
 10	Leach	Leach	PROPN	NNP	Number=Sing	9	obj	9:obj	_
 11	or	or	CCONJ	CC	_	12	cc	12:cc	_
-12	Pool	Pool	PROPN	NNP	Number=Sing	10	conj	10:conj:or|9:obj	_
+12	Pool	Pool	PROPN	NNP	Number=Sing	10	conj	9:obj|10:conj:or	_
 13	at	at	ADP	IN	_	14	case	14:case	_
 14	Index	index	NOUN	NN	Number=Sing	9	obl	9:obl:at	_
 15	-	-	PUNCT	,	_	14	punct	14:punct	_
@@ -50,7 +50,7 @@
 4	remember	remember	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	if	if	SCONJ	IN	_	9	mark	9:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	det	7:det	_
-7	guys	guy	NOUN	NNS	Number=Plur	9	nsubj	12:nsubj|9:nsubj	_
+7	guys	guy	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj|12:nsubj	_
 8	could	could	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 9	do	do	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:if	_
 10	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj	_
@@ -252,7 +252,7 @@
 3	$	$	SYM	$	_	2	obj	2:obj	SpaceAfter=No
 4	16,900	16,900	NUM	CD	NumType=Card	3	nummod	3:nummod	_
 5	+	+	CCONJ	CC	_	6	cc	6:cc	_
-6	tax	tax	NOUN	NN	Number=Sing	3	conj	2:obj|3:conj:+	SpaceAfter=No
+6	tax	tax	NOUN	NN	Number=Sing	3	conj	2:obj|3:conj	SpaceAfter=No
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent11_01-0020
@@ -292,7 +292,7 @@
 7	gray	gray	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	over	over	ADV	RB	_	4	advmod	4:advmod	_
 9	at	at	ADP	IN	_	10	case	10:case	_
-10	Jerry	Jerry	PROPN	NNP	Number=Sing	8	obl	8:obl:'s	SpaceAfter=No
+10	Jerry	Jerry	PROPN	NNP	Number=Sing	8	obl	8:obl:at	SpaceAfter=No
 11	's	's	PART	POS	_	10	case	10:case	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -579,7 +579,7 @@
 
 # sent_id = email-enronsent11_01-0042
 # text = We used to go out and lay in the pasture on a blanket and watch for the space shuttle.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	15:nsubj:xsubj|2:nsubj|4:nsubj:xsubj|7:nsubj:xsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj|7:nsubj:xsubj|15:nsubj:xsubj	_
 2	used	use	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	go	go	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
@@ -696,7 +696,7 @@
 # text = I think she just wants to be able to touch football players legs.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	nsubj	10:nsubj:xsubj|5:nsubj|8:nsubj:xsubj	_
+3	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj|8:nsubj:xsubj|10:nsubj:xsubj	_
 4	just	just	ADV	RB	_	5	advmod	5:advmod	_
 5	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
 6	to	to	PART	TO	_	8	mark	8:mark	_
@@ -1221,7 +1221,7 @@
 9	July	July	PROPN	NNP	Number=Sing	4	obl	4:obl:from	_
 10	2000	2000	NUM	CD	NumType=Card	9	nummod	9:nummod	_
 11	-	-	SYM	SYM	_	12	case	12:case	_
-12	Dec	Dec	PROPN	NNP	Number=Sing	9	nmod	9:nmod:-	_
+12	Dec	Dec	PROPN	NNP	Number=Sing	9	nmod	9:nmod	_
 13	2000	2000	NUM	CD	NumType=Card	12	nummod	12:nummod	SpaceAfter=No
 14	?	?	PUNCT	.	_	4	punct	4:punct	_
 
@@ -1266,7 +1266,7 @@
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	_
 10	for	for	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	cashout	cashout	NOUN	NN	Number=Sing	5	ccomp	16:nsubj:pass:relsubj|5:ccomp	_
+12	cashout	cashout	NOUN	NN	Number=Sing	5	ccomp	5:ccomp|16:nsubj:pass:relsubj	_
 13	that	that	PRON	WDT	PronType=Rel	16	nsubj:pass	12:ref	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	aux:pass	16:aux:pass	_
 15	not	not	PART	RB	_	16	advmod	16:advmod	_
@@ -1319,7 +1319,7 @@
 # text = I assume you have your anwser and don't need me.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	assume	assume	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	10:nsubj|4:nsubj	_
+3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|10:nsubj	_
 4	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
 5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	anwser	anwser	NOUN	NN	Number=Sing	4	obj	4:obj	_
