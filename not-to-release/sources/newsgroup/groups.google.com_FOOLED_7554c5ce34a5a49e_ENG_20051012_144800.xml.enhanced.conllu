@@ -3,7 +3,7 @@
 # text = NASA & Company Diplomacy - Trying to keep Moon Landing Hoax a secret in modern times
 1	NASA	NASA	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 2	&	&	CCONJ	CC	_	3	cc	3:cc	_
-3	Company	company	NOUN	NN	Number=Sing	1	conj	1:conj:&|4:compound	_
+3	Company	company	NOUN	NN	Number=Sing	1	conj	1:conj|4:compound	_
 4	Diplomacy	diplomacy	NOUN	NN	Number=Sing	0	root	0:root	_
 5	-	-	PUNCT	:	_	4	punct	4:punct	_
 6	Trying	try	VERB	VBG	VerbForm=Ger	4	parataxis	4:parataxis	_
@@ -11,7 +11,7 @@
 8	keep	keep	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 9	Moon	moon	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	Landing	landing	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	Hoax	hoax	NOUN	NN	Number=Sing	8	obj	13:nsubj:xsubj|8:obj	_
+11	Hoax	hoax	NOUN	NN	Number=Sing	8	obj	8:obj|13:nsubj:xsubj	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 13	secret	secret	NOUN	NN	Number=Sing	8	xcomp	8:xcomp	_
 14	in	in	ADP	IN	_	16	case	16:case	_
@@ -27,7 +27,7 @@
 5	by	by	ADP	IN	_	6	case	6:case	_
 6	NASA	NASA	PROPN	NNP	Number=Sing	4	obl	4:obl:by	_
 7	&	&	CCONJ	CC	_	8	cc	8:cc	_
-8	Company	company	NOUN	NN	Number=Sing	6	conj	4:obl:by|6:conj:&	_
+8	Company	company	NOUN	NN	Number=Sing	6	conj	4:obl:by|6:conj	_
 9	in	in	ADP	IN	_	10	case	10:case	_
 10	relation	relation	NOUN	NN	Number=Sing	4	obl	4:obl:in	_
 11	to	to	ADP	IN	_	12	case	12:case	_
@@ -60,7 +60,7 @@
 6	=	=	PUNCT	,	_	2	punct	2:punct	_
 7	NASA	NASA	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	_
 8	&	&	CCONJ	CC	_	9	cc	9:cc	_
-9	company	company	NOUN	NN	Number=Sing	7	conj	11:nsubj|7:conj:&	_
+9	company	company	NOUN	NN	Number=Sing	7	conj	7:conj|11:nsubj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	use	use	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
 12	"	"	PUNCT	``	_	14	punct	14:punct	SpaceAfter=No
@@ -95,12 +95,12 @@
 5	through	through	ADP	IN	_	14	case	14:case	_
 6	political	political	ADJ	JJ	Degree=Pos	14	amod	14:amod	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	economical	economical	ADJ	JJ	Degree=Pos	6	conj	14:amod|6:conj:and	SpaceAfter=No
+8	economical	economical	ADJ	JJ	Degree=Pos	6	conj	6:conj:and|14:amod	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	social	social	ADJ	JJ	Degree=Pos	6	conj	14:amod|6:conj:and	SpaceAfter=No
+10	social	social	ADJ	JJ	Degree=Pos	6	conj	6:conj:and|14:amod	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	technological	technological	ADJ	JJ	Degree=Pos	6	conj	14:amod|6:conj:and	_
+13	technological	technological	ADJ	JJ	Degree=Pos	6	conj	6:conj:and|14:amod	_
 14	influence	influence	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 15	.	.	PUNCT	.	_	14	punct	14:punct	_
 
@@ -117,7 +117,7 @@
 9	=	=	PUNCT	,	_	3	punct	3:punct	_
 10	NASA	NASA	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
 11	&	&	CCONJ	CC	_	12	cc	12:cc	_
-12	Company	company	NOUN	NN	Number=Sing	10	conj	10:conj:&|14:nsubj	_
+12	Company	company	NOUN	NN	Number=Sing	10	conj	10:conj|14:nsubj	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	use	use	VERB	VB	VerbForm=Inf	3	parataxis	3:parataxis	_
 15	"	"	PUNCT	``	_	17	punct	17:punct	SpaceAfter=No
@@ -149,12 +149,12 @@
 5	through	through	ADP	IN	_	14	case	14:case	_
 6	political	political	ADJ	JJ	Degree=Pos	14	amod	14:amod	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	economical	economical	ADJ	JJ	Degree=Pos	6	conj	14:amod|6:conj:and	SpaceAfter=No
+8	economical	economical	ADJ	JJ	Degree=Pos	6	conj	6:conj:and|14:amod	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	social	social	ADJ	JJ	Degree=Pos	6	conj	14:amod|6:conj:and	SpaceAfter=No
+10	social	social	ADJ	JJ	Degree=Pos	6	conj	6:conj:and|14:amod	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	technological	technological	ADJ	JJ	Degree=Pos	6	conj	14:amod|6:conj:and	_
+13	technological	technological	ADJ	JJ	Degree=Pos	6	conj	6:conj:and|14:amod	_
 14	influence	influence	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 15	.	.	PUNCT	.	_	14	punct	14:punct	_
 
@@ -164,7 +164,7 @@
 2	=	=	PUNCT	,	_	1	punct	1:punct	_
 3	NASA	NASA	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
 4	&	&	CCONJ	CC	_	5	cc	5:cc	_
-5	Company	company	NOUN	NN	Number=Sing	3	conj	3:conj:&|7:nsubj	_
+5	Company	company	NOUN	NN	Number=Sing	3	conj	3:conj|7:nsubj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	use	use	VERB	VB	VerbForm=Inf	1	parataxis	1:parataxis	_
 8	"	"	PUNCT	``	_	10	punct	10:punct	SpaceAfter=No
@@ -183,7 +183,7 @@
 
 # sent_id = newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008
 # text = This is really an end goal aim of NASA & Company and also does not allow anyone challenging the moon landing hoax.
-1	This	this	PRON	DT	Number=Sing|PronType=Dem	7	nsubj	16:nsubj|7:nsubj	_
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	7	nsubj	7:nsubj|16:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 3	really	really	ADV	RB	_	7	advmod	7:advmod	_
 4	an	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
@@ -193,7 +193,7 @@
 8	of	of	ADP	IN	_	9	case	9:case	_
 9	NASA	NASA	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	_
 10	&	&	CCONJ	CC	_	11	cc	11:cc	_
-11	Company	company	NOUN	NN	Number=Sing	9	conj	7:nmod:of|9:conj:&	_
+11	Company	company	NOUN	NN	Number=Sing	9	conj	7:nmod:of|9:conj	_
 12	and	and	CCONJ	CC	_	16	cc	16:cc	_
 13	also	also	ADV	RB	_	7	advmod	7:advmod	_
 14	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
@@ -214,7 +214,7 @@
 3	for	for	ADP	IN	_	4	case	4:case	_
 4	NASA	NASA	PROPN	NNP	Number=Sing	2	nmod	2:nmod:for	_
 5	&	&	CCONJ	CC	_	6	cc	6:cc	_
-6	Company	Company	PROPN	NNP	Number=Sing	4	conj	2:nmod:for|4:conj:&	_
+6	Company	Company	PROPN	NNP	Number=Sing	4	conj	2:nmod:for|4:conj	_
 7	probably	probably	ADV	RB	_	9	advmod	9:advmod	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -225,7 +225,7 @@
 14	ambitious	ambitious	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 15	space	space	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	program	program	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	countries	country	NOUN	NNS	Number=Plur	9	obj	18:nsubj:xsubj|9:obj	_
+17	countries	country	NOUN	NNS	Number=Plur	9	obj	9:obj|18:nsubj:xsubj	_
 18	shifting	shift	VERB	VBG	VerbForm=Ger	9	xcomp	9:xcomp	_
 19	towards	towards	ADP	IN	_	21	case	21:case	_
 20	this	this	DET	DT	Number=Sing|PronType=Dem	21	det	21:det	_
@@ -380,7 +380,7 @@
 14	40	40	NUM	CD	NumType=Card	11	amod	11:amod	SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	Nie	Nie	PROPN	NNP	Number=Sing	11	conj	11:conj:and|9:obl:as	_
+17	Nie	Nie	PROPN	NNP	Number=Sing	11	conj	9:obl:as|11:conj:and	_
 18	Haishen	Haishen	PROPN	NNP	Number=Sing	17	flat	17:flat	SpaceAfter=No
 19	,	,	PUNCT	,	_	17	punct	17:punct	_
 20	41	41	NUM	CD	NumType=Card	17	amod	17:amod	SpaceAfter=No
@@ -433,7 +433,7 @@
 10	into	into	ADP	IN	_	13	case	13:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	elite	elite	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	circle	circle	NOUN	NN	Number=Sing	6	obl	26:nsubj:relsubj|28:nsubj:relsubj|6:obl:into	_
+13	circle	circle	NOUN	NN	Number=Sing	6	obl	6:obl:into|26:nsubj:relsubj|28:nsubj:relsubj	_
 14	of	of	ADP	IN	_	16	case	16:case	_
 15	spacefaring	spacefaring	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	nations	nation	NOUN	NNS	Number=Plur	13	nmod	13:nmod:of	_
@@ -485,7 +485,7 @@
 4	uncertain	uncertain	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	_
 5	about	about	SCONJ	IN	_	8	mark	8:mark	_
 6	whether	whether	SCONJ	IN	_	8	mark	8:mark	_
-7	China	China	PROPN	NNP	Number=Sing	8	nsubj	10:nsubj:xsubj|8:nsubj	_
+7	China	China	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 8	aims	aim	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	beat	beat	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
@@ -684,9 +684,9 @@
 38	's	's	PART	POS	_	37	case	37:case	_
 39	human	human	ADJ	JJ	Degree=Pos	40	amod	40:amod	_
 40	rights	rights	NOUN	NNS	Number=Plur	41	compound	41:compound	_
-41	policies	policy	NOUN	NNS	Number=Plur	30	nmod	30:nmod:including	_
+41	policies	policy	NOUN	NNS	Number=Plur	30	nmod	30:nmod:include	_
 42	and	and	CCONJ	CC	_	43	cc	43:cc	_
-43	worries	worry	NOUN	NNS	Number=Plur	41	conj	30:nmod:including|41:conj:and	_
+43	worries	worry	NOUN	NNS	Number=Plur	41	conj	30:nmod:include|41:conj:and	_
 44	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	46	nsubj	46:nsubj	_
 45	could	could	AUX	MD	VerbForm=Fin	46	aux	46:aux	_
 46	acquire	acquire	VERB	VB	VerbForm=Inf	43	acl	43:acl	_
@@ -836,7 +836,7 @@
 19	initiative	initiative	NOUN	NN	Number=Sing	15	obj	15:obj	_
 20	or	or	CCONJ	CC	_	22	cc	22:cc	_
 21	to	to	PART	TO	_	22	mark	22:mark	_
-22	extend	extend	VERB	VB	VerbForm=Inf	10	conj	10:conj:or|7:nmod:for	_
+22	extend	extend	VERB	VB	VerbForm=Inf	10	conj	7:nmod:for|10:conj:or	_
 23	an	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
 24	invitation	invitation	NOUN	NN	Number=Sing	22	obj	22:obj	_
 25	to	to	ADP	IN	_	26	case	26:case	_
@@ -1033,7 +1033,7 @@
 4	always	always	ADV	RB	_	3	advmod	3:advmod	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	possibility	possibility	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-7	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	9	nsubj	13:nsubj|9:nsubj	_
+7	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	9	nsubj	9:nsubj|13:nsubj	_
 8	could	could	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 9	jam	jam	VERB	VB	VerbForm=Inf	6	acl:relcl	6:acl:relcl	_
 10	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	9	obj	9:obj	_
@@ -1166,7 +1166,7 @@
 # text = Pike's concern is based on China's development of a new medium-lift rocket, the Long March V, and the construction of a new space launch complex on Hainan Island in the South China Sea.
 1	Pike	Pike	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	SpaceAfter=No
 2	's	's	PART	POS	_	1	case	1:case	_
-3	concern	concern	NOUN	NN	Number=Sing	9	nsubj	25:nsubj|9:nsubj	_
+3	concern	concern	NOUN	NN	Number=Sing	9	nsubj	9:nsubj|25:nsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 5	based	base	VERB	VBN	Tense=Past|VerbForm=Part	9	case	9:case	_
 6	on	on	ADP	IN	_	9	case	9:case	_

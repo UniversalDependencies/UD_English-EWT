@@ -28,7 +28,7 @@
 6	still	still	ADV	RB	_	7	advmod	7:advmod	_
 7	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	assistance	assistance	NOUN	NN	Number=Sing	7	obj	14:nsubj:xsubj|7:obj	_
+9	assistance	assistance	NOUN	NN	Number=Sing	7	obj	7:obj|14:nsubj:xsubj	_
 10	of	of	ADP	IN	_	12	case	12:case	_
 11	other	other	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	visualizations	visualization	NOUN	NNS	Number=Plur	9	nmod	9:nmod:of	_
@@ -152,14 +152,16 @@
 15	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 16	back	back	NOUN	NN	Number=Sing	14	obj	14:obj|17:nsubj:xsubj	_
 17	straight	straight	ADJ	JJ	Degree=Pos	14	xcomp	14:xcomp	SpaceAfter=No
-18	,	,	PUNCT	,	_	19	punct	19:punct	_
-19	eyes	eye	NOUN	NNS	Number=Plur	14	conj	14:conj:and	_
-20	closed	close	VERB	VBN	Tense=Past|VerbForm=Part	19	orphan	19:orphan	_
-21	and	and	CCONJ	CC	_	22	cc	22:cc	_
-22	tongue	tongue	NOUN	NN	Number=Sing	14	conj	14:conj:and	_
+18	,	,	PUNCT	,	_	19	punct	18.1:punct|19:punct	_
+18.1	keep	keep	VERB	VB	Mood=Imp|VerbForm=Fin	_	_	14:conj:and	CopyOf=14
+19	eyes	eye	NOUN	NNS	Number=Plur	14	conj	14:conj:and|18.1:obj|20:nsubj:xsubj	_
+20	closed	close	VERB	VBN	Tense=Past|VerbForm=Part	19	orphan	18.1:xcomp	_
+21	and	and	CCONJ	CC	_	22	cc	21.1:cc|22:cc	_
+21.1	keep	keep	VERB	VB	Mood=Imp|VerbForm=Fin	_	_	14:conj:and	CopyOf=14
+22	tongue	tongue	NOUN	NN	Number=Sing	14	conj	14:conj:and|21.1:obj	_
 23	on	on	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
-25	roof	roof	NOUN	NN	Number=Sing	22	orphan	22:orphan	_
+25	roof	roof	NOUN	NN	Number=Sing	22	orphan	21.1:obl:on	_
 26	of	of	ADP	IN	_	28	case	28:case	_
 27	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	28	nmod:poss	28:nmod:poss	_
 28	mouth	mouth	NOUN	NN	Number=Sing	25	nmod	25:nmod:of	SpaceAfter=No
@@ -184,7 +186,7 @@
 # text = Spend a minute or so concentrating on your breath, feeling the air flowing through your nostrils.
 1	Spend	spend	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
-3	minute	minute	NOUN	NN	Number=Sing	1	obj	1:obj|11:nsubj:xsubj|6:nsubj:xsubj	_
+3	minute	minute	NOUN	NN	Number=Sing	1	obj	1:obj|6:nsubj:xsubj|11:nsubj:xsubj	_
 4	or	or	CCONJ	CC	_	5	cc	5:cc	_
 5	so	so	ADV	RB	_	3	advmod	3:advmod	_
 6	concentrating	concentrate	VERB	VBG	VerbForm=Ger	1	xcomp	1:xcomp	_
@@ -273,7 +275,7 @@
 9	breathing	breathe	VERB	VBG	VerbForm=Ger	8	xcomp	8:xcomp	_
 10	rhythmically	rhythmically	ADV	RB	_	9	advmod	9:advmod	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	naturally	naturally	ADV	RB	_	10	conj	10:conj:and|9:advmod	SpaceAfter=No
+12	naturally	naturally	ADV	RB	_	10	conj	9:advmod|10:conj:and	SpaceAfter=No
 13	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_Meditation20052_06390a5f75b2e1f2_ENG_20050316_091700-0016
@@ -436,7 +438,7 @@
 8	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 9	greater	greater	ADJ	JJR	Degree=Cmp	11	amod	11:amod	_
 10	universal	universal	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	Mind	mind	NOUN	NN	Number=Sing	4	obl	13:nsubj:relsubj|4:obl:with	_
+11	Mind	mind	NOUN	NN	Number=Sing	4	obl	4:obl:with|13:nsubj:relsubj	_
 12	that	that	PRON	WDT	PronType=Rel	13	nsubj	11:ref	_
 13	surrounds	surround	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
 14	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	13	obj	13:obj	SpaceAfter=No
@@ -560,7 +562,7 @@
 3	's	's	PART	POS	_	2	case	2:case	_
 4	rays	ray	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	warmth	warmth	NOUN	NN	Number=Sing	4	conj	10:nsubj|4:conj:and	_
+6	warmth	warmth	NOUN	NN	Number=Sing	4	conj	4:conj:and|10:nsubj	_
 7	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 8	still	still	ADV	RB	_	10	advmod	10:advmod	_
 9	with	with	ADP	IN	_	10	case	10:case	_
@@ -667,7 +669,7 @@
 11	close	close	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	reminder	reminder	NOUN	NN	Number=Sing	5	appos	5:appos	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	link	link	NOUN	NN	Number=Sing	12	conj	12:conj:and|5:appos	_
+14	link	link	NOUN	NN	Number=Sing	12	conj	5:appos|12:conj:and	_
 15	between	between	ADP	IN	_	16	case	16:case	_
 16	earth	earth	NOUN	NN	Number=Sing	14	nmod	14:nmod:between	_
 17	and	and	CCONJ	CC	_	20	cc	20:cc	_
@@ -708,7 +710,7 @@
 2	warm	warm	ADJ	JJ	Degree=Pos	5	amod	5:amod	SpaceAfter=No
 3	,	,	PUNCT	,	_	5	punct	5:punct	_
 4	gentle	gentle	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	breeze	breeze	NOUN	NN	Number=Sing	6	nsubj	11:nsubj|6:nsubj	_
+5	breeze	breeze	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|11:nsubj	_
 6	swirls	swirl	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 7	around	around	ADP	IN	_	9	case	9:case	_
 8	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
@@ -1114,7 +1116,7 @@
 13	and	and	CCONJ	CC	_	16	cc	16:cc	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	universal	universal	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	Consciousness	consciousness	NOUN	NN	Number=Sing	12	conj	12:conj:and|9:nmod:between	_
+16	Consciousness	consciousness	NOUN	NN	Number=Sing	12	conj	9:nmod:between|12:conj:and	_
 17	or	or	CCONJ	CC	_	19	cc	19:cc	_
 18	Supreme	supreme	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 19	Consciousness	consciousness	NOUN	NN	Number=Sing	16	conj	16:conj:or	SpaceAfter=No
@@ -1134,7 +1136,7 @@
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	mantra	mantra	NOUN	NN	Number=Sing	8	obl	8:obl:on	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	ideation	ideation	NOUN	NN	Number=Sing	11	conj	11:conj:and|8:obl:on	_
+13	ideation	ideation	NOUN	NN	Number=Sing	11	conj	8:obl:on|11:conj:and	_
 14	-	-	PUNCT	,	_	3	punct	3:punct	_
 15	that	that	PRON	DT	Number=Sing|PronType=Dem	17	nsubj	17:nsubj	SpaceAfter=No
 16	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
@@ -1195,7 +1197,7 @@
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	but	but	CCONJ	CC	_	9	cc	9:cc	_
 9	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	6	conj	6:conj:but	SpaceAfter=No
-10	s	s	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	9	obj	11:nsubj:xsubj|9:obj	_
+10	s	s	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	9	obj	9:obj|11:nsubj:xsubj	_
 11	face	face	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 12	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obj	11:obj	_
 13	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	16	nsubj	16:nsubj|19:nsubj	SpaceAfter=No

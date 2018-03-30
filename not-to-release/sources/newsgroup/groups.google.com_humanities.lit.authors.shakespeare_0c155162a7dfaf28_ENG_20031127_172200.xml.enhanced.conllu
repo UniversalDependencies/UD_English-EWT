@@ -4,18 +4,18 @@
 1	Dear	dear	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
 2	Judges	judge	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
-4	Lawyers	lawyer	NOUN	NNS	Number=Plur	2	conj	2:conj:et.	SpaceAfter=No
+4	Lawyers	lawyer	NOUN	NNS	Number=Plur	2	conj	2:conj:et	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	Policemen	policeman	NOUN	NNS	Number=Plur	2	conj	2:conj:et.	SpaceAfter=No
+6	Policemen	policeman	NOUN	NNS	Number=Plur	2	conj	2:conj:et	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	Guards	guard	NOUN	NNS	Number=Plur	2	conj	2:conj:et.	SpaceAfter=No
+8	Guards	guard	NOUN	NNS	Number=Plur	2	conj	2:conj:et	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	Counselors	counselor	NOUN	NNS	Number=Plur	2	conj	2:conj:et.	SpaceAfter=No
+10	Counselors	counselor	NOUN	NNS	Number=Plur	2	conj	2:conj:et	SpaceAfter=No
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
-12	Taxpayers	taxpayer	NOUN	NNS	Number=Plur	2	conj	2:conj:et.	SpaceAfter=No
+12	Taxpayers	taxpayer	NOUN	NNS	Number=Plur	2	conj	2:conj:et	SpaceAfter=No
 13	,	,	PUNCT	,	_	12	punct	12:punct	_
-14	et.	et.	X	FW	_	15	cc	15:cc	_
-15	al.	al.	X	FW	_	2	conj	2:conj:et.	SpaceAfter=No
+14	et.	et	X	FW	_	15	cc	15:cc	_
+15	al.	al.	X	FW	_	2	conj	2:conj:et	SpaceAfter=No
 16	,	,	PUNCT	,	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0c155162a7dfaf28_ENG_20031127_172200-0002
@@ -35,7 +35,7 @@
 6	for	for	ADP	IN	_	7	case	7:case	_
 7	good	good	NOUN	NN	Number=Sing	13	obl	13:obl:for	_
 8	or	or	CCONJ	CC	_	9	cc	9:cc	_
-9	bad	bad	NOUN	NN	Number=Sing	7	conj	13:obl:for|7:conj:or	SpaceAfter=No
+9	bad	bad	NOUN	NN	Number=Sing	7	conj	7:conj:or|13:obl:for	SpaceAfter=No
 10	,	,	PUNCT	,	_	13	punct	13:punct	_
 11	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 12	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
@@ -70,12 +70,12 @@
 17	drug	drug	NOUN	NN	Number=Sing	20	compound	20:compound	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
 19	alcohol	alcohol	NOUN	NN	Number=Sing	17	conj	17:conj:and|20:compound	_
-20	addicts	addict	NOUN	NNS	Number=Plur	15	conj	15:conj|4:appos	SpaceAfter=No
+20	addicts	addict	NOUN	NNS	Number=Plur	15	conj	4:appos|15:conj	SpaceAfter=No
 21	,	,	PUNCT	,	_	4	punct	4:punct	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 23	unemployed	unemployed	ADJ	JJ	Degree=Pos	4	appos	4:appos	_
 24	and	and	CCONJ	CC	_	25	cc	25:cc	_
-25	unemployable	unemployable	ADJ	JJ	Degree=Pos	23	conj	23:conj:and|4:appos	SpaceAfter=No
+25	unemployable	unemployable	ADJ	JJ	Degree=Pos	23	conj	4:appos|23:conj:and	SpaceAfter=No
 26	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0c155162a7dfaf28_ENG_20031127_172200-0006
@@ -110,7 +110,7 @@
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0c155162a7dfaf28_ENG_20031127_172200-0008
 # text = We are ex-cons, uninsured, homeless, of many colors and speaking many tongues.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	11:nsubj|3:nsubj|5:nsubj|7:nsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj|7:nsubj|11:nsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	ex-cons	ex-con	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
@@ -386,7 +386,7 @@
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	meet	meet	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	convict	convict	NOUN	NN	Number=Sing	8	obj	12:nsubj:relsubj|8:obj	_
+10	convict	convict	NOUN	NN	Number=Sing	8	obj	8:obj|12:nsubj:relsubj	_
 11	who	who	PRON	WP	PronType=Rel	12	nsubj	10:ref	_
 12	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
 13	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
@@ -505,7 +505,7 @@
 5	approximately	approximately	ADV	RB	_	7	advmod	7:advmod	_
 6	10	10	NUM	CD	NumType=Card	7	compound	7:compound	_
 7	million	million	NUM	CD	NumType=Card	8	nummod	8:nummod	_
-8	Americans	Americans	PROPN	NNPS	Number=Plur	9	nsubj	11:nsubj|23:nsubj|9:nsubj	_
+8	Americans	Americans	PROPN	NNPS	Number=Plur	9	nsubj	9:nsubj|11:nsubj|23:nsubj	_
 9	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
 10	either	either	CCONJ	CC	_	9	cc:preconj	9:cc:preconj	_
 11	incarcerated	incarcerate	VERB	VBN	Tense=Past|VerbForm=Part	9	conj	3:ccomp|9:conj:or	SpaceAfter=No
@@ -689,8 +689,8 @@
 1	Bruce	Bruce	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	Reilly	Reilly	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	(	(	PUNCT	-LRB-	_	5	punct	5:punct	SpaceAfter=No
-4	a.k.a	a.k.a	ADP	IN	_	5	case	5:case	_
-5	Bruha	Bruha	PROPN	NNP	Number=Sing	1	nmod	1:nmod:a.k.a	SpaceAfter=No
+4	a.k.a	a.k.a	ADV	RB	_	5	advmod	5:advmod	_
+5	Bruha	Bruha	PROPN	NNP	Number=Sing	1	appos	1:appos	SpaceAfter=No
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	_
 7	P.O.	p.o.	NOUN	NN	Number=Sing	8	compound	8:compound	SpaceAfter=No
 8	Box	box	NOUN	NN	Number=Sing	1	list	1:list	_
@@ -764,7 +764,7 @@
 25	pp	pp	NOUN	NN	Number=Sing	26	nmod:npmod	26:nmod:npmod	_
 26	69	69	NUM	CD	NumType=Card	18	appos	18:appos	SpaceAfter=No
 27	-	-	SYM	SYM	_	28	case	28:case	SpaceAfter=No
-28	72	72	NUM	CD	NumType=Card	26	nmod	26:nmod:-	SpaceAfter=No
+28	72	72	NUM	CD	NumType=Card	26	nmod	26:nmod	SpaceAfter=No
 29	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0c155162a7dfaf28_ENG_20031127_172200-0042
@@ -924,7 +924,7 @@
 18	possibly	possibly	ADV	RB	_	21	advmod	21:advmod	_
 19	other	other	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 20	intelligence	intelligence	NOUN	NN	Number=Sing	21	compound	21:compound	_
-21	organizations	organization	NOUN	NNS	Number=Plur	15	conj	15:conj:and|6:nmod:by	SpaceAfter=No
+21	organizations	organization	NOUN	NNS	Number=Plur	15	conj	6:nmod:by|15:conj:and	SpaceAfter=No
 22	)	)	PUNCT	-RRB-	_	15	punct	15:punct	_
 23	for	for	ADP	IN	_	25	case	25:case	_
 24	interesting	interesting	ADJ	JJ	Degree=Pos	25	amod	25:amod	_

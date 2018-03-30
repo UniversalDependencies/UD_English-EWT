@@ -36,7 +36,7 @@
 7	Of	of	ADP	IN	_	8	case	8:case	_
 8	Checks	check	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	_
 9	And	and	CCONJ	CC	_	10	cc	10:cc	_
-10	Balances	balance	NOUN	NNS	Number=Plur	8	conj	6:nmod:of|8:conj:And	SpaceAfter=No
+10	Balances	balance	NOUN	NNS	Number=Plur	8	conj	6:nmod:of|8:conj:and	SpaceAfter=No
 11	,	,	PUNCT	,	_	3	punct	3:punct	_
 12	Giving	give	VERB	VBG	VerbForm=Ger	3	advcl	3:advcl	_
 13	Far	far	ADV	RB	Degree=Pos	15	advmod	15:advmod	_
@@ -212,7 +212,7 @@
 12	and	and	CCONJ	CC	_	15	cc	15:cc	_
 13	from	from	ADP	IN	_	15	case	15:case	_
 14	Law	law	NOUN	NN	Number=Sing	15	compound	15:compound	_
-15	School	school	NOUN	NN	Number=Sing	11	conj	11:conj:and|2:obl:from	_
+15	School	school	NOUN	NN	Number=Sing	11	conj	2:obl:from|11:conj:and	_
 16	at	at	ADP	IN	_	17	case	17:case	_
 17	Yale	Yale	PROPN	NNP	Number=Sing	15	nmod	15:nmod:at	SpaceAfter=No
 18	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -229,7 +229,7 @@
 8	,	,	PUNCT	,	_	7	punct	7:punct	_
 9	including	include	VERB	VBG	VerbForm=Ger	11	case	11:case	_
 10	many	many	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	years	year	NOUN	NNS	Number=Plur	7	nmod	7:nmod:including	_
+11	years	year	NOUN	NNS	Number=Plur	7	nmod	7:nmod:include	_
 12	as	as	ADP	IN	_	16	case	16:case	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 14	Federal	federal	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
@@ -283,19 +283,19 @@
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	mild	mild	ADJ	JJ	Degree=Pos	15	amod	15:amod	SpaceAfter=No
 14	-	-	PUNCT	HYPH	_	15	punct	15:punct	SpaceAfter=No
-15	mannered	mannered	ADJ	JJ	Degree=Pos	11	conj	11:conj|2:advcl	SpaceAfter=No
+15	mannered	mannered	ADJ	JJ	Degree=Pos	11	conj	2:advcl|11:conj	SpaceAfter=No
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
-17	respectful	respectful	ADJ	JJ	Degree=Pos	11	conj	11:conj|2:advcl	_
+17	respectful	respectful	ADJ	JJ	Degree=Pos	11	conj	2:advcl|11:conj	_
 18	of	of	ADP	IN	_	20	case	20:case	_
 19	all	all	DET	DT	_	20	det	20:det	_
 20	people	people	NOUN	NNS	Number=Plur	17	obl	17:obl:of	SpaceAfter=No
 21	;	;	PUNCT	,	_	11	punct	11:punct	_
-22	careful	careful	ADJ	JJ	Degree=Pos	11	conj	11:conj|2:advcl	_
+22	careful	careful	ADJ	JJ	Degree=Pos	11	conj	2:advcl|11:conj	_
 23	in	in	ADP	IN	_	25	case	25:case	_
 24	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
 25	work	work	NOUN	NN	Number=Sing	22	obl	22:obl:in	SpaceAfter=No
 26	,	,	PUNCT	,	_	27	punct	27:punct	_
-27	meticulous	meticulous	ADJ	JJ	Degree=Pos	11	conj	11:conj|2:advcl	_
+27	meticulous	meticulous	ADJ	JJ	Degree=Pos	11	conj	2:advcl|11:conj	_
 28	in	in	ADP	IN	_	29	case	29:case	_
 29	detail	detail	NOUN	NN	Number=Sing	27	obl	27:obl:in	SpaceAfter=No
 30	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -409,7 +409,7 @@
 15	approve	approve	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
 16	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	obj	15:obj	_
 17	or	or	CCONJ	CC	_	18	cc	18:cc	_
-18	not	not	PART	RB	_	15	conj	15:conj:or|9:advcl:to	SpaceAfter=No
+18	not	not	PART	RB	_	15	conj	9:advcl:to|15:conj:or	SpaceAfter=No
 19	;	;	PUNCT	,	_	7	punct	7:punct	_
 20	and	and	CCONJ	CC	_	33	cc	33:cc	_
 21	at	at	ADP	IN	_	23	case	23:case	_
@@ -443,7 +443,7 @@
 # sent_id = newsgroup-groups.google.com_civicamerican_22c54c292026bfd2_ENG_20060128_072400-0021
 # text = The President is very eager to go ahead quickly and get this vote, because he very much wants to have Samuel Alito on the Supreme Court, to be judging the cases Bush is interested in.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	President	President	PROPN	NNP	Number=Sing	5	nsubj	11:nsubj:xsubj|5:nsubj|7:nsubj:xsubj	_
+2	President	President	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj|7:nsubj:xsubj|11:nsubj:xsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 4	very	very	ADV	RB	_	5	advmod	5:advmod	_
 5	eager	eager	ADJ	JJ	Degree=Pos	0	root	0:root	_
@@ -680,7 +680,7 @@
 8	Of	of	ADP	IN	_	9	case	9:case	_
 9	Checks	check	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	_
 10	And	and	CCONJ	CC	_	11	cc	11:cc	_
-11	Balances	balance	NOUN	NNS	Number=Plur	9	conj	7:nmod:of|9:conj:And	SpaceAfter=No
+11	Balances	balance	NOUN	NNS	Number=Plur	9	conj	7:nmod:of|9:conj:and	SpaceAfter=No
 12	,	,	PUNCT	,	_	4	punct	4:punct	_
 13	Giving	give	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl	_
 14	Far	far	ADV	RB	Degree=Pos	16	advmod	16:advmod	_
@@ -764,7 +764,7 @@
 8	-	-	PUNCT	HYPH	_	9	punct	9:punct	SpaceAfter=No
 9	known	know	VERB	VBN	Tense=Past|VerbForm=Part	11	amod	11:amod	_
 10	Constitutional	constitutional	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	theory	theory	NOUN	NN	Number=Sing	4	obl	22:nsubj:relsubj|4:obl:in	_
+11	theory	theory	NOUN	NN	Number=Sing	4	obl	4:obl:in|22:nsubj:relsubj	_
 12	-	-	PUNCT	,	_	11	punct	11:punct	_
 13	called	call	VERB	VBN	Tense=Past|VerbForm=Part	11	acl	11:acl	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
@@ -808,7 +808,7 @@
 52	,	,	PUNCT	,	_	46	punct	46:punct	_
 53	including	include	VERB	VBG	VerbForm=Ger	55	case	55:case	_
 54	the	the	DET	DT	Definite=Def|PronType=Art	55	det	55:det	_
-55	functions	function	NOUN	NNS	Number=Plur	46	nmod	46:nmod:including	_
+55	functions	function	NOUN	NNS	Number=Plur	46	nmod	46:nmod:include	_
 56	of	of	ADP	IN	_	59	case	59:case	_
 57	the	the	DET	DT	Definite=Def|PronType=Art	59	det	59:det	_
 58	Independent	independent	ADJ	JJ	Degree=Pos	59	amod	59:amod	_
@@ -876,7 +876,7 @@
 # sent_id = newsgroup-groups.google.com_civicamerican_22c54c292026bfd2_ENG_20060128_072400-0032
 # text = "Commander In Chief" doesn't mean that he is the boss of the Military, merely that he is the Administrator, just as he is the Administrator of the Executive Branch, charged with "executing faithfully" all the laws passed by Congress and all the Decisions rendered by the Supreme Court.
 1	"	"	PUNCT	``	_	2	punct	2:punct	SpaceAfter=No
-2	Commander	Commander	PROPN	NNP	Number=Sing	8	nsubj	18:nsubj|8:nsubj	_
+2	Commander	Commander	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|18:nsubj|18.1:nsubj	_
 3	In	in	ADP	IN	_	4	case	4:case	_
 4	Chief	Chief	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	SpaceAfter=No
 5	"	"	PUNCT	''	_	2	punct	2:punct	_
@@ -892,12 +892,13 @@
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 16	Military	military	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	SpaceAfter=No
 17	,	,	PUNCT	,	_	8	punct	8:punct	_
-18	merely	merely	ADV	RB	_	8	conj	8:conj	_
+18	merely	merely	ADV	RB	_	8	conj	8:conj|18.1:advmod	_
+18.1	mean	mean	VERB	VB	VerbForm=Inf	_	_	8:conj	CopyOf=8
 19	that	that	SCONJ	IN	_	23	mark	23:mark	_
 20	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	23	nsubj	23:nsubj	_
 21	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	cop	23:cop	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
-23	Administrator	administrator	NOUN	NN	Number=Sing	18	orphan	18:orphan	SpaceAfter=No
+23	Administrator	administrator	NOUN	NN	Number=Sing	18	orphan	18.1:ccomp	SpaceAfter=No
 24	,	,	PUNCT	,	_	23	punct	23:punct	_
 25	just	just	ADV	RB	_	30	advmod	30:advmod	_
 26	as	as	SCONJ	IN	_	30	mark	30:mark	_
@@ -946,7 +947,7 @@
 9	of	of	ADP	IN	_	10	case	10:case	_
 10	Congress	Congress	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	Decisions	decision	NOUN	NNS	Number=Plur	8	conj	17:nsubj|8:conj:and	_
+12	Decisions	decision	NOUN	NNS	Number=Plur	8	conj	8:conj:and|17:nsubj	_
 13	of	of	ADP	IN	_	16	case	16:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	Supreme	Supreme	PROPN	NNP	Number=Sing	16	compound	16:compound	_
@@ -967,11 +968,11 @@
 # text = And so Congress and the Supreme Court become mere advisors to the President, with no real authority over him.
 1	And	and	CCONJ	CC	_	10	cc	10:cc	_
 2	so	so	ADV	RB	_	8	advmod	8:advmod	_
-3	Congress	Congress	PROPN	NNP	Number=Sing	8	nsubj	10:nsubj:xsubj|8:nsubj	_
+3	Congress	Congress	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 4	and	and	CCONJ	CC	_	7	cc	7:cc	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	Supreme	Supreme	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	Court	Court	PROPN	NNP	Number=Sing	3	conj	10:nsubj:xsubj|3:conj:and|8:nsubj	_
+7	Court	Court	PROPN	NNP	Number=Sing	3	conj	3:conj:and|8:nsubj|10:nsubj:xsubj	_
 8	become	become	VERB	VB	VerbForm=Inf	0	root	0:root	_
 9	mere	mere	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	advisors	advisor	NOUN	NNS	Number=Plur	8	xcomp	8:xcomp	_
@@ -1037,7 +1038,7 @@
 13	Free	free	ADJ	JJ	Degree=Pos	10	nmod	10:nmod:of	_
 14	And	and	CCONJ	CC	_	16	cc	16:cc	_
 15	The	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	Home	home	NOUN	NN	Number=Sing	10	conj	10:conj:And|5:appos	_
+16	Home	home	NOUN	NN	Number=Sing	10	conj	5:appos|10:conj:and	_
 17	Of	of	ADP	IN	_	19	case	19:case	_
 18	The	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 19	Brave	brave	ADJ	JJ	Degree=Pos	16	nmod	16:nmod:of	_
@@ -1166,7 +1167,7 @@
 8	send	send	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 9	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	8	obj	8:obj	_
 10	to	to	ADP	IN	_	11	case	11:case	_
-11	everyone	everyone	PRON	NN	Number=Sing	8	obl	15:nsubj:relsubj|17:nsubj:xsubj|8:obl:to	_
+11	everyone	everyone	PRON	NN	Number=Sing	8	obl	8:obl:to|15:nsubj:relsubj|17:nsubj:xsubj	_
 12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
 13	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
 14	who	who	PRON	WP	PronType=Rel	15	nsubj	11:ref	_
