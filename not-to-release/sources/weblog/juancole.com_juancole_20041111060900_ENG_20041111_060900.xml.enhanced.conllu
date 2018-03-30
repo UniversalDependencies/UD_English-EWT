@@ -35,7 +35,7 @@
 10	noncombatants	noncombatant	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	SpaceAfter=No
 11	,	,	PUNCT	,	_	7	punct	7:punct	_
 12	including	include	VERB	VBG	VerbForm=Ger	13	case	13:case	_
-13	Shaikh	Shaikh	PROPN	NNP	Number=Sing	7	nmod	7:nmod:including	_
+13	Shaikh	Shaikh	PROPN	NNP	Number=Sing	7	nmod	7:nmod:include	_
 14	Abdul	Abdul	PROPN	NNP	Number=Sing	13	flat	13:flat	_
 15	Wahhab	Wahhab	PROPN	NNP	Number=Sing	13	flat	13:flat	_
 16	al	al	PROPN	NNP	Number=Sing	13	flat	13:flat	SpaceAfter=No
@@ -92,14 +92,14 @@
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	Tikrit	Tikrit	PROPN	NNP	Number=Sing	4	obl	4:obl:in	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	Huwaijah	Huwaijah	PROPN	NNP	Number=Sing	11	conj	11:conj:and|4:obl:in	SpaceAfter=No
+13	Huwaijah	Huwaijah	PROPN	NNP	Number=Sing	11	conj	4:obl:in|11:conj:and	SpaceAfter=No
 14	,	,	PUNCT	,	_	11	punct	11:punct	_
 15	as	as	ADV	RB	_	11	advmod	11:advmod	_
 16	well	well	ADV	RB	Degree=Pos	15	fixed	15:fixed	SpaceAfter=No
 17	,	,	PUNCT	,	_	4	punct	4:punct	_
 18	according	accord	VERB	VBG	VerbForm=Ger	20	case	20:case	_
 19	to	to	ADP	IN	_	18	fixed	18:fixed	_
-20	az	az	PROPN	NNP	Number=Sing	4	obl	4:obl:according_to	SpaceAfter=No
+20	az	az	PROPN	NNP	Number=Sing	4	obl	4:obl:accord_to	SpaceAfter=No
 21	-	-	PUNCT	HYPH	_	20	punct	20:punct	SpaceAfter=No
 22	Zaman	Zaman	PROPN	NNP	Number=Sing	20	flat	20:flat	_
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -153,9 +153,9 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	man	man	NOUN	NN	Number=Sing	9	nmod:poss	9:nmod:poss	SpaceAfter=No
 8	's	's	PART	POS	_	7	case	7:case	_
-9	wife	wife	NOUN	NN	Number=Sing	4	conj	17:nsubj:pass|4:conj:and	_
+9	wife	wife	NOUN	NN	Number=Sing	4	conj	4:conj:and|17:nsubj:pass	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	daughter	daughter	NOUN	NN	Number=Sing	4	conj	17:nsubj:pass|4:conj:and	SpaceAfter=No
+11	daughter	daughter	NOUN	NN	Number=Sing	4	conj	4:conj:and|17:nsubj:pass	SpaceAfter=No
 12	-	-	PUNCT	HYPH	_	11	punct	11:punct	SpaceAfter=No
 13	in	in	ADP	IN	_	15	case	15:case	SpaceAfter=No
 14	-	-	PUNCT	HYPH	_	15	punct	15:punct	SpaceAfter=No
@@ -196,7 +196,7 @@
 15	especially	especially	ADV	RB	_	18	advmod	18:advmod	_
 16	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 17	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	18	amod	18:amod	_
-18	cousins	cousin	NOUN	NNS	Number=Plur	12	nmod	12:nmod:including	SpaceAfter=No
+18	cousins	cousin	NOUN	NNS	Number=Plur	12	nmod	12:nmod:include	SpaceAfter=No
 19	,	,	PUNCT	,	_	8	punct	8:punct	_
 20	so	so	ADV	RB	_	23	advmod	23:advmod	_
 21	this	this	DET	DT	Number=Sing|PronType=Dem	22	det	22:det	_
@@ -217,7 +217,7 @@
 # text = The US Marines took most of Fallujah Wednesday, but still face pockets of resistance.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	US	US	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Marines	Marines	PROPN	NNPS	Number=Plur	4	nsubj	12:nsubj|4:nsubj	_
+3	Marines	Marines	PROPN	NNPS	Number=Plur	4	nsubj	4:nsubj|12:nsubj	_
 4	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	most	most	ADJ	JJS	Degree=Sup	4	obj	4:obj	_
 6	of	of	ADP	IN	_	7	case	7:case	_
@@ -365,7 +365,7 @@
 16	Iraq	Iraq	PROPN	NNP	Number=Sing	8	nmod	8:nmod:in	_
 17	and	and	CCONJ	CC	_	19	cc	19:cc	_
 18	in	in	ADP	IN	_	19	case	19:case	_
-19	Washington	Washington	PROPN	NNP	Number=Sing	16	conj	16:conj:and|8:nmod:in	SpaceAfter=No
+19	Washington	Washington	PROPN	NNP	Number=Sing	16	conj	8:nmod:in|16:conj:and	SpaceAfter=No
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-juancole.com_juancole_20041111060900_ENG_20041111_060900-0015
@@ -379,7 +379,7 @@
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
 8	see	see	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 9	Unconfirmed	Unconfirmed	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	Sources	Sources	PROPN	NNPS	Number=Plur	8	obj	12:nsubj:relsubj|8:obj	_
+10	Sources	Sources	PROPN	NNPS	Number=Plur	8	obj	8:obj|12:nsubj:relsubj	_
 11	which	which	PRON	WDT	PronType=Rel	12	nsubj	10:ref	_
 12	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
 13	some	some	DET	DT	_	14	det	14:det	_

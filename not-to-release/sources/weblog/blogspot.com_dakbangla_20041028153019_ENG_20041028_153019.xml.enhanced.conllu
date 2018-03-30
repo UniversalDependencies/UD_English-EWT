@@ -51,7 +51,7 @@
 1	Over	over	ADV	RB	_	3	advmod	3:advmod	_
 2	nine	nine	NUM	CD	NumType=Card	3	compound	3:compound	_
 3	dozen	dozen	NOUN	NN	Number=Sing	4	nummod	4:nummod	_
-4	temples	temple	NOUN	NNS	Number=Plur	13	nsubj:pass	13:nsubj:pass|7:nsubj:relsubj	_
+4	temples	temple	NOUN	NNS	Number=Plur	13	nsubj:pass	7:nsubj:relsubj|13:nsubj:pass	_
 5	that	that	PRON	WDT	PronType=Rel	7	nsubj	4:ref	_
 6	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	aux	7:aux	_
 7	served	serve	VERB	VBN	Tense=Past|VerbForm=Part	4	acl:relcl	4:acl:relcl	_
@@ -68,10 +68,11 @@
 18	as	as	ADP	IN	_	20	case	20:case	_
 19	building	building	NOUN	NN	Number=Sing	20	compound	20:compound	_
 20	material	material	NOUN	NN	Number=Sing	17	obl	17:obl:as	_
-21	and	and	CCONJ	CC	_	22	cc	22:cc	_
-22	others	other	NOUN	NNS	Number=Plur	17	conj	13:advcl:with|17:conj:and	_
+21	and	and	CCONJ	CC	_	22	cc	22:cc|22.1:cc	_
+22	others	other	NOUN	NNS	Number=Plur	17	conj	13:advcl:with|17:conj:and|22.1:nsubj	_
+22.1	used	use	VERB	VBN	Tense=Past|VerbForm=Part	_	_	13:advcl:with|17:conj:and	CopyOf=17
 23	as	as	ADP	IN	_	24	case	24:case	_
-24	urinals	urinal	NOUN	NNS	Number=Plur	22	orphan	22:orphan	SpaceAfter=No
+24	urinals	urinal	NOUN	NNS	Number=Plur	22	orphan	22.1:obl:as	SpaceAfter=No
 25	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041028153019_ENG_20041028_153019-0003
@@ -267,7 +268,7 @@
 4	this	this	PRON	DT	Number=Sing|PronType=Dem	6	nsubj	6:nsubj	_
 5	even	even	ADV	RB	_	6	advmod	6:advmod	_
 6	includes	include	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	parataxis	1:parataxis	_
-7	members	member	NOUN	NNS	Number=Plur	6	obj	23:nsubj:relsubj|25:nsubj:xsubj|6:obj	_
+7	members	member	NOUN	NNS	Number=Plur	6	obj	6:obj|23:nsubj:relsubj|25:nsubj:xsubj	_
 8	of	of	ADP	IN	_	14	case	14:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 10	U.S.	U.S.	PROPN	NNP	Number=Sing	14	compound	14:compound	_
@@ -324,7 +325,7 @@
 6	while	while	SCONJ	IN	_	23	mark	23:mark	_
 7	Pakistan	Pakistan	PROPN	NNP	Number=Sing	23	nsubj	23:nsubj	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	China	China	PROPN	NNP	Number=Sing	7	conj	13:nsubj:pass:relsubj|23:nsubj|7:conj:and	_
+9	China	China	PROPN	NNP	Number=Sing	7	conj	7:conj:and|13:nsubj:pass:relsubj|23:nsubj	_
 10	(	(	PUNCT	-LRB-	_	13	punct	13:punct	SpaceAfter=No
 11	which	which	PRON	WDT	PronType=Rel	13	nsubj:pass	9:ref	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux:pass	13:aux:pass	_
@@ -351,7 +352,7 @@
 5	would	would	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 6	ensure	ensure	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	degree	degree	NOUN	NN	Number=Sing	6	obj	16:nsubj:relsubj|17:nsubj:xsubj|6:obj	_
+8	degree	degree	NOUN	NN	Number=Sing	6	obj	6:obj|16:nsubj:relsubj|17:nsubj:xsubj	_
 9	of	of	ADP	IN	_	10	case	10:case	_
 10	autonomy	autonomy	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	_
 11	for	for	ADP	IN	_	13	case	13:case	_
@@ -548,7 +549,7 @@
 3	,	,	PUNCT	,	_	8	punct	8:punct	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	Kashmir	Kashmir	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	Valley	Valley	PROPN	NNP	Number=Sing	8	nsubj	22:nsubj|29:nsubj:xsubj|8:nsubj	_
+6	Valley	Valley	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|22:nsubj|29:nsubj:xsubj	_
 7	can	can	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 8	attract	attract	VERB	VB	VerbForm=Inf	0	root	0:root	_
 9	investment	investment	NOUN	NN	Number=Sing	8	obj	8:obj	_
@@ -558,7 +559,7 @@
 13	East	East	PROPN	NNP	Number=Sing	9	nmod	9:nmod:from	_
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
 15	other	other	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	locations	location	NOUN	NNS	Number=Plur	13	conj	13:conj:and|9:nmod:from	_
+16	locations	location	NOUN	NNS	Number=Plur	13	conj	9:nmod:from|13:conj:and	_
 17	where	where	ADV	WRB	PronType=Rel	20	advmod	20:advmod	_
 18	Muslims	Muslims	PROPN	NNPS	Number=Plur	20	nsubj	20:nsubj	_
 19	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	cop	20:cop	_
@@ -681,7 +682,7 @@
 1	Over	over	ADV	RB	_	3	advmod	3:advmod	_
 2	nine	nine	NUM	CD	NumType=Card	3	compound	3:compound	_
 3	dozen	dozen	NOUN	NN	Number=Sing	4	nummod	4:nummod	_
-4	temples	temple	NOUN	NNS	Number=Plur	13	nsubj:pass	13:nsubj:pass|7:nsubj:relsubj	_
+4	temples	temple	NOUN	NNS	Number=Plur	13	nsubj:pass	7:nsubj:relsubj|13:nsubj:pass	_
 5	that	that	PRON	WDT	PronType=Rel	7	nsubj	4:ref	_
 6	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	aux	7:aux	_
 7	served	serve	VERB	VBN	Tense=Past|VerbForm=Part	4	acl:relcl	4:acl:relcl	_
@@ -698,10 +699,11 @@
 18	as	as	ADP	IN	_	20	case	20:case	_
 19	building	building	NOUN	NN	Number=Sing	20	compound	20:compound	_
 20	material	material	NOUN	NN	Number=Sing	17	obl	17:obl:as	_
-21	and	and	CCONJ	CC	_	22	cc	22:cc	_
-22	others	other	NOUN	NNS	Number=Plur	17	conj	13:advcl:with|17:conj:and	_
+21	and	and	CCONJ	CC	_	22	cc	22:cc|22.1:cc	_
+22	others	other	NOUN	NNS	Number=Plur	17	conj	13:advcl:with|17:conj:and|22.1:nsubj	_
+22.1	used	use	VERB	VBN	Tense=Past|VerbForm=Part	_	_	13:advcl:with|17:conj:and	CopyOf=17
 23	as	as	ADP	IN	_	24	case	24:case	_
-24	urinals	urinal	NOUN	NNS	Number=Plur	22	orphan	22:orphan	SpaceAfter=No
+24	urinals	urinal	NOUN	NNS	Number=Plur	22	orphan	22.1:obl:as	SpaceAfter=No
 25	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041028153019_ENG_20041028_153019-0022
@@ -768,7 +770,7 @@
 9	supports	support	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	Kashmir	Kashmir	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	groups	group	NOUN	NNS	Number=Plur	9	obj	14:nsubj:relsubj|9:obj	_
+12	groups	group	NOUN	NNS	Number=Plur	9	obj	9:obj|14:nsubj:relsubj	_
 13	that	that	PRON	WDT	PronType=Rel	14	nsubj	12:ref	_
 14	back	back	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	acl:relcl	12:acl:relcl	_
 15	jihad	jihad	NOUN	NN	Number=Sing	14	obj	14:obj	_
@@ -794,7 +796,7 @@
 3	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	1	obl	1:obl:for	SpaceAfter=No
 4	,	,	PUNCT	,	_	8	punct	8:punct	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	general	general	NOUN	NN	Number=Sing	8	nsubj	10:nsubj:xsubj|8:nsubj	_
+6	general	general	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 8	decided	decide	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
@@ -831,7 +833,7 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 7	misnamed	misname	VERB	VBN	Tense=Past|VerbForm=Part	9	amod	9:amod	_
 8	think	think	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	tanks	tank	NOUN	NNS	Number=Plur	4	conj	11:nsubj:relsubj|15:nsubj|4:conj:and	_
+9	tanks	tank	NOUN	NNS	Number=Plur	4	conj	4:conj:and|11:nsubj:relsubj|15:nsubj	_
 10	that	that	PRON	WDT	PronType=Rel	11	nsubj	9:ref	_
 11	follow	follow	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
 12	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
@@ -892,7 +894,7 @@
 16	Congress	Congress	PROPN	NNP	Number=Sing	19	nsubj	19:nsubj|21:nsubj:xsubj	_
 17	can	can	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 18	least	least	ADV	RBS	Degree=Sup	19	advmod	19:advmod	_
-19	afford	afford	VERB	VB	VerbForm=Inf	5	conj	27:csubj|5:conj:and	_
+19	afford	afford	VERB	VB	VerbForm=Inf	5	conj	5:conj:and|27:csubj	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
 21	ignore	ignore	VERB	VB	VerbForm=Inf	19	xcomp	19:xcomp	_
 22	Indian	indian	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
@@ -943,7 +945,7 @@
 2	many	many	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	wrinkles	wrinkle	NOUN	NNS	Number=Plur	10	nmod	10:nmod:despite	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
-5	India	India	PROPN	NNP	Number=Sing	6	nsubj	10:nsubj:xsubj|28:nsubj:xsubj|6:nsubj	_
+5	India	India	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj|10:nsubj:xsubj|28:nsubj:xsubj	_
 6	remains	remain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 8	part	part	NOUN	NN	Number=Sing	10	compound	10:compound	SpaceAfter=No
@@ -966,7 +968,7 @@
 25	Kashmir	Kashmir	PROPN	NNP	Number=Sing	21	obl	21:obl:for	_
 26	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	28	aux	28:aux	_
 27	not	not	PART	RB	_	28	advmod	28:advmod	_
-28	get	get	VERB	VB	VerbForm=Inf	10	conj	10:conj:and|6:xcomp	_
+28	get	get	VERB	VB	VerbForm=Inf	10	conj	6:xcomp|10:conj:and	_
 29	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	28	obj	28:obj	_
 30	into	into	ADP	IN	_	32	case	32:case	_
 31	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
@@ -1063,7 +1065,7 @@
 17	,	,	PUNCT	,	_	20	punct	20:punct	_
 18	hence	hence	ADV	RB	_	20	advmod	20:advmod	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
-20	favor	favor	NOUN	NN	Number=Sing	9	obl:npmod	26:obl:relobj|9:obl:npmod	_
+20	favor	favor	NOUN	NN	Number=Sing	9	obl:npmod	9:obl:npmod|26:obl:relobj	_
 21	that	that	PRON	WDT	PronType=Rel	26	obj	20:ref	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 23	generals	general	NOUN	NNS	Number=Plur	26	nsubj	26:nsubj	_
@@ -1127,7 +1129,7 @@
 22	settlement	settlement	NOUN	NN	Number=Sing	18	obl	18:obl:as	SpaceAfter=No
 23	:	:	PUNCT	:	_	25	punct	25:punct	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
-25	line	line	NOUN	NN	Number=Sing	6	parataxis	30:nsubj:pass:relsubj|6:parataxis	_
+25	line	line	NOUN	NN	Number=Sing	6	parataxis	6:parataxis|30:nsubj:pass:relsubj	_
 26	of	of	ADP	IN	_	27	case	27:case	_
 27	action	action	NOUN	NN	Number=Sing	25	nmod	25:nmod:of	_
 28	that	that	PRON	WDT	PronType=Rel	30	nsubj:pass	25:ref	_
@@ -1256,7 +1258,7 @@
 # text = The one country that has shown that it understands the realities in South Asia is China.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	one	one	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	country	country	NOUN	NN	Number=Sing	16	nsubj	16:nsubj|6:nsubj:relsubj	_
+3	country	country	NOUN	NN	Number=Sing	16	nsubj	6:nsubj:relsubj|16:nsubj	_
 4	that	that	PRON	WDT	PronType=Rel	6	nsubj	3:ref	_
 5	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
 6	shown	show	VERB	VBN	Tense=Past|VerbForm=Part	3	acl:relcl	3:acl:relcl	_

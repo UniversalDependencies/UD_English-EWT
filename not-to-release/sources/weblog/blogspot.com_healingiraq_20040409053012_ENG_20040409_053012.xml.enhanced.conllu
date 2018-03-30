@@ -16,7 +16,7 @@
 13	Sadr	Sadr	PROPN	NNP	Number=Sing	14	compound	14:compound	_
 14	city	city	NOUN	NN	Number=Sing	6	obl	6:obl:in	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	Adhamiya	Adhamiya	PROPN	NNP	Number=Sing	14	conj	14:conj:and|6:obl:in	SpaceAfter=No
+16	Adhamiya	Adhamiya	PROPN	NNP	Number=Sing	14	conj	6:obl:in|14:conj:and	SpaceAfter=No
 17	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0002
@@ -633,7 +633,7 @@
 9	American	american	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	snipers	sniper	NOUN	NNS	Number=Plur	12	nsubj	12:nsubj	_
 11	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-12	shooting	shoot	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	30:nsubj|4:conj:and	_
+12	shooting	shoot	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	4:conj:and|30:nsubj	_
 13	children	child	NOUN	NNS	Number=Plur	12	obj	12:obj	_
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
 15	pregnant	pregnant	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
@@ -644,7 +644,7 @@
 20	"	"	PUNCT	``	_	23	punct	23:punct	SpaceAfter=No
 21	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	23	nsubj	23:nsubj	_
 22	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	23	aux	23:aux	_
-23	using	use	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	30:nsubj|4:conj:and	_
+23	using	use	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	4:conj:and|30:nsubj	_
 24	cluster	cluster	NOUN	NN	Number=Sing	25	compound	25:compound	_
 25	bombs	bomb	NOUN	NNS	Number=Plur	23	obj	23:obj	_
 26	against	against	ADP	IN	_	27	case	27:case	_
@@ -707,7 +707,7 @@
 
 # sent_id = weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0021
 # text = Someone who called himself Abu Hafs from the Ibn Al-Khattab Brigades (another new group) was on Al-Jazeera describing the enormous casualties among the Marines and he sweared that American soldiers were mutilating the bodies of dead insurgents.
-1	Someone	someone	PRON	NN	Number=Sing	23	nsubj	23:nsubj|3:nsubj:relsubj	_
+1	Someone	someone	PRON	NN	Number=Sing	23	nsubj	3:nsubj:relsubj|23:nsubj	_
 2	who	who	PRON	WP	PronType=Rel	3	nsubj	1:ref	_
 3	called	call	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
 4	himself	himself	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	3	obj	3:obj|5:nsubj:xsubj	_
@@ -760,9 +760,10 @@
 4	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux:pass	5:aux:pass	_
 5	reported	report	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 6	dead	dead	ADJ	JJ	Degree=Pos	5	xcomp	5:xcomp	_
-7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	500	500	NUM	CD	NumType=Card	5	conj	5:conj:and	_
-9	wounded	wounded	ADJ	JJ	Degree=Pos	8	orphan	8:orphan	_
+7	and	and	CCONJ	CC	_	8	cc	8:cc|8.1:cc	_
+8	500	500	NUM	CD	NumType=Card	5	conj	5:conj:and|8.1:nsubj:pass|9:nsubj:xsubj	_
+8.1	reported	report	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	_	_	5:conj:and	CopyOf=5
+9	wounded	wounded	ADJ	JJ	Degree=Pos	8	orphan	8.1:xcomp	_
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	Fallujah	Fallujah	PROPN	NNP	Number=Sing	5	obl	5:obl:in	_
 12	alone	alone	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No

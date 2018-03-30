@@ -86,7 +86,7 @@
 6	Sunni	sunni	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	Arab	arab	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	Shiite	shiite	ADJ	JJ	Degree=Pos	7	conj	10:amod|7:conj:and	_
+9	Shiite	shiite	ADJ	JJ	Degree=Pos	7	conj	7:conj:and|10:amod	_
 10	insurgencies	insurgency	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 11	simultaneously	simultaneously	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
 12	,	,	PUNCT	,	_	4	punct	4:punct	_
@@ -121,9 +121,9 @@
 5	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 6	Spanish	spanish	ADJ	JJ	Degree=Pos	11	amod	11:amod	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	Thai	thai	ADJ	JJ	Degree=Pos	6	conj	11:amod|6:conj:and	_
+8	Thai	thai	ADJ	JJ	Degree=Pos	6	conj	6:conj:and|11:amod	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	other	other	ADJ	JJ	Degree=Pos	6	conj	11:amod|6:conj:and	_
+10	other	other	ADJ	JJ	Degree=Pos	6	conj	6:conj:and|11:amod	_
 11	contingents	contingent	NOUN	NNS	Number=Plur	14	nsubj	14:nsubj	_
 12	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
 13	already	already	ADV	RB	_	14	advmod	14:advmod	_
@@ -135,7 +135,7 @@
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	UN	UN	PROPN	NNP	Number=Sing	22	nsubj	22:nsubj|25:nsubj:xsubj	_
 21	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
-22	reluctant	reluctant	ADJ	JJ	Degree=Pos	14	conj	14:conj:and|3:acl:relcl	_
+22	reluctant	reluctant	ADJ	JJ	Degree=Pos	14	conj	3:acl:relcl|14:conj:and	_
 23	to	to	PART	TO	_	25	mark	25:mark	_
 24	get	get	VERB	VB	VerbForm=Inf	25	aux:pass	25:aux:pass	_
 25	involved	involved	ADJ	JJ	Degree=Pos	22	xcomp	22:xcomp	SpaceAfter=No
@@ -203,7 +203,7 @@
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	CPA	CPA	PROPN	NNP	Number=Sing	6	obj	6:obj	_
 9	with	with	ADP	IN	_	10	case	10:case	_
-10	Neoconservatives	neoconservative	NOUN	NNS	Number=Plur	6	obl	12:nmod|6:obl:with	SpaceAfter=No
+10	Neoconservatives	neoconservative	NOUN	NNS	Number=Plur	6	obl	6:obl:with|12:nmod	SpaceAfter=No
 11	,	,	PUNCT	,	_	10	punct	10:punct	_
 12	most	most	ADJ	JJS	Degree=Sup	15	nsubj	15:nsubj	_
 13	of	of	ADP	IN	_	14	case	14:case	_
@@ -285,7 +285,7 @@
 11	motives	motive	NOUN	NNS	Number=Plur	8	nmod	8:nmod:of	_
 12	and	and	CCONJ	CC	_	14	cc	14:cc	_
 13	social	social	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	experiments	experiment	NOUN	NNS	Number=Plur	11	conj	11:conj:and|8:nmod:of	_
+14	experiments	experiment	NOUN	NNS	Number=Plur	11	conj	8:nmod:of|11:conj:and	_
 15	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	16	nsubj	16:nsubj|18:nsubj:xsubj	_
 16	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
@@ -301,10 +301,10 @@
 27	style	style	NOUN	NN	Number=Sing	30	compound	30:compound	_
 28	economic	economic	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
 29	shock	shock	NOUN	NN	Number=Sing	30	compound	30:compound	_
-30	therapy	therapy	NOUN	NN	Number=Sing	11	nmod	11:nmod:including	SpaceAfter=No
+30	therapy	therapy	NOUN	NN	Number=Sing	11	nmod	11:nmod:include	SpaceAfter=No
 31	,	,	PUNCT	,	_	33	punct	33:punct	_
 32	some	some	DET	DT	_	33	det	33:det	_
-33	sort	sort	NOUN	NN	Number=Sing	30	conj	11:nmod:including|30:conj:and	_
+33	sort	sort	NOUN	NN	Number=Sing	30	conj	11:nmod:include|30:conj:and	_
 34	of	of	ADP	IN	_	36	case	36:case	_
 35	sweetheart	sweetheart	NOUN	NN	Number=Sing	36	compound	36:compound	_
 36	deal	deal	NOUN	NN	Number=Sing	33	nmod	33:nmod:of	_
@@ -314,7 +314,7 @@
 40	and	and	CCONJ	CC	_	43	cc	43:cc	_
 41	maybe	maybe	ADV	RB	_	43	advmod	43:advmod	_
 42	even	even	ADV	RB	_	43	advmod	43:advmod	_
-43	breaking	break	VERB	VBG	VerbForm=Ger	30	conj	11:nmod:including|30:conj:and	_
+43	breaking	break	VERB	VBG	VerbForm=Ger	30	conj	11:nmod:include|30:conj:and	_
 44	the	the	DET	DT	Definite=Def|PronType=Art	45	det	45:det	_
 45	country	country	NOUN	NN	Number=Sing	43	obj	43:obj	_
 46	up	up	ADP	RP	_	43	compound:prt	43:compound:prt	_
@@ -400,7 +400,7 @@
 43	to	to	ADP	IN	_	42	fixed	42:fixed	_
 44	the	the	DET	DT	Definite=Def|PronType=Art	46	det	46:det	_
 45	Asian	Asian	PROPN	NNP	Number=Sing	46	compound	46:compound	_
-46	Times	Times	PROPN	NNP	Number=Sing	16	obl	16:obl:according_to	_
+46	Times	Times	PROPN	NNP	Number=Sing	16	obl	16:obl:accord_to	_
 47	.	.	PUNCT	.	_	16	punct	16:punct	_
 
 # sent_id = weblog-juancole.com_juancole_20040404101100_ENG_20040404_101100-0014
@@ -485,7 +485,7 @@
 9	with	with	ADP	IN	_	12	case	12:case	_
 10	dark	dark	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	ulterior	ulterior	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	motives	motive	NOUN	NNS	Number=Plur	8	obl	17:nsubj:pass:relsubj|8:obl:with	_
+12	motives	motive	NOUN	NNS	Number=Plur	8	obl	8:obl:with|17:nsubj:pass:relsubj	_
 13	that	that	PRON	WDT	PronType=Rel	17	nsubj:pass	12:ref	_
 14	can	can	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 15	scarcely	scarcely	ADV	RB	_	17	advmod	17:advmod	_
@@ -582,7 +582,7 @@
 17	given	give	VERB	VBN	Tense=Past|VerbForm=Part	20	case	20:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 19	Neocon	neocon	NOUN	NN	Number=Sing	20	compound	20:compound	_
-20	predominance	predominance	NOUN	NN	Number=Sing	15	obl	15:obl:given	_
+20	predominance	predominance	NOUN	NN	Number=Sing	15	obl	15:obl:give	_
 21	in	in	ADP	IN	_	23	case	23:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 23	CPA	CPA	PROPN	NNP	Number=Sing	20	nmod	20:nmod:in	_
@@ -612,7 +612,7 @@
 3	radical	radical	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 4	Shiite	shiite	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	Muslim	muslim	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	cleric	cleric	NOUN	NN	Number=Sing	8	nsubj	17:nsubj|8:nsubj	_
+6	cleric	cleric	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|17:nsubj	_
 7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 8	expressed	express	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 9	solidarity	solidarity	NOUN	NN	Number=Sing	8	obj	8:obj	_
@@ -648,11 +648,11 @@
 4	said	say	VERB	VBN	Tense=Past|VerbForm=Part	29	ccomp	29:ccomp	_
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
-7	repeat	repeat	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	29:ccomp|4:conj:and	_
+7	repeat	repeat	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and|29:ccomp	_
 8	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	expression	expression	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	solidarity	solidarity	NOUN	NN	Number=Sing	9	nmod	15:obl|9:nmod:of	_
+11	solidarity	solidarity	NOUN	NN	Number=Sing	9	nmod	9:nmod:of|15:obl	_
 12	which	which	PRON	WDT	PronType=Rel	15	obl	11:ref	_
 13	Hassan	Hassan	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	_
 14	Nasrallah	Nasrallah	PROPN	NNP	Number=Sing	13	flat	13:flat	_
@@ -714,7 +714,7 @@
 4	Hamas	Hamas	PROPN	NNP	Number=Sing	2	obj	2:obj|6:nsubj:xsubj	SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	_
 6	consider	consider	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	obj	10:nsubj:xsubj|6:obj	_
+7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	obj	6:obj|10:nsubj:xsubj	_
 8	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 9	striking	striking	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	arm	arm	NOUN	NN	Number=Sing	6	xcomp	6:xcomp	_
