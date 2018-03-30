@@ -7,15 +7,15 @@
 4	random	random	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	speculation	speculation	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
 6	about	about	SCONJ	IN	_	8	mark	8:mark	_
-7	Google	Google	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
-8	developiong	developiong	VERB	VBG	VerbForm=Ger	5	acl	5:acl	_
+7	Google	Google	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|13:nsubj|15:nsubj	_
+8	developiong	developiong	VERB	VBG	VerbForm=Ger	5	acl	5:acl:about	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	new	new	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	browser	browser	NOUN	NN	Number=Sing	8	obj	8:obj	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	SpaceAfter=No
-13	/	/	SYM	SYM	_	8	conj	8:conj	SpaceAfter=No
+13	/	/	SYM	SYM	_	8	conj	5:acl:about|8:conj:and	SpaceAfter=No
 14	or	or	CCONJ	CC	_	15	cc	15:cc	_
-15	acquiring	acquire	VERB	VBG	VerbForm=Ger	8	conj	8:conj	_
+15	acquiring	acquire	VERB	VBG	VerbForm=Ger	8	conj	5:acl:about|8:conj:or	_
 16	Firefox	Firefox	PROPN	NNP	Number=Sing	15	obj	15:obj	SpaceAfter=No
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -40,20 +40,20 @@
 3	acquired	acquire	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	Urchin	Urchin	PROPN	NNP	Number=Sing	3	obj	3:obj	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	Zipdash	Zipdash	PROPN	NNP	Number=Sing	4	conj	4:conj	SpaceAfter=No
+6	Zipdash	Zipdash	PROPN	NNP	Number=Sing	4	conj	3:obj|4:conj:and	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	Applied	Applied	PROPN	NNP	Number=Sing	9	compound	9:compound	_
-9	Semantics	Semantics	PROPN	NNPS	Number=Plur	4	conj	4:conj	SpaceAfter=No
+9	Semantics	Semantics	PROPN	NNPS	Number=Plur	4	conj	3:obj|4:conj:and	SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
-11	Picasa	Picasa	PROPN	NNP	Number=Sing	4	conj	4:conj	SpaceAfter=No
+11	Picasa	Picasa	PROPN	NNP	Number=Sing	4	conj	3:obj|4:conj:and	SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
-13	Blogger	Blogger	PROPN	NNP	Number=Sing	4	conj	4:conj	SpaceAfter=No
+13	Blogger	Blogger	PROPN	NNP	Number=Sing	4	conj	3:obj|4:conj:and	SpaceAfter=No
 14	,	,	PUNCT	,	_	19	punct	19:punct	_
 15	and	and	CCONJ	CC	_	19	cc	19:cc	_
 16	satellite	satellite	NOUN	NN	Number=Sing	17	compound	17:compound	_
 17	imaging	imaging	NOUN	NN	Number=Sing	18	compound	18:compound	_
 18	company	company	NOUN	NN	Number=Sing	19	compound	19:compound	_
-19	Keyhole	Keyhole	PROPN	NNP	Number=Sing	4	conj	4:conj	SpaceAfter=No
+19	Keyhole	Keyhole	PROPN	NNP	Number=Sing	4	conj	3:obj|4:conj:and	SpaceAfter=No
 20	,	,	PUNCT	,	_	3	punct	3:punct	_
 21	so	so	ADV	RB	_	24	advmod	24:advmod	_
 22	why	why	ADV	WRB	PronType=Int	24	advmod	24:advmod	_
@@ -73,10 +73,10 @@
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 9	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
 10	been	be	AUX	VBN	Tense=Past|VerbForm=Part	11	aux	11:aux	_
-11	following	follow	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj	_
-12	links	link	NOUN	NNS	Number=Plur	11	obj	11:obj	_
+11	following	follow	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:but	_
+12	links	link	NOUN	NNS	Number=Plur	11	obj	11:obj|16:nsubj:relsubj	_
 13	today	today	NOUN	NN	Number=Sing	11	obl:tmod	11:obl:tmod	_
-14	that	that	PRON	WDT	PronType=Rel	16	nsubj	16:nsubj	_
+14	that	that	PRON	WDT	PronType=Rel	16	nsubj	12:ref	_
 15	strongly	strongly	ADV	RB	_	16	advmod	16:advmod	_
 16	indicate	indicate	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	acl:relcl	12:acl:relcl	_
 17	that	that	SCONJ	IN	_	21	mark	21:mark	_
@@ -85,7 +85,7 @@
 20	damn	damn	ADV	RB	_	21	advmod	21:advmod	_
 21	serious	serious	ADJ	JJ	Degree=Pos	16	ccomp	16:ccomp	_
 22	about	about	SCONJ	IN	_	23	mark	23:mark	_
-23	securing	secure	VERB	VBG	VerbForm=Ger	21	advcl	21:advcl	_
+23	securing	secure	VERB	VBG	VerbForm=Ger	21	advcl	21:advcl:about	_
 24	permanent	permanent	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 25	control	control	NOUN	NN	Number=Sing	23	obj	23:obj	_
 26	of	of	ADP	IN	_	31	case	31:case	_
@@ -93,9 +93,9 @@
 28	leading	lead	VERB	VBG	VerbForm=Ger	29	amod	29:amod	_
 29	edge	edge	NOUN	NN	Number=Sing	31	compound	31:compound	_
 30	browser	browser	NOUN	NN	Number=Sing	31	compound	31:compound	_
-31	technology	technology	NOUN	NN	Number=Sing	25	nmod	25:nmod	_
+31	technology	technology	NOUN	NN	Number=Sing	25	nmod	25:nmod:of	_
 32	in	in	ADP	IN	_	33	case	33:case	_
-33	Firefox	Firefox	PROPN	NNP	Number=Sing	31	nmod	31:nmod	SpaceAfter=No
+33	Firefox	Firefox	PROPN	NNP	Number=Sing	31	nmod	31:nmod:in	SpaceAfter=No
 34	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0005
@@ -108,7 +108,7 @@
 6	engineer	engineer	NOUN	NN	Number=Sing	0	root	0:root	_
 7	for	for	ADP	IN	_	9	case	9:case	_
 8	Mozilla	Mozilla	PROPN	NNP	Number=Sing	9	compound	9:compound	_
-9	Firefox	Firefox	PROPN	NNP	Number=Sing	6	nmod	6:nmod	SpaceAfter=No
+9	Firefox	Firefox	PROPN	NNP	Number=Sing	6	nmod	6:nmod:for	SpaceAfter=No
 10	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0006
@@ -117,14 +117,14 @@
 2	announced	announce	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	this	this	PRON	DT	Number=Sing|PronType=Dem	2	obj	2:obj	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	January	January	PROPN	NNP	Number=Sing	2	obl	2:obl	SpaceAfter=No
+5	January	January	PROPN	NNP	Number=Sing	2	obl	2:obl:in	SpaceAfter=No
 6	:	:	PUNCT	:	_	2	punct	2:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0007
 # text = As of January 10, 2005, my source of income changed from The Mozilla Foundation to Google, Inc. of Mountain View, California.
 1	As	as	ADP	IN	_	3	case	3:case	_
 2	of	of	ADP	IN	_	1	fixed	1:fixed	_
-3	January	January	PROPN	NNP	Number=Sing	12	obl	12:obl	_
+3	January	January	PROPN	NNP	Number=Sing	12	obl	12:obl:as_of	_
 4	10	10	NUM	CD	NumType=Card	3	nummod	3:nummod	SpaceAfter=No
 5	,	,	PUNCT	,	_	3	punct	3:punct	_
 6	2005	2005	NUM	CD	NumType=Card	3	nummod	3:nummod	SpaceAfter=No
@@ -132,19 +132,19 @@
 8	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	source	source	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	income	income	NOUN	NN	Number=Sing	9	nmod	9:nmod	_
+11	income	income	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	_
 12	changed	change	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 13	from	from	ADP	IN	_	16	case	16:case	_
 14	The	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	Mozilla	Mozilla	PROPN	NNP	Number=Sing	16	compound	16:compound	_
-16	Foundation	Foundation	PROPN	NNP	Number=Sing	12	obl	12:obl	_
+16	Foundation	Foundation	PROPN	NNP	Number=Sing	12	obl	12:obl:from	_
 17	to	to	ADP	IN	_	20	case	20:case	_
 18	Google	Google	PROPN	NNP	Number=Sing	20	compound	20:compound	SpaceAfter=No
 19	,	,	PUNCT	,	_	20	punct	20:punct	_
-20	Inc.	Inc.	PROPN	NNP	Number=Sing	12	obl	12:obl	_
+20	Inc.	Inc.	PROPN	NNP	Number=Sing	12	obl	12:obl:to	_
 21	of	of	ADP	IN	_	23	case	23:case	_
 22	Mountain	Mountain	PROPN	NNP	Number=Sing	23	compound	23:compound	_
-23	View	View	PROPN	NNP	Number=Sing	20	nmod	20:nmod	SpaceAfter=No
+23	View	View	PROPN	NNP	Number=Sing	20	nmod	20:nmod:of	SpaceAfter=No
 24	,	,	PUNCT	,	_	23	punct	23:punct	_
 25	California	California	PROPN	NNP	Number=Sing	23	appos	23:appos	SpaceAfter=No
 26	.	.	PUNCT	.	_	12	punct	12:punct	_
@@ -152,19 +152,19 @@
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0008
 # text = My role with Firefox and the Mozilla project will remain largely unchanged, I will continue doing much the same work as I have described above - with the new goal of successful 1.1, 1.5 and 2.0 releases.
 1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	role	role	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
+2	role	role	NOUN	NN	Number=Sing	10	nsubj	10:nsubj|12:nsubj:xsubj	_
 3	with	with	ADP	IN	_	4	case	4:case	_
-4	Firefox	Firefox	PROPN	NNP	Number=Sing	2	nmod	2:nmod	_
+4	Firefox	Firefox	PROPN	NNP	Number=Sing	2	nmod	2:nmod:with	_
 5	and	and	CCONJ	CC	_	8	cc	8:cc	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	Mozilla	Mozilla	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	project	project	NOUN	NN	Number=Sing	4	conj	4:conj	_
+8	project	project	NOUN	NN	Number=Sing	4	conj	2:nmod:with|4:conj:and	_
 9	will	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 10	remain	remain	VERB	VB	VerbForm=Inf	0	root	0:root	_
 11	largely	largely	ADV	RB	_	10	advmod	10:advmod	_
 12	unchanged	unchanged	ADJ	JJ	Degree=Pos	10	xcomp	10:xcomp	SpaceAfter=No
 13	,	,	PUNCT	,	_	12	punct	12:punct	_
-14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
+14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj|17:nsubj:xsubj	_
 15	will	will	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 16	continue	continue	VERB	VB	VerbForm=Inf	12	parataxis	12:parataxis	_
 17	doing	do	VERB	VBG	VerbForm=Ger	16	xcomp	16:xcomp	_
@@ -175,26 +175,26 @@
 22	as	as	SCONJ	IN	_	25	mark	25:mark	_
 23	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
 24	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	25	aux	25:aux	_
-25	described	describe	VERB	VBN	Tense=Past|VerbForm=Part	16	advcl	16:advcl	_
+25	described	describe	VERB	VBN	Tense=Past|VerbForm=Part	16	advcl	16:advcl:as	_
 26	above	above	ADV	RB	_	25	advmod	25:advmod	_
 27	-	-	PUNCT	,	_	16	punct	16:punct	_
 28	with	with	ADP	IN	_	31	case	31:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
 30	new	new	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
-31	goal	goal	NOUN	NN	Number=Sing	16	obl	16:obl	_
+31	goal	goal	NOUN	NN	Number=Sing	16	obl	16:obl:with	_
 32	of	of	ADP	IN	_	39	case	39:case	_
 33	successful	successful	ADJ	JJ	Degree=Pos	39	amod	39:amod	_
 34	1.1	1.1	NUM	CD	NumType=Card	39	compound	39:compound	SpaceAfter=No
 35	,	,	PUNCT	,	_	36	punct	36:punct	_
-36	1.5	1.5	NUM	CD	NumType=Card	34	conj	34:conj	_
+36	1.5	1.5	NUM	CD	NumType=Card	34	conj	34:conj:and|39:compound	_
 37	and	and	CCONJ	CC	_	38	cc	38:cc	_
-38	2.0	2.0	NUM	CD	NumType=Card	34	conj	34:conj	_
-39	releases	release	NOUN	NNS	Number=Plur	31	nmod	31:nmod	SpaceAfter=No
+38	2.0	2.0	NUM	CD	NumType=Card	34	conj	34:conj:and|39:compound	_
+39	releases	release	NOUN	NNS	Number=Plur	31	nmod	31:nmod:of	SpaceAfter=No
 40	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0009
 # text = I remain devoted full-time to the advancement of Firefox, the Mozilla platform and web browsing in general.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|3:nsubj:xsubj	_
 2	remain	remain	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	devoted	devoted	ADJ	JJ	Degree=Pos	2	xcomp	2:xcomp	_
 4	full	full	ADJ	JJ	Degree=Pos	6	amod	6:amod	SpaceAfter=No
@@ -202,18 +202,18 @@
 6	time	time	NOUN	NN	Number=Sing	3	obl:npmod	3:obl:npmod	_
 7	to	to	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	advancement	advancement	NOUN	NN	Number=Sing	3	obl	3:obl	_
+9	advancement	advancement	NOUN	NN	Number=Sing	3	obl	3:obl:to	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	Firefox	Firefox	PROPN	NNP	Number=Sing	9	nmod	9:nmod	SpaceAfter=No
+11	Firefox	Firefox	PROPN	NNP	Number=Sing	9	nmod	9:nmod:of	SpaceAfter=No
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	Mozilla	Mozilla	PROPN	NNP	Number=Sing	15	compound	15:compound	_
-15	platform	platform	NOUN	NN	Number=Sing	11	conj	11:conj	_
+15	platform	platform	NOUN	NN	Number=Sing	11	conj	9:nmod:of|11:conj:and	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	web	web	NOUN	NN	Number=Sing	18	compound	18:compound	_
-18	browsing	browsing	NOUN	NN	Number=Sing	11	conj	11:conj	_
+18	browsing	browsing	NOUN	NN	Number=Sing	11	conj	9:nmod:of|11:conj:and	_
 19	in	in	ADP	IN	_	20	case	20:case	_
-20	general	general	ADJ	JJ	Degree=Pos	18	nmod	18:nmod	SpaceAfter=No
+20	general	general	ADJ	JJ	Degree=Pos	18	nmod	18:nmod:in	SpaceAfter=No
 21	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0010
@@ -223,7 +223,7 @@
 3	announced	announce	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	this	this	PRON	DT	Number=Sing|PronType=Dem	3	obj	3:obj	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	January	January	PROPN	NNP	Number=Sing	3	obl	3:obl	SpaceAfter=No
+6	January	January	PROPN	NNP	Number=Sing	3	obl	3:obl:in	SpaceAfter=No
 7	:	:	PUNCT	:	_	3	punct	3:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0011
@@ -234,7 +234,7 @@
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0012
 # text = I just want to extend a big "Welcome!" to Darin Darin Fisher who joined me at Google this week.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	just	just	ADV	RB	_	3	advmod	3:advmod	_
 3	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -247,20 +247,20 @@
 11	"	"	PUNCT	''	_	9	punct	9:punct	_
 12	to	to	ADP	IN	_	14	case	14:case	_
 13	Darin	Darin	PROPN	NNP	Number=Sing	14	reparandum	14:reparandum	_
-14	Darin	Darin	PROPN	NNP	Number=Sing	5	obl	5:obl	_
+14	Darin	Darin	PROPN	NNP	Number=Sing	5	obl	5:obl:to|17:nsubj:relsubj	_
 15	Fisher	Fisher	PROPN	NNP	Number=Sing	14	flat	14:flat	_
-16	who	who	PRON	WP	PronType=Rel	17	nsubj	17:nsubj	_
+16	who	who	PRON	WP	PronType=Rel	17	nsubj	14:ref	_
 17	joined	join	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	14	acl:relcl	14:acl:relcl	_
 18	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	17	obj	17:obj	_
 19	at	at	ADP	IN	_	20	case	20:case	_
-20	Google	Google	PROPN	NNP	Number=Sing	17	obl	17:obl	_
+20	Google	Google	PROPN	NNP	Number=Sing	17	obl	17:obl:at	_
 21	this	this	DET	DT	Number=Sing|PronType=Dem	22	det	22:det	_
 22	week	week	NOUN	NN	Number=Sing	17	obl:tmod	17:obl:tmod	SpaceAfter=No
 23	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0013
 # text = 2005 is going to rock!
-1	2005	2005	NUM	CD	NumType=Card	3	nsubj	3:nsubj	_
+1	2005	2005	NUM	CD	NumType=Card	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -275,7 +275,7 @@
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
 5	response	response	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	on	on	ADP	IN	_	7	case	7:case	_
-7	January	January	PROPN	NNP	Number=Sing	3	obl	3:obl	_
+7	January	January	PROPN	NNP	Number=Sing	3	obl	3:obl:on	_
 8	25	25	NUM	CD	NumType=Card	7	nummod	7:nummod	SpaceAfter=No
 9	,	,	PUNCT	,	_	7	punct	7:punct	_
 10	2005	2005	NUM	CD	NumType=Card	7	nummod	7:nummod	SpaceAfter=No
@@ -288,7 +288,7 @@
 3	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 4	big	big	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 5	"	"	PUNCT	``	_	6	punct	6:punct	SpaceAfter=No
-6	G	G	PROPN	NNP	Number=Sing	1	conj	1:conj	SpaceAfter=No
+6	G	G	PROPN	NNP	Number=Sing	1	conj	1:conj:and	SpaceAfter=No
 7	"	"	PUNCT	''	_	6	punct	6:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0016
@@ -296,11 +296,11 @@
 1	Following	follow	VERB	VBG	VerbForm=Ger	4	case	4:case	_
 2	on	on	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	heels	heel	NOUN	NNS	Number=Plur	12	obl	12:obl	_
+4	heels	heel	NOUN	NNS	Number=Plur	12	obl	12:obl:on	_
 5	of	of	ADP	IN	_	8	case	8:case	_
 6	Ben	Ben	PROPN	NNP	Number=Sing	8	nmod:poss	8:nmod:poss	SpaceAfter=No
 7	's	's	PART	POS	_	6	case	6:case	_
-8	annoucement	annoucement	NOUN	NN	Number=Sing	4	nmod	4:nmod	_
+8	annoucement	annoucement	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
 9	yesterday	yesterday	NOUN	NN	Number=Sing	8	nmod:tmod	8:nmod:tmod	SpaceAfter=No
 10	,	,	PUNCT	,	_	12	punct	12:punct	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
@@ -320,7 +320,7 @@
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0017
 # text = Like Ben, I will still be very much involved with the Mozilla project and community :-)
 1	Like	like	ADP	IN	_	2	case	2:case	_
-2	Ben	Ben	PROPN	NNP	Number=Sing	10	obl	10:obl	SpaceAfter=No
+2	Ben	Ben	PROPN	NNP	Number=Sing	10	obl	10:obl:like	SpaceAfter=No
 3	,	,	PUNCT	,	_	10	punct	10:punct	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 5	will	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
@@ -332,16 +332,16 @@
 11	with	with	ADP	IN	_	14	case	14:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	Mozilla	Mozilla	PROPN	NNP	Number=Sing	14	compound	14:compound	_
-14	project	project	NOUN	NN	Number=Sing	10	obl	10:obl	_
+14	project	project	NOUN	NN	Number=Sing	10	obl	10:obl:with	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	community	community	NOUN	NN	Number=Sing	14	conj	14:conj	_
+16	community	community	NOUN	NN	Number=Sing	14	conj	10:obl:with|14:conj:and	_
 17	:-)	:-)	SYM	NFP	_	10	discourse	10:discourse	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0018
 # text = Posted by darin
 1	Posted	post	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 2	by	by	ADP	IN	_	3	case	3:case	_
-3	darin	darin	PROPN	NNP	Number=Sing	1	obl	1:obl	_
+3	darin	darin	PROPN	NNP	Number=Sing	1	obl	1:obl:by	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0019
 # text = Ben made another announcement on March 28, 2005:
@@ -350,7 +350,7 @@
 3	another	another	DET	DT	_	4	det	4:det	_
 4	announcement	announcement	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	on	on	ADP	IN	_	6	case	6:case	_
-6	March	March	PROPN	NNP	Number=Sing	2	obl	2:obl	_
+6	March	March	PROPN	NNP	Number=Sing	2	obl	2:obl:on	_
 7	28	28	NUM	CD	NumType=Card	6	nummod	6:nummod	SpaceAfter=No
 8	,	,	PUNCT	,	_	6	punct	6:punct	_
 9	2005	2005	NUM	CD	NumType=Card	6	nummod	6:nummod	SpaceAfter=No
@@ -358,18 +358,18 @@
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0020
 # text = I want to use this opportunity to welcome Brian Ryner to Google!
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj	_
 2	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	use	use	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	_
-6	opportunity	opportunity	NOUN	NN	Number=Sing	4	obj	4:obj	_
+6	opportunity	opportunity	NOUN	NN	Number=Sing	4	obj	4:obj|8:nsubj:xsubj	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	welcome	welcome	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 9	Brian	Brian	PROPN	NNP	Number=Sing	8	obj	8:obj	_
 10	Ryner	Ryner	PROPN	NNP	Number=Sing	9	flat	9:flat	_
 11	to	to	ADP	IN	_	12	case	12:case	_
-12	Google	Google	PROPN	NNP	Number=Sing	8	obl	8:obl	SpaceAfter=No
+12	Google	Google	PROPN	NNP	Number=Sing	8	obl	8:obl:to	SpaceAfter=No
 13	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0021
@@ -382,18 +382,18 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 7	most	most	ADV	RBS	_	9	advmod	9:advmod	_
 8	crucial	crucial	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	elements	element	NOUN	NNS	Number=Plur	4	nmod	4:nmod	_
+9	elements	element	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
 10	to	to	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	success	success	NOUN	NN	Number=Sing	9	nmod	9:nmod	_
+12	success	success	NOUN	NN	Number=Sing	9	nmod	9:nmod:to	_
 13	of	of	ADP	IN	_	15	case	15:case	_
 14	Mozilla	Mozilla	PROPN	NNP	Number=Sing	15	compound	15:compound	_
-15	software	software	NOUN	NN	Number=Sing	12	nmod	12:nmod	_
+15	software	software	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	_
 16	over	over	ADP	IN	_	20	case	20:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 18	past	past	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
 19	few	few	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-20	years	year	NOUN	NNS	Number=Plur	4	obl	4:obl	SpaceAfter=No
+20	years	year	NOUN	NNS	Number=Plur	4	obl	4:obl:over	SpaceAfter=No
 21	,	,	PUNCT	,	_	4	punct	4:punct	SpaceAfter=No
 22	...	...	PUNCT	.	_	4	punct	4:punct	_
 
@@ -404,7 +404,7 @@
 3	have	have	VERB	VB	VerbForm=Inf	1	csubj	1:csubj	_
 4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	obj	3:obj	_
 5	on	on	ADP	IN	_	6	case	6:case	_
-6	board	board	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+6	board	board	NOUN	NN	Number=Sing	3	obl	3:obl:on	SpaceAfter=No
 7	!	!	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0023
@@ -413,30 +413,30 @@
 2	,	,	PUNCT	,	_	8	punct	8:punct	_
 3	none	none	NOUN	NN	Number=Sing	8	nsubj:pass	8:nsubj:pass	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	this	this	PRON	DT	Number=Sing|PronType=Dem	3	nmod	3:nmod	_
+5	this	this	PRON	DT	Number=Sing|PronType=Dem	3	nmod	3:nmod:of	_
 6	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 7	been	be	AUX	VBN	Tense=Past|VerbForm=Part	8	aux:pass	8:aux:pass	_
 8	confirmed	confirm	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 9	by	by	ADP	IN	_	10	case	10:case	_
-10	Google	Google	PROPN	NNP	Number=Sing	8	obl	8:obl	_
+10	Google	Google	PROPN	NNP	Number=Sing	8	obl	8:obl:by	_
 11	at	at	ADP	IN	_	14	case	14:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	present	present	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	time	time	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+14	time	time	NOUN	NN	Number=Sing	8	obl	8:obl:at	SpaceAfter=No
 15	,	,	PUNCT	,	_	21	punct	21:punct	_
 16	but	but	CCONJ	CC	_	21	cc	21:cc	_
 17	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	21	expl	21:expl	SpaceAfter=No
 18	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	cop	21:cop	_
 19	an	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 20	old	old	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
-21	adage	adage	NOUN	NN	Number=Sing	8	conj	8:conj	_
+21	adage	adage	NOUN	NN	Number=Sing	8	conj	8:conj:but	_
 22	that	that	SCONJ	IN	_	24	mark	24:mark	_
 23	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	24	nsubj	24:nsubj	_
 24	follow	follow	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	21	csubj	21:csubj	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
 26	money	money	NOUN	NN	Number=Sing	24	obj	24:obj	_
 27	to	to	PART	TO	_	28	mark	28:mark	_
-28	see	see	VERB	VB	VerbForm=Inf	24	advcl	24:advcl	_
+28	see	see	VERB	VB	VerbForm=Inf	24	advcl	24:advcl:to	_
 29	who	who	PRON	WP	PronType=Int	32	nsubj	32:nsubj	_
 30	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	cop	32:cop	_
 31	behind	behind	ADP	IN	_	32	case	32:case	_
@@ -447,13 +447,13 @@
 # text = In this case, following the talent leads me to think that Google will be making an announcement this year that formalizes the Google-Mozilla/Firefox relationship.
 1	In	in	ADP	IN	_	3	case	3:case	_
 2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	_
-3	case	case	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+3	case	case	NOUN	NN	Number=Sing	8	obl	8:obl:in	SpaceAfter=No
 4	,	,	PUNCT	,	_	8	punct	8:punct	_
 5	following	follow	VERB	VBG	VerbForm=Ger	8	csubj	8:csubj	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	talent	talent	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	leads	lead	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-9	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	obj	8:obj	_
+9	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	obj	8:obj|11:nsubj:xsubj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	think	think	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
 12	that	that	SCONJ	IN	_	16	mark	16:mark	_
@@ -462,15 +462,15 @@
 15	be	be	AUX	VB	VerbForm=Inf	16	aux	16:aux	_
 16	making	make	VERB	VBG	Tense=Pres|VerbForm=Part	11	ccomp	11:ccomp	_
 17	an	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
-18	announcement	announcement	NOUN	NN	Number=Sing	16	obj	16:obj	_
+18	announcement	announcement	NOUN	NN	Number=Sing	16	obj	16:obj|22:nsubj:relsubj	_
 19	this	this	DET	DT	Number=Sing|PronType=Dem	20	det	20:det	_
 20	year	year	NOUN	NN	Number=Sing	16	obl:tmod	16:obl:tmod	_
-21	that	that	PRON	WDT	PronType=Rel	22	nsubj	22:nsubj	_
+21	that	that	PRON	WDT	PronType=Rel	22	nsubj	18:ref	_
 22	formalizes	formalize	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	acl:relcl	18:acl:relcl	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
 24	Google	Google	PROPN	NNP	Number=Sing	29	compound	29:compound	SpaceAfter=No
 25	-	-	PUNCT	HYPH	_	26	cc	26:cc	SpaceAfter=No
-26	Mozilla	Mozilla	PROPN	NNP	Number=Sing	24	conj	24:conj	SpaceAfter=No
+26	Mozilla	Mozilla	PROPN	NNP	Number=Sing	24	conj	24:conj|29:compound	SpaceAfter=No
 27	/	/	SYM	SYM	_	28	cc	28:cc	SpaceAfter=No
 28	Firefox	Firefox	PROPN	NNP	Number=Sing	26	conj	26:conj	_
 29	relationship	relationship	NOUN	NN	Number=Sing	22	obj	22:obj	SpaceAfter=No
@@ -483,38 +483,38 @@
 3	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
 4	not	not	PART	RB	_	6	advmod	6:advmod	_
 5	already	already	ADV	RB	_	6	advmod	6:advmod	_
-6	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	14	advcl	14:advcl	_
+6	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	14	advcl	14:advcl:if	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	Flash	Flash	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 9	movie	movie	NOUN	NN	Number=Sing	6	obj	6:obj	_
 10	Epic	Epic	PROPN	NNP	Number=Sing	9	appos	9:appos	_
 11	,	,	PUNCT	,	_	14	punct	14:punct	_
-12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	14	nsubj	14:nsubj	_
+12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	14	nsubj	14:nsubj|19:nsubj	_
 13	should	should	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
 14	take	take	VERB	VB	VerbForm=Inf	0	root	0:root	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 16	few	few	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	minutes	minute	NOUN	NNS	Number=Plur	14	obj	14:obj	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
-19	view	view	VERB	VB	VerbForm=Inf	14	conj	14:conj	_
+19	view	view	VERB	VB	VerbForm=Inf	14	conj	14:conj:and	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 21	future	future	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 22	history	history	NOUN	NN	Number=Sing	19	obj	19:obj	_
 23	of	of	ADP	IN	_	24	case	24:case	_
-24	media	media	NOUN	NN	Number=Sing	22	nmod	22:nmod	_
+24	media	media	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	_
 25	as	as	SCONJ	IN	_	26	mark	26:mark	_
-26	conceived	conceive	VERB	VBN	Tense=Past|VerbForm=Part	19	advcl	19:advcl	_
+26	conceived	conceive	VERB	VBN	Tense=Past|VerbForm=Part	19	advcl	19:advcl:as	_
 27	by	by	ADP	IN	_	28	case	28:case	_
-28	Robin	Robin	PROPN	NNP	Number=Sing	26	obl	26:obl	_
+28	Robin	Robin	PROPN	NNP	Number=Sing	26	obl	26:obl:by	_
 29	Sloan	Sloan	PROPN	NNP	Number=Sing	28	flat	28:flat	_
 30	and	and	CCONJ	CC	_	31	cc	31:cc	_
-31	Matt	Matt	PROPN	NNP	Number=Sing	28	conj	28:conj	_
+31	Matt	Matt	PROPN	NNP	Number=Sing	28	conj	26:obl:by|28:conj:and	_
 32	Thompson	Thompson	PROPN	NNP	Number=Sing	31	flat	31:flat	SpaceAfter=No
 33	,	,	PUNCT	,	_	26	punct	26:punct	_
 34	with	with	ADP	IN	_	35	case	35:case	_
-35	music	music	NOUN	NN	Number=Sing	26	obl	26:obl	_
+35	music	music	NOUN	NN	Number=Sing	26	obl	26:obl:with	_
 36	by	by	ADP	IN	_	37	case	37:case	_
-37	Aaron	Aaron	PROPN	NNP	Number=Sing	35	nmod	35:nmod	_
+37	Aaron	Aaron	PROPN	NNP	Number=Sing	35	nmod	35:nmod:by	_
 38	McLeran	McLeran	PROPN	NNP	Number=Sing	37	flat	37:flat	SpaceAfter=No
 39	.	.	PUNCT	.	_	14	punct	14:punct	_
 
@@ -522,10 +522,10 @@
 # text = In this movie Google and Amazon (GOOGLEZON ) create a brave new world of media in 2008.
 1	In	in	ADP	IN	_	3	case	3:case	_
 2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	_
-3	movie	movie	NOUN	NN	Number=Sing	10	obl	10:obl	_
+3	movie	movie	NOUN	NN	Number=Sing	10	obl	10:obl:in	_
 4	Google	Google	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	Amazon	Amazon	PROPN	NNP	Number=Sing	4	conj	4:conj	_
+6	Amazon	Amazon	PROPN	NNP	Number=Sing	4	conj	4:conj:and|10:nsubj	_
 7	(	(	PUNCT	-LRB-	_	8	punct	8:punct	SpaceAfter=No
 8	GOOGLEZON	GOOGLEZON	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 9	)	)	PUNCT	-RRB-	_	8	punct	8:punct	_
@@ -535,9 +535,9 @@
 13	new	new	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	world	world	NOUN	NN	Number=Sing	10	obj	10:obj	_
 15	of	of	ADP	IN	_	16	case	16:case	_
-16	media	media	NOUN	NN	Number=Sing	14	nmod	14:nmod	_
+16	media	media	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	_
 17	in	in	ADP	IN	_	18	case	18:case	_
-18	2008	2008	NUM	CD	NumType=Card	10	obl	10:obl	SpaceAfter=No
+18	2008	2008	NUM	CD	NumType=Card	10	obl	10:obl:in	SpaceAfter=No
 19	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0027
@@ -580,7 +580,7 @@
 12	far	far	ADV	RB	Degree=Pos	9	advmod	9:advmod	_
 13	as	as	SCONJ	IN	_	15	mark	15:mark	_
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
-15	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl	SpaceAfter=No
+15	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:as	SpaceAfter=No
 16	,	,	PUNCT	,	_	9	punct	9:punct	_
 17	for	for	SCONJ	IN	_	21	mark	21:mark	_
 18	Google	Google	PROPN	NNP	Number=Sing	21	nsubj	21:nsubj	_
@@ -598,19 +598,19 @@
 3	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	rights	rights	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
-6	take	take	VERB	VB	VerbForm=Inf	4	acl	4:acl	_
+6	take	take	VERB	VB	VerbForm=Inf	4	acl	4:acl:to	_
 7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	obj	6:obj	SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	alter	alter	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+9	alter	alter	VERB	VB	VerbForm=Inf	6	conj	4:acl:to|6:conj:and	_
 10	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	release	release	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+13	release	release	VERB	VB	VerbForm=Inf	6	conj	4:acl:to|6:conj:and	_
 14	those	those	DET	DT	Number=Plur|PronType=Dem	15	det	15:det	_
 15	changes	change	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 16	to	to	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	world	world	NOUN	NN	Number=Sing	13	obl	13:obl	_
+18	world	world	NOUN	NN	Number=Sing	13	obl	13:obl:to	_
 19	-	-	PUNCT	,	_	22	punct	22:punct	_
 20	this	this	PRON	DT	Number=Sing|PronType=Dem	22	nsubj	22:nsubj	_
 21	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
@@ -626,7 +626,7 @@
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0031
 # text = I'm inclined to say that google is doing what they can to both shape and support the growth of the most popular non-Microsoft browser out there - by taking on the leading lights in Firefox development, they're ensuring the continued life of the project, and ensuring (not that I think they need to) that their voice will be heard admidst the higher echelons of the firefox development team.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	SpaceAfter=No
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	SpaceAfter=No
 2	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	inclined	inclined	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -640,31 +640,31 @@
 12	can	can	AUX	MD	VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
 13	to	to	PART	TO	_	15	mark	15:mark	_
 14	both	both	CCONJ	CC	_	15	cc:preconj	15:cc:preconj	_
-15	shape	shape	VERB	VB	VerbForm=Inf	9	advcl	9:advcl	_
+15	shape	shape	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	support	support	VERB	VB	VerbForm=Inf	15	conj	15:conj	_
+17	support	support	VERB	VB	VerbForm=Inf	15	conj	9:advcl:to|15:conj:and	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	growth	growth	NOUN	NN	Number=Sing	15	obj	15:obj	_
+19	growth	growth	NOUN	NN	Number=Sing	15	obj	15:obj|17:obj	_
 20	of	of	ADP	IN	_	25	case	25:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
 22	most	most	ADV	RBS	_	23	advmod	23:advmod	_
 23	popular	popular	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 24	non-Microsoft	non-microsoft	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
-25	browser	browser	NOUN	NN	Number=Sing	19	nmod	19:nmod	_
+25	browser	browser	NOUN	NN	Number=Sing	19	nmod	19:nmod:of	_
 26	out	out	ADV	RB	_	27	advmod	27:advmod	_
 27	there	there	ADV	RB	PronType=Dem	25	advmod	25:advmod	_
 28	-	-	PUNCT	,	_	3	punct	3:punct	_
 29	by	by	SCONJ	IN	_	30	mark	30:mark	_
-30	taking	take	VERB	VBG	VerbForm=Ger	41	advcl	41:advcl	_
+30	taking	take	VERB	VBG	VerbForm=Ger	41	advcl	41:advcl:by	_
 31	on	on	ADP	RP	_	30	compound:prt	30:compound:prt	_
 32	the	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	_
 33	leading	lead	VERB	VBG	VerbForm=Ger	34	amod	34:amod	_
 34	lights	light	NOUN	NNS	Number=Plur	30	obj	30:obj	_
 35	in	in	ADP	IN	_	37	case	37:case	_
 36	Firefox	Firefox	PROPN	NNP	Number=Sing	37	compound	37:compound	_
-37	development	development	NOUN	NN	Number=Sing	34	nmod	34:nmod	SpaceAfter=No
+37	development	development	NOUN	NN	Number=Sing	34	nmod	34:nmod:in	SpaceAfter=No
 38	,	,	PUNCT	,	_	41	punct	41:punct	_
-39	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	41	nsubj	41:nsubj	SpaceAfter=No
+39	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	41	nsubj	41:nsubj|50:nsubj	SpaceAfter=No
 40	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	41	aux	41:aux	_
 41	ensuring	ensure	VERB	VBG	Tense=Pres|VerbForm=Part	3	parataxis	3:parataxis	_
 42	the	the	DET	DT	Definite=Def|PronType=Art	44	det	44:det	_
@@ -672,10 +672,10 @@
 44	life	life	NOUN	NN	Number=Sing	41	obj	41:obj	_
 45	of	of	ADP	IN	_	47	case	47:case	_
 46	the	the	DET	DT	Definite=Def|PronType=Art	47	det	47:det	_
-47	project	project	NOUN	NN	Number=Sing	44	nmod	44:nmod	SpaceAfter=No
+47	project	project	NOUN	NN	Number=Sing	44	nmod	44:nmod:of	SpaceAfter=No
 48	,	,	PUNCT	,	_	50	punct	50:punct	_
 49	and	and	CCONJ	CC	_	50	cc	50:cc	_
-50	ensuring	ensure	VERB	VBG	Tense=Pres|VerbForm=Part	41	conj	41:conj	_
+50	ensuring	ensure	VERB	VBG	Tense=Pres|VerbForm=Part	41	conj	41:conj:and	_
 51	(	(	PUNCT	-LRB-	_	52	punct	52:punct	SpaceAfter=No
 52	not	not	PART	RB	_	50	parataxis	50:parataxis	_
 53	that	that	SCONJ	IN	_	55	mark	55:mark	_
@@ -694,12 +694,12 @@
 66	admidst	amidst	ADP	IN	Typo=Yes	69	case	69:case	_
 67	the	the	DET	DT	Definite=Def|PronType=Art	69	det	69:det	_
 68	higher	higher	ADJ	JJR	Degree=Cmp	69	amod	69:amod	_
-69	echelons	echelon	NOUN	NNS	Number=Plur	65	obl	65:obl	_
+69	echelons	echelon	NOUN	NNS	Number=Plur	65	obl	65:obl:amidst	_
 70	of	of	ADP	IN	_	74	case	74:case	_
 71	the	the	DET	DT	Definite=Def|PronType=Art	74	det	74:det	_
 72	firefox	firefox	PROPN	NNP	Number=Sing	73	compound	73:compound	_
 73	development	development	NOUN	NN	Number=Sing	74	compound	74:compound	_
-74	team	team	NOUN	NN	Number=Sing	69	nmod	69:nmod	SpaceAfter=No
+74	team	team	NOUN	NN	Number=Sing	69	nmod	69:nmod:of	SpaceAfter=No
 75	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0032
@@ -711,13 +711,13 @@
 5	of	of	ADP	IN	_	8	case	8:case	_
 6	enlightened	enlightened	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 7	self	self	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	interest	interest	NOUN	NN	Number=Sing	4	nmod	4:nmod	_
+8	interest	interest	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
 9	that	that	PRON	WDT	PronType=Dem	10	nsubj	10:nsubj	_
 10	keeps	keep	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	csubj	4:csubj	_
 11	large	large	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 12	open	open	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	source	source	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	projects	project	NOUN	NNS	Number=Plur	10	obj	10:obj	_
+14	projects	project	NOUN	NNS	Number=Plur	10	obj	10:obj|15:nsubj:xsubj	_
 15	alive	alive	ADJ	JJ	Degree=Pos	10	xcomp	10:xcomp	SpaceAfter=No
 16	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -727,9 +727,9 @@
 2	viewpoint	viewpoint	NOUN	NN	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	future	future	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+5	future	future	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	Epic	Epic	PROPN	NNP	Number=Sing	2	nmod	2:nmod	SpaceAfter=No
+7	Epic	Epic	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	SpaceAfter=No
 8	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0034
@@ -737,7 +737,7 @@
 1	Thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	_
 2	for	for	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	link	link	NOUN	NN	Number=Sing	1	nmod	1:nmod	SpaceAfter=No
+4	link	link	NOUN	NN	Number=Sing	1	nmod	1:nmod:for	SpaceAfter=No
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0035
@@ -764,11 +764,11 @@
 9	inexpensive	inexpensive	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	way	way	NOUN	NN	Number=Sing	5	obj	5:obj	_
 11	of	of	SCONJ	IN	_	12	mark	12:mark	_
-12	influencing	influence	VERB	VBG	VerbForm=Ger	10	acl	10:acl	_
+12	influencing	influence	VERB	VBG	VerbForm=Ger	10	acl	10:acl:of	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	anticipating	anticipate	VERB	VBG	VerbForm=Ger	12	conj	12:conj	_
+14	anticipating	anticipate	VERB	VBG	VerbForm=Ger	12	conj	10:acl:of|12:conj:and	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	direction	direction	NOUN	NN	Number=Sing	12	obj	12:obj	_
+16	direction	direction	NOUN	NN	Number=Sing	12	obj	12:obj|14:obj	_
 17	an	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
 18	open	open	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 19	source	source	NOUN	NN	Number=Sing	20	compound	20:compound	_
@@ -786,14 +786,14 @@
 5	bang	bang	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	for	for	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	buck	buck	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+8	buck	buck	NOUN	NN	Number=Sing	5	nmod	5:nmod:for	_
 9	than	than	SCONJ	IN	_	10	mark	10:mark	_
-10	acquiring	acquire	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl	_
+10	acquiring	acquire	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl:than	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 12	private	private	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	company	company	NOUN	NN	Number=Sing	10	obj	10:obj	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	having	have	VERB	VBG	VerbForm=Ger	10	conj	10:conj	_
+15	having	have	VERB	VBG	VerbForm=Ger	10	conj	4:advcl:than|10:conj:and	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	handle	handle	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
@@ -802,6 +802,6 @@
 21	clashes	clash	NOUN	NNS	Number=Plur	17	obj	17:obj	_
 22	and	and	CCONJ	CC	_	24	cc	24:cc	_
 23	process	process	NOUN	NN	Number=Sing	24	compound	24:compound	_
-24	mis-matches	mis-match	NOUN	NNS	Number=Plur	21	conj	21:conj	SpaceAfter=No
+24	mis-matches	mis-match	NOUN	NNS	Number=Plur	21	conj	17:obj|21:conj:and	SpaceAfter=No
 25	.	.	PUNCT	.	_	3	punct	3:punct	_
 

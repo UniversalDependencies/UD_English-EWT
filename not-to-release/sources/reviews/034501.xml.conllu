@@ -5,7 +5,7 @@
 2	Stationery	stationery	NOUN	NN	Number=Sing	3	compound	3:compound	_
 3	store	store	NOUN	NN	Number=Sing	0	root	0:root	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	Bethesda	Bethesda	PROPN	NNP	Number=Sing	3	nmod	3:nmod	_
+5	Bethesda	Bethesda	PROPN	NNP	Number=Sing	3	nmod	3:nmod:in	_
 
 # sent_id = reviews-034501-0002
 # text = Papeluna, a cute Mom/Pop custom printing and paper store, just opened a few days ago.
@@ -19,7 +19,7 @@
 8	custom	custom	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	printing	printing	NOUN	NN	Number=Sing	12	compound	12:compound	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	paper	paper	NOUN	NN	Number=Sing	9	conj	9:conj	_
+11	paper	paper	NOUN	NN	Number=Sing	9	conj	9:conj:and|12:compound	_
 12	store	store	NOUN	NN	Number=Sing	1	appos	1:appos	SpaceAfter=No
 13	,	,	PUNCT	,	_	15	punct	15:punct	_
 14	just	just	ADV	RB	_	15	advmod	15:advmod	_
@@ -32,32 +32,32 @@
 
 # sent_id = reviews-034501-0003
 # text = It is right on the hustle and bustle of Wisconsin Ave but some might miss it as it is nestled in between Subway Sandwiches and Modell's.
-1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj|8:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 3	right	right	ADV	RB	_	6	advmod	6:advmod	_
 4	on	on	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	hustle	hustle	NOUN	NN	Number=Sing	0	root	0:root	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	bustle	bustle	NOUN	NN	Number=Sing	6	conj	6:conj	_
+8	bustle	bustle	NOUN	NN	Number=Sing	6	conj	6:conj:and	_
 9	of	of	ADP	IN	_	11	case	11:case	_
 10	Wisconsin	Wisconsin	PROPN	NNP	Number=Sing	11	compound	11:compound	_
-11	Ave	Ave	PROPN	NNP	Number=Sing	6	nmod	6:nmod	_
+11	Ave	Ave	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	_
 12	but	but	CCONJ	CC	_	15	cc	15:cc	_
 13	some	some	DET	DT	_	15	nsubj	15:nsubj	_
 14	might	might	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-15	miss	miss	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+15	miss	miss	VERB	VB	VerbForm=Inf	6	conj	6:conj:but	_
 16	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	obj	15:obj	_
 17	as	as	SCONJ	IN	_	20	mark	20:mark	_
 18	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	nsubj:pass	20:nsubj:pass	_
 19	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	aux:pass	20:aux:pass	_
-20	nestled	nestle	VERB	VBN	Tense=Past|VerbForm=Part	15	advcl	15:advcl	_
+20	nestled	nestle	VERB	VBN	Tense=Past|VerbForm=Part	15	advcl	15:advcl:as	_
 21	in	in	ADP	IN	_	24	case	24:case	_
 22	between	between	ADP	IN	_	21	fixed	21:fixed	_
 23	Subway	Subway	PROPN	NNP	Number=Sing	24	compound	24:compound	_
-24	Sandwiches	Sandwiches	PROPN	NNPS	Number=Plur	20	obl	20:obl	_
+24	Sandwiches	Sandwiches	PROPN	NNPS	Number=Plur	20	obl	20:obl:in_between	_
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_
-26	Modell	Modell	PROPN	NNP	Number=Sing	24	conj	24:conj	SpaceAfter=No
+26	Modell	Modell	PROPN	NNP	Number=Sing	24	conj	20:obl:in_between|24:conj:and	SpaceAfter=No
 27	's	's	PART	POS	_	26	case	26:case	SpaceAfter=No
 28	.	.	PUNCT	.	_	6	punct	6:punct	_
 
@@ -72,9 +72,9 @@
 7	pumpkin	pumpkin	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	spice	spice	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	latte	latte	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	break	break	NOUN	NN	Number=Sing	2	obl	2:obl	_
+10	break	break	NOUN	NN	Number=Sing	2	obl	2:obl:after	_
 11	at	at	ADP	IN	_	12	case	12:case	_
-12	Starbucks	Starbucks	PROPN	NNP	Number=Sing	10	nmod	10:nmod	SpaceAfter=No
+12	Starbucks	Starbucks	PROPN	NNP	Number=Sing	10	nmod	10:nmod:at	SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-034501-0005
@@ -87,10 +87,10 @@
 6	store	store	NOUN	NN	Number=Sing	0	root	0:root	_
 7	filled	fill	VERB	VBN	Tense=Past|VerbForm=Part	6	acl	6:acl	_
 8	with	with	ADP	IN	_	9	case	9:case	_
-9	lots	lot	NOUN	NNS	Number=Plur	7	obl	7:obl	_
+9	lots	lot	NOUN	NNS	Number=Plur	7	obl	7:obl:with	_
 10	of	of	ADP	IN	_	12	case	12:case	_
 11	stationery	stationery	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	goodness	goodness	NOUN	NN	Number=Sing	9	nmod	9:nmod	SpaceAfter=No
+12	goodness	goodness	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	SpaceAfter=No
 13	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-034501-0006
@@ -98,28 +98,28 @@
 1	Cards	card	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
 3	wrapping	wrapping	NOUN	NN	Number=Sing	4	compound	4:compound	_
-4	paper	paper	NOUN	NN	Number=Sing	1	conj	1:conj	SpaceAfter=No
+4	paper	paper	NOUN	NN	Number=Sing	1	conj	1:conj:and	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	paper	paper	NOUN	NN	Number=Sing	1	conj	1:conj	SpaceAfter=No
+6	paper	paper	NOUN	NN	Number=Sing	1	conj	1:conj:and	SpaceAfter=No
 7	,	,	PUNCT	,	_	10	punct	10:punct	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	an	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	area	area	NOUN	NN	Number=Sing	1	conj	1:conj	_
+10	area	area	NOUN	NN	Number=Sing	1	conj	1:conj:and	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	sit	sit	VERB	VB	VerbForm=Inf	10	acl	10:acl	_
+12	sit	sit	VERB	VB	VerbForm=Inf	10	acl	10:acl:to	_
 13	down	down	ADV	RB	_	12	advmod	12:advmod	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	talk	talk	VERB	VB	VerbForm=Inf	12	conj	12:conj	_
+15	talk	talk	VERB	VB	VerbForm=Inf	12	conj	10:acl:to|12:conj:and	_
 16	with	with	ADP	IN	_	17	case	17:case	_
-17	someone	someone	PRON	NN	Number=Sing	15	obl	15:obl	_
+17	someone	someone	PRON	NN	Number=Sing	15	obl	15:obl:with	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
-19	design	design	VERB	VB	VerbForm=Inf	15	advcl	15:advcl	_
+19	design	design	VERB	VB	VerbForm=Inf	15	advcl	15:advcl:to	_
 20	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
 21	own	own	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 22	invitations	invitation	NOUN	NNS	Number=Plur	19	obj	19:obj	_
 23	or	or	CCONJ	CC	_	25	cc	25:cc	_
 24	for	for	SCONJ	IN	_	25	case	25:case	_
-25	whatever	whatever	DET	WDT	PronType=Int	19	conj	19:conj	_
+25	whatever	whatever	DET	WDT	PronType=Int	19	conj	15:advcl:for|19:conj:or	_
 26	else	else	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 27	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	30	nmod:poss	30:nmod:poss	_
 28	custom	custom	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
@@ -149,8 +149,8 @@
 16	"	"	PUNCT	''	_	14	punct	14:punct	_
 17	card	card	NOUN	NN	Number=Sing	2	obj	2:obj	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
-19	let	let	VERB	VB	VerbForm=Inf	2	advcl	2:advcl	_
-20	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	19	obj	19:obj	_
+19	let	let	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
+20	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	19	obj	19:obj|21:nsubj:xsubj	_
 21	know	know	VERB	VB	VerbForm=Inf	19	xcomp	19:xcomp	_
 22	that	that	SCONJ	IN	_	28	mark	28:mark	_
 23	Yelp	Yelp	PROPN	NNP	Number=Sing	28	nsubj	28:nsubj	_
@@ -165,12 +165,12 @@
 32	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	_
 33	word	word	NOUN	NN	Number=Sing	31	obj	31:obj	_
 34	about	about	ADP	IN	_	35	case	35:case	_
-35	Papeluna	Papeluna	PROPN	NNP	Number=Sing	33	nmod	33:nmod	SpaceAfter=No
+35	Papeluna	Papeluna	PROPN	NNP	Number=Sing	33	nmod	33:nmod:about	SpaceAfter=No
 36	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-034501-0008
 # text = I ended up buying a birthday card and would probably come back for more.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj|11:nsubj	_
 2	ended	end	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	up	up	ADP	RP	_	2	compound:prt	2:compound:prt	_
 4	buying	buy	VERB	VBG	VerbForm=Ger	2	xcomp	2:xcomp	_
@@ -180,10 +180,10 @@
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
 9	would	would	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 10	probably	probably	ADV	RB	_	11	advmod	11:advmod	_
-11	come	come	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
+11	come	come	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
 12	back	back	ADV	RB	_	11	advmod	11:advmod	_
 13	for	for	ADP	IN	_	14	case	14:case	_
-14	more	more	ADJ	JJR	Degree=Cmp	11	obl	11:obl	SpaceAfter=No
+14	more	more	ADJ	JJR	Degree=Cmp	11	obl	11:obl:for	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-034501-0009

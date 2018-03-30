@@ -3,7 +3,7 @@
 # text = Bait and switch, untrained workers
 1	Bait	bait	NOUN	NN	Number=Sing	0	root	0:root	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	switch	switch	NOUN	NN	Number=Sing	1	conj	1:conj	SpaceAfter=No
+3	switch	switch	NOUN	NN	Number=Sing	1	conj	1:conj:and	SpaceAfter=No
 4	,	,	PUNCT	,	_	1	punct	1:punct	_
 5	untrained	untrained	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	workers	worker	NOUN	NNS	Number=Plur	1	parataxis	1:parataxis	_
@@ -20,14 +20,14 @@
 8	,	,	PUNCT	,	_	1	punct	1:punct	_
 9	before	before	SCONJ	IN	_	11	mark	11:mark	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
-11	ripped	rip	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	advcl	1:advcl	_
+11	ripped	rip	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	advcl	1:advcl:before	_
 12	out	out	ADP	RP	_	11	compound:prt	11:compound:prt	_
 13	350	350	NUM	CD	NumType=Card	15	nummod	15:nummod	SpaceAfter=No
 14	sq	sq	ADJ	JJ	Degree=Pos	15	amod	15:amod	SpaceAfter=No
 15	ft	ft	NOUN	NNS	Number=Plur	11	obj	11:obj	_
 16	of	of	ADP	IN	_	18	case	18:case	_
 17	ceramic	ceramic	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	tile	tile	NOUN	NN	Number=Sing	15	nmod	15:nmod	SpaceAfter=No
+18	tile	tile	NOUN	NN	Number=Sing	15	nmod	15:nmod:of	SpaceAfter=No
 19	...	...	PUNCT	,	_	1	punct	1:punct	_
 20	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	aux:pass	21:aux:pass	_
 21	told	tell	VERB	VBN	Tense=Past|VerbForm=Part	1	parataxis	1:parataxis	_
@@ -39,13 +39,13 @@
 27	dual	dual	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
 28	head	head	NOUN	NN	Number=Sing	30	compound	30:compound	_
 29	concrete	concrete	NOUN	NN	Number=Sing	30	compound	30:compound	_
-30	grinder	grinder	NOUN	NN	Number=Sing	24	obj	24:obj	SpaceAfter=No
+30	grinder	grinder	NOUN	NN	Number=Sing	24	obj	24:obj|33:nsubj:xsubj|36:nsubj:xsubj	SpaceAfter=No
 31	"	"	PUNCT	''	_	30	punct	30:punct	_
 32	to	to	PART	TO	_	33	mark	33:mark	_
 33	remove	remove	VERB	VB	VerbForm=Inf	24	xcomp	24:xcomp	_
 34	thinset	thinset	NOUN	NN	Number=Sing	33	obj	33:obj	_
 35	and	and	CCONJ	CC	_	36	cc	36:cc	_
-36	make	make	VERB	VB	VerbForm=Inf	33	conj	33:conj	_
+36	make	make	VERB	VB	VerbForm=Inf	33	conj	24:xcomp|33:conj:and	_
 37	a	a	DET	DT	Definite=Ind|PronType=Art	42	det	42:det	_
 38	nice	nice	ADJ	JJ	Degree=Pos	42	amod	42:amod	_
 39	"	"	PUNCT	``	_	42	punct	42:punct	SpaceAfter=No
@@ -56,7 +56,7 @@
 44	ready	ready	ADJ	JJ	Degree=Pos	42	appos	42:appos	_
 45	for	for	ADP	IN	_	47	case	47:case	_
 46	concrete	concrete	NOUN	NN	Number=Sing	47	compound	47:compound	_
-47	stain	stain	NOUN	NN	Number=Sing	44	obl	44:obl	SpaceAfter=No
+47	stain	stain	NOUN	NN	Number=Sing	44	obl	44:obl:for	SpaceAfter=No
 48	)	)	PUNCT	-RRB-	_	44	punct	44:punct	SpaceAfter=No
 49	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -70,7 +70,7 @@
 6	inclusive	inclusive	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	grinder	grinder	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	inserts	insert	NOUN	NNS	Number=Plur	6	obl	6:obl	SpaceAfter=No
+9	inserts	insert	NOUN	NNS	Number=Plur	6	obl	6:obl:of	SpaceAfter=No
 10	,	,	PUNCT	,	_	9	punct	9:punct	_
 11	etc	etc	X	FW	_	9	advmod	9:advmod	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -84,7 +84,7 @@
 5	like	like	SCONJ	IN	_	8	mark	8:mark	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj:pass	8:nsubj:pass	SpaceAfter=No
 7	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux:pass	8:aux:pass	_
-8	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	advcl	4:advcl	_
+8	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	advcl	4:advcl:like	_
 9	every	every	DET	DT	_	10	det	10:det	_
 10	day	day	NOUN	NN	Number=Sing	8	obl:tmod	8:obl:tmod	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -100,7 +100,7 @@
 # text = Got the tile ripped out, call today, now all the sudden this grinder won't leave a finished look AND it's $125 PLUS around $75 for the inserts.
 1	Got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	tile	tile	NOUN	NN	Number=Sing	1	obj	1:obj	_
+3	tile	tile	NOUN	NN	Number=Sing	1	obj	1:obj|4:nsubj:xsubj	_
 4	ripped	rip	VERB	VBN	Tense=Past|VerbForm=Part	1	xcomp	1:xcomp	_
 5	out	out	ADP	RP	_	4	compound:prt	4:compound:prt	SpaceAfter=No
 6	,	,	PUNCT	,	_	1	punct	1:punct	_
@@ -120,17 +120,17 @@
 20	finished	finish	VERB	VBN	Tense=Past|VerbForm=Part	21	amod	21:amod	_
 21	look	look	NOUN	NN	Number=Sing	18	obj	18:obj	_
 22	AND	and	CCONJ	CC	_	25	cc	25:cc	_
-23	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	25	nsubj	25:nsubj	SpaceAfter=No
+23	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	25	nsubj	25:nsubj|29:nsubj	SpaceAfter=No
 24	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	25	cop	25:cop	_
-25	$	$	SYM	$	_	18	conj	18:conj	SpaceAfter=No
+25	$	$	SYM	$	_	18	conj	18:conj:and	SpaceAfter=No
 26	125	125	NUM	CD	NumType=Card	25	nummod	25:nummod	_
 27	PLUS	plus	CCONJ	CC	_	29	cc	29:cc	_
 28	around	around	ADV	RB	_	29	advmod	29:advmod	_
-29	$	$	SYM	$	_	25	conj	25:conj	SpaceAfter=No
+29	$	$	SYM	$	_	25	conj	25:conj:plus	SpaceAfter=No
 30	75	75	NUM	CD	NumType=Card	29	compound	29:compound	_
 31	for	for	ADP	IN	_	33	case	33:case	_
 32	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	_
-33	inserts	insert	NOUN	NNS	Number=Plur	29	nmod	29:nmod	SpaceAfter=No
+33	inserts	insert	NOUN	NNS	Number=Plur	29	nmod	29:nmod:for	SpaceAfter=No
 34	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-210066-0007
@@ -139,12 +139,12 @@
 2	can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	rent	rent	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	another	another	DET	DT	_	5	det	5:det	_
-5	machine	machine	NOUN	NN	Number=Sing	3	obj	3:obj	_
+5	machine	machine	NOUN	NN	Number=Sing	3	obj	3:obj|12:nsubj:relsubj	_
 6	for	for	ADP	IN	_	8	case	8:case	_
 7	like	like	ADV	RB	_	8	advmod	8:advmod	_
-8	$	$	SYM	$	_	3	obl	3:obl	SpaceAfter=No
+8	$	$	SYM	$	_	3	obl	3:obl:for	SpaceAfter=No
 9	60	60	NUM	CD	NumType=Card	8	compound	8:compound	_
-10	that	that	PRON	WDT	PronType=Rel	12	nsubj	12:nsubj	_
+10	that	that	PRON	WDT	PronType=Rel	12	nsubj	5:ref	_
 11	will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 12	give	give	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	_
 13	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	12	iobj	12:iobj	_
@@ -157,10 +157,10 @@
 # text = So from $55 to $260?
 1	So	so	ADV	RB	_	0	root	0:root	_
 2	from	from	ADP	IN	_	3	case	3:case	_
-3	$	$	SYM	$	_	1	obl	1:obl	SpaceAfter=No
+3	$	$	SYM	$	_	1	obl	1:obl:from	SpaceAfter=No
 4	55	55	NUM	CD	NumType=Card	3	nummod	3:nummod	_
 5	to	to	ADP	IN	_	6	case	6:case	_
-6	$	$	SYM	$	_	1	obl	1:obl	SpaceAfter=No
+6	$	$	SYM	$	_	1	obl	1:obl:to	SpaceAfter=No
 7	260	260	NUM	CD	NumType=Card	6	nummod	6:nummod	SpaceAfter=No
 8	?	?	PUNCT	.	_	1	punct	1:punct	_
 
@@ -179,13 +179,13 @@
 4	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 5	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	aux	7:aux	SpaceAfter=No
 6	n't	not	PART	RB	_	7	advmod	7:advmod	_
-7	tell	tell	VERB	VB	VerbForm=Inf	2	advcl	2:advcl	_
+7	tell	tell	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:like	_
 8	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	7	iobj	7:iobj	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	pitfalls	pitfall	NOUN	NNS	Number=Plur	7	obj	7:obj	_
 11	before	before	SCONJ	IN	_	13	mark	13:mark	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
-13	pulled	pull	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	advcl	7:advcl	_
+13	pulled	pull	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	advcl	7:advcl:before	_
 14	out	out	ADV	RB	_	13	advmod	13:advmod	_
 15	this	this	DET	DT	Number=Sing|PronType=Dem	16	det	16:det	_
 16	tile	tile	NOUN	NN	Number=Sing	13	obj	13:obj	_
@@ -198,7 +198,7 @@
 23	other	other	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 24	options	option	NOUN	NNS	Number=Plur	21	obj	21:obj	_
 25	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	26	nsubj	26:nsubj	_
-26	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj	_
+26	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
 27	5	5	NUM	CD	NumType=Card	28	compound	28:compound	_
 28	TIMES	time	NOUN	NNS	Number=Plur	30	nummod	30:nummod	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
@@ -218,15 +218,15 @@
 9	what	what	PRON	WP	PronType=Int	12	obj	12:obj	_
 10	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 11	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-12	renting	rent	VERB	VBG	Tense=Pres|VerbForm=Part	7	acl	7:acl	SpaceAfter=No
+12	renting	rent	VERB	VBG	Tense=Pres|VerbForm=Part	7	acl	7:acl:about	SpaceAfter=No
 13	,	,	PUNCT	,	_	19	punct	19:punct	_
 14	or	or	CCONJ	CC	_	19	cc	19:cc	_
 15	worse	worse	ADJ	JJR	Degree=Cmp	19	advmod	19:advmod	SpaceAfter=No
 16	-	-	PUNCT	,	_	19	punct	19:punct	_
-17	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	19	nsubj	19:nsubj	_
+17	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	19	nsubj	19:nsubj|21:nsubj	_
 18	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
-19	bait	bait	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+19	bait	bait	VERB	VB	VerbForm=Inf	6	conj	6:conj:or	_
 20	and	and	CCONJ	CC	_	21	cc	21:cc	_
-21	switching	switch	VERB	VBG	Tense=Pres|VerbForm=Part	19	conj	19:conj	SpaceAfter=No
+21	switching	switch	VERB	VBG	Tense=Pres|VerbForm=Part	19	conj	19:conj:and	SpaceAfter=No
 22	.	.	PUNCT	.	_	6	punct	6:punct	_
 

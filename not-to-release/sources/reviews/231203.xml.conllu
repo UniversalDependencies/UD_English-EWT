@@ -17,7 +17,7 @@
 4	regular	regular	NOUN	NN	Number=Sing	0	root	0:root	_
 5	at	at	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	HH	HH	PROPN	NNP	Number=Sing	4	nmod	4:nmod	SpaceAfter=No
+7	HH	HH	PROPN	NNP	Number=Sing	4	nmod	4:nmod:at	SpaceAfter=No
 8	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-231203-0003
@@ -44,7 +44,7 @@
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	mindset	mindset	NOUN	NN	Number=Sing	2	ccomp	2:ccomp	_
 9	from	from	SCONJ	IN	_	10	case	10:case	_
-10	when	when	ADV	WRB	PronType=Int	8	nmod	8:nmod	_
+10	when	when	ADV	WRB	PronType=Int	8	nmod	8:nmod:from	_
 11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
 13	only	only	ADV	RB	_	14	advmod	14:advmod	_
@@ -52,19 +52,19 @@
 15	sitting	sit	VERB	VBG	VerbForm=Ger	14	acl	14:acl	_
 16	around	around	ADV	RB	_	15	advmod	15:advmod	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	drinking	drink	VERB	VBG	VerbForm=Ger	15	conj	15:conj	SpaceAfter=No
+18	drinking	drink	VERB	VBG	VerbForm=Ger	15	conj	14:acl|15:conj:and	SpaceAfter=No
 19	...	...	PUNCT	,	_	18	punct	18:punct	_
 20	not	not	ADV	RB	_	23	advmod	23:advmod	_
 21	in	in	ADP	IN	_	23	case	23:case	_
 22	any	any	DET	DT	_	23	det	23:det	_
-23	hurry	hurry	NOUN	NN	Number=Sing	18	obl	18:obl	SpaceAfter=No
+23	hurry	hurry	NOUN	NN	Number=Sing	18	obl	18:obl:in	SpaceAfter=No
 24	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-231203-0005
 # text = In my experience the food has been excellent (for the most part).
 1	In	in	ADP	IN	_	3	case	3:case	_
 2	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	experience	experience	NOUN	NN	Number=Sing	8	obl	8:obl	_
+3	experience	experience	NOUN	NN	Number=Sing	8	obl	8:obl:in	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	food	food	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 6	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
@@ -74,7 +74,7 @@
 10	for	for	ADP	IN	_	13	case	13:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	most	most	ADJ	JJS	Degree=Sup	13	amod	13:amod	_
-13	part	part	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+13	part	part	NOUN	NN	Number=Sing	8	obl	8:obl:for	SpaceAfter=No
 14	)	)	PUNCT	-RRB-	_	13	punct	13:punct	SpaceAfter=No
 15	.	.	PUNCT	.	_	8	punct	8:punct	_
 
@@ -83,9 +83,9 @@
 1	However	however	ADV	RB	_	8	advmod	8:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	8	punct	8:punct	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-4	bartenders	bartender	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	SpaceAfter=No
+4	bartenders	bartender	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj|11:nsubj:xsubj|23:nsubj:xsubj	SpaceAfter=No
 5	/	/	PUNCT	,	_	6	cc	6:cc	SpaceAfter=No
-6	waitresses	waitress	NOUN	NNS	Number=Plur	4	conj	4:conj	_
+6	waitresses	waitress	NOUN	NNS	Number=Plur	4	conj	4:conj|8:nsubj|11:nsubj:xsubj|23:nsubj:xsubj	_
 7	definately	definately	ADV	RB	_	8	advmod	8:advmod	_
 8	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 9	to	to	PART	TO	_	11	mark	11:mark	_
@@ -95,47 +95,47 @@
 13	if	if	SCONJ	IN	_	16	mark	16:mark	_
 14	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
 15	ever	ever	ADV	RB	_	16	advmod	16:advmod	_
-16	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	advcl	11:advcl	_
+16	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:if	_
 17	any	any	DET	DT	_	16	obj	16:obj	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
-19	begin	begin	VERB	VB	VerbForm=Inf	16	advcl	16:advcl	_
+19	begin	begin	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:to	_
 20	with	with	ADP	IN	_	19	obl	19:obl	SpaceAfter=No
 21	)	)	PUNCT	-RRB-	_	16	punct	16:punct	_
 22	and	and	CCONJ	CC	_	23	cc	23:cc	_
-23	learn	learn	VERB	VB	VerbForm=Inf	11	conj	11:conj	_
+23	learn	learn	VERB	VB	VerbForm=Inf	11	conj	8:xcomp|11:conj:and	_
 24	two	two	NUM	CD	NumType=Card	25	nummod	25:nummod	_
 25	things	thing	NOUN	NNS	Number=Plur	23	obj	23:obj	SpaceAfter=No
 26	:	:	PUNCT	:	_	25	punct	25:punct	_
 27	only	only	ADV	RB	_	28	advmod	28:advmod	_
 28	chat	chat	VERB	VB	Mood=Imp|VerbForm=Fin	25	appos	25:appos	_
 29	with	with	ADP	IN	_	30	case	30:case	_
-30	customers	customer	NOUN	NNS	Number=Plur	28	obl	28:obl	_
+30	customers	customer	NOUN	NNS	Number=Plur	28	obl	28:obl:with	_
 31	when	when	ADV	WRB	PronType=Int	37	mark	37:mark	_
 32	other	other	ADJ	JJ	Degree=Pos	33	amod	33:amod	_
 33	customers	customer	NOUN	NNS	Number=Plur	37	nsubj	37:nsubj	_
 34	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	37	aux	37:aux	_
 35	not	not	PART	RB	_	37	advmod	37:advmod	_
 36	impatiently	impatiently	ADV	RB	_	37	advmod	37:advmod	_
-37	waiting	wait	VERB	VBG	Tense=Pres|VerbForm=Part	28	advcl	28:advcl	_
+37	waiting	wait	VERB	VBG	Tense=Pres|VerbForm=Part	28	advcl	28:advcl:when	_
 38	and	and	CCONJ	CC	_	40	cc	40:cc	_
 39	to	to	PART	TO	_	40	mark	40:mark	_
-40	look	look	VERB	VB	Mood=Imp|VerbForm=Fin	28	conj	28:conj	_
+40	look	look	VERB	VB	Mood=Imp|VerbForm=Fin	28	conj	25:appos|28:conj:and	_
 41	around	around	ADV	RB	_	40	advmod	40:advmod	_
 42	more	more	ADV	RBR	_	43	advmod	43:advmod	_
 43	often	often	ADV	RB	_	40	advmod	40:advmod	_
 44	to	to	PART	TO	_	45	mark	45:mark	_
-45	see	see	VERB	VB	VerbForm=Inf	40	advcl	40:advcl	_
+45	see	see	VERB	VB	VerbForm=Inf	40	advcl	40:advcl:to	_
 46	if	if	SCONJ	IN	_	49	mark	49:mark	_
 47	people	people	NOUN	NNS	Number=Plur	49	nsubj	49:nsubj	_
 48	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	49	aux	49:aux	_
-49	waiting	wait	VERB	VBG	Tense=Pres|VerbForm=Part	45	advcl	45:advcl	SpaceAfter=No
+49	waiting	wait	VERB	VBG	Tense=Pres|VerbForm=Part	45	advcl	45:advcl:if	SpaceAfter=No
 50	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-231203-0007
 # text = In some cases the result is because of understaffing, in some cases the staff just doesn't care/know better.
 1	In	in	ADP	IN	_	3	case	3:case	_
 2	some	some	DET	DT	_	3	det	3:det	_
-3	cases	case	NOUN	NNS	Number=Plur	9	obl	9:obl	_
+3	cases	case	NOUN	NNS	Number=Plur	9	obl	9:obl:in	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	result	result	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
@@ -145,9 +145,9 @@
 10	,	,	PUNCT	,	_	9	punct	9:punct	_
 11	in	in	ADP	IN	_	13	case	13:case	_
 12	some	some	DET	DT	_	13	det	13:det	_
-13	cases	case	NOUN	NNS	Number=Plur	19	obl	19:obl	_
+13	cases	case	NOUN	NNS	Number=Plur	19	obl	19:obl:in	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
-15	staff	staff	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
+15	staff	staff	NOUN	NN	Number=Sing	19	nsubj	19:nsubj|21:nsubj	_
 16	just	just	ADV	RB	_	19	advmod	19:advmod	_
 17	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	aux	19:aux	SpaceAfter=No
 18	n't	not	PART	RB	_	19	advmod	19:advmod	_
@@ -165,10 +165,10 @@
 4	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	something	something	PRON	NN	Number=Sing	4	obj	4:obj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	keep	keep	VERB	VB	VerbForm=Inf	4	advcl	4:advcl	_
+7	keep	keep	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	_
 8	take	take	NOUN	NN	Number=Sing	10	compound	10:compound	SpaceAfter=No
 9	-	-	PUNCT	HYPH	_	10	punct	10:punct	SpaceAfter=No
-10	out	out	NOUN	NN	Number=Sing	7	obj	7:obj	_
+10	out	out	NOUN	NN	Number=Sing	7	obj	7:obj|11:nsubj:xsubj	_
 11	warm	warm	ADJ	JJ	Degree=Pos	7	xcomp	7:xcomp	SpaceAfter=No
 12	,	,	PUNCT	,	_	7	punct	7:punct	_
 13	so	so	SCONJ	IN	_	18	mark	18:mark	_
@@ -176,31 +176,31 @@
 15	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
 16	not	not	PART	RB	_	18	advmod	18:advmod	_
 17	room	room	NOUN	NN	Number=Sing	18	compound	18:compound	_
-18	temperature	temperature	NOUN	NN	Number=Sing	7	advcl	7:advcl	_
+18	temperature	temperature	NOUN	NN	Number=Sing	7	advcl	7:advcl:so	_
 19	at	at	ADV	RB	_	20	case	20:case	_
-20	best	best	ADV	RBS	Degree=Sup	18	obl	18:obl	_
+20	best	best	ADV	RBS	Degree=Sup	18	obl	18:obl:at	_
 21	when	when	ADV	WRB	PronType=Int	23	mark	23:mark	_
 22	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	23	nsubj	23:nsubj	_
-23	get	get	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl	_
-24	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	23	obj	23:obj	_
+23	get	get	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl:when	_
+24	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	23	obj	23:obj|25:nsubj:xsubj	_
 25	home	home	ADV	RB	_	23	xcomp	23:xcomp	SpaceAfter=No
 26	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-231203-0009
 # text = You just have to know what you're getting into when you go.
-1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	just	just	ADV	RB	_	3	advmod	3:advmod	_
 3	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	know	know	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-6	what	what	PRON	WP	PronType=Int	9	obl	9:obl	_
+6	what	what	PRON	WP	PronType=Int	9	obl	9:obl:into	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	SpaceAfter=No
 8	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
 9	getting	get	VERB	VBG	Tense=Pres|VerbForm=Part	5	ccomp	5:ccomp	_
 10	into	into	ADP	IN	_	6	case	6:case	_
 11	when	when	ADV	WRB	PronType=Int	13	mark	13:mark	_
 12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
-13	go	go	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl	SpaceAfter=No
+13	go	go	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:when	SpaceAfter=No
 14	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-231203-0010
@@ -210,7 +210,7 @@
 3	pub	pub	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	excellent	excellent	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	food	food	NOUN	NN	Number=Sing	3	conj	3:conj	_
+6	food	food	NOUN	NN	Number=Sing	3	conj	3:conj:and	_
 7	(	(	PUNCT	-LRB-	_	9	punct	9:punct	SpaceAfter=No
 8	especially	especially	ADV	RB	_	9	advmod	9:advmod	_
 9	wings	wing	NOUN	NNS	Number=Plur	6	appos	6:appos	SpaceAfter=No
@@ -219,14 +219,14 @@
 12	and	and	CCONJ	CC	_	15	cc	15:cc	_
 13	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	15	aux	15:aux	SpaceAfter=No
 14	n't	not	PART	RB	_	15	advmod	15:advmod	_
-15	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	3	conj	3:conj	_
+15	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	3	conj	3:conj:and	_
 16	if	if	SCONJ	IN	_	18	mark	18:mark	_
 17	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
-18	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl	_
+18	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl:if	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 20	limited	limited	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 21	amount	amount	NOUN	NN	Number=Sing	18	obj	18:obj	_
 22	of	of	ADP	IN	_	23	case	23:case	_
-23	time	time	NOUN	NN	Number=Sing	21	nmod	21:nmod	SpaceAfter=No
+23	time	time	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	SpaceAfter=No
 24	.	.	PUNCT	.	_	3	punct	3:punct	_
 

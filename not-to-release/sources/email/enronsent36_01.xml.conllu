@@ -17,7 +17,7 @@
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 10	proposed	propose	VERB	VBN	Tense=Past|VerbForm=Part	12	amod	12:amod	_
 11	Project	Project	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	Bruin	Bruin	PROPN	NNP	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+12	Bruin	Bruin	PROPN	NNP	Number=Sing	7	nmod	7:nmod:regarding	SpaceAfter=No
 13	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent36_01-0003
@@ -45,10 +45,10 @@
 3	sorry	sorry	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	for	for	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	delay	delay	NOUN	NN	Number=Sing	3	obl	3:obl	_
+6	delay	delay	NOUN	NN	Number=Sing	3	obl	3:obl:for	_
 7	on	on	SCONJ	IN	_	8	mark	8:mark	_
-8	getting	get	VERB	VBG	VerbForm=Ger	6	acl	6:acl	_
-9	this	this	PRON	DT	Number=Sing|PronType=Dem	8	obj	8:obj	_
+8	getting	get	VERB	VBG	VerbForm=Ger	6	acl	6:acl:on	_
+9	this	this	PRON	DT	Number=Sing|PronType=Dem	8	obj	8:obj|10:nsubj:xsubj	_
 10	around	around	ADV	RB	_	8	xcomp	8:xcomp	SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -59,14 +59,14 @@
 3	when	when	ADV	WRB	PronType=Int	6	mark	6:mark	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
 5	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-6	meet	meet	VERB	VB	VerbForm=Inf	2	advcl	2:advcl	_
+6	meet	meet	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:when	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	discuss	discuss	VERB	VB	VerbForm=Inf	6	advcl	6:advcl	_
+8	discuss	discuss	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:to	_
 9	issues	issue	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 10	related	related	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 11	to	to	ADP	IN	_	13	case	13:case	_
 12	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
-13	area	area	NOUN	NN	Number=Sing	10	obl	10:obl	SpaceAfter=No
+13	area	area	NOUN	NN	Number=Sing	10	obl	10:obl:to	SpaceAfter=No
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent36_01-0007
@@ -88,7 +88,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	spoke	speak	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	with	with	ADP	IN	_	4	case	4:case	_
-4	Mike	Mike	PROPN	NNP	Number=Sing	2	obl	2:obl	_
+4	Mike	Mike	PROPN	NNP	Number=Sing	2	obl	2:obl:with|18:nsubj:relsubj	_
 5	Collins	Collins	PROPN	NNP	Number=Sing	4	flat	4:flat	_
 6	[	[	PUNCT	-LRB-	_	7	punct	7:punct	SpaceAfter=No
 7	203-719-8385	203-719-8385	NUM	CD	NumType=Card	4	parataxis	4:parataxis	_
@@ -96,15 +96,15 @@
 9	phone	phone	NOUN	NN	Number=Sing	7	appos	7:appos	SpaceAfter=No
 10	)	)	PUNCT	-RRB-	_	9	punct	9:punct	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	203-719-7031	203-719-7031	NUM	CD	NumType=Card	7	conj	7:conj	_
+12	203-719-7031	203-719-7031	NUM	CD	NumType=Card	7	conj	7:conj:and	_
 13	(	(	PUNCT	-LRB-	_	14	punct	14:punct	SpaceAfter=No
 14	fax	fax	NOUN	NN	Number=Sing	12	appos	12:appos	SpaceAfter=No
 15	)	)	PUNCT	-RRB-	_	14	punct	14:punct	SpaceAfter=No
 16	]	]	PUNCT	-RRB-	_	7	punct	7:punct	_
-17	who	who	PRON	WP	PronType=Rel	18	nsubj	18:nsubj	_
+17	who	who	PRON	WP	PronType=Rel	18	nsubj	4:ref	_
 18	conrfirmed	conrfirm	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
 19	to	to	ADP	IN	_	20	case	20:case	_
-20	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	18	obl	18:obl	_
+20	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	18	obl	18:obl:to	_
 21	that	that	SCONJ	IN	_	24	mark	24:mark	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 23	cap	cap	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	_
@@ -126,9 +126,9 @@
 4	executed	execute	VERB	VBN	Tense=Past|VerbForm=Part	5	amod	5:amod	_
 5	copy	copy	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	confirm	confirm	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+7	confirm	confirm	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
 8	to	to	ADP	IN	_	9	case	9:case	_
-9	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obl	2:obl	SpaceAfter=No
+9	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obl	2:obl:to	SpaceAfter=No
 10	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent36_01-0012
@@ -149,10 +149,10 @@
 5	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	cell	cell	NOUN	NN	Number=Sing	9	compound	9:compound	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	car	car	NOUN	NN	Number=Sing	6	conj	6:conj	_
+8	car	car	NOUN	NN	Number=Sing	6	conj	6:conj|9:compound	_
 9	numbers	number	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	reach	reach	VERB	VB	VerbForm=Inf	9	acl	9:acl	_
+11	reach	reach	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	_
 12	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	11	obj	11:obj	SpaceAfter=No
 13	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -163,7 +163,7 @@
 3	be	be	AUX	VB	VerbForm=Inf	4	cop	4:cop	_
 4	back	back	ADV	RB	_	0	root	0:root	_
 5	on	on	ADP	IN	_	6	case	6:case	_
-6	Monday	Monday	PROPN	NNP	Number=Sing	4	obl	4:obl	SpaceAfter=No
+6	Monday	Monday	PROPN	NNP	Number=Sing	4	obl	4:obl:on	SpaceAfter=No
 7	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent36_01-0016
@@ -223,36 +223,36 @@
 9	for	for	ADP	IN	_	12	case	12:case	_
 10	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 11	Paragraph	paragraph	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	13s	13	NOUN	NNS	Number=Plur	7	nmod	7:nmod	_
-13	which	which	PRON	WDT	PronType=Rel	15	nsubj:pass	15:nsubj:pass	_
+12	13s	13	NOUN	NNS	Number=Plur	7	nmod	7:nmod:for|15:nsubj:pass:relsubj	_
+13	which	which	PRON	WDT	PronType=Rel	15	nsubj:pass	12:ref	_
 14	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	aux:pass	15:aux:pass	_
 15	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	acl:relcl	12:acl:relcl	_
 16	to	to	ADP	IN	_	19	case	19:case	_
 17	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
 18	sample	sample	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-19	ISDAs	isda	NOUN	NNS	Number=Plur	15	obl	15:obl	_
+19	ISDAs	isda	NOUN	NNS	Number=Plur	15	obl	15:obl:to	_
 20	for	for	ADP	IN	_	24	case	24:case	_
 21	(	(	PUNCT	-LRB-	_	22	punct	22:punct	SpaceAfter=No
 22	a	a	X	LS	_	23	nummod	23:nummod	SpaceAfter=No
 23	)	)	PUNCT	-RRB-	_	25	punct	25:punct	_
-24	US	US	PROPN	NNP	Number=Sing	19	nmod	19:nmod	_
+24	US	US	PROPN	NNP	Number=Sing	19	nmod	19:nmod:for	_
 25	Corporate	corporate	ADJ	JJ	Degree=Pos	24	amod	24:amod	SpaceAfter=No
 26	,	,	PUNCT	,	_	31	punct	31:punct	_
 27	(	(	PUNCT	-LRB-	_	28	punct	28:punct	SpaceAfter=No
 28	b	b	X	LS	_	29	nummod	29:nummod	SpaceAfter=No
 29	)	)	PUNCT	-RRB-	_	31	punct	31:punct	_
 30	Hedge	hedge	NOUN	NN	Number=Sing	31	compound	31:compound	_
-31	Funds	fund	NOUN	NNS	Number=Plur	24	conj	24:conj	SpaceAfter=No
+31	Funds	fund	NOUN	NNS	Number=Plur	24	conj	19:nmod:for|24:conj	SpaceAfter=No
 32	,	,	PUNCT	,	_	36	punct	36:punct	_
 33	(	(	PUNCT	-LRB-	_	34	punct	34:punct	SpaceAfter=No
 34	c	c	X	LS	_	36	nummod	36:nummod	SpaceAfter=No
 35	)	)	PUNCT	-RRB-	_	36	punct	36:punct	_
-36	Municipal	municipal	ADJ	JJ	Degree=Pos	24	conj	24:conj	SpaceAfter=No
+36	Municipal	municipal	ADJ	JJ	Degree=Pos	24	conj	19:nmod:for|24:conj	SpaceAfter=No
 37	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent36_01-0021
 # text = I will extract the one for the US corporate Paragraph 13 and email to your contact @ First Union Securities.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|13:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	extract	extract	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
@@ -261,13 +261,13 @@
 7	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 8	US	US	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 9	corporate	corporate	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	Paragraph	paragraph	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+10	Paragraph	paragraph	NOUN	NN	Number=Sing	5	nmod	5:nmod:for	_
 11	13	13	NUM	CD	NumType=Card	10	nummod	10:nummod	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	email	email	VERB	VB	VerbForm=Inf	3	conj	3:conj	_
+13	email	email	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
 14	to	to	ADP	IN	_	16	case	16:case	_
 15	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
-16	contact	contact	NOUN	NN	Number=Sing	13	obl	13:obl	_
+16	contact	contact	NOUN	NN	Number=Sing	13	obl	13:obl:to	_
 17	@	@	ADP	IN	_	20	case	20:case	_
 18	First	First	PROPN	NNP	Number=Sing	19	compound	19:compound	_
 19	Union	Union	PROPN	NNP	Number=Sing	20	compound	20:compound	_
@@ -305,7 +305,7 @@
 1	While	while	SCONJ	IN	_	4	mark	4:mark	_
 2	Tanya	Tanya	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	reviewing	review	VERB	VBG	Tense=Pres|VerbForm=Part	10	advcl	10:advcl	_
+4	reviewing	review	VERB	VBG	Tense=Pres|VerbForm=Part	10	advcl	10:advcl:while	_
 5	credit	credit	NOUN	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No
 6	,	,	PUNCT	,	_	10	punct	10:punct	_
 7	can	can	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
@@ -321,7 +321,7 @@
 17	"	"	PUNCT	''	_	15	punct	15:punct	_
 18	for	for	ADP	IN	_	20	case	20:case	_
 19	this	this	DET	DT	Number=Sing|PronType=Dem	20	det	20:det	_
-20	master	master	NOUN	NN	Number=Sing	15	nmod	15:nmod	SpaceAfter=No
+20	master	master	NOUN	NN	Number=Sing	15	nmod	15:nmod:for	SpaceAfter=No
 21	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = email-enronsent36_01-0026
@@ -338,11 +338,11 @@
 3	subject	subject	ADJ	JJ	Degree=Pos	1	appos	1:appos	_
 4	to	to	ADP	IN	_	6	case	6:case	_
 5	credit	credit	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	review	review	NOUN	NN	Number=Sing	3	obl	3:obl	_
+6	review	review	NOUN	NN	Number=Sing	3	obl	3:obl:to	_
 7	even	even	ADV	RB	_	10	advmod	10:advmod	_
 8	though	though	SCONJ	IN	_	10	mark	10:mark	_
 9	there	there	PRON	EX	_	10	expl	10:expl	_
-10	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl	_
+10	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:though	_
 11	blanks	blank	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	SpaceAfter=No
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -372,7 +372,7 @@
 
 # sent_id = email-enronsent36_01-0032
 # text = I just wanted to follow up on whether you will have a chance to send a draft Credit Support Annex (similar in form to the one previously executed with ENA).
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	just	just	ADV	RB	_	3	advmod	3:advmod	_
 3	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -386,7 +386,7 @@
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 13	chance	chance	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
-15	send	send	VERB	VB	VerbForm=Inf	13	acl	13:acl	_
+15	send	send	VERB	VB	VerbForm=Inf	13	acl	13:acl:to	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
 17	draft	draft	NOUN	NN	Number=Sing	20	compound	20:compound	_
 18	Credit	credit	NOUN	NN	Number=Sing	19	compound	19:compound	_
@@ -395,14 +395,14 @@
 21	(	(	PUNCT	-LRB-	_	22	punct	22:punct	SpaceAfter=No
 22	similar	similar	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
 23	in	in	ADP	IN	_	24	case	24:case	_
-24	form	form	NOUN	NN	Number=Sing	22	obl	22:obl	_
+24	form	form	NOUN	NN	Number=Sing	22	obl	22:obl:in	_
 25	to	to	ADP	IN	_	27	case	27:case	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
-27	one	one	NOUN	NN	Number=Sing	22	obl	22:obl	_
+27	one	one	NOUN	NN	Number=Sing	22	obl	22:obl:to	_
 28	previously	previously	ADV	RB	_	29	advmod	29:advmod	_
 29	executed	execute	VERB	VBN	Tense=Past|VerbForm=Part	27	acl	27:acl	_
 30	with	with	ADP	IN	_	31	case	31:case	_
-31	ENA	ENA	PROPN	NNP	Number=Sing	29	obl	29:obl	SpaceAfter=No
+31	ENA	ENA	PROPN	NNP	Number=Sing	29	obl	29:obl:with	SpaceAfter=No
 32	)	)	PUNCT	-RRB-	_	22	punct	22:punct	SpaceAfter=No
 33	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -424,18 +424,18 @@
 14	leave	leave	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	appropriate	appropriate	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	sections	section	NOUN	NNS	Number=Plur	14	obj	14:obj	_
+17	sections	section	NOUN	NNS	Number=Plur	14	obj	14:obj|18:nsubj:xsubj	_
 18	blank	blank	ADJ	JJ	Degree=Pos	14	xcomp	14:xcomp	_
 19	in	in	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	meantime	meantime	NOUN	NN	Number=Sing	14	obl	14:obl	SpaceAfter=No
+21	meantime	meantime	NOUN	NN	Number=Sing	14	obl	14:obl:in	SpaceAfter=No
 22	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent36_01-0034
 # text = Thanks and regards,
 1	Thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	regards	regards	NOUN	NNS	Number=Plur	1	conj	1:conj	SpaceAfter=No
+3	regards	regards	NOUN	NNS	Number=Plur	1	conj	1:conj:and	SpaceAfter=No
 4	,	,	PUNCT	,	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent36_01-0035

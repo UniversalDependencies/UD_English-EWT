@@ -7,7 +7,7 @@
 4	old	old	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	kittens	kitten	NOUN	NNS	Number=Plur	1	obj	1:obj	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	HATING	hate	VERB	VBG	VerbForm=Ger	1	conj	1:conj	_
+7	HATING	hate	VERB	VBG	VerbForm=Ger	1	conj	1:conj:and	_
 8	IT	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	obj	7:obj	SpaceAfter=No
 9	!	!	PUNCT	.	_	1	punct	1:punct	_
 
@@ -19,16 +19,16 @@
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0003
 # text = I wanted to volunteer and help animals, and decided to try fostering kittens.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj|6:nsubj:xsubj|10:nsubj|12:nsubj:xsubj|13:nsubj:xsubj	_
 2	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	volunteer	volunteer	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	help	help	VERB	VB	VerbForm=Inf	4	conj	4:conj	_
+6	help	help	VERB	VB	VerbForm=Inf	4	conj	2:xcomp|4:conj:and	_
 7	animals	animal	NOUN	NNS	Number=Plur	6	obj	6:obj	SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	decided	decide	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+10	decided	decide	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	try	try	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	fostering	foster	VERB	VBG	VerbForm=Ger	12	xcomp	12:xcomp	_
@@ -43,8 +43,8 @@
 4	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	5	amod	5:amod	_
 5	experience	experience	NOUN	NN	Number=Sing	0	root	0:root	_
 6	and	and	CCONJ	CC	_	8	cc	8:cc	_
-7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
-8	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj	_
+7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj|22:nsubj	_
+8	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	_
 9	two	two	NUM	CD	NumType=Card	13	nummod	13:nummod	_
 10	six	six	NUM	CD	NumType=Card	11	nummod	11:nummod	_
 11	week	week	NOUN	NN	Number=Sing	12	obl:npmod	12:obl:npmod	_
@@ -58,12 +58,12 @@
 19	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
 20	wit	wit	NOUN	NN	Number=Sing	22	nmod:poss	22:nmod:poss	SpaceAfter=No
 21	s	's	PART	POS	_	20	case	20:case	_
-22	end	end	NOUN	NN	Number=Sing	8	conj	8:conj	SpaceAfter=No
+22	end	end	NOUN	NN	Number=Sing	8	conj	8:conj:and	SpaceAfter=No
 23	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0005
 # text = I do not want to have to bring them back before they are eight weeks old but they are ruining my apartment.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj|8:nsubj:xsubj	_
 2	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	not	not	PART	RB	_	4	advmod	4:advmod	_
 4	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -78,18 +78,18 @@
 13	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
 14	eight	eight	NUM	CD	NumType=Card	15	nummod	15:nummod	_
 15	weeks	week	NOUN	NNS	Number=Plur	16	obl:npmod	16:obl:npmod	_
-16	old	old	ADJ	JJ	Degree=Pos	8	advcl	8:advcl	_
+16	old	old	ADJ	JJ	Degree=Pos	8	advcl	8:advcl:before	_
 17	but	but	CCONJ	CC	_	20	cc	20:cc	_
 18	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	20	nsubj	20:nsubj	_
 19	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
-20	ruining	ruin	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	4:conj	_
+20	ruining	ruin	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	4:conj:but	_
 21	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
 22	apartment	apartment	NOUN	NN	Number=Sing	20	obj	20:obj	SpaceAfter=No
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0006
 # text = They track poop everywhere (most disgustingly my bed....), and am constantly trying to climb up everything, including my bare legs!
-1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj|16:nsubj|18:nsubj:xsubj	_
 2	track	track	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	poop	poop	NOUN	NN	Number=Sing	2	obj	2:obj	_
 4	everywhere	everywhere	ADV	RB	_	2	advmod	2:advmod	_
@@ -104,7 +104,7 @@
 13	and	and	CCONJ	CC	_	16	cc	16:cc	_
 14	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
 15	constantly	constantly	ADV	RB	_	16	advmod	16:advmod	_
-16	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj	_
+16	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:and	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
 18	climb	climb	VERB	VB	VerbForm=Inf	16	xcomp	16:xcomp	_
 19	up	up	ADV	RB	_	18	advmod	18:advmod	_
@@ -113,7 +113,7 @@
 22	including	include	VERB	VBG	VerbForm=Ger	25	case	25:case	_
 23	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
 24	bare	bare	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
-25	legs	leg	NOUN	NNS	Number=Plur	20	nmod	20:nmod	SpaceAfter=No
+25	legs	leg	NOUN	NNS	Number=Plur	20	nmod	20:nmod:including	SpaceAfter=No
 26	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0007
@@ -121,12 +121,12 @@
 1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	legs	leg	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	hands	hand	NOUN	NNS	Number=Plur	2	conj	2:conj	_
+4	hands	hand	NOUN	NNS	Number=Plur	2	conj	2:conj:and|7:nsubj	_
 5	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 6	just	just	ADV	RB	_	7	advmod	7:advmod	_
 7	full	full	ADJ	JJ	Degree=Pos	0	root	0:root	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	scratches	scratch	NOUN	NNS	Number=Plur	7	obl	7:obl	SpaceAfter=No
+9	scratches	scratch	NOUN	NNS	Number=Plur	7	obl	7:obl:of	SpaceAfter=No
 10	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0008
@@ -140,19 +140,19 @@
 7	that	that	SCONJ	IN	_	10	mark	10:mark	_
 8	cats	cat	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
 9	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
-10	climb	climb	VERB	VB	VerbForm=Inf	5	conj	5:conj	SpaceAfter=No
+10	climb	climb	VERB	VB	VerbForm=Inf	5	conj	2:ccomp|5:conj:and	SpaceAfter=No
 11	,	,	PUNCT	,	_	16	punct	16:punct	_
 12	but	but	CCONJ	CC	_	16	cc	16:cc	_
 13	this	this	PRON	DT	Number=Sing|PronType=Dem	16	nsubj	16:nsubj	_
 14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
 15	just	just	ADV	RB	_	16	advmod	16:advmod	_
-16	ridiculous	ridiculous	ADJ	JJ	Degree=Pos	10	conj	10:conj	SpaceAfter=No
+16	ridiculous	ridiculous	ADJ	JJ	Degree=Pos	10	conj	10:conj:but	SpaceAfter=No
 17	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0009
 # text = My apartment also smells repulsive even though I am cleaning out their litter box at least once a day if not twice.
 1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	apartment	apartment	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
+2	apartment	apartment	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|5:nsubj:xsubj	_
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
 4	smells	smell	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	repulsive	repulsive	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	_
@@ -160,19 +160,19 @@
 7	though	though	SCONJ	IN	_	10	mark	10:mark	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 9	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
-10	cleaning	clean	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl	_
+10	cleaning	clean	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl:though	_
 11	out	out	ADP	RP	_	10	compound:prt	10:compound:prt	_
 12	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 13	litter	litter	NOUN	NN	Number=Sing	14	compound	14:compound	_
 14	box	box	NOUN	NN	Number=Sing	10	obj	10:obj	_
 15	at	at	ADV	RB	_	16	case	16:case	_
-16	least	least	ADV	RBS	Degree=Sup	17	obl	17:obl	_
+16	least	least	ADV	RBS	Degree=Sup	17	obl	17:obl:at	_
 17	once	once	ADV	RB	NumType=Mult	10	advmod	10:advmod	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
 19	day	day	NOUN	NN	Number=Sing	17	obl:npmod	17:obl:npmod	_
 20	if	if	SCONJ	IN	_	22	mark	22:mark	_
 21	not	not	ADV	RB	_	22	advmod	22:advmod	_
-22	twice	twice	ADV	RB	NumType=Mult	17	advcl	17:advcl	SpaceAfter=No
+22	twice	twice	ADV	RB	NumType=Mult	17	advcl	17:advcl:if	SpaceAfter=No
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0010
@@ -181,10 +181,10 @@
 2	suggestions	suggestion	NOUN	NNS	Number=Plur	16	nsubj:pass	16:nsubj:pass	_
 3	and	and	CCONJ	CC	_	5	cc	5:cc	_
 4	helpful	helpful	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	hints	hint	NOUN	NNS	Number=Plur	2	conj	2:conj	_
+5	hints	hint	NOUN	NNS	Number=Plur	2	conj	2:conj:and|16:nsubj:pass	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	make	make	VERB	VB	VerbForm=Inf	5	acl	5:acl	_
-8	this	this	PRON	DT	Number=Sing|PronType=Dem	7	obj	7:obj	_
+7	make	make	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
+8	this	this	PRON	DT	Number=Sing|PronType=Dem	7	obj	7:obj|12:nsubj:xsubj	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 10	more	more	ADV	RBR	_	11	advmod	11:advmod	_
 11	positive	positive	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
@@ -215,19 +215,19 @@
 2	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	1	obj	1:obj	_
 3	to	to	ADP	IN	_	5	case	5:case	_
 4	one	one	NUM	CD	NumType=Card	5	nummod	5:nummod	_
-5	room	room	NOUN	NN	Number=Sing	1	obl	1:obl	_
+5	room	room	NOUN	NN	Number=Sing	1	obl	1:obl:to	_
 6	with	with	ADP	IN	_	10	case	10:case	_
 7	easy	easy	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
-9	clean	clean	VERB	VB	VerbForm=Inf	7	advcl	7:advcl	_
-10	flooring	flooring	NOUN	NN	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+9	clean	clean	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:to	_
+10	flooring	flooring	NOUN	NN	Number=Sing	5	nmod	5:nmod:with	SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0013
 # text = If you have limited options, try the bathroom.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl	_
+3	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	_
 4	limited	limit	VERB	VBN	Tense=Past|VerbForm=Part	5	amod	5:amod	_
 5	options	option	NOUN	NNS	Number=Plur	3	obj	3:obj	SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
@@ -245,8 +245,8 @@
 5	plenty	plenty	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	litter	litter	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	boxes	box	NOUN	NNS	Number=Plur	5	nmod	5:nmod	_
-9	that	that	PRON	WDT	PronType=Rel	11	nsubj:pass	11:nsubj:pass	_
+8	boxes	box	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of|11:nsubj:pass:relsubj	_
+9	that	that	PRON	WDT	PronType=Rel	11	nsubj:pass	8:ref	_
 10	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	aux:pass	11:aux:pass	_
 11	cleaned	clean	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	acl:relcl	8:acl:relcl	_
 12	often	often	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
@@ -257,9 +257,9 @@
 1	Depending	depend	VERB	VBG	VerbForm=Ger	4	case	4:case	_
 2	on	on	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	batch	batch	NOUN	NN	Number=Sing	11	obl	11:obl	_
+4	batch	batch	NOUN	NN	Number=Sing	11	obl	11:obl:on	_
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	kittens	kitten	NOUN	NNS	Number=Plur	4	nmod	4:nmod	SpaceAfter=No
+6	kittens	kitten	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	SpaceAfter=No
 7	,	,	PUNCT	,	_	11	punct	11:punct	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 9	will	will	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
@@ -268,29 +268,29 @@
 12	as	as	ADV	RB	_	13	advmod	13:advmod	_
 13	many	many	ADJ	JJ	Degree=Pos	11	obj	11:obj	_
 14	as	as	ADP	IN	_	15	case	15:case	_
-15	one	one	NUM	CD	NumType=Card	13	obl	13:obl	_
+15	one	one	NUM	CD	NumType=Card	13	obl	13:obl:as	_
 16	per	per	ADP	IN	_	17	case	17:case	_
-17	kitten	kitten	NOUN	NN	Number=Sing	15	nmod	15:nmod	SpaceAfter=No
+17	kitten	kitten	NOUN	NN	Number=Sing	15	nmod	15:nmod:per	SpaceAfter=No
 18	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0016
 # text = They can produce a lot of waste and even scooping twice a day they can get messy.
-1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj|16:nsubj	_
 2	can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	produce	produce	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	lot	lot	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	waste	waste	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+7	waste	waste	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
 8	and	and	CCONJ	CC	_	16	cc	16:cc	_
 9	even	even	ADV	RB	_	10	advmod	10:advmod	_
 10	scooping	scoop	VERB	VBG	VerbForm=Ger	17	advcl	17:advcl	_
 11	twice	twice	ADV	RB	NumType=Mult	13	case	13:case	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 13	day	day	NOUN	NN	Number=Sing	10	advmod	10:advmod	_
-14	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	16	obj	16:obj	_
+14	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	16	obj	16:obj|17:nsubj:xsubj	_
 15	can	can	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
-16	get	get	VERB	VB	VerbForm=Inf	3	conj	3:conj	_
+16	get	get	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
 17	messy	messy	ADJ	JJ	Degree=Pos	16	xcomp	16:xcomp	SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -298,7 +298,7 @@
 # text = For some reason it takes them awhile to learn not to step in poop.
 1	For	for	ADP	IN	_	3	case	3:case	_
 2	some	some	DET	DT	_	3	det	3:det	_
-3	reason	reason	NOUN	NN	Number=Sing	5	obl	5:obl	_
+3	reason	reason	NOUN	NN	Number=Sing	5	obl	5:obl:for	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	expl	5:expl	_
 5	takes	take	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	5	obj	5:obj	_
@@ -309,7 +309,7 @@
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	step	step	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	poop	poop	NOUN	NN	Number=Sing	12	obl	12:obl	SpaceAfter=No
+14	poop	poop	NOUN	NN	Number=Sing	12	obl	12:obl:in	SpaceAfter=No
 15	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0018
@@ -317,7 +317,7 @@
 1	Also	also	ADV	RB	_	7	advmod	7:advmod	_
 2	if	if	SCONJ	IN	_	4	mark	4:mark	_
 3	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
-4	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl	_
+4	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	_
 5	diarrhea	diarrhea	NOUN	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
 7	check	check	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
@@ -325,19 +325,19 @@
 9	with	with	ADP	IN	_	12	case	12:case	_
 10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 11	foster	foster	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	coordinator	coordinator	NOUN	NN	Number=Sing	7	obl	7:obl	SpaceAfter=No
+12	coordinator	coordinator	NOUN	NN	Number=Sing	7	obl	7:obl:with	SpaceAfter=No
 13	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0019
 # text = They made need medication or deworming or something.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-2	made	may	AUX	MD	VerbForm=Fin|Typo=Yes	3	aux	3:aux	_
+2	made	may	AUX	MD	Typo=Yes|VerbForm=Fin	3	aux	3:aux	_
 3	need	need	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	medication	medication	NOUN	NN	Number=Sing	3	obj	3:obj	_
 5	or	or	CCONJ	CC	_	6	cc	6:cc	_
-6	deworming	deworming	NOUN	NN	Number=Sing	4	conj	4:conj	_
+6	deworming	deworming	NOUN	NN	Number=Sing	4	conj	3:obj|4:conj:or	_
 7	or	or	CCONJ	CC	_	8	cc	8:cc	_
-8	something	something	PRON	NN	Number=Sing	4	conj	4:conj	SpaceAfter=No
+8	something	something	PRON	NN	Number=Sing	4	conj	3:obj|4:conj:or	SpaceAfter=No
 9	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0020
@@ -349,28 +349,28 @@
 5	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	claws	claw	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	teeth	tooth	NOUN	NNS	Number=Plur	6	conj	6:conj	SpaceAfter=No
+8	teeth	tooth	NOUN	NNS	Number=Plur	6	conj	3:obj|6:conj:and	SpaceAfter=No
 9	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0021
 # text = To some degree you can/should help teach them not to use their teeth and claws inappropriately.
 1	To	to	ADP	IN	_	3	case	3:case	_
 2	some	some	DET	DT	_	3	det	3:det	_
-3	degree	degree	NOUN	NN	Number=Sing	8	obl	8:obl	_
-4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
-5	can	can	AUX	MD	VerbForm=Fin	8	aux	8:aux	SpaceAfter=No
-6	/	/	PUNCT	,	_	7	cc	7:cc	SpaceAfter=No
-7	should	should	AUX	MD	VerbForm=Fin	8	conj	8:conj	_
-8	help	help	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	degree	degree	NOUN	NN	Number=Sing	8	obl	8:obl:to	_
+4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	5:nsubj|8:nsubj|9:nsubj:xsubj	_
+5	can	can	AUX	MD	VerbForm=Fin	0	root	0:root	SpaceAfter=No
+6	/	/	PUNCT	,	_	8	cc	8:cc	SpaceAfter=No
+7	should	should	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
+8	help	help	VERB	VB	VerbForm=Inf	5	conj	5:conj	_
 9	teach	teach	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
-10	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	9	obj	9:obj	_
+10	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	9	obj	9:obj|13:nsubj:xsubj	_
 11	not	not	ADV	RB	_	13	advmod	13:advmod	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	use	use	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 14	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	teeth	tooth	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	claws	claw	NOUN	NNS	Number=Plur	15	conj	15:conj	_
+17	claws	claw	NOUN	NNS	Number=Plur	15	conj	13:obj|15:conj:and	_
 18	inappropriately	inappropriately	ADV	RB	_	13	advmod	13:advmod	SpaceAfter=No
 19	.	.	PUNCT	.	_	8	punct	8:punct	_
 
@@ -379,14 +379,14 @@
 1	But	but	CCONJ	CC	_	7	cc	7:cc	_
 2	in	in	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	meantime	meantime	NOUN	NN	Number=Sing	7	obl	7:obl	SpaceAfter=No
+4	meantime	meantime	NOUN	NN	Number=Sing	7	obl	7:obl:in	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	highly	highly	ADV	RB	_	7	advmod	7:advmod	_
 7	recommend	recommend	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 8	jeans	jeans	NOUN	NNS	Number=Plur	7	obj	7:obj	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	long	long	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	sleeves	sleeve	NOUN	NNS	Number=Plur	8	conj	8:conj	_
+11	sleeves	sleeve	NOUN	NNS	Number=Plur	8	conj	7:obj|8:conj:and	_
 12	anytime	anytime	NOUN	NN	Number=Sing	7	obl:tmod	7:obl:tmod	_
 13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	16	nsubj	16:nsubj	SpaceAfter=No
 14	'll	will	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
@@ -394,7 +394,7 @@
 16	interacting	interact	VERB	VBG	Tense=Pres|VerbForm=Part	12	acl:relcl	12:acl:relcl	_
 17	with	with	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	kittens	kitten	NOUN	NNS	Number=Plur	16	obl	16:obl	SpaceAfter=No
+19	kittens	kitten	NOUN	NNS	Number=Plur	16	obl	16:obl:with	SpaceAfter=No
 20	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0023
@@ -403,7 +403,7 @@
 2	take	take	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	care	care	NOUN	NN	Number=Sing	2	obj	2:obj	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	2	obl	2:obl	SpaceAfter=No
+5	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	2	obl	2:obl:of	SpaceAfter=No
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0024
@@ -411,16 +411,16 @@
 1	Get	get	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	plenty	plenty	NOUN	NN	Number=Sing	1	obj	1:obj	_
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	sleep	sleep	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+4	sleep	sleep	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	make	make	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
+6	make	make	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 7	sure	sure	ADJ	JJ	Degree=Pos	6	xcomp	6:xcomp	_
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
 9	take	take	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	ccomp	7:ccomp	_
 10	time	time	NOUN	NN	Number=Sing	9	obj	9:obj	_
 11	out	out	ADV	RB	_	10	advmod	10:advmod	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
-13	do	do	VERB	VB	VerbForm=Inf	9	advcl	9:advcl	_
+13	do	do	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
 14	some	some	DET	DT	_	15	det	15:det	_
 15	things	thing	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	_
@@ -440,9 +440,9 @@
 9	day	day	NOUN	NN	Number=Sing	7	nmod:npmod	7:nmod:npmod	_
 10	for	for	ADP	IN	_	12	case	12:case	_
 11	short	short	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	periods	period	NOUN	NNS	Number=Plur	2	obl	2:obl	_
+12	periods	period	NOUN	NNS	Number=Plur	2	obl	2:obl:for	_
 13	of	of	ADP	IN	_	14	case	14:case	_
-14	time	time	NOUN	NN	Number=Sing	12	nmod	12:nmod	SpaceAfter=No
+14	time	time	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	SpaceAfter=No
 15	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0026
@@ -451,18 +451,18 @@
 2	to	to	PART	TO	_	3	mark	3:mark	_
 3	go	go	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	there	there	ADV	RB	PronType=Dem	3	obl	3:obl	_
+5	there	there	ADV	RB	PronType=Dem	3	obl	3:obl:in	_
 6	with	with	ADP	IN	_	9	case	9:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	right	right	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	frame	frame	NOUN	NN	Number=Sing	3	obl	3:obl	_
+9	frame	frame	NOUN	NN	Number=Sing	3	obl	3:obl:with	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	mind	mind	NOUN	NN	Number=Sing	9	nmod	9:nmod	_
+11	mind	mind	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	enjoy	enjoy	VERB	VB	VerbForm=Inf	3	conj	3:conj	_
+13	enjoy	enjoy	VERB	VB	VerbForm=Inf	3	conj	1:xcomp|3:conj:and	_
 14	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	13	obj	13:obj	_
 15	for	for	SCONJ	IN	_	16	case	16:case	_
-16	what	what	PRON	WP	PronType=Int	13	obl	13:obl	_
+16	what	what	PRON	WP	PronType=Int	13	obl	13:obl:for	_
 17	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
 18	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	acl:relcl	16:acl:relcl	SpaceAfter=No
 19	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -474,7 +474,7 @@
 3	still	still	ADV	RB	_	6	advmod	6:advmod	_
 4	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	aux	6:aux	SpaceAfter=No
 5	n't	not	PART	RB	_	6	advmod	6:advmod	_
-6	enjoy	enjoy	VERB	VB	VerbForm=Inf	10	advcl	10:advcl	_
+6	enjoy	enjoy	VERB	VB	VerbForm=Inf	10	advcl	10:advcl:if	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	kittens	kitten	NOUN	NNS	Number=Plur	6	obj	6:obj	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
@@ -495,16 +495,16 @@
 5	homes	home	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	for	for	ADP	IN	_	8	case	8:case	_
 7	adult	adult	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	cats	cat	NOUN	NNS	Number=Plur	5	nmod	5:nmod	_
+8	cats	cat	NOUN	NNS	Number=Plur	5	nmod	5:nmod:for	_
 9	in	in	ADP	IN	_	11	case	11:case	_
 10	different	different	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	situations	situation	NOUN	NNS	Number=Plur	8	nmod	8:nmod	SpaceAfter=No
+11	situations	situation	NOUN	NNS	Number=Plur	8	nmod	8:nmod:in	SpaceAfter=No
 12	..	..	PUNCT	,	_	8	punct	8:punct	_
 13	sick	sick	ADJ	JJ	Degree=Pos	8	parataxis	8:parataxis	SpaceAfter=No
 14	,	,	PUNCT	,	_	13	punct	13:punct	_
 15	recovering	recover	VERB	VBG	VerbForm=Ger	13	list	13:list	_
 16	from	from	ADP	IN	_	17	case	17:case	_
-17	surgery	surgery	NOUN	NN	Number=Sing	15	obl	15:obl	SpaceAfter=No
+17	surgery	surgery	NOUN	NN	Number=Sing	15	obl	15:obl:from	SpaceAfter=No
 18	,	,	PUNCT	,	_	13	punct	13:punct	_
 19	need	need	VERB	VB	VerbForm=Inf	13	list	13:list	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
@@ -528,12 +528,12 @@
 # sent_id = answers-20111108104352AASs5OZ_ans-0030
 # text = Generally they're not clawing and biting, they don't make nearly as much mess, they don't need nearly as much litterbox scooping, etc :)
 1	Generally	generally	ADV	RB	_	5	advmod	5:advmod	_
-2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	SpaceAfter=No
+2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj|7:nsubj	SpaceAfter=No
 3	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 4	not	not	PART	RB	_	5	advmod	5:advmod	_
 5	clawing	claw	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	biting	bite	VERB	VBG	Tense=Pres|VerbForm=Part	5	conj	5:conj	SpaceAfter=No
+7	biting	bite	VERB	VBG	Tense=Pres|VerbForm=Part	5	conj	5:conj:and	SpaceAfter=No
 8	,	,	PUNCT	,	_	5	punct	5:punct	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 10	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	aux	12:aux	SpaceAfter=No
@@ -566,7 +566,7 @@
 5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	thing	thing	NOUN	NN	Number=Sing	1	ccomp	1:ccomp	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	give	give	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
+8	give	give	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 9	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	8	obj	8:obj	_
 10	back	back	ADP	RP	_	8	compound:prt	8:compound:prt	SpaceAfter=No
 11	!	!	PUNCT	.	_	1	punct	1:punct	_
@@ -579,7 +579,7 @@
 4	research	research	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	before	before	SCONJ	IN	_	7	mark	7:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
-7	agree	agree	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	advcl	2:advcl	_
+7	agree	agree	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	advcl	2:advcl:before	_
 8	next	next	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	time	time	NOUN	NN	Number=Sing	7	obl:tmod	7:obl:tmod	_
 10	;-)	;-)	SYM	NFP	_	2	discourse	2:discourse	_
@@ -592,7 +592,7 @@
 4	back	back	ADV	RB	_	1	advmod	1:advmod	_
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	shelter	shelter	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+7	shelter	shelter	NOUN	NN	Number=Sing	4	obl	4:obl:to	SpaceAfter=No
 8	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108104352AASs5OZ_ans-0034
@@ -604,7 +604,7 @@
 5	at	at	ADP	IN	_	8	case	8:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	humane	humane	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	society	society	NOUN	NN	Number=Sing	2	obl	2:obl	SpaceAfter=No
+8	society	society	NOUN	NN	Number=Sing	2	obl	2:obl:at	SpaceAfter=No
 9	,	,	PUNCT	,	_	2	punct	2:punct	_
 10	walk	walk	VERB	VB	Mood=Imp|VerbForm=Fin	4	appos	4:appos	_
 11	dogs	dog	NOUN	NNS	Number=Plur	10	obj	10:obj	SpaceAfter=No

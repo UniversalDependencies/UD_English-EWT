@@ -16,14 +16,14 @@
 13	on	on	SCONJ	IN	_	16	mark	16:mark	_
 14	how	how	ADV	WRB	PronType=Int	16	advmod	16:advmod	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
-16	use	use	VERB	VB	VerbForm=Inf	12	acl	12:acl	_
+16	use	use	VERB	VB	VerbForm=Inf	12	acl	12:acl:to	_
 17	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 18	hands	hand	NOUN	NNS	Number=Plur	16	obj	16:obj	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	body	body	NOUN	NN	Number=Sing	18	conj	18:conj	SpaceAfter=No
+20	body	body	NOUN	NN	Number=Sing	18	conj	16:obj|18:conj:and	SpaceAfter=No
 21	,	,	PUNCT	,	_	23	punct	23:punct	_
 22	to	to	PART	TO	_	23	mark	23:mark	_
-23	give	give	VERB	VB	VerbForm=Inf	16	conj	16:conj	_
+23	give	give	VERB	VB	VerbForm=Inf	16	conj	12:acl:to|16:conj	_
 24	every	every	DET	DT	_	25	det	25:det	_
 25	person	person	NOUN	NN	Number=Sing	23	iobj	23:iobj	_
 26	an	a	DET	DT	Definite=Ind|PronType=Art	28	det	28:det	_
@@ -33,7 +33,7 @@
 30	CALL	call	VERB	VB	Mood=Imp|VerbForm=Fin	2	parataxis	2:parataxis	_
 31	TODAY	today	NOUN	NN	Number=Sing	30	obl:tmod	30:obl:tmod	_
 32	AND	and	CCONJ	CC	_	33	cc	33:cc	_
-33	SCHEDULE	schedule	VERB	VB	Mood=Imp|VerbForm=Fin	30	conj	30:conj	_
+33	SCHEDULE	schedule	VERB	VB	Mood=Imp|VerbForm=Fin	30	conj	30:conj:and	_
 34	YOU	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	36	nsubj	36:nsubj	_
 35	MUST	must	AUX	MD	VerbForm=Fin	36	aux	36:aux	_
 36	SEE	see	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
@@ -43,13 +43,13 @@
 40	WILL	will	AUX	MD	VerbForm=Fin	41	aux	41:aux	_
 41	FALL	fall	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
 42	IN	in	ADP	IN	_	43	case	43:case	_
-43	LOVE	love	NOUN	NN	Number=Sing	41	obl	41:obl	_
+43	LOVE	love	NOUN	NN	Number=Sing	41	obl	41:obl:in	_
 44	SHE	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	47	nsubj	47:nsubj	_
 45	IS	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	47	cop	47:cop	_
 46	THE	the	DET	DT	Definite=Def|PronType=Art	47	det	47:det	_
 47	BEST	best	ADJ	JJS	Degree=Sup	2	parataxis	2:parataxis	_
 48	OF	of	ADP	IN	_	50	case	50:case	_
 49	THE	the	DET	DT	Definite=Def|PronType=Art	50	det	50:det	_
-50	BEST	best	ADJ	JJS	Degree=Sup	47	obl	47:obl	_
+50	BEST	best	ADJ	JJS	Degree=Sup	47	obl	47:obl:of	_
 51	!	!	PUNCT	.	_	2	punct	2:punct	_
 

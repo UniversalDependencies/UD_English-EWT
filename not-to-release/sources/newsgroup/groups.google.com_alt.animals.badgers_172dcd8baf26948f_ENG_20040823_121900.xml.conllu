@@ -4,9 +4,9 @@
 1	the	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	industry	industry	NOUN	NN	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	Marriage	marriage	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+4	Marriage	marriage	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	Kids	kid	NOUN	NNS	Number=Plur	4	conj	4:conj	SpaceAfter=No
+6	Kids	kid	NOUN	NNS	Number=Plur	4	conj	2:nmod:of|4:conj:and	SpaceAfter=No
 7	,	,	PUNCT	,	_	2	punct	2:punct	_
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
 9	heard	hear	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	parataxis	2:parataxis	_
@@ -20,8 +20,8 @@
 3	,	,	PUNCT	,	_	11	punct	11:punct	_
 4	in	in	ADP	IN	_	7	case	7:case	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	of	of	ADP	IN	_	4	conj	4:conj	_
-7	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	11	obl	11:obl	SpaceAfter=No
+6	of	of	ADP	IN	_	4	conj	4:conj:and|7:case	_
+7	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	11	obl	11:obl:of	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	noble	noble	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
@@ -31,14 +31,14 @@
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 15	too	too	ADV	RB	_	16	advmod	16:advmod	_
 16	often	often	ADV	RB	_	17	advmod	17:advmod	_
-17	leads	lead	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	conj	11:conj	_
+17	leads	lead	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	conj	11:conj:but	_
 18	to	to	ADP	IN	_	19	case	19:case	_
-19	kids	kid	NOUN	NNS	Number=Plur	17	obl	17:obl	_
+19	kids	kid	NOUN	NNS	Number=Plur	17	obl	17:obl:to	_
 20	and	and	CCONJ	CC	_	24	cc	24:cc	_
 21	kids	kid	NOUN	NNS	Number=Plur	24	nsubj	24:nsubj	_
 22	flat	flat	ADV	RB	_	23	advmod	23:advmod	_
 23	out	out	ADV	RB	_	24	advmod	24:advmod	_
-24	suck	suck	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	conj	17:conj	SpaceAfter=No
+24	suck	suck	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	conj	17:conj:and	SpaceAfter=No
 25	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_172dcd8baf26948f_ENG_20040823_121900-0003
@@ -59,19 +59,19 @@
 # text = Look around you and notice all the mind numbing trailor trash cretins out there who should not be procreating, yet they do.
 1	Look	look	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	around	around	ADP	IN	_	3	case	3:case	_
-3	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	obl	1:obl	_
+3	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	obl	1:obl:around	_
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
-5	notice	notice	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
+5	notice	notice	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 6	all	all	DET	PDT	_	12	det:predet	12:det:predet	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 8	mind	mind	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	numbing	numb	VERB	VBG	VerbForm=Ger	12	amod	12:amod	_
 10	trailor	trailor	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	trash	trash	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	cretins	cretin	NOUN	NNS	Number=Plur	5	obj	5:obj	_
+12	cretins	cretin	NOUN	NNS	Number=Plur	5	obj	5:obj|19:nsubj:relsubj	_
 13	out	out	ADV	RB	_	14	advmod	14:advmod	_
 14	there	there	ADV	RB	PronType=Dem	12	advmod	12:advmod	_
-15	who	who	PRON	WP	PronType=Rel	19	nsubj	19:nsubj	_
+15	who	who	PRON	WP	PronType=Rel	19	nsubj	12:ref	_
 16	should	should	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 17	not	not	PART	RB	_	19	advmod	19:advmod	_
 18	be	be	AUX	VB	VerbForm=Inf	19	aux	19:aux	_
@@ -79,7 +79,7 @@
 20	,	,	PUNCT	,	_	23	punct	23:punct	_
 21	yet	yet	CCONJ	CC	_	23	cc	23:cc	_
 22	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	23	nsubj	23:nsubj	_
-23	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	conj	19:conj	SpaceAfter=No
+23	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	conj	12:acl:relcl|19:conj:yet	SpaceAfter=No
 24	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_172dcd8baf26948f_ENG_20040823_121900-0005
@@ -87,14 +87,14 @@
 1	These	these	PRON	DT	Number=Plur|PronType=Dem	4	nsubj	4:nsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	people	people	NOUN	NNS	Number=Plur	0	root	0:root	_
-5	who	who	PRON	WP	PronType=Rel	6	nsubj	6:nsubj	_
+4	people	people	NOUN	NNS	Number=Plur	0	root	6:nsubj:relsubj	_
+5	who	who	PRON	WP	PronType=Rel	6	nsubj	4:ref	_
 6	keep	keep	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
 7	Jerry	Jerry	PROPN	NNP	Number=Sing	6	obj	6:obj	_
 8	springer	springer	PROPN	NNP	Number=Sing	7	flat	7:flat	_
 9	on	on	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	air	air	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+11	air	air	NOUN	NN	Number=Sing	6	obl	6:obl:on	SpaceAfter=No
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_172dcd8baf26948f_ENG_20040823_121900-0006
@@ -102,8 +102,8 @@
 1	These	these	PRON	DT	Number=Plur|PronType=Dem	4	nsubj	4:nsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	kids	kid	NOUN	NNS	Number=Plur	0	root	0:root	_
-5	who	who	PRON	WP	PronType=Rel	7	nsubj	7:nsubj	_
+4	kids	kid	NOUN	NNS	Number=Plur	0	root	7:nsubj:relsubj	_
+5	who	who	PRON	WP	PronType=Rel	7	nsubj	4:ref	_
 6	will	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 7	destroy	destroy	VERB	VB	VerbForm=Inf	4	acl:relcl	4:acl:relcl	_
 8	society	society	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
@@ -111,7 +111,7 @@
 10	because	because	ADP	IN	_	13	case	13:case	_
 11	of	of	ADP	IN	_	10	fixed	10:fixed	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	crapfest	crapfest	NOUN	NN	Number=Sing	7	obl	7:obl	_
+13	crapfest	crapfest	NOUN	NN	Number=Sing	7	obl	7:obl:because_of	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	American	american	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	family	family	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
@@ -121,7 +121,7 @@
 20	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 21	post	post	X	AFX	_	22	advmod	22:advmod	_
 22	hippie	hippie	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
-23	culture	culture	NOUN	NN	Number=Sing	18	obl	18:obl	SpaceAfter=No
+23	culture	culture	NOUN	NN	Number=Sing	18	obl	18:obl:under	SpaceAfter=No
 24	,	,	PUNCT	,	_	4	punct	4:punct	_
 25	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	26	nsubj	26:nsubj	_
 26	heard	hear	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	_
@@ -135,7 +135,7 @@
 3	might	might	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 4	think	think	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	by	by	SCONJ	IN	_	6	mark	6:mark	_
-6	reading	read	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl	_
+6	reading	read	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl:by	_
 7	this	this	PRON	DT	Number=Sing|PronType=Dem	6	obj	6:obj	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 9	blame	blame	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
@@ -148,14 +148,14 @@
 1	Not	not	PART	RB	_	2	advmod	2:advmod	_
 2	so	so	ADV	RB	_	0	root	0:root	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
-4	Kids	kid	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
+4	Kids	kid	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj|11:nsubj	_
 5	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 6	what	what	PRON	WP	PronType=Int	2	parataxis	2:parataxis	_
 7	kids	kid	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
 8	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	will	will	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
-11	do	do	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+11	do	do	VERB	VB	VerbForm=Inf	6	conj	6:conj:and	_
 12	what	what	PRON	WP	PronType=Int	11	obj	11:obj	_
 13	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
 14	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	acl:relcl	12:acl:relcl	SpaceAfter=No
@@ -170,9 +170,9 @@
 5	see	see	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
 6	and	and	CCONJ	CC	_	8	cc	8:cc	_
 7	monkey	monkey	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
-8	do	do	VERB	VB	VerbForm=Inf	5	conj	5:conj	_
+8	do	do	VERB	VB	VerbForm=Inf	5	conj	2:ccomp|5:conj:and	_
 9	with	with	ADP	IN	_	10	case	10:case	_
-10	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	2	obl	2:obl	SpaceAfter=No
+10	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	2	obl	2:obl:with	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_172dcd8baf26948f_ENG_20040823_121900-0010
@@ -190,10 +190,10 @@
 2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	bad	bad	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	parents	parent	NOUN	NNS	Number=Plur	0	root	0:root	_
+5	parents	parent	NOUN	NNS	Number=Plur	0	root	9:nsubj:relsubj|16:nsubj:relsubj|18:nsubj:xsubj	_
 6	out	out	ADV	RB	_	7	advmod	7:advmod	_
 7	there	there	ADV	RB	PronType=Dem	5	advmod	5:advmod	_
-8	who	who	PRON	WP	PronType=Rel	9	nsubj	9:nsubj	_
+8	who	who	PRON	WP	PronType=Rel	9	nsubj	5:ref	_
 9	fuck	fuck	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 10	up	up	ADP	RP	_	9	compound:prt	9:compound:prt	_
 11	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
@@ -201,13 +201,13 @@
 13	and	and	CCONJ	CC	_	16	cc	16:cc	_
 14	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	aux	16:aux	SpaceAfter=No
 15	nt	not	PART	RB	_	16	advmod	16:advmod	_
-16	seem	seem	VERB	VB	VerbForm=Inf	9	conj	9:conj	_
+16	seem	seem	VERB	VB	VerbForm=Inf	9	conj	5:acl:relcl|9:conj:and	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
 18	understand	understand	VERB	VB	VerbForm=Inf	16	xcomp	16:xcomp	_
 19	that	that	SCONJ	IN	_	30	mark	30:mark	_
 20	once	once	SCONJ	IN	_	22	mark	22:mark	_
-21	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	22:nsubj	_
-22	decide	decide	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	30	advcl	30:advcl	_
+21	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	22:nsubj|24:nsubj:xsubj	_
+22	decide	decide	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	30	advcl	30:advcl:once	_
 23	to	to	PART	TO	_	24	mark	24:mark	_
 24	have	have	VERB	VB	VerbForm=Inf	22	xcomp	22:xcomp	_
 25	kids	kid	NOUN	NNS	Number=Plur	24	obj	24:obj	SpaceAfter=No
@@ -217,17 +217,17 @@
 29	indeed	indeed	ADV	RB	_	30	advmod	30:advmod	_
 30	time	time	NOUN	NN	Number=Sing	18	ccomp	18:ccomp	_
 31	to	to	PART	TO	_	32	mark	32:mark	_
-32	grow	grow	VERB	VB	VerbForm=Inf	30	acl	30:acl	_
+32	grow	grow	VERB	VB	VerbForm=Inf	30	acl	30:acl:to	_
 33	up	up	ADP	RP	_	32	compound:prt	32:compound:prt	_
 34	and	and	CCONJ	CC	_	39	cc	39:cc	_
 35	be	be	AUX	VB	VerbForm=Inf	39	cop	39:cop	_
 36	a	a	DET	DT	Definite=Ind|PronType=Art	39	det	39:det	_
 37	responsible	responsible	ADJ	JJ	Degree=Pos	39	amod	39:amod	_
 38	role	role	NOUN	NN	Number=Sing	39	compound	39:compound	_
-39	model	model	NOUN	NN	Number=Sing	32	conj	32:conj	_
+39	model	model	NOUN	NN	Number=Sing	32	conj	30:acl:to|32:conj:and	_
 40	for	for	ADP	IN	_	42	case	42:case	_
 41	those	those	DET	DT	Number=Plur|PronType=Dem	42	det	42:det	_
-42	kids	kid	NOUN	NNS	Number=Plur	39	nmod	39:nmod	SpaceAfter=No
+42	kids	kid	NOUN	NNS	Number=Plur	39	nmod	39:nmod:for	SpaceAfter=No
 43	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_172dcd8baf26948f_ENG_20040823_121900-0012
@@ -259,8 +259,8 @@
 16	granting	grant	VERB	VBG	VerbForm=Ger	19	acl	19:acl	_
 17	bullshit	bullshit	NOUN	NN	Number=Sing	19	compound	19:compound	_
 18	liberal	liberal	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-19	culture	culture	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
-20	that	that	PRON	WDT	PronType=Rel	22	nsubj	22:nsubj	_
+19	culture	culture	NOUN	NN	Number=Sing	6	nmod	6:nmod:of|22:nsubj:relsubj	_
+20	that	that	PRON	WDT	PronType=Rel	22	nsubj	19:ref	_
 21	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	aux	22:aux	_
 22	caused	cause	VERB	VBN	Tense=Past|VerbForm=Part	19	acl:relcl	19:acl:relcl	_
 23	this	this	PRON	DT	Number=Sing|PronType=Dem	22	obj	22:obj	SpaceAfter=No
@@ -270,18 +270,18 @@
 # text = When you blame it all on society, there's noone to to take responsibility and all of a sudden you have generation of fucked up kids who are likley smoking, drinking, doing drugs, fucking the neighbor or some internet perv just because you are too lazy to see waht they're doing.
 1	When	when	ADV	WRB	PronType=Int	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	blame	blame	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl	_
+3	blame	blame	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl:when	_
 4	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 5	all	all	DET	DT	_	4	advmod	4:advmod	_
 6	on	on	ADP	IN	_	7	case	7:case	_
-7	society	society	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+7	society	society	NOUN	NN	Number=Sing	3	obl	3:obl:on	SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	there	there	PRON	EX	_	10	expl	10:expl	SpaceAfter=No
 10	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 11	noone	noone	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
 12	to	to	PART	TO	_	14	reparandum	14:reparandum	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
-14	take	take	VERB	VB	VerbForm=Inf	11	acl	11:acl	_
+14	take	take	VERB	VB	VerbForm=Inf	11	acl	11:acl:to	_
 15	responsibility	responsibility	NOUN	NN	Number=Sing	14	obj	14:obj	_
 16	and	and	CCONJ	CC	_	22	cc	22:cc	_
 17	all	all	ADV	RB	_	20	advmod	20:advmod	_
@@ -289,37 +289,37 @@
 19	a	a	ADV	RB	_	20	advmod	20:advmod	_
 20	sudden	sudden	ADV	RB	_	22	advmod	22:advmod	_
 21	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	22:nsubj	_
-22	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	conj	10:conj	_
+22	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	conj	10:conj:and	_
 23	generation	generation	NOUN	NN	Number=Sing	22	obj	22:obj	_
 24	of	of	ADP	IN	_	27	case	27:case	_
 25	fucked	fuck	VERB	VBN	Tense=Past|VerbForm=Part	27	amod	27:amod	_
 26	up	up	ADP	RP	_	25	compound	25:compound	_
-27	kids	kid	NOUN	NNS	Number=Plur	23	nmod	23:nmod	_
-28	who	who	PRON	WP	PronType=Rel	31	nsubj	31:nsubj	_
+27	kids	kid	NOUN	NNS	Number=Plur	23	nmod	23:nmod:of|31:nsubj:relsubj|33:nsubj:relsubj|35:nsubj:relsubj|38:nsubj:relsubj	_
+28	who	who	PRON	WP	PronType=Rel	31	nsubj	27:ref	_
 29	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	31	aux	31:aux	_
 30	likley	likley	ADV	RB	_	31	advmod	31:advmod	_
 31	smoking	smoke	VERB	VBG	Tense=Pres|VerbForm=Part	27	acl:relcl	27:acl:relcl	SpaceAfter=No
 32	,	,	PUNCT	,	_	33	punct	33:punct	_
-33	drinking	drink	VERB	VBG	Tense=Pres|VerbForm=Part	31	conj	31:conj	SpaceAfter=No
+33	drinking	drink	VERB	VBG	Tense=Pres|VerbForm=Part	31	conj	27:acl:relcl|31:conj	SpaceAfter=No
 34	,	,	PUNCT	,	_	35	punct	35:punct	_
-35	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	31	conj	31:conj	_
+35	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	31	conj	27:acl:relcl|31:conj	_
 36	drugs	drug	NOUN	NNS	Number=Plur	35	obj	35:obj	SpaceAfter=No
 37	,	,	PUNCT	,	_	38	punct	38:punct	_
-38	fucking	fuck	VERB	VBG	Tense=Pres|VerbForm=Part	31	conj	31:conj	_
+38	fucking	fuck	VERB	VBG	Tense=Pres|VerbForm=Part	31	conj	27:acl:relcl|31:conj	_
 39	the	the	DET	DT	Definite=Def|PronType=Art	40	det	40:det	_
 40	neighbor	neighbor	NOUN	NN	Number=Sing	38	obj	38:obj	_
 41	or	or	CCONJ	CC	_	44	cc	44:cc	_
 42	some	some	DET	DT	_	44	det	44:det	_
 43	internet	internet	NOUN	NN	Number=Sing	44	compound	44:compound	_
-44	perv	perv	NOUN	NN	Number=Sing	40	conj	40:conj	_
+44	perv	perv	NOUN	NN	Number=Sing	40	conj	38:obj|40:conj:or	_
 45	just	just	ADV	RB	_	50	advmod	50:advmod	_
 46	because	because	SCONJ	IN	_	50	mark	50:mark	_
 47	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	50	nsubj	50:nsubj	_
 48	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	50	cop	50:cop	_
 49	too	too	ADV	RB	_	50	advmod	50:advmod	_
-50	lazy	lazy	ADJ	JJ	Degree=Pos	31	advcl	31:advcl	_
+50	lazy	lazy	ADJ	JJ	Degree=Pos	31	advcl	31:advcl:because	_
 51	to	to	PART	TO	_	52	mark	52:mark	_
-52	see	see	VERB	VB	VerbForm=Inf	50	advcl	50:advcl	_
+52	see	see	VERB	VB	VerbForm=Inf	50	advcl	50:advcl:to	_
 53	waht	waht	PRON	WP	PronType=Int	56	obj	56:obj	_
 54	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	56	nsubj	56:nsubj	SpaceAfter=No
 55	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	56	aux	56:aux	_
@@ -330,7 +330,7 @@
 # text = People like this will never have my sympathy, nor do they deserve my sympathy.
 1	People	people	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
 2	like	like	ADP	IN	_	3	case	3:case	_
-3	this	this	PRON	DT	Number=Sing|PronType=Dem	1	nmod	1:nmod	_
+3	this	this	PRON	DT	Number=Sing|PronType=Dem	1	nmod	1:nmod:like	_
 4	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 5	never	never	ADV	RB	_	6	advmod	6:advmod	_
 6	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -340,7 +340,7 @@
 10	nor	nor	CCONJ	CC	_	13	cc	13:cc	_
 11	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
 12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
-13	deserve	deserve	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+13	deserve	deserve	VERB	VB	VerbForm=Inf	6	conj	6:conj:nor	_
 14	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	sympathy	sympathy	NOUN	NN	Number=Sing	13	obj	13:obj	SpaceAfter=No
 16	.	.	PUNCT	.	_	6	punct	6:punct	_
@@ -349,7 +349,7 @@
 # text = Look inside yourselves parents, is this you?
 1	Look	look	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	inside	inside	ADP	IN	_	3	case	3:case	_
-3	yourselves	yourselves	PRON	PRP	Case=Acc|Number=Plur|Person=2|PronType=Prs|Reflex=Yes	1	obl	1:obl	_
+3	yourselves	yourselves	PRON	PRP	Case=Acc|Number=Plur|Person=2|PronType=Prs|Reflex=Yes	1	obl	1:obl:inside	_
 4	parents	parent	NOUN	NNS	Number=Plur	1	vocative	1:vocative	SpaceAfter=No
 5	,	,	PUNCT	,	_	1	punct	1:punct	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
@@ -380,10 +380,10 @@
 6	brats	brat	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 7	off	off	ADP	RP	_	4	compound:prt	4:compound:prt	_
 8	on	on	ADP	IN	_	9	case	9:case	_
-9	others	other	NOUN	NNS	Number=Plur	4	obl	4:obl	_
+9	others	other	NOUN	NNS	Number=Plur	4	obl	4:obl:on	_
 10	to	to	PART	TO	_	12	mark	12:mark	_
 11	"	"	PUNCT	``	_	12	punct	12:punct	SpaceAfter=No
-12	get	get	VERB	VB	VerbForm=Inf	4	advcl	4:advcl	_
+12	get	get	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 14	break	break	NOUN	NN	Number=Sing	12	obj	12:obj	SpaceAfter=No
 15	"	"	PUNCT	''	_	12	punct	12:punct	_
@@ -398,7 +398,7 @@
 5	to	to	PART	TO	_	8	mark	8:mark	_
 6	be	be	AUX	VB	VerbForm=Inf	8	cop	8:cop	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	mommy	mommy	NOUN	NN	Number=Sing	4	acl	4:acl	SpaceAfter=No
+8	mommy	mommy	NOUN	NN	Number=Sing	4	acl	4:acl:to	SpaceAfter=No
 9	,	,	PUNCT	,	_	2	punct	2:punct	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
 11	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	aux	13:aux	SpaceAfter=No
@@ -408,20 +408,20 @@
 15	break	break	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	until	until	SCONJ	IN	_	18	mark	18:mark	_
 17	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
-18	move	move	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl	_
+18	move	move	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:until	_
 19	out	out	ADV	RB	_	18	advmod	18:advmod	SpaceAfter=No
 20	,	,	PUNCT	,	_	2	punct	2:punct	_
 21	that	that	PRON	DT	Number=Sing|PronType=Dem	24	nsubj	24:nsubj	SpaceAfter=No
 22	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
-24	choice	choice	NOUN	NN	Number=Sing	2	parataxis	2:parataxis	_
-25	that	that	PRON	WDT	PronType=Rel	27	obj	27:obj	_
+24	choice	choice	NOUN	NN	Number=Sing	2	parataxis	2:parataxis|27:obl:relobj	_
+25	that	that	PRON	WDT	PronType=Rel	27	obj	24:ref	_
 26	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	27	nsubj	27:nsubj	_
 27	madea	madea	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	24	acl:relcl	24:acl:relcl	_
 28	and	and	CCONJ	CC	_	31	cc	31:cc	_
 29	that	that	PRON	DT	Number=Sing|PronType=Dem	31	nsubj	31:nsubj	SpaceAfter=No
 30	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	31	cop	31:cop	_
-31	life	life	NOUN	NN	Number=Sing	24	conj	24:conj	SpaceAfter=No
+31	life	life	NOUN	NN	Number=Sing	24	conj	24:conj:and|27:obl:relobj	SpaceAfter=No
 32	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_172dcd8baf26948f_ENG_20040823_121900-0021
@@ -436,7 +436,7 @@
 2	because	because	SCONJ	IN	_	5	mark	5:mark	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	SpaceAfter=No
 4	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-5	stuck	stuck	ADJ	JJ	Degree=Pos	9	advcl	9:advcl	SpaceAfter=No
+5	stuck	stuck	ADJ	JJ	Degree=Pos	9	advcl	9:advcl:because	SpaceAfter=No
 6	,	,	PUNCT	,	_	9	punct	9:punct	_
 7	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	SpaceAfter=No
 8	nt	not	PART	RB	_	9	advmod	9:advmod	_
@@ -445,13 +445,13 @@
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	right	right	NOUN	NN	Number=Sing	9	obj	9:obj	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
-14	drag	drag	VERB	VB	VerbForm=Inf	12	acl	12:acl	_
+14	drag	drag	VERB	VB	VerbForm=Inf	12	acl	12:acl:to	_
 15	down	down	ADP	RP	_	14	compound:prt	14:compound:prt	_
 16	all	all	DET	PDT	_	18	det:predet	18:det:predet	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 18	singles	singles	NOUN	NNS	Number=Plur	14	obj	14:obj	_
 19	around	around	ADP	IN	_	20	case	20:case	_
-20	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	18	nmod	18:nmod	SpaceAfter=No
+20	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	18	nmod	18:nmod:around	SpaceAfter=No
 21	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_172dcd8baf26948f_ENG_20040823_121900-0023
@@ -467,23 +467,23 @@
 9	fun	fun	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 10	work	work	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	related	related	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	instances	instance	NOUN	NNS	Number=Plur	5	obl	5:obl	_
+12	instances	instance	NOUN	NNS	Number=Plur	5	obl	5:obl:into	_
 13	where	where	ADV	WRB	PronType=Int	17	mark	17:mark	_
 14	"	"	PUNCT	``	_	15	punct	15:punct	SpaceAfter=No
-15	Mommies	mommy	NOUN	NNS	Number=Plur	17	nsubj	17:nsubj	SpaceAfter=No
+15	Mommies	mommy	NOUN	NNS	Number=Plur	17	nsubj	17:nsubj|23:nsubj	SpaceAfter=No
 16	"	"	PUNCT	''	_	15	punct	15:punct	_
-17	get	get	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl	_
+17	get	get	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl:where	_
 18	out	out	ADP	IN	_	20	mark	20:mark	_
 19	of	of	SCONJ	IN	_	20	mark	20:mark	_
 20	doing	do	VERB	VBG	VerbForm=Ger	17	obl	17:obl	_
 21	work	work	NOUN	NN	Number=Sing	20	obj	20:obj	_
 22	and	and	CCONJ	CC	_	23	cc	23:cc	_
-23	hiding	hide	VERB	VBG	VerbForm=Ger	17	conj	17:conj	_
+23	hiding	hide	VERB	VBG	VerbForm=Ger	17	conj	5:advcl:where|17:conj:and	_
 24	behind	behind	ADP	IN	_	25	case	25:case	_
-25	childcare	childcare	NOUN	NN	Number=Sing	23	obl	23:obl	_
+25	childcare	childcare	NOUN	NN	Number=Sing	23	obl	23:obl:behind	_
 26	as	as	ADP	IN	_	28	case	28:case	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
-28	reason	reason	NOUN	NN	Number=Sing	23	obl	23:obl	SpaceAfter=No
+28	reason	reason	NOUN	NN	Number=Sing	23	obl	23:obl:as	SpaceAfter=No
 29	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_172dcd8baf26948f_ENG_20040823_121900-0024
@@ -493,7 +493,7 @@
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	insidious	insidious	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	conspiracy	conspiracy	NOUN	NN	Number=Sing	0	root	0:root	_
-6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
+6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj|9:nsubj:xsubj	_
 7	call	call	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 8	"	"	PUNCT	``	_	9	punct	9:punct	SpaceAfter=No
 9	Mommism	mommism	NOUN	NN	Number=Sing	7	xcomp	7:xcomp	SpaceAfter=No

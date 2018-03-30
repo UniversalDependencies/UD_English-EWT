@@ -4,17 +4,17 @@
 1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	Favorite	favorite	NOUN	NN	Number=Sing	0	root	0:root	_
 3	in	in	ADP	IN	_	4	case	4:case	_
-4	McLean	McLean	PROPN	NNP	Number=Sing	2	nmod	2:nmod	_
+4	McLean	McLean	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	_
 
 # sent_id = reviews-314974-0002
 # text = My family loves coming to Endo Sushi.They are very nice, it is never crowded, and the food is wonderful, very delicious and fresh!
 1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	family	family	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
+2	family	family	NOUN	NN	Number=Sing	3	nsubj	3:nsubj|4:nsubj:xsubj	_
 3	loves	love	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	coming	come	VERB	VBG	VerbForm=Ger	3	xcomp	3:xcomp	_
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	Endo	Endo	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	Sushi	Sushi	PROPN	NNP	Number=Sing	4	obl	4:obl	SpaceAfter=No
+7	Sushi	Sushi	PROPN	NNP	Number=Sing	4	obl	4:obl:to	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
 9	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 10	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
@@ -24,18 +24,18 @@
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
 16	never	never	ADV	RB	_	17	advmod	17:advmod	_
-17	crowded	crowded	ADJ	JJ	Degree=Pos	12	conj	12:conj	SpaceAfter=No
+17	crowded	crowded	ADJ	JJ	Degree=Pos	12	conj	12:conj:and	SpaceAfter=No
 18	,	,	PUNCT	,	_	23	punct	23:punct	_
 19	and	and	CCONJ	CC	_	23	cc	23:cc	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	food	food	NOUN	NN	Number=Sing	23	nsubj	23:nsubj	_
+21	food	food	NOUN	NN	Number=Sing	23	nsubj	23:nsubj|26:nsubj	_
 22	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	cop	23:cop	_
-23	wonderful	wonderful	ADJ	JJ	Degree=Pos	12	conj	12:conj	SpaceAfter=No
+23	wonderful	wonderful	ADJ	JJ	Degree=Pos	12	conj	12:conj:and	SpaceAfter=No
 24	,	,	PUNCT	,	_	26	punct	26:punct	_
 25	very	very	ADV	RB	_	26	advmod	26:advmod	_
 26	delicious	delicious	ADJ	JJ	Degree=Pos	23	conj	23:conj	_
 27	and	and	CCONJ	CC	_	28	cc	28:cc	_
-28	fresh	fresh	ADJ	JJ	Degree=Pos	26	conj	26:conj	SpaceAfter=No
+28	fresh	fresh	ADJ	JJ	Degree=Pos	26	conj	26:conj:and	SpaceAfter=No
 29	!	!	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = reviews-314974-0003
@@ -49,12 +49,12 @@
 7	parking	parking	NOUN	NN	Number=Sing	6	obj	6:obj	_
 8	in	in	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	lot	lot	NOUN	NN	Number=Sing	6	obl	6:obl	_
+10	lot	lot	NOUN	NN	Number=Sing	6	obl	6:obl:in	_
 11	in	in	ADP	IN	_	12	case	12:case	_
-12	front	front	NOUN	NN	Number=Sing	10	nmod	10:nmod	_
+12	front	front	NOUN	NN	Number=Sing	10	nmod	10:nmod:in	_
 13	of	of	ADP	IN	_	15	case	15:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
-15	storefront	storefront	NOUN	NN	Number=Sing	12	nmod	12:nmod	SpaceAfter=No
+15	storefront	storefront	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	SpaceAfter=No
 16	,	,	PUNCT	,	_	25	punct	25:punct	_
 17	and	and	CCONJ	CC	_	25	cc	25:cc	_
 18	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	25	nsubj	25:nsubj	_
@@ -64,7 +64,7 @@
 22	one	one	NUM	CD	NumType=Card	24	nummod	24:nummod	SpaceAfter=No
 23	-	-	PUNCT	HYPH	_	24	punct	24:punct	SpaceAfter=No
 24	way	way	NOUN	NN	Number=Sing	25	compound	25:compound	_
-25	street	street	NOUN	NN	Number=Sing	4	conj	4:conj	SpaceAfter=No
+25	street	street	NOUN	NN	Number=Sing	4	conj	4:conj:and	SpaceAfter=No
 26	,	,	PUNCT	,	_	33	punct	33:punct	_
 27	but	but	CCONJ	CC	_	33	cc	33:cc	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
@@ -72,7 +72,7 @@
 30	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	29	nmod:npmod	29:nmod:npmod	_
 31	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	33	cop	33:cop	_
 32	NEVER	never	ADV	RB	_	33	advmod	33:advmod	_
-33	overcrowded	overcrowded	ADJ	JJ	Degree=Pos	4	conj	4:conj	SpaceAfter=No
+33	overcrowded	overcrowded	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
 34	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-314974-0004
@@ -81,13 +81,13 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
 3	can	can	AUX	MD	VerbForm=Fin	5	aux	5:aux	SpaceAfter=No
 4	not	not	PART	RB	_	5	advmod	5:advmod	_
-5	park	park	VERB	VB	VerbForm=Inf	13	advcl	13:advcl	_
+5	park	park	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:if	_
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	lot	lot	NOUN	NN	Number=Sing	5	obl	5:obl	SpaceAfter=No
+8	lot	lot	NOUN	NN	Number=Sing	5	obl	5:obl:in	SpaceAfter=No
 9	,	,	PUNCT	,	_	13	punct	13:punct	_
 10	then	then	ADV	RB	PronType=Dem	13	advmod	13:advmod	_
-11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
+11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj|22:nsubj	_
 12	can	can	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
 13	park	park	VERB	VB	VerbForm=Inf	0	root	0:root	_
 14	in	in	ADP	IN	_	19	case	19:case	_
@@ -95,14 +95,14 @@
 16	shopping	shopping	NOUN	NN	Number=Sing	17	compound	17:compound	_
 17	center	center	NOUN	NN	Number=Sing	19	nmod:poss	19:nmod:poss	SpaceAfter=No
 18	's	's	PART	POS	_	17	case	17:case	_
-19	garage	garage	NOUN	NN	Number=Sing	13	obl	13:obl	SpaceAfter=No
+19	garage	garage	NOUN	NN	Number=Sing	13	obl	13:obl:in	SpaceAfter=No
 20	,	,	PUNCT	,	_	22	punct	22:punct	_
 21	and	and	CCONJ	CC	_	22	cc	22:cc	_
-22	walk	walk	VERB	VB	VerbForm=Inf	13	conj	13:conj	_
+22	walk	walk	VERB	VB	VerbForm=Inf	13	conj	13:conj:and	_
 23	up	up	ADP	RP	_	22	compound:prt	22:compound:prt	_
 24	to	to	ADP	IN	_	26	case	26:case	_
 25	Endo	Endo	PROPN	NNP	Number=Sing	26	compound	26:compound	_
-26	Sushi	Sushi	PROPN	NNP	Number=Sing	22	obl	22:obl	SpaceAfter=No
+26	Sushi	Sushi	PROPN	NNP	Number=Sing	22	obl	22:obl:to	SpaceAfter=No
 27	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = reviews-314974-0005
@@ -124,11 +124,11 @@
 7	bell	bell	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	on	on	ADP	IN	_	10	case	10:case	_
 9	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	way	way	NOUN	NN	Number=Sing	4	obl	4:obl	_
+10	way	way	NOUN	NN	Number=Sing	4	obl	4:obl:on	_
 11	out	out	ADV	RB	_	10	advmod	10:advmod	_
 12	if	if	SCONJ	IN	_	14	mark	14:mark	_
 13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	14	nsubj	14:nsubj	_
-14	enjoyed	enjoy	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	advcl	4:advcl	_
+14	enjoyed	enjoy	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	advcl	4:advcl:if	_
 15	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 16	meal	meal	NOUN	NN	Number=Sing	14	obj	14:obj	SpaceAfter=No
 17	!	!	PUNCT	.	_	2	punct	2:punct	_
@@ -145,6 +145,6 @@
 8	on	on	ADP	IN	_	11	case	11:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	hostess	hostess	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	stand	stand	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+11	stand	stand	NOUN	NN	Number=Sing	6	obl	6:obl:on	SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	6	punct	6:punct	_
 

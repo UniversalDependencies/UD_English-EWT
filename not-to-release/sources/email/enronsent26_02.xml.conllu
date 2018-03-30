@@ -20,10 +20,10 @@
 6	execution	execution	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	version	version	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	with	with	ADP	IN	_	9	case	9:case	_
-9	questions	question	NOUN	NNS	Number=Plur	7	nmod	7:nmod	_
+9	questions	question	NOUN	NNS	Number=Plur	7	nmod	7:nmod:with	_
 10	removed	remove	VERB	VBN	Tense=Past|VerbForm=Part	9	acl	9:acl	SpaceAfter=No
 11	/	/	PUNCT	,	_	12	cc	12:cc	SpaceAfter=No
-12	blanks	blank	NOUN	NNS	Number=Plur	9	conj	9:conj	_
+12	blanks	blank	NOUN	NNS	Number=Plur	9	conj	7:nmod:with|9:conj	_
 13	filled	fill	VERB	VBN	Tense=Past|VerbForm=Part	12	acl	12:acl	_
 14	in	in	ADP	RP	_	13	compound:prt	13:compound:prt	SpaceAfter=No
 15	?	?	PUNCT	.	_	4	punct	4:punct	_
@@ -35,11 +35,11 @@
 3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obj	2:obj	_
 4	directly	directly	ADV	RB	_	2	advmod	2:advmod	_
 5	to	to	ADP	IN	_	6	case	6:case	_
-6	kent.shoemaker@ae.ge.com	kent.shoemaker@ae.ge.com	X	ADD	_	2	obl	2:obl	SpaceAfter=No
+6	kent.shoemaker@ae.ge.com	kent.shoemaker@ae.ge.com	X	ADD	_	2	obl	2:obl:to	SpaceAfter=No
 7	,	,	PUNCT	,	_	2	punct	2:punct	_
 8	copy	copy	VERB	VB	Mood=Imp|VerbForm=Fin	2	parataxis	2:parataxis	_
 9	to	to	ADP	IN	_	10	case	10:case	_
-10	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	obl	8:obl	SpaceAfter=No
+10	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	obl	8:obl:to	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent26_02-0005
@@ -66,7 +66,7 @@
 6	following	follow	VERB	VBG	VerbForm=Ger	7	amod	7:amod	_
 7	annotations	annotation	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 8	on	on	ADP	IN	_	9	case	9:case	_
-9	04/25/01	04/25/01	NUM	CD	NumType=Card	4	obl	4:obl	_
+9	04/25/01	04/25/01	NUM	CD	NumType=Card	4	obl	4:obl:on	_
 10	12:42:55	12:42:55	NUM	CD	NumType=Card	9	nmod:tmod	9:nmod:tmod	_
 
 # sent_id = email-enronsent26_02-0009
@@ -93,7 +93,7 @@
 # text = In most cases, our address is composed of conventional first name and last name plus @paulhastings.com.
 1	In	in	ADP	IN	_	3	case	3:case	_
 2	most	most	ADJ	JJS	Degree=Sup	3	amod	3:amod	_
-3	cases	case	NOUN	NNS	Number=Plur	8	obl	8:obl	SpaceAfter=No
+3	cases	case	NOUN	NNS	Number=Plur	8	obl	8:obl:in	SpaceAfter=No
 4	,	,	PUNCT	,	_	8	punct	8:punct	_
 5	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	address	address	NOUN	NN	Number=Sing	8	nsubj:pass	8:nsubj:pass	_
@@ -102,12 +102,12 @@
 9	of	of	ADP	IN	_	12	case	12:case	_
 10	conventional	conventional	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	12	amod	12:amod	_
-12	name	name	NOUN	NN	Number=Sing	8	obl	8:obl	_
+12	name	name	NOUN	NN	Number=Sing	8	obl	8:obl:of	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	last	last	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	name	name	NOUN	NN	Number=Sing	12	conj	12:conj	_
+15	name	name	NOUN	NN	Number=Sing	12	conj	8:obl:of|12:conj:and	_
 16	plus	plus	CCONJ	CC	_	17	cc	17:cc	_
-17	@paulhastings.com	@paulhastings.com	NOUN	NN	Number=Sing	12	conj	12:conj	SpaceAfter=No
+17	@paulhastings.com	@paulhastings.com	NOUN	NN	Number=Sing	12	conj	8:obl:of|12:conj:and	SpaceAfter=No
 18	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = email-enronsent26_02-0012
@@ -119,14 +119,14 @@
 5	:	:	PUNCT	:	_	6	punct	6:punct	_
 6	janesmith@paulhastings.com	janesmith@paulhastings.com	X	ADD	_	4	appos	4:appos	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	danjones@paulhastings.com	danjones@paulhastings.com	X	ADD	_	6	conj	6:conj	SpaceAfter=No
+8	danjones@paulhastings.com	danjones@paulhastings.com	X	ADD	_	6	conj	4:appos|6:conj:and	SpaceAfter=No
 9	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = email-enronsent26_02-0013
 # text = If you have any questions, please contact us at noc@paulhastings.com.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl	_
+3	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:if	_
 4	any	any	DET	DT	_	5	det	5:det	_
 5	questions	question	NOUN	NNS	Number=Plur	3	obj	3:obj	SpaceAfter=No
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
@@ -134,7 +134,7 @@
 8	contact	contact	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 9	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	8	obj	8:obj	_
 10	at	at	ADP	IN	_	11	case	11:case	_
-11	noc@paulhastings.com	noc@paulhastings.com	X	ADD	_	8	obl	8:obl	SpaceAfter=No
+11	noc@paulhastings.com	noc@paulhastings.com	X	ADD	_	8	obl	8:obl:at	SpaceAfter=No
 12	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = email-enronsent26_02-0014
@@ -145,29 +145,29 @@
 # text = "The information transmitted is intended only for the person or entity to which it is addressed and may contain confidential and/or privileged material.
 1	"	"	PUNCT	``	_	6	punct	6:punct	SpaceAfter=No
 2	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	information	information	NOUN	NN	Number=Sing	6	nsubj:pass	6:nsubj:pass	_
+3	information	information	NOUN	NN	Number=Sing	6	nsubj:pass	6:nsubj:pass|20:nsubj:pass	_
 4	transmitted	transmit	VERB	VBN	Tense=Past|VerbForm=Part	3	acl	3:acl	_
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux:pass	6:aux:pass	_
 6	intended	intend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 7	only	only	ADV	RB	_	10	advmod	10:advmod	_
 8	for	for	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	person	person	NOUN	NN	Number=Sing	6	obl	6:obl	_
+10	person	person	NOUN	NN	Number=Sing	6	obl	6:obl:for|17:obl	_
 11	or	or	CCONJ	CC	_	12	cc	12:cc	_
-12	entity	entity	NOUN	NN	Number=Sing	10	conj	10:conj	_
+12	entity	entity	NOUN	NN	Number=Sing	10	conj	6:obl:for|10:conj:or|17:obl:for	_
 13	to	to	ADP	IN	_	14	case	14:case	_
-14	which	which	PRON	WDT	PronType=Rel	17	obl	17:obl	_
+14	which	which	PRON	WDT	PronType=Rel	17	obl	10:ref	_
 15	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj:pass	17:nsubj:pass	_
 16	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	aux:pass	17:aux:pass	_
 17	addressed	address	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	acl:relcl	10:acl:relcl	_
 18	and	and	CCONJ	CC	_	20	cc	20:cc	_
 19	may	may	AUX	MD	VerbForm=Fin	20	aux	20:aux	_
-20	contain	contain	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+20	contain	contain	VERB	VB	VerbForm=Inf	6	conj	6:conj:and	_
 21	confidential	confidential	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
 22	and	and	CCONJ	CC	_	25	cc	25:cc	SpaceAfter=No
 23	/	/	PUNCT	,	_	24	cc	24:cc	SpaceAfter=No
-24	or	or	CCONJ	CC	_	22	conj	22:conj	_
-25	privileged	privileged	ADJ	JJ	Degree=Pos	21	conj	21:conj	_
+24	or	or	CCONJ	CC	_	22	conj	22:conj|25:cc	_
+25	privileged	privileged	ADJ	JJ	Degree=Pos	21	conj	21:conj:and_or|26:amod	_
 26	material	material	NOUN	NN	Number=Sing	20	obj	20:obj	SpaceAfter=No
 27	.	.	PUNCT	.	_	6	punct	6:punct	_
 
@@ -176,34 +176,34 @@
 1	Any	any	DET	DT	_	2	det	2:det	_
 2	review	review	NOUN	NN	Number=Sing	33	nsubj:pass	33:nsubj:pass	SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
-4	retransmission	retransmission	NOUN	NN	Number=Sing	2	conj	2:conj	SpaceAfter=No
+4	retransmission	retransmission	NOUN	NN	Number=Sing	2	conj	2:conj:or|33:nsubj:pass	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	dissemination	dissemination	NOUN	NN	Number=Sing	2	conj	2:conj	_
+6	dissemination	dissemination	NOUN	NN	Number=Sing	2	conj	2:conj:or|33:nsubj:pass	_
 7	or	or	CCONJ	CC	_	9	cc	9:cc	_
 8	other	other	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	use	use	NOUN	NN	Number=Sing	2	conj	2:conj	_
+9	use	use	NOUN	NN	Number=Sing	2	conj	2:conj:or|33:nsubj:pass	_
 10	of	of	ADP	IN	_	9	nmod	9:nmod	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	or	or	CCONJ	CC	_	13	cc	13:cc	_
-13	taking	taking	NOUN	NN	Number=Sing	2	conj	2:conj	_
+13	taking	taking	NOUN	NN	Number=Sing	2	conj	2:conj:or|33:nsubj:pass	_
 14	of	of	ADP	IN	_	16	case	16:case	_
 15	any	any	DET	DT	_	16	det	16:det	_
-16	action	action	NOUN	NN	Number=Sing	13	nmod	13:nmod	_
+16	action	action	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	_
 17	in	in	ADP	IN	_	18	case	18:case	_
-18	reliance	reliance	NOUN	NN	Number=Sing	13	nmod	13:nmod	_
+18	reliance	reliance	NOUN	NN	Number=Sing	13	nmod	13:nmod:in	_
 19	upon	upon	ADP	IN	_	22	case	22:case	SpaceAfter=No
 20	,	,	PUNCT	,	_	2	punct	2:punct	_
 21	this	this	DET	DT	Number=Sing|PronType=Dem	22	det	22:det	_
-22	information	information	NOUN	NN	Number=Sing	18	nmod	18:nmod	_
+22	information	information	NOUN	NN	Number=Sing	18	nmod	18:nmod:upon	_
 23	by	by	ADP	IN	_	24	case	24:case	_
-24	persons	person	NOUN	NNS	Number=Plur	2	nmod	2:nmod	_
+24	persons	person	NOUN	NNS	Number=Plur	2	nmod	2:nmod:by	_
 25	or	or	CCONJ	CC	_	26	cc	26:cc	_
-26	entities	entity	NOUN	NNS	Number=Plur	24	conj	24:conj	_
+26	entities	entity	NOUN	NNS	Number=Plur	24	conj	2:nmod:by|24:conj:or	_
 27	other	other	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 28	than	than	ADP	IN	_	31	case	31:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
 30	intended	intend	VERB	VBN	Tense=Past|VerbForm=Part	31	amod	31:amod	_
-31	recipient	recipient	NOUN	NN	Number=Sing	27	obl	27:obl	_
+31	recipient	recipient	NOUN	NN	Number=Sing	27	obl	27:obl:than	_
 32	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	33	aux:pass	33:aux:pass	_
 33	prohibited	prohibit	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No
 34	.	.	PUNCT	.	_	33	punct	33:punct	_
@@ -212,22 +212,22 @@
 # text = If you received this in error, please contact the sender and delete the material from all computers."
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	received	receive	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	advcl	9:advcl	_
+3	received	receive	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	advcl	9:advcl:if	_
 4	this	this	PRON	DT	Number=Sing|PronType=Dem	3	obj	3:obj	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	error	error	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+6	error	error	NOUN	NN	Number=Sing	3	obl	3:obl:in	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	please	please	INTJ	UH	_	9	discourse	9:discourse	_
 9	contact	contact	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	sender	sender	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	delete	delete	VERB	VB	Mood=Imp|VerbForm=Fin	9	conj	9:conj	_
+13	delete	delete	VERB	VB	Mood=Imp|VerbForm=Fin	9	conj	9:conj:and	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	material	material	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	from	from	ADP	IN	_	18	case	18:case	_
 17	all	all	DET	DT	_	18	det	18:det	_
-18	computers	computer	NOUN	NNS	Number=Plur	13	obl	13:obl	SpaceAfter=No
+18	computers	computer	NOUN	NNS	Number=Plur	13	obl	13:obl:from	SpaceAfter=No
 19	.	.	PUNCT	.	_	9	punct	9:punct	SpaceAfter=No
 20	"	"	PUNCT	''	_	9	punct	9:punct	_
 
@@ -242,10 +242,10 @@
 3	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	GE	GE	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	Guarantee	guarantee	NOUN	NN	Number=Sing	3	obj	3:obj	_
+6	Guarantee	guarantee	NOUN	NN	Number=Sing	3	obj	1:nsubj:xsubj|3:obj	_
 7	in	in	ADP	IN	_	9	case	9:case	_
 8	Word	Word	PROPN	NNP	Number=Sing	9	compound	9:compound	_
-9	format	format	NOUN	NN	Number=Sing	6	nmod	6:nmod	SpaceAfter=No
+9	format	format	NOUN	NN	Number=Sing	6	nmod	6:nmod:in	SpaceAfter=No
 10	.?	.?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent26_02-0020
@@ -262,16 +262,16 @@
 10	line	line	NOUN	NN	Number=Sing	5	obj	5:obj	_
 11	of	of	ADP	IN	_	13	case	13:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	Guarantee	guarantee	NOUN	NN	Number=Sing	10	nmod	10:nmod	_
+13	Guarantee	guarantee	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	_
 14	vs	versus	ADP	IN	Abbr=Yes	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	form	form	NOUN	NN	Number=Sing	10	nmod	10:nmod	_
+16	form	form	NOUN	NN	Number=Sing	10	nmod	10:nmod:vs	_
 17	of	of	ADP	IN	_	18	case	18:case	_
-18	guarantee	guarantee	NOUN	NN	Number=Sing	16	nmod	16:nmod	_
+18	guarantee	guarantee	NOUN	NN	Number=Sing	16	nmod	16:nmod:of	_
 19	in	in	ADP	IN	_	22	case	22:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 21	Turbine	turbine	NOUN	NN	Number=Sing	22	compound	22:compound	_
-22	Contract	contract	NOUN	NN	Number=Sing	16	nmod	16:nmod	SpaceAfter=No
+22	Contract	contract	NOUN	NN	Number=Sing	16	nmod	16:nmod:in	SpaceAfter=No
 23	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = email-enronsent26_02-0021
@@ -288,7 +288,7 @@
 6	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	5	obj	5:obj	_
 7	with	with	ADP	IN	_	9	case	9:case	_
 8	any	any	DET	DT	_	9	det	9:det	_
-9	questions	question	NOUN	NNS	Number=Plur	5	obl	5:obl	SpaceAfter=No
+9	questions	question	NOUN	NNS	Number=Plur	5	obl	5:obl:with	SpaceAfter=No
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent26_02-0023

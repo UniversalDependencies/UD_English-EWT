@@ -7,26 +7,26 @@
 
 # sent_id = reviews-334388-0002
 # text = I'm certainly no expert on asian food in fact not even a lover of Vietnamese food but I wanted to try the real things here at A Dong.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	SpaceAfter=No
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|14:nsubj	SpaceAfter=No
 2	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	certainly	certainly	ADV	RB	_	5	advmod	5:advmod	_
 4	no	no	DET	DT	_	5	det	5:det	_
 5	expert	expert	NOUN	NN	Number=Sing	0	root	0:root	_
 6	on	on	ADP	IN	_	8	case	8:case	_
 7	asian	asian	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	food	food	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+8	food	food	NOUN	NN	Number=Sing	5	nmod	5:nmod:on	_
 9	in	in	ADP	IN	_	10	case	10:case	_
-10	fact	fact	NOUN	NN	Number=Sing	14	nmod	14:nmod	_
+10	fact	fact	NOUN	NN	Number=Sing	14	nmod	14:nmod:in	_
 11	not	not	PART	RB	_	14	advmod	14:advmod	_
 12	even	even	ADV	RB	_	14	advmod	14:advmod	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
-14	lover	lover	NOUN	NN	Number=Sing	5	conj	5:conj	_
+14	lover	lover	NOUN	NN	Number=Sing	5	conj	5:conj:but	_
 15	of	of	ADP	IN	_	17	case	17:case	_
 16	Vietnamese	vietnamese	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	food	food	NOUN	NN	Number=Sing	14	nmod	14:nmod	_
+17	food	food	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	_
 18	but	but	CCONJ	CC	_	20	cc	20:cc	_
-19	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
-20	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+19	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj|22:nsubj:xsubj	_
+20	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj:but	_
 21	to	to	PART	TO	_	22	mark	22:mark	_
 22	try	try	VERB	VB	VerbForm=Inf	20	xcomp	20:xcomp	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
@@ -35,25 +35,25 @@
 26	here	here	ADV	RB	PronType=Dem	25	advmod	25:advmod	_
 27	at	at	ADP	IN	_	29	case	29:case	_
 28	A	A	PROPN	NNP	Number=Sing	29	compound	29:compound	_
-29	Dong	Dong	PROPN	NNP	Number=Sing	25	nmod	25:nmod	SpaceAfter=No
+29	Dong	Dong	PROPN	NNP	Number=Sing	25	nmod	25:nmod:at	SpaceAfter=No
 30	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-334388-0003
 # text = Cold, slimy, tasteless however is the same in all languages and foods.
 1	Cold	cold	ADJ	JJ	Degree=Pos	9	nsubj	9:nsubj	SpaceAfter=No
 2	,	,	PUNCT	,	_	3	punct	3:punct	_
-3	slimy	slimy	ADJ	JJ	Degree=Pos	1	conj	1:conj	SpaceAfter=No
+3	slimy	slimy	ADJ	JJ	Degree=Pos	1	conj	1:conj|9:nsubj	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
-5	tasteless	tasteless	ADJ	JJ	Degree=Pos	1	conj	1:conj	_
+5	tasteless	tasteless	ADJ	JJ	Degree=Pos	1	conj	1:conj|9:nsubj	_
 6	however	however	ADV	RB	_	9	advmod	9:advmod	_
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	same	same	ADJ	JJ	Degree=Pos	0	root	0:root	_
 10	in	in	ADP	IN	_	12	case	12:case	_
 11	all	all	DET	DT	_	12	det	12:det	_
-12	languages	language	NOUN	NNS	Number=Plur	9	obl	9:obl	_
+12	languages	language	NOUN	NNS	Number=Plur	9	obl	9:obl:in	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	foods	food	NOUN	NNS	Number=Plur	12	conj	12:conj	SpaceAfter=No
+14	foods	food	NOUN	NNS	Number=Plur	12	conj	9:obl:in|12:conj:and	SpaceAfter=No
 15	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = reviews-334388-0004
@@ -62,15 +62,15 @@
 2	good	good	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 3	,	,	PUNCT	,	_	5	punct	5:punct	_
 4	not	not	ADV	RB	_	5	advmod	5:advmod	_
-5	great	great	ADJ	JJ	Degree=Pos	2	conj	2:conj	SpaceAfter=No
+5	great	great	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	SpaceAfter=No
 6	,	,	PUNCT	,	_	10	punct	10:punct	_
 7	and	and	CCONJ	CC	_	10	cc	10:cc	_
 8	again	again	ADV	RB	_	10	advmod	10:advmod	_
 9	another	another	DET	DT	_	10	det	10:det	_
-10	disappointment	disappointment	NOUN	NN	Number=Sing	2	conj	2:conj	_
+10	disappointment	disappointment	NOUN	NN	Number=Sing	2	conj	2:conj:and	_
 11	in	in	ADP	IN	_	13	case	13:case	_
 12	Central	Central	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	Iowa	Iowa	PROPN	NNP	Number=Sing	10	nmod	10:nmod	SpaceAfter=No
+13	Iowa	Iowa	PROPN	NNP	Number=Sing	10	nmod	10:nmod:in	SpaceAfter=No
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-334388-0005
@@ -81,7 +81,7 @@
 4	places	place	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
 5	stay	stay	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	business	business	NOUN	NN	Number=Sing	5	obl	5:obl	SpaceAfter=No
+7	business	business	NOUN	NN	Number=Sing	5	obl	5:obl:in	SpaceAfter=No
 8	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-334388-0006
@@ -96,6 +96,6 @@
 8	this	this	PRON	DT	Number=Sing|PronType=Dem	11	nsubj	11:nsubj	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	not	not	PART	RB	_	11	advmod	11:advmod	_
-11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	conj	3:conj	SpaceAfter=No
+11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	conj	3:conj:and	SpaceAfter=No
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
 

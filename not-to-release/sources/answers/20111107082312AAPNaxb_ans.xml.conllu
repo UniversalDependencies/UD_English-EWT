@@ -5,9 +5,9 @@
 2	of	of	ADP	IN	_	5	case	5:case	_
 3	specific	specific	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 4	Hibachi	Hibachi	PROPN	NNP	Number=Sing	5	compound	5:compound	_
-5	restaurant	restaurant	NOUN	NN	Number=Sing	1	nmod	1:nmod	_
+5	restaurant	restaurant	NOUN	NN	Number=Sing	1	nmod	1:nmod:of	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	Chicago	Chicago	PROPN	NNP	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+7	Chicago	Chicago	PROPN	NNP	Number=Sing	5	nmod	5:nmod:in	SpaceAfter=No
 8	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111107082312AAPNaxb_ans-0002
@@ -18,14 +18,14 @@
 4	friend	friend	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	out	out	ADV	RB	_	4	advmod	4:advmod	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	Chicago	Chicago	PROPN	NNP	Number=Sing	5	obl	5:obl	_
+7	Chicago	Chicago	PROPN	NNP	Number=Sing	5	obl	5:obl:in	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
 9	week	week	NOUN	NN	Number=Sing	4	nmod:tmod	4:nmod:tmod	SpaceAfter=No
 10	,	,	PUNCT	,	_	14	punct	14:punct	_
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
-12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
+12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj|16:nsubj:xsubj	_
 13	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
-14	trying	try	VERB	VBG	VerbForm=Ger	2	conj	2:conj	_
+14	trying	try	VERB	VBG	VerbForm=Ger	2	conj	2:conj:and	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	remember	remember	VERB	VB	VerbForm=Inf	14	xcomp	14:xcomp	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
@@ -35,12 +35,12 @@
 21	awesome	awesome	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 22	hibachi	hibachi	NOUN	NN	Number=Sing	23	compound	23:compound	_
 23	style	style	NOUN	NN	Number=Sing	24	compound	24:compound	_
-24	restaurant	restaurant	NOUN	NN	Number=Sing	18	nmod	18:nmod	_
+24	restaurant	restaurant	NOUN	NN	Number=Sing	18	nmod	18:nmod:of	_
 25	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	26	nsubj	26:nsubj	_
 26	visited	visit	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	24	acl:relcl	24:acl:relcl	_
 27	while	while	SCONJ	IN	_	29	mark	29:mark	_
 28	out	out	ADV	RB	_	29	advmod	29:advmod	_
-29	there	there	ADV	RB	PronType=Dem	26	advcl	26:advcl	_
+29	there	there	ADV	RB	PronType=Dem	26	advcl	26:advcl:while	_
 30	a	a	DET	DT	Definite=Ind|PronType=Art	31	det	31:det	_
 31	couple	couple	NOUN	NN	Number=Sing	32	nmod	32:nmod	_
 32	years	year	NOUN	NNS	Number=Plur	33	obl:npmod	33:obl:npmod	_
@@ -49,7 +49,7 @@
 
 # sent_id = answers-20111107082312AAPNaxb_ans-0003
 # text = I think it was in the Lincoln Square area but don't quote me on that.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|13:nsubj	_
 2	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
 4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	9:cop	_
@@ -61,10 +61,10 @@
 10	but	but	CCONJ	CC	_	13	cc	13:cc	_
 11	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	13	aux	13:aux	SpaceAfter=No
 12	n't	not	PART	RB	_	13	advmod	13:advmod	_
-13	quote	quote	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj	_
+13	quote	quote	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj:but	_
 14	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	13	obj	13:obj	_
 15	on	on	ADP	IN	_	16	case	16:case	_
-16	that	that	PRON	DT	Number=Sing|PronType=Dem	13	obl	13:obl	SpaceAfter=No
+16	that	that	PRON	DT	Number=Sing|PronType=Dem	13	obl	13:obl:on	SpaceAfter=No
 17	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111107082312AAPNaxb_ans-0004
@@ -75,7 +75,7 @@
 4	'	'	PUNCT	''	_	3	punct	3:punct	_
 5	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	that	that	SCONJ	IN	_	8	mark	8:mark	_
-7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
+7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj|18:nsubj	_
 8	fill	fill	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	_
 9	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	bowl	bowl	NOUN	NN	Number=Sing	8	obj	8:obj	_
@@ -84,22 +84,22 @@
 13	style	style	NOUN	NN	Number=Sing	8	obl:npmod	8:obl:npmod	_
 14	from	from	ADP	IN	_	16	case	16:case	_
 15	raw	raw	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	ingredients	ingredient	NOUN	NNS	Number=Plur	8	obl	8:obl	_
+16	ingredients	ingredient	NOUN	NNS	Number=Plur	8	obl	8:obl:from	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	leave	leave	VERB	VB	VerbForm=Inf	8	conj	8:conj	_
+18	leave	leave	VERB	VB	VerbForm=Inf	8	conj	5:ccomp|8:conj:and	_
 19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	_
 20	on	on	ADP	IN	_	22	case	22:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
-22	counter	counter	NOUN	NN	Number=Sing	18	obl	18:obl	_
+22	counter	counter	NOUN	NN	Number=Sing	18	obl	18:obl:on	_
 23	with	with	ADP	IN	_	25	case	25:case	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
-25	chopstick	chopstick	NOUN	NN	Number=Sing	18	obl	18:obl	_
+25	chopstick	chopstick	NOUN	NN	Number=Sing	18	obl	18:obl:with	_
 26	listing	list	VERB	VBG	VerbForm=Ger	25	acl	25:acl	_
 27	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	29	nmod:poss	29:nmod:poss	_
 28	table	table	NOUN	NN	Number=Sing	29	compound	29:compound	_
 29	number	number	NOUN	NN	Number=Sing	26	obj	26:obj	_
 30	on	on	ADP	IN	_	31	case	31:case	_
-31	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	26	obl	26:obl	SpaceAfter=No
+31	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	26	obl	26:obl:on	SpaceAfter=No
 32	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111107082312AAPNaxb_ans-0005
@@ -111,7 +111,7 @@
 5	large	large	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 6	square	square	NOUN	NN	Number=Sing	8	compound	8:compound	_
 7	open	open	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	hibachi	hibachi	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+8	hibachi	hibachi	NOUN	NN	Number=Sing	2	nmod	2:nmod:around	_
 9	cook	cook	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	food	food	NOUN	NN	Number=Sing	9	obj	9:obj	SpaceAfter=No
@@ -120,14 +120,14 @@
 14	when	when	ADV	WRB	PronType=Int	17	mark	17:mark	_
 15	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj:pass	17:nsubj:pass	SpaceAfter=No
 16	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	aux:pass	17:aux:pass	_
-17	finished	finish	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	20	advcl	20:advcl	_
+17	finished	finish	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	20	advcl	20:advcl:when	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
 19	server	server	NOUN	NN	Number=Sing	20	nsubj	20:nsubj	_
-20	brings	bring	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	conj	9:conj	_
+20	brings	bring	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	conj	9:conj:and	_
 21	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	obj	20:obj	_
 22	to	to	ADP	IN	_	24	case	24:case	_
 23	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
-24	table	table	NOUN	NN	Number=Sing	20	obl	20:obl	SpaceAfter=No
+24	table	table	NOUN	NN	Number=Sing	20	obl	20:obl:to	SpaceAfter=No
 25	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = answers-20111107082312AAPNaxb_ans-0006
@@ -144,16 +144,16 @@
 
 # sent_id = answers-20111107082312AAPNaxb_ans-0007
 # text = It was pretty epic as I remember and would love to send my friend there.
-1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj|10:nsubj|12:nsubj:xsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
 3	pretty	pretty	ADV	RB	_	4	advmod	4:advmod	_
 4	epic	epic	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	as	as	SCONJ	IN	_	7	mark	7:mark	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
-7	remember	remember	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl	_
+7	remember	remember	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:as	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	would	would	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
-10	love	love	VERB	VB	VerbForm=Inf	4	conj	4:conj	_
+10	love	love	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	send	send	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_

@@ -50,9 +50,9 @@
 7	for	for	ADP	IN	_	10	case	10:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	game	game	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	show	show	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+10	show	show	NOUN	NN	Number=Sing	6	nmod	6:nmod:for	_
 11	on	on	ADP	IN	_	12	case	12:case	_
-12	August	August	PROPN	NNP	Number=Sing	10	nmod	10:nmod	_
+12	August	August	PROPN	NNP	Number=Sing	10	nmod	10:nmod:on	_
 13	17th	17th	NOUN	NN	Number=Sing	12	nummod	12:nummod	SpaceAfter=No
 14	!.	!.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -60,8 +60,8 @@
 # text = Thanks to all who volunteered.
 1	Thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	_
 2	to	to	ADP	IN	_	3	case	3:case	_
-3	all	all	DET	DT	_	1	nmod	1:nmod	_
-4	who	who	PRON	WP	PronType=Rel	5	nsubj	5:nsubj	_
+3	all	all	DET	DT	_	1	nmod	1:nmod:to|5:nsubj:relsubj	_
+4	who	who	PRON	WP	PronType=Rel	5	nsubj	3:ref	_
 5	volunteered	volunteer	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	SpaceAfter=No
 6	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -71,7 +71,7 @@
 2	will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	remain	remain	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	as	as	ADP	IN	_	5	case	5:case	_
-5	alternates	alternate	NOUN	NNS	Number=Plur	3	obl	3:obl	SpaceAfter=No
+5	alternates	alternate	NOUN	NNS	Number=Plur	3	obl	3:obl:as	SpaceAfter=No
 6	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent01_01-0010
@@ -203,28 +203,28 @@
 3	Heather	Heather	PROPN	NNP	Number=Sing	1	appos	1:appos	_
 4	Johnson	Johnson	PROPN	NNP	Number=Sing	3	flat	3:flat	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	Usman	Usman	PROPN	NNP	Number=Sing	3	conj	3:conj	_
+6	Usman	Usman	PROPN	NNP	Number=Sing	3	conj	1:appos|3:conj	_
 7	Shaukat	Shaukat	PROPN	NNP	Number=Sing	6	flat	6:flat	SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	Gerard	Gerard	PROPN	NNP	Number=Sing	3	conj	3:conj	_
+9	Gerard	Gerard	PROPN	NNP	Number=Sing	3	conj	1:appos|3:conj	_
 10	Benitez	Benitez	PROPN	NNP	Number=Sing	9	flat	9:flat	SpaceAfter=No
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
-12	Matthew	Matthew	PROPN	NNP	Number=Sing	3	conj	3:conj	_
+12	Matthew	Matthew	PROPN	NNP	Number=Sing	3	conj	1:appos|3:conj	_
 13	Almy	Almy	PROPN	NNP	Number=Sing	12	flat	12:flat	SpaceAfter=No
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
-15	Travis	Travis	PROPN	NNP	Number=Sing	3	conj	3:conj	_
+15	Travis	Travis	PROPN	NNP	Number=Sing	3	conj	1:appos|3:conj	_
 16	Hanson	Hanson	PROPN	NNP	Number=Sing	15	flat	15:flat	_
 
 # sent_id = email-enronsent01_01-0020
 # text = WHO WANTS TO HELP MILLIONS FOR UNITED WAY?
-1	WHO	who	PRON	WP	PronType=Int	2	nsubj	2:nsubj	_
+1	WHO	who	PRON	WP	PronType=Int	2	nsubj	2:nsubj|4:nsubj:xsubj	_
 2	WANTS	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	TO	to	PART	TO	_	4	mark	4:mark	_
 4	HELP	help	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	MILLIONS	million	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 6	FOR	for	ADP	IN	_	8	case	8:case	_
 7	UNITED	UNITED	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	WAY	WAY	PROPN	NNP	Number=Sing	4	obl	4:obl	SpaceAfter=No
+8	WAY	WAY	PROPN	NNP	Number=Sing	4	obl	4:obl:for	SpaceAfter=No
 9	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent01_01-0021
@@ -269,21 +269,21 @@
 9	,	,	PUNCT	,	_	8	punct	8:punct	_
 10	http://unitedway.enron.com	http://unitedway.enron.com	X	ADD	_	8	appos	8:appos	_
 11	or	or	CCONJ	CC	_	12	cc	12:cc	_
-12	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj	_
+12	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj:or	_
 13	directly	directly	ADV	RB	_	12	advmod	12:advmod	_
 14	to	to	ADP	IN	_	16	case	16:case	_
 15	Internet	Internet	PROPN	NNP	Number=Sing	16	compound	16:compound	_
-16	Explorer	Explorer	PROPN	NNP	Number=Sing	12	obl	12:obl	_
+16	Explorer	Explorer	PROPN	NNP	Number=Sing	12	obl	12:obl:to	_
 17	or	or	CCONJ	CC	_	18	cc	18:cc	_
-18	Netscape	Netscape	PROPN	NNP	Number=Sing	16	conj	16:conj	_
+18	Netscape	Netscape	PROPN	NNP	Number=Sing	16	conj	12:obl:to|16:conj:or	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	type	type	VERB	VB	Mood=Imp|VerbForm=Fin	12	conj	12:conj	_
+20	type	type	VERB	VB	Mood=Imp|VerbForm=Fin	12	conj	12:conj:and	_
 21	in	in	ADV	RB	_	20	advmod	20:advmod	_
 22	unitedway.enron.com	unitedway.enron.com	X	ADD	_	20	obj	20:obj	_
 23	in	in	ADP	IN	_	26	case	26:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
 25	address	address	NOUN	NN	Number=Sing	26	compound	26:compound	_
-26	field	field	NOUN	NN	Number=Sing	20	obl	20:obl	SpaceAfter=No
+26	field	field	NOUN	NN	Number=Sing	20	obl	20:obl:in	SpaceAfter=No
 27	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent01_01-0025
@@ -301,7 +301,7 @@
 11	Way	Way	PROPN	NNP	Number=Sing	14	compound	14:compound	_
 12	2000	2000	NUM	CD	NumType=Card	11	nummod	11:nummod	_
 13	Campaign	campaign	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	site	site	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+14	site	site	NOUN	NN	Number=Sing	4	obl	4:obl:to	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent01_01-0026
@@ -310,7 +310,7 @@
 2	NOTE	note	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 3	:	:	PUNCT	:	_	2	punct	2:punct	_
 4	Your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-5	pledge	pledge	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
+5	pledge	pledge	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|9:nsubj:xsubj	_
 6	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	_
 7	to	to	PART	TO	_	9	mark	9:mark	_
 8	be	be	AUX	VB	VerbForm=Inf	9	aux:pass	9:aux:pass	_
@@ -337,13 +337,13 @@
 2	:	:	PUNCT	:	_	1	punct	1:punct	_
 3	If	if	SCONJ	IN	_	5	mark	5:mark	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
-5	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl	_
+5	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:if	_
 6	any	any	DET	DT	_	7	det	7:det	_
 7	questions	question	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 8	regarding	regard	VERB	VBG	VerbForm=Ger	11	case	11:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	pledging	pledging	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	process	process	NOUN	NN	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+11	process	process	NOUN	NN	Number=Sing	7	nmod	7:nmod:regarding	SpaceAfter=No
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
 13	please	please	INTJ	UH	_	14	discourse	14:discourse	_
 14	contact	contact	VERB	VB	Mood=Imp|VerbForm=Fin	1	parataxis	1:parataxis	_
@@ -353,13 +353,13 @@
 18	3-5213	3-5213	NUM	CD	NumType=Card	15	appos	15:appos	SpaceAfter=No
 19	)	)	PUNCT	-RRB-	_	18	punct	18:punct	SpaceAfter=No
 20	,	,	PUNCT	,	_	21	punct	21:punct	_
-21	Bert	Bert	PROPN	NNP	Number=Sing	15	conj	15:conj	_
+21	Bert	Bert	PROPN	NNP	Number=Sing	15	conj	14:obj|15:conj:or	_
 22	Frazier	Frazier	PROPN	NNP	Number=Sing	21	flat	21:flat	_
 23	(	(	PUNCT	-LRB-	_	24	punct	24:punct	SpaceAfter=No
 24	3-5076	3-5076	NUM	CD	NumType=Card	21	appos	21:appos	SpaceAfter=No
 25	)	)	PUNCT	-RRB-	_	24	punct	24:punct	_
 26	or	or	CCONJ	CC	_	27	cc	27:cc	_
-27	Kathy	Kathy	PROPN	NNP	Number=Sing	15	conj	15:conj	_
+27	Kathy	Kathy	PROPN	NNP	Number=Sing	15	conj	14:obj|15:conj:or	_
 28	Mayfield	Mayfield	PROPN	NNP	Number=Sing	27	flat	27:flat	_
 29	(	(	PUNCT	-LRB-	_	30	punct	30:punct	SpaceAfter=No
 30	3-3264	3-3264	NUM	CD	NumType=Card	27	appos	27:appos	SpaceAfter=No
@@ -374,7 +374,7 @@
 4	both	both	CCONJ	CC	_	5	cc:preconj	5:cc:preconj	_
 5	o'neal	o'neal	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	matt	matt	PROPN	NNP	Number=Sing	5	conj	5:conj	_
+7	matt	matt	PROPN	NNP	Number=Sing	5	conj	5:conj:and|9:nsubj	_
 8	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 9	out	out	ADV	RB	_	2	ccomp	2:ccomp	SpaceAfter=No
 10	?	?	PUNCT	.	_	2	punct	2:punct	_
@@ -384,13 +384,13 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	tonight	tonight	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 3	at	at	ADP	IN	_	4	case	4:case	_
-4	7	7	NUM	CD	NumType=Card	1	nmod	1:nmod	SpaceAfter=No
+4	7	7	NUM	CD	NumType=Card	1	nmod	1:nmod:at	SpaceAfter=No
 5	,	,	PUNCT	,	_	1	punct	1:punct	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	SpaceAfter=No
 7	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 8	time	time	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	kick	kick	VERB	VB	VerbForm=Inf	8	acl	8:acl	_
+10	kick	kick	VERB	VB	VerbForm=Inf	8	acl	8:acl:to	_
 11	some	some	DET	DT	_	12	det	12:det	_
 12	ass	ass	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No
 13	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -407,21 +407,21 @@
 8	so	so	ADV	RB	_	10	advmod	10:advmod	_
 9	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 10	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj	_
-11	shanna	shanna	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	_
+11	shanna	shanna	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj|17:nsubj:xsubj	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	conj	11:conj	_
+13	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	conj	11:conj:and|15:nsubj|17:nsubj:xsubj	_
 14	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
 15	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	10	ccomp	10:ccomp	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	stay	stay	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_
 18	in	in	ADP	IN	_	19	case	19:case	_
-19	town	town	NOUN	NN	Number=Sing	17	obl	17:obl	SpaceAfter=No
+19	town	town	NOUN	NN	Number=Sing	17	obl	17:obl:in	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent01_01-0032
 # text = the weather is going to be fine, hector was just blowing smoke.
 1	the	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	weather	weather	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
+2	weather	weather	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|7:nsubj:xsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 5	to	to	PART	TO	_	7	mark	7:mark	_
@@ -452,7 +452,7 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 3	heard	hear	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	from	from	ADP	IN	_	5	case	5:case	_
-5	anyone	anyone	PRON	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+5	anyone	anyone	PRON	NN	Number=Sing	3	obl	3:obl:from	SpaceAfter=No
 6	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent01_01-0036
@@ -465,7 +465,7 @@
 6	deal	deal	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
 7	with	with	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	weather	weather	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+9	weather	weather	NOUN	NN	Number=Sing	6	nmod	6:nmod:with	_
 10	this	this	DET	DT	Number=Sing|PronType=Dem	11	det	11:det	_
 11	weekend	weekend	NOUN	NN	Number=Sing	9	nmod:tmod	9:nmod:tmod	SpaceAfter=No
 12	?	?	PUNCT	.	_	3	punct	3:punct	_
@@ -473,7 +473,7 @@
 # sent_id = email-enronsent01_01-0037
 # text = is it supposed to be storming?
 1	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
+2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|6:nsubj:xsubj	_
 3	supposed	suppose	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	to	to	PART	TO	_	6	mark	6:mark	_
 5	be	be	AUX	VB	VerbForm=Inf	6	aux	6:aux	_
@@ -484,7 +484,7 @@
 # text = by the way, buy it now b/c it is going to 100 by year end.
 1	by	by	ADP	IN	_	3	case	3:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	way	way	NOUN	NN	Number=Sing	5	obl	5:obl	SpaceAfter=No
+3	way	way	NOUN	NN	Number=Sing	5	obl	5:obl:by	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	buy	buy	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj	_
@@ -492,12 +492,12 @@
 8	b/c	because	SCONJ	IN	Abbr=Yes	11	mark	11:mark	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
-11	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	5	advcl	5:advcl	_
+11	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	5	advcl	5:advcl:because	_
 12	to	to	ADP	IN	_	13	case	13:case	_
-13	100	100	NUM	CD	NumType=Card	11	obl	11:obl	_
+13	100	100	NUM	CD	NumType=Card	11	obl	11:obl:to	_
 14	by	by	ADP	IN	_	16	case	16:case	_
 15	year	year	NOUN	NN	Number=Sing	16	compound	16:compound	_
-16	end	end	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+16	end	end	NOUN	NN	Number=Sing	11	obl	11:obl:by	SpaceAfter=No
 17	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = email-enronsent01_01-0039
@@ -507,7 +507,7 @@
 3	never	never	ADV	RB	_	4	advmod	4:advmod	_
 4	listens	listen	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	to	to	ADP	IN	_	6	case	6:case	_
-6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	4	obl	4:obl	SpaceAfter=No
+6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	4	obl	4:obl:to	SpaceAfter=No
 7	,	,	PUNCT	,	_	4	punct	4:punct	_
 8	what	what	PRON	WP	PronType=Int	11	obj	11:obj	_
 9	can	can	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
@@ -524,7 +524,7 @@
 5	very	very	ADV	RB	_	6	advmod	6:advmod	_
 6	happy	happy	ADJ	JJ	Degree=Pos	0	root	0:root	_
 7	for	for	ADP	IN	_	8	case	8:case	_
-8	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	obl	6:obl	SpaceAfter=No
+8	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	obl	6:obl:for	SpaceAfter=No
 9	!	!	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = email-enronsent01_01-0041
@@ -540,7 +540,7 @@
 2	news	news	NOUN	NN	Number=Sing	0	root	0:root	_
 3	on	on	ADP	IN	_	5	case	5:case	_
 4	Aunt	Aunt	PROPN	NNP	Number=Sing	5	compound	5:compound	_
-5	Toni	Toni	PROPN	NNP	Number=Sing	2	nmod	2:nmod	SpaceAfter=No
+5	Toni	Toni	PROPN	NNP	Number=Sing	2	nmod	2:nmod:on	SpaceAfter=No
 6	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent01_01-0043

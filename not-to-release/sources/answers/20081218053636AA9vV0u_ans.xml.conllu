@@ -9,23 +9,23 @@
 6	for	for	ADP	IN	_	9	case	9:case	_
 7	an	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	Argentinian	argentinian	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	restaurant	restaurant	NOUN	NN	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+9	restaurant	restaurant	NOUN	NN	Number=Sing	5	nmod	5:nmod:for	SpaceAfter=No
 10	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20081218053636AA9vV0u_ans-0002
 # text = "In Argentina, beef is revered, respected, and praised.
 1	"	"	PUNCT	``	_	7	punct	7:punct	SpaceAfter=No
 2	In	in	ADP	IN	_	3	case	3:case	_
-3	Argentina	Argentina	PROPN	NNP	Number=Sing	7	obl	7:obl	SpaceAfter=No
+3	Argentina	Argentina	PROPN	NNP	Number=Sing	7	obl	7:obl:in	SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
-5	beef	beef	NOUN	NN	Number=Sing	7	nsubj:pass	7:nsubj:pass	_
+5	beef	beef	NOUN	NN	Number=Sing	7	nsubj:pass	7:nsubj:pass|9:nsubj:pass|12:nsubj:pass	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux:pass	7:aux:pass	_
 7	revered	revere	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	respected	respect	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	7:conj	SpaceAfter=No
+9	respected	respect	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	7:conj:and	SpaceAfter=No
 10	,	,	PUNCT	,	_	12	punct	12:punct	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	praised	praise	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	7:conj	SpaceAfter=No
+12	praised	praise	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	7:conj:and	SpaceAfter=No
 13	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = answers-20081218053636AA9vV0u_ans-0003
@@ -45,7 +45,7 @@
 1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	_
 2	taste	taste	NOUN	NN	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	Argentina	Argentina	PROPN	NNP	Number=Sing	2	nmod	2:nmod	SpaceAfter=No
+4	Argentina	Argentina	PROPN	NNP	Number=Sing	2	nmod	2:nmod:of	SpaceAfter=No
 5	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20081218053636AA9vV0u_ans-0005
@@ -53,14 +53,14 @@
 1	Here	here	ADV	RB	PronType=Dem	0	root	0:root	_
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
 3	some	some	DET	DT	_	4	det	4:det	_
-4	articles	article	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	_
-5	that	that	PRON	WDT	PronType=Rel	6	nsubj	6:nsubj	_
+4	articles	article	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj|6:nsubj:relsubj	_
+5	that	that	PRON	WDT	PronType=Rel	6	nsubj	4:ref	_
 6	discuss	discuss	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	details	detail	NOUN	NNS	Number=Plur	6	obj	6:obj	_
 9	of	of	ADP	IN	_	11	case	11:case	_
 10	slogan	slogan	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	writing	writing	NOUN	NN	Number=Sing	8	nmod	8:nmod	SpaceAfter=No
+11	writing	writing	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	SpaceAfter=No
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20081218053636AA9vV0u_ans-0006
@@ -72,7 +72,7 @@
 5	and	and	CCONJ	CC	_	8	cc	8:cc	_
 6	why	why	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
 7	some	some	DET	DT	_	8	nsubj	8:nsubj	_
-8	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj	SpaceAfter=No
+8	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	SpaceAfter=No
 9	n't	not	PART	RB	_	8	advmod	8:advmod	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -81,10 +81,10 @@
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	_
-4	these	these	PRON	DT	Number=Plur|PronType=Dem	3	obj	3:obj	_
+4	these	these	PRON	DT	Number=Plur|PronType=Dem	3	obj	3:obj|5:nsubj:xsubj	_
 5	helpful	helpful	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	_
 6	in	in	SCONJ	IN	_	7	mark	7:mark	_
-7	writing	write	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl	_
+7	writing	write	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl:in	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	new	new	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	slogan	slogan	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
@@ -95,7 +95,7 @@
 1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	_
 2	Look	look	NOUN	NN	Number=Sing	0	root	0:root	_
 3	at	at	ADP	IN	_	4	case	4:case	_
-4	Slogans	slogan	NOUN	NNS	Number=Plur	2	nmod	2:nmod	_
+4	Slogans	slogan	NOUN	NNS	Number=Plur	2	nmod	2:nmod:at	_
 5	-	-	PUNCT	:	_	2	punct	2:punct	_
 6	http://www.small-business-software.net/look-at-slogans.htm	http://www.small-business-software.net/look-at-slogans.htm	X	ADD	_	2	appos	2:appos	_
 

@@ -16,12 +16,12 @@
 4	half	half	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	furniture	furniture	NOUN	NN	Number=Sing	4	nmod	4:nmod	_
+7	furniture	furniture	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 9	own	own	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
 10	from	from	ADP	IN	_	12	case	12:case	_
 11	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	12:det	_
-12	place	place	NOUN	NN	Number=Sing	2	obl	2:obl	SpaceAfter=No
+12	place	place	NOUN	NN	Number=Sing	2	obl	2:obl:from	SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-036133-0003
@@ -39,9 +39,9 @@
 6	deals	deal	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 7	if	if	SCONJ	IN	_	9	mark	9:mark	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-9	paid	pay	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	advcl	3:advcl	_
+9	paid	pay	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	advcl	3:advcl:if	_
 10	in	in	ADP	IN	_	11	case	11:case	_
-11	cash	cash	NOUN	NN	Number=Sing	9	obl	9:obl	SpaceAfter=No
+11	cash	cash	NOUN	NN	Number=Sing	9	obl	9:obl:in	SpaceAfter=No
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-036133-0005
@@ -54,20 +54,20 @@
 # sent_id = reviews-036133-0006
 # text = Well they came through and delivered almost all of my items within a few days.
 1	Well	well	INTJ	UH	_	3	discourse	3:discourse	_
-2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
+2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj|6:nsubj	_
 3	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	through	through	ADV	RB	_	3	advmod	3:advmod	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	delivered	deliver	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj	_
+6	delivered	deliver	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
 7	almost	almost	ADV	RB	_	8	advmod	8:advmod	_
 8	all	all	DET	DT	_	6	obj	6:obj	_
 9	of	of	ADP	IN	_	11	case	11:case	_
 10	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-11	items	item	NOUN	NNS	Number=Plur	8	nmod	8:nmod	_
+11	items	item	NOUN	NNS	Number=Plur	8	nmod	8:nmod:of	_
 12	within	within	ADP	IN	_	15	case	15:case	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 14	few	few	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	days	day	NOUN	NNS	Number=Plur	6	obl	6:obl	SpaceAfter=No
+15	days	day	NOUN	NNS	Number=Plur	6	obl	6:obl:within	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-036133-0007
@@ -87,15 +87,15 @@
 # sent_id = reviews-036133-0008
 # text = The guy who was cutting me the deals and getting me the furniture quickly, Ahmed, was nice and mostly professional, except the semi-sketchiness.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	guy	guy	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
-3	who	who	PRON	WP	PronType=Rel	5	nsubj	5:nsubj	_
+2	guy	guy	NOUN	NN	Number=Sing	19	nsubj	5:nsubj:relsubj|10:nsubj:relsubj|19:nsubj|22:nsubj	_
+3	who	who	PRON	WP	PronType=Rel	5	nsubj	2:ref	_
 4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
 5	cutting	cut	VERB	VBG	VerbForm=Ger	2	acl:relcl	2:acl:relcl	_
 6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	iobj	5:iobj	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	deals	deal	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	getting	get	VERB	VBG	VerbForm=Ger	5	conj	5:conj	_
+10	getting	get	VERB	VBG	VerbForm=Ger	5	conj	2:acl:relcl|5:conj:and	_
 11	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	10	iobj	10:iobj	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	furniture	furniture	NOUN	NN	Number=Sing	10	obj	10:obj	_
@@ -107,11 +107,11 @@
 19	nice	nice	ADJ	JJ	Degree=Pos	0	root	0:root	_
 20	and	and	CCONJ	CC	_	22	cc	22:cc	_
 21	mostly	mostly	ADV	RB	_	22	advmod	22:advmod	_
-22	professional	professional	ADJ	JJ	Degree=Pos	19	conj	19:conj	SpaceAfter=No
+22	professional	professional	ADJ	JJ	Degree=Pos	19	conj	19:conj:and	SpaceAfter=No
 23	,	,	PUNCT	,	_	19	punct	19:punct	_
 24	except	except	ADP	IN	_	26	case	26:case	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
-26	semi-sketchiness	semi-sketchiness	NOUN	NN	Number=Sing	19	obl	19:obl	SpaceAfter=No
+26	semi-sketchiness	semi-sketchiness	NOUN	NN	Number=Sing	19	obl	19:obl:except	SpaceAfter=No
 27	.	.	PUNCT	.	_	19	punct	19:punct	_
 
 # sent_id = reviews-036133-0009
@@ -127,18 +127,18 @@
 9	,	,	PUNCT	,	_	6	punct	6:punct	_
 10	not	not	ADV	RB	_	12	advmod	12:advmod	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	return	return	VERB	VB	VerbForm=Inf	6	advcl	6:advcl	_
+12	return	return	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:to	_
 13	for	for	ADP	IN	_	14	case	14:case	_
-14	months	month	NOUN	NNS	Number=Plur	12	obl	12:obl	SpaceAfter=No
+14	months	month	NOUN	NNS	Number=Plur	12	obl	12:obl:for	SpaceAfter=No
 15	,	,	PUNCT	,	_	6	punct	6:punct	_
 16	WITHOUT	without	SCONJ	IN	_	17	mark	17:mark	_
-17	informing	inform	VERB	VBG	VerbForm=Ger	6	advcl	6:advcl	_
+17	informing	inform	VERB	VBG	VerbForm=Ger	6	advcl	6:advcl:without	_
 18	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	17	obj	17:obj	SpaceAfter=No
 19	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-036133-0010
 # text = He also neglected to tell the other person working at the store about a dining room table that I had ordered and that was supposed to be coming in.
-1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	also	also	ADV	RB	_	3	advmod	3:advmod	_
 3	neglected	neglect	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -149,20 +149,20 @@
 9	working	work	VERB	VBG	VerbForm=Ger	8	acl	8:acl	_
 10	at	at	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	store	store	NOUN	NN	Number=Sing	9	obl	9:obl	_
+12	store	store	NOUN	NN	Number=Sing	9	obl	9:obl:at	_
 13	about	about	ADP	IN	_	17	case	17:case	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 15	dining	dining	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	room	room	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	table	table	NOUN	NN	Number=Sing	5	obl	5:obl	_
-18	that	that	PRON	WDT	PronType=Rel	21	obj	21:obj	_
+17	table	table	NOUN	NN	Number=Sing	5	obl	5:obl:about|21:obl:relobj	_
+18	that	that	PRON	WDT	PronType=Rel	21	obj	17:ref	_
 19	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	21	nsubj	21:nsubj	_
 20	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	21	aux	21:aux	_
 21	ordered	order	VERB	VBN	Tense=Past|VerbForm=Part	17	acl:relcl	17:acl:relcl	_
 22	and	and	CCONJ	CC	_	25	cc	25:cc	_
-23	that	that	PRON	WDT	PronType=Dem	25	nsubj	25:nsubj	_
+23	that	that	PRON	WDT	PronType=Dem	25	nsubj	25:nsubj|28:nsubj:xsubj	_
 24	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	25	aux	25:aux	_
-25	supposed	suppose	VERB	VBN	Tense=Past|VerbForm=Part	21	conj	21:conj	_
+25	supposed	suppose	VERB	VBN	Tense=Past|VerbForm=Part	21	conj	17:acl:relcl|21:conj:and	_
 26	to	to	PART	TO	_	28	mark	28:mark	_
 27	be	be	AUX	VB	VerbForm=Inf	28	aux	28:aux	_
 28	coming	come	VERB	VBG	Tense=Pres|VerbForm=Part	25	xcomp	25:xcomp	_
@@ -177,7 +177,7 @@
 4	working	work	VERB	VBG	VerbForm=Ger	3	acl	3:acl	_
 5	at	at	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	store	store	NOUN	NN	Number=Sing	4	obl	4:obl	_
+7	store	store	NOUN	NN	Number=Sing	4	obl	4:obl:at	_
 8	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	aux	10:aux	SpaceAfter=No
 9	n't	not	PART	RB	_	10	advmod	10:advmod	_
 10	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -186,7 +186,7 @@
 13	still	still	ADV	RB	_	14	advmod	14:advmod	_
 14	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	ccomp	10:ccomp	_
 15	this	this	DET	DT	Number=Sing|PronType=Dem	16	det	16:det	_
-16	table	table	NOUN	NN	Number=Sing	14	obj	14:obj	_
+16	table	table	NOUN	NN	Number=Sing	14	obj	14:obj|17:nsubj:xsubj	_
 17	coming	come	VERB	VBG	VerbForm=Ger	14	xcomp	14:xcomp	SpaceAfter=No
 18	.	.	PUNCT	.	_	10	punct	10:punct	_
 
@@ -196,20 +196,20 @@
 2	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	aux	3:aux	_
 3	paid	pay	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	cash	cash	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+5	cash	cash	NOUN	NN	Number=Sing	3	obl	3:obl:in	SpaceAfter=No
 6	,	,	PUNCT	,	_	9	punct	9:punct	_
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_
 8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
-9	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj	_
+9	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
 10	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 11	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	ccomp	9:ccomp	_
 12	no	no	DET	DT	_	15	det	15:det	_
 13	receipt	receipt	NOUN	NN	Number=Sing	11	obj	11:obj	SpaceAfter=No
 14	/	/	PUNCT	HYPH	_	15	cc	15:cc	SpaceAfter=No
-15	record	record	NOUN	NN	Number=Sing	13	conj	13:conj	_
+15	record	record	NOUN	NN	Number=Sing	13	conj	11:obj|13:conj	_
 16	of	of	ADP	IN	_	18	case	18:case	_
 17	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
-18	purchase	purchase	NOUN	NN	Number=Sing	15	nmod	15:nmod	SpaceAfter=No
+18	purchase	purchase	NOUN	NN	Number=Sing	15	nmod	15:nmod:of	SpaceAfter=No
 19	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-036133-0013
@@ -219,24 +219,24 @@
 3	back	back	ADV	RB	_	2	advmod	2:advmod	_
 4	with	with	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	receipt	receipt	NOUN	NN	Number=Sing	2	obl	2:obl	_
+6	receipt	receipt	NOUN	NN	Number=Sing	2	obl	2:obl:with	_
 7	Ahmed	Ahmed	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
 8	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	aux	9:aux	_
 9	provided	provide	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	_
 10	upon	upon	ADP	IN	_	12	case	12:case	_
 11	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
-12	purchase	purchase	NOUN	NN	Number=Sing	9	obl	9:obl	SpaceAfter=No
+12	purchase	purchase	NOUN	NN	Number=Sing	9	obl	9:obl:upon	SpaceAfter=No
 13	,	,	PUNCT	,	_	17	punct	17:punct	_
 14	and	and	CCONJ	CC	_	17	cc	17:cc	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	guy	guy	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
-17	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+16	guy	guy	NOUN	NN	Number=Sing	17	nsubj	17:nsubj|23:nsubj	_
+17	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 18	forever	forever	ADV	RB	_	17	advmod	17:advmod	_
 19	to	to	PART	TO	_	20	mark	20:mark	_
-20	copy	copy	VERB	VB	VerbForm=Inf	17	advcl	17:advcl	_
+20	copy	copy	VERB	VB	VerbForm=Inf	17	advcl	17:advcl:to	_
 21	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	obj	20:obj	_
 22	but	but	CCONJ	CC	_	23	cc	23:cc	_
-23	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	17	conj	17:conj	_
+23	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	17	conj	17:conj:but	_
 24	that	that	SCONJ	IN	_	27	mark	27:mark	_
 25	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	27	nsubj	27:nsubj	_
 26	would	would	AUX	MD	VerbForm=Fin	27	aux	27:aux	_
@@ -244,7 +244,7 @@
 28	care	care	NOUN	NN	Number=Sing	27	obj	27:obj	_
 29	of	of	ADP	IN	_	31	case	31:case	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
-31	situation	situation	NOUN	NN	Number=Sing	27	obl	27:obl	SpaceAfter=No
+31	situation	situation	NOUN	NN	Number=Sing	27	obl	27:obl:of	SpaceAfter=No
 32	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-036133-0014
@@ -270,7 +270,7 @@
 
 # sent_id = reviews-036133-0017
 # text = I've had to pester this new guy several times to ask when my table will arrive.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	SpaceAfter=No
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	SpaceAfter=No
 2	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -281,17 +281,17 @@
 9	several	several	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	times	time	NOUN	NNS	Number=Plur	5	obl:tmod	5:obl:tmod	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	ask	ask	VERB	VB	VerbForm=Inf	5	advcl	5:advcl	_
+12	ask	ask	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:to	_
 13	when	when	ADV	WRB	PronType=Int	17	mark	17:mark	_
 14	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	table	table	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
 16	will	will	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
-17	arrive	arrive	VERB	VB	VerbForm=Inf	12	advcl	12:advcl	SpaceAfter=No
+17	arrive	arrive	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:when	SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-036133-0018
 # text = He kept saying different arrival/delivery dates and didn't seem terribly apologetic.
-1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj|3:nsubj:xsubj|12:nsubj|14:nsubj:xsubj	_
 2	kept	keep	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	saying	say	VERB	VBG	VerbForm=Ger	2	xcomp	2:xcomp	_
 4	different	different	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
@@ -302,7 +302,7 @@
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	12	aux	12:aux	SpaceAfter=No
 11	n't	not	PART	RB	_	12	advmod	12:advmod	_
-12	seem	seem	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
+12	seem	seem	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
 13	terribly	terribly	ADV	RB	_	14	advmod	14:advmod	_
 14	apologetic	apologetic	ADJ	JJ	Degree=Pos	12	xcomp	12:xcomp	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -319,11 +319,11 @@
 8	STILL	still	ADV	RB	_	11	advmod	11:advmod	_
 9	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	aux	11:aux	SpaceAfter=No
 10	n't	not	PART	RB	_	11	advmod	11:advmod	_
-11	have	have	VERB	VB	VerbForm=Inf	5	conj	5:conj	_
+11	have	have	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	_
 12	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
-13	table	table	NOUN	NN	Number=Sing	11	obj	11:obj	_
+13	table	table	NOUN	NN	Number=Sing	11	obj	11:obj|18:nsubj:relsubj	_
 14	(	(	PUNCT	-LRB-	_	22	punct	22:punct	SpaceAfter=No
-15	which	which	PRON	WDT	PronType=Rel	18	nsubj	18:nsubj	_
+15	which	which	PRON	WDT	PronType=Rel	18	nsubj	13:ref	_
 16	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	18:cop	_
 17	NOT	not	PART	RB	_	18	advmod	18:advmod	_
 18	cheap	cheap	ADJ	JJ	Degree=Pos	13	acl:relcl	13:acl:relcl	SpaceAfter=No
@@ -339,21 +339,21 @@
 1	Point	point	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
 2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 3	:	:	PUNCT	:	_	2	punct	2:punct	_
-4	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
+4	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|9:nsubj:xsubj	_
 5	might	might	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 6	be	be	AUX	VB	VerbForm=Inf	7	cop	7:cop	_
 7	able	able	ADJ	JJ	Degree=Pos	2	parataxis	2:parataxis	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
-9	get	get	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
+9	get	get	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp|20:obl:relobj	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 11	good	good	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	deal	deal	NOUN	NN	Number=Sing	9	obj	9:obj	_
 13	on	on	ADP	IN	_	16	case	16:case	_
 14	some	some	DET	DT	_	16	det	16:det	_
 15	nice	nice	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	furniture	furniture	NOUN	NN	Number=Sing	12	nmod	12:nmod	_
+16	furniture	furniture	NOUN	NN	Number=Sing	12	nmod	12:nmod:on	_
 17	--	--	PUNCT	,	_	9	punct	9:punct	_
-18	which	which	PRON	WDT	PronType=Rel	20	obj	20:obj	_
+18	which	which	PRON	WDT	PronType=Rel	20	obj	9:ref	_
 19	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
 20	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
 21	--	--	PUNCT	,	_	7	punct	7:punct	_
@@ -362,7 +362,7 @@
 24	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	27	cop	27:cop	_
 25	not	not	PART	RB	_	27	advmod	27:advmod	_
 26	very	very	ADV	RB	_	27	advmod	27:advmod	_
-27	communicative	communicative	ADJ	JJ	Degree=Pos	7	conj	7:conj	_
+27	communicative	communicative	ADJ	JJ	Degree=Pos	7	conj	7:conj:but	_
 28	and	and	CCONJ	CC	_	37	cc	37:cc	_
 29	god	god	PROPN	NNP	Number=Sing	30	nsubj	30:nsubj	_
 30	forbid	forbid	VERB	VB	VerbForm=Inf	32	discourse	32:discourse	_
@@ -370,14 +370,14 @@
 32	goes	go	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	37	ccomp	37:ccomp	_
 33	wrong	wrong	ADV	RB	_	32	advmod	32:advmod	SpaceAfter=No
 34	,	,	PUNCT	,	_	37	punct	37:punct	_
-35	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	37	nsubj	37:nsubj	SpaceAfter=No
+35	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	37	nsubj	37:nsubj|39:nsubj:xsubj	SpaceAfter=No
 36	'll	will	AUX	MD	VerbForm=Fin	37	aux	37:aux	_
-37	have	have	VERB	VB	VerbForm=Inf	27	conj	27:conj	_
+37	have	have	VERB	VB	VerbForm=Inf	27	conj	27:conj:and	_
 38	to	to	PART	TO	_	39	mark	39:mark	_
 39	fight	fight	VERB	VB	VerbForm=Inf	37	xcomp	37:xcomp	_
 40	to	to	PART	TO	_	41	mark	41:mark	_
-41	get	get	VERB	VB	VerbForm=Inf	39	advcl	39:advcl	_
-42	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	41	obj	41:obj	_
+41	get	get	VERB	VB	VerbForm=Inf	39	advcl	39:advcl:to	_
+42	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	41	obj	41:obj|43:nsubj:xsubj	_
 43	resolved	resolve	VERB	VBN	Tense=Past|VerbForm=Part	41	xcomp	41:xcomp	SpaceAfter=No
 44	.	.	PUNCT	.	_	2	punct	2:punct	_
 

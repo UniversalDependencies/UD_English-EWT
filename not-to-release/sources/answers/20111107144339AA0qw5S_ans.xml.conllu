@@ -7,7 +7,7 @@
 4	unique	unique	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	customs	custom	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	ireland	ireland	PROPN	NNP	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+7	ireland	ireland	PROPN	NNP	Number=Sing	5	nmod	5:nmod:in	SpaceAfter=No
 8	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111107144339AA0qw5S_ans-0002
@@ -17,7 +17,7 @@
 3	ask	as	SCONJ	IN	Typo=Yes	6	mark	6:mark	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	SpaceAfter=No
 5	’m	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
-6	aware	aware	ADJ	JJ	Degree=Pos	2	advcl	2:advcl	_
+6	aware	aware	ADJ	JJ	Degree=Pos	2	advcl	2:advcl:ask	_
 7	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 8	most	most	ADV	RBS	_	9	advmod	9:advmod	_
 9	unique	unique	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
@@ -36,28 +36,28 @@
 1	In	in	ADP	IN	_	4	case	4:case	_
 2	all	all	DET	PDT	_	4	det:predet	4:det:predet	_
 3	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	travels	travels	NOUN	NNS	Number=Plur	8	obl	8:obl	_
-5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	SpaceAfter=No
+4	travels	travels	NOUN	NNS	Number=Plur	8	obl	8:obl:in	_
+5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj|15:nsubj:pass	SpaceAfter=No
 6	’ve	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 7	never	never	ADV	RB	_	8	advmod	8:advmod	_
 8	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 9	anything	anything	PRON	NN	Number=Sing	8	obj	8:obj	_
 10	like	like	ADP	IN	_	11	case	11:case	_
-11	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nmod	9:nmod	_
+11	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nmod	9:nmod:like	_
 12	and	and	CCONJ	CC	_	15	cc	15:cc	_
 13	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	15	aux:pass	15:aux:pass	_
 14	often	often	ADV	RB	_	15	advmod	15:advmod	_
-15	met	meet	VERB	VBN	Tense=Past|VerbForm=Part	8	conj	8:conj	_
+15	met	meet	VERB	VBN	Tense=Past|VerbForm=Part	8	conj	8:conj:and	_
 16	with	with	ADP	IN	_	19	case	19:case	_
 17	an	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
 18	odd	odd	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-19	look	look	NOUN	NN	Number=Sing	15	obl	15:obl	_
+19	look	look	NOUN	NN	Number=Sing	15	obl	15:obl:with	_
 20	when	when	ADV	WRB	PronType=Int	22	mark	22:mark	_
 21	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	22	nsubj	22:nsubj	_
-22	explain	explain	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl	_
+22	explain	explain	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl:when	_
 23	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	22	obj	22:obj	_
 24	to	to	ADP	IN	_	25	case	25:case	_
-25	foreigners	foreigner	NOUN	NNS	Number=Plur	22	obl	22:obl	SpaceAfter=No
+25	foreigners	foreigner	NOUN	NNS	Number=Plur	22	obl	22:obl:to	SpaceAfter=No
 26	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = answers-20111107144339AA0qw5S_ans-0004
@@ -65,7 +65,7 @@
 1	After	after	SCONJ	IN	_	4	mark	4:mark	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
 3	person	person	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	dies	die	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl	SpaceAfter=No
+4	dies	die	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl:after	SpaceAfter=No
 5	,	,	PUNCT	,	_	10	punct	10:punct	_
 6	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	remains	remains	NOUN	NNS	Number=Plur	10	nsubj:pass	10:nsubj:pass	_
@@ -75,50 +75,50 @@
 11	”	"	PUNCT	``	_	10	punct	10:punct	_
 12	in	in	ADP	IN	_	14	case	14:case	_
 13	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
-14	home	home	NOUN	NN	Number=Sing	10	obl	10:obl	_
+14	home	home	NOUN	NN	Number=Sing	10	obl	10:obl:in	_
 15	for	for	ADP	IN	_	20	case	20:case	_
 16	roughly	roughly	ADV	RB	_	19	advmod	19:advmod	_
 17	2	2	NUM	CD	NumType=Card	20	nummod	20:nummod	SpaceAfter=No
 18	-	-	SYM	SYM	_	19	case	19:case	SpaceAfter=No
 19	3	3	NUM	CD	NumType=Card	17	nmod	17:nmod	SpaceAfter=No
-20	days	day	NOUN	NNS	Number=Plur	10	obl	10:obl	SpaceAfter=No
+20	days	day	NOUN	NNS	Number=Plur	10	obl	10:obl:for	SpaceAfter=No
 21	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = answers-20111107144339AA0qw5S_ans-0005
 # text = In this time visitors will come to the house, pay their respects to the desisted and their family and have a couple of cups of tea with a sandwich or a bun.
 1	In	in	ADP	IN	_	3	case	3:case	_
 2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	_
-3	time	time	NOUN	NN	Number=Sing	6	obl	6:obl	_
-4	visitors	visitor	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
+3	time	time	NOUN	NN	Number=Sing	6	obl	6:obl:in	_
+4	visitors	visitor	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj|11:nsubj|21:nsubj	_
 5	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 6	come	come	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	to	to	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	house	house	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+9	house	house	NOUN	NN	Number=Sing	6	obl	6:obl:to	SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
-11	pay	pay	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+11	pay	pay	VERB	VB	VerbForm=Inf	6	conj	6:conj:and	_
 12	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	respects	respects	NOUN	NNS	Number=Plur	11	obj	11:obj	_
 14	to	to	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	desisted	desisted	ADJ	JJ	Degree=Pos	11	obl	11:obl	_
+16	desisted	desisted	ADJ	JJ	Degree=Pos	11	obl	11:obl:to	_
 17	and	and	CCONJ	CC	_	19	cc	19:cc	_
 18	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
-19	family	family	NOUN	NN	Number=Sing	16	conj	16:conj	_
+19	family	family	NOUN	NN	Number=Sing	16	conj	11:obl:to|16:conj:and	_
 20	and	and	CCONJ	CC	_	21	cc	21:cc	_
-21	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	conj	6:conj	_
+21	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	conj	6:conj:and	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
 23	couple	couple	NOUN	NN	Number=Sing	21	obj	21:obj	_
 24	of	of	ADP	IN	_	25	case	25:case	_
-25	cups	cup	NOUN	NNS	Number=Plur	23	nmod	23:nmod	_
+25	cups	cup	NOUN	NNS	Number=Plur	23	nmod	23:nmod:of	_
 26	of	of	ADP	IN	_	27	case	27:case	_
-27	tea	tea	NOUN	NN	Number=Sing	23	nmod	23:nmod	_
+27	tea	tea	NOUN	NN	Number=Sing	23	nmod	23:nmod:of	_
 28	with	with	ADP	IN	_	30	case	30:case	_
 29	a	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
-30	sandwich	sandwich	NOUN	NN	Number=Sing	23	nmod	23:nmod	_
+30	sandwich	sandwich	NOUN	NN	Number=Sing	23	nmod	23:nmod:with	_
 31	or	or	CCONJ	CC	_	33	cc	33:cc	_
 32	a	a	DET	DT	Definite=Ind|PronType=Art	33	det	33:det	_
-33	bun	bun	NOUN	NN	Number=Sing	30	conj	30:conj	SpaceAfter=No
+33	bun	bun	NOUN	NN	Number=Sing	30	conj	23:nmod:with|30:conj:or	SpaceAfter=No
 34	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111107144339AA0qw5S_ans-0006
@@ -133,15 +133,15 @@
 8	were	were	ADV	WRB	PronType=Rel	12	advmod	12:advmod	_
 9	friends	friend	NOUN	NNS	Number=Plur	12	nsubj	12:nsubj	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	family	family	NOUN	NN	Number=Sing	9	conj	9:conj	_
+11	family	family	NOUN	NN	Number=Sing	9	conj	9:conj:and|12:nsubj	_
 12	sit	sit	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
 13	up	up	ADP	RP	_	12	compound:prt	12:compound:prt	_
 14	through	through	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	night	night	NOUN	NN	Number=Sing	12	obl	12:obl	_
+16	night	night	NOUN	NN	Number=Sing	12	obl	12:obl:through	_
 17	with	with	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	remains	remains	NOUN	NNS	Number=Plur	12	obl	12:obl	SpaceAfter=No
+19	remains	remains	NOUN	NNS	Number=Plur	12	obl	12:obl:with	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111107144339AA0qw5S_ans-0007
@@ -152,14 +152,14 @@
 4	both	both	CCONJ	CC	_	5	cc:preconj	5:cc:preconj	_
 5	north	north	ADV	RB	_	3	advmod	3:advmod	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	south	south	ADV	RB	_	5	conj	5:conj	_
+7	south	south	ADV	RB	_	5	conj	3:advmod|5:conj:and	_
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	boarder	boarder	NOUN	NN	Number=Sing	5	obl	5:obl	_
+10	boarder	boarder	NOUN	NN	Number=Sing	5	obl	5:obl:of	_
 11	with	with	ADP	IN	_	12	case	12:case	_
-12	Protestants	Protestants	PROPN	NNPS	Number=Plur	3	obl	3:obl	_
+12	Protestants	Protestants	PROPN	NNPS	Number=Plur	3	obl	3:obl:with	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	Catholics	Catholics	PROPN	NNPS	Number=Plur	12	conj	12:conj	_
+14	Catholics	Catholics	PROPN	NNPS	Number=Plur	12	conj	3:obl:with|12:conj:and	_
 15	alike	alike	ADV	RB	_	12	advmod	12:advmod	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -186,25 +186,25 @@
 9	that	that	SCONJ	IN	_	22	mark	22:mark	_
 10	in	in	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	south	south	NOUN	NN	Number=Sing	22	obl	22:obl	_
+12	south	south	NOUN	NN	Number=Sing	22	obl	22:obl:in	_
 13	of	of	ADP	IN	_	14	case	14:case	_
-14	Ireland	Ireland	PROPN	NNP	Number=Sing	12	nmod	12:nmod	_
+14	Ireland	Ireland	PROPN	NNP	Number=Sing	12	nmod	12:nmod:of	_
 15	one	one	NUM	CD	NumType=Card	16	nummod	16:nummod	_
 16	night	night	NOUN	NN	Number=Sing	22	nsubj:pass	22:nsubj:pass	_
 17	of	of	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	wake	wake	NOUN	NN	Number=Sing	16	nmod	16:nmod	_
+19	wake	wake	NOUN	NN	Number=Sing	16	nmod	16:nmod:of	_
 20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	aux:pass	22:aux:pass	_
 21	often	often	ADV	RB	_	22	advmod	22:advmod	_
 22	held	hold	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	ccomp	8:ccomp	_
 23	in	in	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
-25	chapel	chapel	NOUN	NN	Number=Sing	22	obl	22:obl	_
+25	chapel	chapel	NOUN	NN	Number=Sing	22	obl	22:obl:in	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 27	night	night	NOUN	NN	Number=Sing	22	obl:tmod	22:obl:tmod	_
 28	before	before	ADP	IN	_	30	case	30:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
-30	funeral	funeral	NOUN	NN	Number=Sing	27	nmod	27:nmod	SpaceAfter=No
+30	funeral	funeral	NOUN	NN	Number=Sing	27	nmod	27:nmod:before	SpaceAfter=No
 31	,	,	PUNCT	,	_	8	punct	8:punct	_
 32	this	this	DET	DT	Number=Sing|PronType=Dem	33	det	33:det	_
 33	tradition	tradition	NOUN	NN	Number=Sing	34	nsubj	34:nsubj	_
@@ -212,7 +212,7 @@
 35	after	after	ADP	IN	_	38	case	38:case	_
 36	the	the	DET	DT	Definite=Def|PronType=Art	38	det	38:det	_
 37	civil	civil	ADJ	JJ	Degree=Pos	38	amod	38:amod	_
-38	war	war	NOUN	NN	Number=Sing	34	obl	34:obl	SpaceAfter=No
+38	war	war	NOUN	NN	Number=Sing	34	obl	34:obl:after	SpaceAfter=No
 39	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = answers-20111107144339AA0qw5S_ans-0010
@@ -224,9 +224,9 @@
 5	and	and	CCONJ	CC	_	8	cc	8:cc	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	dying	die	VERB	VBG	VerbForm=Ger	8	amod	8:amod	_
-8	one	one	NOUN	NN	Number=Sing	3	conj	3:conj	_
+8	one	one	NOUN	NN	Number=Sing	3	conj	3:conj:and|14:nsubj	_
 9	at	at	ADP	IN	_	10	case	10:case	_
-10	that	that	PRON	DT	Number=Sing|PronType=Dem	8	nmod	8:nmod	SpaceAfter=No
+10	that	that	PRON	DT	Number=Sing|PronType=Dem	8	nmod	8:nmod:at	SpaceAfter=No
 11	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
 12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
@@ -239,41 +239,41 @@
 2	Pioneers	Pioneers	PROPN	NNPS	Number=Plur	5	nsubj	5:nsubj	_
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
 4	an	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-5	organization	organization	NOUN	NN	Number=Sing	0	root	0:root	_
+5	organization	organization	NOUN	NN	Number=Sing	0	root	15:nsubj:relsubj|17:nsubj:relsubj	_
 6	started	start	VERB	VBN	Tense=Past|VerbForm=Part	5	acl	5:acl	_
 7	at	at	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	end	end	NOUN	NN	Number=Sing	6	obl	6:obl	_
+9	end	end	NOUN	NN	Number=Sing	6	obl	6:obl:at	_
 10	of	of	ADP	IN	_	13	case	13:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	19th	19th	ADJ	JJ	Degree=Pos|NumType=Ord	13	amod	13:amod	_
-13	century	century	NOUN	NN	Number=Sing	9	nmod	9:nmod	_
-14	which	which	PRON	WDT	PronType=Rel	15	nsubj	15:nsubj	_
+13	century	century	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	_
+14	which	which	PRON	WDT	PronType=Rel	15	nsubj	5:ref	_
 15	pushed	push	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	supported	support	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	conj	15:conj	_
+17	supported	support	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	conj	5:acl:relcl|15:conj:and	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	ideal	ideal	NOUN	NN	Number=Sing	15	obj	15:obj	_
+19	ideal	ideal	NOUN	NN	Number=Sing	15	obj	15:obj|17:obj	_
 20	of	of	ADP	IN	_	21	case	21:case	_
-21	temperance	temperance	NOUN	NN	Number=Sing	19	nmod	19:nmod	_
+21	temperance	temperance	NOUN	NN	Number=Sing	19	nmod	19:nmod:of	_
 22	(	(	PUNCT	-LRB-	_	23	punct	23:punct	SpaceAfter=No
 23	abstaining	abstain	VERB	VBG	VerbForm=Ger	21	appos	21:appos	_
 24	from	from	ADP	IN	_	25	case	25:case	_
-25	alcohol	alcohol	ADV	RB	_	23	obl	23:obl	SpaceAfter=No
+25	alcohol	alcohol	ADV	RB	_	23	obl	23:obl:from	SpaceAfter=No
 26	)	)	PUNCT	-RRB-	_	23	punct	23:punct	SpaceAfter=No
 27	,	,	PUNCT	,	_	15	punct	15:punct	_
 28	in	in	ADP	IN	_	30	case	30:case	_
 29	an	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
-30	attempt	attempt	NOUN	NN	Number=Sing	15	obl	15:obl	_
+30	attempt	attempt	NOUN	NN	Number=Sing	15	obl	15:obl:in	_
 31	to	to	PART	TO	_	32	mark	32:mark	_
-32	deal	deal	VERB	VB	VerbForm=Inf	30	acl	30:acl	_
+32	deal	deal	VERB	VB	VerbForm=Inf	30	acl	30:acl:to	_
 33	with	with	ADP	IN	_	36	case	36:case	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	36	det	36:det	_
 35	massive	massive	ADJ	JJ	Degree=Pos	36	amod	36:amod	_
-36	issue	issue	NOUN	NN	Number=Sing	32	obl	32:obl	_
+36	issue	issue	NOUN	NN	Number=Sing	32	obl	32:obl:with|42:obl:with	_
 37	of	of	ADP	IN	_	38	case	38:case	_
-38	alcoholism	alcoholism	NOUN	NN	Number=Sing	36	nmod	36:nmod	_
-39	that	that	PRON	WDT	PronType=Rel	42	obl	42:obl	_
+38	alcoholism	alcoholism	NOUN	NN	Number=Sing	36	nmod	36:nmod:of	_
+39	that	that	PRON	WDT	PronType=Rel	42	obl	36:ref	_
 40	Ireland	Ireland	PROPN	NNP	Number=Sing	42	nsubj:pass	42:nsubj:pass	_
 41	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	42	aux:pass	42:aux:pass	_
 42	gripped	grip	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	36	acl:relcl	36:acl:relcl	_
@@ -282,7 +282,7 @@
 
 # sent_id = answers-20111107144339AA0qw5S_ans-0012
 # text = Pioneers take a pledge to remain tee-total and at the hight of the organization popularity, had an estimated two million members even filling Croke Park on the 25th anniversary.
-1	Pioneers	Pioneers	PROPN	NNPS	Number=Plur	2	nsubj	2:nsubj	_
+1	Pioneers	Pioneers	PROPN	NNPS	Number=Plur	2	nsubj	2:nsubj|19:nsubj	_
 2	take	take	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	pledge	pledge	NOUN	NN	Number=Sing	2	obj	2:obj	_
@@ -294,13 +294,13 @@
 10	and	and	CCONJ	CC	_	19	cc	19:cc	_
 11	at	at	ADP	IN	_	13	case	13:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	hight	hight	NOUN	NN	Number=Sing	19	obl	19:obl	_
+13	hight	hight	NOUN	NN	Number=Sing	19	obl	19:obl:at	_
 14	of	of	ADP	IN	_	17	case	17:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	organization	organization	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	popularity	popularity	NOUN	NN	Number=Sing	13	nmod	13:nmod	SpaceAfter=No
+17	popularity	popularity	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	SpaceAfter=No
 18	,	,	PUNCT	,	_	19	punct	19:punct	_
-19	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+19	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 20	an	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
 21	estimated	estimate	VERB	VBN	Tense=Past|VerbForm=Part	24	amod	24:amod	_
 22	two	two	NUM	CD	NumType=Card	23	compound	23:compound	_
@@ -313,21 +313,21 @@
 29	on	on	ADP	IN	_	32	case	32:case	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
 31	25th	25th	ADJ	JJ	Degree=Pos|NumType=Ord	32	amod	32:amod	_
-32	anniversary	anniversary	NOUN	NN	Number=Sing	26	obl	26:obl	SpaceAfter=No
+32	anniversary	anniversary	NOUN	NN	Number=Sing	26	obl	26:obl:on	SpaceAfter=No
 33	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111107144339AA0qw5S_ans-0013
 # text = I my self am one but appreciate that the organization is unlikely to make into the 22nd century.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|7:nsubj	_
 2	my	my	X	GW	_	3	goeswith	3:goeswith	_
 3	self	self	PRON	PRP	_	1	appos	1:appos	_
 4	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 5	one	one	NUM	CD	NumType=Card	0	root	0:root	_
 6	but	but	CCONJ	CC	_	7	cc	7:cc	_
-7	appreciate	appreciate	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj	_
+7	appreciate	appreciate	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj:but	_
 8	that	that	SCONJ	IN	_	12	mark	12:mark	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	organization	organization	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
+10	organization	organization	NOUN	NN	Number=Sing	12	nsubj	12:nsubj|14:nsubj:xsubj	_
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 12	unlikely	unlikely	ADJ	JJ	Degree=Pos	7	ccomp	7:ccomp	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
@@ -335,25 +335,25 @@
 15	into	into	ADP	IN	_	18	case	18:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	22nd	22nd	ADJ	JJ	Degree=Pos|NumType=Ord	18	amod	18:amod	_
-18	century	century	NOUN	NN	Number=Sing	14	obl	14:obl	SpaceAfter=No
+18	century	century	NOUN	NN	Number=Sing	14	obl	14:obl:into	SpaceAfter=No
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111107144339AA0qw5S_ans-0014
 # text = The Orange Order and the 12th of July Marches would be argued by some not to be an Irish custom but unarguable ticks every criteria to be considered one.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	Orange	Orange	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Order	Order	PROPN	NNP	Number=Sing	12	nsubj:pass	12:nsubj:pass	_
+3	Order	Order	PROPN	NNP	Number=Sing	12	nsubj:pass	12:nsubj:pass|20:nsubj:xsubj|23:nsubj:pass	_
 4	and	and	CCONJ	CC	_	9	cc	9:cc	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 6	12th	12th	NOUN	NN	Number=Sing	9	compound	9:compound	_
 7	of	of	ADP	IN	_	8	case	8:case	_
-8	July	July	PROPN	NNP	Number=Sing	6	nmod	6:nmod	_
-9	Marches	Marches	PROPN	NNPS	Number=Plur	3	conj	3:conj	_
+8	July	July	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	_
+9	Marches	Marches	PROPN	NNPS	Number=Plur	3	conj	3:conj:and|12:nsubj:pass|20:nsubj:xsubj	_
 10	would	would	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 11	be	be	AUX	VB	VerbForm=Inf	12	aux:pass	12:aux:pass	_
 12	argued	argue	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 13	by	by	ADP	IN	_	14	case	14:case	_
-14	some	some	DET	DT	_	12	obl	12:obl	_
+14	some	some	DET	DT	_	12	obl	12:obl:by	_
 15	not	not	PART	RB	_	20	advmod	20:advmod	_
 16	to	to	PART	TO	_	20	mark	20:mark	_
 17	be	be	AUX	VB	VerbForm=Inf	20	cop	20:cop	_
@@ -362,12 +362,12 @@
 20	custom	custom	NOUN	NN	Number=Sing	12	xcomp	12:xcomp	_
 21	but	but	CCONJ	CC	_	23	cc	23:cc	_
 22	unarguable	unarguable	ADV	RB	_	23	advmod	23:advmod	_
-23	ticks	tick	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	conj	12:conj	_
+23	ticks	tick	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	conj	12:conj:but	_
 24	every	every	DET	DT	_	25	det	25:det	_
 25	criteria	criteria	NOUN	NN	Number=Sing	23	obj	23:obj	_
 26	to	to	PART	TO	_	28	mark	28:mark	_
 27	be	be	AUX	VB	VerbForm=Inf	28	aux:pass	28:aux:pass	_
-28	considered	consider	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	25	acl	25:acl	_
+28	considered	consider	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	25	acl	25:acl:to	_
 29	one	one	NUM	CD	NumType=Card	28	xcomp	28:xcomp	SpaceAfter=No
 30	.	.	PUNCT	.	_	12	punct	12:punct	_
 
@@ -377,30 +377,30 @@
 2	marches	march	NOUN	NNS	Number=Plur	11	nsubj:pass	11:nsubj:pass	_
 3	on	on	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	12th	12th	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+5	12th	12th	NOUN	NN	Number=Sing	2	nmod	2:nmod:on	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	July	July	PROPN	NNP	Number=Sing	5	nmod	5:nmod	_
+7	July	July	PROPN	NNP	Number=Sing	5	nmod	5:nmod:of	_
 8	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	aux:pass	11:aux:pass	_
 9	only	only	ADV	RB	_	11	advmod	11:advmod	_
 10	really	really	ADV	RB	_	11	advmod	11:advmod	_
 11	attended	attend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 12	by	by	ADP	IN	_	13	case	13:case	_
-13	protestants	protestants	PROPN	NNPS	Number=Plur	11	obl	11:obl	_
+13	protestants	protestants	PROPN	NNPS	Number=Plur	11	obl	11:obl:by	_
 14	in	in	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	Ulster	Ulster	PROPN	NNP	Number=Sing	13	nmod	13:nmod	_
+16	Ulster	Ulster	PROPN	NNP	Number=Sing	13	nmod	13:nmod:in	_
 17	but	but	CCONJ	CC	_	26	cc	26:cc	_
 18	in	in	ADP	IN	_	19	case	19:case	_
-19	spite	spite	NOUN	NN	Number=Sing	26	obl	26:obl	_
+19	spite	spite	NOUN	NN	Number=Sing	26	obl	26:obl:in	_
 20	of	of	ADP	IN	_	19	nmod	19:nmod	_
 21	the	the	PRON	PRP	_	26	nsubj	26:nsubj	_
 22	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	26	cop	26:cop	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
 24	largest	largest	ADJ	JJS	Degree=Sup	25	compound	25:compound	_
 25	attended	attend	VERB	VBN	Tense=Past|VerbForm=Part	26	amod	26:amod	_
-26	paraded	paraded	NOUN	NNS	Number=Plur	11	conj	11:conj	_
+26	paraded	paraded	NOUN	NNS	Number=Plur	11	conj	11:conj:but	_
 27	in	in	ADP	IN	_	28	case	28:case	_
-28	Ireland	Ireland	PROPN	NNP	Number=Sing	26	nmod	26:nmod	SpaceAfter=No
+28	Ireland	Ireland	PROPN	NNP	Number=Sing	26	nmod	26:nmod:in	SpaceAfter=No
 29	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = answers-20111107144339AA0qw5S_ans-0016
@@ -409,7 +409,7 @@
 2	brack	brack	NOUN	NN	Number=Sing	0	root	0:root	_
 3	and	and	CCONJ	CC	_	5	cc	5:cc	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	ring	ring	NOUN	NN	Number=Sing	2	conj	2:conj	SpaceAfter=No
+5	ring	ring	NOUN	NN	Number=Sing	2	conj	2:conj:and	SpaceAfter=No
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111107144339AA0qw5S_ans-0017
@@ -421,7 +421,7 @@
 5	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	family	family	NOUN	NN	Number=Sing	5	obl	5:obl	_
+8	family	family	NOUN	NN	Number=Sing	5	obl	5:obl:in	_
 9	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 10	;	;	PUNCT	,	_	9	punct	9:punct	_
 11	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
@@ -429,16 +429,16 @@
 13	sinnel	sinnel	NOUN	NN	Number=Sing	14	compound	14:compound	_
 14	cake	cake	NOUN	NN	Number=Sing	12	obj	12:obj	_
 15	for	for	ADP	IN	_	16	case	16:case	_
-16	easter	easter	PROPN	NNP	Number=Sing	14	nmod	14:nmod	_
+16	easter	easter	PROPN	NNP	Number=Sing	14	nmod	14:nmod:for	_
 17	,	,	PUNCT	,	_	12	punct	12:punct	SpaceAfter=No
 18	barn	barn	NOUN	NN	Number=Sing	19	compound	19:compound	_
 19	brack	brack	NOUN	NN	Number=Sing	12	obj	12:obj	_
 20	and	and	CCONJ	CC	_	23	cc	23:cc	_
 21	col	col	NOUN	NN	Number=Sing	23	compound	23:compound	SpaceAfter=No
 22	-	-	PUNCT	HYPH	_	23	punct	23:punct	SpaceAfter=No
-23	cannon	cannon	NOUN	NN	Number=Sing	19	conj	19:conj	_
+23	cannon	cannon	NOUN	NN	Number=Sing	19	conj	12:obj|19:conj:and	_
 24	for	for	ADP	IN	_	25	case	25:case	_
-25	Halloween	Halloween	PROPN	NNP	Number=Sing	19	nmod	19:nmod	SpaceAfter=No
+25	Halloween	Halloween	PROPN	NNP	Number=Sing	19	nmod	19:nmod:for	SpaceAfter=No
 26	.	.	PUNCT	.	_	9	punct	9:punct	SpaceAfter=No
 
 # sent_id = answers-20111107144339AA0qw5S_ans-0018
@@ -447,6 +447,6 @@
 2	cake	cake	NOUN	NN	Number=Sing	0	root	0:root	_
 3	for	for	ADP	IN	_	5	case	5:case	_
 4	christmas	christmas	PROPN	NNP	Number=Sing	5	compound	5:compound	_
-5	day	day	NOUN	NN	Number=Sing	2	nmod	2:nmod	SpaceAfter=No
+5	day	day	NOUN	NN	Number=Sing	2	nmod	2:nmod:for	SpaceAfter=No
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 

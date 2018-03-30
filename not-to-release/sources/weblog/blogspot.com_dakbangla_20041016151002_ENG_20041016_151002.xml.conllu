@@ -2,7 +2,7 @@
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0001
 # text = [ Karzai also has to deal with the stepped up rivalry between India and Pakistan in Afghanistan.
 1	[	[	PUNCT	-LRB-	_	4	punct	4:punct	_
-2	Karzai	Karzai	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
+2	Karzai	Karzai	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
 4	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
@@ -11,13 +11,13 @@
 8	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 9	stepped	step	VERB	VBN	Tense=Past|VerbForm=Part	11	amod	11:amod	_
 10	up	up	ADP	RP	_	9	compound:prt	9:compound:prt	_
-11	rivalry	rivalry	NOUN	NN	Number=Sing	6	obl	6:obl	_
+11	rivalry	rivalry	NOUN	NN	Number=Sing	6	obl	6:obl:with	_
 12	between	between	ADP	IN	_	13	case	13:case	_
-13	India	India	PROPN	NNP	Number=Sing	11	nmod	11:nmod	_
+13	India	India	PROPN	NNP	Number=Sing	11	nmod	11:nmod:between	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	Pakistan	Pakistan	PROPN	NNP	Number=Sing	13	conj	13:conj	_
+15	Pakistan	Pakistan	PROPN	NNP	Number=Sing	13	conj	11:nmod:between|13:conj:and	_
 16	in	in	ADP	IN	_	17	case	17:case	_
-17	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	11	nmod	11:nmod	SpaceAfter=No
+17	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	11	nmod	11:nmod:in	SpaceAfter=No
 18	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0002
@@ -27,23 +27,23 @@
 3	New	New	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4	Delhi	Delhi	PROPN	NNP	Number=Sing	2	obj	2:obj	_
 5	of	of	SCONJ	IN	_	6	mark	6:mark	_
-6	using	use	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	_
+6	using	use	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:of	_
 7	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	consulates	consulate	NOUN	NNS	Number=Plur	6	obj	6:obj	_
+8	consulates	consulate	NOUN	NNS	Number=Plur	6	obj	6:obj|14:nsubj:xsubj	_
 9	in	in	ADP	IN	_	10	case	10:case	_
-10	Kandahar	Kandahar	PROPN	NNP	Number=Sing	8	nmod	8:nmod	_
+10	Kandahar	Kandahar	PROPN	NNP	Number=Sing	8	nmod	8:nmod:in	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	Jalalabad	Jalalabad	PROPN	NNP	Number=Sing	10	conj	10:conj	_
+12	Jalalabad	Jalalabad	PROPN	NNP	Number=Sing	10	conj	8:nmod:in|10:conj:and	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	train	train	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 15	Balochi	balochi	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	insurgents	insurgent	NOUN	NNS	Number=Plur	14	obj	14:obj	_
-17	who	who	PRON	WP	PronType=Rel	19	nsubj	19:nsubj	_
+16	insurgents	insurgent	NOUN	NNS	Number=Plur	14	obj	14:obj|19:nsubj:relsubj	_
+17	who	who	PRON	WP	PronType=Rel	19	nsubj	16:ref	_
 18	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
 19	active	active	ADJ	JJ	Degree=Pos	16	acl:relcl	16:acl:relcl	_
 20	in	in	ADP	IN	_	22	case	22:case	_
 21	Pakistani	pakistani	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	Balochistan	Balochistan	PROPN	NNP	Number=Sing	19	obl	19:obl	SpaceAfter=No
+22	Balochistan	Balochistan	PROPN	NNP	Number=Sing	19	obl	19:obl:in	SpaceAfter=No
 23	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0003
@@ -56,17 +56,17 @@
 6	as	as	ADV	RB	_	7	advmod	7:advmod	_
 7	many	many	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 8	as	as	ADP	IN	_	9	mark	9:mark	_
-9	42	42	NUM	CD	NumType=Card	6	advcl	6:advcl	_
+9	42	42	NUM	CD	NumType=Card	6	advcl	6:advcl:as	_
 10	RAW	RAW	PROPN	NNP	Number=Sing	11	compound	11:compound	_
 11	agents	agent	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
 12	based	base	VERB	VBN	Tense=Past|VerbForm=Part	11	acl	11:acl	_
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	Kandahar	Kandahar	PROPN	NNP	Number=Sing	12	obl	12:obl	_
+14	Kandahar	Kandahar	PROPN	NNP	Number=Sing	12	obl	12:obl:in	_
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
 16	another	another	DET	DT	_	17	det	17:det	_
-17	12	12	NUM	CD	NumType=Card	11	conj	11:conj	_
+17	12	12	NUM	CD	NumType=Card	11	conj	5:nsubj|11:conj:and	_
 18	in	in	ADP	IN	_	19	case	19:case	_
-19	Jalalabad	Jalalabad	PROPN	NNP	Number=Sing	17	nmod	17:nmod	SpaceAfter=No
+19	Jalalabad	Jalalabad	PROPN	NNP	Number=Sing	17	nmod	17:nmod:in	SpaceAfter=No
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0004
@@ -81,7 +81,7 @@
 8	unless	unless	SCONJ	IN	_	11	mark	11:mark	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 10	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
-11	undermining	undermine	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl	_
+11	undermining	undermine	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:unless	_
 12	Pakistan	Pakistan	PROPN	NNP	Number=Sing	11	obj	11:obj	SpaceAfter=No
 13	,	,	PUNCT	,	_	15	punct	15:punct	SpaceAfter=No
 14	’’	''	PUNCT	''	_	15	punct	15:punct	_
@@ -96,7 +96,7 @@
 1	Both	both	CCONJ	CC	_	2	cc:preconj	2:cc:preconj	_
 2	India	India	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	2	conj	2:conj	_
+4	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	2	conj	2:conj:and|5:nsubj	_
 5	deny	deny	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	claim	claim	NOUN	NN	Number=Sing	5	obj	5:obj	SpaceAfter=No
@@ -114,15 +114,15 @@
 8	of	of	ADP	IN	_	11	case	11:case	_
 9	an	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	Indian	indian	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	hand	hand	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
+11	hand	hand	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	_
 12	using	use	VERB	VBG	VerbForm=Ger	11	acl	11:acl	_
 13	Afghan	afghan	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	soil	soil	NOUN	NN	Number=Sing	12	obj	12:obj	_
+14	soil	soil	NOUN	NN	Number=Sing	12	obj	12:obj|16:nsubj:xsubj	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	work	work	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
 17	against	against	ADP	IN	_	19	case	19:case	_
 18	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
-19	neighbours	neighbour	NOUN	NNS	Number=Plur	16	obl	16:obl	_
+19	neighbours	neighbour	NOUN	NNS	Number=Plur	16	obl	16:obl:against	_
 20	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	22	nsubj	22:nsubj	_
 21	will	will	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
 22	take	take	VERB	VB	VerbForm=Inf	28	ccomp	28:ccomp	_
@@ -141,7 +141,7 @@
 35	’s	's	PART	POS	_	34	case	34:case	_
 36	National	National	PROPN	NNP	Number=Sing	37	compound	37:compound	_
 37	Security	Security	PROPN	NNP	Number=Sing	38	compound	38:compound	_
-38	Directorate	Directorate	PROPN	NNP	Number=Sing	32	nmod	32:nmod	SpaceAfter=No
+38	Directorate	Directorate	PROPN	NNP	Number=Sing	32	nmod	32:nmod:of	SpaceAfter=No
 39	.	.	PUNCT	.	_	28	punct	28:punct	_
 40	]	]	PUNCT	-RRB-	_	28	punct	28:punct	_
 
@@ -165,34 +165,34 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 3	past	past	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 4	25	25	NUM	CD	NumType=Card	5	nummod	5:nummod	_
-5	years	year	NOUN	NNS	Number=Plur	9	obl	9:obl	_
+5	years	year	NOUN	NNS	Number=Plur	9	obl	9:obl:for	_
 6	landlocked	landlocked	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
 8	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
 9	suffered	suffer	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 10	from	from	ADP	IN	_	12	case	12:case	_
 11	constant	constant	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	interference	interference	NOUN	NN	Number=Sing	9	obl	9:obl	_
+12	interference	interference	NOUN	NN	Number=Sing	9	obl	9:obl:from	_
 13	from	from	ADP	IN	_	15	case	15:case	_
 14	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
-15	neighbours	neighbour	NOUN	NNS	Number=Plur	9	obl	9:obl	_
+15	neighbours	neighbour	NOUN	NNS	Number=Plur	9	obl	9:obl:from	_
 16	-	-	PUNCT	,	_	15	punct	15:punct	_
 17	Pakistan	Pakistan	PROPN	NNP	Number=Sing	15	appos	15:appos	SpaceAfter=No
 18	,	,	PUNCT	,	_	19	punct	19:punct	_
-19	Iran	Iran	PROPN	NNP	Number=Sing	17	conj	17:conj	_
+19	Iran	Iran	PROPN	NNP	Number=Sing	17	conj	15:appos|17:conj:and	_
 20	and	and	CCONJ	CC	_	24	cc	24:cc	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 22	Central	central	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 23	Asian	asian	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-24	Republics	republic	NOUN	NNS	Number=Plur	17	conj	17:conj	_
+24	Republics	republic	NOUN	NNS	Number=Plur	17	conj	15:appos|17:conj:and	_
 25	-	-	PUNCT	,	_	24	punct	24:punct	_
 26	and	and	CCONJ	CC	_	28	cc	28:cc	_
 27	regional	regional	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
-28	powers	power	NOUN	NNS	Number=Plur	15	conj	15:conj	_
+28	powers	power	NOUN	NNS	Number=Plur	15	conj	9:obl:from|15:conj:and	_
 29	-	-	PUNCT	,	_	15	punct	15:punct	SpaceAfter=No
 30	Russia	Russia	PROPN	NNP	Number=Sing	28	appos	28:appos	_
 31	and	and	CCONJ	CC	_	32	cc	32:cc	_
-32	India	India	PROPN	NNP	Number=Sing	30	conj	30:conj	SpaceAfter=No
+32	India	India	PROPN	NNP	Number=Sing	30	conj	28:appos|30:conj:and	SpaceAfter=No
 33	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0010
@@ -205,20 +205,20 @@
 6	,	,	PUNCT	,	_	9	punct	9:punct	_
 7	but	but	CCONJ	CC	_	9	cc	9:cc	_
 8	there	there	PRON	EX	_	9	expl	9:expl	_
-9	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj	_
+9	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj:but	_
 10	signs	sign	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj	_
 11	that	that	SCONJ	IN	_	22	mark	22:mark	_
 12	rather	rather	ADP	IN	_	14	mark	14:mark	_
 13	than	than	SCONJ	IN	_	12	fixed	12:fixed	_
-14	undermining	undermine	VERB	VBG	VerbForm=Ger	22	advcl	22:advcl	_
+14	undermining	undermine	VERB	VBG	VerbForm=Ger	22	advcl	22:advcl:rather_than	_
 15	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	17	nmod:poss	17:nmod:poss	SpaceAfter=No
 16	’s	's	PART	POS	_	15	case	15:case	_
 17	stability	stability	NOUN	NN	Number=Sing	14	obj	14:obj	_
-18	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	22	nsubj	22:nsubj	_
+18	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	22	nsubj	22:nsubj|24:nsubj:xsubj	_
 19	may	may	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
 20	now	now	ADV	RB	_	22	advmod	22:advmod	_
 21	be	be	AUX	VB	VerbForm=Inf	22	aux	22:aux	_
-22	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl	10:acl	_
+22	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl	10:acl:that	_
 23	to	to	PART	TO	_	24	mark	24:mark	_
 24	strengthen	strengthen	VERB	VB	VerbForm=Inf	22	xcomp	22:xcomp	_
 25	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	24	obj	24:obj	SpaceAfter=No
@@ -236,7 +236,7 @@
 8	to	to	ADP	IN	_	11	case	11:case	_
 9	all	all	DET	PDT	_	11	det:predet	11:det:predet	_
 10	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-11	neighbours	neighbour	NOUN	NNS	Number=Plur	7	nmod	7:nmod	_
+11	neighbours	neighbour	NOUN	NNS	Number=Plur	7	nmod	7:nmod:to	_
 12	that	that	SCONJ	IN	_	21	mark	21:mark	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 14	stable	stable	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
@@ -246,9 +246,9 @@
 18	peaceful	peaceful	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 19	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	15	appos	15:appos	_
 20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	cop	21:cop	_
-21	good	good	ADJ	JJ	Degree=Pos	7	acl	7:acl	_
+21	good	good	ADJ	JJ	Degree=Pos	7	acl	7:acl:that	_
 22	for	for	ADP	IN	_	23	case	23:case	_
-23	all	all	DET	DT	_	21	obl	21:obl	SpaceAfter=No
+23	all	all	DET	DT	_	21	obl	21:obl:for	SpaceAfter=No
 24	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0012
@@ -259,7 +259,7 @@
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	looser	looser	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	3	obl	3:obl	SpaceAfter=No
+7	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	3	obl	3:obl:in	SpaceAfter=No
 8	,	,	PUNCT	,	_	13	punct	13:punct	SpaceAfter=No
 9	’’	''	PUNCT	''	_	13	punct	13:punct	_
 10	President	President	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	_
@@ -279,7 +279,7 @@
 1	All	all	PUNCT	PDT	_	4	det:predet	4:det:predet	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 3	regional	regional	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	countries	country	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
+4	countries	country	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj|12:nsubj	_
 5	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 6	publicly	publicly	ADV	RB	_	7	advmod	7:advmod	_
 7	backed	back	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
@@ -287,7 +287,7 @@
 9	Karzai	Karzai	PROPN	NNP	Number=Sing	7	obj	7:obj	_
 10	government	government	NOUN	NN	Number=Sing	9	flat	9:flat	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	supported	support	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	7:conj	_
+12	supported	support	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	7:conj:and	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	electoral	electoral	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	process	process	NOUN	NN	Number=Sing	12	obj	12:obj	SpaceAfter=No
@@ -295,22 +295,22 @@
 17	but	but	CCONJ	CC	_	20	cc	20:cc	_
 18	serious	serious	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 19	undercurrents	undercurrent	NOUN	NNS	Number=Plur	20	nsubj	20:nsubj	_
-20	remain	remain	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	conj	7:conj	_
+20	remain	remain	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	conj	7:conj:and	_
 21	as	as	SCONJ	IN	_	24	mark	24:mark	_
 22	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	24	nsubj	24:nsubj	_
 23	all	all	DET	DT	_	22	det	22:det	_
-24	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	advcl	20:advcl	_
+24	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	advcl	20:advcl:as	_
 25	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	27	nmod:poss	27:nmod:poss	_
 26	favourite	favourite	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
 27	contenders	contender	NOUN	NNS	Number=Plur	24	obj	24:obj	_
 28	in	in	ADP	IN	_	29	case	29:case	_
-29	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	27	nmod	27:nmod	SpaceAfter=No
+29	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	27	nmod	27:nmod:in	SpaceAfter=No
 30	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0014
 # text = Since September 11, Pakistan has been repeatedly accused by Afghan and Western leaders of harbouring Taliban extremists who had pledged to disrupt the elections, but at the highest level the US has avoided criticising President Pervaiz Musharraf on the grounds that he is helping the US catch Al Qaeda elements inside Pakistan.
 1	Since	since	ADP	IN	_	2	case	2:case	_
-2	September	September	PROPN	NNP	Number=Sing	9	obl	9:obl	_
+2	September	September	PROPN	NNP	Number=Sing	9	obl	9:obl:since	_
 3	11	11	NUM	CD	NumType=Card	2	nummod	2:nummod	SpaceAfter=No
 4	,	,	PUNCT	,	_	9	punct	9:punct	_
 5	Pakistan	Pakistan	PROPN	NNP	Number=Sing	9	nsubj:pass	9:nsubj:pass	_
@@ -321,13 +321,13 @@
 10	by	by	ADP	IN	_	14	case	14:case	_
 11	Afghan	afghan	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	Western	western	ADJ	JJ	Degree=Pos	11	conj	11:conj	_
-14	leaders	leader	NOUN	NNS	Number=Plur	9	obl	9:obl	_
+13	Western	western	ADJ	JJ	Degree=Pos	11	conj	11:conj:and|14:amod	_
+14	leaders	leader	NOUN	NNS	Number=Plur	9	obl	9:obl:by	_
 15	of	of	SCONJ	IN	_	16	mark	16:mark	_
-16	harbouring	harbour	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl	_
+16	harbouring	harbour	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl:of	_
 17	Taliban	Taliban	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-18	extremists	extremist	NOUN	NNS	Number=Plur	16	obj	16:obj	_
-19	who	who	PRON	WP	PronType=Rel	21	nsubj	21:nsubj	_
+18	extremists	extremist	NOUN	NNS	Number=Plur	16	obj	16:obj|21:nsubj:relsubj|23:nsubj:xsubj	_
+19	who	who	PRON	WP	PronType=Rel	21	nsubj	18:ref	_
 20	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	21	aux	21:aux	_
 21	pledged	pledge	VERB	VBN	Tense=Past|VerbForm=Part	18	acl:relcl	18:acl:relcl	_
 22	to	to	PART	TO	_	23	mark	23:mark	_
@@ -339,30 +339,30 @@
 28	at	at	ADP	IN	_	31	case	31:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
 30	highest	highest	ADJ	JJS	Degree=Sup	31	amod	31:amod	_
-31	level	level	NOUN	NN	Number=Sing	35	obl	35:obl	_
+31	level	level	NOUN	NN	Number=Sing	35	obl	35:obl:at	_
 32	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	_
-33	US	US	PROPN	NNP	Number=Sing	35	nsubj	35:nsubj	_
+33	US	US	PROPN	NNP	Number=Sing	35	nsubj	35:nsubj|36:nsubj:xsubj	_
 34	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	35	aux	35:aux	_
-35	avoided	avoid	VERB	VBN	Tense=Past|VerbForm=Part	9	conj	9:conj	_
+35	avoided	avoid	VERB	VBN	Tense=Past|VerbForm=Part	9	conj	9:conj:but	_
 36	criticising	criticise	VERB	VBG	VerbForm=Ger	35	xcomp	35:xcomp	_
 37	President	President	PROPN	NNP	Number=Sing	36	obj	36:obj	_
 38	Pervaiz	Pervaiz	PROPN	NNP	Number=Sing	37	flat	37:flat	_
 39	Musharraf	Musharraf	PROPN	NNP	Number=Sing	37	flat	37:flat	_
 40	on	on	ADP	IN	_	42	case	42:case	_
 41	the	the	DET	DT	Definite=Def|PronType=Art	42	det	42:det	_
-42	grounds	grounds	NOUN	NNS	Number=Plur	35	obl	35:obl	_
+42	grounds	grounds	NOUN	NNS	Number=Plur	35	obl	35:obl:on	_
 43	that	that	SCONJ	IN	_	46	mark	46:mark	_
-44	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	46	nsubj	46:nsubj	_
+44	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	46	nsubj	46:nsubj|49:nsubj:xsubj	_
 45	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	46	aux	46:aux	_
-46	helping	help	VERB	VBG	Tense=Pres|VerbForm=Part	42	acl	42:acl	_
+46	helping	help	VERB	VBG	Tense=Pres|VerbForm=Part	42	acl	42:acl:that	_
 47	the	the	DET	DT	Definite=Def|PronType=Art	48	det	48:det	_
-48	US	US	PROPN	NNP	Number=Sing	46	nsubj	46:obj	_
+48	US	US	PROPN	NNP	Number=Sing	46	nsubj	46:nsubj|49:nsubj:xsubj	_
 49	catch	catch	VERB	VB	VerbForm=Inf	46	xcomp	46:xcomp	_
 50	Al	Al	PROPN	NNP	Number=Sing	51	compound	51:compound	_
 51	Qaeda	Qaeda	PROPN	NNP	Number=Sing	52	compound	52:compound	_
 52	elements	element	NOUN	NNS	Number=Plur	49	obj	49:obj	_
 53	inside	inside	ADP	IN	_	54	case	54:case	_
-54	Pakistan	Pakistan	PROPN	NNP	Number=Sing	52	nmod	52:nmod	SpaceAfter=No
+54	Pakistan	Pakistan	PROPN	NNP	Number=Sing	52	nmod	52:nmod:inside	SpaceAfter=No
 55	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0015
@@ -370,7 +370,7 @@
 1	That	that	PRON	DT	Number=Sing|PronType=Dem	2	nsubj	2:nsubj	_
 2	changed	change	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	on	on	ADP	IN	_	4	case	4:case	_
-4	September	September	PROPN	NNP	Number=Sing	2	obl	2:obl	_
+4	September	September	PROPN	NNP	Number=Sing	2	obl	2:obl:on	_
 5	22	22	NUM	CD	NumType=Card	4	nummod	4:nummod	_
 6	when	when	ADV	WRB	PronType=Int	15	mark	15:mark	_
 7	President	President	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	_
@@ -378,25 +378,25 @@
 9	W.	W.	PROPN	NNP	Number=Sing	7	flat	7:flat	_
 10	Bush	Bush	PROPN	NNP	Number=Sing	7	flat	7:flat	SpaceAfter=No
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
-12	Musharraf	Musharraf	PROPN	NNP	Number=Sing	7	conj	7:conj	_
+12	Musharraf	Musharraf	PROPN	NNP	Number=Sing	7	conj	7:conj:and|15:nsubj	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	Karzai	Karzai	PROPN	NNP	Number=Sing	7	conj	7:conj	_
-15	held	hold	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	advcl	2:advcl	_
+14	Karzai	Karzai	PROPN	NNP	Number=Sing	7	conj	7:conj:and|15:nsubj	_
+15	held	hold	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	advcl	2:advcl:when	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
 17	three	three	NUM	CD	NumType=Card	18	nummod	18:nummod	_
 18	way	way	NOUN	NN	Number=Sing	19	compound	19:compound	_
 19	meeting	meeting	NOUN	NN	Number=Sing	15	obj	15:obj	_
 20	in	in	ADP	IN	_	22	case	22:case	_
 21	New	New	PROPN	NNP	Number=Sing	22	compound	22:compound	_
-22	York	York	PROPN	NNP	Number=Sing	19	nmod	19:nmod	_
+22	York	York	PROPN	NNP	Number=Sing	19	nmod	19:nmod:in	_
 23	on	on	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
-25	sidelines	sideline	NOUN	NNS	Number=Plur	19	nmod	19:nmod	_
+25	sidelines	sideline	NOUN	NNS	Number=Plur	19	nmod	19:nmod:on	_
 26	of	of	ADP	IN	_	30	case	30:case	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
 28	UN	UN	PROPN	NNP	Number=Sing	30	compound	30:compound	_
 29	General	General	PROPN	NNP	Number=Sing	30	compound	30:compound	_
-30	Assembly	Assembly	PROPN	NNP	Number=Sing	25	nmod	25:nmod	SpaceAfter=No
+30	Assembly	Assembly	PROPN	NNP	Number=Sing	25	nmod	25:nmod:of	SpaceAfter=No
 31	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0016
@@ -408,44 +408,44 @@
 5	together	together	ADV	RB	_	4	advmod	4:advmod	_
 6	by	by	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	CIA	CIA	PROPN	NNP	Number=Sing	4	obl	4:obl	_
+8	CIA	CIA	PROPN	NNP	Number=Sing	4	obl	4:obl:by|17:nsubj:relsubj	_
 9	and	and	CCONJ	CC	_	13	cc	13:cc	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 11	US	US	PROPN	NNP	Number=Sing	13	compound	13:compound	_
 12	Defence	Defence	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	Department	Department	PROPN	NNP	Number=Sing	8	conj	8:conj	_
-14	who	who	PRON	WP	PronType=Rel	17	nsubj	17:nsubj	_
+13	Department	Department	PROPN	NNP	Number=Sing	8	conj	4:obl:by|8:conj:and|17:nsubj:relsubj	_
+14	who	who	PRON	WP	PronType=Rel	17	nsubj	8:ref	_
 15	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	17	cop	17:cop	_
 16	desperately	desperately	ADV	RB	_	17	advmod	17:advmod	_
 17	anxious	anxious	ADJ	JJ	Degree=Pos	8	acl:relcl	8:acl:relcl	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
-19	secure	secure	VERB	VB	VerbForm=Inf	17	advcl	17:advcl	_
+19	secure	secure	VERB	VB	VerbForm=Inf	17	advcl	17:advcl:to	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
 21	peaceful	peaceful	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 22	election	election	NOUN	NN	Number=Sing	19	obj	19:obj	_
 23	in	in	ADP	IN	_	24	case	24:case	_
-24	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	22	nmod	22:nmod	_
+24	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	22	nmod	22:nmod:in	_
 25	and	and	CCONJ	CC	_	27	cc	27:cc	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
-27	non-interference	non-interference	NOUN	NN	Number=Sing	22	conj	22:conj	_
+27	non-interference	non-interference	NOUN	NN	Number=Sing	22	conj	19:obj|22:conj:and	_
 28	of	of	ADP	IN	_	32	case	32:case	_
 29	alleged	alleged	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
 30	Pakistani	Pakistani	ADJ	NNP	Number=Sing	31	obl:npmod	31:obl:npmod	_
 31	backed	back	VERB	VBN	Tense=Past|VerbForm=Part	32	amod	32:amod	_
-32	Taliban	Taliban	PROPN	NNP	Number=Sing	27	nmod	27:nmod	SpaceAfter=No
+32	Taliban	Taliban	PROPN	NNP	Number=Sing	27	nmod	27:nmod:of	SpaceAfter=No
 33	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0017
 # text = Western and Afghan diplomats intimately involved with the meeting, said Bush pushed Musharraf hard on reigning in the Taliban so the elections could take place peacefully.
 1	Western	western	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	Afghan	afghan	ADJ	JJ	Degree=Pos	1	conj	1:conj	_
+3	Afghan	afghan	ADJ	JJ	Degree=Pos	1	conj	1:conj:and|4:amod	_
 4	diplomats	diplomat	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
 5	intimately	intimately	ADV	RB	_	6	advmod	6:advmod	_
 6	involved	involved	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 7	with	with	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	meeting	meeting	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+9	meeting	meeting	NOUN	NN	Number=Sing	6	obl	6:obl:with	SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
 11	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 12	Bush	Bush	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	_
@@ -453,7 +453,7 @@
 14	Musharraf	Musharraf	PROPN	NNP	Number=Sing	13	obj	13:obj	_
 15	hard	hard	ADV	RB	Degree=Pos	13	advmod	13:advmod	_
 16	on	on	SCONJ	IN	_	17	mark	17:mark	_
-17	reigning	reign	VERB	VBG	VerbForm=Ger	13	advcl	13:advcl	_
+17	reigning	reign	VERB	VBG	VerbForm=Ger	13	advcl	13:advcl:on	_
 18	in	in	ADP	RP	_	17	compound:prt	17:compound:prt	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	Taliban	Taliban	PROPN	NNP	Number=Sing	17	obj	17:obj	_
@@ -461,7 +461,7 @@
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 23	elections	election	NOUN	NNS	Number=Plur	25	nsubj	25:nsubj	_
 24	could	could	AUX	MD	VerbForm=Fin	25	aux	25:aux	_
-25	take	take	VERB	VB	VerbForm=Inf	17	advcl	17:advcl	_
+25	take	take	VERB	VB	VerbForm=Inf	17	advcl	17:advcl:so	_
 26	place	place	NOUN	NN	Number=Sing	25	obj	25:obj	_
 27	peacefully	peacefully	ADV	RB	_	25	advmod	25:advmod	SpaceAfter=No
 28	.	.	PUNCT	.	_	11	punct	11:punct	_
@@ -474,17 +474,17 @@
 4	Mullah	Mullah	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
 5	Omar	Omar	PROPN	NNP	Number=Sing	4	flat	4:flat	SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
-7	Mullah	Mullah	PROPN	NNP	Number=Sing	4	conj	4:conj	_
+7	Mullah	Mullah	PROPN	NNP	Number=Sing	4	conj	2:nsubj|4:conj:and	_
 8	Usmani	Usmani	PROPN	NNP	Number=Sing	7	flat	7:flat	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	Gulbuddin	Gulbuddin	PROPN	NNP	Number=Sing	4	conj	4:conj	_
+10	Gulbuddin	Gulbuddin	PROPN	NNP	Number=Sing	4	conj	2:nsubj|4:conj:and	_
 11	Hikmetar	Hikmetar	PROPN	NNP	Number=Sing	10	flat	10:flat	SpaceAfter=No
 12	?	?	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
 13	’’	''	PUNCT	''	_	2	punct	2:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0019
 # text = Bush is reported to have asked a flustered Musharraf.
-1	Bush	Bush	PROPN	NNP	Number=Sing	3	nsubj:pass	3:nsubj:pass	_
+1	Bush	Bush	PROPN	NNP	Number=Sing	3	nsubj:pass	3:nsubj:pass|6:nsubj:xsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	reported	report	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	to	to	PART	TO	_	6	mark	6:mark	_
@@ -498,20 +498,20 @@
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0020
 # text = All three are extremist Taliban or their allies and known to be living in Pakistan.
 1	All	all	DET	DT	_	2	det	2:det	_
-2	three	three	NUM	CD	NumType=Card	5	nsubj	5:nsubj	_
+2	three	three	NUM	CD	NumType=Card	5	nsubj	5:nsubj|8:nsubj|10:nsubj|13:nsubj:xsubj	_
 3	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 4	extremist	extremist	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	Taliban	Taliban	PROPN	NNP	Number=Sing	0	root	0:root	_
 6	or	or	CCONJ	CC	_	8	cc	8:cc	_
 7	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	allies	ally	NOUN	NNS	Number=Plur	5	conj	5:conj	_
+8	allies	ally	NOUN	NNS	Number=Plur	5	conj	5:conj:or	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	known	know	VERB	VBN	Tense=Past|VerbForm=Part	5	conj	5:conj	_
+10	known	know	VERB	VBN	Tense=Past|VerbForm=Part	5	conj	5:conj:and	_
 11	to	to	PART	TO	_	13	mark	13:mark	_
 12	be	be	AUX	VB	VerbForm=Inf	13	aux	13:aux	_
 13	living	live	VERB	VBG	Tense=Pres|VerbForm=Part	10	xcomp	10:xcomp	_
 14	in	in	ADP	IN	_	15	case	15:case	_
-15	Pakistan	Pakistan	PROPN	NNP	Number=Sing	13	obl	13:obl	SpaceAfter=No
+15	Pakistan	Pakistan	PROPN	NNP	Number=Sing	13	obl	13:obl:in	SpaceAfter=No
 16	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0021
@@ -523,30 +523,30 @@
 5	leader	leader	NOUN	NN	Number=Sing	0	root	0:root	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	Taliban	Taliban	PROPN	NNP	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+8	Taliban	Taliban	PROPN	NNP	Number=Sing	5	nmod	5:nmod:of	SpaceAfter=No
 9	,	,	PUNCT	,	_	5	punct	5:punct	_
-10	Usmani	Usmani	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	_
+10	Usmani	Usmani	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj|25:nsubj	_
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 13	former	former	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 14	corps	corps	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	commander	commander	NOUN	NN	Number=Sing	5	parataxis	5:parataxis	_
 16	of	of	ADP	IN	_	17	case	17:case	_
-17	Kandahar	Kandahar	PROPN	NNP	Number=Sing	15	nmod	15:nmod	_
+17	Kandahar	Kandahar	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	_
 18	under	under	ADP	IN	_	21	case	21:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 20	Taliban	Taliban	PROPN	NNP	Number=Sing	21	compound	21:compound	_
-21	regime	regime	NOUN	NN	Number=Sing	15	nmod	15:nmod	_
+21	regime	regime	NOUN	NN	Number=Sing	15	nmod	15:nmod:under	_
 22	and	and	CCONJ	CC	_	25	cc	25:cc	_
 23	now	now	ADV	RB	_	25	advmod	25:advmod	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
-25	commander	commander	NOUN	NN	Number=Sing	15	conj	15:conj	_
+25	commander	commander	NOUN	NN	Number=Sing	15	conj	15:conj:and	_
 26	of	of	ADP	IN	_	28	case	28:case	_
 27	Taliban	Taliban	PROPN	NNP	Number=Sing	28	compound	28:compound	_
-28	forces	force	NOUN	NNS	Number=Plur	25	nmod	25:nmod	_
+28	forces	force	NOUN	NNS	Number=Plur	25	nmod	25:nmod:of	_
 29	while	while	SCONJ	IN	_	31	mark	31:mark	_
 30	Hikmetyar	Hikmetyar	PROPN	NNP	Number=Sing	31	nsubj	31:nsubj	_
-31	heads	head	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl	_
+31	heads	head	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl:while	_
 32	the	the	DET	DT	Definite=Def|PronType=Art	38	det	38:det	_
 33	extremist	extremist	NOUN	NN	Number=Sing	38	compound	38:compound	_
 34	Hizb	Hizb	PROPN	NNP	Number=Sing	38	compound	38:compound	SpaceAfter=No
@@ -564,22 +564,22 @@
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	6	amod	6:amod	_
-6	time	time	NOUN	NN	Number=Sing	24	ccomp	24:ccomp	_
-7	that	that	ADV	WRB	PronType=Rel	10	advmod	10:advmod	_
+6	time	time	NOUN	NN	Number=Sing	24	ccomp	10:advmod|24:ccomp	_
+7	that	that	ADV	WRB	PronType=Rel	10	advmod	6:ref	_
 8	Bush	Bush	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
 9	totally	totally	ADV	RB	_	10	advmod	10:advmod	_
 10	focused	focus	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
 11	on	on	ADP	IN	_	14	case	14:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	Taliban	Taliban	PROPN	NNP	Number=Sing	14	compound	14:compound	_
-14	threat	threat	NOUN	NN	Number=Sing	10	obl	10:obl	_
+14	threat	threat	NOUN	NN	Number=Sing	10	obl	10:obl:on	_
 15	rather	rather	ADP	IN	_	18	case	18:case	_
 16	than	than	ADP	IN	_	15	fixed	15:fixed	_
 17	Al	Al	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-18	Qaeda	Qaeda	PROPN	NNP	Number=Sing	14	nmod	14:nmod	_
+18	Qaeda	Qaeda	PROPN	NNP	Number=Sing	14	nmod	14:nmod:rather_than	_
 19	with	with	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	Pakistanis	Pakistanis	PROPN	NNPS	Number=Plur	10	obl	10:obl	SpaceAfter=No
+21	Pakistanis	Pakistanis	PROPN	NNPS	Number=Plur	10	obl	10:obl:with	SpaceAfter=No
 22	,	,	PUNCT	,	_	24	punct	24:punct	SpaceAfter=No
 23	’’	''	PUNCT	''	_	24	punct	24:punct	_
 24	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -598,7 +598,7 @@
 6	briefed	brief	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	ccomp	14:ccomp	_
 7	before	before	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	meeting	meeting	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+9	meeting	meeting	NOUN	NN	Number=Sing	6	obl	6:obl:before	SpaceAfter=No
 10	,	,	PUNCT	,	_	14	punct	14:punct	SpaceAfter=No
 11	’’	''	PUNCT	''	_	14	punct	14:punct	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
@@ -613,7 +613,7 @@
 3	official	official	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 4	at	at	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	meeting	meeting	NOUN	NN	Number=Sing	3	nmod	3:nmod	_
+6	meeting	meeting	NOUN	NN	Number=Sing	3	nmod	3:nmod:at	_
 7	added	add	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 8	,	,	PUNCT	,	_	7	punct	7:punct	_
 9	‘’	''	PUNCT	``	_	7	punct	7:punct	SpaceAfter=No
@@ -630,10 +630,10 @@
 20	threat	threat	NOUN	NN	Number=Sing	13	ccomp	13:ccomp	_
 21	to	to	ADP	IN	_	23	case	23:case	_
 22	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
-23	security	security	NOUN	NN	Number=Sing	20	nmod	20:nmod	_
+23	security	security	NOUN	NN	Number=Sing	20	nmod	20:nmod:to	_
 24	than	than	ADP	IN	_	26	case	26:case	_
 25	Al	Al	PROPN	NNP	Number=Sing	26	compound	26:compound	_
-26	Qaeda	Qaeda	PROPN	NNP	Number=Sing	20	nmod	20:nmod	SpaceAfter=No
+26	Qaeda	Qaeda	PROPN	NNP	Number=Sing	20	nmod	20:nmod:than	SpaceAfter=No
 27	.	.	PUNCT	.	_	7	punct	7:punct	SpaceAfter=No
 28	’’	''	PUNCT	''	_	7	punct	7:punct	_
 
@@ -645,29 +645,29 @@
 4	pleased	pleased	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	at	at	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	results	result	NOUN	NNS	Number=Plur	4	obl	4:obl	SpaceAfter=No
+7	results	result	NOUN	NNS	Number=Plur	4	obl	4:obl:at	SpaceAfter=No
 8	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0026
 # text = ‘’President Musharraf promised to help us and cooperate with us on curbing terrorist activity by the Taliban,’’ says Karzai.
 1	‘’	''	PUNCT	``	_	21	punct	21:punct	SpaceAfter=No
-2	President	President	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
+2	President	President	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj|9:nsubj:xsubj	_
 3	Musharraf	Musharraf	PROPN	NNP	Number=Sing	2	flat	2:flat	_
 4	promised	promise	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	21	ccomp	21:ccomp	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	help	help	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	6	obj	6:obj	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	cooperate	cooperate	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+9	cooperate	cooperate	VERB	VB	VerbForm=Inf	6	conj	4:xcomp|6:conj:and	_
 10	with	with	ADP	IN	_	11	case	11:case	_
-11	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	9	obl	9:obl	_
+11	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	9	obl	9:obl:with	_
 12	on	on	SCONJ	IN	_	13	mark	13:mark	_
-13	curbing	curb	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl	_
+13	curbing	curb	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl:on	_
 14	terrorist	terrorist	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	activity	activity	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	by	by	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	Taliban	Taliban	PROPN	NNP	Number=Sing	15	nmod	15:nmod	SpaceAfter=No
+18	Taliban	Taliban	PROPN	NNP	Number=Sing	15	nmod	15:nmod:by	SpaceAfter=No
 19	,	,	PUNCT	,	_	21	punct	21:punct	SpaceAfter=No
 20	’’	''	PUNCT	''	_	21	punct	21:punct	_
 21	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -692,20 +692,20 @@
 14	Pakistani	pakistani	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	troops	troops	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 16	to	to	ADP	IN	_	17	case	17:case	_
-17	Iraq	Iraq	PROPN	NNP	Number=Sing	13	obl	13:obl	SpaceAfter=No
+17	Iraq	Iraq	PROPN	NNP	Number=Sing	13	obl	13:obl:to	SpaceAfter=No
 18	,	,	PUNCT	,	_	21	punct	21:punct	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 20	clear	clear	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 21	snub	snub	NOUN	NN	Number=Sing	13	appos	13:appos	_
 22	to	to	ADP	IN	_	24	case	24:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
-24	Americans	Americans	PROPN	NNPS	Number=Plur	21	nmod	21:nmod	SpaceAfter=No
+24	Americans	Americans	PROPN	NNPS	Number=Plur	21	nmod	21:nmod:to	SpaceAfter=No
 25	.	.	PUNCT	.	_	21	punct	21:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0028
 # text = Until then he had said Pakistan’s options were open.
 1	Until	until	ADP	IN	_	2	case	2:case	_
-2	then	then	ADV	RB	PronType=Dem	5	obl	5:obl	_
+2	then	then	ADV	RB	PronType=Dem	5	obl	5:obl:until	_
 3	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 4	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
 5	said	say	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
@@ -730,25 +730,25 @@
 10	to	to	ADP	IN	_	13	case	13:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	tripartite	tripartite	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	meeting	meeting	NOUN	NN	Number=Sing	9	obl	9:obl	SpaceAfter=No
+13	meeting	meeting	NOUN	NN	Number=Sing	9	obl	9:obl:to	SpaceAfter=No
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0030
 # text = US and NATO military officers in Kabul say it is too early to say whether Bush’s tough message was instrumental in persuading Musharraf and the ISI to pressure the Taliban to restrain from disrupting the elections.
 1	US	US	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	NATO	NATO	PROPN	NNP	Number=Sing	1	conj	1:conj	_
+3	NATO	NATO	PROPN	NNP	Number=Sing	1	conj	1:conj:and|5:compound	_
 4	military	military	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	officers	officer	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	Kabul	Kabul	PROPN	NNP	Number=Sing	5	nmod	5:nmod	_
+7	Kabul	Kabul	PROPN	NNP	Number=Sing	5	nmod	5:nmod:in	_
 8	say	say	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	12	expl	12:expl	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 11	too	too	ADV	RB	_	12	advmod	12:advmod	_
 12	early	early	ADJ	JJ	Degree=Pos	8	ccomp	8:ccomp	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
-14	say	say	VERB	VB	VerbForm=Inf	12	advcl	12:advcl	_
+14	say	say	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:to	_
 15	whether	whether	SCONJ	IN	_	21	mark	21:mark	_
 16	Bush	Bush	PROPN	NNP	Number=Sing	19	nmod:poss	19:nmod:poss	SpaceAfter=No
 17	’s	's	PART	POS	_	16	case	16:case	_
@@ -757,19 +757,19 @@
 20	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	cop	21:cop	_
 21	instrumental	instrumental	ADJ	JJ	Degree=Pos	14	ccomp	14:ccomp	_
 22	in	in	SCONJ	IN	_	23	mark	23:mark	_
-23	persuading	persuade	VERB	VBG	VerbForm=Ger	21	advcl	21:advcl	_
-24	Musharraf	Musharraf	PROPN	NNP	Number=Sing	23	obj	23:obj	_
+23	persuading	persuade	VERB	VBG	VerbForm=Ger	21	advcl	21:advcl:in	_
+24	Musharraf	Musharraf	PROPN	NNP	Number=Sing	23	obj	23:obj|29:nsubj:xsubj	_
 25	and	and	CCONJ	CC	_	27	cc	27:cc	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
-27	ISI	ISI	PROPN	NNP	Number=Sing	24	conj	24:conj	_
+27	ISI	ISI	PROPN	NNP	Number=Sing	24	conj	23:obj|24:conj:and|29:nsubj:xsubj	_
 28	to	to	PART	TO	_	29	mark	29:mark	_
 29	pressure	pressure	VERB	VB	VerbForm=Inf	23	xcomp	23:xcomp	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
-31	Taliban	Taliban	PROPN	NNP	Number=Sing	29	obj	29:obj	_
+31	Taliban	Taliban	PROPN	NNP	Number=Sing	29	obj	29:obj|33:nsubj:xsubj	_
 32	to	to	PART	TO	_	33	mark	33:mark	_
 33	restrain	restrain	VERB	VB	VerbForm=Inf	29	xcomp	29:xcomp	_
 34	from	from	SCONJ	IN	_	35	mark	35:mark	_
-35	disrupting	disrupt	VERB	VBG	VerbForm=Ger	33	advcl	33:advcl	_
+35	disrupting	disrupt	VERB	VBG	VerbForm=Ger	33	advcl	33:advcl:from	_
 36	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	_
 37	elections	election	NOUN	NNS	Number=Plur	35	obj	35:obj	SpaceAfter=No
 38	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -783,11 +783,11 @@
 5	signs	sign	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	crackdown	crackdown	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+8	crackdown	crackdown	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
 9	on	on	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	Pakistan	Pakistan	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	side	side	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+12	side	side	NOUN	NN	Number=Sing	3	obl	3:obl:on	SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0032
@@ -798,11 +798,11 @@
 4	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	ccomp	18:ccomp	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	large	large	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	force	force	NOUN	NN	Number=Sing	4	obj	4:obj	_
+7	force	force	NOUN	NN	Number=Sing	4	obj	4:obj|14:nsubj:relsubj	_
 8	deployed	deploy	VERB	VBN	Tense=Past|VerbForm=Part	7	acl	7:acl	_
 9	in	in	ADP	IN	_	10	case	10:case	_
-10	Baluchistan	Baluchistan	PROPN	NNP	Number=Sing	8	obl	8:obl	_
-11	which	which	PRON	WDT	PronType=Rel	14	nsubj	14:nsubj	_
+10	Baluchistan	Baluchistan	PROPN	NNP	Number=Sing	8	obl	8:obl:in	_
+11	which	which	PRON	WDT	PronType=Rel	14	nsubj	7:ref	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
 13	not	not	PART	RB	_	14	advmod	14:advmod	_
 14	there	there	ADV	RB	PronType=Dem	7	acl:relcl	7:acl:relcl	_
@@ -827,21 +827,21 @@
 7	cooperation	cooperation	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
 8	between	between	ADP	IN	_	10	case	10:case	_
 9	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	forces	force	NOUN	NNS	Number=Plur	7	nmod	7:nmod	_
+10	forces	force	NOUN	NNS	Number=Plur	7	nmod	7:nmod:between	_
 11	on	on	ADP	IN	_	13	case	13:case	_
 12	both	both	DET	DT	_	13	det	13:det	_
-13	sides	side	NOUN	NNS	Number=Plur	7	nmod	7:nmod	_
+13	sides	side	NOUN	NNS	Number=Plur	7	nmod	7:nmod:on	_
 14	of	of	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	border	border	NOUN	NN	Number=Sing	13	nmod	13:nmod	SpaceAfter=No
+16	border	border	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	SpaceAfter=No
 17	,	,	PUNCT	,	_	24	punct	24:punct	_
 18	but	but	CCONJ	CC	_	24	cc	24:cc	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	movement	movement	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	_
 21	of	of	ADP	IN	_	22	case	22:case	_
-22	Taliban	Taliban	PROPN	NNP	Number=Sing	20	nmod	20:nmod	_
+22	Taliban	Taliban	PROPN	NNP	Number=Sing	20	nmod	20:nmod:of	_
 23	still	still	ADV	RB	_	24	advmod	24:advmod	_
-24	goes	go	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+24	goes	go	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:but|31:ccomp	_
 25	on	on	ADP	RP	_	24	compound:prt	24:compound:prt	_
 26	both	both	DET	DT	_	27	det	27:det	_
 27	ways	way	NOUN	NNS	Number=Plur	24	obl:npmod	24:obl:npmod	SpaceAfter=No
@@ -858,18 +858,18 @@
 3	days	day	NOUN	NNS	Number=Plur	6	nmod:npmod	6:nmod:npmod	_
 4	before	before	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	elections	election	NOUN	NNS	Number=Plur	8	obl	8:obl	_
+6	elections	election	NOUN	NNS	Number=Plur	8	obl	8:obl:before	_
 7	Pakistan	Pakistan	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
 8	closed	close	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 10	border	border	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	crossing	crossing	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	point	point	NOUN	NN	Number=Sing	8	obj	8:obj	_
+12	point	point	NOUN	NN	Number=Sing	8	obj	8:obj|22:nsubj:relsubj	_
 13	at	at	ADP	IN	_	14	case	14:case	_
-14	Chaman	Chaman	PROPN	NNP	Number=Sing	12	nmod	12:nmod	_
+14	Chaman	Chaman	PROPN	NNP	Number=Sing	12	nmod	12:nmod:at	_
 15	in	in	ADP	IN	_	16	case	16:case	_
-16	Baluchistan	Baluchistan	PROPN	NNP	Number=Sing	14	nmod	14:nmod	_
-17	which	which	PRON	WDT	PronType=Rel	22	nsubj	22:nsubj	_
+16	Baluchistan	Baluchistan	PROPN	NNP	Number=Sing	14	nmod	14:nmod:in	_
+17	which	which	PRON	WDT	PronType=Rel	22	nsubj	12:ref	_
 18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
 20	key	key	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
@@ -877,9 +877,9 @@
 22	point	point	NOUN	NN	Number=Sing	12	acl:relcl	12:acl:relcl	_
 23	for	for	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
-25	Taliban	Taliban	PROPN	NNP	Number=Sing	22	nmod	22:nmod	_
+25	Taliban	Taliban	PROPN	NNP	Number=Sing	22	nmod	22:nmod:for	_
 26	into	into	ADP	IN	_	27	case	27:case	_
-27	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	22	nmod	22:nmod	SpaceAfter=No
+27	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	22	nmod	22:nmod:into	SpaceAfter=No
 28	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0035
@@ -891,20 +891,20 @@
 5	say	say	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	regular	regular	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 7	army	army	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	officers	officer	NOUN	NNS	Number=Plur	26	nsubj	26:nsubj	_
+8	officers	officer	NOUN	NNS	Number=Plur	26	nsubj	26:nsubj|28:nsubj:xsubj	_
 9	-	-	PUNCT	,	_	8	punct	8:punct	_
 10	many	many	ADJ	JJ	Degree=Pos	8	acl:relcl	8:acl:relcl	_
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	10	nmod	10:nmod	_
+12	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	10	nmod	10:nmod:of	_
 13	Pashtun	pashtun	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 14	-	-	PUNCT	,	_	8	punct	8:punct	_
 15	leading	lead	VERB	VBG	VerbForm=Ger	8	acl	8:acl	_
-16	units	unit	NOUN	NNS	Number=Plur	15	obj	15:obj	_
+16	units	unit	NOUN	NNS	Number=Plur	15	obj	15:obj|25:nsubj:relsubj	_
 17	of	of	ADP	IN	_	20	case	20:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 19	Frontier	Frontier	PROPN	NNP	Number=Sing	20	compound	20:compound	_
-20	Corps	Corps	PROPN	NNP	Number=Sing	16	nmod	16:nmod	_
-21	who	who	PRON	WP	PronType=Rel	25	nsubj	25:nsubj	_
+20	Corps	Corps	PROPN	NNP	Number=Sing	16	nmod	16:nmod:of	_
+21	who	who	PRON	WP	PronType=Rel	25	nsubj	16:ref	_
 22	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	25	cop	25:cop	_
 23	on	on	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
@@ -914,13 +914,13 @@
 28	sympathetic	sympathetic	ADJ	JJ	Degree=Pos	26	xcomp	26:xcomp	_
 29	to	to	ADP	IN	_	31	case	31:case	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
-31	Taliban	Taliban	PROPN	NNP	Number=Sing	28	obl	28:obl	_
+31	Taliban	Taliban	PROPN	NNP	Number=Sing	28	obl	28:obl:to	_
 32	and	and	CCONJ	CC	_	34	cc	34:cc	_
 33	the	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	_
-34	mullahs	mulla	NOUN	NNS	Number=Plur	31	conj	31:conj	_
+34	mullahs	mulla	NOUN	NNS	Number=Plur	31	conj	28:obl:to|31:conj:and	_
 35	of	of	ADP	IN	_	37	case	37:case	_
 36	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	_
-37	JUI	JUI	PROPN	NNP	Number=Sing	34	nmod	34:nmod	SpaceAfter=No
+37	JUI	JUI	PROPN	NNP	Number=Sing	34	nmod	34:nmod:of	SpaceAfter=No
 38	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0036
@@ -928,28 +928,28 @@
 1	At	at	ADP	IN	_	4	case	4:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 3	same	same	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	time	time	NOUN	NN	Number=Sing	8	obl	8:obl	_
+4	time	time	NOUN	NN	Number=Sing	8	obl	8:obl:at	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	US	US	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
+6	US	US	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj|8:nsubj:xsubj	_
 7	remains	remain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 8	oblivious	oblivious	ADJ	JJ	Degree=Pos	7	xcomp	7:xcomp	_
 9	of	of	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	serious	serious	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	problems	problem	NOUN	NNS	Number=Plur	8	obl	8:obl	_
+12	problems	problem	NOUN	NNS	Number=Plur	8	obl	8:obl:of|20:obl:relobj	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	political	political	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	fallout	fallout	NOUN	NN	Number=Sing	12	conj	12:conj	_
-16	which	which	PRON	WDT	PronType=Rel	20	obj	20:obj	_
+15	fallout	fallout	NOUN	NN	Number=Sing	12	conj	8:obl:of|12:conj:and|20:obl:relobj	_
+16	which	which	PRON	WDT	PronType=Rel	20	obj	12:ref	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 18	army	army	NOUN	NN	Number=Sing	20	nsubj	20:nsubj	_
 19	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
 20	facing	face	VERB	VBG	Tense=Pres|VerbForm=Part	12	acl:relcl	12:acl:relcl	_
 21	in	in	ADP	IN	_	23	case	23:case	_
 22	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
-23	operations	operation	NOUN	NNS	Number=Plur	20	obl	20:obl	_
+23	operations	operation	NOUN	NNS	Number=Plur	20	obl	20:obl:in	_
 24	in	in	ADP	IN	_	25	case	25:case	_
-25	Waziristan	Waziristan	PROPN	NNP	Number=Sing	23	nmod	23:nmod	SpaceAfter=No
+25	Waziristan	Waziristan	PROPN	NNP	Number=Sing	23	nmod	23:nmod:in	SpaceAfter=No
 26	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0037
@@ -965,19 +965,19 @@
 9	fallout	fallout	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
 10	,	,	PUNCT	,	_	12	punct	12:punct	_
 11	growing	grow	VERB	VBG	VerbForm=Ger	12	amod	12:amod	_
-12	anti-Americanism	anti-americanism	NOUN	NN	Number=Sing	9	conj	9:conj	_
+12	anti-Americanism	anti-americanism	NOUN	NN	Number=Sing	9	conj	6:obj|9:conj:and	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	anti-army	anti-army	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	feeling	feeling	NOUN	NN	Number=Sing	9	conj	9:conj	_
+15	feeling	feeling	NOUN	NN	Number=Sing	9	conj	6:obj|9:conj:and	_
 16	in	in	ADP	IN	_	19	case	19:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 18	tribal	tribal	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-19	areas	area	NOUN	NNS	Number=Plur	9	nmod	9:nmod	_
+19	areas	area	NOUN	NNS	Number=Plur	9	nmod	9:nmod:in	_
 20	but	but	CCONJ	CC	_	24	cc	24:cc	_
 21	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	24	nsubj	24:nsubj	_
 22	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	aux	24:aux	_
 23	also	also	ADV	RB	_	24	advmod	24:advmod	_
-24	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	6	conj	6:conj	_
+24	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	6	conj	6:conj:but	_
 25	heavy	heavy	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
 26	casualties	casualty	NOUN	NNS	Number=Plur	24	obj	24:obj	_
 27	-	-	PUNCT	:	_	6	punct	6:punct	SpaceAfter=No
@@ -992,9 +992,9 @@
 36	killed	kill	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	parataxis	6:parataxis	_
 37	in	in	ADP	IN	_	39	case	39:case	_
 38	the	the	DET	DT	Definite=Def|PronType=Art	39	det	39:det	_
-39	region	region	NOUN	NN	Number=Sing	36	obl	36:obl	_
+39	region	region	NOUN	NN	Number=Sing	36	obl	36:obl:in	_
 40	since	since	ADP	IN	_	41	case	41:case	_
-41	March	March	PROPN	NNP	Number=Sing	36	obl	36:obl	SpaceAfter=No
+41	March	March	PROPN	NNP	Number=Sing	36	obl	36:obl:since	SpaceAfter=No
 42	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0038
@@ -1013,10 +1013,10 @@
 12	intelligence	intelligence	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	about	about	ADP	IN	_	15	case	15:case	_
 14	Taliban	Taliban	PROPN	NNP	Number=Sing	15	compound	15:compound	_
-15	leaders	leader	NOUN	NNS	Number=Plur	12	nmod	12:nmod	_
+15	leaders	leader	NOUN	NNS	Number=Plur	12	nmod	12:nmod:about	_
 16	hiding	hide	VERB	VBG	VerbForm=Ger	15	acl	15:acl	_
 17	in	in	ADP	IN	_	18	case	18:case	_
-18	Baluchistan	Baluchistan	PROPN	NNP	Number=Sing	16	obl	16:obl	SpaceAfter=No
+18	Baluchistan	Baluchistan	PROPN	NNP	Number=Sing	16	obl	16:obl:in	SpaceAfter=No
 19	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0039
@@ -1031,7 +1031,7 @@
 # text = US and Afghan intelligence will shortly be presenting the ISI with a list of Taliban extremists and their suspected whereabouts.
 1	US	US	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	Afghan	afghan	ADJ	JJ	Degree=Pos	1	conj	1:conj	_
+3	Afghan	afghan	ADJ	JJ	Degree=Pos	1	conj	1:conj:and|4:compound	_
 4	intelligence	intelligence	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 5	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 6	shortly	shortly	ADV	RB	_	8	advmod	8:advmod	_
@@ -1041,14 +1041,14 @@
 10	ISI	ISI	PROPN	NNP	Number=Sing	8	obj	8:obj	_
 11	with	with	ADP	IN	_	13	case	13:case	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
-13	list	list	NOUN	NN	Number=Sing	8	obl	8:obl	_
+13	list	list	NOUN	NN	Number=Sing	8	obl	8:obl:with	_
 14	of	of	ADP	IN	_	16	case	16:case	_
 15	Taliban	Taliban	PROPN	NNP	Number=Sing	16	compound	16:compound	_
-16	extremists	extremist	NOUN	NNS	Number=Plur	13	nmod	13:nmod	_
+16	extremists	extremist	NOUN	NNS	Number=Plur	13	nmod	13:nmod:of	_
 17	and	and	CCONJ	CC	_	20	cc	20:cc	_
 18	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
 19	suspected	suspect	VERB	VBN	Tense=Past|VerbForm=Part	20	amod	20:amod	_
-20	whereabouts	whereabouts	NOUN	NNS	Number=Plur	16	conj	16:conj	SpaceAfter=No
+20	whereabouts	whereabouts	NOUN	NNS	Number=Plur	16	conj	13:nmod:of|16:conj:and	SpaceAfter=No
 21	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0041
@@ -1061,34 +1061,34 @@
 6	covert	covert	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	attempts	attempt	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
 8	under	under	ADP	IN	_	9	case	9:case	_
-9	way	way	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
+9	way	way	NOUN	NN	Number=Sing	7	nmod	7:nmod:under	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	try	try	VERB	VB	VerbForm=Inf	7	acl	7:acl	_
+11	try	try	VERB	VB	VerbForm=Inf	7	acl	7:acl:to	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	bring	bring	VERB	VB	VerbForm=Inf	11	conj	11:conj	_
+13	bring	bring	VERB	VB	VerbForm=Inf	11	conj	7:acl:to|11:conj:and	_
 14	back	back	ADV	RB	_	13	advmod	13:advmod	_
 15	to	to	ADP	IN	_	16	case	16:case	_
-16	Kabul	Kabul	PROPN	NNP	Number=Sing	14	obl	14:obl	_
+16	Kabul	Kabul	PROPN	NNP	Number=Sing	14	obl	14:obl:to	_
 17	leading	lead	VERB	VBG	VerbForm=Ger	19	amod	19:amod	_
 18	Taliban	Taliban	PROPN	NNP	Number=Sing	19	compound	19:compound	_
-19	commanders	commander	NOUN	NNS	Number=Plur	13	obj	13:obj	SpaceAfter=No
+19	commanders	commander	NOUN	NNS	Number=Plur	13	obj	13:obj|24:nsubj:relsubj|30:nsubj:relsubj	SpaceAfter=No
 20	,	,	PUNCT	,	_	19	punct	19:punct	_
-21	who	who	PRON	WP	PronType=Rel	24	nsubj	24:nsubj	_
+21	who	who	PRON	WP	PronType=Rel	24	nsubj	19:ref	_
 22	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	24	aux	24:aux	_
 23	been	be	AUX	VBN	Tense=Past|VerbForm=Part	24	aux	24:aux	_
 24	living	live	VERB	VBG	Tense=Pres|VerbForm=Part	19	acl:relcl	19:acl:relcl	_
 25	quietly	quietly	ADV	RB	_	24	advmod	24:advmod	_
 26	in	in	ADP	IN	_	27	case	27:case	_
-27	Pakistan	Pakistan	PROPN	NNP	Number=Sing	24	obl	24:obl	_
+27	Pakistan	Pakistan	PROPN	NNP	Number=Sing	24	obl	24:obl:in	_
 28	and	and	CCONJ	CC	_	30	cc	30:cc	_
 29	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	30	aux	30:aux	_
-30	taken	take	VERB	VBN	Tense=Past|VerbForm=Part	24	conj	24:conj	_
+30	taken	take	VERB	VBN	Tense=Past|VerbForm=Part	24	conj	19:acl:relcl|24:conj:and	_
 31	no	no	DET	DT	_	32	det	32:det	_
 32	part	part	NOUN	NN	Number=Sing	30	obj	30:obj	_
 33	in	in	ADP	IN	_	36	case	36:case	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	36	det	36:det	_
 35	Taliban	Taliban	PROPN	NNP	Number=Sing	36	compound	36:compound	_
-36	insurgency	insurgency	NOUN	NN	Number=Sing	30	obl	30:obl	SpaceAfter=No
+36	insurgency	insurgency	NOUN	NN	Number=Sing	30	obl	30:obl:in	SpaceAfter=No
 37	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0042
@@ -1096,9 +1096,9 @@
 1	With	with	ADP	IN	_	4	case	4:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 3	Taliban	Taliban	PROPN	NNP	Number=Sing	4	compound	4:compound	_
-4	failure	failure	NOUN	NN	Number=Sing	16	obl	16:obl	_
+4	failure	failure	NOUN	NN	Number=Sing	16	obl	16:obl:with	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
-6	disrupt	disrupt	VERB	VB	VerbForm=Inf	4	acl	4:acl	_
+6	disrupt	disrupt	VERB	VB	VerbForm=Inf	4	acl	4:acl:to	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	Afghan	afghan	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	elections	election	NOUN	NNS	Number=Plur	6	obj	6:obj	SpaceAfter=No
@@ -1112,8 +1112,8 @@
 17	from	from	ADP	IN	_	20	case	20:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 19	mainstream	mainstream	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-20	Taliban	Taliban	PROPN	NNP	Number=Sing	16	obl	16:obl	_
-21	who	who	PRON	WP	PronType=Rel	22	nsubj	22:nsubj	_
+20	Taliban	Taliban	PROPN	NNP	Number=Sing	16	obl	16:obl:from|22:nsubj:relsubj|24:nsubj:xsubj	_
+21	who	who	PRON	WP	PronType=Rel	22	nsubj	20:ref	_
 22	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	acl:relcl	20:acl:relcl	_
 23	to	to	PART	TO	_	24	mark	24:mark	_
 24	return	return	VERB	VB	VerbForm=Inf	22	xcomp	22:xcomp	_
@@ -1123,7 +1123,7 @@
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0043
 # text = Until now Pakistan has not facilitated such a return and clearly it cannot happen until there is both a pull from Kabul and a push from Islamabad.
 1	Until	until	ADP	IN	_	2	case	2:case	_
-2	now	now	ADV	RB	_	6	obl	6:obl	_
+2	now	now	ADV	RB	_	6	obl	6:obl:until	_
 3	Pakistan	Pakistan	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
 4	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
 5	not	not	PART	RB	_	6	advmod	6:advmod	_
@@ -1136,48 +1136,48 @@
 12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 13	can	can	AUX	MD	VerbForm=Fin	15	aux	15:aux	SpaceAfter=No
 14	not	not	PART	RB	_	15	advmod	15:advmod	_
-15	happen	happen	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+15	happen	happen	VERB	VB	VerbForm=Inf	6	conj	6:conj:and	_
 16	until	until	SCONJ	IN	_	18	mark	18:mark	_
 17	there	there	PRON	EX	_	18	expl	18:expl	_
-18	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl	_
+18	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl:until	_
 19	both	both	CCONJ	CC	_	21	cc:preconj	21:cc:preconj	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 21	pull	pull	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
 22	from	from	ADP	IN	_	23	case	23:case	_
-23	Kabul	Kabul	PROPN	NNP	Number=Sing	21	nmod	21:nmod	_
+23	Kabul	Kabul	PROPN	NNP	Number=Sing	21	nmod	21:nmod:from	_
 24	and	and	CCONJ	CC	_	26	cc	26:cc	_
 25	a	a	DET	DT	Definite=Ind|PronType=Art	26	det	26:det	_
-26	push	push	NOUN	NN	Number=Sing	21	conj	21:conj	_
+26	push	push	NOUN	NN	Number=Sing	21	conj	18:nsubj|21:conj:and	_
 27	from	from	ADP	IN	_	28	case	28:case	_
-28	Islamabad	Islamabad	PROPN	NNP	Number=Sing	26	nmod	26:nmod	SpaceAfter=No
+28	Islamabad	Islamabad	PROPN	NNP	Number=Sing	26	nmod	26:nmod:from	SpaceAfter=No
 29	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0044
 # text = With President Karzai certain to win the elections and the demotion of key former Northern Alliance figures such as General Fahim and warlord Ismail Khan, there is now little reason for moderate Taliban leaders to fear reprisals from former Northern Alliance figures if they return home.
 1	With	with	ADP	IN	_	4	mark	4:mark	_
-2	President	President	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
+2	President	President	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj|11:nsubj	_
 3	Karzai	Karzai	PROPN	NNP	Number=Sing	2	flat	2:flat	_
-4	certain	certain	ADJ	JJ	Degree=Pos	28	advcl	28:advcl	_
+4	certain	certain	ADJ	JJ	Degree=Pos	28	advcl	28:advcl:with	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	win	win	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	elections	election	NOUN	NNS	Number=Plur	6	obj	6:obj	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	demotion	demotion	NOUN	NN	Number=Sing	4	conj	4:conj	_
+11	demotion	demotion	NOUN	NN	Number=Sing	4	conj	4:conj:and|28:advcl:with	_
 12	of	of	ADP	IN	_	17	case	17:case	_
 13	key	key	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 14	former	former	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 15	Northern	Northern	PROPN	NNP	Number=Sing	16	compound	16:compound	_
 16	Alliance	Alliance	PROPN	NNP	Number=Sing	17	compound	17:compound	_
-17	figures	figure	NOUN	NNS	Number=Plur	11	nmod	11:nmod	_
+17	figures	figure	NOUN	NNS	Number=Plur	11	nmod	11:nmod:of	_
 18	such	such	ADJ	JJ	Degree=Pos	21	case	21:case	_
 19	as	as	ADP	IN	_	18	fixed	18:fixed	_
 20	General	General	PROPN	NNP	Number=Sing	21	compound	21:compound	_
-21	Fahim	Fahim	PROPN	NNP	Number=Sing	17	nmod	17:nmod	_
+21	Fahim	Fahim	PROPN	NNP	Number=Sing	17	nmod	17:nmod:such_as	_
 22	and	and	CCONJ	CC	_	24	cc	24:cc	_
 23	warlord	warlord	NOUN	NN	Number=Sing	24	compound	24:compound	_
-24	Ismail	Ismail	PROPN	NNP	Number=Sing	21	conj	21:conj	_
+24	Ismail	Ismail	PROPN	NNP	Number=Sing	21	conj	17:nmod:such_as|21:conj:and	_
 25	Khan	Khan	PROPN	NNP	Number=Sing	24	flat	24:flat	SpaceAfter=No
 26	,	,	PUNCT	,	_	28	punct	28:punct	_
 27	there	there	PRON	EX	_	28	expl	28:expl	_
@@ -1190,16 +1190,16 @@
 34	Taliban	Taliban	PROPN	NNP	Number=Sing	35	compound	35:compound	_
 35	leaders	leader	NOUN	NNS	Number=Plur	37	nsubj	37:nsubj	_
 36	to	to	PART	TO	_	37	mark	37:mark	_
-37	fear	fear	VERB	VB	VerbForm=Inf	31	acl	31:acl	_
+37	fear	fear	VERB	VB	VerbForm=Inf	31	acl	31:acl:to	_
 38	reprisals	reprisal	NOUN	NNS	Number=Plur	37	obj	37:obj	_
 39	from	from	ADP	IN	_	43	case	43:case	_
 40	former	former	ADJ	JJ	Degree=Pos	43	amod	43:amod	_
 41	Northern	Northern	PROPN	NNP	Number=Sing	42	compound	42:compound	_
 42	Alliance	Alliance	PROPN	NNP	Number=Sing	43	compound	43:compound	_
-43	figures	figure	NOUN	NNS	Number=Plur	38	nmod	38:nmod	_
+43	figures	figure	NOUN	NNS	Number=Plur	38	nmod	38:nmod:from	_
 44	if	if	SCONJ	IN	_	46	mark	46:mark	_
 45	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	46	nsubj	46:nsubj	_
-46	return	return	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	28	advcl	28:advcl	_
+46	return	return	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	28	advcl	28:advcl:if	_
 47	home	home	ADV	RB	_	46	advmod	46:advmod	SpaceAfter=No
 48	.	.	PUNCT	.	_	28	punct	28:punct	_
 
@@ -1215,12 +1215,12 @@
 8	for	for	SCONJ	IN	_	11	mark	11:mark	_
 9	Pakistan	Pakistan	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	help	help	VERB	VB	VerbForm=Inf	7	acl	7:acl	_
+11	help	help	VERB	VB	VerbForm=Inf	7	acl	7:acl:to	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	return	return	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	of	of	ADP	IN	_	16	case	16:case	_
 15	moderate	moderate	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	Taliban	Taliban	PROPN	NNP	Number=Sing	13	nmod	13:nmod	SpaceAfter=No
+16	Taliban	Taliban	PROPN	NNP	Number=Sing	13	nmod	13:nmod:of	SpaceAfter=No
 17	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0046
@@ -1231,37 +1231,37 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	appointment	appointment	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	on	on	ADP	IN	_	7	case	7:case	_
-7	October	October	PROPN	NNP	Number=Sing	5	nmod	5:nmod	_
+7	October	October	PROPN	NNP	Number=Sing	5	nmod	5:nmod:on	_
 8	3	3	NUM	CD	NumType=Card	7	nummod	7:nummod	_
 9	of	of	ADP	IN	_	12	case	12:case	_
 10	Lt.	Lt.	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 11	General	General	PROPN	NNP	Number=Sing	10	flat	10:flat	_
-12	Ashfaq	Ashfaq	PROPN	NNP	Number=Sing	5	nmod	5:nmod	_
+12	Ashfaq	Ashfaq	PROPN	NNP	Number=Sing	5	nmod	5:nmod:of	_
 13	Kiyani	Kiyani	PROPN	NNP	Number=Sing	12	flat	12:flat	_
 14	as	as	ADP	IN	_	18	case	18:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 16	new	new	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 17	ISI	ISI	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-18	chief	chief	NOUN	NN	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+18	chief	chief	NOUN	NN	Number=Sing	5	nmod	5:nmod:as	SpaceAfter=No
 19	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0047
 # text = Kayani is well known and liked in Kabul as during the last year he led the Pakistani delegation in the tripartite military meetings with the Afghan and US military on issues related to border issues.
-1	Kayani	Kayani	PROPN	NNP	Number=Sing	4	nsubj:pass	4:nsubj:pass	_
+1	Kayani	Kayani	PROPN	NNP	Number=Sing	4	nsubj:pass	4:nsubj:pass|6:nsubj:pass	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 3	well	well	ADV	RB	Degree=Pos	4	advmod	4:advmod	_
 4	known	know	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	liked	like	VERB	VBN	Tense=Past|VerbForm=Part	4	conj	4:conj	_
+6	liked	like	VERB	VBN	Tense=Past|VerbForm=Part	4	conj	4:conj:and	_
 7	in	in	ADP	IN	_	8	case	8:case	_
-8	Kabul	Kabul	PROPN	NNP	Number=Sing	6	obl	6:obl	_
+8	Kabul	Kabul	PROPN	NNP	Number=Sing	6	obl	6:obl:in	_
 9	as	as	SCONJ	IN	_	15	mark	15:mark	_
 10	during	during	ADP	IN	_	13	case	13:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	last	last	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	year	year	NOUN	NN	Number=Sing	15	obl	15:obl	_
+13	year	year	NOUN	NN	Number=Sing	15	obl	15:obl:during	_
 14	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
-15	led	lead	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	advcl	6:advcl	_
+15	led	lead	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:as	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	Pakistani	pakistani	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	delegation	delegation	NOUN	NN	Number=Sing	15	obj	15:obj	_
@@ -1269,24 +1269,24 @@
 20	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 21	tripartite	tripartite	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
 22	military	military	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
-23	meetings	meeting	NOUN	NNS	Number=Plur	15	obl	15:obl	_
+23	meetings	meeting	NOUN	NNS	Number=Plur	15	obl	15:obl:in	_
 24	with	with	ADP	IN	_	29	case	29:case	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
 26	Afghan	afghan	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
 27	and	and	CCONJ	CC	_	28	cc	28:cc	_
-28	US	US	PROPN	NNP	Number=Sing	26	conj	26:conj	_
-29	military	military	NOUN	NN	Number=Sing	23	nmod	23:nmod	_
+28	US	US	PROPN	NNP	Number=Sing	26	conj	26:conj:and|29:amod	_
+29	military	military	NOUN	NN	Number=Sing	23	nmod	23:nmod:with	_
 30	on	on	ADP	IN	_	31	case	31:case	_
-31	issues	issue	NOUN	NNS	Number=Plur	23	nmod	23:nmod	_
+31	issues	issue	NOUN	NNS	Number=Plur	23	nmod	23:nmod:on	_
 32	related	related	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
 33	to	to	ADP	IN	_	35	case	35:case	_
 34	border	border	NOUN	NN	Number=Sing	35	compound	35:compound	_
-35	issues	issue	NOUN	NNS	Number=Plur	32	obl	32:obl	SpaceAfter=No
+35	issues	issue	NOUN	NNS	Number=Plur	32	obl	32:obl:to	SpaceAfter=No
 36	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0048
 # text = Karzai also has to deal with the stepped up rivalry between India and Pakistan in Afghanistan.
-1	Karzai	Karzai	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
+1	Karzai	Karzai	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	also	also	ADV	RB	_	3	advmod	3:advmod	_
 3	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -1295,13 +1295,13 @@
 7	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 8	stepped	step	VERB	VBN	Tense=Past|VerbForm=Part	10	amod	10:amod	_
 9	up	up	ADP	RP	_	8	compound:prt	8:compound:prt	_
-10	rivalry	rivalry	NOUN	NN	Number=Sing	5	obl	5:obl	_
+10	rivalry	rivalry	NOUN	NN	Number=Sing	5	obl	5:obl:with	_
 11	between	between	ADP	IN	_	12	case	12:case	_
-12	India	India	PROPN	NNP	Number=Sing	10	nmod	10:nmod	_
+12	India	India	PROPN	NNP	Number=Sing	10	nmod	10:nmod:between	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	Pakistan	Pakistan	PROPN	NNP	Number=Sing	12	conj	12:conj	_
+14	Pakistan	Pakistan	PROPN	NNP	Number=Sing	12	conj	10:nmod:between|12:conj:and	_
 15	in	in	ADP	IN	_	16	case	16:case	_
-16	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	10	nmod	10:nmod	SpaceAfter=No
+16	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	10	nmod	10:nmod:in	SpaceAfter=No
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0049
@@ -1311,23 +1311,23 @@
 3	New	New	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4	Delhi	Delhi	PROPN	NNP	Number=Sing	2	obj	2:obj	_
 5	of	of	SCONJ	IN	_	6	mark	6:mark	_
-6	using	use	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	_
+6	using	use	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:of	_
 7	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	consulates	consulate	NOUN	NNS	Number=Plur	6	obj	6:obj	_
+8	consulates	consulate	NOUN	NNS	Number=Plur	6	obj	6:obj|14:nsubj:xsubj	_
 9	in	in	ADP	IN	_	10	case	10:case	_
-10	Kandahar	Kandahar	PROPN	NNP	Number=Sing	8	nmod	8:nmod	_
+10	Kandahar	Kandahar	PROPN	NNP	Number=Sing	8	nmod	8:nmod:in	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	Jalalabad	Jalalabad	PROPN	NNP	Number=Sing	10	conj	10:conj	_
+12	Jalalabad	Jalalabad	PROPN	NNP	Number=Sing	10	conj	8:nmod:in|10:conj:and	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	train	train	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 15	Balochi	balochi	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	insurgents	insurgent	NOUN	NNS	Number=Plur	14	obj	14:obj	_
-17	who	who	PRON	WP	PronType=Rel	19	nsubj	19:nsubj	_
+16	insurgents	insurgent	NOUN	NNS	Number=Plur	14	obj	14:obj|19:nsubj:relsubj	_
+17	who	who	PRON	WP	PronType=Rel	19	nsubj	16:ref	_
 18	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
 19	active	active	ADJ	JJ	Degree=Pos	16	acl:relcl	16:acl:relcl	_
 20	in	in	ADP	IN	_	22	case	22:case	_
 21	Pakistani	pakistani	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	Balochistan	Balochistan	PROPN	NNP	Number=Sing	19	obl	19:obl	SpaceAfter=No
+22	Balochistan	Balochistan	PROPN	NNP	Number=Sing	19	obl	19:obl:in	SpaceAfter=No
 23	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0050
@@ -1340,17 +1340,17 @@
 6	as	as	ADV	RB	_	7	advmod	7:advmod	_
 7	many	many	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 8	as	as	ADP	IN	_	9	mark	9:mark	_
-9	42	42	NUM	CD	NumType=Card	6	advcl	6:advcl	_
+9	42	42	NUM	CD	NumType=Card	6	advcl	6:advcl:as	_
 10	RAW	RAW	PROPN	NNP	Number=Sing	11	compound	11:compound	_
 11	agents	agent	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
 12	based	base	VERB	VBN	Tense=Past|VerbForm=Part	11	acl	11:acl	_
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	Kandahar	Kandahar	PROPN	NNP	Number=Sing	12	obl	12:obl	_
+14	Kandahar	Kandahar	PROPN	NNP	Number=Sing	12	obl	12:obl:in	_
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
 16	another	another	DET	DT	_	17	det	17:det	_
-17	12	12	NUM	CD	NumType=Card	11	conj	11:conj	_
+17	12	12	NUM	CD	NumType=Card	11	conj	5:nsubj|11:conj:and	_
 18	in	in	ADP	IN	_	19	case	19:case	_
-19	Jalalabad	Jalalabad	PROPN	NNP	Number=Sing	17	nmod	17:nmod	SpaceAfter=No
+19	Jalalabad	Jalalabad	PROPN	NNP	Number=Sing	17	nmod	17:nmod:in	SpaceAfter=No
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0051
@@ -1365,7 +1365,7 @@
 8	unless	unless	SCONJ	IN	_	11	mark	11:mark	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 10	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
-11	undermining	undermine	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl	_
+11	undermining	undermine	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:unless	_
 12	Pakistan	Pakistan	PROPN	NNP	Number=Sing	11	obj	11:obj	SpaceAfter=No
 13	,	,	PUNCT	,	_	15	punct	15:punct	SpaceAfter=No
 14	’’	''	PUNCT	''	_	15	punct	15:punct	_
@@ -1380,7 +1380,7 @@
 1	Both	both	CCONJ	CC	_	2	cc:preconj	2:cc:preconj	_
 2	India	India	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	2	conj	2:conj	_
+4	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	2	conj	2:conj:and|5:nsubj	_
 5	deny	deny	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	claim	claim	NOUN	NN	Number=Sing	5	obj	5:obj	SpaceAfter=No
@@ -1398,15 +1398,15 @@
 8	of	of	ADP	IN	_	11	case	11:case	_
 9	an	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	Indian	indian	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	hand	hand	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
+11	hand	hand	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	_
 12	using	use	VERB	VBG	VerbForm=Ger	11	acl	11:acl	_
 13	Afghan	afghan	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	soil	soil	NOUN	NN	Number=Sing	12	obj	12:obj	_
+14	soil	soil	NOUN	NN	Number=Sing	12	obj	12:obj|16:nsubj:xsubj	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	work	work	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
 17	against	against	ADP	IN	_	19	case	19:case	_
 18	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
-19	neighbours	neighbour	NOUN	NNS	Number=Plur	16	obl	16:obl	_
+19	neighbours	neighbour	NOUN	NNS	Number=Plur	16	obl	16:obl:against	_
 20	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	22	nsubj	22:nsubj	_
 21	will	will	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
 22	take	take	VERB	VB	VerbForm=Inf	28	ccomp	28:ccomp	_
@@ -1425,7 +1425,7 @@
 35	’s	's	PART	POS	_	34	case	34:case	_
 36	National	National	PROPN	NNP	Number=Sing	37	compound	37:compound	_
 37	Security	Security	PROPN	NNP	Number=Sing	38	compound	38:compound	_
-38	Directorate	Directorate	PROPN	NNP	Number=Sing	32	nmod	32:nmod	SpaceAfter=No
+38	Directorate	Directorate	PROPN	NNP	Number=Sing	32	nmod	32:nmod:of	SpaceAfter=No
 39	.	.	PUNCT	.	_	28	punct	28:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0054
@@ -1444,13 +1444,13 @@
 12	adverse	adverse	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	action	action	NOUN	NN	Number=Sing	24	nsubj:pass	24:nsubj:pass	_
 14	against	against	ADP	IN	_	15	case	15:case	_
-15	Pakistan	Pakistan	PROPN	NNP	Number=Sing	13	nmod	13:nmod	_
+15	Pakistan	Pakistan	PROPN	NNP	Number=Sing	13	nmod	13:nmod:against	_
 16	taken	take	VERB	VBN	Tense=Past|VerbForm=Part	13	acl	13:acl	_
 17	by	by	ADP	IN	_	19	case	19:case	_
 18	Indian	indian	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-19	diplomats	diplomat	NOUN	NNS	Number=Plur	16	obl	16:obl	_
+19	diplomats	diplomat	NOUN	NNS	Number=Plur	16	obl	16:obl:by	_
 20	inside	inside	ADP	IN	_	21	case	21:case	_
-21	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	19	nmod	19:nmod	_
+21	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	19	nmod	19:nmod:inside	_
 22	would	would	AUX	MD	VerbForm=Fin	24	aux	24:aux	_
 23	be	be	AUX	VB	VerbForm=Inf	24	aux:pass	24:aux:pass	_
 24	acted	act	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	ccomp	7:ccomp	_
@@ -1465,7 +1465,7 @@
 3	diplomats	diplomat	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
 4	and	and	CCONJ	CC	_	6	cc	6:cc	_
 5	military	military	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	officials	official	NOUN	NNS	Number=Plur	3	conj	3:conj	_
+6	officials	official	NOUN	NNS	Number=Plur	3	conj	3:conj:and|8:nsubj	_
 7	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 8	warned	warn	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 9	India	India	PROPN	NNP	Number=Sing	8	obj	8:obj	_
@@ -1478,21 +1478,21 @@
 2	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 3	major	major	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 4	regional	regional	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	shift	shift	NOUN	NN	Number=Sing	29	obl	29:obl	_
+5	shift	shift	NOUN	NN	Number=Sing	29	obl	29:obl:in	_
 6	reflecting	reflect	VERB	VBG	VerbForm=Ger	5	acl	5:acl	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 8	newly	newly	ADV	RB	_	9	advmod	9:advmod	_
 9	strengthened	strengthen	VERB	VBN	Tense=Past|VerbForm=Part	10	amod	10:amod	_
 10	position	position	NOUN	NN	Number=Sing	6	obj	6:obj	_
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	Karzai	Karzai	PROPN	NNP	Number=Sing	10	nmod	10:nmod	SpaceAfter=No
+12	Karzai	Karzai	PROPN	NNP	Number=Sing	10	nmod	10:nmod:of	SpaceAfter=No
 13	,	,	PUNCT	,	_	29	punct	29:punct	_
-14	Iran	Iran	PROPN	NNP	Number=Sing	29	nsubj	29:nsubj	SpaceAfter=No
+14	Iran	Iran	PROPN	NNP	Number=Sing	29	nsubj	22:nsubj:relsubj|29:nsubj	SpaceAfter=No
 15	,	,	PUNCT	,	_	16	punct	16:punct	_
-16	Russia	Russia	PROPN	NNP	Number=Sing	14	conj	14:conj	_
+16	Russia	Russia	PROPN	NNP	Number=Sing	14	conj	14:conj:and|22:nsubj:relsubj|29:nsubj	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	India	India	PROPN	NNP	Number=Sing	14	conj	14:conj	_
-19	which	which	PRON	WDT	PronType=Rel	22	nsubj	22:nsubj	_
+18	India	India	PROPN	NNP	Number=Sing	14	conj	14:conj:and|22:nsubj:relsubj|29:nsubj	_
+19	which	which	PRON	WDT	PronType=Rel	22	nsubj	14:ref	_
 20	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	aux	22:aux	_
 21	traditionally	traditionally	ADV	RB	_	22	advmod	22:advmod	_
 22	backed	back	VERB	VBN	Tense=Past|VerbForm=Part	14	acl:relcl	14:acl:relcl	_
@@ -1506,24 +1506,24 @@
 30	strenuous	strenuous	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
 31	efforts	effort	NOUN	NNS	Number=Plur	29	obj	29:obj	_
 32	to	to	PART	TO	_	33	mark	33:mark	_
-33	convince	convince	VERB	VB	VerbForm=Inf	31	acl	31:acl	_
+33	convince	convince	VERB	VB	VerbForm=Inf	31	acl	31:acl:to	_
 34	presidential	presidential	ADJ	JJ	Degree=Pos	35	amod	35:amod	_
 35	candidate	candidate	NOUN	NN	Number=Sing	36	compound	36:compound	_
-36	Younis	Younis	PROPN	NNP	Number=Sing	33	obj	33:obj	_
+36	Younis	Younis	PROPN	NNP	Number=Sing	33	obj	33:obj|39:nsubj:xsubj|50:nsubj:xsubj	_
 37	Qanooni	Qanooni	PROPN	NNP	Number=Sing	36	flat	36:flat	_
 38	to	to	PART	TO	_	39	mark	39:mark	_
 39	strike	strike	VERB	VB	VerbForm=Inf	33	xcomp	33:xcomp	_
 40	a	a	DET	DT	Definite=Ind|PronType=Art	41	det	41:det	_
 41	deal	deal	NOUN	NN	Number=Sing	39	obj	39:obj	_
 42	with	with	ADP	IN	_	43	case	43:case	_
-43	Karzai	Karzai	PROPN	NNP	Number=Sing	41	nmod	41:nmod	_
+43	Karzai	Karzai	PROPN	NNP	Number=Sing	41	nmod	41:nmod:with	_
 44	before	before	ADP	IN	_	46	case	46:case	_
 45	the	the	DET	DT	Definite=Def|PronType=Art	46	det	46:det	_
-46	elections	election	NOUN	NNS	Number=Plur	39	obl	39:obl	_
+46	elections	election	NOUN	NNS	Number=Plur	39	obl	39:obl:before	_
 47	and	and	CCONJ	CC	_	50	cc	50:cc	_
 48	not	not	PART	RB	_	50	advmod	50:advmod	_
 49	to	to	PART	TO	_	50	mark	50:mark	_
-50	oppose	oppose	VERB	VB	VerbForm=Inf	39	conj	39:conj	_
+50	oppose	oppose	VERB	VB	VerbForm=Inf	39	conj	33:xcomp|39:conj:and	_
 51	Karzai	Karzai	PROPN	NNP	Number=Sing	50	obj	50:obj	SpaceAfter=No
 52	.	.	PUNCT	.	_	29	punct	29:punct	_
 
@@ -1531,25 +1531,25 @@
 # text = Iran in particular feared that Qanooni would loose and then be politically isolated from the mainstream.
 1	Iran	Iran	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	particular	particular	ADJ	JJ	Degree=Pos	1	nmod	1:nmod	_
+3	particular	particular	ADJ	JJ	Degree=Pos	1	nmod	1:nmod:in	_
 4	feared	fear	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	that	that	SCONJ	IN	_	8	mark	8:mark	_
-6	Qanooni	Qanooni	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
+6	Qanooni	Qanooni	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|13:nsubj:pass	_
 7	would	would	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 8	loose	loose	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	_
 9	and	and	CCONJ	CC	_	13	cc	13:cc	_
 10	then	then	ADV	RB	PronType=Dem	13	advmod	13:advmod	_
 11	be	be	AUX	VB	VerbForm=Inf	13	aux:pass	13:aux:pass	_
 12	politically	politically	ADV	RB	_	13	advmod	13:advmod	_
-13	isolated	isolate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	conj	8:conj	_
+13	isolated	isolate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	conj	4:ccomp|8:conj:and	_
 14	from	from	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	mainstream	mainstream	NOUN	NN	Number=Sing	13	obl	13:obl	SpaceAfter=No
+16	mainstream	mainstream	NOUN	NN	Number=Sing	13	obl	13:obl:from	SpaceAfter=No
 17	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0058
 # text = Qanooni refused to accept the Iranian advice as his fellow Panjsheri Tajiks urged him to stand against Karzai.
-1	Qanooni	Qanooni	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
+1	Qanooni	Qanooni	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|4:nsubj:xsubj	_
 2	refused	refuse	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	accept	accept	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
@@ -1561,12 +1561,12 @@
 10	fellow	fellow	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	Panjsheri	panjsheri	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	Tajiks	Tajiks	PROPN	NNPS	Number=Plur	13	nsubj	13:nsubj	_
-13	urged	urge	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	advcl	2:advcl	_
-14	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	obj	13:obj	_
+13	urged	urge	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	advcl	2:advcl:as	_
+14	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	obj	13:obj|16:nsubj:xsubj	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	stand	stand	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
 17	against	against	ADP	IN	_	18	case	18:case	_
-18	Karzai	Karzai	PROPN	NNP	Number=Sing	16	obl	16:obl	SpaceAfter=No
+18	Karzai	Karzai	PROPN	NNP	Number=Sing	16	obl	16:obl:against	SpaceAfter=No
 19	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0059
@@ -1574,18 +1574,18 @@
 1	However	however	ADV	RB	_	8	advmod	8:advmod	_
 2	since	since	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	elections	election	NOUN	NNS	Number=Plur	8	obl	8:obl	_
+4	elections	election	NOUN	NNS	Number=Plur	8	obl	8:obl:since	_
 5	Iranian	iranian	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	influence	influence	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
+6	influence	influence	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|9:nsubj:xsubj	_
 7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 8	proved	prove	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 9	critical	critical	ADJ	JJ	Degree=Pos	8	xcomp	8:xcomp	_
 10	in	in	SCONJ	IN	_	11	mark	11:mark	_
-11	convincing	convince	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl	_
+11	convincing	convince	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl:in	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 13	Hazara	Hazara	PROPN	NNP	Number=Sing	14	compound	14:compound	_
 14	Shia	Shia	PROPN	NNP	Number=Sing	15	compound	15:compound	_
-15	candidate	candidate	NOUN	NN	Number=Sing	11	obj	11:obj	_
+15	candidate	candidate	NOUN	NN	Number=Sing	11	obj	11:obj|19:nsubj:xsubj	_
 16	Mohammed	Mohammed	PROPN	NNP	Number=Sing	15	appos	15:appos	_
 17	Mohaqeq	Mohaqeq	PROPN	NNP	Number=Sing	16	flat	16:flat	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
@@ -1594,11 +1594,11 @@
 21	results	result	NOUN	NNS	Number=Plur	19	obj	19:obj	_
 22	of	of	ADP	IN	_	24	case	24:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
-24	elections	election	NOUN	NNS	Number=Plur	21	nmod	21:nmod	_
+24	elections	election	NOUN	NNS	Number=Plur	21	nmod	21:nmod:of	_
 25	and	and	CCONJ	CC	_	27	cc	27:cc	_
 26	later	later	ADV	RB	_	27	advmod	27:advmod	_
-27	convincing	convince	VERB	VBG	VerbForm=Ger	11	conj	11:conj	_
-28	Qanooni	Qanooni	PROPN	NNP	Number=Sing	27	obj	27:obj	_
+27	convincing	convince	VERB	VBG	VerbForm=Ger	11	conj	9:advcl:in|11:conj:and	_
+28	Qanooni	Qanooni	PROPN	NNP	Number=Sing	27	obj	27:obj|30:nsubj:xsubj	_
 29	to	to	PART	TO	_	30	mark	30:mark	_
 30	do	do	VERB	VB	VerbForm=Inf	27	xcomp	27:xcomp	_
 31	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
@@ -1612,17 +1612,17 @@
 3	US	US	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 4	military	military	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	presence	presence	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
-6	posing	pose	VERB	VBG	VerbForm=Ger	23	advcl	23:advcl	_
+6	posing	pose	VERB	VBG	VerbForm=Ger	23	advcl	23:advcl:with	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 8	threat	threat	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	on	on	ADP	IN	_	11	case	11:case	_
 10	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-11	borders	border	NOUN	NNS	Number=Plur	6	obl	6:obl	_
+11	borders	border	NOUN	NNS	Number=Plur	6	obl	6:obl:on	_
 12	in	in	ADP	IN	_	14	case	14:case	_
 13	both	both	CCONJ	CC	_	14	cc:preconj	14:cc:preconj	_
-14	Iraq	Iraq	PROPN	NNP	Number=Sing	6	obl	6:obl	_
+14	Iraq	Iraq	PROPN	NNP	Number=Sing	6	obl	6:obl:in	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	14	conj	14:conj	SpaceAfter=No
+16	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	14	conj	6:obl:in|14:conj:and	SpaceAfter=No
 17	,	,	PUNCT	,	_	23	punct	23:punct	_
 18	Iran	Iran	PROPN	NNP	Number=Sing	21	nmod:poss	21:nmod:poss	SpaceAfter=No
 19	’s	's	PART	POS	_	18	case	18:case	_
@@ -1631,7 +1631,7 @@
 22	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	cop	23:cop	_
 23	keen	keen	ADJ	JJ	Degree=Pos	0	root	0:root	_
 24	to	to	PART	TO	_	25	mark	25:mark	_
-25	help	help	VERB	VB	VerbForm=Inf	23	advcl	23:advcl	_
+25	help	help	VERB	VB	VerbForm=Inf	23	advcl	23:advcl:to	_
 26	stabilise	stabilise	VERB	VB	VerbForm=Inf	25	xcomp	25:xcomp	_
 27	Karzai	Karzai	PROPN	NNP	Number=Sing	26	obj	26:obj	_
 28	so	so	SCONJ	IN	_	36	mark	36:mark	_
@@ -1640,18 +1640,18 @@
 31	US	US	PROPN	NNP	Number=Sing	32	compound	32:compound	_
 32	presence	presence	NOUN	NN	Number=Sing	36	nsubj:pass	36:nsubj:pass	_
 33	in	in	ADP	IN	_	34	case	34:case	_
-34	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	32	nmod	32:nmod	_
+34	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	32	nmod	32:nmod:in	_
 35	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	36	aux:pass	36:aux:pass	_
-36	reduced	reduce	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	26	advcl	26:advcl	SpaceAfter=No
+36	reduced	reduce	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	26	advcl	26:advcl:so_that	SpaceAfter=No
 37	.	.	PUNCT	.	_	23	punct	23:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0061
 # text = However powerful hardliners in Tehran may be trying to undermine that strategy and a new issue is likely to deepen the rift with the moderates.
 1	However	however	ADV	RB	_	8	advmod	8:advmod	_
 2	powerful	powerful	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	hardliners	hardliner	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
+3	hardliners	hardliner	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	Tehran	Tehran	PROPN	NNP	Number=Sing	3	nmod	3:nmod	_
+5	Tehran	Tehran	PROPN	NNP	Number=Sing	3	nmod	3:nmod:in	_
 6	may	may	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 7	be	be	AUX	VB	VerbForm=Inf	8	aux	8:aux	_
 8	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
@@ -1662,16 +1662,16 @@
 13	and	and	CCONJ	CC	_	18	cc	18:cc	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 15	new	new	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	issue	issue	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
+16	issue	issue	NOUN	NN	Number=Sing	18	nsubj	18:nsubj|20:nsubj:xsubj	_
 17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
-18	likely	likely	ADJ	JJ	Degree=Pos	8	conj	8:conj	_
+18	likely	likely	ADJ	JJ	Degree=Pos	8	conj	8:conj:and	_
 19	to	to	PART	TO	_	20	mark	20:mark	_
 20	deepen	deepen	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 22	rift	rift	NOUN	NN	Number=Sing	20	obj	20:obj	_
 23	with	with	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
-25	moderates	moderate	NOUN	NNS	Number=Plur	22	nmod	22:nmod	SpaceAfter=No
+25	moderates	moderate	NOUN	NNS	Number=Plur	22	nmod	22:nmod:with	SpaceAfter=No
 26	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0062
@@ -1684,9 +1684,9 @@
 6	about	about	ADP	IN	_	9	case	9:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	US	US	PROPN	NNP	Number=Sing	9	compound	9:compound	_
-9	occupation	occupation	NOUN	NN	Number=Sing	5	obl	5:obl	_
+9	occupation	occupation	NOUN	NN	Number=Sing	5	obl	5:obl:about	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	Shindand	Shindand	PROPN	NNP	Number=Sing	9	nmod	9:nmod	SpaceAfter=No
+11	Shindand	Shindand	PROPN	NNP	Number=Sing	9	nmod	9:nmod:of	SpaceAfter=No
 12	,	,	PUNCT	,	_	11	punct	11:punct	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 14	massive	massive	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
@@ -1700,7 +1700,7 @@
 22	from	from	ADP	IN	_	25	case	25:case	_
 23	Iran	Iran	PROPN	NNP	Number=Sing	25	nmod:poss	25:nmod:poss	SpaceAfter=No
 24	’s	's	PART	POS	_	23	case	23:case	_
-25	border	border	NOUN	NN	Number=Sing	18	nmod	18:nmod	SpaceAfter=No
+25	border	border	NOUN	NN	Number=Sing	18	nmod	18:nmod:from	SpaceAfter=No
 26	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0063
@@ -1708,39 +1708,39 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 2	enhanced	enhance	VERB	VBN	Tense=Past|VerbForm=Part	4	amod	4:amod	_
 3	US	US	PROPN	NNP	Number=Sing	4	compound	4:compound	_
-4	presence	presence	NOUN	NN	Number=Sing	10	nsubj:pass	10:nsubj:pass	_
+4	presence	presence	NOUN	NN	Number=Sing	10	nsubj:pass	10:nsubj:pass|11:nsubj:xsubj	_
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	western	western	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	4	nmod	4:nmod	_
+7	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	_
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux:pass	10:aux:pass	_
 9	only	only	ADV	RB	_	10	advmod	10:advmod	_
 10	made	make	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 11	possible	possible	ADJ	JJ	Degree=Pos	10	xcomp	10:xcomp	_
 12	after	after	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	ousting	ousting	NOUN	NN	Number=Sing	10	obl	10:obl	_
+14	ousting	ousting	NOUN	NN	Number=Sing	10	obl	10:obl:after|33:nsubj:relsubj	_
 15	of	of	ADP	IN	_	16	case	16:case	_
-16	Ismail	Ismail	PROPN	NNP	Number=Sing	14	nmod	14:nmod	_
+16	Ismail	Ismail	PROPN	NNP	Number=Sing	14	nmod	14:nmod:of	_
 17	Khan	Khan	PROPN	NNP	Number=Sing	16	flat	16:flat	SpaceAfter=No
 18	,	,	PUNCT	,	_	16	punct	16:punct	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	warlord	warlord	NOUN	NN	Number=Sing	16	appos	16:appos	_
 21	and	and	CCONJ	CC	_	22	cc	22:cc	_
-22	Governor	Governor	PROPN	NNP	Number=Sing	20	conj	20:conj	_
+22	Governor	Governor	PROPN	NNP	Number=Sing	20	conj	16:appos|20:conj:and	_
 23	of	of	ADP	IN	_	25	case	25:case	_
 24	Herat	Herat	PROPN	NNP	Number=Sing	25	compound	25:compound	_
-25	province	province	NOUN	NN	Number=Sing	20	nmod	20:nmod	_
+25	province	province	NOUN	NN	Number=Sing	20	nmod	20:nmod:of	_
 26	last	last	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
 27	month	month	NOUN	NN	Number=Sing	14	nmod:tmod	14:nmod:tmod	SpaceAfter=No
 28	,	,	PUNCT	,	_	14	punct	14:punct	_
-29	who	who	PRON	WP	PronType=Rel	33	nsubj	33:nsubj	_
+29	who	who	PRON	WP	PronType=Rel	33	nsubj	14:ref	_
 30	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	33	cop	33:cop	_
 31	a	a	DET	DT	Definite=Ind|PronType=Art	33	det	33:det	_
 32	close	close	ADJ	JJ	Degree=Pos	33	amod	33:amod	_
 33	ally	ally	NOUN	NN	Number=Sing	14	acl:relcl	14:acl:relcl	_
 34	of	of	ADP	IN	_	36	case	36:case	_
 35	Iranian	iranian	ADJ	JJ	Degree=Pos	36	amod	36:amod	_
-36	hardliners	hardliner	NOUN	NNS	Number=Plur	33	nmod	33:nmod	SpaceAfter=No
+36	hardliners	hardliner	NOUN	NNS	Number=Plur	33	nmod	33:nmod:of	SpaceAfter=No
 37	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0064
@@ -1755,52 +1755,52 @@
 8	to	to	ADP	IN	_	11	case	11:case	_
 9	Khan	Khan	PROPN	NNP	Number=Sing	11	nmod:poss	11:nmod:poss	SpaceAfter=No
 10	’s	's	PART	POS	_	9	case	9:case	_
-11	ouster	ouster	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
+11	ouster	ouster	NOUN	NN	Number=Sing	7	nmod	7:nmod:to	_
 12	because	because	SCONJ	IN	_	14	mark	14:mark	_
-13	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
-14	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl	_
+13	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	14	nsubj	14:nsubj|16:nsubj:xsubj	_
+14	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl:because	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	strengthen	strengthen	VERB	VB	VerbForm=Inf	14	xcomp	14:xcomp	_
 17	Karzai	Karzai	PROPN	NNP	Number=Sing	19	nmod:poss	19:nmod:poss	SpaceAfter=No
 18	’s	's	PART	POS	_	17	case	17:case	_
 19	campaign	campaign	NOUN	NN	Number=Sing	16	obj	16:obj	_
 20	against	against	ADP	IN	_	21	case	21:case	_
-21	warlords	warlord	NOUN	NNS	Number=Plur	19	nmod	19:nmod	SpaceAfter=No
+21	warlords	warlord	NOUN	NNS	Number=Plur	19	nmod	19:nmod:against	SpaceAfter=No
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0065
 # text = At a time of heightened tensions between Tehran and Washington over Iran’s nuclear weapons program and calls by neo-conservatives in Washington that a second Bush term should deal with Iran aggressively, the Iranians fear that Shindand could be used as a listening post, spying facility and even a launching pad for any future US actions against Iran.
 1	At	at	ADP	IN	_	3	case	3:case	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
-3	time	time	NOUN	NN	Number=Sing	36	obl	36:obl	_
+3	time	time	NOUN	NN	Number=Sing	36	obl	36:obl:at	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	heightened	heighten	VERB	VBN	Tense=Past|VerbForm=Part	6	amod	6:amod	_
-6	tensions	tension	NOUN	NNS	Number=Plur	3	nmod	3:nmod	_
+6	tensions	tension	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
 7	between	between	ADP	IN	_	8	case	8:case	_
-8	Tehran	Tehran	PROPN	NNP	Number=Sing	6	nmod	6:nmod	_
+8	Tehran	Tehran	PROPN	NNP	Number=Sing	6	nmod	6:nmod:between	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	Washington	Washington	PROPN	NNP	Number=Sing	8	conj	8:conj	_
+10	Washington	Washington	PROPN	NNP	Number=Sing	8	conj	6:nmod:between|8:conj:and	_
 11	over	over	ADP	IN	_	16	case	16:case	_
 12	Iran	Iran	PROPN	NNP	Number=Sing	16	nmod:poss	16:nmod:poss	SpaceAfter=No
 13	’s	's	PART	POS	_	12	case	12:case	_
 14	nuclear	nuclear	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	weapons	weapon	NOUN	NNS	Number=Plur	16	compound	16:compound	_
-16	program	program	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+16	program	program	NOUN	NN	Number=Sing	6	nmod	6:nmod:over	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	calls	call	NOUN	NNS	Number=Plur	6	conj	6:conj	_
+18	calls	call	NOUN	NNS	Number=Plur	6	conj	3:nmod:of|6:conj:and	_
 19	by	by	ADP	IN	_	20	case	20:case	_
-20	neo-conservatives	neo-conservative	NOUN	NNS	Number=Plur	18	nmod	18:nmod	_
+20	neo-conservatives	neo-conservative	NOUN	NNS	Number=Plur	18	nmod	18:nmod:by	_
 21	in	in	ADP	IN	_	22	case	22:case	_
-22	Washington	Washington	PROPN	NNP	Number=Sing	20	nmod	20:nmod	_
+22	Washington	Washington	PROPN	NNP	Number=Sing	20	nmod	20:nmod:in	_
 23	that	that	SCONJ	IN	_	29	mark	29:mark	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	26	det	26:det	_
 25	second	second	ADJ	JJ	Degree=Pos|NumType=Ord	26	amod	26:amod	_
 26	Bush	Bush	PROPN	NNP	Number=Sing	29	nsubj	29:nsubj	_
 27	term	term	NOUN	NN	Number=Sing	26	flat	26:flat	_
 28	should	should	AUX	MD	VerbForm=Fin	29	aux	29:aux	_
-29	deal	deal	VERB	VB	VerbForm=Inf	18	acl	18:acl	_
+29	deal	deal	VERB	VB	VerbForm=Inf	18	acl	18:acl:that	_
 30	with	with	ADP	IN	_	31	case	31:case	_
-31	Iran	Iran	PROPN	NNP	Number=Sing	29	obl	29:obl	_
+31	Iran	Iran	PROPN	NNP	Number=Sing	29	obl	29:obl:with	_
 32	aggressively	aggressively	ADV	RB	_	29	advmod	29:advmod	SpaceAfter=No
 33	,	,	PUNCT	,	_	36	punct	36:punct	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
@@ -1814,22 +1814,22 @@
 42	as	as	ADP	IN	_	45	case	45:case	_
 43	a	a	DET	DT	Definite=Ind|PronType=Art	48	det	48:det	_
 44	listening	listening	NOUN	NN	Number=Sing	45	compound	45:compound	_
-45	post	post	NOUN	NN	Number=Sing	41	obl	41:obl	SpaceAfter=No
+45	post	post	NOUN	NN	Number=Sing	41	obl	41:obl:as	SpaceAfter=No
 46	,	,	PUNCT	,	_	48	punct	48:punct	_
 47	spying	spying	NOUN	NN	Number=Sing	48	compound	48:compound	_
-48	facility	facility	NOUN	NN	Number=Sing	45	conj	45:conj	_
+48	facility	facility	NOUN	NN	Number=Sing	45	conj	41:obl:as|45:conj:and	_
 49	and	and	CCONJ	CC	_	53	cc	53:cc	_
 50	even	even	ADV	RB	_	53	advmod	53:advmod	_
 51	a	a	DET	DT	Definite=Ind|PronType=Art	53	det	53:det	_
 52	launching	launching	NOUN	NN	Number=Sing	53	compound	53:compound	_
-53	pad	pad	NOUN	NN	Number=Sing	45	conj	45:conj	_
+53	pad	pad	NOUN	NN	Number=Sing	45	conj	41:obl:as|45:conj:and	_
 54	for	for	ADP	IN	_	58	case	58:case	_
 55	any	any	DET	DT	_	58	det	58:det	_
 56	future	future	ADJ	JJ	Degree=Pos	58	amod	58:amod	_
 57	US	US	PROPN	NNP	Number=Sing	58	compound	58:compound	_
-58	actions	action	NOUN	NNS	Number=Plur	53	nmod	53:nmod	_
+58	actions	action	NOUN	NNS	Number=Plur	53	nmod	53:nmod:for	_
 59	against	against	ADP	IN	_	60	case	60:case	_
-60	Iran	Iran	PROPN	NNP	Number=Sing	58	nmod	58:nmod	SpaceAfter=No
+60	Iran	Iran	PROPN	NNP	Number=Sing	58	nmod	58:nmod:against	SpaceAfter=No
 61	.	.	PUNCT	.	_	36	punct	36:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0066
@@ -1846,9 +1846,9 @@
 10	Special	special	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	Forces	force	NOUN	NNS	Number=Plur	7	obj	7:obj	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	helicopters	helicopter	NOUN	NNS	Number=Plur	11	conj	11:conj	_
+13	helicopters	helicopter	NOUN	NNS	Number=Plur	11	conj	7:obj|11:conj:and	_
 14	to	to	ADP	IN	_	15	case	15:case	_
-15	Shindand	Shindand	PROPN	NNP	Number=Sing	7	obl	7:obl	SpaceAfter=No
+15	Shindand	Shindand	PROPN	NNP	Number=Sing	7	obl	7:obl:to	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0067
@@ -1864,7 +1864,7 @@
 9	no	no	DET	DT	_	10	det	10:det	_
 10	threat	threat	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	to	to	ADP	IN	_	12	case	12:case	_
-12	Iran	Iran	PROPN	NNP	Number=Sing	10	nmod	10:nmod	SpaceAfter=No
+12	Iran	Iran	PROPN	NNP	Number=Sing	10	nmod	10:nmod:to	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0068
@@ -1877,13 +1877,13 @@
 6	small	small	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	number	number	NOUN	NN	Number=Sing	3	obj	3:obj	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	forces	force	NOUN	NNS	Number=Plur	7	nmod	7:nmod	_
+9	forces	force	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	_
 10	in	in	ADP	IN	_	11	case	11:case	_
-11	Shindand	Shindand	PROPN	NNP	Number=Sing	7	nmod	7:nmod	_
+11	Shindand	Shindand	PROPN	NNP	Number=Sing	7	nmod	7:nmod:in	_
 12	with	with	ADP	IN	_	15	case	15:case	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 14	few	few	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	helicopters	helicopter	NOUN	NNS	Number=Plur	7	nmod	7:nmod	SpaceAfter=No
+15	helicopters	helicopter	NOUN	NNS	Number=Plur	7	nmod	7:nmod:with	SpaceAfter=No
 16	,	,	PUNCT	,	_	18	punct	18:punct	SpaceAfter=No
 17	’’	''	PUNCT	''	_	18	punct	18:punct	_
 18	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -1900,11 +1900,11 @@
 6	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 7	difficult	difficult	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	sensitive	sensitive	ADJ	JJ	Degree=Pos	7	conj	7:conj	_
-10	situation	situation	NOUN	NN	Number=Sing	3	obl	3:obl	_
+9	sensitive	sensitive	ADJ	JJ	Degree=Pos	7	conj	7:conj:and|10:amod	_
+10	situation	situation	NOUN	NN	Number=Sing	3	obl	3:obl:in	_
 11	because	because	SCONJ	IN	_	13	mark	13:mark	_
-12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
-13	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl	_
+12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj|15:nsubj:xsubj	_
+13	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:because	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
 15	maintain	maintain	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
 16	excellent	excellent	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
@@ -1912,9 +1912,9 @@
 18	with	with	ADP	IN	_	21	case	21:case	_
 19	both	both	CCONJ	CC	_	21	cc:preconj	21:cc:preconj	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	US	US	PROPN	NNP	Number=Sing	17	nmod	17:nmod	_
+21	US	US	PROPN	NNP	Number=Sing	17	nmod	17:nmod:with	_
 22	and	and	CCONJ	CC	_	23	cc	23:cc	_
-23	Iran	Iran	PROPN	NNP	Number=Sing	21	conj	21:conj	SpaceAfter=No
+23	Iran	Iran	PROPN	NNP	Number=Sing	21	conj	17:nmod:with|21:conj:and	SpaceAfter=No
 24	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0070
@@ -1926,13 +1926,13 @@
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	benefit	benefit	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	of	of	ADP	IN	_	8	case	8:case	_
-8	cooperation	cooperation	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+8	cooperation	cooperation	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	_
 9	from	from	ADP	IN	_	12	case	12:case	_
 10	both	both	CCONJ	CC	_	12	cc:preconj	12:cc:preconj	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	US	US	PROPN	NNP	Number=Sing	8	nmod	8:nmod	_
+12	US	US	PROPN	NNP	Number=Sing	8	nmod	8:nmod:from	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	Iran	Iran	PROPN	NNP	Number=Sing	12	conj	12:conj	SpaceAfter=No
+14	Iran	Iran	PROPN	NNP	Number=Sing	12	conj	8:nmod:from|12:conj:and	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0071
@@ -1948,12 +1948,12 @@
 9	been	be	AUX	VBN	Tense=Past|VerbForm=Part	10	cop	10:cop	_
 10	good	good	ADJ	JJ	Degree=Pos	25	ccomp	25:ccomp	_
 11	for	for	ADP	IN	_	12	case	12:case	_
-12	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	10	obl	10:obl	_
+12	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	10	obl	10:obl:for	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	that	that	PRON	DT	Number=Sing|PronType=Dem	15	nsubj	15:nsubj	SpaceAfter=No
-15	’s	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	conj	10:conj	_
+15	’s	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	conj	10:conj:and|25:ccomp	_
 16	how	how	ADV	WRB	PronType=Int	19	advmod	19:advmod	_
-17	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
+17	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	19	nsubj	19:nsubj|21:nsubj:xsubj	_
 18	would	would	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 19	like	like	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
@@ -1976,7 +1976,7 @@
 7	of	of	ADP	IN	_	10	case	10:case	_
 8	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	10	nmod:poss	10:nmod:poss	SpaceAfter=No
 9	’s	's	PART	POS	_	8	case	8:case	_
-10	neighbours	neighbour	NOUN	NNS	Number=Plur	6	nmod	6:nmod	_
+10	neighbours	neighbour	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	_
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 12	over	over	ADV	RB	_	3	ccomp	3:ccomp	SpaceAfter=No
 13	,	,	PUNCT	,	_	18	punct	18:punct	_
@@ -1984,19 +1984,19 @@
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 16	elections	election	NOUN	NNS	Number=Plur	18	nsubj	18:nsubj	_
 17	will	will	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
-18	do	do	VERB	VB	VerbForm=Inf	3	conj	3:conj	_
+18	do	do	VERB	VB	VerbForm=Inf	3	conj	3:conj:but	_
 19	much	much	ADJ	JJ	Degree=Pos	18	obj	18:obj	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
-21	strengthen	strengthen	VERB	VB	VerbForm=Inf	19	acl	19:acl	_
+21	strengthen	strengthen	VERB	VB	VerbForm=Inf	19	acl	19:acl:to	_
 22	Karzai	Karzai	PROPN	NNP	Number=Sing	21	obj	21:obj	_
 23	and	and	CCONJ	CC	_	24	cc	24:cc	_
-24	deal	deal	VERB	VB	VerbForm=Inf	21	conj	21:conj	_
+24	deal	deal	VERB	VB	VerbForm=Inf	21	conj	19:acl:to|21:conj:and	_
 25	more	more	ADV	RBR	_	26	advmod	26:advmod	_
 26	firmly	firmly	ADV	RB	_	24	advmod	24:advmod	_
 27	with	with	ADP	IN	_	30	case	30:case	_
 28	neighbours	neighbour	NOUN	NNS	Number=Plur	30	nmod:poss	30:nmod:poss	SpaceAfter=No
 29	’	's	PART	POS	_	28	case	28:case	_
-30	interference	interference	NOUN	NN	Number=Sing	24	obl	24:obl	SpaceAfter=No
+30	interference	interference	NOUN	NN	Number=Sing	24	obl	24:obl:with	SpaceAfter=No
 31	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0073
@@ -2005,7 +2005,7 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 3	post	post	X	AFX	_	4	amod	4:amod	_
 4	election	election	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	scenario	scenario	NOUN	NN	Number=Sing	8	obl	8:obl	_
+5	scenario	scenario	NOUN	NN	Number=Sing	8	obl	8:obl:in	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	expl	8:expl	_
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 8	becoming	become	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
@@ -2022,11 +2022,11 @@
 19	of	of	ADP	IN	_	22	case	22:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 21	Afghan	afghan	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	people	people	NOUN	NNS	Number=Plur	18	nmod	18:nmod	_
+22	people	people	NOUN	NNS	Number=Plur	18	nmod	18:nmod:of	_
 23	nor	nor	CCONJ	CC	_	26	cc	26:cc	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
 25	Afghan	afghan	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
-26	Pashtuns	Pashtuns	PROPN	NNPS	Number=Plur	22	conj	22:conj	SpaceAfter=No
+26	Pashtuns	Pashtuns	PROPN	NNPS	Number=Plur	22	conj	18:nmod:of|22:conj:nor	SpaceAfter=No
 27	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0074
@@ -2035,27 +2035,27 @@
 2	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 3	highly	highly	ADV	RB	_	4	advmod	4:advmod	_
 4	significant	significant	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	move	move	NOUN	NN	Number=Sing	13	obl	13:obl	_
+5	move	move	NOUN	NN	Number=Sing	13	obl	13:obl:in	_
 6	Afghan	afghan	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 7	Pashtun	pashtun	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	tribes	tribe	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
 9	along	along	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	Pakistan	Pakistan	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	border	border	NOUN	NN	Number=Sing	8	nmod	8:nmod	_
+12	border	border	NOUN	NN	Number=Sing	8	nmod	8:nmod:along	_
 13	warned	warn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	Taliban	Taliban	PROPN	NNP	Number=Sing	13	obj	13:obj	_
 16	in	in	ADP	IN	_	17	case	17:case	_
-17	Quetta	Quetta	PROPN	NNP	Number=Sing	15	nmod	15:nmod	_
+17	Quetta	Quetta	PROPN	NNP	Number=Sing	15	nmod	15:nmod:in	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
-19	Chaman	Chaman	PROPN	NNP	Number=Sing	17	conj	17:conj	_
+19	Chaman	Chaman	PROPN	NNP	Number=Sing	17	conj	15:nmod:in|17:conj:and	_
 20	that	that	SCONJ	IN	_	32	mark	32:mark	_
 21	if	if	SCONJ	IN	_	23	mark	23:mark	_
-22	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	23	nsubj	23:nsubj	_
-23	try	try	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	32	advcl	32:advcl	_
+22	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	23	nsubj	23:nsubj|25:nsubj	_
+23	try	try	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	32	advcl	32:advcl:if	_
 24	and	and	CCONJ	CC	_	25	cc	25:cc	_
-25	disrupt	disrupt	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	23	conj	23:conj	_
+25	disrupt	disrupt	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	23	conj	23:conj:and|32:advcl:if	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 27	elections	election	NOUN	NNS	Number=Plur	25	obj	25:obj	SpaceAfter=No
 28	,	,	PUNCT	,	_	32	punct	32:punct	_
@@ -2071,10 +2071,10 @@
 2	Taliban	Taliban	PROPN	NNPS	Number=Plur	6	nsubj	6:nsubj	_
 3	living	live	VERB	VBG	VerbForm=Ger	2	acl	2:acl	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	3	obl	3:obl	_
+5	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	3	obl	3:obl:in	_
 6	voted	vote	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	for	for	ADP	IN	_	8	case	8:case	_
-8	President	President	PROPN	NNP	Number=Sing	6	obl	6:obl	_
+8	President	President	PROPN	NNP	Number=Sing	6	obl	6:obl:for	_
 9	Karzai	Karzai	PROPN	NNP	Number=Sing	8	flat	8:flat	SpaceAfter=No
 10	.	.	PUNCT	.	_	6	punct	6:punct	_
 
@@ -2090,24 +2090,24 @@
 8	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 9	rapidly	rapidly	ADV	RB	_	10	advmod	10:advmod	_
 10	changing	change	VERB	VBG	VerbForm=Ger	11	amod	11:amod	_
-11	face	face	NOUN	NN	Number=Sing	32	obl	32:obl	_
+11	face	face	NOUN	NN	Number=Sing	32	obl	32:obl:with	_
 12	of	of	ADP	IN	_	13	case	13:case	_
-13	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	11	nmod	11:nmod	SpaceAfter=No
+13	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	11	nmod	11:nmod:of	SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	demise	demise	NOUN	NN	Number=Sing	11	conj	11:conj	_
+16	demise	demise	NOUN	NN	Number=Sing	11	conj	11:conj:and|32:obl:with	_
 17	of	of	ADP	IN	_	21	case	21:case	_
 18	key	key	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 19	Northern	Northern	PROPN	NNP	Number=Sing	20	compound	20:compound	_
 20	Alliance	Alliance	PROPN	NNP	Number=Sing	21	compound	21:compound	_
-21	figures	figure	NOUN	NNS	Number=Plur	16	nmod	16:nmod	_
+21	figures	figure	NOUN	NNS	Number=Plur	16	nmod	16:nmod:of	_
 22	and	and	CCONJ	CC	_	26	cc	26:cc	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
 24	fluid	fluid	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
 25	political	political	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
-26	situation	situation	NOUN	NN	Number=Sing	11	conj	11:conj	_
+26	situation	situation	NOUN	NN	Number=Sing	11	conj	11:conj:and|32:obl:with	_
 27	in	in	ADP	IN	_	28	case	28:case	_
-28	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	26	nmod	26:nmod	SpaceAfter=No
+28	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	26	nmod	26:nmod:in	SpaceAfter=No
 29	,	,	PUNCT	,	_	32	punct	32:punct	_
 30	Pakistan	Pakistan	PROPN	NNP	Number=Sing	32	nsubj	32:nsubj	_
 31	should	should	AUX	MD	VerbForm=Fin	32	aux	32:aux	_
@@ -2115,16 +2115,16 @@
 33	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	34	nmod:poss	34:nmod:poss	_
 34	policy	policy	NOUN	NN	Number=Sing	32	obj	32:obj	_
 35	of	of	SCONJ	IN	_	36	mark	36:mark	_
-36	giving	give	VERB	VBG	VerbForm=Ger	34	acl	34:acl	_
+36	giving	give	VERB	VBG	VerbForm=Ger	34	acl	34:acl:of	_
 37	unlimited	unlimited	ADJ	JJ	Degree=Pos	38	amod	38:amod	_
 38	sanctuary	sanctuary	NOUN	NN	Number=Sing	36	obj	36:obj	_
 39	to	to	ADP	IN	_	41	case	41:case	_
 40	Taliban	Taliban	PROPN	NNP	Number=Sing	41	compound	41:compound	_
-41	extremists	extremist	NOUN	NNS	Number=Plur	36	obl	36:obl	_
+41	extremists	extremist	NOUN	NNS	Number=Plur	36	obl	36:obl:to	_
 42	living	live	VERB	VBG	VerbForm=Ger	41	acl	41:acl	_
 43	on	on	ADP	IN	_	45	case	45:case	_
 44	Pakistani	pakistani	ADJ	JJ	Degree=Pos	45	amod	45:amod	_
-45	soil	soil	NOUN	NN	Number=Sing	42	obl	42:obl	SpaceAfter=No
+45	soil	soil	NOUN	NN	Number=Sing	42	obl	42:obl:on	SpaceAfter=No
 46	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = weblog-blogspot.com_dakbangla_20041016151002_ENG_20041016_151002-0077

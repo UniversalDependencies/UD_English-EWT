@@ -6,7 +6,7 @@
 
 # sent_id = reviews-018562-0002
 # text = I want to say that Mike did a great job for our family in our time of need.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj	_
 2	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	say	say	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
@@ -18,12 +18,12 @@
 10	job	job	NOUN	NN	Number=Sing	7	obj	7:obj	_
 11	for	for	ADP	IN	_	13	case	13:case	_
 12	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
-13	family	family	NOUN	NN	Number=Sing	7	obl	7:obl	_
+13	family	family	NOUN	NN	Number=Sing	7	obl	7:obl:for	_
 14	in	in	ADP	IN	_	16	case	16:case	_
 15	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
-16	time	time	NOUN	NN	Number=Sing	7	obl	7:obl	_
+16	time	time	NOUN	NN	Number=Sing	7	obl	7:obl:in	_
 17	of	of	ADP	IN	_	18	case	18:case	_
-18	need	need	NOUN	NN	Number=Sing	16	nmod	16:nmod	SpaceAfter=No
+18	need	need	NOUN	NN	Number=Sing	16	nmod	16:nmod:of	SpaceAfter=No
 19	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-018562-0003
@@ -40,7 +40,7 @@
 10	Mike	Mike	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	_
 11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	_
 12	very	very	ADV	RB	_	13	advmod	13:advmod	_
-13	understanding	understanding	ADJ	JJ	Degree=Pos	4	conj	4:conj	SpaceAfter=No
+13	understanding	understanding	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-018562-0004
@@ -53,23 +53,23 @@
 6	time	time	NOUN	NN	Number=Sing	0	root	0:root	_
 7	for	for	ADP	IN	_	9	case	9:case	_
 8	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	family	family	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+9	family	family	NOUN	NN	Number=Sing	6	nmod	6:nmod:for	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs|Reflex=Yes	9	conj	9:conj	_
+11	myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs|Reflex=Yes	9	conj	6:nmod:for|9:conj:and	_
 12	yet	yet	CCONJ	CC	_	14	cc	14:cc	_
 13	Mike	Mike	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
-14	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	conj	6:conj	_
+14	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	conj	6:conj:yet	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 16	time	time	NOUN	NN	Number=Sing	14	obj	14:obj	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
-18	greet	greet	VERB	VB	VerbForm=Inf	16	acl	16:acl	_
+18	greet	greet	VERB	VB	VerbForm=Inf	16	acl	16:acl:to	_
 19	each	each	DET	DT	_	23	det	23:det	_
 20	and	and	CCONJ	CC	_	21	cc	21:cc	_
-21	every	every	DET	DT	_	19	conj	19:conj	SpaceAfter=No
+21	every	every	DET	DT	_	19	conj	19:conj:and|23:det	SpaceAfter=No
 22	one	one	NUM	CD	NumType=Card	18	reparandum	18:reparandum	_
 23	one	one	NUM	CD	NumType=Card	18	obj	18:obj	_
 24	of	of	ADP	IN	_	25	case	25:case	_
-25	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	19	nmod	19:nmod	SpaceAfter=No
+25	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	19	nmod	19:nmod:of	SpaceAfter=No
 26	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-018562-0005
@@ -80,21 +80,21 @@
 4	professional	professional	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
-7	position	position	NOUN	NN	Number=Sing	4	obl	4:obl	_
+7	position	position	NOUN	NN	Number=Sing	4	obl	4:obl:in	_
 8	as	as	ADP	IN	_	10	case	10:case	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	director	director	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
+10	director	director	NOUN	NN	Number=Sing	7	nmod	7:nmod:as	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
 12	yet	yet	CCONJ	CC	_	15	cc	15:cc	_
 13	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 14	still	still	ADV	RB	_	15	advmod	15:advmod	_
-15	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj	_
+15	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj:and_yet	_
 16	time	time	NOUN	NN	Number=Sing	15	obj	15:obj	_
 17	to	to	PART	TO	_	19	mark	19:mark	_
 18	be	be	AUX	VB	VerbForm=Inf	19	cop	19:cop	_
-19	compassionate	compassionate	ADJ	JJ	Degree=Pos	16	acl	16:acl	_
+19	compassionate	compassionate	ADJ	JJ	Degree=Pos	16	acl	16:acl:to	_
 20	for	for	SCONJ	IN	_	21	case	21:case	_
-21	what	what	PRON	WP	PronType=Int	19	obl	19:obl	_
+21	what	what	PRON	WP	PronType=Int	19	obl	19:obl:for	_
 22	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
 23	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	25	aux	25:aux	_
 24	all	all	ADV	RB	_	25	advmod	25:advmod	_
@@ -124,7 +124,7 @@
 18	such	such	DET	PDT	_	21	det:predet	21:det:predet	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 20	short	short	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
-21	time	time	NOUN	NN	Number=Sing	13	obl	13:obl	SpaceAfter=No
+21	time	time	NOUN	NN	Number=Sing	13	obl	13:obl:in	SpaceAfter=No
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-018562-0007
@@ -136,33 +136,33 @@
 5	silently	silently	ADV	RB	_	3	advmod	3:advmod	_
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	sleep	sleep	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+8	sleep	sleep	NOUN	NN	Number=Sing	3	obl	3:obl:in	SpaceAfter=No
 9	,	,	PUNCT	,	_	13	punct	13:punct	_
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
 11	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 12	grandmother	grandmother	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
-13	passed	pass	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj	_
+13	passed	pass	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
 14	away	away	ADV	RB	_	13	advmod	13:advmod	_
 15	after	after	ADP	IN	_	18	case	18:case	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 17	short	short	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	struggle	struggle	NOUN	NN	Number=Sing	13	obl	13:obl	_
+18	struggle	struggle	NOUN	NN	Number=Sing	13	obl	13:obl:after	_
 19	with	with	ADP	IN	_	20	case	20:case	_
-20	cancer	cancer	NOUN	NN	Number=Sing	18	nmod	18:nmod	SpaceAfter=No
+20	cancer	cancer	NOUN	NN	Number=Sing	18	nmod	18:nmod:with	SpaceAfter=No
 21	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-018562-0008
 # text = Both my grandparents looked as natural as could be expected.
 1	Both	both	DET	PDT	_	3	det:predet	3:det:predet	_
 2	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	grandparents	grandparent	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
+3	grandparents	grandparent	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 4	looked	look	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	as	as	ADV	RB	_	6	advmod	6:advmod	_
 6	natural	natural	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	_
 7	as	as	SCONJ	IN	_	10	mark	10:mark	_
 8	could	could	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 9	be	be	AUX	VB	VerbForm=Inf	10	aux:pass	10:aux:pass	_
-10	expected	expect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	advcl	5:advcl	SpaceAfter=No
+10	expected	expect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	advcl	5:advcl:as	SpaceAfter=No
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-018562-0009
@@ -173,10 +173,10 @@
 4	for	for	ADP	IN	_	7	case	7:case	_
 5	all	all	DET	PDT	_	7	det:predet	7:det:predet	_
 6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
-7	help	help	NOUN	NN	Number=Sing	1	obl	1:obl	_
+7	help	help	NOUN	NN	Number=Sing	1	obl	1:obl:for	_
 8	professionally	professionally	ADV	RB	_	1	advmod	1:advmod	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	personally	personally	ADV	RB	_	8	conj	8:conj	SpaceAfter=No
+10	personally	personally	ADV	RB	_	8	conj	1:advmod|8:conj:and	SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-018562-0010

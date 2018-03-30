@@ -2,7 +2,7 @@
 # sent_id = answers-20111108111112AAAjhoy_ans-0001
 # text = My dog has threw up yellow bile for two days but does not have dhirea.
 1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	dog	dog	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
+2	dog	dog	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|14:nsubj	_
 3	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	threw	throw	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 5	up	up	ADP	RP	_	4	compound:prt	4:compound:prt	_
@@ -10,11 +10,11 @@
 7	bile	bile	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	for	for	ADP	IN	_	10	case	10:case	_
 9	two	two	NUM	CD	NumType=Card	10	nummod	10:nummod	_
-10	days	day	NOUN	NNS	Number=Plur	4	obl	4:obl	_
+10	days	day	NOUN	NNS	Number=Plur	4	obl	4:obl:for	_
 11	but	but	CCONJ	CC	_	14	cc	14:cc	_
 12	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
 13	not	not	PART	RB	_	14	advmod	14:advmod	_
-14	have	have	VERB	VB	VerbForm=Inf	4	conj	4:conj	_
+14	have	have	VERB	VB	VerbForm=Inf	4	conj	4:conj:but	_
 15	dhirea	dhirea	NOUN	NN	Number=Sing	14	obj	14:obj	SpaceAfter=No
 16	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -38,7 +38,7 @@
 8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 9	wo	will	AUX	MD	VerbForm=Fin	11	aux	11:aux	SpaceAfter=No
 10	nt	not	PART	RB	_	11	advmod	11:advmod	_
-11	eat	eat	VERB	VB	VerbForm=Inf	3	conj	3:conj	_
+11	eat	eat	VERB	VB	VerbForm=Inf	3	conj	3:conj:but	_
 12	anything	anything	PRON	NN	Number=Sing	11	obj	11:obj	SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -71,7 +71,7 @@
 9	with	with	ADP	IN	_	12	case	12:case	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 11	sick	sick	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	dog	dog	NOUN	NN	Number=Sing	8	obl	8:obl	_
+12	dog	dog	NOUN	NN	Number=Sing	8	obl	8:obl:with	_
 
 # sent_id = answers-20111108111112AAAjhoy_ans-0007
 # text = VERY CONCERNED!!!
@@ -87,7 +87,7 @@
 4	dog	dog	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	vet	vet	NOUN	NN	Number=Sing	2	obl	2:obl	_
+7	vet	vet	NOUN	NN	Number=Sing	2	obl	2:obl:to	_
 8	ASAP	asap	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
 9	!!!	!!!	PUNCT	.	_	2	punct	2:punct	_
 
@@ -96,18 +96,18 @@
 1	esp	esp	ADV	RB	_	3	advmod	3:advmod	_
 2	if	if	SCONJ	IN	_	4	mark	4:mark	_
 3	not	not	PART	RB	_	4	advmod	4:advmod	_
-4	eating	eat	VERB	VBG	VerbForm=Ger	24	advcl	24:advcl	_
+4	eating	eat	VERB	VBG	VerbForm=Ger	24	advcl	24:advcl:if	_
 5	-	-	PUNCT	,	_	24	punct	24:punct	_
 6	if	if	SCONJ	IN	_	10	mark	10:mark	_
-7	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
+7	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj|14:nsubj	_
 8	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	aux	10:aux	_
 9	only	only	ADV	RB	_	10	advmod	10:advmod	_
-10	happened	happen	VERB	VBN	Tense=Past|VerbForm=Part	24	advcl	24:advcl	_
+10	happened	happen	VERB	VBN	Tense=Past|VerbForm=Part	24	advcl	24:advcl:if	_
 11	once	once	ADV	RB	NumType=Mult	10	advmod	10:advmod	_
 12	and	and	CCONJ	CC	_	14	cc	14:cc	_
 13	could	could	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
-14	get	get	VERB	VB	VerbForm=Inf	10	conj	10:conj	_
-15	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	14	obj	14:obj	_
+14	get	get	VERB	VB	VerbForm=Inf	10	conj	10:conj:and|24:advcl:if	_
+15	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	14	obj	14:obj|17:nsubj:xsubj	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	eat	eat	VERB	VB	VerbForm=Inf	14	xcomp	14:xcomp	_
 18	right	right	ADV	RB	_	19	advmod	19:advmod	_
@@ -123,23 +123,23 @@
 28	meal	meal	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
 29	time	time	NOUN	NN	Number=Sing	26	obj	26:obj	_
 30	and	and	CCONJ	CC	_	32	cc	32:cc	_
-31	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	32	nsubj	32:nsubj	_
-32	needed	need	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	26	conj	26:conj	_
+31	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	32	nsubj	32:nsubj|34:nsubj:xsubj	_
+32	needed	need	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	26	conj	24:ccomp|26:conj:and	_
 33	to	to	PART	TO	_	34	mark	34:mark	_
 34	eat	eat	VERB	VB	VerbForm=Inf	32	xcomp	32:xcomp	_
 35	-	-	PUNCT	,	_	24	punct	24:punct	_
 36	since	since	SCONJ	IN	_	38	mark	38:mark	_
 37	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	38	expl	38:expl	_
-38	sounds	sound	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	53	advcl	53:advcl	_
+38	sounds	sound	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	53	advcl	53:advcl:since	_
 39	like	like	SCONJ	IN	_	42	mark	42:mark	_
 40	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	42	nsubj	42:nsubj	_
 41	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	42	aux	42:aux	_
-42	happened	happen	VERB	VBN	Tense=Past|VerbForm=Part	38	advcl	38:advcl	_
+42	happened	happen	VERB	VBN	Tense=Past|VerbForm=Part	38	advcl	38:advcl:like	_
 43	several	several	ADJ	JJ	Degree=Pos	44	amod	44:amod	_
 44	times	time	NOUN	NNS	Number=Plur	42	obj	42:obj	_
 45	over	over	ADP	IN	_	47	case	47:case	_
 46	two	two	NUM	CD	NumType=Card	47	nummod	47:nummod	_
-47	days	day	NOUN	NNS	Number=Plur	42	obl	42:obl	_
+47	days	day	NOUN	NNS	Number=Plur	42	obl	42:obl:over	_
 48	-	-	PUNCT	,	_	53	punct	53:punct	_
 49	then	then	ADV	RB	PronType=Dem	53	advmod	53:advmod	_
 50	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	53	nsubj	53:nsubj	_
@@ -148,8 +148,8 @@
 53	gotten	get	VERB	VBN	Tense=Past|VerbForm=Part	24	parataxis	24:parataxis	_
 54	int	int	X	GW	_	55	goeswith	55:goeswith	_
 55	to	to	ADP	IN	_	56	case	56:case	_
-56	something	something	PRON	NN	Number=Sing	53	obl	53:obl	_
-57	that	that	PRON	WDT	PronType=Rel	58	nsubj	58:nsubj	_
+56	something	something	PRON	NN	Number=Sing	53	obl	53:obl:to|58:nsubj:relsubj|61:nsubj:xsubj	_
+57	that	that	PRON	WDT	PronType=Rel	58	nsubj	56:ref	_
 58	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	56	acl:relcl	56:acl:relcl	_
 59	to	to	PART	TO	_	61	mark	61:mark	_
 60	be	be	AUX	VB	VerbForm=Inf	61	aux:pass	61:aux:pass	_
@@ -167,11 +167,11 @@
 4	some	some	DET	DT	_	5	det	5:det	_
 5	type	type	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	disease	disease	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+7	disease	disease	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
-9	that	that	PRON	DT	Number=Sing|PronType=Dem	11	nsubj	11:nsubj	_
+9	that	that	PRON	DT	Number=Sing|PronType=Dem	11	nsubj	11:nsubj|14:nsubj:xsubj	_
 10	too	too	ADV	RB	_	9	advmod	9:advmod	_
-11	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+11	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
 12	to	to	PART	TO	_	14	mark	14:mark	_
 13	be	be	AUX	VB	VerbForm=Inf	14	aux:pass	14:aux:pass	_
 14	attended	attend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	11	xcomp	11:xcomp	_

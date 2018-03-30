@@ -4,7 +4,7 @@
 1	Ham	Ham	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
 2	s	's	PART	POS	_	1	case	1:case	_
 3	on	on	ADP	IN	_	4	case	4:case	_
-4	Friendly	Friendly	PROPN	NNP	Number=Sing	1	nmod	1:nmod	_
+4	Friendly	Friendly	PROPN	NNP	Number=Sing	1	nmod	1:nmod:on	_
 5	...	...	PUNCT	,	_	1	punct	1:punct	_
 6	RIP	rip	INTJ	UH	_	1	discourse	1:discourse	_
 
@@ -22,18 +22,18 @@
 10	into	into	ADP	IN	_	13	case	13:case	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 12	regional	regional	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	chain	chain	NOUN	NN	Number=Sing	9	obl	9:obl	_
+13	chain	chain	NOUN	NN	Number=Sing	9	obl	9:obl:into	_
 14	in	in	ADP	IN	_	17	case	17:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	late	late	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	80's	80'	NOUN	NNS	Number=Plur	9	obl	9:obl	_
+17	80's	80'	NOUN	NNS	Number=Plur	9	obl	9:obl:in	_
 18	--	--	PUNCT	,	_	7	punct	7:punct	_
 19	but	but	CCONJ	CC	_	24	cc	24:cc	_
 20	this	this	DET	DT	Number=Sing|PronType=Dem	21	det	21:det	_
 21	one	one	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	_
 22	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	_
 23	no	no	ADV	RB	_	24	advmod	24:advmod	_
-24	more	more	ADV	RBR	_	7	conj	7:conj	SpaceAfter=No
+24	more	more	ADV	RBR	_	7	conj	7:conj:but	SpaceAfter=No
 25	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-291046-0003
@@ -41,13 +41,13 @@
 1	Victim	victim	NOUN	NN	Number=Sing	0	root	0:root	_
 2	of	of	ADP	IN	_	4	case	4:case	_
 3	hard	hard	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	times	time	NOUN	NNS	Number=Plur	1	nmod	1:nmod	_
+4	times	time	NOUN	NNS	Number=Plur	1	nmod	1:nmod:of	_
 5	and	and	CCONJ	CC	_	10	cc	10:cc	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 7	suspect	suspect	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	parataxis	4:parataxis	_
 8	failing	fail	VERB	VBG	VerbForm=Ger	10	amod	10:amod	_
 9	corporate	corporate	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	management	management	NOUN	NN	Number=Sing	4	conj	4:conj	SpaceAfter=No
+10	management	management	NOUN	NN	Number=Sing	4	conj	1:nmod:of|4:conj:and	SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-291046-0004
@@ -55,7 +55,7 @@
 1	According	accord	VERB	VBG	VerbForm=Ger	4	case	4:case	_
 2	to	to	ADP	IN	_	4	case	4:case	_
 3	news	news	NOUN	NN	Number=Sing	4	compound	4:compound	_
-4	accounts	account	NOUN	NNS	Number=Plur	9	obl	9:obl	SpaceAfter=No
+4	accounts	account	NOUN	NNS	Number=Plur	9	obl	9:obl:to	SpaceAfter=No
 5	,	,	PUNCT	,	_	9	punct	9:punct	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	company	company	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
@@ -73,7 +73,7 @@
 6	of	of	ADP	IN	_	9	case	9:case	_
 7	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 8	college	college	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	evenings	evening	NOUN	NNS	Number=Plur	5	nmod	5:nmod	_
+9	evenings	evening	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	_
 10	there	there	ADV	RB	PronType=Dem	9	advmod	9:advmod	_
 11	long	long	ADV	RB	Degree=Pos	12	advmod	12:advmod	_
 12	ago	ago	ADV	RB	_	9	advmod	9:advmod	SpaceAfter=No

@@ -12,16 +12,16 @@
 3	go	go	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	into	into	ADP	IN	_	6	case	6:case	_
 5	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	_
-6	store	store	NOUN	NN	Number=Sing	3	obl	3:obl	_
+6	store	store	NOUN	NN	Number=Sing	3	obl	3:obl:into	_
 7	just	just	ADV	RB	_	9	advmod	9:advmod	_
 8	for	for	ADP	IN	_	9	case	9:case	_
-9	something	something	PRON	NN	Number=Sing	3	obl	3:obl	_
+9	something	something	PRON	NN	Number=Sing	3	obl	3:obl:for	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	do	do	VERB	VB	VerbForm=Inf	9	acl	9:acl	_
+11	do	do	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	_
 12	on	on	ADP	IN	_	15	case	15:case	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 14	sunday	sunday	PROPN	NNP	Number=Sing	15	compound	15:compound	_
-15	afternoon	afternoon	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+15	afternoon	afternoon	NOUN	NN	Number=Sing	11	obl	11:obl:on	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-241855-0003
@@ -32,10 +32,10 @@
 4	people	people	NOUN	NNS	Number=Plur	2	obj	2:obj	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	product	product	NOUN	NN	Number=Sing	4	conj	4:conj	_
+7	product	product	NOUN	NN	Number=Sing	4	conj	2:obj|4:conj:and	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	service	service	NOUN	NN	Number=Sing	4	conj	4:conj	SpaceAfter=No
+10	service	service	NOUN	NN	Number=Sing	4	conj	2:obj|4:conj:and	SpaceAfter=No
 11	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-241855-0004
@@ -46,14 +46,14 @@
 4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 5	home	home	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	made	make	VERB	VBN	Tense=Past|VerbForm=Part	7	amod	7:amod	_
-7	product	product	NOUN	NN	Number=Sing	2	obl	2:obl	_
-8	that	that	PRON	WDT	PronType=Rel	10	nsubj	10:nsubj	_
+7	product	product	NOUN	NN	Number=Sing	2	obl	2:obl:to|10:nsubj:relsubj	_
+8	that	that	PRON	WDT	PronType=Rel	10	nsubj	7:ref	_
 9	really	really	ADV	RB	_	10	advmod	10:advmod	_
 10	stands	stand	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	test	test	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	of	of	ADP	IN	_	14	case	14:case	_
-14	time	time	NOUN	NN	Number=Sing	12	nmod	12:nmod	SpaceAfter=No
+14	time	time	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 16	-	-	PUNCT	NFP	_	2	punct	2:punct	_
 
@@ -62,10 +62,10 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	Brick	Brick	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
-4	Ikea	Ikea	PROPN	NNP	Number=Sing	2	conj	2:conj	SpaceAfter=No
+4	Ikea	Ikea	PROPN	NNP	Number=Sing	2	conj	2:conj:and|9:nsubj	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	Leon	Leon	PROPN	NNP	Number=Sing	2	conj	2:conj	SpaceAfter=No
+7	Leon	Leon	PROPN	NNP	Number=Sing	2	conj	2:conj:and|9:nsubj	SpaceAfter=No
 8	's	's	PART	POS	_	7	case	7:case	_
 9	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 10	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
@@ -77,7 +77,7 @@
 1	But	but	CCONJ	CC	_	7	cc	7:cc	_
 2	furniture	furniture	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 3	like	like	ADP	IN	_	4	case	4:case	_
-4	this	this	PRON	DT	Number=Sing|PronType=Dem	2	nmod	2:nmod	_
+4	this	this	PRON	DT	Number=Sing|PronType=Dem	2	nmod	2:nmod:like	_
 5	will	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 6	truly	truly	ADV	RB	_	7	advmod	7:advmod	_
 7	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	_

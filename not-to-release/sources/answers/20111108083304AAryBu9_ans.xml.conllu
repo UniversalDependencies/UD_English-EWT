@@ -18,10 +18,10 @@
 4	an	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	essay	essay	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	for	for	ADP	IN	_	7	case	7:case	_
-7	school	school	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+7	school	school	NOUN	NN	Number=Sing	5	nmod	5:nmod:for	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
-9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
-10	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj|12:nsubj:xsubj	_
+10	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	know	know	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	if	if	SCONJ	IN	_	20	mark	20:mark	_
@@ -31,7 +31,7 @@
 17	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 18	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	20	amod	20:amod	_
 19	Smart	smart	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-20	Phone	phone	NOUN	NN	Number=Sing	12	advcl	12:advcl	SpaceAfter=No
+20	Phone	phone	NOUN	NN	Number=Sing	12	advcl	12:advcl:if	SpaceAfter=No
 21	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108083304AAryBu9_ans-0003
@@ -50,14 +50,14 @@
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
 7	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	9:cop	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	4	advcl	4:advcl	_
+9	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	4	advcl	4:advcl:because	_
 10	with	with	ADP	IN	_	12	case	12:case	_
 11	real	real	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	email	email	NOUN	NN	Number=Sing	9	obl	9:obl	_
+12	email	email	NOUN	NN	Number=Sing	9	obl	9:obl:with	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	games	game	NOUN	NNS	Number=Plur	12	conj	12:conj	_
+14	games	game	NOUN	NNS	Number=Plur	12	conj	9:obl:with|12:conj:and	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	stuff	stuff	NOUN	NN	Number=Sing	12	conj	12:conj	SpaceAfter=No
+16	stuff	stuff	NOUN	NN	Number=Sing	12	conj	9:obl:with|12:conj:and	SpaceAfter=No
 17	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108083304AAryBu9_ans-0005
@@ -98,6 +98,6 @@
 9	of	of	ADP	IN	_	12	case	12:case	_
 10	as	as	ADP	IN	_	12	case	12:case	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
-12	smartphone	smartphone	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+12	smartphone	smartphone	NOUN	NN	Number=Sing	8	obl	8:obl:as	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 

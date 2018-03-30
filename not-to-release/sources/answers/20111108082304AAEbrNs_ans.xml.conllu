@@ -5,13 +5,13 @@
 2	Color	Color	PROPN	NNP	Number=Sing	0	root	0:root	_
 3	or	or	CCONJ	CC	_	5	cc	5:cc	_
 4	NOOK	NOOK	PROPN	NNP	Number=Sing	5	compound	5:compound	_
-5	Tablet	Tablet	PROPN	NNP	Number=Sing	2	conj	2:conj	SpaceAfter=No
+5	Tablet	Tablet	PROPN	NNP	Number=Sing	2	conj	2:conj:or	SpaceAfter=No
 6	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108082304AAEbrNs_ans-0002
 # text = From what I understand they're pretty much the same thing.
 1	From	from	SCONJ	IN	_	2	case	2:case	_
-2	what	what	PRON	WP	PronType=Int	11	obl	11:obl	_
+2	what	what	PRON	WP	PronType=Int	11	obl	11:obl:from	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 4	understand	understand	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
 5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	SpaceAfter=No
@@ -25,11 +25,11 @@
 
 # sent_id = answers-20111108082304AAEbrNs_ans-0003
 # text = Some of the major differences I see is the HD video, longer battery life, and faster processor that the NOOK Tablet boasts.
-1	Some	some	DET	DT	_	11	nsubj	11:nsubj	_
+1	Some	some	DET	DT	_	11	nsubj	11:nsubj|15:nsubj|19:nsubj	_
 2	of	of	ADP	IN	_	5	case	5:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	major	major	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	differences	difference	NOUN	NNS	Number=Plur	1	nmod	1:nmod	_
+5	differences	difference	NOUN	NNS	Number=Plur	1	nmod	1:nmod:of	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 7	see	see	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
@@ -39,12 +39,12 @@
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	longer	longer	ADJ	JJR	Degree=Cmp	15	amod	15:amod	_
 14	battery	battery	NOUN	NN	Number=Sing	15	compound	15:compound	_
-15	life	life	NOUN	NN	Number=Sing	11	conj	11:conj	SpaceAfter=No
+15	life	life	NOUN	NN	Number=Sing	11	conj	11:conj:and	SpaceAfter=No
 16	,	,	PUNCT	,	_	19	punct	19:punct	_
 17	and	and	CCONJ	CC	_	19	cc	19:cc	_
 18	faster	faster	ADJ	JJR	Degree=Cmp	19	amod	19:amod	_
-19	processor	processor	NOUN	NN	Number=Sing	11	conj	11:conj	_
-20	that	that	PRON	WDT	PronType=Rel	24	obj	24:obj	_
+19	processor	processor	NOUN	NN	Number=Sing	11	conj	11:conj:and|24:obl:relobj	_
+20	that	that	PRON	WDT	PronType=Rel	24	obj	19:ref	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 22	NOOK	NOOK	PROPN	NNP	Number=Sing	23	compound	23:compound	_
 23	Tablet	Tablet	PROPN	NNP	Number=Sing	24	nsubj	24:nsubj	_
@@ -61,11 +61,11 @@
 6	major	major	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	difference	difference	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	speed	speed	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
+9	speed	speed	NOUN	NN	Number=Sing	7	nmod	7:nmod:in	_
 10	compared	compare	VERB	VBN	Tense=Past|VerbForm=Part	13	case	13:case	_
 11	to	to	ADP	IN	_	13	case	13:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	Color	Color	PROPN	NNP	Number=Sing	4	obl	4:obl	SpaceAfter=No
+13	Color	Color	PROPN	NNP	Number=Sing	4	obl	4:obl:to	SpaceAfter=No
 14	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108082304AAEbrNs_ans-0005
@@ -77,7 +77,7 @@
 5	an	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	iPad	iPad	PROPN	NNP	Number=Sing	4	obj	4:obj	_
 7	or	or	CCONJ	CC	_	8	cc	8:cc	_
-8	Kindle	Kindle	PROPN	NNP	Number=Sing	6	conj	6:conj	SpaceAfter=No
+8	Kindle	Kindle	PROPN	NNP	Number=Sing	6	conj	4:obj|6:conj:or	SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108082304AAEbrNs_ans-0006
@@ -86,8 +86,8 @@
 2	just	just	ADV	RB	_	3	advmod	3:advmod	_
 3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	an	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-5	e-reader	e-reader	NOUN	NN	Number=Sing	3	obj	3:obj	_
-6	that	that	PRON	WDT	PronType=Rel	7	nsubj	7:nsubj	_
+5	e-reader	e-reader	NOUN	NN	Number=Sing	3	obj	3:obj|7:nsubj:relsubj	_
+6	that	that	PRON	WDT	PronType=Rel	7	nsubj	5:ref	_
 7	does	do	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	little	little	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
@@ -95,24 +95,24 @@
 11	more	more	ADJ	JJR	Degree=Cmp	7	obj	7:obj	_
 12	than	than	SCONJ	IN	_	14	mark	14:mark	_
 13	just	just	ADV	RB	_	14	advmod	14:advmod	_
-14	read	read	VERB	VB	VerbForm=Inf	11	advcl	11:advcl	SpaceAfter=No
+14	read	read	VERB	VB	VerbForm=Inf	11	advcl	11:advcl:than	SpaceAfter=No
 15	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108082304AAEbrNs_ans-0007
 # text = Yes, I know about the Kindle Fire but that's not what I want (: Does it make sense to shell out the extra fifty dollars?
 1	Yes	yes	INTJ	UH	_	4	discourse	4:discourse	SpaceAfter=No
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|11:nsubj|13:nsubj	_
 4	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	about	about	ADP	IN	_	8	case	8:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	Kindle	Kindle	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	Fire	Fire	PROPN	NNP	Number=Sing	4	obl	4:obl	_
+8	Fire	Fire	PROPN	NNP	Number=Sing	4	obl	4:obl:about	_
 9	but	but	CCONJ	CC	_	11	cc	11:cc	_
 10	that	that	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	4:nsubj	SpaceAfter=No
-11	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj	_
+11	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj:but	_
 12	not	not	PART	RB	_	4	advmod	4:advmod	_
-13	what	what	PRON	WP	PronType=Int	4	conj	4:conj	_
+13	what	what	PRON	WP	PronType=Int	4	conj	4:conj:but	_
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
 15	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	acl:relcl	13:acl:relcl	_
 16	(:	(:	SYM	NFP	_	4	discourse	4:discourse	_
@@ -149,8 +149,8 @@
 7	Color	Color	PROPN	NNP	Number=Sing	4	obj	4:obj	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
-10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
-11	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj	_
+10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj|13:nsubj:xsubj	_
+11	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	say	say	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	that	that	SCONJ	IN	_	18	mark	18:mark	_
@@ -159,7 +159,7 @@
 17	very	very	ADV	RB	_	18	advmod	18:advmod	_
 18	happy	happy	ADJ	JJ	Degree=Pos	13	ccomp	13:ccomp	_
 19	with	with	ADP	IN	_	20	case	20:case	_
-20	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obl	18:obl	SpaceAfter=No
+20	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obl	18:obl:with	SpaceAfter=No
 21	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108082304AAEbrNs_ans-0010
@@ -177,7 +177,7 @@
 # text = When I found out them came up with the Nook Tablet, I was pretty disappointed though, because I bought my Nook color for the same darn price!
 1	When	when	ADV	WRB	PronType=Int	3	mark	3:mark	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	found	find	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	16	advcl	16:advcl	_
+3	found	find	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	16	advcl	16:advcl:when	_
 4	out	out	ADP	RP	_	3	compound:prt	3:compound:prt	_
 5	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
 6	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	ccomp	3:ccomp	_
@@ -185,7 +185,7 @@
 8	with	with	ADP	IN	_	11	case	11:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	Nook	Nook	PROPN	NNP	Number=Sing	11	compound	11:compound	_
-11	Tablet	Tablet	PROPN	NNP	Number=Sing	6	obl	6:obl	SpaceAfter=No
+11	Tablet	Tablet	PROPN	NNP	Number=Sing	6	obl	6:obl:with	SpaceAfter=No
 12	,	,	PUNCT	,	_	16	punct	16:punct	_
 13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	cop	16:cop	_
@@ -195,7 +195,7 @@
 18	,	,	PUNCT	,	_	16	punct	16:punct	_
 19	because	because	SCONJ	IN	_	21	mark	21:mark	_
 20	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	21	nsubj	21:nsubj	_
-21	bought	buy	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	16	advcl	16:advcl	_
+21	bought	buy	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	16	advcl	16:advcl:because	_
 22	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
 23	Nook	Nook	PROPN	NNP	Number=Sing	24	compound	24:compound	_
 24	color	color	PROPN	NNP	Number=Sing	21	obj	21:obj	_
@@ -203,7 +203,7 @@
 26	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
 27	same	same	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
 28	darn	darn	NOUN	NN	Number=Sing	29	compound	29:compound	_
-29	price	price	NOUN	NN	Number=Sing	24	nmod	24:nmod	SpaceAfter=No
+29	price	price	NOUN	NN	Number=Sing	24	nmod	24:nmod:for	SpaceAfter=No
 30	!	!	PUNCT	.	_	16	punct	16:punct	_
 
 # sent_id = answers-20111108082304AAEbrNs_ans-0012
@@ -219,7 +219,7 @@
 9	more	more	ADV	RBR	_	10	advmod	10:advmod	_
 10	updated	updated	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	Nook	Nook	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	Tablet	Tablet	PROPN	NNP	Number=Sing	6	obl	6:obl	SpaceAfter=No
+12	Tablet	Tablet	PROPN	NNP	Number=Sing	6	obl	6:obl:for	SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108082304AAEbrNs_ans-0013
@@ -248,8 +248,8 @@
 3	Nook	Nook	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4	Tablet	Tablet	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	SpaceAfter=No
 5	's	's	PART	POS	_	4	case	4:case	_
-6	processor	processor	NOUN	NN	Number=Sing	1	obl	1:obl	_
-7	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	SpaceAfter=No
+6	processor	processor	NOUN	NN	Number=Sing	1	obl	1:obl:by	_
+7	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj|13:nsubj:xsubj	SpaceAfter=No
 8	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
 9	supposed	suppose	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 10	to	to	PART	TO	_	13	mark	13:mark	_
@@ -270,14 +270,14 @@
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	better	better	ADV	RBR	Degree=Cmp	11	advmod	11:advmod	_
 10	battery	battery	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	life	life	NOUN	NN	Number=Sing	7	conj	7:conj	_
+11	life	life	NOUN	NN	Number=Sing	7	conj	5:obj|7:conj:and	_
 12	and	and	CCONJ	CC	_	15	cc	15:cc	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 14	better	better	ADJ	JJR	Degree=Cmp	15	amod	15:amod	_
-15	processor	processor	NOUN	NN	Number=Sing	7	conj	7:conj	_
+15	processor	processor	NOUN	NN	Number=Sing	7	conj	5:obj|7:conj:and	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
-18	microphone	microphone	NOUN	NN	Number=Sing	7	conj	7:conj	SpaceAfter=No
+18	microphone	microphone	NOUN	NN	Number=Sing	7	conj	5:obj|7:conj:and	SpaceAfter=No
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108082304AAEbrNs_ans-0017
@@ -292,13 +292,13 @@
 4	;	;	PUNCT	,	_	3	punct	3:punct	_
 5	B	B	PROPN	NNP	Number=Sing	9	compound	9:compound	SpaceAfter=No
 6	&	&	CCONJ	CC	_	7	cc	7:cc	SpaceAfter=No
-7	N	N	PROPN	NNP	Number=Sing	5	conj	5:conj	_
+7	N	N	PROPN	NNP	Number=Sing	5	conj	5:conj|9:compound	_
 8	Nook	Nook	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 9	Tablet	Tablet	PROPN	NNP	Number=Sing	3	list	3:list	SpaceAfter=No
 10	,	,	PUNCT	,	_	9	punct	9:punct	_
 11	B	B	PROPN	NNP	Number=Sing	15	compound	15:compound	SpaceAfter=No
 12	&	&	CCONJ	CC	_	13	cc	13:cc	SpaceAfter=No
-13	N	N	PROPN	NNP	Number=Sing	11	conj	11:conj	_
+13	N	N	PROPN	NNP	Number=Sing	11	conj	11:conj|15:compound	_
 14	Nook	Nook	PROPN	NNP	Number=Sing	15	compound	15:compound	_
 15	Color	Color	PROPN	NNP	Number=Sing	9	list	9:list	SpaceAfter=No
 16	,	,	PUNCT	,	_	9	punct	9:punct	_

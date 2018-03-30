@@ -6,7 +6,7 @@
 3	good	good	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 4	B	b	ADJ	JJ	Degree=Pos	9	amod	9:amod	SpaceAfter=No
 5	&	&	CCONJ	CC	_	6	cc	6:cc	SpaceAfter=No
-6	W	w	ADJ	JJ	Degree=Pos	4	conj	4:conj	_
+6	W	w	ADJ	JJ	Degree=Pos	4	conj	4:conj|9:amod	_
 7	software	software	NOUN	NN	Number=Sing	9	nmod:poss	9:nmod:poss	SpaceAfter=No
 8	's	's	PART	POS	_	7	case	7:case	_
 9	Photography	photography	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	SpaceAfter=No
@@ -24,8 +24,8 @@
 8	crisp	crisp	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 9	Black	black	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 10	&	&	CCONJ	CC	_	11	cc	11:cc	_
-11	White	white	ADJ	JJ	Degree=Pos	9	conj	9:conj	_
-12	editing	editing	NOUN	NN	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+11	White	white	ADJ	JJ	Degree=Pos	9	conj	9:conj|12:amod	_
+12	editing	editing	NOUN	NN	Number=Sing	5	nmod	5:nmod:for	SpaceAfter=No
 13	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108080100AAJHNUK_ans-0003
@@ -37,7 +37,7 @@
 5	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	SpaceAfter=No
 6	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 7	not	not	PART	RB	_	8	advmod	8:advmod	_
-8	cutting	cut	VERB	VBG	VerbForm=Ger	2	conj	2:conj	_
+8	cutting	cut	VERB	VBG	VerbForm=Ger	2	conj	2:conj:and	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	obj	8:obj	SpaceAfter=No
 10	,	,	PUNCT	,	_	8	punct	8:punct	_
 11	looks	look	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	parataxis	8:parataxis	_
@@ -51,11 +51,11 @@
 3	one	one	NUM	CD	NumType=Card	1	nsubj	1:nsubj	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
-6	shots	shot	NOUN	NNS	Number=Plur	3	nmod	3:nmod	_
+6	shots	shot	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
 7	in	in	ADP	IN	_	8	case	8:case	_
-8	B	b	ADJ	JJ	Degree=Pos	6	nmod	6:nmod	SpaceAfter=No
+8	B	b	ADJ	JJ	Degree=Pos	6	nmod	6:nmod:in	SpaceAfter=No
 9	&	&	CCONJ	CC	_	10	cc	10:cc	SpaceAfter=No
-10	W	w	ADJ	JJ	Degree=Pos	8	conj	8:conj	_
+10	W	w	ADJ	JJ	Degree=Pos	8	conj	6:nmod:in|8:conj	_
 
 # sent_id = answers-20111108080100AAJHNUK_ans-0005
 # text = http://www.flickr.com/photos/adamtolle/6094960940/in/set-72157627535453128/
@@ -64,8 +64,8 @@
 # sent_id = answers-20111108080100AAJHNUK_ans-0006
 # text = Any programs that you use please list :) Thx
 1	Any	any	DET	DT	_	2	det	2:det	_
-2	programs	program	NOUN	NNS	Number=Plur	7	obj	7:obj	_
-3	that	that	PRON	WDT	PronType=Rel	5	obj	5:obj	_
+2	programs	program	NOUN	NNS	Number=Plur	7	obj	5:obl:relobj|7:obj	_
+3	that	that	PRON	WDT	PronType=Rel	5	obj	2:ref	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
 5	use	use	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
 6	please	please	INTJ	UH	_	7	discourse	7:discourse	_
@@ -81,7 +81,7 @@
 4	try	try	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	this	this	PRON	DT	Number=Sing|PronType=Dem	4	obj	4:obj	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	gimp	gimp	PROPN	NNP	Number=Sing	4	obl	4:obl	SpaceAfter=No
+7	gimp	gimp	PROPN	NNP	Number=Sing	4	obl	4:obl:in	SpaceAfter=No
 8	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108080100AAJHNUK_ans-0008
@@ -98,15 +98,15 @@
 10	as	as	ADV	RB	_	13	cc	13:cc	_
 11	well	well	ADV	RB	Degree=Pos	10	fixed	10:fixed	_
 12	as	as	ADP	IN	_	10	fixed	10:fixed	_
-13	control	control	NOUN	NN	Number=Sing	8	conj	8:conj	_
+13	control	control	NOUN	NN	Number=Sing	8	conj	3:obj|8:conj:as_well_as	_
 14	over	over	SCONJ	IN	_	21	mark	21:mark	_
 15	how	how	ADV	WRB	PronType=Int	21	advmod	21:advmod	_
 16	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
 17	black	black	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
-19	white	white	ADJ	JJ	Degree=Pos	17	conj	17:conj	_
+19	white	white	ADJ	JJ	Degree=Pos	17	conj	17:conj:and|20:amod	_
 20	photo	photo	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	_
-21	looks	look	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	acl	13:acl	SpaceAfter=No
+21	looks	look	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	acl	13:acl:over	SpaceAfter=No
 22	:	:	PUNCT	:	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108080100AAJHNUK_ans-0009
@@ -119,7 +119,7 @@
 6	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 7	still	still	ADV	RB	_	9	advmod	9:advmod	_
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	color	color	NOUN	NN	Number=Sing	1	advcl	1:advcl	_
+9	color	color	NOUN	NN	Number=Sing	1	advcl	1:advcl:in	_
 
 # sent_id = answers-20111108080100AAJHNUK_ans-0010
 # text = Create a new layer and fill the later with black.
@@ -128,11 +128,11 @@
 3	new	new	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	layer	layer	NOUN	NN	Number=Sing	1	obj	1:obj	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	fill	fill	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
+6	fill	fill	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	later	later	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	with	with	ADP	IN	_	10	case	10:case	_
-10	black	black	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+10	black	black	NOUN	NN	Number=Sing	6	obl	6:obl:with	SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108080100AAJHNUK_ans-0011
@@ -143,16 +143,16 @@
 4	mode	mode	NOUN	NN	Number=Sing	1	obj	1:obj	_
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	"	"	PUNCT	``	_	7	punct	7:punct	SpaceAfter=No
-7	color	color	NOUN	NN	Number=Sing	1	obl	1:obl	SpaceAfter=No
+7	color	color	NOUN	NN	Number=Sing	1	obl	1:obl:to	SpaceAfter=No
 8	"	"	PUNCT	''	_	7	punct	7:punct	_
 9	this	this	PRON	DT	Number=Sing|PronType=Dem	11	nsubj	11:nsubj	_
 10	will	will	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 11	make	make	VERB	VB	VerbForm=Inf	1	parataxis	1:parataxis	_
 12	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
-13	image	image	NOUN	NN	Number=Sing	11	obj	11:obj	_
+13	image	image	NOUN	NN	Number=Sing	11	obj	11:obj|14:nsubj:xsubj|16:nsubj:xsubj	_
 14	blak	blak	ADJ	JJ	Degree=Pos	11	xcomp	11:xcomp	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	white	white	ADJ	JJ	Degree=Pos	14	conj	14:conj	SpaceAfter=No
+16	white	white	ADJ	JJ	Degree=Pos	14	conj	11:xcomp|14:conj:and	SpaceAfter=No
 17	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108080100AAJHNUK_ans-0012
@@ -162,7 +162,7 @@
 3	>>>	>>>	SYM	NFP	_	4	punct	4:punct	SpaceAfter=No
 4	levels	level	NOUN	NNS	Number=Plur	1	obj	1:obj	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	adjust	adjust	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
+6	adjust	adjust	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 7	each	each	DET	DT	_	8	det	8:det	_
 8	channel	channel	NOUN	NN	Number=Sing	11	nmod:poss	11:nmod:poss	SpaceAfter=No
 9	's	's	PART	POS	_	8	case	8:case	_
@@ -178,26 +178,26 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	brightness	brightness	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	darkness	darkness	NOUN	NN	Number=Sing	5	conj	5:conj	_
+7	darkness	darkness	NOUN	NN	Number=Sing	5	conj	3:obj|5:conj:and	_
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	specific	specific	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	parts	part	NOUN	NNS	Number=Plur	5	nmod	5:nmod	_
+10	parts	part	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	_
 11	of	of	ADP	IN	_	13	case	13:case	_
 12	an	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
-13	image	image	NOUN	NN	Number=Sing	10	nmod	10:nmod	SpaceAfter=No
+13	image	image	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	SpaceAfter=No
 14	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108080100AAJHNUK_ans-0014
 # text = For more information on the theory behind later modes check out this gimp video tutorial: http://gimpedblog.blogspot.com/2011/09/gimp-video-tutorial-how-to-convert.html
 1	For	for	ADP	IN	_	3	case	3:case	_
 2	more	more	ADJ	JJR	Degree=Cmp	3	amod	3:amod	_
-3	information	information	NOUN	NN	Number=Sing	10	obl	10:obl	_
+3	information	information	NOUN	NN	Number=Sing	10	obl	10:obl:for	_
 4	on	on	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	theory	theory	NOUN	NN	Number=Sing	3	nmod	3:nmod	_
+6	theory	theory	NOUN	NN	Number=Sing	3	nmod	3:nmod:on	_
 7	behind	behind	ADP	IN	_	9	case	9:case	_
 8	later	later	ADJ	JJR	Degree=Cmp	9	amod	9:amod	_
-9	modes	mode	NOUN	NNS	Number=Plur	6	nmod	6:nmod	_
+9	modes	mode	NOUN	NNS	Number=Plur	6	nmod	6:nmod:behind	_
 10	check	check	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 11	out	out	ADP	RP	_	10	compound:prt	10:compound:prt	_
 12	this	this	DET	DT	Number=Sing|PronType=Dem	15	det	15:det	_
@@ -211,12 +211,12 @@
 # text = For more information on adjusting exposure in gimp chef out this gimp video tutorial: http://gimpedblog.blogspot.com/2011/09/how-to-use-gimp-for-beginners-lesson-4.html
 1	For	for	ADP	IN	_	3	case	3:case	_
 2	more	more	ADJ	JJR	Degree=Cmp	3	amod	3:amod	_
-3	information	information	NOUN	NN	Number=Sing	9	obl	9:obl	_
+3	information	information	NOUN	NN	Number=Sing	9	obl	9:obl:for	_
 4	on	on	SCONJ	IN	_	5	mark	5:mark	_
-5	adjusting	adjust	VERB	VBG	VerbForm=Ger	3	acl	3:acl	_
+5	adjusting	adjust	VERB	VBG	VerbForm=Ger	3	acl	3:acl:on	_
 6	exposure	exposure	NOUN	NN	Number=Sing	5	obj	5:obj	_
 7	in	in	ADP	IN	_	8	case	8:case	_
-8	gimp	gimp	PROPN	NNP	Number=Sing	5	obl	5:obl	_
+8	gimp	gimp	PROPN	NNP	Number=Sing	5	obl	5:obl:in	_
 9	chef	chef	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 10	out	out	ADP	RP	_	9	compound:prt	9:compound:prt	_
 11	this	this	DET	DT	Number=Sing|PronType=Dem	14	det	14:det	_
@@ -235,12 +235,12 @@
 
 # sent_id = answers-20111108080100AAJHNUK_ans-0017
 # text = Picasa is free and pretty good.
-1	Picasa	Picasa	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
+1	Picasa	Picasa	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj|6:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	free	free	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	and	and	CCONJ	CC	_	6	cc	6:cc	_
 5	pretty	pretty	ADV	RB	_	6	advmod	6:advmod	_
-6	good	good	ADJ	JJ	Degree=Pos	3	conj	3:conj	SpaceAfter=No
+6	good	good	ADJ	JJ	Degree=Pos	3	conj	3:conj:and	SpaceAfter=No
 7	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108080100AAJHNUK_ans-0018
@@ -257,9 +257,9 @@
 10	r	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
 11	on	on	ADP	IN	_	13	case	13:case	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
-13	macbook	macbook	PROPN	NNP	Number=Sing	15	advcl	15:advcl	_
+13	macbook	macbook	PROPN	NNP	Number=Sing	15	advcl	15:advcl:on	_
 14	there	there	PRON	EX	_	15	expl	15:expl	SpaceAfter=No
-15	s	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj	_
+15	s	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:or	_
 16	aperture	aperture	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	_
 17	:)	:)	SYM	NFP	_	6	discourse	6:discourse	_
 
@@ -271,9 +271,9 @@
 4	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	1	ccomp	1:ccomp	_
 5	from	from	ADP	IN	_	7	case	7:case	_
 6	"	"	PUNCT	``	_	7	punct	7:punct	SpaceAfter=No
-7	B	b	ADJ	JJ	Degree=Pos	4	obl	4:obl	SpaceAfter=No
+7	B	b	ADJ	JJ	Degree=Pos	4	obl	4:obl:from	SpaceAfter=No
 8	&	&	CCONJ	CC	_	9	cc	9:cc	SpaceAfter=No
-9	W	w	ADJ	JJ	Degree=Pos	7	conj	7:conj	SpaceAfter=No
+9	W	w	ADJ	JJ	Degree=Pos	7	conj	4:obl:from|7:conj	SpaceAfter=No
 10	"	"	PUNCT	''	_	9	punct	9:punct	SpaceAfter=No
 11	...	...	PUNCT	,	_	1	punct	1:punct	_
 12	many	many	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
@@ -284,7 +284,7 @@
 17	generic	generic	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	B	b	ADJ	JJ	Degree=Pos	15	obj	15:obj	SpaceAfter=No
 19	&	&	CCONJ	CC	_	20	cc	20:cc	SpaceAfter=No
-20	W	w	ADJ	JJ	Degree=Pos	18	conj	18:conj	SpaceAfter=No
+20	W	w	ADJ	JJ	Degree=Pos	18	conj	15:obj|18:conj	SpaceAfter=No
 21	...	...	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108080100AAJHNUK_ans-0020
@@ -292,8 +292,8 @@
 1	try	try	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	something	something	PRON	NN	Number=Sing	1	obj	1:obj	_
 3	like	like	ADP	IN	_	4	case	4:case	_
-4	photoscape	photoscape	PROPN	NNP	Number=Sing	2	nmod	2:nmod	_
-5	which	which	PRON	WDT	PronType=Rel	6	nsubj	6:nsubj	_
+4	photoscape	photoscape	PROPN	NNP	Number=Sing	2	nmod	2:nmod:like|6:nsubj:relsubj	_
+5	which	which	PRON	WDT	PronType=Rel	6	nsubj	4:ref	_
 6	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
 7	different	different	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	options	option	NOUN	NNS	Number=Plur	6	obj	6:obj	SpaceAfter=No

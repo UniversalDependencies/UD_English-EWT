@@ -7,14 +7,14 @@
 4	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	if	if	SCONJ	IN	_	7	mark	7:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
-7	cross	cross	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl	_
+7	cross	cross	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:if	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	sussex	sussex	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	male	male	NOUN	NN	Number=Sing	7	obj	7:obj	_
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 13	silkie	silkie	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	female	female	NOUN	NN	Number=Sing	10	conj	10:conj	SpaceAfter=No
+14	female	female	NOUN	NN	Number=Sing	10	conj	7:obj|10:conj:and	SpaceAfter=No
 15	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108092029AAsHTYP_ans-0002
@@ -27,7 +27,7 @@
 6	and	and	CCONJ	CC	_	9	cc	9:cc	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	pekin	pekin	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	female	female	NOUN	NN	Number=Sing	5	conj	5:conj	_
+9	female	female	NOUN	NN	Number=Sing	5	conj	2:obj|5:conj:and	_
 10	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 11	bought	buy	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	parataxis	2:parataxis	_
 12	2	2	NUM	CD	NumType=Card	13	nummod	13:nummod	_
@@ -40,7 +40,7 @@
 19	and	and	CCONJ	CC	_	22	cc	22:cc	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 21	silkie	silkie	NOUN	NN	Number=Sing	22	compound	22:compound	_
-22	females	female	NOUN	NNS	Number=Plur	18	conj	18:conj	_
+22	females	female	NOUN	NNS	Number=Plur	18	conj	18:conj:and|24:nsubj	_
 23	would	would	AUX	MD	VerbForm=Fin	24	aux	24:aux	_
 24	make	make	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
 25	?	?	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
@@ -49,23 +49,23 @@
 # text = if you had any pics of your hens i would like to see them to compare them to mine thanks?
 1	if	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	advcl	11:advcl	_
+3	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:if	_
 4	any	any	DET	DT	_	5	det	5:det	_
 5	pics	pic	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	hens	hen	NOUN	NNS	Number=Plur	5	nmod	5:nmod	_
-9	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
+8	hens	hen	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	_
+9	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj|13:nsubj:xsubj	_
 10	would	would	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 11	like	like	VERB	VB	VerbForm=Inf	0	root	0:root	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	see	see	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	13	obj	13:obj	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
-16	compare	compare	VERB	VB	VerbForm=Inf	13	advcl	13:advcl	_
+16	compare	compare	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:to	_
 17	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	16	obj	16:obj	_
 18	to	to	ADP	IN	_	19	case	19:case	_
-19	mine	mine	PRON	PRP	_	16	obl	16:obl	_
+19	mine	mine	PRON	PRP	_	16	obl	16:obl:to	_
 20	thanks	thanks	NOUN	NN	Number=Sing	11	discourse	11:discourse	SpaceAfter=No
 21	?	?	PUNCT	.	_	11	punct	11:punct	_
 
@@ -75,7 +75,7 @@
 2	Sussex	sussex	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 3	crossed	cross	VERB	VBN	Tense=Past|VerbForm=Part	2	acl	2:acl	_
 4	with	with	ADP	IN	_	5	case	5:case	_
-5	Silkie	silkie	NOUN	NN	Number=Sing	3	obl	3:obl	_
+5	Silkie	silkie	NOUN	NN	Number=Sing	3	obl	3:obl:with	_
 6	would	would	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 7	make	make	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
@@ -93,14 +93,14 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	lot	lot	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	genetics	genetics	NOUN	NNS	Number=Plur	4	nmod	4:nmod	_
+6	genetics	genetics	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
 7	at	at	ADP	IN	_	8	case	8:case	_
-8	play	play	NOUN	NN	Number=Sing	4	nmod	4:nmod	_
+8	play	play	NOUN	NN	Number=Sing	4	nmod	4:nmod:at	_
 9	between	between	ADP	IN	_	11	case	11:case	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	Sussex	sussex	NOUN	NN	Number=Sing	2	obl	2:obl	_
+11	Sussex	sussex	NOUN	NN	Number=Sing	2	obl	2:obl:between	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	Silkie	silkie	NOUN	NN	Number=Sing	11	conj	11:conj	SpaceAfter=No
+13	Silkie	silkie	NOUN	NN	Number=Sing	11	conj	2:obl:between|11:conj:and	SpaceAfter=No
 14	,	,	PUNCT	,	_	2	punct	2:punct	_
 15	so	so	ADV	RB	_	19	advmod	19:advmod	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
@@ -108,7 +108,7 @@
 18	would	would	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 19	vary	vary	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
 20	in	in	ADP	IN	_	21	case	21:case	_
-21	appearance	appearance	NOUN	NN	Number=Sing	19	obl	19:obl	SpaceAfter=No
+21	appearance	appearance	NOUN	NN	Number=Sing	19	obl	19:obl:in	SpaceAfter=No
 22	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108092029AAsHTYP_ans-0006
@@ -119,9 +119,9 @@
 4	say	say	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	what	what	DET	WDT	PronType=Int	6	det	6:det	_
 6	color	color	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	Silkie	silkie	NOUN	NN	Number=Sing	12	obl	12:obl	_
+7	Silkie	silkie	NOUN	NN	Number=Sing	12	obl	12:obl:with	_
 8	or	or	CCONJ	CC	_	9	cc	9:cc	_
-9	Sussex	sussex	NOUN	NN	Number=Sing	7	conj	7:conj	_
+9	Sussex	sussex	NOUN	NN	Number=Sing	7	conj	7:conj:or|12:obl:with	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
 11	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
 12	dealing	deal	VERB	VBG	Tense=Pres|VerbForm=Part	4	ccomp	4:ccomp	_
@@ -132,7 +132,7 @@
 17	n't	not	PART	RB	_	18	advmod	18:advmod	_
 18	say	say	VERB	VB	VerbForm=Inf	4	parataxis	4:parataxis	_
 19	what	what	DET	WDT	PronType=Int	20	det	20:det	_
-20	color	color	NOUN	NN	Number=Sing	25	obj	25:obj	_
+20	color	color	NOUN	NN	Number=Sing	25	obj	25:obj|27:nsubj:xsubj	_
 21	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
 22	chicks	chick	NOUN	NNS	Number=Plur	25	nsubj	25:nsubj	_
 23	would	would	AUX	MD	VerbForm=Fin	25	aux	25:aux	_
@@ -186,7 +186,7 @@
 2	offspring	offspring	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 3	from	from	ADP	IN	_	5	case	5:case	_
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
-5	cross	cross	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+5	cross	cross	NOUN	NN	Number=Sing	2	nmod	2:nmod:from	_
 6	will	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 7	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	soft	soft	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
@@ -198,7 +198,7 @@
 14	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 16	recessive	recessive	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	gene	gene	NOUN	NN	Number=Sing	7	advcl	7:advcl	SpaceAfter=No
+17	gene	gene	NOUN	NN	Number=Sing	7	advcl	7:advcl:as	SpaceAfter=No
 18	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = answers-20111108092029AAsHTYP_ans-0012
@@ -210,9 +210,9 @@
 5	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	_
 6	black	black	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 7	skin	skin	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	color	color	NOUN	NN	Number=Sing	5	obj	5:obj	SpaceAfter=No
+8	color	color	NOUN	NN	Number=Sing	5	obj	5:obj|12:nsubj:relsubj	SpaceAfter=No
 9	,	,	PUNCT	,	_	8	punct	8:punct	_
-10	which	which	PRON	WDT	PronType=Rel	12	nsubj	12:nsubj	_
+10	which	which	PRON	WDT	PronType=Rel	12	nsubj	8:ref	_
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 12	dominate	dominate	ADJ	JJ	Degree=Pos	8	acl:relcl	8:acl:relcl	SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -222,13 +222,13 @@
 1	Sussex	sussex	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
 2	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	White	white	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	Skin	skin	NOUN	NN	Number=Sing	2	obj	2:obj	_
-5	which	which	PRON	WDT	PronType=Rel	8	nsubj	8:nsubj	_
+4	Skin	skin	NOUN	NN	Number=Sing	2	obj	2:obj|8:nsubj:relsubj|10:nsubj:relsubj	_
+5	which	which	PRON	WDT	PronType=Rel	8	nsubj	4:ref	_
 6	could	could	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 7	be	be	AUX	VB	VerbForm=Inf	8	cop	8:cop	_
 8	recessive	recessive	ADJ	JJ	Degree=Pos	4	acl:relcl	4:acl:relcl	_
 9	or	or	CCONJ	CC	_	10	cc	10:cc	_
-10	dominate	dominate	ADJ	JJ	Degree=Pos	8	conj	8:conj	SpaceAfter=No
+10	dominate	dominate	ADJ	JJ	Degree=Pos	8	conj	4:acl:relcl|8:conj:or	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108092029AAsHTYP_ans-0014
@@ -237,7 +237,7 @@
 2	way	way	NOUN	NN	Number=Sing	8	obl:npmod	8:obl:npmod	_
 3	rec.	rec.	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
-5	dom.	dom.	ADJ	JJ	Degree=Pos	3	conj	3:conj	_
+5	dom.	dom.	ADJ	JJ	Degree=Pos	3	conj	3:conj:and|7:amod	_
 6	white	white	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	genes	gene	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
 8	dilute	dilute	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -248,15 +248,15 @@
 
 # sent_id = answers-20111108092029AAsHTYP_ans-0015
 # text = Skin will be darker but lighter then the Silkies.
-1	Skin	skin	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
+1	Skin	skin	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	be	be	AUX	VB	VerbForm=Inf	4	cop	4:cop	_
 4	darker	darker	ADJ	JJR	Degree=Cmp	0	root	0:root	_
 5	but	but	CCONJ	CC	_	6	cc	6:cc	_
-6	lighter	lighter	ADJ	JJR	Degree=Cmp	4	conj	4:conj	_
+6	lighter	lighter	ADJ	JJR	Degree=Cmp	4	conj	4:conj:but	_
 7	then	than	ADP	IN	Typo=Yes	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	Silkies	silky	NOUN	NNS	Number=Plur	6	obl	6:obl	SpaceAfter=No
+9	Silkies	silky	NOUN	NNS	Number=Plur	6	obl	6:obl:then	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108092029AAsHTYP_ans-0016
@@ -268,7 +268,7 @@
 5	If	if	SCONJ	IN	_	8	mark	8:mark	_
 6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	Silkie	silkie	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
-8	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	advcl	16:advcl	_
+8	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	advcl	16:advcl:if	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 10	beard	beard	NOUN	NN	Number=Sing	12	compound	12:compound	SpaceAfter=No
 11	/	/	PUNCT	,	_	12	punct	12:punct	SpaceAfter=No
@@ -287,7 +287,7 @@
 24	genes	gene	NOUN	NNS	Number=Plur	27	nsubj	27:nsubj	_
 25	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	27	cop	27:cop	_
 26	incomplete	incomplete	ADV	RB	_	27	advmod	27:advmod	_
-27	dominate	dominate	ADJ	JJ	Degree=Pos	16	advcl	16:advcl	SpaceAfter=No
+27	dominate	dominate	ADJ	JJ	Degree=Pos	16	advcl	16:advcl:as	SpaceAfter=No
 28	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108092029AAsHTYP_ans-0017
@@ -309,7 +309,7 @@
 15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
 16	also	also	ADV	RB	_	18	advmod	18:advmod	_
 17	incomplete	incomplete	ADV	RB	_	18	advmod	18:advmod	_
-18	dominate	dominate	ADJ	JJ	Degree=Pos	8	advcl	8:advcl	SpaceAfter=No
+18	dominate	dominate	ADJ	JJ	Degree=Pos	8	advcl	8:advcl:as	SpaceAfter=No
 19	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108092029AAsHTYP_ans-0018
@@ -330,7 +330,7 @@
 14	another	another	DET	DT	_	17	det	17:det	_
 15	incomplete	incomplete	ADV	RB	_	17	advmod	17:advmod	_
 16	dominate	dominate	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	gene	gene	NOUN	NN	Number=Sing	6	advcl	6:advcl	SpaceAfter=No
+17	gene	gene	NOUN	NN	Number=Sing	6	advcl	6:advcl:due_to	SpaceAfter=No
 18	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108092029AAsHTYP_ans-0019
@@ -341,8 +341,8 @@
 4	Silkies	silky	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
 5	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	_
 6	walnut	walnut	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	combs	comb	NOUN	NNS	Number=Plur	5	obj	5:obj	_
-8	which	which	PRON	WDT	PronType=Rel	14	nsubj	14:nsubj	_
+7	combs	comb	NOUN	NNS	Number=Plur	5	obj	5:obj|14:nsubj:relsubj	_
+8	which	which	PRON	WDT	PronType=Rel	14	nsubj	7:ref	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
 10	actually	actually	ADV	RB	_	14	advmod	14:advmod	_
 11	genetically	genetically	ADV	RB	_	14	advmod	14:advmod	_
@@ -352,16 +352,16 @@
 15	(	(	PUNCT	-LRB-	_	16	punct	16:punct	SpaceAfter=No
 16	Rose	rose	NOUN	NN	Number=Sing	14	appos	14:appos	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	Pea	pea	NOUN	NN	Number=Sing	16	conj	16:conj	SpaceAfter=No
+18	Pea	pea	NOUN	NN	Number=Sing	16	conj	14:appos|16:conj:and	SpaceAfter=No
 19	)	)	PUNCT	-RRB-	_	18	punct	18:punct	_
-20	single	single	NOUN	NN	Number=Sing	23	nsubj	23:nsubj	_
+20	single	single	NOUN	NN	Number=Sing	23	nsubj	23:nsubj|27:nsubj	_
 21	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	cop	23:cop	_
 22	also	also	ADV	RB	_	23	advmod	23:advmod	_
 23	there	there	ADV	RB	PronType=Dem	5	parataxis	5:parataxis	SpaceAfter=No
 24	,	,	PUNCT	,	_	27	punct	27:punct	_
 25	but	but	CCONJ	CC	_	27	cc	27:cc	_
 26	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	27	cop	27:cop	_
-27	recessive	recessive	ADJ	JJ	Degree=Pos	23	conj	23:conj	SpaceAfter=No
+27	recessive	recessive	ADJ	JJ	Degree=Pos	23	conj	23:conj:but	SpaceAfter=No
 28	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108092029AAsHTYP_ans-0020
@@ -370,19 +370,19 @@
 2	crossed	cross	VERB	VBN	Tense=Past|VerbForm=Part	8	advcl	8:advcl	_
 3	to	to	ADP	IN	_	5	case	5:case	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-5	Sussex	Sussex	PROPN	NNP	Number=Sing	2	obl	2:obl	_
+5	Sussex	Sussex	PROPN	NNP	Number=Sing	2	obl	2:obl:to	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 7	could	could	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 8	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
 10	walnut	walnut	NOUN	NN	Number=Sing	18	compound	18:compound	SpaceAfter=No
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
-12	pea	pea	NOUN	NN	Number=Sing	10	conj	10:conj	SpaceAfter=No
+12	pea	pea	NOUN	NN	Number=Sing	10	conj	10:conj:or|18:compound	SpaceAfter=No
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
-14	rose	rose	NOUN	NN	Number=Sing	10	conj	10:conj	SpaceAfter=No
+14	rose	rose	NOUN	NN	Number=Sing	10	conj	10:conj:or|18:compound	SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
-17	single	single	ADJ	JJ	Degree=Pos	10	conj	10:conj	_
+17	single	single	ADJ	JJ	Degree=Pos	10	conj	10:conj:or|18:compound	_
 18	combed	comb	VERB	VBN	Tense=Past|VerbForm=Part	19	amod	19:amod	_
 19	bird	bird	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No
 20	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -421,23 +421,23 @@
 11	could	could	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 12	develop	develop	VERB	VB	VerbForm=Inf	0	root	0:root	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
-14	have	have	VERB	VB	VerbForm=Inf	12	advcl	12:advcl	_
+14	have	have	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:to	_
 15	an	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 16	fifth	fifth	ADJ	JJ	Degree=Pos|NumType=Ord	17	amod	17:amod	_
 17	toe	toe	NOUN	NN	Number=Sing	14	obj	14:obj	_
 18	on	on	ADP	IN	_	19	case	19:case	_
-19	both	both	DET	DT	_	17	nmod	17:nmod	SpaceAfter=No
+19	both	both	DET	DT	_	17	nmod	17:nmod:on	SpaceAfter=No
 20	,	,	PUNCT	,	_	24	punct	24:punct	_
 21	or	or	CCONJ	CC	_	24	cc	24:cc	_
 22	even	even	ADV	RB	_	24	advmod	24:advmod	_
 23	one	one	NUM	CD	NumType=Card	24	nummod	24:nummod	_
-24	foot	foot	NOUN	NN	Number=Sing	19	conj	19:conj	SpaceAfter=No
+24	foot	foot	NOUN	NN	Number=Sing	19	conj	17:nmod:on|19:conj:or	SpaceAfter=No
 25	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = answers-20111108092029AAsHTYP_ans-0024
 # text = Silkie crosses are great birds, and very neat looking.
 1	Silkie	silkie	NOUN	NN	Number=Sing	2	compound	2:compound	_
-2	crosses	cross	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
+2	crosses	cross	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|10:nsubj	_
 3	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 4	great	great	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	birds	bird	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
@@ -445,7 +445,7 @@
 7	and	and	CCONJ	CC	_	10	cc	10:cc	_
 8	very	very	ADV	RB	_	10	advmod	10:advmod	_
 9	neat	neat	ADJ	JJ	Degree=Pos	10	obl:npmod	10:obl:npmod	_
-10	looking	look	VERB	VBG	VerbForm=Ger	5	conj	5:conj	SpaceAfter=No
+10	looking	look	VERB	VBG	VerbForm=Ger	5	conj	5:conj:and	SpaceAfter=No
 11	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108092029AAsHTYP_ans-0025
@@ -455,19 +455,19 @@
 3	excellent	excellent	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	mothers	mother	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 5	as	as	SCONJ	IN	_	8	mark	8:mark	_
-6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
+6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj|11:nsubj|16:nsubj	_
 7	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
-8	bigger	bigger	ADJ	JJR	Degree=Cmp	2	advcl	2:advcl	SpaceAfter=No
+8	bigger	bigger	ADJ	JJR	Degree=Cmp	2	advcl	2:advcl:as	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	can	can	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
-11	see	see	VERB	VB	VerbForm=Inf	8	conj	8:conj	_
+11	see	see	VERB	VB	VerbForm=Inf	8	conj	2:advcl:as|8:conj:and	_
 12	better	better	ADV	RBR	Degree=Cmp	11	advmod	11:advmod	SpaceAfter=No
 13	,	,	PUNCT	,	_	16	punct	16:punct	_
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
 15	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
-16	smarter	smarter	ADJ	JJR	Degree=Cmp	8	conj	8:conj	_
+16	smarter	smarter	ADJ	JJR	Degree=Cmp	8	conj	2:advcl:as|8:conj:and	_
 17	the	than	ADP	IN	Typo=Yes	18	case	18:case	_
-18	Silkies	silky	NOUN	NNS	Number=Plur	16	obl	16:obl	SpaceAfter=No
+18	Silkies	silky	NOUN	NNS	Number=Plur	16	obl	16:obl:the	SpaceAfter=No
 19	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108092029AAsHTYP_ans-0026

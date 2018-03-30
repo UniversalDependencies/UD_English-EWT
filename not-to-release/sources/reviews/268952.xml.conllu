@@ -6,7 +6,7 @@
 
 # sent_id = reviews-268952-0002
 # text = I have been going there since I was a little girl and love the friendly and relaxing atmosphere.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|13:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	4	aux	4:aux	_
 4	going	go	VERB	VBG	VerbForm=Ger	0	root	0:root	_
@@ -16,19 +16,19 @@
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	little	little	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	girl	girl	NOUN	NN	Number=Sing	4	advcl	4:advcl	_
+11	girl	girl	NOUN	NN	Number=Sing	4	advcl	4:advcl:since	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	love	love	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj	_
+13	love	love	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 15	friendly	friendly	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	relaxing	relaxing	ADJ	JJ	Degree=Pos	15	conj	15:conj	_
+17	relaxing	relaxing	ADJ	JJ	Degree=Pos	15	conj	15:conj:and|18:amod	_
 18	atmosphere	atmosphere	NOUN	NN	Number=Sing	13	obj	13:obj	SpaceAfter=No
 19	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-268952-0003
 # text = Dr. Stiefvater has always been very professional and helpful.
-1	Dr.	Dr.	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
+1	Dr.	Dr.	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj|9:nsubj	_
 2	Stiefvater	Stiefvater	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 4	always	always	ADV	RB	_	7	advmod	7:advmod	_
@@ -36,7 +36,7 @@
 6	very	very	ADV	RB	_	7	advmod	7:advmod	_
 7	professional	professional	ADJ	JJ	Degree=Pos	0	root	0:root	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	helpful	helpful	ADJ	JJ	Degree=Pos	7	conj	7:conj	SpaceAfter=No
+9	helpful	helpful	ADJ	JJ	Degree=Pos	7	conj	7:conj:and	SpaceAfter=No
 10	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-268952-0004
@@ -47,21 +47,21 @@
 4	Bayside	Bayside	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 5	Chiropractic	Chiropractic	PROPN	NNP	Number=Sing	3	obj	3:obj	_
 6	to	to	ADP	IN	_	7	case	7:case	_
-7	anyone	anyone	PRON	NN	Number=Sing	3	obl	3:obl	_
-8	who	who	PRON	WP	PronType=Rel	11	nsubj	11:nsubj	_
+7	anyone	anyone	PRON	NN	Number=Sing	3	obl	3:obl:to|11:nsubj:relsubj|18:nsubj:relsubj	_
+8	who	who	PRON	WP	PronType=Rel	11	nsubj	7:ref	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	need	need	NOUN	NN	Number=Sing	7	acl:relcl	7:acl:relcl	_
 12	of	of	ADP	IN	_	15	case	15:case	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 14	regular	regular	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	adjustment	adjustment	NOUN	NN	Number=Sing	11	nmod	11:nmod	_
+15	adjustment	adjustment	NOUN	NN	Number=Sing	11	nmod	11:nmod:of	_
 16	or	or	CCONJ	CC	_	18	cc	18:cc	_
 17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
-18	suffering	suffer	VERB	VBG	Tense=Pres|VerbForm=Part	11	conj	11:conj	_
+18	suffering	suffer	VERB	VBG	Tense=Pres|VerbForm=Part	11	conj	7:acl:relcl|11:conj:or	_
 19	from	from	ADP	IN	_	22	case	22:case	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
 21	chronic	chronic	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	condition	condition	NOUN	NN	Number=Sing	18	obl	18:obl	SpaceAfter=No
+22	condition	condition	NOUN	NN	Number=Sing	18	obl	18:obl:from	SpaceAfter=No
 23	.	.	PUNCT	.	_	3	punct	3:punct	_
 

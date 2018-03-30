@@ -13,13 +13,13 @@
 5	on	on	ADP	IN	_	8	case	8:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	Sunday	Sunday	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	morning	morning	NOUN	NN	Number=Sing	2	obl	2:obl	SpaceAfter=No
+8	morning	morning	NOUN	NN	Number=Sing	2	obl	2:obl:on	SpaceAfter=No
 9	,	,	PUNCT	,	_	2	punct	2:punct	_
 10	with	with	SCONJ	IN	_	14	mark	14:mark	_
 11	friends	friend	NOUN	NNS	Number=Plur	14	nsubj	14:nsubj	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	family	family	NOUN	NN	Number=Sing	11	conj	11:conj	_
-14	telling	tell	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	_
+13	family	family	NOUN	NN	Number=Sing	11	conj	11:conj:and|14:nsubj	_
+14	telling	tell	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:with	_
 15	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	14	obj	14:obj	_
 16	that	that	SCONJ	IN	_	20	mark	20:mark	_
 17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
@@ -30,12 +30,12 @@
 22	Dentist	dentist	NOUN	NN	Number=Sing	20	obj	20:obj	_
 23	on	on	ADP	IN	_	25	case	25:case	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
-25	Sunday	Sunday	PROPN	NNP	Number=Sing	20	obl	20:obl	SpaceAfter=No
+25	Sunday	Sunday	PROPN	NNP	Number=Sing	20	obl	20:obl:on	SpaceAfter=No
 26	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-180886-0003
 # text = Dr. Taylor was not only available on a Sunday, but also was able to immediately take care of me.
-1	Dr.	Dr.	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
+1	Dr.	Dr.	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj|6:nsubj:xsubj|14:nsubj|17:nsubj:xsubj	_
 2	Taylor	Taylor	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	was	be	VERB	VBD	Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	not	not	ADV	RB	_	5	advmod	5:advmod	_
@@ -43,18 +43,18 @@
 6	available	available	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	_
 7	on	on	ADP	IN	_	9	case	9:case	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
-9	Sunday	Sunday	PROPN	NNP	Number=Sing	3	obl	3:obl	SpaceAfter=No
+9	Sunday	Sunday	PROPN	NNP	Number=Sing	3	obl	3:obl:on	SpaceAfter=No
 10	,	,	PUNCT	,	_	14	punct	14:punct	_
 11	but	but	CCONJ	CC	_	14	cc	14:cc	_
 12	also	also	ADV	RB	_	14	advmod	14:advmod	_
 13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
-14	able	able	ADJ	JJ	Degree=Pos	3	conj	3:conj	_
+14	able	able	ADJ	JJ	Degree=Pos	3	conj	3:conj:but	_
 15	to	to	PART	TO	_	17	mark	17:mark	_
 16	immediately	immediately	ADV	RB	_	17	advmod	17:advmod	_
 17	take	take	VERB	VB	VerbForm=Inf	14	xcomp	14:xcomp	_
 18	care	care	NOUN	NN	Number=Sing	17	obj	17:obj	_
 19	of	of	ADP	IN	_	20	case	20:case	_
-20	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	17	obl	17:obl	SpaceAfter=No
+20	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	17	obl	17:obl:of	SpaceAfter=No
 21	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-180886-0004
@@ -65,7 +65,7 @@
 4	informative	informative	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	about	about	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	options	option	NOUN	NNS	Number=Plur	4	obl	4:obl	_
+7	options	option	NOUN	NNS	Number=Plur	4	obl	4:obl:about	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 9	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	SpaceAfter=No
 10	,	,	PUNCT	,	_	4	punct	4:punct	_
@@ -74,9 +74,9 @@
 13	opinions	opinion	NOUN	NNS	Number=Plur	11	obj	11:obj	_
 14	on	on	ADP	IN	_	16	case	16:case	_
 15	different	different	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	treatments	treatment	NOUN	NNS	Number=Plur	13	nmod	13:nmod	_
+16	treatments	treatment	NOUN	NNS	Number=Plur	13	nmod	13:nmod:on	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
-18	choose	choose	VERB	VB	VerbForm=Inf	16	acl	16:acl	_
+18	choose	choose	VERB	VB	VerbForm=Inf	16	acl	16:acl:to	_
 19	from	from	ADP	IN	_	18	obl	18:obl	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -85,13 +85,13 @@
 1	Coming	come	VERB	VBG	VerbForm=Ger	16	advcl	16:advcl	_
 2	from	from	ADP	IN	_	4	case	4:case	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	person	person	NOUN	NN	Number=Sing	1	obl	1:obl	_
-5	who	who	PRON	WP	PronType=Rel	6	nsubj	6:nsubj	_
+4	person	person	NOUN	NN	Number=Sing	1	obl	1:obl:from|6:nsubj:relsubj	_
+5	who	who	PRON	WP	PronType=Rel	6	nsubj	4:ref	_
 6	hates	hate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	dentist	dentist	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	in	in	ADP	IN	_	10	case	10:case	_
-10	general	general	ADJ	JJ	Degree=Pos	6	obl	6:obl	SpaceAfter=No
+10	general	general	ADJ	JJ	Degree=Pos	6	obl	6:obl:in	SpaceAfter=No
 11	,	,	PUNCT	,	_	16	punct	16:punct	_
 12	Dr.	Dr.	PROPN	NNP	Number=Sing	16	nsubj	16:nsubj	_
 13	Taylor	Taylor	PROPN	NNP	Number=Sing	12	flat	12:flat	_
@@ -106,14 +106,14 @@
 2	really	really	ADV	RB	_	3	advmod	3:advmod	_
 3	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	visit	visit	NOUN	NN	Number=Sing	3	obj	3:obj	_
+5	visit	visit	NOUN	NN	Number=Sing	3	obj	3:obj|9:nsubj:xsubj	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 7	pain	pain	NOUN	NN	Number=Sing	8	obl:npmod	8:obl:npmod	_
 8	free	free	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	one	one	NOUN	NN	Number=Sing	3	xcomp	3:xcomp	_
 10	with	with	ADP	IN	_	12	case	12:case	_
 11	excellent	excellent	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	service	service	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+12	service	service	NOUN	NN	Number=Sing	3	obl	3:obl:with	SpaceAfter=No
 13	!	!	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-180886-0007
@@ -123,6 +123,6 @@
 3	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 5	to	to	ADP	IN	_	6	case	6:case	_
-6	everyone	everyone	PRON	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+6	everyone	everyone	PRON	NN	Number=Sing	3	obl	3:obl:to	SpaceAfter=No
 7	!	!	PUNCT	.	_	3	punct	3:punct	_
 

@@ -23,16 +23,16 @@
 # sent_id = reviews-217359-0003
 # text = if you don't mind being robbed ,cheated or lied to then this is the company for you .
 1	if	if	SCONJ	IN	_	5	mark	5:mark	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj|9:nsubj:xsubj|11:nsubj:xsubj	_
 3	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	5:aux	SpaceAfter=No
 4	n't	not	PART	RB	_	5	advmod	5:advmod	_
-5	mind	mind	VERB	VB	VerbForm=Inf	17	advcl	17:advcl	_
+5	mind	mind	VERB	VB	VerbForm=Inf	17	advcl	17:advcl:if	_
 6	being	be	AUX	VBG	VerbForm=Ger	7	aux:pass	7:aux:pass	_
 7	robbed	rob	VERB	VBN	Tense=Past|VerbForm=Part	5	xcomp	5:xcomp	_
 8	,	,	PUNCT	,	_	9	punct	9:punct	SpaceAfter=No
-9	cheated	cheat	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	7:conj	_
+9	cheated	cheat	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	5:xcomp|7:conj:or	_
 10	or	or	CCONJ	CC	_	11	cc	11:cc	_
-11	lied	lie	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	7:conj	_
+11	lied	lie	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	5:xcomp|7:conj:or	_
 12	to	to	ADP	IN	_	11	obl	11:obl	_
 13	then	then	ADV	RB	PronType=Dem	17	advmod	17:advmod	_
 14	this	this	PRON	DT	Number=Sing|PronType=Dem	17	nsubj	17:nsubj	_
@@ -40,7 +40,7 @@
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	company	company	NOUN	NN	Number=Sing	0	root	0:root	_
 18	for	for	ADP	IN	_	19	case	19:case	_
-19	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	17	nmod	17:nmod	_
+19	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	17	nmod	17:nmod:for	_
 20	.	.	PUNCT	.	_	17	punct	17:punct	_
 
 # sent_id = reviews-217359-0004
@@ -51,9 +51,9 @@
 4	every	every	DET	DT	_	5	det	5:det	_
 5	attempt	attempt	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	misinform	misinform	VERB	VB	VerbForm=Inf	5	acl	5:acl	_
+7	misinform	misinform	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	misrepresent	misrepresent	VERB	VB	VerbForm=Inf	7	conj	7:conj	_
+9	misrepresent	misrepresent	VERB	VB	VerbForm=Inf	7	conj	5:acl:to|7:conj:and	_
 10	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs|Reflex=Yes	9	obj	9:obj	_
 11	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -64,48 +64,48 @@
 3	up	up	ADP	RP	_	2	compound:prt	2:compound:prt	_
 4	excuses	excuse	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	hopes	hope	NOUN	NNS	Number=Plur	2	obl	2:obl	_
+6	hopes	hope	NOUN	NNS	Number=Plur	2	obl	2:obl:in	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	confuse	confuse	VERB	VB	VerbForm=Inf	6	acl	6:acl	_
+8	confuse	confuse	VERB	VB	VerbForm=Inf	6	acl	6:acl:to	_
 9	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 10	policy	policy	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	holders	holder	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 12	with	with	ADP	IN	_	13	case	13:case	_
-13	misinformation	misinformation	NOUN	NN	Number=Sing	8	obl	8:obl	_
+13	misinformation	misinformation	NOUN	NN	Number=Sing	8	obl	8:obl:with	_
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-217359-0006
 # text = as an example they took payment for 5 out of 6 monthly plan premiums for a yearly policy and cancelled the contract for the remainder of the policy for reasons they stated was not receiving information on other licensed drivers in the household ?
 1	as	as	ADP	IN	_	3	case	3:case	_
 2	an	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
-3	example	example	NOUN	NN	Number=Sing	5	obl	5:obl	_
-4	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
+3	example	example	NOUN	NN	Number=Sing	5	obl	5:obl:as	_
+4	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj|20:nsubj	_
 5	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	payment	payment	NOUN	NN	Number=Sing	5	obj	5:obj	_
 7	for	for	ADP	IN	_	14	case	14:case	_
 8	5	5	NUM	CD	NumType=Card	12	compound	12:compound	_
 9	out	out	ADP	IN	_	11	case	11:case	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	6	6	NUM	CD	NumType=Card	8	nmod	8:nmod	_
+11	6	6	NUM	CD	NumType=Card	8	nmod	8:nmod:of	_
 12	monthly	monthly	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 13	plan	plan	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	premiums	premium	NOUN	NNS	Number=Plur	6	nmod	6:nmod	_
+14	premiums	premium	NOUN	NNS	Number=Plur	6	nmod	6:nmod:for	_
 15	for	for	ADP	IN	_	18	case	18:case	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 17	yearly	yearly	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	policy	policy	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+18	policy	policy	NOUN	NN	Number=Sing	6	nmod	6:nmod:for	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	cancelled	cancel	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+20	cancelled	cancel	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj:and	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 22	contract	contract	NOUN	NN	Number=Sing	20	obj	20:obj	_
 23	for	for	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
-25	remainder	remainder	NOUN	NN	Number=Sing	22	nmod	22:nmod	_
+25	remainder	remainder	NOUN	NN	Number=Sing	22	nmod	22:nmod:for	_
 26	of	of	ADP	IN	_	28	case	28:case	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
-28	policy	policy	NOUN	NN	Number=Sing	25	nmod	25:nmod	_
+28	policy	policy	NOUN	NN	Number=Sing	25	nmod	25:nmod:of	_
 29	for	for	ADP	IN	_	30	case	30:case	_
-30	reasons	reason	NOUN	NNS	Number=Plur	20	obl	20:obl	_
+30	reasons	reason	NOUN	NNS	Number=Plur	20	obl	20:obl:for	_
 31	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	32	nsubj	32:nsubj	_
 32	stated	state	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	30	acl:relcl	30:acl:relcl	_
 33	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	35	aux	35:aux	_
@@ -115,10 +115,10 @@
 37	on	on	ADP	IN	_	40	case	40:case	_
 38	other	other	ADJ	JJ	Degree=Pos	40	amod	40:amod	_
 39	licensed	license	VERB	VBN	Tense=Past|VerbForm=Part	40	amod	40:amod	_
-40	drivers	driver	NOUN	NNS	Number=Plur	36	nmod	36:nmod	_
+40	drivers	driver	NOUN	NNS	Number=Plur	36	nmod	36:nmod:on	_
 41	in	in	ADP	IN	_	43	case	43:case	_
 42	the	the	DET	DT	Definite=Def|PronType=Art	43	det	43:det	_
-43	household	household	NOUN	NN	Number=Sing	40	nmod	40:nmod	_
+43	household	household	NOUN	NN	Number=Sing	40	nmod	40:nmod:in	_
 44	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-217359-0007
@@ -131,17 +131,17 @@
 6	on	on	ADP	IN	_	9	case	9:case	_
 7	four	four	NUM	CD	NumType=Card	9	nummod	9:nummod	_
 8	separate	separate	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	occasions	occasion	NOUN	NNS	Number=Plur	3	obl	3:obl	_
+9	occasions	occasion	NOUN	NNS	Number=Plur	3	obl	3:obl:on	_
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
-12	claim	claim	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+12	claim	claim	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
 13	there	there	PRON	EX	_	14	expl	14:expl	_
 14	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	ccomp	12:ccomp	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 16	glitch	glitch	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	_
 17	in	in	ADP	IN	_	19	case	19:case	_
 18	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
-19	systems	system	NOUN	NNS	Number=Plur	16	nmod	16:nmod	_
+19	systems	system	NOUN	NNS	Number=Plur	16	nmod	16:nmod:in	_
 20	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-217359-0008
@@ -155,6 +155,6 @@
 7	m	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	F%#king	fucking	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	Assh@%$e	asshole	NOUN	NN	Number=Sing	4	advcl	4:advcl	_
+10	Assh@%$e	asshole	NOUN	NN	Number=Sing	4	advcl	4:advcl:for	_
 11	!!!	!!!	PUNCT	.	_	4	punct	4:punct	_
 

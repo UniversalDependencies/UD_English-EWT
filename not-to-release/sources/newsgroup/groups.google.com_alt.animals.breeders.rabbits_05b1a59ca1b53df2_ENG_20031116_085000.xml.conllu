@@ -19,24 +19,24 @@
 
 # sent_id = newsgroup-groups.google.com_alt.animals.breeders.rabbits_05b1a59ca1b53df2_ENG_20031116_085000-0003
 # text = I would like to invite you to come to a site where you can hear talking parakeets that are not just mimicking, but actually talking in sophisticated conversational language.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	like	like	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	invite	invite	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	obj	5:obj	_
+6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	obj	5:obj|8:nsubj:xsubj	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	come	come	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
 9	to	to	ADP	IN	_	11	case	11:case	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	site	site	NOUN	NN	Number=Sing	8	obl	8:obl	_
+11	site	site	NOUN	NN	Number=Sing	8	obl	8:obl:to	_
 12	where	where	ADV	WRB	PronType=Rel	15	advmod	15:advmod	_
 13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
 14	can	can	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
 15	hear	hear	VERB	VB	VerbForm=Inf	11	acl:relcl	11:acl:relcl	_
 16	talking	talk	VERB	VBG	VerbForm=Ger	17	amod	17:amod	_
-17	parakeets	parakeet	NOUN	NNS	Number=Plur	15	obj	15:obj	_
-18	that	that	PRON	WDT	PronType=Rel	22	nsubj	22:nsubj	_
+17	parakeets	parakeet	NOUN	NNS	Number=Plur	15	obj	15:obj|22:nsubj:relsubj|26:nsubj:relsubj	_
+18	that	that	PRON	WDT	PronType=Rel	22	nsubj	17:ref	_
 19	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	aux	22:aux	_
 20	not	not	PART	RB	_	22	advmod	22:advmod	_
 21	just	just	ADV	RB	_	22	advmod	22:advmod	_
@@ -44,16 +44,16 @@
 23	,	,	PUNCT	,	_	26	punct	26:punct	_
 24	but	but	CCONJ	CC	_	26	cc	26:cc	_
 25	actually	actually	ADV	RB	_	26	advmod	26:advmod	_
-26	talking	talk	VERB	VBG	VerbForm=Ger	22	conj	22:conj	_
+26	talking	talk	VERB	VBG	VerbForm=Ger	22	conj	17:acl:relcl|22:conj:but	_
 27	in	in	ADP	IN	_	30	case	30:case	_
 28	sophisticated	sophisticated	ADJ	JJ	Degree=Pos	30	amod	30:amod	_
 29	conversational	conversational	ADJ	JJ	Degree=Pos	30	amod	30:amod	_
-30	language	language	NOUN	NN	Number=Sing	26	obl	26:obl	SpaceAfter=No
+30	language	language	NOUN	NN	Number=Sing	26	obl	26:obl:in	SpaceAfter=No
 31	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.breeders.rabbits_05b1a59ca1b53df2_ENG_20031116_085000-0004
 # text = This is a major breakthrough in the animal intelligence field and a must see/hear for every animal intelligence enthusiast.
-1	This	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj|16:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 4	major	major	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
@@ -62,18 +62,18 @@
 7	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 8	animal	animal	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	intelligence	intelligence	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	field	field	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+10	field	field	NOUN	NN	Number=Sing	5	nmod	5:nmod:in	_
 11	and	and	CCONJ	CC	_	16	cc	16:cc	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 13	must	must	NOUN	NN	Number=Sing	16	compound	16:compound	_
 14	see	see	NOUN	NN	Number=Sing	16	compound	16:compound	SpaceAfter=No
 15	/	/	PUNCT	,	_	16	punct	16:punct	SpaceAfter=No
-16	hear	hear	NOUN	NN	Number=Sing	5	conj	5:conj	_
+16	hear	hear	NOUN	NN	Number=Sing	5	conj	5:conj:and	_
 17	for	for	ADP	IN	_	21	case	21:case	_
 18	every	every	DET	DT	_	21	det	21:det	_
 19	animal	animal	NOUN	NN	Number=Sing	20	compound	20:compound	_
 20	intelligence	intelligence	NOUN	NN	Number=Sing	21	compound	21:compound	_
-21	enthusiast	enthusiast	NOUN	NN	Number=Sing	16	nmod	16:nmod	SpaceAfter=No
+21	enthusiast	enthusiast	NOUN	NN	Number=Sing	16	nmod	16:nmod:for	SpaceAfter=No
 22	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.breeders.rabbits_05b1a59ca1b53df2_ENG_20031116_085000-0005

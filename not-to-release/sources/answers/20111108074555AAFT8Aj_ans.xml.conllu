@@ -6,8 +6,8 @@
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 4	call	call	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	device	device	NOUN	NN	Number=Sing	4	obj	4:obj	_
-7	that	that	PRON	WDT	PronType=Rel	8	nsubj	8:nsubj	_
+6	device	device	NOUN	NN	Number=Sing	4	obj	4:obj|8:nsubj:relsubj	_
+7	that	that	PRON	WDT	PronType=Rel	8	nsubj	6:ref	_
 8	hold	hold	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
 9	up	up	ADP	RP	_	8	compound:prt	8:compound:prt	_
 10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
@@ -47,7 +47,7 @@
 5	good	good	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 6	photography	photography	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	supplies	supplies	NOUN	NNS	Number=Plur	8	compound	8:compound	_
-8	shop	shop	NOUN	NN	Number=Sing	1	obl	1:obl	SpaceAfter=No
+8	shop	shop	NOUN	NN	Number=Sing	1	obl	1:obl:in	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108074555AAFT8Aj_ans-0006
@@ -70,7 +70,7 @@
 6	search	search	NOUN	NN	Number=Sing	2	ccomp	2:ccomp	_
 7	on	on	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	net	net	NOUN	NN	Number=Sing	6	nmod	6:nmod	SpaceAfter=No
+9	net	net	NOUN	NN	Number=Sing	6	nmod	6:nmod:on	SpaceAfter=No
 10	:	:	PUNCT	:	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108074555AAFT8Aj_ans-0009
@@ -89,24 +89,24 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	term	term	NOUN	NN	Number=Sing	1	obj	1:obj	_
 4	or	or	CCONJ	CC	_	5	cc	5:cc	_
-5	find	find	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
+5	find	find	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:or	_
 6	photography	photography	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	supplies	supplies	NOUN	NNS	Number=Plur	8	compound	8:compound	_
 8	websites	website	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	put	put	VERB	VB	Mood=Imp|VerbForm=Fin	5	conj	5:conj	_
+10	put	put	VERB	VB	Mood=Imp|VerbForm=Fin	5	conj	5:conj:and	_
 11	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	obj	10:obj	_
 12	in	in	ADP	IN	_	15	case	15:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	search	search	NOUN	NN	Number=Sing	15	compound	15:compound	_
-15	box	box	NOUN	NN	Number=Sing	10	obl	10:obl	_
+15	box	box	NOUN	NN	Number=Sing	10	obl	10:obl:in	_
 16	(	(	PUNCT	-LRB-	_	1	punct	1:punct	SpaceAfter=No
 17	or	or	CCONJ	CC	_	18	cc	18:cc	_
-18	look	look	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
+18	look	look	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:or	_
 19	for	for	ADP	IN	_	22	case	22:case	_
 20	studio	studio	NOUN	NN	Number=Sing	21	compound	21:compound	_
 21	equipment	equipment	NOUN	NN	Number=Sing	22	compound	22:compound	_
-22	supplies	supplies	NOUN	NNS	Number=Plur	18	obl	18:obl	SpaceAfter=No
+22	supplies	supplies	NOUN	NNS	Number=Plur	18	obl	18:obl:for	SpaceAfter=No
 23	)	)	PUNCT	-RRB-	_	1	punct	1:punct	SpaceAfter=No
 24	.	.	PUNCT	.	_	1	punct	1:punct	_
 

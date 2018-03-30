@@ -5,7 +5,7 @@
 2	information	information	NOUN	NN	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	5	case	5:case	_
 4	big	big	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	companies	company	NOUN	NNS	Number=Plur	2	nmod	2:nmod	_
+5	companies	company	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0002
 # text = Apple Computers
@@ -21,7 +21,7 @@
 5	fruit	fruit	NOUN	NN	Number=Sing	0	root	0:root	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	founder	founder	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	Steve	Steve	PROPN	NNP	Number=Sing	5	nmod	5:nmod	_
+8	Steve	Steve	PROPN	NNP	Number=Sing	5	nmod	5:nmod:of	_
 9	Jobs	Jobs	PROPN	NNP	Number=Sing	8	flat	8:flat	SpaceAfter=No
 10	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -33,20 +33,20 @@
 4	months	month	NOUN	NNS	Number=Plur	5	obl:tmod	5:obl:tmod	_
 5	late	late	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	in	in	SCONJ	IN	_	7	mark	7:mark	_
-7	filing	file	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl	_
+7	filing	file	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl:in	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 9	name	name	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	for	for	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	business	business	NOUN	NN	Number=Sing	9	nmod	9:nmod	SpaceAfter=No
+12	business	business	NOUN	NN	Number=Sing	9	nmod	9:nmod:for	SpaceAfter=No
 13	,	,	PUNCT	,	_	16	punct	16:punct	_
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
-15	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
-16	threatened	threaten	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+15	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj|18:nsubj:xsubj	_
+16	threatened	threaten	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj:and	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
 18	call	call	VERB	VB	VerbForm=Inf	16	xcomp	16:xcomp	_
 19	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
-20	company	company	NOUN	NN	Number=Sing	18	obj	18:obj	_
+20	company	company	NOUN	NN	Number=Sing	18	obj	18:obj|22:nsubj:xsubj	_
 21	Apple	Apple	PROPN	NNP	Number=Sing	22	compound	22:compound	_
 22	Computers	Computers	PROPN	NNPS	Number=Plur	18	xcomp	18:xcomp	_
 23	if	if	SCONJ	IN	_	29	mark	29:mark	_
@@ -55,13 +55,13 @@
 26	colleagues	colleague	NOUN	NNS	Number=Plur	29	nsubj	29:nsubj	_
 27	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	29	aux	29:aux	SpaceAfter=No
 28	n't	not	PART	RB	_	29	advmod	29:advmod	_
-29	suggest	suggest	VERB	VB	VerbForm=Inf	18	advcl	18:advcl	_
+29	suggest	suggest	VERB	VB	VerbForm=Inf	18	advcl	18:advcl:if	_
 30	a	a	DET	DT	Definite=Ind|PronType=Art	32	det	32:det	_
 31	better	better	ADJ	JJR	Degree=Cmp	32	amod	32:amod	_
 32	name	name	NOUN	NN	Number=Sing	29	obj	29:obj	_
 33	by	by	ADP	IN	_	35	case	35:case	_
 34	5	5	NUM	CD	NumType=Card	35	nummod	35:nummod	_
-35	O'clock	o'clock	NOUN	NN	Number=Sing	29	obl	29:obl	SpaceAfter=No
+35	O'clock	o'clock	NOUN	NN	Number=Sing	29	obl	29:obl:by	SpaceAfter=No
 36	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0005
@@ -77,7 +77,7 @@
 5	acronym	acronym	NOUN	NN	Number=Sing	0	root	0:root	_
 6	as	as	SCONJ	IN	_	8	mark	8:mark	_
 7	popularly	popularly	ADV	RB	_	8	advmod	8:advmod	_
-8	believed	believe	VERB	VBN	Tense=Past|VerbForm=Part	5	advcl	5:advcl	SpaceAfter=No
+8	believed	believe	VERB	VBN	Tense=Past|VerbForm=Part	5	advcl	5:advcl:as	SpaceAfter=No
 9	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0007
@@ -86,7 +86,7 @@
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	short	short	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	for	for	ADP	IN	_	5	case	5:case	_
-5	San	San	PROPN	NNP	Number=Sing	3	obl	3:obl	_
+5	San	San	PROPN	NNP	Number=Sing	3	obl	3:obl:for	_
 6	Francisco	Francisco	PROPN	NNP	Number=Sing	5	flat	5:flat	SpaceAfter=No
 7	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -101,16 +101,16 @@
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 4	formed	form	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	by	by	SCONJ	IN	_	6	mark	6:mark	_
-6	using	use	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl	_
+6	using	use	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl:by	_
 7	COMp	comp	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
 8	,	,	PUNCT	,	_	7	punct	7:punct	_
 9	for	for	ADP	IN	_	10	case	10:case	_
-10	computer	computer	NOUN	NN	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+10	computer	computer	NOUN	NN	Number=Sing	7	nmod	7:nmod:for	SpaceAfter=No
 11	,	,	PUNCT	,	_	6	punct	6:punct	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	PAQ	paq	NOUN	NN	Number=Sing	7	conj	7:conj	_
+13	PAQ	paq	NOUN	NN	Number=Sing	7	conj	6:obj|7:conj:and	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
-15	denote	denote	VERB	VB	VerbForm=Inf	13	acl	13:acl	_
+15	denote	denote	VERB	VB	VerbForm=Inf	13	acl	13:acl:to	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
 17	small	small	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 18	integral	integral	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
@@ -131,7 +131,7 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	founder	founder	NOUN	NN	Number=Sing	9	nmod:poss	9:nmod:poss	SpaceAfter=No
 8	's	's	PART	POS	_	7	case	7:case	_
-9	name	name	NOUN	NN	Number=Sing	4	obl	4:obl	_
+9	name	name	NOUN	NN	Number=Sing	4	obl	4:obl:from	_
 10	Dr.	Dr.	PROPN	NNP	Number=Sing	9	appos	9:appos	SpaceAfter=No
 11	Michael	Michael	PROPN	NNP	Number=Sing	10	flat	10:flat	_
 12	Cowpland	Cowpland	PROPN	NNP	Number=Sing	10	flat	10:flat	SpaceAfter=No
@@ -144,7 +144,7 @@
 3	for	for	ADP	IN	_	6	case	6:case	_
 4	COwpland	COwpland	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 5	REsearch	REsearch	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	Laboratory	Laboratory	PROPN	NNP	Number=Sing	2	obl	2:obl	SpaceAfter=No
+6	Laboratory	Laboratory	PROPN	NNP	Number=Sing	2	obl	2:obl:for	SpaceAfter=No
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0013
@@ -158,17 +158,17 @@
 3	started	start	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	as	as	ADP	IN	_	6	case	6:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-6	joke	joke	NOUN	NN	Number=Sing	3	obl	3:obl	_
+6	joke	joke	NOUN	NN	Number=Sing	3	obl	3:obl:as	_
 7	boasting	boast	VERB	VBG	VerbForm=Ger	6	acl	6:acl	_
 8	about	about	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	amount	amount	NOUN	NN	Number=Sing	7	obl	7:obl	_
+10	amount	amount	NOUN	NN	Number=Sing	7	obl	7:obl:about	_
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	information	information	NOUN	NN	Number=Sing	10	nmod	10:nmod	_
+12	information	information	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 14	search	search	NOUN	NN	Number=Sing	16	compound	16:compound	SpaceAfter=No
 15	-	-	PUNCT	HYPH	_	16	punct	16:punct	SpaceAfter=No
-16	engine	engine	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
+16	engine	engine	NOUN	NN	Number=Sing	19	nsubj	19:nsubj|21:nsubj:xsubj	_
 17	would	would	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 18	be	be	AUX	VB	VerbForm=Inf	19	cop	19:cop	_
 19	able	able	ADJ	JJ	Degree=Pos	10	acl:relcl	10:acl:relcl	_
@@ -178,7 +178,7 @@
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0015
 # text = It was originally named 'Googol', a word for the number represented by 1 followed by 100 zeros.
-1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj:pass	4:nsubj:pass	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj:pass	4:nsubj:pass|6:nsubj:xsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 3	originally	originally	ADV	RB	_	4	advmod	4:advmod	_
 4	named	name	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -190,14 +190,14 @@
 10	word	word	NOUN	NN	Number=Sing	6	appos	6:appos	_
 11	for	for	ADP	IN	_	13	case	13:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	number	number	NOUN	NN	Number=Sing	10	nmod	10:nmod	_
+13	number	number	NOUN	NN	Number=Sing	10	nmod	10:nmod:for	_
 14	represented	represent	VERB	VBN	Tense=Past|VerbForm=Part	13	acl	13:acl	_
 15	by	by	ADP	IN	_	16	case	16:case	_
-16	1	1	NUM	CD	NumType=Card	14	obl	14:obl	_
+16	1	1	NUM	CD	NumType=Card	14	obl	14:obl:by	_
 17	followed	follow	VERB	VBN	Tense=Past|VerbForm=Part	16	acl	16:acl	_
 18	by	by	ADP	IN	_	20	case	20:case	_
 19	100	100	NUM	CD	NumType=Card	20	nummod	20:nummod	_
-20	zeros	zero	NOUN	NNS	Number=Plur	17	obl	17:obl	SpaceAfter=No
+20	zeros	zero	NOUN	NNS	Number=Plur	17	obl	17:obl:by	SpaceAfter=No
 21	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0016
@@ -211,15 +211,15 @@
 7	Sergey	Sergey	PROPN	NNP	Number=Sing	12	nsubj	12:nsubj	_
 8	Brin	Brin	PROPN	NNP	Number=Sing	7	flat	7:flat	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	Larry	Larry	PROPN	NNP	Number=Sing	7	conj	7:conj	_
+10	Larry	Larry	PROPN	NNP	Number=Sing	7	conj	7:conj:and|12:nsubj	_
 11	Page	Page	PROPN	NNP	Number=Sing	10	flat	10:flat	_
-12	presented	present	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	21	advcl	21:advcl	_
+12	presented	present	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	21	advcl	21:advcl:after	_
 13	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 14	project	project	NOUN	NN	Number=Sing	12	obj	12:obj	_
 15	to	to	ADP	IN	_	18	case	18:case	_
 16	an	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 17	angel	angel	NOUN	NN	Number=Sing	18	compound	18:compound	_
-18	investor	investor	NOUN	NN	Number=Sing	12	obl	12:obl	SpaceAfter=No
+18	investor	investor	NOUN	NN	Number=Sing	12	obl	12:obl:to	SpaceAfter=No
 19	,	,	PUNCT	,	_	21	punct	21:punct	_
 20	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	21	nsubj	21:nsubj	_
 21	received	receive	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -229,7 +229,7 @@
 25	out	out	ADP	RP	_	24	compound:prt	24:compound:prt	_
 26	to	to	ADP	IN	_	28	case	28:case	_
 27	'	'	PUNCT	``	_	28	punct	28:punct	SpaceAfter=No
-28	Google	Google	PROPN	NNP	Number=Sing	24	obl	24:obl	SpaceAfter=No
+28	Google	Google	PROPN	NNP	Number=Sing	24	obl	24:obl:to	SpaceAfter=No
 29	'	'	PUNCT	''	_	28	punct	28:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0017
@@ -245,18 +245,18 @@
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	idea	idea	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	of	of	SCONJ	IN	_	8	mark	8:mark	_
-8	accessing	access	VERB	VBG	VerbForm=Ger	6	acl	6:acl	_
+8	accessing	access	VERB	VBG	VerbForm=Ger	6	acl	6:acl:of	_
 9	e-mail	e-mail	NOUN	NN	Number=Sing	8	obj	8:obj	_
 10	via	via	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	web	web	NOUN	NN	Number=Sing	8	obl	8:obl	_
+12	web	web	NOUN	NN	Number=Sing	8	obl	8:obl:via	_
 13	from	from	ADP	IN	_	15	case	15:case	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
-15	computer	computer	NOUN	NN	Number=Sing	8	obl	8:obl	_
+15	computer	computer	NOUN	NN	Number=Sing	8	obl	8:obl:from	_
 16	anywhere	anywhere	ADV	RB	_	8	advmod	8:advmod	_
 17	in	in	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	world	world	NOUN	NN	Number=Sing	16	obl	16:obl	SpaceAfter=No
+19	world	world	NOUN	NN	Number=Sing	16	obl	16:obl:in	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0019
@@ -264,36 +264,36 @@
 1	When	when	ADV	WRB	PronType=Int	4	mark	4:mark	_
 2	Sabeer	Sabeer	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
 3	Bhatia	Bhatia	PROPN	NNP	Number=Sing	2	flat	2:flat	_
-4	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	16	advcl	16:advcl	_
+4	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	16	advcl	16:advcl:when	_
 5	up	up	ADV	RB	_	4	advmod	4:advmod	_
 6	with	with	ADP	IN	_	9	case	9:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	business	business	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	plan	plan	NOUN	NN	Number=Sing	4	obl	4:obl	_
+9	plan	plan	NOUN	NN	Number=Sing	4	obl	4:obl:with	_
 10	for	for	ADP	IN	_	13	case	13:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	mail	mail	NOUN	NN	Number=Sing	13	compound	13:compound	_
-13	service	service	NOUN	NN	Number=Sing	9	nmod	9:nmod	SpaceAfter=No
+13	service	service	NOUN	NN	Number=Sing	9	nmod	9:nmod:for	SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
-15	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
+15	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj|28:nsubj	_
 16	tried	try	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 17	all	all	DET	DT	_	18	det	18:det	_
 18	kinds	kind	NOUN	NNS	Number=Plur	16	obj	16:obj	_
 19	of	of	ADP	IN	_	20	case	20:case	_
-20	names	name	NOUN	NNS	Number=Plur	18	nmod	18:nmod	_
+20	names	name	NOUN	NNS	Number=Plur	18	nmod	18:nmod:of	_
 21	ending	end	VERB	VBG	VerbForm=Ger	20	acl	20:acl	_
 22	in	in	ADP	IN	_	24	case	24:case	_
 23	'	'	PUNCT	``	_	24	punct	24:punct	SpaceAfter=No
-24	mail	mail	NOUN	NN	Number=Sing	21	obl	21:obl	SpaceAfter=No
+24	mail	mail	NOUN	NN	Number=Sing	21	obl	21:obl:in	SpaceAfter=No
 25	'	'	PUNCT	''	_	24	punct	24:punct	_
 26	and	and	CCONJ	CC	_	28	cc	28:cc	_
 27	finally	finally	ADV	RB	_	28	advmod	28:advmod	_
-28	settled	settle	VERB	VBN	Tense=Past|VerbForm=Part	16	conj	16:conj	_
+28	settled	settle	VERB	VBN	Tense=Past|VerbForm=Part	16	conj	16:conj:and	_
 29	for	for	ADP	IN	_	30	case	30:case	_
-30	hotmail	hotmail	PROPN	NNP	Number=Sing	28	obl	28:obl	_
+30	hotmail	hotmail	PROPN	NNP	Number=Sing	28	obl	28:obl:for	_
 31	as	as	SCONJ	IN	_	33	mark	33:mark	_
 32	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	33	nsubj	33:nsubj	_
-33	included	include	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	28	advcl	28:advcl	_
+33	included	include	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	28	advcl	28:advcl:as	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
 35	letters	letter	NOUN	NNS	Number=Plur	37	compound	37:compound	_
 36	"	"	PUNCT	``	_	37	punct	37:punct	SpaceAfter=No
@@ -318,10 +318,10 @@
 4	referred	refer	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	to	to	ADP	IN	_	4	obl	4:obl	_
 6	as	as	ADP	IN	_	7	case	7:case	_
-7	HoTMaiL	HoTMaiL	PROPN	NNP	Number=Sing	4	obl	4:obl	_
+7	HoTMaiL	HoTMaiL	PROPN	NNP	Number=Sing	4	obl	4:obl:as	_
 8	with	with	ADP	IN	_	10	case	10:case	_
 9	selective	selective	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	uppercasing	uppercasing	NOUN	NN	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+10	uppercasing	uppercasing	NOUN	NN	Number=Sing	7	nmod	7:nmod:with	SpaceAfter=No
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0021
@@ -334,16 +334,16 @@
 1	Bill	Bill	PROPN	NNP	Number=Sing	2	compound	2:compound	_
 2	Hewlett	Hewlett	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	Dave	Dave	PROPN	NNP	Number=Sing	2	conj	2:conj	_
+4	Dave	Dave	PROPN	NNP	Number=Sing	2	conj	2:conj:and|6:nsubj	_
 5	Packard	Packard	PROPN	NNP	Number=Sing	4	flat	4:flat	_
 6	tossed	toss	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 8	coin	coin	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	decide	decide	VERB	VB	VerbForm=Inf	6	advcl	6:advcl	SpaceAfter=No
+10	decide	decide	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:to	SpaceAfter=No
 11	whether	whether	SCONJ	IN	_	18	mark	18:mark	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	company	company	NOUN	NN	Number=Sing	18	nsubj:pass	18:nsubj:pass	_
+13	company	company	NOUN	NN	Number=Sing	18	nsubj:pass	18:nsubj:pass|21:nsubj:xsubj|25:nsubj:xsubj	_
 14	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 15	founded	found	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	acl:relcl	13:acl:relcl	_
 16	would	would	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
@@ -355,7 +355,7 @@
 22	or	or	CCONJ	CC	_	25	cc	25:cc	_
 23	Packard	Packard	PROPN	NNP	Number=Sing	25	compound	25:compound	SpaceAfter=No
 24	-	-	PUNCT	HYPH	_	25	punct	25:punct	SpaceAfter=No
-25	Hewlett	Hewlett	PROPN	NNP	Number=Sing	21	conj	21:conj	SpaceAfter=No
+25	Hewlett	Hewlett	PROPN	NNP	Number=Sing	21	conj	18:xcomp|21:conj:or	SpaceAfter=No
 26	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0023
@@ -364,17 +364,17 @@
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0024
 # text = Bob Noyce and Gordon Moore wanted to name their new company 'Moore Noyce' but that was already trademarked by a hotel chain so they had to settle for an acronym of INTegrated ELectronics.
-1	Bob	Bob	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
+1	Bob	Bob	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj|8:nsubj:xsubj	_
 2	Noyce	Noyce	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	Gordon	Gordon	PROPN	NNP	Number=Sing	1	conj	1:conj	_
+4	Gordon	Gordon	PROPN	NNP	Number=Sing	1	conj	1:conj:and|6:nsubj|8:nsubj:xsubj	_
 5	Moore	Moore	PROPN	NNP	Number=Sing	4	flat	4:flat	_
 6	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	name	name	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 9	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 10	new	new	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	company	company	NOUN	NN	Number=Sing	8	obj	8:obj	_
+11	company	company	NOUN	NN	Number=Sing	8	obj	8:obj|13:nsubj:xsubj	_
 12	'	'	PUNCT	``	_	13	punct	13:punct	SpaceAfter=No
 13	Moore	Moore	PROPN	NNP	Number=Sing	8	xcomp	8:xcomp	_
 14	Noyce	Noyce	PROPN	NNP	Number=Sing	13	flat	13:flat	SpaceAfter=No
@@ -383,22 +383,22 @@
 17	that	that	PRON	DT	Number=Sing|PronType=Dem	20	nsubj:pass	20:nsubj:pass	_
 18	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	aux:pass	20:aux:pass	_
 19	already	already	ADV	RB	_	20	advmod	20:advmod	_
-20	trademarked	trademark	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	conj	6:conj	_
+20	trademarked	trademark	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	conj	6:conj:but	_
 21	by	by	ADP	IN	_	24	case	24:case	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
 23	hotel	hotel	NOUN	NN	Number=Sing	24	compound	24:compound	_
-24	chain	chain	NOUN	NN	Number=Sing	20	obl	20:obl	_
+24	chain	chain	NOUN	NN	Number=Sing	20	obl	20:obl:by	_
 25	so	so	ADV	RB	_	27	advmod	27:advmod	_
-26	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	27	nsubj	27:nsubj	_
+26	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	27	nsubj	27:nsubj|29:nsubj:xsubj	_
 27	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	20	conj	20:conj	_
 28	to	to	PART	TO	_	29	mark	29:mark	_
 29	settle	settle	VERB	VB	VerbForm=Inf	27	xcomp	27:xcomp	_
 30	for	for	ADP	IN	_	32	case	32:case	_
 31	an	a	DET	DT	Definite=Ind|PronType=Art	32	det	32:det	_
-32	acronym	acronym	NOUN	NN	Number=Sing	29	obl	29:obl	_
+32	acronym	acronym	NOUN	NN	Number=Sing	29	obl	29:obl:for	_
 33	of	of	ADP	IN	_	35	case	35:case	_
 34	INTegrated	integrated	ADJ	JJ	Degree=Pos	35	amod	35:amod	_
-35	ELectronics	electronics	NOUN	NNS	Number=Plur	32	nmod	32:nmod	SpaceAfter=No
+35	ELectronics	electronics	NOUN	NNS	Number=Plur	32	nmod	32:nmod:of	SpaceAfter=No
 36	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0025
@@ -417,22 +417,22 @@
 5	name	name	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	for	for	ADP	IN	_	8	case	8:case	_
 7	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	company	company	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+8	company	company	NOUN	NN	Number=Sing	5	nmod	5:nmod:for	_
 9	from	from	ADP	IN	_	13	case	13:case	_
 10	'	'	PUNCT	``	_	13	punct	13:punct	SpaceAfter=No
 11	The	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	Lotus	lotus	NOUN	NN	Number=Sing	13	compound	13:compound	_
-13	Position	position	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+13	Position	position	NOUN	NN	Number=Sing	3	obl	3:obl:from	SpaceAfter=No
 14	'	'	PUNCT	''	_	13	punct	13:punct	_
 15	or	or	CCONJ	CC	_	17	cc	17:cc	_
 16	'	'	PUNCT	``	_	17	punct	17:punct	SpaceAfter=No
-17	Padmasana	padmasana	NOUN	NN	Number=Sing	13	conj	13:conj	SpaceAfter=No
+17	Padmasana	padmasana	NOUN	NN	Number=Sing	13	conj	3:obl:from|13:conj:or	SpaceAfter=No
 18	'	'	PUNCT	''	_	17	punct	17:punct	SpaceAfter=No
 19	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0027
 # text = Kapor used to be a teacher of Transcendental Meditation of Maharishi Mahesh Yogi.
-1	Kapor	Kapor	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
+1	Kapor	Kapor	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|6:nsubj:xsubj	_
 2	used	use	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	6	mark	6:mark	_
 4	be	be	AUX	VB	VerbForm=Inf	6	cop	6:cop	_
@@ -440,10 +440,10 @@
 6	teacher	teacher	NOUN	NN	Number=Sing	2	xcomp	2:xcomp	_
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	Transcendental	Transcendental	PROPN	NNP	Number=Sing	9	compound	9:compound	_
-9	Meditation	Meditation	PROPN	NNP	Number=Sing	6	nmod	6:nmod	_
+9	Meditation	Meditation	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	_
 10	of	of	ADP	IN	_	12	case	12:case	_
 11	Maharishi	Maharishi	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	Mahesh	Mahesh	PROPN	NNP	Number=Sing	9	nmod	9:nmod	_
+12	Mahesh	Mahesh	PROPN	NNP	Number=Sing	9	nmod	9:nmod:of	_
 13	Yogi	Yogi	PROPN	NNP	Number=Sing	12	flat	12:flat	SpaceAfter=No
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -455,18 +455,18 @@
 # text = Coined by Bill Gates to represent the company that was devoted to MICROcomputer SOFTware.
 1	Coined	coin	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 2	by	by	ADP	IN	_	3	case	3:case	_
-3	Bill	Bill	PROPN	NNP	Number=Sing	1	obl	1:obl	_
+3	Bill	Bill	PROPN	NNP	Number=Sing	1	obl	1:obl:by	_
 4	Gates	Gates	PROPN	NNP	Number=Sing	3	flat	3:flat	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
-6	represent	represent	VERB	VB	VerbForm=Inf	1	advcl	1:advcl	_
+6	represent	represent	VERB	VB	VerbForm=Inf	1	advcl	1:advcl:to	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	company	company	NOUN	NN	Number=Sing	6	obj	6:obj	_
-9	that	that	PRON	WDT	PronType=Rel	11	nsubj	11:nsubj	_
+8	company	company	NOUN	NN	Number=Sing	6	obj	6:obj|11:nsubj:relsubj	_
+9	that	that	PRON	WDT	PronType=Rel	11	nsubj	8:ref	_
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
 11	devoted	devoted	ADJ	JJ	Degree=Pos	8	acl:relcl	8:acl:relcl	_
 12	to	to	ADP	IN	_	14	case	14:case	_
 13	MICROcomputer	microcomputer	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	SOFTware	software	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+14	SOFTware	software	NOUN	NN	Number=Sing	11	obl	11:obl:to	SpaceAfter=No
 15	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0030
@@ -500,15 +500,15 @@
 5	up	up	ADV	RB	_	4	advmod	4:advmod	_
 6	with	with	ADP	IN	_	8	case	8:case	_
 7	this	this	DET	DT	Number=Sing|PronType=Dem	8	det	8:det	_
-8	name	name	NOUN	NN	Number=Sing	4	obl	4:obl	_
+8	name	name	NOUN	NN	Number=Sing	4	obl	4:obl:with	_
 9	when	when	ADV	WRB	PronType=Int	12	mark	12:mark	_
 10	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-11	company	company	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
-12	started	start	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	advcl	4:advcl	_
+11	company	company	NOUN	NN	Number=Sing	12	nsubj	12:nsubj|13:nsubj:xsubj	_
+12	started	start	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	advcl	4:advcl:when	_
 13	manufacturing	manufacture	VERB	VBG	VerbForm=Ger	12	xcomp	12:xcomp	_
 14	radios	radio	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 15	for	for	ADP	IN	_	16	case	16:case	_
-16	cars	car	NOUN	NNS	Number=Plur	14	nmod	14:nmod	SpaceAfter=No
+16	cars	car	NOUN	NNS	Number=Plur	14	nmod	14:nmod:for	SpaceAfter=No
 17	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0033
@@ -516,10 +516,10 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 2	popular	popular	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 3	radio	radio	NOUN	NN	Number=Sing	4	compound	4:compound	_
-4	company	company	NOUN	NN	Number=Sing	9	nsubj:pass	9:nsubj:pass	_
+4	company	company	NOUN	NN	Number=Sing	9	nsubj:pass	9:nsubj:pass|10:nsubj:xsubj	_
 5	at	at	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	time	time	NOUN	NN	Number=Sing	4	nmod	4:nmod	_
+7	time	time	NOUN	NN	Number=Sing	4	nmod	4:nmod:at	_
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	9:aux:pass	_
 9	called	call	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 10	Victrola	Victrola	PROPN	NNP	Number=Sing	9	xcomp	9:xcomp	SpaceAfter=No
@@ -534,17 +534,17 @@
 1	Larry	Larry	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
 2	Ellison	Ellison	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	Bob	Bob	PROPN	NNP	Number=Sing	1	conj	1:conj	_
+4	Bob	Bob	PROPN	NNP	Number=Sing	1	conj	1:conj:and|7:nsubj	_
 5	Oats	Oats	PROPN	NNP	Number=Sing	4	flat	4:flat	_
 6	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	aux	7:aux	_
 7	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 8	on	on	ADP	IN	_	11	case	11:case	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	consulting	consulting	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	project	project	NOUN	NN	Number=Sing	7	obl	7:obl	_
+11	project	project	NOUN	NN	Number=Sing	7	obl	7:obl:on	_
 12	for	for	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	CIA	CIA	PROPN	NNP	Number=Sing	11	nmod	11:nmod	_
+14	CIA	CIA	PROPN	NNP	Number=Sing	11	nmod	11:nmod:for	_
 15	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
 16	Central	Central	PROPN	NNP	Number=Sing	18	compound	18:compound	_
 17	Intelligence	Intelligence	PROPN	NNP	Number=Sing	18	compound	18:compound	_
@@ -556,10 +556,10 @@
 # text = The code name for the project was called Oracle (the CIA saw this as the system to give answers to all questions or something such).
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	code	code	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	name	name	NOUN	NN	Number=Sing	8	nsubj:pass	8:nsubj:pass	_
+3	name	name	NOUN	NN	Number=Sing	8	nsubj:pass	8:nsubj:pass|9:nsubj:xsubj	_
 4	for	for	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	project	project	NOUN	NN	Number=Sing	3	nmod	3:nmod	_
+6	project	project	NOUN	NN	Number=Sing	3	nmod	3:nmod:for	_
 7	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	8:aux:pass	_
 8	called	call	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 9	Oracle	Oracle	PROPN	NNP	Number=Sing	8	xcomp	8:xcomp	_
@@ -570,15 +570,15 @@
 14	this	this	PRON	DT	Number=Sing|PronType=Dem	13	obj	13:obj	_
 15	as	as	ADP	IN	_	17	case	17:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
-17	system	system	NOUN	NN	Number=Sing	13	obl	13:obl	_
+17	system	system	NOUN	NN	Number=Sing	13	obl	13:obl:as	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
-19	give	give	VERB	VB	VerbForm=Inf	17	acl	17:acl	_
+19	give	give	VERB	VB	VerbForm=Inf	17	acl	17:acl:to	_
 20	answers	answer	NOUN	NNS	Number=Plur	19	obj	19:obj	_
 21	to	to	ADP	IN	_	23	case	23:case	_
 22	all	all	DET	DT	_	23	det	23:det	_
-23	questions	question	NOUN	NNS	Number=Plur	20	nmod	20:nmod	_
+23	questions	question	NOUN	NNS	Number=Plur	20	nmod	20:nmod:to	_
 24	or	or	CCONJ	CC	_	25	cc	25:cc	_
-25	something	something	PRON	NN	Number=Sing	17	conj	17:conj	_
+25	something	something	PRON	NN	Number=Sing	17	conj	13:obl:as|17:conj:or	_
 26	such	such	ADJ	JJ	Degree=Pos	25	amod	25:amod	SpaceAfter=No
 27	)	)	PUNCT	-RRB-	_	13	punct	13:punct	SpaceAfter=No
 28	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -590,7 +590,7 @@
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 4	designed	design	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
-6	help	help	VERB	VB	VerbForm=Inf	4	advcl	4:advcl	_
+6	help	help	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	_
 7	use	use	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 9	newly	newly	ADV	RB	_	10	advmod	10:advmod	_
@@ -598,7 +598,7 @@
 11	SQL	sql	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	code	code	NOUN	NN	Number=Sing	7	obj	7:obj	_
 13	by	by	ADP	IN	_	14	case	14:case	_
-14	IBM	IBM	PROPN	NNP	Number=Sing	12	nmod	12:nmod	SpaceAfter=No
+14	IBM	IBM	PROPN	NNP	Number=Sing	12	nmod	12:nmod:by	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0038
@@ -609,32 +609,32 @@
 4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass	_
 5	terminated	terminate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 6	but	but	CCONJ	CC	_	10	cc	10:cc	_
-7	Larry	Larry	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
+7	Larry	Larry	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj|12:nsubj:xsubj|17:nsubj:xsubj	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	Bob	Bob	PROPN	NNP	Number=Sing	7	conj	7:conj	_
-10	decided	decide	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+9	Bob	Bob	PROPN	NNP	Number=Sing	7	conj	7:conj:and|10:nsubj|12:nsubj:xsubj|17:nsubj:xsubj	_
+10	decided	decide	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj:but	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	finish	finish	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	what	what	PRON	WP	PronType=Int	12	obj	12:obj	_
 14	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 15	started	start	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	acl:relcl	13:acl:relcl	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	bring	bring	VERB	VB	VerbForm=Inf	12	conj	12:conj	_
+17	bring	bring	VERB	VB	VerbForm=Inf	12	conj	10:xcomp|12:conj:and	_
 18	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	obj	17:obj	_
 19	to	to	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	world	world	NOUN	NN	Number=Sing	17	obl	17:obl	SpaceAfter=No
+21	world	world	NOUN	NN	Number=Sing	17	obl	17:obl:to	SpaceAfter=No
 22	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0039
 # text = They kept the name Oracle and created the RDBMS engine.
-1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj|7:nsubj	_
 2	kept	keep	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	name	name	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	Oracle	Oracle	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	created	create	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+7	created	create	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	RDBMS	RDBMS	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	engine	engine	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
@@ -650,7 +650,7 @@
 6	name	name	NOUN	NN	Number=Sing	3	obj	3:obj	_
 7	for	for	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	company	company	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+9	company	company	NOUN	NN	Number=Sing	3	obl	3:obl:for	SpaceAfter=No
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0041
@@ -664,7 +664,7 @@
 3	from	from	ADP	IN	_	6	case	6:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	Latin	Latin	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	word	word	NOUN	NN	Number=Sing	2	obl	2:obl	_
+6	word	word	NOUN	NN	Number=Sing	2	obl	2:obl:from	_
 7	'	'	PUNCT	``	_	8	punct	8:punct	SpaceAfter=No
 8	sonus	sonus	NOUN	NN	Number=Sing	6	appos	6:appos	SpaceAfter=No
 9	'	'	PUNCT	''	_	8	punct	8:punct	_
@@ -673,19 +673,19 @@
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	'	'	PUNCT	``	_	15	punct	15:punct	SpaceAfter=No
-15	sonny	sonny	NOUN	NN	Number=Sing	6	conj	6:conj	SpaceAfter=No
+15	sonny	sonny	NOUN	NN	Number=Sing	6	conj	2:obl:from|6:conj:and	SpaceAfter=No
 16	'	'	PUNCT	''	_	15	punct	15:punct	_
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 18	slang	slang	NOUN	NN	Number=Sing	15	appos	15:appos	_
 19	used	use	VERB	VBN	Tense=Past|VerbForm=Part	18	acl	18:acl	_
 20	by	by	ADP	IN	_	21	case	21:case	_
-21	Americans	Americans	PROPN	NNPS	Number=Plur	19	obl	19:obl	_
+21	Americans	Americans	PROPN	NNPS	Number=Plur	19	obl	19:obl:by	_
 22	to	to	PART	TO	_	23	mark	23:mark	_
-23	refer	refer	VERB	VB	VerbForm=Inf	19	advcl	19:advcl	_
+23	refer	refer	VERB	VB	VerbForm=Inf	19	advcl	19:advcl:to	_
 24	to	to	ADP	IN	_	27	case	27:case	_
 25	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	_
 26	bright	bright	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	youngster	youngster	NOUN	NN	Number=Sing	23	obl	23:obl	SpaceAfter=No
+27	youngster	youngster	NOUN	NN	Number=Sing	23	obl	23:obl:to	SpaceAfter=No
 28	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0043
@@ -699,7 +699,7 @@
 3	4	4	NUM	CD	NumType=Card	6	nummod	6:nummod	_
 4	Stanford	Stanford	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 5	University	University	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	buddies	buddy	NOUN	NNS	Number=Plur	1	obl	1:obl	SpaceAfter=No
+6	buddies	buddy	NOUN	NNS	Number=Plur	1	obl	1:obl:by	SpaceAfter=No
 7	,	,	PUNCT	,	_	11	punct	11:punct	_
 8	SUN	SUN	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
@@ -708,7 +708,7 @@
 12	for	for	ADP	IN	_	15	case	15:case	_
 13	Stanford	Stanford	PROPN	NNP	Number=Sing	14	compound	14:compound	_
 14	University	University	PROPN	NNP	Number=Sing	15	compound	15:compound	_
-15	Network	Network	PROPN	NNP	Number=Sing	11	nmod	11:nmod	SpaceAfter=No
+15	Network	Network	PROPN	NNP	Number=Sing	11	nmod	11:nmod:for	SpaceAfter=No
 16	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0045
@@ -719,26 +719,26 @@
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	microcomputer	microcomputer	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
 6	;	;	PUNCT	,	_	3	punct	3:punct	_
-7	Vinod	Vinod	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
+7	Vinod	Vinod	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj|21.1:nsubj|22:nsubj	_
 8	Khosla	Khosla	PROPN	NNP	Number=Sing	7	flat	7:flat	_
 9	recruited	recruit	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	parataxis	5:parataxis	_
 10	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	Scott	Scott	PROPN	NNP	Number=Sing	10	conj	10:conj	_
+12	Scott	Scott	PROPN	NNP	Number=Sing	10	conj	9:obj|10:conj:and	_
 13	McNealy	McNealy	PROPN	NNP	Number=Sing	12	flat	12:flat	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
-15	manufacture	manufacture	VERB	VB	VerbForm=Inf	9	advcl	9:advcl	_
+15	manufacture	manufacture	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
 16	computers	computer	NOUN	NNS	Number=Plur	15	obj	15:obj	_
 17	based	base	VERB	VBN	Tense=Past|VerbForm=Part	16	acl	16:acl	_
 18	on	on	ADP	IN	_	19	case	19:case	_
-19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	obl	17:obl	SpaceAfter=No
-20	,	,	PUNCT	,	_	22	punct	21.1:punct	_
-21	and	and	CCONJ	CC	_	22	cc	21.1:cc	_
-21.1	recruited	recruit	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	_	_	9:conj	CopyOf=9
-22	Bill	Bill	PROPN	NNP	Number=Sing	9	conj	21.1:obj	_
+19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	obl	17:obl:on	SpaceAfter=No
+20	,	,	PUNCT	,	_	22	punct	21.1:punct|22:punct	_
+21	and	and	CCONJ	CC	_	22	cc	21.1:cc|22:cc	_
+21.1	recruited	recruit	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	_	_	9:conj:and	CopyOf=9
+22	Bill	Bill	PROPN	NNP	Number=Sing	9	conj	9:conj:and|21.1:obj	_
 23	Joy	Joy	PROPN	NNP	Number=Sing	22	flat	22:flat	_
 24	to	to	PART	TO	_	25	mark	25:mark	_
-25	develop	develop	VERB	VB	VerbForm=Inf	22	orphan	21.1:advcl	_
+25	develop	develop	VERB	VB	VerbForm=Inf	22	orphan	21.1:advcl:to	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
 27	UNIX	UNIX	PROPN	NNP	Number=Sing	29	compound	29:compound	SpaceAfter=No
 28	-	-	PUNCT	HYPH	_	29	punct	29:punct	SpaceAfter=No
@@ -746,7 +746,7 @@
 30	OS	os	NOUN	NN	Number=Sing	25	obj	25:obj	_
 31	for	for	ADP	IN	_	33	case	33:case	_
 32	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	_
-33	computer	computer	NOUN	NN	Number=Sing	30	nmod	30:nmod	SpaceAfter=No
+33	computer	computer	NOUN	NN	Number=Sing	30	nmod	30:nmod:for	SpaceAfter=No
 34	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0046
@@ -756,17 +756,17 @@
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0047
 # text = The word was invented by Jonathan Swift and used in his book 'Gulliver's Travels'.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	word	word	NOUN	NN	Number=Sing	4	nsubj:pass	4:nsubj:pass	_
+2	word	word	NOUN	NN	Number=Sing	4	nsubj:pass	4:nsubj:pass|9:nsubj:pass	_
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 4	invented	invent	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	by	by	ADP	IN	_	6	case	6:case	_
-6	Jonathan	Jonathan	PROPN	NNP	Number=Sing	4	obl	4:obl	_
+6	Jonathan	Jonathan	PROPN	NNP	Number=Sing	4	obl	4:obl:by	_
 7	Swift	Swift	PROPN	NNP	Number=Sing	6	flat	6:flat	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	used	use	VERB	VBN	Tense=Past|VerbForm=Part	4	conj	4:conj	_
+9	used	use	VERB	VBN	Tense=Past|VerbForm=Part	4	conj	4:conj:and	_
 10	in	in	ADP	IN	_	12	case	12:case	_
 11	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
-12	book	book	NOUN	NN	Number=Sing	9	obl	9:obl	_
+12	book	book	NOUN	NN	Number=Sing	9	obl	9:obl:in	_
 13	'	'	PUNCT	``	_	16	punct	16:punct	SpaceAfter=No
 14	Gulliver	Gulliver	PROPN	NNP	Number=Sing	16	nmod:poss	16:nmod:poss	SpaceAfter=No
 15	's	's	PART	POS	_	14	case	14:case	_
@@ -779,18 +779,18 @@
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
 2	represents	represent	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	person	person	NOUN	NN	Number=Sing	2	obj	2:obj	_
-5	who	who	PRON	WP	PronType=Rel	7	nsubj	7:nsubj	_
+4	person	person	NOUN	NN	Number=Sing	2	obj	2:obj|7:nsubj:relsubj|15:nsubj:relsubj	_
+5	who	who	PRON	WP	PronType=Rel	7	nsubj	4:ref	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 7	repulsive	repulsive	ADJ	JJ	Degree=Pos	4	acl:relcl	4:acl:relcl	_
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	appearance	appearance	NOUN	NN	Number=Sing	7	obl	7:obl	_
+9	appearance	appearance	NOUN	NN	Number=Sing	7	obl	7:obl:in	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	action	action	NOUN	NN	Number=Sing	9	conj	9:conj	_
+11	action	action	NOUN	NN	Number=Sing	9	conj	7:obl:in|9:conj:and	_
 12	and	and	CCONJ	CC	_	15	cc	15:cc	_
 13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 14	barely	barely	ADV	RB	_	15	advmod	15:advmod	_
-15	human	human	ADJ	JJ	Degree=Pos	7	conj	7:conj	SpaceAfter=No
+15	human	human	ADJ	JJ	Degree=Pos	7	conj	4:acl:relcl|7:conj:and	SpaceAfter=No
 16	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0049
@@ -800,15 +800,15 @@
 3	Jerry	Jerry	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
 4	Yang	Yang	PROPN	NNP	Number=Sing	3	flat	3:flat	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	David	David	PROPN	NNP	Number=Sing	3	conj	3:conj	SpaceAfter=No
+6	David	David	PROPN	NNP	Number=Sing	3	conj	3:conj:and|8:nsubj	SpaceAfter=No
 7	Filo	Filo	PROPN	NNP	Number=Sing	6	flat	6:flat	_
 8	selected	select	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	name	name	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	because	because	SCONJ	IN	_	13	mark	13:mark	_
 12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
-13	considered	consider	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	advcl	8:advcl	_
-14	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs|Reflex=Yes	13	obj	13:obj	_
+13	considered	consider	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	advcl	8:advcl:because	_
+14	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs|Reflex=Yes	13	obj	13:obj|15:nsubj:xsubj	_
 15	yahoos	yahoo	NOUN	NNS	Number=Plur	13	xcomp	13:xcomp	SpaceAfter=No
 16	...	...	PUNCT	,	_	8	punct	8:punct	_
 

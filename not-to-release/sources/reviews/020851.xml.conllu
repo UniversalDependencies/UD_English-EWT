@@ -5,23 +5,23 @@
 2	Best	best	ADJ	JJS	Degree=Sup	3	amod	3:amod	_
 3	Deals	deal	NOUN	NNS	Number=Plur	0	root	0:root	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	Town	town	NOUN	NN	Number=Sing	3	nmod	3:nmod	_
+5	Town	town	NOUN	NN	Number=Sing	3	nmod	3:nmod:in	_
 
 # sent_id = reviews-020851-0002
 # text = Before you buy ANYTHING in NY, make sure you stop by Jack-s first.
 1	Before	before	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	buy	buy	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl	_
+3	buy	buy	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:before	_
 4	ANYTHING	anything	PRON	NN	Number=Sing	3	obj	3:obj	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	NY	NY	PROPN	NNP	Number=Sing	3	obl	3:obl	SpaceAfter=No
+6	NY	NY	PROPN	NNP	Number=Sing	3	obl	3:obl:in	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
 8	make	make	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 9	sure	sure	ADJ	JJ	Degree=Pos	8	xcomp	8:xcomp	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
 11	stop	stop	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	ccomp	9:ccomp	_
 12	by	by	ADP	IN	_	13	case	13:case	_
-13	Jack	Jack	PROPN	NNP	Number=Sing	11	obl	11:obl	SpaceAfter=No
+13	Jack	Jack	PROPN	NNP	Number=Sing	11	obl	11:obl:by	SpaceAfter=No
 14	-s	's	PART	POS	_	13	case	13:case	_
 15	first	first	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 16	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -40,7 +40,7 @@
 10	on	on	ADP	IN	_	13	case	13:case	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 12	given	give	VERB	VBN	Tense=Past|VerbForm=Part	13	amod	13:amod	_
-13	week	week	NOUN	NN	Number=Sing	9	obl	9:obl	_
+13	week	week	NOUN	NN	Number=Sing	9	obl	9:obl:on	_
 14	might	might	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 15	never	never	ADV	RB	_	17	advmod	17:advmod	_
 16	be	be	AUX	VB	VerbForm=Inf	17	cop	17:cop	_
@@ -48,7 +48,7 @@
 18	again	again	ADV	RB	_	17	advmod	17:advmod	_
 19	at	at	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	store	store	NOUN	NN	Number=Sing	17	obl	17:obl	SpaceAfter=No
+21	store	store	NOUN	NN	Number=Sing	17	obl	17:obl:at	SpaceAfter=No
 22	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-020851-0004
@@ -59,10 +59,10 @@
 4	for	for	ADP	IN	_	7	case	7:case	_
 5	discounted	discount	VERB	VBN	Tense=Past|VerbForm=Part	7	amod	7:amod	_
 6	beauty	beauty	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	items	item	NOUN	NNS	Number=Plur	2	obl	2:obl	_
+7	items	item	NOUN	NNS	Number=Plur	2	obl	2:obl:for	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	household	household	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	appliances	appliance	NOUN	NNS	Number=Plur	7	conj	7:conj	SpaceAfter=No
+10	appliances	appliance	NOUN	NNS	Number=Plur	7	conj	2:obl:for|7:conj:and	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-020851-0005
@@ -78,7 +78,7 @@
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	SpaceAfter=No
 10	-ll	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 11	always	always	ADV	RB	_	12	advmod	12:advmod	_
-12	go	go	VERB	VB	VerbForm=Inf	5	conj	5:conj	_
+12	go	go	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	_
 13	back	back	ADV	RB	_	12	advmod	12:advmod	SpaceAfter=No
 14	!	!	PUNCT	.	_	1	punct	1:punct	_
 

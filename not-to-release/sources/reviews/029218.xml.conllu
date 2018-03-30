@@ -7,33 +7,33 @@
 
 # sent_id = reviews-029218-0002
 # text = We just had our wedding on 11/7/08 and was very impressed.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|11:nsubj	_
 2	just	just	ADV	RB	_	3	advmod	3:advmod	_
 3	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	wedding	wedding	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	on	on	ADP	IN	_	7	case	7:case	_
-7	11/7/08	11/7/08	NUM	CD	NumType=Card	3	obl	3:obl	_
+7	11/7/08	11/7/08	NUM	CD	NumType=Card	3	obl	3:obl:on	_
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
 10	very	very	ADV	RB	_	11	advmod	11:advmod	_
-11	impressed	impressed	ADJ	JJ	Degree=Pos	3	conj	3:conj	SpaceAfter=No
+11	impressed	impressed	ADJ	JJ	Degree=Pos	3	conj	3:conj:and	SpaceAfter=No
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-029218-0003
 # text = Cj and company did all that we ask and 10 times more.
 1	Cj	Cj	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	company	company	NOUN	NN	Number=Sing	1	conj	1:conj	_
+3	company	company	NOUN	NN	Number=Sing	1	conj	1:conj:and|4:nsubj	_
 4	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
-5	all	all	DET	DT	_	4	obj	4:obj	_
-6	that	that	PRON	WDT	PronType=Rel	8	obj	8:obj	_
+5	all	all	DET	DT	_	4	obj	4:obj|8:obl:relobj	_
+6	that	that	PRON	WDT	PronType=Rel	8	obj	5:ref	_
 7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 8	ask	ask	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10	10	10	NUM	CD	NumType=Card	11	compound	11:compound	_
 11	times	time	NOUN	NNS	Number=Plur	12	nummod	12:nummod	_
-12	more	more	ADJ	JJR	Degree=Cmp	5	conj	5:conj	SpaceAfter=No
+12	more	more	ADJ	JJR	Degree=Cmp	5	conj	4:obj|5:conj:and|8:obl:relobj	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-029218-0004
@@ -49,14 +49,14 @@
 # text = If you need a cater that is affordable and easy to work with they are the ones.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl	_
+3	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl:if	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-5	cater	cater	NOUN	NN	Number=Sing	3	obj	3:obj	_
-6	that	that	PRON	WDT	PronType=Rel	8	nsubj	8:nsubj	_
+5	cater	cater	NOUN	NN	Number=Sing	3	obj	3:obj|8:nsubj:relsubj|10:nsubj:relsubj	_
+6	that	that	PRON	WDT	PronType=Rel	8	nsubj	5:ref	_
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 8	affordable	affordable	ADJ	JJ	Degree=Pos	5	acl:relcl	5:acl:relcl	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	easy	easy	ADJ	JJ	Degree=Pos	8	conj	8:conj	_
+10	easy	easy	ADJ	JJ	Degree=Pos	8	conj	5:acl:relcl|8:conj:and	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	work	work	VERB	VB	VerbForm=Inf	10	ccomp	10:ccomp	_
 13	with	with	ADP	IN	_	12	obl	12:obl	_

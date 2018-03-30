@@ -14,15 +14,15 @@
 # text = First of all, if you call for an appointment they won't tell you to call back a month later so you can then make one.
 1	First	first	ADV	RB	_	14	advmod	14:advmod	_
 2	of	of	ADP	IN	_	3	case	3:case	_
-3	all	all	DET	DT	_	1	obl	1:obl	SpaceAfter=No
+3	all	all	DET	DT	_	1	obl	1:obl:of	SpaceAfter=No
 4	,	,	PUNCT	,	_	14	punct	14:punct	_
 5	if	if	SCONJ	IN	_	7	mark	7:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
-7	call	call	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl	_
+7	call	call	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:if	_
 8	for	for	ADP	IN	_	10	case	10:case	_
 9	an	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	appointment	appointment	NOUN	NN	Number=Sing	7	obl	7:obl	_
-11	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
+10	appointment	appointment	NOUN	NN	Number=Sing	7	obl	7:obl:for	_
+11	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	14	nsubj	14:nsubj|17:nsubj:xsubj	_
 12	wo	will	AUX	MD	VerbForm=Fin	14	aux	14:aux	SpaceAfter=No
 13	n't	not	PART	RB	_	14	advmod	14:advmod	_
 14	tell	tell	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -37,7 +37,7 @@
 23	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	26	nsubj	26:nsubj	_
 24	can	can	AUX	MD	VerbForm=Fin	26	aux	26:aux	_
 25	then	then	ADV	RB	PronType=Dem	26	advmod	26:advmod	_
-26	make	make	VERB	VB	VerbForm=Inf	17	advcl	17:advcl	_
+26	make	make	VERB	VB	VerbForm=Inf	17	advcl	17:advcl:so	_
 27	one	one	NUM	CD	NumType=Card	26	obj	26:obj	SpaceAfter=No
 28	.	.	PUNCT	.	_	14	punct	14:punct	_
 
@@ -50,7 +50,7 @@
 5	tell	tell	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	obj	5:obj	_
 7	that	that	SCONJ	IN	_	10	mark	10:mark	_
-8	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	10	nsubj	10:nsubj	SpaceAfter=No
+8	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	10	nsubj	10:nsubj|12:nsubj:xsubj	SpaceAfter=No
 9	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
 10	going	go	VERB	VBG	VerbForm=Ger	5	ccomp	5:ccomp	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
@@ -62,11 +62,11 @@
 17	"	"	PUNCT	''	_	16	punct	16:punct	_
 18	to	to	PART	TO	_	20	mark	20:mark	_
 19	be	be	AUX	VB	VerbForm=Inf	20	aux:pass	20:aux:pass	_
-20	admitted	admit	VERB	VBN	Tense=Past|VerbForm=Part	12	advcl	12:advcl	_
+20	admitted	admit	VERB	VBN	Tense=Past|VerbForm=Part	12	advcl	12:advcl:to	_
 21	to	to	PART	TO	_	24	mark	24:mark	_
 22	be	be	AUX	VB	VerbForm=Inf	24	cop	24:cop	_
 23	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
-24	patient	patient	NOUN	NN	Number=Sing	20	advcl	20:advcl	SpaceAfter=No
+24	patient	patient	NOUN	NN	Number=Sing	20	advcl	20:advcl:to	SpaceAfter=No
 25	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-220214-0004
@@ -82,7 +82,7 @@
 9	offices	office	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
 10	work	work	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 11	around	around	ADP	IN	_	12	case	12:case	_
-12	here	here	ADV	RB	PronType=Dem	10	obl	10:obl	_
+12	here	here	ADV	RB	PronType=Dem	10	obl	10:obl:around	_
 13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 15	little	little	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
@@ -102,7 +102,7 @@
 29	two	two	NUM	CD	NumType=Card	30	nummod	30:nummod	_
 30	things	thing	NOUN	NNS	Number=Plur	27	obj	27:obj	_
 31	in	in	ADP	IN	_	32	case	32:case	_
-32	particlular	particular	ADJ	JJ	Degree=Pos|Typo=Yes	27	obl	27:obl	SpaceAfter=No
+32	particlular	particular	ADJ	JJ	Degree=Pos|Typo=Yes	27	obl	27:obl:in	SpaceAfter=No
 33	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-220214-0005
@@ -119,7 +119,7 @@
 10	maybe	maybe	ADV	RB	_	13	advmod	13:advmod	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	following	follow	VERB	VBG	VerbForm=Ger	13	amod	13:amod	_
-13	week	week	NOUN	NN	Number=Sing	8	conj	8:conj	SpaceAfter=No
+13	week	week	NOUN	NN	Number=Sing	8	conj	5:obl:tmod|8:conj:or	SpaceAfter=No
 14	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-220214-0006
@@ -146,17 +146,17 @@
 20	gene	gene	NOUN	NN	Number=Sing	23	nsubj:pass	23:nsubj:pass	_
 21	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	aux:pass	23:aux:pass	_
 22	exclusively	exclusively	ADV	RB	_	23	advmod	23:advmod	_
-23	passed	pass	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	17	advcl	17:advcl	_
+23	passed	pass	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	17	advcl	17:advcl:because	_
 24	on	on	ADP	RP	_	23	compound:prt	23:compound:prt	_
 25	through	through	ADP	IN	_	27	case	27:case	_
 26	maternal	maternal	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	line	line	NOUN	NN	Number=Sing	23	obl	23:obl	_
+27	line	line	NOUN	NN	Number=Sing	23	obl	23:obl:through	_
 28	but	but	CCONJ	CC	_	33	cc	33:cc	_
 29	that	that	PRON	DT	Number=Sing|PronType=Dem	33	nsubj	33:nsubj	SpaceAfter=No
 30	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	33	cop	33:cop	_
 31	a	a	DET	DT	Definite=Ind|PronType=Art	33	det	33:det	_
 32	common	common	ADJ	JJ	Degree=Pos	33	amod	33:amod	_
-33	misconception	misconception	NOUN	NN	Number=Sing	4	conj	4:conj	_
+33	misconception	misconception	NOUN	NN	Number=Sing	4	conj	4:conj:but	_
 34	(	(	PUNCT	-LRB-	_	35	punct	35:punct	SpaceAfter=No
 35	http://www.consumerreports.org/health/healthy-living/beauty-personal-care/hair-loss-10-08/hair-loss.htm	http://www.consumerreports.org/health/healthy-living/beauty-personal-care/hair-loss-10-08/hair-loss.htm	X	ADD	_	33	appos	33:appos	SpaceAfter=No
 36	)	)	PUNCT	-RRB-	_	35	punct	35:punct	SpaceAfter=No
@@ -165,17 +165,17 @@
 # sent_id = reviews-220214-0007
 # text = In general I would say that the staff is attentive and nice.
 1	In	in	ADP	IN	_	2	case	2:case	_
-2	general	general	ADJ	JJ	Degree=Pos	5	obl	5:obl	_
+2	general	general	ADJ	JJ	Degree=Pos	5	obl	5:obl:in	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 4	would	would	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 5	say	say	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	that	that	SCONJ	IN	_	10	mark	10:mark	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	staff	staff	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
+8	staff	staff	NOUN	NN	Number=Sing	10	nsubj	10:nsubj|12:nsubj	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 10	attentive	attentive	ADJ	JJ	Degree=Pos	5	ccomp	5:ccomp	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	nice	nice	ADJ	JJ	Degree=Pos	10	conj	10:conj	SpaceAfter=No
+12	nice	nice	ADJ	JJ	Degree=Pos	10	conj	5:ccomp|10:conj:and	SpaceAfter=No
 13	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-220214-0008
@@ -187,7 +187,7 @@
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	_
 6	nice	nice	ADJ	JJ	Degree=Pos	0	root	0:root	_
 7	to	to	ADP	IN	_	8	case	8:case	_
-8	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	6	obl	6:obl	_
+8	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	6	obl	6:obl:to	_
 9	so	so	ADV	RB	_	14	advmod	14:advmod	_
 10	that	that	PRON	DT	Number=Sing|PronType=Dem	14	nsubj	14:nsubj	_
 11	could	could	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
@@ -201,12 +201,12 @@
 1	Anyhow	anyhow	INTJ	UH	_	11	discourse	11:discourse	SpaceAfter=No
 2	,	,	PUNCT	,	_	11	punct	11:punct	_
 3	after	after	SCONJ	IN	_	4	mark	4:mark	_
-4	reading	read	VERB	VBG	VerbForm=Ger	11	advcl	11:advcl	_
+4	reading	read	VERB	VBG	VerbForm=Ger	11	advcl	11:advcl:after	_
 5	some	some	DET	DT	_	4	obj	4:obj	_
 6	of	of	ADP	IN	_	9	case	9:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	other	other	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	reviews	review	NOUN	NNS	Number=Plur	5	nmod	5:nmod	_
+9	reviews	review	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	_
 10	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	expl	11:expl	_
 11	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 12	like	like	SCONJ	IN	_	19	mark	19:mark	_
@@ -214,9 +214,9 @@
 14	of	of	ADP	IN	_	17	case	17:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	other	other	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	reviewers	reviewer	NOUN	NNS	Number=Plur	13	nmod	13:nmod	_
+17	reviewers	reviewer	NOUN	NNS	Number=Plur	13	nmod	13:nmod:of	_
 18	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
-19	expecting	expect	VERB	VBG	Tense=Pres|VerbForm=Part	11	advcl	11:advcl	_
+19	expecting	expect	VERB	VBG	Tense=Pres|VerbForm=Part	11	advcl	11:advcl:like	_
 20	mircles	mircle	NOUN	NNS	Number=Plur	19	obj	19:obj	SpaceAfter=No
 21	.	.	PUNCT	.	_	11	punct	11:punct	_
 
@@ -224,16 +224,16 @@
 # text = If you want miracles you'll have to go to 21st St.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl	_
+3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	_
 4	miracles	miracle	NOUN	NNS	Number=Plur	3	obj	3:obj	_
-5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	SpaceAfter=No
+5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|9:nsubj:xsubj	SpaceAfter=No
 6	'll	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 7	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	go	go	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
 10	to	to	ADP	IN	_	12	case	12:case	_
 11	21st	21st	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	St	St	PROPN	NNP	Number=Sing	9	obl	9:obl	SpaceAfter=No
+12	St	St	PROPN	NNP	Number=Sing	9	obl	9:obl:to	SpaceAfter=No
 13	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-220214-0011
@@ -249,11 +249,11 @@
 9	but	but	CCONJ	CC	_	16	cc	16:cc	_
 10	for	for	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	area	area	NOUN	NN	Number=Sing	16	obl	16:obl	_
+12	area	area	NOUN	NN	Number=Sing	16	obl	16:obl:for	_
 13	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	SpaceAfter=No
 14	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
 15	very	very	ADV	RB	_	16	advmod	16:advmod	_
-16	good	good	ADJ	JJ	Degree=Pos	8	conj	8:conj	SpaceAfter=No
+16	good	good	ADJ	JJ	Degree=Pos	8	conj	8:conj:but	SpaceAfter=No
 17	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-220214-0012
@@ -263,13 +263,13 @@
 3	n't	not	PART	RB	_	4	advmod	4:advmod	_
 4	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	certain	certain	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	things	thing	NOUN	NNS	Number=Plur	4	obj	4:obj	_
-7	that	that	PRON	WDT	PronType=Rel	10	nsubj	10:nsubj	_
+6	things	thing	NOUN	NNS	Number=Plur	4	obj	4:obj|10:nsubj:relsubj	_
+7	that	that	PRON	WDT	PronType=Rel	10	nsubj	6:ref	_
 8	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 9	really	really	ADV	RB	_	10	advmod	10:advmod	_
 10	annoying	annoying	ADJ	JJ	Degree=Pos	6	acl:relcl	6:acl:relcl	_
 11	about	about	ADP	IN	_	13	case	13:case	_
 12	other	other	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	offices	office	NOUN	NNS	Number=Plur	10	obl	10:obl	SpaceAfter=No
+13	offices	office	NOUN	NNS	Number=Plur	10	obl	10:obl:about	SpaceAfter=No
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
 

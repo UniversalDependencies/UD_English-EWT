@@ -29,17 +29,17 @@
 14	win	win	X	GW	_	15	goeswith	15:goeswith	_
 15	in	in	ADP	IN	_	17	case	17:case	_
 16	48	48	NUM	CD	NumType=Card	17	nummod	17:nummod	_
-17	hours	hour	NOUN	NNS	Number=Plur	13	obl	13:obl	_
+17	hours	hour	NOUN	NNS	Number=Plur	13	obl	13:obl:in	_
 18	but	but	CCONJ	CC	_	23	cc	23:cc	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 20	sales	sale	NOUN	NNS	Number=Plur	21	compound	21:compound	_
 21	man	man	NOUN	NN	Number=Sing	23	nsubj	23:nsubj	_
 22	also	also	ADV	RB	_	23	advmod	23:advmod	_
-23	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	conj	8:conj	_
+23	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	conj	8:conj:but	_
 24	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	23	obj	23:obj	_
 25	out	out	ADV	RB	_	23	advmod	23:advmod	_
 26	to	to	ADP	IN	_	27	case	27:case	_
-27	lunch	lunch	NOUN	NN	Number=Sing	25	obl	25:obl	SpaceAfter=No
+27	lunch	lunch	NOUN	NN	Number=Sing	25	obl	25:obl:to	SpaceAfter=No
 28	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-382257-0003
@@ -47,7 +47,7 @@
 1	Very	very	ADV	RB	_	2	advmod	2:advmod	_
 2	kind	kind	ADJ	JJ	Degree=Pos	0	root	0:root	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	reliable	reliable	ADJ	JJ	Degree=Pos	2	conj	2:conj	SpaceAfter=No
+4	reliable	reliable	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	SpaceAfter=No
 5	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-382257-0004
@@ -58,16 +58,16 @@
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
 5	dealership	dealership	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	if	if	SCONJ	IN	_	10	mark	10:mark	_
-7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
+7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj|12:nsubj:xsubj|16:nsubj	_
 8	would	would	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 9	not	not	PART	RB	_	10	advmod	10:advmod	_
-10	like	like	VERB	VB	VerbForm=Inf	3	advcl	3:advcl	_
+10	like	like	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:if	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	hassle	hassle	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	on	on	ADP	IN	_	14	case	14:case	_
-14	price	price	NOUN	NN	Number=Sing	12	obl	12:obl	_
+14	price	price	NOUN	NN	Number=Sing	12	obl	12:obl:on	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	receive	receive	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	conj	10:conj	_
+16	receive	receive	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	conj	3:advcl:if|10:conj:and	_
 17	friendly	friendly	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	service	service	NOUN	NN	Number=Sing	16	obj	16:obj	SpaceAfter=No
 19	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -82,7 +82,7 @@
 6	cars	car	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 7	from	from	ADP	IN	_	9	case	9:case	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
-9	dealership	dealership	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+9	dealership	dealership	NOUN	NN	Number=Sing	4	obl	4:obl:from	SpaceAfter=No
 10	,	,	PUNCT	,	_	4	punct	4:punct	_
 11	The	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	13	amod	13:amod	_
@@ -95,7 +95,7 @@
 19	second	second	NOUN	NN	Number=Sing	22	nsubj	22:nsubj	_
 20	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	cop	22:cop	_
 21	from	from	ADP	IN	_	22	case	22:case	_
-22	Richard	Richard	PROPN	NNP	Number=Sing	16	conj	16:conj	SpaceAfter=No
+22	Richard	Richard	PROPN	NNP	Number=Sing	16	conj	16:conj:and	SpaceAfter=No
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-382257-0006
@@ -104,8 +104,8 @@
 2	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
 3	excellent	excellent	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 4	sales	sale	NOUN	NNS	Number=Plur	5	compound	5:compound	_
-5	men	man	NOUN	NNS	Number=Plur	0	root	0:root	_
-6	who	who	PRON	WP	PronType=Rel	7	nsubj	7:nsubj	_
+5	men	man	NOUN	NNS	Number=Plur	0	root	7:nsubj:relsubj	_
+6	who	who	PRON	WP	PronType=Rel	7	nsubj	5:ref	_
 7	put	put	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 8	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	needs	need	NOUN	NNS	Number=Plur	7	obj	7:obj	_

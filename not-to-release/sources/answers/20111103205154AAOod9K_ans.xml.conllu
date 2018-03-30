@@ -7,12 +7,12 @@
 4	best	best	ADJ	JJS	Degree=Sup	5	amod	5:amod	_
 5	place	place	NOUN	NN	Number=Sing	0	root	0:root	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	get	get	VERB	VB	VerbForm=Inf	5	acl	5:acl	_
+7	get	get	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
 8	discounts	discount	NOUN	NNS	Number=Plur	7	obj	7:obj	_
 9	for	for	ADP	IN	_	12	case	12:case	_
 10	San	San	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 11	Francisco	Francisco	PROPN	NNP	Number=Sing	10	flat	10:flat	_
-12	restaurants	restaurant	NOUN	NNS	Number=Plur	8	nmod	8:nmod	SpaceAfter=No
+12	restaurants	restaurant	NOUN	NNS	Number=Plur	8	nmod	8:nmod:for	SpaceAfter=No
 13	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111103205154AAOod9K_ans-0002
@@ -22,15 +22,15 @@
 3	moved	move	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	into	into	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	city	city	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+6	city	city	NOUN	NN	Number=Sing	3	obl	3:obl:into	SpaceAfter=No
 7	,	,	PUNCT	,	_	11	punct	11:punct	_
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	SpaceAfter=No
 10	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
-11	wondering	wonder	VERB	VBG	VerbForm=Ger	3	conj	3:conj	_
+11	wondering	wonder	VERB	VBG	VerbForm=Ger	3	conj	3:conj:and	_
 12	if	if	SCONJ	IN	_	14	mark	14:mark	_
 13	there	there	PRON	EX	_	14	expl	14:expl	SpaceAfter=No
-14	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl	_
+14	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:if	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 16	place	place	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	_
 17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
@@ -39,13 +39,13 @@
 20	good	good	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 21	deals	deal	NOUN	NNS	Number=Plur	19	obj	19:obj	_
 22	on	on	ADP	IN	_	23	case	23:case	_
-23	restaurants	restaurant	NOUN	NNS	Number=Plur	21	nmod	21:nmod	_
+23	restaurants	restaurant	NOUN	NNS	Number=Plur	21	nmod	21:nmod:on	_
 24	here	here	ADV	RB	PronType=Dem	23	advmod	23:advmod	SpaceAfter=No
 25	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111103205154AAOod9K_ans-0003
 # text = I don't want to have to deal with those deal-a-day websites like Groupon.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj|8:nsubj:xsubj	_
 2	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	4:aux	SpaceAfter=No
 3	n't	not	PART	RB	_	4	advmod	4:advmod	_
 4	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -60,9 +60,9 @@
 13	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	SpaceAfter=No
 14	-	-	PUNCT	HYPH	_	15	punct	15:punct	SpaceAfter=No
 15	day	day	NOUN	NN	Number=Sing	16	compound	16:compound	_
-16	websites	website	NOUN	NNS	Number=Plur	8	obl	8:obl	_
+16	websites	website	NOUN	NNS	Number=Plur	8	obl	8:obl:with	_
 17	like	like	ADP	IN	_	18	case	18:case	_
-18	Groupon	Groupon	PROPN	NNP	Number=Sing	16	nmod	16:nmod	SpaceAfter=No
+18	Groupon	Groupon	PROPN	NNP	Number=Sing	16	nmod	16:nmod:like	SpaceAfter=No
 19	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111103205154AAOod9K_ans-0004
@@ -74,13 +74,13 @@
 5	simple	simple	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	way	way	NOUN	NN	Number=Sing	3	obj	3:obj	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	get	get	VERB	VB	VerbForm=Inf	6	acl	6:acl	_
+8	get	get	VERB	VB	VerbForm=Inf	6	acl	6:acl:to	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	good	good	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	deal	deal	NOUN	NN	Number=Sing	8	obj	8:obj	_
 12	to	to	ADP	IN	_	14	case	14:case	_
 13	whatever	whatever	DET	WDT	PronType=Int	14	det	14:det	_
-14	Restaurant	restaurant	NOUN	NN	Number=Sing	11	nmod	11:nmod	_
+14	Restaurant	restaurant	NOUN	NN	Number=Sing	11	nmod	11:nmod:to	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
 16	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	acl:relcl	14:acl:relcl	SpaceAfter=No
 17	,	,	PUNCT	,	_	8	punct	8:punct	_
@@ -117,17 +117,17 @@
 4	daily	daily	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	deals	deal	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	from	from	ADP	IN	_	7	case	7:case	_
-7	Groupon	Groupon	PROPN	NNP	Number=Sing	3	obl	3:obl	SpaceAfter=No
+7	Groupon	Groupon	PROPN	NNP	Number=Sing	3	obl	3:obl:from	SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	Living	Living	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	Social	Social	PROPN	NNP	Number=Sing	7	conj	7:conj	SpaceAfter=No
+10	Social	Social	PROPN	NNP	Number=Sing	7	conj	3:obl:from|7:conj:and	SpaceAfter=No
 11	,	,	PUNCT	,	_	14	punct	14:punct	_
 12	and	and	CCONJ	CC	_	14	cc	14:cc	_
 13	all	all	DET	DT	_	14	det	14:det	_
-14	sorts	sort	NOUN	NNS	Number=Plur	7	conj	7:conj	_
+14	sorts	sort	NOUN	NNS	Number=Plur	7	conj	3:obl:from|7:conj:and	_
 15	of	of	ADP	IN	_	17	case	17:case	_
 16	other	other	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	places	place	NOUN	NNS	Number=Plur	14	nmod	14:nmod	SpaceAfter=No
+17	places	place	NOUN	NNS	Number=Plur	14	nmod	14:nmod:of	SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111103205154AAOod9K_ans-0008
@@ -150,40 +150,40 @@
 1	Most	most	ADJ	JJS	Degree=Sup	5	nsubj	5:nsubj	_
 2	of	of	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	deals	deal	NOUN	NNS	Number=Plur	1	nmod	1:nmod	_
+4	deals	deal	NOUN	NNS	Number=Plur	1	nmod	1:nmod:of	_
 5	let	let	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	obj	5:obj	_
+6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	obj	5:obj|7:nsubj:xsubj	_
 7	eat	eat	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
 8	for	for	ADP	IN	_	10	case	10:case	_
 9	500	500	NUM	CD	NumType=Card	10	nummod	10:nummod	SpaceAfter=No
-10	ff	ff	NOUN	NNS	Number=Plur	7	obl	7:obl	SpaceAfter=No
+10	ff	ff	NOUN	NNS	Number=Plur	7	obl	7:obl:for	SpaceAfter=No
 11	,	,	PUNCT	,	_	19	punct	19:punct	_
 12	and	and	CCONJ	CC	_	19	cc	19:cc	_
 13	some	some	DET	DT	_	19	nsubj	19:nsubj	_
 14	of	of	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	deals	deal	NOUN	NNS	Number=Plur	13	nmod	13:nmod	_
+16	deals	deal	NOUN	NNS	Number=Plur	13	nmod	13:nmod:of	_
 17	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
 18	even	even	ADV	RB	_	19	advmod	19:advmod	_
-19	free	free	ADJ	JJ	Degree=Pos	5	conj	5:conj	SpaceAfter=No
+19	free	free	ADJ	JJ	Degree=Pos	5	conj	5:conj:and	SpaceAfter=No
 20	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111103205154AAOod9K_ans-0010
 # text = If you want to eat cheaply without worrying about all those daily deal emails every day, ZebraKlub should be perfect for you.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	21	advcl	21:advcl	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
+3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	21	advcl	21:advcl:if	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	eat	eat	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	cheaply	cheaply	ADV	RB	_	5	advmod	5:advmod	_
 7	without	without	SCONJ	IN	_	8	mark	8:mark	_
-8	worrying	worry	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl	_
+8	worrying	worry	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl:without	_
 9	about	about	ADP	IN	_	14	case	14:case	_
 10	all	all	DET	PDT	_	14	det:predet	14:det:predet	_
 11	those	those	DET	DT	Number=Plur|PronType=Dem	14	det	14:det	_
 12	daily	daily	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	deal	deal	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	emails	email	NOUN	NNS	Number=Plur	8	obl	8:obl	_
+14	emails	email	NOUN	NNS	Number=Plur	8	obl	8:obl:about	_
 15	every	every	DET	DT	_	16	det	16:det	_
 16	day	day	NOUN	NN	Number=Sing	8	obl:tmod	8:obl:tmod	SpaceAfter=No
 17	,	,	PUNCT	,	_	21	punct	21:punct	_
@@ -192,6 +192,6 @@
 20	be	be	AUX	VB	VerbForm=Inf	21	cop	21:cop	_
 21	perfect	perfect	ADJ	JJ	Degree=Pos	0	root	0:root	_
 22	for	for	ADP	IN	_	23	case	23:case	_
-23	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	21	obl	21:obl	SpaceAfter=No
+23	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	21	obl	21:obl:for	SpaceAfter=No
 24	.	.	PUNCT	.	_	21	punct	21:punct	_
 

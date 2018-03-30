@@ -3,10 +3,10 @@
 # text = After recently relocating to South Bend, we were looking for a delicious, fun, yet elegant establishment for New Years Eve dinner.
 1	After	after	SCONJ	IN	_	3	mark	3:mark	_
 2	recently	recently	ADV	RB	_	3	advmod	3:advmod	_
-3	relocating	relocate	VERB	VBG	VerbForm=Ger	10	advcl	10:advcl	_
+3	relocating	relocate	VERB	VBG	VerbForm=Ger	10	advcl	10:advcl:after	_
 4	to	to	ADP	IN	_	6	case	6:case	_
 5	South	South	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	Bend	Bend	PROPN	NNP	Number=Sing	3	obl	3:obl	SpaceAfter=No
+6	Bend	Bend	PROPN	NNP	Number=Sing	3	obl	3:obl:to	SpaceAfter=No
 7	,	,	PUNCT	,	_	10	punct	10:punct	_
 8	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 9	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	aux	10:aux	_
@@ -15,17 +15,17 @@
 12	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
 13	delicious	delicious	ADJ	JJ	Degree=Pos	19	amod	19:amod	SpaceAfter=No
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
-15	fun	fun	ADJ	JJ	Degree=Pos	13	conj	13:conj	SpaceAfter=No
+15	fun	fun	ADJ	JJ	Degree=Pos	13	conj	13:conj:yet|19:amod	SpaceAfter=No
 16	,	,	PUNCT	,	_	18	punct	18:punct	_
 17	yet	yet	CCONJ	CC	_	18	cc	18:cc	_
-18	elegant	elegant	ADJ	JJ	Degree=Pos	13	conj	13:conj	_
-19	establishment	establishment	NOUN	NN	Number=Sing	10	obl	10:obl	_
+18	elegant	elegant	ADJ	JJ	Degree=Pos	13	conj	13:conj:yet|19:amod	_
+19	establishment	establishment	NOUN	NN	Number=Sing	10	obl	10:obl:for	_
 20	for	for	ADP	IN	_	25	case	25:case	_
 21	New	New	PROPN	NNP	Number=Sing	22	compound	22:compound	_
 22	Year	Year	PROPN	NNP	Number=Sing	24	nmod:poss	24:nmod:poss	SpaceAfter=No
 23	s	's	PART	POS	_	22	case	22:case	_
 24	Eve	Eve	PROPN	NNP	Number=Sing	25	compound	25:compound	_
-25	dinner	dinner	NOUN	NN	Number=Sing	10	obl	10:obl	SpaceAfter=No
+25	dinner	dinner	NOUN	NN	Number=Sing	10	obl	10:obl:for	SpaceAfter=No
 26	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = reviews-085980-0002
@@ -36,35 +36,35 @@
 4	with	with	ADP	IN	_	7	case	7:case	_
 5	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	7:det	_
 6	holiday	holiday	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	dinner	dinner	NOUN	NN	Number=Sing	3	obl	3:obl	_
+7	dinner	dinner	NOUN	NN	Number=Sing	3	obl	3:obl:with	_
 8	due	due	ADP	IN	_	12	case	12:case	_
 9	to	to	ADP	IN	_	8	fixed	8:fixed	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	overall	overall	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	flavor	flavor	NOUN	NN	Number=Sing	3	obl	3:obl	_
+12	flavor	flavor	NOUN	NN	Number=Sing	3	obl	3:obl:due_to	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	price	price	NOUN	NN	Number=Sing	12	conj	12:conj	_
+14	price	price	NOUN	NN	Number=Sing	12	conj	3:obl:due_to|12:conj:and	_
 15	of	of	ADP	IN	_	17	case	17:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
-17	meal	meal	NOUN	NN	Number=Sing	12	nmod	12:nmod	SpaceAfter=No
+17	meal	meal	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	SpaceAfter=No
 18	,	,	PUNCT	,	_	20	punct	20:punct	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	accessibility	accessibility	NOUN	NN	Number=Sing	12	conj	12:conj	_
+20	accessibility	accessibility	NOUN	NN	Number=Sing	12	conj	3:obl:due_to|12:conj:and	_
 21	to	to	ADP	IN	_	24	case	24:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 23	Jazz	Jazz	PROPN	NNP	Number=Sing	24	compound	24:compound	_
-24	Club	Club	PROPN	NNP	Number=Sing	20	nmod	20:nmod	SpaceAfter=No
+24	Club	Club	PROPN	NNP	Number=Sing	20	nmod	20:nmod:to	SpaceAfter=No
 25	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-085980-0003
 # text = The meal was extremely overpriced and lacked flavor, especially for being a special NYE menu.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	meal	meal	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+2	meal	meal	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|7:nsubj	_
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
 4	extremely	extremely	ADV	RB	_	5	advmod	5:advmod	_
 5	overpriced	overpriced	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	lacked	lack	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+7	lacked	lack	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj:and	_
 8	flavor	flavor	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
 9	,	,	PUNCT	,	_	7	punct	7:punct	_
 10	especially	especially	ADV	RB	_	16	advmod	16:advmod	_
@@ -73,7 +73,7 @@
 13	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 14	special	special	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 15	NYE	NYE	PROPN	NNP	Number=Sing	16	compound	16:compound	_
-16	menu	menu	NOUN	NN	Number=Sing	7	advcl	7:advcl	SpaceAfter=No
+16	menu	menu	NOUN	NN	Number=Sing	7	advcl	7:advcl:for	SpaceAfter=No
 17	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-085980-0004
@@ -92,14 +92,14 @@
 12	packages	package	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj	_
 13	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
 14	way	way	ADV	RB	_	15	advmod	15:advmod	_
-15	overpriced	overpriced	ADJ	JJ	Degree=Pos	4	conj	4:conj	SpaceAfter=No
+15	overpriced	overpriced	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
 16	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-085980-0005
 # text = After our meal, our server found us a table in the jazz club where we were informed it would be another $10/person to stay and listen to the band, despite the fact we had just finished a dinner there and were intending to enjoy their drink list.
 1	After	after	ADP	IN	_	3	case	3:case	_
 2	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	meal	meal	NOUN	NN	Number=Sing	7	obl	7:obl	SpaceAfter=No
+3	meal	meal	NOUN	NN	Number=Sing	7	obl	7:obl:after	SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	server	server	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
@@ -110,12 +110,12 @@
 11	in	in	ADP	IN	_	14	case	14:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	jazz	jazz	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	club	club	NOUN	NN	Number=Sing	10	nmod	10:nmod	_
+14	club	club	NOUN	NN	Number=Sing	10	nmod	10:nmod:in	_
 15	where	where	ADV	WRB	PronType=Rel	18	advmod	18:advmod	_
 16	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	18	nsubj:pass	18:nsubj:pass	_
 17	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	18	aux:pass	18:aux:pass	_
 18	informed	inform	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	acl:relcl	14:acl:relcl	_
-19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	23	nsubj	23:nsubj	_
+19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	23	nsubj	23:nsubj|28:nsubj:xsubj|30:nsubj:xsubj	_
 20	would	would	AUX	MD	VerbForm=Fin	23	aux	23:aux	_
 21	be	be	AUX	VB	VerbForm=Inf	23	cop	23:cop	_
 22	another	another	DET	DT	_	23	det	23:det	_
@@ -126,15 +126,15 @@
 27	to	to	PART	TO	_	28	mark	28:mark	_
 28	stay	stay	VERB	VB	VerbForm=Inf	23	xcomp	23:xcomp	_
 29	and	and	CCONJ	CC	_	30	cc	30:cc	_
-30	listen	listen	VERB	VB	VerbForm=Inf	28	conj	28:conj	_
+30	listen	listen	VERB	VB	VerbForm=Inf	28	conj	23:xcomp|28:conj:and	_
 31	to	to	ADP	IN	_	33	case	33:case	_
 32	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	_
-33	band	band	NOUN	NN	Number=Sing	30	obl	30:obl	SpaceAfter=No
+33	band	band	NOUN	NN	Number=Sing	30	obl	30:obl:to	SpaceAfter=No
 34	,	,	PUNCT	,	_	23	punct	23:punct	_
 35	despite	despite	ADP	IN	_	37	case	37:case	_
 36	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	_
-37	fact	fact	NOUN	NN	Number=Sing	23	obl	23:obl	_
-38	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	41	nsubj	41:nsubj	_
+37	fact	fact	NOUN	NN	Number=Sing	23	obl	23:obl:despite	_
+38	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	41	nsubj	41:nsubj|47:nsubj|49:nsubj:xsubj	_
 39	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	41	aux	41:aux	_
 40	just	just	ADV	RB	_	41	advmod	41:advmod	_
 41	finished	finish	VERB	VBN	Tense=Past|VerbForm=Part	37	acl	37:acl	_
@@ -143,7 +143,7 @@
 44	there	there	ADV	RB	PronType=Dem	41	advmod	41:advmod	_
 45	and	and	CCONJ	CC	_	47	cc	47:cc	_
 46	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	47	aux	47:aux	_
-47	intending	intend	VERB	VBG	Tense=Pres|VerbForm=Part	41	conj	41:conj	_
+47	intending	intend	VERB	VBG	Tense=Pres|VerbForm=Part	41	conj	37:acl|41:conj:and	_
 48	to	to	PART	TO	_	49	mark	49:mark	_
 49	enjoy	enjoy	VERB	VB	VerbForm=Inf	47	xcomp	47:xcomp	_
 50	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	52	nmod:poss	52:nmod:poss	_
@@ -158,10 +158,10 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 4	less	less	ADJ	JJR	Degree=Cmp	7	amod	7:amod	_
 5	than	than	ADP	IN	_	6	case	6:case	_
-6	impressive	impressive	ADJ	JJ	Degree=Pos	4	obl	4:obl	_
+6	impressive	impressive	ADJ	JJ	Degree=Pos	4	obl	4:obl:than	_
 7	experience	experience	NOUN	NN	Number=Sing	0	root	0:root	_
 8	at	at	ADP	IN	_	9	case	9:case	_
-9	Trio	Trio	PROPN	NNP	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+9	Trio	Trio	PROPN	NNP	Number=Sing	7	nmod	7:nmod:at	SpaceAfter=No
 10	's	's	PART	POS	_	9	case	9:case	SpaceAfter=No
 11	.	.	PUNCT	.	_	7	punct	7:punct	_
 

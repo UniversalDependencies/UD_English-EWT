@@ -8,21 +8,21 @@
 5	between	between	ADP	IN	_	9	case	9:case	_
 6	Indian	indian	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	African	african	ADJ	JJ	Degree=Pos	6	conj	6:conj	_
-9	ringnecks	ringneck	NOUN	NNS	Number=Plur	4	nmod	4:nmod	_
+8	African	african	ADJ	JJ	Degree=Pos	6	conj	6:conj:and|9:amod	_
+9	ringnecks	ringneck	NOUN	NNS	Number=Plur	4	nmod	4:nmod:between	_
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	alexandrine	alexandrine	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	parrots	parrot	NOUN	NNS	Number=Plur	9	conj	9:conj	SpaceAfter=No
+12	parrots	parrot	NOUN	NNS	Number=Plur	9	conj	4:nmod:between|9:conj:and	SpaceAfter=No
 13	?	?	PUNCT	.	_	1	punct	1:punct	_
 14	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108102612AASRNao_ans-0002
 # text = I was fixing to buy an indian ringneck, did a bunch of research, (I'm a very experienced bird owner, macaws, cockatoos, amazons),
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|10:nsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	3:aux	_
 3	fixing	fix	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
-5	buy	buy	VERB	VB	VerbForm=Inf	3	advcl	3:advcl	_
+5	buy	buy	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_
 6	an	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	indian	indian	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	ringneck	ringneck	NOUN	NN	Number=Sing	5	obj	5:obj	SpaceAfter=No
@@ -31,7 +31,7 @@
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	bunch	bunch	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	of	of	ADP	IN	_	14	case	14:case	_
-14	research	research	NOUN	NN	Number=Sing	12	nmod	12:nmod	SpaceAfter=No
+14	research	research	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	SpaceAfter=No
 15	,	,	PUNCT	,	_	3	punct	3:punct	_
 16	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
 17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	23	nsubj	23:nsubj	SpaceAfter=No
@@ -56,8 +56,8 @@
 2	noticed	notice	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	two	two	NUM	CD	NumType=Card	5	nummod	5:nummod	_
 4	other	other	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	breeds	breed	NOUN	NNS	Number=Plur	2	obj	2:obj	_
-6	that	that	PRON	WDT	PronType=Rel	7	nsubj	7:nsubj	_
+5	breeds	breed	NOUN	NNS	Number=Plur	2	obj	2:obj|7:nsubj:relsubj|10:nsubj:xsubj	_
+6	that	that	PRON	WDT	PronType=Rel	7	nsubj	5:ref	_
 7	look	look	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 9	lot	lot	NOUN	NN	Number=Sing	10	obl:npmod	10:obl:npmod	_

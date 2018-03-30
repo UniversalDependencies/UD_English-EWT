@@ -6,7 +6,7 @@
 3	cuban	cuban	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	cafe	cafe	NOUN	NN	Number=Sing	0	root	0:root	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	Orlando	Orlando	PROPN	NNP	Number=Sing	4	nmod	4:nmod	_
+6	Orlando	Orlando	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	_
 
 # sent_id = reviews-112579-0002
 # text = I have been eating Cuban for a long time, sandwiches mainly along with other dishes..
@@ -18,14 +18,14 @@
 6	for	for	ADP	IN	_	9	case	9:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	long	long	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	time	time	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+9	time	time	NOUN	NN	Number=Sing	4	obl	4:obl:for	SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
 11	sandwiches	sandwich	NOUN	NNS	Number=Plur	4	parataxis	4:parataxis	_
 12	mainly	mainly	ADV	RB	_	11	advmod	11:advmod	_
 13	along	along	ADP	IN	_	16	case	16:case	_
 14	with	with	ADP	IN	_	16	case	16:case	_
 15	other	other	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	dishes	dish	NOUN	NNS	Number=Plur	11	nmod	11:nmod	SpaceAfter=No
+16	dishes	dish	NOUN	NNS	Number=Plur	11	nmod	11:nmod:with	SpaceAfter=No
 17	..	..	PUNCT	.	_	11	punct	11:punct	SpaceAfter=No
 
 # sent_id = reviews-112579-0003
@@ -39,14 +39,14 @@
 7	...	...	PUNCT	,	_	2	punct	2:punct	_
 8	mmmm	mmmm	INTJ	UH	_	2	discourse	2:discourse	_
 9	anyways	anyways	INTJ	UH	_	2	discourse	2:discourse	_
-10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
+10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj|17:nsubj|18:nsubj:xsubj	_
 11	found	find	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	parataxis	2:parataxis	_
 12	this	this	DET	DT	Number=Sing|PronType=Dem	13	det	13:det	_
 13	place	place	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	and	and	CCONJ	CC	_	17	cc	17:cc	_
 15	ca	can	AUX	MD	VerbForm=Fin	17	aux	17:aux	SpaceAfter=No
 16	n't	not	PART	RB	_	17	advmod	17:advmod	_
-17	stop	stop	VERB	VB	VerbForm=Inf	11	conj	11:conj	_
+17	stop	stop	VERB	VB	VerbForm=Inf	11	conj	11:conj:and	_
 18	going	go	VERB	VBG	VerbForm=Ger	17	xcomp	17:xcomp	_
 19	there	there	ADV	RB	PronType=Dem	18	advmod	18:advmod	SpaceAfter=No
 20	,	,	PUNCT	,	_	2	punct	2:punct	_
@@ -54,12 +54,12 @@
 22	stop	stop	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	_
 23	in	in	ADV	RB	_	22	advmod	22:advmod	_
 24	at	at	ADV	RB	_	25	case	25:case	_
-25	least	least	ADV	RBS	Degree=Sup	26	obl	26:obl	_
+25	least	least	ADV	RBS	Degree=Sup	26	obl	26:obl:at	_
 26	once	once	ADV	RB	NumType=Mult	22	advmod	22:advmod	_
 27	a	a	DET	DT	Definite=Ind|PronType=Art	28	det	28:det	_
 28	week	week	NOUN	NN	Number=Sing	26	obl:npmod	26:obl:npmod	_
 29	and	and	CCONJ	CC	_	30	cc	30:cc	_
-30	anytime	anytime	ADV	RB	_	25	conj	25:conj	_
+30	anytime	anytime	ADV	RB	_	25	conj	25:conj:and|26:obl:at	_
 31	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	35	nsubj	35:nsubj	SpaceAfter=No
 32	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	35	cop	35:cop	_
 33	in	in	ADP	IN	_	35	case	35:case	_
@@ -68,24 +68,24 @@
 36	for	for	ADP	IN	_	39	case	39:case	_
 37	a	a	DET	DT	Definite=Ind|PronType=Art	39	det	39:det	_
 38	Cuban	cuban	ADJ	JJ	Degree=Pos	39	amod	39:amod	_
-39	coffee	coffee	NOUN	NN	Number=Sing	22	obl	22:obl	_
+39	coffee	coffee	NOUN	NN	Number=Sing	22	obl	22:obl:for	_
 40	or	or	CCONJ	CC	_	41	cc	41:cc	_
-41	snack	snack	NOUN	NN	Number=Sing	39	conj	39:conj	SpaceAfter=No
+41	snack	snack	NOUN	NN	Number=Sing	39	conj	22:obl:for|39:conj:or	SpaceAfter=No
 42	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-112579-0004
 # text = The place is chill and comfortable.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	place	place	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
+2	place	place	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 4	chill	chill	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	comfortable	comfortable	ADJ	JJ	Degree=Pos	4	conj	4:conj	SpaceAfter=No
+6	comfortable	comfortable	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
 7	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-112579-0005
 # text = They don't speak the best English but enough to get by.
-1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj|9:nsubj	_
 2	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	4:aux	SpaceAfter=No
 3	n't	not	PART	RB	_	4	advmod	4:advmod	_
 4	speak	speak	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -93,9 +93,9 @@
 6	best	best	ADJ	JJS	Degree=Sup	7	amod	7:amod	_
 7	English	English	PROPN	NNP	Number=Sing	4	obj	4:obj	_
 8	but	but	CCONJ	CC	_	9	cc	9:cc	_
-9	enough	enough	ADJ	JJ	Degree=Pos	4	conj	4:conj	_
+9	enough	enough	ADJ	JJ	Degree=Pos	4	conj	4:conj:but	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	get	get	VERB	VB	VerbForm=Inf	9	advcl	9:advcl	_
+11	get	get	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
 12	by	by	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -126,7 +126,7 @@
 23	meat	meat	NOUN	NN	Number=Sing	26	nsubj	26:nsubj	_
 24	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	cop	26:cop	_
 25	always	always	ADV	RB	_	26	advmod	26:advmod	_
-26	fresh	fresh	ADJ	JJ	Degree=Pos	2	conj	2:conj	SpaceAfter=No
+26	fresh	fresh	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	SpaceAfter=No
 27	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-112579-0007
@@ -139,24 +139,24 @@
 6	special	special	NOUN	NN	Number=Sing	2	obj	2:obj	_
 7	with	with	ADP	IN	_	9	case	9:case	_
 8	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	choice	choice	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+9	choice	choice	NOUN	NN	Number=Sing	6	nmod	6:nmod:with	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	meat	meat	NOUN	NN	Number=Sing	9	nmod	9:nmod	SpaceAfter=No
+11	meat	meat	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
-13	chicken	chicken	NOUN	NN	Number=Sing	11	conj	11:conj	SpaceAfter=No
+13	chicken	chicken	NOUN	NN	Number=Sing	11	conj	9:nmod:of|11:conj:or	SpaceAfter=No
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
-15	steak	steak	NOUN	NN	Number=Sing	11	conj	11:conj	SpaceAfter=No
+15	steak	steak	NOUN	NN	Number=Sing	11	conj	9:nmod:of|11:conj:or	SpaceAfter=No
 16	,	,	PUNCT	,	_	18	punct	18:punct	_
 17	or	or	CCONJ	CC	_	18	cc	18:cc	_
-18	pork	pork	NOUN	NN	Number=Sing	11	conj	11:conj	_
+18	pork	pork	NOUN	NN	Number=Sing	11	conj	9:nmod:of|11:conj:or	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	rice	rice	NOUN	NN	Number=Sing	9	conj	9:conj	_
+20	rice	rice	NOUN	NN	Number=Sing	9	conj	6:nmod:with|9:conj:and	_
 21	and	and	CCONJ	CC	_	23	cc	23:cc	_
 22	black	black	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
-23	beans	bean	NOUN	NNS	Number=Plur	9	conj	9:conj	_
+23	beans	bean	NOUN	NNS	Number=Plur	9	conj	6:nmod:with|9:conj:and	_
 24	and	and	CCONJ	CC	_	26	cc	26:cc	_
 25	fried	fry	VERB	VBN	Tense=Past|VerbForm=Part	26	amod	26:amod	_
-26	plantains	plantain	NOUN	NNS	Number=Plur	9	conj	9:conj	SpaceAfter=No
+26	plantains	plantain	NOUN	NNS	Number=Plur	9	conj	6:nmod:with|9:conj:and	SpaceAfter=No
 27	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-112579-0008
@@ -179,14 +179,14 @@
 7	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 8	mango	mango	NOUN	NN	Number=Sing	11	compound	11:compound	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	cheese	cheese	NOUN	NN	Number=Sing	8	conj	8:conj	_
-11	pastries	pastry	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
+10	cheese	cheese	NOUN	NN	Number=Sing	8	conj	8:conj:and|11:compound	_
+11	pastries	pastry	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj|17:nsubj	_
 12	and	and	CCONJ	CC	_	17	cc	17:cc	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 14	omelets	omelet	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
 15	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
-17	die	die	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+17	die	die	VERB	VB	VerbForm=Inf	6	conj	4:ccomp|6:conj:and	_
 18	for	for	ADP	IN	_	17	obl	17:obl	SpaceAfter=No
 19	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -195,7 +195,7 @@
 1	Stop	stop	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	in	in	ADV	RB	_	1	advmod	1:advmod	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	1	conj	1:conj	_
+4	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	1	conj	1:conj:and	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	bite	bite	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
@@ -210,11 +210,11 @@
 1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	_
 2	slice	slice	NOUN	NN	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	heaven	heaven	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+4	heaven	heaven	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	winter	winter	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	park	park	PROPN	NNP	Number=Sing	2	nmod	2:nmod	_
+7	park	park	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	_
 8	off	off	ADP	IN	_	9	case	9:case	_
-9	forsyth	forsyth	PROPN	NNP	Number=Sing	2	nmod	2:nmod	SpaceAfter=No
+9	forsyth	forsyth	PROPN	NNP	Number=Sing	2	nmod	2:nmod:off	SpaceAfter=No
 10	!	!	PUNCT	.	_	2	punct	2:punct	_
 

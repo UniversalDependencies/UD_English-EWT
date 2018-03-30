@@ -11,7 +11,7 @@
 8	do	do	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	_
 9	while	while	SCONJ	IN	_	11	mark	11:mark	_
 10	in	in	ADP	IN	_	11	case	11:case	_
-11	Japan	Japan	PROPN	NNP	Number=Sing	8	advcl	8:advcl	SpaceAfter=No
+11	Japan	Japan	PROPN	NNP	Number=Sing	8	advcl	8:advcl:in	SpaceAfter=No
 12	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0002
@@ -24,7 +24,7 @@
 6	for	for	ADP	IN	_	9	case	9:case	_
 7	about	about	ADV	RB	_	9	advmod	9:advmod	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
-9	week	week	NOUN	NN	Number=Sing	5	obl	5:obl	_
+9	week	week	NOUN	NN	Number=Sing	5	obl	5:obl:for	_
 10	so	so	ADV	RB	_	13	advmod	13:advmod	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
@@ -50,12 +50,12 @@
 7	female	female	ADJ	NN	Number=Sing	0	root	0:root	_
 8	travelling	travel	VERB	VBG	VerbForm=Ger	7	acl	7:acl	_
 9	by	by	ADP	IN	_	10	case	10:case	_
-10	myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs|Reflex=Yes	8	obl	8:obl	_
+10	myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs|Reflex=Yes	8	obl	8:obl:by	_
 11	so	so	ADV	RB	_	15	advmod	15:advmod	_
 12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 13	could	could	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
 14	be	be	AUX	VB	VerbForm=Inf	15	cop	15:cop	_
-15	anything	anything	PRON	NN	Number=Sing	6	conj	6:conj	SpaceAfter=No
+15	anything	anything	PRON	NN	Number=Sing	6	conj	6:conj|7:amod	SpaceAfter=No
 16	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0004
@@ -64,8 +64,8 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 3	obvious	obvious	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 4	tourist	tourist	NOUN	NN	Number=Sing	5	compound	5:compound	_
-5	spots	spot	NOUN	NNS	Number=Plur	0	root	0:root	_
-6	which	which	PRON	WDT	PronType=Rel	10	obl	10:obl	_
+5	spots	spot	NOUN	NNS	Number=Plur	0	root	10:obl:besides	_
+6	which	which	PRON	WDT	PronType=Rel	10	obl	5:ref	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 8	already	already	ADV	RB	_	10	advmod	10:advmod	_
 9	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
@@ -81,7 +81,7 @@
 4	night	night	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	life	life	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	Naha	Naha	PROPN	NNP	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+7	Naha	Naha	PROPN	NNP	Number=Sing	5	nmod	5:nmod:in	SpaceAfter=No
 8	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0006
@@ -90,8 +90,8 @@
 2	there	there	PRON	EX	_	1	expl	1:expl	_
 3	any	any	DET	DT	_	5	det	5:det	_
 4	good	good	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	venues	venue	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	_
-6	that	that	PRON	WDT	PronType=Rel	7	nsubj	7:nsubj	_
+5	venues	venue	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj|7:nsubj:relsubj	_
+6	that	that	PRON	WDT	PronType=Rel	7	nsubj	5:ref	_
 7	showcase	showcase	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 8	underground	underground	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	bands	band	NOUN	NNS	Number=Plur	7	obj	7:obj	SpaceAfter=No
@@ -99,14 +99,14 @@
 11	or	or	CCONJ	CC	_	14	cc	14:cc	_
 12	just	just	ADV	RB	_	14	advmod	14:advmod	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
-14	venue	venue	NOUN	NN	Number=Sing	5	conj	5:conj	_
+14	venue	venue	NOUN	NN	Number=Sing	5	conj	1:nsubj|5:conj:or|7:nsubj:relsubj	_
 15	at	at	ADV	RB	_	16	case	16:case	_
-16	all	all	ADV	RB	_	14	nmod	14:nmod	SpaceAfter=No
+16	all	all	ADV	RB	_	14	nmod	14:nmod:at	SpaceAfter=No
 17	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0007
 # text = It doesn't have to be underground it could be any type of music.
-1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj|7:nsubj:xsubj	_
 2	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	SpaceAfter=No
 3	n't	not	PART	RB	_	4	advmod	4:advmod	_
 4	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -119,7 +119,7 @@
 11	any	any	DET	DT	_	12	det	12:det	_
 12	type	type	NOUN	NN	Number=Sing	4	parataxis	4:parataxis	_
 13	of	of	ADP	IN	_	14	case	14:case	_
-14	music	music	NOUN	NN	Number=Sing	12	nmod	12:nmod	SpaceAfter=No
+14	music	music	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0008
@@ -135,13 +135,13 @@
 5	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 6	do	do	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	_
 7	in	in	ADP	IN	_	8	case	8:case	_
-8	Okinawa	Okinawa	PROPN	NNP	Number=Sing	6	obl	6:obl	_
+8	Okinawa	Okinawa	PROPN	NNP	Number=Sing	6	obl	6:obl:in	_
 9	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	go	go	VERB	VB	VerbForm=Inf	9	ccomp	9:ccomp	_
 12	to	to	ADP	IN	_	14	case	14:case	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
-14	beach	beach	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+14	beach	beach	NOUN	NN	Number=Sing	11	obl	11:obl:to	SpaceAfter=No
 15	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0010
@@ -157,16 +157,16 @@
 9	do	do	VERB	VB	VerbForm=Inf	6	acl:relcl	6:acl:relcl	_
 10	in	in	ADP	IN	_	12	case	12:case	_
 11	other	other	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	parts	part	NOUN	NNS	Number=Plur	9	obl	9:obl	_
+12	parts	part	NOUN	NNS	Number=Plur	9	obl	9:obl:in	_
 13	or	of	ADP	IN	Typo=Yes	14	case	14:case	_
-14	Japan	Japan	PROPN	NNP	Number=Sing	12	nmod	12:nmod	SpaceAfter=No
+14	Japan	Japan	PROPN	NNP	Number=Sing	12	nmod	12:nmod:or	SpaceAfter=No
 15	,	,	PUNCT	,	_	9	punct	9:punct	_
 16	like	like	ADP	IN	_	17	case	17:case	_
-17	shopping	shopping	NOUN	NN	Number=Sing	9	obl	9:obl	SpaceAfter=No
+17	shopping	shopping	NOUN	NN	Number=Sing	9	obl	9:obl:like	SpaceAfter=No
 18	,	,	PUNCT	,	_	19	punct	19:punct	_
-19	eating	eating	NOUN	NN	Number=Sing	17	conj	17:conj	SpaceAfter=No
+19	eating	eating	NOUN	NN	Number=Sing	17	conj	9:obl:like|17:conj	SpaceAfter=No
 20	,	,	PUNCT	,	_	21	punct	21:punct	_
-21	etc	etc	X	FW	_	17	conj	17:conj	SpaceAfter=No
+21	etc	etc	X	FW	_	17	conj	9:obl:like|17:conj	SpaceAfter=No
 22	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0011
@@ -177,16 +177,16 @@
 4	visit	visit	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	temples	temple	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 6	or	or	CCONJ	CC	_	7	cc	7:cc	_
-7	shrines	shrine	NOUN	NNS	Number=Plur	5	conj	5:conj	_
+7	shrines	shrine	NOUN	NNS	Number=Plur	5	conj	4:obj|5:conj:or	_
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	Okinawa	Okinawa	PROPN	NNP	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+9	Okinawa	Okinawa	PROPN	NNP	Number=Sing	5	nmod	5:nmod:in	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0012
 # text = Well first you can try speaking Japanese.
 1	Well	well	INTJ	UH	_	5	discourse	5:discourse	_
 2	first	first	ADV	RB	_	5	advmod	5:advmod	_
-3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
+3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj|6:nsubj:xsubj	_
 4	can	can	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 5	try	try	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	speaking	speak	VERB	VBG	VerbForm=Ger	5	xcomp	5:xcomp	_
@@ -199,7 +199,7 @@
 2	to	to	ADP	IN	_	5	case	5:case	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 4	sumo	sumo	NOUN	NN	Number=Sing	5	compound	5:compound	_
-5	tournament	tournament	NOUN	NN	Number=Sing	1	obl	1:obl	SpaceAfter=No
+5	tournament	tournament	NOUN	NN	Number=Sing	1	obl	1:obl:to	SpaceAfter=No
 6	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0014
@@ -211,7 +211,7 @@
 5	-	-	PUNCT	HYPH	_	6	punct	6:punct	SpaceAfter=No
 6	belt	belt	NOUN	NN	Number=Sing	8	compound	8:compound	_
 7	sushi	sushi	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	restaurant	restaurant	NOUN	NN	Number=Sing	1	obl	1:obl	SpaceAfter=No
+8	restaurant	restaurant	NOUN	NN	Number=Sing	1	obl	1:obl:at	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0015
@@ -229,15 +229,15 @@
 4	different	different	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	from	from	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	rest	rest	NOUN	NN	Number=Sing	4	obl	4:obl	_
+7	rest	rest	NOUN	NN	Number=Sing	4	obl	4:obl:from	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	Japan	Japan	PROPN	NNP	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+9	Japan	Japan	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	SpaceAfter=No
 10	,	,	PUNCT	,	_	4	punct	4:punct	_
 11	although	although	SCONJ	IN	_	15	mark	15:mark	_
 12	of	of	ADV	RB	_	15	advmod	15:advmod	_
 13	course	course	ADV	RB	_	12	fixed	12:fixed	_
 14	there	there	PRON	EX	_	15	expl	15:expl	_
-15	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl	_
+15	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:although	_
 16	similarities	similarity	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj	SpaceAfter=No
 17	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -253,7 +253,7 @@
 8	go	go	VERB	VB	VerbForm=Inf	7	ccomp	7:ccomp	_
 9	to	to	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	beach	beach	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+11	beach	beach	NOUN	NN	Number=Sing	8	obl	8:obl:to	SpaceAfter=No
 12	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0018
@@ -261,27 +261,27 @@
 1	There	there	PRON	EX	_	2	expl	2:expl	SpaceAfter=No
 2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	market	market	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+4	market	market	NOUN	NN	Number=Sing	2	nsubj	2:nsubj|10:nsubj:relsubj	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	Naha	Naha	PROPN	NNP	Number=Sing	4	nmod	4:nmod	SpaceAfter=No
+6	Naha	Naha	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	SpaceAfter=No
 7	,	,	PUNCT	,	_	4	punct	4:punct	_
-8	which	which	PRON	WDT	PronType=Rel	10	nsubj	10:nsubj	_
+8	which	which	PRON	WDT	PronType=Rel	10	nsubj	4:ref	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 10	great	great	ADJ	JJ	Degree=Pos	4	acl:relcl	4:acl:relcl	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0019
 # text = You can find all sorts of fresh food and get a really delicious, fresh sashimi/sushi lunch upstairs.
-1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|10:nsubj	_
 2	can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	all	all	DET	DT	_	5	det	5:det	_
 5	sorts	sort	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	fresh	fresh	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	food	food	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+8	food	food	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	get	get	VERB	VB	VerbForm=Inf	3	conj	3:conj	_
+10	get	get	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
 12	really	really	ADV	RB	_	13	advmod	13:advmod	_
 13	delicious	delicious	ADJ	JJ	Degree=Pos	19	amod	19:amod	SpaceAfter=No
@@ -289,7 +289,7 @@
 15	fresh	fresh	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 16	sashimi	sashimi	NOUN	NN	Number=Sing	19	compound	19:compound	SpaceAfter=No
 17	/	/	PUNCT	,	_	18	cc	18:cc	SpaceAfter=No
-18	sushi	sushi	NOUN	NN	Number=Sing	16	conj	16:conj	_
+18	sushi	sushi	NOUN	NN	Number=Sing	16	conj	16:conj|19:compound	_
 19	lunch	lunch	NOUN	NN	Number=Sing	10	obj	10:obj	_
 20	upstairs	upstairs	ADV	RB	_	10	advmod	10:advmod	SpaceAfter=No
 21	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -303,7 +303,7 @@
 5	too	too	ADV	RB	_	1	advmod	1:advmod	_
 6	if	if	SCONJ	IN	_	8	mark	8:mark	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
-8	can	can	AUX	MD	VerbForm=Fin	1	advcl	1:advcl	SpaceAfter=No
+8	can	can	AUX	MD	VerbForm=Fin	1	advcl	1:advcl:if	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0021
@@ -327,7 +327,7 @@
 8	much	much	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	nightlife	nightlife	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 10	in	in	ADP	IN	_	11	case	11:case	_
-11	Naha	Naha	PROPN	NNP	Number=Sing	7	obl	7:obl	SpaceAfter=No
+11	Naha	Naha	PROPN	NNP	Number=Sing	7	obl	7:obl:in	SpaceAfter=No
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0023
@@ -337,23 +337,23 @@
 3	more	more	ADJ	JJR	Degree=Cmp	0	root	0:root	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-6	place	place	NOUN	NN	Number=Sing	3	obl	3:obl	_
+6	place	place	NOUN	NN	Number=Sing	3	obl	3:obl:of	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	go	go	VERB	VB	VerbForm=Inf	6	acl	6:acl	_
+8	go	go	VERB	VB	VerbForm=Inf	6	acl	6:acl:to	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	enjoy	enjoy	VERB	VB	VerbForm=Inf	8	advcl	8:advcl	_
+10	enjoy	enjoy	VERB	VB	VerbForm=Inf	8	advcl	8:advcl:to	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	weather	weather	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No
 13	,	,	PUNCT	,	_	15	punct	15:punct	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
-15	sea	sea	NOUN	NN	Number=Sing	12	conj	12:conj	SpaceAfter=No
+15	sea	sea	NOUN	NN	Number=Sing	12	conj	10:obj|12:conj	SpaceAfter=No
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
-17	etc	etc	X	FW	_	12	conj	12:conj	SpaceAfter=No
+17	etc	etc	X	FW	_	12	conj	10:obj|12:conj	SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0024
 # text = You might have to make your own nightlife by finding an izakaya (pub) somewhere.
-1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	might	might	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -362,7 +362,7 @@
 7	own	own	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	nightlife	nightlife	NOUN	NN	Number=Sing	5	obj	5:obj	_
 9	by	by	SCONJ	IN	_	10	mark	10:mark	_
-10	finding	find	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl	_
+10	finding	find	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl:by	_
 11	an	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	izakaya	izakaya	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	(	(	PUNCT	-LRB-	_	12	punct	12:punct	SpaceAfter=No
@@ -388,13 +388,13 @@
 13	Lonely	Lonely	PROPN	NNP	Number=Sing	15	compound	15:compound	_
 14	Planet	Planet	PROPN	NNP	Number=Sing	15	compound	15:compound	_
 15	Japan	Japan	PROPN	NNP	Number=Sing	16	compound	16:compound	_
-16	book	book	NOUN	NN	Number=Sing	10	nmod	10:nmod	_
+16	book	book	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	read	read	VERB	VB	VerbForm=Inf	8	conj	8:conj	_
+18	read	read	VERB	VB	VerbForm=Inf	8	conj	6:ccomp|8:conj:and	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	chapter	chapter	NOUN	NN	Number=Sing	18	obj	18:obj	_
 21	on	on	ADP	IN	_	22	case	22:case	_
-22	Okinawa	Okinawa	PROPN	NNP	Number=Sing	20	nmod	20:nmod	SpaceAfter=No
+22	Okinawa	Okinawa	PROPN	NNP	Number=Sing	20	nmod	20:nmod:on	SpaceAfter=No
 23	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0026

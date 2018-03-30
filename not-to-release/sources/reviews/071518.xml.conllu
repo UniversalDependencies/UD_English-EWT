@@ -16,7 +16,7 @@
 6	Frontier	Frontier	PROPN	NNP	Number=Sing	2	obj	2:obj	_
 7	in	in	ADV	RB	_	2	advmod	2:advmod	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
-9	fix	fix	VERB	VB	VerbForm=Inf	2	advcl	2:advcl	_
+9	fix	fix	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 11	cracked	crack	VERB	VBN	Tense=Past|VerbForm=Part	12	amod	12:amod	_
 12	manifold	manifold	NOUN	NN	Number=Sing	9	obj	9:obj	SpaceAfter=No
@@ -30,14 +30,14 @@
 4	$	$	SYM	$	_	3	obj	3:obj	SpaceAfter=No
 5	1300	1300	NUM	CD	NumType=Card	4	nummod	4:nummod	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	fix	fix	VERB	VB	VerbForm=Inf	4	advcl	4:advcl	_
+7	fix	fix	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	_
 8	that	that	PRON	DT	Number=Sing|PronType=Dem	7	obj	7:obj	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	another	another	DET	DT	_	11	det	11:det	_
-11	$	$	SYM	$	_	4	conj	4:conj	SpaceAfter=No
+11	$	$	SYM	$	_	4	conj	3:obj|4:conj:and	SpaceAfter=No
 12	1500	1500	NUM	CD	NumType=Card	11	nummod	11:nummod	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
-14	fix	fix	VERB	VB	VerbForm=Inf	11	acl	11:acl	_
+14	fix	fix	VERB	VB	VerbForm=Inf	11	acl	11:acl:to	_
 15	some	some	DET	DT	_	17	det	17:det	_
 16	other	other	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	things	thing	NOUN	NNS	Number=Plur	14	obj	14:obj	SpaceAfter=No
@@ -52,7 +52,7 @@
 5	much	much	ADJ	JJ	Degree=Pos	17	nsubj	17:nsubj	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	work	work	NOUN	NN	Number=Sing	5	obl	5:obl	_
+8	work	work	NOUN	NN	Number=Sing	5	obl	5:obl:of	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	dealer	dealer	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
 11	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
@@ -70,7 +70,7 @@
 23	fixed	fix	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	20	xcomp	20:xcomp	_
 24	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	26	cop	26:cop	_
 25	only	only	ADV	RB	_	26	advmod	26:advmod	_
-26	$	$	SYM	$	_	17	conj	17:conj	SpaceAfter=No
+26	$	$	SYM	$	_	17	conj	3:ccomp|17:conj:and	SpaceAfter=No
 27	400	400	NUM	CD	NumType=Card	26	compound	26:compound	SpaceAfter=No
 28	!!	!!	PUNCT	.	_	3	punct	3:punct	_
 
@@ -82,16 +82,16 @@
 4	impressed	impressed	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	with	with	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	honesty	honesty	NOUN	NN	Number=Sing	4	obl	4:obl	_
+7	honesty	honesty	NOUN	NN	Number=Sing	4	obl	4:obl:with	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	integrity	integrity	NOUN	NN	Number=Sing	7	conj	7:conj	_
+9	integrity	integrity	NOUN	NN	Number=Sing	7	conj	4:obl:with|7:conj:and	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	Mike	Mike	PROPN	NNP	Number=Sing	7	nmod	7:nmod	_
+11	Mike	Mike	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	everyone	everyone	PRON	NN	Number=Sing	11	conj	11:conj	_
+13	everyone	everyone	PRON	NN	Number=Sing	11	conj	7:nmod:of|11:conj:and	_
 14	at	at	ADP	IN	_	16	case	16:case	_
 15	Eagle	Eagle	PROPN	NNP	Number=Sing	16	compound	16:compound	_
-16	Transmission	Transmission	PROPN	NNP	Number=Sing	13	nmod	13:nmod	SpaceAfter=No
+16	Transmission	Transmission	PROPN	NNP	Number=Sing	13	nmod	13:nmod:at	SpaceAfter=No
 17	!	!	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-071518-0006
@@ -103,11 +103,11 @@
 5	off	off	ADP	RP	_	2	compound:prt	2:compound:prt	_
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	morning	morning	NOUN	NN	Number=Sing	2	obl	2:obl	_
+8	morning	morning	NOUN	NN	Number=Sing	2	obl	2:obl:in	_
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	_
-12	ready	ready	ADJ	JJ	Degree=Pos	2	conj	2:conj	_
+12	ready	ready	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	_
 13	that	that	DET	DT	Number=Sing|PronType=Dem	14	det	14:det	_
 14	afternoon	afternoon	NOUN	NN	Number=Sing	12	obl:tmod	12:obl:tmod	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -137,7 +137,7 @@
 9	charge	charge	VERB	VB	VerbForm=Inf	4	csubj	4:csubj	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 11	service	service	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	fee	fee	NOUN	NN	Number=Sing	9	obj	9:obj	_
+12	fee	fee	NOUN	NN	Number=Sing	9	obj	9:obj|14:nsubj:xsubj	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	diagnose	diagnose	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_

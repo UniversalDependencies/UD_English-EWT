@@ -15,20 +15,20 @@
 6	puppy	puppy	NOUN	NN	Number=Sing	3	obj	3:obj	_
 7	to	to	ADP	IN	_	9	case	9:case	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
-9	Clinic	clinic	NOUN	NN	Number=Sing	3	obl	3:obl	_
+9	Clinic	clinic	NOUN	NN	Number=Sing	3	obl	3:obl:to	_
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	_
-13	SHOCKED	shocked	ADJ	JJ	Degree=Pos	3	conj	3:conj	_
+13	SHOCKED	shocked	ADJ	JJ	Degree=Pos	3	conj	3:conj:and	_
 14	at	at	SCONJ	IN	_	22	mark	22:mark	_
 15	how	how	ADV	WRB	PronType=Int	16	advmod	16:advmod	_
 16	well	well	ADV	RB	Degree=Pos	22	advmod	22:advmod	_
 17	Romeo	Romeo	PROPN	NNP	Number=Sing	22	nsubj:pass	22:nsubj:pass	_
 18	and	and	CCONJ	CC	_	20	cc	20:cc	_
 19	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
-20	family	family	NOUN	NN	Number=Sing	17	conj	17:conj	_
+20	family	family	NOUN	NN	Number=Sing	17	conj	17:conj:and|22:nsubj:pass	_
 21	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	aux:pass	22:aux:pass	_
-22	treated	treat	VERB	VBN	Tense=Past|VerbForm=Part	13	advcl	13:advcl	SpaceAfter=No
+22	treated	treat	VERB	VBN	Tense=Past|VerbForm=Part	13	advcl	13:advcl:at	SpaceAfter=No
 23	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-079375-0003
@@ -37,9 +37,9 @@
 2	worked	work	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	around	around	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	clock	clock	NOUN	NN	Number=Sing	2	obl	2:obl	_
+5	clock	clock	NOUN	NN	Number=Sing	2	obl	2:obl:around	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	ensure	ensure	VERB	VB	VerbForm=Inf	2	advcl	2:advcl	_
+7	ensure	ensure	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
 8	that	that	SCONJ	IN	_	13	mark	13:mark	_
 9	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	puppy	puppy	NOUN	NN	Number=Sing	11	compound	11:compound	_
@@ -50,31 +50,31 @@
 
 # sent_id = reviews-079375-0004
 # text = We have to leave him at the vet for 3 days and I was told to call for check ups as often as I wished that no matter how many times I called I would not annoy them.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj	_
 2	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	leave	leave	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj	_
 6	at	at	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	vet	vet	NOUN	NN	Number=Sing	4	obl	4:obl	_
+8	vet	vet	NOUN	NN	Number=Sing	4	obl	4:obl:at	_
 9	for	for	ADP	IN	_	11	case	11:case	_
 10	3	3	NUM	CD	NumType=Card	11	nummod	11:nummod	_
-11	days	day	NOUN	NNS	Number=Plur	4	obl	4:obl	_
+11	days	day	NOUN	NNS	Number=Plur	4	obl	4:obl:for	_
 12	and	and	CCONJ	CC	_	15	cc	15:cc	_
-13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj:pass	15:nsubj:pass	_
+13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj:pass	15:nsubj:pass|17:nsubj:xsubj	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	15	aux:pass	15:aux:pass	_
-15	told	tell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	conj	2:conj	_
+15	told	tell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	conj	2:conj:and	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	call	call	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_
 18	for	for	ADP	IN	_	20	case	20:case	_
 19	check	check	NOUN	NN	Number=Sing	20	compound	20:compound	_
-20	ups	up	NOUN	NNS	Number=Plur	17	obl	17:obl	_
+20	ups	up	NOUN	NNS	Number=Plur	17	obl	17:obl:for	_
 21	as	as	ADV	RB	_	22	advmod	22:advmod	_
 22	often	often	ADV	RB	_	17	advmod	17:advmod	_
 23	as	as	SCONJ	IN	_	25	mark	25:mark	_
 24	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
-25	wished	wish	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	21	advcl	21:advcl	_
+25	wished	wish	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	21	advcl	21:advcl:as	_
 26	that	that	SCONJ	IN	_	37	mark	37:mark	_
 27	no	no	ADV	RB	_	28	advmod	28:advmod	_
 28	matter	matter	ADV	RB	_	37	advmod	37:advmod	_
@@ -86,36 +86,36 @@
 34	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	37	nsubj	37:nsubj	_
 35	would	would	AUX	MD	VerbForm=Fin	37	aux	37:aux	_
 36	not	not	PART	RB	_	37	advmod	37:advmod	_
-37	annoy	annoy	VERB	VB	VerbForm=Inf	17	conj	17:conj	_
+37	annoy	annoy	VERB	VB	VerbForm=Inf	17	conj	15:xcomp|17:conj	_
 38	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	37	obj	37:obj	SpaceAfter=No
 39	.	.	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
 
 # sent_id = reviews-079375-0005
 # text = lol They where super friendly towards us and treated us like people not walking bags of cash.
 1	lol	lol	INTJ	UH	_	3	discourse	3:discourse	_
-2	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
+2	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj|9:nsubj	_
 3	where	where	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	super	super	ADV	RB	_	5	advmod	5:advmod	_
 5	friendly	friendly	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	_
 6	towards	towards	ADP	IN	_	7	case	7:case	_
-7	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	5	obl	5:obl	_
+7	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	5	obl	5:obl:towards	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	treated	treat	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj	_
+9	treated	treat	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
 10	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	9	obj	9:obj	_
 11	like	like	ADP	IN	_	12	case	12:case	_
-12	people	people	NOUN	NNS	Number=Plur	9	obl	9:obl	_
+12	people	people	NOUN	NNS	Number=Plur	9	obl	9:obl:like	_
 13	not	not	ADV	RB	_	15	advmod	15:advmod	_
 14	walking	walk	VERB	VBG	VerbForm=Ger	15	amod	15:amod	_
-15	bags	bag	NOUN	NNS	Number=Plur	12	conj	12:conj	_
+15	bags	bag	NOUN	NNS	Number=Plur	12	conj	9:obl:like|12:conj	_
 16	of	of	ADP	IN	_	17	case	17:case	_
-17	cash	cash	NOUN	NN	Number=Sing	15	nmod	15:nmod	SpaceAfter=No
+17	cash	cash	NOUN	NN	Number=Sing	15	nmod	15:nmod:of	SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-079375-0006
 # text = In this day its rare to find such wonderful people who CARE , Not the kind of want to make cash.
 1	In	in	ADP	IN	_	3	case	3:case	_
 2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	_
-3	day	day	NOUN	NN	Number=Sing	6	obl	6:obl	_
+3	day	day	NOUN	NN	Number=Sing	6	obl	6:obl:in	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	expl	6:expl	SpaceAfter=No
 5	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 6	rare	rare	ADJ	JJ	Degree=Pos	0	root	0:root	_
@@ -123,8 +123,8 @@
 8	find	find	VERB	VB	VerbForm=Inf	6	csubj	6:csubj	_
 9	such	such	ADV	RB	_	11	advmod	11:advmod	_
 10	wonderful	wonderful	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	people	people	NOUN	NNS	Number=Plur	8	obj	8:obj	_
-12	who	who	PRON	WP	PronType=Rel	13	nsubj	13:nsubj	_
+11	people	people	NOUN	NNS	Number=Plur	8	obj	8:obj|13:nsubj:relsubj	_
+12	who	who	PRON	WP	PronType=Rel	13	nsubj	11:ref	_
 13	CARE	care	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
 14	,	,	PUNCT	,	_	17	punct	17:punct	_
 15	Not	not	ADV	RB	_	17	advmod	17:advmod	_
@@ -149,16 +149,16 @@
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	chance	chance	NOUN	NN	Number=Sing	6	obj	6:obj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	prove	prove	VERB	VB	VerbForm=Inf	9	acl	9:acl	_
+11	prove	prove	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	_
 12	to	to	ADP	IN	_	13	case	13:case	_
-13	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	11	obl	11:obl	_
+13	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	11	obl	11:obl:to	_
 14	that	that	SCONJ	IN	_	22	mark	22:mark	_
 15	not	not	ADV	RB	_	16	advmod	16:advmod	_
 16	all	all	DET	DT	_	17	det	17:det	_
 17	people	people	NOUN	NNS	Number=Plur	22	nsubj	22:nsubj	_
 18	in	in	ADP	IN	_	20	case	20:case	_
 19	this	this	DET	DT	Number=Sing|PronType=Dem	20	det	20:det	_
-20	world	world	NOUN	NN	Number=Sing	17	nmod	17:nmod	_
+20	world	world	NOUN	NN	Number=Sing	17	nmod	17:nmod:in	_
 21	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
 22	evil	evil	ADJ	JJ	Degree=Pos	11	ccomp	11:ccomp	SpaceAfter=No
 23	!	!	PUNCT	.	_	4	punct	4:punct	_
@@ -171,12 +171,12 @@
 4	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	another	another	DET	DT	_	7	det	7:det	_
-7	vet	vet	NOUN	NN	Number=Sing	4	obl	4:obl	_
+7	vet	vet	NOUN	NN	Number=Sing	4	obl	4:obl:to	_
 8	as	as	ADV	RB	_	9	advmod	9:advmod	_
 9	long	long	ADV	RB	Degree=Pos	4	advmod	4:advmod	_
 10	as	as	SCONJ	IN	_	12	mark	12:mark	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-12	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl	_
+12	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:as	_
 13	animals	animal	NOUN	NNS	Number=Plur	12	obj	12:obj	SpaceAfter=No
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -193,36 +193,36 @@
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 10	will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 11	still	still	ADV	RB	_	12	advmod	12:advmod	_
-12	make	make	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
+12	make	make	VERB	VB	VerbForm=Inf	2	conj	2:conj:and_yet	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 14	drive	drive	NOUN	NN	Number=Sing	12	obj	12:obj	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
-16	see	see	VERB	VB	VerbForm=Inf	12	advcl	12:advcl	_
+16	see	see	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:to	_
 17	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	16	obj	16:obj	SpaceAfter=No
 18	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-079375-0010
 # text = Infact I look forward to taking my animals to the vet simply because of how my animals and I are treated.
 1	In	in	ADP	IN	_	2	case	2:case	SpaceAfter=No
-2	fact	fact	NOUN	NN	Number=Sing	4	obl	4:obl	_
+2	fact	fact	NOUN	NN	Number=Sing	4	obl	4:obl:in	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 4	look	look	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	forward	forward	ADV	RB	_	4	advmod	4:advmod	_
 6	to	to	SCONJ	IN	_	7	mark	7:mark	_
-7	taking	take	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl	_
+7	taking	take	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl:to	_
 8	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	animals	animal	NOUN	NNS	Number=Plur	7	obj	7:obj	_
 10	to	to	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	vet	vet	NOUN	NN	Number=Sing	7	obl	7:obl	_
+12	vet	vet	NOUN	NN	Number=Sing	7	obl	7:obl:to	_
 13	simply	simply	ADV	RB	_	16	advmod	16:advmod	_
 14	because	because	ADP	IN	_	16	case	16:case	_
 15	of	of	SCONJ	IN	_	14	fixed	14:fixed	_
-16	how	how	ADV	WRB	PronType=Int	4	obl	4:obl	_
+16	how	how	ADV	WRB	PronType=Int	4	obl	4:obl:because_of	_
 17	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 18	animals	animal	NOUN	NNS	Number=Plur	22	nsubj:pass	22:nsubj:pass	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	conj	18:conj	_
+20	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	conj	18:conj:and|22:nsubj:pass	_
 21	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	aux:pass	22:aux:pass	_
 22	treated	treat	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	16	acl:relcl	16:acl:relcl	SpaceAfter=No
 23	.	.	PUNCT	.	_	4	punct	4:punct	_

@@ -17,7 +17,7 @@
 # text = Craig and Nate are wonderful.
 1	Craig	Craig	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	Nate	Nate	PROPN	NNP	Number=Sing	1	conj	1:conj	_
+3	Nate	Nate	PROPN	NNP	Number=Sing	1	conj	1:conj:and|5:nsubj	_
 4	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 5	wonderful	wonderful	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 6	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -33,9 +33,9 @@
 7	all	all	DET	DT	_	6	obj	6:obj	_
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	wine	wine	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
+10	wine	wine	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	beer	beer	NOUN	NN	Number=Sing	10	conj	10:conj	SpaceAfter=No
+12	beer	beer	NOUN	NN	Number=Sing	10	conj	7:nmod:of|10:conj:and	SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-256677-0005
@@ -43,10 +43,10 @@
 1	No	no	DET	DT	_	2	det	2:det	_
 2	need	need	NOUN	NN	Number=Sing	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
-4	go	go	VERB	VB	VerbForm=Inf	2	acl	2:acl	_
+4	go	go	VERB	VB	VerbForm=Inf	2	acl	2:acl:to	_
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
-7	grocer	grocer	NOUN	NN	Number=Sing	4	obl	4:obl	_
+7	grocer	grocer	NOUN	NN	Number=Sing	4	obl	4:obl:to	_
 8	again	again	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 

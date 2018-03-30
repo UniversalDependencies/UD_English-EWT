@@ -7,16 +7,16 @@
 
 # sent_id = reviews-274106-0002
 # text = I just got back from france yesterday and just missed the food already!
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|10:nsubj	_
 2	just	just	ADV	RB	_	3	advmod	3:advmod	_
 3	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	back	back	ADV	RB	_	3	advmod	3:advmod	_
 5	from	from	ADP	IN	_	6	case	6:case	_
-6	france	france	PROPN	NNP	Number=Sing	4	obl	4:obl	_
+6	france	france	PROPN	NNP	Number=Sing	4	obl	4:obl:from	_
 7	yesterday	yesterday	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	just	just	ADV	RB	_	10	advmod	10:advmod	_
-10	missed	miss	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj	_
+10	missed	miss	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	food	food	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	already	already	ADV	RB	_	10	advmod	10:advmod	SpaceAfter=No
@@ -27,7 +27,7 @@
 1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	sister	sister	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 3	in	in	ADP	IN	_	4	case	4:case	_
-4	law	law	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+4	law	law	NOUN	NN	Number=Sing	2	nmod	2:nmod:in	_
 5	told	tell	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	obj	5:obj	_
 7	about	about	ADP	IN	_	12	case	12:case	_
@@ -35,26 +35,26 @@
 9	amazing	amazing	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 10	new	new	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	crepe	crepe	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	place	place	NOUN	NN	Number=Sing	5	obl	5:obl	_
+12	place	place	NOUN	NN	Number=Sing	5	obl	5:obl:about	_
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	town	town	NOUN	NN	Number=Sing	12	nmod	12:nmod	SpaceAfter=No
+14	town	town	NOUN	NN	Number=Sing	12	nmod	12:nmod:in	SpaceAfter=No
 15	,	,	PUNCT	,	_	5	punct	5:punct	_
 16	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
 17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	cop	19:cop	_
 18	so	so	ADV	RB	_	19	advmod	19:advmod	_
 19	excited	excited	ADJ	JJ	Degree=Pos	5	parataxis	5:parataxis	_
-20	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	22	nsubj	22:nsubj	_
+20	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	22	nsubj	22:nsubj|24:nsubj:xsubj|26:nsubj:xsubj	_
 21	just	just	ADV	RB	_	22	advmod	22:advmod	_
 22	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	19	advcl	19:advcl	_
 23	to	to	PART	TO	_	24	mark	24:mark	_
 24	go	go	VERB	VB	VerbForm=Inf	22	xcomp	22:xcomp	_
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_
-26	test	test	VERB	VB	VerbForm=Inf	24	conj	24:conj	_
+26	test	test	VERB	VB	VerbForm=Inf	24	conj	22:xcomp|24:conj:and	_
 27	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	26	obj	26:obj	_
 28	out	out	ADP	RP	_	26	compound:prt	26:compound:prt	_
 29	for	for	ADP	IN	_	31	case	31:case	_
 30	my	my	X	GW	_	31	goeswith	31:goeswith	_
-31	self	self	PRON	PRP	_	26	obl	26:obl	SpaceAfter=No
+31	self	self	PRON	PRP	_	26	obl	26:obl:for	SpaceAfter=No
 32	!	!	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-274106-0004
@@ -73,7 +73,7 @@
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
 4	better	better	ADJ	JJR	Degree=Cmp	0	root	0:root	_
 5	then	than	ADP	IN	Typo=Yes	6	case	6:case	_
-6	anything	anything	PRON	NN	Number=Sing	4	obl	4:obl	_
+6	anything	anything	PRON	NN	Number=Sing	4	obl	4:obl:than	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 8	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	aux	10:aux	_
 9	ever	ever	ADV	RB	_	10	advmod	10:advmod	_
@@ -96,20 +96,20 @@
 5	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	_
 6	place	place	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	to	to	ADP	IN	_	8	case	8:case	_
-8	anyone	anyone	PRON	NN	Number=Sing	4	obl	4:obl	_
+8	anyone	anyone	PRON	NN	Number=Sing	4	obl	4:obl:to	_
 9	looking	look	VERB	VBG	VerbForm=Ger	8	acl	8:acl	_
 10	for	for	ADP	IN	_	13	case	13:case	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 12	great	great	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	atmosphere	atmosphere	NOUN	NN	Number=Sing	9	obl	9:obl	SpaceAfter=No
+13	atmosphere	atmosphere	NOUN	NN	Number=Sing	9	obl	9:obl:for	SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
 15	amazing	amazing	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	food	food	NOUN	NN	Number=Sing	13	conj	13:conj	SpaceAfter=No
+16	food	food	NOUN	NN	Number=Sing	13	conj	9:obl:for|13:conj:and	SpaceAfter=No
 17	,	,	PUNCT	,	_	21	punct	21:punct	_
 18	and	and	CCONJ	CC	_	21	cc	21:cc	_
 19	great	great	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 20	customer	customer	NOUN	NN	Number=Sing	21	compound	21:compound	_
-21	service	service	NOUN	NN	Number=Sing	13	conj	13:conj	SpaceAfter=No
+21	service	service	NOUN	NN	Number=Sing	13	conj	9:obl:for|13:conj:and	SpaceAfter=No
 22	!	!	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-274106-0008

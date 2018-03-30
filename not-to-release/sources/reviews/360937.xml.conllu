@@ -7,7 +7,7 @@
 4	today	today	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	_
 5	@	at	ADP	IN	Abbr=Yes	7	case	7:case	_
 6	Yards	Yards	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	Brewery	Brewery	PROPN	NNP	Number=Sing	2	obl	2:obl	SpaceAfter=No
+7	Brewery	Brewery	PROPN	NNP	Number=Sing	2	obl	2:obl:at	SpaceAfter=No
 8	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-360937-0002
@@ -21,13 +21,13 @@
 7	impressed	impressed	ADJ	JJ	Degree=Pos	3	ccomp	3:ccomp	_
 8	with	with	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	size	size	NOUN	NN	Number=Sing	7	obl	7:obl	_
+10	size	size	NOUN	NN	Number=Sing	7	obl	7:obl:with	_
 11	of	of	ADP	IN	_	14	case	14:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	bar	bar	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	area	area	NOUN	NN	Number=Sing	10	nmod	10:nmod	_
+14	area	area	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	lounge	lounge	NOUN	NN	Number=Sing	14	conj	14:conj	SpaceAfter=No
+16	lounge	lounge	NOUN	NN	Number=Sing	14	conj	10:nmod:of|14:conj:and	SpaceAfter=No
 17	,	,	PUNCT	,	_	20	punct	20:punct	_
 18	&	&	CCONJ	CC	_	20	cc	20:cc	_
 19	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
@@ -41,7 +41,7 @@
 27	right	right	ADV	RB	_	30	advmod	30:advmod	_
 28	thru	through	ADP	IN	Abbr=Yes	30	case	30:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
-30	glass	glass	NOUN	NN	Number=Sing	24	obl	24:obl	SpaceAfter=No
+30	glass	glass	NOUN	NN	Number=Sing	24	obl	24:obl:through	SpaceAfter=No
 31	!	!	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-360937-0003
@@ -51,14 +51,14 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	sampler	sampler	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	IPA	ipa	NOUN	NN	Number=Sing	4	nmod	4:nmod	SpaceAfter=No
+6	IPA	ipa	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	Brawler	Brawler	PROPN	NNP	Number=Sing	6	conj	6:conj	SpaceAfter=No
+8	Brawler	Brawler	PROPN	NNP	Number=Sing	6	conj	4:nmod:of|6:conj	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	Love	Love	PROPN	NNP	Number=Sing	11	compound	11:compound	_
-11	Stout	Stout	PROPN	NNP	Number=Sing	6	conj	6:conj	_
+11	Stout	Stout	PROPN	NNP	Number=Sing	6	conj	4:nmod:of|6:conj	_
 12	&	&	CCONJ	CC	_	13	cc	13:cc	_
-13	ESA	esa	NOUN	NN	Number=Sing	6	conj	6:conj	SpaceAfter=No
+13	ESA	esa	NOUN	NN	Number=Sing	6	conj	4:nmod:of|6:conj	SpaceAfter=No
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-360937-0004
@@ -73,34 +73,34 @@
 8	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 9	Dogwood	dogwood	NOUN	NN	Number=Sing	11	compound	11:compound	_
 10	Grilled	grill	VERB	VBN	Tense=Past|VerbForm=Part	11	amod	11:amod	_
-11	Cheese	cheese	NOUN	NN	Number=Sing	7	obj	7:obj	_
-12	which	which	PRON	WDT	PronType=Rel	14	nsubj	14:nsubj	_
+11	Cheese	cheese	NOUN	NN	Number=Sing	7	obj	7:obj|14:nsubj:relsubj	_
+12	which	which	PRON	WDT	PronType=Rel	14	nsubj	11:ref	_
 13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
 14	enjoyable	enjoyable	ADJ	JJ	Degree=Pos	11	acl:relcl	11:acl:relcl	_
 15	with	with	ADP	IN	_	18	case	18:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	fine	fine	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	beers	beer	NOUN	NNS	Number=Plur	14	obl	14:obl	SpaceAfter=No
+18	beers	beer	NOUN	NNS	Number=Plur	14	obl	14:obl:with	SpaceAfter=No
 19	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-360937-0005
 # text = After my sampler & sandwich, I asked for a pint of there Nitrogen Love Stout, I must say I was impressed, with the great taste & I am a Guiness Lover so coming from me, I think this is better, its less dry & smoother!
 1	After	after	ADP	IN	_	3	case	3:case	_
 2	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	sampler	sampler	NOUN	NN	Number=Sing	8	obl	8:obl	_
+3	sampler	sampler	NOUN	NN	Number=Sing	8	obl	8:obl:after	_
 4	&	&	CCONJ	CC	_	5	cc	5:cc	_
-5	sandwich	sandwich	NOUN	NN	Number=Sing	3	conj	3:conj	SpaceAfter=No
+5	sandwich	sandwich	NOUN	NN	Number=Sing	3	conj	3:conj|8:obl:after	SpaceAfter=No
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 8	asked	ask	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	for	for	ADP	IN	_	11	case	11:case	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	pint	pint	NOUN	NN	Number=Sing	8	obl	8:obl	_
+11	pint	pint	NOUN	NN	Number=Sing	8	obl	8:obl:for	_
 12	of	of	ADP	IN	_	16	case	16:case	_
 13	there	there	PRON	PRP$	_	16	nmod:poss	16:nmod:poss	_
 14	Nitrogen	Nitrogen	PROPN	NNP	Number=Sing	16	compound	16:compound	_
 15	Love	Love	PROPN	NNP	Number=Sing	16	compound	16:compound	_
-16	Stout	Stout	PROPN	NNP	Number=Sing	11	nmod	11:nmod	SpaceAfter=No
+16	Stout	Stout	PROPN	NNP	Number=Sing	11	nmod	11:nmod:of	SpaceAfter=No
 17	,	,	PUNCT	,	_	20	punct	20:punct	_
 18	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
 19	must	must	AUX	MD	VerbForm=Fin	20	aux	20:aux	_
@@ -112,7 +112,7 @@
 25	with	with	ADP	IN	_	28	case	28:case	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 27	great	great	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
-28	taste	taste	NOUN	NN	Number=Sing	23	obl	23:obl	_
+28	taste	taste	NOUN	NN	Number=Sing	23	obl	23:obl:with	_
 29	&	&	CCONJ	CC	_	34	cc	34:cc	_
 30	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	34	nsubj	34:nsubj	_
 31	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	34	cop	34:cop	_
@@ -122,7 +122,7 @@
 35	so	so	ADV	RB	_	41	advmod	41:advmod	_
 36	coming	come	VERB	VBG	VerbForm=Ger	41	advcl	41:advcl	_
 37	from	from	ADP	IN	_	38	case	38:case	_
-38	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	36	obl	36:obl	SpaceAfter=No
+38	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	36	obl	36:obl:from	SpaceAfter=No
 39	,	,	PUNCT	,	_	41	punct	41:punct	_
 40	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	41	nsubj	41:nsubj	_
 41	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	parataxis	8:parataxis	_
@@ -130,10 +130,10 @@
 43	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	44	cop	44:cop	_
 44	better	better	ADJ	JJR	Degree=Cmp	41	ccomp	41:ccomp	SpaceAfter=No
 45	,	,	PUNCT	,	_	8	punct	8:punct	_
-46	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	49	nsubj	49:nsubj	SpaceAfter=No
+46	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	49	nsubj	49:nsubj|51:nsubj	SpaceAfter=No
 47	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	49	cop	49:cop	_
 48	less	less	ADV	RBR	Degree=Cmp	49	advmod	49:advmod	_
-49	dry	dry	ADJ	JJ	Degree=Pos	44	conj	44:conj	_
+49	dry	dry	ADJ	JJ	Degree=Pos	44	conj	41:ccomp|44:conj	_
 50	&	&	CCONJ	CC	_	51	cc	51:cc	_
 51	smoother	smoother	ADJ	JJR	Degree=Cmp	49	conj	49:conj	SpaceAfter=No
 52	!	!	PUNCT	.	_	8	punct	8:punct	_
@@ -144,8 +144,8 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
 3	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	Philly	Philly	PROPN	NNP	Number=Sing	7	advcl	7:advcl	_
-6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
+5	Philly	Philly	PROPN	NNP	Number=Sing	7	advcl	7:advcl:in	_
+6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|9:nsubj:xsubj|10:nsubj:xsubj	_
 7	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	come	come	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
@@ -164,7 +164,7 @@
 5	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
 6	abou	about	ADP	IN	Typo=Yes	8	case	8:case	_
 7	this	this	DET	DT	Number=Sing|PronType=Dem	8	det	8:det	_
-8	place	place	NOUN	NN	Number=Sing	3	nmod	3:nmod	_
+8	place	place	NOUN	NN	Number=Sing	3	nmod	3:nmod:about	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	parking	parking	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
@@ -176,9 +176,9 @@
 2	left	leave	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	with	with	ADP	IN	_	5	case	5:case	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-5	case	case	NOUN	NN	Number=Sing	2	obl	2:obl	_
+5	case	case	NOUN	NN	Number=Sing	2	obl	2:obl:with	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	BRAWLER	BRAWLER	PROPN	NNP	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+7	BRAWLER	BRAWLER	PROPN	NNP	Number=Sing	5	nmod	5:nmod:of	SpaceAfter=No
 8	!!!!	!!!!	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
 9	!	!	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
 

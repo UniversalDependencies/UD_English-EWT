@@ -12,7 +12,7 @@
 4	nail	nail	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	on	on	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	head	head	NOUN	NN	Number=Sing	2	obl	2:obl	SpaceAfter=No
+7	head	head	NOUN	NN	Number=Sing	2	obl	2:obl:on	SpaceAfter=No
 8	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-365154-0003
@@ -30,15 +30,15 @@
 # text = After the way she spoke to me on my last visit, I will not be returning!!
 1	After	after	ADP	IN	_	3	case	3:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	way	way	NOUN	NN	Number=Sing	17	obl	17:obl	_
+3	way	way	NOUN	NN	Number=Sing	17	obl	17:obl:after	_
 4	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 5	spoke	speak	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
 6	to	to	ADP	IN	_	7	case	7:case	_
-7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	obl	5:obl	_
+7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	obl	5:obl:to	_
 8	on	on	ADP	IN	_	11	case	11:case	_
 9	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 10	last	last	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	visit	visit	NOUN	NN	Number=Sing	5	obl	5:obl	SpaceAfter=No
+11	visit	visit	NOUN	NN	Number=Sing	5	obl	5:obl:on	SpaceAfter=No
 12	,	,	PUNCT	,	_	17	punct	17:punct	_
 13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
 14	will	will	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
@@ -57,7 +57,7 @@
 6	that	that	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
 7	stuck	stick	VERB	VBN	Tense=Past|VerbForm=Part	9	amod	9:amod	_
 8	up	up	ADP	RP	_	7	compound	7:compound	_
-9	attitude	attitude	NOUN	NN	Number=Sing	3	obl	3:obl	_
+9	attitude	attitude	NOUN	NN	Number=Sing	3	obl	3:obl:with	_
 10	Dr.	Dr.	PROPN	NNP	Number=Sing	2	vocative	2:vocative	_
 11	Shady	Shady	PROPN	NNP	Number=Sing	10	flat	10:flat	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -80,11 +80,11 @@
 5	feel	feel	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
 6	like	like	SCONJ	IN	_	8	mark	8:mark	_
 7	being	be	AUX	VBG	VerbForm=Ger	8	cop	8:cop	_
-8	condescending	condescending	ADJ	JJ	Degree=Pos	5	advcl	5:advcl	_
+8	condescending	condescending	ADJ	JJ	Degree=Pos	5	advcl	5:advcl:like	_
 9	to	to	ADP	IN	_	10	case	10:case	_
-10	someone	someone	PRON	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+10	someone	someone	PRON	NN	Number=Sing	8	obl	8:obl:to	SpaceAfter=No
 11	,	,	PUNCT	,	_	15	punct	15:punct	_
-12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
+12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj|18:nsubj:xsubj	_
 13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
 14	not	not	PART	RB	_	15	advmod	15:advmod	_
 15	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
@@ -95,12 +95,12 @@
 
 # sent_id = reviews-365154-0008
 # text = Dr. Shady is inexperienced and prideful.
-1	Dr.	Dr.	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
+1	Dr.	Dr.	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|6:nsubj	_
 2	Shady	Shady	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 4	inexperienced	inexperienced	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	prideful	prideful	ADJ	JJ	Degree=Pos	4	conj	4:conj	SpaceAfter=No
+6	prideful	prideful	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
 7	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-365154-0009
@@ -115,18 +115,18 @@
 8	%	%	SYM	NN	Number=Sing	6	obj	6:obj	_
 9	of	of	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	knowledge	knowledge	NOUN	NN	Number=Sing	8	nmod	8:nmod	_
-12	that	that	PRON	WDT	PronType=Rel	19	obj	19:obj	_
+11	knowledge	knowledge	NOUN	NN	Number=Sing	8	nmod	8:nmod:of|19:obl:relobj	_
+12	that	that	PRON	WDT	PronType=Rel	19	obj	11:ref	_
 13	some	some	DET	DT	_	19	nsubj	19:nsubj	_
 14	of	of	ADP	IN	_	18	case	18:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 16	other	other	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 17	EXPERIENCED	experienced	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	vets	vet	NOUN	NNS	Number=Plur	13	nmod	13:nmod	_
+18	vets	vet	NOUN	NNS	Number=Plur	13	nmod	13:nmod:of	_
 19	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
 20	in	in	ADP	IN	_	22	case	22:case	_
 21	this	this	DET	DT	Number=Sing|PronType=Dem	22	det	22:det	_
-22	area	area	NOUN	NN	Number=Sing	19	obl	19:obl	SpaceAfter=No
+22	area	area	NOUN	NN	Number=Sing	19	obl	19:obl:in	SpaceAfter=No
 23	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-365154-0010
@@ -139,7 +139,7 @@
 6	vets	vet	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 7	before	before	SCONJ	IN	_	9	mark	9:mark	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-9	take	take	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl	_
+9	take	take	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl:before	_
 10	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	dog	dog	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	someplace	someplace	NOUN	NN	Number=Sing	9	advmod	9:advmod	_

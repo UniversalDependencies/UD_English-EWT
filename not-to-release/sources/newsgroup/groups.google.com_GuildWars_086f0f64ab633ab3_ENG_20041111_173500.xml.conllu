@@ -14,10 +14,10 @@
 5	forums	forum	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
 6	around	around	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	net	net	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+8	net	net	NOUN	NN	Number=Sing	5	nmod	5:nmod:around	_
 9	focused	focus	VERB	VBN	Tense=Past|VerbForm=Part	5	acl	5:acl	_
 10	on	on	SCONJ	IN	_	11	mark	11:mark	_
-11	discussing	discuss	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl	_
+11	discussing	discuss	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl:on	_
 12	Guild	Guild	PROPN	NNP	Number=Sing	13	compound	13:compound	_
 13	Wars	Wars	PROPN	NNPS	Number=Plur	11	obj	11:obj	SpaceAfter=No
 14	,	,	PUNCT	,	_	2	punct	2:punct	_
@@ -50,14 +50,14 @@
 9	to	to	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	global	global	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	community	community	NOUN	NN	Number=Sing	8	obl	8:obl	_
+12	community	community	NOUN	NN	Number=Sing	8	obl	8:obl:to	_
 13	and	and	CCONJ	CC	_	16	cc	16:cc	_
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	16	nsubj	16:nsubj	_
 15	can	can	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
-16	rest	rest	VERB	VB	VerbForm=Inf	8	conj	8:conj	_
+16	rest	rest	VERB	VB	VerbForm=Inf	8	conj	4:ccomp|8:conj:and	_
 17	assured	assure	VERB	VBN	Tense=Past|VerbForm=Part	16	advcl	16:advcl	_
 18	that	that	SCONJ	IN	_	22	mark	22:mark	_
-19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	22	nsubj	22:nsubj	SpaceAfter=No
+19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	22	nsubj	22:nsubj|24:nsubj:xsubj	SpaceAfter=No
 20	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	aux	22:aux	_
 21	not	not	PART	RB	_	22	advmod	22:advmod	_
 22	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	17	ccomp	17:ccomp	_
@@ -77,11 +77,11 @@
 7	suddenly	suddenly	ADV	RB	_	8	advmod	8:advmod	_
 8	disappear	disappear	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
 9	without	without	ADP	IN	_	10	case	10:case	_
-10	notice	notice	NOUN	NN	Number=Sing	8	obl	8:obl	_
+10	notice	notice	NOUN	NN	Number=Sing	8	obl	8:obl:without	_
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
 12	for	for	ADP	IN	_	14	case	14:case	_
 13	no	no	DET	DT	_	14	det	14:det	_
-14	reason	reason	NOUN	NN	Number=Sing	10	conj	10:conj	SpaceAfter=No
+14	reason	reason	NOUN	NN	Number=Sing	10	conj	8:obl:for|10:conj:and	SpaceAfter=No
 15	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0006
@@ -94,15 +94,15 @@
 6	developer	developer	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	site	site	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+9	site	site	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	_
 10	can	can	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
 11	no	no	ADV	RB	_	12	advmod	12:advmod	_
 12	longer	longer	ADV	RBR	Degree=Cmp	13	advmod	13:advmod	_
-13	afford	afford	VERB	VB	VerbForm=Inf	3	advcl	3:advcl	_
+13	afford	afford	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:because	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	cost	cost	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	of	of	ADP	IN	_	17	case	17:case	_
-17	bandwidth	bandwidth	NOUN	NN	Number=Sing	15	nmod	15:nmod	_
+17	bandwidth	bandwidth	NOUN	NN	Number=Sing	15	nmod	15:nmod:of	_
 18	being	be	AUX	VBG	VerbForm=Ger	19	aux:pass	19:aux:pass	_
 19	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	17	acl	17:acl	SpaceAfter=No
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -113,29 +113,29 @@
 2	said	say	VERB	VBN	Tense=Past|VerbForm=Part	10	parataxis	10:parataxis	SpaceAfter=No
 3	,	,	PUNCT	,	_	10	punct	10:punct	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	maintenance	maintenance	NOUN	NN	Number=Sing	10	nsubj:pass	10:nsubj:pass	_
+5	maintenance	maintenance	NOUN	NN	Number=Sing	10	nsubj:pass	10:nsubj:pass|16:nsubj:pass|17:nsubj:xsubj	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	this	this	DET	DT	Number=Sing|PronType=Dem	8	det	8:det	_
-8	forum	forum	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+8	forum	forum	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux:pass	10:aux:pass	_
 10	handled	handle	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 11	by	by	ADP	IN	_	12	case	12:case	_
-12	Google	Google	PROPN	NNP	Number=Sing	10	obl	10:obl	_
+12	Google	Google	PROPN	NNP	Number=Sing	10	obl	10:obl:by	_
 13	and	and	CCONJ	CC	_	16	cc	16:cc	_
 14	thus	thus	ADV	RB	_	16	advmod	16:advmod	_
 15	will	will	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
-16	remain	remain	VERB	VB	VerbForm=Inf	10	conj	10:conj	_
+16	remain	remain	VERB	VB	VerbForm=Inf	10	conj	10:conj:and	_
 17	reliable	reliable	ADJ	JJ	Degree=Pos	16	xcomp	16:xcomp	_
 18	and	and	CCONJ	CC	_	22	cc	22:cc	_
 19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	22	nsubj	22:nsubj	_
 20	will	will	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
 21	ultimately	ultimately	ADV	RB	_	22	advmod	22:advmod	_
-22	give	give	VERB	VB	VerbForm=Inf	10	conj	10:conj	_
+22	give	give	VERB	VB	VerbForm=Inf	10	conj	10:conj:and	_
 23	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	22	iobj	22:iobj	_
 24	more	more	ADJ	JJR	Degree=Cmp	25	amod	25:amod	_
 25	time	time	NOUN	NN	Number=Sing	22	obj	22:obj	_
 26	to	to	PART	TO	_	27	mark	27:mark	_
-27	play	play	VERB	VB	VerbForm=Inf	25	acl	25:acl	_
+27	play	play	VERB	VB	VerbForm=Inf	25	acl	25:acl:to	_
 28	:)	:)	SYM	NFP	_	10	discourse	10:discourse	SpaceAfter=No
 29	.	.	PUNCT	.	_	10	punct	10:punct	_
 
@@ -148,17 +148,17 @@
 5	than	than	ADP	IN	_	8	case	8:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	devoted	devoted	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	fan	fan	NOUN	NN	Number=Sing	4	obl	4:obl	_
+8	fan	fan	NOUN	NN	Number=Sing	4	obl	4:obl:than	_
 9	of	of	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	game	game	NOUN	NN	Number=Sing	8	nmod	8:nmod	_
+11	game	game	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	_
 12	myself	myself	PRON	PRP	Number=Sing|Person=1|PronType=Prs	1	nmod:npmod	1:nmod:npmod	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
-15	hope	hope	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+15	hope	hope	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
 16	that	that	SCONJ	IN	_	20	mark	20:mark	_
 17	this	this	DET	DT	Number=Sing|PronType=Dem	18	det	18:det	_
-18	area	area	NOUN	NN	Number=Sing	20	nsubj	20:nsubj	_
+18	area	area	NOUN	NN	Number=Sing	20	nsubj	20:nsubj|22:nsubj:xsubj	_
 19	can	can	AUX	MD	VerbForm=Fin	20	aux	20:aux	_
 20	become	become	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	_
 21	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
@@ -166,7 +166,7 @@
 23	for	for	ADP	IN	_	26	case	26:case	_
 24	deep	deep	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
 25	fan	fan	NOUN	NN	Number=Sing	26	compound	26:compound	_
-26	discussions	discussion	NOUN	NNS	Number=Plur	22	nmod	22:nmod	SpaceAfter=No
+26	discussions	discussion	NOUN	NNS	Number=Plur	22	nmod	22:nmod:for	SpaceAfter=No
 27	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0009
@@ -199,7 +199,7 @@
 5	forward	forward	ADV	RB	_	4	advmod	4:advmod	_
 6	to	to	ADP	IN	_	8	case	8:case	_
 7	Guild	Guild	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	Wars	Wars	PROPN	NNPS	Number=Plur	4	obl	4:obl	SpaceAfter=No
+8	Wars	Wars	PROPN	NNPS	Number=Plur	4	obl	4:obl:to	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0014
@@ -230,17 +230,17 @@
 10	Guild	Guild	PROPN	NNP	Number=Sing	11	compound	11:compound	_
 11	Wars	Wars	PROPN	NNPS	Number=Plur	13	nsubj:pass	13:nsubj:pass	_
 12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	aux:pass	13:aux:pass	_
-13	made	make	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	advcl	7:advcl	_
+13	made	make	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	advcl	7:advcl:although	_
 14	by	by	ADP	IN	_	15	case	15:case	_
-15	ex-members	ex-member	NOUN	NNS	Number=Plur	13	obl	13:obl	_
+15	ex-members	ex-member	NOUN	NNS	Number=Plur	13	obl	13:obl:by	_
 16	of	of	ADP	IN	_	17	case	17:case	_
-17	Blizzard	Blizzard	PROPN	NNP	Number=Sing	15	nmod	15:nmod	SpaceAfter=No
+17	Blizzard	Blizzard	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	SpaceAfter=No
 18	,	,	PUNCT	,	_	23	punct	23:punct	_
 19	so	so	ADV	RB	_	23	advmod	23:advmod	_
 20	Feb	Feb	PROPN	NNP	Number=Sing	23	nsubj	23:nsubj	_
 21	2005	2005	NUM	CD	NumType=Card	20	nmod:tmod	20:nmod:tmod	_
 22	could	could	AUX	MD	VerbForm=Fin	23	aux	23:aux	_
-23	mean	mean	VERB	VB	VerbForm=Inf	13	conj	13:conj	_
+23	mean	mean	VERB	VB	VerbForm=Inf	13	conj	7:advcl:although|13:conj	_
 24	August	August	PROPN	NNP	Number=Sing	23	obj	23:obj	_
 25	2006	2006	NUM	CD	NumType=Card	24	nummod	24:nummod	SpaceAfter=No
 26	...	...	PUNCT	,	_	7	punct	7:punct	_
@@ -249,7 +249,7 @@
 # text = Anyway, I tried to get a preorder but no places were selling it so I missed out on 2/3 weekend events.
 1	Anyway	anyway	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 4	tried	try	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	get	get	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
@@ -259,7 +259,7 @@
 10	no	no	DET	DT	_	11	det	11:det	_
 11	places	place	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
 12	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
-13	selling	sell	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	4:conj	_
+13	selling	sell	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	4:conj:but	_
 14	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	13	obj	13:obj	_
 15	so	so	ADV	RB	_	17	advmod	17:advmod	_
 16	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
@@ -268,7 +268,7 @@
 19	on	on	ADP	IN	_	22	case	22:case	_
 20	2/3	2/3	NUM	CD	NumType=Card	22	nummod	22:nummod	_
 21	weekend	weekend	NOUN	NN	Number=Sing	22	compound	22:compound	_
-22	events	event	NOUN	NNS	Number=Plur	17	obl	17:obl	SpaceAfter=No
+22	events	event	NOUN	NNS	Number=Plur	17	obl	17:obl:on	SpaceAfter=No
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0018
@@ -282,10 +282,10 @@
 7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	obj	6:obj	_
 8	when	when	ADV	WRB	PronType=Int	10	mark	10:mark	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
-10	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	advcl	6:advcl	_
+10	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	advcl	6:advcl:when	_
 11	out	out	ADP	RP	_	10	compound:prt	10:compound:prt	_
 12	in	in	ADP	IN	_	13	case	13:case	_
-13	Febuary	Febuary	PROPN	NNP	Number=Sing	10	obl	10:obl	SpaceAfter=No
+13	Febuary	Febuary	PROPN	NNP	Number=Sing	10	obl	10:obl:in	SpaceAfter=No
 14	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0019
@@ -296,7 +296,7 @@
 4	05	05	NUM	CD	NumType=Card	3	nummod	3:nummod	_
 5	on	on	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	calender	calender	NOUN	NN	Number=Sing	2	obl	2:obl	SpaceAfter=No
+7	calender	calender	NOUN	NN	Number=Sing	2	obl	2:obl:on	SpaceAfter=No
 8	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0020
@@ -312,9 +312,9 @@
 9	long	long	ADV	RB	Degree=Pos	7	advmod	7:advmod	_
 10	as	as	SCONJ	IN	_	12	mark	12:mark	_
 11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
-12	takes	take	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl	_
+12	takes	take	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:as	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
-14	work	work	VERB	VB	VerbForm=Inf	7	advcl	7:advcl	_
+14	work	work	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:to	_
 15	out	out	ADP	RP	_	14	compound:prt	14:compound:prt	_
 16	all	all	DET	PDT	_	18	det:predet	18:det:predet	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
@@ -322,7 +322,7 @@
 19	so	so	ADV	RB	_	22	advmod	22:advmod	_
 20	who	who	PRON	WP	PronType=Int	22	nsubj	22:nsubj	_
 21	really	really	ADV	RB	_	22	advmod	22:advmod	_
-22	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+22	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:but	_
 23	how	how	ADV	WRB	PronType=Int	24	advmod	24:advmod	_
 24	long	long	ADV	RB	Degree=Pos	22	advmod	22:advmod	SpaceAfter=No
 25	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -333,18 +333,18 @@
 2	far	far	ADV	RB	Degree=Pos	6	advmod	6:advmod	_
 3	as	as	ADP	IN	_	5	case	5:case	_
 4	pre	pre	X	AFX	_	5	case	5:case	_
-5	order	order	NOUN	NN	Number=Sing	1	obl	1:obl	_
+5	order	order	NOUN	NN	Number=Sing	1	obl	1:obl:pre	_
 6	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 7	to	to	ADP	IN	_	6	obl	6:obl	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
-10	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	conj	6:conj	_
+10	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	conj	6:conj:and	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	list	list	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	of	of	ADP	IN	_	15	case	15:case	_
 14	major	major	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	retailers	retailer	NOUN	NNS	Number=Plur	12	nmod	12:nmod	_
-16	that	that	PRON	WDT	PronType=Rel	17	nsubj	17:nsubj	_
+15	retailers	retailer	NOUN	NNS	Number=Plur	12	nmod	12:nmod:of|17:nsubj:relsubj	_
+16	that	that	PRON	WDT	PronType=Rel	17	nsubj	15:ref	_
 17	carry	carry	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	acl:relcl	15:acl:relcl	_
 18	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	obj	17:obj	_
 19	there	there	PRON	EX	_	20	expl	20:expl	_
@@ -352,14 +352,14 @@
 21	also	also	ADV	RB	_	20	advmod	20:advmod	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
 23	few	few	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-24	websites	website	NOUN	NNS	Number=Plur	20	nsubj	20:nsubj	_
-25	that	that	PRON	WDT	PronType=Rel	28	obj	28:obj	_
+24	websites	website	NOUN	NNS	Number=Plur	20	nsubj	20:nsubj|28:obl:relobj	_
+25	that	that	PRON	WDT	PronType=Rel	28	obj	24:ref	_
 26	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	28	nsubj	28:nsubj	_
 27	could	could	AUX	MD	VerbForm=Fin	28	aux	28:aux	_
 28	order	order	VERB	VB	VerbForm=Inf	24	acl:relcl	24:acl:relcl	_
 29	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	28	obj	28:obj	_
 30	off	off	ADP	IN	_	31	case	31:case	_
-31	of	of	ADP	IN	_	28	obl	28:obl	SpaceAfter=No
+31	of	of	ADP	IN	_	28	obl	28:obl:off	SpaceAfter=No
 32	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0022
@@ -369,7 +369,7 @@
 3	good	good	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	reason	reason	NOUN	NN	Number=Sing	0	root	0:root	_
 5	for	for	SCONJ	IN	_	6	mark	6:mark	_
-6	starting	start	VERB	VBG	VerbForm=Ger	4	acl	4:acl	_
+6	starting	start	VERB	VBG	VerbForm=Ger	4	acl	4:acl:for	_
 7	this	this	DET	DT	Number=Sing|PronType=Dem	8	det	8:det	_
 8	group	group	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
 9	....	....	PUNCT	,	_	4	punct	4:punct	SpaceAfter=No
@@ -396,11 +396,11 @@
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0024
 # text = I havn't heard of it.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-2	hav	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin|Typo=Yes	4	aux	4:aux	SpaceAfter=No
+2	hav	have	AUX	VBP	Mood=Ind|Tense=Pres|Typo=Yes|VerbForm=Fin	4	aux	4:aux	SpaceAfter=No
 3	n't	not	PART	RB	_	4	advmod	4:advmod	_
 4	heard	hear	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obl	4:obl	SpaceAfter=No
+6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obl	4:obl:of	SpaceAfter=No
 7	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0025
@@ -415,10 +415,10 @@
 8	at	at	ADP	IN	_	7	nmod	7:nmod	_
 9	for	for	ADP	IN	_	11	case	11:case	_
 10	more	more	ADJ	JJR	Degree=Cmp	11	amod	11:amod	_
-11	info	info	NOUN	NN	Number=Sing	1	obl	1:obl	_
+11	info	info	NOUN	NN	Number=Sing	1	obl	1:obl:for	_
 12	about	about	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	game	game	NOUN	NN	Number=Sing	11	nmod	11:nmod	SpaceAfter=No
+14	game	game	NOUN	NN	Number=Sing	11	nmod	11:nmod:about	SpaceAfter=No
 15	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0026
@@ -440,7 +440,7 @@
 3	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 4	without	without	ADP	IN	_	6	case	6:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-6	doubt	doubt	NOUN	NN	Number=Sing	11	obl	11:obl	_
+6	doubt	doubt	NOUN	NN	Number=Sing	11	obl	11:obl:without	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	11	reparandum	11:reparandum	_
 8	amoung	among	ADP	IN	Typo=Yes	11	case	11:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
@@ -452,16 +452,16 @@
 15	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	11	acl:relcl	11:acl:relcl	_
 16	for	for	ADP	IN	_	18	case	18:case	_
 17	any	any	DET	DT	_	18	det	18:det	_
-18	game	game	NOUN	NN	Number=Sing	15	obl	15:obl	_
+18	game	game	NOUN	NN	Number=Sing	15	obl	15:obl:for	_
 19	and	and	CCONJ	CC	_	23	cc	23:cc	_
 20	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	23	nsubj	23:nsubj	_
 21	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	23	aux	23:aux	_
 22	been	be	AUX	VBN	Tense=Past|VerbForm=Part	23	aux	23:aux	_
-23	gaming	game	VERB	VBG	Tense=Pres|VerbForm=Part	11	conj	11:conj	_
+23	gaming	game	VERB	VBG	Tense=Pres|VerbForm=Part	11	conj	11:conj:and	_
 24	since	since	ADP	IN	_	27	case	27:case	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 26	MUD	mud	NOUN	NN	Number=Sing	27	compound	27:compound	_
-27	days	day	NOUN	NNS	Number=Plur	23	obl	23:obl	SpaceAfter=No
+27	days	day	NOUN	NNS	Number=Plur	23	obl	23:obl:since	SpaceAfter=No
 28	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0028
@@ -475,20 +475,20 @@
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0029
 # text = I have a preorder and am even considering getting a second preorder to have multiple accounts.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|8:nsubj|9:nsubj:xsubj	_
 2	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	preorder	preorder	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	and	and	CCONJ	CC	_	8	cc	8:cc	_
 6	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 7	even	even	ADV	RB	_	8	advmod	8:advmod	_
-8	considering	consider	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj	_
+8	considering	consider	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:and	_
 9	getting	get	VERB	VBG	VerbForm=Ger	8	xcomp	8:xcomp	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 11	second	second	ADJ	JJ	Degree=Pos|NumType=Ord	12	amod	12:amod	_
 12	preorder	preorder	NOUN	NN	Number=Sing	9	obj	9:obj	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
-14	have	have	VERB	VB	VerbForm=Inf	9	advcl	9:advcl	_
+14	have	have	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
 15	multiple	multiple	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	accounts	account	NOUN	NNS	Number=Plur	14	obj	14:obj	SpaceAfter=No
 17	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -503,11 +503,11 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 7	weekend	weekend	NOUN	NN	Number=Sing	9	compound	9:compound	_
 8	beta	beta	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	events	event	NOUN	NNS	Number=Plur	3	obl	3:obl	_
+9	events	event	NOUN	NNS	Number=Plur	3	obl	3:obl:in	_
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	world	world	NOUN	NN	Number=Sing	13	compound	13:compound	_
-13	preview	preview	NOUN	NN	Number=Sing	9	conj	9:conj	SpaceAfter=No
+13	preview	preview	NOUN	NN	Number=Sing	9	conj	3:obl:in|9:conj:and	SpaceAfter=No
 14	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0031
@@ -527,7 +527,7 @@
 2	ca	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	SpaceAfter=No
 3	n't	not	PART	RB	_	4	advmod	4:advmod	_
 4	imagine	imagine	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	4	obj	4:obj	_
+5	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	4	obj	4:obj|8:nsubj:xsubj|10:nsubj:xsubj	_
 6	not	not	ADV	RB	_	8	advmod	8:advmod	_
 7	being	be	AUX	VBG	VerbForm=Ger	8	cop	8:cop	_
 8	able	able	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	_
@@ -544,11 +544,11 @@
 1	Warm	warm	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
 2	greetings	greeting	NOUN	NNS	Number=Plur	0	root	0:root	_
 3	to	to	ADP	IN	_	4	case	4:case	_
-4	all	all	DET	DT	_	2	nmod	2:nmod	_
+4	all	all	DET	DT	_	2	nmod	2:nmod:to	_
 5	in	in	ADP	IN	_	8	case	8:case	_
 6	this	this	DET	DT	Number=Sing|PronType=Dem	8	det	8:det	_
 7	GW	GW	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	community	community	NOUN	NN	Number=Sing	4	nmod	4:nmod	SpaceAfter=No
+8	community	community	NOUN	NN	Number=Sing	4	nmod	4:nmod:in	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0034
@@ -559,16 +559,16 @@
 4	Kingel	Kingel	PROPN	NNP	Number=Sing	3	flat	3:flat	_
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
-7	hail	hail	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+7	hail	hail	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
 8	from	from	ADP	IN	_	13	case	13:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 10	United	United	PROPN	NNP	Number=Sing	13	compound	13:compound	_
 11	Legit	Legit	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 12	Gaming	Gaming	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	Guilds	Guilds	PROPN	NNPS	Number=Plur	7	obl	7:obl	_
+13	Guilds	Guilds	PROPN	NNPS	Number=Plur	7	obl	7:obl:from	_
 14	of	of	ADP	IN	_	16	case	16:case	_
 15	Guild	Guild	PROPN	NNP	Number=Sing	16	compound	16:compound	_
-16	Wars	Wars	PROPN	NNPS	Number=Plur	13	nmod	13:nmod	SpaceAfter=No
+16	Wars	Wars	PROPN	NNPS	Number=Plur	13	nmod	13:nmod:of	SpaceAfter=No
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0035
@@ -576,29 +576,29 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	consortium	consortium	NOUN	NN	Number=Sing	0	root	0:root	_
+4	consortium	consortium	NOUN	NN	Number=Sing	0	root	11:nsubj:pass:relsubj	_
 5	of	of	ADP	IN	_	8	case	8:case	_
 6	legit	legit	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 7	honorable	honorable	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	guilds	guild	NOUN	NNS	Number=Plur	4	nmod	4:nmod	_
-9	that	that	PRON	WDT	PronType=Rel	11	nsubj:pass	11:nsubj:pass	_
+8	guilds	guild	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
+9	that	that	PRON	WDT	PronType=Rel	11	nsubj:pass	4:ref	_
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	11:aux:pass	_
 11	established	establish	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	acl:relcl	4:acl:relcl	_
 12	in	in	ADP	IN	_	13	case	13:case	_
-13	1997	1997	NUM	CD	NumType=Card	11	obl	11:obl	_
+13	1997	1997	NUM	CD	NumType=Card	11	obl	11:obl:in	_
 14	for	for	ADP	IN	_	15	case	15:case	_
-15	DI	DI	PROPN	NNP	Number=Sing	11	obl	11:obl	_
+15	DI	DI	PROPN	NNP	Number=Sing	11	obl	11:obl:for	_
 16	and	and	CCONJ	CC	_	20	cc	20:cc	_
 17	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
 18	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
 19	now	now	ADV	RB	_	20	advmod	20:advmod	_
-20	adding	add	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	4:conj	_
+20	adding	add	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	4:conj:and|11:nsubj:pass:relsubj	_
 21	GW	GW	PROPN	NNP	Number=Sing	20	obj	20:obj	_
 22	to	to	ADP	IN	_	24	case	24:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
-24	list	list	NOUN	NN	Number=Sing	20	obl	20:obl	_
+24	list	list	NOUN	NN	Number=Sing	20	obl	20:obl:to	_
 25	of	of	ADP	IN	_	26	case	26:case	_
-26	games	game	NOUN	NNS	Number=Plur	24	nmod	24:nmod	_
+26	games	game	NOUN	NNS	Number=Plur	24	nmod	24:nmod:of	_
 27	played	play	VERB	VBN	Tense=Past|VerbForm=Part	26	acl	26:acl	SpaceAfter=No
 28	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -619,11 +619,11 @@
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	formed	form	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
-5	allow	allow	VERB	VB	VerbForm=Inf	3	advcl	3:advcl	_
+5	allow	allow	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_
 6	many	many	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 7	different	different	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	guilds	guild	NOUN	NNS	Number=Plur	5	obj	5:obj	_
-9	who	who	PRON	WP	PronType=Rel	13	nsubj	13:nsubj	_
+8	guilds	guild	NOUN	NNS	Number=Plur	5	obj	5:obj|13:nsubj:relsubj|15:nsubj:xsubj|21:nsubj:xsubj	_
+9	who	who	PRON	WP	PronType=Rel	13	nsubj	8:ref	_
 10	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	cop	13:cop	_
 11	all	all	ADV	RB	_	13	advmod	13:advmod	_
 12	strictly	strictly	ADV	RB	_	13	advmod	13:advmod	_
@@ -633,14 +633,14 @@
 16	together	together	ADV	RB	_	15	advmod	15:advmod	_
 17	as	as	ADP	IN	_	19	case	19:case	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
-19	family	family	NOUN	NN	Number=Sing	15	obl	15:obl	_
+19	family	family	NOUN	NN	Number=Sing	15	obl	15:obl:as	_
 20	and	and	CCONJ	CC	_	21	cc	21:cc	_
-21	allow	allow	VERB	VB	VerbForm=Inf	15	conj	15:conj	_
+21	allow	allow	VERB	VB	VerbForm=Inf	15	conj	5:xcomp|15:conj:and	_
 22	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	21	iobj	21:iobj	_
 23	many	many	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 24	people	people	NOUN	NNS	Number=Plur	21	obj	21:obj	_
 25	to	to	PART	TO	_	26	mark	26:mark	_
-26	game	game	VERB	VB	VerbForm=Inf	24	acl	24:acl	_
+26	game	game	VERB	VB	VerbForm=Inf	24	acl	24:acl:to	_
 27	with	with	ADP	IN	_	26	obl	26:obl	SpaceAfter=No
 28	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -654,9 +654,9 @@
 6	other	other	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 7	than	than	SCONJ	IN	_	9	mark	9:mark	_
 8	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-9	ask	ask	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	advcl	6:advcl	_
+9	ask	ask	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	advcl	6:advcl:than	_
 10	that	that	SCONJ	IN	_	12	mark	12:mark	_
-11	members	member	NOUN	NNS	Number=Plur	12	nsubj	12:nsubj	_
+11	members	member	NOUN	NNS	Number=Plur	12	nsubj	12:nsubj|22:nsubj|23:nsubj:xsubj	_
 12	greet	greet	VERB	VB	VerbForm=Inf	9	ccomp	9:ccomp	_
 13	each	each	DET	DT	_	15	det	15:det	_
 14	new	new	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
@@ -664,18 +664,18 @@
 16	and	and	CCONJ	CC	_	19	cc	19:cc	_
 17	each	each	DET	DT	_	19	det	19:det	_
 18	new	new	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-19	alliance	alliance	NOUN	NN	Number=Sing	15	conj	15:conj	_
+19	alliance	alliance	NOUN	NN	Number=Sing	15	conj	12:obj|15:conj:and	_
 20	and	and	CCONJ	CC	_	22	cc	22:cc	_
 21	also	also	ADV	RB	_	22	advmod	22:advmod	_
-22	feel	feel	VERB	VB	VerbForm=Inf	12	conj	12:conj	_
+22	feel	feel	VERB	VB	VerbForm=Inf	12	conj	9:ccomp|12:conj:and	_
 23	free	free	ADJ	JJ	Degree=Pos	22	xcomp	22:xcomp	_
 24	to	to	PART	TO	_	25	mark	25:mark	_
-25	post	post	VERB	VB	VerbForm=Inf	23	advcl	23:advcl	_
+25	post	post	VERB	VB	VerbForm=Inf	23	advcl	23:advcl:to	_
 26	in	in	ADP	IN	_	27	case	27:case	_
-27	any	any	DET	DT	_	25	obl	25:obl	_
+27	any	any	DET	DT	_	25	obl	25:obl:in	_
 28	of	of	ADP	IN	_	30	case	30:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
-30	forums	forum	NOUN	NNS	Number=Plur	27	nmod	27:nmod	SpaceAfter=No
+30	forums	forum	NOUN	NNS	Number=Plur	27	nmod	27:nmod:of	SpaceAfter=No
 31	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0039
@@ -684,33 +684,33 @@
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	also	also	ADV	RB	_	5	advmod	5:advmod	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-5	group	group	NOUN	NN	Number=Sing	0	root	0:root	_
-6	who	who	PRON	WP	PronType=Rel	8	nsubj	8:nsubj	_
+5	group	group	NOUN	NN	Number=Sing	0	root	8:nsubj:relsubj	_
+6	who	who	PRON	WP	PronType=Rel	8	nsubj	5:ref	_
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 8	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	5	acl:relcl	5:acl:relcl	_
 9	for	for	ADP	IN	_	10	case	10:case	_
-10	members	member	NOUN	NNS	Number=Plur	8	obl	8:obl	_
+10	members	member	NOUN	NNS	Number=Plur	8	obl	8:obl:for	_
 11	for	for	ADP	IN	_	15	case	15:case	_
 12	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 13	own	own	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 14	select	select	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	guild	guild	NOUN	NN	Number=Sing	10	nmod	10:nmod	_
+15	guild	guild	NOUN	NN	Number=Sing	10	nmod	10:nmod:for|24:nsubj:relsubj	_
 16	called	call	VERB	VBN	Tense=Past|VerbForm=Part	15	acl	15:acl	_
 17	ULGG	ULGG	PROPN	NNP	Number=Sing	16	xcomp	16:xcomp	_
 18	of	of	ADP	IN	_	19	case	19:case	_
-19	GW	GW	PROPN	NNP	Number=Sing	17	nmod	17:nmod	SpaceAfter=No
+19	GW	GW	PROPN	NNP	Number=Sing	17	nmod	17:nmod:of	SpaceAfter=No
 20	...	...	PUNCT	,	_	15	punct	15:punct	SpaceAfter=No
-21	which	which	PRON	WDT	PronType=Rel	24	nsubj	24:nsubj	_
+21	which	which	PRON	WDT	PronType=Rel	24	nsubj	15:ref	_
 22	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	_
 23	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
 24	part	part	NOUN	NN	Number=Sing	15	acl:relcl	15:acl:relcl	_
 25	of	of	ADP	IN	_	27	case	27:case	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
-27	alliance	alliance	NOUN	NN	Number=Sing	24	nmod	24:nmod	_
+27	alliance	alliance	NOUN	NN	Number=Sing	24	nmod	24:nmod:of	_
 28	with	with	ADP	IN	_	31	case	31:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
 30	same	same	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
-31	name	name	NOUN	NN	Number=Sing	27	nmod	27:nmod	SpaceAfter=No
+31	name	name	NOUN	NN	Number=Sing	27	nmod	27:nmod:with	SpaceAfter=No
 32	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0040
@@ -719,29 +719,29 @@
 2	play	play	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	in	in	ADP	IN	_	5	case	5:case	_
 4	all	all	DET	DT	_	5	det	5:det	_
-5	aspects	aspect	NOUN	NNS	Number=Plur	2	obl	2:obl	_
+5	aspects	aspect	NOUN	NNS	Number=Plur	2	obl	2:obl:in	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	game	game	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+8	game	game	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 11	hand	hand	NOUN	NN	Number=Sing	12	obl:npmod	12:obl:npmod	_
-12	pick	pick	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj	_
+12	pick	pick	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
 13	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 14	members	member	NOUN	NNS	Number=Plur	12	obj	12:obj	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0041
 # text = I would like to personally invite each of you to visit our website.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|6:nsubj:xsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	like	like	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	to	to	PART	TO	_	6	mark	6:mark	_
 5	personally	personally	ADV	RB	_	6	advmod	6:advmod	_
 6	invite	invite	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-7	each	each	DET	DT	_	6	obj	6:obj	_
+7	each	each	DET	DT	_	6	obj	6:obj|11:nsubj:xsubj	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	7	nmod	7:nmod	_
+9	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	7	nmod	7:nmod:of	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	visit	visit	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 12	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
@@ -754,26 +754,26 @@
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	individuals	individual	NOUN	NNS	Number=Plur	0	root	0:root	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	quality	quality	NOUN	NN	Number=Sing	3	nmod	3:nmod	SpaceAfter=No
+5	quality	quality	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	SpaceAfter=No
 6	,	,	PUNCT	,	_	12	punct	12:punct	_
 7	and	and	CCONJ	CC	_	12	cc	12:cc	_
 8	in	in	ADP	IN	_	10	case	10:case	_
 9	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	alliance	alliance	NOUN	NN	Number=Sing	12	obl	12:obl	_
+10	alliance	alliance	NOUN	NN	Number=Sing	12	obl	12:obl:in	_
 11	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-12	seek	seek	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+12	seek	seek	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
 13	quality	quality	NOUN	NN	Number=Sing	12	obj	12:obj	_
 14	of	of	ADP	IN	_	15	case	15:case	_
-15	member	member	NOUN	NN	Number=Sing	13	nmod	13:nmod	_
+15	member	member	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	_
 16	over	over	ADP	IN	_	17	case	17:case	_
-17	quantity	quantity	NOUN	NN	Number=Sing	13	nmod	13:nmod	_
+17	quantity	quantity	NOUN	NN	Number=Sing	13	nmod	13:nmod:over	_
 18	of	of	ADP	IN	_	19	case	19:case	_
-19	member	member	NOUN	NN	Number=Sing	17	nmod	17:nmod	SpaceAfter=No
+19	member	member	NOUN	NN	Number=Sing	17	nmod	17:nmod:of	SpaceAfter=No
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0043
 # text = You will be asked to register, and then you should wander over to the Announce Your Arrival Section and present yourself.
-1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj:pass	4:nsubj:pass	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj:pass	4:nsubj:pass|6:nsubj:xsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	be	be	AUX	VB	VerbForm=Inf	4	aux:pass	4:aux:pass	_
 4	asked	ask	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -782,18 +782,18 @@
 7	,	,	PUNCT	,	_	12	punct	12:punct	_
 8	and	and	CCONJ	CC	_	12	cc	12:cc	_
 9	then	then	ADV	RB	PronType=Dem	12	advmod	12:advmod	_
-10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
+10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj|21:nsubj	_
 11	should	should	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
-12	wander	wander	VERB	VB	VerbForm=Inf	4	conj	4:conj	_
+12	wander	wander	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 13	over	over	ADV	RB	_	12	advmod	12:advmod	_
 14	to	to	ADP	IN	_	19	case	19:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 16	Announce	announce	VERB	VB	Mood=Imp|VerbForm=Fin	19	compound	19:compound	_
 17	Your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 18	Arrival	arrival	NOUN	NN	Number=Sing	16	obj	16:obj	_
-19	Section	section	NOUN	NN	Number=Sing	13	obl	13:obl	_
+19	Section	section	NOUN	NN	Number=Sing	13	obl	13:obl:to	_
 20	and	and	CCONJ	CC	_	21	cc	21:cc	_
-21	present	present	VERB	VB	VerbForm=Inf	12	conj	12:conj	_
+21	present	present	VERB	VB	VerbForm=Inf	12	conj	12:conj:and	_
 22	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	21	obj	21:obj	SpaceAfter=No
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -805,34 +805,34 @@
 4	greeted	greet	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	by	by	ADP	IN	_	7	case	7:case	_
 6	many	many	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	members	member	NOUN	NNS	Number=Plur	4	obl	4:obl	_
+7	members	member	NOUN	NNS	Number=Plur	4	obl	4:obl:by	_
 8	of	of	ADP	IN	_	11	case	11:case	_
 9	this	this	DET	DT	Number=Sing|PronType=Dem	11	det	11:det	_
 10	wonderful	wonderful	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	family	family	NOUN	NN	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+11	family	family	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	SpaceAfter=No
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0045
 # text = I do hope to see you visiting us at the fire and we shall prepare a feast for you, as well.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	hope	hope	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	see	see	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-6	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	obj	5:obj	_
+6	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	obj	5:obj|7:nsubj:xsubj	_
 7	visiting	visit	VERB	VBG	VerbForm=Ger	5	xcomp	5:xcomp	_
 8	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	7	obj	7:obj	_
 9	at	at	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	fire	fire	NOUN	NN	Number=Sing	7	obl	7:obl	_
+11	fire	fire	NOUN	NN	Number=Sing	7	obl	7:obl:at	_
 12	and	and	CCONJ	CC	_	15	cc	15:cc	_
 13	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
 14	shall	shall	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-15	prepare	prepare	VERB	VB	VerbForm=Inf	3	conj	3:conj	_
+15	prepare	prepare	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 17	feast	feast	NOUN	NN	Number=Sing	15	obj	15:obj	_
 18	for	for	ADP	IN	_	19	case	19:case	_
-19	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	15	obl	15:obl	SpaceAfter=No
+19	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	15	obl	15:obl:for	SpaceAfter=No
 20	,	,	PUNCT	,	_	15	punct	15:punct	_
 21	as	as	ADV	RB	_	15	advmod	15:advmod	_
 22	well	well	ADV	RB	Degree=Pos	21	fixed	21:fixed	SpaceAfter=No
@@ -842,11 +842,11 @@
 # text = If you paste this in your browser, it will take you directly to our GW website.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	paste	paste	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl	_
+3	paste	paste	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:if	_
 4	this	this	PRON	DT	Number=Sing|PronType=Dem	3	obj	3:obj	_
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
-7	browser	browser	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+7	browser	browser	NOUN	NN	Number=Sing	3	obl	3:obl:in	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 10	will	will	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
@@ -856,7 +856,7 @@
 14	to	to	ADP	IN	_	17	case	17:case	_
 15	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 16	GW	GW	PROPN	NNP	Number=Sing	17	compound	17:compound	_
-17	website	website	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+17	website	website	NOUN	NN	Number=Sing	11	obl	11:obl:to	SpaceAfter=No
 18	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0047
@@ -866,22 +866,22 @@
 3	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	hand	hand	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	to	to	ADP	IN	_	6	case	6:case	_
-6	each	each	DET	DT	_	2	obl	2:obl	_
+6	each	each	DET	DT	_	2	obl	2:obl:to	_
 7	of	of	ADP	IN	_	8	case	8:case	_
-8	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	nmod	6:nmod	_
+8	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	nmod	6:nmod:of	_
 9	in	in	ADP	IN	_	11	case	11:case	_
 10	true	true	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	friendship	friendship	NOUN	NN	Number=Sing	2	obl	2:obl	SpaceAfter=No
+11	friendship	friendship	NOUN	NN	Number=Sing	2	obl	2:obl:in	SpaceAfter=No
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	honor	honor	NOUN	NN	Number=Sing	11	conj	11:conj	SpaceAfter=No
+14	honor	honor	NOUN	NN	Number=Sing	11	conj	2:obl:in|11:conj:and	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0048
 # text = Come and say hello...you will be warmly welcomed!
 1	Come	come	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	say	say	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
+3	say	say	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 4	hello	hello	INTJ	UH	_	3	obj	3:obj	SpaceAfter=No
 5	...	...	PUNCT	,	_	1	punct	1:punct	SpaceAfter=No
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj:pass	10:nsubj:pass	_
@@ -900,7 +900,7 @@
 5	to	to	ADP	IN	_	8	case	8:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	new	new	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	server	server	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+8	server	server	NOUN	NN	Number=Sing	4	obl	4:obl:to	SpaceAfter=No
 9	,	,	PUNCT	,	_	14	punct	14:punct	_
 10	so	so	ADV	RB	_	14	advmod	14:advmod	_
 11	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
@@ -909,7 +909,7 @@
 14	down	down	ADV	RB	_	4	conj	4:conj	_
 15	for	for	ADP	IN	_	17	case	17:case	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
-17	while	while	NOUN	NN	Number=Sing	14	obl	14:obl	SpaceAfter=No
+17	while	while	NOUN	NN	Number=Sing	14	obl	14:obl:for	SpaceAfter=No
 18	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0050
@@ -918,29 +918,29 @@
 2	will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	inform	inform	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	when	when	ADV	WRB	PronType=Int	7	mark	7:mark	_
-5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
+5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	7	nsubj	7:nsubj|9:nsubj	_
 6	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
-7	up	up	ADV	RB	_	3	advcl	3:advcl	_
+7	up	up	ADV	RB	_	3	advcl	3:advcl:when	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	running	run	VERB	VBG	VerbForm=Ger	7	conj	7:conj	_
+9	running	run	VERB	VBG	VerbForm=Ger	7	conj	3:advcl:when|7:conj:and	_
 10	again	again	ADV	RB	_	7	advmod	7:advmod	SpaceAfter=No
 11	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0051
 # text = I wish all happy holidays, and moreso, peace on earth.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|9.1:nsubj|10:nsubj	_
 2	wish	wish	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	all	all	DET	DT	_	2	iobj	2:iobj	_
 4	happy	happy	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	holidays	holiday	NOUN	NNS	Number=Plur	2	obj	2:obj	SpaceAfter=No
-6	,	,	PUNCT	,	_	10	punct	9.1:punct	_
-7	and	and	CCONJ	CC	_	10	cc	9.1:cc	_
+6	,	,	PUNCT	,	_	10	punct	9.1:punct|10:punct	_
+7	and	and	CCONJ	CC	_	10	cc	9.1:cc|10:cc	_
 8	moreso	moreso	ADV	RB	_	10	orphan	9.1:advmod	SpaceAfter=No
-9	,	,	PUNCT	,	_	10	punct	9.1:punct	_
-9.1	wish	wish	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	_	_	2:conj	CopyOf=2
-10	peace	peace	NOUN	NN	Number=Sing	2	conj	9.1:obj	_
+9	,	,	PUNCT	,	_	10	punct	9.1:punct|10:punct	_
+9.1	wish	wish	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	_	_	2:conj:and	CopyOf=2
+10	peace	peace	NOUN	NN	Number=Sing	2	conj	2:conj:and|9.1:obj	_
 11	on	on	ADP	IN	_	12	case	12:case	_
-12	earth	earth	NOUN	NN	Number=Sing	10	nmod	10:nmod	SpaceAfter=No
+12	earth	earth	NOUN	NN	Number=Sing	10	nmod	10:nmod:on	SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0052

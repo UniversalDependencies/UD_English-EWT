@@ -4,7 +4,7 @@
 1	Top	top	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
 2	range	range	NOUN	NN	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	bike	bike	NOUN	NN	Number=Sing	2	nmod	2:nmod	SpaceAfter=No
+4	bike	bike	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	SpaceAfter=No
 5	,	,	PUNCT	,	_	2	punct	2:punct	_
 6	cheap	cheap	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	prices	price	NOUN	NNS	Number=Plur	2	list	2:list	SpaceAfter=No
@@ -17,22 +17,22 @@
 # text = yep they fixeded my thumpstar in 1 day.
 1	yep	yep	INTJ	UH	_	3	discourse	3:discourse	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	fixeded	fixed	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin|Typo=Yes	0	root	0:root	_
+3	fixeded	fixed	VERB	VBD	Mood=Ind|Tense=Past|Typo=Yes|VerbForm=Fin	0	root	0:root	_
 4	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	thumpstar	thumpstar	PROPN	NNP	Number=Sing	3	obj	3:obj	_
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	1	1	NUM	CD	NumType=Card	8	nummod	8:nummod	_
-8	day	day	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+8	day	day	NOUN	NN	Number=Sing	3	obl	3:obl:in	SpaceAfter=No
 9	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-100592-0003
 # text = it wasent going an had a gear box problem....
-1	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
-2	wase	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin|Typo=Yes	4	aux	4:aux	SpaceAfter=No
+1	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj|6:nsubj	_
+2	wase	be	AUX	VBD	Mood=Ind|Tense=Past|Typo=Yes|VerbForm=Fin	4	aux	4:aux	SpaceAfter=No
 3	nt	not	PART	RB	_	4	advmod	4:advmod	_
 4	going	go	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 5	an	and	CCONJ	CC	Typo=Yes	6	cc	6:cc	_
-6	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj	_
+6	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 8	gear	gear	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	box	box	NOUN	NN	Number=Sing	10	compound	10:compound	_
@@ -42,14 +42,14 @@
 # sent_id = reviews-100592-0004
 # text = i coldn't find anywere else local to fix it so i took it there and they fixed it for $150...
 1	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-2	cold	could	AUX	MD	VerbForm=Fin|Typo=Yes	4	aux	4:aux	SpaceAfter=No
+2	cold	could	AUX	MD	Typo=Yes|VerbForm=Fin	4	aux	4:aux	SpaceAfter=No
 3	n't	not	PART	RB	_	4	advmod	4:advmod	_
 4	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	anywere	anywere	NOUN	NN	Number=Sing	4	obj	4:obj	_
 6	else	else	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 7	local	local	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
-9	fix	fix	VERB	VB	VerbForm=Inf	5	acl	5:acl	_
+9	fix	fix	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
 10	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj	_
 11	so	so	ADV	RB	_	13	advmod	13:advmod	_
 12	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
@@ -58,10 +58,10 @@
 15	there	there	ADV	RB	PronType=Dem	13	advmod	13:advmod	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
-18	fixed	fix	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	conj	13:conj	_
+18	fixed	fix	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	conj	4:advcl|13:conj:and	_
 19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	_
 20	for	for	ADP	IN	_	21	case	21:case	_
-21	$	$	SYM	$	_	18	obl	18:obl	SpaceAfter=No
+21	$	$	SYM	$	_	18	obl	18:obl:for	SpaceAfter=No
 22	150	150	NUM	CD	NumType=Card	21	nummod	21:nummod	SpaceAfter=No
 23	...	...	PUNCT	.	_	4	punct	4:punct	_
 
@@ -73,11 +73,11 @@
 4	really	really	ADV	RB	_	5	advmod	5:advmod	_
 5	well	well	ADV	RB	Degree=Pos	3	advmod	3:advmod	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	thaks	thanks	NOUN	NN	Number=Sing|Typo=Yes	1	conj	1:conj	_
+7	thaks	thanks	NOUN	NN	Number=Sing|Typo=Yes	1	conj	1:conj:and	_
 8	4	for	ADP	IN	Abbr=Yes	11	case	11:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	cheap	cheap	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	price	price	NOUN	NN	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+11	price	price	NOUN	NN	Number=Sing	7	nmod	7:nmod:for	SpaceAfter=No
 12	..	..	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-100592-0006
@@ -88,8 +88,8 @@
 4	guys	guy	NOUN	NNS	Number=Plur	1	list	1:list	_
 5	a	a	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 6	+++++	+++++	SYM	SYM	_	5	compound	5:compound	_
-7	reccommend	recommend	VERB	VB	VerbForm=Inf|Typo=Yes	1	list	1:list	_
+7	reccommend	recommend	VERB	VB	Typo=Yes|VerbForm=Inf	1	list	1:list	_
 8	to	to	ADP	IN	_	9	case	9:case	_
-9	anyone	anyone	PRON	NN	Number=Sing	7	obl	7:obl	SpaceAfter=No
+9	anyone	anyone	PRON	NN	Number=Sing	7	obl	7:obl:to	SpaceAfter=No
 10	!!!!!!!!!!	!!!!!!!!!!	PUNCT	.	_	4	punct	4:punct	_
 

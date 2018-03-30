@@ -18,8 +18,8 @@
 7	tile	tile	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
 8	in	in	ADP	IN	_	10	case	10:case	_
 9	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	bathroom	bathroom	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
-11	coming	come	VERB	VBG	VerbForm=Ger	4	acl	4:acl	_
+10	bathroom	bathroom	NOUN	NN	Number=Sing	7	nmod	7:nmod:in	_
+11	coming	come	VERB	VBG	VerbForm=Ger	4	acl	4:acl:with	_
 12	apart	apart	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -33,12 +33,12 @@
 6	businesses	business	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 7	in	in	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	area	area	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+9	area	area	NOUN	NN	Number=Sing	6	nmod	6:nmod:in	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	get	get	VERB	VB	VerbForm=Inf	2	advcl	2:advcl	_
+11	get	get	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
 12	estimates	estimate	NOUN	NNS	Number=Plur	11	obj	11:obj	_
 13	,	,	PUNCT	,	_	2	punct	2:punct	_
-14	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
+14	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	18	nsubj	18:nsubj|23:nsubj	_
 15	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	18	cop	18:cop	SpaceAfter=No
 16	n't	not	PART	RB	_	18	advmod	18:advmod	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
@@ -47,7 +47,7 @@
 20	found	find	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	18	acl:relcl	18:acl:relcl	_
 21	but	but	CCONJ	CC	_	23	cc	23:cc	_
 22	very	very	ADV	RB	_	23	advmod	23:advmod	_
-23	reasonable	reasonable	ADJ	JJ	Degree=Pos	18	conj	18:conj	SpaceAfter=No
+23	reasonable	reasonable	ADJ	JJ	Degree=Pos	18	conj	18:conj:but	SpaceAfter=No
 24	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-190256-0004
@@ -60,13 +60,13 @@
 6	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	ccomp	4:ccomp	_
 7	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 8	whole	whole	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	bathroom	bathroom	NOUN	NN	Number=Sing	6	obj	6:obj	_
+9	bathroom	bathroom	NOUN	NN	Number=Sing	6	obj	6:obj|10:nsubj:xsubj	_
 10	remodeled	remodel	VERB	VBN	Tense=Past|VerbForm=Part	6	xcomp	6:xcomp	_
 11	for	for	ADP	IN	_	15	case	15:case	_
 12	about	about	ADV	RB	_	15	advmod	15:advmod	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	same	same	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	price	price	NOUN	NN	Number=Sing	6	obl	6:obl	_
+15	price	price	NOUN	NN	Number=Sing	6	obl	6:obl:for	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	other	other	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	company's	company	NOUN	NNS	Number=Plur	20	nsubj	20:nsubj	_
@@ -74,12 +74,12 @@
 20	quoting	quote	VERB	VBG	Tense=Pres|VerbForm=Part	15	acl:relcl	15:acl:relcl	_
 21	just	just	ADV	RB	_	23	advmod	23:advmod	_
 22	to	to	PART	TO	_	23	mark	23:mark	_
-23	fix	fix	VERB	VB	VerbForm=Inf	20	advcl	20:advcl	_
+23	fix	fix	VERB	VB	VerbForm=Inf	20	advcl	20:advcl:to	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
 25	shower	shower	NOUN	NN	Number=Sing	26	compound	26:compound	_
 26	tile	tile	NOUN	NN	Number=Sing	23	obj	23:obj	_
 27	and	and	CCONJ	CC	_	28	cc	28:cc	_
-28	fixtures	fixture	NOUN	NNS	Number=Plur	26	conj	26:conj	SpaceAfter=No
+28	fixtures	fixture	NOUN	NNS	Number=Plur	26	conj	23:obj|26:conj:and	SpaceAfter=No
 29	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-190256-0005
@@ -87,20 +87,20 @@
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
 2	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	work	work	NOUN	NN	Number=Sing	2	obj	2:obj	_
+4	work	work	NOUN	NN	Number=Sing	2	obj	2:obj|5:nsubj:xsubj	_
 5	done	done	ADJ	JJ	Degree=Pos	2	xcomp	2:xcomp	_
 6	in	in	ADP	IN	_	10	case	10:case	_
 7	about	about	ADV	RB	_	8	advmod	8:advmod	_
 8	half	half	DET	PDT	_	10	nummod	10:nummod	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	time	time	NOUN	NN	Number=Sing	2	obl	2:obl	_
+10	time	time	NOUN	NN	Number=Sing	2	obl	2:obl:in	_
 11	quoted	quote	VERB	VBN	Tense=Past|VerbForm=Part	10	acl	10:acl	_
 12	which	which	PRON	WDT	PronType=Int	13	nsubj	13:nsubj	_
 13	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	parataxis	2:parataxis	_
-14	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	13	obj	13:obj	_
+14	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	13	obj	13:obj|19:nsubj:xsubj	_
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
 16	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
-17	wife	wife	NOUN	NN	Number=Sing	14	conj	14:conj	_
+17	wife	wife	NOUN	NN	Number=Sing	14	conj	13:obj|14:conj:and|19:nsubj:xsubj	_
 18	extremely	extremely	ADV	RB	_	19	advmod	19:advmod	_
 19	happy	happy	ADJ	JJ	Degree=Pos	13	xcomp	13:xcomp	SpaceAfter=No
 20	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -112,13 +112,13 @@
 3	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	nothing	nothing	PRON	NN	Number=Sing	3	obj	3:obj	_
 5	but	but	ADP	IN	_	6	case	6:case	_
-6	compliments	compliment	NOUN	NNS	Number=Plur	4	nmod	4:nmod	_
+6	compliments	compliment	NOUN	NNS	Number=Plur	4	nmod	4:nmod:but	_
 7	on	on	ADP	IN	_	9	case	9:case	_
 8	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	bathroom	bathroom	NOUN	NN	Number=Sing	4	nmod	4:nmod	_
+9	bathroom	bathroom	NOUN	NN	Number=Sing	4	nmod	4:nmod:on	_
 10	when	when	ADV	WRB	PronType=Int	12	mark	12:mark	_
 11	guest	guest	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
-12	come	come	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl	_
+12	come	come	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:when	_
 13	over	over	ADV	RB	_	12	advmod	12:advmod	SpaceAfter=No
 14	-	-	PUNCT	,	_	3	punct	3:punct	_
 15	who	who	PRON	WP	PronType=Int	18	nsubj	18:nsubj	_
@@ -136,7 +136,7 @@
 3	work	work	NOUN	NN	Number=Sing	0	root	0:root	_
 4	and	and	CCONJ	CC	_	6	cc	6:cc	_
 5	friendly	friendly	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	guys	guy	NOUN	NNS	Number=Plur	3	conj	3:conj	_
+6	guys	guy	NOUN	NNS	Number=Plur	3	conj	3:conj:and	_
 7	too	too	ADV	RB	_	6	advmod	6:advmod	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -148,7 +148,7 @@
 4	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 5	spent	spend	VERB	VBN	Tense=Past|VerbForm=Part	2	acl:relcl	2:acl:relcl	_
 6	on	on	ADP	IN	_	7	case	7:case	_
-7	remodeling	remodeling	NOUN	NN	Number=Sing	5	obl	5:obl	_
+7	remodeling	remodeling	NOUN	NN	Number=Sing	5	obl	5:obl:on	_
 8	ever	ever	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -158,7 +158,7 @@
 2	highly	highly	ADV	RB	_	3	advmod	3:advmod	_
 3	recommend	recommend	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	any	any	DET	DT	_	5	det	5:det	_
-5	one	one	NOUN	NN	Number=Sing	3	obj	3:obj	_
+5	one	one	NOUN	NN	Number=Sing	3	obj	3:obj|10:nsubj:xsubj	_
 6	considering	consider	VERB	VBG	VerbForm=Ger	5	acl	5:acl	_
 7	home	home	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	repair	repair	NOUN	NN	Number=Sing	6	obj	6:obj	_

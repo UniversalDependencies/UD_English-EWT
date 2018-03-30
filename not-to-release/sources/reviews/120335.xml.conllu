@@ -15,11 +15,11 @@
 5	that	that	SCONJ	IN	_	8	mark	8:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 7	can	can	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	fool	fool	VERB	VB	VerbForm=Inf	4	acl	4:acl	_
+8	fool	fool	VERB	VB	VerbForm=Inf	4	acl	4:acl:that	_
 9	people	people	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 10	with	with	ADP	IN	_	12	case	12:case	_
 11	good	good	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	advertising	advertising	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+12	advertising	advertising	NOUN	NN	Number=Sing	8	obl	8:obl:with	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-120335-0003
@@ -28,7 +28,7 @@
 2	convince	convince	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	lots	lot	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	people	people	NOUN	NNS	Number=Plur	3	nmod	3:nmod	_
+5	people	people	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
 6	that	that	SCONJ	IN	_	11	mark	11:mark	_
 7	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 8	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
@@ -38,15 +38,15 @@
 12	,	,	PUNCT	,	_	2	punct	2:punct	_
 13	when	when	ADV	WRB	PronType=Int	21	mark	21:mark	_
 14	in	in	ADP	IN	_	15	case	15:case	_
-15	fact	fact	NOUN	NN	Number=Sing	21	obl	21:obl	_
+15	fact	fact	NOUN	NN	Number=Sing	21	obl	21:obl:in	_
 16	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	21	nsubj	21:nsubj	_
 17	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	21	cop	21:cop	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 19	very	very	ADV	RB	_	20	advmod	20:advmod	_
 20	average	average	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
-21	place	place	NOUN	NN	Number=Sing	2	advcl	2:advcl	_
+21	place	place	NOUN	NN	Number=Sing	2	advcl	2:advcl:when	_
 22	at	at	ADV	RB	_	23	case	23:case	_
-23	best	best	ADV	RBS	Degree=Sup	21	obl	21:obl	SpaceAfter=No
+23	best	best	ADV	RBS	Degree=Sup	21	obl	21:obl:at	SpaceAfter=No
 24	,	,	PUNCT	,	_	2	punct	2:punct	_
 25	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	31	nsubj	31:nsubj	_
 26	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	31	cop	31:cop	_
@@ -57,23 +57,23 @@
 31	store	store	NOUN	NN	Number=Sing	2	parataxis	2:parataxis	_
 32	like	like	ADP	IN	_	34	case	34:case	_
 33	the	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	_
-34	others	other	NOUN	NNS	Number=Plur	31	nmod	31:nmod	SpaceAfter=No
+34	others	other	NOUN	NNS	Number=Plur	31	nmod	31:nmod:like	SpaceAfter=No
 35	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-120335-0004
 # text = They offer sales that aren't really sales, mislabeled items that make the item sound like a good deal when it isn't, a bad attitude about return items, and on and on.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
 2	offer	offer	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	sales	sale	NOUN	NNS	Number=Plur	2	obj	2:obj	_
-4	that	that	PRON	WDT	PronType=Rel	8	nsubj	8:nsubj	_
+3	sales	sale	NOUN	NNS	Number=Plur	2	obj	2:obj|8:nsubj:relsubj	_
+4	that	that	PRON	WDT	PronType=Rel	8	nsubj	3:ref	_
 5	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	cop	8:cop	SpaceAfter=No
 6	n't	not	PART	RB	_	8	advmod	8:advmod	_
 7	really	really	ADV	RB	_	8	advmod	8:advmod	_
 8	sales	sale	NOUN	NNS	Number=Plur	3	acl:relcl	3:acl:relcl	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	mislabeled	mislabele	VERB	VBN	Tense=Past|VerbForm=Part	11	amod	11:amod	_
-11	items	item	NOUN	NNS	Number=Plur	3	conj	3:conj	_
-12	that	that	PRON	WDT	PronType=Rel	13	nsubj	13:nsubj	_
+11	items	item	NOUN	NNS	Number=Plur	3	conj	3:conj|13:nsubj:relsubj	_
+12	that	that	PRON	WDT	PronType=Rel	13	nsubj	11:ref	_
 13	make	make	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	item	item	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	_
@@ -81,23 +81,23 @@
 17	like	like	ADP	IN	_	20	case	20:case	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
 19	good	good	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-20	deal	deal	NOUN	NN	Number=Sing	16	obl	16:obl	_
+20	deal	deal	NOUN	NN	Number=Sing	16	obl	16:obl:like	_
 21	when	when	ADV	WRB	PronType=Int	23	mark	23:mark	_
 22	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	23	nsubj	23:nsubj	_
-23	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	advcl	16:advcl	SpaceAfter=No
+23	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	advcl	16:advcl:when	SpaceAfter=No
 24	n't	not	PART	RB	_	23	advmod	23:advmod	SpaceAfter=No
 25	,	,	PUNCT	,	_	28	punct	28:punct	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	28	det	28:det	_
 27	bad	bad	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
-28	attitude	attitude	NOUN	NN	Number=Sing	3	conj	3:conj	_
+28	attitude	attitude	NOUN	NN	Number=Sing	3	conj	2:obj|3:conj|8:nsubj:relsubj	_
 29	about	about	ADP	IN	_	31	case	31:case	_
 30	return	return	NOUN	NN	Number=Sing	31	compound	31:compound	_
-31	items	item	NOUN	NNS	Number=Plur	28	nmod	28:nmod	SpaceAfter=No
+31	items	item	NOUN	NNS	Number=Plur	28	nmod	28:nmod:about	SpaceAfter=No
 32	,	,	PUNCT	,	_	34	punct	34:punct	_
 33	and	and	CCONJ	CC	_	34	cc	34:cc	_
 34	on	on	ADV	RB	_	3	advmod	3:advmod	_
 35	and	and	CCONJ	CC	_	36	cc	36:cc	_
-36	on	on	ADV	RB	_	34	conj	34:conj	SpaceAfter=No
+36	on	on	ADV	RB	_	34	conj	3:advmod|34:conj:and	SpaceAfter=No
 37	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-120335-0005
@@ -105,8 +105,8 @@
 1	With	with	ADP	IN	_	5	case	5:case	_
 2	higher	higher	ADJ	JJR	Degree=Cmp	5	amod	5:amod	_
 3	than	than	ADP	IN	_	4	case	4:case	_
-4	average	average	ADJ	JJ	Degree=Pos	2	obl	2:obl	_
-5	prices	price	NOUN	NNS	Number=Plur	7	obl	7:obl	_
+4	average	average	ADJ	JJ	Degree=Pos	2	obl	2:obl:than	_
+5	prices	price	NOUN	NNS	Number=Plur	7	obl	7:obl:with	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	boot	boot	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
 8	!	!	PUNCT	.	_	7	punct	7:punct	_
@@ -122,11 +122,11 @@
 7	,	,	PUNCT	,	_	5	punct	5:punct	_
 8	keep	keep	VERB	VB	Mood=Imp|VerbForm=Fin	5	parataxis	5:parataxis	_
 9	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	eyes	eye	NOUN	NNS	Number=Plur	8	obj	8:obj	_
+10	eyes	eye	NOUN	NNS	Number=Plur	8	obj	8:obj|11:nsubj:xsubj	_
 11	open	open	ADJ	JJ	Degree=Pos	8	xcomp	8:xcomp	_
 12	if	if	SCONJ	IN	_	14	mark	14:mark	_
-13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	14	nsubj	14:nsubj	_
-14	choose	choose	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl	_
+13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	14	nsubj	14:nsubj|16:nsubj:xsubj	_
+14	choose	choose	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:if	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	shop	shop	VERB	VB	VerbForm=Inf	14	xcomp	14:xcomp	_
 17	here	here	ADV	RB	PronType=Dem	16	advmod	16:advmod	SpaceAfter=No
@@ -137,7 +137,7 @@
 1	On	on	ADP	IN	_	4	case	4:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 3	other	other	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	hand	hand	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+4	hand	hand	NOUN	NN	Number=Sing	11	obl	11:obl:on	SpaceAfter=No
 5	,	,	PUNCT	,	_	11	punct	11:punct	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 7	Richmond	Richmond	PROPN	NNP	Number=Sing	9	compound	9:compound	_
@@ -148,18 +148,18 @@
 12	for	for	ADP	IN	_	15	case	15:case	_
 13	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 14	charity	charity	NOUN	NN	Number=Sing	15	compound	15:compound	_
-15	work	work	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+15	work	work	NOUN	NN	Number=Sing	11	obl	11:obl:for	SpaceAfter=No
 16	,	,	PUNCT	,	_	19	punct	19:punct	_
 17	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
 18	community	community	NOUN	NN	Number=Sing	19	compound	19:compound	_
-19	action	action	NOUN	NN	Number=Sing	15	conj	15:conj	SpaceAfter=No
+19	action	action	NOUN	NN	Number=Sing	15	conj	11:obl:for|15:conj:and	SpaceAfter=No
 20	,	,	PUNCT	,	_	23	punct	23:punct	_
 21	and	and	CCONJ	CC	_	23	cc	23:cc	_
 22	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
-23	interest	interest	NOUN	NN	Number=Sing	15	conj	15:conj	_
+23	interest	interest	NOUN	NN	Number=Sing	15	conj	11:obl:for|15:conj:and	_
 24	in	in	ADP	IN	_	27	case	27:case	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 26	public	public	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	welfare	welfare	NOUN	NN	Number=Sing	23	nmod	23:nmod	SpaceAfter=No
+27	welfare	welfare	NOUN	NN	Number=Sing	23	nmod	23:nmod:in	SpaceAfter=No
 28	.	.	PUNCT	.	_	11	punct	11:punct	_
 

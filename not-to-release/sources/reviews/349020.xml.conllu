@@ -13,7 +13,7 @@
 10	BMW	BMW	PROPN	NNP	Number=Sing	2	obj	2:obj	_
 11	from	from	ADP	IN	_	13	case	13:case	_
 12	this	this	DET	DT	Number=Sing|PronType=Dem	13	det	13:det	_
-13	dealership	dealership	NOUN	NN	Number=Sing	2	obl	2:obl	SpaceAfter=No
+13	dealership	dealership	NOUN	NN	Number=Sing	2	obl	2:obl:from	SpaceAfter=No
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-349020-0002
@@ -45,9 +45,9 @@
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	wind	wind	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	while	while	SCONJ	IN	_	8	mark	8:mark	_
-8	driving	drive	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl	_
+8	driving	drive	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl:while	_
 9	on	on	ADP	IN	_	10	case	10:case	_
-10	highway	highway	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+10	highway	highway	NOUN	NN	Number=Sing	8	obl	8:obl:on	SpaceAfter=No
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-349020-0004
@@ -75,13 +75,13 @@
 8	attention	attention	NOUN	NN	Number=Sing	7	obj	7:obj	_
 9	to	to	ADP	IN	_	11	case	11:case	_
 10	this	this	DET	DT	Number=Sing|PronType=Dem	11	det	11:det	_
-11	kind	kind	NOUN	NN	Number=Sing	7	obl	7:obl	_
+11	kind	kind	NOUN	NN	Number=Sing	7	obl	7:obl:to	_
 12	of	of	ADP	IN	_	14	case	14:case	_
 13	little	little	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	things	thing	NOUN	NNS	Number=Plur	11	nmod	11:nmod	_
+14	things	thing	NOUN	NNS	Number=Plur	11	nmod	11:nmod:of	_
 15	while	while	SCONJ	IN	_	17	mark	17:mark	_
 16	test	test	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	drive	driving	VERB	VBG	VerbForm=Ger|Typo=Yes	7	advcl	7:advcl	SpaceAfter=No
+17	drive	driving	VERB	VBG	Typo=Yes|VerbForm=Ger	7	advcl	7:advcl:while	SpaceAfter=No
 18	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-349020-0006
@@ -95,7 +95,7 @@
 7	car	car	NOUN	NN	Number=Sing	0	root	0:root	_
 8	from	from	ADP	IN	_	10	case	10:case	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	dealer	dealer	NOUN	NN	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+10	dealer	dealer	NOUN	NN	Number=Sing	7	nmod	7:nmod:from	SpaceAfter=No
 11	.	.	PUNCT	.	_	7	punct	7:punct	SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	7	punct	7:punct	_
 
@@ -118,13 +118,13 @@
 2	told	tell	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj	_
 4	that	that	SCONJ	IN	_	9	mark	9:mark	_
-5	this	this	PRON	DT	Number=Sing|PronType=Dem	9	nsubj	9:nsubj	_
+5	this	this	PRON	DT	Number=Sing|PronType=Dem	9	nsubj	9:nsubj|11:nsubj|13:nsubj:xsubj	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 7	not	not	PART	RB	_	9	advmod	9:advmod	_
 8	under	under	ADP	IN	_	9	case	9:case	_
 9	warranty	warranty	NOUN	NN	Number=Sing	2	ccomp	2:ccomp	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	conj	9:conj	_
+11	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	conj	2:ccomp|9:conj:and	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	charge	charge	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	13	iobj	13:iobj	_
@@ -132,7 +132,7 @@
 16	175	175	NUM	CD	NumType=Card	15	nummod	15:nummod	_
 17	just	just	ADV	RB	_	19	advmod	19:advmod	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
-19	diagnose	diagnose	VERB	VB	VerbForm=Inf	13	advcl	13:advcl	_
+19	diagnose	diagnose	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:to	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	problem	problem	NOUN	NN	Number=Sing	19	obj	19:obj	SpaceAfter=No
 22	!	!	PUNCT	.	_	2	punct	2:punct	_
@@ -145,11 +145,11 @@
 4	much	much	ADJ	JJ	Degree=Pos	9	advmod	9:advmod	_
 5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
 6	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
-7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	obj	6:obj	_
+7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	obj	6:obj|9:nsubj:xsubj	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	pay	pay	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	fix	fix	VERB	VB	VerbForm=Inf	9	advcl	9:advcl	_
+11	fix	fix	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
 12	this	this	DET	DT	Number=Sing|PronType=Dem	13	det	13:det	_
 13	thing	thing	NOUN	NN	Number=Sing	11	obj	11:obj	SpaceAfter=No
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -181,6 +181,6 @@
 3	AS	as	ADV	RB	_	4	advmod	4:advmod	_
 4	FAR	far	ADV	RB	Degree=Pos	1	advmod	1:advmod	_
 5	AS	as	SCONJ	IN	_	6	case	6:case	_
-6	POSSIBLE	possible	ADJ	JJ	Degree=Pos	3	obl	3:obl	SpaceAfter=No
+6	POSSIBLE	possible	ADJ	JJ	Degree=Pos	3	obl	3:obl:as	SpaceAfter=No
 7	.	.	PUNCT	.	_	1	punct	1:punct	_
 

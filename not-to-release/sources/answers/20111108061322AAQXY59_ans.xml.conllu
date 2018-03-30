@@ -5,7 +5,7 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	statue	statue	NOUN	NN	Number=Sing	7	nsubj:pass	7:nsubj:pass	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	David	David	PROPN	NNP	Number=Sing	3	nmod	3:nmod	_
+5	David	David	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	_
 6	be	be	AUX	VB	VerbForm=Inf	7	aux:pass	7:aux:pass	_
 7	censored	censor	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	SpaceAfter=No
 8	?	?	PUNCT	.	_	7	punct	7:punct	_
@@ -18,24 +18,24 @@
 4	sophomore	sophomore	NOUN	NN	Number=Sing	0	root	0:root	_
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	high	high	ADJ	JJ	Degree=Pos	7	amod	7:amod	SpaceAfter=No
-7	school	school	NOUN	NN	Number=Sing	4	nmod	4:nmod	_
+7	school	school	NOUN	NN	Number=Sing	4	nmod	4:nmod:in	_
 8	doing	do	VERB	VBG	VerbForm=Ger	4	acl	4:acl	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	presentation	presentation	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	on	on	ADP	IN	_	13	case	13:case	_
 12	Italian	italian	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	Arts	art	NOUN	NNS	Number=Plur	10	nmod	10:nmod	_
+13	Arts	art	NOUN	NNS	Number=Plur	10	nmod	10:nmod:on	_
 14	and	and	CCONJ	CC	_	18	cc	18:cc	_
 15	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 16	teacher	teacher	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
 17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
-18	making	make	VERB	VBG	VerbForm=Ger	4	conj	4:conj	_
-19	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	18	obj	18:obj	_
+18	making	make	VERB	VBG	VerbForm=Ger	4	conj	4:conj:and	_
+19	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	18	obj	18:obj|20:nsubj:xsubj	_
 20	censor	censor	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 22	Statue	statue	NOUN	NN	Number=Sing	20	obj	20:obj	_
 23	of	of	ADP	IN	_	24	case	24:case	_
-24	David	David	PROPN	NNP	Number=Sing	22	nmod	22:nmod	SpaceAfter=No
+24	David	David	PROPN	NNP	Number=Sing	22	nmod	22:nmod:of	SpaceAfter=No
 25	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108061322AAQXY59_ans-0003
@@ -43,7 +43,7 @@
 1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	argument	argument	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
 3	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	SpaceAfter=No
+4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj|12:nsubj:pass	SpaceAfter=No
 5	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 6	art	art	NOUN	NN	Number=Sing	3	ccomp	3:ccomp	_
 7	and	and	CCONJ	CC	_	12	cc	12:cc	_
@@ -51,11 +51,11 @@
 9	should	should	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 10	not	not	PART	RB	_	12	advmod	12:advmod	_
 11	be	be	AUX	VB	VerbForm=Inf	12	aux:pass	12:aux:pass	_
-12	censored	censor	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	conj	6:conj	_
+12	censored	censor	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	conj	3:ccomp|6:conj:and	_
 13	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	SpaceAfter=No
 14	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
 15	making	make	VERB	VBG	Tense=Pres|VerbForm=Part	3	parataxis	3:parataxis	_
-16	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	15	obj	15:obj	_
+16	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	15	obj	15:obj|17:nsubj:xsubj	_
 17	censor	censor	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_
 18	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	obj	17:obj	_
 19	who	who	PRON	WP	PronType=Int	21	nsubj	21:nsubj	SpaceAfter=No
@@ -74,26 +74,26 @@
 8	of	of	ADP	IN	_	11	case	11:case	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	young	young	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	man	man	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
+11	man	man	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	_
 
 # sent_id = answers-20111108061322AAQXY59_ans-0005
 # text = the city of florence did at one time in the past put clothes on the statue
 1	the	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	city	city	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	florence	florence	PROPN	NNP	Number=Sing	2	nmod	2:nmod	_
+4	florence	florence	PROPN	NNP	Number=Sing	2	nmod	2:nmod:of	_
 5	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	12	aux	12:aux	_
 6	at	at	ADP	IN	_	8	case	8:case	_
 7	one	one	NUM	CD	NumType=Card	8	nummod	8:nummod	_
-8	time	time	NOUN	NN	Number=Sing	12	obl	12:obl	_
+8	time	time	NOUN	NN	Number=Sing	12	obl	12:obl:at	_
 9	in	in	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	past	past	NOUN	NN	Number=Sing	8	nmod	8:nmod	_
+11	past	past	NOUN	NN	Number=Sing	8	nmod	8:nmod:in	_
 12	put	put	VERB	VB	VerbForm=Inf	0	root	0:root	_
 13	clothes	clothes	NOUN	NNS	Number=Plur	12	obj	12:obj	_
 14	on	on	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	statue	statue	NOUN	NN	Number=Sing	12	obl	12:obl	_
+16	statue	statue	NOUN	NN	Number=Sing	12	obl	12:obl:on	_
 
 # sent_id = answers-20111108061322AAQXY59_ans-0006
 # text = An art teacher in the mid-cities area of Dallas/Ft.Worth metro got fired because she took an art class on an approved field trip with parental permission for each student and some hysterical parent discovered that they saw "nudes" in the museum.
@@ -103,18 +103,18 @@
 4	in	in	ADP	IN	_	7	case	7:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	mid-cities	mid-city	NOUN	NNS	Number=Plur	7	compound	7:compound	_
-7	area	area	NOUN	NN	Number=Sing	3	nmod	3:nmod	_
+7	area	area	NOUN	NN	Number=Sing	3	nmod	3:nmod:in	_
 8	of	of	ADP	IN	_	13	case	13:case	_
 9	Dallas	Dallas	PROPN	NNP	Number=Sing	13	compound	13:compound	SpaceAfter=No
 10	/	/	PUNCT	,	_	12	cc	12:cc	SpaceAfter=No
 11	Ft.	Ft.	PROPN	NNP	Number=Sing	12	compound	12:compound	SpaceAfter=No
-12	Worth	Worth	PROPN	NNP	Number=Sing	9	conj	9:conj	_
-13	metro	metro	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
+12	Worth	Worth	PROPN	NNP	Number=Sing	9	conj	9:conj|13:compound	_
+13	metro	metro	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	_
 14	got	get	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	aux:pass	15:aux:pass	_
 15	fired	fire	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 16	because	because	SCONJ	IN	_	18	mark	18:mark	_
 17	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
-18	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	advcl	15:advcl	_
+18	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	advcl	15:advcl:because	_
 19	an	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 20	art	art	NOUN	NN	Number=Sing	21	compound	21:compound	_
 21	class	class	NOUN	NN	Number=Sing	18	obj	18:obj	_
@@ -122,18 +122,18 @@
 23	an	a	DET	DT	Definite=Ind|PronType=Art	26	det	26:det	_
 24	approved	approve	VERB	VBN	Tense=Past|VerbForm=Part	26	amod	26:amod	_
 25	field	field	NOUN	NN	Number=Sing	26	compound	26:compound	_
-26	trip	trip	NOUN	NN	Number=Sing	18	obl	18:obl	_
+26	trip	trip	NOUN	NN	Number=Sing	18	obl	18:obl:on	_
 27	with	with	ADP	IN	_	29	case	29:case	_
 28	parental	parental	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
-29	permission	permission	NOUN	NN	Number=Sing	26	nmod	26:nmod	_
+29	permission	permission	NOUN	NN	Number=Sing	26	nmod	26:nmod:with	_
 30	for	for	ADP	IN	_	32	case	32:case	_
 31	each	each	DET	DT	_	32	det	32:det	_
-32	student	student	NOUN	NN	Number=Sing	29	nmod	29:nmod	_
+32	student	student	NOUN	NN	Number=Sing	29	nmod	29:nmod:for	_
 33	and	and	CCONJ	CC	_	37	cc	37:cc	_
 34	some	some	DET	DT	_	36	det	36:det	_
 35	hysterical	hysterical	ADJ	JJ	Degree=Pos	36	amod	36:amod	_
 36	parent	parent	NOUN	NN	Number=Sing	37	nsubj	37:nsubj	_
-37	discovered	discover	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	conj	15:conj	_
+37	discovered	discover	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	conj	15:conj:and	_
 38	that	that	SCONJ	IN	_	40	mark	40:mark	_
 39	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	40	nsubj	40:nsubj	_
 40	saw	see	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	37	ccomp	37:ccomp	_
@@ -142,7 +142,7 @@
 43	"	"	PUNCT	''	_	42	punct	42:punct	_
 44	in	in	ADP	IN	_	46	case	46:case	_
 45	the	the	DET	DT	Definite=Def|PronType=Art	46	det	46:det	_
-46	museum	museum	NOUN	NN	Number=Sing	40	obl	40:obl	SpaceAfter=No
+46	museum	museum	NOUN	NN	Number=Sing	40	obl	40:obl:in	SpaceAfter=No
 47	.	.	PUNCT	.	_	15	punct	15:punct	_
 
 # sent_id = answers-20111108061322AAQXY59_ans-0007
@@ -156,36 +156,36 @@
 7	because	because	ADP	IN	_	10	case	10:case	_
 8	of	of	ADP	IN	_	7	fixed	7:fixed	_
 9	female	female	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	nudes	nude	NOUN	NNS	Number=Plur	6	obl	6:obl	_
+10	nudes	nude	NOUN	NNS	Number=Plur	6	obl	6:obl:because_of	_
 11	considering	consider	VERB	VBG	VerbForm=Ger	6	advcl	6:advcl	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 13	nearly	nearly	ADV	RB	_	14	advmod	14:advmod	_
 14	naked	naked	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	girls	girl	NOUN	NNS	Number=Plur	11	obj	11:obj	SpaceAfter=No
 16	/	/	PUNCT	,	_	17	cc	17:cc	SpaceAfter=No
-17	women	woman	NOUN	NNS	Number=Plur	15	conj	15:conj	_
+17	women	woman	NOUN	NNS	Number=Plur	15	conj	11:obj|15:conj:and	_
 18	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	15	acl	15:acl	_
 19	at	at	ADP	IN	_	20	case	20:case	_
-20	pools	pool	NOUN	NNS	Number=Plur	18	obl	18:obl	_
+20	pools	pool	NOUN	NNS	Number=Plur	18	obl	18:obl:at	_
 21	and	and	CCONJ	CC	_	22	cc	22:cc	_
-22	beaches	beach	NOUN	NNS	Number=Plur	20	conj	20:conj	_
+22	beaches	beach	NOUN	NNS	Number=Plur	20	conj	18:obl:at|20:conj:and	_
 23	and	and	CCONJ	CC	_	27	cc	27:cc	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 25	completely	completely	ADV	RB	_	26	advmod	26:advmod	_
 26	naked	naked	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	manikins	manikin	NOUN	NNS	Number=Plur	15	conj	15:conj	_
-28	that	that	PRON	WDT	PronType=Rel	29	nsubj	29:nsubj	_
+27	manikins	manikin	NOUN	NNS	Number=Plur	15	conj	11:obj|15:conj:and|29:nsubj:relsubj	_
+28	that	that	PRON	WDT	PronType=Rel	29	nsubj	27:ref	_
 29	show	show	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	27	acl:relcl	27:acl:relcl	_
 30	up	up	ADP	RP	_	29	compound:prt	29:compound:prt	_
 31	in	in	ADP	IN	_	33	case	33:case	_
 32	store	store	NOUN	NN	Number=Sing	33	compound	33:compound	_
-33	windows	window	NOUN	NNS	Number=Plur	29	obl	29:obl	_
+33	windows	window	NOUN	NNS	Number=Plur	29	obl	29:obl:in	_
 34	in	in	ADP	IN	_	35	case	35:case	_
-35	malls	mall	NOUN	NNS	Number=Plur	33	nmod	33:nmod	_
+35	malls	mall	NOUN	NNS	Number=Plur	33	nmod	33:nmod:in	_
 36	during	during	ADP	IN	_	37	case	37:case	_
-37	changes	change	NOUN	NNS	Number=Plur	29	obl	29:obl	_
+37	changes	change	NOUN	NNS	Number=Plur	29	obl	29:obl:during	_
 38	in	in	ADP	IN	_	39	case	39:case	_
-39	display	display	NOUN	NN	Number=Sing	37	nmod	37:nmod	SpaceAfter=No
+39	display	display	NOUN	NN	Number=Sing	37	nmod	37:nmod:in	SpaceAfter=No
 40	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108061322AAQXY59_ans-0008
@@ -200,16 +200,16 @@
 # sent_id = answers-20111108061322AAQXY59_ans-0009
 # text = Your teacher knows what goes on in your community and wants to keep her job.
 1	Your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	teacher	teacher	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
+2	teacher	teacher	NOUN	NN	Number=Sing	3	nsubj	3:nsubj|11:nsubj|13:nsubj:xsubj	_
 3	knows	know	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	what	what	PRON	WP	PronType=Int	5	nsubj	5:nsubj	_
 5	goes	go	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
 6	on	on	ADP	RP	_	5	compound:prt	5:compound:prt	_
 7	in	in	ADP	IN	_	9	case	9:case	_
 8	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	community	community	NOUN	NN	Number=Sing	5	obl	5:obl	_
+9	community	community	NOUN	NN	Number=Sing	5	obl	5:obl:in	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+11	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	keep	keep	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
@@ -219,25 +219,25 @@
 # sent_id = answers-20111108061322AAQXY59_ans-0010
 # text = Let her do it - argue when you are of age and can battle the other adults in your community - skipping of course telling your boss he/she is a prudish ignoramus because you want to keep your job.
 1	Let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	1	obj	1:obj	_
+2	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	1	obj	1:obj|3:nsubj:xsubj	_
 3	do	do	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
 4	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 5	-	-	PUNCT	,	_	1	punct	1:punct	_
 6	argue	argue	VERB	VB	Mood=Imp|VerbForm=Fin	1	parataxis	1:parataxis	_
 7	when	when	ADV	WRB	PronType=Int	11	mark	11:mark	_
-8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
+8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj|14:nsubj	_
 9	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	age	age	NOUN	NN	Number=Sing	6	advcl	6:advcl	_
+11	age	age	NOUN	NN	Number=Sing	6	advcl	6:advcl:of	_
 12	and	and	CCONJ	CC	_	14	cc	14:cc	_
 13	can	can	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
-14	battle	battle	VERB	VB	VerbForm=Inf	11	conj	11:conj	_
+14	battle	battle	VERB	VB	VerbForm=Inf	11	conj	6:advcl:of|11:conj:and	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	other	other	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	adults	adult	NOUN	NNS	Number=Plur	14	obj	14:obj	_
 18	in	in	ADP	IN	_	20	case	20:case	_
 19	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
-20	community	community	NOUN	NN	Number=Sing	17	nmod	17:nmod	_
+20	community	community	NOUN	NN	Number=Sing	17	nmod	17:nmod:in	_
 21	-	-	PUNCT	,	_	14	punct	14:punct	_
 22	skipping	skip	VERB	VBG	VerbForm=Ger	14	advcl	14:advcl	_
 23	of	of	ADV	RB	_	22	advmod	22:advmod	_
@@ -247,14 +247,14 @@
 27	boss	boss	NOUN	NN	Number=Sing	25	iobj	25:iobj	_
 28	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	34	nsubj	34:nsubj	SpaceAfter=No
 29	/	/	PUNCT	,	_	30	cc	30:cc	SpaceAfter=No
-30	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	28	conj	28:conj	_
+30	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	28	conj	28:conj|34:nsubj	_
 31	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	34	cop	34:cop	_
 32	a	a	DET	DT	Definite=Ind|PronType=Art	34	det	34:det	_
 33	prudish	prudish	ADJ	JJ	Degree=Pos	34	amod	34:amod	_
 34	ignoramus	ignoramus	NOUN	NN	Number=Sing	25	ccomp	25:ccomp	_
 35	because	because	SCONJ	IN	_	37	mark	37:mark	_
-36	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	37	nsubj	37:nsubj	_
-37	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	advcl	22:advcl	_
+36	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	37	nsubj	37:nsubj|39:nsubj:xsubj	_
+37	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	advcl	22:advcl:because	_
 38	to	to	PART	TO	_	39	mark	39:mark	_
 39	keep	keep	VERB	VB	VerbForm=Inf	37	xcomp	37:xcomp	_
 40	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	41	nmod:poss	41:nmod:poss	_

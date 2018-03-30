@@ -6,22 +6,22 @@
 3	at	at	ADP	IN	_	6	case	6:case	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	good	good	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	price	price	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+6	price	price	NOUN	NN	Number=Sing	2	nmod	2:nmod:at	_
 
 # sent_id = reviews-031113-0002
 # text = I just moved nearby and have tried several of the local places, this was the first one and I should have just stuck with it.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|7:nsubj	_
 2	just	just	ADV	RB	_	3	advmod	3:advmod	_
 3	moved	move	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	nearby	nearby	ADV	RB	_	3	advmod	3:advmod	_
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
 6	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
-7	tried	try	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj	_
+7	tried	try	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj:and	_
 8	several	several	ADJ	JJ	Degree=Pos	7	obj	7:obj	_
 9	of	of	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	local	local	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	places	place	NOUN	NNS	Number=Plur	8	obl	8:obl	SpaceAfter=No
+12	places	place	NOUN	NNS	Number=Plur	8	obl	8:obl:of	SpaceAfter=No
 13	,	,	PUNCT	,	_	3	punct	3:punct	_
 14	this	this	PRON	DT	Number=Sing|PronType=Dem	18	nsubj	18:nsubj	_
 15	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	18:cop	_
@@ -33,9 +33,9 @@
 21	should	should	AUX	MD	VerbForm=Fin	24	aux	24:aux	_
 22	have	have	AUX	VB	VerbForm=Inf	24	aux	24:aux	_
 23	just	just	ADV	RB	_	24	advmod	24:advmod	_
-24	stuck	stick	VERB	VBN	Tense=Past|VerbForm=Part	18	conj	18:conj	_
+24	stuck	stick	VERB	VBN	Tense=Past|VerbForm=Part	18	conj	18:conj:and	_
 25	with	with	ADP	IN	_	26	case	26:case	_
-26	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	24	obl	24:obl	SpaceAfter=No
+26	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	24	obl	24:obl:with	SpaceAfter=No
 27	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-031113-0003
@@ -59,9 +59,9 @@
 17	Friday	Friday	PROPN	NNP	Number=Sing	18	compound	18:compound	_
 18	night	night	NOUN	NN	Number=Sing	6	parataxis	6:parataxis	_
 19	and	and	CCONJ	CC	_	22	cc	22:cc	_
-20	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	22	nsubj	22:nsubj	_
+20	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	22	nsubj	22:nsubj|25:nsubj:xsubj	_
 21	just	just	ADV	RB	_	22	advmod	22:advmod	_
-22	needed	need	VERB	VBN	Tense=Past|VerbForm=Part	18	conj	18:conj	_
+22	needed	need	VERB	VBN	Tense=Past|VerbForm=Part	18	conj	18:conj:and	_
 23	to	to	PART	TO	_	25	mark	25:mark	_
 24	be	be	AUX	VB	VerbForm=Inf	25	aux:pass	25:aux:pass	_
 25	cooked	cook	VERB	VBN	Tense=Past|VerbForm=Part	22	xcomp	22:xcomp	_
@@ -73,7 +73,7 @@
 31	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	34	nsubj	34:nsubj	_
 32	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	34	cop	34:cop	_
 33	still	still	ADV	RB	_	34	advmod	34:advmod	_
-34	good	good	ADJ	JJ	Degree=Pos	18	conj	18:conj	SpaceAfter=No
+34	good	good	ADJ	JJ	Degree=Pos	18	conj	18:conj:and	SpaceAfter=No
 35	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-031113-0004
@@ -87,7 +87,7 @@
 7	of	of	ADP	IN	_	10	case	10:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	better	better	ADJ	JJR	Degree=Cmp	10	amod	10:amod	_
-10	ones	one	NOUN	NNS	Number=Plur	6	nmod	6:nmod	_
+10	ones	one	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
 12	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
 13	ever	ever	ADV	RB	_	14	advmod	14:advmod	_

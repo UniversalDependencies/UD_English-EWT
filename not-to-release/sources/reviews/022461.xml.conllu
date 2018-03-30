@@ -5,7 +5,7 @@
 2	best	best	ADJ	JJS	Degree=Sup	0	root	0:root	_
 3	in	in	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	area	area	NOUN	NN	Number=Sing	2	obl	2:obl	SpaceAfter=No
+5	area	area	NOUN	NN	Number=Sing	2	obl	2:obl:in	SpaceAfter=No
 6	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-022461-0002
@@ -21,15 +21,15 @@
 9	shops	shop	NOUN	NNS	Number=Plur	0	root	0:root	_
 10	around	around	ADP	IN	_	12	case	12:case	_
 11	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	12:det	_
-12	area	area	NOUN	NN	Number=Sing	9	nmod	9:nmod	_
+12	area	area	NOUN	NN	Number=Sing	9	nmod	9:nmod:around	_
 13	and	and	CCONJ	CC	_	20	cc	20:cc	_
 14	Stainless	Stainless	PROPN	NNP	Number=Sing	15	compound	15:compound	_
 15	Steel	Steel	PROPN	NNP	Number=Sing	20	nsubj	20:nsubj	_
 16	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	20:cop	_
 17	by	by	ADP	IN	_	18	case	18:case	_
-18	far	far	ADV	RB	Degree=Pos	20	obl	20:obl	_
+18	far	far	ADV	RB	Degree=Pos	20	obl	20:obl:by	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
-20	best	best	ADJ	JJS	Degree=Sup	9	conj	9:conj	SpaceAfter=No
+20	best	best	ADJ	JJS	Degree=Sup	9	conj	9:conj:and	SpaceAfter=No
 21	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = reviews-022461-0003
@@ -40,12 +40,12 @@
 4	pleased	pleased	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	with	with	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	tattoos	tattoo	NOUN	NNS	Number=Plur	4	obl	4:obl	_
-8	that	that	PRON	WDT	PronType=Rel	10	obj	10:obj	_
+7	tattoos	tattoo	NOUN	NNS	Number=Plur	4	obl	4:obl:with|10:obl:relobj	_
+8	that	that	PRON	WDT	PronType=Rel	10	obj	7:ref	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 10	revived	revive	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
 11	from	from	ADP	IN	_	12	case	12:case	_
-12	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	10	obl	10:obl	SpaceAfter=No
+12	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	10	obl	10:obl:from	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-022461-0004
@@ -59,7 +59,7 @@
 7	prices	price	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
 8	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 9	very	very	ADV	RB	_	10	advmod	10:advmod	_
-10	reasonable	reasonable	ADJ	JJ	Degree=Pos	4	conj	4:conj	SpaceAfter=No
+10	reasonable	reasonable	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-022461-0005
@@ -70,7 +70,7 @@
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
 5	shop	shop	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	to	to	ADP	IN	_	7	case	7:case	_
-7	anyone	anyone	PRON	NN	Number=Sing	3	obl	3:obl	_
+7	anyone	anyone	PRON	NN	Number=Sing	3	obl	3:obl:to	_
 8	looking	look	VERB	VBG	VerbForm=Ger	7	acl	7:acl	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	get	get	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_

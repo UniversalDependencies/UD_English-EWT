@@ -3,9 +3,9 @@
 # text = weather in december in Tremblant?
 1	weather	weather	NOUN	NN	Number=Sing	0	root	0:root	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	december	december	PROPN	NNP	Number=Sing	1	nmod	1:nmod	_
+3	december	december	PROPN	NNP	Number=Sing	1	nmod	1:nmod:in	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	Tremblant	Tremblant	PROPN	NNP	Number=Sing	1	nmod	1:nmod	SpaceAfter=No
+5	Tremblant	Tremblant	PROPN	NNP	Number=Sing	1	nmod	1:nmod:in	SpaceAfter=No
 6	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108101906AA2JJqq_ans-0002
@@ -18,20 +18,20 @@
 
 # sent_id = answers-20111108101906AA2JJqq_ans-0003
 # text = There may or may not be snow, depending on local weather conditions.
-1	There	there	PRON	EX	_	6	expl	6:expl	_
-2	may	may	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
+1	There	there	PRON	EX	_	2	expl	2:expl	_
+2	may	may	AUX	MD	VerbForm=Fin	0	root	0:root	_
 3	or	or	CCONJ	CC	_	4	cc	4:cc	_
-4	may	may	AUX	MD	VerbForm=Fin	6	conj	6:conj	_
+4	may	may	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 5	not	not	PART	RB	_	6	advmod	6:advmod	_
-6	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	_
-7	snow	snow	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	SpaceAfter=No
-8	,	,	PUNCT	,	_	7	punct	7:punct	_
+6	be	be	VERB	VB	VerbForm=Inf	2	conj	2:conj:or	_
+7	snow	snow	NOUN	NN	Number=Sing	6	nsubj	2:nsubj|6:nsubj	SpaceAfter=No
+8	,	,	PUNCT	,	_	2	punct	2:punct	_
 9	depending	depend	VERB	VBG	VerbForm=Ger	13	case	13:case	_
 10	on	on	ADP	IN	_	13	case	13:case	_
 11	local	local	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 12	weather	weather	NOUN	NN	Number=Sing	13	compound	13:compound	_
-13	conditions	condition	NOUN	NNS	Number=Plur	7	nmod	7:nmod	SpaceAfter=No
-14	.	.	PUNCT	.	_	7	punct	7:punct	_
+13	conditions	condition	NOUN	NNS	Number=Plur	2	obl	2:obl:on	SpaceAfter=No
+14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108101906AA2JJqq_ans-0004
 # text = In the ski resort areas, there will likely be man-made snow on the slopes.
@@ -39,7 +39,7 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 3	ski	ski	NOUN	NN	Number=Sing	4	compound	4:compound	_
 4	resort	resort	NOUN	NN	Number=Sing	5	compound	5:compound	_
-5	areas	area	NOUN	NNS	Number=Plur	14	obl	14:obl	SpaceAfter=No
+5	areas	area	NOUN	NNS	Number=Plur	14	obl	14:obl:in	SpaceAfter=No
 6	,	,	PUNCT	,	_	14	punct	14:punct	_
 7	there	there	PRON	EX	_	14	expl	14:expl	_
 8	will	will	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
@@ -51,6 +51,6 @@
 14	snow	snow	NOUN	NN	Number=Sing	0	root	0:root	_
 15	on	on	ADP	IN	_	17	case	17:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
-17	slopes	slope	NOUN	NNS	Number=Plur	14	obl	14:obl	SpaceAfter=No
+17	slopes	slope	NOUN	NNS	Number=Plur	14	obl	14:obl:on	SpaceAfter=No
 18	.	.	PUNCT	.	_	14	punct	14:punct	_
 

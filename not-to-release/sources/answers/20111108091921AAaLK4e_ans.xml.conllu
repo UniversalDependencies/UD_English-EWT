@@ -32,30 +32,30 @@
 2	posted	post	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	this	this	PRON	DT	Number=Sing|PronType=Dem	2	obj	2:obj	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	singles	singles	NOUN	NNS	Number=Plur	2	obl	2:obl	_
+5	singles	singles	NOUN	NNS	Number=Plur	2	obl	2:obl:in	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	dating	dating	NOUN	NN	Number=Sing	5	conj	5:conj	_
+7	dating	dating	NOUN	NN	Number=Sing	5	conj	2:obl:in|5:conj:and	_
 8	too	too	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
 9	,	,	PUNCT	,	_	2	punct	2:punct	_
 10	so	so	ADV	RB	_	14	advmod	14:advmod	_
-11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	SpaceAfter=No
+11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj|16:nsubj	SpaceAfter=No
 12	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
 13	just	just	ADV	RB	_	14	advmod	14:advmod	_
 14	copied	copy	VERB	VBN	Tense=Past|VerbForm=Part	2	parataxis	2:parataxis	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	pasted	paste	VERB	VBN	Tense=Past|VerbForm=Part	14	conj	14:conj	SpaceAfter=No
+16	pasted	paste	VERB	VBN	Tense=Past|VerbForm=Part	14	conj	14:conj:and	SpaceAfter=No
 17	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0005
 # text = Well, I'll try to make this short.
 1	Well	well	INTJ	UH	_	5	discourse	5:discourse	SpaceAfter=No
 2	,	,	PUNCT	,	_	5	punct	5:punct	_
-3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	SpaceAfter=No
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj	SpaceAfter=No
 4	'll	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 5	try	try	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	make	make	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
-8	this	this	PRON	DT	Number=Sing|PronType=Dem	7	obj	7:obj	_
+8	this	this	PRON	DT	Number=Sing|PronType=Dem	7	obj	7:obj|9:nsubj:xsubj	_
 9	short	short	ADJ	JJ	Degree=Pos	7	xcomp	7:xcomp	SpaceAfter=No
 10	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -69,17 +69,17 @@
 6	for	for	ADP	IN	_	9	case	9:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	long	long	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	time	time	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+9	time	time	NOUN	NN	Number=Sing	3	obl	3:obl:for	SpaceAfter=No
 10	,	,	PUNCT	,	_	17	punct	17:punct	_
 11	but	but	CCONJ	CC	_	17	cc	17:cc	_
-12	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	17	nsubj	17:nsubj	SpaceAfter=No
+12	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	17	nsubj	17:nsubj|19:nsubj	SpaceAfter=No
 13	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
 14	never	never	ADV	RB	_	17	advmod	17:advmod	_
 15	been	be	AUX	VBN	Tense=Past|VerbForm=Part	17	cop	17:cop	_
 16	good	good	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	friends	friend	NOUN	NNS	Number=Plur	3	conj	3:conj	_
+17	friends	friend	NOUN	NNS	Number=Plur	3	conj	3:conj:but	_
 18	or	or	CCONJ	CC	_	19	cc	19:cc	_
-19	anything	anything	PRON	NN	Number=Sing	17	conj	17:conj	SpaceAfter=No
+19	anything	anything	PRON	NN	Number=Sing	17	conj	17:conj:or	SpaceAfter=No
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0007
@@ -102,8 +102,8 @@
 16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 17	client	client	NOUN	NN	Number=Sing	4	parataxis	4:parataxis	_
 18	if	if	SCONJ	IN	_	20	mark	20:mark	_
-19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	20:nsubj	_
-20	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl	_
+19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	20:nsubj|22:nsubj:xsubj	_
+20	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl:if	_
 21	to	to	PART	TO	_	22	mark	22:mark	_
 22	view	view	VERB	VB	VerbForm=Inf	20	xcomp	20:xcomp	_
 23	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	22	obj	22:obj	_
@@ -119,11 +119,11 @@
 4	two	two	NUM	CD	NumType=Card	5	nummod	5:nummod	_
 5	weeks	week	NOUN	NNS	Number=Plur	6	obl:npmod	6:obl:npmod	_
 6	ago	ago	ADV	RB	_	8	advmod	8:advmod	_
-7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
+7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj|11:nsubj|19:nsubj	_
 8	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	out	out	ADV	RB	_	8	advmod	8:advmod	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	conj	8:conj	_
+11	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	conj	8:conj:and	_
 12	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	horse	horse	NOUN	NN	Number=Sing	15	nmod:poss	15:nmod:poss	SpaceAfter=No
 14	s	's	PART	POS	_	13	case	13:case	_
@@ -131,7 +131,7 @@
 16	and	and	CCONJ	CC	_	19	cc	19:cc	_
 17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	cop	19:cop	_
 18	SO	so	ADV	RB	_	19	advmod	19:advmod	_
-19	flirty	flirty	ADJ	JJ	Degree=Pos	8	conj	8:conj	SpaceAfter=No
+19	flirty	flirty	ADJ	JJ	Degree=Pos	8	conj	8:conj:and	SpaceAfter=No
 20	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0009
@@ -142,14 +142,14 @@
 4	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	obj	3:obj	_
 5	when	when	ADV	WRB	PronType=Int	7	mark	7:mark	_
 6	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
-7	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl	SpaceAfter=No
+7	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:when	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	but	but	CCONJ	CC	_	11	cc	11:cc	_
 10	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
-11	gave	give	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj	_
+11	gave	give	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj:but	_
 12	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	11	iobj	11:iobj	_
 13	at	at	ADV	RB	_	14	case	14:case	_
-14	least	least	ADV	RBS	Degree=Sup	15	nmod	15:nmod	_
+14	least	least	ADV	RBS	Degree=Sup	15	nmod	15:nmod:at	_
 15	5	5	NUM	CD	NumType=Card	22	nummod	22:nummod	_
 16	tight	tight	ADJ	JJ	Degree=Pos	22	amod	22:amod	SpaceAfter=No
 17	,	,	PUNCT	,	_	22	punct	22:punct	_
@@ -161,7 +161,7 @@
 23	while	while	SCONJ	IN	_	26	mark	26:mark	_
 24	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	26	nsubj	26:nsubj	_
 25	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	26	cop	26:cop	_
-26	there	there	ADV	RB	PronType=Dem	11	advcl	11:advcl	SpaceAfter=No
+26	there	there	ADV	RB	PronType=Dem	11	advcl	11:advcl:while	SpaceAfter=No
 27	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0010
@@ -176,10 +176,10 @@
 8	horse	horse	NOUN	NN	Number=Sing	11	nmod:poss	11:nmod:poss	SpaceAfter=No
 9	's	's	PART	POS	_	8	case	8:case	_
 10	crappy	crappy	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	feet	foot	NOUN	NNS	Number=Plur	5	obl	5:obl	_
+11	feet	foot	NOUN	NNS	Number=Plur	5	obl	5:obl:about	_
 12	and	and	CCONJ	CC	_	14	cc	14:cc	_
 13	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
-14	mentioned	mention	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj	SpaceAfter=No
+14	mentioned	mention	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj:and	SpaceAfter=No
 15	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0011
@@ -188,26 +188,26 @@
 2	Well	well	INTJ	UH	_	14	discourse	14:discourse	SpaceAfter=No
 3	,	,	PUNCT	,	_	14	punct	14:punct	_
 4	if	if	SCONJ	IN	_	8	mark	8:mark	_
-5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
+5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 6	ever	ever	ADV	RB	_	8	advmod	8:advmod	_
 7	just	just	ADV	RB	_	8	advmod	8:advmod	_
-8	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl	_
+8	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:if	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	see	see	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
 11	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	10	obj	10:obj	_
-12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	SpaceAfter=No
+12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj|17:nsubj	SpaceAfter=No
 13	'll	will	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
 14	come	come	VERB	VB	VerbForm=Inf	0	root	0:root	_
 15	out	out	ADV	RB	_	14	advmod	14:advmod	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	look	look	VERB	VB	VerbForm=Inf	14	conj	14:conj	_
+17	look	look	VERB	VB	VerbForm=Inf	14	conj	14:conj:and	_
 18	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	obj	17:obj	_
 19	over	over	ADP	RP	_	17	compound:prt	17:compound:prt	_
 20	and	and	CCONJ	CC	_	24	cc	24:cc	_
 21	then	then	ADV	RB	PronType=Dem	24	advmod	24:advmod	_
 22	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	24	nsubj	24:nsubj	_
 23	can	can	AUX	MD	VerbForm=Fin	24	aux	24:aux	_
-24	grab	grab	VERB	VB	VerbForm=Inf	14	conj	14:conj	_
+24	grab	grab	VERB	VB	VerbForm=Inf	14	conj	14:conj:and	_
 25	a	a	DET	DT	Definite=Ind|PronType=Art	26	det	26:det	_
 26	coffee	coffee	NOUN	NN	Number=Sing	24	obj	24:obj	_
 27	after	after	ADV	RB	_	24	advmod	24:advmod	SpaceAfter=No
@@ -228,7 +228,7 @@
 10	realizing	realize	VERB	VBG	Tense=Pres|VerbForm=Part	4	parataxis	4:parataxis	_
 11	at	at	ADP	IN	_	13	case	13:case	_
 12	that	that	DET	DT	Number=Sing|PronType=Dem	13	det	13:det	_
-13	point	point	NOUN	NN	Number=Sing	10	obl	10:obl	_
+13	point	point	NOUN	NN	Number=Sing	10	obl	10:obl:at	_
 14	that	that	SCONJ	IN	_	19	mark	19:mark	_
 15	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	nsubj	19:nsubj	_
 16	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	cop	19:cop	_
@@ -258,7 +258,7 @@
 12	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	horse	horse	NOUN	NN	Number=Sing	15	nmod:poss	15:nmod:poss	SpaceAfter=No
 14	s	's	PART	POS	_	13	case	13:case	_
-15	foot	foot	NOUN	NN	Number=Sing	7	obl	7:obl	SpaceAfter=No
+15	foot	foot	NOUN	NN	Number=Sing	7	obl	7:obl:of	SpaceAfter=No
 16	(	(	PUNCT	-LRB-	_	20	punct	20:punct	SpaceAfter=No
 17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj	SpaceAfter=No
 18	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
@@ -267,11 +267,11 @@
 21	of	of	SCONJ	IN	_	24	mark	24:mark	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
 23	farrier	farrier	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	_
-24	doing	do	VERB	VBG	VerbForm=Ger	20	advcl	20:advcl	_
+24	doing	do	VERB	VBG	VerbForm=Ger	20	advcl	20:advcl:of	_
 25	this	this	PRON	DT	Number=Sing|PronType=Dem	24	obj	24:obj	SpaceAfter=No
 26	)	)	PUNCT	-RRB-	_	20	punct	20:punct	_
 27	and	and	CCONJ	CC	_	28	cc	28:cc	_
-28	telling	tell	VERB	VBG	VerbForm=Ger	7	conj	7:conj	_
+28	telling	tell	VERB	VBG	VerbForm=Ger	7	conj	5:ccomp|7:conj:and	_
 29	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	28	iobj	28:iobj	_
 30	to	to	PART	TO	_	31	mark	31:mark	_
 31	call	call	VERB	VB	VerbForm=Inf	28	xcomp	28:xcomp	_
@@ -279,7 +279,7 @@
 33	in	in	ADP	IN	_	36	case	36:case	_
 34	a	a	DET	DT	Definite=Ind|PronType=Art	36	det	36:det	_
 35	few	few	ADJ	JJ	Degree=Pos	36	amod	36:amod	_
-36	days	day	NOUN	NNS	Number=Plur	31	obl	31:obl	SpaceAfter=No
+36	days	day	NOUN	NNS	Number=Plur	31	obl	31:obl:in	SpaceAfter=No
 37	(	(	PUNCT	-LRB-	_	42	punct	42:punct	SpaceAfter=No
 38	first	first	ADV	RB	_	42	advmod	42:advmod	_
 39	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	42	nsubj	42:nsubj	_
@@ -296,20 +296,20 @@
 50	lol	lol	INTJ	UH	_	49	discourse	49:discourse	SpaceAfter=No
 51	)	)	PUNCT	-RRB-	_	42	punct	42:punct	_
 52	and	and	CCONJ	CC	_	55	cc	55:cc	_
-53	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	55	nsubj	55:nsubj	SpaceAfter=No
+53	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	55	nsubj	55:nsubj|59:nsubj	SpaceAfter=No
 54	'd	would	AUX	MD	VerbForm=Fin	55	aux	55:aux	_
-55	come	come	VERB	VB	VerbForm=Inf	31	conj	31:conj	_
+55	come	come	VERB	VB	VerbForm=Inf	31	conj	28:xcomp|31:conj:and	_
 56	back	back	ADV	RB	_	57	advmod	57:advmod	_
 57	out	out	ADV	RB	_	55	advmod	55:advmod	_
 58	and	and	CCONJ	CC	_	59	cc	59:cc	_
-59	put	put	VERB	VB	VerbForm=Inf	55	conj	55:conj	_
+59	put	put	VERB	VB	VerbForm=Inf	55	conj	55:conj:and	_
 60	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	59	obj	59:obj	_
 61	in	in	ADV	RB	_	59	advmod	59:advmod	SpaceAfter=No
 62	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0015
 # text = He told me to remember to call like 3 times before he left.
-1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj|5:nsubj:xsubj|7:nsubj:xsubj	_
 2	told	tell	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	2:iobj	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -321,7 +321,7 @@
 10	times	time	NOUN	NNS	Number=Plur	7	advmod	7:advmod	_
 11	before	before	SCONJ	IN	_	13	mark	13:mark	_
 12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
-13	left	leave	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	advcl	7:advcl	SpaceAfter=No
+13	left	leave	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	advcl	7:advcl:before	SpaceAfter=No
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0016
@@ -333,22 +333,22 @@
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	week	week	NOUN	NN	Number=Sing	4	obl:tmod	4:obl:tmod	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	call	call	VERB	VB	VerbForm=Inf	4	advcl	4:advcl	_
+8	call	call	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	_
 9	because	because	SCONJ	IN	_	12	mark	12:mark	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	_
-12	busy	busy	ADJ	JJ	Degree=Pos	4	advcl	4:advcl	_
+12	busy	busy	ADJ	JJ	Degree=Pos	4	advcl	4:advcl:because	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
-14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
-15	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj	_
+14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj|17:nsubj:xsubj	_
+15	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	have	have	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_
-18	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	obj	17:obj	_
+18	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	obj	17:obj|19:nsubj:xsubj	_
 19	come	come	VERB	VB	VerbForm=Inf	17	xcomp	17:xcomp	_
 20	out	out	ADV	RB	_	19	advmod	19:advmod	_
 21	on	on	ADP	IN	_	23	case	23:case	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
-23	day	day	NOUN	NN	Number=Sing	19	obl	19:obl	_
+23	day	day	NOUN	NN	Number=Sing	19	obl	19:obl:on	_
 24	when	when	ADV	WRB	PronType=Rel	28	advmod	28:advmod	_
 25	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	28	nsubj	28:nsubj	_
 26	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	28	cop	28:cop	_
@@ -356,8 +356,8 @@
 28	available	available	ADJ	JJ	Degree=Pos	23	acl:relcl	23:acl:relcl	_
 29	in	in	ADP	IN	_	32	mark	32:mark	_
 30	case	case	NOUN	NN	Number=Sing	29	fixed	29:fixed	_
-31	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	32	nsubj	32:nsubj	_
-32	were	be	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	28	advcl	28:advcl	_
+31	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	32	nsubj	32:nsubj|34:nsubj:xsubj	_
+32	were	be	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	28	advcl	28:advcl:in_case	_
 33	to	to	PART	TO	_	34	mark	34:mark	_
 34	hang	hang	VERB	VB	VerbForm=Inf	32	xcomp	32:xcomp	_
 35	out	out	ADP	RP	_	34	compound:prt	34:compound:prt	_
@@ -375,10 +375,10 @@
 7	days	day	NOUN	NNS	Number=Plur	8	obl:npmod	8:obl:npmod	_
 8	ago	ago	ADV	RB	_	0	root	0:root	_
 9	that	that	ADV	WRB	PronType=Dem	11	advmod	11:advmod	_
-10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
+10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj|13:nsubj	_
 11	called	call	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	advcl	8:advcl	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	left	leave	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	conj	11:conj	_
+13	left	leave	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	conj	8:advcl|11:conj:and	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 15	message	message	NOUN	NN	Number=Sing	13	obj	13:obj	SpaceAfter=No
 16	,	,	PUNCT	,	_	22	punct	22:punct	_
@@ -387,7 +387,7 @@
 19	still	still	ADV	RB	_	22	advmod	22:advmod	_
 20	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	aux	22:aux	SpaceAfter=No
 21	n't	not	PART	RB	_	22	advmod	22:advmod	_
-22	called	call	VERB	VBN	Tense=Past|VerbForm=Part	8	conj	8:conj	_
+22	called	call	VERB	VBN	Tense=Past|VerbForm=Part	8	conj	8:conj:but	_
 23	back	back	ADP	RP	_	22	compound:prt	22:compound:prt	_
 24	yet	yet	ADV	RB	_	22	advmod	22:advmod	SpaceAfter=No
 25	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -399,14 +399,14 @@
 3	n't	not	PART	RB	_	4	advmod	4:advmod	_
 4	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	if	if	SCONJ	IN	_	8	mark	8:mark	_
-6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
+6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj|13:nsubj	_
 7	should	should	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	call	call	VERB	VB	VerbForm=Inf	4	advcl	4:advcl	_
+8	call	call	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:if	_
 9	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	obj	8:obj	_
 10	again	again	ADV	RB	_	8	advmod	8:advmod	_
 11	tomorrow	tomorrow	NOUN	NN	Number=Sing	8	obl:tmod	8:obl:tmod	_
 12	or	or	CCONJ	CC	_	13	cc	13:cc	_
-13	not	not	PART	RB	_	8	conj	8:conj	SpaceAfter=No
+13	not	not	PART	RB	_	8	conj	4:advcl:if|8:conj:or	SpaceAfter=No
 14	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0019
@@ -414,31 +414,31 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	lot	lot	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
+4	lot	lot	NOUN	NN	Number=Sing	7	nsubj	7:nsubj|9:nsubj:xsubj	_
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	people	people	NOUN	NNS	Number=Plur	4	nmod	4:nmod	_
+6	people	people	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
 7	say	say	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	wait	wait	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
 10	until	until	SCONJ	IN	_	12	mark	12:mark	_
 11	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
-12	calls	call	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl	_
+12	calls	call	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:until	_
 13	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	12	obj	12:obj	SpaceAfter=No
 14	,	,	PUNCT	,	_	18	punct	18:punct	_
 15	but	but	CCONJ	CC	_	18	cc	18:cc	_
 16	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj	SpaceAfter=No
 17	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
-18	different	different	ADJ	JJ	Degree=Pos	2	conj	2:conj	_
+18	different	different	ADJ	JJ	Degree=Pos	2	conj	2:conj:but	_
 19	because	because	SCONJ	IN	_	23	mark	23:mark	_
 20	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	23	nsubj	23:nsubj	SpaceAfter=No
 21	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	23	cop	23:cop	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
-23	client	client	NOUN	NN	Number=Sing	18	advcl	18:advcl	_
+23	client	client	NOUN	NN	Number=Sing	18	advcl	18:advcl:because	_
 24	and	and	CCONJ	CC	_	28	cc	28:cc	_
 25	technically	technically	ADV	RB	_	28	advmod	28:advmod	_
 26	that	that	PRON	DT	Number=Sing|PronType=Dem	28	nsubj	28:nsubj	SpaceAfter=No
 27	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	28	cop	28:cop	_
-28	all	all	DET	DT	_	23	conj	23:conj	_
+28	all	all	DET	DT	_	23	conj	18:advcl:because|23:conj:and	_
 29	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	33	nsubj	33:nsubj	_
 30	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	33	cop	33:cop	_
 31	at	at	ADP	IN	_	33	case	33:case	_
@@ -451,14 +451,14 @@
 1	On	on	ADP	IN	_	4	case	4:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 3	other	other	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	hand	hand	NOUN	NN	Number=Sing	16	obl	16:obl	_
+4	hand	hand	NOUN	NN	Number=Sing	16	obl	16:obl:on	_
 5	though	though	ADV	RB	_	16	advmod	16:advmod	SpaceAfter=No
 6	,	,	PUNCT	,	_	16	punct	16:punct	_
 7	if	if	SCONJ	IN	_	11	mark	11:mark	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	SpaceAfter=No
 9	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	client	client	NOUN	NN	Number=Sing	16	advcl	16:advcl	_
+11	client	client	NOUN	NN	Number=Sing	16	advcl	16:advcl:if	_
 12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
 13	should	should	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 14	really	really	ADV	RB	_	16	advmod	16:advmod	_
@@ -466,14 +466,14 @@
 16	called	call	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 17	back	back	ADP	RP	_	16	compound:prt	16:compound:prt	_
 18	by	by	ADP	IN	_	19	case	19:case	_
-19	now	now	ADV	RB	_	16	obl	16:obl	_
+19	now	now	ADV	RB	_	16	obl	16:obl:by	_
 20	because	because	SCONJ	IN	_	24	mark	24:mark	_
 21	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	24	nsubj	24:nsubj	_
 22	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	24	aux	24:aux	SpaceAfter=No
 23	n't	not	PART	RB	_	24	advmod	24:advmod	_
-24	leave	leave	VERB	VB	VerbForm=Inf	16	advcl	16:advcl	_
+24	leave	leave	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:because	_
 25	a	a	DET	DT	Definite=Ind|PronType=Art	26	det	26:det	_
-26	customer	customer	NOUN	NN	Number=Sing	24	obj	24:obj	_
+26	customer	customer	NOUN	NN	Number=Sing	24	obj	24:obj|27:nsubj:xsubj	_
 27	hanging	hang	VERB	VBG	VerbForm=Ger	24	xcomp	24:xcomp	SpaceAfter=No
 28	.	.	PUNCT	.	_	16	punct	16:punct	_
 
@@ -491,7 +491,7 @@
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	13	amod	13:amod	_
-13	time	time	NOUN	NN	Number=Sing	4	advcl	4:advcl	_
+13	time	time	NOUN	NN	Number=Sing	4	advcl	4:advcl:because	_
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	SpaceAfter=No
 15	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
 16	called	call	VERB	VBN	Tense=Past|VerbForm=Part	13	acl:relcl	13:acl:relcl	_
@@ -499,7 +499,7 @@
 18	instead	instead	ADV	RB	_	21	case	21:case	_
 19	of	of	ADP	IN	_	18	fixed	18:fixed	_
 20	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
-21	dad	dad	NOUN	NN	Number=Sing	16	obl	16:obl	SpaceAfter=No
+21	dad	dad	NOUN	NN	Number=Sing	16	obl	16:obl:instead_of	SpaceAfter=No
 22	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0022
@@ -509,7 +509,7 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 4	father	father	NOUN	NN	Number=Sing	7	compound	7:compound	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	son	son	NOUN	NN	Number=Sing	4	conj	4:conj	_
+6	son	son	NOUN	NN	Number=Sing	4	conj	4:conj:and|7:compound	_
 7	business	business	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 8	.	.	PUNCT	.	_	7	punct	7:punct	_
 
@@ -523,9 +523,9 @@
 6	ANY	any	DET	DT	_	7	det	7:det	_
 7	insight	insight	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	on	on	ADP	IN	_	9	case	9:case	_
-9	this	this	PRON	DT	Number=Sing|PronType=Dem	7	nmod	7:nmod	_
+9	this	this	PRON	DT	Number=Sing|PronType=Dem	7	nmod	7:nmod:on	_
 10	at	at	ADV	RB	_	11	case	11:case	_
-11	all	all	ADV	RB	_	7	nmod	7:nmod	SpaceAfter=No
+11	all	all	ADV	RB	_	7	nmod	7:nmod:at	SpaceAfter=No
 12	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0024
@@ -533,10 +533,10 @@
 1	Thank	thank	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	obj	1:obj	_
 3	for	for	ADP	IN	_	4	case	4:case	_
-4	reading	reading	NOUN	NN	Number=Sing	1	obl	1:obl	_
+4	reading	reading	NOUN	NN	Number=Sing	1	obl	1:obl:for	_
 5	if	if	SCONJ	IN	_	7	mark	7:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
-7	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	advcl	1:advcl	SpaceAfter=No
+7	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	advcl	1:advcl:if	SpaceAfter=No
 8	!	!	PUNCT	.	_	1	punct	1:punct	_
 9	:)	:)	SYM	NFP	_	1	discourse	1:discourse	_
 
@@ -552,9 +552,9 @@
 8	being	be	AUX	VBG	VerbForm=Ger	11	cop	11:cop	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	bad	bad	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	farrier	farrier	NOUN	NN	Number=Sing	5	advcl	5:advcl	_
+11	farrier	farrier	NOUN	NN	Number=Sing	5	advcl	5:advcl:as	_
 12	for	for	SCONJ	IN	_	13	mark	13:mark	_
-13	leaving	leave	VERB	VBG	VerbForm=Ger	11	advcl	11:advcl	_
+13	leaving	leave	VERB	VBG	VerbForm=Ger	11	advcl	11:advcl:for	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 15	nail	nail	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	out	out	ADV	RB	_	13	advmod	13:advmod	_
@@ -573,7 +573,7 @@
 29	farriers	farrier	NOUN	NNS	Number=Plur	22	parataxis	22:parataxis	_
 30	in	in	ADP	IN	_	32	case	32:case	_
 31	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
-32	area	area	NOUN	NN	Number=Sing	29	obl	29:obl	SpaceAfter=No
+32	area	area	NOUN	NN	Number=Sing	29	obl	29:obl:in	SpaceAfter=No
 33	.	.	PUNCT	.	_	22	punct	22:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0026
@@ -588,12 +588,12 @@
 8	if	if	SCONJ	IN	_	11	mark	11:mark	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	shoe	shoe	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
-11	fell	fall	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	advcl	7:advcl	_
+11	fell	fall	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	advcl	7:advcl:if	_
 12	off	off	ADV	RB	_	11	advmod	11:advmod	_
 13	because	because	SCONJ	IN	_	16	mark	16:mark	_
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
 15	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	aux	16:aux	_
-16	missing	miss	VERB	VBG	Tense=Pres|VerbForm=Part	11	advcl	11:advcl	_
+16	missing	miss	VERB	VBG	Tense=Pres|VerbForm=Part	11	advcl	11:advcl:because	_
 17	one	one	NUM	CD	NumType=Card	19	nummod	19:nummod	_
 18	lousy	lousy	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 19	nail	nail	NOUN	NN	Number=Sing	16	obj	16:obj	SpaceAfter=No
@@ -614,11 +614,11 @@
 11	in	in	ADV	RB	_	8	advmod	8:advmod	_
 12	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 13	because	because	SCONJ	IN	_	18	mark	18:mark	_
-14	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
+14	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj|20:nsubj:xsubj	_
 15	"	"	PUNCT	``	_	18	punct	18:punct	SpaceAfter=No
 16	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	18	aux	18:aux	SpaceAfter=No
 17	n't	not	PART	RB	_	18	advmod	18:advmod	_
-18	want	want	VERB	VB	VerbForm=Inf	12	advcl	12:advcl	_
+18	want	want	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:because	_
 19	to	to	PART	TO	_	20	mark	20:mark	_
 20	risk	risk	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
 21	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	obj	20:obj	SpaceAfter=No
@@ -628,7 +628,7 @@
 25	horse	horse	NOUN	NN	Number=Sing	28	nmod:poss	28:nmod:poss	SpaceAfter=No
 26	's	's	PART	POS	_	25	case	25:case	_
 27	horrible	horrible	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
-28	feet	foot	NOUN	NNS	Number=Plur	20	obl	20:obl	SpaceAfter=No
+28	feet	foot	NOUN	NNS	Number=Plur	20	obl	20:obl:with	SpaceAfter=No
 29	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0028
@@ -649,10 +649,10 @@
 14	because	because	SCONJ	IN	_	17	mark	17:mark	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
 16	just	just	ADV	RB	_	17	advmod	17:advmod	_
-17	switched	switch	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	advcl	6:advcl	_
+17	switched	switch	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:because	_
 18	back	back	ADV	RB	_	17	advmod	17:advmod	_
 19	to	to	ADP	IN	_	20	case	20:case	_
-20	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	17	obl	17:obl	SpaceAfter=No
+20	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	17	obl	17:obl:to	SpaceAfter=No
 21	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0029
@@ -664,26 +664,26 @@
 5	switched	switch	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
 6	away	away	ADV	RB	_	5	advmod	5:advmod	_
 7	from	from	ADP	IN	_	8	case	8:case	_
-8	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	6	obl	6:obl	_
+8	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	6	obl	6:obl:from	_
 9	in	in	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	12	amod	12:amod	_
-12	place	place	NOUN	NN	Number=Sing	5	obl	5:obl	_
+12	place	place	NOUN	NN	Number=Sing	5	obl	5:obl:in	_
 13	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 14	because	because	SCONJ	IN	_	23	mark	23:mark	_
 15	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 16	good	good	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	friend	friend	NOUN	NN	Number=Sing	23	nsubj	23:nsubj	_
-18	who	who	PRON	WP	PronType=Rel	19	nsubj	19:nsubj	_
+17	friend	friend	NOUN	NN	Number=Sing	23	nsubj	19:nsubj:relsubj|23:nsubj	_
+18	who	who	PRON	WP	PronType=Rel	19	nsubj	17:ref	_
 19	apprenticed	apprentice	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	17	acl:relcl	17:acl:relcl	_
 20	with	with	ADP	IN	_	21	case	21:case	_
-21	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	19	obl	19:obl	_
+21	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	19	obl	19:obl:with	_
 22	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	aux	23:aux	_
 23	starting	start	VERB	VBG	Tense=Pres|VerbForm=Part	13	ccomp	13:ccomp	_
 24	out	out	ADP	RP	_	23	compound:prt	23:compound:prt	_
 25	on	on	ADP	IN	_	27	case	27:case	_
 26	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	27	nmod:poss	27:nmod:poss	_
-27	own	own	ADJ	JJ	Degree=Pos	23	obl	23:obl	SpaceAfter=No
+27	own	own	ADJ	JJ	Degree=Pos	23	obl	23:obl:on	SpaceAfter=No
 28	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0030
@@ -696,15 +696,15 @@
 6	horse	horse	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	without	without	ADP	IN	_	9	case	9:case	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
-9	shoe	shoe	NOUN	NN	Number=Sing	4	obl	4:obl	_
+9	shoe	shoe	NOUN	NN	Number=Sing	4	obl	4:obl:without	_
 10	for	for	ADP	IN	_	12	case	12:case	_
 11	TWO	two	NUM	CD	NumType=Card	12	nummod	12:nummod	_
-12	WEEKS	week	NOUN	NNS	Number=Plur	4	obl	4:obl	SpaceAfter=No
+12	WEEKS	week	NOUN	NNS	Number=Plur	4	obl	4:obl:for	SpaceAfter=No
 13	(	(	PUNCT	-LRB-	_	16	punct	16:punct	SpaceAfter=No
 14	now	now	ADV	RB	_	16	advmod	16:advmod	_
 15	that	that	PRON	DT	Number=Sing|PronType=Dem	16	nsubj	16:nsubj	SpaceAfter=No
 16	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	parataxis	4:parataxis	_
-17	what	what	PRON	WP	PronType=Int	19	obj	19:obj	_
+17	what	what	PRON	WP	PronType=Int	19	obj	19:obj|22:nsubj:xsubj	_
 18	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
 19	call	call	VERB	VB	VerbForm=Inf	16	ccomp	16:ccomp	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
@@ -723,13 +723,13 @@
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	same	same	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	foot	foot	NOUN	NN	Number=Sing	0	root	0:root	_
-10	that	that	PRON	WDT	PronType=Rel	11	nsubj	11:nsubj	_
+9	foot	foot	NOUN	NN	Number=Sing	0	root	11:nsubj:relsubj|12:nsubj:xsubj	_
+10	that	that	PRON	WDT	PronType=Rel	11	nsubj	9:ref	_
 11	keeps	keep	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
 12	crumbling	crumble	VERB	VBG	VerbForm=Ger	11	xcomp	11:xcomp	_
 13	with	with	ADP	IN	_	15	case	15:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
-15	nails	nail	NOUN	NNS	Number=Plur	12	obl	12:obl	SpaceAfter=No
+15	nails	nail	NOUN	NNS	Number=Plur	12	obl	12:obl:with	SpaceAfter=No
 16	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0032
@@ -742,7 +742,7 @@
 6	back	back	ADV	RB	_	5	advmod	5:advmod	_
 7	to	to	ADP	IN	_	9	case	9:case	_
 8	these	these	DET	DT	Number=Plur|PronType=Dem	9	det	9:det	_
-9	guys	guy	NOUN	NNS	Number=Plur	6	obl	6:obl	SpaceAfter=No
+9	guys	guy	NOUN	NNS	Number=Plur	6	obl	6:obl:to	SpaceAfter=No
 10	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0033
@@ -759,12 +759,12 @@
 10	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	SpaceAfter=No
 11	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
 12	some	some	DET	DT	_	13	det	13:det	_
-13	stranger	stranger	NOUN	NN	Number=Sing	7	advcl	7:advcl	_
-14	that	that	PRON	WDT	PronType=Rel	15	nsubj	15:nsubj	_
+13	stranger	stranger	NOUN	NN	Number=Sing	7	advcl	7:advcl:like|15:nsubj:relsubj|18:nsubj:relsubj	_
+14	that	that	PRON	WDT	PronType=Rel	15	nsubj	13:ref	_
 15	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	acl:relcl	13:acl:relcl	_
 16	up	up	ADV	RB	_	15	advmod	15:advmod	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	groped	grope	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	conj	15:conj	_
+18	groped	grope	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	conj	13:acl:relcl|15:conj:and	_
 19	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	18	obj	18:obj	_
 20	lol	lol	INTJ	UH	_	7	discourse	7:discourse	SpaceAfter=No
 21	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -779,7 +779,7 @@
 6	for	for	ADP	IN	_	9	case	9:case	_
 7	about	about	ADV	RB	_	8	advmod	8:advmod	_
 8	10	10	NUM	CD	NumType=Card	9	nummod	9:nummod	_
-9	years	year	NOUN	NNS	Number=Plur	3	obl	3:obl	SpaceAfter=No
+9	years	year	NOUN	NNS	Number=Plur	3	obl	3:obl:for	SpaceAfter=No
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0035
@@ -796,7 +796,7 @@
 10	kids	kid	NOUN	NNS	Number=Plur	3	parataxis	3:parataxis	_
 11	when	when	ADV	WRB	PronType=Int	13	mark	13:mark	_
 12	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
-13	knew	know	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	advcl	10:advcl	_
+13	knew	know	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	advcl	10:advcl:when	_
 14	each	each	DET	DT	_	15	det	15:det	_
 15	other	other	ADJ	JJ	Degree=Pos	13	obj	13:obj	SpaceAfter=No
 16	!	!	PUNCT	.	_	3	punct	3:punct	_
@@ -810,7 +810,7 @@
 5	years	year	NOUN	NNS	Number=Plur	6	obl:npmod	6:obl:npmod	_
 6	older	older	ADJ	JJR	Degree=Cmp	0	root	0:root	_
 7	than	than	ADP	IN	_	8	case	8:case	_
-8	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	obl	6:obl	SpaceAfter=No
+8	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	obl	6:obl:than	SpaceAfter=No
 9	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0037
@@ -827,7 +827,7 @@
 # sent_id = answers-20111108091921AAaLK4e_ans-0038
 # text = To answer Barry White, yes that did occur to me :) I hope that is all he's waiting for.
 1	To	to	PART	TO	_	2	mark	2:mark	_
-2	answer	answer	VERB	VB	VerbForm=Inf	9	advcl	9:advcl	_
+2	answer	answer	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
 3	Barry	Barry	PROPN	NNP	Number=Sing	2	obj	2:obj	_
 4	White	White	PROPN	NNP	Number=Sing	3	flat	3:flat	SpaceAfter=No
 5	,	,	PUNCT	,	_	9	punct	9:punct	_
@@ -836,7 +836,7 @@
 8	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	aux	9:aux	_
 9	occur	occur	VERB	VB	VerbForm=Inf	0	root	0:root	_
 10	to	to	ADP	IN	_	11	case	11:case	_
-11	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	9	obl	9:obl	_
+11	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	9	obl	9:obl:to	_
 12	:)	:)	SYM	NFP	_	9	discourse	9:discourse	_
 13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
 14	hope	hope	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	parataxis	9:parataxis	_
@@ -854,9 +854,9 @@
 1	On	on	ADP	IN	_	4	case	4:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 3	other	other	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	hand	hand	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+4	hand	hand	NOUN	NN	Number=Sing	11	obl	11:obl:on	SpaceAfter=No
 5	,	,	PUNCT	,	_	11	punct	11:punct	_
-6	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
+6	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj|14:nsubj	_
 7	could	could	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 8	very	very	ADV	RB	_	9	advmod	9:advmod	_
 9	easily	easily	ADV	RB	_	11	advmod	11:advmod	_
@@ -864,7 +864,7 @@
 11	call	call	VERB	VB	VerbForm=Inf	0	root	0:root	_
 12	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	11	obj	11:obj	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	say	say	VERB	VB	VerbForm=Inf	11	conj	11:conj	_
+14	say	say	VERB	VB	VerbForm=Inf	11	conj	11:conj:and	_
 15	hey	hey	INTJ	UH	_	18	discourse	18:discourse	_
 16	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	18:nsubj	SpaceAfter=No
 17	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
@@ -879,7 +879,7 @@
 26	when	when	ADV	WRB	PronType=Int	29	mark	29:mark	_
 27	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	29	nsubj	29:nsubj	_
 28	can	can	AUX	MD	VerbForm=Fin	29	aux	29:aux	_
-29	come	come	VERB	VB	VerbForm=Inf	24	advcl	24:advcl	_
+29	come	come	VERB	VB	VerbForm=Inf	24	advcl	24:advcl:when	_
 30	out	out	ADV	RB	_	29	advmod	29:advmod	SpaceAfter=No
 31	.	.	PUNCT	.	_	11	punct	11:punct	_
 
@@ -891,7 +891,7 @@
 4	as	as	SCONJ	IN	_	7	mark	7:mark	_
 5	scheduled	schedule	VERB	VBN	Tense=Past|VerbForm=Part	6	amod	6:amod	_
 6	visits	visit	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
-7	go	go	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	advcl	2:advcl	SpaceAfter=No
+7	go	go	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	advcl	2:advcl:as	SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 10	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -921,14 +921,14 @@
 6	Okay	okay	INTJ	UH	_	10	discourse	10:discourse	SpaceAfter=No
 7	,	,	PUNCT	,	_	10	punct	10:punct	_
 8	they're	they're	PRON	PRP$	_	9	nmod:poss	9:nmod:poss	_
-9	feet	foot	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
+9	feet	foot	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj|13:nsubj:xsubj|16:nsubj	_
 10	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
 11	to	to	PART	TO	_	13	mark	13:mark	_
 12	be	be	AUX	VB	VerbForm=Inf	13	aux:pass	13:aux:pass	_
 13	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	xcomp	10:xcomp	SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
 15	better	better	ADV	RBR	Degree=Cmp	16	aux	16:aux	_
-16	call	call	VERB	VB	VerbForm=Inf	10	conj	10:conj	_
+16	call	call	VERB	VB	VerbForm=Inf	10	conj	2:ccomp|10:conj	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 18	farrier	farrier	NOUN	NN	Number=Sing	16	obj	16:obj	SpaceAfter=No
 19	.	.	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
@@ -944,7 +944,7 @@
 6	within	within	ADP	IN	_	9	case	9:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	few	few	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	days	day	NOUN	NNS	Number=Plur	4	obl	4:obl	SpaceAfter=No
+9	days	day	NOUN	NNS	Number=Plur	4	obl	4:obl:within	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0044
@@ -965,14 +965,14 @@
 2	like	like	SCONJ	IN	_	5	mark	5:mark	_
 3	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 4	really	really	ADV	RB	_	5	advmod	5:advmod	_
-5	likes	like	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	advcl	1:advcl	_
+5	likes	like	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	advcl	1:advcl:like	_
 6	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	obj	5:obj	SpaceAfter=No
 7	..	..	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0046
 # text = But you need to ask yourself do you feel the same way?
 1	But	but	CCONJ	CC	_	3	cc	3:cc	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 3	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	ask	ask	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
@@ -988,15 +988,15 @@
 # sent_id = answers-20111108091921AAaLK4e_ans-0047
 # text = would You like going for *coffee* with him?
 1	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-2	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
+2	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|4:nsubj:xsubj	_
 3	like	like	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	going	go	VERB	VBG	VerbForm=Ger	3	xcomp	3:xcomp	_
 5	for	for	ADP	IN	_	7	case	7:case	_
 6	*	*	PUNCT	NFP	_	7	punct	7:punct	SpaceAfter=No
-7	coffee	coffee	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+7	coffee	coffee	NOUN	NN	Number=Sing	4	obl	4:obl:for	SpaceAfter=No
 8	*	*	PUNCT	NFP	_	7	punct	7:punct	_
 9	with	with	ADP	IN	_	10	case	10:case	_
-10	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	obl	4:obl	SpaceAfter=No
+10	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	obl	4:obl:with	SpaceAfter=No
 11	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0048
@@ -1022,7 +1022,7 @@
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 3	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
-4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	advcl	7:advcl	_
+4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	advcl	7:advcl:if	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 6	would	would	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 7	Go	go	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
@@ -1037,15 +1037,15 @@
 5	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 6	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 7	not	not	PART	RB	_	8	advmod	8:advmod	_
-8	call	call	VERB	VB	VerbForm=Inf	13	advcl	13:advcl	_
+8	call	call	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:if	_
 9	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	8	obj	8:obj	_
 10	back	back	ADP	RP	_	8	compound:prt	8:compound:prt	_
 11	by	by	ADP	IN	_	12	case	12:case	_
-12	friday	friday	PROPN	NNP	Number=Sing	8	obl	8:obl	_
+12	friday	friday	PROPN	NNP	Number=Sing	8	obl	8:obl:by	_
 13	call	call	VERB	VB	Mood=Imp|VerbForm=Fin	3	ccomp	3:ccomp	_
 14	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	obj	13:obj	_
 15	again	again	ADV	RB	_	13	advmod	13:advmod	_
-16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	nsubj	19:nsubj	_
+16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	nsubj	19:nsubj|20:nsubj:xsubj	_
 17	could	could	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 18	be	be	AUX	VB	VerbForm=Inf	19	aux	19:aux	_
 19	playing	play	VERB	VBG	Tense=Pres|VerbForm=Part	3	parataxis	3:parataxis	_
@@ -1065,15 +1065,15 @@
 7	out	out	ADP	IN	_	10	case	10:case	_
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	shoe	shoe	NOUN	NN	Number=Sing	4	obl	4:obl	_
+10	shoe	shoe	NOUN	NN	Number=Sing	4	obl	4:obl:of	_
 11	as	as	ADP	IN	_	13	case	13:case	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
-13	excuse	excuse	NOUN	NN	Number=Sing	4	obl	4:obl	_
+13	excuse	excuse	NOUN	NN	Number=Sing	4	obl	4:obl:as	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
-15	come	come	VERB	VB	VerbForm=Inf	13	acl	13:acl	_
+15	come	come	VERB	VB	VerbForm=Inf	13	acl	13:acl:to	_
 16	back	back	ADV	RB	_	15	advmod	15:advmod	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	see	see	VERB	VB	VerbForm=Inf	15	conj	15:conj	_
+18	see	see	VERB	VB	VerbForm=Inf	15	conj	13:acl:to|15:conj:and	_
 19	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	18	obj	18:obj	_
 20	hey	hey	INTJ	UH	_	2	discourse	2:discourse	_
 21	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	26	nsubj	26:nsubj	_
@@ -1100,11 +1100,11 @@
 12	danger	danger	NOUN	NN	Number=Sing	7	ccomp	7:ccomp	_
 13	Of	of	SCONJ	IN	_	15	mark	15:mark	_
 14	being	be	AUX	VBG	VerbForm=Ger	15	aux:pass	15:aux:pass	_
-15	hurt	hurt	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	acl	12:acl	_
+15	hurt	hurt	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	acl	12:acl:of	_
 16	With	with	SCONJ	IN	_	19	mark	19:mark	_
 17	one	one	NUM	CD	NumType=Card	18	nummod	18:nummod	_
 18	Nail	nail	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
-19	missing	miss	VERB	VBG	VerbForm=Ger	12	advcl	12:advcl	SpaceAfter=No
+19	missing	miss	VERB	VBG	VerbForm=Ger	12	advcl	12:advcl:with	SpaceAfter=No
 20	..	..	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0054
@@ -1112,29 +1112,29 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
-4	horses	horse	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
+4	horses	horse	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|11:nsubj	_
 5	Loose	loose	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
 6	Nails	nail	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 7	On	on	ADP	IN	_	9	case	9:case	_
 8	there	there	PRON	PRP$	_	9	nmod:poss	9:nmod:poss	_
-9	Own	own	ADJ	JJ	Degree=Pos	5	obl	5:obl	_
+9	Own	own	ADJ	JJ	Degree=Pos	5	obl	5:obl:on	_
 10	And	and	CCONJ	CC	_	11	cc	11:cc	_
-11	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj	_
+11	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	3:ccomp|5:conj:and	_
 12	just	just	ADV	RB	_	13	advmod	13:advmod	_
 13	fine	fine	ADV	RB	_	11	advmod	11:advmod	_
 14	with	with	SCONJ	IN	_	17	mark	17:mark	_
 15	ONE	one	NUM	CD	NumType=Card	16	nummod	16:nummod	_
 16	nail	nail	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
-17	gone	go	VERB	VBN	Tense=Past|VerbForm=Part	11	advcl	11:advcl	_
+17	gone	go	VERB	VBN	Tense=Past|VerbForm=Part	11	advcl	11:advcl:with	_
 18	Now	now	ADV	RB	_	30	advmod	30:advmod	_
 19	if	if	SCONJ	IN	_	22	mark	22:mark	_
 20	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	22	nsubj	22:nsubj	_
 21	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	22	aux	22:aux	_
-22	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	30	advcl	30:advcl	_
+22	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	30	advcl	30:advcl:if	_
 23	out	out	ADV	RB	_	22	advmod	22:advmod	_
 24	2	2	NUM	CD	NumType=Card	22	obj	22:obj	_
 25	or	or	CCONJ	CC	_	26	cc	26:cc	_
-26	3	3	NUM	CD	NumType=Card	24	conj	24:conj	_
+26	3	3	NUM	CD	NumType=Card	24	conj	22:obj|24:conj:or	_
 27	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	30	nsubj	30:nsubj	_
 28	would	would	AUX	MD	VerbForm=Fin	30	aux	30:aux	_
 29	be	be	AUX	VB	VerbForm=Inf	30	aux	30:aux	_
@@ -1165,8 +1165,8 @@
 19	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
 21	added	add	VERB	VBN	Tense=Past|VerbForm=Part	22	amod	22:amod	_
-22	bonus	bonus	NOUN	NN	Number=Sing	4	conj	4:conj	_
-23	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	25	nsubj	25:nsubj	_
+22	bonus	bonus	NOUN	NN	Number=Sing	4	conj	4:conj:and	_
+23	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	25	nsubj	25:nsubj|27:nsubj:xsubj	_
 24	would	would	AUX	MD	VerbForm=Fin	25	aux	25:aux	_
 25	get	get	VERB	VB	VerbForm=Inf	22	acl:relcl	22:acl:relcl	_
 26	to	to	PART	TO	_	27	mark	27:mark	_
@@ -1179,11 +1179,11 @@
 1	When	when	ADV	WRB	PronType=Int	4	mark	4:mark	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
-4	Younger	younger	ADJ	JJR	Degree=Cmp	13	advcl	13:advcl	_
+4	Younger	younger	ADJ	JJR	Degree=Cmp	13	advcl	13:advcl:when	_
 5	In	in	ADP	IN	_	8	case	8:case	_
 6	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 7	early	early	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	20s	20	NOUN	NNS	Number=Plur	13	obl	13:obl	_
+8	20s	20	NOUN	NNS	Number=Plur	13	obl	13:obl:in	_
 9	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	farrier	farrier	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
 11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	_
@@ -1194,8 +1194,8 @@
 16	..	..	PUNCT	,	_	13	punct	13:punct	SpaceAfter=No
 17	(	(	PUNCT	-LRB-	_	27	punct	27:punct	_
 18	for	for	ADP	IN	_	19	case	19:case	_
-19	those	those	PRON	DT	Number=Plur|PronType=Dem	27	obl	27:obl	_
-20	who	who	PRON	WP	PronType=Rel	23	nsubj	23:nsubj	_
+19	those	those	PRON	DT	Number=Plur|PronType=Dem	27	obl	23:nsubj:relsubj|27:obl:for	_
+20	who	who	PRON	WP	PronType=Rel	23	nsubj	19:ref	_
 21	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	23	aux	23:aux	SpaceAfter=No
 22	n't	not	PART	RB	_	23	advmod	23:advmod	_
 23	Know	know	VERB	VB	VerbForm=Inf	19	acl:relcl	19:acl:relcl	_
@@ -1208,55 +1208,55 @@
 30	Bio	bio	NOUN	NN	Number=Sing	28	obj	28:obj	_
 31	on	on	ADP	IN	_	33	case	33:case	_
 32	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	33	nmod:poss	33:nmod:poss	_
-33	Page	page	NOUN	NN	Number=Sing	30	nmod	30:nmod	SpaceAfter=No
+33	Page	page	NOUN	NN	Number=Sing	30	nmod	30:nmod:on	SpaceAfter=No
 34	)	)	PUNCT	-RRB-	_	27	punct	27:punct	_
 35	dumb	dumb	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 36	as	as	ADP	IN	_	38	case	38:case	_
 37	a	a	DET	DT	Definite=Ind|PronType=Art	38	det	38:det	_
-38	post	post	NOUN	NN	Number=Sing	35	obl	35:obl	_
+38	post	post	NOUN	NN	Number=Sing	35	obl	35:obl:as	_
 39	about	about	ADP	IN	_	40	case	40:case	_
-40	everything	everything	PRON	NN	Number=Sing	35	obl	35:obl	_
+40	everything	everything	PRON	NN	Number=Sing	35	obl	35:obl:about	_
 41	But	but	ADP	IN	_	42	case	42:case	_
-42	horses	horse	NOUN	NNS	Number=Plur	40	nmod	40:nmod	SpaceAfter=No
+42	horses	horse	NOUN	NNS	Number=Plur	40	nmod	40:nmod:but	SpaceAfter=No
 43	..	..	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0057
 # text = He was In his 30s divorced and Had 2 kids.. but we both flirted Horribly with each other.. but neither one of us took the chance and Asked to other on a date. :(
-1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj|6:nsubj|8:nsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
 3	In	in	ADP	IN	_	5	case	5:case	_
 4	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	30s	30	NOUN	NNS	Number=Plur	0	root	0:root	_
-6	divorced	divorced	ADJ	JJ	Degree=Pos	5	conj	5:conj	_
+6	divorced	divorced	ADJ	JJ	Degree=Pos	5	conj	5:conj:and	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	Had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+8	Had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj:and	_
 9	2	2	NUM	CD	NumType=Card	10	nummod	10:nummod	_
 10	kids	kid	NOUN	NNS	Number=Plur	8	obj	8:obj	SpaceAfter=No
 11	..	..	PUNCT	,	_	5	punct	5:punct	_
 12	but	but	CCONJ	CC	_	15	cc	15:cc	_
 13	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
 14	both	both	DET	DT	_	13	nmod:npmod	13:nmod:npmod	_
-15	flirted	flirt	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+15	flirted	flirt	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj:but	_
 16	Horribly	horribly	ADV	RB	_	15	advmod	15:advmod	_
 17	with	with	ADP	IN	_	19	case	19:case	_
 18	each	each	DET	DT	_	19	det	19:det	_
-19	other	other	ADJ	JJ	Degree=Pos	15	obl	15:obl	SpaceAfter=No
+19	other	other	ADJ	JJ	Degree=Pos	15	obl	15:obl:with	SpaceAfter=No
 20	..	..	PUNCT	,	_	5	punct	5:punct	_
 21	but	but	CCONJ	CC	_	26	cc	26:cc	_
 22	neither	neither	DET	DT	_	23	det	23:det	_
-23	one	one	NUM	CD	NumType=Card	26	nsubj	26:nsubj	_
+23	one	one	NUM	CD	NumType=Card	26	nsubj	26:nsubj|30:nsubj	_
 24	of	of	ADP	IN	_	25	case	25:case	_
-25	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	23	nmod	23:nmod	_
-26	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+25	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	23	nmod	23:nmod:of	_
+26	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj:but	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 28	chance	chance	NOUN	NN	Number=Sing	26	obj	26:obj	_
 29	and	and	CCONJ	CC	_	30	cc	30:cc	_
-30	Asked	ask	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	26	conj	26:conj	_
+30	Asked	ask	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	26	conj	26:conj:and	_
 31	to	to	ADP	IN	_	32	case	32:case	_
-32	other	other	ADJ	JJ	Degree=Pos	30	obl	30:obl	_
+32	other	other	ADJ	JJ	Degree=Pos	30	obl	30:obl:to	_
 33	on	on	ADP	IN	_	35	case	35:case	_
 34	a	a	DET	DT	Definite=Ind|PronType=Art	35	det	35:det	_
-35	date	date	NOUN	NN	Number=Sing	30	obl	30:obl	SpaceAfter=No
+35	date	date	NOUN	NN	Number=Sing	30	obl	30:obl:on	SpaceAfter=No
 36	.	.	PUNCT	.	_	5	punct	5:punct	_
 37	:(	:(	SYM	NFP	_	5	discourse	5:discourse	_
 
@@ -1289,7 +1289,7 @@
 3	this	this	DET	DT	Number=Sing|PronType=Dem	4	det	4:det	_
 4	Habit	habit	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	of	of	SCONJ	IN	_	6	mark	6:mark	_
-6	telling	tell	VERB	VBG	VerbForm=Ger	4	acl	4:acl	_
+6	telling	tell	VERB	VBG	VerbForm=Ger	4	acl	4:acl:of	_
 7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	iobj	6:iobj	_
 8	Everything	everything	PRON	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
 9	..	..	PUNCT	.	_	2	punct	2:punct	_
@@ -1302,7 +1302,7 @@
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 5	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	to	to	ADP	IN	_	7	case	7:case	_
-7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	obl	5:obl	_
+7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	obl	5:obl:to	_
 8	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
 9	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	ccomp	5:ccomp	_
 10	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
@@ -1313,7 +1313,7 @@
 15	as	as	SCONJ	IN	_	18	mark	18:mark	_
 16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	nsubj:pass	18:nsubj:pass	_
 17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	aux:pass	18:aux:pass	_
-18	bent	bend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	advcl	5:advcl	_
+18	bent	bend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	advcl	5:advcl:as	_
 19	over	over	ADV	RB	_	18	advmod	18:advmod	_
 20	Working	work	VERB	VBG	VerbForm=Ger	18	advcl	18:advcl	_
 21	on	on	ADP	IN	_	27	case	27:case	_
@@ -1322,11 +1322,11 @@
 24	s	's	PART	POS	_	23	case	23:case	_
 25	Right	right	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
 26	front	front	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	hoof	hoof	NOUN	NN	Number=Sing	20	obl	20:obl	SpaceAfter=No
+27	hoof	hoof	NOUN	NN	Number=Sing	20	obl	20:obl:on	SpaceAfter=No
 28	..	..	PUNCT	,	_	5	punct	5:punct	_
 29	and	and	CCONJ	CC	_	31	cc	31:cc	_
 30	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	31	nsubj	31:nsubj	_
-31	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+31	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	5	conj	5:conj:and	_
 32	Like	like	INTJ	UH	_	31	discourse	31:discourse	_
 33	Ummmm	ummmm	INTJ	UH	_	31	discourse	31:discourse	_
 34	okay	okay	INTJ	UH	_	33	discourse	33:discourse	SpaceAfter=No
@@ -1346,7 +1346,7 @@
 10	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
 11	could	could	AUX	MD	VerbForm=Fin	13	aux	13:aux	SpaceAfter=No
 12	n't	not	PART	RB	_	13	advmod	13:advmod	_
-13	see	see	VERB	VB	VerbForm=Inf	7	advcl	7:advcl	_
+13	see	see	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:so	_
 14	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 15	red	red	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	face	face	NOUN	NN	Number=Sing	13	obj	13:obj	_
@@ -1367,7 +1367,7 @@
 4	Later	later	ADV	RBR	Degree=Cmp	13	advmod	13:advmod	_
 5	when	when	ADV	WRB	PronType=Int	7	mark	7:mark	_
 6	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
-7	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	advcl	13:advcl	_
+7	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	advcl	13:advcl:when	_
 8	back	back	ADV	RB	_	9	advmod	9:advmod	_
 9	out	out	ADV	RB	_	7	advmod	7:advmod	_
 10	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
@@ -1379,24 +1379,24 @@
 16	mare	mare	NOUN	NN	Number=Sing	19	nmod:poss	19:nmod:poss	SpaceAfter=No
 17	s	's	PART	POS	_	16	case	16:case	_
 18	front	front	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-19	Foot	Foot	PROPN	NNP	Number=Sing	13	obl	13:obl	_
+19	Foot	Foot	PROPN	NNP	Number=Sing	13	obl	13:obl:on	_
 20	and	and	CCONJ	CC	_	22	cc	22:cc	_
 21	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	22	nsubj	22:nsubj	_
-22	looked	look	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	conj	13:conj	_
+22	looked	look	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	conj	13:conj:and	_
 23	Down	down	ADV	RB	_	22	advmod	22:advmod	_
 24	and	and	CCONJ	CC	_	27	cc	27:cc	_
 25	Yeah	yeah	INTJ	UH	_	27	discourse	27:discourse	_
 26	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	27	nsubj	27:nsubj	_
-27	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	conj	13:conj	_
+27	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	conj	13:conj:and	_
 28	Wholes	whole	NOUN	NNS	Number=Plur	27	obj	27:obj	_
 29	In	in	ADP	IN	_	31	case	31:case	_
 30	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	31	nmod:poss	31:nmod:poss	_
-31	pants	pants	NOUN	NNS	Number=Plur	28	nmod	28:nmod	_
+31	pants	pants	NOUN	NNS	Number=Plur	28	nmod	28:nmod:in	_
 32	In	in	ADP	IN	_	35	case	35:case	_
 33	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
 34	wrong	wrong	ADJ	JJ	Degree=Pos	35	amod	35:amod	_
-35	places	place	NOUN	NNS	Number=Plur	28	nmod	28:nmod	_
-36	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	37	nsubj	37:nsubj	_
+35	places	place	NOUN	NNS	Number=Plur	28	nmod	28:nmod:in	_
+36	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	37	nsubj	37:nsubj|39:nsubj:xsubj	_
 37	bust	bust	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	parataxis	13:parataxis	_
 38	out	out	ADP	RP	_	37	compound:prt	37:compound:prt	_
 39	Laughing	laugh	VERB	VBG	VerbForm=Ger	37	xcomp	37:xcomp	_
@@ -1404,7 +1404,7 @@
 41	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	44	nsubj	44:nsubj	_
 42	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	44	cop	44:cop	_
 43	like	like	INTJ	UH	_	44	discourse	44:discourse	_
-44	what	what	PRON	WP	PronType=Int	13	conj	13:conj	SpaceAfter=No
+44	what	what	PRON	WP	PronType=Int	13	conj	13:conj:and	SpaceAfter=No
 45	???	???	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0064
@@ -1439,11 +1439,11 @@
 4	strange	strange	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	way	way	NOUN	NN	Number=Sing	0	root	0:root	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	flirt	flirt	VERB	VB	VerbForm=Inf	5	acl	5:acl	SpaceAfter=No
+7	flirt	flirt	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	SpaceAfter=No
 8	..	..	PUNCT	,	_	5	punct	5:punct	_
 9	but	but	CCONJ	CC	_	11	cc	11:cc	_
 10	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
-11	guss	guss	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj	_
+11	guss	guss	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj:but	_
 12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
 14	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
@@ -1455,12 +1455,12 @@
 1	But	but	CCONJ	CC	_	7	cc	7:cc	_
 2	like	like	SCONJ	IN	_	4	mark	4:mark	_
 3	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-4	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	advcl	7:advcl	_
+4	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	advcl	7:advcl:like	_
 5	nothing	nothing	PRON	NN	Number=Sing	7	nsubj	7:nsubj	_
 6	ever	ever	ADV	RB	_	7	advmod	7:advmod	_
 7	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	It	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	obl	7:obl	SpaceAfter=No
+9	It	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	obl	7:obl:of	SpaceAfter=No
 10	..	..	PUNCT	,	_	7	punct	7:punct	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	next	next	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
@@ -1472,61 +1472,61 @@
 18	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	19	aux	19:aux	_
 19	told	tell	VERB	VBN	Tense=Past|VerbForm=Part	7	parataxis	7:parataxis	_
 20	Me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	19	iobj	19:iobj	_
-21	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	22	nsubj	22:nsubj	_
+21	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	22	nsubj	22:nsubj|25:nsubj:xsubj	_
 22	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	19	ccomp	19:ccomp	_
 23	To	to	PART	TO	_	25	mark	25:mark	_
 24	get	get	AUX	VB	VerbForm=Inf	25	aux:pass	25:aux:pass	_
 25	married	marry	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	22	xcomp	22:xcomp	_
 26	to	to	ADP	IN	_	28	case	28:case	_
 27	a	a	DET	DT	Definite=Ind|PronType=Art	28	det	28:det	_
-28	girl	girl	NOUN	NN	Number=Sing	25	obl	25:obl	_
-29	Who	who	PRON	WP	PronType=Rel	31	obl	31:obl	_
+28	girl	girl	NOUN	NN	Number=Sing	25	obl	25:obl:to|31:obl	_
+29	Who	who	PRON	WP	PronType=Rel	31	obl	28:ref	_
 30	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	31	nsubj	31:nsubj	_
 31	worked	work	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	28	acl:relcl	28:acl:relcl	_
 32	with	with	ADP	IN	_	29	case	29:case	_
 33	becuse	because	SCONJ	IN	Typo=Yes	35	mark	35:mark	_
 34	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	35	nsubj	35:nsubj	_
-35	knocked	knock	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	25	advcl	25:advcl	_
+35	knocked	knock	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	25	advcl	25:advcl:becuse	_
 36	Her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	35	obj	35:obj	_
 37	Up	up	ADP	RP	_	35	compound:prt	35:compound:prt	SpaceAfter=No
 38	..	..	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0067
 # text = I was heartbroken.. but then realized He was not the Guy for me..
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|7:nsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
 3	heartbroken	heartbroken	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 4	..	..	PUNCT	,	_	3	punct	3:punct	_
 5	but	but	CCONJ	CC	_	7	cc	7:cc	_
 6	then	then	ADV	RB	PronType=Dem	7	advmod	7:advmod	_
-7	realized	realize	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj	_
+7	realized	realize	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj:but	_
 8	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	_
 10	not	not	PART	RB	_	12	advmod	12:advmod	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	Guy	guy	NOUN	NN	Number=Sing	7	ccomp	7:ccomp	_
 13	for	for	ADP	IN	_	14	case	14:case	_
-14	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	12	nmod	12:nmod	SpaceAfter=No
+14	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	12	nmod	12:nmod:for	SpaceAfter=No
 15	..	..	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0068
 # text = Wow he does sound interested in you, my farrier never gives me hugs like that (probably a good thing as he has a wife and 2 kids) anyway, I find that they can be very busy so I would wait a week lo9nger and if still no reply give him a call but don’t leave a message so you don’t have to necessarily wait for him to call.
 1	Wow	wow	INTJ	UH	_	4	discourse	4:discourse	_
-2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
+2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj|5:nsubj:xsubj|60:nsubj	_
 3	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	sound	sound	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	interested	interested	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	obl	5:obl	SpaceAfter=No
+7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	obl	5:obl:in	SpaceAfter=No
 8	,	,	PUNCT	,	_	12	punct	12:punct	_
 9	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	farrier	farrier	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
 11	never	never	ADV	RB	_	12	advmod	12:advmod	_
-12	gives	give	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj	_
+12	gives	give	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	_
 13	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	12	iobj	12:iobj	_
 14	hugs	hug	NOUN	NNS	Number=Plur	12	obj	12:obj	_
 15	like	like	ADP	IN	_	16	case	16:case	_
-16	that	that	PRON	DT	Number=Sing|PronType=Dem	14	nmod	14:nmod	_
+16	that	that	PRON	DT	Number=Sing|PronType=Dem	14	nmod	14:nmod:like	_
 17	(	(	PUNCT	-LRB-	_	21	punct	21:punct	SpaceAfter=No
 18	probably	probably	ADV	RB	_	21	advmod	21:advmod	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
@@ -1534,12 +1534,12 @@
 21	thing	thing	NOUN	NN	Number=Sing	12	parataxis	12:parataxis	_
 22	as	as	SCONJ	IN	_	24	mark	24:mark	_
 23	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	24	nsubj	24:nsubj	_
-24	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	advcl	21:advcl	_
+24	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	advcl	21:advcl:as	_
 25	a	a	DET	DT	Definite=Ind|PronType=Art	26	det	26:det	_
 26	wife	wife	NOUN	NN	Number=Sing	24	obj	24:obj	_
 27	and	and	CCONJ	CC	_	29	cc	29:cc	_
 28	2	2	NUM	CD	NumType=Card	29	nummod	29:nummod	_
-29	kids	kid	NOUN	NNS	Number=Plur	26	conj	26:conj	SpaceAfter=No
+29	kids	kid	NOUN	NNS	Number=Plur	26	conj	24:obj|26:conj:and	SpaceAfter=No
 30	)	)	PUNCT	-RRB-	_	21	punct	21:punct	_
 31	anyway	anyway	INTJ	UH	_	34	discourse	34:discourse	SpaceAfter=No
 32	,	,	PUNCT	,	_	34	punct	34:punct	_
@@ -1563,46 +1563,46 @@
 50	still	still	ADV	RB	_	52	advmod	52:advmod	_
 51	no	no	DET	DT	_	52	det	52:det	_
 52	reply	reply	NOUN	NN	Number=Sing	53	csubj	53:csubj	_
-53	give	give	VERB	VB	Mood=Imp|VerbForm=Fin	4	conj	4:conj	_
+53	give	give	VERB	VB	Mood=Imp|VerbForm=Fin	4	conj	4:conj:and	_
 54	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	53	iobj	53:iobj	_
 55	a	a	DET	DT	Definite=Ind|PronType=Art	56	det	56:det	_
 56	call	call	NOUN	NN	Number=Sing	53	obj	53:obj	_
 57	but	but	CCONJ	CC	_	60	cc	60:cc	_
 58	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	60	aux	60:aux	SpaceAfter=No
 59	n’t	not	PART	RB	_	60	advmod	60:advmod	_
-60	leave	leave	VERB	VB	Mood=Imp|VerbForm=Fin	4	conj	4:conj	_
+60	leave	leave	VERB	VB	Mood=Imp|VerbForm=Fin	4	conj	4:conj:but	_
 61	a	a	DET	DT	Definite=Ind|PronType=Art	62	det	62:det	_
 62	message	message	NOUN	NN	Number=Sing	60	obj	60:obj	_
 63	so	so	SCONJ	IN	_	67	mark	67:mark	_
-64	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	67	nsubj	67:nsubj	_
+64	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	67	nsubj	67:nsubj|70:nsubj:xsubj	_
 65	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	67	aux	67:aux	SpaceAfter=No
 66	n’t	not	PART	RB	_	67	advmod	67:advmod	_
-67	have	have	VERB	VB	VerbForm=Inf	60	advcl	60:advcl	_
+67	have	have	VERB	VB	VerbForm=Inf	60	advcl	60:advcl:so	_
 68	to	to	PART	TO	_	70	mark	70:mark	_
 69	necessarily	necessarily	ADV	RB	_	70	advmod	70:advmod	_
 70	wait	wait	VERB	VB	VerbForm=Inf	67	xcomp	67:xcomp	_
 71	for	for	SCONJ	IN	_	74	mark	74:mark	_
 72	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	74	nsubj	74:nsubj	_
 73	to	to	PART	TO	_	74	mark	74:mark	_
-74	call	call	VERB	VB	VerbForm=Inf	70	advcl	70:advcl	SpaceAfter=No
+74	call	call	VERB	VB	VerbForm=Inf	70	advcl	70:advcl:to	SpaceAfter=No
 75	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0069
 # text = From the point of view of a business, and client/operator relationships, he's doing a really shitty job.
 1	From	from	ADP	IN	_	3	case	3:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	point	point	NOUN	NN	Number=Sing	18	obl	18:obl	_
+3	point	point	NOUN	NN	Number=Sing	18	obl	18:obl:from	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	view	view	NOUN	NN	Number=Sing	3	nmod	3:nmod	_
+5	view	view	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	business	business	NOUN	NN	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+8	business	business	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	SpaceAfter=No
 9	,	,	PUNCT	,	_	14	punct	14:punct	_
 10	and	and	CCONJ	CC	_	14	cc	14:cc	_
 11	client	client	NOUN	NN	Number=Sing	14	compound	14:compound	SpaceAfter=No
 12	/	/	PUNCT	,	_	13	cc	13:cc	SpaceAfter=No
-13	operator	operator	NOUN	NN	Number=Sing	11	conj	11:conj	_
-14	relationships	relationship	NOUN	NNS	Number=Plur	8	conj	8:conj	SpaceAfter=No
+13	operator	operator	NOUN	NN	Number=Sing	11	conj	11:conj|14:compound	_
+14	relationships	relationship	NOUN	NNS	Number=Plur	8	conj	5:nmod:of|8:conj:and	SpaceAfter=No
 15	,	,	PUNCT	,	_	18	punct	18:punct	_
 16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj	SpaceAfter=No
 17	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
@@ -1619,11 +1619,11 @@
 2	nails	nail	NOUN	NNS	Number=Plur	1	obj	1:obj	_
 3	out	out	ADV	RB	_	1	advmod	1:advmod	_
 4	so	so	SCONJ	IN	_	7	mark	7:mark	_
-5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	SpaceAfter=No
+5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|9:nsubj	SpaceAfter=No
 6	'll	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
-7	call	call	VERB	VB	VerbForm=Inf	1	advcl	1:advcl	_
+7	call	call	VERB	VB	VerbForm=Inf	1	advcl	1:advcl:so	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	have	have	VERB	VB	VerbForm=Inf	7	conj	7:conj	_
+9	have	have	VERB	VB	VerbForm=Inf	7	conj	1:advcl:so|7:conj:and	_
 10	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 11	come	come	VERB	VB	VerbForm=Inf	9	ccomp	9:ccomp	_
 12	back	back	ADV	RB	_	13	advmod	13:advmod	_
@@ -1635,7 +1635,7 @@
 # text = Cute or not, I'd call a different bloke because he's doing a sub-par job at something he needs to be doing his best at, whether he's flirting or trying to ask you out or not, he ought to put quality first.
 1	Cute	cute	ADJ	JJ	Degree=Pos	7	advcl	7:advcl	_
 2	or	or	CCONJ	CC	_	3	cc	3:cc	_
-3	not	not	PART	RB	_	1	conj	1:conj	SpaceAfter=No
+3	not	not	PART	RB	_	1	conj	1:conj:or|7:advcl	SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	SpaceAfter=No
 6	'd	would	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
@@ -1646,13 +1646,13 @@
 11	because	because	SCONJ	IN	_	14	mark	14:mark	_
 12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	SpaceAfter=No
 13	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
-14	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	7	advcl	7:advcl	_
+14	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	7	advcl	7:advcl:because	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 16	sub-par	sub-par	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	job	job	NOUN	NN	Number=Sing	14	obj	14:obj	_
 18	at	at	ADP	IN	_	19	case	19:case	_
-19	something	something	PRON	NN	Number=Sing	14	obl	14:obl	_
-20	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	21	nsubj	21:nsubj	_
+19	something	something	PRON	NN	Number=Sing	14	obl	14:obl:at	_
+20	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	21	nsubj	21:nsubj|24:nsubj:xsubj	_
 21	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	acl:relcl	19:acl:relcl	_
 22	to	to	PART	TO	_	24	mark	24:mark	_
 23	be	be	AUX	VB	VerbForm=Inf	24	aux	24:aux	_
@@ -1662,19 +1662,19 @@
 27	at	at	ADP	IN	_	24	obl	24:obl	SpaceAfter=No
 28	,	,	PUNCT	,	_	7	punct	7:punct	_
 29	whether	whether	SCONJ	IN	_	32	mark	32:mark	_
-30	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	32	nsubj	32:nsubj	SpaceAfter=No
+30	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	32	nsubj	32:nsubj|34:nsubj|36:nsubj:xsubj|40:nsubj	SpaceAfter=No
 31	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	aux	32:aux	_
-32	flirting	flirt	VERB	VBG	Tense=Pres|VerbForm=Part	43	advcl	43:advcl	_
+32	flirting	flirt	VERB	VBG	Tense=Pres|VerbForm=Part	43	advcl	43:advcl:whether	_
 33	or	or	CCONJ	CC	_	34	cc	34:cc	_
-34	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	32	conj	32:conj	_
+34	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	32	conj	32:conj:or|43:advcl:whether	_
 35	to	to	PART	TO	_	36	mark	36:mark	_
 36	ask	ask	VERB	VB	VerbForm=Inf	34	xcomp	34:xcomp	_
 37	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	36	obj	36:obj	_
 38	out	out	ADV	RB	_	36	advmod	36:advmod	_
 39	or	or	CCONJ	CC	_	40	cc	40:cc	_
-40	not	not	PART	RB	_	32	conj	32:conj	SpaceAfter=No
+40	not	not	PART	RB	_	32	conj	32:conj:or|43:advcl:whether	SpaceAfter=No
 41	,	,	PUNCT	,	_	43	punct	43:punct	_
-42	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	43	nsubj	43:nsubj	_
+42	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	43	nsubj	43:nsubj|45:nsubj:xsubj	_
 43	ought	ought	AUX	MD	VerbForm=Fin	7	parataxis	7:parataxis	_
 44	to	to	PART	TO	_	45	mark	45:mark	_
 45	put	put	VERB	VB	VerbForm=Inf	43	xcomp	43:xcomp	_
@@ -1696,18 +1696,18 @@
 10	and	and	CCONJ	CC	_	24	cc	24:cc	_
 11	if	if	SCONJ	IN	_	13	mark	13:mark	_
 12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
-13	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	advcl	24:advcl	_
-14	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	13	obj	13:obj	_
+13	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	advcl	24:advcl:if	_
+14	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	13	obj	13:obj|16:nsubj:xsubj|18:nsubj:xsubj	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	remain	remain	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 18	customer	customer	NOUN	NN	Number=Sing	16	xcomp	16:xcomp	_
 19	why	why	ADV	WRB	PronType=Int	24	advmod	24:advmod	_
 20	on	on	ADP	IN	_	21	case	21:case	_
-21	earth	earth	NOUN	NN	Number=Sing	19	obl	19:obl	_
+21	earth	earth	NOUN	NN	Number=Sing	19	obl	19:obl:on	_
 22	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	aux	24:aux	_
 23	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	24	nsubj	24:nsubj	_
-24	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	8	conj	8:conj	_
+24	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	8	conj	8:conj:and	_
 25	shoddy	shoddy	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
 26	work	work	NOUN	NN	Number=Sing	24	obj	24:obj	SpaceAfter=No
 27	?	?	PUNCT	.	_	8	punct	8:punct	_

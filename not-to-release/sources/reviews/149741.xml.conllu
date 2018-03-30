@@ -12,27 +12,27 @@
 9	bit	bit	NOUN	NN	Number=Sing	5	obj	5:obj	_
 10	about	about	ADP	IN	_	12	case	12:case	_
 11	bull	bull	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	fighting	fighting	NOUN	NN	Number=Sing	9	nmod	9:nmod	SpaceAfter=No
+12	fighting	fighting	NOUN	NN	Number=Sing	9	nmod	9:nmod:about	SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-149741-0002
 # text = If you watch a lot of fights (youtube) and research some of the history (http://en.wikipedia.org/wiki/Bullfighting) you will find yourself enjoying it a lot more!
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	watch	watch	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	advcl	22:advcl	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|12:nsubj	_
+3	watch	watch	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	advcl	22:advcl:if	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	lot	lot	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	fights	fight	NOUN	NNS	Number=Plur	5	nmod	5:nmod	_
+7	fights	fight	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	_
 8	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
 9	youtube	youtube	PROPN	NNP	Number=Sing	3	obl:npmod	3:obl:npmod	SpaceAfter=No
 10	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	research	research	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+12	research	research	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and|22:advcl:if	_
 13	some	some	DET	DT	_	12	obj	12:obj	_
 14	of	of	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	history	history	NOUN	NN	Number=Sing	13	nmod	13:nmod	_
+16	history	history	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	_
 17	(	(	PUNCT	-LRB-	_	12	punct	12:punct	SpaceAfter=No
 18	http://en.wikipedia.org/wiki/Bullfighting	http://en.wikipedia.org/wiki/bullfighting	X	ADD	_	12	obl:npmod	12:obl:npmod	SpaceAfter=No
 19	)	)	PUNCT	-RRB-	_	12	punct	12:punct	_
@@ -51,11 +51,11 @@
 # text = Also after seeing a handful of bullfights, I can say that they're a lot more enjoyable if you're smashed (BAC>= .15).
 1	Also	also	ADV	RB	_	11	advmod	11:advmod	_
 2	after	after	SCONJ	IN	_	3	mark	3:mark	_
-3	seeing	see	VERB	VBG	VerbForm=Ger	11	advcl	11:advcl	_
+3	seeing	see	VERB	VBG	VerbForm=Ger	11	advcl	11:advcl:after	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	handful	handful	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	bullfights	bullfight	NOUN	NNS	Number=Plur	5	nmod	5:nmod	SpaceAfter=No
+7	bullfights	bullfight	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 10	can	can	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
@@ -70,7 +70,7 @@
 19	if	if	SCONJ	IN	_	22	mark	22:mark	_
 20	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	22:nsubj	SpaceAfter=No
 21	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
-22	smashed	smashed	ADJ	JJ	Degree=Pos	18	advcl	18:advcl	_
+22	smashed	smashed	ADJ	JJ	Degree=Pos	18	advcl	18:advcl:if	_
 23	(	(	PUNCT	-LRB-	_	26	punct	26:punct	SpaceAfter=No
 24	BAC	bac	NOUN	NN	Number=Sing	25	nsubj	25:nsubj	SpaceAfter=No
 25	>=	>=	SYM	SYM	_	22	parataxis	22:parataxis	_
