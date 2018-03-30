@@ -29,7 +29,7 @@
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	which	which	PRON	WDT	PronType=Int	7	obj	7:obj	_
-6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	10:nsubj|7:nsubj	_
+6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|10:nsubj	_
 7	liked	like	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	ccomp	4:ccomp	_
 8	better	better	ADV	RBR	Degree=Cmp	7	advmod	7:advmod	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
@@ -160,7 +160,7 @@
 15	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 16	Royal	Royal	PROPN	NNP	Number=Sing	17	compound	17:compound	_
 17	Caribbean	Caribbean	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-18	Mariner	Mariner	PROPN	NNP	Number=Sing	13	conj	13:conj:and|9:appos	_
+18	Mariner	Mariner	PROPN	NNP	Number=Sing	13	conj	9:appos|13:conj:and	_
 19	of	of	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	Seas	Seas	PROPN	NNPS	Number=Plur	18	nmod	18:nmod:of	SpaceAfter=No
@@ -232,7 +232,7 @@
 11	Coco	Coco	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 12	Cay	Cay	PROPN	NNP	Number=Sing	10	appos	10:appos	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	Labadee	Labadee	PROPN	NNP	Number=Sing	10	conj	10:conj:and|6:obl:to	_
+14	Labadee	Labadee	PROPN	NNP	Number=Sing	10	conj	6:obl:to|10:conj:and	_
 15	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	north	north	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
@@ -244,12 +244,12 @@
 
 # sent_id = answers-20111107155912AAS93e5_ans-0018
 # text = We loved most of the locations that both of the ships visited and don't believe that this should be a distinguishing factor on deciding between the cruise lines.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	16:nsubj|2:nsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj|16:nsubj	_
 2	loved	love	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	most	most	ADJ	JJS	Degree=Sup	2	obj	2:obj	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	locations	location	NOUN	NNS	Number=Plur	3	nmod	12:obl:relobj|3:nmod:of	_
+6	locations	location	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|12:obl:relobj	_
 7	that	that	PRON	WDT	PronType=Rel	12	obj	6:ref	_
 8	both	both	DET	DT	_	12	nsubj	12:nsubj	_
 9	of	of	ADP	IN	_	11	case	11:case	_
@@ -303,7 +303,7 @@
 11	entertainment	entertainment	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	_
 12	before	before	ADV	RB	_	9	advmod	9:advmod	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	perhaps	perhaps	ADV	RB	_	12	conj	12:conj:and|9:advmod	_
+14	perhaps	perhaps	ADV	RB	_	12	conj	9:advmod|12:conj:and	_
 15	afterward	afterward	ADV	RB	_	14	advmod	14:advmod	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -416,7 +416,7 @@
 4	The	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	Liberty	Liberty	PROPN	NNP	Number=Sing	12	nsubj	12:nsubj	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	Mariner	Mariner	PROPN	NNP	Number=Sing	5	conj	12:nsubj|5:conj:and	_
+7	Mariner	Mariner	PROPN	NNP	Number=Sing	5	conj	5:conj:and|12:nsubj	_
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	Seas	Seas	PROPN	NNPS	Number=Plur	7	nmod	7:nmod:of	_
@@ -448,7 +448,7 @@
 
 # sent_id = answers-20111107155912AAS93e5_ans-0028
 # text = We had a slightly better experience on the Liberty, but feel that both crews did an excellent job and that this should not be a distinguishing factor on choosing a cruise.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	12:nsubj|2:nsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj|12:nsubj	_
 2	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 4	slightly	slightly	ADV	RB	_	5	advmod	5:advmod	_
@@ -491,7 +491,7 @@
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	Seas	Seas	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	Liberty	Liberty	PROPN	NNP	Number=Sing	3	conj	10:nsubj|3:conj:and	_
+8	Liberty	Liberty	PROPN	NNP	Number=Sing	3	conj	3:conj:and|10:nsubj	_
 9	both	both	DET	DT	_	3	cc:preconj	3:cc:preconj	_
 10	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	appos	1:appos	_
 11	salt	salt	NOUN	NN	Number=Sing	12	compound	12:compound	_
@@ -554,7 +554,7 @@
 # sent_id = answers-20111107155912AAS93e5_ans-0033
 # text = Spa We tried the spa on the Liberty and loved it.
 1	Spa	spa	NOUN	NN	Number=Sing	0	root	0:root	_
-2	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	10:nsubj|3:nsubj	_
+2	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|10:nsubj	_
 3	tried	try	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	appos	1:appos	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	spa	spa	NOUN	NN	Number=Sing	3	obj	3:obj	_

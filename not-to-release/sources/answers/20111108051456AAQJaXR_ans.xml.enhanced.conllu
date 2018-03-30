@@ -123,11 +123,11 @@
 10	like	like	ADP	IN	_	11	case	11:case	_
 11	tin	tin	NOUN	NN	Number=Sing	7	nmod	7:nmod:like	SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
-13	pewter	pewter	NOUN	NN	Number=Sing	11	conj	11:conj:or|7:nmod:like	SpaceAfter=No
+13	pewter	pewter	NOUN	NN	Number=Sing	11	conj	7:nmod:like|11:conj:or	SpaceAfter=No
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
-15	aluminum	aluminum	NOUN	NN	Number=Sing	11	conj	11:conj:or|7:nmod:like	_
+15	aluminum	aluminum	NOUN	NN	Number=Sing	11	conj	7:nmod:like|11:conj:or	_
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
-17	zinc	zinc	NOUN	NN	Number=Sing	11	conj	11:conj:or|7:nmod:like	SpaceAfter=No
+17	zinc	zinc	NOUN	NN	Number=Sing	11	conj	7:nmod:like|11:conj:or	SpaceAfter=No
 18	,	,	PUNCT	,	_	3	punct	3:punct	_
 19	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	21	nsubj	21:nsubj	_
 20	all	all	DET	DT	_	19	det	19:det	_
@@ -209,7 +209,7 @@
 11	in	in	ADP	IN	_	12	case	12:case	_
 12	tooling	tooling	NOUN	NN	Number=Sing	5	obl	5:obl:in	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	safety	safety	NOUN	NN	Number=Sing	12	conj	12:conj:and|5:obl:in	SpaceAfter=No
+14	safety	safety	NOUN	NN	Number=Sing	12	conj	5:obl:in|12:conj:and	SpaceAfter=No
 15	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108051456AAQJaXR_ans-0010
@@ -264,11 +264,11 @@
 10	like	like	ADP	IN	_	11	case	11:case	_
 11	tin	tin	NOUN	NN	Number=Sing	7	nmod	7:nmod:like	SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
-13	pewter	pewter	NOUN	NN	Number=Sing	11	conj	11:conj:or|7:nmod:like	SpaceAfter=No
+13	pewter	pewter	NOUN	NN	Number=Sing	11	conj	7:nmod:like|11:conj:or	SpaceAfter=No
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
-15	aluminum	aluminum	NOUN	NN	Number=Sing	11	conj	11:conj:or|7:nmod:like	_
+15	aluminum	aluminum	NOUN	NN	Number=Sing	11	conj	7:nmod:like|11:conj:or	_
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
-17	zinc	zinc	NOUN	NN	Number=Sing	11	conj	11:conj:or|7:nmod:like	SpaceAfter=No
+17	zinc	zinc	NOUN	NN	Number=Sing	11	conj	7:nmod:like|11:conj:or	SpaceAfter=No
 18	,	,	PUNCT	,	_	3	punct	3:punct	_
 19	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	21	nsubj	21:nsubj	_
 20	all	all	DET	DT	_	19	det	19:det	_
@@ -314,7 +314,7 @@
 4	also	also	ADV	RB	_	6	advmod	6:advmod	_
 5	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	aux	6:aux	_
 6	take	take	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
-7	charcoal	charcoal	NOUN	NN	Number=Sing	6	obj	17:nsubj:relsubj|19:nsubj:xsubj|6:obj	_
+7	charcoal	charcoal	NOUN	NN	Number=Sing	6	obj	6:obj|17:nsubj:relsubj|19:nsubj:xsubj	_
 8	as	as	SCONJ	IN	_	11	mark	11:mark	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	nsubj:pass	11:nsubj:pass	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux:pass	11:aux:pass	_
@@ -346,7 +346,7 @@
 
 # sent_id = answers-20111108051456AAQJaXR_ans-0015
 # text = I have done a fair amount of metal casting, but never tried to build my own furnace, but I think your version is just too small and doesn't get hot enough.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	13:nsubj|15:nsubj:xsubj|3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|13:nsubj|15:nsubj:xsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	done	do	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
@@ -444,7 +444,7 @@
 4	just	just	ADV	RB	_	5	advmod	5:advmod	_
 5	under	under	ADP	IN	_	6	advmod	6:advmod	_
 6	2000	2000	NUM	CD	NumType=Card	7	nummod	7:nummod	SpaceAfter=No
-7	F	F	PROPN	NNP	Number=Sing	2	obl	13:nsubj:relsubj|2:obl:at	_
+7	F	F	PROPN	NNP	Number=Sing	2	obl	2:obl:at|13:nsubj:relsubj	_
 8	which	which	PRON	WDT	PronType=Rel	13	nsubj	7:ref	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_

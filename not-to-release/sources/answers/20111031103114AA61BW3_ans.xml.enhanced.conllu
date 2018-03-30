@@ -44,7 +44,7 @@
 10	Food	Food	PROPN	NNP	Number=Sing	8	obj	8:obj	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	good	good	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	drinks	drink	NOUN	NNS	Number=Plur	10	conj	10:conj|8:obj	_
+13	drinks	drink	NOUN	NNS	Number=Plur	10	conj	8:obj|10:conj	_
 14	on	on	ADP	IN	_	15	case	15:case	_
 15	occasion	occasion	NOUN	NN	Number=Sing	13	nmod	13:nmod:on	SpaceAfter=No
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
@@ -76,15 +76,15 @@
 14	burgers	burger	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	SpaceAfter=No
 15	/	/	PUNCT	,	_	17	cc	17:cc	SpaceAfter=No
 16	american	american	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	food	food	NOUN	NN	Number=Sing	14	conj	10:nsubj|14:conj:/	SpaceAfter=No
+17	food	food	NOUN	NN	Number=Sing	14	conj	10:nsubj|14:conj:and	SpaceAfter=No
 18	,	,	PUNCT	,	_	19	punct	19:punct	_
-19	atmosphere	atmosphere	NOUN	NN	Number=Sing	14	conj	10:nsubj|14:conj:/	_
+19	atmosphere	atmosphere	NOUN	NN	Number=Sing	14	conj	10:nsubj|14:conj:and	_
 20	(	(	PUNCT	-LRB-	_	29	punct	29:punct	SpaceAfter=No
 21	preferably	preferably	ADV	RB	_	29	advmod	29:advmod	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	26	det	26:det	_
 23	tavern	tavern	NOUN	NN	Number=Sing	26	compound	26:compound	SpaceAfter=No
 24	/	/	PUNCT	,	_	25	cc	25:cc	SpaceAfter=No
-25	pub	pub	NOUN	NN	Number=Sing	23	conj	23:conj:/|26:compound	_
+25	pub	pub	NOUN	NN	Number=Sing	23	conj	23:conj|26:compound	_
 26	style	style	NOUN	NN	Number=Sing	29	nsubj	29:nsubj	_
 27	would	would	AUX	MD	VerbForm=Fin	29	aux	29:aux	_
 28	be	be	AUX	VB	VerbForm=Inf	29	cop	29:cop	_
@@ -92,7 +92,7 @@
 30	)	)	PUNCT	-RRB-	_	29	punct	29:punct	SpaceAfter=No
 31	,	,	PUNCT	,	_	33	punct	33:punct	_
 32	good	good	ADJ	JJ	Degree=Pos	33	amod	33:amod	_
-33	service	service	NOUN	NN	Number=Sing	14	conj	10:nsubj|14:conj:/	SpaceAfter=No
+33	service	service	NOUN	NN	Number=Sing	14	conj	10:nsubj|14:conj:and	SpaceAfter=No
 34	,	,	PUNCT	,	_	14	punct	14:punct	_
 35	and	and	CCONJ	CC	_	40	cc	40:cc	_
 36	all	all	ADV	RB	_	37	advmod	37:advmod	_
@@ -120,7 +120,7 @@
 13	and	and	CCONJ	CC	_	16	cc	16:cc	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	where	where	NOUN	NN	Number=Sing	16	compound	16:compound	_
-16	to's	to'	NOUN	NNS	Number=Plur	12	conj	12:conj:and|9:obj	SpaceAfter=No
+16	to's	to'	NOUN	NNS	Number=Plur	12	conj	9:obj|12:conj:and	SpaceAfter=No
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111031103114AA61BW3_ans-0006
@@ -277,9 +277,9 @@
 25	,	,	PUNCT	,	_	26	punct	26:punct	_
 26	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 27	to	to	ADP	IN	_	28	case	28:case	_
-28	Chickie	Chickie	PROPN	NNP	Number=Sing	26	obl	26:obl:'s	_
+28	Chickie	Chickie	PROPN	NNP	Number=Sing	26	obl	26:obl:to	_
 29	&	&	CCONJ	CC	_	30	cc	30:cc	_
-30	Pete	Pete	PROPN	NNP	Number=Sing	28	conj	26:obl:'s|28:conj:&	SpaceAfter=No
+30	Pete	Pete	PROPN	NNP	Number=Sing	28	conj	26:obl:to|28:conj	SpaceAfter=No
 31	's	's	PART	POS	_	28	case	28:case	SpaceAfter=No
 32	!	!	PUNCT	.	_	26	punct	26:punct	_
 

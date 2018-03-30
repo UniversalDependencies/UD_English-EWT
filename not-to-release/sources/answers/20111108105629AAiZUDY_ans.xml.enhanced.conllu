@@ -33,7 +33,7 @@
 6	can	can	AUX	MD	VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	get	get	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-9	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	obj	11:nsubj:xsubj|8:obj	_
+9	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	obj	8:obj|11:nsubj:xsubj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	eat	eat	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
 12	but	but	CCONJ	CC	_	14	cc	14:cc	_
@@ -92,7 +92,7 @@
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	vet	vet	NOUN	NN	Number=Sing	8	obl	8:obl:according_to	SpaceAfter=No
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
-6	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	10:nsubj|11:nsubj:xsubj|8:nsubj	_
+6	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj|10:nsubj|11:nsubj:xsubj	_
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 8	healthy	healthy	ADJ	JJ	Degree=Pos	0	root	0:root	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
@@ -120,7 +120,7 @@
 2	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 3	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	that	that	SCONJ	IN	_	15	mark	15:mark	_
-5	snakes	snake	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj|7:nsubj:relsubj	_
+5	snakes	snake	NOUN	NNS	Number=Plur	15	nsubj	7:nsubj:relsubj|15:nsubj	_
 6	that	that	PRON	WDT	PronType=Rel	7	nsubj	5:ref	_
 7	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 8	problems	problem	NOUN	NNS	Number=Plur	7	obj	7:obj	_
@@ -265,7 +265,7 @@
 5	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	iobj	4:iobj	_
 6	5	5	NUM	CD	NumType=Card	10	nummod	10:nummod	_
 7	or	or	CCONJ	CC	_	8	cc	8:cc	_
-8	6	6	NUM	CD	NumType=Card	6	conj	10:nummod|6:conj:or	_
+8	6	6	NUM	CD	NumType=Card	6	conj	6:conj:or|10:nummod	_
 9	live	live	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	pinkies	pinkie	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 11	and	and	CCONJ	CC	_	19	cc	19:cc	_
@@ -276,7 +276,7 @@
 16	(	(	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
 17	thawed	thaw	VERB	VBN	Tense=Past|VerbForm=Part	19	amod	19:amod	SpaceAfter=No
 18	)	)	PUNCT	-RRB-	_	19	punct	19:punct	_
-19	pinkies	pinkie	NOUN	NNS	Number=Plur	10	conj	10:conj:and|4:obj	SpaceAfter=No
+19	pinkies	pinkie	NOUN	NNS	Number=Plur	10	conj	4:obj|10:conj:and	SpaceAfter=No
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108105629AAiZUDY_ans-0015
@@ -288,7 +288,7 @@
 5	feeding	feed	VERB	VBG	VerbForm=Ger	4	xcomp	4:xcomp	_
 6	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	iobj	5:iobj	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	pinky	pinky	NOUN	NN	Number=Sing	5	obj	12:nsubj:relsubj|5:obj	_
+8	pinky	pinky	NOUN	NN	Number=Sing	5	obj	5:obj|12:nsubj:relsubj	_
 9	that	that	PRON	WDT	PronType=Rel	12	nsubj	8:ref	_
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	_
 11	bigger	bigger	ADV	RBR	_	12	advmod	12:advmod	_
@@ -332,7 +332,7 @@
 
 # sent_id = answers-20111108105629AAiZUDY_ans-0017
 # text = he crawls on top of them but does not try to eat them.
-1	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	10:nsubj|12:nsubj:xsubj|2:nsubj	_
+1	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj|10:nsubj|12:nsubj:xsubj	_
 2	crawls	crawl	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	on	on	ADP	IN	_	4	case	4:case	_
 4	top	top	NOUN	NN	Number=Sing	2	obl	2:obl:on	_
@@ -363,7 +363,7 @@
 
 # sent_id = answers-20111108105629AAiZUDY_ans-0019
 # text = i have tried "braining" both live and dead pinkies, and bloodying them up to get his attention, but he doesn't care.
-1	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	14:nsubj:xsubj|3:nsubj|5:nsubj:xsubj	_
+1	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj|14:nsubj:xsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	tried	try	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	"	"	PUNCT	``	_	5	punct	5:punct	SpaceAfter=No
@@ -372,15 +372,15 @@
 7	both	both	CCONJ	CC	_	8	cc:preconj	8:cc:preconj	_
 8	live	live	NOUN	NN	Number=Sing	11	amod	11:amod	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	dead	dead	ADJ	JJ	Degree=Pos	8	conj	11:amod|8:conj:and	_
-11	pinkies	pinkie	NOUN	NNS	Number=Plur	5	obj	18:nsubj:xsubj|5:obj	SpaceAfter=No
+10	dead	dead	ADJ	JJ	Degree=Pos	8	conj	8:conj:and|11:amod	_
+11	pinkies	pinkie	NOUN	NNS	Number=Plur	5	obj	5:obj|18:nsubj:xsubj	SpaceAfter=No
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
 14	bloodying	bloody	VERB	VBG	VerbForm=Ger	5	conj	3:xcomp|5:conj:and	_
 15	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	14	obj	14:obj	_
 16	up	up	ADP	RP	_	14	compound:prt	14:compound:prt	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
-18	get	get	VERB	VB	VerbForm=Inf	5	xcomp	14:xcomp|5:xcomp	_
+18	get	get	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp|14:xcomp	_
 19	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
 20	attention	attention	NOUN	NN	Number=Sing	18	obj	18:obj	SpaceAfter=No
 21	,	,	PUNCT	,	_	26	punct	26:punct	_
@@ -410,12 +410,12 @@
 15	in	in	ADP	IN	_	18	case	18:case	_
 16	used	used	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 17	gerbil	gerbil	NOUN	NN	Number=Sing	18	compound	18:compound	_
-18	bedding	bedding	NOUN	NN	Number=Sing	12	conj	12:conj:and|9:nmod:in	SpaceAfter=No
+18	bedding	bedding	NOUN	NN	Number=Sing	12	conj	9:nmod:in|12:conj:and	SpaceAfter=No
 19	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108105629AAiZUDY_ans-0021
 # text = i have bought some long reptile feeding tweezers and have tried holding the pinky in front of the snake's face.
-1	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	11:nsubj|12:nsubj:xsubj|3:nsubj	_
+1	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|11:nsubj|12:nsubj:xsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	bought	buy	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	some	some	DET	DT	_	8	det	8:det	_
@@ -611,7 +611,7 @@
 15	just	just	ADV	RB	_	18	advmod	18:advmod	_
 16	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	18	aux	18:aux	SpaceAfter=No
 17	n't	not	PART	RB	_	18	advmod	18:advmod	_
-18	want	want	VERB	VB	VerbForm=Inf	10	conj	10:conj:and|8:ccomp	_
+18	want	want	VERB	VB	VerbForm=Inf	10	conj	8:ccomp|10:conj:and	_
 19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	SpaceAfter=No
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -633,7 +633,7 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	winter	winter	NOUN	NN	Number=Sing	8	obl	8:obl:in	SpaceAfter=No
 4	,	,	PUNCT	,	_	8	punct	8:punct	_
-5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	12:nsubj|8:nsubj	_
+5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj|12:nsubj	_
 6	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 7	usually	usually	ADV	RB	_	8	advmod	8:advmod	_
 8	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -699,14 +699,14 @@
 5	not	not	PART	RB	_	6	advmod	6:advmod	_
 6	pregnant	pregnant	ADJ	JJ	Degree=Pos	22	advcl	22:advcl:if	_
 7	or	or	CCONJ	CC	_	8	cc	8:cc	_
-8	shedding	shed	VERB	VBG	VerbForm=Ger	6	conj	22:advcl:if|6:conj:or	SpaceAfter=No
+8	shedding	shed	VERB	VBG	VerbForm=Ger	6	conj	6:conj:or|22:advcl:if	SpaceAfter=No
 9	,	,	PUNCT	,	_	15	punct	15:punct	_
 10	and	and	CCONJ	CC	_	15	cc	15:cc	_
 11	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 12	enclosure	enclosure	NOUN	NN	Number=Sing	15	nsubj:pass	15:nsubj:pass	_
 13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	aux:pass	15:aux:pass	_
 14	properly	properly	ADV	RB	_	15	advmod	15:advmod	_
-15	equipped	equip	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	conj	22:advcl:if|6:conj:and	SpaceAfter=No
+15	equipped	equip	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	conj	6:conj:and|22:advcl:if	SpaceAfter=No
 16	,	,	PUNCT	,	_	22	punct	22:punct	_
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 18	loss	loss	NOUN	NN	Number=Sing	22	nsubj	22:nsubj	_
@@ -730,7 +730,7 @@
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 7	necessity	necessity	NOUN	NN	Number=Sing	3	conj	3:conj:and	_
 8	for	for	ADP	IN	_	9	case	9:case	_
-9	snakes	snake	NOUN	NNS	Number=Plur	7	nmod	12:nsubj:relsubj|15:nsubj:xsubj|7:nmod:for	_
+9	snakes	snake	NOUN	NNS	Number=Plur	7	nmod	7:nmod:for|12:nsubj:relsubj|15:nsubj:xsubj	_
 10	that	that	PRON	WDT	PronType=Rel	12	nsubj	9:ref	_
 11	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
 12	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	9	acl:relcl	9:acl:relcl	_
@@ -742,13 +742,13 @@
 # sent_id = answers-20111108105629AAiZUDY_ans-0039
 # text = Another thing that can cause a king snake to stop eating is shedding.
 1	Another	another	DET	DT	_	2	det	2:det	_
-2	thing	thing	NOUN	NN	Number=Sing	13	nsubj	13:nsubj|5:nsubj:relsubj	_
+2	thing	thing	NOUN	NN	Number=Sing	13	nsubj	5:nsubj:relsubj|13:nsubj	_
 3	that	that	PRON	WDT	PronType=Rel	5	nsubj	2:ref	_
 4	can	can	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 5	cause	cause	VERB	VB	VerbForm=Inf	2	acl:relcl	2:acl:relcl	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	king	king	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	snake	snake	NOUN	NN	Number=Sing	5	obj	10:nsubj:xsubj|11:nsubj:xsubj|5:obj	_
+8	snake	snake	NOUN	NN	Number=Sing	5	obj	5:obj|10:nsubj:xsubj|11:nsubj:xsubj	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	stop	stop	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
 11	eating	eat	VERB	VBG	VerbForm=Ger	10	xcomp	10:xcomp	_
@@ -764,7 +764,7 @@
 4	when	when	ADV	WRB	PronType=Int	9	mark	9:mark	_
 5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 6	king	king	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	snake	snake	NOUN	NN	Number=Sing	9	nsubj	11:nsubj:xsubj|9:nsubj	_
+7	snake	snake	NOUN	NN	Number=Sing	9	nsubj	9:nsubj|11:nsubj:xsubj	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 9	about	about	ADJ	JJ	Degree=Pos	3	advcl	3:advcl:when	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
@@ -798,7 +798,7 @@
 3	few	few	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	days	day	NOUN	NNS	Number=Plur	8	obl	8:obl:in	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	snake	snake	NOUN	NN	Number=Sing	8	nsubj	10:nsubj:xsubj|8:nsubj	_
+6	snake	snake	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 7	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 8	begin	begin	VERB	VB	VerbForm=Inf	0	root	0:root	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
@@ -825,7 +825,7 @@
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	summer	summer	NOUN	NN	Number=Sing	8	obl	8:obl:in	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	winter	winter	NOUN	NN	Number=Sing	15	conj	15:conj:and|8:obl:in	SpaceAfter=No
+17	winter	winter	NOUN	NN	Number=Sing	15	conj	8:obl:in|15:conj:and	SpaceAfter=No
 18	,	,	PUNCT	,	_	8	punct	8:punct	_
 19	feeding	feed	VERB	VBG	VerbForm=Ger	8	advcl	8:advcl	_
 20	mainly	mainly	ADV	RB	_	19	advmod	19:advmod	_
@@ -837,7 +837,7 @@
 
 # sent_id = answers-20111108105629AAiZUDY_ans-0044
 # text = It's natural and so long as you don't see any serious deterioration in their health is nothing to worry about.
-1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	19:nsubj|3:nsubj	SpaceAfter=No
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|19:nsubj	SpaceAfter=No
 2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	natural	natural	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	and	and	CCONJ	CC	_	19	cc	19:cc	_
