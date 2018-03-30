@@ -22,7 +22,7 @@
 
 # sent_id = reviews-338429-0003
 # text = We were told by a detective and asked to check our credit for anything unusual.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj:pass	10:nsubj:xsubj|3:nsubj:pass|8:nsubj:pass	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj:pass	3:nsubj:pass|8:nsubj:pass|10:nsubj:xsubj	_
 2	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	told	tell	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	by	by	ADP	IN	_	6	case	6:case	_
@@ -81,7 +81,7 @@
 7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	obj	6:obj	_
 8	to	to	ADP	IN	_	10	case	10:case	_
 9	another	another	DET	DT	_	10	det	10:det	_
-10	guy	guy	NOUN	NN	Number=Sing	6	obl	12:nsubj:relsubj|6:obl:to	_
+10	guy	guy	NOUN	NN	Number=Sing	6	obl	6:obl:to|12:nsubj:relsubj	_
 11	that	that	PRON	WDT	PronType=Rel	12	nsubj	10:ref	_
 12	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
 13	all	all	DET	PDT	_	15	det:predet	15:det:predet	_
@@ -197,9 +197,10 @@
 6	would	would	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 7	leave	leave	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
-9	then	then	ADV	RB	PronType=Dem	11	orphan	11:orphan	_
+9	then	then	ADV	RB	PronType=Dem	11	orphan	11.1:advmod	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	girl	girl	NOUN	NN	Number=Sing	7	parataxis	7:parataxis	SpaceAfter=No
+11	girl	girl	NOUN	NN	Number=Sing	7	parataxis	7:parataxis|11.1:nsubj	SpaceAfter=No
+11.1	leave	leave	VERB	VB	VerbForm=Inf	_	_	7:parataxis	CopyOf=7
 12	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-338429-0014

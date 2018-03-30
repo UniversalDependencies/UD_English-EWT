@@ -20,7 +20,7 @@
 2	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
 3	appointment	appointment	NOUN	NN	Number=Sing	9	obl	9:obl:at	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	girl	girl	NOUN	NN	Number=Sing	9	nsubj	12:nsubj:xsubj|9:nsubj	_
+5	girl	girl	NOUN	NN	Number=Sing	9	nsubj	9:nsubj|12:nsubj:xsubj	_
 6	helping	help	VERB	VBG	VerbForm=Ger	5	acl	5:acl	_
 7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	obj	6:obj	_
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	9:cop	_
@@ -119,11 +119,11 @@
 10	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 11	designer	designer	NOUN	NN	Number=Sing	14	compound	14:compound	SpaceAfter=No
 12	/	/	PUNCT	,	_	13	cc	13:cc	SpaceAfter=No
-13	dress	dress	NOUN	NN	Number=Sing	11	conj	11:conj:/|14:compound	_
+13	dress	dress	NOUN	NN	Number=Sing	11	conj	11:conj|14:compound	_
 14	name	name	NOUN	NN	Number=Sing	8	obl	8:obl:for	_
 15	or	or	CCONJ	CC	_	17	cc	17:cc	_
 16	style	style	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	number	number	NOUN	NN	Number=Sing	14	conj	14:conj:or|8:obl:for	_
+17	number	number	NOUN	NN	Number=Sing	14	conj	8:obl:for|14:conj:or	_
 18	associated	associate	VERB	VBN	Tense=Past|VerbForm=Part	14	acl	14:acl	_
 19	with	with	ADP	IN	_	22	case	22:case	_
 20	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
@@ -155,7 +155,7 @@
 1	Hmmm	hmmm	INTJ	UH	_	7	discourse	7:discourse	SpaceAfter=No
 2	...	...	PUNCT	,	_	7	punct	7:punct	_
 3	A	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	person	person	NOUN	NN	Number=Sing	7	nsubj	29:nsubj|7:nsubj	_
+4	person	person	NOUN	NN	Number=Sing	7	nsubj	7:nsubj|29:nsubj	_
 5	can	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	SpaceAfter=No
 6	not	not	PART	RB	_	7	advmod	7:advmod	_
 7	call	call	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -204,7 +204,7 @@
 
 # sent_id = reviews-211797-0009
 # text = They either: a) don't want to give it to me because they don't want me purchasing the dress elsewhere or b) are recreating the dresses themselves (ie STEALING other designers' dress designs and "filling the orders" by their own seamstresses).
-1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	10:nsubj:xsubj|28:nsubj|8:nsubj	_
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj|10:nsubj:xsubj|28:nsubj	_
 2	either	either	CCONJ	CC	_	8	cc:preconj	8:cc:preconj	SpaceAfter=No
 3	:	:	PUNCT	:	_	8	punct	8:punct	_
 4	a	a	X	LS	_	8	nummod	8:nummod	SpaceAfter=No
@@ -364,7 +364,7 @@
 11	of	of	ADP	IN	_	12	case	12:case	_
 12	designers	designer	NOUN	NNS	Number=Plur	10	nmod	10:nmod:of	SpaceAfter=No
 13	/	/	PUNCT	,	_	14	cc	14:cc	SpaceAfter=No
-14	dresses	dress	NOUN	NNS	Number=Plur	12	conj	10:nmod:of|12:conj:/	SpaceAfter=No
+14	dresses	dress	NOUN	NNS	Number=Plur	12	conj	10:nmod:of|12:conj	SpaceAfter=No
 15	,	,	PUNCT	,	_	33	punct	33:punct	_
 16	after	after	SCONJ	IN	_	18	mark	18:mark	_
 17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
@@ -432,7 +432,7 @@
 12	sit	sit	VERB	VB	Mood=Imp|VerbForm=Fin	2	appos	2:appos	_
 13	there	there	ADV	RB	PronType=Dem	12	advmod	12:advmod	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	argue	argue	VERB	VB	Mood=Imp|VerbForm=Fin	12	conj	12:conj:and|2:appos	_
+15	argue	argue	VERB	VB	Mood=Imp|VerbForm=Fin	12	conj	2:appos|12:conj:and	_
 16	with	with	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 18	customer	customer	NOUN	NN	Number=Sing	15	obl	15:obl:with	SpaceAfter=No
@@ -480,9 +480,9 @@
 13	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
 14	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	acl:relcl	12:acl:relcl	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	try	try	VERB	VB	VerbForm=Inf	8	conj	29:acl|8:conj:and	_
+16	try	try	VERB	VB	VerbForm=Inf	8	conj	8:conj:and|29:acl	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	force	force	VERB	VB	VerbForm=Inf	8	conj	29:acl|8:conj:and	_
+18	force	force	VERB	VB	VerbForm=Inf	8	conj	8:conj:and|29:acl	_
 19	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	_
 20	into	into	ADP	IN	_	22	case	22:case	_
 21	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
@@ -493,7 +493,7 @@
 26	not	not	PART	RB	_	27	advmod	27:advmod	_
 27	loving	love	VERB	VBG	Tense=Pres|VerbForm=Part	22	acl:relcl	22:acl:relcl	SpaceAfter=No
 28	"	"	PUNCT	''	_	8	punct	8:punct	_
-29	approach	approach	NOUN	NN	Number=Sing	5	obj	33:nsubj:relsubj|5:obj	_
+29	approach	approach	NOUN	NN	Number=Sing	5	obj	5:obj|33:nsubj:relsubj	_
 30	which	which	PRON	WDT	PronType=Rel	33	nsubj	29:ref	_
 31	will	will	AUX	MD	VerbForm=Fin	33	aux	33:aux	_
 32	likely	likely	ADV	RB	_	33	advmod	33:advmod	_
@@ -528,7 +528,7 @@
 8	NICER	nicer	ADJ	JJR	Degree=Cmp	12	amod	12:amod	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	more	more	ADV	RBR	_	11	advmod	11:advmod	_
-11	TRANSPARENT	transparent	ADJ	JJ	Degree=Pos	8	conj	12:amod|8:conj:and	_
+11	TRANSPARENT	transparent	ADJ	JJ	Degree=Pos	8	conj	8:conj:and|12:amod	_
 12	owners	owner	NOUN	NNS	Number=Plur	6	obj	6:obj	SpaceAfter=No
 13	.	.	PUNCT	.	_	6	punct	6:punct	_
 
@@ -539,7 +539,7 @@
 3	that	that	PRON	WDT	PronType=Rel	4	nsubj	2:ref	_
 4	seem	seem	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
 5	like	like	SCONJ	IN	_	7	mark	7:mark	_
-6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj	12:nsubj|7:nsubj	_
+6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj	7:nsubj|12:nsubj	_
 7	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:like	_
 8	something	something	PRON	NN	Number=Sing	7	obj	7:obj	_
 9	to	to	PART	TO	_	10	mark	10:mark	_

@@ -21,16 +21,17 @@
 # sent_id = reviews-044427-0003
 # text = But I found the location wonderful and the neighbors very kind.
 1	But	but	CCONJ	CC	_	3	cc	3:cc	_
-2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|9:nsubj	_
+2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|7.1:nsubj|9:nsubj	_
 3	found	find	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	location	location	NOUN	NN	Number=Sing	3	obj	3:obj|6:nsubj:xsubj	_
 6	wonderful	wonderful	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	_
 7	and	and	CCONJ	CC	_	6	cc	6:cc	_
+7.1	found	find	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	_	_	3:conj	CopyOf=3
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	neighbors	neighbor	NOUN	NNS	Number=Plur	3	conj	3:conj	_
+9	neighbors	neighbor	NOUN	NNS	Number=Plur	3	conj	3:conj|7.1:obj|11:nsubj:xsubj	_
 10	very	very	ADV	RB	_	11	advmod	11:advmod	_
-11	kind	kind	ADJ	JJ	Degree=Pos	9	orphan	9:orphan	SpaceAfter=No
+11	kind	kind	ADJ	JJ	Degree=Pos	9	orphan	7.1:xcomp	SpaceAfter=No
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-044427-0004
@@ -44,7 +45,7 @@
 7	staff	staff	NOUN	NN	Number=Sing	4	nmod	4:nmod:with	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
 9	found	find	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
-10	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	9	obj	12:nsubj:xsubj|9:obj	_
+10	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	9	obj	9:obj|12:nsubj:xsubj	_
 11	very	very	ADV	RB	_	12	advmod	12:advmod	_
 12	helpful	helpful	ADJ	JJ	Degree=Pos	9	xcomp	9:xcomp	_
 13	when	when	ADV	WRB	PronType=Int	9	advmod	9:advmod	_

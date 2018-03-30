@@ -26,7 +26,7 @@
 10	of	of	ADP	IN	_	11	case	11:case	_
 11	disappointment	disappointment	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	anger	anger	NOUN	NN	Number=Sing	11	conj	11:conj:and|9:nmod:of	SpaceAfter=No
+13	anger	anger	NOUN	NN	Number=Sing	11	conj	9:nmod:of|11:conj:and	SpaceAfter=No
 14	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = reviews-026883-0004
@@ -52,7 +52,7 @@
 3	21st	21st	NOUN	NN	Number=Sing	2	nummod	2:nummod	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	2009	2009	NUM	CD	NumType=Card	2	nummod	2:nummod	_
-6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	14:nsubj|7:nsubj	_
+6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj|14:nsubj	_
 7	ordered	order	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 8	furniture	furniture	NOUN	NN	Number=Sing	7	obj	7:obj	_
 9	from	from	ADP	IN	_	12	case	12:case	_
@@ -129,14 +129,14 @@
 5	on	on	ADP	IN	_	8	case	8:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	bedroom	bedroom	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	suite	suite	NOUN	NN	Number=Sing	2	obl	12:nsubj:relsubj|15:nsubj:relsubj|2:obl:on	SpaceAfter=No
+8	suite	suite	NOUN	NN	Number=Sing	2	obl	2:obl:on|12:nsubj:relsubj|15:nsubj:relsubj	SpaceAfter=No
 9	,	,	PUNCT	,	_	8	punct	8:punct	_
 10	which	which	PRON	WDT	PronType=Rel	12	nsubj	8:ref	_
 11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	_
 12	complete	complete	ADJ	JJ	Degree=Pos	8	acl:relcl	8:acl:relcl	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	excellent	excellent	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	condition	condition	NOUN	NN	Number=Sing	12	conj	12:conj:and|8:acl:relcl	_
+15	condition	condition	NOUN	NN	Number=Sing	12	conj	8:acl:relcl|12:conj:and	_
 16	on	on	ADP	IN	_	19	case	19:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 18	showroom	showroom	NOUN	NN	Number=Sing	19	compound	19:compound	_
@@ -287,7 +287,7 @@
 # text = The customer service at Home Delivery Service was terrible let alone their promise to proper set up furniture.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	customer	customer	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	service	service	NOUN	NN	Number=Sing	9	nsubj	13:nsubj|9:nsubj	_
+3	service	service	NOUN	NN	Number=Sing	9	nsubj	9:nsubj|13:nsubj	_
 4	at	at	ADP	IN	_	7	case	7:case	_
 5	Home	Home	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 6	Delivery	Delivery	PROPN	NNP	Number=Sing	7	compound	7:compound	_
@@ -315,7 +315,7 @@
 6	regarding	regard	VERB	VBG	VerbForm=Ger	9	case	9:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	bedroom	bedroom	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	suite	suite	NOUN	NN	Number=Sing	5	obl	5:obl:regarding	SpaceAfter=No
+9	suite	suite	NOUN	NN	Number=Sing	5	obl	5:obl:regard	SpaceAfter=No
 10	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-026883-0015
@@ -325,7 +325,7 @@
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	owners	owner	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	employees	employee	NOUN	NNS	Number=Plur	4	conj	10:nsubj|4:conj:and	_
+6	employees	employee	NOUN	NNS	Number=Plur	4	conj	4:conj:and|10:nsubj	_
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
 9	store	store	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
@@ -361,6 +361,6 @@
 12	terrible	terrible	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 13	sit	sit	VERB	VB	VerbForm=Inf	15	amod	15:amod	_
 14	up	up	ADP	RP	_	13	compound:prt	13:compound:prt	_
-15	service	service	NOUN	NN	Number=Sing	10	conj	10:conj:and|7:obj	SpaceAfter=No
+15	service	service	NOUN	NN	Number=Sing	10	conj	7:obj|10:conj:and	SpaceAfter=No
 16	.	.	PUNCT	.	_	5	punct	5:punct	_
 

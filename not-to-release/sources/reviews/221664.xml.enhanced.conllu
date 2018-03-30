@@ -23,7 +23,7 @@
 10	check	check	VERB	VB	Mood=Imp|VerbForm=Fin	13	compound	13:compound	_
 11	engine	engine	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No
 12	"	"	PUNCT	''	_	10	punct	10:punct	_
-13	light	light	NOUN	NN	Number=Sing	7	obj	14:nsubj:xsubj|7:obj	_
+13	light	light	NOUN	NN	Number=Sing	7	obj	7:obj|14:nsubj:xsubj	_
 14	diagnosed	diagnose	VERB	VBN	Tense=Past|VerbForm=Part	7	xcomp	7:xcomp	_
 15	back	back	ADV	RB	_	17	advmod	17:advmod	_
 16	in	in	ADP	IN	_	17	case	17:case	_
@@ -36,7 +36,7 @@
 # text = They said it was "plugs and wires" and quoted me $330 to do the work, including parts.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
 2	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	11:nsubj|6:nsubj|8:nsubj	_
+3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj|8:nsubj|11:nsubj	_
 4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	_
 5	"	"	PUNCT	``	_	6	punct	6:punct	SpaceAfter=No
 6	plugs	plug	NOUN	NNS	Number=Plur	2	ccomp	2:ccomp	_
@@ -54,7 +54,7 @@
 18	work	work	NOUN	NN	Number=Sing	16	obj	16:obj	SpaceAfter=No
 19	,	,	PUNCT	,	_	18	punct	18:punct	_
 20	including	include	VERB	VBG	VerbForm=Ger	21	case	21:case	_
-21	parts	part	NOUN	NNS	Number=Plur	18	nmod	18:nmod:including	SpaceAfter=No
+21	parts	part	NOUN	NNS	Number=Plur	18	nmod	18:nmod:include	SpaceAfter=No
 22	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-221664-0004
@@ -85,7 +85,7 @@
 # sent_id = reviews-221664-0005
 # text = Those things ended up being a windsheild washer fluid tank (1 screw) and the air filter canister (4 spring clips).
 1	Those	those	DET	DT	Number=Plur|PronType=Dem	2	det	2:det	_
-2	things	thing	NOUN	NNS	Number=Plur	3	nsubj	10:nsubj:xsubj|19:nsubj:xsubj|3:nsubj	_
+2	things	thing	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj|10:nsubj:xsubj|19:nsubj:xsubj	_
 3	ended	end	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	up	up	ADP	RP	_	3	compound:prt	3:compound:prt	_
 5	being	be	AUX	VBG	VerbForm=Ger	10	cop	10:cop	_
@@ -102,7 +102,7 @@
 16	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 17	air	air	NOUN	NN	Number=Sing	18	compound	18:compound	_
 18	filter	filter	NOUN	NN	Number=Sing	19	compound	19:compound	_
-19	canister	canister	NOUN	NN	Number=Sing	10	conj	10:conj:and|3:xcomp	_
+19	canister	canister	NOUN	NN	Number=Sing	10	conj	3:xcomp|10:conj:and	_
 20	(	(	PUNCT	-LRB-	_	23	punct	23:punct	SpaceAfter=No
 21	4	4	NUM	CD	NumType=Card	23	nummod	23:nummod	_
 22	spring	spring	NOUN	NN	Number=Sing	23	compound	23:compound	_

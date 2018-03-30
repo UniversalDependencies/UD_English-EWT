@@ -51,7 +51,7 @@
 13	,	,	PUNCT	,	_	3	punct	3:punct	_
 14	once	once	SCONJ	IN	_	15	mark	15:mark	_
 15	there	there	ADV	RB	PronType=Dem	17	advcl	17:advcl:once	_
-16	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj|29:nsubj	_
+16	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj|25.1:nsubj|29:nsubj	_
 17	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	parataxis	3:parataxis	_
 18	another	another	DET	DT	_	20	det	20:det	_
 19	20	20	NUM	CD	NumType=Card	20	nummod	20:nummod	_
@@ -60,15 +60,16 @@
 22	get	get	VERB	VB	VerbForm=Inf	17	advcl	17:advcl:to	_
 23	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
 24	orders	order	NOUN	NNS	Number=Plur	22	obj	22:obj	_
-25	and	and	CCONJ	CC	_	29	cc	29:cc	_
+25	and	and	CCONJ	CC	_	29	cc	25.1:cc|29:cc	_
+25.1	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	_	_	17:conj:and	CopyOf=17
 26	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	29:det	_
 27	further	further	ADJ	JJR	Degree=Cmp	29	amod	29:amod	_
 28	45	45	NUM	CD	NumType=Card	29	nummod	29:nummod	_
-29	mins	min	NOUN	NNS	Number=Plur	17	conj	17:conj:and	_
+29	mins	min	NOUN	NNS	Number=Plur	17	conj	17:conj:and|25.1:obj	_
 30	till	till	SCONJ	IN	_	33	mark	33:mark	_
 31	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	32	nmod:poss	32:nmod:poss	_
 32	starters	starter	NOUN	NNS	Number=Plur	33	nsubj	33:nsubj	_
-33	landed	land	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	29	orphan	29:orphan	_
+33	landed	land	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	29	orphan	25.1:advcl:till	_
 34	on	on	ADP	IN	_	36	case	36:case	_
 35	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	36	nmod:poss	36:nmod:poss	_
 36	table	table	NOUN	NN	Number=Sing	33	obl	33:obl:on	SpaceAfter=No
@@ -80,7 +81,7 @@
 2	frustrating	frustrating	ADJ	JJ	Degree=Pos	0	root	0:root	_
 3	for	for	ADP	IN	_	5	case	5:case	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-5	restaurant	restaurant	NOUN	NN	Number=Sing	2	obl	13:nsubj:relsubj|2:obl:for|7:nsubj:relsubj	_
+5	restaurant	restaurant	NOUN	NN	Number=Sing	2	obl	2:obl:for|7:nsubj:relsubj|13:nsubj:relsubj	_
 6	that	that	PRON	WDT	PronType=Rel	7	nsubj	5:ref	_
 7	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 8	1	1	NUM	CD	NumType=Card	9	nummod	9:nummod	_
