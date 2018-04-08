@@ -10,7 +10,7 @@
 7	of	of	ADP	IN	_	10	case	10:case	_
 8	Big	Big	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 9	Bad	Bad	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	Wolf	Wolf	PROPN	NNP	Number=Sing	6	obl	6:obl	SpaceAfter=No
+10	Wolf	Wolf	PROPN	NNP	Number=Sing	6	obl	6:obl:of	SpaceAfter=No
 11	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0002
@@ -42,8 +42,8 @@
 # text = Ever since he ate up Red Riding Hood's grandma and blew down the houses of two-thirds of the Three Little Pigs, the Big Bad Wolf has held a persistently bad reputation.
 1	Ever	ever	ADV	RB	_	4	advmod	4:advmod	_
 2	since	since	SCONJ	IN	_	4	mark	4:mark	_
-3	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
-4	ate	eat	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	31	advcl	31:advcl	_
+3	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj|12:nsubj	_
+4	ate	eat	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	31	advcl	31:advcl:since	_
 5	up	up	ADP	RP	_	4	compound:prt	4:compound:prt	_
 6	Red	Red	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 7	Riding	Riding	PROPN	NNP	Number=Sing	8	compound	8:compound	_
@@ -51,19 +51,19 @@
 9	's	's	PART	POS	_	8	case	8:case	_
 10	grandma	grandma	NOUN	NN	Number=Sing	4	obj	4:obj	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	blew	blow	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj	_
+12	blew	blow	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj:and|31:advcl:since	_
 13	down	down	ADP	RP	_	12	compound:prt	12:compound:prt	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	houses	house	NOUN	NNS	Number=Plur	12	obj	12:obj	_
 16	of	of	ADP	IN	_	19	case	19:case	_
 17	two	two	NUM	CD	NumType=Card	19	nummod	19:nummod	SpaceAfter=No
 18	-	-	PUNCT	HYPH	_	19	punct	19:punct	SpaceAfter=No
-19	thirds	third	NOUN	NNS	Number=Plur	15	nmod	15:nmod	_
+19	thirds	third	NOUN	NNS	Number=Plur	15	nmod	15:nmod:of	_
 20	of	of	ADP	IN	_	24	case	24:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 22	Three	Three	PROPN	NNP	Number=Sing	24	compound	24:compound	_
 23	Little	Little	PROPN	NNP	Number=Sing	24	compound	24:compound	_
-24	Pigs	Pigs	PROPN	NNPS	Number=Plur	19	nmod	19:nmod	SpaceAfter=No
+24	Pigs	Pigs	PROPN	NNPS	Number=Plur	19	nmod	19:nmod:of	SpaceAfter=No
 25	,	,	PUNCT	,	_	31	punct	31:punct	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
 27	Big	Big	PROPN	NNP	Number=Sing	29	compound	29:compound	_
@@ -80,11 +80,11 @@
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0006
 # text = In part because of that reputation, the gray wolf was nearly exterminated from the lower 48 states by the 1920s, except for a small remnant population on Isle Royale National Park in Michigan's Lake Superior.
 1	In	in	ADP	IN	_	2	case	2:case	_
-2	part	part	ADJ	JJ	Degree=Pos	6	nmod	6:nmod	_
+2	part	part	ADJ	JJ	Degree=Pos	6	nmod	6:nmod:in	_
 3	because	because	ADP	IN	_	6	case	6:case	_
 4	of	of	ADP	IN	_	3	fixed	3:fixed	_
 5	that	that	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	_
-6	reputation	reputation	NOUN	NN	Number=Sing	13	obl	13:obl	SpaceAfter=No
+6	reputation	reputation	NOUN	NN	Number=Sing	13	obl	13:obl:because_of	SpaceAfter=No
 7	,	,	PUNCT	,	_	13	punct	13:punct	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	gray	gray	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
@@ -96,27 +96,27 @@
 15	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 16	lower	lower	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 17	48	48	NUM	CD	NumType=Card	18	nummod	18:nummod	_
-18	states	state	NOUN	NNS	Number=Plur	13	obl	13:obl	_
+18	states	state	NOUN	NNS	Number=Plur	13	obl	13:obl:from	_
 19	by	by	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	1920s	1920	NOUN	NNS	Number=Plur	13	obl	13:obl	SpaceAfter=No
+21	1920s	1920	NOUN	NNS	Number=Plur	13	obl	13:obl:by	SpaceAfter=No
 22	,	,	PUNCT	,	_	13	punct	13:punct	_
 23	except	except	ADP	IN	_	28	case	28:case	_
 24	for	for	ADP	IN	_	28	case	28:case	_
 25	a	a	DET	DT	Definite=Ind|PronType=Art	28	det	28:det	_
 26	small	small	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
 27	remnant	remnant	NOUN	NN	Number=Sing	28	compound	28:compound	_
-28	population	population	NOUN	NN	Number=Sing	13	obl	13:obl	_
+28	population	population	NOUN	NN	Number=Sing	13	obl	13:obl:for	_
 29	on	on	ADP	IN	_	33	case	33:case	_
 30	Isle	Isle	PROPN	NNP	Number=Sing	31	compound	31:compound	_
 31	Royale	Royale	PROPN	NNP	Number=Sing	33	compound	33:compound	_
 32	National	National	PROPN	NNP	Number=Sing	33	compound	33:compound	_
-33	Park	Park	PROPN	NNP	Number=Sing	28	nmod	28:nmod	_
+33	Park	Park	PROPN	NNP	Number=Sing	28	nmod	28:nmod:on	_
 34	in	in	ADP	IN	_	38	case	38:case	_
 35	Michigan	Michigan	PROPN	NNP	Number=Sing	38	nmod:poss	38:nmod:poss	SpaceAfter=No
 36	's	's	PART	POS	_	35	case	35:case	_
 37	Lake	Lake	PROPN	NNP	Number=Sing	38	compound	38:compound	_
-38	Superior	Superior	PROPN	NNP	Number=Sing	33	nmod	33:nmod	SpaceAfter=No
+38	Superior	Superior	PROPN	NNP	Number=Sing	33	nmod	33:nmod:in	SpaceAfter=No
 39	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0007
@@ -129,9 +129,9 @@
 6	in	in	ADP	IN	_	9	case	9:case	_
 7	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 8	National	National	PROPN	NNP	Number=Sing	9	compound	9:compound	_
-9	Park	Park	PROPN	NNP	Number=Sing	5	obl	5:obl	_
+9	Park	Park	PROPN	NNP	Number=Sing	5	obl	5:obl:in	_
 10	in	in	ADP	IN	_	11	case	11:case	_
-11	1943	1943	NUM	CD	NumType=Card	5	obl	5:obl	SpaceAfter=No
+11	1943	1943	NUM	CD	NumType=Card	5	obl	5:obl:in	SpaceAfter=No
 12	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0008
@@ -139,12 +139,12 @@
 1	Western	western	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 2	sheep	sheep	NOUN	NNS	Number=Plur	5	compound	5:compound	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	cattle	cattle	NOUN	NNS	Number=Plur	2	conj	2:conj	_
-5	ranchers	rancher	NOUN	NNS	Number=Plur	17	nsubj	17:nsubj	SpaceAfter=No
+4	cattle	cattle	NOUN	NNS	Number=Plur	2	conj	2:conj:and|5:compound	_
+5	ranchers	rancher	NOUN	NNS	Number=Plur	17	nsubj	9:nmod:poss|17:nsubj|24:nsubj	SpaceAfter=No
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7	on	on	ADP	IN	_	9	case	9:case	_
-8	whose	whose	PRON	WP$	Poss=Yes|PronType=Int	9	nmod:poss	9:nmod:poss	_
-9	behalf	behalf	NOUN	NN	Number=Sing	14	obl	14:obl	_
+8	whose	whose	PRON	WP$	Poss=Yes|PronType=Int	9	nmod:poss	5:ref	_
+9	behalf	behalf	NOUN	NN	Number=Sing	14	obl	14:obl:on	_
 10	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	12:det	_
 11	extermination	extermination	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	campaign	campaign	NOUN	NN	Number=Sing	14	nsubj:pass	14:nsubj:pass	_
@@ -157,14 +157,14 @@
 19	hands	hand	NOUN	NNS	Number=Plur	17	obj	17:obj	_
 20	of	of	ADP	IN	_	22	case	22:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
-22	wolf	wolf	NOUN	NN	Number=Sing	17	obl	17:obl	_
+22	wolf	wolf	NOUN	NN	Number=Sing	17	obl	17:obl:of	_
 23	and	and	CCONJ	CC	_	24	cc	24:cc	_
-24	wrote	write	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	17	conj	17:conj	_
+24	wrote	write	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	17	conj	17:conj:and	_
 25	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	24	obj	24:obj	_
 26	off	off	ADP	RP	_	24	compound:prt	24:compound:prt	_
 27	as	as	ADP	IN	_	29	case	29:case	_
 28	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	29:det	_
-29	job	job	NOUN	NN	Number=Sing	24	obl	24:obl	_
+29	job	job	NOUN	NN	Number=Sing	24	obl	24:obl:as	_
 30	well	well	ADV	RB	Degree=Pos	31	advmod	31:advmod	_
 31	done	do	VERB	VBN	Tense=Past|VerbForm=Part	29	acl	29:acl	SpaceAfter=No
 32	.	.	PUNCT	.	_	17	punct	17:punct	_
@@ -179,7 +179,7 @@
 6	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	cows	cow	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj	_
 8	could	could	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	ruminate	ruminate	VERB	VB	VerbForm=Inf	4	conj	4:conj	_
+9	ruminate	ruminate	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 10	and	and	CCONJ	CC	_	17	cc	17:cc	_
 11	never	never	ADV	RB	_	17	advmod	17:advmod	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
@@ -187,7 +187,7 @@
 14	word	word	NOUN	NN	Number=Sing	17	nsubj:pass	17:nsubj:pass	_
 15	would	would	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 16	be	be	AUX	VB	VerbForm=Inf	17	aux:pass	17:aux:pass	_
-17	heard	hear	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	conj	4:conj	SpaceAfter=No
+17	heard	hear	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	conj	4:conj:and	SpaceAfter=No
 18	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0010
@@ -197,29 +197,29 @@
 3	major	major	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 4	kill	kill	NOUN	NN	Number=Sing	6	compound	6:compound	SpaceAfter=No
 5	-	-	PUNCT	HYPH	_	6	punct	6:punct	SpaceAfter=No
-6	offs	off	NOUN	NNS	Number=Plur	14	obl	14:obl	SpaceAfter=No
+6	offs	off	NOUN	NNS	Number=Plur	14	obl	14:obl:after	SpaceAfter=No
 7	,	,	PUNCT	,	_	14	punct	14:punct	_
 8	wolves	wolf	NOUN	NNS	Number=Plur	14	nsubj	14:nsubj	_
 9	outside	outside	ADP	IN	_	11	case	11:case	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	Alaska	Alaska	PROPN	NNP	Number=Sing	8	nmod	8:nmod	_
+11	Alaska	Alaska	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	Canada	Canada	PROPN	NNP	Number=Sing	11	conj	11:conj	_
+13	Canada	Canada	PROPN	NNP	Number=Sing	11	conj	8:nmod:of|11:conj:and	_
 14	existed	exist	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 15	mostly	mostly	ADV	RB	_	17	advmod	17:advmod	_
 16	as	as	ADP	IN	_	17	case	17:case	_
-17	legend	legend	NOUN	NN	Number=Sing	14	obl	14:obl	SpaceAfter=No
+17	legend	legend	NOUN	NN	Number=Sing	14	obl	14:obl:as	SpaceAfter=No
 18	.	.	PUNCT	.	_	14	punct	14:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0011
 # text = Like UFOs or Sasquatch, several people claimed to see fleeting lone wolves, usually in Yellowstone.
 1	Like	like	ADP	IN	_	2	case	2:case	_
-2	UFOs	ufo	NOUN	NNS	Number=Plur	8	obl	8:obl	_
+2	UFOs	ufo	NOUN	NNS	Number=Plur	8	obl	8:obl:like	_
 3	or	or	CCONJ	CC	_	4	cc	4:cc	_
-4	Sasquatch	Sasquatch	PROPN	NNP	Number=Sing	2	conj	2:conj	SpaceAfter=No
+4	Sasquatch	Sasquatch	PROPN	NNP	Number=Sing	2	conj	2:conj:or|8:obl:like	SpaceAfter=No
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	several	several	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	people	people	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
+7	people	people	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 8	claimed	claim	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	see	see	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
@@ -229,24 +229,24 @@
 14	,	,	PUNCT	,	_	10	punct	10:punct	_
 15	usually	usually	ADV	RB	_	17	advmod	17:advmod	_
 16	in	in	ADP	IN	_	17	case	17:case	_
-17	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	10	obl	10:obl	SpaceAfter=No
+17	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	10	obl	10:obl:in	SpaceAfter=No
 18	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0012
 # text = In the 1960s, a group shooting a movie in the Wyoming park reportedly imported some captive wolves, then released them when their shooting was done.
 1	In	in	ADP	IN	_	3	case	3:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	1960s	1960	NOUN	NNS	Number=Plur	15	obl	15:obl	SpaceAfter=No
+3	1960s	1960	NOUN	NNS	Number=Plur	15	obl	15:obl:in	SpaceAfter=No
 4	,	,	PUNCT	,	_	15	punct	15:punct	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-6	group	group	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
+6	group	group	NOUN	NN	Number=Sing	15	nsubj	15:nsubj|21:nsubj	_
 7	shooting	shoot	VERB	VBG	VerbForm=Ger	6	acl	6:acl	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 9	movie	movie	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	in	in	ADP	IN	_	13	case	13:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	Wyoming	Wyoming	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	park	park	NOUN	NN	Number=Sing	7	obl	7:obl	_
+13	park	park	NOUN	NN	Number=Sing	7	obl	7:obl:in	_
 14	reportedly	reportedly	ADV	RB	_	15	advmod	15:advmod	_
 15	imported	import	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 16	some	some	DET	DT	_	18	det	18:det	_
@@ -260,13 +260,13 @@
 24	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
 25	shooting	shooting	NOUN	NN	Number=Sing	27	nsubj	27:nsubj	_
 26	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	27	cop	27:cop	_
-27	done	done	ADJ	JJ	Degree=Pos	21	advcl	21:advcl	SpaceAfter=No
+27	done	done	ADJ	JJ	Degree=Pos	21	advcl	21:advcl:when	SpaceAfter=No
 28	.	.	PUNCT	.	_	15	punct	15:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0013
 # text = If so, this happy band has not been heard from since.
 1	If	if	SCONJ	IN	_	2	mark	2:mark	_
-2	so	so	ADV	RB	_	10	advcl	10:advcl	SpaceAfter=No
+2	so	so	ADV	RB	_	10	advcl	10:advcl:if	SpaceAfter=No
 3	,	,	PUNCT	,	_	10	punct	10:punct	_
 4	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	_
 5	happy	happy	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
@@ -287,23 +287,23 @@
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	expl	3:expl	_
 5	some	some	DET	DT	_	7	det	7:det	_
 6	renegade	renegade	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	biologist	biologist	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
+7	biologist	biologist	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|15:nsubj	_
 8	brought	bring	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	ccomp	3:ccomp	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	caged	cage	VERB	VBN	Tense=Past|VerbForm=Part	11	amod	11:amod	_
 11	pair	pair	NOUN	NN	Number=Sing	8	obj	8:obj	_
 12	to	to	ADP	IN	_	13	case	13:case	_
-13	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	8	obl	8:obl	_
+13	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	8	obl	8:obl:to	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	released	release	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	conj	8:conj	_
+15	released	release	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	conj	3:ccomp|8:conj:and	_
 16	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	15	obj	15:obj	_
 17	into	into	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	wild	wild	NOUN	NN	Number=Sing	15	obl	15:obl	_
+19	wild	wild	NOUN	NN	Number=Sing	15	obl	15:obl:into	_
 20	sometime	sometime	ADV	RB	_	15	advmod	15:advmod	_
 21	in	in	ADP	IN	_	23	case	23:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
-23	1970s	1970	NOUN	NNS	Number=Plur	20	obl	20:obl	SpaceAfter=No
+23	1970s	1970	NOUN	NNS	Number=Plur	20	obl	20:obl:in	SpaceAfter=No
 24	,	,	PUNCT	,	_	15	punct	15:punct	_
 25	hoping	hope	VERB	VBG	VerbForm=Ger	15	advcl	15:advcl	_
 26	to	to	PART	TO	_	27	mark	27:mark	_
@@ -316,7 +316,7 @@
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0015
 # text = If true, the caper failed.
 1	If	if	SCONJ	IN	_	2	mark	2:mark	_
-2	true	true	ADJ	JJ	Degree=Pos	6	advcl	6:advcl	SpaceAfter=No
+2	true	true	ADJ	JJ	Degree=Pos	6	advcl	6:advcl:if	SpaceAfter=No
 3	,	,	PUNCT	,	_	6	punct	6:punct	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	caper	caper	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
@@ -326,12 +326,12 @@
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0016
 # text = Over time, the wolf's absence seemed to rehabilitate its image.
 1	Over	over	ADP	IN	_	2	case	2:case	_
-2	time	time	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+2	time	time	NOUN	NN	Number=Sing	8	obl	8:obl:over	SpaceAfter=No
 3	,	,	PUNCT	,	_	8	punct	8:punct	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	wolf	wolf	NOUN	NN	Number=Sing	7	nmod:poss	7:nmod:poss	SpaceAfter=No
 6	's	's	PART	POS	_	5	case	5:case	_
-7	absence	absence	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
+7	absence	absence	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 8	seemed	seem	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	rehabilitate	rehabilitate	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
@@ -346,10 +346,10 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	trickle	trickle	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	support	support	NOUN	NN	Number=Sing	4	nmod	4:nmod	_
+6	support	support	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
 7	appeared	appear	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 8	for	for	SCONJ	IN	_	9	mark	9:mark	_
-9	bringing	bring	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl	_
+9	bringing	bring	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl:for	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	predator	predator	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	back	back	ADV	RB	_	9	advmod	9:advmod	_
@@ -357,12 +357,12 @@
 14	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 15	former	former	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 16	home	home	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	range	range	NOUN	NN	Number=Sing	12	obl	12:obl	_
+17	range	range	NOUN	NN	Number=Sing	12	obl	12:obl:to	_
 18	in	in	ADP	IN	_	22	case	22:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 20	northern	northern	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 21	Rocky	Rocky	PROPN	NNP	Number=Sing	22	compound	22:compound	_
-22	Mountains	Mountains	PROPN	NNPS	Number=Plur	17	nmod	17:nmod	SpaceAfter=No
+22	Mountains	Mountains	PROPN	NNPS	Number=Plur	17	nmod	17:nmod:in	SpaceAfter=No
 23	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0018
@@ -372,25 +372,25 @@
 3	grew	grow	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	into	into	ADP	IN	_	6	case	6:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-6	flood	flood	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+6	flood	flood	NOUN	NN	Number=Sing	3	obl	3:obl:into	SpaceAfter=No
 7	,	,	PUNCT	,	_	3	punct	3:punct	_
 8	resulting	result	VERB	VBG	VerbForm=Ger	3	advcl	3:advcl	_
 9	in	in	SCONJ	IN	_	13	mark	13:mark	_
 10	14	14	NUM	CD	NumType=Card	11	nummod	11:nummod	_
 11	wolves	wolf	NOUN	NNS	Number=Plur	13	nsubj:pass	13:nsubj:pass	_
 12	being	be	AUX	VBG	VerbForm=Ger	13	aux:pass	13:aux:pass	_
-13	reintroduced	reintroduce	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	advcl	8:advcl	_
+13	reintroduced	reintroduce	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	advcl	8:advcl:in	_
 14	in	in	ADP	IN	_	15	case	15:case	_
-15	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	13	obl	13:obl	_
+15	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	13	obl	13:obl:in	_
 16	in	in	ADP	IN	_	17	case	17:case	_
-17	1995	1995	NUM	CD	NumType=Card	13	obl	13:obl	_
+17	1995	1995	NUM	CD	NumType=Card	13	obl	13:obl:in	_
 18	by	by	ADP	IN	_	24	case	24:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 20	U.S.	U.S.	PROPN	NNP	Number=Sing	24	compound	24:compound	_
 21	Fish	Fish	PROPN	NNP	Number=Sing	24	compound	24:compound	_
 22	and	and	CCONJ	CC	_	23	cc	23:cc	_
-23	Wildlife	Wildlife	PROPN	NNP	Number=Sing	21	conj	21:conj	_
-24	Service	Service	PROPN	NNP	Number=Sing	13	obl	13:obl	_
+23	Wildlife	Wildlife	PROPN	NNP	Number=Sing	21	conj	21:conj:and|24:compound	_
+24	Service	Service	PROPN	NNP	Number=Sing	13	obl	13:obl:by	_
 25	--	--	PUNCT	,	_	13	punct	13:punct	_
 26	albeit	albeit	SCONJ	IN	_	34	advmod	34:advmod	_
 27	over	over	ADP	IN	_	34	case	34:case	_
@@ -399,10 +399,10 @@
 30	and	and	CCONJ	CC	_	33	cc	33:cc	_
 31	still	still	ADV	RB	_	33	advmod	33:advmod	SpaceAfter=No
 32	-	-	PUNCT	HYPH	_	33	punct	33:punct	SpaceAfter=No
-33	continuing	continue	VERB	VBG	VerbForm=Ger	29	conj	29:conj	_
-34	objections	objection	NOUN	NNS	Number=Plur	13	advcl	13:advcl	_
+33	continuing	continue	VERB	VBG	VerbForm=Ger	29	conj	29:conj:and|34:amod	_
+34	objections	objection	NOUN	NNS	Number=Plur	13	advcl	13:advcl:over	_
 35	of	of	ADP	IN	_	36	case	36:case	_
-36	ranchers	rancher	NOUN	NNS	Number=Plur	34	nmod	34:nmod	SpaceAfter=No
+36	ranchers	rancher	NOUN	NNS	Number=Plur	34	nmod	34:nmod:of	SpaceAfter=No
 37	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0019
@@ -416,7 +416,7 @@
 7	and	and	CCONJ	CC	_	10	cc	10:cc	_
 8	now	now	ADV	RB	_	10	advmod	10:advmod	_
 9	there	there	PRON	EX	_	10	expl	10:expl	_
-10	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj	_
+10	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	_
 11	an	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 12	estimated	estimate	VERB	VBN	Tense=Past|VerbForm=Part	14	amod	14:amod	_
 13	850	850	NUM	CD	NumType=Card	14	nummod	14:nummod	_
@@ -442,7 +442,7 @@
 2	compelling	compelling	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	argument	argument	NOUN	NN	Number=Sing	0	root	0:root	_
 4	for	for	ADP	IN	_	5	case	5:case	_
-5	reintroduction	reintroduction	NOUN	NN	Number=Sing	3	nmod	3:nmod	_
+5	reintroduction	reintroduction	NOUN	NN	Number=Sing	3	nmod	3:nmod:for	_
 6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	wolf	wolf	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
@@ -450,27 +450,27 @@
 10	as	as	ADP	IN	_	13	case	13:case	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 12	keystone	keystone	NOUN	NN	Number=Sing	13	compound	13:compound	_
-13	predator	predator	NOUN	NN	Number=Sing	9	obl	9:obl	SpaceAfter=No
+13	predator	predator	NOUN	NN	Number=Sing	9	obl	9:obl:as	SpaceAfter=No
 14	,	,	PUNCT	,	_	13	punct	13:punct	_
 15	an	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
-16	animal	animal	NOUN	NN	Number=Sing	13	appos	13:appos	_
-17	that	that	PRON	WDT	PronType=Rel	18	nsubj	18:nsubj	_
+16	animal	animal	NOUN	NN	Number=Sing	13	appos	13:appos|18:nsubj	_
+17	that	that	PRON	WDT	PronType=Rel	18	nsubj	16:ref	_
 18	affects	affect	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	acl:relcl	16:acl:relcl	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	populations	population	NOUN	NNS	Number=Plur	18	obj	18:obj	SpaceAfter=No
 21	,	,	PUNCT	,	_	22	punct	22:punct	_
-22	behavior	behavior	NOUN	NN	Number=Sing	20	conj	20:conj	_
+22	behavior	behavior	NOUN	NN	Number=Sing	20	conj	18:obj|20:conj:and	_
 23	and	and	CCONJ	CC	_	24	cc	24:cc	_
-24	ecology	ecology	NOUN	NN	Number=Sing	20	conj	20:conj	_
+24	ecology	ecology	NOUN	NN	Number=Sing	20	conj	18:obj|20:conj:and	_
 25	of	of	ADP	IN	_	28	case	28:case	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	28	det	28:det	_
 27	wide	wide	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
-28	variety	variety	NOUN	NN	Number=Sing	20	nmod	20:nmod	_
+28	variety	variety	NOUN	NN	Number=Sing	20	nmod	20:nmod:of	_
 29	of	of	ADP	IN	_	30	case	30:case	_
-30	species	species	NOUN	NNS	Number=Plur	28	nmod	28:nmod	_
+30	species	species	NOUN	NNS	Number=Plur	28	nmod	28:nmod:of	_
 31	within	within	ADP	IN	_	33	case	33:case	_
 32	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	33	nmod:poss	33:nmod:poss	_
-33	range	range	NOUN	NN	Number=Sing	30	nmod	30:nmod	SpaceAfter=No
+33	range	range	NOUN	NN	Number=Sing	30	nmod	30:nmod:within	SpaceAfter=No
 34	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0021
@@ -482,14 +482,14 @@
 5	by	by	ADP	IN	_	8	case	8:case	_
 6	Oregon	Oregon	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 7	State	State	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	University	University	PROPN	NNP	Number=Sing	4	obl	4:obl	_
+8	University	University	PROPN	NNP	Number=Sing	4	obl	4:obl:by	_
 9	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
 10	given	give	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 11	considerable	considerable	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	credence	credence	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	to	to	ADP	IN	_	15	case	15:case	_
 14	this	this	DET	DT	Number=Sing|PronType=Dem	15	det	15:det	_
-15	idea	idea	NOUN	NN	Number=Sing	10	obl	10:obl	SpaceAfter=No
+15	idea	idea	NOUN	NN	Number=Sing	10	obl	10:obl:to	SpaceAfter=No
 16	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0022
@@ -500,7 +500,7 @@
 4	William	William	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
 5	Ripple	Ripple	PROPN	NNP	Number=Sing	4	flat	4:flat	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	Robert	Robert	PROPN	NNP	Number=Sing	4	conj	4:conj	_
+7	Robert	Robert	PROPN	NNP	Number=Sing	4	conj	4:conj:and|10:nsubj	_
 8	Beschta	Beschta	PROPN	NNP	Number=Sing	7	flat	7:flat	_
 9	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
 10	found	find	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
@@ -516,7 +516,7 @@
 20	although	although	SCONJ	IN	_	23	mark	23:mark	_
 21	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	23	nsubj	23:nsubj	_
 22	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	23	aux	23:aux	_
-23	given	give	VERB	VBN	Tense=Past|VerbForm=Part	14	advcl	14:advcl	_
+23	given	give	VERB	VBN	Tense=Past|VerbForm=Part	14	advcl	14:advcl:although	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
 25	phenomenon	phenomenon	NOUN	NN	Number=Sing	23	iobj	23:iobj	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
@@ -525,31 +525,31 @@
 29	of	of	ADP	IN	_	32	case	32:case	_
 30	"	"	PUNCT	``	_	32	punct	32:punct	SpaceAfter=No
 31	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
-32	ecology	ecology	NOUN	NN	Number=Sing	28	nmod	28:nmod	_
+32	ecology	ecology	NOUN	NN	Number=Sing	28	nmod	28:nmod:of	_
 33	of	of	ADP	IN	_	34	case	34:case	_
-34	fear	fear	NOUN	NN	Number=Sing	32	nmod	32:nmod	SpaceAfter=No
+34	fear	fear	NOUN	NN	Number=Sing	32	nmod	32:nmod:of	SpaceAfter=No
 35	"	"	PUNCT	''	_	32	punct	32:punct	_
 36	--	--	PUNCT	,	_	28	punct	28:punct	_
-37	something	something	PRON	NN	Number=Sing	28	appos	28:appos	_
-38	that	that	PRON	WDT	PronType=Rel	39	nsubj	39:nsubj	_
+37	something	something	PRON	NN	Number=Sing	28	appos	28:appos|39:nsubj	_
+38	that	that	PRON	WDT	PronType=Rel	39	nsubj	37:ref	_
 39	smacks	smack	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	37	acl:relcl	37:acl:relcl	_
 40	of	of	ADP	IN	_	43	case	43:case	_
 41	the	the	DET	DT	Definite=Def|PronType=Art	43	det	43:det	_
 42	horrible	horrible	ADJ	JJ	Degree=Pos	43	amod	43:amod	_
-43	PR	pr	NOUN	NN	Number=Sing	39	obl	39:obl	_
+43	PR	pr	NOUN	NN	Number=Sing	39	obl	39:obl:of	_
 44	resulting	result	VERB	VBG	VerbForm=Ger	43	acl	43:acl	_
 45	from	from	ADP	IN	_	49	case	49:case	_
 46	the	the	DET	DT	Definite=Def|PronType=Art	47	det	47:det	_
 47	wolf	wolf	NOUN	NN	Number=Sing	49	nmod:poss	49:nmod:poss	SpaceAfter=No
 48	's	's	PART	POS	_	47	case	47:case	_
-49	relationships	relationship	NOUN	NNS	Number=Plur	44	obl	44:obl	_
+49	relationships	relationship	NOUN	NNS	Number=Plur	44	obl	44:obl:from	_
 50	with	with	ADP	IN	_	52	case	52:case	_
 51	Riding	Riding	PROPN	NNP	Number=Sing	52	compound	52:compound	_
-52	Hood	Hood	PROPN	NNP	Number=Sing	49	nmod	49:nmod	_
+52	Hood	Hood	PROPN	NNP	Number=Sing	49	nmod	49:nmod:with	_
 53	and	and	CCONJ	CC	_	56	cc	56:cc	_
 54	the	the	DET	DT	Definite=Def|PronType=Art	56	det	56:det	_
 55	Three	Three	PROPN	NNP	Number=Sing	56	compound	56:compound	_
-56	Pigs	Pigs	PROPN	NNPS	Number=Plur	52	conj	52:conj	SpaceAfter=No
+56	Pigs	Pigs	PROPN	NNPS	Number=Plur	52	conj	49:nmod:with|52:conj:and	SpaceAfter=No
 57	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0023
@@ -557,74 +557,74 @@
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
 2	explained	explain	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	that	that	SCONJ	IN	_	7	mark	7:mark	_
-4	elk	elk	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
+4	elk	elk	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj|9:nsubj:xsubj|10:nsubj:xsubj	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	4	nmod	4:nmod	_
+6	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	_
 7	used	use	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	browse	browse	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
 10	unmolested	unmolested	ADJ	JJ	Degree=Pos	9	xcomp	9:xcomp	_
 11	on	on	ADP	IN	_	13	case	13:case	_
 12	young	young	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	aspen	aspen	NOUN	NN	Number=Sing	9	obl	9:obl	_
+13	aspen	aspen	NOUN	NN	Number=Sing	9	obl	9:obl:on	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	willow	willow	NOUN	NN	Number=Sing	13	conj	13:conj	_
+15	willow	willow	NOUN	NN	Number=Sing	13	conj	9:obl:on|13:conj:and	_
 16	growing	grow	VERB	VBG	VerbForm=Ger	13	acl	13:acl	_
 17	near	near	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	banks	bank	NOUN	NNS	Number=Plur	16	obl	16:obl	_
+19	banks	bank	NOUN	NNS	Number=Plur	16	obl	16:obl:near	_
 20	of	of	ADP	IN	_	21	case	21:case	_
-21	streams	stream	NOUN	NNS	Number=Plur	19	nmod	19:nmod	SpaceAfter=No
+21	streams	stream	NOUN	NNS	Number=Plur	19	nmod	19:nmod:of	SpaceAfter=No
 22	,	,	PUNCT	,	_	9	punct	9:punct	_
 23	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
-24	behavior	behavior	NOUN	NN	Number=Sing	9	appos	9:appos	_
-25	that	that	PRON	WDT	PronType=Rel	26	nsubj	26:nsubj	_
+24	behavior	behavior	NOUN	NN	Number=Sing	9	appos	9:appos|26:nsubj|34:nsubj	_
+25	that	that	PRON	WDT	PronType=Rel	26	nsubj	24:ref	_
 26	prevented	prevent	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	24	acl:relcl	24:acl:relcl	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 28	saplings	sapling	NOUN	NNS	Number=Plur	26	obj	26:obj	_
 29	from	from	SCONJ	IN	_	30	mark	30:mark	_
-30	reaching	reach	VERB	VBG	VerbForm=Ger	26	advcl	26:advcl	_
+30	reaching	reach	VERB	VBG	VerbForm=Ger	26	advcl	26:advcl:from	_
 31	mature	mature	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
 32	stages	stage	NOUN	NNS	Number=Plur	30	obj	30:obj	_
 33	and	and	CCONJ	CC	_	34	cc	34:cc	_
-34	increased	increase	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	26	conj	26:conj	_
+34	increased	increase	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	26	conj	24:acl:relcl|26:conj:and	_
 35	the	the	DET	DT	Definite=Def|PronType=Art	36	det	36:det	_
 36	possibility	possibility	NOUN	NN	Number=Sing	34	obj	34:obj	_
 37	of	of	ADP	IN	_	39	case	39:case	_
 38	soil	soil	NOUN	NN	Number=Sing	39	compound	39:compound	_
-39	erosion	erosion	NOUN	NN	Number=Sing	36	nmod	36:nmod	SpaceAfter=No
+39	erosion	erosion	NOUN	NN	Number=Sing	36	nmod	36:nmod:of	SpaceAfter=No
 40	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0024
 # text = Since reintroduction, however, Ripple and Beschta have found, fear of the wolves apparently has discouraged the elk from spending too much time at stream banks -- where they are out in the open -- and munching on the saplings.
 1	Since	since	ADP	IN	_	2	case	2:case	_
-2	reintroduction	reintroduction	NOUN	NN	Number=Sing	10	obl	10:obl	SpaceAfter=No
+2	reintroduction	reintroduction	NOUN	NN	Number=Sing	10	obl	10:obl:since	SpaceAfter=No
 3	,	,	PUNCT	,	_	10	punct	10:punct	_
 4	however	however	ADV	RB	_	10	advmod	10:advmod	SpaceAfter=No
 5	,	,	PUNCT	,	_	10	punct	10:punct	_
 6	Ripple	Ripple	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	Beschta	Beschta	PROPN	NNP	Number=Sing	6	conj	6:conj	_
+8	Beschta	Beschta	PROPN	NNP	Number=Sing	6	conj	6:conj:and|10:nsubj	_
 9	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
 10	found	find	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	SpaceAfter=No
 11	,	,	PUNCT	,	_	10	punct	10:punct	_
 12	fear	fear	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
 13	of	of	ADP	IN	_	15	case	15:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
-15	wolves	wolf	NOUN	NNS	Number=Plur	12	nmod	12:nmod	_
+15	wolves	wolf	NOUN	NNS	Number=Plur	12	nmod	12:nmod:of	_
 16	apparently	apparently	ADV	RB	_	18	advmod	18:advmod	_
 17	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
 18	discouraged	discourage	VERB	VBN	Tense=Past|VerbForm=Part	10	ccomp	10:ccomp	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	elk	elk	NOUN	NNS	Number=Plur	18	obj	18:obj	_
 21	from	from	SCONJ	IN	_	22	mark	22:mark	_
-22	spending	spend	VERB	VBG	VerbForm=Ger	18	advcl	18:advcl	_
+22	spending	spend	VERB	VBG	VerbForm=Ger	18	advcl	18:advcl:from	_
 23	too	too	ADV	RB	_	24	advmod	24:advmod	_
 24	much	much	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 25	time	time	NOUN	NN	Number=Sing	22	obj	22:obj	_
 26	at	at	ADP	IN	_	28	case	28:case	_
 27	stream	stream	NOUN	NN	Number=Sing	28	compound	28:compound	_
-28	banks	bank	NOUN	NNS	Number=Plur	22	obl	22:obl	_
+28	banks	bank	NOUN	NNS	Number=Plur	22	obl	22:obl:at	_
 29	--	--	PUNCT	,	_	28	punct	28:punct	_
 30	where	where	ADV	WRB	PronType=Rel	33	advmod	33:advmod	_
 31	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	33	nsubj	33:nsubj	_
@@ -632,20 +632,20 @@
 33	out	out	ADV	RB	_	28	acl:relcl	28:acl:relcl	_
 34	in	in	ADP	IN	_	36	case	36:case	_
 35	the	the	DET	DT	Definite=Def|PronType=Art	36	det	36:det	_
-36	open	open	ADJ	JJ	Degree=Pos	33	obl	33:obl	_
+36	open	open	ADJ	JJ	Degree=Pos	33	obl	33:obl:in	_
 37	--	--	PUNCT	,	_	22	punct	22:punct	_
 38	and	and	CCONJ	CC	_	39	cc	39:cc	_
-39	munching	munch	VERB	VBG	VerbForm=Ger	22	conj	22:conj	_
+39	munching	munch	VERB	VBG	VerbForm=Ger	22	conj	18:advcl:from|22:conj:and	_
 40	on	on	ADP	IN	_	42	case	42:case	_
 41	the	the	DET	DT	Definite=Def|PronType=Art	42	det	42:det	_
-42	saplings	sapling	NOUN	NNS	Number=Plur	39	obl	39:obl	SpaceAfter=No
+42	saplings	sapling	NOUN	NNS	Number=Plur	39	obl	39:obl:on	SpaceAfter=No
 43	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0025
 # text = "All you have to do is look at the photographs," Ed Bangs, wolf recovery coordinator for the U.S. Fish and Wildlife Service, told UPI's Blue Planet,
 1	"	"	PUNCT	``	_	28	punct	28:punct	SpaceAfter=No
 2	All	all	DET	DT	_	7	nsubj	7:nsubj	_
-3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
+3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 4	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	do	do	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
@@ -653,7 +653,7 @@
 8	look	look	VERB	VB	VerbForm=Inf	7	ccomp	7:ccomp	_
 9	at	at	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	photographs	photograph	NOUN	NNS	Number=Plur	8	obl	8:obl	SpaceAfter=No
+11	photographs	photograph	NOUN	NNS	Number=Plur	8	obl	8:obl:at	SpaceAfter=No
 12	,	,	PUNCT	,	_	28	punct	28:punct	SpaceAfter=No
 13	"	"	PUNCT	''	_	28	punct	28:punct	_
 14	Ed	Ed	PROPN	NNP	Number=Sing	28	nsubj	28:nsubj	_
@@ -667,8 +667,8 @@
 22	U.S.	U.S.	PROPN	NNP	Number=Sing	26	compound	26:compound	_
 23	Fish	Fish	PROPN	NNP	Number=Sing	26	compound	26:compound	_
 24	and	and	CCONJ	CC	_	25	cc	25:cc	_
-25	Wildlife	Wildlife	PROPN	NNP	Number=Sing	23	conj	23:conj	_
-26	Service	Service	PROPN	NNP	Number=Sing	19	nmod	19:nmod	SpaceAfter=No
+25	Wildlife	Wildlife	PROPN	NNP	Number=Sing	23	conj	23:conj:and|26:compound	_
+26	Service	Service	PROPN	NNP	Number=Sing	19	nmod	19:nmod:for	SpaceAfter=No
 27	,	,	PUNCT	,	_	28	punct	28:punct	_
 28	told	tell	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 29	UPI	UPI	PROPN	NNP	Number=Sing	32	nmod:poss	32:nmod:poss	SpaceAfter=No
@@ -691,8 +691,8 @@
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0027
 # text = An area that used to be bald as a billiard ball is now a sea of willow."
 1	An	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	_
-2	area	area	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
-3	that	that	PRON	WDT	PronType=Rel	4	nsubj	4:nsubj	_
+2	area	area	NOUN	NN	Number=Sing	15	nsubj	4:nsubj|7:nsubj:xsubj|15:nsubj	_
+3	that	that	PRON	WDT	PronType=Rel	4	nsubj	2:ref	_
 4	used	use	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
 5	to	to	PART	TO	_	7	mark	7:mark	_
 6	be	be	AUX	VB	VerbForm=Inf	7	cop	7:cop	_
@@ -700,13 +700,13 @@
 8	as	as	ADP	IN	_	11	case	11:case	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	billiard	billiard	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	ball	ball	NOUN	NN	Number=Sing	7	obl	7:obl	_
+11	ball	ball	NOUN	NN	Number=Sing	7	obl	7:obl:as	_
 12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 13	now	now	ADV	RB	_	15	advmod	15:advmod	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 15	sea	sea	NOUN	NN	Number=Sing	0	root	0:root	_
 16	of	of	ADP	IN	_	17	case	17:case	_
-17	willow	willow	NOUN	NN	Number=Sing	15	nmod	15:nmod	SpaceAfter=No
+17	willow	willow	NOUN	NN	Number=Sing	15	nmod	15:nmod:of	SpaceAfter=No
 18	.	.	PUNCT	.	_	15	punct	15:punct	SpaceAfter=No
 19	"	"	PUNCT	''	_	15	punct	15:punct	_
 
@@ -722,7 +722,7 @@
 8	ecological	ecological	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	cascade	cascade	NOUN	NN	Number=Sing	5	obj	5:obj	_
 10	in	in	ADP	IN	_	11	case	11:case	_
-11	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	5	obl	5:obl	SpaceAfter=No
+11	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	5	obl	5:obl:in	SpaceAfter=No
 12	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0029
@@ -731,16 +731,16 @@
 2	streamside	streamside	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	willow	willow	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
-5	aspen	aspen	NOUN	NN	Number=Sing	3	conj	3:conj	_
+5	aspen	aspen	NOUN	NN	Number=Sing	3	conj	3:conj:and|7:nsubj	_
 6	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 7	meant	mean	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 8	better	better	ADJ	JJR	Degree=Cmp	9	amod	9:amod	_
 9	habitat	habitat	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	for	for	ADP	IN	_	11	case	11:case	_
-11	beaver	beaver	NOUN	NNS	Number=Plur	9	nmod	9:nmod	SpaceAfter=No
+11	beaver	beaver	NOUN	NNS	Number=Plur	9	nmod	9:nmod:for	SpaceAfter=No
 12	,	,	PUNCT	,	_	7	punct	7:punct	_
 13	for	for	ADP	IN	_	14	case	14:case	_
-14	instance	instance	NOUN	NN	Number=Sing	7	obl	7:obl	SpaceAfter=No
+14	instance	instance	NOUN	NN	Number=Sing	7	obl	7:obl:for	SpaceAfter=No
 15	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0030
@@ -748,7 +748,7 @@
 1	Where	where	ADV	WRB	PronType=Int	4	mark	4:mark	_
 2	there	there	PRON	EX	_	4	expl	4:expl	_
 3	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
-4	been	be	VERB	VBN	Tense=Past|VerbForm=Part	22	advcl	22:advcl	_
+4	been	be	VERB	VBN	Tense=Past|VerbForm=Part	22	advcl	22:advcl:where	_
 5	only	only	ADV	RB	_	8	advmod	8:advmod	_
 6	one	one	NUM	CD	NumType=Card	8	nummod	8:nummod	_
 7	beaver	beaver	NOUN	NN	Number=Sing	8	compound	8:compound	_
@@ -758,11 +758,11 @@
 11	park	park	NOUN	NN	Number=Sing	14	nmod:poss	14:nmod:poss	SpaceAfter=No
 12	's	's	PART	POS	_	11	case	11:case	_
 13	northern	northern	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	range	range	NOUN	NN	Number=Sing	8	nmod	8:nmod	_
+14	range	range	NOUN	NN	Number=Sing	8	nmod	8:nmod:in	_
 15	before	before	SCONJ	IN	_	18	mark	18:mark	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	wolves	wolf	NOUN	NNS	Number=Plur	18	nsubj	18:nsubj	_
-18	returned	return	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	advcl	4:advcl	SpaceAfter=No
+18	returned	return	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	advcl	4:advcl:before	SpaceAfter=No
 19	,	,	PUNCT	,	_	22	punct	22:punct	_
 20	now	now	ADV	RB	_	22	advmod	22:advmod	_
 21	there	there	PRON	EX	_	22	expl	22:expl	_
@@ -779,9 +779,9 @@
 5	uninteresting	uninteresting	ADJ	JJ	Degree=Pos	14	ccomp	14:ccomp	_
 6	to	to	ADP	IN	_	8	case	8:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	lot	lot	NOUN	NN	Number=Sing	5	obl	5:obl	_
+8	lot	lot	NOUN	NN	Number=Sing	5	obl	5:obl:to	_
 9	of	of	ADP	IN	_	10	case	10:case	_
-10	people	people	NOUN	NNS	Number=Plur	8	nmod	8:nmod	SpaceAfter=No
+10	people	people	NOUN	NNS	Number=Plur	8	nmod	8:nmod:of	SpaceAfter=No
 11	,	,	PUNCT	,	_	14	punct	14:punct	SpaceAfter=No
 12	"	"	PUNCT	''	_	14	punct	14:punct	_
 13	Beschta	Beschta	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
@@ -798,12 +798,12 @@
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	lot	lot	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	impact	impact	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+7	impact	impact	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
 8	on	on	ADP	IN	_	9	case	9:case	_
-9	plants	plant	NOUN	NNS	Number=Plur	7	nmod	7:nmod	_
+9	plants	plant	NOUN	NNS	Number=Plur	7	nmod	7:nmod:on	_
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
-12	say	say	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj	SpaceAfter=No
+12	say	say	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	SpaceAfter=No
 13	,	,	PUNCT	,	_	12	punct	12:punct	_
 14	'	'	PUNCT	``	_	12	punct	12:punct	SpaceAfter=No
 15	Who	who	PRON	WP	PronType=Int	16	nsubj	16:nsubj	_
@@ -820,26 +820,26 @@
 5	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 6	at	at	ADP	IN	_	8	case	8:case	_
 7	streamside	streamside	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	communities	community	NOUN	NNS	Number=Plur	5	obl	5:obl	SpaceAfter=No
+8	communities	community	NOUN	NNS	Number=Plur	5	obl	5:obl:at	SpaceAfter=No
 9	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0034
 # text = Since wolf recovery, streamside plants, willows and cottonwoods provide food for other critters -- beavers, a whole variety of avian species, berry-producing shrubs that bears can use.
 1	Since	since	ADP	IN	_	3	case	3:case	_
 2	wolf	wolf	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	recovery	recovery	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+3	recovery	recovery	NOUN	NN	Number=Sing	11	obl	11:obl:since	SpaceAfter=No
 4	,	,	PUNCT	,	_	11	punct	11:punct	_
 5	streamside	streamside	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	plants	plant	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	willows	willow	NOUN	NNS	Number=Plur	6	conj	6:conj	_
+8	willows	willow	NOUN	NNS	Number=Plur	6	conj	6:conj:and|11:nsubj	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	cottonwoods	cottonwood	NOUN	NNS	Number=Plur	6	conj	6:conj	_
+10	cottonwoods	cottonwood	NOUN	NNS	Number=Plur	6	conj	6:conj:and|11:nsubj	_
 11	provide	provide	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 12	food	food	NOUN	NN	Number=Sing	11	obj	11:obj	_
 13	for	for	ADP	IN	_	15	case	15:case	_
 14	other	other	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	critters	critter	NOUN	NNS	Number=Plur	11	obl	11:obl	_
+15	critters	critter	NOUN	NNS	Number=Plur	11	obl	11:obl:for	_
 16	--	--	PUNCT	,	_	15	punct	15:punct	_
 17	beavers	beaver	NOUN	NNS	Number=Plur	15	appos	15:appos	SpaceAfter=No
 18	,	,	PUNCT	,	_	17	punct	17:punct	_
@@ -848,13 +848,13 @@
 21	variety	variety	NOUN	NN	Number=Sing	17	appos	17:appos	_
 22	of	of	ADP	IN	_	24	case	24:case	_
 23	avian	avian	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-24	species	species	NOUN	NNS	Number=Plur	21	nmod	21:nmod	SpaceAfter=No
+24	species	species	NOUN	NNS	Number=Plur	21	nmod	21:nmod:of	SpaceAfter=No
 25	,	,	PUNCT	,	_	11	punct	11:punct	_
 26	berry	berry	NOUN	NN	Number=Sing	28	compound	28:compound	SpaceAfter=No
 27	-	-	PUNCT	HYPH	_	28	punct	28:punct	SpaceAfter=No
 28	producing	produce	VERB	VBG	VerbForm=Ger	29	amod	29:amod	_
-29	shrubs	shrub	NOUN	NNS	Number=Plur	11	obj	11:obj	_
-30	that	that	PRON	WDT	PronType=Rel	33	obj	33:obj	_
+29	shrubs	shrub	NOUN	NNS	Number=Plur	11	obj	11:obj|33:obj	_
+30	that	that	PRON	WDT	PronType=Rel	33	obj	29:ref	_
 31	bears	bear	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	33	nsubj	33:nsubj	_
 32	can	can	AUX	MD	VerbForm=Fin	33	aux	33:aux	_
 33	use	use	VERB	VB	VerbForm=Inf	29	acl:relcl	29:acl:relcl	SpaceAfter=No
@@ -866,12 +866,12 @@
 2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	important	important	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	with	with	ADP	IN	_	5	case	5:case	_
-5	regard	regard	NOUN	NN	Number=Sing	3	obl	3:obl	_
+5	regard	regard	NOUN	NN	Number=Sing	3	obl	3:obl:with	_
 6	to	to	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	quality	quality	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+8	quality	quality	NOUN	NN	Number=Sing	5	nmod	5:nmod:to	_
 9	of	of	ADP	IN	_	10	case	10:case	_
-10	streams	stream	NOUN	NNS	Number=Plur	8	nmod	8:nmod	SpaceAfter=No
+10	streams	stream	NOUN	NNS	Number=Plur	8	nmod	8:nmod:of	SpaceAfter=No
 11	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0036
@@ -882,10 +882,10 @@
 4	shade	shade	NOUN	NN	Number=Sing	3	obj	3:obj	_
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
 6	root	root	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	strength	strength	NOUN	NN	Number=Sing	4	conj	4:conj	_
+7	strength	strength	NOUN	NN	Number=Sing	4	conj	3:obj|4:conj:and	_
 8	for	for	ADP	IN	_	10	case	10:case	_
 9	bank	bank	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	stability	stability	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+10	stability	stability	NOUN	NN	Number=Sing	3	obl	3:obl:for	SpaceAfter=No
 11	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0037
@@ -895,7 +895,7 @@
 3	critical	critical	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	to	to	ADP	IN	_	6	case	6:case	_
 5	wildland	wildland	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	ecosystems	ecosystem	NOUN	NNS	Number=Plur	3	obl	3:obl	SpaceAfter=No
+6	ecosystems	ecosystem	NOUN	NNS	Number=Plur	3	obl	3:obl:to	SpaceAfter=No
 7	.	.	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
 8	"	"	PUNCT	''	_	3	punct	3:punct	_
 
@@ -911,10 +911,10 @@
 8	one	one	NUM	CD	NumType=Card	6	appos	6:appos	_
 9	of	of	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	largest	largest	ADJ	JJS	Degree=Sup	8	nmod	8:nmod	_
+11	largest	largest	ADJ	JJS	Degree=Sup	8	nmod	8:nmod:of	_
 12	in	in	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	world	world	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+14	world	world	NOUN	NN	Number=Sing	11	obl	11:obl:in	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0039
@@ -925,20 +925,20 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	number	number	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	elk	elk	NOUN	NNS	Number=Plur	5	nmod	5:nmod	_
+7	elk	elk	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	_
 8	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
 9	not	not	PART	RB	_	10	advmod	10:advmod	_
-10	declined	decline	VERB	VBN	Tense=Past|VerbForm=Part	21	advcl	21:advcl	_
+10	declined	decline	VERB	VBN	Tense=Past|VerbForm=Part	21	advcl	21:advcl:although	_
 11	very	very	ADV	RB	_	12	advmod	12:advmod	_
 12	much	much	ADV	RB	_	10	advmod	10:advmod	_
 13	since	since	SCONJ	IN	_	16	mark	16:mark	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	wolves	wolf	NOUN	NNS	Number=Plur	16	nsubj	16:nsubj	_
-16	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	advcl	10:advcl	_
+16	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	advcl	10:advcl:since	_
 17	back	back	ADV	RB	_	16	advmod	16:advmod	SpaceAfter=No
 18	,	,	PUNCT	,	_	21	punct	21:punct	_
 19	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
-20	behavior	behavior	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	_
+20	behavior	behavior	NOUN	NN	Number=Sing	21	nsubj	21:nsubj|23:nsubj:xsubj	_
 21	appears	appear	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
 22	markedly	markedly	ADV	RB	_	23	advmod	23:advmod	_
 23	different	different	ADJ	JJ	Degree=Pos	21	xcomp	21:xcomp	SpaceAfter=No
@@ -952,7 +952,7 @@
 4	pretty	pretty	ADV	RB	_	5	advmod	5:advmod	_
 5	suspicious	suspicious	ADJ	JJ	Degree=Pos	15	ccomp	15:ccomp	_
 6	of	of	SCONJ	IN	_	7	mark	7:mark	_
-7	making	make	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl	_
+7	making	make	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl:of	_
 8	broad	broad	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	generalizations	generalization	NOUN	NNS	Number=Plur	7	obj	7:obj	SpaceAfter=No
 10	,	,	PUNCT	,	_	5	punct	5:punct	SpaceAfter=No
@@ -982,7 +982,7 @@
 5	there	there	ADV	RB	PronType=Dem	0	root	0:root	_
 6	for	for	ADP	IN	_	8	case	8:case	_
 7	10	10	NUM	CD	NumType=Card	8	nummod	8:nummod	_
-8	years	year	NOUN	NNS	Number=Plur	5	obl	5:obl	SpaceAfter=No
+8	years	year	NOUN	NNS	Number=Plur	5	obl	5:obl:for	SpaceAfter=No
 9	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0043
@@ -990,7 +990,7 @@
 1	In	in	ADP	IN	_	4	case	4:case	_
 2	10	10	NUM	CD	NumType=Card	4	nummod	4:nummod	_
 3	more	more	ADJ	JJR	Degree=Cmp	4	amod	4:amod	_
-4	years	year	NOUN	NNS	Number=Plur	7	obl	7:obl	_
+4	years	year	NOUN	NNS	Number=Plur	7	obl	7:obl:in	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	7	nsubj	7:nsubj	SpaceAfter=No
 6	'll	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 7	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -1007,7 +1007,7 @@
 3	in	in	ADP	IN	_	6	case	6:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	northern	northern	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	Rockies	Rockies	PROPN	NNPS	Number=Plur	2	nmod	2:nmod	_
+6	Rockies	Rockies	PROPN	NNPS	Number=Plur	2	nmod	2:nmod:in	_
 7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
 8	been	be	AUX	VBN	Tense=Past|VerbForm=Part	10	cop	10:cop	_
 9	so	so	ADV	RB	_	10	advmod	10:advmod	_
@@ -1015,32 +1015,32 @@
 11	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 12	Fish	Fish	PROPN	NNP	Number=Sing	15	compound	15:compound	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	Wildlife	Wildlife	PROPN	NNP	Number=Sing	12	conj	12:conj	_
+14	Wildlife	Wildlife	PROPN	NNP	Number=Sing	12	conj	12:conj:and|15:compound	_
 15	Service	Service	PROPN	NNP	Number=Sing	17	nsubj	17:nsubj	_
 16	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
 17	moved	move	VERB	VBN	Tense=Past|VerbForm=Part	10	ccomp	10:ccomp	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
-19	reduce	reduce	VERB	VB	VerbForm=Inf	17	advcl	17:advcl	_
+19	reduce	reduce	VERB	VB	VerbForm=Inf	17	advcl	17:advcl:to	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	animal	animal	NOUN	NN	Number=Sing	23	nmod:poss	23:nmod:poss	SpaceAfter=No
 22	's	's	PART	POS	_	21	case	21:case	_
 23	status	status	NOUN	NN	Number=Sing	19	obj	19:obj	_
 24	from	from	ADP	IN	_	25	case	25:case	_
-25	endangered	endangered	NOUN	NN	Number=Sing	19	obl	19:obl	_
+25	endangered	endangered	NOUN	NN	Number=Sing	19	obl	19:obl:from	_
 26	to	to	ADP	IN	_	27	case	27:case	_
-27	threatened	threatened	NOUN	NN	Number=Sing	19	obl	19:obl	_
+27	threatened	threatened	NOUN	NN	Number=Sing	19	obl	19:obl:to	_
 28	and	and	CCONJ	CC	_	33	cc	33:cc	SpaceAfter=No
 29	,	,	PUNCT	,	_	33	punct	33:punct	_
 30	eventually	eventually	ADV	RB	_	33	advmod	33:advmod	SpaceAfter=No
 31	,	,	PUNCT	,	_	33	punct	33:punct	_
 32	to	to	PART	TO	_	33	mark	33:mark	_
-33	remove	remove	VERB	VB	VerbForm=Inf	19	conj	19:conj	_
+33	remove	remove	VERB	VB	VerbForm=Inf	19	conj	17:advcl:to|19:conj:and	_
 34	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	33	obj	33:obj	_
 35	from	from	ADP	IN	_	39	case	39:case	_
 36	the	the	DET	DT	Definite=Def|PronType=Art	39	det	39:det	_
 37	endangered	endangered	ADJ	JJ	Degree=Pos	38	amod	38:amod	_
 38	species	species	NOUN	NN	Number=Sing	39	compound	39:compound	_
-39	list	list	NOUN	NN	Number=Sing	33	obl	33:obl	_
+39	list	list	NOUN	NN	Number=Sing	33	obl	33:obl:from	_
 40	altogether	altogether	ADV	RB	_	33	advmod	33:advmod	SpaceAfter=No
 41	.	.	PUNCT	.	_	10	punct	10:punct	_
 
@@ -1058,13 +1058,13 @@
 10	in	in	ADP	IN	_	13	case	13:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	northern	northern	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	Rockies	Rockies	PROPN	NNPS	Number=Plur	6	obl	6:obl	SpaceAfter=No
+13	Rockies	Rockies	PROPN	NNPS	Number=Plur	6	obl	6:obl:in	SpaceAfter=No
 14	,	,	PUNCT	,	_	6	punct	6:punct	_
 15	as	as	SCONJ	IN	_	16	mark	16:mark	_
-16	required	require	VERB	VBN	Tense=Past|VerbForm=Part	6	advcl	6:advcl	_
+16	required	require	VERB	VBN	Tense=Past|VerbForm=Part	6	advcl	6:advcl:as	_
 17	by	by	ADP	IN	_	19	case	19:case	_
 18	federal	federal	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-19	regulations	regulation	NOUN	NNS	Number=Plur	16	obl	16:obl	SpaceAfter=No
+19	regulations	regulation	NOUN	NNS	Number=Plur	16	obl	16:obl:by	SpaceAfter=No
 20	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0046
@@ -1073,38 +1073,38 @@
 2	conservationists	conservationist	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
 3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	protection	protection	NOUN	NN	Number=Sing	3	obj	3:obj	_
+5	protection	protection	NOUN	NN	Number=Sing	3	obj	3:obj|6:nsubj:xsubj	_
 6	extended	extend	VERB	VBN	Tense=Past|VerbForm=Part	3	xcomp	3:xcomp	_
 7	so	so	SCONJ	IN	_	10	mark	10:mark	_
 8	wolves	wolf	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
 9	can	can	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
-10	move	move	VERB	VB	VerbForm=Inf	6	advcl	6:advcl	_
+10	move	move	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:so	_
 11	into	into	ADP	IN	_	13	case	13:case	_
 12	other	other	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	states	state	NOUN	NNS	Number=Plur	10	obl	10:obl	SpaceAfter=No
+13	states	state	NOUN	NNS	Number=Plur	10	obl	10:obl:into	SpaceAfter=No
 14	,	,	PUNCT	,	_	13	punct	13:punct	_
 15	including	include	VERB	VBG	VerbForm=Ger	16	case	16:case	_
-16	Colorado	Colorado	PROPN	NNP	Number=Sing	13	nmod	13:nmod	SpaceAfter=No
+16	Colorado	Colorado	PROPN	NNP	Number=Sing	13	nmod	13:nmod:include	SpaceAfter=No
 17	,	,	PUNCT	,	_	18	punct	18:punct	_
-18	Utah	Utah	PROPN	NNP	Number=Sing	16	conj	16:conj	_
+18	Utah	Utah	PROPN	NNP	Number=Sing	16	conj	13:nmod:include|16:conj:and	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	Oregon	Oregon	PROPN	NNP	Number=Sing	16	conj	16:conj	SpaceAfter=No
+20	Oregon	Oregon	PROPN	NNP	Number=Sing	16	conj	13:nmod:include|16:conj:and	SpaceAfter=No
 21	,	,	PUNCT	,	_	16	punct	16:punct	_
 22	among	among	ADP	IN	_	23	case	23:case	_
-23	others	other	NOUN	NNS	Number=Plur	16	nmod	16:nmod	SpaceAfter=No
+23	others	other	NOUN	NNS	Number=Plur	16	nmod	16:nmod:among	SpaceAfter=No
 24	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0047
 # text = On Jan. 31, Oregon Federal District Court Judge Robert E. Jones appeared to agree with them.
 1	On	on	ADP	IN	_	2	case	2:case	_
-2	Jan.	Jan.	PROPN	NNP	Number=Sing	13	obl	13:obl	_
+2	Jan.	Jan.	PROPN	NNP	Number=Sing	13	obl	13:obl:on	_
 3	31	31	NUM	CD	NumType=Card	2	nummod	2:nummod	SpaceAfter=No
 4	,	,	PUNCT	,	_	13	punct	13:punct	_
 5	Oregon	Oregon	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 6	Federal	Federal	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 7	District	District	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 8	Court	Court	PROPN	NNP	Number=Sing	9	compound	9:compound	_
-9	Judge	Judge	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	_
+9	Judge	Judge	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj|15:nsubj:xsubj	_
 10	Robert	Robert	PROPN	NNP	Number=Sing	9	flat	9:flat	_
 11	E.	E.	PROPN	NNP	Number=Sing	9	flat	9:flat	_
 12	Jones	Jones	PROPN	NNP	Number=Sing	9	flat	9:flat	_
@@ -1112,7 +1112,7 @@
 14	to	to	PART	TO	_	15	mark	15:mark	_
 15	agree	agree	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
 16	with	with	ADP	IN	_	17	case	17:case	_
-17	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	15	obl	15:obl	SpaceAfter=No
+17	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	15	obl	15:obl:with	SpaceAfter=No
 18	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0048
@@ -1123,7 +1123,7 @@
 4	FWS	FWS	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 5	decision	decision	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	downgrade	downgrade	VERB	VB	VerbForm=Inf	5	acl	5:acl	_
+7	downgrade	downgrade	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	wolf	wolf	NOUN	NN	Number=Sing	11	nmod:poss	11:nmod:poss	SpaceAfter=No
 10	's	's	PART	POS	_	9	case	9:case	_
@@ -1151,14 +1151,14 @@
 4	wolf	wolf	NOUN	NN	Number=Sing	7	nmod:poss	7:nmod:poss	SpaceAfter=No
 5	's	's	PART	POS	_	4	case	4:case	_
 6	legal	legal	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	status	status	NOUN	NN	Number=Sing	1	obl	1:obl	SpaceAfter=No
+7	status	status	NOUN	NN	Number=Sing	1	obl	1:obl:of	SpaceAfter=No
 8	,	,	PUNCT	,	_	16	punct	16:punct	_
 9	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 10	future	future	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	expansion	expansion	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	_
+11	expansion	expansion	NOUN	NN	Number=Sing	16	nsubj	16:nsubj|17:nsubj:xsubj	_
 12	into	into	ADP	IN	_	14	case	14:case	_
 13	new	new	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	areas	area	NOUN	NNS	Number=Plur	11	nmod	11:nmod	_
+14	areas	area	NOUN	NNS	Number=Plur	11	nmod	11:nmod:into	_
 15	now	now	ADV	RB	_	16	advmod	16:advmod	_
 16	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 17	likely	likely	ADJ	JJ	Degree=Pos	16	xcomp	16:xcomp	SpaceAfter=No
@@ -1177,20 +1177,20 @@
 # text = A Yellowstone wolf was found dead, hit by a car, on a Colorado highway last year, several hundred miles from home.
 1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
 2	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	wolf	wolf	NOUN	NN	Number=Sing	5	nsubj:pass	5:nsubj:pass	_
+3	wolf	wolf	NOUN	NN	Number=Sing	5	nsubj:pass	5:nsubj:pass|6:nsubj:xsubj|8:nsubj:xsubj	_
 4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass	_
 5	found	find	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 6	dead	dead	ADJ	JJ	Degree=Pos	5	xcomp	5:xcomp	SpaceAfter=No
 7	,	,	PUNCT	,	_	5	punct	5:punct	_
-8	hit	hit	VERB	VBN	Tense=Past|VerbForm=Part	6	conj	6:conj	_
+8	hit	hit	VERB	VBN	Tense=Past|VerbForm=Part	6	conj	5:xcomp|6:conj	_
 9	by	by	ADP	IN	_	11	case	11:case	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	car	car	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+11	car	car	NOUN	NN	Number=Sing	8	obl	8:obl:by	SpaceAfter=No
 12	,	,	PUNCT	,	_	5	punct	5:punct	_
 13	on	on	ADP	IN	_	16	case	16:case	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 15	Colorado	Colorado	PROPN	NNP	Number=Sing	16	compound	16:compound	_
-16	highway	highway	NOUN	NN	Number=Sing	5	obl	5:obl	_
+16	highway	highway	NOUN	NN	Number=Sing	5	obl	5:obl:on	_
 17	last	last	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	year	year	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	SpaceAfter=No
 19	,	,	PUNCT	,	_	5	punct	5:punct	_
@@ -1198,7 +1198,7 @@
 21	hundred	hundred	NUM	CD	NumType=Card	22	nummod	22:nummod	_
 22	miles	mile	NOUN	NNS	Number=Plur	24	nmod:npmod	24:nmod:npmod	_
 23	from	from	ADP	IN	_	24	case	24:case	_
-24	home	home	NOUN	NN	Number=Sing	5	obl	5:obl	SpaceAfter=No
+24	home	home	NOUN	NN	Number=Sing	5	obl	5:obl:from	SpaceAfter=No
 25	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0053
@@ -1206,7 +1206,7 @@
 1	Meanwhile	meanwhile	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	5	punct	5:punct	_
 3	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	reputation	reputation	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+4	reputation	reputation	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|8:nsubj:xsubj	_
 5	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	to	to	PART	TO	_	8	mark	8:mark	_
 7	be	be	AUX	VB	VerbForm=Inf	8	aux	8:aux	_
@@ -1214,7 +1214,7 @@
 9	,	,	PUNCT	,	_	8	punct	8:punct	_
 10	although	although	SCONJ	IN	_	12	mark	12:mark	_
 11	Bangs	Bangs	PROPN	NNP	Number=Sing	12	nsubj	12:nsubj	_
-12	noted	note	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	advcl	8:advcl	_
+12	noted	note	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	advcl	8:advcl:although	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 14	"	"	PUNCT	``	_	18	punct	18:punct	SpaceAfter=No
 15	pretty	pretty	ADV	RB	_	16	advmod	16:advmod	_
@@ -1234,11 +1234,11 @@
 6	wolves	wolf	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
 7	in	in	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	West	west	ADJ	JJ	Degree=Pos	2	obl	2:obl	SpaceAfter=No
+9	West	west	ADJ	JJ	Degree=Pos	2	obl	2:obl:in	SpaceAfter=No
 10	,	,	PUNCT	,	_	13	punct	13:punct	_
 11	but	but	CCONJ	CC	_	13	cc	13:cc	_
 12	there	there	PRON	EX	_	13	expl	13:expl	_
-13	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj	_
+13	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj:but	_
 14	an	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 15	estimated	estimate	VERB	VBN	Tense=Past|VerbForm=Part	18	amod	18:amod	_
 16	31,000	31,000	NUM	CD	NumType=Card	18	nummod	18:nummod	_
@@ -1250,7 +1250,7 @@
 # text = Pound for pound, mountain lions eat more game and more livestock than wolves.
 1	Pound	pound	NOUN	NN	Number=Sing	7	obl:npmod	7:obl:npmod	_
 2	for	for	ADP	IN	_	3	case	3:case	_
-3	pound	pound	NOUN	NN	Number=Sing	1	nmod	1:nmod	SpaceAfter=No
+3	pound	pound	NOUN	NN	Number=Sing	1	nmod	1:nmod:for	SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	mountain	mountain	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	lions	lion	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
@@ -1259,9 +1259,9 @@
 9	game	game	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	more	more	ADJ	JJR	Degree=Cmp	12	amod	12:amod	_
-12	livestock	livestock	NOUN	NN	Number=Sing	9	conj	9:conj	_
+12	livestock	livestock	NOUN	NN	Number=Sing	9	conj	7:obj|9:conj:and	_
 13	than	than	ADP	IN	_	14	case	14:case	_
-14	wolves	wolf	NOUN	NNS	Number=Plur	8	obl	8:obl	SpaceAfter=No
+14	wolves	wolf	NOUN	NNS	Number=Plur	8	obl	8:obl:than	SpaceAfter=No
 15	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0056
@@ -1279,17 +1279,17 @@
 11	--	--	PUNCT	,	_	14	punct	14:punct	_
 12	despite	despite	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	propaganda	propaganda	NOUN	NN	Number=Sing	4	obl	4:obl	_
+14	propaganda	propaganda	NOUN	NN	Number=Sing	4	obl	4:obl:despite	_
 15	from	from	ADP	IN	_	18	case	18:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	Brothers	Brothers	PROPN	NNPS	Number=Plur	18	compound	18:compound	_
-18	Grimm	Grimm	PROPN	NNP	Number=Sing	14	nmod	14:nmod	SpaceAfter=No
+18	Grimm	Grimm	PROPN	NNP	Number=Sing	14	nmod	14:nmod:from	SpaceAfter=No
 19	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0057
 # text = Yet people seem willing -- even eager -- to accommodate mountain lions, despite the risks.
 1	Yet	yet	CCONJ	CC	_	3	cc	3:cc	_
-2	people	people	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
+2	people	people	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj|4:nsubj:xsubj|10:nsubj:xsubj	_
 3	seem	seem	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	willing	willing	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	_
 5	--	--	PUNCT	,	_	4	punct	4:punct	_
@@ -1303,12 +1303,12 @@
 13	,	,	PUNCT	,	_	10	punct	10:punct	_
 14	despite	despite	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	risks	risk	NOUN	NNS	Number=Plur	10	obl	10:obl	SpaceAfter=No
+16	risks	risk	NOUN	NNS	Number=Plur	10	obl	10:obl:despite	SpaceAfter=No
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0058
 # text = It remains to be seen whether they will extend the same courtesy to the arriving gray wolf.
-1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj|5:nsubj:xsubj	_
 2	remains	remain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	5	mark	5:mark	_
 4	be	be	AUX	VB	VerbForm=Inf	5	aux:pass	5:aux:pass	_
@@ -1324,7 +1324,7 @@
 14	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 15	arriving	arrive	VERB	VBG	VerbForm=Ger	17	amod	17:amod	_
 16	gray	gray	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	wolf	wolf	NOUN	NN	Number=Sing	9	obl	9:obl	SpaceAfter=No
+17	wolf	wolf	NOUN	NN	Number=Sing	9	obl	9:obl:to	SpaceAfter=No
 18	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0059
@@ -1333,20 +1333,20 @@
 2	those	those	DET	DT	Number=Plur|PronType=Dem	3	det	3:det	_
 3	rumors	rumor	NOUN	NNS	Number=Plur	0	root	0:root	_
 4	about	about	ADP	IN	_	5	case	5:case	_
-5	wolves	wolf	NOUN	NNS	Number=Plur	3	nmod	3:nmod	_
+5	wolves	wolf	NOUN	NNS	Number=Plur	3	nmod	3:nmod:about	_
 6	living	live	VERB	VBG	VerbForm=Ger	5	acl	5:acl	_
 7	in	in	ADP	IN	_	8	case	8:case	_
-8	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	6	obl	6:obl	_
+8	Yellowstone	Yellowstone	PROPN	NNP	Number=Sing	6	obl	6:obl:in	_
 9	prior	prior	ADJ	JJ	Degree=Pos	13	case	13:case	_
 10	to	to	ADP	IN	_	9	fixed	9:fixed	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	official	official	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	reintroduction	reintroduction	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+13	reintroduction	reintroduction	NOUN	NN	Number=Sing	6	obl	6:obl:prior_to	SpaceAfter=No
 14	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0060
 # text = They seem to be just that: rumors.
-1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj|6:nsubj:xsubj	_
 2	seem	seem	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	6	mark	6:mark	_
 4	be	be	AUX	VB	VerbForm=Inf	6	cop	6:cop	_
@@ -1367,14 +1367,14 @@
 7	wolves	wolf	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	wolf	wolf	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	hybrids	hybrid	NOUN	NNS	Number=Plur	7	conj	7:conj	_
+10	hybrids	hybrid	NOUN	NNS	Number=Plur	7	conj	4:nsubj|7:conj:and	_
 11	kept	keep	VERB	VBN	Tense=Past|VerbForm=Part	7	acl	7:acl	_
 12	as	as	ADP	IN	_	13	case	13:case	_
-13	pets	pet	NOUN	NNS	Number=Plur	11	obl	11:obl	_
+13	pets	pet	NOUN	NNS	Number=Plur	11	obl	11:obl:as	_
 14	in	in	ADP	IN	_	17	case	17:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	United	United	PROPN	NNP	Number=Sing	17	compound	17:compound	_
-17	States	States	PROPN	NNP	Number=Sing	4	obl	4:obl	SpaceAfter=No
+17	States	States	PROPN	NNP	Number=Sing	4	obl	4:obl:in	SpaceAfter=No
 18	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0062
@@ -1389,29 +1389,29 @@
 8	some	some	DET	DT	_	7	obj	7:obj	_
 9	of	of	ADP	IN	_	11	case	11:case	_
 10	these	these	DET	DT	Number=Plur|PronType=Dem	11	det	11:det	_
-11	animals	animal	NOUN	NNS	Number=Plur	8	nmod	8:nmod	_
+11	animals	animal	NOUN	NNS	Number=Plur	8	nmod	8:nmod:of	_
 12	into	into	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	wild	wild	NOUN	NN	Number=Sing	7	obl	7:obl	_
+14	wild	wild	NOUN	NN	Number=Sing	7	obl	7:obl:into	_
 15	hoping	hope	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl	_
 16	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
 17	would	would	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
 18	survive	survive	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	_
 19	--	--	PUNCT	,	_	4	punct	4:punct	_
 20	for	for	ADP	IN	_	21	case	21:case	_
-21	instance	instance	NOUN	NN	Number=Sing	28	obl	28:obl	SpaceAfter=No
+21	instance	instance	NOUN	NN	Number=Sing	28	obl	28:obl:for	SpaceAfter=No
 22	,	,	PUNCT	,	_	28	punct	28:punct	_
 23	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
 24	ranger	ranger	NOUN	NN	Number=Sing	28	nsubj	28:nsubj	_
 25	in	in	ADP	IN	_	27	case	27:case	_
 26	Glacier	Glacier	PROPN	NNP	Number=Sing	27	compound	27:compound	_
-27	Park	Park	PROPN	NNP	Number=Sing	24	nmod	24:nmod	_
+27	Park	Park	PROPN	NNP	Number=Sing	24	nmod	24:nmod:in	_
 28	caught	catch	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	ccomp	4:ccomp	_
 29	someone	someone	PRON	NN	Number=Sing	28	obj	28:obj	_
 30	in	in	ADP	IN	_	33	case	33:case	_
 31	this	this	DET	DT	Number=Sing|PronType=Dem	33	det	33:det	_
 32	very	very	ADJ	JJ	Degree=Pos	33	amod	33:amod	_
-33	act	act	NOUN	NN	Number=Sing	28	obl	28:obl	_
+33	act	act	NOUN	NN	Number=Sing	28	obl	28:obl:in	_
 34	not	not	PART	RB	_	35	advmod	35:advmod	_
 35	long	long	ADV	RB	Degree=Pos	28	advmod	28:advmod	_
 36	ago	ago	ADV	RB	_	35	advmod	35:advmod	SpaceAfter=No
@@ -1427,10 +1427,10 @@
 6	not	not	PART	RB	_	7	advmod	7:advmod	_
 7	equipped	equip	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	ccomp	2:ccomp	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
-9	survive	survive	VERB	VB	VerbForm=Inf	7	advcl	7:advcl	_
+9	survive	survive	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:to	_
 10	in	in	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	wild	wild	NOUN	NN	Number=Sing	9	obl	9:obl	SpaceAfter=No
+12	wild	wild	NOUN	NN	Number=Sing	9	obl	9:obl:in	SpaceAfter=No
 13	,	,	PUNCT	,	_	7	punct	7:punct	_
 14	however	however	ADV	RB	_	7	advmod	7:advmod	SpaceAfter=No
 15	,	,	PUNCT	,	_	22	punct	22:punct	_
@@ -1440,7 +1440,7 @@
 19	almost	almost	ADV	RB	_	20	advmod	20:advmod	_
 20	certainly	certainly	ADV	RB	_	22	advmod	22:advmod	_
 21	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	aux	22:aux	_
-22	died	die	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	7:conj	SpaceAfter=No
+22	died	die	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	2:ccomp|7:conj:and	SpaceAfter=No
 23	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0064
@@ -1449,14 +1449,14 @@
 2	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	after	after	ADP	IN	_	5	case	5:case	_
 4	10	10	NUM	CD	NumType=Card	5	nummod	5:nummod	_
-5	years	year	NOUN	NNS	Number=Plur	17	obl	17:obl	_
+5	years	year	NOUN	NNS	Number=Plur	17	obl	17:obl:after	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	DNA	dna	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	testing	testing	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+8	testing	testing	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
 9	on	on	ADP	IN	_	12	case	12:case	_
 10	northern	northern	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	Rockies	Rockies	PROPN	NNPS	Number=Plur	12	compound	12:compound	_
-12	wolves	wolf	NOUN	NNS	Number=Plur	8	nmod	8:nmod	SpaceAfter=No
+12	wolves	wolf	NOUN	NNS	Number=Plur	8	nmod	8:nmod:on	SpaceAfter=No
 13	,	,	PUNCT	,	_	17	punct	17:punct	_
 14	scientists	scientist	NOUN	NNS	Number=Plur	17	nsubj	17:nsubj	_
 15	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
@@ -1464,23 +1464,23 @@
 17	found	find	VERB	VBN	Tense=Past|VerbForm=Part	2	ccomp	2:ccomp	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
 19	single	single	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-20	strain	strain	NOUN	NN	Number=Sing	17	obj	17:obj	_
-21	that	that	PRON	WDT	PronType=Rel	24	nsubj	24:nsubj	_
+20	strain	strain	NOUN	NN	Number=Sing	17	obj	17:obj|24:nsubj	_
+21	that	that	PRON	WDT	PronType=Rel	24	nsubj	20:ref	_
 22	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	24	aux	24:aux	_
 23	not	not	PART	RB	_	24	advmod	24:advmod	_
 24	belong	belong	VERB	VB	VerbForm=Inf	20	acl:relcl	20:acl:relcl	_
 25	to	to	ADP	IN	_	26	case	26:case	_
-26	one	one	NUM	CD	NumType=Card	24	obl	24:obl	_
+26	one	one	NUM	CD	NumType=Card	24	obl	24:obl:to	_
 27	of	of	ADP	IN	_	29	case	29:case	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
-29	wolves	wolf	NOUN	NNS	Number=Plur	26	nmod	26:nmod	_
+29	wolves	wolf	NOUN	NNS	Number=Plur	26	nmod	26:nmod:of	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
 31	agency	agency	NOUN	NN	Number=Sing	32	nsubj	32:nsubj	_
 32	released	release	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	29	acl:relcl	29:acl:relcl	_
 33	--	--	PUNCT	,	_	26	punct	26:punct	_
 34	or	or	CCONJ	CC	_	36	cc	36:cc	_
 35	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	36	nmod:poss	36:nmod:poss	_
-36	descendants	descendant	NOUN	NNS	Number=Plur	26	conj	26:conj	SpaceAfter=No
+36	descendants	descendant	NOUN	NNS	Number=Plur	26	conj	24:obl:to|26:conj:or	SpaceAfter=No
 37	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0065
@@ -1499,16 +1499,16 @@
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	relationship	relationship	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	humans	human	NOUN	NNS	Number=Plur	9	nmod	9:nmod	_
+11	humans	human	NOUN	NNS	Number=Plur	9	nmod	9:nmod:of	_
 12	to	to	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	environment	environment	NOUN	NN	Number=Sing	9	nmod	9:nmod	SpaceAfter=No
+14	environment	environment	NOUN	NN	Number=Sing	9	nmod	9:nmod:to	SpaceAfter=No
 15	,	,	PUNCT	,	_	6	punct	6:punct	_
 16	by	by	ADP	IN	_	20	case	20:case	_
 17	veteran	veteran	NOUN	NN	Number=Sing	19	compound	19:compound	_
 18	environmental	environmental	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 19	reporter	reporter	NOUN	NN	Number=Sing	20	compound	20:compound	_
-20	Dan	Dan	PROPN	NNP	Number=Sing	6	nmod	6:nmod	_
+20	Dan	Dan	PROPN	NNP	Number=Sing	6	nmod	6:nmod:by	_
 21	Whipple	Whipple	PROPN	NNP	Number=Sing	20	flat	20:flat	SpaceAfter=No
 22	.	.	PUNCT	.	_	6	punct	6:punct	_
 

@@ -16,14 +16,14 @@
 8	husband	husband	NOUN	NN	Number=Sing	11	nmod:poss	11:nmod:poss	SpaceAfter=No
 9	's	's	PART	POS	_	8	case	8:case	_
 10	funeral	funeral	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	flowers	flower	NOUN	NNS	Number=Plur	2	obl	2:obl	_
+11	flowers	flower	NOUN	NNS	Number=Plur	2	obl	2:obl:for	_
 12	as	as	SCONJ	IN	_	16	mark	16:mark	_
 13	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	16	nsubj:pass	16:nsubj:pass	_
 14	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	16	aux	16:aux	_
 15	been	be	AUX	VBN	Tense=Past|VerbForm=Part	16	aux:pass	16:aux:pass	_
-16	recommended	recommend	VERB	VBN	Tense=Past|VerbForm=Part	2	advcl	2:advcl	_
+16	recommended	recommend	VERB	VBN	Tense=Past|VerbForm=Part	2	advcl	2:advcl:as	_
 17	to	to	ADP	IN	_	18	case	18:case	_
-18	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	16	obl	16:obl	SpaceAfter=No
+18	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	16	obl	16:obl:to	SpaceAfter=No
 19	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-186284-0003
@@ -37,23 +37,23 @@
 7	called	call	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	ccomp	4:ccomp	_
 8	in	in	ADP	RP	_	7	compound:prt	7:compound:prt	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	see	see	VERB	VB	VerbForm=Inf	7	advcl	7:advcl	_
+10	see	see	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:to	_
 11	Ana	Ana	PROPN	NNP	Number=Sing	10	obj	10:obj	SpaceAfter=No
 12	,	,	PUNCT	,	_	4	punct	4:punct	_
 13	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 16	lovely	lovely	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	girl	girl	NOUN	NN	Number=Sing	4	parataxis	4:parataxis	_
-18	who	who	PRON	WP	PronType=Rel	19	nsubj	19:nsubj	_
+17	girl	girl	NOUN	NN	Number=Sing	4	parataxis	4:parataxis|19:nsubj	_
+18	who	who	PRON	WP	PronType=Rel	19	nsubj	17:ref	_
 19	showed	show	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	17	acl:relcl	17:acl:relcl	_
 20	nothing	nothing	PRON	NN	Number=Sing	19	obj	19:obj	_
 21	but	but	ADP	IN	_	22	case	22:case	_
-22	care	care	NOUN	NN	Number=Sing	20	nmod	20:nmod	_
+22	care	care	NOUN	NN	Number=Sing	20	nmod	20:nmod:but	_
 23	and	and	CCONJ	CC	_	24	cc	24:cc	_
-24	compassion	compassion	NOUN	NN	Number=Sing	22	conj	22:conj	_
+24	compassion	compassion	NOUN	NN	Number=Sing	22	conj	20:nmod:but|22:conj:and	_
 25	towards	towards	ADP	IN	_	26	case	26:case	_
-26	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	22	nmod	22:nmod	SpaceAfter=No
+26	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	22	nmod	22:nmod:towards	SpaceAfter=No
 27	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-186284-0004
@@ -61,8 +61,8 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	flowers	flower	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
 3	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
-4	all	all	DET	DT	_	0	root	0:root	_
-5	that	that	PRON	WDT	PronType=Rel	7	obj	7:obj	_
+4	all	all	DET	DT	_	0	root	7:obj	_
+5	that	that	PRON	WDT	PronType=Rel	7	obj	4:ref	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 7	hoped	hope	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
 8	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
@@ -75,7 +75,7 @@
 15	several	several	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	funerals	funeral	NOUN	NNS	Number=Plur	14	obj	14:obj	_
 17	of	of	ADP	IN	_	18	case	18:case	_
-18	late	late	ADV	RB	Degree=Pos	14	obl	14:obl	_
+18	late	late	ADV	RB	Degree=Pos	14	obl	14:obl:of	_
 19	unfortunately	unfortunately	ADV	RB	_	14	advmod	14:advmod	_
 20	and	and	CCONJ	CC	_	27	cc	27:cc	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
@@ -83,8 +83,8 @@
 23	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	24	nsubj	24:nsubj	_
 24	recieved	recieve	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	22	acl:relcl	22:acl:relcl	_
 25	from	from	ADP	IN	_	26	case	26:case	_
-26	Ana	Ana	PROPN	NNP	Number=Sing	24	obl	24:obl	_
-27	outshone	outshine	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	14	conj	14:conj	_
+26	Ana	Ana	PROPN	NNP	Number=Sing	24	obl	24:obl:from	_
+27	outshone	outshine	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	14	conj	14:conj:and	_
 28	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	27	obj	27:obj	_
 29	all	all	DET	DT	_	28	det	28:det	SpaceAfter=No
 30	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -102,25 +102,25 @@
 9	arranged	arrange	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	parataxis	4:parataxis	_
 10	superbly	superbly	ADV	RB	_	9	advmod	9:advmod	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	delicately	delicately	ADV	RB	_	10	conj	10:conj	SpaceAfter=No
+12	delicately	delicately	ADV	RB	_	10	conj	9:advmod|10:conj:and	SpaceAfter=No
 13	,	,	PUNCT	,	_	4	punct	4:punct	_
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
 16	so	so	ADV	RB	_	17	advmod	17:advmod	_
 17	obvious	obvious	ADJ	JJ	Degree=Pos	4	parataxis	4:parataxis	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
-19	see	see	VERB	VB	VerbForm=Inf	17	advcl	17:advcl	_
+19	see	see	VERB	VB	VerbForm=Inf	17	advcl	17:advcl:to	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	difference	difference	NOUN	NN	Number=Sing	19	obj	19:obj	_
 22	between	between	ADP	IN	_	23	case	23:case	_
-23	someone	someone	PRON	NN	Number=Sing	21	nmod	21:nmod	_
+23	someone	someone	PRON	NN	Number=Sing	21	nmod	21:nmod:between	_
 24	fully	fully	ADV	RB	_	25	advmod	25:advmod	_
 25	trained	trained	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
 26	and	and	CCONJ	CC	_	27	cc	27:cc	_
-27	skilled	skilled	ADJ	JJ	Degree=Pos	25	conj	25:conj	_
+27	skilled	skilled	ADJ	JJ	Degree=Pos	25	conj	23:amod|25:conj:and	_
 28	compared	compare	VERB	VBN	Tense=Past|VerbForm=Part	30	case	30:case	_
 29	to	to	ADP	IN	_	30	case	30:case	_
-30	others	other	NOUN	NNS	Number=Plur	23	nmod	23:nmod	SpaceAfter=No
+30	others	other	NOUN	NNS	Number=Plur	23	nmod	23:nmod:to	SpaceAfter=No
 31	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-186284-0006
@@ -128,16 +128,16 @@
 1	Thank	thank	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	iobj	1:iobj	_
 3	Ana	Ana	PROPN	NNP	Number=Sing	1	obj	1:obj	_
-4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
+4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj	_
 5	hope	hope	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	1	parataxis	1:parataxis	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	see	see	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
 8	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	7	obj	7:obj	_
 9	in	in	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	future	future	NOUN	NN	Number=Sing	7	obl	7:obl	_
+11	future	future	NOUN	NN	Number=Sing	7	obl	7:obl:in	_
 12	under	under	ADP	IN	_	14	case	14:case	_
 13	better	better	ADJ	JJR	Degree=Cmp	14	amod	14:amod	_
-14	circumstances	circumstance	NOUN	NNS	Number=Plur	7	obl	7:obl	SpaceAfter=No
+14	circumstances	circumstance	NOUN	NNS	Number=Plur	7	obl	7:obl:under	SpaceAfter=No
 15	.	.	PUNCT	.	_	1	punct	1:punct	_
 

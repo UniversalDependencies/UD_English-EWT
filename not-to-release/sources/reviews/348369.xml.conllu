@@ -18,7 +18,7 @@
 
 # sent_id = reviews-348369-0003
 # text = They was about to Charge me $129...
-1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
 3	about	about	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -43,31 +43,31 @@
 2	save	save	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj	_
 4	from	from	SCONJ	IN	_	5	mark	5:mark	_
-5	having	have	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	_
+5	having	have	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:from	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	deal	deal	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
 8	with	with	ADP	IN	_	9	case	9:case	_
-9	Tmobile	Tmobile	PROPN	NNP	Number=Sing	7	obl	7:obl	SpaceAfter=No
+9	Tmobile	Tmobile	PROPN	NNP	Number=Sing	7	obl	7:obl:with	SpaceAfter=No
 10	...	...	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-348369-0006
 # text = Tmobile want to Send of my phone and i didn't want to go thru that...
-1	Tmobile	Tmobile	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
+1	Tmobile	Tmobile	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|4:nsubj:xsubj	_
 2	want	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	Send	send	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-5	of	of	ADP	RP	_	4	compound:prt	4:compound:prt	_
+5	of	off	ADP	RP	Typo=Yes	4	compound:prt	4:compound:prt	_
 6	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	phone	phone	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	and	and	CCONJ	CC	_	12	cc	12:cc	_
-9	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
+9	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj|14:nsubj:xsubj	_
 10	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	12	aux	12:aux	SpaceAfter=No
 11	n't	not	PART	RB	_	12	advmod	12:advmod	_
-12	want	want	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
+12	want	want	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	go	go	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
-15	thru	thru	ADP	IN	_	16	case	16:case	_
-16	that	that	PRON	DT	Number=Sing|PronType=Dem	14	obl	14:obl	SpaceAfter=No
+15	thru	through	ADP	IN	Abbr=Yes	16	case	16:case	_
+16	that	that	PRON	DT	Number=Sing|PronType=Dem	14	obl	14:obl:through	SpaceAfter=No
 17	...	...	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-348369-0007
@@ -92,6 +92,6 @@
 3	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	3	obj	3:obj	_
 5	to	to	ADP	IN	_	6	case	6:case	_
-6	anyone	anyone	PRON	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+6	anyone	anyone	PRON	NN	Number=Sing	3	obl	3:obl:to	SpaceAfter=No
 7	..	..	PUNCT	.	_	3	punct	3:punct	_
 

@@ -19,19 +19,19 @@
 7	reef	reef	NOUN	NN	Number=Sing	2	obj	2:obj	_
 8	with	with	ADP	IN	_	10	case	10:case	_
 9	10	10	NUM	CD	NumType=Card	10	nummod	10:nummod	_
-10	lbs	lb	NOUN	NNS	Number=Plur	7	nmod	7:nmod	_
+10	lbs	lb	NOUN	NNS	Number=Plur	7	nmod	7:nmod:with	_
 11	of	of	ADP	IN	_	14	case	14:case	_
 12	live	live	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 13	fiji	fiji	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	rock	rock	NOUN	NN	Number=Sing	10	nmod	10:nmod	SpaceAfter=No
+14	rock	rock	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	SpaceAfter=No
 15	,	,	PUNCT	,	_	18	punct	18:punct	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	10	10	NUM	CD	NumType=Card	18	nummod	18:nummod	_
-18	lbs	lb	NOUN	NNS	Number=Plur	10	conj	10:conj	_
+18	lbs	lb	NOUN	NNS	Number=Plur	10	conj	7:nmod:with|10:conj:and	_
 19	of	of	ADP	IN	_	22	case	22:case	_
 20	live	live	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 21	carribean	carribean	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	sand	sand	NOUN	NN	Number=Sing	18	nmod	18:nmod	SpaceAfter=No
+22	sand	sand	NOUN	NN	Number=Sing	18	nmod	18:nmod:of	SpaceAfter=No
 23	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108103158AARnMLC_ans-0003
@@ -41,10 +41,10 @@
 3	aware	aware	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	maintenance	maintenance	NOUN	NN	Number=Sing	3	obl	3:obl	_
+6	maintenance	maintenance	NOUN	NN	Number=Sing	3	obl	3:obl:of	_
 7	involved	involve	VERB	VBN	Tense=Past|VerbForm=Part	6	acl	6:acl	_
 8	in	in	SCONJ	IN	_	9	mark	9:mark	_
-9	keeping	keep	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl	_
+9	keeping	keep	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl:in	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 11	tank	tank	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	this	this	DET	DT	Number=Sing|PronType=Dem	13	det	13:det	_
@@ -61,7 +61,7 @@
 6	gravity	gravity	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	level	level	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	1.024	1.024	NUM	CD	NumType=Card	7	nmod	7:nmod	SpaceAfter=No
+9	1.024	1.024	NUM	CD	NumType=Card	7	nmod	7:nmod:of	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108103158AARnMLC_ans-0005
@@ -73,7 +73,7 @@
 5	gallon	gallon	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	filter	filter	NOUN	NN	Number=Sing	2	obj	2:obj	_
 7	on	on	ADP	IN	_	8	case	8:case	_
-8	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obl	2:obl	SpaceAfter=No
+8	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obl	2:obl:on	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108103158AARnMLC_ans-0006
@@ -98,7 +98,7 @@
 5	questions	question	NOUN	NNS	Number=Plur	2	obj	2:obj	SpaceAfter=No
 6	,	,	PUNCT	,	_	2	punct	2:punct	_
 7	first	first	ADV	RB	_	2	advmod	2:advmod	_
-8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
+8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj|11:nsubj:xsubj	_
 9	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	start	start	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
@@ -108,7 +108,7 @@
 15	,	,	PUNCT	,	_	18	punct	18:punct	_
 16	but	but	CCONJ	CC	_	18	cc	18:cc	_
 17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
-18	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj	_
+18	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj:but	_
 19	no	no	DET	DT	_	20	det	20:det	_
 20	idea	idea	NOUN	NN	Number=Sing	18	obj	18:obj	_
 21	on	on	SCONJ	IN	_	30	mark	30:mark	_
@@ -118,16 +118,16 @@
 25	intake	intake	NOUN	NN	Number=Sing	30	nsubj	30:nsubj	_
 26	and	and	CCONJ	CC	_	28	cc	28:cc	_
 27	water	water	NOUN	NN	Number=Sing	28	compound	28:compound	_
-28	return	return	NOUN	NN	Number=Sing	25	conj	25:conj	_
+28	return	return	NOUN	NN	Number=Sing	25	conj	25:conj:and|30:nsubj	_
 29	would	would	AUX	MD	VerbForm=Fin	30	aux	30:aux	_
-30	work	work	VERB	VB	VerbForm=Inf	20	acl	20:acl	SpaceAfter=No
+30	work	work	VERB	VB	VerbForm=Inf	20	acl	20:acl:on	SpaceAfter=No
 31	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108103158AARnMLC_ans-0008
 # text = How would I need to set a sump for this 10 gallon?
 1	How	how	ADV	WRB	PronType=Int	6	advmod	6:advmod	_
 2	would	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 4	need	need	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	set	set	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
@@ -136,7 +136,7 @@
 9	for	for	ADP	IN	_	12	case	12:case	_
 10	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	12:det	_
 11	10	10	NUM	CD	NumType=Card	12	nummod	12:nummod	_
-12	gallon	gallon	NOUN	NN	Number=Sing	8	nmod	8:nmod	SpaceAfter=No
+12	gallon	gallon	NOUN	NN	Number=Sing	8	nmod	8:nmod:for	SpaceAfter=No
 13	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108103158AARnMLC_ans-0009
@@ -150,7 +150,7 @@
 7	or	or	CCONJ	CC	_	10	cc	10:cc	_
 8	any	any	DET	DT	_	10	det	10:det	_
 9	other	other	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	equipment	equipment	NOUN	NN	Number=Sing	6	conj	6:conj	SpaceAfter=No
+10	equipment	equipment	NOUN	NN	Number=Sing	6	conj	3:obj|6:conj:or	SpaceAfter=No
 11	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108103158AARnMLC_ans-0010
@@ -162,14 +162,14 @@
 1	Unless	unless	SCONJ	IN	_	4	mark	4:mark	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	tank	tank	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	advcl	21:advcl	_
+4	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	advcl	21:advcl:unless	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 6	built	build	VERB	VBN	Tense=Past|VerbForm=Part	9	amod	9:amod	_
 7	in	in	ADP	RP	_	6	compound	6:compound	_
 8	overflow	overflow	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	box	box	NOUN	NN	Number=Sing	4	obj	4:obj	_
+9	box	box	NOUN	NN	Number=Sing	4	obj	4:obj|14:obj	_
 10	(	(	PUNCT	-LRB-	_	9	punct	9:punct	SpaceAfter=No
-11	which	which	PRON	WDT	PronType=Rel	14	obj	14:obj	_
+11	which	which	PRON	WDT	PronType=Rel	14	obj	9:ref	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	SpaceAfter=No
 13	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
 14	certain	certain	ADJ	JJ	Degree=Pos	9	acl:relcl	9:acl:relcl	_
@@ -178,7 +178,7 @@
 17	n't	not	PART	RB	_	16	advmod	16:advmod	SpaceAfter=No
 18	)	)	PUNCT	-RRB-	_	9	punct	9:punct	_
 19	then	then	ADV	RB	PronType=Dem	21	advmod	21:advmod	_
-20	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	21	nsubj	21:nsubj	_
+20	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	21	nsubj	21:nsubj|23:nsubj:xsubj	_
 21	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 22	to	to	PART	TO	_	23	mark	23:mark	_
 23	get	get	VERB	VB	VerbForm=Inf	21	xcomp	21:xcomp	_
@@ -187,14 +187,14 @@
 26	those	those	DET	DT	Number=Plur|PronType=Dem	31	det	31:det	_
 27	hang	hang	VERB	VB	Mood=Imp|VerbForm=Fin	31	compound	31:compound	_
 28	on	on	ADP	IN	_	29	case	29:case	_
-29	back	back	NOUN	NN	Number=Sing	27	obl	27:obl	_
+29	back	back	NOUN	NN	Number=Sing	27	obl	27:obl:on	_
 30	overflow	overflow	NOUN	NN	Number=Sing	31	compound	31:compound	_
-31	boxes	box	NOUN	NNS	Number=Plur	24	nmod	24:nmod	_
+31	boxes	box	NOUN	NNS	Number=Plur	24	nmod	24:nmod:of	_
 32	so	so	SCONJ	IN	_	36	mark	36:mark	_
 33	that	that	SCONJ	IN	_	32	fixed	32:fixed	_
 34	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	36	nsubj	36:nsubj	_
 35	can	can	AUX	MD	VerbForm=Fin	36	aux	36:aux	_
-36	install	install	VERB	VB	VerbForm=Inf	23	advcl	23:advcl	_
+36	install	install	VERB	VB	VerbForm=Inf	23	advcl	23:advcl:so_that	_
 37	a	a	DET	DT	Definite=Ind|PronType=Art	38	det	38:det	_
 38	sump	sump	NOUN	NN	Number=Sing	36	obj	36:obj	SpaceAfter=No
 39	.	.	PUNCT	.	_	21	punct	21:punct	_
@@ -208,11 +208,11 @@
 5	down	down	ADV	RB	_	4	advmod	4:advmod	_
 6	into	into	ADP	IN	_	8	case	8:case	_
 7	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	sump	sump	NOUN	NN	Number=Sing	5	obl	5:obl	_
+8	sump	sump	NOUN	NN	Number=Sing	5	obl	5:obl:into	_
 9	from	from	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	overflow	overflow	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	box	box	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+12	box	box	NOUN	NN	Number=Sing	4	obl	4:obl:from	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108103158AARnMLC_ans-0013
@@ -220,10 +220,10 @@
 1	On	on	ADP	IN	_	4	case	4:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 3	other	other	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	end	end	NOUN	NN	Number=Sing	11	obl	11:obl	_
+4	end	end	NOUN	NN	Number=Sing	11	obl	11:obl:on	_
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	sump	sump	NOUN	NN	Number=Sing	4	nmod	4:nmod	SpaceAfter=No
+7	sump	sump	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
 10	would	would	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
@@ -234,35 +234,35 @@
 15	pump	pump	NOUN	NN	Number=Sing	11	obj	11:obj	_
 16	with	with	ADP	IN	_	18	case	18:case	_
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
-18	hose	hose	NOUN	NN	Number=Sing	15	nmod	15:nmod	_
-19	that	that	PRON	WDT	PronType=Rel	20	nsubj	20:nsubj	_
+18	hose	hose	NOUN	NN	Number=Sing	15	nmod	15:nmod:with|20:nsubj	_
+19	that	that	PRON	WDT	PronType=Rel	20	nsubj	18:ref	_
 20	puts	put	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	acl:relcl	18:acl:relcl	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 22	water	water	NOUN	NN	Number=Sing	20	obj	20:obj	_
 23	back	back	ADV	RB	_	20	advmod	20:advmod	_
 24	into	into	ADP	IN	_	26	case	26:case	_
 25	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
-26	tank	tank	NOUN	NN	Number=Sing	23	obl	23:obl	SpaceAfter=No
+26	tank	tank	NOUN	NN	Number=Sing	23	obl	23:obl:into	SpaceAfter=No
 27	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = answers-20111108103158AARnMLC_ans-0014
 # text = If you're going to go through the trouble of creating a sump for this tank, getting a protein skimmer wouldn't be a bad idea.
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	SpaceAfter=No
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	SpaceAfter=No
 3	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	27	advcl	27:advcl	_
+4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	27	advcl	27:advcl:if	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	go	go	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	through	through	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	trouble	trouble	NOUN	NN	Number=Sing	6	obl	6:obl	_
+9	trouble	trouble	NOUN	NN	Number=Sing	6	obl	6:obl:through	_
 10	of	of	SCONJ	IN	_	11	mark	11:mark	_
-11	creating	create	VERB	VBG	VerbForm=Ger	9	acl	9:acl	_
+11	creating	create	VERB	VBG	VerbForm=Ger	9	acl	9:acl:of	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 13	sump	sump	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	for	for	ADP	IN	_	16	case	16:case	_
 15	this	this	DET	DT	Number=Sing|PronType=Dem	16	det	16:det	_
-16	tank	tank	NOUN	NN	Number=Sing	13	nmod	13:nmod	SpaceAfter=No
+16	tank	tank	NOUN	NN	Number=Sing	13	nmod	13:nmod:for	SpaceAfter=No
 17	,	,	PUNCT	,	_	27	punct	27:punct	_
 18	getting	get	VERB	VBG	VerbForm=Ger	27	csubj	27:csubj	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
@@ -295,13 +295,13 @@
 15	in	in	ADP	IN	_	17	case	17:case	SpaceAfter=No
 16	-	-	PUNCT	HYPH	_	17	punct	17:punct	SpaceAfter=No
 17	tank	tank	NOUN	NN	Number=Sing	18	compound	18:compound	_
-18	design	design	NOUN	NN	Number=Sing	10	parataxis	10:parataxis	_
-19	that	that	PRON	WDT	PronType=Rel	22	nsubj	22:nsubj	_
+18	design	design	NOUN	NN	Number=Sing	10	parataxis	10:parataxis|22:nsubj	_
+19	that	that	PRON	WDT	PronType=Rel	22	nsubj	18:ref	_
 20	could	could	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
 21	easily	easily	ADV	RB	_	22	advmod	22:advmod	_
 22	sit	sit	VERB	VB	VerbForm=Inf	18	acl:relcl	18:acl:relcl	_
 23	in	in	ADP	IN	_	25	case	25:case	_
 24	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
-25	sump	sump	NOUN	NN	Number=Sing	22	obl	22:obl	SpaceAfter=No
+25	sump	sump	NOUN	NN	Number=Sing	22	obl	22:obl:in	SpaceAfter=No
 26	.	.	PUNCT	.	_	10	punct	10:punct	_
 

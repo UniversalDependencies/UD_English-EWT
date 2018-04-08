@@ -14,17 +14,17 @@
 6	Kerry	Kerry	PROPN	NNP	Number=Sing	5	flat	5:flat	_
 7	served	serve	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	ccomp	3:ccomp	_
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	Vietnam	Vietnam	PROPN	NNP	Number=Sing	7	obl	7:obl	SpaceAfter=No
+9	Vietnam	Vietnam	PROPN	NNP	Number=Sing	7	obl	7:obl:in	SpaceAfter=No
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0003
 # text = Four whole months, after which he took advantage of a little-known, little-invoked regulation that allowed him to desert his "band of brothers".
 1	Four	four	NUM	CD	NumType=Card	3	nummod	3:nummod	_
 2	whole	whole	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	months	month	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+3	months	month	NOUN	NNS	Number=Plur	0	root	8:obl	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	after	after	ADP	IN	_	6	case	6:case	_
-6	which	which	PRON	WDT	PronType=Rel	8	obl	8:obl	_
+6	which	which	PRON	WDT	PronType=Rel	8	obl	3:ref	_
 7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 8	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
 9	advantage	advantage	NOUN	NN	Number=Sing	8	obj	8:obj	_
@@ -37,17 +37,17 @@
 16	little	little	ADV	RB	Degree=Pos	18	advmod	18:advmod	SpaceAfter=No
 17	-	-	PUNCT	HYPH	_	18	punct	18:punct	SpaceAfter=No
 18	invoked	invoke	VERB	VBN	Tense=Past|VerbForm=Part	19	amod	19:amod	_
-19	regulation	regulation	NOUN	NN	Number=Sing	8	obl	8:obl	_
-20	that	that	PRON	WDT	PronType=Rel	21	nsubj	21:nsubj	_
+19	regulation	regulation	NOUN	NN	Number=Sing	8	obl	8:obl:of|21:nsubj	_
+20	that	that	PRON	WDT	PronType=Rel	21	nsubj	19:ref	_
 21	allowed	allow	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	19	acl:relcl	19:acl:relcl	_
-22	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	21	obj	21:obj	_
+22	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	21	obj	21:obj|24:nsubj:xsubj	_
 23	to	to	PART	TO	_	24	mark	24:mark	_
 24	desert	desert	VERB	VB	VerbForm=Inf	21	xcomp	21:xcomp	_
 25	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	27	nmod:poss	27:nmod:poss	_
 26	"	"	PUNCT	``	_	27	punct	27:punct	SpaceAfter=No
 27	band	band	NOUN	NN	Number=Sing	24	obj	24:obj	_
 28	of	of	ADP	IN	_	29	case	29:case	_
-29	brothers	brother	NOUN	NNS	Number=Plur	27	nmod	27:nmod	SpaceAfter=No
+29	brothers	brother	NOUN	NNS	Number=Plur	27	nmod	27:nmod:of	SpaceAfter=No
 30	"	"	PUNCT	''	_	3	punct	3:punct	SpaceAfter=No
 31	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -57,13 +57,13 @@
 2	also	also	ADV	RB	_	3	advmod	3:advmod	_
 3	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	how	how	ADV	WRB	PronType=Int	7	advmod	7:advmod	_
-5	Dan	Dan	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
+5	Dan	Dan	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj|11:nsubj	_
 6	Rather	Rather	PROPN	NNP	Number=Sing	5	flat	5:flat	_
 7	libeled	libel	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	ccomp	3:ccomp	_
 8	George	George	PROPN	NNP	Number=Sing	7	obj	7:obj	_
 9	Bush	Bush	PROPN	NNP	Number=Sing	8	flat	8:flat	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	impugned	impugn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	conj	7:conj	_
+11	impugned	impugn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	conj	3:ccomp|7:conj:and	_
 12	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	service	service	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	in	in	ADP	IN	_	19	case	19:case	_
@@ -71,7 +71,7 @@
 16	Texas	Texas	PROPN	NNP	Number=Sing	19	compound	19:compound	_
 17	Air	Air	PROPN	NNP	Number=Sing	19	compound	19:compound	_
 18	National	National	PROPN	NNP	Number=Sing	19	compound	19:compound	_
-19	Guard	Guard	PROPN	NNP	Number=Sing	13	nmod	13:nmod	_
+19	Guard	Guard	PROPN	NNP	Number=Sing	13	nmod	13:nmod:in	_
 20	on	on	ADP	IN	_	27	case	27:case	_
 21	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	_
 22	"	"	PUNCT	``	_	24	punct	24:punct	SpaceAfter=No
@@ -79,22 +79,22 @@
 24	Minutes	Minutes	PROPN	NNPS	Number=Plur	27	compound	27:compound	_
 25	II	ii	NUM	CD	NumType=Card	24	nummod	24:nummod	SpaceAfter=No
 26	"	"	PUNCT	''	_	24	punct	24:punct	_
-27	report	report	NOUN	NN	Number=Sing	11	obl	11:obl	_
+27	report	report	NOUN	NN	Number=Sing	11	obl	11:obl:on	_
 28	based	base	VERB	VBN	Tense=Past|VerbForm=Part	32	case	32:case	_
 29	largely	largely	ADV	RB	_	32	advmod	32:advmod	_
 30	on	on	ADP	IN	_	32	case	32:case	_
 31	forged	forge	VERB	VBN	Tense=Past|VerbForm=Part	32	amod	32:amod	_
-32	documents	document	NOUN	NNS	Number=Plur	11	obl	11:obl	SpaceAfter=No
+32	documents	document	NOUN	NNS	Number=Plur	11	obl	11:obl:on	SpaceAfter=No
 33	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0005
 # text = During his time in the Guard, George Bush flew the F-102 Delta Dagger fighter-interceptor.
 1	During	during	ADP	IN	_	3	case	3:case	_
 2	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	time	time	NOUN	NN	Number=Sing	10	obl	10:obl	_
+3	time	time	NOUN	NN	Number=Sing	10	obl	10:obl:during	_
 4	in	in	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	Guard	Guard	PROPN	NNP	Number=Sing	3	nmod	3:nmod	SpaceAfter=No
+6	Guard	Guard	PROPN	NNP	Number=Sing	3	nmod	3:nmod:in	SpaceAfter=No
 7	,	,	PUNCT	,	_	10	punct	10:punct	_
 8	George	George	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
 9	Bush	Bush	PROPN	NNP	Number=Sing	8	flat	8:flat	_
@@ -121,12 +121,12 @@
 7	in	in	ADP	IN	_	10	case	10:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	Vietnam	Vietnam	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	theater	theater	NOUN	NN	Number=Sing	5	obl	5:obl	_
+10	theater	theater	NOUN	NN	Number=Sing	5	obl	5:obl:in	_
 11	between	between	ADP	IN	_	12	case	12:case	_
-12	March	March	PROPN	NNP	Number=Sing	5	obl	5:obl	_
+12	March	March	PROPN	NNP	Number=Sing	5	obl	5:obl:between	_
 13	1962	1962	NUM	CD	NumType=Card	12	nummod	12:nummod	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	December	December	PROPN	NNP	Number=Sing	12	conj	12:conj	_
+15	December	December	PROPN	NNP	Number=Sing	12	conj	5:obl:between|12:conj:and	_
 16	1969	1969	NUM	CD	NumType=Card	15	nummod	15:nummod	SpaceAfter=No
 17	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -134,7 +134,7 @@
 # text = During this time, F-102 squadrons were based out of Tan Son Nhut, Da Nang and Bien Hoa in Vietnam, and Udorn and Don Muang in Thailand.
 1	During	during	ADP	IN	_	3	case	3:case	_
 2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	_
-3	time	time	NOUN	NN	Number=Sing	10	obl	10:obl	SpaceAfter=No
+3	time	time	NOUN	NN	Number=Sing	10	obl	10:obl:during	SpaceAfter=No
 4	,	,	PUNCT	,	_	10	punct	10:punct	_
 5	F	F	PROPN	NNP	Number=Sing	8	compound	8:compound	SpaceAfter=No
 6	-	-	PUNCT	HYPH	_	5	punct	5:punct	SpaceAfter=No
@@ -146,23 +146,23 @@
 12	of	of	ADP	IN	_	15	case	15:case	_
 13	Tan	Tan	PROPN	NNP	Number=Sing	15	compound	15:compound	_
 14	Son	Son	PROPN	NNP	Number=Sing	15	compound	15:compound	_
-15	Nhut	Nhut	PROPN	NNP	Number=Sing	10	obl	10:obl	SpaceAfter=No
+15	Nhut	Nhut	PROPN	NNP	Number=Sing	10	obl	10:obl:of	SpaceAfter=No
 16	,	,	PUNCT	,	_	18	punct	18:punct	_
 17	Da	Da	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-18	Nang	Nang	PROPN	NNP	Number=Sing	15	conj	15:conj	_
+18	Nang	Nang	PROPN	NNP	Number=Sing	15	conj	10:obl:of|15:conj:and	_
 19	and	and	CCONJ	CC	_	21	cc	21:cc	_
 20	Bien	Bien	PROPN	NNP	Number=Sing	21	compound	21:compound	_
-21	Hoa	Hoa	PROPN	NNP	Number=Sing	15	conj	15:conj	_
+21	Hoa	Hoa	PROPN	NNP	Number=Sing	15	conj	10:obl:of|15:conj:and	_
 22	in	in	ADP	IN	_	23	case	23:case	_
-23	Vietnam	Vietnam	PROPN	NNP	Number=Sing	15	nmod	15:nmod	SpaceAfter=No
+23	Vietnam	Vietnam	PROPN	NNP	Number=Sing	15	nmod	15:nmod:in	SpaceAfter=No
 24	,	,	PUNCT	,	_	26	punct	26:punct	_
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_
-26	Udorn	Udorn	PROPN	NNP	Number=Sing	15	conj	15:conj	_
+26	Udorn	Udorn	PROPN	NNP	Number=Sing	15	conj	10:obl:of|15:conj:and	_
 27	and	and	CCONJ	CC	_	29	cc	29:cc	_
 28	Don	Don	PROPN	NNP	Number=Sing	29	compound	29:compound	_
-29	Muang	Muang	PROPN	NNP	Number=Sing	26	conj	26:conj	_
+29	Muang	Muang	PROPN	NNP	Number=Sing	26	conj	26:conj:and	_
 30	in	in	ADP	IN	_	31	case	31:case	_
-31	Thailand	Thailand	PROPN	NNP	Number=Sing	26	nmod	26:nmod	SpaceAfter=No
+31	Thailand	Thailand	PROPN	NNP	Number=Sing	26	nmod	26:nmod:in	SpaceAfter=No
 32	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0008
@@ -171,7 +171,7 @@
 2	Click	click	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	here	here	ADV	RB	PronType=Dem	2	advmod	2:advmod	_
 4	for	for	ADP	IN	_	5	case	5:case	_
-5	source	source	NOUN	NN	Number=Sing	2	obl	2:obl	SpaceAfter=No
+5	source	source	NOUN	NN	Number=Sing	2	obl	2:obl:for	SpaceAfter=No
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 7	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
 
@@ -182,18 +182,18 @@
 3	as	as	SCONJ	IN	_	6	mark	6:mark	_
 4	George	George	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
 5	Bush	Bush	PROPN	NNP	Number=Sing	4	flat	4:flat	_
-6	knew	know	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	advcl	1:advcl	SpaceAfter=No
+6	knew	know	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	advcl	1:advcl:as	SpaceAfter=No
 7	,	,	PUNCT	,	_	15	punct	15:punct	_
 8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	nsubj:pass	15:nsubj:pass	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-11	unit	unit	NOUN	NN	Number=Sing	8	conj	8:conj	_
+11	unit	unit	NOUN	NN	Number=Sing	8	conj	8:conj:and|15:nsubj:pass	_
 12	could	could	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
 13	have	have	AUX	VB	VerbForm=Inf	15	aux	15:aux	_
 14	been	be	AUX	VBN	Tense=Past|VerbForm=Part	15	aux:pass	15:aux:pass	_
 15	transferred	transfer	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 16	to	to	ADP	IN	_	17	case	17:case	_
-17	Vietnam	Vietnam	PROPN	NNP	Number=Sing	15	obl	15:obl	SpaceAfter=No
+17	Vietnam	Vietnam	PROPN	NNP	Number=Sing	15	obl	15:obl:to	SpaceAfter=No
 18	.	.	PUNCT	.	_	15	punct	15:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0010
@@ -204,14 +204,14 @@
 4	so	so	ADV	RB	_	6	compound	6:compound	SpaceAfter=No
 5	-	-	PUNCT	HYPH	_	6	punct	6:punct	SpaceAfter=No
 6	called	call	VERB	VBN	Tense=Past|VerbForm=Part	7	amod	7:amod	_
-7	controversy	controversy	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+7	controversy	controversy	NOUN	NN	Number=Sing	11	obl	11:obl:in	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
 10	anyone	anyone	PRON	NN	Number=Sing	11	nsubj	11:nsubj	_
 11	considered	consider	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 12	that	that	SCONJ	IN	_	17	mark	17:mark	_
 13	perhaps	perhaps	ADV	RB	_	17	advmod	17:advmod	_
-14	George	George	PROPN	NNP	Number=Sing	17	nsubj	17:nsubj	_
+14	George	George	PROPN	NNP	Number=Sing	17	nsubj	17:nsubj|19:nsubj:xsubj	_
 15	Bush	Bush	PROPN	NNP	Number=Sing	14	flat	14:flat	_
 16	just	just	ADV	RB	_	17	advmod	17:advmod	_
 17	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	ccomp	11:ccomp	_
@@ -225,7 +225,7 @@
 1	And	and	CCONJ	CC	_	3	cc	3:cc	SpaceAfter=No
 2	,	,	PUNCT	,	_	3	punct	3:punct	_
 3	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	SpaceAfter=No
-4	's	's	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	3	obj	3:obj	_
+4	's	's	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	3	obj	3:obj|5:nsubj:xsubj	_
 5	remember	remember	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	SpaceAfter=No
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7	flying	fly	VERB	VBG	VerbForm=Ger	12	csubj	12:csubj	_
@@ -243,7 +243,7 @@
 3	n't	not	PART	RB	_	4	advmod	4:advmod	_
 4	let	let	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	just	just	ADV	RB	_	6	advmod	6:advmod	_
-6	anybody	anybody	PRON	NN	Number=Sing	4	obj	4:obj	_
+6	anybody	anybody	PRON	NN	Number=Sing	4	obj	4:obj|7:nsubj:xsubj	_
 7	do	do	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 8	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	obj	7:obj	SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -260,7 +260,7 @@
 8	ones	one	NOUN	NNS	Number=Plur	2	appos	2:appos	_
 9	with	with	ADP	IN	_	11	case	11:case	_
 10	journalistic	journalistic	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	ethics	ethic	NOUN	NNS	Number=Plur	8	nmod	8:nmod	SpaceAfter=No
+11	ethics	ethic	NOUN	NNS	Number=Plur	8	nmod	8:nmod:with	SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
 13	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
 14	actually	actually	ADV	RB	_	15	advmod	15:advmod	_
@@ -271,19 +271,19 @@
 19	George	George	PROPN	NNP	Number=Sing	22	nmod:poss	22:nmod:poss	_
 20	Bush	Bush	PROPN	NNP	Number=Sing	19	flat	19:flat	SpaceAfter=No
 21	's	's	PART	POS	_	19	case	19:case	_
-22	service	service	NOUN	NN	Number=Sing	17	nmod	17:nmod	_
+22	service	service	NOUN	NN	Number=Sing	17	nmod	17:nmod:about	_
 23	in	in	ADP	IN	_	28	case	28:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 25	Texas	Texas	PROPN	NNP	Number=Sing	28	compound	28:compound	_
 26	Air	Air	PROPN	NNP	Number=Sing	28	compound	28:compound	_
 27	National	National	PROPN	NNP	Number=Sing	28	compound	28:compound	_
-28	Guard	Guard	PROPN	NNP	Number=Sing	22	nmod	22:nmod	SpaceAfter=No
+28	Guard	Guard	PROPN	NNP	Number=Sing	22	nmod	22:nmod:in	SpaceAfter=No
 29	.	.	PUNCT	.	_	15	punct	15:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0014
 # text = For example, did you know that George Bush spent considerably more time in uniform than John Kerry?
 1	For	for	ADP	IN	_	2	case	2:case	_
-2	example	example	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+2	example	example	NOUN	NN	Number=Sing	6	obl	6:obl:for	SpaceAfter=No
 3	,	,	PUNCT	,	_	6	punct	6:punct	_
 4	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	aux	6:aux	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
@@ -296,9 +296,9 @@
 12	more	more	ADJ	JJR	Degree=Cmp	13	amod	13:amod	_
 13	time	time	NOUN	NN	Number=Sing	10	obj	10:obj	_
 14	in	in	ADP	IN	_	15	case	15:case	_
-15	uniform	uniform	NOUN	NN	Number=Sing	13	nmod	13:nmod	_
+15	uniform	uniform	NOUN	NN	Number=Sing	13	nmod	13:nmod:in	_
 16	than	than	ADP	IN	_	17	case	17:case	_
-17	John	John	PROPN	NNP	Number=Sing	12	obl	12:obl	_
+17	John	John	PROPN	NNP	Number=Sing	12	obl	12:obl:than	_
 18	Kerry	Kerry	PROPN	NNP	Number=Sing	17	flat	17:flat	SpaceAfter=No
 19	?	?	PUNCT	.	_	6	punct	6:punct	_
 
@@ -311,19 +311,19 @@
 5	text	text	NOUN	NN	Number=Sing	0	root	0:root	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	an	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	e-mail	e-mail	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+8	e-mail	e-mail	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
 9	sent	send	VERB	VBN	Tense=Past|VerbForm=Part	8	acl	8:acl	_
 10	to	to	ADP	IN	_	11	case	11:case	_
-11	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	9	obl	9:obl	_
+11	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	9	obl	9:obl:to	_
 12	by	by	ADP	IN	_	14	case	14:case	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
-14	friend	friend	NOUN	NN	Number=Sing	9	obl	9:obl	_
+14	friend	friend	NOUN	NN	Number=Sing	9	obl	9:obl:by	_
 15	of	of	ADP	IN	_	16	case	16:case	_
-16	mine	mine	PRON	PRP	_	14	nmod	14:nmod	_
+16	mine	mine	PRON	PRP	_	14	nmod	14:nmod:of	_
 17	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
 18	thanks	thanks	NOUN	NN	Number=Sing	5	parataxis	5:parataxis	_
 19	to	to	ADP	IN	_	20	case	20:case	_
-20	Dave	Dave	PROPN	NNP	Number=Sing	18	nmod	18:nmod	_
+20	Dave	Dave	PROPN	NNP	Number=Sing	18	nmod	18:nmod:to	_
 21	Manzano	Manzano	PROPN	NNP	Number=Sing	20	flat	20:flat	SpaceAfter=No
 22	)	)	PUNCT	-RRB-	_	18	punct	18:punct	SpaceAfter=No
 23	.	.	PUNCT	.	_	18	punct	18:punct	_
@@ -354,11 +354,11 @@
 # text = Before you fall for Dems’ spin, here are the facts
 1	Before	before	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	fall	fall	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl	_
+3	fall	fall	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:before	_
 4	for	for	ADP	IN	_	7	case	7:case	_
 5	Dems	Dems	PROPN	NNPS	Number=Plur	7	nmod:poss	7:nmod:poss	SpaceAfter=No
-6	’	'	PART	POS	_	5	case	5:case	_
-7	spin	spin	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+6	’	's	PART	POS	_	5	case	5:case	_
+7	spin	spin	NOUN	NN	Number=Sing	3	obl	3:obl:for	SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
 9	here	here	ADV	RB	PronType=Dem	0	root	0:root	_
 10	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
@@ -377,12 +377,12 @@
 8	W.	W.	PROPN	NNP	Number=Sing	7	flat	7:flat	_
 9	Bush	Bush	PROPN	NNP	Number=Sing	7	flat	7:flat	SpaceAfter=No
 10	’s	's	PART	POS	_	7	case	7:case	_
-11	time	time	NOUN	NN	Number=Sing	5	obl	5:obl	_
+11	time	time	NOUN	NN	Number=Sing	5	obl	5:obl:about	_
 12	in	in	ADP	IN	_	16	case	16:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 14	Air	Air	PROPN	NNP	Number=Sing	16	compound	16:compound	_
 15	National	National	PROPN	NNP	Number=Sing	16	compound	16:compound	_
-16	Guard	Guard	PROPN	NNP	Number=Sing	11	nmod	11:nmod	SpaceAfter=No
+16	Guard	Guard	PROPN	NNP	Number=Sing	11	nmod	11:nmod:in	SpaceAfter=No
 17	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0021
@@ -394,9 +394,9 @@
 5	show	show	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	up	up	ADP	RP	_	5	compound:prt	5:compound:prt	_
 7	for	for	ADP	IN	_	8	case	8:case	_
-8	duty	duty	NOUN	NN	Number=Sing	5	obl	5:obl	_
+8	duty	duty	NOUN	NN	Number=Sing	5	obl	5:obl:for	_
 9	in	in	ADP	IN	_	10	case	10:case	_
-10	Alabama	Alabama	PROPN	NNP	Number=Sing	5	obl	5:obl	SpaceAfter=No
+10	Alabama	Alabama	PROPN	NNP	Number=Sing	5	obl	5:obl:in	SpaceAfter=No
 11	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0022
@@ -421,15 +421,15 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0024
 # text = News coverage of the president’s years in the Guard has tended to focus on one brief portion of that time — to the exclusion of virtually everything else.
 1	News	news	NOUN	NN	Number=Sing	2	compound	2:compound	_
-2	coverage	coverage	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
+2	coverage	coverage	NOUN	NN	Number=Sing	12	nsubj	12:nsubj|14:nsubj:xsubj	_
 3	of	of	ADP	IN	_	7	case	7:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	president	president	PROPN	NNP	Number=Sing	7	nmod:poss	7:nmod:poss	SpaceAfter=No
 6	’s	's	PART	POS	_	5	case	5:case	_
-7	years	year	NOUN	NNS	Number=Plur	2	nmod	2:nmod	_
+7	years	year	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	_
 8	in	in	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	Guard	Guard	PROPN	NNP	Number=Sing	7	nmod	7:nmod	_
+10	Guard	Guard	PROPN	NNP	Number=Sing	7	nmod	7:nmod:in	_
 11	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
 12	tended	tend	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
@@ -437,17 +437,17 @@
 15	on	on	ADP	IN	_	18	case	18:case	_
 16	one	one	NUM	CD	NumType=Card	18	nummod	18:nummod	_
 17	brief	brief	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	portion	portion	NOUN	NN	Number=Sing	14	obl	14:obl	_
+18	portion	portion	NOUN	NN	Number=Sing	14	obl	14:obl:on	_
 19	of	of	ADP	IN	_	21	case	21:case	_
 20	that	that	DET	DT	Number=Sing|PronType=Dem	21	det	21:det	_
-21	time	time	NOUN	NN	Number=Sing	18	nmod	18:nmod	_
+21	time	time	NOUN	NN	Number=Sing	18	nmod	18:nmod:of	_
 22	—	-	PUNCT	,	_	14	punct	14:punct	_
 23	to	to	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
-25	exclusion	exclusion	NOUN	NN	Number=Sing	14	obl	14:obl	_
+25	exclusion	exclusion	NOUN	NN	Number=Sing	14	obl	14:obl:to	_
 26	of	of	ADP	IN	_	28	case	28:case	_
 27	virtually	virtually	ADV	RB	_	28	advmod	28:advmod	_
-28	everything	everything	PRON	NN	Number=Sing	25	nmod	25:nmod	_
+28	everything	everything	PRON	NN	Number=Sing	25	nmod	25:nmod:of	_
 29	else	else	ADJ	JJ	Degree=Pos	28	amod	28:amod	SpaceAfter=No
 30	.	.	PUNCT	.	_	12	punct	12:punct	_
 
@@ -457,12 +457,12 @@
 2	just	just	ADV	RB	_	5	advmod	5:advmod	_
 3	for	for	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	record	record	NOUN	NN	Number=Sing	7	obl	7:obl	SpaceAfter=No
+5	record	record	NOUN	NN	Number=Sing	7	obl	7:obl:for	SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
 7	here	here	ADV	RB	PronType=Dem	0	root	0:root	SpaceAfter=No
 8	,	,	PUNCT	,	_	7	punct	7:punct	_
 9	in	in	ADP	IN	_	10	case	10:case	_
-10	full	full	ADJ	JJ	Degree=Pos	7	obl	7:obl	SpaceAfter=No
+10	full	full	ADJ	JJ	Degree=Pos	7	obl	7:obl:in	SpaceAfter=No
 11	,	,	PUNCT	,	_	7	punct	7:punct	_
 12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 13	what	what	PRON	WP	PronType=Int	15	obj	15:obj	_
@@ -479,7 +479,7 @@
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	Guard	Guard	PROPN	NNP	Number=Sing	4	obj	4:obj	_
 7	in	in	ADP	IN	_	8	case	8:case	_
-8	May	May	PROPN	NNP	Number=Sing	4	obl	4:obl	_
+8	May	May	PROPN	NNP	Number=Sing	4	obl	4:obl:in	_
 9	1968	1968	NUM	CD	NumType=Card	8	nummod	8:nummod	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -494,7 +494,7 @@
 7	extended	extended	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	period	period	NOUN	NN	Number=Sing	5	obj	5:obj	_
 9	of	of	ADP	IN	_	10	case	10:case	_
-10	training	training	NOUN	NN	Number=Sing	8	nmod	8:nmod	SpaceAfter=No
+10	training	training	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	SpaceAfter=No
 11	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0028
@@ -503,7 +503,7 @@
 2	weeks	week	NOUN	NNS	Number=Plur	0	root	0:root	_
 3	of	of	ADP	IN	_	5	case	5:case	_
 4	basic	basic	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	training	training	NOUN	NN	Number=Sing	2	nmod	2:nmod	SpaceAfter=No
+5	training	training	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	SpaceAfter=No
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0029
@@ -514,7 +514,7 @@
 4	weeks	week	NOUN	NNS	Number=Plur	0	root	0:root	_
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	flight	flight	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	training	training	NOUN	NN	Number=Sing	4	nmod	4:nmod	SpaceAfter=No
+7	training	training	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	SpaceAfter=No
 8	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0030
@@ -527,7 +527,7 @@
 6	fighter	fighter	NOUN	NN	Number=Sing	8	compound	8:compound	SpaceAfter=No
 7	-	-	PUNCT	HYPH	_	8	punct	8:punct	SpaceAfter=No
 8	interceptor	interceptor	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	training	training	NOUN	NN	Number=Sing	4	nmod	4:nmod	SpaceAfter=No
+9	training	training	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0031
@@ -537,12 +537,12 @@
 3	80	80	NUM	CD	NumType=Card	4	nummod	4:nummod	_
 4	weeks	week	NOUN	NNS	Number=Plur	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
-6	begin	begin	VERB	VB	VerbForm=Inf	4	advcl	4:advcl	_
+6	begin	begin	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	_
 7	with	with	ADP	IN	_	6	obl	6:obl	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	there	there	PRON	EX	_	11	expl	11:expl	_
-11	were	be	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj	_
+11	were	be	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	_
 12	other	other	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 13	training	training	NOUN	NN	Number=Sing	14	compound	14:compound	_
 14	periods	period	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
@@ -566,7 +566,7 @@
 # text = By the time it was over, Bush had served nearly two years.
 1	By	by	ADP	IN	_	3	case	3:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	time	time	NOUN	NN	Number=Sing	10	obl	10:obl	_
+3	time	time	NOUN	NN	Number=Sing	10	obl	10:obl:by	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	_
 6	over	over	ADV	RB	_	3	acl:relcl	3:acl:relcl	SpaceAfter=No
@@ -585,7 +585,7 @@
 2	two	two	NUM	CD	NumType=Card	3	nummod	3:nummod	_
 3	years	year	NOUN	NNS	Number=Plur	0	root	0:root	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	weekends	weekend	NOUN	NNS	Number=Plur	3	nmod	3:nmod	SpaceAfter=No
+5	weekends	weekend	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	SpaceAfter=No
 6	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0035
@@ -597,9 +597,9 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0036
 # text = After training, Bush kept flying, racking up hundreds of hours in F-102 jets.
 1	After	after	ADP	IN	_	2	case	2:case	_
-2	training	training	NOUN	NN	Number=Sing	5	obl	5:obl	SpaceAfter=No
+2	training	training	NOUN	NN	Number=Sing	5	obl	5:obl:after	SpaceAfter=No
 3	,	,	PUNCT	,	_	5	punct	5:punct	_
-4	Bush	Bush	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
+4	Bush	Bush	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj|6:nsubj:xsubj	_
 5	kept	keep	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	flying	fly	VERB	VBG	VerbForm=Ger	5	xcomp	5:xcomp	SpaceAfter=No
 7	,	,	PUNCT	,	_	6	punct	6:punct	_
@@ -607,19 +607,19 @@
 9	up	up	ADP	RP	_	8	compound:prt	8:compound:prt	_
 10	hundreds	hundred	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	hours	hour	NOUN	NNS	Number=Plur	10	nmod	10:nmod	_
+12	hours	hour	NOUN	NNS	Number=Plur	10	nmod	10:nmod:of	_
 13	in	in	ADP	IN	_	17	case	17:case	_
 14	F	F	PROPN	NNP	Number=Sing	17	compound	17:compound	SpaceAfter=No
 15	-	-	PUNCT	HYPH	_	14	punct	14:punct	SpaceAfter=No
 16	102	102	NUM	CD	NumType=Card	14	nummod	14:nummod	_
-17	jets	jet	NOUN	NNS	Number=Plur	10	nmod	10:nmod	SpaceAfter=No
+17	jets	jet	NOUN	NNS	Number=Plur	10	nmod	10:nmod:in	SpaceAfter=No
 18	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0037
 # text = As he did, he accumulated points toward his National Guard service requirements.
 1	As	as	SCONJ	IN	_	3	mark	3:mark	_
 2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	advcl	6:advcl	SpaceAfter=No
+3	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:as	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
 6	accumulated	accumulate	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -629,16 +629,16 @@
 10	National	National	PROPN	NNP	Number=Sing	11	compound	11:compound	_
 11	Guard	Guard	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 12	service	service	NOUN	NN	Number=Sing	13	compound	13:compound	_
-13	requirements	requirement	NOUN	NNS	Number=Plur	7	nmod	7:nmod	SpaceAfter=No
+13	requirements	requirement	NOUN	NNS	Number=Plur	7	nmod	7:nmod:toward	SpaceAfter=No
 14	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0038
 # text = At the time, guardsmen were required to accumulate a minimum of 50 points to meet their yearly obligation.
 1	At	at	ADP	IN	_	3	case	3:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	time	time	NOUN	NN	Number=Sing	7	obl	7:obl	SpaceAfter=No
+3	time	time	NOUN	NN	Number=Sing	7	obl	7:obl:at	SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
-5	guardsmen	guardsman	NOUN	NNS	Number=Plur	7	nsubj:pass	7:nsubj:pass	_
+5	guardsmen	guardsman	NOUN	NNS	Number=Plur	7	nsubj:pass	7:nsubj:pass|9:nsubj:xsubj	_
 6	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	aux:pass	7:aux:pass	_
 7	required	require	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
@@ -647,9 +647,9 @@
 11	minimum	minimum	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	of	of	ADP	IN	_	14	case	14:case	_
 13	50	50	NUM	CD	NumType=Card	14	nummod	14:nummod	_
-14	points	point	NOUN	NNS	Number=Plur	11	nmod	11:nmod	_
+14	points	point	NOUN	NNS	Number=Plur	11	nmod	11:nmod:of	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
-16	meet	meet	VERB	VB	VerbForm=Inf	9	advcl	9:advcl	_
+16	meet	meet	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
 17	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
 18	yearly	yearly	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 19	obligation	obligation	NOUN	NN	Number=Sing	16	obj	16:obj	SpaceAfter=No
@@ -659,7 +659,7 @@
 # text = According to records released earlier this year, Bush earned 253 points in his first year, May 1968 to May 1969 (since he joined in May 1968, his service thereafter was measured on a May-to-May basis).
 1	According	accord	VERB	VBG	VerbForm=Ger	3	case	3:case	_
 2	to	to	ADP	IN	_	3	case	3:case	_
-3	records	record	NOUN	NNS	Number=Plur	10	obl	10:obl	_
+3	records	record	NOUN	NNS	Number=Plur	10	obl	10:obl:to	_
 4	released	release	VERB	VBN	Tense=Past|VerbForm=Part	3	acl	3:acl	_
 5	earlier	earlier	ADV	RBR	Degree=Cmp	7	advmod	7:advmod	_
 6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	7:det	_
@@ -672,19 +672,19 @@
 13	in	in	ADP	IN	_	16	case	16:case	_
 14	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 15	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	16	amod	16:amod	_
-16	year	year	NOUN	NN	Number=Sing	10	obl	10:obl	SpaceAfter=No
+16	year	year	NOUN	NN	Number=Sing	10	obl	10:obl:in	SpaceAfter=No
 17	,	,	PUNCT	,	_	10	punct	10:punct	_
 18	May	May	PROPN	NNP	Number=Sing	10	obl:tmod	10:obl:tmod	_
 19	1968	1968	NUM	CD	NumType=Card	18	nummod	18:nummod	_
 20	to	to	ADP	IN	_	21	case	21:case	_
-21	May	May	PROPN	NNP	Number=Sing	18	nmod	18:nmod	_
+21	May	May	PROPN	NNP	Number=Sing	18	nmod	18:nmod:to	_
 22	1969	1969	NUM	CD	NumType=Card	21	nummod	21:nummod	_
 23	(	(	PUNCT	-LRB-	_	35	punct	35:punct	SpaceAfter=No
 24	since	since	SCONJ	IN	_	26	mark	26:mark	_
 25	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	26	nsubj	26:nsubj	_
-26	joined	join	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	35	advcl	35:advcl	_
+26	joined	join	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	35	advcl	35:advcl:since	_
 27	in	in	ADP	IN	_	28	case	28:case	_
-28	May	May	PROPN	NNP	Number=Sing	26	obl	26:obl	_
+28	May	May	PROPN	NNP	Number=Sing	26	obl	26:obl:in	_
 29	1968	1968	NUM	CD	NumType=Card	28	nummod	28:nummod	SpaceAfter=No
 30	,	,	PUNCT	,	_	35	punct	35:punct	_
 31	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	32	nmod:poss	32:nmod:poss	_
@@ -698,8 +698,8 @@
 39	-	-	PUNCT	HYPH	_	38	punct	38:punct	SpaceAfter=No
 40	to	to	ADP	IN	_	42	case	42:case	SpaceAfter=No
 41	-	-	PUNCT	HYPH	_	42	punct	42:punct	SpaceAfter=No
-42	May	May	PROPN	NNP	Number=Sing	38	nmod	38:nmod	_
-43	basis	basis	NOUN	NN	Number=Sing	35	obl	35:obl	SpaceAfter=No
+42	May	May	PROPN	NNP	Number=Sing	38	nmod	38:nmod:to	_
+43	basis	basis	NOUN	NN	Number=Sing	35	obl	35:obl:on	SpaceAfter=No
 44	)	)	PUNCT	-RRB-	_	35	punct	35:punct	SpaceAfter=No
 45	.	.	PUNCT	.	_	10	punct	10:punct	_
 
@@ -710,7 +710,7 @@
 3	340	340	NUM	CD	NumType=Card	4	nummod	4:nummod	_
 4	points	point	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	1969	1969	NUM	CD	NumType=Card	2	obl	2:obl	SpaceAfter=No
+6	1969	1969	NUM	CD	NumType=Card	2	obl	2:obl:in	SpaceAfter=No
 7	-	-	SYM	SYM	_	8	case	8:case	SpaceAfter=No
 8	1970	1970	NUM	CD	NumType=Card	6	nmod	6:nmod	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -720,14 +720,14 @@
 1	[	[	PUNCT	-LRB-	_	7	punct	7:punct	SpaceAfter=No
 2	In	in	ADP	IN	_	4	case	4:case	_
 3	other	other	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	words	word	NOUN	NNS	Number=Plur	7	obl	7:obl	SpaceAfter=No
+4	words	word	NOUN	NNS	Number=Plur	7	obl	7:obl:in	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	Bush	Bush	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
 7	earned	earn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 8	enough	enough	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	points	point	NOUN	NNS	Number=Plur	7	obj	7:obj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	satisfy	satisfy	VERB	VB	VerbForm=Inf	9	acl	9:acl	_
+11	satisfy	satisfy	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	requirements	requirement	NOUN	NNS	Number=Plur	11	obj	11:obj	_
 14	for	for	ADP	IN	_	19	case	19:case	_
@@ -735,9 +735,9 @@
 16	entire	entire	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 17	six	six	NUM	CD	NumType=Card	18	nummod	18:nummod	_
 18	year	year	NOUN	NN	Number=Sing	19	compound	19:compound	_
-19	hitch	hitch	NOUN	NN	Number=Sing	13	nmod	13:nmod	_
+19	hitch	hitch	NOUN	NN	Number=Sing	13	nmod	13:nmod:for	_
 20	in	in	ADP	IN	_	21	case	21:case	_
-21	1969	1969	NUM	CD	NumType=Card	7	obl	7:obl	SpaceAfter=No
+21	1969	1969	NUM	CD	NumType=Card	7	obl	7:obl:in	SpaceAfter=No
 22	-	-	SYM	SYM	_	23	case	23:case	SpaceAfter=No
 23	1970	1970	NUM	CD	NumType=Card	21	nmod	21:nmod	_
 24	alone	alone	ADV	RB	_	21	advmod	21:advmod	SpaceAfter=No
@@ -756,7 +756,7 @@
 3	137	137	NUM	CD	NumType=Card	4	nummod	4:nummod	_
 4	points	point	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	1970	1970	NUM	CD	NumType=Card	2	obl	2:obl	SpaceAfter=No
+6	1970	1970	NUM	CD	NumType=Card	2	obl	2:obl:in	SpaceAfter=No
 7	-	-	SYM	SYM	_	8	case	8:case	SpaceAfter=No
 8	1971	1971	NUM	CD	NumType=Card	6	nmod	6:nmod	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -769,7 +769,7 @@
 4	112	112	NUM	CD	NumType=Card	5	nummod	5:nummod	_
 5	points	point	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	1971	1971	NUM	CD	NumType=Card	3	obl	3:obl	SpaceAfter=No
+7	1971	1971	NUM	CD	NumType=Card	3	obl	3:obl:in	SpaceAfter=No
 8	-	-	SYM	SYM	_	9	case	9:case	SpaceAfter=No
 9	1972	1972	NUM	CD	NumType=Card	7	nmod	7:nmod	SpaceAfter=No
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -784,7 +784,7 @@
 6	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 7	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	9	amod	9:amod	_
 8	four	four	NUM	CD	NumType=Card	9	nummod	9:nummod	_
-9	years	year	NOUN	NNS	Number=Plur	14	obl	14:obl	SpaceAfter=No
+9	years	year	NOUN	NNS	Number=Plur	14	obl	14:obl:in	SpaceAfter=No
 10	,	,	PUNCT	,	_	14	punct	14:punct	_
 11	Bush	Bush	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
 12	not	not	PART	RB	_	13	advmod	13:advmod	_
@@ -793,7 +793,7 @@
 15	up	up	ADP	RP	_	14	compound:prt	14:compound:prt	SpaceAfter=No
 16	,	,	PUNCT	,	_	18	punct	18:punct	_
 17	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
-18	showed	show	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	14	conj	14:conj	_
+18	showed	show	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	14	conj	3:ccomp|14:conj	_
 19	up	up	ADP	RP	_	18	compound:prt	18:compound:prt	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 21	lot	lot	NOUN	NN	Number=Sing	18	obl:npmod	18:obl:npmod	SpaceAfter=No
@@ -814,12 +814,12 @@
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	story	story	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	to	to	ADP	IN	_	6	case	6:case	_
-6	May	May	PROPN	NNP	Number=Sing	2	obl	2:obl	_
+6	May	May	PROPN	NNP	Number=Sing	2	obl	2:obl:to	_
 7	1972	1972	NUM	CD	NumType=Card	6	nummod	6:nummod	_
 8	—	-	PUNCT	,	_	6	punct	6:punct	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	time	time	NOUN	NN	Number=Sing	6	appos	6:appos	_
-11	that	that	PRON	WDT	PronType=Rel	15	nsubj	15:nsubj	_
+10	time	time	NOUN	NN	Number=Sing	6	appos	6:appos|15:nsubj	_
+11	that	that	PRON	WDT	PronType=Rel	15	nsubj	10:ref	_
 12	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
 13	been	be	AUX	VBN	Tense=Past|VerbForm=Part	15	cop	15:cop	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
@@ -828,30 +828,30 @@
 17	so	so	ADV	RB	_	18	advmod	18:advmod	_
 18	many	many	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
 19	news	news	NOUN	NN	Number=Sing	20	compound	20:compound	_
-20	reports	report	NOUN	NNS	Number=Plur	15	nmod	15:nmod	_
+20	reports	report	NOUN	NNS	Number=Plur	15	nmod	15:nmod:of	_
 21	—	-	PUNCT	,	_	6	punct	6:punct	_
 22	when	when	ADV	WRB	PronType=Int	25	mark	25:mark	_
-23	Bush	Bush	PROPN	NNP	Number=Sing	25	nsubj	25:nsubj	_
+23	Bush	Bush	PROPN	NNP	Number=Sing	25	nsubj	25:nsubj|36:nsubj|38:nsubj:xsubj	_
 24	“	"	PUNCT	``	_	25	punct	25:punct	SpaceAfter=No
-25	deserted	desert	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	advcl	6:advcl	SpaceAfter=No
+25	deserted	desert	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:when	SpaceAfter=No
 26	”	"	PUNCT	''	_	25	punct	25:punct	_
 27	(	(	PUNCT	-LRB-	_	32	punct	32:punct	SpaceAfter=No
 28	according	accord	VERB	VBG	VerbForm=Ger	32	case	32:case	_
 29	to	to	ADP	IN	_	28	fixed	28:fixed	_
 30	anti-Bush	anti-bush	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
 31	filmmaker	filmmaker	NOUN	NN	Number=Sing	32	compound	32:compound	_
-32	Michael	Michael	PROPN	NNP	Number=Sing	25	obl	25:obl	_
+32	Michael	Michael	PROPN	NNP	Number=Sing	25	obl	25:obl:accord_to	_
 33	Moore	Moore	PROPN	NNP	Number=Sing	32	flat	32:flat	SpaceAfter=No
 34	)	)	PUNCT	-RRB-	_	32	punct	32:punct	_
 35	or	or	CCONJ	CC	_	36	cc	36:cc	_
-36	went	go	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	25	conj	25:conj	_
+36	went	go	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	25	conj	6:advcl:when|25:conj:or	_
 37	“	"	PUNCT	``	_	38	punct	38:punct	SpaceAfter=No
 38	AWOL	awol	ADJ	JJ	Degree=Pos	36	xcomp	36:xcomp	SpaceAfter=No
 39	”	"	PUNCT	''	_	38	punct	38:punct	_
 40	(	(	PUNCT	-LRB-	_	43	punct	43:punct	SpaceAfter=No
 41	according	accord	VERB	VBG	VerbForm=Ger	43	case	43:case	_
 42	to	to	ADP	IN	_	41	fixed	41:fixed	_
-43	Terry	Terry	PROPN	NNP	Number=Sing	36	obl	36:obl	_
+43	Terry	Terry	PROPN	NNP	Number=Sing	36	obl	36:obl:accord_to	_
 44	McAuliffe	McAuliffe	PROPN	NNP	Number=Sing	43	flat	43:flat	SpaceAfter=No
 45	,	,	PUNCT	,	_	43	punct	43:punct	_
 46	chairman	chairman	NOUN	NN	Number=Sing	43	appos	43:appos	_
@@ -859,7 +859,7 @@
 48	the	the	DET	DT	Definite=Def|PronType=Art	51	det	51:det	_
 49	Democratic	Democratic	PROPN	NNP	Number=Sing	51	compound	51:compound	_
 50	National	National	PROPN	NNP	Number=Sing	51	compound	51:compound	_
-51	Committee	Committee	PROPN	NNP	Number=Sing	46	nmod	46:nmod	SpaceAfter=No
+51	Committee	Committee	PROPN	NNP	Number=Sing	46	nmod	46:nmod:of	SpaceAfter=No
 52	)	)	PUNCT	-RRB-	_	43	punct	43:punct	SpaceAfter=No
 53	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -868,17 +868,17 @@
 1	Bush	Bush	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
 2	asked	ask	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	for	for	ADP	IN	_	4	case	4:case	_
-4	permission	permission	NOUN	NN	Number=Sing	2	obl	2:obl	_
+4	permission	permission	NOUN	NN	Number=Sing	2	obl	2:obl:for	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
-6	go	go	VERB	VB	VerbForm=Inf	4	acl	4:acl	_
+6	go	go	VERB	VB	VerbForm=Inf	4	acl	4:acl:to	_
 7	to	to	ADP	IN	_	8	case	8:case	_
-8	Alabama	Alabama	PROPN	NNP	Number=Sing	6	obl	6:obl	_
+8	Alabama	Alabama	PROPN	NNP	Number=Sing	6	obl	6:obl:to	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	work	work	VERB	VB	VerbForm=Inf	6	advcl	6:advcl	_
+10	work	work	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:to	_
 11	on	on	ADP	IN	_	14	case	14:case	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 13	Senate	Senate	PROPN	NNP	Number=Sing	14	compound	14:compound	_
-14	campaign	campaign	NOUN	NN	Number=Sing	10	obl	10:obl	SpaceAfter=No
+14	campaign	campaign	NOUN	NN	Number=Sing	10	obl	10:obl:on	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0049
@@ -894,32 +894,32 @@
 # text = Requests like that weren’t unusual, says retired Col. William Campenni, who flew with Bush in 1970 and 1971.
 1	Requests	request	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
 2	like	like	ADP	IN	_	3	case	3:case	_
-3	that	that	PRON	DT	Number=Sing|PronType=Dem	1	nmod	1:nmod	_
+3	that	that	PRON	DT	Number=Sing|PronType=Dem	1	nmod	1:nmod:like	_
 4	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	cop	6:cop	SpaceAfter=No
 5	n’t	not	PART	RB	_	6	advmod	6:advmod	_
 6	unusual	unusual	ADJ	JJ	Degree=Pos	8	ccomp	8:ccomp	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
 8	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 9	retired	retire	VERB	VBN	Tense=Past|VerbForm=Part	10	amod	10:amod	_
-10	Col.	Col.	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
+10	Col.	Col.	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|15:nsubj	_
 11	William	William	PROPN	NNP	Number=Sing	10	flat	10:flat	_
 12	Campenni	Campenni	PROPN	NNP	Number=Sing	10	flat	10:flat	SpaceAfter=No
 13	,	,	PUNCT	,	_	10	punct	10:punct	_
-14	who	who	PRON	WP	PronType=Rel	15	nsubj	15:nsubj	_
+14	who	who	PRON	WP	PronType=Rel	15	nsubj	10:ref	_
 15	flew	fly	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
 16	with	with	ADP	IN	_	17	case	17:case	_
-17	Bush	Bush	PROPN	NNP	Number=Sing	15	obl	15:obl	_
+17	Bush	Bush	PROPN	NNP	Number=Sing	15	obl	15:obl:with	_
 18	in	in	ADP	IN	_	19	case	19:case	_
-19	1970	1970	NUM	CD	NumType=Card	15	obl	15:obl	_
+19	1970	1970	NUM	CD	NumType=Card	15	obl	15:obl:in	_
 20	and	and	CCONJ	CC	_	21	cc	21:cc	_
-21	1971	1971	NUM	CD	NumType=Card	19	conj	19:conj	SpaceAfter=No
+21	1971	1971	NUM	CD	NumType=Card	19	conj	15:obl:in|19:conj:and	SpaceAfter=No
 22	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0051
 # text = “In 1972, there was an enormous glut of pilots,” Campenni says.
 1	“	"	PUNCT	``	_	15	punct	15:punct	SpaceAfter=No
 2	In	in	ADP	IN	_	3	case	3:case	_
-3	1972	1972	NUM	CD	NumType=Card	6	obl	6:obl	SpaceAfter=No
+3	1972	1972	NUM	CD	NumType=Card	6	obl	6:obl:in	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	there	there	PRON	EX	_	6	expl	6:expl	_
 6	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	ccomp	15:ccomp	_
@@ -927,7 +927,7 @@
 8	enormous	enormous	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	glut	glut	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	pilots	pilot	NOUN	NNS	Number=Plur	9	nmod	9:nmod	SpaceAfter=No
+11	pilots	pilot	NOUN	NNS	Number=Plur	9	nmod	9:nmod:of	SpaceAfter=No
 12	,	,	PUNCT	,	_	15	punct	15:punct	SpaceAfter=No
 13	”	"	PUNCT	''	_	15	punct	15:punct	_
 14	Campenni	Campenni	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	_
@@ -949,37 +949,37 @@
 11	Air	Air	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 12	Force	Force	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
 13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	aux	14:aux	_
-14	putting	put	VERB	VBG	Tense=Pres|VerbForm=Part	6	conj	6:conj	_
+14	putting	put	VERB	VBG	Tense=Pres|VerbForm=Part	6	conj	6:conj:and	_
 15	pilots	pilot	NOUN	NNS	Number=Plur	14	obj	14:obj	_
 16	in	in	ADP	IN	_	18	case	18:case	_
 17	desk	desk	NOUN	NN	Number=Sing	18	compound	18:compound	_
-18	jobs	job	NOUN	NNS	Number=Plur	14	obl	14:obl	SpaceAfter=No
+18	jobs	job	NOUN	NNS	Number=Plur	14	obl	14:obl:in	SpaceAfter=No
 19	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0053
 # text = In ’72 or ’73, if you were a pilot, active or Guard, and you had an obligation and wanted to get out, no problem.
 1	In	in	ADP	IN	_	2	case	2:case	_
-2	’72	'72	NUM	CD	NumType=Card	10	obl	10:obl	_
+2	’72	'72	NUM	CD	NumType=Card	10	obl	10:obl:in	_
 3	or	or	CCONJ	CC	_	4	cc	4:cc	_
-4	’73	'73	NUM	CD	NumType=Card	2	conj	2:conj	SpaceAfter=No
+4	’73	'73	NUM	CD	NumType=Card	2	conj	2:conj:or|10:obl:in	SpaceAfter=No
 5	,	,	PUNCT	,	_	10	punct	10:punct	_
 6	if	if	SCONJ	IN	_	10	mark	10:mark	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
 8	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	cop	10:cop	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	pilot	pilot	NOUN	NN	Number=Sing	28	advcl	28:advcl	SpaceAfter=No
+10	pilot	pilot	NOUN	NN	Number=Sing	28	advcl	28:advcl:if	SpaceAfter=No
 11	,	,	PUNCT	,	_	10	punct	10:punct	_
 12	active	active	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 13	or	or	CCONJ	CC	_	14	cc	14:cc	_
-14	Guard	Guard	PROPN	NNP	Number=Sing	12	conj	12:conj	SpaceAfter=No
+14	Guard	Guard	PROPN	NNP	Number=Sing	12	conj	10:amod|12:conj:or	SpaceAfter=No
 15	,	,	PUNCT	,	_	18	punct	18:punct	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
-17	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
-18	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	conj	10:conj	_
+17	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj|22:nsubj|24:nsubj:xsubj	_
+18	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	conj	10:conj:and|28:advcl:if	_
 19	an	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
 20	obligation	obligation	NOUN	NN	Number=Sing	18	obj	18:obj	_
 21	and	and	CCONJ	CC	_	22	cc	22:cc	_
-22	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	18	conj	18:conj	_
+22	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	18	conj	18:conj:and	_
 23	to	to	PART	TO	_	24	mark	24:mark	_
 24	get	get	VERB	VB	VerbForm=Inf	22	xcomp	22:xcomp	_
 25	out	out	ADV	RB	_	24	advmod	24:advmod	SpaceAfter=No
@@ -991,12 +991,12 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0054
 # text = In fact, you were helping them solve their problem.”
 1	In	in	ADP	IN	_	2	case	2:case	_
-2	fact	fact	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+2	fact	fact	NOUN	NN	Number=Sing	6	obl	6:obl:in	SpaceAfter=No
 3	,	,	PUNCT	,	_	6	punct	6:punct	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
 5	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	aux	6:aux	_
 6	helping	help	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
-7	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	6	obj	6:obj	_
+7	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	6	obj	6:obj|8:nsubj:xsubj	_
 8	solve	solve	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 9	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	problem	problem	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No
@@ -1006,7 +1006,7 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0055
 # text = So Bush stopped flying.
 1	So	so	ADV	RB	_	3	advmod	3:advmod	_
-2	Bush	Bush	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
+2	Bush	Bush	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj|4:nsubj:xsubj	_
 3	stopped	stop	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	flying	fly	VERB	VBG	VerbForm=Ger	3	xcomp	3:xcomp	SpaceAfter=No
 5	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -1014,10 +1014,10 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0056
 # text = From May 1972 to May 1973, he earned just 56 points — not much, but enough to meet his requirement.
 1	From	from	ADP	IN	_	2	case	2:case	_
-2	May	May	PROPN	NNP	Number=Sing	9	obl	9:obl	_
+2	May	May	PROPN	NNP	Number=Sing	9	obl	9:obl:from	_
 3	1972	1972	NUM	CD	NumType=Card	2	nummod	2:nummod	_
 4	to	to	ADP	IN	_	5	case	5:case	_
-5	May	May	PROPN	NNP	Number=Sing	2	nmod	2:nmod	_
+5	May	May	PROPN	NNP	Number=Sing	2	nmod	2:nmod:to	_
 6	1973	1973	NUM	CD	NumType=Card	5	nummod	5:nummod	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
@@ -1030,9 +1030,9 @@
 15	much	much	ADJ	JJ	Degree=Pos	12	amod	12:amod	SpaceAfter=No
 16	,	,	PUNCT	,	_	18	punct	18:punct	_
 17	but	but	CCONJ	CC	_	18	cc	18:cc	_
-18	enough	enough	ADJ	JJ	Degree=Pos	15	conj	15:conj	_
+18	enough	enough	ADJ	JJ	Degree=Pos	15	conj	12:amod|15:conj:but	_
 19	to	to	PART	TO	_	20	mark	20:mark	_
-20	meet	meet	VERB	VB	VerbForm=Inf	18	advcl	18:advcl	_
+20	meet	meet	VERB	VB	VerbForm=Inf	18	advcl	18:advcl:to	_
 21	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
 22	requirement	requirement	NOUN	NN	Number=Sing	20	obj	20:obj	SpaceAfter=No
 23	.	.	PUNCT	.	_	9	punct	9:punct	_
@@ -1042,24 +1042,24 @@
 1	Then	then	ADV	RB	PronType=Dem	23	advmod	23:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	23	punct	23:punct	_
 3	in	in	ADP	IN	_	4	case	4:case	_
-4	1973	1973	NUM	CD	NumType=Card	23	obl	23:obl	SpaceAfter=No
+4	1973	1973	NUM	CD	NumType=Card	23	obl	23:obl:in	SpaceAfter=No
 5	,	,	PUNCT	,	_	23	punct	23:punct	_
 6	as	as	SCONJ	IN	_	8	mark	8:mark	_
 7	Bush	Bush	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
-8	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	23	advcl	23:advcl	_
+8	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	23	advcl	23:advcl:as	_
 9	plans	plan	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	leave	leave	VERB	VB	VerbForm=Inf	9	acl	9:acl	_
+11	leave	leave	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	Guard	Guard	PROPN	NNP	Number=Sing	11	obj	11:obj	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	go	go	VERB	VB	VerbForm=Inf	11	conj	11:conj	_
+15	go	go	VERB	VB	VerbForm=Inf	11	conj	9:acl:to|11:conj:and	_
 16	to	to	ADP	IN	_	19	case	19:case	_
 17	Harvard	Harvard	PROPN	NNP	Number=Sing	19	compound	19:compound	_
 18	Business	Business	PROPN	NNP	Number=Sing	19	compound	19:compound	_
-19	School	School	PROPN	NNP	Number=Sing	15	obl	15:obl	SpaceAfter=No
+19	School	School	PROPN	NNP	Number=Sing	15	obl	15:obl:to	SpaceAfter=No
 20	,	,	PUNCT	,	_	23	punct	23:punct	_
-21	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	23	nsubj	23:nsubj	_
+21	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	23	nsubj	23:nsubj|24:nsubj:xsubj	_
 22	again	again	ADV	RB	_	23	advmod	23:advmod	_
 23	started	start	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 24	showing	show	VERB	VBG	VerbForm=Ger	23	xcomp	23:xcomp	_
@@ -1070,11 +1070,11 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0058
 # text = In June and July of 1973, he accumulated 56 points, enough to meet the minimum requirement for the 1973-1974 year.
 1	In	in	ADP	IN	_	2	case	2:case	_
-2	June	June	PROPN	NNP	Number=Sing	9	obl	9:obl	_
+2	June	June	PROPN	NNP	Number=Sing	9	obl	9:obl:in	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	July	July	PROPN	NNP	Number=Sing	2	conj	2:conj	_
+4	July	July	PROPN	NNP	Number=Sing	2	conj	2:conj:and|9:obl:in	_
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	1973	1973	NUM	CD	NumType=Card	2	nmod	2:nmod	SpaceAfter=No
+6	1973	1973	NUM	CD	NumType=Card	2	nmod	2:nmod:of	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
 9	accumulated	accumulate	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -1083,7 +1083,7 @@
 12	,	,	PUNCT	,	_	11	punct	11:punct	_
 13	enough	enough	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
-15	meet	meet	VERB	VB	VerbForm=Inf	13	advcl	13:advcl	_
+15	meet	meet	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:to	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	minimum	minimum	NOUN	NN	Number=Sing	18	compound	18:compound	_
 18	requirement	requirement	NOUN	NN	Number=Sing	15	obj	15:obj	_
@@ -1092,7 +1092,7 @@
 21	1973	1973	NUM	CD	NumType=Card	24	compound	24:compound	SpaceAfter=No
 22	-	-	SYM	SYM	_	23	case	23:case	SpaceAfter=No
 23	1974	1974	NUM	CD	NumType=Card	21	nmod	21:nmod	_
-24	year	year	NOUN	NN	Number=Sing	18	nmod	18:nmod	SpaceAfter=No
+24	year	year	NOUN	NN	Number=Sing	18	nmod	18:nmod:for	SpaceAfter=No
 25	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0059
@@ -1101,14 +1101,14 @@
 2	,	,	PUNCT	,	_	9	punct	9:punct	_
 3	at	at	ADP	IN	_	5	case	5:case	_
 4	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-5	request	request	NOUN	NN	Number=Sing	9	obl	9:obl	SpaceAfter=No
+5	request	request	NOUN	NN	Number=Sing	9	obl	9:obl:at	SpaceAfter=No
 6	,	,	PUNCT	,	_	9	punct	9:punct	_
 7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	nsubj:pass	9:nsubj:pass	_
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	9:aux:pass	_
 9	given	give	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 10	permission	permission	NOUN	NN	Number=Sing	9	obj	9:obj	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	go	go	VERB	VB	VerbForm=Inf	10	acl	10:acl	SpaceAfter=No
+12	go	go	VERB	VB	VerbForm=Inf	10	acl	10:acl:to	SpaceAfter=No
 13	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0060
@@ -1119,29 +1119,29 @@
 4	honorable	honorable	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	discharge	discharge	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	after	after	SCONJ	IN	_	7	mark	7:mark	_
-7	serving	serve	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	_
+7	serving	serve	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:after	_
 8	five	five	NUM	CD	NumType=Card	9	nummod	9:nummod	_
 9	years	year	NOUN	NNS	Number=Plur	7	obj	7:obj	SpaceAfter=No
 10	,	,	PUNCT	,	_	12	punct	12:punct	_
 11	four	four	NUM	CD	NumType=Card	12	nummod	12:nummod	_
-12	months	month	NOUN	NNS	Number=Plur	9	conj	9:conj	_
+12	months	month	NOUN	NNS	Number=Plur	9	conj	7:obj|9:conj:and	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	five	five	NUM	CD	NumType=Card	15	nummod	15:nummod	_
-15	days	day	NOUN	NNS	Number=Plur	9	conj	9:conj	_
+15	days	day	NOUN	NNS	Number=Plur	9	conj	7:obj|9:conj:and	_
 16	of	of	ADP	IN	_	22	case	22:case	_
 17	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
 18	original	original	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 19	six	six	NUM	CD	NumType=Card	21	nummod	21:nummod	SpaceAfter=No
 20	-	-	PUNCT	HYPH	_	21	punct	21:punct	SpaceAfter=No
 21	year	year	NOUN	NN	Number=Sing	22	compound	22:compound	_
-22	commitment	commitment	NOUN	NN	Number=Sing	9	nmod	9:nmod	SpaceAfter=No
+22	commitment	commitment	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	SpaceAfter=No
 23	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0061
 # text = By that time, however, he had accumulated enough points in each year to cover six years of service.
 1	By	by	ADP	IN	_	3	case	3:case	_
 2	that	that	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	_
-3	time	time	NOUN	NN	Number=Sing	9	obl	9:obl	SpaceAfter=No
+3	time	time	NOUN	NN	Number=Sing	9	obl	9:obl:by	SpaceAfter=No
 4	,	,	PUNCT	,	_	9	punct	9:punct	_
 5	however	however	ADV	RB	_	9	advmod	9:advmod	SpaceAfter=No
 6	,	,	PUNCT	,	_	9	punct	9:punct	_
@@ -1152,20 +1152,20 @@
 11	points	point	NOUN	NNS	Number=Plur	9	obj	9:obj	_
 12	in	in	ADP	IN	_	14	case	14:case	_
 13	each	each	DET	DT	_	14	det	14:det	_
-14	year	year	NOUN	NN	Number=Sing	9	obl	9:obl	_
+14	year	year	NOUN	NN	Number=Sing	9	obl	9:obl:in	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
-16	cover	cover	VERB	VB	VerbForm=Inf	10	advcl	10:advcl	_
+16	cover	cover	VERB	VB	VerbForm=Inf	10	advcl	10:advcl:to	_
 17	six	six	NUM	CD	NumType=Card	18	nummod	18:nummod	_
 18	years	year	NOUN	NNS	Number=Plur	16	obj	16:obj	_
 19	of	of	ADP	IN	_	20	case	20:case	_
-20	service	service	NOUN	NN	Number=Sing	18	nmod	18:nmod	SpaceAfter=No
+20	service	service	NOUN	NN	Number=Sing	18	nmod	18:nmod:of	SpaceAfter=No
 21	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0062
 # text = During his service, Bush received high marks as a pilot.
 1	During	during	ADP	IN	_	3	case	3:case	_
 2	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	service	service	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+3	service	service	NOUN	NN	Number=Sing	6	obl	6:obl:during	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	Bush	Bush	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
 6	received	receive	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -1173,7 +1173,7 @@
 8	marks	mark	NOUN	NNS	Number=Plur	6	obj	6:obj	_
 9	as	as	ADP	IN	_	11	case	11:case	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	pilot	pilot	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+11	pilot	pilot	NOUN	NN	Number=Sing	6	obl	6:obl:as	SpaceAfter=No
 12	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0063
@@ -1182,7 +1182,7 @@
 2	1970	1970	NUM	CD	NumType=Card	3	nummod	3:nummod	_
 3	evaluation	evaluation	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 4	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
-5	Bush	Bush	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
+5	Bush	Bush	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|23:nsubj	_
 6	“	"	PUNCT	``	_	8	punct	8:punct	SpaceAfter=No
 7	clearly	clearly	ADV	RB	_	8	advmod	8:advmod	_
 8	stands	stand	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
@@ -1193,21 +1193,21 @@
 13	notch	notch	NOUN	NN	Number=Sing	16	compound	16:compound	_
 14	fighter	fighter	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	interceptor	interceptor	NOUN	NN	Number=Sing	16	compound	16:compound	_
-16	pilot	pilot	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+16	pilot	pilot	NOUN	NN	Number=Sing	8	obl	8:obl:as	SpaceAfter=No
 17	”	"	PUNCT	''	_	8	punct	8:punct	_
 18	and	and	CCONJ	CC	_	23	cc	23:cc	_
 19	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	cop	23:cop	_
 20	“	"	PUNCT	``	_	23	punct	23:punct	SpaceAfter=No
 21	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
 22	natural	natural	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
-23	leader	leader	NOUN	NN	Number=Sing	8	conj	8:conj	_
-24	whom	whom	PRON	WP	PronType=Rel	27	obl	27:obl	_
+23	leader	leader	NOUN	NN	Number=Sing	8	conj	4:ccomp|8:conj:and|27:obl	_
+24	whom	whom	PRON	WP	PronType=Rel	27	obl	23:ref	_
 25	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
 26	contemporaries	contemporary	NOUN	NNS	Number=Plur	27	nsubj	27:nsubj	_
 27	look	look	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	23	acl:relcl	23:acl:relcl	_
 28	to	to	ADP	IN	_	24	case	24:case	_
 29	for	for	ADP	IN	_	30	case	30:case	_
-30	leadership	leadership	NOUN	NN	Number=Sing	27	obl	27:obl	SpaceAfter=No
+30	leadership	leadership	NOUN	NN	Number=Sing	27	obl	27:obl:for	SpaceAfter=No
 31	.	.	PUNCT	.	_	4	punct	4:punct	SpaceAfter=No
 32	”	"	PUNCT	''	_	4	punct	4:punct	_
 
@@ -1217,17 +1217,17 @@
 2	1971	1971	NUM	CD	NumType=Card	3	nummod	3:nummod	_
 3	evaluation	evaluation	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 4	called	call	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
-5	Bush	Bush	PROPN	NNP	Number=Sing	4	obj	4:obj	_
+5	Bush	Bush	PROPN	NNP	Number=Sing	4	obj	4:obj|11:nsubj:xsubj|13:nsubj:xsubj	_
 6	“	"	PUNCT	``	_	11	punct	11:punct	SpaceAfter=No
 7	an	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 8	exceptionally	exceptionally	ADV	RB	_	9	advmod	9:advmod	_
 9	fine	fine	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 10	young	young	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	officer	officer	NOUN	NN	Number=Sing	4	xcomp	4:xcomp	_
+11	officer	officer	NOUN	NN	Number=Sing	4	xcomp	4:xcomp|18:nsubj	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	pilot	pilot	NOUN	NN	Number=Sing	11	conj	11:conj	SpaceAfter=No
+13	pilot	pilot	NOUN	NN	Number=Sing	11	conj	4:xcomp|11:conj:and|18:nsubj	SpaceAfter=No
 14	”	"	PUNCT	''	_	13	punct	13:punct	_
-15	who	who	PRON	WP	PronType=Rel	18	nsubj	18:nsubj	_
+15	who	who	PRON	WP	PronType=Rel	18	nsubj	11:ref	_
 16	“	"	PUNCT	``	_	18	punct	18:punct	SpaceAfter=No
 17	continually	continually	ADV	RB	_	18	advmod	18:advmod	_
 18	flies	fly	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
@@ -1235,9 +1235,9 @@
 20	missions	mission	NOUN	NNS	Number=Plur	18	obj	18:obj	_
 21	with	with	ADP	IN	_	23	case	23:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
-23	unit	unit	NOUN	NN	Number=Sing	18	obl	18:obl	_
+23	unit	unit	NOUN	NN	Number=Sing	18	obl	18:obl:with	_
 24	to	to	PART	TO	_	25	mark	25:mark	_
-25	increase	increase	VERB	VB	VerbForm=Inf	18	advcl	18:advcl	_
+25	increase	increase	VERB	VB	VerbForm=Inf	18	advcl	18:advcl:to	_
 26	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	27	nmod:poss	27:nmod:poss	_
 27	proficiency	proficiency	NOUN	NN	Number=Sing	25	obj	25:obj	_
 28	even	even	ADV	RB	_	29	advmod	29:advmod	_
@@ -1252,7 +1252,7 @@
 3	1972	1972	NUM	CD	NumType=Card	4	nummod	4:nummod	_
 4	evaluation	evaluation	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 5	called	call	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
-6	Bush	Bush	PROPN	NNP	Number=Sing	5	obj	5:obj	_
+6	Bush	Bush	PROPN	NNP	Number=Sing	5	obj	5:obj|12:nsubj:xsubj|14:nsubj:xsubj	_
 7	“	"	PUNCT	``	_	5	punct	5:punct	SpaceAfter=No
 8	an	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 9	exceptional	exceptional	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
@@ -1260,7 +1260,7 @@
 11	interceptor	interceptor	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	pilot	pilot	NOUN	NN	Number=Sing	5	xcomp	5:xcomp	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	officer	officer	NOUN	NN	Number=Sing	12	conj	12:conj	SpaceAfter=No
+14	officer	officer	NOUN	NN	Number=Sing	12	conj	5:xcomp|12:conj:and	SpaceAfter=No
 15	.	.	PUNCT	.	_	5	punct	5:punct	SpaceAfter=No
 16	”	"	PUNCT	''	_	5	punct	5:punct	_
 
@@ -1283,19 +1283,19 @@
 15	in	in	ADP	IN	_	18	case	18:case	_
 16	The	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	Boston	Boston	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-18	Globe	Globe	PROPN	NNP	Number=Sing	9	nmod	9:nmod	_
+18	Globe	Globe	PROPN	NNP	Number=Sing	9	nmod	9:nmod:in	_
 19	and	and	CCONJ	CC	_	23	cc	23:cc	_
 20	The	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 21	New	New	PROPN	NNP	Number=Sing	22	compound	22:compound	_
 22	York	York	PROPN	NNP	Number=Sing	23	compound	23:compound	_
-23	Times	Times	PROPN	NNP	Number=Sing	18	conj	18:conj	SpaceAfter=No
+23	Times	Times	PROPN	NNP	Number=Sing	18	conj	9:nmod:in|18:conj:and	SpaceAfter=No
 24	,	,	PUNCT	,	_	26	punct	26:punct	_
 25	on	on	ADP	IN	_	26	case	26:case	_
-26	CBS	CBS	PROPN	NNP	Number=Sing	18	conj	18:conj	_
+26	CBS	CBS	PROPN	NNP	Number=Sing	18	conj	9:nmod:on|18:conj:and	_
 27	and	and	CCONJ	CC	_	30	cc	30:cc	_
 28	in	in	ADP	IN	_	30	case	30:case	_
 29	other	other	ADJ	JJ	Degree=Pos	30	amod	30:amod	_
-30	outlets	outlet	NOUN	NNS	Number=Plur	18	conj	18:conj	_
+30	outlets	outlet	NOUN	NNS	Number=Plur	18	conj	9:nmod:in|18:conj:and	_
 31	—	-	PUNCT	,	_	33	punct	33:punct	_
 32	would	would	AUX	MD	VerbForm=Fin	33	aux	33:aux	_
 33	come	come	VERB	VB	VerbForm=Inf	6	csubj	6:csubj	_
@@ -1310,20 +1310,20 @@
 3	spitting	spitting	ADV	RB	_	4	advmod	4:advmod	_
 4	mad	mad	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	over	over	ADP	IN	_	6	case	6:case	_
-6	attacks	attack	NOUN	NNS	Number=Plur	4	obl	4:obl	_
+6	attacks	attack	NOUN	NNS	Number=Plur	4	obl	4:obl:over	_
 7	on	on	ADP	IN	_	11	case	11:case	_
 8	John	John	PROPN	NNP	Number=Sing	11	nmod:poss	11:nmod:poss	_
 9	Kerry	Kerry	PROPN	NNP	Number=Sing	8	flat	8:flat	SpaceAfter=No
 10	’s	's	PART	POS	_	8	case	8:case	_
-11	record	record	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+11	record	record	NOUN	NN	Number=Sing	6	nmod	6:nmod:on	_
 12	by	by	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	group	group	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+14	group	group	NOUN	NN	Number=Sing	6	nmod	6:nmod:by	_
 15	Swift	Swift	PROPN	NNP	Number=Sing	16	compound	16:compound	_
 16	Boat	Boat	PROPN	NNP	Number=Sing	17	compound	17:compound	_
 17	Veterans	Veterans	PROPN	NNPS	Number=Plur	14	appos	14:appos	_
 18	for	for	ADP	IN	_	19	case	19:case	_
-19	Truth	Truth	PROPN	NNP	Number=Sing	17	nmod	17:nmod	SpaceAfter=No
+19	Truth	Truth	PROPN	NNP	Number=Sing	17	nmod	17:nmod:for	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0068
@@ -1332,9 +1332,9 @@
 2	,	,	PUNCT	,	_	11	punct	11:punct	_
 3	as	as	SCONJ	IN	_	5	mark	5:mark	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	expl	5:expl	_
-5	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl	_
+5	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:as	_
 6	with	with	ADP	IN	_	7	case	7:case	_
-7	Kerry	Kerry	PROPN	NNP	Number=Sing	5	obl	5:obl	SpaceAfter=No
+7	Kerry	Kerry	PROPN	NNP	Number=Sing	5	obl	5:obl:with	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	expl	11:expl	SpaceAfter=No
 10	’s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
@@ -1346,35 +1346,35 @@
 16	candidate	candidate	NOUN	NN	Number=Sing	19	nmod:poss	19:nmod:poss	SpaceAfter=No
 17	’s	's	PART	POS	_	16	case	16:case	_
 18	entire	entire	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-19	record	record	NOUN	NN	Number=Sing	13	obl	13:obl	SpaceAfter=No
+19	record	record	NOUN	NN	Number=Sing	13	obl	13:obl:at	SpaceAfter=No
 20	,	,	PUNCT	,	_	19	punct	19:punct	_
 21	including	include	VERB	VBG	VerbForm=Ger	24	case	24:case	_
 22	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
 23	military	military	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-24	service	service	NOUN	NN	Number=Sing	19	nmod	19:nmod	_
+24	service	service	NOUN	NN	Number=Sing	19	nmod	19:nmod:include	_
 25	—	-	PUNCT	,	_	24	punct	24:punct	_
 26	or	or	CCONJ	CC	_	27	cc	27:cc	_
-27	lack	lack	NOUN	NN	Number=Sing	24	conj	24:conj	_
+27	lack	lack	NOUN	NN	Number=Sing	24	conj	19:nmod:include|24:conj:or	_
 28	of	of	ADP	IN	_	29	case	29:case	_
-29	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	27	nmod	27:nmod	SpaceAfter=No
+29	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	27	nmod	27:nmod:of	SpaceAfter=No
 30	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0069
 # text = Voters are perfectly able to decide whether it’s important or not in November.
-1	Voters	voter	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
+1	Voters	voter	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	perfectly	perfectly	ADV	RB	_	4	advmod	4:advmod	_
 4	able	able	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	decide	decide	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	whether	whether	SCONJ	IN	_	10	mark	10:mark	_
-8	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	SpaceAfter=No
+8	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj|12:nsubj	SpaceAfter=No
 9	’s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 10	important	important	ADJ	JJ	Degree=Pos	6	ccomp	6:ccomp	_
 11	or	or	CCONJ	CC	_	12	cc	12:cc	_
-12	not	not	PART	RB	_	10	conj	10:conj	_
+12	not	not	PART	RB	_	10	conj	6:ccomp|10:conj:or	_
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	November	November	PROPN	NNP	Number=Sing	6	obl	6:obl	SpaceAfter=No
+14	November	November	PROPN	NNP	Number=Sing	6	obl	6:obl:in	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0070
@@ -1389,12 +1389,12 @@
 8	Swift	Swift	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 9	boat	boat	PROPN	NNP	Number=Sing	8	flat	8:flat	_
 10	veterans	veterans	PROPN	NNPS	Number=Plur	12	nmod:poss	12:nmod:poss	SpaceAfter=No
-11	’	'	PART	POS	_	10	case	10:case	_
-12	attack	attack	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+11	’	's	PART	POS	_	10	case	10:case	_
+12	attack	attack	NOUN	NN	Number=Sing	4	obl	4:obl:for	SpaceAfter=No
 13	,	,	PUNCT	,	_	25	punct	25:punct	_
 14	but	but	CCONJ	CC	_	25	cc	25:cc	_
-15	anyone	anyone	PRON	NN	Number=Sing	25	nsubj	25:nsubj	_
-16	who	who	PRON	WP	PronType=Rel	18	nsubj	18:nsubj	_
+15	anyone	anyone	PRON	NN	Number=Sing	25	nsubj	18:nsubj|25:nsubj	_
+16	who	who	PRON	WP	PronType=Rel	18	nsubj	15:ref	_
 17	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
 18	spent	spend	VERB	VBN	Tense=Past|VerbForm=Part	15	acl:relcl	15:acl:relcl	_
 19	much	much	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
@@ -1402,20 +1402,20 @@
 21	talking	talk	VERB	VBG	VerbForm=Ger	18	advcl	18:advcl	_
 22	to	to	ADP	IN	_	24	case	24:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
-24	Swifties	Swifties	PROPN	NNPS	Number=Plur	21	obl	21:obl	_
-25	gets	get	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj	_
+24	Swifties	Swifties	PROPN	NNPS	Number=Plur	21	obl	21:obl:to	_
+25	gets	get	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj:but	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 27	sense	sense	NOUN	NN	Number=Sing	25	obj	25:obj	_
 28	that	that	SCONJ	IN	_	31	mark	31:mark	_
 29	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	31	nsubj	31:nsubj	_
 30	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	31	aux	31:aux	_
-31	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	27	acl	27:acl	_
+31	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	27	acl	27:acl:that	_
 32	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	31	obj	31:obj	_
 33	entirely	entirely	ADV	RB	_	37	advmod	37:advmod	_
 34	for	for	ADP	IN	_	37	case	37:case	_
 35	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	37	nmod:poss	37:nmod:poss	_
 36	own	own	ADJ	JJ	Degree=Pos	37	amod	37:amod	_
-37	reasons	reason	NOUN	NNS	Number=Plur	31	obl	31:obl	SpaceAfter=No
+37	reasons	reason	NOUN	NNS	Number=Plur	31	obl	31:obl:for	SpaceAfter=No
 38	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0071
@@ -1426,7 +1426,7 @@
 4	be	be	AUX	VB	VerbForm=Inf	5	aux:pass	5:aux:pass	_
 5	noted	note	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	passing	passing	NOUN	NN	Number=Sing	5	obl	5:obl	_
+7	passing	passing	NOUN	NN	Number=Sing	5	obl	5:obl:in	_
 8	that	that	SCONJ	IN	_	12	mark	12:mark	_
 9	Kerry	Kerry	PROPN	NNP	Number=Sing	12	nsubj	12:nsubj	_
 10	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
@@ -1441,7 +1441,7 @@
 19	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	aux	22:aux	_
 20	not	not	PART	RB	_	22	advmod	22:advmod	_
 21	personally	personally	ADV	RB	_	22	advmod	22:advmod	_
-22	questioned	question	VERB	VBN	Tense=Past|VerbForm=Part	12	advcl	12:advcl	_
+22	questioned	question	VERB	VBN	Tense=Past|VerbForm=Part	12	advcl	12:advcl:while	_
 23	Kerry	Kerry	PROPN	NNP	Number=Sing	22	obj	22:obj	SpaceAfter=No
 24	’s	's	PART	POS	_	23	case	23:case	SpaceAfter=No
 25	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -1449,7 +1449,7 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0072
 # text = In April — before the Swift boat veterans had said a word — Kerry said Bush “has yet to explain to America whether or not, and tell the truth, about whether he showed up for duty.”
 1	In	in	ADP	IN	_	2	case	2:case	_
-2	April	April	PROPN	NNP	Number=Sing	15	obl	15:obl	_
+2	April	April	PROPN	NNP	Number=Sing	15	obl	15:obl:in	_
 3	—	-	PUNCT	,	_	15	punct	15:punct	_
 4	before	before	SCONJ	IN	_	10	mark	10:mark	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
@@ -1457,36 +1457,36 @@
 7	boat	boat	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 8	veterans	veterans	PROPN	NNPS	Number=Plur	10	nsubj	10:nsubj	_
 9	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	aux	10:aux	_
-10	said	say	VERB	VBN	Tense=Past|VerbForm=Part	15	advcl	15:advcl	_
+10	said	say	VERB	VBN	Tense=Past|VerbForm=Part	15	advcl	15:advcl:before	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	word	word	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	—	-	PUNCT	,	_	15	punct	15:punct	_
 14	Kerry	Kerry	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	_
 15	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
-16	Bush	Bush	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj	_
+16	Bush	Bush	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj|21:nsubj:xsubj|29:nsubj:xsubj	_
 17	“	"	PUNCT	``	_	18	punct	18:punct	SpaceAfter=No
 18	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	ccomp	15:ccomp	_
 19	yet	yet	ADV	RB	_	18	advmod	18:advmod	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
 21	explain	explain	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
 22	to	to	ADP	IN	_	23	case	23:case	_
-23	America	America	PROPN	NNP	Number=Sing	21	obl	21:obl	_
-24	whether	whether	ADP	IN	_	21	ccomp	21:ccomp	_
+23	America	America	PROPN	NNP	Number=Sing	21	obl	21:obl:to	_
+24	whether	whether	SCONJ	IN	_	21	ccomp	21:ccomp	_
 25	or	or	CCONJ	CC	_	24	fixed	24:fixed	_
 26	not	not	ADV	RB	_	24	fixed	24:fixed	SpaceAfter=No
 27	,	,	PUNCT	,	_	29	punct	29:punct	_
 28	and	and	CCONJ	CC	_	29	cc	29:cc	_
-29	tell	tell	VERB	VB	VerbForm=Inf	21	conj	21:conj	_
+29	tell	tell	VERB	VB	VerbForm=Inf	21	conj	18:xcomp|21:conj:and	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
 31	truth	truth	NOUN	NN	Number=Sing	29	obj	29:obj	SpaceAfter=No
 32	,	,	PUNCT	,	_	31	punct	31:punct	_
 33	about	about	SCONJ	IN	_	36	mark	36:mark	_
-34	whether	whether	ADP	IN	_	36	mark	36:mark	_
+34	whether	whether	SCONJ	IN	_	36	mark	36:mark	_
 35	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	36	nsubj	36:nsubj	_
-36	showed	show	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	31	acl	31:acl	_
+36	showed	show	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	31	acl	31:acl:whether	_
 37	up	up	ADP	RP	_	36	compound:prt	36:compound:prt	_
 38	for	for	ADP	IN	_	39	case	39:case	_
-39	duty	duty	NOUN	NN	Number=Sing	36	obl	36:obl	SpaceAfter=No
+39	duty	duty	NOUN	NN	Number=Sing	36	obl	36:obl:for	SpaceAfter=No
 40	.	.	PUNCT	.	_	15	punct	15:punct	SpaceAfter=No
 41	”	"	PUNCT	''	_	15	punct	15:punct	_
 
@@ -1509,7 +1509,7 @@
 15	not	not	PART	RB	_	20	advmod	20:advmod	SpaceAfter=No
 16	,	,	PUNCT	,	_	20	punct	20:punct	_
 17	in	in	ADP	IN	_	18	case	18:case	_
-18	fact	fact	NOUN	NN	Number=Sing	20	obl	20:obl	SpaceAfter=No
+18	fact	fact	NOUN	NN	Number=Sing	20	obl	20:obl:in	SpaceAfter=No
 19	,	,	PUNCT	,	_	20	punct	20:punct	_
 20	answer	answer	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	_
 21	that	that	DET	DT	Number=Sing|PronType=Dem	22	det	22:det	_
@@ -1525,14 +1525,14 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 5	Swift	Swift	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 6	boat	boat	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	episode	episode	NOUN	NN	Number=Sing	12	obl	12:obl	SpaceAfter=No
+7	episode	episode	NOUN	NN	Number=Sing	12	obl	12:obl:after	SpaceAfter=No
 8	,	,	PUNCT	,	_	12	punct	12:punct	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	spotlight	spotlight	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
 11	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
 12	returned	return	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 13	to	to	ADP	IN	_	14	case	14:case	_
-14	Bush	Bush	PROPN	NNP	Number=Sing	12	obl	12:obl	SpaceAfter=No
+14	Bush	Bush	PROPN	NNP	Number=Sing	12	obl	12:obl:to	SpaceAfter=No
 15	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0075
@@ -1551,7 +1551,7 @@
 5	much	much	ADJ	JJ	Degree=Pos	3	obj	3:obj	_
 6	as	as	SCONJ	IN	_	8	mark	8:mark	_
 7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
-8	can	can	AUX	MD	VerbForm=Fin	5	advcl	5:advcl	SpaceAfter=No
+8	can	can	AUX	MD	VerbForm=Fin	5	advcl	5:advcl:as	SpaceAfter=No
 9	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0077
@@ -1566,7 +1566,7 @@
 8	of	of	ADP	IN	_	11	case	11:case	_
 9	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 10	military	military	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	records	record	NOUN	NNS	Number=Plur	7	obl	7:obl	_
+11	records	record	NOUN	NNS	Number=Plur	7	obl	7:obl:of	_
 12	as	as	ADV	RB	_	6	advmod	6:advmod	_
 13	well	well	ADV	RB	Degree=Pos	12	fixed	12:fixed	SpaceAfter=No
 14	.	.	PUNCT	.	_	6	punct	6:punct	_
@@ -1582,7 +1582,7 @@
 7	correspondent	correspondent	NOUN	NN	Number=Sing	0	root	0:root	_
 8	for	for	ADP	IN	_	10	case	10:case	_
 9	National	National	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	Review	Review	PROPN	NNP	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+10	Review	Review	PROPN	NNP	Number=Sing	7	nmod	7:nmod:for	SpaceAfter=No
 11	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0079
@@ -1592,7 +1592,7 @@
 3	appears	appear	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	in	in	ADP	IN	_	6	case	6:case	_
 5	The	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	Hill	Hill	PROPN	NNP	Number=Sing	3	obl	3:obl	_
+6	Hill	Hill	PROPN	NNP	Number=Sing	3	obl	3:obl:in	_
 7	each	each	DET	DT	_	8	det	8:det	_
 8	week	week	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	SpaceAfter=No
 9	.	.	PUNCT	.	_	3	punct	3:punct	_

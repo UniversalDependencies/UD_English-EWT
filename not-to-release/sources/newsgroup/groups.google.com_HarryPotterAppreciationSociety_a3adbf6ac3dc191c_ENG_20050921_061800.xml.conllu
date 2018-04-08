@@ -7,12 +7,12 @@
 4	from	from	ADP	IN	_	5	case	5:case	_
 5	Brazil	Brazil	PROPN	NNP	Number=Sing	0	root	0:root	_
 6	and	and	CCONJ	CC	_	8	cc	8:cc	_
-7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
-8	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj	_
+7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj|10:nsubj:xsubj	_
+8	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	know	know	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	book	book	NOUN	NN	Number=Sing	10	obl	10:obl	_
+12	book	book	NOUN	NN	Number=Sing	10	obl	10:obl:of	_
 13	06	06	NUM	CD	NumType=Card	12	nummod	12:nummod	SpaceAfter=No
 14	.	.	PUNCT	.	_	5	punct	5:punct	SpaceAfter=No
 
@@ -21,7 +21,7 @@
 1	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	cop	2:cop	_
 2	good	good	ADJ	JJ	Degree=Pos	0	root	0:root	_
 3	or	or	CCONJ	CC	_	4	cc	4:cc	_
-4	bad	bad	ADJ	JJ	Degree=Pos	2	conj	2:conj	SpaceAfter=No
+4	bad	bad	ADJ	JJ	Degree=Pos	2	conj	2:conj:or	SpaceAfter=No
 5	?	?	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
 
 # sent_id = newsgroup-groups.google.com_HarryPotterAppreciationSociety_a3adbf6ac3dc191c_ENG_20050921_061800-0003
@@ -60,9 +60,9 @@
 1	pairing	pairing	NOUN	NN	Number=Sing	2	compound	2:compound	_
 2	up	up	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	harry	harry	PROPN	NNP	Number=Sing	2	nmod	2:nmod	_
+4	harry	harry	PROPN	NNP	Number=Sing	2	nmod	2:nmod:of	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	ginny	ginny	PROPN	NNP	Number=Sing	4	conj	4:conj	_
+6	ginny	ginny	PROPN	NNP	Number=Sing	4	conj	2:nmod:of|4:conj:and	_
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 8	cool	cool	ADJ	JJ	Degree=Pos	0	root	0:root	_
 
@@ -74,6 +74,6 @@
 4	-	-	PUNCT	,	_	3	punct	3:punct	_
 5	better	better	ADJ	JJR	Degree=Cmp	3	parataxis	3:parataxis	_
 6	than	than	ADP	IN	_	7	case	7:case	_
-7	book	book	NOUN	NN	Number=Sing	5	obl	5:obl	_
+7	book	book	NOUN	NN	Number=Sing	5	obl	5:obl:than	_
 8	5	5	NUM	CD	NumType=Card	7	nummod	7:nummod	_
 

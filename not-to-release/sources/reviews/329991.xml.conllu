@@ -6,16 +6,16 @@
 3	restaurants	restaurant	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 4	in	in	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	area	area	NOUN	NN	Number=Sing	3	nmod	3:nmod	_
+6	area	area	NOUN	NN	Number=Sing	3	nmod	3:nmod:in	_
 7	and	and	CCONJ	CC	_	10	cc	10:cc	_
 8	Fuji	Fuji	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 9	Sushi	Sushi	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
-10	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+10	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 11	up	up	ADV	RB	_	10	advmod	10:advmod	_
 12	and	and	CCONJ	CC	_	15	cc	15:cc	_
 13	reviews	review	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj	_
 14	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
-15	great	great	ADJ	JJ	Degree=Pos	2	conj	2:conj	_
+15	great	great	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	_
 16	so	so	ADV	RB	_	18	advmod	18:advmod	_
 17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
 18	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	parataxis	2:parataxis	_
@@ -25,7 +25,7 @@
 22	order	order	NOUN	NN	Number=Sing	18	obj	18:obj	_
 23	of	of	ADP	IN	_	25	case	25:case	_
 24	:	:	PUNCT	:	_	25	punct	25:punct	_
-25	L	l	SYM	$	_	22	nmod	22:nmod	_
+25	L	l	SYM	$	_	22	nmod	22:nmod:of	_
 26	17	17	NUM	CD	NumType=Card	25	nummod	25:nummod	SpaceAfter=No
 27	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -37,59 +37,59 @@
 4	8.25	8.25	NUM	CD	NumType=Card	5	nummod	5:nummod	_
 5	Shrimp	shrimp	NOUN	NN	Number=Sing	8	compound	8:compound	_
 6	or	or	CCONJ	CC	_	7	cc	7:cc	_
-7	vegetable	vegetable	NOUN	NN	Number=Sing	5	conj	5:conj	_
+7	vegetable	vegetable	NOUN	NN	Number=Sing	5	conj	5:conj:or|8:compound	_
 8	tempura	tempura	NOUN	NN	Number=Sing	2	appos	2:appos	_
 9	&	&	CCONJ	CC	_	10	cc	10:cc	_
-10	salad	salad	NOUN	NN	Number=Sing	8	conj	8:conj	SpaceAfter=No
+10	salad	salad	NOUN	NN	Number=Sing	8	conj	2:appos|8:conj	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-329991-0003
 # text = I was very happy with the customer service and even more please with the portion size, to go box set up and quality of the food for the price.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|12:nsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
 3	very	very	ADV	RB	_	4	advmod	4:advmod	_
 4	happy	happy	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	with	with	ADP	IN	_	8	case	8:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	customer	customer	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	service	service	NOUN	NN	Number=Sing	4	obl	4:obl	_
+8	service	service	NOUN	NN	Number=Sing	4	obl	4:obl:with	_
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10	even	even	ADV	RB	_	11	advmod	11:advmod	_
 11	more	more	ADV	RBR	_	12	advmod	12:advmod	_
-12	please	please	ADJ	JJ	Degree=Pos	4	conj	4:conj	_
+12	please	please	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	_
 13	with	with	ADP	IN	_	16	case	16:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	portion	portion	NOUN	NN	Number=Sing	16	compound	16:compound	_
-16	size	size	NOUN	NN	Number=Sing	12	obl	12:obl	SpaceAfter=No
+16	size	size	NOUN	NN	Number=Sing	12	obl	12:obl:with	SpaceAfter=No
 17	,	,	PUNCT	,	_	22	punct	22:punct	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
 19	go	go	VERB	VB	VerbForm=Inf	20	compound	20:compound	_
 20	box	box	NOUN	NN	Number=Sing	22	compound	22:compound	_
 21	set	set	NOUN	NN	Number=Sing	22	compound	22:compound	_
-22	up	up	NOUN	NN	Number=Sing	16	conj	16:conj	_
+22	up	up	NOUN	NN	Number=Sing	16	conj	12:obl:with|16:conj:and	_
 23	and	and	CCONJ	CC	_	24	cc	24:cc	_
-24	quality	quality	NOUN	NN	Number=Sing	16	conj	16:conj	_
+24	quality	quality	NOUN	NN	Number=Sing	16	conj	12:obl:with|16:conj:and	_
 25	of	of	ADP	IN	_	27	case	27:case	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
-27	food	food	NOUN	NN	Number=Sing	24	nmod	24:nmod	_
+27	food	food	NOUN	NN	Number=Sing	24	nmod	24:nmod:of	_
 28	for	for	ADP	IN	_	30	case	30:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
-30	price	price	NOUN	NN	Number=Sing	24	nmod	24:nmod	SpaceAfter=No
+30	price	price	NOUN	NN	Number=Sing	24	nmod	24:nmod:for	SpaceAfter=No
 31	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-329991-0004
 # text = I'm very happy and will definitely dine in and carry out again.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	SpaceAfter=No
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|8:nsubj	SpaceAfter=No
 2	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	very	very	ADV	RB	_	4	advmod	4:advmod	_
 4	happy	happy	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	and	and	CCONJ	CC	_	8	cc	8:cc	_
 6	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 7	definitely	definitely	ADV	RB	_	8	advmod	8:advmod	_
-8	dine	dine	VERB	VB	VerbForm=Inf	4	conj	4:conj	_
+8	dine	dine	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 9	in	in	ADV	RB	_	8	advmod	8:advmod	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	carry	carry	VERB	VB	VerbForm=Inf	8	conj	8:conj	_
+11	carry	carry	VERB	VB	VerbForm=Inf	8	conj	8:conj:and	_
 12	out	out	ADP	RP	_	11	compound:prt	11:compound:prt	_
 13	again	again	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 14	.	.	PUNCT	.	_	4	punct	4:punct	_

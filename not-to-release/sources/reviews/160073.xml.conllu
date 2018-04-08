@@ -5,35 +5,35 @@
 2	on	on	ADP	IN	_	7	case	7:case	_
 3	House	house	NOUN	NN	Number=Sing	7	compound	7:compound	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	Joy	Joy	PROPN	NNP	Number=Sing	3	nmod	3:nmod	_
+5	Joy	Joy	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	_
 6	Chinese	Chinese	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	Restaurant	Restaurant	PROPN	NNP	Number=Sing	1	nmod	1:nmod	_
+7	Restaurant	Restaurant	PROPN	NNP	Number=Sing	1	nmod	1:nmod:on	_
 
 # sent_id = reviews-160073-0002
 # text = My family and I moved to San Antonio a year ago and have tried almost all of the Chinese Restaurants because we love Chinese food.
 1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	family	family	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+2	family	family	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|14:nsubj	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	conj	2:conj	_
+4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	conj	2:conj:and|5:nsubj	_
 5	moved	move	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	to	to	ADP	IN	_	7	case	7:case	_
-7	San	San	PROPN	NNP	Number=Sing	5	obl	5:obl	_
+7	San	San	PROPN	NNP	Number=Sing	5	obl	5:obl:to	_
 8	Antonio	Antonio	PROPN	NNP	Number=Sing	7	flat	7:flat	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	year	year	NOUN	NN	Number=Sing	11	obl:npmod	11:obl:npmod	_
 11	ago	ago	ADV	RB	_	5	advmod	5:advmod	_
 12	and	and	CCONJ	CC	_	14	cc	14:cc	_
 13	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
-14	tried	try	VERB	VBN	Tense=Past|VerbForm=Part	5	conj	5:conj	_
+14	tried	try	VERB	VBN	Tense=Past|VerbForm=Part	5	conj	5:conj:and	_
 15	almost	almost	ADV	RB	_	16	advmod	16:advmod	_
 16	all	all	DET	DT	_	14	obj	14:obj	_
 17	of	of	ADP	IN	_	20	case	20:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 19	Chinese	chinese	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-20	Restaurants	restaurant	NOUN	NNS	Number=Plur	16	nmod	16:nmod	_
+20	Restaurants	restaurant	NOUN	NNS	Number=Plur	16	nmod	16:nmod:of	_
 21	because	because	SCONJ	IN	_	23	mark	23:mark	_
 22	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	23	nsubj	23:nsubj	_
-23	love	love	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl	_
+23	love	love	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:because	_
 24	Chinese	chinese	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 25	food	food	NOUN	NN	Number=Sing	23	obj	23:obj	SpaceAfter=No
 26	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -48,8 +48,8 @@
 6	while	while	NOUN	NN	Number=Sing	3	obj	3:obj	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	find	find	VERB	VB	VerbForm=Inf	3	csubj	3:csubj	_
-9	one	one	NUM	CD	NumType=Card	8	obj	8:obj	_
-10	that	that	PRON	WDT	PronType=Rel	12	obj	12:obj	_
+9	one	one	NUM	CD	NumType=Card	8	obj	8:obj|12:obj	_
+10	that	that	PRON	WDT	PronType=Rel	12	obj	9:ref	_
 11	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 12	liked	like	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -64,7 +64,7 @@
 6	like	like	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	House	house	NOUN	NN	Number=Sing	6	obj	6:obj	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	Joy	Joy	PROPN	NNP	Number=Sing	7	nmod	7:nmod	_
+9	Joy	Joy	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	_
 10	WE	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 11	LOVE	love	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	parataxis	6:parataxis	_
 12	IT	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obj	11:obj	SpaceAfter=No
@@ -72,7 +72,7 @@
 
 # sent_id = reviews-160073-0005
 # text = Everything we have gotten there has been more authentic and better tasting than any other Chinese restaurant in the San Antonio area we have been to--and trust me we have been to a lot of them.
-1	Everything	everything	PRON	NN	Number=Sing	9	nsubj	9:nsubj	_
+1	Everything	everything	PRON	NN	Number=Sing	9	nsubj	9:nsubj|12:nsubj	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 3	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	gotten	get	VERB	VBN	Tense=Past|VerbForm=Part	1	acl:relcl	1:acl:relcl	_
@@ -83,17 +83,17 @@
 9	authentic	authentic	ADJ	JJ	Degree=Pos	0	root	0:root	_
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	better	better	ADV	RBR	Degree=Cmp	12	advmod	12:advmod	_
-12	tasting	taste	VERB	VBG	VerbForm=Ger	9	conj	9:conj	_
+12	tasting	taste	VERB	VBG	VerbForm=Ger	9	conj	9:conj:and	_
 13	than	than	ADP	IN	_	17	case	17:case	_
 14	any	any	DET	DT	_	17	det	17:det	_
 15	other	other	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 16	Chinese	chinese	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	restaurant	restaurant	NOUN	NN	Number=Sing	9	obl	9:obl	_
+17	restaurant	restaurant	NOUN	NN	Number=Sing	9	obl	9:obl:than	_
 18	in	in	ADP	IN	_	22	case	22:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 20	San	San	PROPN	NNP	Number=Sing	22	compound	22:compound	_
 21	Antonio	Antonio	PROPN	NNP	Number=Sing	20	flat	20:flat	_
-22	area	area	NOUN	NN	Number=Sing	17	nmod	17:nmod	_
+22	area	area	NOUN	NN	Number=Sing	17	nmod	17:nmod:in	_
 23	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	26	nsubj	26:nsubj	_
 24	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	26	aux	26:aux	_
 25	been	be	AUX	VBN	Tense=Past|VerbForm=Part	26	cop	26:cop	_
@@ -107,14 +107,14 @@
 33	been	be	AUX	VBN	Tense=Past|VerbForm=Part	36	cop	36:cop	_
 34	to	to	ADP	IN	_	36	case	36:case	_
 35	a	a	DET	DT	Definite=Ind|PronType=Art	36	det	36:det	_
-36	lot	lot	NOUN	NN	Number=Sing	9	conj	9:conj	_
+36	lot	lot	NOUN	NN	Number=Sing	9	conj	9:conj:and	_
 37	of	of	ADP	IN	_	38	case	38:case	_
-38	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	36	nmod	36:nmod	SpaceAfter=No
+38	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	36	nmod	36:nmod:of	SpaceAfter=No
 39	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = reviews-160073-0006
 # text = We just happen to stumble across this little restaurant one day when we had to visit the Bexar County Tax Office off of Bandera Road.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	just	just	ADV	RB	_	3	advmod	3:advmod	_
 3	happen	happen	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -122,12 +122,12 @@
 6	across	across	ADP	IN	_	9	case	9:case	_
 7	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
 8	little	little	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	restaurant	restaurant	NOUN	NN	Number=Sing	5	obl	5:obl	_
+9	restaurant	restaurant	NOUN	NN	Number=Sing	5	obl	5:obl:across	_
 10	one	one	NUM	CD	NumType=Card	11	nummod	11:nummod	_
 11	day	day	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	_
 12	when	when	ADV	WRB	PronType=Int	14	mark	14:mark	_
-13	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
-14	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	advcl	5:advcl	_
+13	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	14	nsubj	14:nsubj|16:nsubj:xsubj	_
+14	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	advcl	5:advcl:when	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	visit	visit	VERB	VB	VerbForm=Inf	14	xcomp	14:xcomp	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
@@ -138,23 +138,23 @@
 22	off	off	ADP	IN	_	25	case	25:case	_
 23	of	of	ADP	IN	_	25	case	25:case	_
 24	Bandera	Bandera	PROPN	NNP	Number=Sing	25	compound	25:compound	_
-25	Road	Road	PROPN	NNP	Number=Sing	21	nmod	21:nmod	SpaceAfter=No
+25	Road	Road	PROPN	NNP	Number=Sing	21	nmod	21:nmod:of	SpaceAfter=No
 26	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-160073-0007
 # text = We stopped in and got some take out and cannot stop going back.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj|5:nsubj|12:nsubj|13:nsubj:xsubj	_
 2	stopped	stop	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	in	in	ADV	RB	_	2	advmod	2:advmod	_
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
-5	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+5	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 6	some	some	DET	DT	_	8	det	8:det	_
 7	take	take	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	out	out	NOUN	NN	Number=Sing	5	obj	5:obj	_
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10	can	can	AUX	MD	VerbForm=Fin	12	aux	12:aux	SpaceAfter=No
 11	not	not	PART	RB	_	12	advmod	12:advmod	_
-12	stop	stop	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
+12	stop	stop	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
 13	going	go	VERB	VBG	VerbForm=Ger	12	xcomp	12:xcomp	_
 14	back	back	ADV	RB	_	13	advmod	13:advmod	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -184,7 +184,7 @@
 6	Rolls	roll	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_
 8	Spring	spring	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	Rolls	roll	NOUN	NNS	Number=Plur	6	conj	6:conj	SpaceAfter=No
+9	Rolls	roll	NOUN	NNS	Number=Plur	6	conj	3:obj|6:conj:and	SpaceAfter=No
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-160073-0010
@@ -201,13 +201,13 @@
 
 # sent_id = reviews-160073-0011
 # text = Everything is always cooked fresh and tastes fresh.
-1	Everything	everything	PRON	NN	Number=Sing	4	nsubj:pass	4:nsubj:pass	_
+1	Everything	everything	PRON	NN	Number=Sing	4	nsubj:pass	4:nsubj:pass|7:nsubj:pass|8:nsubj:xsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 3	always	always	ADV	RB	_	4	advmod	4:advmod	_
 4	cooked	cook	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	fresh	fresh	ADV	RB	_	4	advmod	4:advmod	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	tastes	taste	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj	_
+7	tastes	taste	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	_
 8	fresh	fresh	ADJ	JJ	Degree=Pos	7	xcomp	7:xcomp	SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -220,9 +220,9 @@
 5	reasonable	reasonable	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	for	for	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	amount	amount	NOUN	NN	Number=Sing	5	obl	5:obl	_
+8	amount	amount	NOUN	NN	Number=Sing	5	obl	5:obl:for	_
 9	of	of	ADP	IN	_	10	case	10:case	_
-10	food	food	NOUN	NN	Number=Sing	8	nmod	8:nmod	_
+10	food	food	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
 12	receive	receive	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	SpaceAfter=No
 13	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -237,7 +237,7 @@
 6	so	so	ADV	RB	_	7	advmod	7:advmod	_
 7	pleasant	pleasant	ADJ	JJ	Degree=Pos	0	root	0:root	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
-9	deal	deal	VERB	VB	VerbForm=Inf	7	advcl	7:advcl	_
+9	deal	deal	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:to	_
 10	with	with	ADP	IN	_	9	obl	9:obl	SpaceAfter=No
 11	.	.	PUNCT	.	_	7	punct	7:punct	_
 
@@ -248,56 +248,56 @@
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
 4	quick	quick	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	at	at	SCONJ	IN	_	6	mark	6:mark	_
-6	getting	get	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl	_
+6	getting	get	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl:at	_
 7	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 8	order	order	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	out	out	ADV	RB	_	6	advmod	6:advmod	_
 10	to	to	ADP	IN	_	11	case	11:case	_
-11	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	9	obl	9:obl	SpaceAfter=No
+11	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	9	obl	9:obl:to	SpaceAfter=No
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-160073-0015
 # text = You don't have to sit and wait around forever like most places!!
-1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj|8:nsubj:xsubj	_
 2	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	4:aux	SpaceAfter=No
 3	n't	not	PART	RB	_	4	advmod	4:advmod	_
 4	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	sit	sit	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	wait	wait	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+8	wait	wait	VERB	VB	VerbForm=Inf	6	conj	4:xcomp|6:conj:and	_
 9	around	around	ADV	RB	_	8	advmod	8:advmod	_
 10	forever	forever	ADV	RB	_	8	advmod	8:advmod	_
 11	like	like	ADP	IN	_	13	case	13:case	_
 12	most	most	ADJ	JJS	Degree=Sup	13	amod	13:amod	_
-13	places	place	NOUN	NNS	Number=Plur	8	obl	8:obl	SpaceAfter=No
+13	places	place	NOUN	NNS	Number=Plur	8	obl	8:obl:like	SpaceAfter=No
 14	!!	!!	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-160073-0016
 # text = So anyone looking for an Excellent night out for Chinese or maybe just lunch should stop in and try it because I promise you 2 things---You won't regret it!!
 1	So	so	ADV	RB	_	16	advmod	16:advmod	_
-2	anyone	anyone	PRON	NN	Number=Sing	16	nsubj	16:nsubj	_
+2	anyone	anyone	PRON	NN	Number=Sing	16	nsubj	16:nsubj|19:nsubj	_
 3	looking	look	VERB	VBG	VerbForm=Ger	2	acl	2:acl	_
 4	for	for	ADP	IN	_	7	case	7:case	_
 5	an	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	Excellent	excellent	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	night	night	NOUN	NN	Number=Sing	3	obl	3:obl	_
+7	night	night	NOUN	NN	Number=Sing	3	obl	3:obl:for	_
 8	out	out	ADV	RB	_	7	advmod	7:advmod	_
 9	for	for	ADP	IN	_	10	case	10:case	_
-10	Chinese	chinese	ADJ	JJ	Degree=Pos	7	nmod	7:nmod	_
+10	Chinese	chinese	ADJ	JJ	Degree=Pos	7	nmod	7:nmod:for	_
 11	or	or	CCONJ	CC	_	14	cc	14:cc	_
 12	maybe	maybe	ADV	RB	_	14	advmod	14:advmod	_
 13	just	just	ADV	RB	_	14	advmod	14:advmod	_
-14	lunch	lunch	NOUN	NN	Number=Sing	7	conj	7:conj	_
+14	lunch	lunch	NOUN	NN	Number=Sing	7	conj	3:obl:for|7:conj:or	_
 15	should	should	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 16	stop	stop	VERB	VB	VerbForm=Inf	0	root	0:root	_
 17	in	in	ADV	RB	_	16	advmod	16:advmod	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
-19	try	try	VERB	VB	VerbForm=Inf	16	conj	16:conj	_
+19	try	try	VERB	VB	VerbForm=Inf	16	conj	16:conj:and	_
 20	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	19	obj	19:obj	_
 21	because	because	SCONJ	IN	_	23	mark	23:mark	_
 22	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	23	nsubj	23:nsubj	_
-23	promise	promise	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	advcl	19:advcl	_
+23	promise	promise	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	advcl	19:advcl:because	_
 24	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	23	iobj	23:iobj	_
 25	2	2	NUM	CD	NumType=Card	26	nummod	26:nummod	_
 26	things	thing	NOUN	NNS	Number=Plur	23	obj	23:obj	SpaceAfter=No
@@ -317,7 +317,7 @@
 4	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	back	back	ADV	RB	_	4	advmod	4:advmod	_
 6	for	for	ADP	IN	_	7	case	7:case	_
-7	more	more	ADJ	JJR	Degree=Cmp	4	obl	4:obl	SpaceAfter=No
+7	more	more	ADJ	JJR	Degree=Cmp	4	obl	4:obl:for	SpaceAfter=No
 8	!!!	!!!	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-160073-0018
@@ -334,7 +334,7 @@
 3	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	noticed	notice	VERB	VBN	Tense=Past|VerbForm=Part	1	appos	1:appos	_
 5	on	on	ADP	IN	_	6	case	6:case	_
-6	here	here	ADV	RB	PronType=Dem	4	obl	4:obl	_
+6	here	here	ADV	RB	PronType=Dem	4	obl	4:obl:on	_
 7	that	that	SCONJ	IN	_	9	mark	9:mark	_
 8	someone	someone	PRON	NN	Number=Sing	9	nsubj	9:nsubj	_
 9	left	leave	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	ccomp	4:ccomp	_
@@ -346,19 +346,19 @@
 15	of	of	ADP	IN	_	18	case	18:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	nice	nice	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	comments	comment	NOUN	NNS	Number=Plur	14	nmod	14:nmod	_
+18	comments	comment	NOUN	NNS	Number=Plur	14	nmod	14:nmod:of	_
 19	must	must	AUX	MD	VerbForm=Fin	20	aux	20:aux	_
 20	come	come	VERB	VB	VerbForm=Inf	11	appos	11:appos	_
 21	from	from	ADP	IN	_	23	case	23:case	_
 22	co	co	X	AFX	_	23	compound	23:compound	_
-23	workers	worker	NOUN	NNS	Number=Plur	20	obl	20:obl	_
+23	workers	worker	NOUN	NNS	Number=Plur	20	obl	20:obl:from	_
 24	or	or	CCONJ	CC	_	25	cc	25:cc	_
-25	friends	friend	NOUN	NNS	Number=Plur	23	conj	23:conj	SpaceAfter=No
+25	friends	friend	NOUN	NNS	Number=Plur	23	conj	20:obl:from|23:conj:or	SpaceAfter=No
 26	"	"	PUNCT	''	_	20	punct	20:punct	_
 27	and	and	CCONJ	CC	_	30	cc	30:cc	_
 28	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	30	nsubj	30:nsubj	_
 29	will	will	AUX	MD	VerbForm=Fin	30	aux	30:aux	_
-30	tell	tell	VERB	VB	VerbForm=Inf	4	conj	4:conj	_
+30	tell	tell	VERB	VB	VerbForm=Inf	4	conj	1:appos|4:conj:and	_
 31	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	30	obj	30:obj	_
 32	that	that	SCONJ	IN	_	36	mark	36:mark	_
 33	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	36	nsubj	36:nsubj	_
@@ -372,18 +372,18 @@
 41	eating	eat	VERB	VBG	VerbForm=Ger	36	obl	36:obl	_
 42	at	at	ADP	IN	_	44	case	44:case	_
 43	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	44	nmod:poss	44:nmod:poss	_
-44	restaurant	restaurant	NOUN	NN	Number=Sing	41	obl	41:obl	SpaceAfter=No
+44	restaurant	restaurant	NOUN	NN	Number=Sing	41	obl	41:obl:at	SpaceAfter=No
 45	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-160073-0020
 # text = We are from Virginia and just moved here a year ago.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj|7:nsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	from	from	ADP	IN	_	4	case	4:case	_
 4	Virginia	Virginia	PROPN	NNP	Number=Sing	0	root	0:root	_
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
 6	just	just	ADV	RB	_	7	advmod	7:advmod	_
-7	moved	move	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj	_
+7	moved	move	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	_
 8	here	here	ADV	RB	PronType=Dem	7	advmod	7:advmod	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	year	year	NOUN	NN	Number=Sing	11	obl:npmod	11:obl:npmod	_

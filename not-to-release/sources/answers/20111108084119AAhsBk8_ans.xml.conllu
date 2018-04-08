@@ -7,8 +7,8 @@
 4	crashes	crash	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	with	with	ADP	IN	_	8	case	8:case	_
 6	most	most	ADJ	JJS	Degree=Sup	8	amod	8:amod	_
-7	custom	custom	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	ROMs	rom	NOUN	NNS	Number=Plur	4	obl	4:obl	_
+7	custom	custom	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
+8	ROMs	rom	NOUN	NNS	Number=Plur	4	obl	4:obl:with	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 10	install	install	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	SpaceAfter=No
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -32,7 +32,7 @@
 7	but	but	CCONJ	CC	_	10	cc	10:cc	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 9	process	process	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
-10	crashes	crash	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+10	crashes	crash	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:but	_
 11	repeatedly	repeatedly	ADV	RB	_	10	advmod	10:advmod	_
 12	about	about	ADV	RB	_	14	advmod	14:advmod	_
 13	every	every	DET	DT	_	14	det	14:det	_
@@ -53,7 +53,7 @@
 9	version	version	NOUN	NN	Number=Sing	6	obj	6:obj	_
 10	of	of	ADP	IN	_	12	case	12:case	_
 11	Cyanogen	cyanogen	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	Mod	mod	NOUN	NN	Number=Sing	9	nmod	9:nmod	SpaceAfter=No
+12	Mod	mod	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	SpaceAfter=No
 13	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111108084119AAhsBk8_ans-0005
@@ -69,13 +69,13 @@
 9	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	warrenty	warrenty	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	by	by	SCONJ	IN	_	12	mark	12:mark	_
-12	installing	install	VERB	VBG	VerbForm=Ger	8	advcl	8:advcl	_
+12	installing	install	VERB	VBG	VerbForm=Ger	8	advcl	8:advcl:by	_
 13	custom	custom	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	roms	rom	NOUN	NNS	Number=Plur	12	obj	12:obj	_
 
 # sent_id = answers-20111108084119AAhsBk8_ans-0006
 # text = you are best to either recover to the standard ROM, or find one that doesn't crash.
-1	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
+1	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|6:nsubj:xsubj|13:nsubj:xsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	best	best	ADJ	JJS	Degree=Sup	0	root	0:root	_
 4	to	to	PART	TO	_	6	mark	6:mark	_
@@ -84,12 +84,12 @@
 7	to	to	ADP	IN	_	10	case	10:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	standard	standard	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	ROM	rom	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+10	ROM	rom	NOUN	NN	Number=Sing	6	obl	6:obl:to	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	or	or	CCONJ	CC	_	13	cc	13:cc	_
-13	find	find	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
-14	one	one	NUM	CD	NumType=Card	13	obj	13:obj	_
-15	that	that	PRON	WDT	PronType=Rel	18	nsubj	18:nsubj	_
+13	find	find	VERB	VB	VerbForm=Inf	6	conj	3:xcomp|6:conj:or	_
+14	one	one	NUM	CD	NumType=Card	13	obj	13:obj|18:nsubj	_
+15	that	that	PRON	WDT	PronType=Rel	18	nsubj	14:ref	_
 16	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	SpaceAfter=No
 17	n't	not	PART	RB	_	18	advmod	18:advmod	_
 18	crash	crash	VERB	VB	VerbForm=Inf	14	acl:relcl	14:acl:relcl	SpaceAfter=No
@@ -106,7 +106,7 @@
 # sent_id = answers-20111108084119AAhsBk8_ans-0008
 # text = Have you tried using clockwork recovery?
 1	Have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|4:nsubj:xsubj	_
 3	tried	try	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	using	use	VERB	VBG	VerbForm=Ger	3	xcomp	3:xcomp	_
 5	clockwork	clockwork	NOUN	NN	Number=Sing	6	compound	6:compound	_
@@ -121,7 +121,7 @@
 4	version	version	NOUN	NN	Number=Sing	1	obj	1:obj	_
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	Cynagon	Cynagon	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	mod	mod	PROPN	NNP	Number=Sing	4	nmod	4:nmod	SpaceAfter=No
+7	mod	mod	PROPN	NNP	Number=Sing	4	nmod	4:nmod:of	SpaceAfter=No
 8	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108084119AAhsBk8_ans-0010
@@ -135,10 +135,10 @@
 7	rom	rom	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	like	like	ADP	IN	_	10	case	10:case	_
 9	bugless	bugless	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	beast	beast	PROPN	NNP	Number=Sing	7	nmod	7:nmod	_
+10	beast	beast	PROPN	NNP	Number=Sing	7	nmod	7:nmod:like	_
 11	and	and	CCONJ	CC	_	13	cc	13:cc	_
 12	baked	baked	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	snake	snake	PROPN	NNP	Number=Sing	10	conj	10:conj	SpaceAfter=No
+13	snake	snake	PROPN	NNP	Number=Sing	10	conj	7:nmod:like|10:conj:and	SpaceAfter=No
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108084119AAhsBk8_ans-0011
@@ -147,9 +147,9 @@
 2	roms	rom	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
 3	focus	focus	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	on	on	ADP	IN	_	5	case	5:case	_
-5	speed	speed	NOUN	NN	Number=Sing	3	obl	3:obl	_
+5	speed	speed	NOUN	NN	Number=Sing	3	obl	3:obl:on	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	stability	stability	NOUN	NN	Number=Sing	5	conj	5:conj	SpaceAfter=No
+7	stability	stability	NOUN	NN	Number=Sing	5	conj	3:obl:on|5:conj:and	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108084119AAhsBk8_ans-0012
@@ -175,17 +175,17 @@
 5	launcher	launcher	PROPN	NNP	Number=Sing	3	obj	3:obj	_
 6	or	or	CCONJ	CC	_	8	cc	8:cc	_
 7	adw	adw	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	launcher	launcher	PROPN	NNP	Number=Sing	5	conj	5:conj	SpaceAfter=No
+8	launcher	launcher	PROPN	NNP	Number=Sing	5	conj	3:obj|5:conj:or	SpaceAfter=No
 9	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108084119AAhsBk8_ans-0014
 # text = They are both excellent and speed up the phone quite a bit.
-1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj|6:nsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	both	both	ADV	RB	_	4	advmod	4:advmod	_
 4	excellent	excellent	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	speed	speed	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj	_
+6	speed	speed	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	_
 7	up	up	ADP	RP	_	6	compound:prt	6:compound:prt	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	phone	phone	NOUN	NN	Number=Sing	6	obj	6:obj	_
@@ -200,7 +200,7 @@
 2	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 3	mytouch	mytouch	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4	4g	4g	PROPN	NNP	Number=Sing	5	compound	5:compound	_
-5	owner	owner	NOUN	NN	Number=Sing	7	obl	7:obl	_
+5	owner	owner	NOUN	NN	Number=Sing	7	obl	7:obl:as	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 7	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
@@ -210,7 +210,7 @@
 12	fast	fast	ADJ	JJ	Degree=Pos	7	ccomp	7:ccomp	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	their	their	PRON	EX	_	15	expl	15:expl	_
-15	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	conj	12:conj	_
+15	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	conj	7:ccomp|12:conj:and	_
 16	no	no	DET	DT	_	17	det	17:det	_
 17	point	point	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
 18	installing	install	VERB	VBG	VerbForm=Ger	17	acl	17:acl	_
@@ -224,6 +224,6 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 3	read	read	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	ccomp	1:ccomp	_
 4	through	through	ADP	IN	_	5	case	5:case	_
-5	this	this	PRON	DT	Number=Sing|PronType=Dem	3	obl	3:obl	SpaceAfter=No
+5	this	this	PRON	DT	Number=Sing|PronType=Dem	3	obl	3:obl:through	SpaceAfter=No
 6	.	.	PUNCT	.	_	1	punct	1:punct	_
 

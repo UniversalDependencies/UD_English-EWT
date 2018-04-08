@@ -13,13 +13,13 @@
 # text = When we walked in, the person behind desk said: "oh well, you must wait, I am in the middle of something."
 1	When	when	ADV	WRB	PronType=Int	3	mark	3:mark	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	walked	walk	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	advcl	10:advcl	_
+3	walked	walk	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	advcl	10:advcl:when	_
 4	in	in	ADV	RB	_	3	advmod	3:advmod	SpaceAfter=No
 5	,	,	PUNCT	,	_	10	punct	10:punct	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	person	person	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
 8	behind	behind	ADP	IN	_	9	case	9:case	_
-9	desk	desk	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
+9	desk	desk	NOUN	NN	Number=Sing	7	nmod	7:nmod:behind	_
 10	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 11	:	:	PUNCT	:	_	10	punct	10:punct	_
 12	"	"	PUNCT	``	_	10	punct	10:punct	SpaceAfter=No
@@ -36,7 +36,7 @@
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 24	middle	middle	NOUN	NN	Number=Sing	18	parataxis	18:parataxis	_
 25	of	of	ADP	IN	_	26	case	26:case	_
-26	something	something	PRON	NN	Number=Sing	24	nmod	24:nmod	SpaceAfter=No
+26	something	something	PRON	NN	Number=Sing	24	nmod	24:nmod:of	SpaceAfter=No
 27	.	.	PUNCT	.	_	10	punct	10:punct	SpaceAfter=No
 28	"	"	PUNCT	''	_	10	punct	10:punct	_
 
@@ -46,7 +46,7 @@
 2	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 3	good	good	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 4	few	few	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	minutes	minute	NOUN	NNS	Number=Plur	8	obl	8:obl	SpaceAfter=No
+5	minutes	minute	NOUN	NNS	Number=Plur	8	obl	8:obl:after	SpaceAfter=No
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
 7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 8	asked	ask	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
@@ -65,12 +65,12 @@
 2	in	in	ADP	IN	_	5	case	5:case	_
 3	between	between	ADP	IN	_	2	fixed	2:fixed	_
 4	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-5	rudeness	rudeness	NOUN	NN	Number=Sing	1	obl	1:obl	_
+5	rudeness	rudeness	NOUN	NN	Number=Sing	1	obl	1:obl:in_between	_
 6	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 7	asked	ask	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 8	if	if	SCONJ	IN	_	10	mark	10:mark	_
 9	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
-10	smoked	smoke	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	advcl	7:advcl	SpaceAfter=No
+10	smoked	smoke	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	advcl	7:advcl:if	SpaceAfter=No
 11	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-162422-0006
@@ -80,7 +80,7 @@
 3	if	if	SCONJ	IN	_	6	mark	6:mark	_
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
 5	hotel	hotel	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
-6	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	advcl	2:advcl	_
+6	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	advcl	2:advcl:if	_
 7	smoking	smoking	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	rooms	room	NOUN	NNS	Number=Plur	6	obj	6:obj	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -113,25 +113,25 @@
 6	to	to	ADP	IN	_	9	case	9:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	credit	credit	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	card	card	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+9	card	card	NOUN	NN	Number=Sing	4	obl	4:obl:to	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-162422-0009
 # text = When I inquired he rudely replied "in the morning when things are checked out you'll get it back."
 1	When	when	ADV	WRB	PronType=Int	3	mark	3:mark	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	inquired	inquire	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	advcl	6:advcl	_
+3	inquired	inquire	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:when	_
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
 5	rudely	rudely	ADV	RB	_	6	advmod	6:advmod	_
 6	replied	reply	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	"	"	PUNCT	``	_	6	punct	6:punct	SpaceAfter=No
 8	in	in	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	morning	morning	NOUN	NN	Number=Sing	18	obl	18:obl	_
+10	morning	morning	NOUN	NN	Number=Sing	18	obl	18:obl:in	_
 11	when	when	ADV	WRB	PronType=Int	14	mark	14:mark	_
 12	things	thing	NOUN	NNS	Number=Plur	14	nsubj:pass	14:nsubj:pass	_
 13	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	aux:pass	14:aux:pass	_
-14	checked	check	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	18	advcl	18:advcl	_
+14	checked	check	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	18	advcl	18:advcl:when	_
 15	out	out	ADP	RP	_	14	compound:prt	14:compound:prt	_
 16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	SpaceAfter=No
 17	'll	will	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
@@ -148,12 +148,12 @@
 3	customer	customer	NOUN	NN	Number=Sing	4	compound	4:compound	_
 4	service	service	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	about	about	ADP	IN	_	6	case	6:case	_
-6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obl	2:obl	_
+6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obl	2:obl:about	_
 7	because	because	SCONJ	IN	_	11	mark	11:mark	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	website	website	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
 10	specifically	specifically	ADV	RB	_	11	advmod	11:advmod	_
-11	states	state	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	advcl	2:advcl	_
+11	states	state	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	advcl	2:advcl:because	_
 12	that	that	SCONJ	IN	_	14	mark	14:mark	_
 13	there	there	PRON	EX	_	14	expl	14:expl	_
 14	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	ccomp	11:ccomp	_
@@ -164,7 +164,7 @@
 19	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 20	check	check	NOUN	NN	Number=Sing	22	compound	22:compound	SpaceAfter=No
 21	-	-	PUNCT	HYPH	_	22	punct	22:punct	SpaceAfter=No
-22	in	in	NOUN	NN	Number=Sing	14	obl	14:obl	SpaceAfter=No
+22	in	in	NOUN	NN	Number=Sing	14	obl	14:obl:at	SpaceAfter=No
 23	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-162422-0011
@@ -175,7 +175,7 @@
 4	to	to	ADP	IN	_	7	case	7:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	reception	reception	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	person	person	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+7	person	person	NOUN	NN	Number=Sing	3	obl	3:obl:to	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-162422-0012
@@ -188,7 +188,7 @@
 6	problem	problem	NOUN	NN	Number=Sing	5	obj	5:obj	_
 7	with	with	ADP	IN	_	9	case	9:case	_
 8	'	'	PUNCT	``	_	9	punct	9:punct	SpaceAfter=No
-9	people	people	NOUN	NNS	Number=Plur	6	nmod	6:nmod	SpaceAfter=No
+9	people	people	NOUN	NNS	Number=Plur	6	nmod	6:nmod:with	SpaceAfter=No
 10	'	'	PUNCT	''	_	9	punct	9:punct	SpaceAfter=No
 11	"	"	PUNCT	''	_	5	punct	5:punct	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -201,7 +201,7 @@
 4	having	have	VERB	VBG	VerbForm=Ger	3	acl	3:acl	_
 5	problems	problem	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 6	with	with	ADP	IN	_	7	case	7:case	_
-7	people	people	NOUN	NNS	Number=Plur	5	nmod	5:nmod	SpaceAfter=No
+7	people	people	NOUN	NNS	Number=Plur	5	nmod	5:nmod:with	SpaceAfter=No
 8	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-162422-0014
@@ -212,7 +212,7 @@
 4	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
-7	rudeness	rudeness	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+7	rudeness	rudeness	NOUN	NN	Number=Sing	3	obl	3:obl:to	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-162422-0015
@@ -225,28 +225,28 @@
 6	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 7	long	long	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	bad	bad	ADJ	JJ	Degree=Pos	7	conj	7:conj	_
+9	bad	bad	ADJ	JJ	Degree=Pos	7	conj	7:conj:and|10:amod	_
 10	day	day	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-162422-0016
 # text = We had no choice but to stay but will take this as far as we can.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj|10:nsubj	_
 2	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	no	no	DET	DT	_	4	det	4:det	_
 4	choice	choice	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	but	but	SCONJ	IN	_	7	mark	7:mark	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	stay	stay	VERB	VB	VerbForm=Inf	4	acl	4:acl	_
+7	stay	stay	VERB	VB	VerbForm=Inf	4	acl	4:acl:to	_
 8	but	but	CCONJ	CC	_	10	cc	10:cc	_
 9	will	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
-10	take	take	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
+10	take	take	VERB	VB	VerbForm=Inf	2	conj	2:conj:but	_
 11	this	this	PRON	DT	Number=Sing|PronType=Dem	10	obj	10:obj	_
 12	as	as	ADV	RB	_	13	advmod	13:advmod	_
 13	far	far	ADV	RB	Degree=Pos	10	advmod	10:advmod	_
 14	as	as	SCONJ	IN	_	16	mark	16:mark	_
 15	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
-16	can	can	AUX	MD	VerbForm=Fin	13	advcl	13:advcl	SpaceAfter=No
+16	can	can	AUX	MD	VerbForm=Fin	13	advcl	13:advcl:as	SpaceAfter=No
 17	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-162422-0017
@@ -259,7 +259,7 @@
 
 # sent_id = reviews-162422-0018
 # text = I came to find out the person was the hotel OWNER also.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj	_
 2	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	find	find	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_

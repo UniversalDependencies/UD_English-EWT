@@ -20,7 +20,7 @@
 12	personal	personal	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	favorite	favorite	NOUN	NN	Number=Sing	9	appos	9:appos	_
 14	of	of	ADP	IN	_	15	case	15:case	_
-15	mine	mine	PRON	PRP	_	13	nmod	13:nmod	SpaceAfter=No
+15	mine	mine	PRON	PRP	_	13	nmod	13:nmod:of	SpaceAfter=No
 16	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-017345-0003
@@ -29,7 +29,7 @@
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
 3	bite	bite	NOUN	NN	Number=Sing	1	obj	1:obj	SpaceAfter=No
 4	,	,	PUNCT	,	_	1	punct	1:punct	_
-5	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
+5	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj|7:nsubj:xsubj	_
 6	tasted	taste	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	parataxis	1:parataxis	_
 7	odd	odd	ADJ	JJ	Degree=Pos	6	xcomp	6:xcomp	SpaceAfter=No
 8	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -41,12 +41,12 @@
 3	square	square	NOUN	NN	Number=Sing	1	obj	1:obj	_
 4	over	over	ADP	RP	_	1	compound:prt	1:compound:prt	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	saw	see	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	conj	1:conj	_
+6	saw	see	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	conj	1:conj:and	_
 7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	obj	6:obj	_
 8	riddled	riddled	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 9	with	with	ADP	IN	_	11	case	11:case	_
 10	green	green	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	mold	mold	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+11	mold	mold	NOUN	NN	Number=Sing	8	obl	8:obl:with	SpaceAfter=No
 12	!!!!	!!!!	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-017345-0005
@@ -62,18 +62,18 @@
 4	store	store	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	and	and	CCONJ	CC	_	8	cc	8:cc	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	clerk	clerk	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
-8	giggled	giggle	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	SpaceAfter=No
+7	clerk	clerk	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|11:nsubj|18:nsubj	_
+8	giggled	giggle	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	agreed	agree	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	conj	8:conj	_
+11	agreed	agree	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	conj	8:conj:and	_
 12	that	that	SCONJ	IN	_	15	mark	15:mark	_
 13	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
 15	gross	gross	ADJ	JJ	Degree=Pos	11	ccomp	11:ccomp	SpaceAfter=No
 16	,	,	PUNCT	,	_	18	punct	18:punct	_
 17	but	but	CCONJ	CC	_	18	cc	18:cc	_
-18	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	conj	8:conj	_
+18	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	conj	8:conj:and	_
 19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	23	nsubj	23:nsubj	_
 20	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	cop	23:cop	_
 21	not	not	PART	RB	_	23	advmod	23:advmod	_
@@ -83,7 +83,7 @@
 
 # sent_id = reviews-017345-0007
 # text = She also refused to get a manager.
-1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	also	also	ADV	RB	_	3	advmod	3:advmod	_
 3	refused	refuse	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -94,13 +94,13 @@
 
 # sent_id = reviews-017345-0008
 # text = I left my number, or tried to anyway.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|7:nsubj	_
 2	left	leave	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	number	number	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	or	or	CCONJ	CC	_	7	cc	7:cc	_
-7	tried	try	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+7	tried	try	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:or	_
 8	to	to	PART	TO	_	7	xcomp	7:xcomp	_
 9	anyway	anyway	ADV	RB	_	7	advmod	7:advmod	SpaceAfter=No
 10	.	.	PUNCT	.	_	2	punct	2:punct	_

@@ -4,7 +4,7 @@
 1	Can	can	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 2	rabbits	rabbit	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	chickens	chicken	NOUN	NNS	Number=Plur	2	conj	2:conj	_
+4	chickens	chicken	NOUN	NNS	Number=Plur	2	conj	2:conj:and|5:nsubj	_
 5	live	live	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	together	together	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
 7	?	?	PUNCT	.	_	5	punct	5:punct	_
@@ -15,19 +15,19 @@
 2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	thinking	think	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 4	about	about	SCONJ	IN	_	5	mark	5:mark	_
-5	getting	get	VERB	VBG	VerbForm=Ger	3	advcl	3:advcl	_
+5	getting	get	VERB	VBG	VerbForm=Ger	3	advcl	3:advcl:about	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 7	rabbit	rabbit	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	as	as	ADP	IN	_	10	case	10:case	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	pet	pet	NOUN	NN	Number=Sing	5	obl	5:obl	SpaceAfter=No
+10	pet	pet	NOUN	NN	Number=Sing	5	obl	5:obl:as	SpaceAfter=No
 11	,	,	PUNCT	,	_	15	punct	15:punct	_
 12	but	but	CCONJ	CC	_	15	cc	15:cc	_
 13	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 14	parents	parent	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj	_
-15	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj	_
+15	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj:but	_
 16	that	that	SCONJ	IN	_	18	mark	18:mark	_
-17	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
+17	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj|20:nsubj:xsubj	_
 18	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	ccomp	15:ccomp	_
 19	to	to	PART	TO	_	20	mark	20:mark	_
 20	stay	stay	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
@@ -40,19 +40,19 @@
 2	also	also	ADV	RB	_	3	advmod	3:advmod	_
 3	own	own	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	two	two	NUM	CD	NumType=Card	5	nummod	5:nummod	_
-5	chickens	chicken	NOUN	NNS	Number=Plur	3	obj	3:obj	_
-6	that	that	PRON	WDT	PronType=Rel	8	nsubj:pass	8:nsubj:pass	_
+5	chickens	chicken	NOUN	NNS	Number=Plur	3	obj	3:obj|8:nsubj:pass	_
+6	that	that	PRON	WDT	PronType=Rel	8	nsubj:pass	5:ref	_
 7	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	aux:pass	8:aux:pass	_
 8	kept	keep	VERB	VBN	Tense=Past|VerbForm=Part	5	acl:relcl	5:acl:relcl	_
 9	in	in	ADP	IN	_	11	case	11:case	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	run	run	NOUN	NN	Number=Sing	8	obl	8:obl	_
+11	run	run	NOUN	NN	Number=Sing	8	obl	8:obl:in	_
 12	behind	behind	ADP	IN	_	17	case	17:case	_
-13	out	out	PRON	PRP$	_	17	nmod:poss	17:nmod:poss	_
+13	out	our	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs|Typo=Yes	17	nmod:poss	17:nmod:poss	_
 14	garage	garage	NOUN	NN	Number=Sing	16	compound	16:compound	SpaceAfter=No
 15	/	/	PUNCT	,	_	16	punct	16:punct	SpaceAfter=No
 16	barn	barn	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	thing	thing	NOUN	NN	Number=Sing	11	nmod	11:nmod	SpaceAfter=No
+17	thing	thing	NOUN	NN	Number=Sing	11	nmod	11:nmod:behind	SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108101850AAhNuvz_ans-0004
@@ -63,8 +63,8 @@
 4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 5	little	little	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 6	dog	dog	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	house	house	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
-8	that	that	PRON	WDT	PronType=Rel	11	obj	11:obj	_
+7	house	house	NOUN	NN	Number=Sing	2	nsubj	2:nsubj|11:obj	_
+8	that	that	PRON	WDT	PronType=Rel	11	obj	7:ref	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 10	would	would	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 11	turn	turn	VERB	VB	VerbForm=Inf	7	acl:relcl	7:acl:relcl	_
@@ -72,7 +72,7 @@
 13	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 14	little	little	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 15	rabbit	rabbit	NOUN	NN	Number=Sing	16	compound	16:compound	_
-16	hutch	hutch	NOUN	NN	Number=Sing	11	obl	11:obl	_
+16	hutch	hutch	NOUN	NN	Number=Sing	11	obl	11:obl:into	_
 17	being	be	AUX	VBG	VerbForm=Ger	18	aux:pass	18:aux:pass	_
 18	kept	keep	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	acl	7:acl	_
 19	back	back	ADV	RB	_	20	advmod	20:advmod	_
@@ -80,33 +80,33 @@
 21	and	and	CCONJ	CC	_	24	cc	24:cc	_
 22	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	24	nsubj	24:nsubj	_
 23	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	24	aux	24:aux	_
-24	thinking	think	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj	_
+24	thinking	think	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:and	_
 25	about	about	SCONJ	IN	_	26	mark	26:mark	_
-26	keeping	keep	VERB	VBG	VerbForm=Ger	24	advcl	24:advcl	_
+26	keeping	keep	VERB	VBG	VerbForm=Ger	24	advcl	24:advcl:about	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 28	rabbit	rabbit	NOUN	NN	Number=Sing	26	obj	26:obj	_
 29	in	in	ADP	IN	_	31	case	31:case	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
-31	run	run	NOUN	NN	Number=Sing	26	obl	26:obl	_
+31	run	run	NOUN	NN	Number=Sing	26	obl	26:obl:in	_
 32	with	with	ADP	IN	_	34	case	34:case	_
 33	the	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	_
-34	chickens	chicken	NOUN	NNS	Number=Plur	26	obl	26:obl	SpaceAfter=No
+34	chickens	chicken	NOUN	NNS	Number=Plur	26	obl	26:obl:with	SpaceAfter=No
 35	,	,	PUNCT	,	_	37	punct	37:punct	_
 36	but	but	CCONJ	CC	_	37	cc	37:cc	_
-37	keeping	keep	VERB	VBG	VerbForm=Ger	26	conj	26:conj	_
+37	keeping	keep	VERB	VBG	VerbForm=Ger	26	conj	24:advcl:about|26:conj:but	_
 38	the	the	DET	DT	Definite=Def|PronType=Art	39	det	39:det	_
 39	chickens	chicken	NOUN	NNS	Number=Plur	37	obj	37:obj	_
 40	in	in	ADP	IN	_	42	case	42:case	_
 41	the	the	DET	DT	Definite=Def|PronType=Art	42	det	42:det	_
-42	coop	coop	NOUN	NN	Number=Sing	37	obl	37:obl	_
+42	coop	coop	NOUN	NN	Number=Sing	37	obl	37:obl:in	_
 43	and	and	CCONJ	CC	_	45	cc	45:cc	_
 44	the	the	DET	DT	Definite=Def|PronType=Art	45	det	45:det	_
-45	rabbit	rabbit	NOUN	NN	Number=Sing	37	conj	37:conj	_
+45	rabbit	rabbit	NOUN	NN	Number=Sing	37	conj	37:conj:and	_
 46	in	in	ADP	IN	_	48	case	48:case	_
 47	the	the	DET	DT	Definite=Def|PronType=Art	48	det	48:det	_
-48	hutch	hutch	NOUN	NN	Number=Sing	45	nmod	45:nmod	_
+48	hutch	hutch	NOUN	NN	Number=Sing	45	nmod	45:nmod:in	_
 49	at	at	ADP	IN	_	50	case	50:case	_
-50	night	night	NOUN	NN	Number=Sing	37	obl	37:obl	SpaceAfter=No
+50	night	night	NOUN	NN	Number=Sing	37	obl	37:obl:at	SpaceAfter=No
 51	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108101850AAhNuvz_ans-0005
@@ -116,7 +116,7 @@
 3	in	in	ADP	IN	_	6	case	6:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	day	day	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	time	time	NOUN	NN	Number=Sing	10	obl	10:obl	_
+6	time	time	NOUN	NN	Number=Sing	10	obl	10:obl:in	_
 7	would	would	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 8	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	expl	10:expl	_
 9	be	be	AUX	VB	VerbForm=Inf	10	cop	10:cop	_
@@ -130,7 +130,7 @@
 17	along	along	ADP	IN	_	20	case	20:case	_
 18	with	with	ADP	IN	_	20	case	20:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
-20	chickens	chicken	NOUN	NNS	Number=Plur	15	obl	15:obl	SpaceAfter=No
+20	chickens	chicken	NOUN	NNS	Number=Plur	15	obl	15:obl:with	SpaceAfter=No
 21	?	?	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = answers-20111108101850AAhNuvz_ans-0006
@@ -141,20 +141,20 @@
 4	chickens	chicken	NOUN	NNS	Number=Plur	2	iobj	2:iobj	_
 5	scraps	scrap	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	veggies	veggy	NOUN	NNS	Number=Plur	5	nmod	5:nmod	_
+7	veggies	veggy	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	fruits	fruit	NOUN	NNS	Number=Plur	7	conj	7:conj	_
+9	fruits	fruit	NOUN	NNS	Number=Plur	7	conj	5:nmod:of|7:conj:and	_
 10	throughout	throughout	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	day	day	NOUN	NN	Number=Sing	2	obl	2:obl	SpaceAfter=No
+12	day	day	NOUN	NN	Number=Sing	2	obl	2:obl:throughout	SpaceAfter=No
 13	,	,	PUNCT	,	_	17	punct	17:punct	_
 14	but	but	CCONJ	CC	_	17	cc	17:cc	_
 15	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	SpaceAfter=No
 16	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
-17	nothing	nothing	PRON	NN	Number=Sing	2	conj	2:conj	_
-18	that	that	PRON	WDT	PronType=Rel	24	obj	24:obj	_
+17	nothing	nothing	PRON	NN	Number=Sing	2	conj	2:conj:but|24:obj	_
+18	that	that	PRON	WDT	PronType=Rel	24	obj	17:ref	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
-20	rabbit	rabbit	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	_
+20	rabbit	rabbit	NOUN	NN	Number=Sing	24	nsubj	24:nsubj|26:nsubj:xsubj	_
 21	would	would	AUX	MD	VerbForm=Fin	24	aux	24:aux	SpaceAfter=No
 22	n't	not	PART	RB	_	24	advmod	24:advmod	_
 23	be	be	AUX	VB	VerbForm=Inf	24	cop	24:cop	_
@@ -172,21 +172,21 @@
 3	can	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 4	rabbits	rabbit	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	chickens	chicken	NOUN	NNS	Number=Plur	4	conj	4:conj	_
+6	chickens	chicken	NOUN	NNS	Number=Plur	4	conj	4:conj:and|7:nsubj	_
 7	live	live	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	together	together	ADV	RB	_	7	advmod	7:advmod	_
 9	as	as	ADV	RB	_	10	advmod	10:advmod	_
 10	long	long	ADV	RB	Degree=Pos	7	advmod	7:advmod	_
 11	as	as	SCONJ	IN	_	13	mark	13:mark	_
 12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
-13	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl	_
+13	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl:as	_
 14	separate	separate	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	places	place	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 16	for	for	ADP	IN	_	18	case	18:case	_
 17	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
-18	food	food	NOUN	NN	Number=Sing	15	nmod	15:nmod	_
+18	food	food	NOUN	NN	Number=Sing	15	nmod	15:nmod:for	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	water	water	NOUN	NN	Number=Sing	18	conj	18:conj	SpaceAfter=No
+20	water	water	NOUN	NN	Number=Sing	18	conj	15:nmod:for|18:conj:and	SpaceAfter=No
 21	?	?	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = answers-20111108101850AAhNuvz_ans-0008
@@ -204,10 +204,10 @@
 11	enough	enough	ADJ	JJ	Degree=Pos	10	advmod	10:advmod	_
 12	for	for	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	rabbit	rabbit	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+14	rabbit	rabbit	NOUN	NN	Number=Sing	11	obl	11:obl:for	SpaceAfter=No
 15	,	,	PUNCT	,	_	6	punct	6:punct	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
-17	chickens	chicken	NOUN	NNS	Number=Plur	21	nsubj	21:nsubj	_
+17	chickens	chicken	NOUN	NNS	Number=Plur	21	nsubj	21:nsubj|23:nsubj:xsubj	_
 18	would	would	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
 19	not	not	PART	RB	_	21	advmod	21:advmod	_
 20	be	be	AUX	VB	VerbForm=Inf	21	cop	21:cop	_
@@ -217,7 +217,7 @@
 24	to	to	ADP	IN	_	27	case	27:case	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 26	rabbit	rabbit	NOUN	NN	Number=Sing	27	compound	27:compound	_
-27	food	food	NOUN	NN	Number=Sing	23	obl	23:obl	SpaceAfter=No
+27	food	food	NOUN	NN	Number=Sing	23	obl	23:obl:to	SpaceAfter=No
 28	)	)	PUNCT	-RRB-	_	33	punct	33:punct	_
 29	Also	also	ADV	RB	_	33	advmod	33:advmod	SpaceAfter=No
 30	,	,	PUNCT	,	_	33	punct	33:punct	_
@@ -228,13 +228,13 @@
 35	the	the	DET	DT	Definite=Def|PronType=Art	36	det	36:det	_
 36	rabbit	rabbit	NOUN	NN	Number=Sing	38	nsubj	38:nsubj	_
 37	occasionally	occasionally	ADV	RB	_	38	advmod	38:advmod	_
-38	sneaks	sneak	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	33	advcl	33:advcl	_
+38	sneaks	sneak	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	33	advcl	33:advcl:if	_
 39	a	a	DET	DT	Definite=Ind|PronType=Art	41	det	41:det	_
 40	few	few	ADJ	JJ	Degree=Pos	41	amod	41:amod	_
 41	bites	bite	NOUN	NNS	Number=Plur	38	obj	38:obj	_
 42	of	of	ADP	IN	_	44	case	44:case	_
 43	chicken	chicken	NOUN	NN	Number=Sing	44	compound	44:compound	_
-44	feed	feed	NOUN	NN	Number=Sing	41	nmod	41:nmod	SpaceAfter=No
+44	feed	feed	NOUN	NN	Number=Sing	41	nmod	41:nmod:of	SpaceAfter=No
 45	?	?	PUNCT	.	_	33	punct	33:punct	_
 
 # sent_id = answers-20111108101850AAhNuvz_ans-0009
@@ -251,15 +251,15 @@
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
 11	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	_
-13	fine	fine	ADJ	JJ	Degree=Pos	4	conj	4:conj	SpaceAfter=No
+13	fine	fine	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
 14	...	...	PUNCT	.	_	4	punct	4:punct	SpaceAfter=No
 
 # sent_id = answers-20111108101850AAhNuvz_ans-0010
 # text = I just wanna make sure :) Thank!
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj|6:nsubj:xsubj	_
 2	just	just	ADV	RB	_	3	advmod	3:advmod	_
-3	wan	wan	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
-4	na	na	PART	TO	_	5	mark	5:mark	_
+3	wan	want	VERB	VBP	Abbr=Yes|Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+4	na	to	PART	TO	Abbr=Yes	5	mark	5:mark	_
 5	make	make	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	sure	sure	ADJ	JJ	Degree=Pos	5	xcomp	5:xcomp	_
 7	:)	:)	PUNCT	NFP	_	8	discourse	8:discourse	_
@@ -291,7 +291,7 @@
 21	attack	attack	VERB	VB	VerbForm=Inf	5	parataxis	5:parataxis	_
 22	rabbits	rabbit	NOUN	NNS	Number=Plur	21	obj	21:obj	_
 23	or	or	CCONJ	CC	_	24	cc	24:cc	_
-24	anything	anything	PRON	NN	Number=Sing	22	conj	22:conj	_
+24	anything	anything	PRON	NN	Number=Sing	22	conj	21:obj|22:conj:or	_
 25	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	26	nsubj	26:nsubj	_
 26	see	see	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	24	acl:relcl	24:acl:relcl	_
 27	moving	move	VERB	VBG	VerbForm=Ger	26	advcl	26:advcl	SpaceAfter=No
@@ -300,7 +300,7 @@
 30	be	be	AUX	VB	Mood=Imp|VerbForm=Fin	31	cop	31:cop	_
 31	aware	aware	ADJ	JJ	Degree=Pos	5	parataxis	5:parataxis	_
 32	of	of	ADP	IN	_	33	case	33:case	_
-33	that	that	PRON	DT	Number=Sing|PronType=Dem	31	obl	31:obl	SpaceAfter=No
+33	that	that	PRON	DT	Number=Sing|PronType=Dem	31	obl	31:obl:of	SpaceAfter=No
 34	,	,	PUNCT	,	_	5	punct	5:punct	SpaceAfter=No
 35	hens	hen	NOUN	NNS	Number=Plur	37	nsubj	37:nsubj	_
 36	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	37	cop	37:cop	_
@@ -308,16 +308,16 @@
 38	with	with	ADP	IN	_	41	case	41:case	_
 39	almost	almost	ADV	RB	_	41	advmod	41:advmod	_
 40	all	all	DET	DT	_	41	det	41:det	_
-41	kinds	kind	NOUN	NNS	Number=Plur	37	obl	37:obl	_
+41	kinds	kind	NOUN	NNS	Number=Plur	37	obl	37:obl:with	_
 42	of	of	ADP	IN	_	43	case	43:case	_
-43	pets	pet	NOUN	NNS	Number=Plur	41	nmod	41:nmod	SpaceAfter=No
+43	pets	pet	NOUN	NNS	Number=Plur	41	nmod	41:nmod:of	SpaceAfter=No
 44	!	!	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108101850AAhNuvz_ans-0012
 # text = From my experience Hens(Not roosters) are very friendly with duck,Guinea pigs,kittens,cows,Rabbits,etc.
 1	From	from	ADP	IN	_	3	case	3:case	_
 2	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	experience	experience	NOUN	NN	Number=Sing	11	obl	11:obl	_
+3	experience	experience	NOUN	NN	Number=Sing	11	obl	11:obl:from	_
 4	Hens	hen	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	SpaceAfter=No
 5	(	(	PUNCT	-LRB-	_	7	punct	7:punct	SpaceAfter=No
 6	Not	not	CCONJ	CC	_	7	orphan	7:orphan	_
@@ -327,18 +327,18 @@
 10	very	very	ADV	RB	_	11	advmod	11:advmod	_
 11	friendly	friendly	ADJ	JJ	Degree=Pos	0	root	0:root	_
 12	with	with	ADP	IN	_	13	case	13:case	_
-13	duck	duck	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+13	duck	duck	NOUN	NN	Number=Sing	11	obl	11:obl:with	SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	SpaceAfter=No
 15	Guinea	guinea	NOUN	NN	Number=Sing	16	compound	16:compound	_
-16	pigs	pig	NOUN	NNS	Number=Plur	13	conj	13:conj	SpaceAfter=No
+16	pigs	pig	NOUN	NNS	Number=Plur	13	conj	11:obl:with|13:conj	SpaceAfter=No
 17	,	,	PUNCT	,	_	18	punct	18:punct	SpaceAfter=No
-18	kittens	kitten	NOUN	NNS	Number=Plur	13	conj	13:conj	SpaceAfter=No
+18	kittens	kitten	NOUN	NNS	Number=Plur	13	conj	11:obl:with|13:conj	SpaceAfter=No
 19	,	,	PUNCT	,	_	20	punct	20:punct	SpaceAfter=No
-20	cows	cow	NOUN	NNS	Number=Plur	13	conj	13:conj	SpaceAfter=No
+20	cows	cow	NOUN	NNS	Number=Plur	13	conj	11:obl:with|13:conj	SpaceAfter=No
 21	,	,	PUNCT	,	_	22	punct	22:punct	SpaceAfter=No
-22	Rabbits	rabbit	NOUN	NNS	Number=Plur	13	conj	13:conj	SpaceAfter=No
+22	Rabbits	rabbit	NOUN	NNS	Number=Plur	13	conj	11:obl:with|13:conj	SpaceAfter=No
 23	,	,	PUNCT	,	_	24	punct	24:punct	SpaceAfter=No
-24	etc	etc	X	FW	_	13	conj	13:conj	SpaceAfter=No
+24	etc	etc	X	FW	_	13	conj	11:obl:with|13:conj	SpaceAfter=No
 25	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = answers-20111108101850AAhNuvz_ans-0013
@@ -362,13 +362,13 @@
 4	live	live	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	different	different	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	cages	cage	NOUN	NNS	Number=Plur	4	obl	4:obl	_
+7	cages	cage	NOUN	NNS	Number=Plur	4	obl	4:obl:in	_
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 10	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
-11	free	free	ADJ	JJ	Degree=Pos	4	conj	4:conj	_
+11	free	free	ADJ	JJ	Degree=Pos	4	conj	2:ccomp|4:conj:and	_
 12	in	in	ADP	IN	_	13	case	13:case	_
-13	day	day	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+13	day	day	NOUN	NN	Number=Sing	11	obl	11:obl:in	SpaceAfter=No
 14	,	,	PUNCT	,	_	2	punct	2:punct	SpaceAfter=No
 15	so	so	ADV	RB	_	21	advmod	21:advmod	_
 16	no	no	DET	DT	_	17	det	17:det	_
@@ -379,19 +379,19 @@
 21	put	put	VERB	VB	Mood=Imp|VerbForm=Fin	2	parataxis	2:parataxis	_
 22	both	both	DET	DT	_	21	obj	21:obj	_
 23	of	of	ADP	IN	_	24	case	24:case	_
-24	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	22	nmod	22:nmod	_
+24	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	22	nmod	22:nmod:of	_
 25	in	in	ADP	IN	_	27	case	27:case	_
 26	one	one	NUM	CD	NumType=Card	27	nummod	27:nummod	_
-27	cage	cage	NOUN	NN	Number=Sing	21	obl	21:obl	_
+27	cage	cage	NOUN	NN	Number=Sing	21	obl	21:obl:in	_
 28	because	because	SCONJ	IN	_	32	mark	32:mark	_
 29	rabbits	rabbit	NOUN	NNS	Number=Plur	30	compound	30:compound	_
 30	bedding	bedding	NOUN	NN	Number=Sing	32	nsubj	32:nsubj	_
 31	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	cop	32:cop	_
-32	different	different	ADJ	JJ	Degree=Pos	21	advcl	21:advcl	_
+32	different	different	ADJ	JJ	Degree=Pos	21	advcl	21:advcl:because	_
 33	than	than	ADP	IN	_	34	case	34:case	_
-34	that	that	PRON	DT	Number=Sing|PronType=Dem	32	obl	32:obl	_
+34	that	that	PRON	DT	Number=Sing|PronType=Dem	32	obl	32:obl:than	_
 35	of	of	ADP	IN	_	36	case	36:case	_
-36	hens	hen	NOUN	NNS	Number=Plur	34	nmod	34:nmod	SpaceAfter=No
+36	hens	hen	NOUN	NNS	Number=Plur	34	nmod	34:nmod:of	SpaceAfter=No
 37	,	,	PUNCT	,	_	2	punct	2:punct	SpaceAfter=No
 38	wet	wet	ADJ	JJ	Degree=Pos	39	amod	39:amod	_
 39	bedding	bedding	NOUN	NN	Number=Sing	41	nsubj	41:nsubj	_
@@ -399,7 +399,7 @@
 41	cause	cause	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
 42	diseases	disease	NOUN	NNS	Number=Plur	41	obj	41:obj	_
 43	in	in	ADP	IN	_	44	case	44:case	_
-44	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	41	obl	41:obl	SpaceAfter=No
+44	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	41	obl	41:obl:in	SpaceAfter=No
 45	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108101850AAhNuvz_ans-0015
@@ -411,10 +411,10 @@
 5	put	put	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 6	both	both	DET	DT	_	5	obj	5:obj	_
 7	of	of	ADP	IN	_	8	case	8:case	_
-8	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	6	nmod	6:nmod	_
+8	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	6	nmod	6:nmod:of	_
 9	in	in	ADP	IN	_	11	case	11:case	_
 10	one	one	NUM	CD	NumType=Card	11	nummod	11:nummod	_
-11	cage	cage	NOUN	NN	Number=Sing	5	obl	5:obl	SpaceAfter=No
+11	cage	cage	NOUN	NN	Number=Sing	5	obl	5:obl:in	SpaceAfter=No
 12	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108101850AAhNuvz_ans-0016
@@ -430,18 +430,18 @@
 3	guess	guess	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	but	but	CCONJ	CC	_	8	cc	8:cc	_
 5	rabbits	rabbit	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
-6	a	a	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
+6	a	can	AUX	MD	Typo=Yes|VerbForm=Fin	8	aux	8:aux	_
 7	easily	easily	ADV	RB	_	8	advmod	8:advmod	_
-8	escape	escape	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+8	escape	escape	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:but	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	pen	pen	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	or	or	CCONJ	CC	_	15	cc	15:cc	_
 12	another	another	DET	DT	_	13	det	13:det	_
 13	rabbit	rabbit	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
 14	could	could	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-15	get	get	VERB	VB	VerbForm=Inf	8	conj	8:conj	_
+15	get	get	VERB	VB	VerbForm=Inf	8	conj	8:conj:or	_
 16	in	in	ADP	IN	_	17	case	17:case	_
-17	there	there	ADV	RB	PronType=Dem	15	obl	15:obl	_
+17	there	there	ADV	RB	PronType=Dem	15	obl	15:obl:in	_
 18	and	and	CCONJ	CC	_	25	cc	25:cc	_
 19	that	that	DET	DT	Number=Sing|PronType=Dem	20	det	20:det	_
 20	rabbit	rabbit	NOUN	NN	Number=Sing	25	nsubj	25:nsubj	_
@@ -449,7 +449,7 @@
 22	be	be	AUX	VB	VerbForm=Inf	25	cop	25:cop	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
 24	opposite	opposite	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
-25	gender	gender	NOUN	NN	Number=Sing	8	conj	8:conj	SpaceAfter=No
+25	gender	gender	NOUN	NN	Number=Sing	8	conj	8:conj:or	SpaceAfter=No
 26	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108101850AAhNuvz_ans-0018
@@ -460,16 +460,16 @@
 4	careful	careful	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	and	and	CCONJ	CC	_	10	cc	10:cc	_
 6	some	some	DET	DT	_	7	det	7:det	_
-7	feeds	feed	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
+7	feeds	feed	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj|14:nsubj	_
 8	could	could	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 9	be	be	AUX	VB	VerbForm=Inf	10	cop	10:cop	_
-10	toxic	toxic	ADJ	JJ	Degree=Pos	4	conj	4:conj	_
+10	toxic	toxic	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	_
 11	to	to	ADP	IN	_	12	case	12:case	_
-12	rabbits	rabbit	NOUN	NNS	Number=Plur	10	obl	10:obl	_
+12	rabbits	rabbit	NOUN	NNS	Number=Plur	10	obl	10:obl:to	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	safe	safe	ADJ	JJ	Degree=Pos	10	conj	10:conj	_
+14	safe	safe	ADJ	JJ	Degree=Pos	10	conj	10:conj:and	_
 15	for	for	ADP	IN	_	16	case	16:case	_
-16	chickens	chicken	NOUN	NNS	Number=Plur	14	obl	14:obl	SpaceAfter=No
+16	chickens	chicken	NOUN	NNS	Number=Plur	14	obl	14:obl:for	SpaceAfter=No
 17	.	.	PUNCT	.	_	4	punct	4:punct	SpaceAfter=No
 
 # sent_id = answers-20111108101850AAhNuvz_ans-0019
@@ -486,24 +486,24 @@
 10	if	if	SCONJ	IN	_	13	mark	13:mark	_
 11	chicken	chicken	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
 12	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
-13	falling	fall	VERB	VBG	Tense=Pres|VerbForm=Part	9	advcl	9:advcl	_
+13	falling	fall	VERB	VBG	Tense=Pres|VerbForm=Part	9	advcl	9:advcl:if	_
 14	into	into	ADP	IN	_	15	case	15:case	_
-15	holes	hole	NOUN	NNS	Number=Plur	13	obl	13:obl	SpaceAfter=No
+15	holes	hole	NOUN	NNS	Number=Plur	13	obl	13:obl:into	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108101850AAhNuvz_ans-0020
 # text = rabbits are delicate and can get diseases so watch out for that.
-1	rabbits	rabbit	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
+1	rabbits	rabbit	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj|6:nsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	delicate	delicate	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	and	and	CCONJ	CC	_	6	cc	6:cc	_
 5	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-6	get	get	VERB	VB	VerbForm=Inf	3	conj	3:conj	_
+6	get	get	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
 7	diseases	disease	NOUN	NNS	Number=Plur	6	obj	6:obj	_
 8	so	so	ADV	RB	_	9	advmod	9:advmod	_
 9	watch	watch	VERB	VB	Mood=Imp|VerbForm=Fin	3	parataxis	3:parataxis	_
 10	out	out	ADP	RP	_	9	compound:prt	9:compound:prt	_
 11	for	for	ADP	IN	_	12	case	12:case	_
-12	that	that	PRON	DT	Number=Sing|PronType=Dem	9	obl	9:obl	SpaceAfter=No
+12	that	that	PRON	DT	Number=Sing|PronType=Dem	9	obl	9:obl:for	SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 

@@ -25,47 +25,47 @@
 4	down	down	ADP	RP	_	3	compound:prt	3:compound:prt	_
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
 6	roadside	roadside	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
-7	towed	tow	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj	_
+7	towed	tow	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
 8	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	vehicle	vehicle	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	to	to	ADP	IN	_	12	case	12:case	_
 11	Sussman	Sussman	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	Kia	Kia	PROPN	NNP	Number=Sing	7	obl	7:obl	SpaceAfter=No
+12	Kia	Kia	PROPN	NNP	Number=Sing	7	obl	7:obl:to	SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-369087-0004
 # text = They squeezed me in and had me back up and running in no time.
-1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj|6:nsubj	_
 2	squeezed	squeeze	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj	_
 4	in	in	ADP	RP	_	2	compound:prt	2:compound:prt	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
-7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
+6	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
+7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	obj	6:obj|9:nsubj:xsubj|11:nsubj:xsubj	_
 8	back	back	ADV	RB	_	9	advmod	9:advmod	_
-9	up	up	ADV	RB	_	6	ccomp	6:ccomp	_
+9	up	up	ADV	RB	_	6	xcomp	6:xcomp	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	running	run	VERB	VBG	VerbForm=Ger	9	conj	9:conj	_
+11	running	run	VERB	VBG	VerbForm=Ger	9	conj	6:xcomp|9:conj:and	_
 12	in	in	ADP	IN	_	14	case	14:case	_
 13	no	no	DET	DT	_	14	det	14:det	_
-14	time	time	NOUN	NN	Number=Sing	9	obl	9:obl	SpaceAfter=No
+14	time	time	NOUN	NN	Number=Sing	9	obl	9:obl:in	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-369087-0005
 # text = Everyone was pleasant and very helpful.
-1	Everyone	everyone	PRON	NN	Number=Sing	3	nsubj	3:nsubj	_
+1	Everyone	everyone	PRON	NN	Number=Sing	3	nsubj	3:nsubj|6:nsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
 3	pleasant	pleasant	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	and	and	CCONJ	CC	_	6	cc	6:cc	_
 5	very	very	ADV	RB	_	6	advmod	6:advmod	_
-6	helpful	helpful	ADJ	JJ	Degree=Pos	3	conj	3:conj	SpaceAfter=No
+6	helpful	helpful	ADJ	JJ	Degree=Pos	3	conj	3:conj:and	SpaceAfter=No
 7	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-369087-0006
 # text = The service department even gave me a ride home and picked me up when my car was finished.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	service	service	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	department	department	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+3	department	department	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|11:nsubj	_
 4	even	even	ADV	RB	_	5	advmod	5:advmod	_
 5	gave	give	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	iobj	5:iobj	_
@@ -73,14 +73,14 @@
 8	ride	ride	NOUN	NN	Number=Sing	5	obj	5:obj	_
 9	home	home	ADV	RB	_	8	advmod	8:advmod	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	picked	pick	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+11	picked	pick	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj:and	_
 12	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	11	obj	11:obj	_
 13	up	up	ADP	RP	_	11	compound:prt	11:compound:prt	_
 14	when	when	ADV	WRB	PronType=Int	18	mark	18:mark	_
 15	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 16	car	car	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
 17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	18:cop	_
-18	finished	finished	ADJ	JJ	Degree=Pos	11	advcl	11:advcl	SpaceAfter=No
+18	finished	finished	ADJ	JJ	Degree=Pos	11	advcl	11:advcl:when	SpaceAfter=No
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-369087-0007
@@ -91,15 +91,15 @@
 4	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	obj	3:obj	_
 5	up	up	ADP	IN	_	7	case	7:case	_
 6	to	to	ADP	IN	_	5	fixed	5:fixed	_
-7	date	date	NOUN	NN	Number=Sing	3	obl	3:obl	_
+7	date	date	NOUN	NN	Number=Sing	3	obl	3:obl:up_to	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	informed	inform	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	7:conj	_
+9	informed	inform	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	3:obl:up_to|7:conj:and	_
 10	on	on	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	progress	progress	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
+12	progress	progress	NOUN	NN	Number=Sing	7	nmod	7:nmod:on	_
 13	of	of	ADP	IN	_	15	case	15:case	_
 14	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
-15	vehicle	vehicle	NOUN	NN	Number=Sing	12	nmod	12:nmod	SpaceAfter=No
+15	vehicle	vehicle	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-369087-0008
@@ -124,6 +124,6 @@
 7	car	car	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	back	back	ADV	RB	_	5	advmod	5:advmod	_
 9	for	for	ADP	IN	_	10	case	10:case	_
-10	service	service	NOUN	NN	Number=Sing	5	obl	5:obl	SpaceAfter=No
+10	service	service	NOUN	NN	Number=Sing	5	obl	5:obl:for	SpaceAfter=No
 11	.	.	PUNCT	.	_	5	punct	5:punct	_
 

@@ -7,25 +7,25 @@
 4	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	Weed	weed	NOUN	NN	Number=Sing	4	obj	4:obj	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	Auckland	Auckland	PROPN	NNP	Number=Sing	4	obl	4:obl	SpaceAfter=No
+7	Auckland	Auckland	PROPN	NNP	Number=Sing	4	obl	4:obl:in	SpaceAfter=No
 8	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111106210027AAhMxfE_ans-0002
 # text = Can ssome oone please tell me where i can buy some weed in auckland.
 1	Can	can	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
-2	ssome	ssome	DET	DT	_	3	det	3:det	_
-3	oone	oone	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+2	ssome	some	DET	DT	Typo=Yes	3	det	3:det	_
+3	oone	one	NOUN	NN	Number=Sing|Typo=Yes	5	nsubj	5:nsubj	_
 4	please	please	INTJ	UH	_	5	discourse	5:discourse	_
 5	tell	tell	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	obj	5:obj	_
 7	where	where	ADV	WRB	PronType=Int	10	mark	10:mark	_
 8	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 9	can	can	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
-10	buy	buy	VERB	VB	VerbForm=Inf	5	advcl	5:advcl	_
+10	buy	buy	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:where	_
 11	some	some	DET	DT	_	12	det	12:det	_
 12	weed	weed	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	auckland	auckland	PROPN	NNP	Number=Sing	10	obl	10:obl	SpaceAfter=No
+14	auckland	auckland	PROPN	NNP	Number=Sing	10	obl	10:obl:in	SpaceAfter=No
 15	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111106210027AAhMxfE_ans-0003
@@ -35,7 +35,7 @@
 3	an	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	address	address	NOUN	NN	Number=Sing	1	obj	1:obj	_
 5	or	or	CCONJ	CC	_	6	cc	6:cc	_
-6	something	something	PRON	NN	Number=Sing	4	conj	4:conj	_
+6	something	something	PRON	NN	Number=Sing	4	conj	1:obj|4:conj:or	_
 7	please	please	INTJ	UH	_	1	discourse	1:discourse	_
 8	idk	idk	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	1	discourse	1:discourse	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -64,14 +64,14 @@
 
 # sent_id = answers-20111106210027AAhMxfE_ans-0007
 # text = Anyone who looks like a druggy or dodgy.
-1	Anyone	anyone	PRON	NN	Number=Sing	0	root	0:root	_
-2	who	who	PRON	WP	PronType=Rel	3	nsubj	3:nsubj	_
+1	Anyone	anyone	PRON	NN	Number=Sing	0	root	3:nsubj	_
+2	who	who	PRON	WP	PronType=Rel	3	nsubj	1:ref	_
 3	looks	look	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
 4	like	like	ADP	IN	_	6	case	6:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-6	druggy	druggy	NOUN	NN	Number=Sing	3	obl	3:obl	_
+6	druggy	druggy	NOUN	NN	Number=Sing	3	obl	3:obl:like	_
 7	or	or	CCONJ	CC	_	8	cc	8:cc	_
-8	dodgy	dodgy	ADJ	JJ	Degree=Pos	6	conj	6:conj	SpaceAfter=No
+8	dodgy	dodgy	ADJ	JJ	Degree=Pos	6	conj	3:obl:like|6:conj:or	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111106210027AAhMxfE_ans-0008
@@ -84,11 +84,11 @@
 6	location	location	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
-9	dealer	dealer	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+9	dealer	dealer	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	_
 10	in	in	ADP	IN	_	13	case	13:case	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 12	public	public	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	place	place	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+13	place	place	NOUN	NN	Number=Sing	4	obl	4:obl:in	SpaceAfter=No
 14	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111106210027AAhMxfE_ans-0009
@@ -104,7 +104,7 @@
 1	Drop	drop	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	by	by	ADP	IN	_	4	case	4:case	_
 3	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	house	house	NOUN	NN	Number=Sing	1	obl	1:obl	SpaceAfter=No
+4	house	house	NOUN	NN	Number=Sing	1	obl	1:obl:by	SpaceAfter=No
 5	,	,	PUNCT	,	_	1	punct	1:punct	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 7	can	can	AUX	MD	VerbForm=Fin	8	aux	8:aux	_

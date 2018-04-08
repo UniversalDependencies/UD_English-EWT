@@ -5,13 +5,13 @@
 2	young	young	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	cat	cat	NOUN	NN	Number=Sing	1	obj	1:obj	_
 4	with	with	ADP	IN	_	5	case	5:case	_
-5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obl	1:obl	_
+5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obl	1:obl:with	_
 6	for	for	ADP	IN	_	8	case	8:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	week	week	NOUN	NN	Number=Sing	1	obl	1:obl	_
+8	week	week	NOUN	NN	Number=Sing	1	obl	1:obl:for	_
 9	out	out	ADP	IN	_	11	case	11:case	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	state	state	NOUN	NN	Number=Sing	1	obl	1:obl	SpaceAfter=No
+11	state	state	NOUN	NN	Number=Sing	1	obl	1:obl:of	SpaceAfter=No
 12	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108105225AAAJ9ek_ans-0002
@@ -33,9 +33,9 @@
 9	kitten	kitten	NOUN	NN	Number=Sing	2	obj	2:obj	_
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-12	live	live	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj	_
+12	live	live	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	forida	forida	PROPN	NNP	Number=Sing	12	obl	12:obl	SpaceAfter=No
+14	forida	forida	PROPN	NNP	Number=Sing	12	obl	12:obl:in	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108105225AAAJ9ek_ans-0004
@@ -45,22 +45,22 @@
 3	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 4	to	to	ADP	IN	_	6	case	6:case	_
 5	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
-6	grandma	grandma	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
-7	s	s	PART	POS	_	6	case	6:case	_
+6	grandma	grandma	NOUN	NN	Number=Sing	3	obl	3:obl:s	SpaceAfter=No
+7	s	's	PART	POS	_	6	case	6:case	_
 8	in	in	ADP	IN	_	10	case	10:case	_
 9	north	north	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	carolina	carolina	PROPN	NNP	Number=Sing	6	nmod	6:nmod	_
+10	carolina	carolina	PROPN	NNP	Number=Sing	6	nmod	6:nmod:in	_
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
-12	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
+12	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	14	nsubj	14:nsubj|15:nsubj:xsubj	_
 13	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
-14	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	3:conj	_
+14	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	3:conj:and	_
 15	camping	camp	VERB	VBG	VerbForm=Ger	14	xcomp	14:xcomp	_
 16	in	in	ADP	IN	_	18	case	18:case	_
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
-18	cabin	cabin	NOUN	NN	Number=Sing	15	obl	15:obl	_
+18	cabin	cabin	NOUN	NN	Number=Sing	15	obl	15:obl:in	_
 19	in	in	ADP	IN	_	21	case	21:case	_
 20	west	west	PROPN	NNP	Number=Sing	21	compound	21:compound	_
-21	virginia	virginia	PROPN	NNP	Number=Sing	18	nmod	18:nmod	SpaceAfter=No
+21	virginia	virginia	PROPN	NNP	Number=Sing	18	nmod	18:nmod:in	SpaceAfter=No
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108105225AAAJ9ek_ans-0005
@@ -73,7 +73,7 @@
 6	cat	cat	NOUN	NN	Number=Sing	0	root	0:root	_
 7	but	but	CCONJ	CC	_	9	cc	9:cc	_
 8	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
-9	loves	love	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj	_
+9	loves	love	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:but	_
 10	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj	_
 11	inside	inside	ADV	RB	_	9	advmod	9:advmod	SpaceAfter=No
 12	.	.	PUNCT	.	_	6	punct	6:punct	_
@@ -86,7 +86,7 @@
 4	good	good	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
-7	carrier	carrier	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+7	carrier	carrier	NOUN	NN	Number=Sing	4	obl	4:obl:in	SpaceAfter=No
 8	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108105225AAAJ9ek_ans-0007
@@ -100,7 +100,7 @@
 # sent_id = answers-20111108105225AAAJ9ek_ans-0008
 # text = if so how quick will she adapt to a litter box inside?
 1	if	if	SCONJ	IN	_	2	mark	2:mark	_
-2	so	so	ADV	RB	_	7	advcl	7:advcl	_
+2	so	so	ADV	RB	_	7	advcl	7:advcl:if	_
 3	how	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
 4	quick	quick	ADV	RB	_	7	advmod	7:advmod	_
 5	will	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
@@ -109,7 +109,7 @@
 8	to	to	ADP	IN	_	11	case	11:case	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	litter	litter	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	box	box	NOUN	NN	Number=Sing	7	obl	7:obl	_
+11	box	box	NOUN	NN	Number=Sing	7	obl	7:obl:to	_
 12	inside	inside	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 13	?	?	PUNCT	.	_	7	punct	7:punct	_
 
@@ -122,7 +122,7 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	cat	cat	NOUN	NN	Number=Sing	2	obj	2:obj	_
+4	cat	cat	NOUN	NN	Number=Sing	2	obj	2:obj|6:nsubj:xsubj	_
 5	Mitten	Mitten	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 6	camping	camp	VERB	VBG	VerbForm=Ger	2	xcomp	2:xcomp	SpaceAfter=No
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -142,7 +142,7 @@
 4	an	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 5	inside	inside	ADJ	JJ	Degree=Pos	8	amod	8:amod	SpaceAfter=No
 6	/	/	PUNCT	,	_	7	cc	7:cc	SpaceAfter=No
-7	outside	outside	ADJ	JJ	Degree=Pos	5	conj	5:conj	_
+7	outside	outside	ADJ	JJ	Degree=Pos	5	conj	5:conj|8:amod	_
 8	cat	cat	NOUN	NN	Number=Sing	0	root	0:root	_
 9	(	(	PUNCT	-LRB-	_	8	punct	8:punct	SpaceAfter=No
 10	only	only	ADV	RB	_	11	advmod	11:advmod	_
@@ -166,15 +166,15 @@
 3	trained	train	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	to	to	ADP	IN	_	6	case	6:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-6	harness	harness	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+6	harness	harness	NOUN	NN	Number=Sing	3	obl	3:obl:to	SpaceAfter=No
 7	/	/	PUNCT	,	_	8	cc	8:cc	SpaceAfter=No
-8	leash	leash	NOUN	NN	Number=Sing	6	conj	6:conj	_
+8	leash	leash	NOUN	NN	Number=Sing	6	conj	3:obl:to|6:conj	_
 9	for	for	ADP	IN	_	11	case	11:case	_
 10	outside	outside	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	time	time	NOUN	NN	Number=Sing	3	obl	3:obl	_
+11	time	time	NOUN	NN	Number=Sing	3	obl	3:obl:for	_
 12	but	but	CCONJ	CC	_	14	cc	14:cc	_
-13	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
-14	knew	know	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj	_
+13	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj|16:nsubj:xsubj	_
+14	knew	know	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj:but	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	use	use	VERB	VB	VerbForm=Inf	14	xcomp	14:xcomp	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
@@ -187,10 +187,10 @@
 # text = If your cat is not trained to use the litter pan, you may have a problem taking her.
 1	If	if	SCONJ	IN	_	6	mark	6:mark	_
 2	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	cat	cat	NOUN	NN	Number=Sing	6	nsubj:pass	6:nsubj:pass	_
+3	cat	cat	NOUN	NN	Number=Sing	6	nsubj:pass	6:nsubj:pass|8:nsubj:xsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux:pass	6:aux:pass	_
 5	not	not	PART	RB	_	6	advmod	6:advmod	_
-6	trained	train	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	15	advcl	15:advcl	_
+6	trained	train	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	15	advcl	15:advcl:if	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	use	use	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
@@ -213,7 +213,7 @@
 
 # sent_id = answers-20111108105225AAAJ9ek_ans-0016
 # text = changing its surroundings too often will stress it out and it will get depressed, mean, sick, or will not want to be around you.
-1	changing	change	VERB	VBG	VerbForm=Ger	7	csubj	7:csubj	_
+1	changing	change	VERB	VBG	VerbForm=Ger	7	csubj	7:csubj|13:csubj	_
 2	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
 3	surroundings	surroundings	NOUN	NNS	Number=Plur	1	obj	1:obj	_
 4	too	too	ADV	RB	_	5	advmod	5:advmod	_
@@ -225,17 +225,17 @@
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
 11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
 12	will	will	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
-13	get	get	VERB	VB	VerbForm=Inf	7	conj	7:conj	_
+13	get	get	VERB	VB	VerbForm=Inf	7	conj	7:conj:and	_
 14	depressed	depressed	ADJ	JJ	Degree=Pos	13	amod	13:amod	SpaceAfter=No
 15	,	,	PUNCT	,	_	16	punct	16:punct	_
-16	mean	mean	ADJ	JJ	Degree=Pos	14	conj	14:conj	SpaceAfter=No
+16	mean	mean	ADJ	JJ	Degree=Pos	14	conj	13:amod|14:conj	SpaceAfter=No
 17	,	,	PUNCT	,	_	18	punct	18:punct	_
-18	sick	sick	ADJ	JJ	Degree=Pos	14	conj	14:conj	SpaceAfter=No
+18	sick	sick	ADJ	JJ	Degree=Pos	14	conj	13:amod|14:conj	SpaceAfter=No
 19	,	,	PUNCT	,	_	23	punct	23:punct	_
 20	or	or	CCONJ	CC	_	23	cc	23:cc	_
 21	will	will	AUX	MD	VerbForm=Fin	23	aux	23:aux	_
 22	not	not	PART	RB	_	23	advmod	23:advmod	_
-23	want	want	VERB	VB	VerbForm=Inf	13	conj	13:conj	_
+23	want	want	VERB	VB	VerbForm=Inf	13	conj	13:conj:or	_
 24	to	to	PART	TO	_	27	mark	27:mark	_
 25	be	be	AUX	VB	VerbForm=Inf	27	cop	27:cop	_
 26	around	around	ADP	IN	_	27	case	27:case	_

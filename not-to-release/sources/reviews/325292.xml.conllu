@@ -18,17 +18,17 @@
 9	and	and	CCONJ	CC	_	15	cc	15:cc	_
 10	every	every	DET	DT	_	11	det	11:det	_
 11	time	time	NOUN	NN	Number=Sing	15	obl:tmod	15:obl:tmod	_
-12	food	food	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
+12	food	food	NOUN	NN	Number=Sing	15	nsubj	15:nsubj|16:nsubj:xsubj|19:nsubj:xsubj	_
 13	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
 14	served	serve	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	12	acl:relcl	12:acl:relcl	_
-15	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj	_
+15	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	_
 16	warmed	warm	VERB	VBN	Tense=Past|VerbForm=Part	15	xcomp	15:xcomp	_
 17	up	up	ADP	RP	_	16	compound:prt	16:compound:prt	_
 18	not	not	CCONJ	CC	_	19	cc	19:cc	_
-19	cooked	cook	VERB	VBN	Tense=Past|VerbForm=Part	16	conj	16:conj	_
+19	cooked	cook	VERB	VBN	Tense=Past|VerbForm=Part	16	conj	15:xcomp|16:conj:not	_
 20	after	after	SCONJ	IN	_	22	mark	22:mark	_
 21	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	22:nsubj	_
-22	order	order	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	advcl	19:advcl	_
+22	order	order	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	advcl	19:advcl:after	_
 23	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	22	obj	22:obj	SpaceAfter=No
 24	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -42,16 +42,16 @@
 6	both	both	DET	DT	_	7	det	7:det	_
 7	ways	way	NOUN	NNS	Number=Plur	5	advcl	5:advcl	_
 8	not	not	ADV	RB	_	5	advmod	5:advmod	_
-9	warm	warm	ADJ	JJ	Degree=Pos	5	conj	5:conj	_
+9	warm	warm	ADJ	JJ	Degree=Pos	5	conj	4:acl|5:conj	_
 10	or	or	CCONJ	CC	_	11	cc	11:cc	_
-11	cold	cold	ADJ	JJ	Degree=Pos	9	conj	9:conj	SpaceAfter=No
+11	cold	cold	ADJ	JJ	Degree=Pos	9	conj	9:conj:or	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-325292-0004
 # text = Price and taste is good.
 1	Price	price	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	taste	taste	NOUN	NN	Number=Sing	1	conj	1:conj	_
+3	taste	taste	NOUN	NN	Number=Sing	1	conj	1:conj:and|5:nsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 5	good	good	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 6	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -65,12 +65,12 @@
 5	if	if	SCONJ	IN	_	8	mark	8:mark	_
 6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 7	can	can	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	serve	serve	VERB	VB	VerbForm=Inf	4	advcl	4:advcl	_
+8	serve	serve	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:if	_
 9	when	when	ADV	WRB	PronType=Int	13	mark	13:mark	_
 10	food	food	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
-12	piping	pipe	VERB	VBG	VerbForm=Ger	13	amod	13:amod	_
-13	hot	hot	ADJ	JJ	Degree=Pos	8	advcl	8:advcl	SpaceAfter=No
+12	piping	pipe	ADV	RB	_	13	advmod	13:advmod	_
+13	hot	hot	ADJ	JJ	Degree=Pos	8	advcl	8:advcl:when	SpaceAfter=No
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-325292-0006

@@ -18,24 +18,24 @@
 3	looking	look	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 4	for	for	ADP	IN	_	6	case	6:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-6	camera	camera	NOUN	NN	Number=Sing	3	obl	3:obl	_
-7	that	that	PRON	WDT	PronType=Rel	8	nsubj	8:nsubj	_
+6	camera	camera	NOUN	NN	Number=Sing	3	obl	3:obl:for|8:nsubj	_
+7	that	that	PRON	WDT	PronType=Rel	8	nsubj	6:ref	_
 8	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
 9	really	really	ADV	RB	_	10	advmod	10:advmod	_
 10	good	good	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	zoom	zoom	NOUN	NN	Number=Sing	8	obj	8:obj	_
 12	during	during	ADP	IN	_	14	case	14:case	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
-14	video	video	NOUN	NN	Number=Sing	11	nmod	11:nmod	_
+14	video	video	NOUN	NN	Number=Sing	11	nmod	11:nmod:during	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	pictures	picture	NOUN	NNS	Number=Plur	14	conj	14:conj	SpaceAfter=No
+16	pictures	picture	NOUN	NNS	Number=Plur	14	conj	11:nmod:during|14:conj:and	SpaceAfter=No
 17	;	;	PUNCT	,	_	11	punct	11:punct	_
 18	and	and	CCONJ	CC	_	23	cc	23:cc	_
 19	good	good	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
 20	quality	quality	NOUN	NN	Number=Sing	23	compound	23:compound	_
 21	pictures	picture	NOUN	NNS	Number=Plur	23	compound	23:compound	_
 22	/	/	PUNCT	,	_	23	punct	23:punct	SpaceAfter=No
-23	videos	video	NOUN	NNS	Number=Plur	11	conj	11:conj	_
+23	videos	video	NOUN	NNS	Number=Plur	11	conj	8:obj|11:conj:and	_
 
 # sent_id = answers-20111108083559AAp6Jfq_ans-0003
 # text = I'm planning on buying a compact system camera at best buy ; so please list the one(s) I should purchase.
@@ -43,14 +43,14 @@
 2	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	planning	plan	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 4	on	on	SCONJ	IN	_	5	mark	5:mark	_
-5	buying	buy	VERB	VBG	VerbForm=Ger	3	advcl	3:advcl	_
+5	buying	buy	VERB	VBG	VerbForm=Ger	3	advcl	3:advcl:on	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 7	compact	compact	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	system	system	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	camera	camera	NOUN	NN	Number=Sing	5	obj	5:obj	_
 10	at	at	ADP	IN	_	12	case	12:case	_
 11	best	best	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	buy	buy	PROPN	NNP	Number=Sing	5	obl	5:obl	_
+12	buy	buy	PROPN	NNP	Number=Sing	5	obl	5:obl:at	_
 13	;	;	PUNCT	,	_	3	punct	3:punct	_
 14	so	so	ADV	RB	_	16	advmod	16:advmod	_
 15	please	please	INTJ	UH	_	16	discourse	16:discourse	_
@@ -77,23 +77,23 @@
 8	drop	drop	VERB	VB	VerbForm=Inf	0	root	0:root	_
 9	on	on	ADP	IN	_	11	case	11:case	_
 10	boxing	boxing	PROPN	NNP	Number=Sing	11	compound	11:compound	_
-11	day	day	PROPN	NNP	Number=Sing	8	obl	8:obl	SpaceAfter=No
+11	day	day	PROPN	NNP	Number=Sing	8	obl	8:obl:on	SpaceAfter=No
 12	?	?	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = answers-20111108083559AAp6Jfq_ans-0005
 # text = **and i can upload my pictures and videos on the computer (facebook)
 1	**	**	PUNCT	NFP	_	5	punct	5:punct	SpaceAfter=No
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	conj	5:conj	_
+3	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 4	can	can	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 5	upload	upload	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	pictures	picture	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	videos	video	NOUN	NNS	Number=Plur	7	conj	7:conj	_
+9	videos	video	NOUN	NNS	Number=Plur	7	conj	5:obj|7:conj:and	_
 10	on	on	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	computer	computer	NOUN	NN	Number=Sing	5	obl	5:obl	_
+12	computer	computer	NOUN	NN	Number=Sing	5	obl	5:obl:on	_
 13	(	(	PUNCT	-LRB-	_	14	punct	14:punct	SpaceAfter=No
 14	facebook	facebook	PROPN	NNP	Number=Sing	12	appos	12:appos	SpaceAfter=No
 15	)	)	PUNCT	-RRB-	_	14	punct	14:punct	_
@@ -105,5 +105,5 @@
 3	look	look	NOUN	NN	Number=Sing	1	obj	1:obj	_
 4	at	at	ADP	IN	_	6	case	6:case	_
 5	sony	sony	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	wx10	wx10	PROPN	NNP	Number=Sing	1	obl	1:obl	_
+6	wx10	wx10	PROPN	NNP	Number=Sing	1	obl	1:obl:at	_
 

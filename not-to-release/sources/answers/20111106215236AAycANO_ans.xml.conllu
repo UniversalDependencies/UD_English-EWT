@@ -6,7 +6,7 @@
 3	good	good	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	places	place	NOUN	NNS	Number=Plur	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
-6	eat	eat	VERB	VB	VerbForm=Inf	4	acl	4:acl	_
+6	eat	eat	VERB	VB	VerbForm=Inf	4	acl	4:acl:to	_
 7	brunch	brunch	NOUN	NN	Number=Sing	6	obj	6:obj	_
 8	at	at	ADP	IN	_	6	obl	6:obl	SpaceAfter=No
 9	?	?	PUNCT	.	_	4	punct	4:punct	_
@@ -20,24 +20,24 @@
 4	Saturday	Saturday	PROPN	NNP	Number=Sing	0	root	0:root	_
 5	:)	:)	SYM	NFP	_	4	discourse	4:discourse	_
 6	and	and	CCONJ	CC	_	8	cc	8:cc	_
-7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
-8	wan	wan	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj	SpaceAfter=No
-9	na	na	PART	TO	_	10	mark	10:mark	_
+7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj|10:nsubj:xsubj	_
+8	wan	want	VERB	VBP	Abbr=Yes|Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	SpaceAfter=No
+9	na	to	PART	TO	Abbr=Yes	10	mark	10:mark	_
 10	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	xcomp	8:xcomp	_
 11	breakfast	breakfast	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No
 12	/	/	PUNCT	,	_	13	cc	13:cc	SpaceAfter=No
-13	lunch	lunch	NOUN	NN	Number=Sing	11	conj	11:conj	_
+13	lunch	lunch	NOUN	NN	Number=Sing	11	conj	10:obj|11:conj	_
 14	with	with	ADP	IN	_	16	case	16:case	_
 15	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
-16	fam	fam	NOUN	NN	Number=Sing	10	obl	10:obl	SpaceAfter=No
+16	fam	fam	NOUN	NN	Number=Sing	10	obl	10:obl:with	SpaceAfter=No
 17	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0003
 # text = I was gonna have a dinner party that night but my cousin is having Having her bridal shower so brunch is it but the only places I know are denny's and ihop.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	3:aux	_
-3	gon	gon	VERB	VBG	VerbForm=Ger	0	root	0:root	SpaceAfter=No
-4	na	na	PART	TO	_	5	mark	5:mark	_
+3	gon	go	VERB	VBG	Abbr=Yes|Tense=Pres|VerbForm=Part	0	root	0:root	SpaceAfter=No
+4	na	to	PART	TO	Abbr=Yes	5	mark	5:mark	_
 5	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	xcomp	3:xcomp	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	dinner	dinner	NOUN	NN	Number=Sing	8	compound	8:compound	_
@@ -49,47 +49,47 @@
 13	cousin	cousin	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	_
 14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
 15	having	have	VERB	VBG	VerbForm=Ger	16	reparandum	16:reparandum	_
-16	Having	have	VERB	VBG	VerbForm=Ger	3	conj	3:conj	_
+16	Having	have	VERB	VBG	VerbForm=Ger	3	conj	3:conj:but	_
 17	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
 18	bridal	bridal	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 19	shower	shower	NOUN	NN	Number=Sing	16	obj	16:obj	_
 20	so	so	ADV	RB	_	22	advmod	22:advmod	_
 21	brunch	brunch	NOUN	NN	Number=Sing	22	nsubj	22:nsubj	_
-22	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+22	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:but	_
 23	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	22	expl	22:expl	_
 24	but	but	CCONJ	CC	_	31	cc	31:cc	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 26	only	only	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	places	place	NOUN	NNS	Number=Plur	31	nsubj	31:nsubj	_
+27	places	place	NOUN	NNS	Number=Plur	31	nsubj	31:nsubj|34:nsubj	_
 28	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	29	nsubj	29:nsubj	_
 29	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	27	acl:relcl	27:acl:relcl	_
 30	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	31	cop	31:cop	_
-31	denny	denny	PROPN	NNP	Number=Sing	3	conj	3:conj	SpaceAfter=No
+31	denny	denny	PROPN	NNP	Number=Sing	3	conj	3:conj:but	SpaceAfter=No
 32	's	's	PART	POS	_	31	case	31:case	_
 33	and	and	CCONJ	CC	_	34	cc	34:cc	_
-34	ihop	ihop	PROPN	NNP	Number=Sing	31	conj	31:conj	SpaceAfter=No
+34	ihop	ihop	PROPN	NNP	Number=Sing	31	conj	31:conj:and	SpaceAfter=No
 35	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0004
 # text = Oh and btw I live in los angeles look for places in like the lb area and torrance etc thanx ^_^
 1	Oh	oh	INTJ	UH	_	5	discourse	5:discourse	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	btw	btw	ADV	RB	_	1	conj	1:conj	_
+3	btw	btw	ADV	RB	_	1	conj	1:conj:and	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 5	live	live	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	los	los	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	angeles	angeles	PROPN	NNP	Number=Sing	5	obl	5:obl	_
+8	angeles	angeles	PROPN	NNP	Number=Sing	5	obl	5:obl:in	_
 9	look	look	VERB	VB	Mood=Imp|VerbForm=Fin	5	parataxis	5:parataxis	_
 10	for	for	ADP	IN	_	11	case	11:case	_
-11	places	place	NOUN	NNS	Number=Plur	9	obl	9:obl	_
+11	places	place	NOUN	NNS	Number=Plur	9	obl	9:obl:for	_
 12	in	in	ADP	IN	_	16	case	16:case	_
 13	like	like	INTJ	UH	_	16	discourse	16:discourse	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	lb	lb	PROPN	NNP	Number=Sing	16	compound	16:compound	_
-16	area	area	NOUN	NN	Number=Sing	11	nmod	11:nmod	_
+16	area	area	NOUN	NN	Number=Sing	11	nmod	11:nmod:in	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	torrance	torrance	PROPN	NNP	Number=Sing	16	conj	16:conj	_
+18	torrance	torrance	PROPN	NNP	Number=Sing	16	conj	11:nmod:in|16:conj:and	_
 19	etc	etc	X	FW	_	16	advmod	16:advmod	_
 20	thanx	thanx	INTJ	UH	_	5	discourse	5:discourse	_
 21	^_^	^_^	SYM	NFP	_	5	discourse	5:discourse	_
@@ -106,7 +106,7 @@
 8	Club	Club	PROPN	NNP	Number=Sing	4	obj	4:obj	SpaceAfter=No
 9	"	"	PUNCT	''	_	8	punct	8:punct	_
 10	in	in	ADP	IN	_	11	case	11:case	_
-11	Chicago	Chicago	PROPN	NNP	Number=Sing	8	nmod	8:nmod	SpaceAfter=No
+11	Chicago	Chicago	PROPN	NNP	Number=Sing	8	nmod	8:nmod:in	SpaceAfter=No
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0006
@@ -118,10 +118,10 @@
 5	on	on	ADP	IN	_	8	case	8:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	great	great	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	meal	meal	NOUN	NN	Number=Sing	4	obl	4:obl	_
+8	meal	meal	NOUN	NN	Number=Sing	4	obl	4:obl:on	_
 9	with	with	ADP	IN	_	11	case	11:case	_
 10	reasonable	reasonable	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	prices	price	NOUN	NNS	Number=Plur	8	nmod	8:nmod	SpaceAfter=No
+11	prices	price	NOUN	NNS	Number=Plur	8	nmod	8:nmod:with	SpaceAfter=No
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0007
@@ -140,7 +140,7 @@
 1	Just	just	ADV	RB	_	2	advmod	2:advmod	_
 2	relax	relax	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	enjoy	enjoy	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj	SpaceAfter=No
+4	enjoy	enjoy	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj:and	SpaceAfter=No
 5	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0009
@@ -159,7 +159,7 @@
 2	Breakfast	Breakfast	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 3	Club	Club	PROPN	NNP	Number=Sing	8	nsubj:pass	8:nsubj:pass	_
 4	&	&	CCONJ	CC	_	5	cc	5:cc	_
-5	Grill	Grill	PROPN	NNP	Number=Sing	3	conj	3:conj	_
+5	Grill	Grill	PROPN	NNP	Number=Sing	3	conj	3:conj|8:nsubj:pass	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux:pass	8:aux:pass	_
 7	conveniently	conveniently	ADV	RB	_	8	advmod	8:advmod	_
 8	located	locate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -169,7 +169,7 @@
 12	off	off	ADP	IN	_	15	case	15:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	Kennedy	Kennedy	PROPN	NNP	Number=Sing	15	compound	15:compound	_
-15	Expressway	Expressway	PROPN	NNP	Number=Sing	8	obl	8:obl	SpaceAfter=No
+15	Expressway	Expressway	PROPN	NNP	Number=Sing	8	obl	8:obl:off	SpaceAfter=No
 16	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0011
@@ -179,15 +179,15 @@
 3	always	always	ADV	RB	_	2	advmod	2:advmod	_
 4	plenty	plenty	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	parking	parking	NOUN	NN	Number=Sing	4	nmod	4:nmod	_
+6	parking	parking	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
 7	on	on	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	street	street	NOUN	NN	Number=Sing	2	obl	2:obl	_
+9	street	street	NOUN	NN	Number=Sing	2	obl	2:obl:on	_
 10	or	or	CCONJ	CC	_	14	cc	14:cc	_
 11	in	in	ADP	IN	_	14	case	14:case	_
 12	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 13	private	private	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	lot	lot	NOUN	NN	Number=Sing	9	conj	9:conj	SpaceAfter=No
+14	lot	lot	NOUN	NN	Number=Sing	9	conj	2:obl:in|9:conj:or	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0012
@@ -196,9 +196,9 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	SpaceAfter=No
 3	'd	would	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 4	rather	rather	ADV	RB	_	5	advmod	5:advmod	_
-5	dine	dine	VERB	VB	VerbForm=Inf	10	advcl	10:advcl	_
+5	dine	dine	VERB	VB	VerbForm=Inf	10	advcl	10:advcl:if	_
 6	at	at	ADP	IN	_	7	case	7:case	_
-7	home	home	NOUN	NN	Number=Sing	5	obl	5:obl	SpaceAfter=No
+7	home	home	NOUN	NN	Number=Sing	5	obl	5:obl:at	SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	simply	simply	ADV	RB	_	10	advmod	10:advmod	_
 10	call	call	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -210,30 +210,30 @@
 16	take	take	NOUN	NN	Number=Sing	18	compound	18:compound	SpaceAfter=No
 17	-	-	PUNCT	HYPH	_	18	punct	18:punct	SpaceAfter=No
 18	out	out	NOUN	NN	Number=Sing	19	compound	19:compound	_
-19	service	service	NOUN	NN	Number=Sing	10	obl	10:obl	SpaceAfter=No
+19	service	service	NOUN	NN	Number=Sing	10	obl	10:obl:with	SpaceAfter=No
 20	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0013
 # text = Plenty of parking on the weekends..during the week please park in the little lot across the street.
 1	Plenty	plenty	NOUN	NN	Number=Sing	0	root	0:root	_
 2	of	of	ADP	IN	_	3	case	3:case	_
-3	parking	parking	NOUN	NN	Number=Sing	1	nmod	1:nmod	_
+3	parking	parking	NOUN	NN	Number=Sing	1	nmod	1:nmod:of	_
 4	on	on	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	weekends	weekend	NOUN	NNS	Number=Plur	1	nmod	1:nmod	SpaceAfter=No
+6	weekends	weekend	NOUN	NNS	Number=Plur	1	nmod	1:nmod:on	SpaceAfter=No
 7	..	..	PUNCT	,	_	1	punct	1:punct	SpaceAfter=No
 8	during	during	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	week	week	NOUN	NN	Number=Sing	12	obl	12:obl	_
+10	week	week	NOUN	NN	Number=Sing	12	obl	12:obl:during	_
 11	please	please	INTJ	UH	_	12	discourse	12:discourse	_
 12	park	park	VERB	VB	Mood=Imp|VerbForm=Fin	1	parataxis	1:parataxis	_
 13	in	in	ADP	IN	_	16	case	16:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	little	little	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	lot	lot	NOUN	NN	Number=Sing	12	obl	12:obl	_
+16	lot	lot	NOUN	NN	Number=Sing	12	obl	12:obl:in	_
 17	across	across	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	street	street	NOUN	NN	Number=Sing	16	nmod	16:nmod	SpaceAfter=No
+19	street	street	NOUN	NN	Number=Sing	16	nmod	16:nmod:across	SpaceAfter=No
 20	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0014
@@ -241,7 +241,7 @@
 1	Directions	direction	NOUN	NNS	Number=Plur	0	root	0:root	_
 2	from	from	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	Kennedy	Kennedy	PROPN	NNP	Number=Sing	1	nmod	1:nmod	SpaceAfter=No
+4	Kennedy	Kennedy	PROPN	NNP	Number=Sing	1	nmod	1:nmod:from	SpaceAfter=No
 5	:	:	PUNCT	:	_	1	punct	1:punct	_
 6	Take	take	VERB	VB	Mood=Imp|VerbForm=Fin	1	appos	1:appos	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
@@ -249,7 +249,7 @@
 9	Exit	exit	NOUN	NN	Number=Sing	6	obj	6:obj	_
 10	off	off	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	Kennedy	Kennedy	PROPN	NNP	Number=Sing	6	obl	6:obl	SpaceAfter=No
+12	Kennedy	Kennedy	PROPN	NNP	Number=Sing	6	obl	6:obl:off	SpaceAfter=No
 13	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0015
@@ -259,11 +259,11 @@
 3	lights	light	NOUN	NNS	Number=Plur	4	obl:npmod	4:obl:npmod	_
 4	down	down	ADV	RB	_	1	advmod	1:advmod	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	take	take	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
+6	take	take	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 8	right	right	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	onto	onto	ADP	IN	_	10	case	10:case	_
-10	Ogden	Ogden	PROPN	NNP	Number=Sing	6	obl	6:obl	SpaceAfter=No
+10	Ogden	Ogden	PROPN	NNP	Number=Sing	6	obl	6:obl:onto	SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0016
@@ -272,9 +272,9 @@
 2	two	two	NUM	CD	NumType=Card	3	nummod	3:nummod	_
 3	blocks	block	NOUN	NNS	Number=Plur	1	obj	1:obj	_
 4	to	to	ADP	IN	_	5	case	5:case	_
-5	Hubbard	Hubbard	PROPN	NNP	Number=Sing	1	obl	1:obl	_
+5	Hubbard	Hubbard	PROPN	NNP	Number=Sing	1	obl	1:obl:to	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	take	take	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
+7	take	take	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 8	another	another	DET	DT	_	9	det	9:det	_
 9	right	right	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
 10	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -287,9 +287,9 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	corner	corner	NOUN	NN	Number=Sing	0	root	0:root	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	Hubbard	Hubbard	PROPN	NNP	Number=Sing	5	nmod	5:nmod	_
+7	Hubbard	Hubbard	PROPN	NNP	Number=Sing	5	nmod	5:nmod:of	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	Noble	Noble	PROPN	NNP	Number=Sing	7	conj	7:conj	SpaceAfter=No
+9	Noble	Noble	PROPN	NNP	Number=Sing	7	conj	5:nmod:of|7:conj:and	SpaceAfter=No
 10	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0018
@@ -327,14 +327,14 @@
 # text = Hours of Operation:
 1	Hours	hour	NOUN	NNS	Number=Plur	0	root	0:root	_
 2	of	of	ADP	IN	_	3	case	3:case	_
-3	Operation	operation	NOUN	NN	Number=Sing	1	nmod	1:nmod	SpaceAfter=No
+3	Operation	operation	NOUN	NN	Number=Sing	1	nmod	1:nmod:of	SpaceAfter=No
 4	:	:	PUNCT	:	_	1	punct	1:punct	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0024
 # text = Monday thru Friday
 1	Monday	Monday	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	thru	thru	ADP	IN	_	3	case	3:case	_
-3	Friday	Friday	PROPN	NNP	Number=Sing	1	nmod	1:nmod	_
+2	thru	through	ADP	IN	Abbr=Yes	3	case	3:case	_
+3	Friday	Friday	PROPN	NNP	Number=Sing	1	nmod	1:nmod:thru	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0025
 # text = 6:30am - 8:00pm
@@ -366,8 +366,8 @@
 # sent_id = answers-20111106215236AAycANO_ans-0029
 # text = Monday thru Friday
 1	Monday	Monday	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	thru	thru	ADP	IN	_	3	case	3:case	_
-3	Friday	Friday	PROPN	NNP	Number=Sing	1	nmod	1:nmod	_
+2	thru	through	ADP	IN	Abbr=Yes	3	case	3:case	_
+3	Friday	Friday	PROPN	NNP	Number=Sing	1	nmod	1:nmod:thru	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0030
 # text = 4:00pm - 6:00pm
@@ -401,15 +401,15 @@
 # text = Unless you plan on being late for the bridal shower you might want to post this again in the L.A. section.
 1	Unless	unless	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	plan	plan	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl	_
+3	plan	plan	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:unless	_
 4	on	on	SCONJ	IN	_	6	mark	6:mark	_
 5	being	be	AUX	VBG	VerbForm=Ger	6	cop	6:cop	_
-6	late	late	ADJ	JJ	Degree=Pos	3	advcl	3:advcl	_
+6	late	late	ADJ	JJ	Degree=Pos	3	advcl	3:advcl:on	_
 7	for	for	ADP	IN	_	10	case	10:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	bridal	bridal	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	shower	shower	NOUN	NN	Number=Sing	6	obl	6:obl	_
-11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
+10	shower	shower	NOUN	NN	Number=Sing	6	obl	6:obl:for	_
+11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj|15:nsubj:xsubj	_
 12	might	might	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
 13	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
@@ -419,6 +419,6 @@
 18	in	in	ADP	IN	_	21	case	21:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 20	L.A.	L.A.	PROPN	NNP	Number=Sing	21	compound	21:compound	_
-21	section	section	NOUN	NN	Number=Sing	15	obl	15:obl	SpaceAfter=No
+21	section	section	NOUN	NN	Number=Sing	15	obl	15:obl:in	SpaceAfter=No
 22	.	.	PUNCT	.	_	13	punct	13:punct	_
 

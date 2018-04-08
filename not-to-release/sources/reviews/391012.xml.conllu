@@ -5,7 +5,7 @@
 2	out	out	ADP	RP	_	1	compound:prt	1:compound:prt	_
 3	for	for	ADP	IN	_	5	case	5:case	_
 4	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-5	wallet	wallet	NOUN	NN	Number=Sing	1	obl	1:obl	_
+5	wallet	wallet	NOUN	NN	Number=Sing	1	obl	1:obl:for	_
 
 # sent_id = reviews-391012-0002
 # text = Watch out for your wallet!
@@ -13,7 +13,7 @@
 2	out	out	ADP	RP	_	1	compound:prt	1:compound:prt	_
 3	for	for	ADP	IN	_	5	case	5:case	_
 4	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-5	wallet	wallet	NOUN	NN	Number=Sing	1	obl	1:obl	SpaceAfter=No
+5	wallet	wallet	NOUN	NN	Number=Sing	1	obl	1:obl:for	SpaceAfter=No
 6	!	!	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-391012-0003
@@ -24,7 +24,7 @@
 4	overpriced	overpriced	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	for	for	ADP	IN	_	7	case	7:case	_
 6	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
-7	services	service	NOUN	NNS	Number=Plur	4	obl	4:obl	SpaceAfter=No
+7	services	service	NOUN	NNS	Number=Plur	4	obl	4:obl:for	SpaceAfter=No
 8	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-391012-0004
@@ -38,16 +38,16 @@
 7	event	event	NOUN	NN	Number=Sing	11	compound	11:compound	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	team	team	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	building	building	NOUN	NN	Number=Sing	7	conj	7:conj	_
-11	company	company	NOUN	NN	Number=Sing	2	advcl	2:advcl	_
+10	building	building	NOUN	NN	Number=Sing	7	conj	7:conj:and|11:compound	_
+11	company	company	NOUN	NN	Number=Sing	2	advcl	2:advcl:on	_
 12	for	for	ADP	IN	_	14	case	14:case	_
 13	corporate	corporate	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	clients	client	NOUN	NNS	Number=Plur	11	nmod	11:nmod	_
+14	clients	client	NOUN	NNS	Number=Plur	11	nmod	11:nmod:for	_
 15	but	but	CCONJ	CC	_	18	cc	18:cc	_
 16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
 17	better	better	ADV	RBR	Degree=Cmp	18	aux	18:aux	_
-18	believe	believe	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
-19	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	21	nsubj	21:nsubj	_
+18	believe	believe	VERB	VB	VerbForm=Inf	2	conj	2:conj:but	_
+19	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	21	nsubj	21:nsubj|23:nsubj:xsubj	_
 20	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	21	aux	21:aux	_
 21	going	go	VERB	VBG	VerbForm=Ger	18	ccomp	18:ccomp	_
 22	to	to	PART	TO	_	23	mark	23:mark	_
@@ -58,7 +58,7 @@
 27	that	that	DET	DT	Number=Sing|PronType=Dem	30	det	30:det	_
 28	feel	feel	VERB	VB	VerbForm=Inf	30	compound	30:compound	_
 29	good	good	ADJ	JJ	Degree=Pos	28	xcomp	28:xcomp	_
-30	premise	premise	NOUN	NN	Number=Sing	23	obl	23:obl	SpaceAfter=No
+30	premise	premise	NOUN	NN	Number=Sing	23	obl	23:obl:on	SpaceAfter=No
 31	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-391012-0005
@@ -67,8 +67,8 @@
 2	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 3	recent	recent	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 4	event	event	NOUN	NN	Number=Sing	5	compound	5:compound	_
-5	quote	quote	NOUN	NN	Number=Sing	12	obl	12:obl	_
-6	that	that	PRON	WDT	PronType=Rel	9	obj	9:obj	_
+5	quote	quote	NOUN	NN	Number=Sing	12	obl	9:obj|12:obl:on	_
+6	that	that	PRON	WDT	PronType=Rel	9	obj	5:ref	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 8	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	aux	9:aux	_
 9	done	do	VERB	VBN	Tense=Past|VerbForm=Part	5	acl:relcl	5:acl:relcl	SpaceAfter=No
@@ -78,11 +78,11 @@
 13	in	in	ADV	RB	_	12	advmod	12:advmod	_
 14	thousands	thousand	NOUN	NNS	Number=Plur	20	nmod:npmod	20:nmod:npmod	_
 15	of	of	ADP	IN	_	16	case	16:case	_
-16	dollars	dollar	NOUN	NNS	Number=Plur	14	nmod	14:nmod	_
+16	dollars	dollar	NOUN	NNS	Number=Plur	14	nmod	14:nmod:of	_
 17	over	over	ADP	IN	_	20	case	20:case	_
 18	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
 19	local	local	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-20	competition	competition	NOUN	NN	Number=Sing	12	obl	12:obl	SpaceAfter=No
+20	competition	competition	NOUN	NN	Number=Sing	12	obl	12:obl:over	SpaceAfter=No
 21	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = reviews-391012-0006
@@ -100,7 +100,7 @@
 11	locally	locally	ADV	RB	_	10	advmod	10:advmod	_
 12	at	at	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	city	city	NOUN	NN	Number=Sing	10	obl	10:obl	_
+14	city	city	NOUN	NN	Number=Sing	10	obl	10:obl:at	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	SpaceAfter=No
 16	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
 17	in	in	ADP	IN	_	14	acl:relcl	14:acl:relcl	SpaceAfter=No
@@ -112,10 +112,10 @@
 23	teams	team	NOUN	NNS	Number=Plur	21	obj	21:obj	SpaceAfter=No
 24	'	'	PUNCT	''	_	23	punct	23:punct	_
 25	in	in	ADP	IN	_	26	case	26:case	_
-26	areas	area	NOUN	NNS	Number=Plur	23	nmod	23:nmod	_
+26	areas	area	NOUN	NNS	Number=Plur	23	nmod	23:nmod:in	_
 27	through	through	ADP	IN	_	29	case	29:case	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
-29	country	country	NOUN	NN	Number=Sing	26	nmod	26:nmod	SpaceAfter=No
+29	country	country	NOUN	NN	Number=Sing	26	nmod	26:nmod:through	SpaceAfter=No
 30	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-391012-0007
@@ -124,43 +124,43 @@
 2	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	spoken	speak	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	to	to	ADP	IN	_	5	case	5:case	_
-5	vendors	vendor	NOUN	NNS	Number=Plur	3	obl	3:obl	_
-6	who	who	PRON	WP	PronType=Rel	8	nsubj:pass	8:nsubj:pass	_
+5	vendors	vendor	NOUN	NNS	Number=Plur	3	obl	3:obl:to|8:nsubj:pass|12:nsubj|26:nsubj	_
+6	who	who	PRON	WP	PronType=Rel	8	nsubj:pass	5:ref	_
 7	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	aux:pass	8:aux:pass	_
 8	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl:relcl	5:acl:relcl	_
 9	by	by	ADP	IN	_	10	case	10:case	_
-10	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	8	obl	8:obl	_
-11	who	who	PRON	WP	PronType=Rel	12	nsubj	12:nsubj	_
+10	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	8	obl	8:obl:by	_
+11	who	who	PRON	WP	PronType=Rel	12	nsubj	5:ref	_
 12	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 13	nothing	nothing	PRON	NN	Number=Sing	12	obj	12:obj	_
 14	good	good	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
-16	say	say	VERB	VB	VerbForm=Inf	13	acl	13:acl	_
+16	say	say	VERB	VB	VerbForm=Inf	13	acl	13:acl:to	_
 17	about	about	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	company	company	NOUN	NN	Number=Sing	16	obl	16:obl	_
+19	company	company	NOUN	NN	Number=Sing	16	obl	16:obl:about	_
 20	as	as	ADV	RB	_	16	advmod	16:advmod	_
 21	well	well	ADV	RB	Degree=Pos	20	fixed	20:fixed	_
 22	and	and	CCONJ	CC	_	26	cc	26:cc	_
 23	in	in	ADP	IN	_	24	case	24:case	_
-24	fact	fact	NOUN	NN	Number=Sing	26	obl	26:obl	_
+24	fact	fact	NOUN	NN	Number=Sing	26	obl	26:obl:in	_
 25	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	26	cop	26:cop	_
-26	afraid	afraid	ADJ	JJ	Degree=Pos	12	conj	12:conj	_
+26	afraid	afraid	ADJ	JJ	Degree=Pos	12	conj	5:acl:relcl|12:conj:and	_
 27	to	to	PART	TO	_	28	mark	28:mark	_
-28	quote	quote	VERB	VB	VerbForm=Inf	26	advcl	26:advcl	_
+28	quote	quote	VERB	VB	VerbForm=Inf	26	advcl	26:advcl:to	_
 29	events	event	NOUN	NNS	Number=Plur	28	obj	28:obj	_
 30	against	against	ADP	IN	_	31	case	31:case	_
-31	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	28	obl	28:obl	_
+31	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	28	obl	28:obl:against	_
 32	even	even	ADV	RB	_	36	advmod	36:advmod	_
 33	though	though	SCONJ	IN	_	36	mark	36:mark	_
 34	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	36	nsubj	36:nsubj	_
 35	openly	openly	ADV	RB	_	36	advmod	36:advmod	_
-36	admitted	admit	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	28	advcl	28:advcl	_
+36	admitted	admit	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	28	advcl	28:advcl:though	_
 37	that	that	SCONJ	IN	_	39	mark	39:mark	_
 38	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	39	nsubj	39:nsubj	_
 39	felt	feel	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	36	ccomp	36:ccomp	_
 40	Canadian	Canadian	PROPN	NNP	Number=Sing	41	compound	41:compound	_
-41	Outback	Outback	PROPN	NNP	Number=Sing	43	nsubj	43:nsubj	_
+41	Outback	Outback	PROPN	NNP	Number=Sing	43	nsubj	43:nsubj|51:nsubj	_
 42	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	43	aux	43:aux	_
 43	pricing	price	VERB	VBG	Tense=Pres|VerbForm=Part	39	ccomp	39:ccomp	_
 44	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	45	nmod:poss	45:nmod:poss	_
@@ -168,16 +168,16 @@
 46	out	out	ADP	IN	_	49	case	49:case	_
 47	of	of	ADP	IN	_	49	case	49:case	_
 48	the	the	DET	DT	Definite=Def|PronType=Art	49	det	49:det	_
-49	market	market	NOUN	NN	Number=Sing	43	obl	43:obl	_
+49	market	market	NOUN	NN	Number=Sing	43	obl	43:obl:of	_
 50	and	and	CCONJ	CC	_	51	cc	51:cc	_
-51	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	43	conj	43:conj	_
+51	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	43	conj	39:ccomp|43:conj:and	_
 52	more	more	ADJ	JJR	Degree=Cmp	51	obj	51:obj	_
 53	to	to	PART	TO	_	54	mark	54:mark	_
-54	hurt	hurt	VERB	VB	VerbForm=Inf	52	acl	52:acl	_
+54	hurt	hurt	VERB	VB	VerbForm=Inf	52	acl	52:acl:to	_
 55	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	56	nmod:poss	56:nmod:poss	_
 56	business	business	NOUN	NN	Number=Sing	54	obj	54:obj	_
 57	than	than	SCONJ	IN	_	58	mark	58:mark	_
-58	help	help	VERB	VB	VerbForm=Inf	52	advcl	52:advcl	_
+58	help	help	VERB	VB	VerbForm=Inf	52	advcl	52:advcl:than	_
 59	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	58	obj	58:obj	SpaceAfter=No
 60	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -191,7 +191,7 @@
 6	ltake	ltake	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
 7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	obj	6:obj	_
 8	for	for	ADP	IN	_	9	case	9:case	_
-9	everything	everything	PRON	NN	Number=Sing	6	obl	6:obl	_
+9	everything	everything	PRON	NN	Number=Sing	6	obl	6:obl:for	_
 10	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 11	can	can	AUX	MD	VerbForm=Fin	9	acl:relcl	9:acl:relcl	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_

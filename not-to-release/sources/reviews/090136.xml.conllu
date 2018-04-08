@@ -3,23 +3,23 @@
 # text = simple but perfect
 1	simple	simple	ADJ	JJ	Degree=Pos	0	root	0:root	_
 2	but	but	CCONJ	CC	_	3	cc	3:cc	_
-3	perfect	perfect	ADJ	JJ	Degree=Pos	1	conj	1:conj	_
+3	perfect	perfect	ADJ	JJ	Degree=Pos	1	conj	1:conj:but	_
 
 # sent_id = reviews-090136-0002
 # text = IF you want flashy fancy food stacked high with lots of fussy garnishes, this is not the place for you.
 1	IF	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	advcl	19:advcl	_
+3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	advcl	19:advcl:if	_
 4	flashy	flashy	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 5	fancy	fancy	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	food	food	NOUN	NN	Number=Sing	3	obj	3:obj	_
 7	stacked	stack	VERB	VBN	Tense=Past|VerbForm=Part	6	acl	6:acl	_
 8	high	high	ADV	RB	Degree=Pos	7	xcomp	7:xcomp	_
 9	with	with	ADP	IN	_	10	case	10:case	_
-10	lots	lot	NOUN	NNS	Number=Plur	7	obl	7:obl	_
+10	lots	lot	NOUN	NNS	Number=Plur	7	obl	7:obl:with	_
 11	of	of	ADP	IN	_	13	case	13:case	_
 12	fussy	fussy	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	garnishes	garnish	NOUN	NNS	Number=Plur	10	nmod	10:nmod	SpaceAfter=No
+13	garnishes	garnish	NOUN	NNS	Number=Plur	10	nmod	10:nmod:of	SpaceAfter=No
 14	,	,	PUNCT	,	_	19	punct	19:punct	_
 15	this	this	PRON	DT	Number=Sing|PronType=Dem	19	nsubj	19:nsubj	_
 16	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
@@ -27,19 +27,19 @@
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 19	place	place	NOUN	NN	Number=Sing	0	root	0:root	_
 20	for	for	ADP	IN	_	21	case	21:case	_
-21	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	19	nmod	19:nmod	SpaceAfter=No
+21	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	19	nmod	19:nmod:for	SpaceAfter=No
 22	.	.	PUNCT	.	_	19	punct	19:punct	_
 
 # sent_id = reviews-090136-0003
 # text = If you want perfectly executed simple dishes that feature a few exquisite ingredients, you'll love Vetri.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl	_
+3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl:if	_
 4	perfectly	perfectly	ADV	RB	_	5	advmod	5:advmod	_
 5	executed	execute	VERB	VBN	Tense=Past|VerbForm=Part	7	amod	7:amod	_
 6	simple	simple	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	dishes	dish	NOUN	NNS	Number=Plur	3	obj	3:obj	_
-8	that	that	PRON	WDT	PronType=Rel	9	nsubj	9:nsubj	_
+7	dishes	dish	NOUN	NNS	Number=Plur	3	obj	3:obj|9:nsubj	_
+8	that	that	PRON	WDT	PronType=Rel	9	nsubj	7:ref	_
 9	feature	feature	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 11	few	few	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
@@ -61,7 +61,7 @@
 5	best	best	ADJ	JJS	Degree=Sup	6	amod	6:amod	_
 6	pasta	pasta	NOUN	NN	Number=Sing	0	root	0:root	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	gnocchi	gnocchi	NOUN	NN	Number=Sing	6	conj	6:conj	_
+8	gnocchi	gnocchi	NOUN	NN	Number=Sing	6	conj	6:conj:and	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	SpaceAfter=No
 10	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
 11	ever	ever	ADV	RB	_	12	advmod	12:advmod	_
@@ -70,7 +70,7 @@
 14	and	and	CCONJ	CC	_	17	cc	17:cc	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	SpaceAfter=No
 16	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
-17	eaten	eat	VERB	VBN	Tense=Past|VerbForm=Part	6	conj	6:conj	_
+17	eaten	eat	VERB	VBN	Tense=Past|VerbForm=Part	6	conj	6:conj:and	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
 19	lot	lot	NOUN	NN	Number=Sing	17	obj	17:obj	SpaceAfter=No
 20	)	)	PUNCT	-RRB-	_	6	punct	6:punct	SpaceAfter=No
@@ -105,18 +105,18 @@
 2	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	dined	dine	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	at	at	ADP	IN	_	5	case	5:case	_
-5	lots	lot	NOUN	NNS	Number=Plur	3	obl	3:obl	_
+5	lots	lot	NOUN	NNS	Number=Plur	3	obl	3:obl:at	_
 6	of	of	ADP	IN	_	10	case	10:case	_
 7	high	high	ADJ	JJ	Degree=Pos	9	amod	9:amod	SpaceAfter=No
 8	-	-	PUNCT	HYPH	_	9	punct	9:punct	SpaceAfter=No
 9	end	end	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	restaurants	restaurant	NOUN	NNS	Number=Plur	5	nmod	5:nmod	_
+10	restaurants	restaurant	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	_
 11	and	and	CCONJ	CC	_	16	cc	16:cc	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	SpaceAfter=No
 13	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
 14	never	never	ADV	RB	_	15	advmod	15:advmod	_
 15	before	before	ADV	RB	_	16	advmod	16:advmod	_
-16	felt	feel	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj	_
+16	felt	feel	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj:and	_
 17	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 18	money	money	NOUN	NN	Number=Sing	22	nsubj:pass	22:nsubj:pass	_
 19	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	aux:pass	22:aux:pass	_

@@ -6,14 +6,14 @@
 3	not	not	PART	RB	_	4	advmod	4:advmod	_
 4	going	go	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 5	unless	unless	SCONJ	IN	_	7	mark	7:mark	_
-6	lisa	lisa	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
-7	promises	promise	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl	_
+6	lisa	lisa	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj|11:nsubj:xsubj|13:nsubj:xsubj	_
+7	promises	promise	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:unless	_
 8	to	to	PART	TO	_	11	mark	11:mark	_
 9	get	get	VERB	VB	VerbForm=Inf	11	aux	11:aux	_
 10	all	all	ADV	RB	_	11	advmod	11:advmod	_
 11	wasted	wasted	ADJ	JJ	Degree=Pos	7	xcomp	7:xcomp	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	boob	boob	VERB	VB	VerbForm=Inf	11	conj	11:conj	_
+13	boob	boob	VERB	VB	VerbForm=Inf	11	conj	7:xcomp|11:conj:and	_
 14	out	out	ADP	RP	_	13	compound:prt	13:compound:prt	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -52,9 +52,9 @@
 2	up	up	ADV	RB	_	0	root	0:root	_
 3	for	for	ADP	IN	_	5	case	5:case	_
 4	happy	happy	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	hour	hour	NOUN	NN	Number=Sing	2	obl	2:obl	_
+5	hour	hour	NOUN	NN	Number=Sing	2	obl	2:obl:for	_
 6	after	after	ADP	IN	_	7	case	7:case	_
-7	work	work	NOUN	NN	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+7	work	work	NOUN	NN	Number=Sing	5	nmod	5:nmod:after	SpaceAfter=No
 8	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent23_13-0005
@@ -66,13 +66,13 @@
 5	's	's	PART	POS	_	4	case	4:case	_
 6	at	at	ADP	IN	_	8	case	8:case	_
 7	around	around	ADV	RB	_	8	advmod	8:advmod	_
-8	5	5	NUM	CD	NumType=Card	4	nmod	4:nmod	SpaceAfter=No
+8	5	5	NUM	CD	NumType=Card	4	nmod	4:nmod:at	SpaceAfter=No
 9	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent23_13-0006
 # text = Let me know
 1	Let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obj	1:obj	_
+2	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obj	1:obj|3:nsubj:xsubj	_
 3	know	know	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
 
 # sent_id = email-enronsent23_13-0007
@@ -118,8 +118,8 @@
 8	n't	not	PART	RB	_	7	advmod	7:advmod	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	slightest	slightest	ADJ	JJS	Degree=Sup	11	amod	11:amod	_
-11	idea	idea	NOUN	NN	Number=Sing	7	obj	7:obj	_
-12	what	what	PRON	WP	PronType=Rel	14	obj	14:obj	_
+11	idea	idea	NOUN	NN	Number=Sing	7	obj	7:obj|14:obj	_
+12	what	what	PRON	WP	PronType=Rel	14	obj	11:ref	_
 13	that	that	PRON	DT	Number=Sing|PronType=Dem	14	nsubj	14:nsubj	_
 14	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	SpaceAfter=No
 15	?	?	PUNCT	.	_	4	punct	4:punct	_

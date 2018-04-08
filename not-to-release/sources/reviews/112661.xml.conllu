@@ -10,7 +10,7 @@
 
 # sent_id = reviews-112661-0002
 # text = I wanted to try someplace new again.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj	_
 2	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	try	try	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
@@ -33,16 +33,16 @@
 3	wife	wife	NOUN	NN	Number=Sing	1	obj	1:obj	_
 4	Deb	Deb	PROPN	NNP	Number=Sing	3	appos	3:appos	_
 5	with	with	ADP	IN	_	6	case	6:case	_
-6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obl	1:obl	_
+6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obl	1:obl:with	_
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_
-8	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
-9	like	like	VERB	VB	VerbForm=Inf	1	conj	1:conj	_
+8	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj|15:nsubj	_
+9	like	like	VERB	VB	VerbForm=Inf	1	conj	1:conj:and	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 11	Fried	fry	VERB	VBN	Tense=Past|VerbForm=Part	13	amod	13:amod	_
 12	Crab	crab	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	Wontons	wonton	NOUN	NNS	Number=Plur	9	obj	9:obj	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	conj	9:conj	_
+15	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	conj	9:conj:and	_
 16	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
 17	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	18	cop	18:cop	_
 18	good	good	ADJ	JJ	Degree=Pos	15	ccomp	15:ccomp	SpaceAfter=No
@@ -73,7 +73,7 @@
 7	and	and	CCONJ	CC	_	10	cc	10:cc	_
 8	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	10:cop	_
-10	great	great	ADJ	JJ	Degree=Pos	2	conj	2:conj	SpaceAfter=No
+10	great	great	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	SpaceAfter=No
 11	..	..	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-112661-0007
@@ -83,8 +83,8 @@
 3	ordered	order	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	Neptune	Neptune	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	Platter	platter	NOUN	NN	Number=Sing	3	obj	3:obj	_
-7	which	which	PRON	WDT	PronType=Rel	9	nsubj	9:nsubj	_
+6	Platter	platter	NOUN	NN	Number=Sing	3	obj	3:obj|9:nsubj	_
+7	which	which	PRON	WDT	PronType=Rel	9	nsubj	6:ref	_
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	9:cop	_
 9	awesome	awesome	ADJ	JJ	Degree=Pos	6	acl:relcl	6:acl:relcl	SpaceAfter=No
 10	...	...	PUNCT	,	_	3	punct	3:punct	_
@@ -95,7 +95,7 @@
 15	5	5	NUM	CD	NumType=Card	19	compound	19:compound	_
 16	out	out	ADP	IN	_	18	case	18:case	_
 17	of	of	ADP	IN	_	18	case	18:case	_
-18	5	5	NUM	CD	NumType=Card	15	nmod	15:nmod	_
+18	5	5	NUM	CD	NumType=Card	15	nmod	15:nmod:of	_
 19	stars	star	NOUN	NNS	Number=Plur	14	obj	14:obj	SpaceAfter=No
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 

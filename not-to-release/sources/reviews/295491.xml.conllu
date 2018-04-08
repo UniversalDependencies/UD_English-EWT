@@ -2,7 +2,7 @@
 # sent_id = reviews-295491-0001
 # text = Skip te rest - this is the best
 1	Skip	skip	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	te	te	DET	DT	_	3	det	3:det	_
+2	te	the	DET	DT	Typo=Yes	3	det	3:det	_
 3	rest	rest	NOUN	NN	Number=Sing	1	obj	1:obj	_
 4	-	-	PUNCT	,	_	1	punct	1:punct	_
 5	this	this	PRON	DT	Number=Sing|PronType=Dem	8	nsubj	8:nsubj	_
@@ -41,7 +41,7 @@
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	obj	6:obj	_
 8	as	as	ADP	IN	_	10	case	10:case	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	friend	friend	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+10	friend	friend	NOUN	NN	Number=Sing	6	obl	6:obl:as	SpaceAfter=No
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-295491-0005
@@ -52,7 +52,7 @@
 4	for	for	ADP	IN	_	7	case	7:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	better	better	ADJ	JJR	Degree=Cmp	7	amod	7:amod	_
-7	experience	experience	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+7	experience	experience	NOUN	NN	Number=Sing	3	obl	3:obl:for	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-295491-0006
@@ -63,7 +63,7 @@
 4	here	here	ADV	RB	PronType=Dem	3	advmod	3:advmod	_
 5	any	any	DET	DT	_	8	compound	8:compound	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	every	every	DET	DT	_	5	conj	5:conj	_
+7	every	every	DET	DT	_	5	conj	5:conj:and|8:compound	_
 8	time	time	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 10	come	come	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
@@ -79,8 +79,8 @@
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	happy	happy	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	camper	camper	NOUN	NN	Number=Sing	0	root	0:root	_
-8	who	who	PRON	WP	PronType=Rel	10	nsubj	10:nsubj	_
+7	camper	camper	NOUN	NN	Number=Sing	0	root	10:nsubj	_
+8	who	who	PRON	WP	PronType=Rel	10	nsubj	7:ref	_
 9	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
 10	found	find	VERB	VBN	Tense=Past|VerbForm=Part	7	acl:relcl	7:acl:relcl	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_

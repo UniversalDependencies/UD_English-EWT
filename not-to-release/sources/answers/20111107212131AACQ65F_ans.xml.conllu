@@ -2,14 +2,14 @@
 # sent_id = answers-20111107212131AACQ65F_ans-0001
 # text = Travelers guide - For the young and unknowledgeable?
 1	Traveler	traveler	NOUN	NN	Number=Sing	3	nmod:poss	3:nmod:poss	SpaceAfter=No
-2	s	s	PART	POS	_	1	case	1:case	_
+2	s	's	PART	POS	_	1	case	1:case	_
 3	guide	guide	NOUN	NN	Number=Sing	0	root	0:root	_
 4	-	-	PUNCT	,	_	3	punct	3:punct	_
 5	For	for	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	young	young	ADJ	JJ	Degree=Pos	3	nmod	3:nmod	_
+7	young	young	ADJ	JJ	Degree=Pos	3	nmod	3:nmod:for	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	unknowledgeable	unknowledgeable	ADJ	JJ	Degree=Pos	7	conj	7:conj	SpaceAfter=No
+9	unknowledgeable	unknowledgeable	ADJ	JJ	Degree=Pos	7	conj	3:nmod:for|7:conj:and	SpaceAfter=No
 10	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111107212131AACQ65F_ans-0002
@@ -30,18 +30,18 @@
 5	along	along	ADV	RB	_	4	advmod	4:advmod	_
 6	with	with	ADP	IN	_	8	case	8:case	_
 7	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	family	family	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+8	family	family	NOUN	NN	Number=Sing	4	obl	4:obl:with	SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111107212131AACQ65F_ans-0004
 # text = I dislike this urban society and want to leave this whole enviroment.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|7:nsubj|9:nsubj:xsubj	_
 2	dislike	dislike	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
 4	urban	urban	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	society	society	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj	_
+7	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	leave	leave	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
 10	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	12:det	_
@@ -68,7 +68,7 @@
 6	best	best	ADJ	JJS	Degree=Sup	7	amod	7:amod	_
 7	way	way	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	of	of	SCONJ	IN	_	9	mark	9:mark	_
-9	doing	do	VERB	VBG	VerbForm=Ger	7	acl	7:acl	_
+9	doing	do	VERB	VBG	VerbForm=Ger	7	acl	7:acl:of	_
 10	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj	SpaceAfter=No
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -90,7 +90,7 @@
 1	wait	wait	VERB	VB	VerbForm=Inf	0	root	0:root	_
 2	for	for	ADP	IN	_	4	case	4:case	_
 3	18th	18th	ADJ	JJ	Degree=Pos|NumType=Ord	4	amod	4:amod	_
-4	birthday	birthday	NOUN	NN	Number=Sing	1	obl	1:obl	SpaceAfter=No
+4	birthday	birthday	NOUN	NN	Number=Sing	1	obl	1:obl:for	SpaceAfter=No
 5	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111107212131AACQ65F_ans-0009
@@ -98,12 +98,12 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	live	live	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	in	in	ADP	IN	_	4	case	4:case	_
-4	London	London	PROPN	NNP	Number=Sing	2	obl	2:obl	SpaceAfter=No
+4	London	London	PROPN	NNP	Number=Sing	2	obl	2:obl:in	SpaceAfter=No
 5	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111107212131AACQ65F_ans-0010
 # text = I want to go travelling.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj	_
 2	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	go	go	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
@@ -130,16 +130,16 @@
 16	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	15	obj	15:obj	_
 17	out	out	ADP	IN	_	19	case	19:case	_
 18	of	of	ADP	IN	_	19	case	19:case	_
-19	home	home	NOUN	NN	Number=Sing	15	obl	15:obl	_
+19	home	home	NOUN	NN	Number=Sing	15	obl	15:obl:of	_
 20	when	when	ADV	WRB	PronType=Int	22	mark	22:mark	_
 21	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	22	nsubj	22:nsubj	_
-22	turn	turn	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl	_
+22	turn	turn	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl:when	_
 23	18	18	NUM	CD	NumType=Card	22	obj	22:obj	SpaceAfter=No
 24	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111107212131AACQ65F_ans-0012
 # text = I don't particularly want to stay with them atm either.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj	_
 2	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	5:aux	SpaceAfter=No
 3	n't	not	PART	RB	_	5	advmod	5:advmod	_
 4	particularly	particularly	ADV	RB	_	5	advmod	5:advmod	_
@@ -147,7 +147,7 @@
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	stay	stay	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
 8	with	with	ADP	IN	_	9	case	9:case	_
-9	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	7	obl	7:obl	_
+9	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	7	obl	7:obl:with	_
 10	atm	atm	ADV	RB	_	7	advmod	7:advmod	_
 11	either	either	ADV	RB	_	7	advmod	7:advmod	SpaceAfter=No
 12	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -164,7 +164,7 @@
 8	convenient	convenient	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	thing	thing	NOUN	NN	Number=Sing	0	root	0:root	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	do	do	VERB	VB	VerbForm=Inf	9	acl	9:acl	SpaceAfter=No
+11	do	do	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	SpaceAfter=No
 12	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = answers-20111107212131AACQ65F_ans-0014
@@ -172,7 +172,7 @@
 1	Anyway	anyway	INTJ	UH	_	2	discourse	2:discourse	_
 2	Advice	advice	NOUN	NN	Number=Sing	0	root	0:root	_
 3	for	for	ADP	IN	_	4	case	4:case	_
-4	travelling	travelling	NOUN	NN	Number=Sing	2	nmod	2:nmod	SpaceAfter=No
+4	travelling	travelling	NOUN	NN	Number=Sing	2	nmod	2:nmod:for	SpaceAfter=No
 5	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111107212131AACQ65F_ans-0015
@@ -183,7 +183,7 @@
 4	best	best	ADJ	JJS	Degree=Sup	5	amod	5:amod	_
 5	way	way	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	_
 6	of	of	SCONJ	IN	_	7	mark	7:mark	_
-7	doing	do	VERB	VBG	VerbForm=Ger	5	acl	5:acl	_
+7	doing	do	VERB	VBG	VerbForm=Ger	5	acl	5:acl:of	_
 8	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	obj	7:obj	SpaceAfter=No
 9	?	?	PUNCT	.	_	1	punct	1:punct	_
 
@@ -191,7 +191,7 @@
 # text = Hotels for travelling will be expensive.
 1	Hotels	hotel	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
 2	for	for	ADP	IN	_	3	case	3:case	_
-3	travelling	travelling	NOUN	NN	Number=Sing	1	nmod	1:nmod	_
+3	travelling	travelling	NOUN	NN	Number=Sing	1	nmod	1:nmod:for	_
 4	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 5	be	be	AUX	VB	VerbForm=Inf	6	cop	6:cop	_
 6	expensive	expensive	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
@@ -199,7 +199,7 @@
 
 # sent_id = answers-20111107212131AACQ65F_ans-0017
 # text = anybody is open to answers but I would much prefere somebody with traveling experience.
-1	anybody	anybody	PRON	NN	Number=Sing	3	nsubj	3:nsubj	_
+1	anybody	anybody	PRON	NN	Number=Sing	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	open	open	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	to	to	ADP	TO	_	5	mark	5:mark	_
@@ -208,16 +208,16 @@
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 8	would	would	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 9	much	much	ADV	RB	_	10	advmod	10:advmod	_
-10	prefere	prefer	VERB	VB	VerbForm=Inf	3	conj	3:conj	_
+10	prefere	prefer	VERB	VB	VerbForm=Inf	3	conj	3:conj:but	_
 11	somebody	somebody	PRON	NN	Number=Sing	10	obj	10:obj	_
 12	with	with	ADP	IN	_	14	case	14:case	_
 13	traveling	traveling	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	experience	experience	NOUN	NN	Number=Sing	11	nmod	11:nmod	SpaceAfter=No
+14	experience	experience	NOUN	NN	Number=Sing	11	nmod	11:nmod:with	SpaceAfter=No
 15	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111107212131AACQ65F_ans-0018
 # text = I want to go all over :) I don't have a set route yet.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj	_
 2	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	go	go	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
@@ -242,11 +242,11 @@
 4	pack	pack	NOUN	NN	Number=Sing	1	obj	1:obj	_
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
 6	sleeping	sleeping	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	bag	bag	NOUN	NN	Number=Sing	4	conj	4:conj	_
+7	bag	bag	NOUN	NN	Number=Sing	4	conj	1:obj|4:conj:and	_
 8	or	or	CCONJ	CC	_	11	cc	11:cc	_
 9	good	good	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 10	warm	warm	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	blanket	blanket	NOUN	NN	Number=Sing	7	conj	7:conj	SpaceAfter=No
+11	blanket	blanket	NOUN	NN	Number=Sing	7	conj	7:conj:or	SpaceAfter=No
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111107212131AACQ65F_ans-0020
@@ -260,11 +260,11 @@
 # text = Light ,warm, but also itchy.
 1	Light	light	ADJ	JJ	Degree=Pos	0	root	0:root	_
 2	,	,	PUNCT	,	_	3	punct	3:punct	SpaceAfter=No
-3	warm	warm	ADJ	JJ	Degree=Pos	1	conj	1:conj	SpaceAfter=No
+3	warm	warm	ADJ	JJ	Degree=Pos	1	conj	1:conj:but	SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	but	but	CCONJ	CC	_	7	cc	7:cc	_
 6	also	also	ADV	RB	_	7	advmod	7:advmod	_
-7	itchy	itchy	ADJ	JJ	Degree=Pos	1	conj	1:conj	SpaceAfter=No
+7	itchy	itchy	ADJ	JJ	Degree=Pos	1	conj	1:conj:but	SpaceAfter=No
 8	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111107212131AACQ65F_ans-0022
@@ -282,9 +282,9 @@
 4	beg	beg	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	for	for	ADP	IN	_	7	case	7:case	_
 6	spare	spare	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	change	change	NOUN	NN	Number=Sing	4	obl	4:obl	_
+7	change	change	NOUN	NN	Number=Sing	4	obl	4:obl:for	_
 8	when	when	ADV	WRB	PronType=Int	11	advmod	11:advmod	_
-9	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	10	obj	10:obj	_
+9	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	10	obj	10:obj|11:nsubj:xsubj	_
 10	get	get	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl	_
 11	hungry	hungry	ADJ	JJ	Degree=Pos	10	xcomp	10:xcomp	SpaceAfter=No
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -297,10 +297,10 @@
 4	survival	survival	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	skills	skill	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 6	before	before	SCONJ	IN	_	7	mark	7:mark	_
-7	setting	set	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	_
+7	setting	set	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:before	_
 8	out	out	ADP	RP	_	7	compound:prt	7:compound:prt	_
 9	on	on	ADP	IN	_	11	case	11:case	_
 10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-11	own	own	ADJ	JJ	Degree=Pos	7	obl	7:obl	SpaceAfter=No
+11	own	own	ADJ	JJ	Degree=Pos	7	obl	7:obl:on	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
 

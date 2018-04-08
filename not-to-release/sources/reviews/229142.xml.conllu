@@ -9,22 +9,22 @@
 6	Annual	annual	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	Walk	Walk	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 8	Against	against	ADP	IN	_	9	case	9:case	_
-9	Drugs	Drugs	PROPN	NNPS	Number=Plur	7	nmod	7:nmod	_
+9	Drugs	Drugs	PROPN	NNPS	Number=Plur	7	nmod	7:nmod:against	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	Alcohol	Alcohol	PROPN	NNP	Number=Sing	9	conj	9:conj	_
-12	event	event	NOUN	NN	Number=Sing	2	obl	2:obl	SpaceAfter=No
+11	Alcohol	Alcohol	PROPN	NNP	Number=Sing	9	conj	7:nmod:against|9:conj:and	_
+12	event	event	NOUN	NN	Number=Sing	2	obl	2:obl:for	SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-229142-0002
 # text = They were very professional, neat and clean.
-1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj|6:nsubj|8:nsubj	_
 2	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
 3	very	very	ADV	RB	_	4	advmod	4:advmod	_
 4	professional	professional	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	neat	neat	ADJ	JJ	Degree=Pos	4	conj	4:conj	_
+6	neat	neat	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	clean	clean	ADJ	JJ	Degree=Pos	4	conj	4:conj	SpaceAfter=No
+8	clean	clean	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-229142-0003
@@ -33,13 +33,13 @@
 2	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	through	through	ADV	RB	_	2	advmod	2:advmod	_
 4	on	on	ADP	IN	_	5	case	5:case	_
-5	all	all	DET	DT	_	2	obl	2:obl	_
+5	all	all	DET	DT	_	2	obl	2:obl:on	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	promises	promise	NOUN	NNS	Number=Plur	5	nmod	5:nmod	_
+8	promises	promise	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
-11	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+11	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 13	very	very	ADV	RB	_	14	advmod	14:advmod	_
 14	successful	successful	ADJ	JJ	Degree=Pos	15	amod	15:amod	_

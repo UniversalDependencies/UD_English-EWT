@@ -2,8 +2,8 @@
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0001
 # text = For those who believe....................
 1	For	for	ADP	IN	_	2	case	2:case	_
-2	those	those	PRON	DT	Number=Plur|PronType=Dem	0	root	0:root	_
-3	who	who	PRON	WP	PronType=Rel	4	nsubj	4:nsubj	_
+2	those	those	PRON	DT	Number=Plur|PronType=Dem	0	root	4:nsubj	_
+3	who	who	PRON	WP	PronType=Rel	4	nsubj	2:ref	_
 4	believe	believe	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	SpaceAfter=No
 5	....................	....................	PUNCT	,	_	2	punct	2:punct	_
 
@@ -11,7 +11,7 @@
 # text = Aries in 2005 - Flexibility
 1	Aries	Aries	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod:in	_
 4	-	-	PUNCT	:	_	1	punct	1:punct	_
 5	Flexibility	flexibility	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
 
@@ -19,24 +19,24 @@
 # text = If you want a motto for 2005, the best one to adopt would be "go with the flow."
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl	_
+3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl:if	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	motto	motto	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	for	for	ADP	IN	_	7	case	7:case	_
-7	2005	2005	NUM	CD	NumType=Card	5	nmod	5:nmod	SpaceAfter=No
+7	2005	2005	NUM	CD	NumType=Card	5	nmod	5:nmod:for	SpaceAfter=No
 8	,	,	PUNCT	,	_	15	punct	15:punct	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	best	best	ADJ	JJS	Degree=Sup	11	amod	11:amod	_
 11	one	one	NUM	CD	NumType=Card	15	nsubj	15:nsubj	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
-13	adopt	adopt	VERB	VB	VerbForm=Inf	11	advcl	11:advcl	_
+13	adopt	adopt	VERB	VB	VerbForm=Inf	11	advcl	11:advcl:to	_
 14	would	would	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
 15	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	_
 16	"	"	PUNCT	``	_	15	punct	15:punct	SpaceAfter=No
 17	go	go	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	_
 18	with	with	ADP	IN	_	20	case	20:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
-20	flow	flow	NOUN	NN	Number=Sing	17	obl	17:obl	SpaceAfter=No
+20	flow	flow	NOUN	NN	Number=Sing	17	obl	17:obl:with	SpaceAfter=No
 21	.	.	PUNCT	.	_	15	punct	15:punct	SpaceAfter=No
 22	"	"	PUNCT	''	_	15	punct	15:punct	_
 
@@ -48,21 +48,21 @@
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	year	year	NOUN	NN	Number=Sing	0	root	0:root	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	ups	up	NOUN	NNS	Number=Plur	5	nmod	5:nmod	_
+7	ups	up	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	downs	downs	NOUN	NNS	Number=Plur	7	conj	7:conj	SpaceAfter=No
+9	downs	downs	NOUN	NNS	Number=Plur	7	conj	5:nmod:of|7:conj:and	SpaceAfter=No
 10	,	,	PUNCT	,	_	17	punct	17:punct	_
 11	and	and	CCONJ	CC	_	17	cc	17:cc	_
 12	only	only	ADV	RB	_	14	advmod	14:advmod	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	flexible	flexible	ADJ	JJ	Degree=Pos	17	nsubj	17:nsubj	_
+14	flexible	flexible	ADJ	JJ	Degree=Pos	17	nsubj	17:nsubj|19:nsubj:xsubj	_
 15	will	will	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 16	be	be	AUX	VB	VerbForm=Inf	17	cop	17:cop	_
-17	able	able	ADJ	JJ	Degree=Pos	5	conj	5:conj	_
+17	able	able	ADJ	JJ	Degree=Pos	5	conj	5:conj:and	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
 19	keep	keep	VERB	VB	VerbForm=Inf	17	xcomp	17:xcomp	_
 20	from	from	SCONJ	IN	_	21	mark	21:mark	_
-21	going	go	VERB	VBG	VerbForm=Ger	19	advcl	19:advcl	_
+21	going	go	VERB	VBG	VerbForm=Ger	19	advcl	19:advcl:from	_
 22	crazy	crazy	ADJ	JJ	Degree=Pos	21	xcomp	21:xcomp	SpaceAfter=No
 23	!	!	PUNCT	.	_	5	punct	5:punct	_
 
@@ -70,7 +70,7 @@
 # text = All Aries natives may have to tighten their belts and curb their desire for constant expansion.
 1	All	all	DET	DT	_	3	det	3:det	_
 2	Aries	Aries	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	natives	native	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
+3	natives	native	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|7:nsubj:xsubj|11:nsubj:xsubj	_
 4	may	may	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 5	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
@@ -78,17 +78,17 @@
 8	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	belts	belt	NOUN	NNS	Number=Plur	7	obj	7:obj	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	curb	curb	VERB	VB	VerbForm=Inf	7	conj	7:conj	_
+11	curb	curb	VERB	VB	VerbForm=Inf	7	conj	5:xcomp|7:conj:and	_
 12	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	desire	desire	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	for	for	ADP	IN	_	16	case	16:case	_
 15	constant	constant	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	expansion	expansion	NOUN	NN	Number=Sing	13	nmod	13:nmod	SpaceAfter=No
+16	expansion	expansion	NOUN	NN	Number=Sing	13	nmod	13:nmod:for	SpaceAfter=No
 17	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0006
 # text = You may need to play it cool and curb your spending.
-1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj|9:nsubj:xsubj	_
 2	may	may	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	need	need	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -96,7 +96,7 @@
 6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj	_
 7	cool	cool	ADV	RB	_	5	advmod	5:advmod	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	curb	curb	VERB	VB	VerbForm=Inf	5	conj	5:conj	_
+9	curb	curb	VERB	VB	VerbForm=Inf	5	conj	3:xcomp|5:conj:and	_
 10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	spending	spending	NOUN	NN	Number=Sing	9	obj	9:obj	SpaceAfter=No
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -108,19 +108,19 @@
 3	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	among	among	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	3	obl	3:obl	_
+6	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	3	obl	3:obl:among	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	seize	seize	VERB	VB	VerbForm=Inf	6	advcl	6:advcl	_
+8	seize	seize	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:to	_
 9	upon	upon	ADP	IN	_	12	case	12:case	_
 10	new	new	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	societal	societal	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	trends	trend	NOUN	NNS	Number=Plur	8	obl	8:obl	_
+12	trends	trend	NOUN	NNS	Number=Plur	8	obl	8:obl:upon	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
-14	create	create	VERB	VB	VerbForm=Inf	8	advcl	8:advcl	_
+14	create	create	VERB	VB	VerbForm=Inf	8	advcl	8:advcl:to	_
 15	new	new	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	opportunities	opportunity	NOUN	NNS	Number=Plur	14	obj	14:obj	_
 17	for	for	ADP	IN	_	18	case	18:case	_
-18	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	16	nmod	16:nmod	SpaceAfter=No
+18	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	16	nmod	16:nmod:for	SpaceAfter=No
 19	,	,	PUNCT	,	_	3	punct	3:punct	_
 20	as	as	SCONJ	IN	_	30	mark	30:mark	_
 21	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
@@ -132,36 +132,36 @@
 27	all	all	DET	DT	_	29	det	29:det	SpaceAfter=No
 28	-	-	PUNCT	HYPH	_	29	punct	29:punct	SpaceAfter=No
 29	time	time	NOUN	NN	Number=Sing	30	compound	30:compound	_
-30	high	high	NOUN	NN	Number=Sing	3	advcl	3:advcl	SpaceAfter=No
+30	high	high	NOUN	NN	Number=Sing	3	advcl	3:advcl:at	SpaceAfter=No
 31	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0008
 # text = You will be more eloquent and persuasive than usual, and others will identify enthusiastically with your vision.
-1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj|7:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 3	be	be	AUX	VB	VerbForm=Inf	5	cop	5:cop	_
 4	more	more	ADV	RBR	_	5	advmod	5:advmod	_
 5	eloquent	eloquent	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	persuasive	persuasive	ADJ	JJ	Degree=Pos	5	conj	5:conj	_
+7	persuasive	persuasive	ADJ	JJ	Degree=Pos	5	conj	5:conj:and	_
 8	than	than	ADP	IN	_	5	mark	5:mark	_
 9	usual	usual	ADJ	JJ	Degree=Pos	5	advcl	5:advcl	SpaceAfter=No
 10	,	,	PUNCT	,	_	14	punct	14:punct	_
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
 12	others	other	NOUN	NNS	Number=Plur	14	nsubj	14:nsubj	_
 13	will	will	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
-14	identify	identify	VERB	VB	VerbForm=Inf	5	conj	5:conj	_
+14	identify	identify	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	_
 15	enthusiastically	enthusiastically	ADV	RB	_	14	advmod	14:advmod	_
 16	with	with	ADP	IN	_	18	case	18:case	_
 17	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
-18	vision	vision	NOUN	NN	Number=Sing	14	obl	14:obl	SpaceAfter=No
+18	vision	vision	NOUN	NN	Number=Sing	14	obl	14:obl:with	SpaceAfter=No
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0009
 # text = If you want to start a new creative project or business venture, your imagination will be working overtime.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
+3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl:if	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	start	start	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
@@ -170,7 +170,7 @@
 9	project	project	NOUN	NN	Number=Sing	5	obj	5:obj	_
 10	or	or	CCONJ	CC	_	12	cc	12:cc	_
 11	business	business	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	venture	venture	NOUN	NN	Number=Sing	9	conj	9:conj	SpaceAfter=No
+12	venture	venture	NOUN	NN	Number=Sing	9	conj	5:obj|9:conj:or	SpaceAfter=No
 13	,	,	PUNCT	,	_	18	punct	18:punct	_
 14	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	imagination	imagination	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
@@ -191,7 +191,7 @@
 7	career-wise	career-wise	ADV	RB	_	5	advmod	5:advmod	_
 8	-	-	PUNCT	,	_	5	punct	5:punct	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	aspiring	aspire	VERB	VBG	VerbForm=Ger	5	conj	5:conj	_
+10	aspiring	aspire	VERB	VBG	VerbForm=Ger	5	conj	4:advcl|5:conj:and	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	climb	climb	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	even	even	ADV	RB	_	14	advmod	14:advmod	_
@@ -202,7 +202,7 @@
 # text = Taurus in 2005 - Tenacity
 1	Taurus	Taurus	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod:in	_
 4	-	-	PUNCT	:	_	1	punct	1:punct	_
 5	Tenacity	tenacity	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
 
@@ -216,7 +216,7 @@
 6	key	key	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	word	word	NOUN	NN	Number=Sing	0	root	0:root	_
 8	for	for	ADP	IN	_	9	case	9:case	_
-9	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	7	nmod	7:nmod	SpaceAfter=No
+9	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	7	nmod	7:nmod:for	SpaceAfter=No
 10	,	,	PUNCT	,	_	7	punct	7:punct	_
 11	Taurus	Taurus	PROPN	NNP	Number=Sing	7	vocative	7:vocative	SpaceAfter=No
 12	.	.	PUNCT	.	_	7	punct	7:punct	_
@@ -225,19 +225,19 @@
 # text = With hard work and focus, you will attain at least one important aspiration that has been on your agenda for a long time.
 1	With	with	ADP	IN	_	3	case	3:case	_
 2	hard	hard	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	work	work	NOUN	NN	Number=Sing	9	obl	9:obl	_
+3	work	work	NOUN	NN	Number=Sing	9	obl	9:obl:with	_
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
-5	focus	focus	NOUN	NN	Number=Sing	3	conj	3:conj	SpaceAfter=No
+5	focus	focus	NOUN	NN	Number=Sing	3	conj	3:conj:and|9:obl:with	SpaceAfter=No
 6	,	,	PUNCT	,	_	9	punct	9:punct	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
 8	will	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 9	attain	attain	VERB	VB	VerbForm=Inf	0	root	0:root	_
 10	at	at	ADV	RB	_	11	case	11:case	_
-11	least	least	ADV	RBS	Degree=Sup	12	nmod	12:nmod	_
+11	least	least	ADV	RBS	Degree=Sup	12	nmod	12:nmod:at	_
 12	one	one	NUM	CD	NumType=Card	14	nummod	14:nummod	_
 13	important	important	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	aspiration	aspiration	NOUN	NN	Number=Sing	9	obj	9:obj	_
-15	that	that	PRON	WDT	PronType=Rel	20	nsubj	20:nsubj	_
+14	aspiration	aspiration	NOUN	NN	Number=Sing	9	obj	9:obj|20:nsubj	_
+15	that	that	PRON	WDT	PronType=Rel	20	nsubj	14:ref	_
 16	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
 17	been	be	AUX	VBN	Tense=Past|VerbForm=Part	20	cop	20:cop	_
 18	on	on	ADP	IN	_	20	case	20:case	_
@@ -246,7 +246,7 @@
 21	for	for	ADP	IN	_	24	case	24:case	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
 23	long	long	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-24	time	time	NOUN	NN	Number=Sing	20	obl	20:obl	SpaceAfter=No
+24	time	time	NOUN	NN	Number=Sing	20	obl	20:obl:for	SpaceAfter=No
 25	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0014
@@ -255,7 +255,7 @@
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	year	year	NOUN	NN	Number=Sing	0	root	0:root	_
-5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	SpaceAfter=No
+5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|9:nsubj:xsubj|15:nsubj:xsubj	SpaceAfter=No
 6	'll	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 7	want	want	VERB	VB	VerbForm=Inf	4	acl:relcl	4:acl:relcl	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
@@ -263,26 +263,26 @@
 10	stock	stock	NOUN	NN	Number=Sing	9	obj	9:obj	_
 11	of	of	ADP	IN	_	13	case	13:case	_
 12	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
-13	career	career	NOUN	NN	Number=Sing	9	obl	9:obl	_
+13	career	career	NOUN	NN	Number=Sing	9	obl	9:obl:of	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	ask	ask	VERB	VB	VerbForm=Inf	9	conj	9:conj	_
+15	ask	ask	VERB	VB	VerbForm=Inf	9	conj	7:xcomp|9:conj:and	_
 16	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	15	obj	15:obj	_
 17	if	if	SCONJ	IN	_	20	mark	20:mark	_
 18	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	20:nsubj	SpaceAfter=No
 19	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
-20	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	15	advcl	15:advcl	_
+20	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	15	advcl	15:advcl:if	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 22	work	work	NOUN	NN	Number=Sing	20	obj	20:obj	_
-23	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	24	nsubj	24:nsubj	_
+23	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	24	nsubj	24:nsubj|26:nsubj:xsubj	_
 24	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	acl:relcl	22:acl:relcl	_
 25	to	to	PART	TO	_	26	mark	26:mark	_
 26	do	do	VERB	VB	VerbForm=Inf	24	xcomp	24:xcomp	_
 27	for	for	ADP	IN	_	29	case	29:case	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
-29	rest	rest	NOUN	NN	Number=Sing	26	obl	26:obl	_
+29	rest	rest	NOUN	NN	Number=Sing	26	obl	26:obl:for	_
 30	of	of	ADP	IN	_	32	case	32:case	_
 31	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	32	nmod:poss	32:nmod:poss	_
-32	life	life	NOUN	NN	Number=Sing	29	nmod	29:nmod	SpaceAfter=No
+32	life	life	NOUN	NN	Number=Sing	29	nmod	29:nmod:of	SpaceAfter=No
 33	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0015
@@ -290,15 +290,15 @@
 1	As	as	SCONJ	IN	_	4	mark	4:mark	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	year	year	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	progresses	progress	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl	SpaceAfter=No
+4	progresses	progress	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:as	SpaceAfter=No
 5	,	,	PUNCT	,	_	13	punct	13:punct	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	13	mark	13:mark	_
 7	more	more	ADV	RBR	_	13	advmod	13:advmod	_
 8	impressive	impressive	ADJ	JJ	Degree=Pos	13	xcomp	13:xcomp	_
 9	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	ideas	idea	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
+10	ideas	idea	NOUN	NNS	Number=Plur	13	nsubj	8:nsubj:xsubj|13:nsubj	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	works	work	NOUN	NNS	Number=Plur	10	conj	10:conj	_
+12	works	work	NOUN	NNS	Number=Plur	10	conj	8:nsubj:xsubj|10:conj:and|13:nsubj	_
 13	become	become	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 14	.	.	PUNCT	.	_	8	punct	8:punct	_
 
@@ -306,7 +306,7 @@
 # text = As a result, your finances improve - and your newfound confidence could attract new love into your life.
 1	As	as	ADP	IN	_	3	case	3:case	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
-3	result	result	NOUN	NN	Number=Sing	7	obl	7:obl	SpaceAfter=No
+3	result	result	NOUN	NN	Number=Sing	7	obl	7:obl:as	SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	finances	finances	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
@@ -317,22 +317,22 @@
 11	newfound	newfound	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	confidence	confidence	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	_
 13	could	could	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
-14	attract	attract	VERB	VB	VerbForm=Inf	7	conj	7:conj	_
+14	attract	attract	VERB	VB	VerbForm=Inf	7	conj	7:conj:and	_
 15	new	new	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	love	love	NOUN	NN	Number=Sing	14	obj	14:obj	_
 17	into	into	ADP	IN	_	19	case	19:case	_
 18	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
-19	life	life	NOUN	NN	Number=Sing	14	obl	14:obl	SpaceAfter=No
+19	life	life	NOUN	NN	Number=Sing	14	obl	14:obl:into	SpaceAfter=No
 20	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0017
 # text = By the end of the year, you will have a whole new network of friends and group activity, stimulating new ideas and taking up your social life a notch or two.
 1	By	by	ADP	IN	_	3	case	3:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	end	end	NOUN	NN	Number=Sing	10	obl	10:obl	_
+3	end	end	NOUN	NN	Number=Sing	10	obl	10:obl:by	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	year	year	NOUN	NN	Number=Sing	3	nmod	3:nmod	SpaceAfter=No
+6	year	year	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	SpaceAfter=No
 7	,	,	PUNCT	,	_	10	punct	10:punct	_
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
 9	will	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
@@ -342,16 +342,16 @@
 13	new	new	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	network	network	NOUN	NN	Number=Sing	10	obj	10:obj	_
 15	of	of	ADP	IN	_	16	case	16:case	_
-16	friends	friend	NOUN	NNS	Number=Plur	14	nmod	14:nmod	_
+16	friends	friend	NOUN	NNS	Number=Plur	14	nmod	14:nmod:of	_
 17	and	and	CCONJ	CC	_	19	cc	19:cc	_
 18	group	group	NOUN	NN	Number=Sing	19	compound	19:compound	_
-19	activity	activity	NOUN	NN	Number=Sing	16	conj	16:conj	SpaceAfter=No
+19	activity	activity	NOUN	NN	Number=Sing	16	conj	14:nmod:of|16:conj:and	SpaceAfter=No
 20	,	,	PUNCT	,	_	10	punct	10:punct	_
 21	stimulating	stimulate	VERB	VBG	VerbForm=Ger	10	advcl	10:advcl	_
 22	new	new	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
 23	ideas	idea	NOUN	NNS	Number=Plur	21	obj	21:obj	_
 24	and	and	CCONJ	CC	_	25	cc	25:cc	_
-25	taking	take	VERB	VBG	VerbForm=Ger	21	conj	21:conj	_
+25	taking	take	VERB	VBG	VerbForm=Ger	21	conj	10:advcl|21:conj:and	_
 26	up	up	ADV	RB	_	25	advmod	25:advmod	_
 27	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	29	nmod:poss	29:nmod:poss	_
 28	social	social	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
@@ -366,7 +366,7 @@
 # text = Gemini in 2005 - Success
 1	Gemini	Gemini	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod:in	_
 4	-	-	PUNCT	:	_	1	punct	1:punct	_
 5	Success	success	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
 
@@ -375,26 +375,26 @@
 1	Your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	cycle	cycle	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
 3	of	of	SCONJ	IN	_	4	mark	4:mark	_
-4	learning	learn	VERB	VBG	VerbForm=Ger	2	acl	2:acl	_
+4	learning	learn	VERB	VBG	VerbForm=Ger	2	acl	2:acl:of	_
 5	through	through	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	school	school	NOUN	NN	Number=Sing	4	obl	4:obl	_
+7	school	school	NOUN	NN	Number=Sing	4	obl	4:obl:through	_
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	hard	hard	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	knocks	knock	NOUN	NNS	Number=Plur	7	nmod	7:nmod	_
+10	knocks	knock	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	_
 11	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
 12	come	come	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 13	to	to	ADP	IN	_	15	case	15:case	_
 14	an	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
-15	end	end	NOUN	NN	Number=Sing	12	obl	12:obl	SpaceAfter=No
+15	end	end	NOUN	NN	Number=Sing	12	obl	12:obl:to	SpaceAfter=No
 16	,	,	PUNCT	,	_	12	punct	12:punct	_
 17	Gemini	Gemini	PROPN	NNP	Number=Sing	12	vocative	12:vocative	SpaceAfter=No
 18	,	,	PUNCT	,	_	23	punct	23:punct	_
 19	and	and	CCONJ	CC	_	23	cc	23:cc	_
 20	now	now	ADV	RB	_	23	advmod	23:advmod	_
-21	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	23	nsubj	23:nsubj	SpaceAfter=No
+21	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	23	nsubj	23:nsubj|25:nsubj:xsubj|26:nsubj:xsubj	SpaceAfter=No
 22	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	23	aux	23:aux	_
-23	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	12	conj	12:conj	_
+23	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	12	conj	12:conj:and	_
 24	to	to	PART	TO	_	25	mark	25:mark	_
 25	start	start	VERB	VB	VerbForm=Inf	23	xcomp	23:xcomp	_
 26	reaping	reap	VERB	VBG	VerbForm=Ger	25	xcomp	25:xcomp	_
@@ -408,17 +408,17 @@
 34	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	28	acl:relcl	28:acl:relcl	_
 35	in	in	ADP	IN	_	37	case	37:case	_
 36	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	37	nmod:poss	37:nmod:poss	_
-37	wake	wake	NOUN	NN	Number=Sing	34	obl	34:obl	SpaceAfter=No
+37	wake	wake	NOUN	NN	Number=Sing	34	obl	34:obl:in	SpaceAfter=No
 38	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0020
 # text = As 2005 progresses, the road ahead will become clearer.
 1	As	as	SCONJ	IN	_	3	mark	3:mark	_
 2	2005	2005	NUM	CD	NumType=Card	3	nsubj	3:nsubj	_
-3	progresses	progress	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl	SpaceAfter=No
+3	progresses	progress	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:as	SpaceAfter=No
 4	,	,	PUNCT	,	_	9	punct	9:punct	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	road	road	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
+6	road	road	NOUN	NN	Number=Sing	9	nsubj	9:nsubj|10:nsubj:xsubj	_
 7	ahead	ahead	ADV	RB	_	6	advmod	6:advmod	_
 8	will	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 9	become	become	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -430,18 +430,18 @@
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 2	now	now	ADV	RB	_	3	advmod	3:advmod	_
 3	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-4	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
+4	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj|8:nsubj:xsubj	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	obl	3:obl	_
+6	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	obl	3:obl:in	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	create	create	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	kind	kind	NOUN	NN	Number=Sing	8	obj	8:obj	_
+10	kind	kind	NOUN	NN	Number=Sing	8	obj	8:obj|17:obj	_
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	life	life	NOUN	NN	Number=Sing	10	nmod	10:nmod	_
+12	life	life	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	_
 13	for	for	ADP	IN	_	14	case	14:case	_
-14	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	12	nmod	12:nmod	_
-15	that	that	PRON	WDT	PronType=Rel	17	obj	17:obj	_
+14	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	12	nmod	12:nmod:for	_
+15	that	that	PRON	WDT	PronType=Rel	17	obj	10:ref	_
 16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	_
 17	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	acl:relcl	10:acl:relcl	SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -451,12 +451,12 @@
 1	These	these	DET	DT	Number=Plur|PronType=Dem	2	det	2:det	_
 2	leaps	leap	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	bounds	bound	NOUN	NNS	Number=Plur	2	conj	2:conj	_
+4	bounds	bound	NOUN	NNS	Number=Plur	2	conj	2:conj:and|6:nsubj	_
 5	forward	forward	ADV	RB	_	2	advmod	2:advmod	_
 6	include	include	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 7	love	love	NOUN	NN	Number=Sing	6	obj	6:obj	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	creativity	creativity	NOUN	NN	Number=Sing	7	conj	7:conj	SpaceAfter=No
+9	creativity	creativity	NOUN	NN	Number=Sing	7	conj	6:obj|7:conj:and	SpaceAfter=No
 10	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0023
@@ -464,15 +464,15 @@
 1	Your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	learning	learning	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	concepts	concept	NOUN	NNS	Number=Plur	2	nmod	2:nmod	_
+4	concepts	concept	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	_
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	all	all	DET	DT	_	7	det	7:det	_
-7	kinds	kind	NOUN	NNS	Number=Plur	4	nmod	4:nmod	_
+7	kinds	kind	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
 8	combines	combine	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 9	with	with	ADP	IN	_	12	case	12:case	_
 10	extensive	extensive	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	group	group	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	activity	activity	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+12	activity	activity	NOUN	NN	Number=Sing	8	obl	8:obl:with	SpaceAfter=No
 13	,	,	PUNCT	,	_	8	punct	8:punct	_
 14	bringing	bring	VERB	VBG	VerbForm=Ger	8	advcl	8:advcl	_
 15	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
@@ -481,7 +481,7 @@
 18	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 19	whole	whole	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 20	new	new	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
-21	space	space	NOUN	NN	Number=Sing	14	obl	14:obl	_
+21	space	space	NOUN	NN	Number=Sing	14	obl	14:obl:into	_
 22	this	this	DET	DT	Number=Sing|PronType=Dem	23	det	23:det	_
 23	year	year	NOUN	NN	Number=Sing	14	obl:tmod	14:obl:tmod	SpaceAfter=No
 24	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -490,9 +490,9 @@
 # text = By the end of 2005 you'll have a whole new start with regard to your career and your earning potential - and a possible new partnership to top it off!
 1	By	by	ADP	IN	_	3	case	3:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	end	end	NOUN	NN	Number=Sing	8	obl	8:obl	_
+3	end	end	NOUN	NN	Number=Sing	8	obl	8:obl:by	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	2005	2005	NUM	CD	NumType=Card	3	nmod	3:nmod	_
+5	2005	2005	NUM	CD	NumType=Card	3	nmod	3:nmod:of	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	SpaceAfter=No
 7	'll	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 8	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -501,22 +501,22 @@
 11	new	new	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	start	start	NOUN	NN	Number=Sing	8	obj	8:obj	_
 13	with	with	ADP	IN	_	14	case	14:case	_
-14	regard	regard	NOUN	NN	Number=Sing	12	nmod	12:nmod	_
+14	regard	regard	NOUN	NN	Number=Sing	12	nmod	12:nmod:with	_
 15	to	to	ADP	IN	_	17	case	17:case	_
 16	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
-17	career	career	NOUN	NN	Number=Sing	14	nmod	14:nmod	_
+17	career	career	NOUN	NN	Number=Sing	14	nmod	14:nmod:to	_
 18	and	and	CCONJ	CC	_	21	cc	21:cc	_
 19	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
 20	earning	earning	NOUN	NN	Number=Sing	21	compound	21:compound	_
-21	potential	potential	NOUN	NN	Number=Sing	17	conj	17:conj	_
+21	potential	potential	NOUN	NN	Number=Sing	17	conj	14:nmod:to|17:conj:and	_
 22	-	-	PUNCT	,	_	12	punct	12:punct	_
 23	and	and	CCONJ	CC	_	27	cc	27:cc	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	_
 25	possible	possible	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
 26	new	new	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	partnership	partnership	NOUN	NN	Number=Sing	12	conj	12:conj	_
+27	partnership	partnership	NOUN	NN	Number=Sing	12	conj	8:obj|12:conj:and	_
 28	to	to	PART	TO	_	29	mark	29:mark	_
-29	top	top	VERB	VB	VerbForm=Inf	27	acl	27:acl	_
+29	top	top	VERB	VB	VerbForm=Inf	27	acl	27:acl:to	_
 30	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	29	obj	29:obj	_
 31	off	off	ADP	RP	_	29	compound:prt	29:compound:prt	SpaceAfter=No
 32	!	!	PUNCT	.	_	8	punct	8:punct	_
@@ -525,7 +525,7 @@
 # text = Cancer in 2005 - Balance
 1	Cancer	Cancer	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod:in	_
 4	-	-	PUNCT	:	_	1	punct	1:punct	_
 5	Balance	balance	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
 
@@ -538,8 +538,8 @@
 5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 6	personal	personal	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	professional	professional	ADJ	JJ	Degree=Pos	6	conj	6:conj	_
-9	lives	life	NOUN	NNS	Number=Plur	3	nmod	3:nmod	_
+8	professional	professional	ADJ	JJ	Degree=Pos	6	conj	6:conj:and|9:amod	_
+9	lives	life	NOUN	NNS	Number=Plur	3	nmod	3:nmod:between	_
 10	may	may	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 11	be	be	AUX	VB	VerbForm=Inf	12	cop	12:cop	_
 12	one	one	NUM	CD	NumType=Card	0	root	0:root	_
@@ -548,7 +548,7 @@
 15	year	year	NOUN	NN	Number=Sing	18	nmod:poss	18:nmod:poss	SpaceAfter=No
 16	's	's	PART	POS	_	15	case	15:case	_
 17	strongest	strongest	ADJ	JJS	Degree=Sup	18	amod	18:amod	_
-18	challenges	challenge	NOUN	NNS	Number=Plur	12	nmod	12:nmod	SpaceAfter=No
+18	challenges	challenge	NOUN	NNS	Number=Plur	12	nmod	12:nmod:of	SpaceAfter=No
 19	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0027
@@ -556,7 +556,7 @@
 1	For	for	ADP	IN	_	4	case	4:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 3	most	most	ADJ	JJR	Degree=Cmp	4	amod	4:amod	_
-4	part	part	NOUN	NN	Number=Sing	12	obl	12:obl	SpaceAfter=No
+4	part	part	NOUN	NN	Number=Sing	12	obl	12:obl:for	SpaceAfter=No
 5	,	,	PUNCT	,	_	12	punct	12:punct	_
 6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 7	outward	outward	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
@@ -566,20 +566,20 @@
 11	will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 12	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	_
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	fits	fit	NOUN	NNS	Number=Plur	12	obl	12:obl	_
+14	fits	fit	NOUN	NNS	Number=Plur	12	obl	12:obl:in	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	starts	start	NOUN	NNS	Number=Plur	14	conj	14:conj	_
+16	starts	start	NOUN	NNS	Number=Plur	14	conj	12:obl:in|14:conj:and	_
 17	-	-	PUNCT	,	_	14	punct	14:punct	_
 18	alternating	alternate	VERB	VBG	VerbForm=Ger	19	amod	19:amod	_
 19	periods	period	NOUN	NNS	Number=Plur	14	appos	14:appos	_
 20	of	of	ADP	IN	_	22	case	22:case	_
 21	intense	intense	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	activity	activity	NOUN	NN	Number=Sing	19	nmod	19:nmod	_
+22	activity	activity	NOUN	NN	Number=Sing	19	nmod	19:nmod:of	_
 23	with	with	ADP	IN	_	24	case	24:case	_
-24	times	time	NOUN	NNS	Number=Plur	19	nmod	19:nmod	_
+24	times	time	NOUN	NNS	Number=Plur	19	nmod	19:nmod:with	_
 25	of	of	ADP	IN	_	27	case	27:case	_
 26	welcome	welcome	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	rest	rest	NOUN	NN	Number=Sing	24	nmod	24:nmod	SpaceAfter=No
+27	rest	rest	NOUN	NN	Number=Sing	24	nmod	24:nmod:of	SpaceAfter=No
 28	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0028
@@ -590,7 +590,7 @@
 4	periods	period	NOUN	NNS	Number=Plur	1	obj	1:obj	_
 5	when	when	ADV	WRB	PronType=Int	7	mark	7:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
-7	can	can	AUX	MD	VerbForm=Fin	1	advcl	1:advcl	SpaceAfter=No
+7	can	can	AUX	MD	VerbForm=Fin	1	advcl	1:advcl:when	SpaceAfter=No
 8	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0029
@@ -614,7 +614,7 @@
 7	in	in	ADP	IN	_	10	case	10:case	_
 8	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 9	work	work	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	habits	habit	NOUN	NNS	Number=Plur	6	nmod	6:nmod	SpaceAfter=No
+10	habits	habit	NOUN	NNS	Number=Plur	6	nmod	6:nmod:in	SpaceAfter=No
 11	,	,	PUNCT	,	_	18	punct	18:punct	_
 12	but	but	CCONJ	CC	_	18	cc	18:cc	_
 13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	SpaceAfter=No
@@ -622,17 +622,17 @@
 15	be	be	AUX	VB	VerbForm=Inf	18	cop	18:cop	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 17	lot	lot	NOUN	NN	Number=Sing	18	obl:npmod	18:obl:npmod	_
-18	happier	happier	ADJ	JJR	Degree=Cmp	4	conj	4:conj	_
+18	happier	happier	ADJ	JJR	Degree=Cmp	4	conj	4:conj:but	_
 19	for	for	ADP	IN	_	20	case	20:case	_
-20	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obl	18:obl	SpaceAfter=No
+20	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obl	18:obl:for	SpaceAfter=No
 21	,	,	PUNCT	,	_	28	punct	28:punct	_
 22	and	and	CCONJ	CC	_	28	cc	28:cc	_
 23	in	in	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
-25	end	end	NOUN	NN	Number=Sing	28	obl	28:obl	_
+25	end	end	NOUN	NN	Number=Sing	28	obl	28:obl:in	_
 26	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	28	nsubj	28:nsubj	SpaceAfter=No
 27	'll	will	AUX	MD	VerbForm=Fin	28	aux	28:aux	_
-28	know	know	VERB	VB	VerbForm=Inf	18	conj	18:conj	_
+28	know	know	VERB	VB	VerbForm=Inf	18	conj	18:conj:and	_
 29	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	31	nsubj	31:nsubj	_
 30	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	31	cop	31:cop	_
 31	worth	worth	ADJ	JJ	Degree=Pos	28	ccomp	28:ccomp	_
@@ -653,49 +653,49 @@
 10	with	with	ADP	IN	_	14	case	14:case	_
 11	career	career	NOUN	NN	Number=Sing	14	compound	14:compound	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	money	money	NOUN	NN	Number=Sing	11	conj	11:conj	_
-14	matters	matter	NOUN	NNS	Number=Plur	9	nmod	9:nmod	_
-15	fades	fade	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	conj	5:conj	_
+13	money	money	NOUN	NN	Number=Sing	11	conj	11:conj:and|14:compound	_
+14	matters	matter	NOUN	NNS	Number=Plur	9	nmod	9:nmod:with	_
+15	fades	fade	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	_
 16	into	into	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	background	background	NOUN	NN	Number=Sing	15	obl	15:obl	SpaceAfter=No
+18	background	background	NOUN	NN	Number=Sing	15	obl	15:obl:into	SpaceAfter=No
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0032
 # text = By the end of 2005, you'll feel more confident, more determined, and far more capable of making the mountains come to you!
 1	By	by	ADP	IN	_	3	case	3:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	end	end	NOUN	NN	Number=Sing	9	obl	9:obl	_
+3	end	end	NOUN	NN	Number=Sing	9	obl	9:obl:by	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	2005	2005	NUM	CD	NumType=Card	3	nmod	3:nmod	SpaceAfter=No
+5	2005	2005	NUM	CD	NumType=Card	3	nmod	3:nmod:of	SpaceAfter=No
 6	,	,	PUNCT	,	_	9	punct	9:punct	_
-7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	SpaceAfter=No
+7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj|11:nsubj:xsubj|14:nsubj:xsubj|19:nsubj:xsubj	SpaceAfter=No
 8	'll	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 9	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	_
 10	more	more	ADV	RBR	_	11	advmod	11:advmod	_
 11	confident	confident	ADJ	JJ	Degree=Pos	9	xcomp	9:xcomp	SpaceAfter=No
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
 13	more	more	ADV	RBR	_	14	advmod	14:advmod	_
-14	determined	determined	ADJ	JJ	Degree=Pos	11	conj	11:conj	SpaceAfter=No
+14	determined	determined	ADJ	JJ	Degree=Pos	11	conj	9:xcomp|11:conj:and	SpaceAfter=No
 15	,	,	PUNCT	,	_	19	punct	19:punct	_
 16	and	and	CCONJ	CC	_	19	cc	19:cc	_
 17	far	far	ADV	RB	Degree=Pos	18	advmod	18:advmod	_
 18	more	more	ADV	RBR	_	19	advmod	19:advmod	_
-19	capable	capable	ADJ	JJ	Degree=Pos	11	conj	11:conj	_
+19	capable	capable	ADJ	JJ	Degree=Pos	11	conj	9:xcomp|11:conj:and	_
 20	of	of	SCONJ	IN	_	21	mark	21:mark	_
-21	making	make	VERB	VBG	VerbForm=Ger	19	advcl	19:advcl	_
+21	making	make	VERB	VBG	VerbForm=Ger	19	advcl	19:advcl:of	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 23	mountains	mountain	NOUN	NNS	Number=Plur	24	nsubj	24:nsubj	_
 24	come	come	VERB	VB	VerbForm=Inf	21	ccomp	21:ccomp	_
 25	to	to	ADP	IN	_	26	case	26:case	_
-26	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	24	obl	24:obl	SpaceAfter=No
+26	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	24	obl	24:obl:to	SpaceAfter=No
 27	!	!	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0033
 # text = Leo in 2005 - Abundance
 1	Leo	Leo	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod:in	_
 4	-	-	PUNCT	:	_	1	punct	1:punct	_
 5	Abundance	abundance	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
 
@@ -712,8 +712,8 @@
 9	usual	usual	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 10	social	social	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	financial	financial	ADJ	JJ	Degree=Pos	10	conj	10:conj	_
-13	advantages	advantage	NOUN	NNS	Number=Plur	17	obl	17:obl	SpaceAfter=No
+12	financial	financial	ADJ	JJ	Degree=Pos	10	conj	10:conj:and|13:amod	_
+13	advantages	advantage	NOUN	NNS	Number=Plur	17	obl	17:obl:with	SpaceAfter=No
 14	,	,	PUNCT	,	_	17	punct	17:punct	_
 15	will	will	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 16	be	be	AUX	VB	VerbForm=Inf	17	cop	17:cop	_
@@ -726,9 +726,9 @@
 23	in	in	ADP	IN	_	26	case	26:case	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	26	det	26:det	_
 25	long	long	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
-26	time	time	NOUN	NN	Number=Sing	17	advcl	17:advcl	_
+26	time	time	NOUN	NN	Number=Sing	17	advcl	17:advcl:in	_
 27	for	for	ADP	IN	_	28	case	28:case	_
-28	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	17	obl	17:obl	SpaceAfter=No
+28	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	17	obl	17:obl:for	SpaceAfter=No
 29	,	,	PUNCT	,	_	17	punct	17:punct	_
 30	Leo	Leo	PROPN	NNP	Number=Sing	17	vocative	17:vocative	SpaceAfter=No
 31	!	!	PUNCT	.	_	17	punct	17:punct	_
@@ -743,24 +743,24 @@
 6	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	deciding	decide	VERB	VBG	VerbForm=Ger	6	ccomp	6:ccomp	_
 8	which	which	DET	WDT	PronType=Int	9	det	9:det	_
-9	path	path	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
+9	path	path	NOUN	NN	Number=Sing	10	nsubj	10:nsubj|19:nsubj	_
 10	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	ccomp	7:ccomp	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	most	most	ADJ	JJR	Degree=Cmp	10	obj	10:obj	_
 13	to	to	ADP	IN	_	14	case	14:case	_
-14	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	10	obl	10:obl	SpaceAfter=No
+14	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	10	obl	10:obl:to	SpaceAfter=No
 15	,	,	PUNCT	,	_	19	punct	19:punct	_
 16	and	and	CCONJ	CC	_	19	cc	19:cc	_
 17	where	where	ADV	WRB	PronType=Int	19	advmod	19:advmod	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
-19	put	put	VERB	VB	VerbForm=Inf	10	conj	10:conj	_
+19	put	put	VERB	VB	VerbForm=Inf	10	conj	7:ccomp|10:conj:and	_
 20	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
 21	focus	focus	NOUN	NN	Number=Sing	19	obj	19:obj	SpaceAfter=No
 22	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0036
 # text = You'll be able to create opportunities for advancement almost out of thin air.
-1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	SpaceAfter=No
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	SpaceAfter=No
 2	'll	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	be	be	AUX	VB	VerbForm=Inf	4	cop	4:cop	_
 4	able	able	ADJ	JJ	Degree=Pos	0	root	0:root	_
@@ -768,37 +768,37 @@
 6	create	create	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	opportunities	opportunity	NOUN	NNS	Number=Plur	6	obj	6:obj	_
 8	for	for	ADP	IN	_	9	case	9:case	_
-9	advancement	advancement	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
+9	advancement	advancement	NOUN	NN	Number=Sing	7	nmod	7:nmod:for	_
 10	almost	almost	ADV	RB	_	14	advmod	14:advmod	_
 11	out	out	ADP	IN	_	14	case	14:case	_
 12	of	of	ADP	IN	_	14	case	14:case	_
 13	thin	thin	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	air	air	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+14	air	air	NOUN	NN	Number=Sing	6	obl	6:obl:of	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0037
 # text = Romance in 2005 will make it a year to remember - and you'll be the envy of all your friends.
 1	Romance	romance	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod:in	_
 4	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 5	make	make	VERB	VB	VerbForm=Inf	0	root	0:root	_
-6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj	_
+6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj|8:nsubj:xsubj	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 8	year	year	NOUN	NN	Number=Sing	5	xcomp	5:xcomp	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	remember	remember	VERB	VB	VerbForm=Inf	8	acl	8:acl	_
+10	remember	remember	VERB	VB	VerbForm=Inf	8	acl	8:acl:to	_
 11	-	-	PUNCT	,	_	5	punct	5:punct	_
 12	and	and	CCONJ	CC	_	17	cc	17:cc	_
 13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	SpaceAfter=No
 14	'll	will	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 15	be	be	AUX	VB	VerbForm=Inf	17	cop	17:cop	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
-17	envy	envy	NOUN	NN	Number=Sing	5	conj	5:conj	_
+17	envy	envy	NOUN	NN	Number=Sing	5	conj	5:conj:and	_
 18	of	of	ADP	IN	_	21	case	21:case	_
 19	all	all	DET	PDT	_	21	det:predet	21:det:predet	_
 20	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
-21	friends	friend	NOUN	NNS	Number=Plur	17	nmod	17:nmod	SpaceAfter=No
+21	friends	friend	NOUN	NNS	Number=Plur	17	nmod	17:nmod:of	SpaceAfter=No
 22	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0038
@@ -807,12 +807,12 @@
 2	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	willingly	willingly	ADV	RB	_	2	advmod	2:advmod	_
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
-5	easily	easily	ADV	RB	_	3	conj	3:conj	SpaceAfter=No
+5	easily	easily	ADV	RB	_	3	conj	2:advmod|3:conj:and	SpaceAfter=No
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0039
 # text = Money may suddenly become tight at a very inconvenient time.
-1	Money	money	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
+1	Money	money	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|5:nsubj:xsubj	_
 2	may	may	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	suddenly	suddenly	ADV	RB	_	4	advmod	4:advmod	_
 4	become	become	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -821,7 +821,7 @@
 7	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 8	very	very	ADV	RB	_	9	advmod	9:advmod	_
 9	inconvenient	inconvenient	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	time	time	NOUN	NN	Number=Sing	5	obl	5:obl	SpaceAfter=No
+10	time	time	NOUN	NN	Number=Sing	5	obl	5:obl:at	SpaceAfter=No
 11	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0040
@@ -834,7 +834,7 @@
 6	comparison	comparison	NOUN	NN	Number=Sing	0	root	0:root	_
 7	to	to	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	advancements	advancement	NOUN	NNS	Number=Plur	6	nmod	6:nmod	_
+9	advancements	advancement	NOUN	NNS	Number=Plur	6	nmod	6:nmod:to	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	SpaceAfter=No
 11	'll	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 12	make	make	VERB	VB	VerbForm=Inf	9	acl:relcl	9:acl:relcl	_
@@ -843,26 +843,26 @@
 15	and	and	CCONJ	CC	_	24	cc	24:cc	_
 16	by	by	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	end	end	NOUN	NN	Number=Sing	24	obl	24:obl	_
+18	end	end	NOUN	NN	Number=Sing	24	obl	24:obl:by	_
 19	of	of	ADP	IN	_	20	case	20:case	_
-20	2005	2005	NUM	CD	NumType=Card	18	nmod	18:nmod	SpaceAfter=No
+20	2005	2005	NUM	CD	NumType=Card	18	nmod	18:nmod:of	SpaceAfter=No
 21	,	,	PUNCT	,	_	24	punct	24:punct	_
 22	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	24	nsubj	24:nsubj	SpaceAfter=No
 23	'll	will	AUX	MD	VerbForm=Fin	24	aux	24:aux	_
-24	look	look	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+24	look	look	VERB	VB	VerbForm=Inf	6	conj	6:conj:and	_
 25	back	back	ADV	RB	_	24	advmod	24:advmod	_
 26	in	in	ADP	IN	_	28	case	28:case	_
 27	sheer	sheer	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
-28	wonder	wonder	NOUN	NN	Number=Sing	24	obl	24:obl	_
+28	wonder	wonder	NOUN	NN	Number=Sing	24	obl	24:obl:in	_
 29	and	and	CCONJ	CC	_	30	cc	30:cc	_
-30	happiness	happiness	NOUN	NN	Number=Sing	28	conj	28:conj	SpaceAfter=No
+30	happiness	happiness	NOUN	NN	Number=Sing	28	conj	24:obl:in|28:conj:and	SpaceAfter=No
 31	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0041
 # text = Virgo in 2005 - Perseverance
 1	Virgo	Virgo	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod:in	_
 4	-	-	PUNCT	:	_	1	punct	1:punct	_
 5	Perseverance	perseverance	NOUN	NN	Number=Sing	1	appos	1:appos	_
 
@@ -885,9 +885,9 @@
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0043
 # text = For much of 2005, you'll be putting your nose to the grindstone.
 1	For	for	ADP	IN	_	2	case	2:case	_
-2	much	much	NOUN	NN	Number=Sing	9	obl	9:obl	_
+2	much	much	NOUN	NN	Number=Sing	9	obl	9:obl:for	_
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	2005	2005	NUM	CD	NumType=Card	2	nmod	2:nmod	SpaceAfter=No
+4	2005	2005	NUM	CD	NumType=Card	2	nmod	2:nmod:of	SpaceAfter=No
 5	,	,	PUNCT	,	_	9	punct	9:punct	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	SpaceAfter=No
 7	'll	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
@@ -897,7 +897,7 @@
 11	nose	nose	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	to	to	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	grindstone	grindstone	NOUN	NN	Number=Sing	9	obl	9:obl	SpaceAfter=No
+14	grindstone	grindstone	NOUN	NN	Number=Sing	9	obl	9:obl:to	SpaceAfter=No
 15	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0044
@@ -905,7 +905,7 @@
 1	On	on	ADP	IN	_	4	case	4:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 3	bright	bright	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	side	side	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+4	side	side	NOUN	NN	Number=Sing	11	obl	11:obl:on	SpaceAfter=No
 5	,	,	PUNCT	,	_	11	punct	11:punct	_
 6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	finances	finances	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
@@ -923,9 +923,9 @@
 4	take	take	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 5	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj	_
 6	for	for	ADP	IN	_	7	mark	7:mark	_
-7	granted	grant	VERB	VBN	Tense=Past|VerbForm=Part	4	advcl	4:advcl	_
+7	granted	grant	VERB	VBN	Tense=Past|VerbForm=Part	4	advcl	4:advcl:for	_
 8	-	-	PUNCT	,	_	4	punct	4:punct	_
-9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
+9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj|14:nsubj:xsubj	_
 10	still	still	ADV	RB	_	11	advmod	11:advmod	_
 11	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	parataxis	4:parataxis	_
 12	to	to	PART	TO	_	14	mark	14:mark	_
@@ -943,22 +943,22 @@
 4	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 5	thrive	thrive	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	for	for	ADP	IN	_	7	case	7:case	_
-7	most	most	ADJ	JJS	Degree=Sup	5	obl	5:obl	_
+7	most	most	ADJ	JJS	Degree=Sup	5	obl	5:obl:for	_
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	year	year	NOUN	NN	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+10	year	year	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	SpaceAfter=No
 11	,	,	PUNCT	,	_	22	punct	22:punct	_
 12	and	and	CCONJ	CC	_	22	cc	22:cc	_
 13	any	any	DET	DT	_	14	det	14:det	_
-14	relationship	relationship	NOUN	NN	Number=Sing	22	nsubj	22:nsubj	_
+14	relationship	relationship	NOUN	NN	Number=Sing	22	nsubj	22:nsubj|27:nsubj:xsubj	_
 15	begun	begin	VERB	VBN	Tense=Past|VerbForm=Part	14	acl	14:acl	_
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
-17	reaffirmed	reaffirm	VERB	VBN	Tense=Past|VerbForm=Part	15	conj	15:conj	_
+17	reaffirmed	reaffirm	VERB	VBN	Tense=Past|VerbForm=Part	15	conj	14:acl|15:conj:or	_
 18	in	in	ADP	IN	_	19	case	19:case	_
-19	2005	2005	NUM	CD	NumType=Card	15	obl	15:obl	_
+19	2005	2005	NUM	CD	NumType=Card	15	obl	15:obl:in	_
 20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
 21	very	very	ADV	RB	_	22	advmod	22:advmod	_
-22	likely	likely	ADJ	JJ	Degree=Pos	5	conj	5:conj	_
+22	likely	likely	ADJ	JJ	Degree=Pos	5	conj	5:conj:and	_
 23	to	to	PART	TO	_	27	mark	27:mark	_
 24	be	be	AUX	VB	VerbForm=Inf	27	cop	27:cop	_
 25	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	_
@@ -970,7 +970,7 @@
 # text = And, you're going to develop a hopeless romantic streak.
 1	And	and	CCONJ	CC	_	5	cc	5:cc	SpaceAfter=No
 2	,	,	PUNCT	,	_	5	punct	5:punct	_
-3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	SpaceAfter=No
+3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj	SpaceAfter=No
 4	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 5	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
@@ -984,21 +984,21 @@
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0048
 # text = In spite of a lot of worry over your career, by the year's end, you'll see that 2005 has filled your life with prosperity and accomplishments.
 1	In	in	ADP	IN	_	2	case	2:case	_
-2	spite	spite	NOUN	NN	Number=Sing	20	obl	20:obl	_
+2	spite	spite	NOUN	NN	Number=Sing	20	obl	20:obl:in	_
 3	of	of	ADP	IN	_	5	case	5:case	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-5	lot	lot	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+5	lot	lot	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	worry	worry	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+7	worry	worry	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
 8	over	over	ADP	IN	_	10	case	10:case	_
 9	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	career	career	NOUN	NN	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+10	career	career	NOUN	NN	Number=Sing	7	nmod	7:nmod:over	SpaceAfter=No
 11	,	,	PUNCT	,	_	20	punct	20:punct	_
 12	by	by	ADP	IN	_	16	case	16:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 14	year	year	NOUN	NN	Number=Sing	16	nmod:poss	16:nmod:poss	SpaceAfter=No
 15	's	's	PART	POS	_	14	case	14:case	_
-16	end	end	NOUN	NN	Number=Sing	20	obl	20:obl	SpaceAfter=No
+16	end	end	NOUN	NN	Number=Sing	20	obl	20:obl:by	SpaceAfter=No
 17	,	,	PUNCT	,	_	20	punct	20:punct	_
 18	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	20:nsubj	SpaceAfter=No
 19	'll	will	AUX	MD	VerbForm=Fin	20	aux	20:aux	_
@@ -1010,16 +1010,16 @@
 25	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
 26	life	life	NOUN	NN	Number=Sing	24	obj	24:obj	_
 27	with	with	ADP	IN	_	28	case	28:case	_
-28	prosperity	prosperity	NOUN	NN	Number=Sing	24	obl	24:obl	_
+28	prosperity	prosperity	NOUN	NN	Number=Sing	24	obl	24:obl:with	_
 29	and	and	CCONJ	CC	_	30	cc	30:cc	_
-30	accomplishments	accomplishment	NOUN	NNS	Number=Plur	28	conj	28:conj	SpaceAfter=No
+30	accomplishments	accomplishment	NOUN	NNS	Number=Plur	28	conj	24:obl:with|28:conj:and	SpaceAfter=No
 31	.	.	PUNCT	.	_	20	punct	20:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0049
 # text = Libra in 2005 - Expansion
 1	Libra	Libra	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod:in	_
 4	-	-	PUNCT	:	_	1	punct	1:punct	_
 5	Expansion	expansion	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
 
@@ -1033,22 +1033,22 @@
 6	Libra	Libra	PROPN	NNP	Number=Sing	1	vocative	1:vocative	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	prepare	prepare	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
+9	prepare	prepare	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 10	for	for	ADP	IN	_	14	case	14:case	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 12	relatively	relatively	ADV	RB	_	13	advmod	13:advmod	_
 13	easy	easy	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	ride	ride	NOUN	NN	Number=Sing	9	obl	9:obl	SpaceAfter=No
+14	ride	ride	NOUN	NN	Number=Sing	9	obl	9:obl:for	SpaceAfter=No
 15	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0051
 # text = With beneficent Jupiter in your sign, this is definitely your year, especially where your social life is concerned.
 1	With	with	ADP	IN	_	3	case	3:case	_
 2	beneficent	beneficent	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	Jupiter	Jupiter	PROPN	NNP	Number=Sing	12	obl	12:obl	_
+3	Jupiter	Jupiter	PROPN	NNP	Number=Sing	12	obl	12:obl:with	_
 4	in	in	ADP	IN	_	6	case	6:case	_
 5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
-6	sign	sign	NOUN	NN	Number=Sing	3	nmod	3:nmod	SpaceAfter=No
+6	sign	sign	NOUN	NN	Number=Sing	3	nmod	3:nmod:in	SpaceAfter=No
 7	,	,	PUNCT	,	_	12	punct	12:punct	_
 8	this	this	PRON	DT	Number=Sing|PronType=Dem	12	nsubj	12:nsubj	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
@@ -1062,14 +1062,14 @@
 17	social	social	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	life	life	NOUN	NN	Number=Sing	20	nsubj	20:nsubj	_
 19	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	20:cop	_
-20	concerned	concerned	ADJ	JJ	Degree=Pos	12	advcl	12:advcl	SpaceAfter=No
+20	concerned	concerned	ADJ	JJ	Degree=Pos	12	advcl	12:advcl:where	SpaceAfter=No
 21	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0052
 # text = Happiness and enjoyment lie ahead.
 1	Happiness	happiness	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	enjoyment	enjoyment	NOUN	NN	Number=Sing	1	conj	1:conj	_
+3	enjoyment	enjoyment	NOUN	NN	Number=Sing	1	conj	1:conj:and|4:nsubj	_
 4	lie	lie	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	ahead	ahead	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
 6	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -1077,14 +1077,14 @@
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0053
 # text = If you're not presently married, and want to be, you just might wed by the end of the year.
 1	If	if	SCONJ	IN	_	6	mark	6:mark	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	SpaceAfter=No
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj|9:nsubj|11:nsubj:xsubj	SpaceAfter=No
 3	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 4	not	not	PART	RB	_	6	advmod	6:advmod	_
 5	presently	presently	ADV	RB	_	6	advmod	6:advmod	_
-6	married	married	ADJ	JJ	Degree=Pos	16	advcl	16:advcl	SpaceAfter=No
+6	married	married	ADJ	JJ	Degree=Pos	16	advcl	16:advcl:if	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	conj	6:conj	_
+9	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	conj	6:conj:and|16:advcl:if	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	be	be	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	SpaceAfter=No
 12	,	,	PUNCT	,	_	16	punct	16:punct	_
@@ -1094,10 +1094,10 @@
 16	wed	wed	VERB	VB	VerbForm=Inf	0	root	0:root	_
 17	by	by	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	end	end	NOUN	NN	Number=Sing	16	obl	16:obl	_
+19	end	end	NOUN	NN	Number=Sing	16	obl	16:obl:by	_
 20	of	of	ADP	IN	_	22	case	22:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
-22	year	year	NOUN	NN	Number=Sing	19	nmod	19:nmod	SpaceAfter=No
+22	year	year	NOUN	NN	Number=Sing	19	nmod	19:nmod:of	SpaceAfter=No
 23	.	.	PUNCT	.	_	16	punct	16:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0054
@@ -1106,7 +1106,7 @@
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	year	year	NOUN	NN	Number=Sing	0	root	0:root	_
-5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	SpaceAfter=No
+5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|10:nsubj:xsubj	SpaceAfter=No
 6	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 7	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	4	acl:relcl	4:acl:relcl	_
 8	to	to	PART	TO	_	10	mark	10:mark	_
@@ -1115,28 +1115,28 @@
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	lot	lot	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	of	of	ADP	IN	_	14	case	14:case	_
-14	travel	travel	NOUN	NN	Number=Sing	12	nmod	12:nmod	_
+14	travel	travel	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	learning	learn	VERB	VBG	VerbForm=Ger	14	conj	14:conj	_
+16	learning	learn	VERB	VBG	VerbForm=Ger	14	conj	12:nmod:of|14:conj:and	_
 17	about	about	ADP	IN	_	19	case	19:case	_
 18	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
-19	world	world	NOUN	NN	Number=Sing	16	obl	16:obl	SpaceAfter=No
+19	world	world	NOUN	NN	Number=Sing	16	obl	16:obl:about	SpaceAfter=No
 20	,	,	PUNCT	,	_	4	punct	4:punct	_
 21	as	as	SCONJ	IN	_	25	mark	25:mark	_
 22	expansion	expansion	NOUN	NN	Number=Sing	25	nsubj	25:nsubj	_
 23	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	25	cop	25:cop	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
-25	theme	theme	NOUN	NN	Number=Sing	4	advcl	4:advcl	SpaceAfter=No
+25	theme	theme	NOUN	NN	Number=Sing	4	advcl	4:advcl:as	SpaceAfter=No
 26	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0055
 # text = The one department of life that may not quite be as hopeful as you'd like could be your career, where advancement may be slow and satisfaction rare.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	one	one	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	department	department	NOUN	NN	Number=Sing	20	nsubj	20:nsubj	_
+3	department	department	NOUN	NN	Number=Sing	20	nsubj	12:nsubj|20:nsubj	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	life	life	NOUN	NN	Number=Sing	3	nmod	3:nmod	_
-6	that	that	PRON	WDT	PronType=Rel	12	nsubj	12:nsubj	_
+5	life	life	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	_
+6	that	that	PRON	WDT	PronType=Rel	12	nsubj	3:ref	_
 7	may	may	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 8	not	not	PART	RB	_	12	advmod	12:advmod	_
 9	quite	quite	ADV	RB	_	12	advmod	12:advmod	_
@@ -1159,7 +1159,7 @@
 26	slow	slow	ADJ	JJ	Degree=Pos	20	acl:relcl	20:acl:relcl	_
 27	and	and	CCONJ	CC	_	29	cc	29:cc	_
 28	satisfaction	satisfaction	NOUN	NN	Number=Sing	29	nsubj	29:nsubj	_
-29	rare	rare	ADJ	JJ	Degree=Pos	26	conj	26:conj	SpaceAfter=No
+29	rare	rare	ADJ	JJ	Degree=Pos	26	conj	20:acl:relcl|26:conj:and	SpaceAfter=No
 30	.	.	PUNCT	.	_	20	punct	20:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0056
@@ -1167,12 +1167,12 @@
 1	By	by	ADP	IN	_	4	case	4:case	_
 2	year	year	NOUN	NN	Number=Sing	4	nmod:poss	4:nmod:poss	SpaceAfter=No
 3	's	's	PART	POS	_	2	case	2:case	_
-4	end	end	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+4	end	end	NOUN	NN	Number=Sing	8	obl	8:obl:by	SpaceAfter=No
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 7	may	may	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 8	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	_
-9	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	8	obj	8:obj	_
+9	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	8	obj	8:obj|11:nsubj:xsubj	_
 10	seriously	seriously	ADV	RB	_	9	advcl	9:advcl	_
 11	considering	consider	VERB	VBG	VerbForm=Ger	8	xcomp	8:xcomp	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
@@ -1182,14 +1182,14 @@
 16	all	all	DET	DT	_	11	parataxis	11:parataxis	_
 17	for	for	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	best	best	ADJ	JJS	Degree=Sup	16	nmod	16:nmod	SpaceAfter=No
+19	best	best	ADJ	JJS	Degree=Sup	16	nmod	16:nmod:for	SpaceAfter=No
 20	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0057
 # text = Scorpio in 2005 - Transmutation
 1	Scorpio	Scorpio	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod:in	_
 4	-	-	PUNCT	:	_	1	punct	1:punct	_
 5	Transmutation	transmutation	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
 
@@ -1209,17 +1209,17 @@
 12	-	-	PUNCT	,	_	7	punct	7:punct	_
 13	in	in	ADP	IN	_	15	case	15:case	_
 14	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
-15	life	life	NOUN	NN	Number=Sing	7	nmod	7:nmod	_
+15	life	life	NOUN	NN	Number=Sing	7	nmod	7:nmod:in	_
 16	this	this	DET	DT	Number=Sing|PronType=Dem	17	det	17:det	_
 17	year	year	NOUN	NN	Number=Sing	6	obl:tmod	6:obl:tmod	SpaceAfter=No
 18	,	,	PUNCT	,	_	6	punct	6:punct	_
 19	almost	almost	ADV	RB	_	22	advmod	22:advmod	_
 20	to	to	ADP	IN	_	22	case	22:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
-22	point	point	NOUN	NN	Number=Sing	6	obl	6:obl	_
+22	point	point	NOUN	NN	Number=Sing	6	obl	6:obl:to	_
 23	of	of	ADP	IN	_	25	case	25:case	_
 24	total	total	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
-25	transformation	transformation	NOUN	NN	Number=Sing	22	nmod	22:nmod	SpaceAfter=No
+25	transformation	transformation	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	SpaceAfter=No
 26	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0059
@@ -1228,13 +1228,13 @@
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 4	most	most	ADV	RBS	_	5	advmod	5:advmod	_
-5	apparent	apparent	ADJ	JJ	Degree=Pos	15	advcl	15:advcl	_
+5	apparent	apparent	ADJ	JJ	Degree=Pos	15	advcl	15:advcl:while	_
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	area	area	NOUN	NN	Number=Sing	5	obl	5:obl	_
+8	area	area	NOUN	NN	Number=Sing	5	obl	5:obl:in	_
 9	of	of	ADP	IN	_	11	case	11:case	_
 10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-11	career	career	NOUN	NN	Number=Sing	8	nmod	8:nmod	SpaceAfter=No
+11	career	career	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	SpaceAfter=No
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	SpaceAfter=No
 14	'll	will	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
@@ -1245,10 +1245,10 @@
 19	in	in	ADP	IN	_	22	case	22:case	_
 20	other	other	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 21	important	important	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	aspects	aspect	NOUN	NNS	Number=Plur	17	obl	17:obl	_
+22	aspects	aspect	NOUN	NNS	Number=Plur	17	obl	17:obl:in	_
 23	of	of	ADP	IN	_	25	case	25:case	_
 24	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
-25	life	life	NOUN	NN	Number=Sing	22	nmod	22:nmod	SpaceAfter=No
+25	life	life	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	SpaceAfter=No
 26	.	.	PUNCT	.	_	15	punct	15:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0060
@@ -1279,7 +1279,7 @@
 6	residence	residence	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	during	during	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	year	year	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+9	year	year	NOUN	NN	Number=Sing	4	obl	4:obl:during	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0062
@@ -1292,24 +1292,24 @@
 6	as	as	ADP	IN	_	9	case	9:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	single	single	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	person	person	NOUN	NN	Number=Sing	3	obl	3:obl	_
+9	person	person	NOUN	NN	Number=Sing	3	obl	3:obl:as	_
 10	looking	look	VERB	VBG	VerbForm=Ger	9	acl	9:acl	_
 11	for	for	ADP	IN	_	13	case	13:case	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
-13	partner	partner	NOUN	NN	Number=Sing	10	obl	10:obl	SpaceAfter=No
+13	partner	partner	NOUN	NN	Number=Sing	10	obl	10:obl:for	SpaceAfter=No
 14	,	,	PUNCT	,	_	19	punct	19:punct	_
 15	or	or	CCONJ	CC	_	19	cc	19:cc	_
 16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	19	nsubj	19:nsubj	SpaceAfter=No
 17	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
 18	been	be	AUX	VBN	Tense=Past|VerbForm=Part	19	cop	19:cop	_
-19	married	married	ADJ	JJ	Degree=Pos	3	conj	3:conj	_
+19	married	married	ADJ	JJ	Degree=Pos	3	conj	3:conj:or|28:ccomp	_
 20	for	for	ADP	IN	_	22	case	22:case	_
 21	many	many	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	years	year	NOUN	NNS	Number=Plur	19	obl	19:obl	SpaceAfter=No
+22	years	year	NOUN	NNS	Number=Plur	19	obl	19:obl:for	SpaceAfter=No
 23	,	,	PUNCT	,	_	28	punct	28:punct	_
 24	happiness	happiness	NOUN	NN	Number=Sing	28	nsubj	28:nsubj	_
 25	in	in	ADP	IN	_	26	case	26:case	_
-26	love	love	NOUN	NN	Number=Sing	24	nmod	24:nmod	_
+26	love	love	NOUN	NN	Number=Sing	24	nmod	24:nmod:in	_
 27	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	28	aux	28:aux	_
 28	lie	lie	VERB	VB	VerbForm=Inf	0	root	0:root	_
 29	ahead	ahead	ADV	RB	_	28	advmod	28:advmod	SpaceAfter=No
@@ -1321,7 +1321,7 @@
 2	prepared	prepared	ADJ	JJ	Degree=Pos	0	root	0:root	_
 3	for	for	ADP	IN	_	5	case	5:case	_
 4	new	new	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	horizons	horizon	NOUN	NNS	Number=Plur	2	obl	2:obl	SpaceAfter=No
+5	horizons	horizon	NOUN	NNS	Number=Plur	2	obl	2:obl:for	SpaceAfter=No
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0064
@@ -1336,7 +1336,7 @@
 8	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 9	will	will	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 10	be	be	AUX	VB	VerbForm=Inf	11	cop	11:cop	_
-11	fascinating	fascinating	ADJ	JJ	Degree=Pos	5	conj	5:conj	SpaceAfter=No
+11	fascinating	fascinating	ADJ	JJ	Degree=Pos	5	conj	5:conj:but	SpaceAfter=No
 12	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0065
@@ -1346,30 +1346,30 @@
 3	cling	cling	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	to	to	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	banks	bank	NOUN	NNS	Number=Plur	3	obl	3:obl	SpaceAfter=No
+6	banks	bank	NOUN	NNS	Number=Plur	3	obl	3:obl:to	SpaceAfter=No
 7	;	;	PUNCT	,	_	3	punct	3:punct	_
 8	instead	instead	ADV	RB	_	10	advmod	10:advmod	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
 10	flow	flow	VERB	VB	VerbForm=Inf	3	parataxis	3:parataxis	_
 11	with	with	ADP	IN	_	13	case	13:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	tide	tide	NOUN	NN	Number=Sing	10	obl	10:obl	_
+13	tide	tide	NOUN	NN	Number=Sing	10	obl	10:obl:with	_
 14	in	in	ADP	IN	_	15	case	15:case	_
-15	2005	2005	NUM	CD	NumType=Card	10	obl	10:obl	SpaceAfter=No
+15	2005	2005	NUM	CD	NumType=Card	10	obl	10:obl:in	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0066
 # text = Sagittarius in 2005 - Empowerment
 1	Sagittarius	Sagittarius	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod:in	_
 4	-	-	PUNCT	:	_	1	punct	1:punct	_
 5	Empowerment	empowerment	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0067
 # text = Are you prepared to handle absolute power?
 1	Are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 3	prepared	prepared	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	handle	handle	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
@@ -1380,7 +1380,7 @@
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0068
 # text = If not, you will be soon!
 1	If	if	SCONJ	IN	_	2	mark	2:mark	_
-2	not	not	PART	RB	_	6	advcl	6:advcl	SpaceAfter=No
+2	not	not	PART	RB	_	6	advcl	6:advcl:if	SpaceAfter=No
 3	,	,	PUNCT	,	_	6	punct	6:punct	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
 5	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
@@ -1403,7 +1403,7 @@
 11	special	special	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	relationship	relationship	NOUN	NN	Number=Sing	0	root	0:root	_
 13	with	with	ADP	IN	_	14	case	14:case	_
-14	Pluto	Pluto	PROPN	NNP	Number=Sing	12	nmod	12:nmod	_
+14	Pluto	Pluto	PROPN	NNP	Number=Sing	12	nmod	12:nmod:with	_
 15	-	-	PUNCT	,	_	12	punct	12:punct	_
 16	called	call	VERB	VBN	Tense=Past|VerbForm=Part	12	acl	12:acl	_
 17	"	"	PUNCT	``	_	19	punct	19:punct	SpaceAfter=No
@@ -1412,7 +1412,7 @@
 20	"	"	PUNCT	''	_	19	punct	19:punct	_
 21	-	-	PUNCT	,	_	12	punct	12:punct	_
 22	in	in	ADP	IN	_	23	case	23:case	_
-23	2005	2005	NUM	CD	NumType=Card	12	obl	12:obl	SpaceAfter=No
+23	2005	2005	NUM	CD	NumType=Card	12	obl	12:obl:in	SpaceAfter=No
 24	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0070
@@ -1425,12 +1425,12 @@
 6	packed	pack	VERB	VBN	Tense=Past|VerbForm=Part	5	acl	5:acl	_
 7	into	into	ADP	IN	_	9	case	9:case	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
-9	combination	combination	NOUN	NN	Number=Sing	6	obl	6:obl	_
+9	combination	combination	NOUN	NN	Number=Sing	6	obl	6:obl:into	_
 10	that	that	SCONJ	IN	_	14	mark	14:mark	_
 11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	SpaceAfter=No
 12	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
 13	almost	almost	ADV	RB	_	14	advmod	14:advmod	_
-14	scary	scary	ADJ	JJ	Degree=Pos	3	advcl	3:advcl	SpaceAfter=No
+14	scary	scary	ADJ	JJ	Degree=Pos	3	advcl	3:advcl:that	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0071
@@ -1445,7 +1445,7 @@
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	ability	ability	NOUN	NN	Number=Sing	3	ccomp	3:ccomp	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	choose	choose	VERB	VB	VerbForm=Inf	9	acl	9:acl	_
+11	choose	choose	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	_
 12	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 13	own	own	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	destiny	destiny	NOUN	NN	Number=Sing	11	obj	11:obj	SpaceAfter=No
@@ -1459,19 +1459,19 @@
 4	practical	practical	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	ways	way	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	of	of	SCONJ	IN	_	7	mark	7:mark	_
-7	increasing	increase	VERB	VBG	VerbForm=Ger	5	acl	5:acl	_
+7	increasing	increase	VERB	VBG	VerbForm=Ger	5	acl	5:acl:of	_
 8	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	effectiveness	effectiveness	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	in	in	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	world	world	NOUN	NN	Number=Sing	9	nmod	9:nmod	_
+12	world	world	NOUN	NN	Number=Sing	9	nmod	9:nmod:in	_
 13	by	by	SCONJ	IN	_	14	mark	14:mark	_
-14	gaining	gain	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl	_
+14	gaining	gain	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl:by	_
 15	new	new	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	skills	skill	NOUN	NNS	Number=Plur	14	obj	14:obj	_
-17	that	that	PRON	WDT	PronType=Rel	18	nsubj	18:nsubj	_
+16	skills	skill	NOUN	NNS	Number=Plur	14	obj	14:obj|18:nsubj	_
+17	that	that	PRON	WDT	PronType=Rel	18	nsubj	16:ref	_
 18	allow	allow	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	acl:relcl	16:acl:relcl	_
-19	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	18	obj	18:obj	_
+19	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	18	obj	18:obj|21:nsubj:xsubj	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
 21	live	live	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
 22	more	more	ADV	RBR	_	23	advmod	23:advmod	_
@@ -1483,10 +1483,10 @@
 1	By	by	ADP	IN	_	4	case	4:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 3	second	second	ADJ	JJ	Degree=Pos|NumType=Ord	4	amod	4:amod	_
-4	half	half	NOUN	NN	Number=Sing	12	obl	12:obl	_
+4	half	half	NOUN	NN	Number=Sing	12	obl	12:obl:by	_
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	year	year	NOUN	NN	Number=Sing	4	nmod	4:nmod	SpaceAfter=No
+7	year	year	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	SpaceAfter=No
 8	,	,	PUNCT	,	_	12	punct	12:punct	_
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
 10	will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
@@ -1498,8 +1498,8 @@
 16	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 17	tight	tight	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 18	financial	financial	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-19	binds	bind	NOUN	NNS	Number=Plur	14	nmod	14:nmod	_
-20	that	that	PRON	WDT	PronType=Rel	22	nsubj	22:nsubj	_
+19	binds	bind	NOUN	NNS	Number=Plur	14	nmod	14:nmod:from|22:nsubj	_
+20	that	that	PRON	WDT	PronType=Rel	22	nsubj	19:ref	_
 21	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	aux	22:aux	_
 22	hindered	hinder	VERB	VBN	Tense=Past|VerbForm=Part	19	acl:relcl	19:acl:relcl	_
 23	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	22	obj	22:obj	_
@@ -1507,7 +1507,7 @@
 25	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 26	past	past	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
 27	two	two	NUM	CD	NumType=Card	28	nummod	28:nummod	_
-28	years	year	NOUN	NNS	Number=Plur	22	obl	22:obl	SpaceAfter=No
+28	years	year	NOUN	NNS	Number=Plur	22	obl	22:obl:over	SpaceAfter=No
 29	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0074
@@ -1530,17 +1530,17 @@
 16	,	,	PUNCT	,	_	13	punct	13:punct	_
 17	for	for	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	rest	rest	NOUN	NN	Number=Sing	13	nmod	13:nmod	_
+19	rest	rest	NOUN	NN	Number=Sing	13	nmod	13:nmod:for	_
 20	of	of	ADP	IN	_	22	case	22:case	_
 21	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
-22	life	life	NOUN	NN	Number=Sing	19	nmod	19:nmod	SpaceAfter=No
+22	life	life	NOUN	NN	Number=Sing	19	nmod	19:nmod:of	SpaceAfter=No
 23	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0075
 # text = Overall, 2005 is sure to be a year you won't forget.
 1	Overall	overall	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	5	punct	5:punct	_
-3	2005	2005	NUM	CD	NumType=Card	5	nsubj	5:nsubj	_
+3	2005	2005	NUM	CD	NumType=Card	5	nsubj	5:nsubj|9:nsubj:xsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 5	sure	sure	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	to	to	PART	TO	_	9	mark	9:mark	_
@@ -1557,7 +1557,7 @@
 # text = Capricorn in 2005 - Resolution
 1	Capricorn	Capricorn	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod:in	_
 4	-	-	PUNCT	:	_	1	punct	1:punct	_
 5	Resolution	resolution	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
 
@@ -1569,12 +1569,12 @@
 4	plenty	plenty	NOUN	NN	Number=Sing	3	obj	3:obj	_
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	lucky	lucky	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	breaks	break	NOUN	NNS	Number=Plur	4	nmod	4:nmod	_
+7	breaks	break	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
 8	headed	head	VERB	VBN	Tense=Past|VerbForm=Part	7	acl	7:acl	_
 9	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	way	way	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	in	in	ADP	IN	_	12	case	12:case	_
-12	2005	2005	NUM	CD	NumType=Card	3	obl	3:obl	SpaceAfter=No
+12	2005	2005	NUM	CD	NumType=Card	3	obl	3:obl:in	SpaceAfter=No
 13	,	,	PUNCT	,	_	3	punct	3:punct	_
 14	friend	friend	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	Capricorn	Capricorn	PROPN	NNP	Number=Sing	3	obj	3:obj	SpaceAfter=No
@@ -1592,7 +1592,7 @@
 8	in	in	ADP	IN	_	11	case	11:case	_
 9	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 10	love	love	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	life	life	NOUN	NN	Number=Sing	7	obl	7:obl	_
+11	life	life	NOUN	NN	Number=Sing	7	obl	7:obl:in	_
 12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 13	around	around	ADP	IN	_	15	case	15:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
@@ -1601,20 +1601,20 @@
 17	and	and	CCONJ	CC	_	26	cc	26:cc	_
 18	by	by	ADP	IN	_	20	case	20:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
-20	end	end	NOUN	NN	Number=Sing	26	obl	26:obl	_
+20	end	end	NOUN	NN	Number=Sing	26	obl	26:obl:by	_
 21	of	of	ADP	IN	_	23	case	23:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
-23	year	year	NOUN	NN	Number=Sing	20	nmod	20:nmod	_
-24	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	26	nsubj	26:nsubj	_
+23	year	year	NOUN	NN	Number=Sing	20	nmod	20:nmod:of	_
+24	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	26	nsubj	26:nsubj|28:nsubj:xsubj	_
 25	will	will	AUX	MD	VerbForm=Fin	26	aux	26:aux	_
-26	feel	feel	VERB	VB	VerbForm=Inf	15	conj	15:conj	_
+26	feel	feel	VERB	VB	VerbForm=Inf	15	conj	15:conj:and	_
 27	much	much	ADV	RB	_	28	advmod	28:advmod	_
 28	clearer	clearer	ADJ	JJR	Degree=Cmp	26	xcomp	26:xcomp	_
 29	about	about	ADP	IN	_	31	case	31:case	_
 30	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	31	nmod:poss	31:nmod:poss	_
-31	partnerships	partnership	NOUN	NNS	Number=Plur	28	obl	28:obl	_
+31	partnerships	partnership	NOUN	NNS	Number=Plur	28	obl	28:obl:about	_
 32	in	in	ADP	IN	_	33	case	33:case	_
-33	general	general	ADJ	JJ	Degree=Pos	26	obl	26:obl	SpaceAfter=No
+33	general	general	ADJ	JJ	Degree=Pos	26	obl	26:obl:in	SpaceAfter=No
 34	.	.	PUNCT	.	_	15	punct	15:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0079
@@ -1633,8 +1633,8 @@
 12	advance	advance	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	planning	planning	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
 14	can	can	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-15	help	help	VERB	VB	VerbForm=Inf	8	advcl	8:advcl	_
-16	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	15	obj	15:obj	_
+15	help	help	VERB	VB	VerbForm=Inf	8	advcl	8:advcl:although	_
+16	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	15	obj	15:obj|17:nsubj:xsubj	_
 17	weather	weather	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 19	storm	storm	NOUN	NN	Number=Sing	17	obj	17:obj	SpaceAfter=No
@@ -1650,14 +1650,14 @@
 6	exponentially	exponentially	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
 7	,	,	PUNCT	,	_	11	punct	11:punct	_
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
-9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	SpaceAfter=No
+9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj|13:nsubj:xsubj	SpaceAfter=No
 10	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
-11	likely	likely	ADJ	JJ	Degree=Pos	5	conj	5:conj	_
+11	likely	likely	ADJ	JJ	Degree=Pos	5	conj	5:conj:and	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	change	change	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	jobs	job	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 15	or	or	CCONJ	CC	_	16	cc	16:cc	_
-16	positions	position	NOUN	NNS	Number=Plur	14	conj	14:conj	_
+16	positions	position	NOUN	NNS	Number=Plur	14	conj	13:obj|14:conj:or	_
 17	this	this	DET	DT	Number=Sing|PronType=Dem	18	det	18:det	_
 18	year	year	NOUN	NN	Number=Sing	13	obl:tmod	13:obl:tmod	SpaceAfter=No
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -1665,51 +1665,51 @@
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0081
 # text = At times, the pressure on your job and home life may seem unbearable, but rest assured you will come through this stronger - and wiser - than ever, as more is revealed and resolved in 2005.
 1	At	at	ADP	IN	_	2	case	2:case	_
-2	times	time	NOUN	NNS	Number=Plur	13	obl	13:obl	SpaceAfter=No
+2	times	time	NOUN	NNS	Number=Plur	13	obl	13:obl:at	SpaceAfter=No
 3	,	,	PUNCT	,	_	13	punct	13:punct	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	pressure	pressure	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
+5	pressure	pressure	NOUN	NN	Number=Sing	13	nsubj	13:nsubj|14:nsubj:xsubj|17:nsubj	_
 6	on	on	ADP	IN	_	8	case	8:case	_
 7	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	job	job	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+8	job	job	NOUN	NN	Number=Sing	5	nmod	5:nmod:on	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	home	home	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	life	life	NOUN	NN	Number=Sing	8	conj	8:conj	_
+11	life	life	NOUN	NN	Number=Sing	8	conj	5:nmod:on|8:conj:and	_
 12	may	may	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
 13	seem	seem	VERB	VB	VerbForm=Inf	0	root	0:root	_
 14	unbearable	unbearable	ADJ	JJ	Degree=Pos	13	xcomp	13:xcomp	SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	but	but	CCONJ	CC	_	17	cc	17:cc	_
-17	rest	rest	VERB	VB	Mood=Imp|VerbForm=Fin	13	conj	13:conj	_
+17	rest	rest	VERB	VB	Mood=Imp|VerbForm=Fin	13	conj	13:conj:but	_
 18	assured	assure	VERB	VBN	Tense=Past|VerbForm=Part	17	advcl	17:advcl	_
-19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	21	nsubj	21:nsubj	_
+19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	21	nsubj	21:nsubj|24:nsubj:xsubj|27:nsubj:xsubj	_
 20	will	will	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
 21	come	come	VERB	VB	VerbForm=Inf	18	ccomp	18:ccomp	_
 22	through	through	ADP	IN	_	23	case	23:case	_
-23	this	this	PRON	DT	Number=Sing|PronType=Dem	21	obl	21:obl	_
+23	this	this	PRON	DT	Number=Sing|PronType=Dem	21	obl	21:obl:through	_
 24	stronger	stronger	ADJ	JJR	Degree=Cmp	21	xcomp	21:xcomp	_
 25	-	-	PUNCT	,	_	24	punct	24:punct	_
 26	and	and	CCONJ	CC	_	27	cc	27:cc	_
-27	wiser	wiser	ADJ	JJR	Degree=Cmp	24	conj	24:conj	_
+27	wiser	wiser	ADJ	JJR	Degree=Cmp	24	conj	21:xcomp|24:conj:and	_
 28	-	-	PUNCT	,	_	24	punct	24:punct	_
 29	than	than	ADP	IN	_	30	mark	30:mark	_
-30	ever	ever	ADV	RB	_	24	advcl	24:advcl	SpaceAfter=No
+30	ever	ever	ADV	RB	_	24	advcl	24:advcl:than	SpaceAfter=No
 31	,	,	PUNCT	,	_	21	punct	21:punct	_
 32	as	as	SCONJ	IN	_	35	mark	35:mark	_
-33	more	more	ADJ	JJR	Degree=Cmp	35	nsubj:pass	35:nsubj:pass	_
+33	more	more	ADJ	JJR	Degree=Cmp	35	nsubj:pass	35:nsubj:pass|37:nsubj:pass	_
 34	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	35	aux:pass	35:aux:pass	_
-35	revealed	reveal	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	21	advcl	21:advcl	_
+35	revealed	reveal	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	21	advcl	21:advcl:as	_
 36	and	and	CCONJ	CC	_	37	cc	37:cc	_
-37	resolved	resolve	VERB	VBN	Tense=Past|VerbForm=Part	35	conj	35:conj	_
+37	resolved	resolve	VERB	VBN	Tense=Past|VerbForm=Part	35	conj	21:advcl:as|35:conj:and	_
 38	in	in	ADP	IN	_	39	case	39:case	_
-39	2005	2005	NUM	CD	NumType=Card	35	obl	35:obl	SpaceAfter=No
+39	2005	2005	NUM	CD	NumType=Card	35	obl	35:obl:in	SpaceAfter=No
 40	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0082
 # text = Aquarius in 2005 - Magic
 1	Aquarius	Aquarius	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod:in	_
 4	-	-	PUNCT	:	_	1	punct	1:punct	_
 5	Magic	magic	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
 
@@ -1722,7 +1722,7 @@
 5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 6	intuitive	intuitive	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	psychic	psychic	ADJ	JJ	Degree=Pos	6	conj	6:conj	_
+8	psychic	psychic	ADJ	JJ	Degree=Pos	6	conj	6:conj:and|9:amod	_
 9	skills	skill	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 10	even	even	ADV	RB	_	11	advmod	11:advmod	_
 11	more	more	ADV	RBR	_	4	advmod	4:advmod	SpaceAfter=No
@@ -1733,68 +1733,68 @@
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0084
 # text = The mysteries of the universe continue to attract and intrigue you, as you apply your mystical awareness to the important decisions upcoming in your life, especially concerning partnerships of all kinds.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	mysteries	mystery	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
+2	mysteries	mystery	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj|8:nsubj:xsubj|10:nsubj:xsubj	_
 3	of	of	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	universe	universe	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+5	universe	universe	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 6	continue	continue	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	attract	attract	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	intrigue	intrigue	VERB	VB	VerbForm=Inf	8	conj	8:conj	_
-11	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	8	obj	8:obj	SpaceAfter=No
+10	intrigue	intrigue	VERB	VB	VerbForm=Inf	8	conj	6:xcomp|8:conj:and	_
+11	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	8	obj	8:obj|10:obj	SpaceAfter=No
 12	,	,	PUNCT	,	_	8	punct	8:punct	_
 13	as	as	SCONJ	IN	_	15	mark	15:mark	_
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
-15	apply	apply	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl	_
+15	apply	apply	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:as	_
 16	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 17	mystical	mystical	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	awareness	awareness	NOUN	NN	Number=Sing	15	obj	15:obj	_
 19	to	to	ADP	IN	_	22	case	22:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 21	important	important	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	decisions	decision	NOUN	NNS	Number=Plur	15	obl	15:obl	_
+22	decisions	decision	NOUN	NNS	Number=Plur	15	obl	15:obl:to	_
 23	upcoming	upcoming	ADJ	JJ	Degree=Pos	22	acl:relcl	22:acl:relcl	_
 24	in	in	ADP	IN	_	26	case	26:case	_
 25	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
-26	life	life	NOUN	NN	Number=Sing	23	obl	23:obl	SpaceAfter=No
+26	life	life	NOUN	NN	Number=Sing	23	obl	23:obl:in	SpaceAfter=No
 27	,	,	PUNCT	,	_	22	punct	22:punct	_
 28	especially	especially	ADV	RB	_	30	advmod	30:advmod	_
 29	concerning	concern	VERB	VBG	VerbForm=Ger	30	case	30:case	_
-30	partnerships	partnership	NOUN	NNS	Number=Plur	22	nmod	22:nmod	_
+30	partnerships	partnership	NOUN	NNS	Number=Plur	22	nmod	22:nmod:concern	_
 31	of	of	ADP	IN	_	33	case	33:case	_
 32	all	all	DET	DT	_	33	det	33:det	_
-33	kinds	kind	NOUN	NNS	Number=Plur	30	nmod	30:nmod	SpaceAfter=No
+33	kinds	kind	NOUN	NNS	Number=Plur	30	nmod	30:nmod:of	SpaceAfter=No
 34	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0085
 # text = 2005 is bound to bring at least one major success in the love department, and your career will be brimming with new enthusiasm and innovation.
-1	2005	2005	NUM	CD	NumType=Card	3	nsubj	3:nsubj	_
+1	2005	2005	NUM	CD	NumType=Card	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	bound	bound	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	bring	bring	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	at	at	ADV	RB	_	7	case	7:case	_
-7	least	least	ADV	RBS	Degree=Sup	8	nmod	8:nmod	_
+7	least	least	ADV	RBS	Degree=Sup	8	nmod	8:nmod:at	_
 8	one	one	NUM	CD	NumType=Card	10	nummod	10:nummod	_
 9	major	major	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	success	success	NOUN	NN	Number=Sing	5	obj	5:obj	_
 11	in	in	ADP	IN	_	14	case	14:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	love	love	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	department	department	NOUN	NN	Number=Sing	10	nmod	10:nmod	SpaceAfter=No
+14	department	department	NOUN	NN	Number=Sing	10	nmod	10:nmod:in	SpaceAfter=No
 15	,	,	PUNCT	,	_	21	punct	21:punct	_
 16	and	and	CCONJ	CC	_	21	cc	21:cc	_
 17	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 18	career	career	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	_
 19	will	will	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
 20	be	be	AUX	VB	VerbForm=Inf	21	aux	21:aux	_
-21	brimming	brim	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	3:conj	_
+21	brimming	brim	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	3:conj:and	_
 22	with	with	ADP	IN	_	24	case	24:case	_
 23	new	new	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-24	enthusiasm	enthusiasm	NOUN	NN	Number=Sing	21	obl	21:obl	_
+24	enthusiasm	enthusiasm	NOUN	NN	Number=Sing	21	obl	21:obl:with	_
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_
-26	innovation	innovation	NOUN	NN	Number=Sing	24	conj	24:conj	SpaceAfter=No
+26	innovation	innovation	NOUN	NN	Number=Sing	24	conj	21:obl:with|24:conj:and	SpaceAfter=No
 27	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0086
@@ -1806,20 +1806,20 @@
 5	but	but	CCONJ	CC	_	13	cc	13:cc	_
 6	travel	travel	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	adventure	adventure	NOUN	NN	Number=Sing	6	conj	6:conj	SpaceAfter=No
+8	adventure	adventure	NOUN	NN	Number=Sing	6	conj	6:conj:and|13:nsubj	SpaceAfter=No
 9	,	,	PUNCT	,	_	12	punct	12:punct	_
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	personal	personal	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	expansion	expansion	NOUN	NN	Number=Sing	6	conj	6:conj	_
-13	infuse	infuse	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+12	expansion	expansion	NOUN	NN	Number=Sing	6	conj	6:conj:and|13:nsubj	_
+13	infuse	infuse	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:but	_
 14	fresh	fresh	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	energy	energy	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	into	into	ADP	IN	_	18	case	18:case	_
 17	all	all	DET	DT	_	18	det	18:det	_
-18	areas	area	NOUN	NNS	Number=Plur	13	obl	13:obl	_
+18	areas	area	NOUN	NNS	Number=Plur	13	obl	13:obl:into	_
 19	of	of	ADP	IN	_	21	case	21:case	_
 20	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
-21	life	life	NOUN	NN	Number=Sing	18	nmod	18:nmod	SpaceAfter=No
+21	life	life	NOUN	NN	Number=Sing	18	nmod	18:nmod:of	SpaceAfter=No
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0087
@@ -1827,7 +1827,7 @@
 1	By	by	ADP	IN	_	4	case	4:case	_
 2	year	year	NOUN	NN	Number=Sing	4	nmod:poss	4:nmod:poss	SpaceAfter=No
 3	's	's	PART	POS	_	2	case	2:case	_
-4	end	end	NOUN	NN	Number=Sing	13	obl	13:obl	SpaceAfter=No
+4	end	end	NOUN	NN	Number=Sing	13	obl	13:obl:by	SpaceAfter=No
 5	,	,	PUNCT	,	_	13	punct	13:punct	_
 6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 7	creative	creative	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
@@ -1841,22 +1841,22 @@
 15	to	to	ADP	IN	_	18	case	18:case	_
 16	whole	whole	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 17	new	new	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	peaks	peak	NOUN	NNS	Number=Plur	13	obl	13:obl	_
+18	peaks	peak	NOUN	NNS	Number=Plur	13	obl	13:obl:to	_
 19	-	-	PUNCT	,	_	18	punct	18:punct	_
 20	and	and	CCONJ	CC	_	24	cc	24:cc	_
 21	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
 22	whole	whole	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 23	new	new	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-24	view	view	NOUN	NN	Number=Sing	18	conj	18:conj	_
+24	view	view	NOUN	NN	Number=Sing	18	conj	13:obl:to|18:conj:and	_
 25	from	from	ADP	IN	_	26	case	26:case	_
-26	above	above	ADV	RB	_	24	nmod	24:nmod	SpaceAfter=No
+26	above	above	ADV	RB	_	24	nmod	24:nmod:from	SpaceAfter=No
 27	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0088
 # text = Pisces in 2005 - Self-confidence
 1	Pisces	Pisces	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	2005	2005	NUM	CD	NumType=Card	1	nmod	1:nmod:in	_
 4	-	-	PUNCT	:	_	1	punct	1:punct	_
 5	Self	self	NOUN	NN	Number=Sing	7	compound	7:compound	SpaceAfter=No
 6	-	-	PUNCT	HYPH	_	7	punct	7:punct	SpaceAfter=No
@@ -1870,7 +1870,7 @@
 4	big	big	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	year	year	NOUN	NN	Number=Sing	0	root	0:root	_
 6	for	for	ADP	IN	_	7	case	7:case	_
-7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	obl	5:obl	SpaceAfter=No
+7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	obl	5:obl:for	SpaceAfter=No
 8	,	,	PUNCT	,	_	5	punct	5:punct	_
 9	friend	friend	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	Pisces	Pisces	PROPN	NNP	Number=Sing	5	vocative	5:vocative	SpaceAfter=No
@@ -1882,7 +1882,7 @@
 2	doubt	doubt	ADV	RB	_	8	advmod	8:advmod	SpaceAfter=No
 3	,	,	PUNCT	,	_	8	punct	8:punct	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	2005	2005	NUM	CD	NumType=Card	8	obl	8:obl	_
+5	2005	2005	NUM	CD	NumType=Card	8	obl	8:obl:in	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	SpaceAfter=No
 7	'll	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 8	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -1890,29 +1890,29 @@
 10	pushed	push	VERB	VBN	Tense=Past|VerbForm=Part	9	advcl	9:advcl	_
 11	more	more	ADV	RBR	_	10	advmod	10:advmod	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	more	more	ADV	RBR	_	11	conj	11:conj	_
+13	more	more	ADV	RBR	_	11	conj	10:advmod|11:conj:and	_
 14	out	out	ADV	RB	_	10	advmod	10:advmod	_
 15	into	into	ADP	IN	_	17	case	17:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
-17	world	world	NOUN	NN	Number=Sing	10	obl	10:obl	SpaceAfter=No
+17	world	world	NOUN	NN	Number=Sing	10	obl	10:obl:into	SpaceAfter=No
 18	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0091
 # text = You'll experience a new sense of purpose and make plenty of new friends.
-1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	SpaceAfter=No
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|10:nsubj	SpaceAfter=No
 2	'll	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	experience	experience	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	new	new	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	sense	sense	NOUN	NN	Number=Sing	3	obj	3:obj	_
 7	of	of	ADP	IN	_	8	case	8:case	_
-8	purpose	purpose	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+8	purpose	purpose	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	make	make	VERB	VB	VerbForm=Inf	3	conj	3:conj	_
+10	make	make	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
 11	plenty	plenty	NOUN	NN	Number=Sing	10	obj	10:obj	_
 12	of	of	ADP	IN	_	14	case	14:case	_
 13	new	new	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	friends	friend	NOUN	NNS	Number=Plur	11	nmod	11:nmod	SpaceAfter=No
+14	friends	friend	NOUN	NNS	Number=Plur	11	nmod	11:nmod:of	SpaceAfter=No
 15	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0092
@@ -1920,43 +1920,43 @@
 1	Expect	expect	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	lots	lot	NOUN	NNS	Number=Plur	1	obj	1:obj	_
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	surprises	surprise	NOUN	NNS	Number=Plur	2	nmod	2:nmod	_
+4	surprises	surprise	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	_
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
 6	lucky	lucky	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	breaks	break	NOUN	NNS	Number=Plur	4	conj	4:conj	_
+7	breaks	break	NOUN	NNS	Number=Plur	4	conj	2:nmod:of|4:conj:and	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
 9	year	year	NOUN	NN	Number=Sing	1	obl:tmod	1:obl:tmod	SpaceAfter=No
 10	,	,	PUNCT	,	_	1	punct	1:punct	_
 11	with	with	SCONJ	IN	_	13	mark	13:mark	_
 12	Uranus	Uranus	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	_
-13	bringing	bring	VERB	VBG	VerbForm=Ger	1	advcl	1:advcl	_
+13	bringing	bring	VERB	VBG	VerbForm=Ger	1	advcl	1:advcl:with	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	unexpected	unexpected	ADJ	JJ	Degree=Pos	13	obj	13:obj	_
 16	in	in	ADP	IN	_	18	case	18:case	_
 17	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
-18	career	career	NOUN	NN	Number=Sing	13	obl	13:obl	SpaceAfter=No
+18	career	career	NOUN	NN	Number=Sing	13	obl	13:obl:in	SpaceAfter=No
 19	,	,	PUNCT	,	_	22	punct	22:punct	_
 20	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
 21	love	love	NOUN	NN	Number=Sing	22	compound	22:compound	_
-22	life	life	NOUN	NN	Number=Sing	18	conj	18:conj	SpaceAfter=No
+22	life	life	NOUN	NN	Number=Sing	18	conj	13:obl:in|18:conj:and	SpaceAfter=No
 23	,	,	PUNCT	,	_	26	punct	26:punct	_
 24	and	and	CCONJ	CC	_	26	cc	26:cc	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
-26	world	world	NOUN	NN	Number=Sing	18	conj	18:conj	_
+26	world	world	NOUN	NN	Number=Sing	18	conj	13:obl:in|18:conj:and	_
 27	in	in	ADP	IN	_	28	case	28:case	_
-28	general	general	ADJ	JJ	Degree=Pos	26	nmod	26:nmod	SpaceAfter=No
+28	general	general	ADJ	JJ	Degree=Pos	26	nmod	26:nmod:in	SpaceAfter=No
 29	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0093
 # text = At some point during the year, you could pick up a financial windfall, hear of a great career opportunity, or unexpectedly meet the love of your life.
 1	At	at	ADP	IN	_	3	case	3:case	_
 2	some	some	DET	DT	_	3	det	3:det	_
-3	point	point	NOUN	NN	Number=Sing	10	obl	10:obl	_
+3	point	point	NOUN	NN	Number=Sing	10	obl	10:obl:at	_
 4	during	during	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	year	year	NOUN	NN	Number=Sing	3	nmod	3:nmod	SpaceAfter=No
+6	year	year	NOUN	NN	Number=Sing	3	nmod	3:nmod:during	SpaceAfter=No
 7	,	,	PUNCT	,	_	10	punct	10:punct	_
-8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
+8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj|16:nsubj|25:nsubj	_
 9	could	could	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 10	pick	pick	VERB	VB	VerbForm=Inf	0	root	0:root	_
 11	up	up	ADP	RP	_	10	compound:prt	10:compound:prt	_
@@ -1964,21 +1964,21 @@
 13	financial	financial	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	windfall	windfall	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No
 15	,	,	PUNCT	,	_	16	punct	16:punct	_
-16	hear	hear	VERB	VB	VerbForm=Inf	10	conj	10:conj	_
+16	hear	hear	VERB	VB	VerbForm=Inf	10	conj	10:conj:or	_
 17	of	of	ADP	IN	_	21	case	21:case	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 19	great	great	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 20	career	career	NOUN	NN	Number=Sing	21	compound	21:compound	_
-21	opportunity	opportunity	NOUN	NN	Number=Sing	16	obl	16:obl	SpaceAfter=No
+21	opportunity	opportunity	NOUN	NN	Number=Sing	16	obl	16:obl:of	SpaceAfter=No
 22	,	,	PUNCT	,	_	25	punct	25:punct	_
 23	or	or	CCONJ	CC	_	25	cc	25:cc	_
 24	unexpectedly	unexpectedly	ADV	RB	_	25	advmod	25:advmod	_
-25	meet	meet	VERB	VB	VerbForm=Inf	10	conj	10:conj	_
+25	meet	meet	VERB	VB	VerbForm=Inf	10	conj	10:conj:or	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 27	love	love	NOUN	NN	Number=Sing	25	obj	25:obj	_
 28	of	of	ADP	IN	_	30	case	30:case	_
 29	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	30	nmod:poss	30:nmod:poss	_
-30	life	life	NOUN	NN	Number=Sing	27	nmod	27:nmod	SpaceAfter=No
+30	life	life	NOUN	NN	Number=Sing	27	nmod	27:nmod:of	SpaceAfter=No
 31	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0094
@@ -1991,30 +1991,30 @@
 6	take	take	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	csubj	3:csubj	_
 7	retreats	retreat	NOUN	NNS	Number=Plur	6	obj	6:obj	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	plenty	plenty	NOUN	NN	Number=Sing	7	conj	7:conj	_
+9	plenty	plenty	NOUN	NN	Number=Sing	7	conj	6:obj|7:conj:and	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	time	time	NOUN	NN	Number=Sing	9	nmod	9:nmod	_
+11	time	time	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	_
 12	for	for	ADP	IN	_	13	case	13:case	_
-13	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	11	nmod	11:nmod	_
+13	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	11	nmod	11:nmod:for	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
-15	regenerate	regenerate	VERB	VB	VerbForm=Inf	6	advcl	6:advcl	SpaceAfter=No
+15	regenerate	regenerate	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:to	SpaceAfter=No
 16	,	,	PUNCT	,	_	6	punct	6:punct	_
 17	as	as	SCONJ	IN	_	30	mark	30:mark	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	rate	rate	NOUN	NN	Number=Sing	30	nsubj	30:nsubj	_
+19	rate	rate	NOUN	NN	Number=Sing	30	nsubj	30:nsubj|32:nsubj	_
 20	of	of	ADP	IN	_	21	case	21:case	_
-21	change	change	NOUN	NN	Number=Sing	19	nmod	19:nmod	_
+21	change	change	NOUN	NN	Number=Sing	19	nmod	19:nmod:of	_
 22	in	in	ADP	IN	_	27	case	27:case	_
 23	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	27	nmod:poss	27:nmod:poss	_
 24	personal	personal	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_
-26	professional	professional	ADJ	JJ	Degree=Pos	24	conj	24:conj	_
-27	life	life	NOUN	NN	Number=Sing	19	nmod	19:nmod	_
+26	professional	professional	ADJ	JJ	Degree=Pos	24	conj	24:conj:and|27:amod	_
+27	life	life	NOUN	NN	Number=Sing	19	nmod	19:nmod:in	_
 28	will	will	AUX	MD	VerbForm=Fin	30	aux	30:aux	_
 29	be	be	AUX	VB	VerbForm=Inf	30	cop	30:cop	_
-30	fast	fast	ADJ	JJ	Degree=Pos	6	advcl	6:advcl	_
+30	fast	fast	ADJ	JJ	Degree=Pos	6	advcl	6:advcl:as	_
 31	and	and	CCONJ	CC	_	32	cc	32:cc	_
-32	unpredictable	unpredictable	ADJ	JJ	Degree=Pos	30	conj	30:conj	SpaceAfter=No
+32	unpredictable	unpredictable	ADJ	JJ	Degree=Pos	30	conj	6:advcl:as|30:conj:and	SpaceAfter=No
 33	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0095
@@ -2022,17 +2022,17 @@
 1	Remain	remain	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	calm	calm	ADJ	JJ	Degree=Pos	1	xcomp	1:xcomp	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	confident	confident	ADJ	JJ	Degree=Pos	2	conj	2:conj	SpaceAfter=No
+4	confident	confident	ADJ	JJ	Degree=Pos	2	conj	1:xcomp|2:conj:and	SpaceAfter=No
 5	,	,	PUNCT	,	_	10	punct	10:punct	_
 6	and	and	CCONJ	CC	_	10	cc	10:cc	_
-7	love	love	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
+7	love	love	NOUN	NN	Number=Sing	10	nsubj	10:nsubj|12:nsubj:xsubj	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 9	very	very	ADV	RB	_	10	advmod	10:advmod	_
-10	likely	likely	ADJ	JJ	Degree=Pos	2	conj	2:conj	_
+10	likely	likely	ADJ	JJ	Degree=Pos	2	conj	1:xcomp|2:conj:and	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	flourish	flourish	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	2005	2005	NUM	CD	NumType=Card	12	obl	12:obl	SpaceAfter=No
+14	2005	2005	NUM	CD	NumType=Card	12	obl	12:obl:in	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0096
@@ -2044,7 +2044,7 @@
 5	,	,	PUNCT	,	_	8	punct	8:punct	SpaceAfter=No
 6	"	"	PUNCT	''	_	2	punct	2:punct	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	enjoy	enjoy	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj	_
+8	enjoy	enjoy	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj:and	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	ride	ride	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No
 11	!	!	PUNCT	.	_	2	punct	2:punct	_
@@ -2055,12 +2055,12 @@
 2	Success	success	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
 3	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	before	before	ADP	IN	_	5	case	5:case	_
-5	work	work	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+5	work	work	NOUN	NN	Number=Sing	3	obl	3:obl:before	SpaceAfter=No
 6	"	"	PUNCT	''	_	3	punct	3:punct	_
 7	only	only	ADV	RB	_	10	advmod	10:advmod	_
 8	in	in	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	dictionary	dictionary	NOUN	NN	Number=Sing	3	obl	3:obl	_
+10	dictionary	dictionary	NOUN	NN	Number=Sing	3	obl	3:obl:in	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0098
 # text = Mayur ? <>
@@ -2098,7 +2098,7 @@
 # text = Talk to me <ymsgr:sendIM?mayursha&__Hi+Mayur...>
 1	Talk	talk	VERB	VB	Mood=Imp|VerbForm=Fin	5	parataxis	5:parataxis	_
 2	to	to	ADP	IN	_	3	case	3:case	_
-3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obl	1:obl	_
+3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obl	1:obl:to	_
 4	<	<	PUNCT	-LRB-	_	5	punct	5:punct	SpaceAfter=No
 5	ymsgr:sendIM?mayursha&__Hi+Mayur...	ymsgr:sendim?mayursha&__hi+mayur...	X	ADD	_	0	root	0:root	SpaceAfter=No
 6	>	>	PUNCT	-RRB-	_	5	punct	5:punct	_

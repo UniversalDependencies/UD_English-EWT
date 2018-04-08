@@ -6,7 +6,7 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	moment	moment	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
-6	read	read	VERB	VB	VerbForm=Inf	2	advcl	2:advcl	_
+6	read	read	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
 7	this	this	PRON	DT	Number=Sing|PronType=Dem	6	obj	6:obj	SpaceAfter=No
 8	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -15,24 +15,24 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	realize	realize	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	that	that	SCONJ	IN	_	6	mark	6:mark	_
-4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
+4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj|7:nsubj:xsubj	_
 5	may	may	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 6	sound	sound	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
 7	strange	strange	ADJ	JJ	Degree=Pos	6	xcomp	6:xcomp	SpaceAfter=No
 8	,	,	PUNCT	,	_	12	punct	12:punct	_
 9	but	but	CCONJ	CC	_	12	cc	12:cc	_
-10	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
+10	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	12	nsubj	12:nsubj|18:nsubj|20:nsubj:xsubj	_
 11	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
-12	desparate	desparate	ADJ	JJ	Degree=Pos	2	conj	2:conj	_
+12	desparate	desparate	ADJ	JJ	Degree=Pos	2	conj	2:conj:but	_
 13	in	in	ADP	IN	_	15	case	15:case	_
 14	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
-15	efforts	effort	NOUN	NNS	Number=Plur	12	obl	12:obl	_
+15	efforts	effort	NOUN	NNS	Number=Plur	12	obl	12:obl:in	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
-18	willing	willing	ADJ	JJ	Degree=Pos	12	conj	12:conj	_
+18	willing	willing	ADJ	JJ	Degree=Pos	12	conj	12:conj:and	_
 19	to	to	PART	TO	_	20	mark	20:mark	_
 20	try	try	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
-21	anything	anything	PRON	NN	Number=Sing	20	obj	20:obj	_
+21	anything	anything	PRON	NN	Number=Sing	20	obj	20:obj|23:nsubj:xsubj	_
 22	to	to	PART	TO	_	23	mark	23:mark	_
 23	help	help	VERB	VB	VerbForm=Inf	20	xcomp	20:xcomp	_
 24	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	27	nmod:poss	27:nmod:poss	_
@@ -43,20 +43,20 @@
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0003
 # text = This costs absolutely nothing, and will take about one minute of your time.
-1	This	this	PRON	DT	Number=Sing|PronType=Dem	2	nsubj	2:nsubj	_
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	2	nsubj	2:nsubj|8:nsubj	_
 2	costs	cost	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	absolutely	absolutely	ADV	RB	_	4	advmod	4:advmod	_
 4	nothing	nothing	PRON	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	and	and	CCONJ	CC	_	8	cc	8:cc	_
 7	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	take	take	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
+8	take	take	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
 9	about	about	ADV	RB	_	10	advmod	10:advmod	_
 10	one	one	NUM	CD	NumType=Card	11	nummod	11:nummod	_
 11	minute	minute	NOUN	NN	Number=Sing	8	obj	8:obj	_
 12	of	of	ADP	IN	_	14	case	14:case	_
 13	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
-14	time	time	NOUN	NN	Number=Sing	11	nmod	11:nmod	SpaceAfter=No
+14	time	time	NOUN	NN	Number=Sing	11	nmod	11:nmod:of	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0004
@@ -72,8 +72,8 @@
 9	many	many	ADJ	JJ	Degree=Pos	13	nsubj	13:nsubj	_
 10	of	of	ADP	IN	_	12	case	12:case	_
 11	these	these	DET	DT	Number=Plur|PronType=Dem	12	det	12:det	_
-12	emails	email	NOUN	NNS	Number=Plur	9	nmod	9:nmod	_
-13	actully	actully	ADV	RB	_	5	advcl	5:advcl	_
+12	emails	email	NOUN	NNS	Number=Plur	9	nmod	9:nmod:of	_
+13	actully	actully	ADV	RB	_	5	advcl	5:advcl:as	_
 14	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	cop	13:cop	SpaceAfter=No
 15	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -81,7 +81,7 @@
 # text = In quick summary, Beyond Control, a local band in our area, is sponoring a benefit for a cancer victim whose benefits have run out.
 1	In	in	ADP	IN	_	3	case	3:case	_
 2	quick	quick	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	summary	summary	NOUN	NN	Number=Sing	16	obl	16:obl	SpaceAfter=No
+3	summary	summary	NOUN	NN	Number=Sing	16	obl	16:obl:in	SpaceAfter=No
 4	,	,	PUNCT	,	_	16	punct	16:punct	_
 5	Beyond	Beyond	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 6	Control	Control	PROPN	NNP	Number=Sing	16	nsubj	16:nsubj	SpaceAfter=No
@@ -91,7 +91,7 @@
 10	band	band	NOUN	NN	Number=Sing	6	appos	6:appos	_
 11	in	in	ADP	IN	_	13	case	13:case	_
 12	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
-13	area	area	NOUN	NN	Number=Sing	10	nmod	10:nmod	SpaceAfter=No
+13	area	area	NOUN	NN	Number=Sing	10	nmod	10:nmod:in	SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
 15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
 16	sponoring	sponor	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
@@ -100,8 +100,8 @@
 19	for	for	ADP	IN	_	22	case	22:case	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
 21	cancer	cancer	NOUN	NN	Number=Sing	22	compound	22:compound	_
-22	victim	victim	NOUN	NN	Number=Sing	18	nmod	18:nmod	_
-23	whose	whose	PRON	WP$	Poss=Yes|PronType=Int	24	nmod:poss	24:nmod:poss	_
+22	victim	victim	NOUN	NN	Number=Sing	18	nmod	18:nmod:for|24:nmod:poss	_
+23	whose	whose	PRON	WP$	Poss=Yes|PronType=Int	24	nmod:poss	22:ref	_
 24	benefits	benefit	NOUN	NNS	Number=Plur	26	nsubj	26:nsubj	_
 25	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	26	aux	26:aux	_
 26	run	run	VERB	VBN	Tense=Past|VerbForm=Part	22	acl:relcl	22:acl:relcl	_
@@ -117,17 +117,17 @@
 5	in	in	ADP	IN	_	8	case	8:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	local	local	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	competition	competition	NOUN	NN	Number=Sing	4	obl	4:obl	_
-9	which	which	PRON	WDT	PronType=Rel	10	nsubj	10:nsubj	_
+8	competition	competition	NOUN	NN	Number=Sing	4	obl	4:obl:in|10:nsubj	_
+9	which	which	PRON	WDT	PronType=Rel	10	nsubj	8:ref	_
 10	promises	promise	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 12	$	$	SYM	$	_	15	compound	15:compound	SpaceAfter=No
 13	5000	5000	NUM	CD	NumType=Card	12	nummod	12:nummod	_
 14	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	15	amod	15:amod	_
-15	prize	prize	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No
+15	prize	prize	NOUN	NN	Number=Sing	10	obj	10:obj|20:obj	SpaceAfter=No
 16	,	,	PUNCT	,	_	15	punct	15:punct	_
-17	which	which	PRON	WDT	PronType=Rel	20	obj	20:obj	_
-18	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	20	nsubj	20:nsubj	_
+17	which	which	PRON	WDT	PronType=Rel	20	obj	15:ref	_
+18	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	20	nsubj	20:nsubj|22:nsubj:xsubj	_
 19	would	would	AUX	MD	VerbForm=Fin	20	aux	20:aux	_
 20	like	like	VERB	VB	VerbForm=Inf	15	acl:relcl	15:acl:relcl	_
 21	to	to	PART	TO	_	22	mark	22:mark	_
@@ -135,13 +135,13 @@
 23	in	in	ADP	IN	_	26	mark	26:mark	_
 24	order	order	NOUN	NN	Number=Sing	23	fixed	23:fixed	_
 25	to	to	PART	TO	_	26	mark	26:mark	_
-26	donate	donate	VERB	VB	VerbForm=Inf	22	advcl	22:advcl	_
+26	donate	donate	VERB	VB	VerbForm=Inf	22	advcl	22:advcl:to	_
 27	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	26	obj	26:obj	_
 28	to	to	ADP	IN	_	31	case	31:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
 30	benefit	benefit	NOUN	NN	Number=Sing	31	compound	31:compound	_
-31	fund	fund	NOUN	NN	Number=Sing	26	obl	26:obl	_
-32	which	which	PRON	WDT	PronType=Rel	35	obj	35:obj	_
+31	fund	fund	NOUN	NN	Number=Sing	26	obl	26:obl:to|35:obj	_
+32	which	which	PRON	WDT	PronType=Rel	35	obj	31:ref	_
 33	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	35	nsubj	35:nsubj	_
 34	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	35	aux	35:aux	_
 35	started	start	VERB	VBN	Tense=Past|VerbForm=Part	31	acl:relcl	31:acl:relcl	SpaceAfter=No
@@ -154,19 +154,19 @@
 3	some	some	DET	DT	_	4	det	4:det	_
 4	emails	email	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	_
 5	to	to	ADP	IN	_	6	case	6:case	_
-6	friends	friend	NOUN	NNS	Number=Plur	4	nmod	4:nmod	_
+6	friends	friend	NOUN	NNS	Number=Plur	4	nmod	4:nmod:to	_
 7	explaining	explain	VERB	VBG	VerbForm=Ger	4	acl	4:acl	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 9	little	little	ADJ	JJ	Degree=Pos	10	obl:npmod	10:obl:npmod	_
 10	more	more	ADJ	JJR	Degree=Cmp	7	obj	7:obj	_
 11	about	about	ADP	IN	_	13	case	13:case	_
 12	this	this	DET	DT	Number=Sing|PronType=Dem	13	det	13:det	_
-13	effort	effort	NOUN	NN	Number=Sing	10	obl	10:obl	SpaceAfter=No
+13	effort	effort	NOUN	NN	Number=Sing	10	obl	10:obl:about	SpaceAfter=No
 14	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0008
 # text = What we are trying to do is solicit votes for the band, in order to put them in first place.
-1	What	what	PRON	WP	PronType=Int	4	obj	4:obj	_
+1	What	what	PRON	WP	PronType=Int	4	obj	4:obj|6:nsubj:xsubj	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 3	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	7	csubj	7:csubj	_
@@ -177,21 +177,21 @@
 9	votes	vote	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 10	for	for	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	band	band	NOUN	NN	Number=Sing	9	nmod	9:nmod	SpaceAfter=No
+12	band	band	NOUN	NN	Number=Sing	9	nmod	9:nmod:for	SpaceAfter=No
 13	,	,	PUNCT	,	_	8	punct	8:punct	_
 14	in	in	ADP	IN	_	17	mark	17:mark	_
 15	order	order	NOUN	NN	Number=Sing	14	fixed	14:fixed	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
-17	put	put	VERB	VB	VerbForm=Inf	8	advcl	8:advcl	_
+17	put	put	VERB	VB	VerbForm=Inf	8	advcl	8:advcl:in_order	_
 18	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	17	obj	17:obj	_
 19	in	in	ADP	IN	_	21	case	21:case	_
 20	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	21	amod	21:amod	_
-21	place	place	NOUN	NN	Number=Sing	17	obl	17:obl	SpaceAfter=No
+21	place	place	NOUN	NN	Number=Sing	17	obl	17:obl:in	SpaceAfter=No
 22	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0009
 # text = They are currently in third place, and need your help so that the prize money can be used for a humanatarian cause.
-1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	6:nsubj|9:nsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 3	currently	currently	ADV	RB	_	6	advmod	6:advmod	_
 4	in	in	ADP	IN	_	6	case	6:case	_
@@ -199,7 +199,7 @@
 6	place	place	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	conj	6:conj	_
+9	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	conj	6:conj:and	_
 10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	help	help	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	so	so	SCONJ	IN	_	19	mark	19:mark	_
@@ -209,11 +209,11 @@
 16	money	money	NOUN	NN	Number=Sing	19	nsubj:pass	19:nsubj:pass	_
 17	can	can	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 18	be	be	AUX	VB	VerbForm=Inf	19	aux:pass	19:aux:pass	_
-19	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	advcl	9:advcl	_
+19	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	advcl	9:advcl:so_that	_
 20	for	for	ADP	IN	_	23	case	23:case	_
 21	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
 22	humanatarian	humanatarian	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
-23	cause	cause	NOUN	NN	Number=Sing	19	obl	19:obl	SpaceAfter=No
+23	cause	cause	NOUN	NN	Number=Sing	19	obl	19:obl:for	SpaceAfter=No
 24	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0010
@@ -224,7 +224,7 @@
 4	at	at	ADP	IN	_	7	case	7:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	following	follow	VERB	VBG	VerbForm=Ger	7	amod	7:amod	_
-7	link	link	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+7	link	link	NOUN	NN	Number=Sing	3	obl	3:obl:at	SpaceAfter=No
 8	,	,	PUNCT	,	_	3	punct	3:punct	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 10	will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
@@ -242,18 +242,18 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	moment	moment	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
-6	click	click	VERB	VB	VerbForm=Inf	2	advcl	2:advcl	_
+6	click	click	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
 7	on	on	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	link	link	NOUN	NN	Number=Sing	6	obl	6:obl	_
+9	link	link	NOUN	NN	Number=Sing	6	obl	6:obl:on	_
 10	below	below	ADV	RB	_	9	advmod	9:advmod	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	cast	cast	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+12	cast	cast	VERB	VB	VerbForm=Inf	6	conj	2:advcl:to|6:conj:and	_
 13	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 14	vote	vote	NOUN	NN	Number=Sing	12	obj	12:obj	_
 15	for	for	ADP	IN	_	17	case	17:case	_
 16	Beyond	Beyond	PROPN	NNP	Number=Sing	17	compound	17:compound	_
-17	Control	Control	PROPN	NNP	Number=Sing	14	nmod	14:nmod	SpaceAfter=No
+17	Control	Control	PROPN	NNP	Number=Sing	14	nmod	14:nmod:for	SpaceAfter=No
 18	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0012
@@ -261,13 +261,13 @@
 1	Thank	thank	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	obj	1:obj	_
 3	in	in	ADP	IN	_	4	case	4:case	_
-4	advance	advance	NOUN	NN	Number=Sing	1	obl	1:obl	_
+4	advance	advance	NOUN	NN	Number=Sing	1	obl	1:obl:in	_
 5	for	for	ADP	IN	_	7	case	7:case	_
 6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
-7	contribution	contribution	NOUN	NN	Number=Sing	1	obl	1:obl	_
+7	contribution	contribution	NOUN	NN	Number=Sing	1	obl	1:obl:for	_
 8	to	to	ADP	IN	_	10	case	10:case	_
 9	this	this	DET	DT	Number=Sing|PronType=Dem	10	det	10:det	_
-10	effort	effort	NOUN	NN	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+10	effort	effort	NOUN	NN	Number=Sing	7	nmod	7:nmod:to	SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0013
@@ -279,16 +279,16 @@
 5	this	this	PRON	DT	Number=Sing|PronType=Dem	4	obj	4:obj	_
 6	along	along	ADV	RB	_	4	advmod	4:advmod	_
 7	to	to	ADP	IN	_	8	case	8:case	_
-8	everyone	everyone	PRON	NN	Number=Sing	4	obl	4:obl	_
+8	everyone	everyone	PRON	NN	Number=Sing	4	obl	4:obl:to	_
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
 10	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	all	all	DET	DT	_	8	conj	8:conj	_
+13	all	all	DET	DT	_	8	conj	4:obl:to|8:conj:and	_
 14	of	of	ADP	IN	_	17	case	17:case	_
 15	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 16	email	email	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	contacts	contact	NOUN	NNS	Number=Plur	13	nmod	13:nmod	SpaceAfter=No
+17	contacts	contact	NOUN	NNS	Number=Plur	13	nmod	13:nmod:of	SpaceAfter=No
 18	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0014
@@ -299,9 +299,9 @@
 4	power	power	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	internet	internet	NOUN	NN	Number=Sing	4	nmod	4:nmod	_
+7	internet	internet	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
-9	pull	pull	VERB	VB	VerbForm=Inf	2	advcl	2:advcl	_
+9	pull	pull	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
 10	this	this	PRON	DT	Number=Sing|PronType=Dem	9	obj	9:obj	_
 11	off	off	ADP	RP	_	9	compound:prt	9:compound:prt	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -321,14 +321,14 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	validity	validity	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	all	all	DET	DT	_	5	nmod	5:nmod	_
+7	all	all	DET	DT	_	5	nmod	5:nmod:of	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	this	this	PRON	DT	Number=Sing|PronType=Dem	7	nmod	7:nmod	_
+9	this	this	PRON	DT	Number=Sing|PronType=Dem	7	nmod	7:nmod:of	_
 10	at	at	ADP	IN	_	14	case	14:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 12	Beyond	Beyond	PROPN	NNP	Number=Sing	13	compound	13:compound	_
 13	Control	Control	PROPN	NNP	Number=Sing	14	compound	14:compound	_
-14	website	website	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+14	website	website	NOUN	NN	Number=Sing	3	obl	3:obl:at	SpaceAfter=No
 15	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0017
@@ -344,22 +344,22 @@
 2	home	home	NOUN	NN	Number=Sing	3	compound	3:compound	_
 3	page	page	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
 4	for	for	ADP	IN	_	5	case	5:case	_
-5	Rockin	Rockin	PROPN	NNP	Number=Sing	3	nmod	3:nmod	_
+5	Rockin	Rockin	PROPN	NNP	Number=Sing	3	nmod	3:nmod:for	_
 6	on	on	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	River	River	PROPN	NNP	Number=Sing	5	nmod	5:nmod	_
+8	River	River	PROPN	NNP	Number=Sing	5	nmod	5:nmod:on	_
 9	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 10	,	,	PUNCT	,	_	13	punct	13:punct	_
 11	and	and	CCONJ	CC	_	13	cc	13:cc	_
 12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
-13	lists	list	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	conj	9:conj	_
+13	lists	list	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	conj	9:conj:and	_
 14	all	all	DET	PDT	_	16	det:predet	16:det:predet	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 16	acts	act	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 17	scheduled	schedule	VERB	VBN	Tense=Past|VerbForm=Part	16	acl	16:acl	_
 18	for	for	ADP	IN	_	20	case	20:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
-20	season	season	NOUN	NN	Number=Sing	17	obl	17:obl	SpaceAfter=No
+20	season	season	NOUN	NN	Number=Sing	17	obl	17:obl:for	SpaceAfter=No
 21	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0019
@@ -373,9 +373,9 @@
 7	well	well	ADV	RB	Degree=Pos	6	fixed	6:fixed	SpaceAfter=No
 8	,	,	PUNCT	,	_	3	punct	3:punct	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	confirm	confirm	VERB	VB	VerbForm=Inf	3	advcl	3:advcl	_
+10	confirm	confirm	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_
 11	that	that	SCONJ	IN	_	15	mark	15:mark	_
-12	this	this	PRON	DT	Number=Sing|PronType=Dem	15	nsubj	15:nsubj	_
+12	this	this	PRON	DT	Number=Sing|PronType=Dem	15	nsubj	15:nsubj|21:nsubj	_
 13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 14	all	all	ADV	RB	_	15	advmod	15:advmod	_
 15	real	real	ADJ	JJ	Degree=Pos	10	ccomp	10:ccomp	SpaceAfter=No
@@ -384,7 +384,7 @@
 18	for	for	ADP	IN	_	21	case	21:case	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 20	worthy	worthy	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
-21	cause	cause	NOUN	NN	Number=Sing	15	conj	15:conj	SpaceAfter=No
+21	cause	cause	NOUN	NN	Number=Sing	15	conj	10:ccomp|15:conj:and	SpaceAfter=No
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0020
@@ -396,14 +396,14 @@
 5	friend	friend	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 6	,	,	PUNCT	,	_	10	punct	10:punct	_
 7	and	and	CCONJ	CC	_	10	cc	10:cc	_
-8	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
+8	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	10	nsubj	10:nsubj|12:nsubj:xsubj	_
 9	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
-10	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	5	conj	5:conj	_
+10	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	5	conj	5:conj:and	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	raise	raise	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	money	money	NOUN	NN	Number=Sing	12	obj	12:obj	_
 14	for	for	ADP	IN	_	15	case	15:case	_
-15	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	12	obl	12:obl	_
+15	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	12	obl	12:obl:for	_
 16	any	any	DET	DT	_	17	det	17:det	_
 17	way	way	NOUN	NN	Number=Sing	12	obl:npmod	12:obl:npmod	_
 18	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
@@ -414,11 +414,11 @@
 23	prize	prize	NOUN	NN	Number=Sing	24	compound	24:compound	_
 24	money	money	NOUN	NN	Number=Sing	26	nsubj	26:nsubj	_
 25	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	cop	26:cop	_
-26	important	important	ADJ	JJ	Degree=Pos	5	conj	5:conj	_
+26	important	important	ADJ	JJ	Degree=Pos	5	conj	5:conj:and	_
 27	to	to	PART	TO	_	28	mark	28:mark	_
-28	help	help	VERB	VB	VerbForm=Inf	26	advcl	26:advcl	_
+28	help	help	VERB	VB	VerbForm=Inf	26	advcl	26:advcl:to	_
 29	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	28	obj	28:obj	_
-30	continue	continue	VERB	VB	VerbForm=Inf	28	ccomp	28:xcomp	_
+30	continue	continue	VERB	VB	VerbForm=Inf	28	ccomp	28:ccomp	_
 31	to	to	PART	TO	_	32	mark	32:mark	_
 32	receive	receive	VERB	VB	VerbForm=Inf	30	xcomp	30:xcomp	_
 33	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	37	nmod:poss	37:nmod:poss	_
@@ -435,13 +435,13 @@
 3	,	,	PUNCT	,	_	7	punct	7:punct	_
 4	and	and	CCONJ	CC	_	7	cc	7:cc	_
 5	may	may	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
-6	God	God	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
-7	bless	bless	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
+6	God	God	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj|11:nsubj	_
+7	bless	bless	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
 8	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	7	obj	7:obj	_
 9	all	all	DET	DT	_	8	det	8:det	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	keep	keep	VERB	VB	VerbForm=Inf	7	conj	7:conj	_
-12	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	11	obj	11:obj	_
+11	keep	keep	VERB	VB	VerbForm=Inf	7	conj	7:conj:and	_
+12	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	11	obj	11:obj|13:nsubj:xsubj	_
 13	healthy	healthy	ADJ	JJ	Degree=Pos	11	xcomp	11:xcomp	SpaceAfter=No
 14	.	.	PUNCT	.	_	7	punct	7:punct	_
 
@@ -458,22 +458,22 @@
 9	along	along	ADP	IN	_	12	case	12:case	_
 10	with	with	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	flyer	flyer	NOUN	NN	Number=Sing	4	nmod	4:nmod	_
+12	flyer	flyer	NOUN	NN	Number=Sing	4	nmod	4:nmod:with	_
 13	for	for	ADP	IN	_	17	case	17:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 15	Benefit	benefit	NOUN	NN	Number=Sing	17	compound	17:compound	_
 16	fund	fund	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	raiser	raiser	NOUN	NN	Number=Sing	12	nmod	12:nmod	_
+17	raiser	raiser	NOUN	NN	Number=Sing	12	nmod	12:nmod:for	_
 18	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
 19	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
 20	holding	hold	VERB	VBG	Tense=Pres|VerbForm=Part	17	acl:relcl	17:acl:relcl	_
 21	in	in	ADP	IN	_	22	case	22:case	_
-22	June	June	PROPN	NNP	Number=Sing	20	obl	20:obl	SpaceAfter=No
+22	June	June	PROPN	NNP	Number=Sing	20	obl	20:obl:in	SpaceAfter=No
 23	,	,	PUNCT	,	_	1	punct	1:punct	_
 24	just	just	ADV	RB	_	27	advmod	27:advmod	_
 25	for	for	ADP	IN	_	27	case	27:case	_
 26	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	27	nmod:poss	27:nmod:poss	_
-27	information	information	NOUN	NN	Number=Sing	1	obl	1:obl	SpaceAfter=No
+27	information	information	NOUN	NN	Number=Sing	1	obl	1:obl:for	SpaceAfter=No
 28	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0023
@@ -488,39 +488,39 @@
 3	sending	send	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	iobj	3:iobj	_
 5	some	some	DET	DT	_	6	det	6:det	_
-6	info	info	NOUN	NN	Number=Sing	3	obj	3:obj	_
-7	that	that	PRON	WDT	PronType=Rel	10	obj	10:obj	_
+6	info	info	NOUN	NN	Number=Sing	3	obj	3:obj|10:obj	_
+7	that	that	PRON	WDT	PronType=Rel	10	obj	6:ref	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 9	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
 10	passed	pass	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	_
 11	along	along	ADV	RB	_	10	advmod	10:advmod	_
 12	regarding	regard	VERB	VBG	VerbForm=Ger	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	effort	effort	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+14	effort	effort	NOUN	NN	Number=Sing	6	nmod	6:nmod:regard	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
-16	win	win	VERB	VB	VerbForm=Inf	14	acl	14:acl	_
+16	win	win	VERB	VB	VerbForm=Inf	14	acl	14:acl:to	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 18	cash	cash	NOUN	NN	Number=Sing	16	obj	16:obj	_
 19	for	for	ADP	IN	_	23	case	23:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 21	fund	fund	NOUN	NN	Number=Sing	22	compound	22:compound	_
 22	raising	raising	NOUN	NN	Number=Sing	23	compound	23:compound	_
-23	benefit	benefit	NOUN	NN	Number=Sing	16	obl	16:obl	SpaceAfter=No
+23	benefit	benefit	NOUN	NN	Number=Sing	16	obl	16:obl:for	SpaceAfter=No
 24	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0025
 # text = If you can pass this info along, and ask everyone you know to forward it to their contacts, etc, we may have a shot at pulling this off.
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|10:nsubj	_
 3	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-4	pass	pass	VERB	VB	VerbForm=Inf	25	advcl	25:advcl	_
+4	pass	pass	VERB	VB	VerbForm=Inf	25	advcl	25:advcl:if	_
 5	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	_
 6	info	info	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	along	along	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	ask	ask	VERB	VB	VerbForm=Inf	4	conj	4:conj	_
-11	everyone	everyone	PRON	NN	Number=Sing	10	obj	10:obj	_
+10	ask	ask	VERB	VB	VerbForm=Inf	4	conj	4:conj:and|25:advcl:if	_
+11	everyone	everyone	PRON	NN	Number=Sing	10	obj	10:obj|15:nsubj:xsubj	_
 12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
 13	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
@@ -528,9 +528,9 @@
 16	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	obj	15:obj	_
 17	to	to	ADP	IN	_	19	case	19:case	_
 18	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
-19	contacts	contact	NOUN	NNS	Number=Plur	15	obl	15:obl	SpaceAfter=No
+19	contacts	contact	NOUN	NNS	Number=Plur	15	obl	15:obl:to	SpaceAfter=No
 20	,	,	PUNCT	,	_	21	punct	21:punct	_
-21	etc	etc	X	FW	_	19	conj	19:conj	SpaceAfter=No
+21	etc	etc	X	FW	_	19	conj	15:obl:to|19:conj	SpaceAfter=No
 22	,	,	PUNCT	,	_	25	punct	25:punct	_
 23	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
 24	may	may	AUX	MD	VerbForm=Fin	25	aux	25:aux	_
@@ -538,7 +538,7 @@
 26	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	_
 27	shot	shot	NOUN	NN	Number=Sing	25	obj	25:obj	_
 28	at	at	SCONJ	IN	_	29	mark	29:mark	_
-29	pulling	pull	VERB	VBG	VerbForm=Ger	27	acl	27:acl	_
+29	pulling	pull	VERB	VBG	VerbForm=Ger	27	acl	27:acl:at	_
 30	this	this	PRON	DT	Number=Sing|PronType=Dem	29	obj	29:obj	_
 31	off	off	ADP	RP	_	29	compound:prt	29:compound:prt	SpaceAfter=No
 32	.	.	PUNCT	.	_	25	punct	25:punct	_
@@ -581,7 +581,7 @@
 5	to	to	ADP	IN	_	8	case	8:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	contest	contest	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	page	page	NOUN	NN	Number=Sing	4	nmod	4:nmod	SpaceAfter=No
+8	page	page	NOUN	NN	Number=Sing	4	nmod	4:nmod:to	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0031
@@ -589,7 +589,7 @@
 1	Any	any	DET	DT	_	2	det	2:det	_
 2	help	help	NOUN	NN	Number=Sing	9	nsubj:pass	9:nsubj:pass	_
 3	in	in	SCONJ	IN	_	4	mark	4:mark	_
-4	distributing	distribute	VERB	VBG	VerbForm=Ger	2	acl	2:acl	_
+4	distributing	distribute	VERB	VBG	VerbForm=Ger	2	acl	2:acl:in	_
 5	this	this	PRON	DT	Number=Sing|PronType=Dem	4	obj	4:obj	_
 6	will	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 7	be	be	AUX	VB	VerbForm=Inf	9	aux:pass	9:aux:pass	_
@@ -610,19 +610,19 @@
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0033
 # text = Abby needs to fly to New York twice a month for these treatments, and her time on the Federal Grant program has expired.
-1	Abby	Abby	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
+1	Abby	Abby	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|4:nsubj:xsubj	_
 2	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	fly	fly	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	New	New	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	York	York	PROPN	NNP	Number=Sing	4	obl	4:obl	_
+7	York	York	PROPN	NNP	Number=Sing	4	obl	4:obl:to	_
 8	twice	twice	ADV	RB	NumType=Mult	4	advmod	4:advmod	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	month	month	NOUN	NN	Number=Sing	8	obl:npmod	8:obl:npmod	_
 11	for	for	ADP	IN	_	13	case	13:case	_
 12	these	these	DET	DT	Number=Plur|PronType=Dem	13	det	13:det	_
-13	treatments	treatment	NOUN	NNS	Number=Plur	4	obl	4:obl	SpaceAfter=No
+13	treatments	treatment	NOUN	NNS	Number=Plur	4	obl	4:obl:for	SpaceAfter=No
 14	,	,	PUNCT	,	_	24	punct	24:punct	_
 15	and	and	CCONJ	CC	_	24	cc	24:cc	_
 16	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
@@ -631,9 +631,9 @@
 19	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 20	Federal	federal	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 21	Grant	grant	NOUN	NN	Number=Sing	22	compound	22:compound	_
-22	program	program	NOUN	NN	Number=Sing	17	nmod	17:nmod	_
+22	program	program	NOUN	NN	Number=Sing	17	nmod	17:nmod:on	_
 23	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	aux	24:aux	_
-24	expired	expire	VERB	VBN	Tense=Past|VerbForm=Part	2	conj	2:conj	SpaceAfter=No
+24	expired	expire	VERB	VBN	Tense=Past|VerbForm=Part	2	conj	2:conj:and	SpaceAfter=No
 25	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0034
@@ -645,20 +645,20 @@
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	funds	fund	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	continue	continue	VERB	VB	VerbForm=Inf	6	acl	6:acl	_
+8	continue	continue	VERB	VB	VerbForm=Inf	6	acl	6:acl:to	_
 9	without	without	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	grant	grant	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+11	grant	grant	NOUN	NN	Number=Sing	4	obl	4:obl:without	SpaceAfter=No
 12	,	,	PUNCT	,	_	21	punct	21:punct	_
 13	and	and	CCONJ	CC	_	21	cc	21:cc	_
 14	without	without	ADP	IN	_	16	case	16:case	_
 15	these	these	DET	DT	Number=Plur|PronType=Dem	16	det	16:det	_
-16	treatments	treatment	NOUN	NNS	Number=Plur	21	obl	21:obl	SpaceAfter=No
+16	treatments	treatment	NOUN	NNS	Number=Plur	21	obl	21:obl:without	SpaceAfter=No
 17	,	,	PUNCT	,	_	21	punct	21:punct	_
 18	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
 19	prognosis	prognosis	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	_
 20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	cop	21:cop	_
-21	grim	grim	ADJ	JJ	Degree=Pos	4	conj	4:conj	SpaceAfter=No
+21	grim	grim	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
 22	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0035
@@ -677,14 +677,14 @@
 1	Also	also	ADV	RB	_	2	advmod	2:advmod	_
 2	encourage	encourage	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	recipients	recipient	NOUN	NNS	Number=Plur	2	obj	2:obj	_
+4	recipients	recipient	NOUN	NNS	Number=Plur	2	obj	2:obj|6:nsubj:xsubj	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	forward	forward	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 7	this	this	PRON	DT	Number=Sing|PronType=Dem	6	obj	6:obj	_
 8	along	along	ADV	RB	_	6	advmod	6:advmod	_
 9	to	to	ADP	IN	_	11	case	11:case	_
 10	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-11	contacts	contact	NOUN	NNS	Number=Plur	6	obl	6:obl	SpaceAfter=No
+11	contacts	contact	NOUN	NNS	Number=Plur	6	obl	6:obl:to	SpaceAfter=No
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	so	so	ADV	RB	_	15	advmod	15:advmod	_
@@ -695,9 +695,9 @@
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	movement	movement	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	_
 21	to	to	PART	TO	_	22	mark	22:mark	_
-22	help	help	VERB	VB	VerbForm=Inf	20	acl	20:acl	_
+22	help	help	VERB	VB	VerbForm=Inf	20	acl	20:acl:to	_
 23	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	22	obj	22:obj	_
-24	grows	grow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	advcl	2:advcl	_
+24	grows	grow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	advcl	2:advcl:so_that	_
 25	exponentially	exponentially	ADV	RB	_	24	advmod	24:advmod	SpaceAfter=No
 26	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -708,18 +708,18 @@
 3	finish	finish	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	in	in	ADP	IN	_	6	case	6:case	_
 5	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	6	amod	6:amod	_
-6	place	place	NOUN	NN	Number=Sing	3	obl	3:obl	_
+6	place	place	NOUN	NN	Number=Sing	3	obl	3:obl:in	_
 7	in	in	ADP	IN	_	10	mark	10:mark	_
 8	order	order	NOUN	NN	Number=Sing	7	fixed	7:fixed	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	contribute	contribute	VERB	VB	VerbForm=Inf	3	advcl	3:advcl	_
+10	contribute	contribute	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	$	$	SYM	$	_	10	obj	10:obj	SpaceAfter=No
 13	5000	5000	NUM	CD	NumType=Card	12	nummod	12:nummod	_
 14	to	to	ADP	IN	_	17	case	17:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	benefit	benefit	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	fund	fund	NOUN	NN	Number=Sing	10	obl	10:obl	SpaceAfter=No
+17	fund	fund	NOUN	NN	Number=Sing	10	obl	10:obl:to	SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0038
@@ -729,10 +729,10 @@
 3	so	so	ADV	RB	_	4	advmod	4:advmod	_
 4	much	much	ADV	RB	_	1	advmod	1:advmod	_
 5	for	for	SCONJ	IN	_	6	mark	6:mark	_
-6	caring	care	VERB	VBG	VerbForm=Ger	1	advcl	1:advcl	_
+6	caring	care	VERB	VBG	VerbForm=Ger	1	advcl	1:advcl:for	_
 7	enough	enough	ADV	RB	_	6	advmod	6:advmod	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
-9	offer	offer	VERB	VB	VerbForm=Inf	6	advcl	6:advcl	_
+9	offer	offer	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:to	_
 10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	help	help	NOUN	NN	Number=Sing	9	obj	9:obj	SpaceAfter=No
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -748,7 +748,7 @@
 3	&	&	CCONJ	CC	_	4	cc	4:cc	_
 4	RAFFLE	raffle	NOUN	NN	Number=Sing	1	conj	1:conj	_
 5	FOR	for	ADP	IN	_	6	case	6:case	_
-6	ABBY	ABBY	PROPN	NNP	Number=Sing	1	nmod	1:nmod	_
+6	ABBY	ABBY	PROPN	NNP	Number=Sing	1	nmod	1:nmod:for	_
 7	FREEMAN	FREEMAN	PROPN	NNP	Number=Sing	6	flat	6:flat	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0041
@@ -764,7 +764,7 @@
 9	P.M.	p.m.	NOUN	NN	Number=Sing	3	appos	3:appos	_
 10	TO	to	ADP	IN	_	12	case	12:case	_
 11	2:00	2:00	NUM	CD	NumType=Card	12	nummod	12:nummod	_
-12	A.M.	a.m.	NOUN	NN	Number=Sing	9	nmod	9:nmod	_
+12	A.M.	a.m.	NOUN	NN	Number=Sing	9	nmod	9:nmod:to	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0042
 # text = WHERE: MAIN STREET SALOON
@@ -781,7 +781,7 @@
 3	DONATIONS	donation	NOUN	NNS	Number=Plur	1	appos	1:appos	_
 4	AT	at	ADP	IN	_	6	case	6:case	_
 5	THE	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	DOOR	door	NOUN	NN	Number=Sing	3	nmod	3:nmod	_
+6	DOOR	door	NOUN	NN	Number=Sing	3	nmod	3:nmod:at	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0044
 # text = Abby Freeman is our good friend who has non-Hodgkin lymphoma, and she needs your help!
@@ -790,15 +790,15 @@
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 4	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 5	good	good	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	friend	friend	NOUN	NN	Number=Sing	0	root	0:root	_
-7	who	who	PRON	WP	PronType=Rel	8	nsubj	8:nsubj	_
+6	friend	friend	NOUN	NN	Number=Sing	0	root	8:nsubj	_
+7	who	who	PRON	WP	PronType=Rel	8	nsubj	6:ref	_
 8	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
 9	non-Hodgkin	non-hodgkin	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	lymphoma	lymphoma	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No
 11	,	,	PUNCT	,	_	14	punct	14:punct	_
 12	and	and	CCONJ	CC	_	14	cc	14:cc	_
 13	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
-14	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj	_
+14	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:and|8:nsubj	_
 15	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 16	help	help	NOUN	NN	Number=Sing	14	obj	14:obj	SpaceAfter=No
 17	!	!	PUNCT	.	_	6	punct	6:punct	_
@@ -811,7 +811,7 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 5	life	life	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	saving	save	VERB	VBG	VerbForm=Ger	7	amod	7:amod	_
-7	treatments	treatment	NOUN	NNS	Number=Plur	2	nmod	2:nmod	_
+7	treatments	treatment	NOUN	NNS	Number=Plur	2	nmod	2:nmod:for	_
 8	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
 9	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
 10	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
@@ -819,11 +819,11 @@
 12	out	out	ADP	RP	_	11	compound:prt	11:compound:prt	SpaceAfter=No
 13	,	,	PUNCT	,	_	16	punct	16:punct	_
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
-15	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
-16	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	conj	11:conj	_
+15	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	16	nsubj	16:nsubj|18:nsubj:xsubj	_
+16	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	conj	11:conj:and	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
 18	help	help	VERB	VB	VerbForm=Inf	16	xcomp	16:xcomp	_
-19	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	_
+19	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj|21:nsubj:xsubj|23:nsubj:xsubj	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
 21	continue	continue	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
 22	to	to	PART	TO	_	23	mark	23:mark	_
@@ -842,12 +842,12 @@
 6	children	child	NOUN	NNS	Number=Plur	2	obj	2:obj	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	friends	friend	NOUN	NNS	Number=Plur	6	conj	6:conj	_
-10	who	who	PRON	WP	PronType=Rel	11	nsubj	11:nsubj	_
+9	friends	friend	NOUN	NNS	Number=Plur	6	conj	2:obj|6:conj:and|11:nsubj|14:nsubj	_
+10	who	who	PRON	WP	PronType=Rel	11	nsubj	9:ref	_
 11	love	love	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
 12	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	11	obj	11:obj	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	conj	11:conj	_
+14	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	conj	9:acl:relcl|11:conj:and	_
 15	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	14	obj	14:obj	SpaceAfter=No
 16	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -855,10 +855,10 @@
 # text = Please help us to help her win this fight.
 1	Please	please	INTJ	UH	_	2	discourse	2:discourse	_
 2	help	help	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-3	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	2	obj	2:obj	_
+3	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	2	obj	2:obj|5:nsubj:xsubj	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	help	help	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-6	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj	_
+6	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj|7:nsubj:xsubj	_
 7	win	win	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
 9	fight	fight	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
@@ -868,7 +868,7 @@
 # text = With your help, we know she can do it!!
 1	With	with	ADP	IN	_	3	case	3:case	_
 2	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	help	help	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+3	help	help	NOUN	NN	Number=Sing	6	obl	6:obl:with	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 6	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -890,14 +890,14 @@
 8	Big	Big	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 9	D	D	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
-11	cookin'	cookin'	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	3:conj	_
+11	cookin'	cookin'	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	3:conj:and	_
 12	.....	.....	PUNCT	,	_	13	punct	13:punct	_
 13	lots	lot	NOUN	NNS	Number=Plur	3	parataxis	3:parataxis	_
 14	of	of	ADP	IN	_	15	case	15:case	_
-15	fun	fun	NOUN	NN	Number=Sing	13	nmod	13:nmod	_
+15	fun	fun	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	great	great	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	prizes	prize	NOUN	NNS	Number=Plur	15	conj	15:conj	SpaceAfter=No
+18	prizes	prize	NOUN	NNS	Number=Plur	15	conj	13:nmod:of|15:conj:and	SpaceAfter=No
 19	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0050
@@ -906,7 +906,7 @@
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	an	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	event	event	NOUN	NN	Number=Sing	0	root	0:root	_
-5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
+5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 6	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	aux	8:aux	SpaceAfter=No
 7	n't	not	PART	RB	_	8	advmod	8:advmod	_
 8	want	want	VERB	VB	VerbForm=Inf	4	acl:relcl	4:acl:relcl	_
@@ -918,17 +918,17 @@
 # text = Bands, food, and prizes are sponsored by Beyond Control, who will be competing in the Band of the Year Contest at the River Front Festival in Cuyahoga Falls on July 1.
 1	Bands	band	NOUN	NNS	Number=Plur	8	nsubj:pass	8:nsubj:pass	SpaceAfter=No
 2	,	,	PUNCT	,	_	3	punct	3:punct	_
-3	food	food	NOUN	NN	Number=Sing	1	conj	1:conj	SpaceAfter=No
+3	food	food	NOUN	NN	Number=Sing	1	conj	1:conj:and|8:nsubj:pass	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	prizes	prize	NOUN	NNS	Number=Plur	1	conj	1:conj	_
+6	prizes	prize	NOUN	NNS	Number=Plur	1	conj	1:conj:and|8:nsubj:pass	_
 7	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	aux:pass	8:aux:pass	_
 8	sponsored	sponsor	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 9	by	by	ADP	IN	_	11	case	11:case	_
 10	Beyond	Beyond	PROPN	NNP	Number=Sing	11	compound	11:compound	_
-11	Control	Control	PROPN	NNP	Number=Sing	8	obl	8:obl	SpaceAfter=No
+11	Control	Control	PROPN	NNP	Number=Sing	8	obl	8:obl:by|16:nsubj	SpaceAfter=No
 12	,	,	PUNCT	,	_	11	punct	11:punct	_
-13	who	who	PRON	WP	PronType=Rel	16	nsubj	16:nsubj	_
+13	who	who	PRON	WP	PronType=Rel	16	nsubj	11:ref	_
 14	will	will	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 15	be	be	AUX	VB	VerbForm=Inf	16	aux	16:aux	_
 16	competing	compete	VERB	VBG	Tense=Pres|VerbForm=Part	11	acl:relcl	11:acl:relcl	_
@@ -937,18 +937,18 @@
 19	Band	Band	PROPN	NNP	Number=Sing	23	compound	23:compound	_
 20	of	of	ADP	IN	_	22	case	22:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
-22	Year	Year	PROPN	NNP	Number=Sing	19	nmod	19:nmod	_
-23	Contest	Contest	PROPN	NNP	Number=Sing	16	obl	16:obl	_
+22	Year	Year	PROPN	NNP	Number=Sing	19	nmod	19:nmod:of	_
+23	Contest	Contest	PROPN	NNP	Number=Sing	16	obl	16:obl:in	_
 24	at	at	ADP	IN	_	28	case	28:case	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 26	River	River	PROPN	NNP	Number=Sing	27	compound	27:compound	_
 27	Front	Front	PROPN	NNP	Number=Sing	28	compound	28:compound	_
-28	Festival	Festival	PROPN	NNP	Number=Sing	23	nmod	23:nmod	_
+28	Festival	Festival	PROPN	NNP	Number=Sing	23	nmod	23:nmod:at	_
 29	in	in	ADP	IN	_	31	case	31:case	_
 30	Cuyahoga	Cuyahoga	PROPN	NNP	Number=Sing	31	compound	31:compound	_
-31	Falls	Falls	PROPN	NNP	Number=Sing	28	nmod	28:nmod	_
+31	Falls	Falls	PROPN	NNP	Number=Sing	28	nmod	28:nmod:in	_
 32	on	on	ADP	IN	_	33	case	33:case	_
-33	July	July	PROPN	NNP	Number=Sing	16	obl	16:obl	_
+33	July	July	PROPN	NNP	Number=Sing	16	obl	16:obl:on	_
 34	1	1	NUM	CD	NumType=Card	33	nummod	33:nummod	SpaceAfter=No
 35	.	.	PUNCT	.	_	8	punct	8:punct	_
 
@@ -958,7 +958,7 @@
 2	winner	winner	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 3	of	of	ADP	IN	_	5	case	5:case	_
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
-5	competition	competition	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+5	competition	competition	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 6	will	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 7	receive	receive	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	$	$	SYM	$	_	7	obj	7:obj	SpaceAfter=No
@@ -966,20 +966,20 @@
 10	,	,	PUNCT	,	_	8	punct	8:punct	_
 11	which	which	PRON	WDT	PronType=Int	16	obj	16:obj	_
 12	Beyond	Beyond	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	Control	Control	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
+13	Control	Control	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj|16:nsubj:xsubj	_
 14	hopes	hope	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	win	win	VERB	VB	VerbForm=Inf	14	xcomp	14:xcomp	_
 17	in	in	ADP	IN	_	20	mark	20:mark	_
 18	order	order	NOUN	NN	Number=Sing	17	fixed	17:fixed	_
 19	to	to	PART	TO	_	20	mark	20:mark	_
-20	donate	donate	VERB	VB	VerbForm=Inf	16	advcl	16:advcl	_
+20	donate	donate	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:to	_
 21	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	obj	20:obj	_
 22	to	to	ADP	IN	_	26	case	26:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
 24	Abby	Abby	PROPN	NNP	Number=Sing	26	compound	26:compound	_
 25	Freeman	Freeman	PROPN	NNP	Number=Sing	24	flat	24:flat	_
-26	fund	fund	NOUN	NN	Number=Sing	20	obl	20:obl	SpaceAfter=No
+26	fund	fund	NOUN	NN	Number=Sing	20	obl	20:obl:to	SpaceAfter=No
 27	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0053
@@ -988,14 +988,14 @@
 2	help	help	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	2	obj	2:obj	_
 4	by	by	SCONJ	IN	_	5	mark	5:mark	_
-5	logging	log	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	_
+5	logging	log	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:by	_
 6	onto	onto	ADP	IN	_	12	case	12:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 8	Rockin	Rockin	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 9	on	on	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	River	River	PROPN	NNP	Number=Sing	8	nmod	8:nmod	_
-12	website	website	NOUN	NN	Number=Sing	5	obl	5:obl	_
+11	River	River	PROPN	NNP	Number=Sing	8	nmod	8:nmod:on	_
+12	website	website	NOUN	NN	Number=Sing	5	obl	5:obl:onto	_
 13	at	at	ADP	IN	_	12	nmod	12:nmod	_
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -1006,18 +1006,18 @@
 3	vote	vote	NOUN	NN	Number=Sing	1	obj	1:obj	_
 4	for	for	ADP	IN	_	6	case	6:case	_
 5	Beyond	Beyond	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	Control	Control	PROPN	NNP	Number=Sing	3	nmod	3:nmod	SpaceAfter=No
+6	Control	Control	PROPN	NNP	Number=Sing	3	nmod	3:nmod:for	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	help	help	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
-10	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	9	obj	9:obj	_
+9	help	help	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
+10	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	9	obj	9:obj|11:nsubj:xsubj	_
 11	provide	provide	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 12	Abby	Abby	PROPN	NNP	Number=Sing	11	obj	11:obj	_
 13	with	with	ADP	IN	_	17	case	17:case	_
 14	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 15	life	life	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	saving	save	VERB	VBG	VerbForm=Ger	17	amod	17:amod	_
-17	treatments	treatment	NOUN	NNS	Number=Plur	11	obl	11:obl	_
+17	treatments	treatment	NOUN	NNS	Number=Plur	11	obl	11:obl:with	_
 18	again	again	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 19	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -1031,22 +1031,22 @@
 6	through	through	ADP	IN	_	9	case	9:case	_
 7	Charter	Charter	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 8	One	One	PROPN	NNP	Number=Sing	9	compound	9:compound	_
-9	Bank	Bank	PROPN	NNP	Number=Sing	5	obl	5:obl	SpaceAfter=No
+9	Bank	Bank	PROPN	NNP	Number=Sing	5	obl	5:obl:through	SpaceAfter=No
 10	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0056
 # text = Make checks payable to Kendel Bunnell c/o Benefit for Abby Freeman
 1	Make	make	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	checks	check	NOUN	NNS	Number=Plur	1	obj	1:obj	_
+2	checks	check	NOUN	NNS	Number=Plur	1	obj	1:obj|3:nsubj:xsubj	_
 3	payable	payable	ADJ	JJ	Degree=Pos	1	xcomp	1:xcomp	_
 4	to	to	ADP	IN	_	5	case	5:case	_
-5	Kendel	Kendel	PROPN	NNP	Number=Sing	3	obl	3:obl	_
+5	Kendel	Kendel	PROPN	NNP	Number=Sing	3	obl	3:obl:to	_
 6	Bunnell	Bunnell	PROPN	NNP	Number=Sing	5	flat	5:flat	_
-7	c	c	NOUN	NN	Number=Sing	5	nmod:npmod	5:nmod:npmod	SpaceAfter=No
+7	c	care	NOUN	NN	Abbr=Yes|Number=Sing	5	nmod:npmod	5:nmod:npmod	SpaceAfter=No
 8	/	/	PUNCT	HYPH	_	7	punct	7:punct	SpaceAfter=No
-9	o	o	ADP	IN	_	10	case	10:case	_
-10	Benefit	Benefit	PROPN	NNP	Number=Sing	7	nmod	7:nmod	_
+9	o	of	ADP	IN	Abbr=Yes	10	case	10:case	_
+10	Benefit	Benefit	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	_
 11	for	for	ADP	IN	_	12	case	12:case	_
-12	Abby	Abby	PROPN	NNP	Number=Sing	10	nmod	10:nmod	_
+12	Abby	Abby	PROPN	NNP	Number=Sing	10	nmod	10:nmod:for	_
 13	Freeman	Freeman	PROPN	NNP	Number=Sing	12	flat	12:flat	_
 

@@ -7,9 +7,9 @@
 4	dress	dress	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	code	code	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	_
 6	for	for	ADP	IN	_	7	case	7:case	_
-7	females	female	NOUN	NNS	Number=Plur	5	nmod	5:nmod	_
+7	females	female	NOUN	NNS	Number=Plur	5	nmod	5:nmod:for	_
 8	at	at	ADP	IN	_	10	case	10:case	_
-9	Del	Del	PROPN	NNP	Number=Sing	5	nmod	5:nmod	_
+9	Del	Del	PROPN	NNP	Number=Sing	5	nmod	5:nmod:at	_
 10	Frisco	Frisco	PROPN	NNP	Number=Sing	9	flat	9:flat	SpaceAfter=No
 11	's	's	PART	POS	_	9	case	9:case	_
 12	Philadelphia	Philadelphia	PROPN	NNP	Number=Sing	9	appos	9:appos	SpaceAfter=No
@@ -22,18 +22,18 @@
 3	be	be	AUX	VB	VerbForm=Inf	4	aux	4:aux	_
 4	going	go	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 5	to	to	ADP	IN	_	6	case	6:case	_
-6	Del	Del	PROPN	NNP	Number=Sing	4	obl	4:obl	_
+6	Del	Del	PROPN	NNP	Number=Sing	4	obl	4:obl:to	_
 7	Frisco	Frisco	PROPN	NNP	Number=Sing	6	flat	6:flat	SpaceAfter=No
 8	's	's	PART	POS	_	6	case	6:case	_
 9	in	in	ADP	IN	_	11	case	11:case	_
 10	late	late	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	November	November	PROPN	NNP	Number=Sing	4	obl	4:obl	_
+11	November	November	PROPN	NNP	Number=Sing	4	obl	4:obl:in	_
 12	for	for	ADP	IN	_	13	case	13:case	_
-13	dinner	dinner	NOUN	NN	Number=Sing	4	obl	4:obl	_
+13	dinner	dinner	NOUN	NN	Number=Sing	4	obl	4:obl:for	_
 14	and	and	CCONJ	CC	_	17	cc	17:cc	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
 16	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	aux	17:aux	_
-17	wondering	wonder	VERB	VBG	VerbForm=Ger	4	conj	4:conj	_
+17	wondering	wonder	VERB	VBG	VerbForm=Ger	4	conj	4:conj:and	_
 18	what	what	PRON	WP	PronType=Int	17	ccomp	17:ccomp	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 20	dress	dress	NOUN	NN	Number=Sing	21	compound	21:compound	_
@@ -41,7 +41,7 @@
 22	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
 23	for	for	ADP	IN	_	25	case	25:case	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
-25	female	female	NOUN	NN	Number=Sing	18	nmod	18:nmod	SpaceAfter=No
+25	female	female	NOUN	NN	Number=Sing	18	nmod	18:nmod:for	SpaceAfter=No
 26	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111024210025AAVtDL7_ans-0003
@@ -52,14 +52,14 @@
 4	casual	casual	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	but	but	CCONJ	CC	_	7	cc	7:cc	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
-7	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj	_
+7	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj:but	_
 8	this	this	PRON	DT	Number=Sing|PronType=Dem	11	nsubj:pass	11:nsubj:pass	_
 9	can	can	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 10	be	be	AUX	VB	VerbForm=Inf	11	aux:pass	11:aux:pass	_
 11	interpreted	interpret	VERB	VBN	Tense=Past|VerbForm=Part	7	ccomp	7:ccomp	_
 12	in	in	ADP	IN	_	14	case	14:case	_
 13	many	many	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	ways	way	NOUN	NNS	Number=Plur	11	obl	11:obl	SpaceAfter=No
+14	ways	way	NOUN	NNS	Number=Plur	11	obl	11:obl:in	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111024210025AAVtDL7_ans-0004
@@ -80,5 +80,5 @@
 2	can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	view	view	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	at	at	ADP	IN	_	5	case	5:case	_
-5	dresscod.com	dresscod.com	X	ADD	_	3	obl	3:obl	_
+5	dresscod.com	dresscod.com	X	ADD	_	3	obl	3:obl:at	_
 

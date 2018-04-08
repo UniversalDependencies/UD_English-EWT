@@ -7,11 +7,11 @@
 4	mold	mold	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	silicone	silicone	NOUN	NN	Number=Sing	4	obj	4:obj	_
 6	or	or	CCONJ	CC	_	7	cc	7:cc	_
-7	rubber	rubber	NOUN	NN	Number=Sing	5	conj	5:conj	_
+7	rubber	rubber	NOUN	NN	Number=Sing	5	conj	4:obj|5:conj:or	_
 8	into	into	ADP	IN	_	11	case	11:case	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	mermaid	mermaid	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	tail	tail	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+11	tail	tail	NOUN	NN	Number=Sing	4	obl	4:obl:into	SpaceAfter=No
 12	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111107201117AANg07J_ans-0002
@@ -21,7 +21,7 @@
 3	in	in	ADP	IN	_	6	case	6:case	_
 4	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 5	chosen	choose	VERB	VBN	Tense=Past|VerbForm=Part	6	amod	6:amod	_
-6	medium	medium	NOUN	NN	Number=Sing	1	obl	1:obl	SpaceAfter=No
+6	medium	medium	NOUN	NN	Number=Sing	1	obl	1:obl:in	SpaceAfter=No
 7	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111107201117AANg07J_ans-0003
@@ -40,18 +40,18 @@
 # text = Depending on scale, just buy a fish and make a mold from that
 1	Depending	depend	VERB	VBG	VerbForm=Ger	3	case	3:case	_
 2	on	on	ADP	IN	_	3	case	3:case	_
-3	scale	scale	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+3	scale	scale	NOUN	NN	Number=Sing	6	obl	6:obl:on	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	just	just	ADV	RB	_	6	advmod	6:advmod	_
 6	buy	buy	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 8	fish	fish	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	make	make	VERB	VB	Mood=Imp|VerbForm=Fin	6	conj	6:conj	_
+10	make	make	VERB	VB	Mood=Imp|VerbForm=Fin	6	conj	6:conj:and	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	mold	mold	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	from	from	ADP	IN	_	14	case	14:case	_
-14	that	that	PRON	DT	Number=Sing|PronType=Dem	10	obl	10:obl	_
+14	that	that	PRON	DT	Number=Sing|PronType=Dem	10	obl	10:obl:from	_
 
 # sent_id = answers-20111107201117AANg07J_ans-0006
 # text = They sell these kits in most hobby and craft stores.
@@ -63,7 +63,7 @@
 6	most	most	ADJ	JJS	Degree=Sup	10	amod	10:amod	_
 7	hobby	hobby	NOUN	NN	Number=Sing	10	compound	10:compound	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	craft	craft	NOUN	NN	Number=Sing	7	conj	7:conj	_
-10	stores	store	NOUN	NNS	Number=Plur	2	obl	2:obl	SpaceAfter=No
+9	craft	craft	NOUN	NN	Number=Sing	7	conj	7:conj:and|10:compound	_
+10	stores	store	NOUN	NNS	Number=Plur	2	obl	2:obl:in	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 

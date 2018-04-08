@@ -16,9 +16,9 @@
 2	for	for	ADP	IN	_	5	case	5:case	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 4	surprise	surprise	NOUN	NN	Number=Sing	5	compound	5:compound	_
-5	spot	spot	NOUN	NN	Number=Sing	1	obl	1:obl	_
+5	spot	spot	NOUN	NN	Number=Sing	1	obl	1:obl:for	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	take	take	VERB	VB	VerbForm=Inf	5	acl	5:acl	_
+7	take	take	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
 8	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	bf	bf	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
 10	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -26,20 +26,20 @@
 # sent_id = answers-20111104115933AA30CRJ_ans-0003
 # text = a bar would be nice but also something extremely unique.
 1	a	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	_
-2	bar	bar	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+2	bar	bar	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|8:nsubj	_
 3	would	would	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 4	be	be	AUX	VB	VerbForm=Inf	5	cop	5:cop	_
 5	nice	nice	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	but	but	CCONJ	CC	_	8	cc	8:cc	_
 7	also	also	ADV	RB	_	8	advmod	8:advmod	_
-8	something	something	PRON	NN	Number=Sing	5	conj	5:conj	_
+8	something	something	PRON	NN	Number=Sing	5	conj	5:conj:but	_
 9	extremely	extremely	ADV	RB	_	10	advmod	10:advmod	_
 10	unique	unique	ADJ	JJ	Degree=Pos	8	amod	8:amod	SpaceAfter=No
 11	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111104115933AA30CRJ_ans-0004
 # text = i would like to have one of those super random surprisingly nice nights out...suggestions?
-1	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	like	like	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -51,7 +51,7 @@
 10	random	random	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 11	surprisingly	surprisingly	ADV	RB	_	12	advmod	12:advmod	_
 12	nice	nice	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	nights	night	NOUN	NNS	Number=Plur	6	nmod	6:nmod	_
+13	nights	night	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	_
 14	out	out	ADV	RB	_	13	advmod	13:advmod	SpaceAfter=No
 15	...	...	PUNCT	,	_	3	punct	3:punct	SpaceAfter=No
 16	suggestions	suggestion	NOUN	NNS	Number=Plur	3	parataxis	3:parataxis	SpaceAfter=No
@@ -62,11 +62,11 @@
 1	o	o	INTJ	UH	_	6	discourse	6:discourse	_
 2	and	and	CCONJ	CC	_	6	cc	6:cc	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	mark	4:mark	_
-4	cheaper	cheaper	ADJ	JJR	Degree=Cmp	6	advcl	6:advcl	_
+4	cheaper	cheaper	ADJ	JJR	Degree=Cmp	6	advcl	6:advcl:the	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	mark	6:mark	_
 6	better	better	ADJ	JJR	Degree=Cmp	0	root	0:root	_
 7	(	(	PUNCT	-LRB-	_	10	punct	10:punct	SpaceAfter=No
-8	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
+8	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	10	nsubj	10:nsubj|12:nsubj:xsubj	_
 9	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
 10	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	6	parataxis	6:parataxis	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
@@ -78,7 +78,7 @@
 17	..	..	PUNCT	.	_	21	punct	21:punct	SpaceAfter=No
 18	that	that	PRON	DT	Number=Sing|PronType=Dem	21	nsubj	21:nsubj	SpaceAfter=No
 19	d	would	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
-20	b	b	AUX	VB	VerbForm=Inf	21	cop	21:cop	_
+20	b	be	AUX	VB	Abbr=Yes|VerbForm=Inf	21	cop	21:cop	_
 21	helpful	helpful	ADJ	JJ	Degree=Pos	10	conj	10:conj	SpaceAfter=No
 22	)	)	PUNCT	-RRB-	_	10	punct	10:punct	_
 23	thanks	thanks	NOUN	NN	Number=Sing	6	discourse	6:discourse	_
@@ -92,17 +92,17 @@
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	bottle	bottle	NOUN	NN	Number=Sing	3	obj	3:obj	_
 7	of	of	ADP	IN	_	8	case	8:case	_
-8	champagne	champagne	NOUN	NN	Number=Sing	6	nmod	6:nmod	SpaceAfter=No
+8	champagne	champagne	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	picnic	picnic	NOUN	NN	Number=Sing	6	conj	6:conj	_
+11	picnic	picnic	NOUN	NN	Number=Sing	6	conj	3:obj|6:conj	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	have	have	VERB	VB	VerbForm=Inf	3	conj	3:conj	_
+13	have	have	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 15	date	date	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	on	on	ADP	IN	_	18	case	18:case	_
 17	Treasure	Treasure	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-18	Island	Island	PROPN	NNP	Number=Sing	13	obl	13:obl	SpaceAfter=No
+18	Island	Island	PROPN	NNP	Number=Sing	13	obl	13:obl:on	SpaceAfter=No
 19	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111104115933AA30CRJ_ans-0007
@@ -123,7 +123,7 @@
 3	plenty	plenty	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	cheap	cheap	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	restaurants	restaurant	NOUN	NNS	Number=Plur	3	nmod	3:nmod	SpaceAfter=No
+6	restaurants	restaurant	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	SpaceAfter=No
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111104115933AA30CRJ_ans-0009

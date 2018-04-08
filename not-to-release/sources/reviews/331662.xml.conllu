@@ -14,50 +14,50 @@
 # sent_id = reviews-331662-0002
 # text = Hot Iron has become a favorite of our family.
 1	Hot	Hot	PROPN	NNP	Number=Sing	2	compound	2:compound	_
-2	Iron	Iron	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
+2	Iron	Iron	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	become	become	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	favorite	favorite	NOUN	NN	Number=Sing	4	xcomp	4:xcomp	_
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	family	family	NOUN	NN	Number=Sing	6	nmod	6:nmod	SpaceAfter=No
+9	family	family	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	SpaceAfter=No
 10	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-331662-0003
 # text = Everyone can get the signature dish with ingredients and spices that they want and have the fun of watching it cook.
-1	Everyone	everyone	PRON	NN	Number=Sing	3	nsubj	3:nsubj	_
+1	Everyone	everyone	PRON	NN	Number=Sing	3	nsubj	3:nsubj|15:nsubj	_
 2	can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	signature	signature	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	dish	dish	NOUN	NN	Number=Sing	3	obj	3:obj	_
 7	with	with	ADP	IN	_	8	case	8:case	_
-8	ingredients	ingredient	NOUN	NNS	Number=Plur	6	nmod	6:nmod	_
+8	ingredients	ingredient	NOUN	NNS	Number=Plur	6	nmod	6:nmod:with|13:obj	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	spices	spice	NOUN	NNS	Number=Plur	8	conj	8:conj	_
-11	that	that	PRON	WDT	PronType=Rel	13	obj	13:obj	_
+10	spices	spice	NOUN	NNS	Number=Plur	8	conj	6:nmod:with|8:conj:and|13:obj	_
+11	that	that	PRON	WDT	PronType=Rel	13	obj	8:ref	_
 12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
 13	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+15	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	fun	fun	NOUN	NN	Number=Sing	15	obj	15:obj	_
 18	of	of	SCONJ	IN	_	19	mark	19:mark	_
-19	watching	watch	VERB	VBG	VerbForm=Ger	17	acl	17:acl	_
-20	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	19	obj	19:obj	_
+19	watching	watch	VERB	VBG	VerbForm=Ger	17	acl	17:acl:of	_
+20	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	19	obj	19:obj|21:nsubj:xsubj	_
 21	cook	cook	VERB	VB	VerbForm=Inf	19	xcomp	19:xcomp	SpaceAfter=No
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-331662-0004
 # text = The staff are very friendly and conscientious.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	staff	staff	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
+2	staff	staff	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|7:nsubj	_
 3	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 4	very	very	ADV	RB	_	5	advmod	5:advmod	_
 5	friendly	friendly	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	conscientious	conscientious	ADJ	JJ	Degree=Pos	5	conj	5:conj	SpaceAfter=No
+7	conscientious	conscientious	ADJ	JJ	Degree=Pos	5	conj	5:conj:and	SpaceAfter=No
 8	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-331662-0005
@@ -67,37 +67,37 @@
 3	ask	ask	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	if	if	SCONJ	IN	_	6	mark	6:mark	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
-6	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl	_
+6	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:if	_
 7	meat	meat	NOUN	NN	Number=Sing	6	obj	6:obj	_
 8	in	in	ADP	IN	_	10	case	10:case	_
 9	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	dish	dish	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+10	dish	dish	NOUN	NN	Number=Sing	6	obl	6:obl:in	SpaceAfter=No
 11	,	,	PUNCT	,	_	3	punct	3:punct	_
 12	(	(	PUNCT	-LRB-	_	14	punct	14:punct	SpaceAfter=No
 13	for	for	ADP	IN	_	14	case	14:case	_
-14	vegetarians	vegetarian	NOUN	NNS	Number=Plur	3	obl	3:obl	_
+14	vegetarians	vegetarian	NOUN	NNS	Number=Plur	3	obl	3:obl:for	_
 15	like	like	ADP	IN	_	16	case	16:case	_
-16	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	14	nmod	14:nmod	SpaceAfter=No
+16	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	14	nmod	14:nmod:like	SpaceAfter=No
 17	)	)	PUNCT	-RRB-	_	14	punct	14:punct	SpaceAfter=No
 18	,	,	PUNCT	,	_	3	punct	3:punct	_
-19	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	20	nsubj	20:nsubj	_
+19	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	20	nsubj	20:nsubj|27:nsubj	_
 20	scrub	scrub	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	_
 21	an	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
 22	area	area	NOUN	NN	Number=Sing	20	obj	20:obj	_
 23	of	of	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
-25	grill	grill	NOUN	NN	Number=Sing	22	nmod	22:nmod	_
+25	grill	grill	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	_
 26	and	and	CCONJ	CC	_	27	cc	27:cc	_
-27	use	use	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	conj	20:conj	_
+27	use	use	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	conj	20:conj:and	_
 28	separate	separate	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
-29	utensils	utensil	NOUN	NNS	Number=Plur	27	obj	27:obj	_
+29	utensils	utensil	NOUN	NNS	Number=Plur	27	obj	27:obj|31:nsubj:xsubj	_
 30	to	to	PART	TO	_	31	mark	31:mark	_
 31	cook	cook	VERB	VB	VerbForm=Inf	27	xcomp	27:xcomp	SpaceAfter=No
 32	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-331662-0006
 # text = They don't just dump your ingredients on and cook either, but carefully separate meat to the hotter parts of the grill and still manage to keep the veggies from turning to mush.
-1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj|10:nsubj|15:nsubj|26:nsubj|28:nsubj:xsubj	_
 2	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	5:aux	SpaceAfter=No
 3	n't	not	PART	RB	_	5	advmod	5:advmod	_
 4	just	just	ADV	RB	_	5	advmod	5:advmod	_
@@ -106,31 +106,31 @@
 7	ingredients	ingredient	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 8	on	on	ADV	RB	_	5	advmod	5:advmod	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	cook	cook	VERB	VB	VerbForm=Inf	5	conj	5:conj	_
+10	cook	cook	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	_
 11	either	either	ADV	RB	_	10	advmod	10:advmod	SpaceAfter=No
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	but	but	CCONJ	CC	_	15	cc	15:cc	_
 14	carefully	carefully	ADV	RB	_	15	advmod	15:advmod	_
-15	separate	separate	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj	_
+15	separate	separate	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj:but	_
 16	meat	meat	NOUN	NN	Number=Sing	15	obj	15:obj	_
 17	to	to	ADP	IN	_	20	case	20:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 19	hotter	hotter	ADJ	JJR	Degree=Cmp	20	amod	20:amod	_
-20	parts	part	NOUN	NNS	Number=Plur	15	obl	15:obl	_
+20	parts	part	NOUN	NNS	Number=Plur	15	obl	15:obl:to	_
 21	of	of	ADP	IN	_	23	case	23:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
-23	grill	grill	NOUN	NN	Number=Sing	20	nmod	20:nmod	_
+23	grill	grill	NOUN	NN	Number=Sing	20	nmod	20:nmod:of	_
 24	and	and	CCONJ	CC	_	26	cc	26:cc	_
 25	still	still	ADV	RB	_	26	advmod	26:advmod	_
-26	manage	manage	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj	_
+26	manage	manage	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj:but	_
 27	to	to	PART	TO	_	28	mark	28:mark	_
 28	keep	keep	VERB	VB	VerbForm=Inf	26	xcomp	26:xcomp	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
 30	veggies	veggy	NOUN	NNS	Number=Plur	28	obj	28:obj	_
 31	from	from	SCONJ	IN	_	32	mark	32:mark	_
-32	turning	turn	VERB	VBG	VerbForm=Ger	28	advcl	28:advcl	_
+32	turning	turn	VERB	VBG	VerbForm=Ger	28	advcl	28:advcl:from	_
 33	to	to	ADP	IN	_	34	case	34:case	_
-34	mush	mush	NOUN	NN	Number=Sing	32	obl	32:obl	SpaceAfter=No
+34	mush	mush	NOUN	NN	Number=Sing	32	obl	32:obl:to	SpaceAfter=No
 35	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-331662-0007
@@ -138,11 +138,11 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	selection	selection	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	meats	meat	NOUN	NNS	Number=Plur	2	nmod	2:nmod	SpaceAfter=No
+4	meats	meat	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	veggies	veggy	NOUN	NNS	Number=Plur	4	conj	4:conj	_
+6	veggies	veggy	NOUN	NNS	Number=Plur	4	conj	2:nmod:of|4:conj:and	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	sauces	sauce	NOUN	NNS	Number=Plur	4	conj	4:conj	_
+8	sauces	sauce	NOUN	NNS	Number=Plur	4	conj	2:nmod:of|4:conj:and	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 10	awesome	awesome	ADJ	JJ	Degree=Pos	0	root	0:root	_
 11	too	too	ADV	RB	_	10	advmod	10:advmod	SpaceAfter=No
@@ -154,7 +154,7 @@
 2	time	time	NOUN	NN	Number=Sing	6	obl:tmod	6:obl:tmod	_
 3	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 4	go	go	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
-5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
+5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	6:nsubj|8:nsubj:xsubj	_
 6	seem	seem	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	have	have	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
@@ -162,23 +162,23 @@
 10	different	different	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	ingredient	ingredient	NOUN	NN	Number=Sing	8	obj	8:obj	_
 12	or	or	CCONJ	CC	_	13	cc	13:cc	_
-13	two	two	NUM	CD	NumType=Card	11	conj	11:conj	_
+13	two	two	NUM	CD	NumType=Card	11	conj	8:obj|11:conj:or	_
 14	which	which	PRON	WDT	PronType=Int	15	nsubj	15:nsubj	_
 15	keeps	keep	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	parataxis	8:parataxis	_
-16	things	thing	NOUN	NNS	Number=Plur	15	obj	15:obj	_
+16	things	thing	NOUN	NNS	Number=Plur	15	obj	15:obj|17:nsubj:xsubj	_
 17	interesting	interesting	ADJ	JJ	Degree=Pos	15	xcomp	15:xcomp	SpaceAfter=No
 18	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-331662-0009
 # text = Meats are kept VERY cold, seafood smells fresh and the serving bar is VERY clean.
-1	Meats	meat	NOUN	NNS	Number=Plur	3	nsubj:pass	3:nsubj:pass	_
+1	Meats	meat	NOUN	NNS	Number=Plur	3	nsubj:pass	3:nsubj:pass|5:nsubj:xsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	kept	keep	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	VERY	very	ADV	RB	_	5	advmod	5:advmod	_
 5	cold	cold	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	SpaceAfter=No
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
-7	seafood	seafood	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
-8	smells	smell	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj	_
+7	seafood	seafood	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|9:nsubj:xsubj	_
+8	smells	smell	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
 9	fresh	fresh	ADJ	JJ	Degree=Pos	8	xcomp	8:xcomp	_
 10	and	and	CCONJ	CC	_	16	cc	16:cc	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
@@ -186,7 +186,7 @@
 13	bar	bar	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	_
 14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
 15	VERY	very	ADV	RB	_	16	advmod	16:advmod	_
-16	clean	clean	ADJ	JJ	Degree=Pos	3	conj	3:conj	SpaceAfter=No
+16	clean	clean	ADJ	JJ	Degree=Pos	3	conj	3:conj:and	SpaceAfter=No
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-331662-0010
@@ -197,7 +197,7 @@
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	(	(	PUNCT	-LRB-	_	11	punct	11:punct	SpaceAfter=No
 6	Kid	kid	NOUN	NN	Number=Sing	8	nmod:poss	8:nmod:poss	SpaceAfter=No
-7	s	s	PART	POS	_	6	case	6:case	_
+7	s	's	PART	POS	_	6	case	6:case	_
 8	meals	meal	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
 9	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	around	around	ADV	RB	_	11	advmod	11:advmod	_
@@ -212,6 +212,6 @@
 19	prices	price	NOUN	NNS	Number=Plur	16	obj	16:obj	SpaceAfter=No
 20	,	,	PUNCT	,	_	22	punct	22:punct	_
 21	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	22	nsubj	22:nsubj	_
-22	believe	believe	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj	SpaceAfter=No
+22	believe	believe	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	SpaceAfter=No
 23	.	.	PUNCT	.	_	3	punct	3:punct	_
 

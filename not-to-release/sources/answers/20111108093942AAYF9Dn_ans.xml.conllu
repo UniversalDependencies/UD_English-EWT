@@ -7,13 +7,13 @@
 4	kind	kind	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	_
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	public	public	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	transport	transport	NOUN	NN	Number=Sing	4	nmod	4:nmod	_
+7	transport	transport	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
 8	available	available	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 9	between	between	ADP	IN	_	10	case	10:case	_
-10	noida	noida	PROPN	NNP	Number=Sing	4	nmod	4:nmod	_
+10	noida	noida	PROPN	NNP	Number=Sing	4	nmod	4:nmod:between	_
 11	and	and	CCONJ	CC	_	13	cc	13:cc	_
 12	greater	greater	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	noida	noida	PROPN	NNP	Number=Sing	10	conj	10:conj	SpaceAfter=No
+13	noida	noida	PROPN	NNP	Number=Sing	10	conj	4:nmod:between|10:conj:and	SpaceAfter=No
 14	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108093942AAYF9Dn_ans-0002
@@ -27,41 +27,41 @@
 7	Sector	Sector	PROPN	NNP	Number=Sing	10	compound	10:compound	SpaceAfter=No
 8	-	-	PUNCT	HYPH	_	7	punct	7:punct	SpaceAfter=No
 9	37	37	NUM	CD	NumType=Card	7	nummod	7:nummod	_
-10	crossing	crossing	VERB	NN	Number=Sing	4	obl	4:obl	_
+10	crossing	crossing	VERB	NN	Number=Sing	4	obl	4:obl:between	_
 11	in	in	ADP	IN	_	12	case	12:case	_
-12	Noida	Noida	PROPN	NNP	Number=Sing	10	obl	10:obl	_
+12	Noida	Noida	PROPN	NNP	Number=Sing	10	obl	10:obl:in	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	Kasna	Kasna	PROPN	NNP	Number=Sing	10	conj	10:conj	_
+14	Kasna	Kasna	PROPN	NNP	Number=Sing	10	conj	4:obl:between|10:conj:and	_
 15	in	in	ADP	IN	_	17	case	17:case	_
 16	Greater	Greater	PROPN	NNP	Number=Sing	17	compound	17:compound	_
-17	Noida	Noida	PROPN	NNP	Number=Sing	14	nmod	14:nmod	SpaceAfter=No
+17	Noida	Noida	PROPN	NNP	Number=Sing	14	nmod	14:nmod:in	SpaceAfter=No
 18	,	,	PUNCT	,	_	10	punct	10:punct	_
 19	passing	pass	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl	_
 20	through	through	ADP	IN	_	22	case	22:case	_
 21	Pari	Pari	PROPN	NNP	Number=Sing	22	compound	22:compound	_
-22	Chowk	Chowk	PROPN	NNP	Number=Sing	19	obl	19:obl	SpaceAfter=No
+22	Chowk	Chowk	PROPN	NNP	Number=Sing	19	obl	19:obl:through	SpaceAfter=No
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108093942AAYF9Dn_ans-0003
 # text = Apart from these there are numerous cabs that ferry passengers between Sector-37 crossing and Pari Chowk.
 1	Apart	apart	ADV	RB	_	5	advmod	5:advmod	_
 2	from	from	ADP	IN	_	3	case	3:case	_
-3	these	these	PRON	DT	Number=Plur|PronType=Dem	1	obl	1:obl	_
+3	these	these	PRON	DT	Number=Plur|PronType=Dem	1	obl	1:obl:from	_
 4	there	there	PRON	EX	_	5	expl	5:expl	_
 5	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	numerous	numerous	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	cabs	cab	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
-8	that	that	PRON	WDT	PronType=Rel	9	nsubj	9:nsubj	_
+7	cabs	cab	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|9:nsubj	_
+8	that	that	PRON	WDT	PronType=Rel	9	nsubj	7:ref	_
 9	ferry	ferry	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
 10	passengers	passenger	NOUN	NNS	Number=Plur	9	obj	9:obj	_
 11	between	between	ADP	IN	_	15	case	15:case	_
 12	Sector	Sector	PROPN	NNP	Number=Sing	15	compound	15:compound	SpaceAfter=No
 13	-	-	PUNCT	HYPH	_	12	punct	12:punct	SpaceAfter=No
 14	37	37	NUM	CD	NumType=Card	12	nummod	12:nummod	_
-15	crossing	crossing	NOUN	NN	Number=Sing	9	obl	9:obl	_
+15	crossing	crossing	NOUN	NN	Number=Sing	9	obl	9:obl:between	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	Pari	Pari	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-18	Chowk	Chowk	PROPN	NNP	Number=Sing	15	conj	15:conj	SpaceAfter=No
+18	Chowk	Chowk	PROPN	NNP	Number=Sing	15	conj	9:obl:between|15:conj:and	SpaceAfter=No
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108093942AAYF9Dn_ans-0004
@@ -98,12 +98,12 @@
 8	of	of	ADP	IN	_	11	case	11:case	_
 9	public	public	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	transport	transport	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	options	option	NOUN	NNS	Number=Plur	7	nmod	7:nmod	_
+11	options	option	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	_
 12	between	between	ADP	IN	_	13	case	13:case	_
-13	Noida	Noida	PROPN	NNP	Number=Sing	11	nmod	11:nmod	_
+13	Noida	Noida	PROPN	NNP	Number=Sing	11	nmod	11:nmod:between	_
 14	to	to	ADP	IN	_	16	case	16:case	_
 15	Greater	Greater	PROPN	NNP	Number=Sing	16	compound	16:compound	_
-16	Noida	Noida	PROPN	NNP	Number=Sing	13	nmod	13:nmod	SpaceAfter=No
+16	Noida	Noida	PROPN	NNP	Number=Sing	13	nmod	13:nmod:to	SpaceAfter=No
 17	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111108093942AAYF9Dn_ans-0008
@@ -133,10 +133,10 @@
 15	frequently	frequently	ADV	RB	_	16	advmod	16:advmod	_
 16	running	run	VERB	VBG	VerbForm=Ger	13	acl	13:acl	_
 17	between	between	ADP	IN	_	18	case	18:case	_
-18	Noida	Noida	PROPN	NNP	Number=Sing	16	obl	16:obl	_
+18	Noida	Noida	PROPN	NNP	Number=Sing	16	obl	16:obl:between	_
 19	and	and	CCONJ	CC	_	21	cc	21:cc	_
 20	Greater	Greater	PROPN	NNP	Number=Sing	21	compound	21:compound	_
-21	Noida	Noida	PROPN	NNP	Number=Sing	18	conj	18:conj	SpaceAfter=No
+21	Noida	Noida	PROPN	NNP	Number=Sing	18	conj	16:obl:between|18:conj:and	SpaceAfter=No
 22	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108093942AAYF9Dn_ans-0010
@@ -148,7 +148,7 @@
 5	From	from	ADP	IN	_	8	case	8:case	_
 6	Indian	Indian	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 7	Oil	Oil	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	Building	Building	PROPN	NNP	Number=Sing	3	obl	3:obl	SpaceAfter=No
+8	Building	Building	PROPN	NNP	Number=Sing	3	obl	3:obl:from	SpaceAfter=No
 9	,	,	PUNCT	,	_	8	punct	8:punct	_
 10	Sector	Sector	PROPN	NNP	Number=Sing	8	appos	8:appos	_
 11	-	-	PUNCT	HYPH	_	10	punct	10:punct	SpaceAfter=No

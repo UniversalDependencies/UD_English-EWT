@@ -24,7 +24,7 @@
 9	mother	mother	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
 10	will	will	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 11	let	let	VERB	VB	VerbForm=Inf	6	acl:relcl	6:acl:relcl	_
-12	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	11	obj	11:obj	_
+12	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	11	obj	11:obj|13:nsubj:xsubj	_
 13	have	have	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	please	please	INTJ	UH	_	15	discourse	15:discourse	_
 15	help	help	VERB	VB	Mood=Imp|VerbForm=Fin	2	parataxis	2:parataxis	_
@@ -35,19 +35,19 @@
 2	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	something	something	PRON	NN	Number=Sing	2	obj	2:obj	_
 4	cheap	cheap	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-5	east	east	ADJ	JJ	Degree=Pos	4	conj	4:conj	_
+5	east	east	ADJ	JJ	Degree=Pos	4	conj	3:amod|4:conj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	take	take	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	_
 8	care	care	NOUN	NN	Number=Sing	7	obj	7:obj	_
 9	of	of	ADP	IN	_	7	obl	7:obl	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	something	something	PRON	NN	Number=Sing	3	conj	3:conj	_
+11	something	something	PRON	NN	Number=Sing	3	conj	2:obj|3:conj:and	_
 12	to	to	PART	TO	_	14	mark	14:mark	_
 13	hopefully	hopefully	ADV	RB	_	14	advmod	14:advmod	_
-14	fit	fit	VERB	VB	VerbForm=Inf	11	acl	11:acl	_
+14	fit	fit	VERB	VB	VerbForm=Inf	11	acl	11:acl:to	_
 15	in	in	ADP	IN	_	17	case	17:case	_
 16	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
-17	room	room	NOUN	NN	Number=Sing	14	obl	14:obl	_
+17	room	room	NOUN	NN	Number=Sing	14	obl	14:obl:in	_
 
 # sent_id = answers-20111108102204AAIivYN_ans-0004
 # text = no pet is really easy to take care of.
@@ -69,13 +69,13 @@
 3	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	love	love	NOUN	NN	Number=Sing	3	obj	3:obj	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	attn	attn	NOUN	NN	Number=Sing	4	conj	4:conj	_
+6	attn	attn	NOUN	NN	Number=Sing	4	conj	3:obj|4:conj:and	_
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	food	food	NOUN	NN	Number=Sing	4	conj	4:conj	SpaceAfter=No
+8	food	food	NOUN	NN	Number=Sing	4	conj	3:obj|4:conj:and	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	proper	proper	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	surroundings	surroundings	NOUN	NNS	Number=Plur	4	conj	4:conj	_
-12	etc	etc	X	FW	_	4	conj	4:conj	SpaceAfter=No
+11	surroundings	surroundings	NOUN	NNS	Number=Plur	4	conj	3:obj|4:conj:and	_
+12	etc	etc	X	FW	_	4	conj	3:obj|4:conj:and	SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108102204AAIivYN_ans-0006
@@ -89,15 +89,15 @@
 7	fish	fish	NOUN	NN	Number=Sing	0	root	0:root	_
 8	-	-	PUNCT	,	_	7	punct	7:punct	_
 9	but	but	CCONJ	CC	_	11	cc	11:cc	_
-10	u	u	PRON	PRP	_	11	nsubj	11:nsubj	_
-11	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	conj	7:conj	_
+10	u	u	PRON	PRP	_	11	nsubj	11:nsubj|13:nsubj:xsubj|18:nsubj:xsubj	_
+11	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	conj	7:conj:but	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	clean	clean	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	tank	tank	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	weekly	weekly	ADV	RB	_	13	advmod	13:advmod	SpaceAfter=No
 17	,	,	PUNCT	,	_	18	punct	18:punct	_
-18	feed	feed	VERB	VB	VerbForm=Inf	13	conj	13:conj	_
+18	feed	feed	VERB	VB	VerbForm=Inf	13	conj	11:xcomp|13:conj	_
 19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	iobj	18:iobj	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 21	right	right	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
@@ -125,7 +125,7 @@
 4	all	all	DET	DT	_	5	det	5:det	_
 5	pets	pet	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	like	like	ADP	IN	_	7	case	7:case	_
-7	children	child	NOUN	NNS	Number=Plur	3	obl	3:obl	SpaceAfter=No
+7	children	child	NOUN	NNS	Number=Plur	3	obl	3:obl:like	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108102204AAIivYN_ans-0009
@@ -135,13 +135,13 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	lot	lot	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	attention	attention	NOUN	NN	Number=Sing	4	nmod	4:nmod	_
+6	attention	attention	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
 7	or	or	CCONJ	CC	_	10	cc	10:cc	_
-8	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	10	nsubj:pass	10:nsubj:pass	_
+8	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	10	nsubj:pass	10:nsubj:pass|12:nsubj:pass	_
 9	get	get	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	aux:pass	10:aux:pass	_
-10	fussy	fussy	ADJ	JJ	Degree=Pos	2	conj	2:conj	_
+10	fussy	fussy	ADJ	JJ	Degree=Pos	2	conj	2:conj:or	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	tear	tear	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	conj	10:conj	_
+12	tear	tear	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	conj	10:conj:and	_
 13	stuff	stuff	NOUN	NN	Number=Sing	12	obj	12:obj	_
 14	up	up	ADP	RP	_	12	compound:prt	12:compound:prt	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -150,16 +150,16 @@
 # text = If you want easy then go with a gold fish or hamster.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	advcl	6:advcl	_
+3	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	advcl	6:advcl:if	_
 4	easy	easy	ADJ	JJ	Degree=Pos	3	obj	3:obj	_
 5	then	then	ADV	RB	PronType=Dem	6	advmod	6:advmod	_
 6	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 7	with	with	ADP	IN	_	10	case	10:case	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	gold	gold	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	fish	fish	NOUN	NN	Number=Sing	6	obl	6:obl	_
+10	fish	fish	NOUN	NN	Number=Sing	6	obl	6:obl:with	_
 11	or	or	CCONJ	CC	_	12	cc	12:cc	_
-12	hamster	hamster	NOUN	NN	Number=Sing	10	conj	10:conj	SpaceAfter=No
+12	hamster	hamster	NOUN	NN	Number=Sing	10	conj	6:obl:with|10:conj:or	SpaceAfter=No
 13	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111108102204AAIivYN_ans-0011
@@ -170,26 +170,26 @@
 4	with	with	ADP	IN	_	7	case	7:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	small	small	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	rodent	rodent	NOUN	NN	Number=Sing	3	obl	3:obl	_
+7	rodent	rodent	NOUN	NN	Number=Sing	3	obl	3:obl:with	_
 8	such	such	ADJ	JJ	Degree=Pos	11	case	11:case	_
 9	as	as	ADP	IN	_	8	fixed	8:fixed	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	mouse	mouse	NOUN	NN	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+11	mouse	mouse	NOUN	NN	Number=Sing	7	nmod	7:nmod:such_as	SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
-13	rat	rat	NOUN	NN	Number=Sing	11	conj	11:conj	SpaceAfter=No
+13	rat	rat	NOUN	NN	Number=Sing	11	conj	7:nmod:such_as|11:conj:or	SpaceAfter=No
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
-15	hamster	hamster	NOUN	NN	Number=Sing	11	conj	11:conj	_
+15	hamster	hamster	NOUN	NN	Number=Sing	11	conj	7:nmod:such_as|11:conj:or	_
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
-17	gerbil	gerbil	NOUN	NN	Number=Sing	11	conj	11:conj	_
+17	gerbil	gerbil	NOUN	NN	Number=Sing	11	conj	7:nmod:such_as|11:conj:or	_
 18	if	if	SCONJ	IN	_	20	mark	20:mark	_
 19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	20:nsubj	_
-20	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl	_
+20	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:if	_
 21	something	something	PRON	NN	Number=Sing	20	obj	20:obj	_
-22	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	24	nsubj	24:nsubj	_
+22	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	24	nsubj	24:nsubj|26:nsubj	_
 23	can	can	AUX	MD	VerbForm=Fin	24	aux	24:aux	_
 24	handle	handle	VERB	VB	VerbForm=Inf	21	acl:relcl	21:acl:relcl	_
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_
-26	hold	hold	VERB	VB	VerbForm=Inf	24	conj	24:conj	SpaceAfter=No
+26	hold	hold	VERB	VB	VerbForm=Inf	24	conj	21:acl:relcl|24:conj:and	SpaceAfter=No
 27	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108102204AAIivYN_ans-0012

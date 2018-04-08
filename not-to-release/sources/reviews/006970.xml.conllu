@@ -1,9 +1,9 @@
 # newdoc id = reviews-006970
 # sent_id = reviews-006970-0001
 # text = Wife and I attempted to adopt a dog and was nothing but frustrating.
-1	Wife	wife	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
+1	Wife	wife	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj|11:nsubj	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	1	conj	1:conj	_
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	1	conj	1:conj:and|4:nsubj|6:nsubj:xsubj	_
 4	attempted	attempt	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	adopt	adopt	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
@@ -11,21 +11,21 @@
 8	dog	dog	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
-11	nothing	nothing	PRON	NN	Number=Sing	4	conj	4:conj	_
+11	nothing	nothing	PRON	NN	Number=Sing	4	conj	4:conj:and	_
 12	but	but	CCONJ	CC	_	13	cc	13:cc	_
-13	frustrating	frustrating	ADJ	JJ	Degree=Pos	11	conj	11:conj	SpaceAfter=No
+13	frustrating	frustrating	ADJ	JJ	Degree=Pos	11	conj	11:conj:but	SpaceAfter=No
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-006970-0002
 # text = We arrived Sunday at about 230 and found a do we really liked.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj|8:nsubj	_
 2	arrived	arrive	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	Sunday	Sunday	PROPN	NNP	Number=Sing	2	obl:tmod	2:obl:tmod	_
 4	at	at	ADP	IN	_	6	case	6:case	_
 5	about	about	ADV	RB	_	6	advmod	6:advmod	_
-6	230	230	NUM	CD	NumType=Card	2	obl	2:obl	_
+6	230	230	NUM	CD	NumType=Card	2	obl	2:obl:at	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	found	find	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+8	found	find	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	do	do	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
@@ -46,7 +46,7 @@
 9	because	because	SCONJ	IN	_	12	mark	12:mark	_
 10	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 11	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	12	aux	12:aux	_
-12	closing	close	VERB	VBG	Tense=Pres|VerbForm=Part	6	advcl	6:advcl	_
+12	closing	close	VERB	VBG	Tense=Pres|VerbForm=Part	6	advcl	6:advcl:because	_
 13	soon	soon	ADV	RB	Degree=Pos	12	advmod	12:advmod	SpaceAfter=No
 14	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -58,8 +58,8 @@
 4	next	next	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	morning	morning	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	let	let	VERB	VB	VerbForm=Inf	2	advcl	2:advcl	_
-8	then	then	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	7	obj	7:obj	_
+7	let	let	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
+8	then	then	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	7	obj	7:obj|9:nsubj:xsubj	_
 9	know	know	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
 10	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	wife	wife	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	_
@@ -79,27 +79,27 @@
 6	around	around	NOUN	NN	Number=Sing	2	obj	2:obj	_
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_
 8	missing	miss	VERB	VBG	VerbForm=Ger	9	amod	9:amod	_
-9	paperwork	paperwork	NOUN	NN	Number=Sing	6	conj	6:conj	_
+9	paperwork	paperwork	NOUN	NN	Number=Sing	6	conj	2:obj|6:conj:and	_
 10	only	only	ADV	RB	_	12	advmod	12:advmod	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	call	call	VERB	VB	VerbForm=Inf	2	advcl	2:advcl	_
+12	call	call	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
 13	back	back	ADP	RP	_	12	compound:prt	12:compound:prt	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
-15	tell	tell	VERB	VB	VerbForm=Inf	12	advcl	12:advcl	_
+15	tell	tell	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:to	_
 16	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	15	iobj	15:iobj	_
 17	someone	someone	PRON	NN	Number=Sing	19	nsubj	19:nsubj	_
 18	else	else	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 19	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	ccomp	15:ccomp	_
 20	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	19	obj	19:obj	_
 21	and	and	CCONJ	CC	_	24	cc	24:cc	_
-22	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	24	nsubj	24:nsubj	_
+22	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	24	nsubj	24:nsubj|26:nsubj:xsubj|29:nsubj:xsubj	_
 23	would	would	AUX	MD	VerbForm=Fin	24	aux	24:aux	_
-24	need	need	VERB	VB	VerbForm=Inf	19	conj	19:conj	_
+24	need	need	VERB	VB	VerbForm=Inf	19	conj	15:ccomp|19:conj:and	_
 25	to	to	PART	TO	_	26	mark	26:mark	_
 26	come	come	VERB	VB	VerbForm=Inf	24	xcomp	24:xcomp	_
 27	in	in	ADV	RB	_	26	advmod	26:advmod	_
 28	and	and	CCONJ	CC	_	29	cc	29:cc	_
-29	put	put	VERB	VB	VerbForm=Inf	26	conj	26:conj	_
+29	put	put	VERB	VB	VerbForm=Inf	26	conj	24:xcomp|26:conj:and	_
 30	down	down	ADP	RP	_	29	compound:prt	29:compound:prt	_
 31	a	a	DET	DT	Definite=Ind|PronType=Art	32	det	32:det	_
 32	deposit	deposit	NOUN	NN	Number=Sing	29	obj	29:obj	SpaceAfter=No
@@ -107,18 +107,18 @@
 
 # sent_id = reviews-006970-0006
 # text = I work 2 hours away but offered my card over the phone.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|7:nsubj	_
 2	work	work	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	2	2	NUM	CD	NumType=Card	4	nummod	4:nummod	_
 4	hours	hour	NOUN	NNS	Number=Plur	5	obl:npmod	5:obl:npmod	_
 5	away	away	ADV	RB	_	2	advmod	2:advmod	_
 6	but	but	CCONJ	CC	_	7	cc	7:cc	_
-7	offered	offer	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+7	offered	offer	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:but	_
 8	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	card	card	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	over	over	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	phone	phone	NOUN	NN	Number=Sing	7	obl	7:obl	SpaceAfter=No
+12	phone	phone	NOUN	NN	Number=Sing	7	obl	7:obl:over	SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-006970-0007
@@ -139,7 +139,7 @@
 # text = At one point they told me the dog had been fixed, the next day it hadn't.
 1	At	at	ADP	IN	_	3	case	3:case	_
 2	one	one	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	point	point	NOUN	NN	Number=Sing	5	obl	5:obl	_
+3	point	point	NOUN	NN	Number=Sing	5	obl	5:obl:at	_
 4	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 5	told	tell	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	iobj	5:iobj	_
@@ -153,7 +153,7 @@
 14	next	next	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	day	day	NOUN	NN	Number=Sing	17	obl:tmod	17:obl:tmod	_
 16	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
-17	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	ccomp	5:ccomp	SpaceAfter=No
+17	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	ccomp	5:ccomp	SpaceAfter=No
 18	n't	not	PART	RB	_	17	advmod	17:advmod	SpaceAfter=No
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -164,10 +164,10 @@
 3	of	of	ADP	IN	_	6	case	6:case	_
 4	time	time	NOUN	NN	Number=Sing	6	case	6:case	_
 5	wasted	waste	VERB	VBN	Tense=Past|VerbForm=Part	6	amod	6:amod	_
-6	time	time	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+6	time	time	NOUN	NN	Number=Sing	2	nmod	2:nmod:time	_
 7	and	and	CCONJ	CC	_	10	cc	10:cc	_
 8	elevated	elevate	VERB	VBN	Tense=Past|VerbForm=Part	10	amod	10:amod	_
 9	blood	blood	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	pressure	pressure	NOUN	NN	Number=Sing	6	conj	6:conj	SpaceAfter=No
+10	pressure	pressure	NOUN	NN	Number=Sing	6	conj	2:nmod:time|6:conj:and	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 

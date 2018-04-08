@@ -14,14 +14,14 @@
 2	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	introduced	introduce	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	to	to	ADP	IN	_	5	case	5:case	_
-5	Bistro	Bistro	PROPN	NNP	Number=Sing	3	obl	3:obl	_
+5	Bistro	Bistro	PROPN	NNP	Number=Sing	3	obl	3:obl:to	_
 6	Tallulah	Tallulah	PROPN	NNP	Number=Sing	5	flat	5:flat	_
 7	by	by	ADP	IN	_	8	case	8:case	_
-8	traveler	traveler	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+8	traveler	traveler	NOUN	NN	Number=Sing	3	obl	3:obl:by	SpaceAfter=No
 9	-	-	PUNCT	,	_	8	punct	8:punct	SpaceAfter=No
 10	professional	professional	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	diner	diner	NOUN	NN	Number=Sing	8	appos	8:appos	_
-12	who	who	PRON	WP	PronType=Rel	13	nsubj	13:nsubj	_
+11	diner	diner	NOUN	NN	Number=Sing	8	appos	8:appos|13:nsubj|15:nsubj:xsubj|20:nsubj|25:nsubj	_
+12	who	who	PRON	WP	PronType=Rel	13	nsubj	11:ref	_
 13	happens	happen	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
 15	own	own	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
@@ -29,14 +29,14 @@
 17	Adelphi	Adelphi	PROPN	NNP	Number=Sing	18	compound	18:compound	_
 18	Hotel	Hotel	PROPN	NNP	Number=Sing	15	obj	15:obj	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	travels	travel	VERB	VB	VerbForm=Inf	13	conj	13:conj	_
+20	travels	travel	VERB	VB	VerbForm=Inf	13	conj	11:acl:relcl|13:conj:and	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 22	world	world	NOUN	NN	Number=Sing	20	obj	20:obj	SpaceAfter=No
 23	--	--	PUNCT	,	_	13	punct	13:punct	_
 24	and	and	CCONJ	CC	_	25	cc	25:cc	_
-25	residing	reside	VERB	VBG	VerbForm=Ger	13	conj	13:conj	_
+25	residing	reside	VERB	VBG	VerbForm=Ger	13	conj	11:acl:relcl|13:conj:and	_
 26	in	in	ADP	IN	_	27	case	27:case	_
-27	Paris	Paris	PROPN	NNP	Number=Sing	25	obl	25:obl	SpaceAfter=No
+27	Paris	Paris	PROPN	NNP	Number=Sing	25	obl	25:obl:in	SpaceAfter=No
 28	,	,	PUNCT	,	_	27	punct	27:punct	SpaceAfter=No
 29	London	London	PROPN	NNP	Number=Sing	27	list	27:list	SpaceAfter=No
 30	,	,	PUNCT	,	_	27	punct	27:punct	_
@@ -46,7 +46,7 @@
 34	rest	rest	NOUN	NN	Number=Sing	25	obl:tmod	25:obl:tmod	_
 35	of	of	ADP	IN	_	37	case	37:case	_
 36	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	_
-37	year	year	NOUN	NN	Number=Sing	34	nmod	34:nmod	SpaceAfter=No
+37	year	year	NOUN	NN	Number=Sing	34	nmod	34:nmod:of	SpaceAfter=No
 38	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-187266-0003
@@ -57,7 +57,7 @@
 4	FOOD	food	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	AND	and	CCONJ	CC	_	7	cc	7:cc	_
 6	DINING	dining	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	EXPERIENCES	experience	NOUN	NNS	Number=Plur	4	conj	4:conj	SpaceAfter=No
+7	EXPERIENCES	experience	NOUN	NNS	Number=Plur	4	conj	2:obj|4:conj:and	SpaceAfter=No
 8	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-187266-0004
@@ -81,10 +81,10 @@
 17	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 18	one	one	NUM	CD	NumType=Card	20	nummod	20:nummod	_
 19	negative	negative	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-20	review	review	NOUN	NN	Number=Sing	14	obl	14:obl	_
+20	review	review	NOUN	NN	Number=Sing	14	obl	14:obl:by	_
 21	on	on	ADP	IN	_	23	case	23:case	_
 22	this	this	DET	DT	Number=Sing|PronType=Dem	23	det	23:det	_
-23	page	page	NOUN	NN	Number=Sing	20	nmod	20:nmod	SpaceAfter=No
+23	page	page	NOUN	NN	Number=Sing	20	nmod	20:nmod:on	SpaceAfter=No
 24	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-187266-0005
@@ -110,7 +110,7 @@
 19	food	food	NOUN	NN	Number=Sing	22	nsubj	22:nsubj	_
 20	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	cop	22:cop	_
 21	consistently	consistently	ADV	RB	_	22	advmod	22:advmod	_
-22	delicious	delicious	ADJ	JJ	Degree=Pos	11	conj	11:conj	_
+22	delicious	delicious	ADJ	JJ	Degree=Pos	11	conj	3:ccomp|11:conj:and	_
 23	--	--	PUNCT	,	_	22	punct	22:punct	_
 24	same	same	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 25	dishes	dish	NOUN	NNS	Number=Plur	28	nsubj	28:nsubj	_
@@ -122,19 +122,19 @@
 # sent_id = reviews-187266-0006
 # text = Our friend is a world traveler and loves unpretentious dining experiences and inspired food.
 1	Our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	friend	friend	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
+2	friend	friend	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|8:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	world	world	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	traveler	traveler	NOUN	NN	Number=Sing	0	root	0:root	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	loves	love	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj	_
+8	loves	love	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:and	_
 9	unpretentious	unpretentious	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 10	dining	dining	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	experiences	experience	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 12	and	and	CCONJ	CC	_	14	cc	14:cc	_
 13	inspired	inspired	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	food	food	NOUN	NN	Number=Sing	11	conj	11:conj	SpaceAfter=No
+14	food	food	NOUN	NN	Number=Sing	11	conj	8:obj|11:conj:and	SpaceAfter=No
 15	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-187266-0007
@@ -153,17 +153,17 @@
 1	Treat	treat	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	1	obj	1:obj	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	SpaceAfter=No
+4	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	SpaceAfter=No
 5	--	--	PUNCT	,	_	1	punct	1:punct	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 7	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	go	go	VERB	VB	VerbForm=Inf	1	ccomp	1:ccomp	_
+8	go	go	VERB	VB	VerbForm=Inf	1	ccomp	1:ccomp|4:ccomp	_
 9	back	back	ADV	RB	_	8	advmod	8:advmod	SpaceAfter=No
 10	!	!	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-187266-0009
 # text = I am a business owner in downtown Saratoga Springs and wish this restaurant was in our town!
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|11:nsubj	_
 2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 4	business	business	NOUN	NN	Number=Sing	5	compound	5:compound	_
@@ -171,9 +171,9 @@
 6	in	in	ADP	IN	_	9	case	9:case	_
 7	downtown	downtown	NOUN	NN	Number=Sing	9	compound	9:compound	_
 8	Saratoga	Saratoga	PROPN	NNP	Number=Sing	9	compound	9:compound	_
-9	Springs	Springs	PROPN	NNPS	Number=Plur	5	nmod	5:nmod	_
+9	Springs	Springs	PROPN	NNPS	Number=Plur	5	nmod	5:nmod:in	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	wish	wish	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj	_
+11	wish	wish	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	_
 12	this	this	DET	DT	Number=Sing|PronType=Dem	13	det	13:det	_
 13	restaurant	restaurant	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	cop	17:cop	_
@@ -186,7 +186,7 @@
 # text = The affordable rent makes it possible for an inspired chef to serve his high quality fare at affordable prices!
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	affordable	affordable	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	rent	rent	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
+3	rent	rent	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 4	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	expl	4:expl	_
 6	possible	possible	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	_
@@ -202,7 +202,7 @@
 16	fare	fare	NOUN	NN	Number=Sing	12	obj	12:obj	_
 17	at	at	ADP	IN	_	19	case	19:case	_
 18	affordable	affordable	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-19	prices	price	NOUN	NNS	Number=Plur	12	obl	12:obl	SpaceAfter=No
+19	prices	price	NOUN	NNS	Number=Plur	12	obl	12:obl:at	SpaceAfter=No
 20	!	!	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-187266-0011
@@ -217,7 +217,7 @@
 2	rrly	rrly	ADV	RB	_	3	advmod	3:advmod	_
 3	seek	seek	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	cehf	cehf	NOUN	NN	Number=Sing	3	obj	3:obj	_
+5	cehf	cehf	NOUN	NN	Number=Sing	3	obj	3:obj|8:nsubj:xsubj	_
 6	out	out	ADP	RP	_	3	compound:prt	3:compound:prt	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	introduce	introduce	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
@@ -231,25 +231,25 @@
 16	went	go	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	14	acl:relcl	14:acl:relcl	SpaceAfter=No
 17	--	--	PUNCT	,	_	19	punct	19:punct	_
 18	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
-19	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj	_
+19	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj:but	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 21	point	point	NOUN	NN	Number=Sing	19	obj	19:obj	_
 22	of	of	SCONJ	IN	_	23	mark	23:mark	_
-23	asking	ask	VERB	VBG	VerbForm=Ger	21	acl	21:acl	_
+23	asking	ask	VERB	VBG	VerbForm=Ger	21	acl	21:acl:of	_
 24	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
 25	wait	wait	NOUN	NN	Number=Sing	26	compound	26:compound	_
-26	person	person	NOUN	NN	Number=Sing	23	obj	23:obj	_
+26	person	person	NOUN	NN	Number=Sing	23	obj	23:obj|28:nsubj:xsubj	_
 27	to	to	PART	TO	_	28	mark	28:mark	_
 28	introduce	introduce	VERB	VB	VerbForm=Inf	23	xcomp	23:xcomp	_
 29	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	30	nmod:poss	30:nmod:poss	_
 30	friend	friend	NOUN	NN	Number=Sing	28	obj	28:obj	_
 31	and	and	CCONJ	CC	_	32	cc	32:cc	_
-32	myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs|Reflex=Yes	30	conj	30:conj	_
+32	myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs|Reflex=Yes	30	conj	28:obj|30:conj:and	_
 33	to	to	ADP	IN	_	35	case	35:case	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
-35	chef	chef	NOUN	NN	Number=Sing	28	obl	28:obl	_
+35	chef	chef	NOUN	NN	Number=Sing	28	obl	28:obl:to	_
 36	to	to	PART	TO	_	37	mark	37:mark	_
-37	tell	tell	VERB	VB	VerbForm=Inf	28	advcl	28:advcl	_
+37	tell	tell	VERB	VB	VerbForm=Inf	28	advcl	28:advcl:to	_
 38	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	37	obj	37:obj	_
 39	just	just	ADV	RB	_	41	advmod	41:advmod	_
 40	how	how	ADV	WRB	PronType=Int	41	advmod	41:advmod	_
@@ -265,7 +265,7 @@
 2	not	not	PART	RB	_	3	advmod	3:advmod	_
 3	wait	wait	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
-5	go	go	VERB	VB	VerbForm=Inf	3	advcl	3:advcl	_
+5	go	go	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_
 6	gain	gain	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
 7	.	.	PUNCT	.	_	3	punct	3:punct	_
 

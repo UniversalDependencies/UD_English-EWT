@@ -28,12 +28,12 @@
 9	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 10	beloved	beloved	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	Ball	ball	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	Python	python	NOUN	NN	Number=Sing	4	obl	4:obl	_
+12	Python	python	NOUN	NN	Number=Sing	4	obl	4:obl:for	_
 13	Salazar	Salazar	PROPN	NNP	Number=Sing	12	appos	12:appos	_
 14	(	(	PUNCT	-LRB-	_	13	punct	13:punct	SpaceAfter=No
 15	name	name	VERB	VBN	Tense=Past|VerbForm=Part	13	acl	13:acl	_
 16	after	after	ADP	IN	_	17	case	17:case	_
-17	Harry	Harry	PROPN	NNP	Number=Sing	15	obl	15:obl	_
+17	Harry	Harry	PROPN	NNP	Number=Sing	15	obl	15:obl:after	_
 18	Potter	Potter	PROPN	NNP	Number=Sing	17	flat	17:flat	SpaceAfter=No
 19	)	)	PUNCT	-RRB-	_	13	punct	13:punct	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -54,7 +54,7 @@
 12	and	and	CCONJ	CC	_	15	cc	15:cc	_
 13	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 14	snake	snake	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
-15	handled	handle	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	conj	11:conj	_
+15	handled	handle	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	conj	11:conj:and	_
 16	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	obj	15:obj	_
 17	easily	easily	ADV	RB	_	15	advmod	15:advmod	SpaceAfter=No
 18	.	.	PUNCT	.	_	11	punct	11:punct	_
@@ -64,12 +64,12 @@
 1	But	but	CCONJ	CC	_	9	cc	9:cc	_
 2	today	today	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	SpaceAfter=No
 3	,	,	PUNCT	,	_	5	punct	5:punct	_
-4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
+4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|9:nsubj	_
 5	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 7	boy	boy	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	realized	realize	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+9	realized	realize	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj:and	_
 10	that	that	SCONJ	IN	_	13	mark	13:mark	_
 11	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
 12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
@@ -93,7 +93,7 @@
 13	cold	cold	ADJ	JJ	Degree=Pos	15	compound	15:compound	SpaceAfter=No
 14	-	-	PUNCT	HYPH	_	15	punct	15:punct	SpaceAfter=No
 15	blooded	blood	VERB	VBN	Tense=Past|VerbForm=Part	16	amod	16:amod	_
-16	creature	creature	NOUN	NN	Number=Sing	4	advcl	4:advcl	SpaceAfter=No
+16	creature	creature	NOUN	NN	Number=Sing	4	advcl	4:advcl:cause	SpaceAfter=No
 17	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108100419AAKZvMH_ans-0006
@@ -104,7 +104,7 @@
 4	question	question	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 5	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	to	to	ADP	IN	_	7	case	7:case	_
-7	this	this	PRON	DT	Number=Sing|PronType=Dem	5	obl	5:obl	SpaceAfter=No
+7	this	this	PRON	DT	Number=Sing|PronType=Dem	5	obl	5:obl:to	SpaceAfter=No
 8	,	,	PUNCT	,	_	5	punct	5:punct	_
 9	how	how	ADV	WRB	PronType=Int	12	advmod	12:advmod	_
 10	can	can	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
@@ -119,11 +119,11 @@
 # text = If I threw him against a wall and still conscious he will run away, do I hang him by the tail so the blood can flush into his skull?
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	threw	throw	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	advcl	13:advcl	_
+3	threw	throw	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	advcl	13:advcl:if	_
 4	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 5	against	against	ADP	IN	_	7	case	7:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
-7	wall	wall	NOUN	NN	Number=Sing	3	obl	3:obl	_
+7	wall	wall	NOUN	NN	Number=Sing	3	obl	3:obl:against	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	still	still	ADV	RB	_	10	advmod	10:advmod	_
 10	conscious	conscious	ADJ	JJ	Degree=Pos	3	parataxis	3:parataxis	_
@@ -138,15 +138,15 @@
 19	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	_
 20	by	by	ADP	IN	_	22	case	22:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
-22	tail	tail	NOUN	NN	Number=Sing	18	obl	18:obl	_
+22	tail	tail	NOUN	NN	Number=Sing	18	obl	18:obl:by	_
 23	so	so	SCONJ	IN	_	27	mark	27:mark	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
 25	blood	blood	NOUN	NN	Number=Sing	27	nsubj	27:nsubj	_
 26	can	can	AUX	MD	VerbForm=Fin	27	aux	27:aux	_
-27	flush	flush	VERB	VB	VerbForm=Inf	18	advcl	18:advcl	_
+27	flush	flush	VERB	VB	VerbForm=Inf	18	advcl	18:advcl:so	_
 28	into	into	ADP	IN	_	30	case	30:case	_
 29	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	30	nmod:poss	30:nmod:poss	_
-30	skull	skull	NOUN	NN	Number=Sing	27	obl	27:obl	SpaceAfter=No
+30	skull	skull	NOUN	NN	Number=Sing	27	obl	27:obl:into	SpaceAfter=No
 31	?	?	PUNCT	.	_	18	punct	18:punct	_
 
 # sent_id = answers-20111108100419AAKZvMH_ans-0008
@@ -157,12 +157,12 @@
 4	need	need	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	answers	answer	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	advice	advice	NOUN	NN	Number=Sing	5	conj	5:conj	SpaceAfter=No
+7	advice	advice	NOUN	NN	Number=Sing	5	conj	4:obj|5:conj:and	SpaceAfter=No
 8	,	,	PUNCT	,	_	12	punct	12:punct	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
 10	NOT	not	ADV	RB	_	12	cc	12:cc	_
 11	INSULTING	insulting	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	ANSWERS	answer	NOUN	NNS	Number=Plur	5	conj	5:conj	SpaceAfter=No
+12	ANSWERS	answer	NOUN	NNS	Number=Plur	5	conj	4:obj|5:conj:and_not	SpaceAfter=No
 13	!!	!!	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108100419AAKZvMH_ans-0009
@@ -183,34 +183,34 @@
 
 # sent_id = answers-20111108100419AAKZvMH_ans-0011
 # text = iw ould just stick him in the tank and let your snake have a nice hunt for once, snakes jaws detach for this sort of this thing, so why not give her a good hunt, but if you do want him knock him id just throw him against the wall or something,, lol i dont know, i agree with you though throw him, haha
-1	iw	i	PRON	PRP	_	4	nsubj	4:nsubj	_
+1	iw	i	PRON	PRP	_	4	nsubj	4:nsubj|10:nsubj	_
 2	ould	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	just	just	ADV	RB	_	4	advmod	4:advmod	_
 4	stick	stick	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj	_
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	tank	tank	NOUN	NN	Number=Sing	4	obl	4:obl	_
+8	tank	tank	NOUN	NN	Number=Sing	4	obl	4:obl:in	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	let	let	VERB	VB	VerbForm=Inf	4	conj	4:conj	_
+10	let	let	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 11	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
-12	snake	snake	NOUN	NN	Number=Sing	10	obj	10:obj	_
+12	snake	snake	NOUN	NN	Number=Sing	10	obj	10:obj|13:nsubj:xsubj	_
 13	have	have	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 15	nice	nice	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	hunt	hunt	NOUN	NN	Number=Sing	13	obj	13:obj	_
 17	for	for	ADP	IN	_	18	case	18:case	_
-18	once	once	ADV	RB	NumType=Mult	13	obl	13:obl	SpaceAfter=No
+18	once	once	ADV	RB	NumType=Mult	13	obl	13:obl:for	SpaceAfter=No
 19	,	,	PUNCT	,	_	22	punct	22:punct	_
 20	snakes	snake	NOUN	NNS	Number=Plur	21	compound	21:compound	_
 21	jaws	jaw	NOUN	NNS	Number=Plur	22	nsubj	22:nsubj	_
 22	detach	detach	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	parataxis	4:parataxis	_
 23	for	for	ADP	IN	_	25	case	25:case	_
 24	this	this	DET	DT	Number=Sing|PronType=Dem	25	det	25:det	_
-25	sort	sort	NOUN	NN	Number=Sing	22	obl	22:obl	_
+25	sort	sort	NOUN	NN	Number=Sing	22	obl	22:obl:for	_
 26	of	of	ADP	IN	_	28	case	28:case	_
 27	this	this	DET	DT	Number=Sing|PronType=Dem	28	det	28:det	_
-28	thing	thing	NOUN	NN	Number=Sing	25	nmod	25:nmod	SpaceAfter=No
+28	thing	thing	NOUN	NN	Number=Sing	25	nmod	25:nmod:of	SpaceAfter=No
 29	,	,	PUNCT	,	_	33	punct	33:punct	_
 30	so	so	ADV	RB	_	33	advmod	33:advmod	_
 31	why	why	ADV	WRB	PronType=Int	33	advmod	33:advmod	_
@@ -223,22 +223,22 @@
 38	,	,	PUNCT	,	_	50	punct	50:punct	_
 39	but	but	CCONJ	CC	_	50	cc	50:cc	_
 40	if	if	SCONJ	IN	_	43	mark	43:mark	_
-41	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	43	nsubj	43:nsubj	_
+41	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	43	nsubj	43:nsubj|45:nsubj:xsubj	_
 42	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	43	aux	43:aux	_
-43	want	want	VERB	VB	VerbForm=Inf	50	advcl	50:advcl	_
+43	want	want	VERB	VB	VerbForm=Inf	50	advcl	50:advcl:if	_
 44	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	45	reparandum	45:reparandum	_
 45	knock	knock	VERB	VB	VerbForm=Inf	43	xcomp	43:xcomp	_
 46	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	45	obj	45:obj	_
 47	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	50	nsubj	50:nsubj	SpaceAfter=No
 48	d	would	AUX	MD	VerbForm=Fin	50	aux	50:aux	_
 49	just	just	ADV	RB	_	50	advmod	50:advmod	_
-50	throw	throw	VERB	VB	VerbForm=Inf	4	conj	4:conj	_
+50	throw	throw	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 51	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	50	obj	50:obj	_
 52	against	against	ADP	IN	_	54	case	54:case	_
 53	the	the	DET	DT	Definite=Def|PronType=Art	54	det	54:det	_
-54	wall	wall	NOUN	NN	Number=Sing	50	obl	50:obl	_
+54	wall	wall	NOUN	NN	Number=Sing	50	obl	50:obl:against	_
 55	or	or	CCONJ	CC	_	56	cc	56:cc	_
-56	something	something	PRON	NN	Number=Sing	54	conj	54:conj	SpaceAfter=No
+56	something	something	PRON	NN	Number=Sing	54	conj	50:obl:against|54:conj:or	SpaceAfter=No
 57	,,	,,	PUNCT	,	_	50	punct	50:punct	_
 58	lol	lol	INTJ	UH	_	62	discourse	62:discourse	_
 59	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	62	nsubj	62:nsubj	_
@@ -249,7 +249,7 @@
 64	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	65	nsubj	65:nsubj	_
 65	agree	agree	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	50	parataxis	50:parataxis	_
 66	with	with	ADP	IN	_	67	case	67:case	_
-67	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	65	obl	65:obl	_
+67	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	65	obl	65:obl:with	_
 68	though	though	ADV	RB	_	65	advmod	65:advmod	_
 69	throw	throw	VERB	VB	VerbForm=Inf	50	parataxis	50:parataxis	_
 70	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	69	obj	69:obj	SpaceAfter=No
@@ -264,7 +264,7 @@
 4	youre	your	PRON	PRP$	_	5	nmod:poss	5:nmod:poss	_
 5	snake	snake	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 6	will	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
-7	take	take	VERB	VB	VerbForm=Inf	13	advcl	13:advcl	_
+7	take	take	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:if	_
 8	pre-killed	pre-killed	ADJ	JJ	Degree=Pos	7	obj	7:obj	SpaceAfter=No
 9	,	,	PUNCT	,	_	13	punct	13:punct	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
@@ -285,21 +285,21 @@
 6	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 7	sealed	seal	VERB	VBN	Tense=Past|VerbForm=Part	9	amod	9:amod	_
 8	tupperwear	tupperware	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	container	container	NOUN	NN	Number=Sing	2	obl	2:obl	_
+9	container	container	NOUN	NN	Number=Sing	2	obl	2:obl:in	_
 10	with	with	ADP	IN	_	12	case	12:case	_
 11	no	no	DET	DT	_	12	det	12:det	_
-12	airholes	airhole	NOUN	NNS	Number=Plur	9	nmod	9:nmod	_
+12	airholes	airhole	NOUN	NNS	Number=Plur	9	nmod	9:nmod:with	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	wait	wait	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj	_
+14	wait	wait	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj:and	_
 15	until	until	SCONJ	IN	_	17	mark	17:mark	_
-16	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
-17	passes	pass	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl	_
+16	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj|20:nsubj	_
+17	passes	pass	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:until	_
 18	out	out	ADP	RP	_	17	compound:prt	17:compound:prt	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	dies	die	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	conj	17:conj	_
+20	dies	die	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	conj	14:advcl:until|17:conj:and	_
 21	and	and	CCONJ	CC	_	23	cc	23:cc	_
 22	then	then	ADV	RB	PronType=Dem	23	advmod	23:advmod	_
-23	feed	feed	VERB	VB	Mood=Imp|VerbForm=Fin	14	conj	14:conj	_
+23	feed	feed	VERB	VB	Mood=Imp|VerbForm=Fin	14	conj	14:conj:and	_
 24	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	23	obj	23:obj	SpaceAfter=No
 25	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -309,35 +309,35 @@
 2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 3	wo	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	SpaceAfter=No
 4	n't	not	PART	RB	_	5	advmod	5:advmod	_
-5	take	take	VERB	VB	VerbForm=Inf	15	advcl	15:advcl	_
+5	take	take	VERB	VB	VerbForm=Inf	15	advcl	15:advcl:if	_
 6	pre-killed	pre-killed	ADJ	JJ	Degree=Pos	5	obj	5:obj	_
 7	and	and	CCONJ	CC	_	10	cc	10:cc	_
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
 9	usually	usually	ADV	RB	_	10	advmod	10:advmod	_
-10	feed	feed	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj	_
+10	feed	feed	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and|15:advcl:if	_
 11	live	live	ADJ	JJ	Degree=Pos	10	obj	10:obj	_
 12	then	then	ADV	RB	PronType=Dem	15	advmod	15:advmod	_
-13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
+13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj|22:nsubj	_
 14	could	could	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
 15	hold	hold	VERB	VB	VerbForm=Inf	0	root	0:root	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	rat	rat	NOUN	NN	Number=Sing	15	obj	15:obj	_
 18	by	by	ADP	IN	_	20	case	20:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
-20	tail	tail	NOUN	NN	Number=Sing	15	obl	15:obl	_
+20	tail	tail	NOUN	NN	Number=Sing	15	obl	15:obl:by	_
 21	and	and	CCONJ	CC	_	22	cc	22:cc	_
-22	whack	whack	VERB	VB	VerbForm=Inf	15	conj	15:conj	_
+22	whack	whack	VERB	VB	VerbForm=Inf	15	conj	15:conj:and	_
 23	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	22	obj	22:obj	_
 24	against	against	ADP	IN	_	27	case	27:case	_
 25	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	_
 26	hard	hard	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	surface	surface	NOUN	NN	Number=Sing	22	obl	22:obl	SpaceAfter=No
+27	surface	surface	NOUN	NN	Number=Sing	22	obl	22:obl:against	SpaceAfter=No
 28	,	,	PUNCT	,	_	22	punct	22:punct	_
 29	like	like	ADP	IN	_	31	case	31:case	_
 30	a	a	DET	DT	Definite=Ind|PronType=Art	31	det	31:det	_
-31	refrigerator	refrigerator	NOUN	NN	Number=Sing	22	obl	22:obl	_
+31	refrigerator	refrigerator	NOUN	NN	Number=Sing	22	obl	22:obl:like	_
 32	or	or	CCONJ	CC	_	33	cc	33:cc	_
-33	wall	wall	NOUN	NN	Number=Sing	31	conj	31:conj	SpaceAfter=No
+33	wall	wall	NOUN	NN	Number=Sing	31	conj	22:obl:like|31:conj:or	SpaceAfter=No
 34	.	.	PUNCT	.	_	15	punct	15:punct	_
 
 # sent_id = answers-20111108100419AAKZvMH_ans-0015
@@ -351,19 +351,19 @@
 7	though	though	ADV	RB	_	4	advmod	4:advmod	_
 8	-	-	PUNCT	:	_	4	punct	4:punct	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
-10	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj	_
+10	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	_
 11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	SpaceAfter=No
 12	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
 13	pretty	pretty	ADV	RB	_	14	advmod	14:advmod	_
 14	cruel	cruel	ADJ	JJ	Degree=Pos	10	ccomp	10:ccomp	_
 15	and	and	CCONJ	CC	_	22	cc	22:cc	_
-16	I'd	i'd	SCONJ	IN	_	18	mark	18:mark	_
+16	I'd	if	SCONJ	IN	Typo=Yes	18	mark	18:mark	_
 17	not	not	ADV	RB	_	18	advmod	18:advmod	_
-18	done	do	VERB	VBN	Tense=Past|VerbForm=Part	22	advcl	22:advcl	_
+18	done	do	VERB	VBN	Tense=Past|VerbForm=Part	22	advcl	22:advcl:if	_
 19	properly	properly	ADV	RB	_	18	advmod	18:advmod	_
-20	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	22:nsubj	SpaceAfter=No
+20	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	22:nsubj|25:nsubj:xsubj|30:nsubj:xsubj	SpaceAfter=No
 21	'll	will	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
-22	end	end	VERB	VB	VerbForm=Inf	4	conj	4:conj	_
+22	end	end	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 23	up	up	ADP	RP	_	22	compound:prt	22:compound:prt	_
 24	really	really	ADV	RB	_	25	advmod	25:advmod	_
 25	hurting	hurt	VERB	VBG	VerbForm=Ger	22	xcomp	22:xcomp	_
@@ -371,16 +371,16 @@
 27	rat	rat	NOUN	NN	Number=Sing	25	obj	25:obj	_
 28	but	but	CCONJ	CC	_	30	cc	30:cc	_
 29	not	not	PART	RB	_	30	advmod	30:advmod	_
-30	stunning	stun	VERB	VBG	VerbForm=Ger	25	conj	25:conj	_
+30	stunning	stun	VERB	VBG	VerbForm=Ger	25	conj	22:xcomp|25:conj:but	_
 31	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	30	obj	30:obj	_
 32	enough	enough	ADV	RB	_	30	advmod	30:advmod	_
 33	to	to	PART	TO	_	34	mark	34:mark	_
-34	stop	stop	VERB	VB	VerbForm=Inf	30	advcl	30:advcl	_
+34	stop	stop	VERB	VB	VerbForm=Inf	30	advcl	30:advcl:to	_
 35	possible	possible	ADJ	JJ	Degree=Pos	36	amod	36:amod	_
 36	injury	injury	NOUN	NN	Number=Sing	34	obj	34:obj	_
 37	to	to	ADP	IN	_	39	case	39:case	_
 38	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	39	nmod:poss	39:nmod:poss	_
-39	snake	snake	NOUN	NN	Number=Sing	36	nmod	36:nmod	SpaceAfter=No
+39	snake	snake	NOUN	NN	Number=Sing	36	nmod	36:nmod:to	SpaceAfter=No
 40	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108100419AAKZvMH_ans-0016
@@ -396,12 +396,12 @@
 9	easiest	easiest	ADJ	JJS	Degree=Sup	3	parataxis	3:parataxis	_
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	most	most	ADV	RBS	_	12	advmod	12:advmod	_
-12	humane	humane	ADJ	JJ	Degree=Pos	9	conj	9:conj	SpaceAfter=No
+12	humane	humane	ADJ	JJ	Degree=Pos	9	conj	9:conj:and	SpaceAfter=No
 13	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = answers-20111108100419AAKZvMH_ans-0017
 # text = You could also just wait until the rat passes out for about 1 minute and them feed it - at this point, it could still have a bit of a heart beat and be slightly still alive.
-1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj|17:nsubj	_
 2	could	could	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 3	also	also	ADV	RB	_	5	advmod	5:advmod	_
 4	just	just	ADV	RB	_	5	advmod	5:advmod	_
@@ -409,22 +409,22 @@
 6	until	until	SCONJ	IN	_	9	mark	9:mark	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	rat	rat	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
-9	passes	pass	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl	_
+9	passes	pass	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl:until	_
 10	out	out	ADP	RP	_	9	compound:prt	9:compound:prt	_
 11	for	for	ADP	IN	_	14	case	14:case	_
 12	about	about	ADV	RB	_	13	advmod	13:advmod	_
 13	1	1	NUM	CD	NumType=Card	14	nummod	14:nummod	_
-14	minute	minute	NOUN	NN	Number=Sing	9	obl	9:obl	_
+14	minute	minute	NOUN	NN	Number=Sing	9	obl	9:obl:for	_
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
 16	them	them	ADV	RB	_	17	advmod	17:advmod	_
-17	feed	feed	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+17	feed	feed	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj:and	_
 18	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	obj	17:obj	_
 19	-	-	PUNCT	:	_	5	punct	5:punct	_
 20	at	at	ADP	IN	_	22	case	22:case	_
 21	this	this	DET	DT	Number=Sing|PronType=Dem	22	det	22:det	_
-22	point	point	NOUN	NN	Number=Sing	27	obl	27:obl	SpaceAfter=No
+22	point	point	NOUN	NN	Number=Sing	27	obl	27:obl:at	SpaceAfter=No
 23	,	,	PUNCT	,	_	27	punct	27:punct	_
-24	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	27	nsubj	27:nsubj	_
+24	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	27	nsubj	27:nsubj|38:nsubj	_
 25	could	could	AUX	MD	VerbForm=Fin	27	aux	27:aux	_
 26	still	still	ADV	RB	_	27	advmod	27:advmod	_
 27	have	have	VERB	VB	VerbForm=Inf	5	parataxis	5:parataxis	_
@@ -433,12 +433,12 @@
 30	of	of	ADP	IN	_	33	case	33:case	_
 31	a	a	DET	DT	Definite=Ind|PronType=Art	33	det	33:det	_
 32	heart	heart	NOUN	NN	Number=Sing	33	compound	33:compound	_
-33	beat	beat	NOUN	NN	Number=Sing	29	nmod	29:nmod	_
+33	beat	beat	NOUN	NN	Number=Sing	29	nmod	29:nmod:of	_
 34	and	and	CCONJ	CC	_	38	cc	38:cc	_
 35	be	be	AUX	VB	VerbForm=Inf	38	cop	38:cop	_
 36	slightly	slightly	ADV	RB	_	38	advmod	38:advmod	_
 37	still	still	ADV	RB	_	38	advmod	38:advmod	_
-38	alive	alive	ADJ	JJ	Degree=Pos	27	conj	27:conj	SpaceAfter=No
+38	alive	alive	ADJ	JJ	Degree=Pos	27	conj	27:conj:and	SpaceAfter=No
 39	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108100419AAKZvMH_ans-0018
@@ -452,20 +452,20 @@
 7	rat	rat	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	in	in	ADP	IN	_	10	case	10:case	_
 9	feeding	feeding	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	prongs	prong	NOUN	NNS	Number=Plur	5	obl	5:obl	_
+10	prongs	prong	NOUN	NNS	Number=Plur	5	obl	5:obl:in	_
 11	so	so	SCONJ	IN	_	15	mark	15:mark	_
 12	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	snake	snake	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
 14	can	can	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-15	get	get	VERB	VB	VerbForm=Inf	5	advcl	5:advcl	_
+15	get	get	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:so	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 17	good	good	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	hold	hold	NOUN	NN	Number=Sing	15	obj	15:obj	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	grip	grip	NOUN	NN	Number=Sing	18	conj	18:conj	_
+20	grip	grip	NOUN	NN	Number=Sing	18	conj	15:obj|18:conj:and	_
 21	on	on	ADP	IN	_	23	case	23:case	_
 22	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
-23	prey	prey	NOUN	NN	Number=Sing	18	nmod	18:nmod	SpaceAfter=No
+23	prey	prey	NOUN	NN	Number=Sing	18	nmod	18:nmod:on	SpaceAfter=No
 24	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108100419AAKZvMH_ans-0019
@@ -488,7 +488,7 @@
 10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	snake	snake	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	on	on	ADP	IN	_	13	mark	13:mark	_
-13	frozen	freeze	VERB	VBN	Tense=Past|VerbForm=Part	9	advcl	9:advcl	SpaceAfter=No
+13	frozen	freeze	VERB	VBN	Tense=Past|VerbForm=Part	9	advcl	9:advcl:on	SpaceAfter=No
 14	/	/	PUNCT	,	_	13	punct	13:punct	SpaceAfter=No
 15	thawed	thaw	VERB	VBN	Tense=Past|VerbForm=Part	13	amod	13:amod	_
 16	will	will	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
@@ -498,16 +498,16 @@
 20	much	much	ADV	RB	_	21	advmod	21:advmod	_
 21	easier	easier	ADJ	JJR	Degree=Cmp	17	xcomp	17:xcomp	_
 22	for	for	ADP	IN	_	23	case	23:case	_
-23	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	21	obl	21:obl	_
+23	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	21	obl	21:obl:for	_
 24	and	and	CCONJ	CC	_	25	cc	25:cc	_
-25	safer	safer	ADJ	JJR	Degree=Cmp	21	conj	21:conj	_
+25	safer	safer	ADJ	JJR	Degree=Cmp	21	conj	17:xcomp|21:conj:and	_
 26	for	for	ADP	IN	_	28	case	28:case	_
 27	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	28	nmod:poss	28:nmod:poss	_
-28	snake	snake	NOUN	NN	Number=Sing	25	obl	25:obl	_
+28	snake	snake	NOUN	NN	Number=Sing	25	obl	25:obl:for	_
 29	in	in	ADP	IN	_	32	case	32:case	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
 31	long	long	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
-32	run	run	NOUN	NN	Number=Sing	21	obl	21:obl	SpaceAfter=No
+32	run	run	NOUN	NN	Number=Sing	21	obl	21:obl:in	SpaceAfter=No
 33	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108100419AAKZvMH_ans-0021
@@ -521,7 +521,7 @@
 7	what	what	PRON	WP	PronType=Int	10	obj	10:obj	_
 8	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	SpaceAfter=No
 9	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
-10	worth	worth	ADJ	JJ	Degree=Pos	4	advcl	4:advcl	SpaceAfter=No
+10	worth	worth	ADJ	JJ	Degree=Pos	4	advcl	4:advcl:for	SpaceAfter=No
 11	…	.	PUNCT	.	_	2	punct	2:punct	_
 12	:-)	:-)	SYM	NFP	_	2	discourse	2:discourse	_
 

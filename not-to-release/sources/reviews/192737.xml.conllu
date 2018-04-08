@@ -3,14 +3,14 @@
 # text = Professional and inspiring
 1	Professional	professional	ADJ	JJ	Degree=Pos	0	root	0:root	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	inspiring	inspiring	ADJ	JJ	Degree=Pos	1	conj	1:conj	_
+3	inspiring	inspiring	ADJ	JJ	Degree=Pos	1	conj	1:conj:and	_
 
 # sent_id = reviews-192737-0002
 # text = Nigel from Nidd Design has always provided a first class service, from his advice and professionalism to the quality of his design drawings and planning applications.
 1	Nigel	Nigel	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
 2	from	from	ADP	IN	_	4	case	4:case	_
 3	Nidd	Nidd	PROPN	NNP	Number=Sing	4	compound	4:compound	_
-4	Design	Design	PROPN	NNP	Number=Sing	1	nmod	1:nmod	_
+4	Design	Design	PROPN	NNP	Number=Sing	1	nmod	1:nmod:from	_
 5	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 6	always	always	ADV	RB	_	7	advmod	7:advmod	_
 7	provided	provide	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
@@ -21,27 +21,27 @@
 12	,	,	PUNCT	,	_	7	punct	7:punct	_
 13	from	from	ADP	IN	_	15	case	15:case	_
 14	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
-15	advice	advice	NOUN	NN	Number=Sing	7	obl	7:obl	_
+15	advice	advice	NOUN	NN	Number=Sing	7	obl	7:obl:from	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	professionalism	professionalism	NOUN	NN	Number=Sing	15	conj	15:conj	_
+17	professionalism	professionalism	NOUN	NN	Number=Sing	15	conj	7:obl:from|15:conj:and	_
 18	to	to	ADP	IN	_	20	case	20:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
-20	quality	quality	NOUN	NN	Number=Sing	7	obl	7:obl	_
+20	quality	quality	NOUN	NN	Number=Sing	7	obl	7:obl:to	_
 21	of	of	ADP	IN	_	24	case	24:case	_
 22	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
 23	design	design	NOUN	NN	Number=Sing	24	compound	24:compound	_
-24	drawings	drawing	NOUN	NNS	Number=Plur	20	nmod	20:nmod	_
+24	drawings	drawing	NOUN	NNS	Number=Plur	20	nmod	20:nmod:of	_
 25	and	and	CCONJ	CC	_	27	cc	27:cc	_
 26	planning	planning	NOUN	NN	Number=Sing	27	compound	27:compound	_
-27	applications	application	NOUN	NNS	Number=Plur	24	conj	24:conj	SpaceAfter=No
+27	applications	application	NOUN	NNS	Number=Plur	24	conj	20:nmod:of|24:conj:and	SpaceAfter=No
 28	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-192737-0003
 # text = His knowledge and expertise help smooth the way with any planning application, ensuring compliance with the building regulations.
 1	His	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	knowledge	knowledge	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+2	knowledge	knowledge	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|6:nsubj:xsubj	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	expertise	expertise	NOUN	NN	Number=Sing	2	conj	2:conj	_
+4	expertise	expertise	NOUN	NN	Number=Sing	2	conj	2:conj:and|5:nsubj|6:nsubj:xsubj	_
 5	help	help	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	smooth	smooth	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
@@ -49,14 +49,14 @@
 9	with	with	ADP	IN	_	12	case	12:case	_
 10	any	any	DET	DT	_	12	det	12:det	_
 11	planning	planning	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	application	application	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+12	application	application	NOUN	NN	Number=Sing	6	obl	6:obl:with	SpaceAfter=No
 13	,	,	PUNCT	,	_	6	punct	6:punct	_
 14	ensuring	ensure	VERB	VBG	VerbForm=Ger	6	advcl	6:advcl	_
 15	compliance	compliance	NOUN	NN	Number=Sing	14	obj	14:obj	_
 16	with	with	ADP	IN	_	19	case	19:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 18	building	building	NOUN	NN	Number=Sing	19	compound	19:compound	_
-19	regulations	regulation	NOUN	NNS	Number=Plur	15	nmod	15:nmod	SpaceAfter=No
+19	regulations	regulation	NOUN	NNS	Number=Plur	15	nmod	15:nmod:with	SpaceAfter=No
 20	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-192737-0004
@@ -64,16 +64,16 @@
 1	Once	once	SCONJ	IN	_	4	mark	4:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 3	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	met	meet	VERB	VBN	Tense=Past|VerbForm=Part	9	advcl	9:advcl	_
+4	met	meet	VERB	VBN	Tense=Past|VerbForm=Part	9	advcl	9:advcl:once	_
 5	Nigel	Nigel	PROPN	NNP	Number=Sing	4	obj	4:obj	_
-6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
+6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj|11:nsubj:xsubj	_
 7	will	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 8	not	not	PART	RB	_	9	advmod	9:advmod	_
 9	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	work	work	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 12	with	with	ADP	IN	_	13	case	13:case	_
-13	anyone	anyone	PRON	NN	Number=Sing	11	obl	11:obl	_
+13	anyone	anyone	PRON	NN	Number=Sing	11	obl	11:obl:with	_
 14	else	else	ADJ	JJ	Degree=Pos	13	amod	13:amod	SpaceAfter=No
 15	.	.	PUNCT	.	_	9	punct	9:punct	_
 
@@ -86,9 +86,9 @@
 5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	dreams	dream	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 7	into	into	ADP	IN	_	8	case	8:case	_
-8	reality	reality	NOUN	NN	Number=Sing	4	obl	4:obl	_
+8	reality	reality	NOUN	NN	Number=Sing	4	obl	4:obl:into	_
 9	for	for	ADP	IN	_	11	case	11:case	_
 10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-11	home	home	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+11	home	home	NOUN	NN	Number=Sing	4	obl	4:obl:for	SpaceAfter=No
 12	!	!	PUNCT	.	_	4	punct	4:punct	_
 

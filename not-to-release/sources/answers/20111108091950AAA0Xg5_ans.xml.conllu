@@ -17,8 +17,8 @@
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	names	name	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 7	some	some	DET	DT	_	8	det	8:det	_
-8	collages	collage	NOUN	NNS	Number=Plur	6	nmod:npmod	6:nmod:npmod	_
-9	that	that	PRON	WDT	PronType=Rel	11	nsubj	11:nsubj	_
+8	collages	collage	NOUN	NNS	Number=Plur	6	nmod:npmod	6:nmod:npmod|11:nsubj	_
+9	that	that	PRON	WDT	PronType=Rel	11	nsubj	8:ref	_
 10	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
 11	post	post	VERB	VB	VerbForm=Inf	8	acl:relcl	8:acl:relcl	_
 12	18	18	NUM	CD	NumType=Card	14	nummod	14:nummod	_
@@ -26,10 +26,10 @@
 14	degrees	degree	NOUN	NNS	Number=Plur	11	obj	11:obj	_
 15	or	or	CCONJ	CC	_	17	cc	17:cc	_
 16	foundation	foundation	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	degrees	degree	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	conj	14:conj	SpaceAfter=No
+17	degrees	degree	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	conj	11:obj|14:conj:or	SpaceAfter=No
 18	)	)	PUNCT	-RRB-	_	16	punct	16:punct	_
 19	in	in	ADP	IN	_	20	case	20:case	_
-20	either	either	CCONJ	CC	_	11	obl	11:obl	SpaceAfter=No
+20	either	either	CCONJ	CC	_	11	obl	11:obl:in	SpaceAfter=No
 21	:	:	PUNCT	:	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108091950AAA0Xg5_ans-0003
@@ -37,7 +37,7 @@
 1	Horse	horse	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 2	behaviour	behaviour	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 3	/	/	PUNCT	,	_	4	cc	4:cc	SpaceAfter=No
-4	training	training	NOUN	NN	Number=Sing	2	conj	2:conj	_
+4	training	training	NOUN	NN	Number=Sing	2	conj	2:conj:or	_
 5	or	or	CCONJ	CC	_	4	cc	4:cc	_
 
 # sent_id = answers-20111108091950AAA0Xg5_ans-0004
@@ -52,15 +52,15 @@
 3	employs	employ	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	people	people	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 5	from	from	ADP	IN	_	6	case	6:case	_
-6	Hartpury	Hartpury	PROPN	NNP	Number=Sing	4	nmod	4:nmod	_
+6	Hartpury	Hartpury	PROPN	NNP	Number=Sing	4	nmod	4:nmod:from	_
 7	because	because	ADP	IN	_	9	case	9:case	_
 8	of	of	SCONJ	IN	_	7	fixed	7:fixed	_
-9	what	what	PRON	WP	PronType=Int	3	obl	3:obl	_
+9	what	what	PRON	WP	PronType=Int	3	obl	3:obl:because_of	_
 10	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 11	received	receive	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
 12	on	on	ADP	IN	_	14	case	14:case	_
 13	work	work	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	experience	experience	NOUN	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+14	experience	experience	NOUN	NN	Number=Sing	11	obl	11:obl:on	SpaceAfter=No
 15	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108091950AAA0Xg5_ans-0006
@@ -75,13 +75,13 @@
 8	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 9	NVQ	nvq	NOUN	NN	Number=Sing	11	compound	11:compound	_
 10	equine	equine	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	course	course	NOUN	NN	Number=Sing	6	obl	6:obl	SpaceAfter=No
+11	course	course	NOUN	NN	Number=Sing	6	obl	6:obl:on	SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	6	punct	6:punct	_
 13	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 14	HND	hnd	NOUN	NN	Number=Sing	13	obj	13:obj	_
 15	in	in	ADP	IN	_	17	case	17:case	_
 16	equine	equine	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	management	management	NOUN	NN	Number=Sing	14	nmod	14:nmod	SpaceAfter=No
+17	management	management	NOUN	NN	Number=Sing	14	nmod	14:nmod:in	SpaceAfter=No
 18	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = answers-20111108091950AAA0Xg5_ans-0007
@@ -93,9 +93,9 @@
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	look	look	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	_
 7	on	on	ADP	IN	_	8	case	8:case	_
-8	UCAS	UCAS	PROPN	NNP	Number=Sing	6	obl	6:obl	_
+8	UCAS	UCAS	PROPN	NNP	Number=Sing	6	obl	6:obl:on	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	do	do	VERB	VB	VerbForm=Inf	6	conj	6:conj	_
+10	do	do	VERB	VB	VerbForm=Inf	6	conj	4:ccomp|6:conj:and	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 12	course	course	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	search	search	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No
@@ -106,9 +106,9 @@
 1	Merrist	Merrist	PROPN	NNP	Number=Sing	2	compound	2:compound	_
 2	Wood	Wood	PROPN	NNP	Number=Sing	0	root	0:root	_
 3	in	in	ADP	IN	_	4	case	4:case	_
-4	Woking	Woking	PROPN	NNP	Number=Sing	2	nmod	2:nmod	_
+4	Woking	Woking	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	Surrey	Surrey	PROPN	NNP	Number=Sing	2	nmod	2:nmod	SpaceAfter=No
+6	Surrey	Surrey	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	SpaceAfter=No
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108091950AAA0Xg5_ans-0009
@@ -116,7 +116,7 @@
 1	Moreton	Moreton	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	Morrell	Morrell	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	in	in	ADP	IN	_	4	case	4:case	_
-4	Coventry	Coventry	PROPN	NNP	Number=Sing	1	nmod	1:nmod	SpaceAfter=No
+4	Coventry	Coventry	PROPN	NNP	Number=Sing	1	nmod	1:nmod:in	SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	Warwickshire	Warwickshire	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 
@@ -135,21 +135,21 @@
 11	but	but	CCONJ	CC	_	19	cc	19:cc	_
 12	if	if	SCONJ	IN	_	14	mark	14:mark	_
 13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	14	nsubj	14:nsubj	_
-14	type	type	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	advcl	19:advcl	_
+14	type	type	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	advcl	19:advcl:if	_
 15	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	obj	14:obj	_
 16	in	in	ADV	RB	_	14	advmod	14:advmod	_
 17	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	19	nsubj	19:nsubj	_
 18	should	should	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
-19	come	come	VERB	VB	VerbForm=Inf	5	conj	5:conj	_
+19	come	come	VERB	VB	VerbForm=Inf	5	conj	5:conj:but	_
 20	up	up	ADV	RB	_	19	advmod	19:advmod	_
 21	with	with	ADP	IN	_	24	case	24:case	_
 22	an	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
 23	alternative	alternative	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-24	suggestion	suggestion	NOUN	NN	Number=Sing	19	obl	19:obl	SpaceAfter=No
+24	suggestion	suggestion	NOUN	NN	Number=Sing	19	obl	19:obl:with	SpaceAfter=No
 25	)	)	PUNCT	-RRB-	_	5	punct	5:punct	SpaceAfter=No
 26	,	,	PUNCT	,	_	2	punct	2:punct	_
 27	in	in	ADP	IN	_	28	case	28:case	_
-28	Gloucestershire	Gloucestershire	PROPN	NNP	Number=Sing	2	nmod	2:nmod	SpaceAfter=No
+28	Gloucestershire	Gloucestershire	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	SpaceAfter=No
 29	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108091950AAA0Xg5_ans-0011
@@ -158,18 +158,18 @@
 2	onto	onto	ADP	IN	_	5	case	5:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	UCAS	UCAS	PROPN	NNP	Number=Sing	5	compound	5:compound	_
-5	website	website	NOUN	NN	Number=Sing	1	obl	1:obl	SpaceAfter=No
+5	website	website	NOUN	NN	Number=Sing	1	obl	1:obl:onto	SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
-7	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
+7	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 8	onto	onto	ADP	IN	_	10	case	10:case	_
 9	course	course	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	search	search	NOUN	NN	Number=Sing	7	obl	7:obl	_
+10	search	search	NOUN	NN	Number=Sing	7	obl	7:obl:onto	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	search	search	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
+12	search	search	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 13	for	for	ADP	IN	_	15	case	15:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
-15	courses	course	NOUN	NNS	Number=Plur	12	obl	12:obl	_
-16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	_
+15	courses	course	NOUN	NNS	Number=Plur	12	obl	12:obl:for	_
+16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj|19:nsubj:xsubj	_
 17	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	acl:relcl	15:acl:relcl	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
 19	do	do	VERB	VB	VerbForm=Inf	17	xcomp	17:xcomp	SpaceAfter=No
@@ -187,8 +187,8 @@
 8	of	of	ADP	IN	_	11	case	11:case	_
 9	all	all	DET	PDT	_	11	det:predet	11:det:predet	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	universities	university	NOUN	NNS	Number=Plur	7	nmod	7:nmod	_
-12	that	that	PRON	WDT	PronType=Rel	13	nsubj	13:nsubj	_
+11	universities	university	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of|13:nsubj	_
+12	that	that	PRON	WDT	PronType=Rel	13	nsubj	11:ref	_
 13	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	courses	course	NOUN	NNS	Number=Plur	13	obj	13:obj	_
@@ -198,10 +198,10 @@
 19	plus	plus	CCONJ	CC	_	22	cc	22:cc	_
 20	all	all	DET	PDT	_	22	det:predet	22:det:predet	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
-22	information	information	NOUN	NN	Number=Sing	7	conj	7:conj	_
+22	information	information	NOUN	NN	Number=Sing	7	conj	3:obj|7:conj:plus	_
 23	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	24	nsubj	24:nsubj	_
 24	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	acl:relcl	22:acl:relcl	_
 25	to	to	PART	TO	_	26	mark	26:mark	_
-26	apply	apply	VERB	VB	VerbForm=Inf	24	advcl	24:advcl	SpaceAfter=No
+26	apply	apply	VERB	VB	VerbForm=Inf	24	advcl	24:advcl:to	SpaceAfter=No
 27	.	.	PUNCT	.	_	3	punct	3:punct	_
 

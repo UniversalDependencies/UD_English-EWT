@@ -11,11 +11,11 @@
 2	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	upon	upon	ADP	IN	_	5	case	5:case	_
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
-5	store	store	NOUN	NN	Number=Sing	2	obl	2:obl	_
+5	store	store	NOUN	NN	Number=Sing	2	obl	2:obl:upon	_
 6	as	as	SCONJ	IN	_	9	mark	9:mark	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	building	building	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
-9	caught	catch	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	advcl	2:advcl	_
+9	caught	catch	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	advcl	2:advcl:as	_
 10	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	eye	eye	NOUN	NN	Number=Sing	9	obj	9:obj	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -31,14 +31,14 @@
 7	HONKA	HONKA	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 8	Log	Log	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 9	Homes	Homes	PROPN	NNPS	Number=Plur	10	compound	10:compound	_
-10	building	building	NOUN	NN	Number=Sing	3	obl	3:obl	SpaceAfter=No
+10	building	building	NOUN	NN	Number=Sing	3	obl	3:obl:in	SpaceAfter=No
 11	,	,	PUNCT	,	_	3	punct	3:punct	_
 12	by	by	ADP	IN	_	13	case	13:case	_
-13	Walmart	Walmart	PROPN	NNP	Number=Sing	3	obl	3:obl	_
+13	Walmart	Walmart	PROPN	NNP	Number=Sing	3	obl	3:obl:by	_
 14	off	off	ADP	IN	_	17	case	17:case	_
 15	of	of	ADP	IN	_	17	case	17:case	_
 16	Evergreen	Evergreen	PROPN	NNP	Number=Sing	17	compound	17:compound	_
-17	Parkway	Parkway	PROPN	NNP	Number=Sing	3	obl	3:obl	SpaceAfter=No
+17	Parkway	Parkway	PROPN	NNP	Number=Sing	3	obl	3:obl:of	SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-382073-0004
@@ -48,16 +48,16 @@
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 4	decorated	decorate	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 5	with	with	ADP	IN	_	6	case	6:case	_
-6	furnishings	furnishings	NOUN	NNS	Number=Plur	4	obl	4:obl	_
+6	furnishings	furnishings	NOUN	NNS	Number=Plur	4	obl	4:obl:with	_
 7	&	&	CCONJ	CC	_	8	cc	8:cc	_
-8	accessories	accessory	NOUN	NNS	Number=Plur	6	conj	6:conj	SpaceAfter=No
+8	accessories	accessory	NOUN	NNS	Number=Plur	6	conj	4:obl:with|6:conj	SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-382073-0005
 # text = The friendly crew working was great & very helpful.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	friendly	friendly	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	crew	crew	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
+3	crew	crew	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|9:nsubj	_
 4	working	work	VERB	VBG	VerbForm=Ger	3	acl	3:acl	_
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	_
 6	great	great	ADJ	JJ	Degree=Pos	0	root	0:root	_
@@ -92,7 +92,7 @@
 10	all	all	DET	DT	_	13	nsubj	13:nsubj	_
 11	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
 12	been	be	AUX	VBN	Tense=Past|VerbForm=Part	13	cop	13:cop	_
-13	great	great	ADJ	JJ	Degree=Pos	4	conj	4:conj	SpaceAfter=No
+13	great	great	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
 14	!	!	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-382073-0008
@@ -100,7 +100,7 @@
 1	It's	it's	PRON	PRP$	_	2	nmod:poss	2:nmod:poss	_
 2	durability	durability	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
 3	&	&	CCONJ	CC	_	4	cc	4:cc	_
-4	look	look	NOUN	NN	Number=Sing	2	conj	2:conj	_
+4	look	look	NOUN	NN	Number=Sing	2	conj	2:conj|6:nsubj	_
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	_
 6	perfect	perfect	ADJ	JJ	Degree=Pos	0	root	0:root	_
 7	and	and	CCONJ	CC	_	12	cc	12:cc	_
@@ -108,10 +108,10 @@
 9	will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 10	definitely	definitely	ADV	RB	_	12	advmod	12:advmod	_
 11	be	be	AUX	VB	VerbForm=Inf	12	aux	12:aux	_
-12	adding	add	VERB	VBG	Tense=Pres|VerbForm=Part	6	conj	6:conj	_
+12	adding	add	VERB	VBG	Tense=Pres|VerbForm=Part	6	conj	6:conj:and	_
 13	to	to	ADP	IN	_	15	case	15:case	_
 14	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
-15	collection	collection	NOUN	NN	Number=Sing	12	obl	12:obl	_
+15	collection	collection	NOUN	NN	Number=Sing	12	obl	12:obl:to	_
 16	soon	soon	ADV	RB	Degree=Pos	12	advmod	12:advmod	SpaceAfter=No
 17	!	!	PUNCT	.	_	6	punct	6:punct	_
 

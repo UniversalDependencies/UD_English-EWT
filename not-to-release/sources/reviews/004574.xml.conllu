@@ -25,16 +25,16 @@
 9	mexican	mexican	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	food	food	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
-12	bland	bland	ADJ	JJ	Degree=Pos	3	conj	3:conj	SpaceAfter=No
+12	bland	bland	ADJ	JJ	Degree=Pos	3	conj	3:conj:and	SpaceAfter=No
 13	,	,	PUNCT	,	_	12	punct	12:punct	_
 14	almost	almost	ADV	RB	_	15	advmod	15:advmod	_
 15	equivalent	equivalent	ADJ	JJ	Degree=Pos	12	appos	12:appos	_
 16	to	to	SCONJ	IN	_	17	mark	17:mark	_
-17	eating	eat	VERB	VBG	VerbForm=Ger	15	advcl	15:advcl	_
+17	eating	eat	VERB	VBG	VerbForm=Ger	15	advcl	15:advcl:to	_
 18	out	out	ADP	IN	_	21	case	21:case	_
 19	of	of	ADP	IN	_	21	case	21:case	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
-21	can	can	NOUN	NN	Number=Sing	17	obl	17:obl	SpaceAfter=No
+21	can	can	NOUN	NN	Number=Sing	17	obl	17:obl:of	SpaceAfter=No
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-004574-0004
@@ -47,20 +47,20 @@
 
 # sent_id = reviews-004574-0005
 # text = I asked for a fried egg on my enchiladas...and did not get it.!
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|14:nsubj	_
 2	asked	ask	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	for	for	ADP	IN	_	6	case	6:case	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	fried	fry	VERB	VBN	Tense=Past|VerbForm=Part	6	amod	6:amod	_
-6	egg	egg	NOUN	NN	Number=Sing	2	obl	2:obl	_
+6	egg	egg	NOUN	NN	Number=Sing	2	obl	2:obl:for	_
 7	on	on	ADP	IN	_	9	case	9:case	_
 8	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	enchiladas	enchilada	NOUN	NNS	Number=Plur	6	nmod	6:nmod	SpaceAfter=No
+9	enchiladas	enchilada	NOUN	NNS	Number=Plur	6	nmod	6:nmod:on	SpaceAfter=No
 10	...	...	PUNCT	,	_	2	punct	2:punct	SpaceAfter=No
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
 12	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	14	aux	14:aux	_
 13	not	not	PART	RB	_	14	advmod	14:advmod	_
-14	get	get	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
+14	get	get	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
 15	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	obj	14:obj	SpaceAfter=No
 16	.!	.!	PUNCT	.	_	2	punct	2:punct	_
 
@@ -75,15 +75,15 @@
 7	come	come	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	with	with	ADP	IN	_	10	case	10:case	_
 9	enchilada	enchilada	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	sauce	sauce	NOUN	NN	Number=Sing	7	obl	7:obl	SpaceAfter=No
+10	sauce	sauce	NOUN	NN	Number=Sing	7	obl	7:obl:with	SpaceAfter=No
 11	..	..	PUNCT	,	_	10	punct	10:punct	SpaceAfter=No
 12	but	but	CCONJ	CC	_	13	cc	13:cc	_
-13	chili	chili	NOUN	NN	Number=Sing	10	conj	10:conj	SpaceAfter=No
+13	chili	chili	NOUN	NN	Number=Sing	10	conj	7:obl:with|10:conj:but	SpaceAfter=No
 14	...	...	PUNCT	,	_	13	punct	13:punct	SpaceAfter=No
 15	like	like	ADP	IN	_	18	case	18:case	_
 16	Hormel	Hormel	PROPN	NNP	Number=Sing	18	nmod:poss	18:nmod:poss	SpaceAfter=No
 17	's	's	PART	POS	_	16	case	16:case	_
-18	chili	chili	NOUN	NN	Number=Sing	13	nmod	13:nmod	SpaceAfter=No
+18	chili	chili	NOUN	NN	Number=Sing	13	nmod	13:nmod:like	SpaceAfter=No
 19	..	..	PUNCT	,	_	7	punct	7:punct	SpaceAfter=No
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	cheese	cheese	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	_
@@ -102,6 +102,6 @@
 6	no	no	DET	DT	_	7	det	7:det	_
 7	batter	batter	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	on	on	ADP	IN	_	9	case	9:case	_
-9	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obl	5:obl	SpaceAfter=No
+9	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obl	5:obl:on	SpaceAfter=No
 10	.	.	PUNCT	.	_	5	punct	5:punct	_
 

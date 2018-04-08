@@ -5,11 +5,11 @@
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 3	text	text	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	from	from	ADP	IN	_	5	case	5:case	_
-5	Canada	Canada	PROPN	NNP	Number=Sing	3	obl	3:obl	_
+5	Canada	Canada	PROPN	NNP	Number=Sing	3	obl	3:obl:from	_
 6	to	to	ADP	IN	_	9	case	9:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	united	united	PROPN	NNP	Number=Sing	9	compound	9:compound	_
-9	states	states	PROPN	NNP	Number=Sing	3	obl	3:obl	SpaceAfter=No
+9	states	states	PROPN	NNP	Number=Sing	3	obl	3:obl:to	SpaceAfter=No
 10	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0002
@@ -26,7 +26,7 @@
 10	but	but	CCONJ	CC	_	13	cc	13:cc	_
 11	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 12	question	question	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
-13	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	conj	8:conj	_
+13	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	conj	8:conj:but	_
 14	can	can	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 15	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	16	nsubj	16:nsubj	_
 16	text	text	VERB	VB	VerbForm=Inf	13	ccomp	13:ccomp	_
@@ -34,22 +34,22 @@
 18	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 19	united	united	PROPN	NNP	Number=Sing	20	compound	20:compound	_
 20	states	states	PROPN	NNP	Number=Sing	21	compound	21:compound	_
-21	number	number	NOUN	NN	Number=Sing	16	obl	16:obl	_
+21	number	number	NOUN	NN	Number=Sing	16	obl	16:obl:from	_
 22	when	when	ADV	WRB	PronType=Int	26	mark	26:mark	_
 23	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	26	nsubj	26:nsubj	SpaceAfter=No
 24	r	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	26	cop	26:cop	_
 25	in	in	ADP	IN	_	26	case	26:case	_
-26	canada	canada	PROPN	NNP	Number=Sing	16	advcl	16:advcl	SpaceAfter=No
+26	canada	canada	PROPN	NNP	Number=Sing	16	advcl	16:advcl:in	SpaceAfter=No
 27	,	,	PUNCT	,	_	30	punct	30:punct	_
 28	can	can	AUX	MD	VerbForm=Fin	30	aux	30:aux	_
 29	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	30	nsubj	30:nsubj	_
-30	send	send	VERB	VB	VerbForm=Inf	16	conj	16:conj	_
+30	send	send	VERB	VB	VerbForm=Inf	16	conj	13:ccomp|16:conj	_
 31	texts	text	NOUN	NNS	Number=Plur	30	obj	30:obj	_
 32	to	to	ADP	IN	_	36	case	36:case	_
 33	another	another	DET	DT	_	36	det	36:det	_
 34	united	united	PROPN	NNP	Number=Sing	35	compound	35:compound	_
 35	states	states	PROPN	NNP	Number=Sing	36	compound	36:compound	_
-36	number	number	NOUN	NN	Number=Sing	30	obl	30:obl	SpaceAfter=No
+36	number	number	NOUN	NN	Number=Sing	30	obl	30:obl:to	SpaceAfter=No
 37	?	?	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0003
@@ -60,7 +60,7 @@
 4	get	get	AUX	VB	VerbForm=Inf	5	aux:pass	5:aux:pass	_
 5	charged	charge	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 6	for	for	ADP	IN	_	7	case	7:case	_
-7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obl	5:obl	SpaceAfter=No
+7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obl	5:obl:for	SpaceAfter=No
 8	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0004
@@ -72,7 +72,7 @@
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 6	could	could	AUX	MD	VerbForm=Fin	8	aux	8:aux	SpaceAfter=No
 7	n't	not	PART	RB	_	8	advmod	8:advmod	_
-8	say	say	VERB	VB	VerbForm=Inf	3	advcl	3:advcl	_
+8	say	say	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:if	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	question	question	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	right	right	ADV	RB	_	8	advmod	8:advmod	SpaceAfter=No
@@ -112,19 +112,19 @@
 4	US	US	PROPN	NNP	Number=Sing	6	compound	6:compound	SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	6	punct	6:punct	_
 6	provider	provider	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
-7	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	advcl	21:advcl	_
+7	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	advcl	21:advcl:if	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 9	deal	deal	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	with	with	ADP	IN	_	14	case	14:case	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 12	canadian	canadian	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 13	wireless	wireless	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	company	company	NOUN	NN	Number=Sing	9	nmod	9:nmod	SpaceAfter=No
+14	company	company	NOUN	NN	Number=Sing	9	nmod	9:nmod:with	SpaceAfter=No
 15	,	,	PUNCT	,	_	21	punct	21:punct	_
 16	you	you	PRON	PRP$	_	17	nmod:poss	17:nmod:poss	_
 17	texts	text	NOUN	NNS	Number=Plur	21	nsubj	21:nsubj	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
-19	calls	call	NOUN	NNS	Number=Plur	17	conj	17:conj	_
+19	calls	call	NOUN	NNS	Number=Plur	17	conj	17:conj:and|21:nsubj	_
 20	will	will	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
 21	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	_
 22	through	through	ADV	RB	_	21	advmod	21:advmod	SpaceAfter=No
@@ -148,9 +148,9 @@
 2	only	only	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	way	way	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
-5	know	know	VERB	VB	VerbForm=Inf	3	acl	3:acl	_
+5	know	know	VERB	VB	VerbForm=Inf	3	acl	3:acl:to	_
 6	for	for	ADP	IN	_	7	case	7:case	_
-7	sure	sure	ADJ	JJ	Degree=Pos	5	obl	5:obl	_
+7	sure	sure	ADJ	JJ	Degree=Pos	5	obl	5:obl:for	_
 8	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	call	call	VERB	VB	VerbForm=Inf	8	ccomp	8:ccomp	_
@@ -161,10 +161,10 @@
 15	cell	cell	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	phone	phone	NOUN	NN	Number=Sing	18	compound	18:compound	_
 17	help	help	NOUN	NN	Number=Sing	18	compound	18:compound	_
-18	line	line	NOUN	NN	Number=Sing	11	conj	11:conj	SpaceAfter=No
+18	line	line	NOUN	NN	Number=Sing	11	conj	10:obj|11:conj:or	SpaceAfter=No
 19	,	,	PUNCT	,	_	21	punct	21:punct	_
 20	and	and	CCONJ	CC	_	21	cc	21:cc	_
-21	ask	ask	VERB	VB	VerbForm=Inf	10	conj	10:conj	SpaceAfter=No
+21	ask	ask	VERB	VB	VerbForm=Inf	10	conj	8:ccomp|10:conj:and	SpaceAfter=No
 22	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0011
@@ -172,7 +172,7 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	phones	phone	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	networks	network	NOUN	NNS	Number=Plur	2	conj	2:conj	_
+4	networks	network	NOUN	NNS	Number=Plur	2	conj	2:conj:and|6:nsubj	_
 5	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 6	compatible	compatible	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 7	,	,	PUNCT	,	_	17	punct	17:punct	_
@@ -208,14 +208,14 @@
 5	but	but	CCONJ	CC	_	8	cc	8:cc	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 7	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	cost	cost	VERB	VB	VerbForm=Inf	3	conj	3:conj	_
+8	cost	cost	VERB	VB	VerbForm=Inf	3	conj	3:conj:but	_
 9	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	8	iobj	8:iobj	_
 10	lots	lot	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	money	money	NOUN	NN	Number=Sing	10	nmod	10:nmod	_
+12	money	money	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	_
 13	unless	unless	SCONJ	IN	_	15	mark	15:mark	_
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
-15	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl	_
+15	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:unless	_
 16	an	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 17	international	international	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	plan	plan	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No
@@ -228,22 +228,22 @@
 3	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 4	Text	text	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	CANADA	CANADA	PROPN	NNP	Number=Sing	4	obl	4:obl	_
+6	CANADA	CANADA	PROPN	NNP	Number=Sing	4	obl	4:obl:in	_
 7	to	to	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	U$	U$	PROPN	NNP	Number=Sing	4	obl	4:obl	_
+9	U$	U$	PROPN	NNP	Number=Sing	4	obl	4:obl:to	_
 10	on	on	ADP	IN	_	13	case	13:case	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 12	U$	U$	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	number	number	NOUN	NN	Number=Sing	4	obl	4:obl	SpaceAfter=No
+13	number	number	NOUN	NN	Number=Sing	4	obl	4:obl:on	SpaceAfter=No
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0014
 # text = Thi$ $ervice will co$t.
-1	Thi$	thi$	DET	DT	_	2	det	2:det	_
-2	$ervice	$ervice	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
+1	Thi$	this	DET	DT	_	2	det	2:det	_
+2	$ervice	service	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 3	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-4	co$t	co$t	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+4	co$t	cost	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
 5	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0015
@@ -252,12 +252,12 @@
 2	varie$	varie$	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	company	company	NOUN	NN	Number=Sing	2	obj	2:obj	_
 4	to	to	ADP	IN	_	5	case	5:case	_
-5	company	company	NOUN	NN	Number=Sing	3	nmod	3:nmod	SpaceAfter=No
+5	company	company	NOUN	NN	Number=Sing	3	nmod	3:nmod:to	SpaceAfter=No
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0016
 # text = You may want to get a temporary phone for your trip to Canada.
-1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	may	may	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -267,9 +267,9 @@
 8	phone	phone	NOUN	NN	Number=Sing	5	obj	5:obj	_
 9	for	for	ADP	IN	_	11	case	11:case	_
 10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-11	trip	trip	NOUN	NN	Number=Sing	3	obl	3:obl	_
+11	trip	trip	NOUN	NN	Number=Sing	3	obl	3:obl:for	_
 12	to	to	ADP	IN	_	13	case	13:case	_
-13	Canada	Canada	PROPN	NNP	Number=Sing	11	nmod	11:nmod	SpaceAfter=No
+13	Canada	Canada	PROPN	NNP	Number=Sing	11	nmod	11:nmod:to	SpaceAfter=No
 14	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0017
@@ -280,13 +280,13 @@
 4	other	other	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	way	way	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	communicate	communicate	VERB	VB	VerbForm=Inf	5	acl	5:acl	_
+7	communicate	communicate	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
 8	or	or	CCONJ	CC	_	13	cc	13:cc	_
 9	do	do	AUX	VB	VerbForm=Inf	13	aux	13:aux	_
 10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	friends	friend	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
 12	only	only	ADV	RB	_	13	advmod	13:advmod	_
-13	understand	understand	VERB	VB	VerbForm=Inf	1	conj	1:conj	_
+13	understand	understand	VERB	VB	VerbForm=Inf	1	conj	1:conj:or	_
 14	text	text	NOUN	NN	Number=Sing	13	obj	13:obj	SpaceAfter=No
 15	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -297,7 +297,7 @@
 3	free	free	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	if	if	SCONJ	IN	_	6	mark	6:mark	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
-6	use	use	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl	_
+6	use	use	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:if	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	WiFi	wifi	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	connection	connection	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
@@ -323,13 +323,13 @@
 16	of	of	ADP	IN	_	19	case	19:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 18	phone	phone	NOUN	NN	Number=Sing	19	compound	19:compound	_
-19	companie	companies	NOUN	NNS	Number=Plur	15	nmod	15:nmod	SpaceAfter=No
+19	companie	companies	NOUN	NNS	Number=Plur	15	nmod	15:nmod:of	SpaceAfter=No
 20	$involved	involve	VERB	VBN	Tense=Past|VerbForm=Part	19	acl	19:acl	_
-21	what	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	conj	10:conj	_
+21	what	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	conj	6:ccomp|10:conj:and	_
 22	$ome	some	DET	DT	_	21	obj	21:obj	_
 23	of	of	ADP	IN	_	25	case	25:case	_
 24	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
-25	money	money	NOUN	NN	Number=Sing	22	nmod	22:nmod	SpaceAfter=No
+25	money	money	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	SpaceAfter=No
 26	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0020
@@ -349,6 +349,6 @@
 13	key	key	NOUN	NN	Number=Sing	8	obj	8:obj	_
 14	on	on	ADP	IN	_	16	case	16:case	_
 15	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
-16	computer	computer	NOUN	NN	Number=Sing	8	obl	8:obl	SpaceAfter=No
+16	computer	computer	NOUN	NN	Number=Sing	8	obl	8:obl:on	SpaceAfter=No
 17	.	.	PUNCT	.	_	1	punct	1:punct	_
 

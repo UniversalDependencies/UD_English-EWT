@@ -4,11 +4,11 @@
 1	Modern	modern	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
 2	m	m	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 3	16	16	NUM	CD	NumType=Card	2	nummod	2:nummod	_
-4	vs	vs	ADP	IN	_	8	case	8:case	_
+4	vs	versus	ADP	IN	Abbr=Yes	8	case	8:case	_
 5	Vietnam	Vietnam	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 6	m	m	NOUN	NN	Number=Sing	8	compound	8:compound	SpaceAfter=No
 7	16	16	NUM	CD	NumType=Card	6	nummod	6:nummod	_
-8	version	version	NOUN	NN	Number=Sing	2	nmod	2:nmod	SpaceAfter=No
+8	version	version	NOUN	NN	Number=Sing	2	nmod	2:nmod:vs	SpaceAfter=No
 9	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0002
@@ -18,8 +18,8 @@
 3	playing	play	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	video	video	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	game	game	NOUN	NN	Number=Sing	3	obj	3:obj	_
-7	that	that	PRON	WDT	PronType=Rel	8	nsubj	8:nsubj	_
+6	game	game	NOUN	NN	Number=Sing	3	obj	3:obj|8:nsubj	_
+7	that	that	PRON	WDT	PronType=Rel	8	nsubj	6:ref	_
 8	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 10	m	m	NOUN	NN	Number=Sing	13	compound	13:compound	SpaceAfter=No
@@ -30,13 +30,13 @@
 15	and	and	CCONJ	CC	_	24	cc	24:cc	_
 16	in	in	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	game	game	NOUN	NN	Number=Sing	24	obl	24:obl	_
+18	game	game	NOUN	NN	Number=Sing	24	obl	24:obl:in	_
 19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	24	nsubj	24:nsubj	SpaceAfter=No
 20	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	_
 21	3	3	NUM	CD	NumType=Card	23	nummod	23:nummod	SpaceAfter=No
 22	-	-	PUNCT	HYPH	_	23	punct	23:punct	SpaceAfter=No
 23	shot	shot	NOUN	NN	Number=Sing	24	compound	24:compound	_
-24	burst	burst	NOUN	NN	Number=Sing	3	conj	3:conj	SpaceAfter=No
+24	burst	burst	NOUN	NN	Number=Sing	3	conj	3:conj:and	SpaceAfter=No
 25	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0003
@@ -51,9 +51,9 @@
 8	-	-	PUNCT	HYPH	_	9	punct	9:punct	SpaceAfter=No
 9	auto	auto	NOUN	NN	Number=Sing	6	obj	6:obj	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	semiautomatic	semiautomatic	ADJ	JJ	Degree=Pos	9	conj	9:conj	_
+11	semiautomatic	semiautomatic	ADJ	JJ	Degree=Pos	9	conj	6:obj|9:conj:and	_
 12	during	during	ADP	IN	_	13	case	13:case	_
-13	Vietnam	Vietnam	PROPN	NNP	Number=Sing	6	obl	6:obl	SpaceAfter=No
+13	Vietnam	Vietnam	PROPN	NNP	Number=Sing	6	obl	6:obl:during	SpaceAfter=No
 14	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0004
@@ -74,10 +74,10 @@
 7	between	between	ADP	IN	_	10	case	10:case	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	modern	modern	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	m16	m16	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+10	m16	m16	NOUN	NN	Number=Sing	6	nmod	6:nmod:between	_
 11	and	and	CCONJ	CC	_	13	cc	13:cc	_
 12	Vietnam	Vietnam	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	m	m	NOUN	NN	Number=Sing	10	conj	10:conj	SpaceAfter=No
+13	m	m	NOUN	NN	Number=Sing	10	conj	6:nmod:between|10:conj:and	SpaceAfter=No
 14	16	16	NUM	CD	NumType=Card	13	nummod	13:nummod	SpaceAfter=No
 15	?	?	PUNCT	.	_	1	punct	1:punct	_
 
@@ -103,7 +103,7 @@
 1	To	to	PART	TO	_	2	mark	2:mark	_
 2	save	save	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 3	money	money	NOUN	NN	Number=Sing	2	obj	2:obj	_
-4	Robert	Robert	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
+4	Robert	Robert	PROPN	NNP	Number=Sing	6	nsubj	2:nsubj:xsubj|6:nsubj	_
 5	McNamara	McNamara	PROPN	NNP	Number=Sing	4	flat	4:flat	_
 6	ordered	order	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	that	that	SCONJ	IN	_	24	mark	24:mark	_
@@ -114,15 +114,15 @@
 12	new	new	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 13	M	m	NOUN	NN	Number=Sing	15	compound	15:compound	SpaceAfter=No
 14	-	-	PUNCT	HYPH	_	15	punct	15:punct	SpaceAfter=No
-15	16s	16	NOUN	NNS	Number=Plur	9	nmod	9:nmod	_
+15	16s	16	NOUN	NNS	Number=Plur	9	nmod	9:nmod:for	_
 16	being	be	AUX	VBG	VerbForm=Ger	17	aux:pass	17:aux:pass	_
 17	sent	send	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	15	acl	15:acl	_
 18	to	to	ADP	IN	_	19	case	19:case	_
-19	SEA	sea	NOUN	NN	Number=Sing	17	obl	17:obl	_
+19	SEA	sea	NOUN	NN	Number=Sing	17	obl	17:obl:to	_
 20	in	in	ADP	IN	_	23	case	23:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 22	early	early	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
-23	60s	60	NOUN	NNS	Number=Plur	17	obl	17:obl	_
+23	60s	60	NOUN	NNS	Number=Plur	17	obl	17:obl:in	_
 24	use	use	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	ccomp	6:ccomp	_
 25	an	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
 26	older	older	ADJ	JJR	Degree=Cmp	30	amod	30:amod	_
@@ -131,13 +131,13 @@
 29	)	)	PUNCT	-RRB-	_	30	punct	30:punct	_
 30	type	type	NOUN	NN	Number=Sing	24	obj	24:obj	_
 31	of	of	ADP	IN	_	32	case	32:case	_
-32	gunpowder	gunpowder	NOUN	NN	Number=Sing	30	nmod	30:nmod	_
+32	gunpowder	gunpowder	NOUN	NN	Number=Sing	30	nmod	30:nmod:of	_
 33	meant	mean	VERB	VBN	Tense=Past|VerbForm=Part	30	acl	30:acl	_
 34	for	for	ADP	IN	_	35	case	35:case	_
-35	use	use	NOUN	NN	Number=Sing	33	obl	33:obl	_
+35	use	use	NOUN	NN	Number=Sing	33	obl	33:obl:for	_
 36	with	with	ADP	IN	_	38	case	38:case	_
 37	the	the	DET	DT	Definite=Def|PronType=Art	38	det	38:det	_
-38	M	m	NOUN	NN	Number=Sing	35	nmod	35:nmod	SpaceAfter=No
+38	M	m	NOUN	NN	Number=Sing	35	nmod	35:nmod:with	SpaceAfter=No
 39	-	-	PUNCT	HYPH	_	38	punct	38:punct	SpaceAfter=No
 40	14	14	NUM	CD	NumType=Card	38	nummod	38:nummod	SpaceAfter=No
 41	.	.	PUNCT	.	_	6	punct	6:punct	_
@@ -151,7 +151,7 @@
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	receiver	receiver	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 7	not	not	ADV	RB	_	8	advmod	8:advmod	_
-8	get	get	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+8	get	get	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp|17:nsubj	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 10	(	(	PUNCT	-LRB-	_	12	punct	12:punct	SpaceAfter=No
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
@@ -159,13 +159,13 @@
 13	chrome	chrome	NOUN	NN	Number=Sing	12	obj	12:obj	SpaceAfter=No
 14	)	)	PUNCT	-RRB-	_	12	punct	12:punct	_
 15	coating	coating	NOUN	NN	Number=Sing	8	obj	8:obj	_
-16	that	that	PRON	WDT	PronType=Rel	17	nsubj	17:nsubj	_
+16	that	that	PRON	WDT	PronType=Rel	17	nsubj	8:ref	_
 17	helped	help	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
 18	keep	keep	VERB	VB	VerbForm=Inf	17	ccomp	17:ccomp	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	gun	gun	NOUN	NN	Number=Sing	18	obj	18:obj	_
 21	from	from	SCONJ	IN	_	22	mark	22:mark	_
-22	jamming	jam	VERB	VBG	VerbForm=Ger	18	advcl	18:advcl	SpaceAfter=No
+22	jamming	jam	VERB	VBG	VerbForm=Ger	18	advcl	18:advcl:from	SpaceAfter=No
 23	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0009
@@ -195,7 +195,7 @@
 # text = As a result there was a problem with the weapon jamming.
 1	As	as	ADP	IN	_	3	case	3:case	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
-3	result	result	NOUN	NN	Number=Sing	5	obl	5:obl	_
+3	result	result	NOUN	NN	Number=Sing	5	obl	5:obl:as	_
 4	there	there	PRON	EX	_	5	expl	5:expl	_
 5	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
@@ -203,15 +203,15 @@
 8	with	with	SCONJ	IN	_	11	mark	11:mark	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	weapon	weapon	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
-11	jamming	jam	VERB	VBG	VerbForm=Ger	7	acl	7:acl	SpaceAfter=No
+11	jamming	jam	VERB	VBG	VerbForm=Ger	7	acl	7:acl:with	SpaceAfter=No
 12	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0011
 # text = Once the troops started cleaning the weapon properly (even with the dirtier powder) the Vietnam era M-16 turned out to be a good weapon for the purpose it was being used for.
 1	Once	once	SCONJ	IN	_	4	mark	4:mark	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	troops	troops	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
-4	started	start	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	22	advcl	22:advcl	_
+3	troops	troops	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj|5:nsubj:xsubj	_
+4	started	start	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	22	advcl	22:advcl:once	_
 5	cleaning	clean	VERB	VBG	VerbForm=Ger	4	xcomp	4:xcomp	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	weapon	weapon	NOUN	NN	Number=Sing	5	obj	5:obj	_
@@ -221,12 +221,12 @@
 11	with	with	ADP	IN	_	14	case	14:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	dirtier	dirtier	ADJ	JJR	Degree=Cmp	14	amod	14:amod	_
-14	powder	powder	NOUN	NN	Number=Sing	5	obl	5:obl	SpaceAfter=No
+14	powder	powder	NOUN	NN	Number=Sing	5	obl	5:obl:with	SpaceAfter=No
 15	)	)	PUNCT	-RRB-	_	14	punct	14:punct	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 17	Vietnam	Vietnam	PROPN	NNP	Number=Sing	18	compound	18:compound	_
 18	era	era	PROPN	NNP	Number=Sing	19	compound	19:compound	_
-19	M	m	NOUN	NN	Number=Sing	22	nsubj	22:nsubj	SpaceAfter=No
+19	M	m	NOUN	NN	Number=Sing	22	nsubj	22:nsubj|28:nsubj:xsubj	SpaceAfter=No
 20	-	-	PUNCT	HYPH	_	19	punct	19:punct	SpaceAfter=No
 21	16	16	NUM	CD	NumType=Card	19	nummod	19:nummod	_
 22	turned	turn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -238,7 +238,7 @@
 28	weapon	weapon	NOUN	NN	Number=Sing	22	xcomp	22:xcomp	_
 29	for	for	ADP	IN	_	31	case	31:case	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
-31	purpose	purpose	NOUN	NN	Number=Sing	28	nmod	28:nmod	_
+31	purpose	purpose	NOUN	NN	Number=Sing	28	nmod	28:nmod:for	_
 32	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	35	nsubj:pass	35:nsubj:pass	_
 33	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	35	aux	35:aux	_
 34	being	be	AUX	VBG	VerbForm=Ger	35	aux:pass	35:aux:pass	_
@@ -256,13 +256,13 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	kind	kind	NOUN	NN	Number=Sing	0	root	0:root	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	things	thing	NOUN	NNS	Number=Plur	7	nmod	7:nmod	_
-10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
+9	things	thing	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	_
+10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj|12:nsubj:xsubj	_
 11	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
 12	happen	happen	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 13	when	when	ADV	WRB	PronType=Int	15	mark	15:mark	_
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
-15	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl	_
+15	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:when	_
 16	bean	bean	NOUN	NN	Number=Sing	18	compound	18:compound	SpaceAfter=No
 17	-	-	PUNCT	HYPH	_	18	punct	18:punct	SpaceAfter=No
 18	counters	counter	NOUN	NNS	Number=Plur	15	obj	15:obj	_
@@ -271,7 +271,7 @@
 21	McNamara	McNamara	PROPN	NNP	Number=Sing	23	nsubj	23:nsubj	_
 22	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	cop	23:cop	_
 23	nothing	nothing	PRON	NN	Number=Sing	18	parataxis	18:parataxis	_
-24	if	if	ADP	IN	_	25	mark	25:mark	_
+24	if	if	SCONJ	IN	_	25	mark	25:mark	_
 25	not	not	ADV	RB	_	29	advmod	29:advmod	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	29:det	_
 27	bean	bean	NOUN	NN	Number=Sing	29	compound	29:compound	SpaceAfter=No
@@ -280,32 +280,32 @@
 30	)	)	PUNCT	-RRB-	_	23	punct	23:punct	_
 31	instead	instead	ADV	RB	_	33	case	33:case	_
 32	of	of	ADP	IN	_	31	fixed	31:fixed	_
-33	soldiers	soldier	NOUN	NNS	Number=Plur	15	obl	15:obl	_
+33	soldiers	soldier	NOUN	NNS	Number=Plur	15	obl	15:obl:instead_of	_
 34	in	in	ADP	IN	_	35	case	35:case	_
-35	charge	charge	NOUN	NN	Number=Sing	15	obl	15:obl	_
+35	charge	charge	NOUN	NN	Number=Sing	15	obl	15:obl:in	_
 36	of	of	ADP	IN	_	38	case	38:case	_
 37	the	the	DET	DT	Definite=Def|PronType=Art	38	det	38:det	_
-38	military	military	NOUN	NN	Number=Sing	35	nmod	35:nmod	SpaceAfter=No
+38	military	military	NOUN	NN	Number=Sing	35	nmod	35:nmod:of	SpaceAfter=No
 39	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0013
 # text = Today's weapons do not have that kind of problem, and are much more reliable.
 1	Today	today	NOUN	NN	Number=Sing	3	nmod:poss	3:nmod:poss	SpaceAfter=No
 2	's	's	PART	POS	_	1	case	1:case	_
-3	weapons	weapon	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
+3	weapons	weapon	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj|16:nsubj	_
 4	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
 5	not	not	PART	RB	_	6	advmod	6:advmod	_
 6	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	that	that	DET	DT	Number=Sing|PronType=Dem	8	det	8:det	_
 8	kind	kind	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	of	of	ADP	IN	_	10	case	10:case	_
-10	problem	problem	NOUN	NN	Number=Sing	8	nmod	8:nmod	SpaceAfter=No
+10	problem	problem	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	SpaceAfter=No
 11	,	,	PUNCT	,	_	16	punct	16:punct	_
 12	and	and	CCONJ	CC	_	16	cc	16:cc	_
 13	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
 14	much	much	ADV	RB	_	15	advmod	15:advmod	_
 15	more	more	ADV	RBR	_	16	advmod	16:advmod	_
-16	reliable	reliable	ADJ	JJ	Degree=Pos	6	conj	6:conj	SpaceAfter=No
+16	reliable	reliable	ADJ	JJ	Degree=Pos	6	conj	6:conj:and	SpaceAfter=No
 17	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0014
@@ -322,7 +322,7 @@
 # sent_id = answers-20111106144630AAadR8l_ans-0015
 # text = Vietnam m16 used to clog up and never work.
 1	Vietnam	Vietnam	PROPN	NNP	Number=Sing	2	compound	2:compound	_
-2	m	m	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	SpaceAfter=No
+2	m	m	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj|10:nsubj:xsubj	SpaceAfter=No
 3	16	16	NUM	CD	NumType=Card	2	nummod	2:nummod	_
 4	used	use	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
@@ -330,7 +330,7 @@
 7	up	up	ADP	RP	_	6	compound:prt	6:compound:prt	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	never	never	ADV	RB	_	10	advmod	10:advmod	_
-10	work	work	VERB	VB	VerbForm=Inf	6	conj	6:conj	SpaceAfter=No
+10	work	work	VERB	VB	VerbForm=Inf	6	conj	4:xcomp|6:conj:and	SpaceAfter=No
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0016
@@ -339,13 +339,13 @@
 2	)	)	PUNCT	-RRB-	_	1	punct	1:punct	_
 3	All	all	DET	DT	_	5	det	5:det	_
 4	M	m	NOUN	NN	Number=Sing	5	compound	5:compound	SpaceAfter=No
-5	16's	16'	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
+5	16's	16'	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj|11:nsubj	_
 6	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 7	either	either	CCONJ	CC	_	8	cc:preconj	8:cc:preconj	_
 8	automatic	automatic	ADJ	JJ	Degree=Pos	0	root	0:root	_
 9	or	or	CCONJ	CC	_	11	cc	11:cc	_
 10	semi	semi	X	AFX	_	11	advmod	11:advmod	_
-11	automatic	automatic	ADJ	JJ	Degree=Pos	8	conj	8:conj	SpaceAfter=No
+11	automatic	automatic	ADJ	JJ	Degree=Pos	8	conj	8:conj:or	SpaceAfter=No
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0017

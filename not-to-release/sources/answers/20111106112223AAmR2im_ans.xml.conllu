@@ -2,12 +2,12 @@
 # sent_id = answers-20111106112223AAmR2im_ans-0001
 # text = in n out of the chicago area?
 1	in	in	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	n	n	CCONJ	CC	_	3	cc	3:cc	_
-3	out	out	PROPN	NNP	Number=Sing	1	conj	1:conj	_
+2	n	and	CCONJ	CC	Abbr=Yes	3	cc	3:cc	_
+3	out	out	PROPN	NNP	Number=Sing	1	conj	1:conj:n	_
 4	of	of	ADP	IN	_	7	case	7:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	chicago	chicago	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	area	area	NOUN	NN	Number=Sing	1	nmod	1:nmod	SpaceAfter=No
+7	area	area	NOUN	NN	Number=Sing	1	nmod	1:nmod:of	SpaceAfter=No
 8	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111106112223AAmR2im_ans-0002
@@ -22,19 +22,19 @@
 8	as	as	ADV	RB	_	9	advmod	9:advmod	_
 9	good	good	ADJ	JJ	Degree=Pos	6	ccomp	6:ccomp	_
 10	as	as	ADP	IN	_	11	case	11:case	_
-11	in	in	PROPN	NNP	Number=Sing	8	obl	8:obl	_
-12	n	n	CCONJ	CC	_	13	cc	13:cc	_
-13	out	out	PROPN	NNP	Number=Sing	11	conj	11:conj	_
+11	in	in	PROPN	NNP	Number=Sing	8	obl	8:obl:as	_
+12	n	and	CCONJ	CC	Abbr=Yes	13	cc	13:cc	_
+13	out	out	PROPN	NNP	Number=Sing	11	conj	8:obl:as|11:conj:n	_
 14	or	or	CCONJ	CC	_	15	cc	15:cc	_
-15	better	better	ADJ	JJR	Degree=Cmp	9	conj	9:conj	_
+15	better	better	ADJ	JJR	Degree=Cmp	9	conj	6:ccomp|9:conj:or	_
 16	in	in	ADP	IN	_	19	case	19:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 18	chicago	chicago	PROPN	NNP	Number=Sing	19	compound	19:compound	_
-19	area	area	NOUN	NN	Number=Sing	9	obl	9:obl	_
+19	area	area	NOUN	NN	Number=Sing	9	obl	9:obl:in	_
 20	besides	besides	ADP	IN	_	22	case	22:case	_
 21	five	five	PROPN	NNP	Number=Sing	22	compound	22:compound	_
-22	guys	guys	PROPN	NNPS	Number=Plur	9	obl	9:obl	_
+22	guys	guys	PROPN	NNPS	Number=Plur	9	obl	9:obl:besides	_
 23	and	and	CCONJ	CC	_	24	cc	24:cc	_
-24	smashburger	smashburger	PROPN	NNP	Number=Sing	22	conj	22:conj	SpaceAfter=No
+24	smashburger	smashburger	PROPN	NNP	Number=Sing	22	conj	9:obl:besides|22:conj:and	SpaceAfter=No
 25	?	?	PUNCT	.	_	6	punct	6:punct	_
 

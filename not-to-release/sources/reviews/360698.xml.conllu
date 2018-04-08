@@ -12,7 +12,7 @@
 9	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
 10	been	be	AUX	VBN	Tense=Past|VerbForm=Part	12	cop	12:cop	_
 11	to	to	ADP	IN	_	12	case	12:case	_
-12	Ipanema	Ipanema	PROPN	NNP	Number=Sing	6	advcl	6:advcl	SpaceAfter=No
+12	Ipanema	Ipanema	PROPN	NNP	Number=Sing	6	advcl	6:advcl:to	SpaceAfter=No
 13	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-360698-0002
@@ -21,7 +21,7 @@
 2	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
 3	wife	wife	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
-5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	conj	3:conj	_
+5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	conj	3:conj:and|7:nsubj	_
 6	first	first	ADV	RB	_	7	advmod	7:advmod	_
 7	went	go	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 8	there	there	ADV	RB	PronType=Dem	7	advmod	7:advmod	_
@@ -35,12 +35,12 @@
 16	think	think	VERB	VB	Mood=Imp|VerbForm=Fin	14	parataxis	14:parataxis	_
 17	lots	lot	NOUN	NNS	Number=Plur	16	obj	16:obj	_
 18	of	of	ADP	IN	_	19	case	19:case	_
-19	meat	meat	NOUN	NN	Number=Sing	17	nmod	17:nmod	SpaceAfter=No
+19	meat	meat	NOUN	NN	Number=Sing	17	nmod	17:nmod:of	SpaceAfter=No
 20	)	)	PUNCT	-RRB-	_	16	punct	16:punct	SpaceAfter=No
 21	,	,	PUNCT	,	_	24	punct	24:punct	_
 22	but	but	CCONJ	CC	_	24	cc	24:cc	_
-23	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	24	nsubj	24:nsubj	_
-24	turned	turn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	conj	7:conj	_
+23	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	24	nsubj	24:nsubj|30:nsubj:xsubj	_
+24	turned	turn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	conj	7:conj:but	_
 25	out	out	ADP	RP	_	24	compound:prt	24:compound:prt	_
 26	to	to	PART	TO	_	30	mark	30:mark	_
 27	be	be	AUX	VB	VerbForm=Inf	30	cop	30:cop	_
@@ -63,13 +63,13 @@
 10	of	of	ADP	IN	_	13	case	13:case	_
 11	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 12	favorite	favorite	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	places	place	NOUN	NNS	Number=Plur	9	nmod	9:nmod	_
+13	places	place	NOUN	NNS	Number=Plur	9	nmod	9:nmod:of	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
-15	eat	eat	VERB	VB	VerbForm=Inf	13	acl	13:acl	_
+15	eat	eat	VERB	VB	VerbForm=Inf	13	acl	13:acl:to	_
 16	in	in	ADP	IN	_	17	case	17:case	_
-17	all	all	DET	DT	_	15	obl	15:obl	_
+17	all	all	DET	DT	_	15	obl	15:obl:in	_
 18	of	of	ADP	IN	_	19	case	19:case	_
-19	Richmond	Richmond	PROPN	NNP	Number=Sing	17	nmod	17:nmod	SpaceAfter=No
+19	Richmond	Richmond	PROPN	NNP	Number=Sing	17	nmod	17:nmod:of	SpaceAfter=No
 20	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = reviews-360698-0004
@@ -85,7 +85,7 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 5	nondescript	nondescript	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 6	building	building	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	entrance	entrance	NOUN	NN	Number=Sing	3	obj	3:obj	_
+7	entrance	entrance	NOUN	NN	Number=Sing	3	obj	3:obj|8:nsubj:xsubj	_
 8	fool	fool	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 9	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	8	obj	8:obj	SpaceAfter=No
 10	,	,	PUNCT	,	_	3	punct	3:punct	_
@@ -94,7 +94,7 @@
 13	some	some	DET	DT	_	17	det	17:det	_
 14	creative	creative	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	talented	talented	ADJ	JJ	Degree=Pos	14	conj	14:conj	_
+16	talented	talented	ADJ	JJ	Degree=Pos	14	conj	14:conj:and|17:amod	_
 17	chefs	chef	NOUN	NNS	Number=Plur	3	parataxis	3:parataxis	SpaceAfter=No
 18	...	...	PUNCT	,	_	20	punct	20:punct	SpaceAfter=No
 19	two	two	NUM	CD	NumType=Card	20	nummod	20:nummod	_

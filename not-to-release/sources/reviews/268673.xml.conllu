@@ -9,14 +9,14 @@
 # text = The new management is tricky and talk you into getting video rental agreement.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	new	new	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	management	management	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+3	management	management	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|7:nsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 5	tricky	tricky	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	talk	talk	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj	_
+7	talk	talk	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	_
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	obj	7:obj	_
 9	into	into	SCONJ	IN	_	10	mark	10:mark	_
-10	getting	get	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl	_
+10	getting	get	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl:into	_
 11	video	video	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	rental	rental	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	agreement	agreement	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No
@@ -26,7 +26,7 @@
 # text = To my surprise $20 deposit.... New movies not on shelf..under the counter for Telugu Speaking people only... or people who spend $30 or more groceries..
 1	To	to	ADP	IN	_	3	case	3:case	_
 2	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	surprise	surprise	NOUN	NN	Number=Sing	6	nmod	6:nmod	_
+3	surprise	surprise	NOUN	NN	Number=Sing	6	nmod	6:nmod:to	_
 4	$	$	SYM	$	_	6	compound	6:compound	SpaceAfter=No
 5	20	20	NUM	CD	NumType=Card	4	nummod	4:nummod	_
 6	deposit	deposit	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
@@ -43,17 +43,17 @@
 17	for	for	ADP	IN	_	20	case	20:case	_
 18	Telugu	Telugu	PROPN	NNP	Number=Sing	19	compound	19:compound	_
 19	Speaking	speak	VERB	VBG	VerbForm=Ger	20	amod	20:amod	_
-20	people	people	NOUN	NNS	Number=Plur	16	nmod	16:nmod	_
+20	people	people	NOUN	NNS	Number=Plur	16	nmod	16:nmod:for	_
 21	only	only	ADV	RB	_	20	advmod	20:advmod	SpaceAfter=No
 22	...	...	PUNCT	,	_	20	punct	20:punct	_
 23	or	or	CCONJ	CC	_	24	cc	24:cc	_
-24	people	people	NOUN	NNS	Number=Plur	20	conj	20:conj	_
-25	who	who	PRON	WP	PronType=Rel	26	nsubj	26:nsubj	_
+24	people	people	NOUN	NNS	Number=Plur	20	conj	16:nmod:for|20:conj:or|26:nsubj	_
+25	who	who	PRON	WP	PronType=Rel	26	nsubj	24:ref	_
 26	spend	spend	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	24	acl:relcl	24:acl:relcl	_
 27	$	$	SYM	$	_	26	obj	26:obj	SpaceAfter=No
 28	30	30	NUM	CD	NumType=Card	27	nummod	27:nummod	_
 29	or	or	CCONJ	CC	_	30	cc	30:cc	_
-30	more	more	ADJ	JJR	Degree=Cmp	27	conj	27:conj	_
+30	more	more	ADJ	JJR	Degree=Cmp	27	conj	26:obj|27:conj:or	_
 31	groceries	grocery	NOUN	NNS	Number=Plur	26	obl:npmod	26:obl:npmod	SpaceAfter=No
 32	..	..	PUNCT	.	_	6	punct	6:punct	_
 
@@ -63,7 +63,7 @@
 2	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obj	2:obj	_
 4	for	for	ADP	IN	_	5	case	5:case	_
-5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obl	2:obl	SpaceAfter=No
+5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obl	2:obl:for	SpaceAfter=No
 6	..	..	PUNCT	.	_	9	punct	9:punct	SpaceAfter=No
 7	no	no	ADV	RB	_	9	advmod	9:advmod	_
 8	more	more	ADJ	JJR	Degree=Cmp	9	amod	9:amod	_
@@ -81,12 +81,12 @@
 6	..	..	PUNCT	,	_	5	punct	5:punct	SpaceAfter=No
 7	cramped	cramped	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	un-ruly	un-ruly	ADJ	JJ	Degree=Pos	7	conj	7:conj	_
+9	un-ruly	un-ruly	ADJ	JJ	Degree=Pos	7	conj	5:amod|7:conj:and	_
 10	with	with	SCONJ	IN	_	14	mark	14:mark	_
 11	Kumon	Kumon	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
 12	Parents	Parents	PROPN	NNPS	Number=Plur	11	flat	11:flat	_
 13	next	next	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	door	door	NOUN	NN	Number=Sing	16	advcl	16:advcl	SpaceAfter=No
+14	door	door	NOUN	NN	Number=Sing	16	advcl	16:advcl:with	SpaceAfter=No
 15	....	....	PUNCT	,	_	16	punct	16:punct	SpaceAfter=No
 16	gives	give	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	parataxis	5:parataxis	_
 17	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	16	iobj	16:iobj	_

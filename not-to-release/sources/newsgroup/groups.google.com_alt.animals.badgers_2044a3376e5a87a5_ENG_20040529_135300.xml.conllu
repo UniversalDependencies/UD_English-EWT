@@ -4,10 +4,10 @@
 1	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	there	there	PRON	EX	_	1	expl	1:expl	_
 3	any	any	DET	DT	_	4	det	4:det	_
-4	sadists	sadist	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	_
+4	sadists	sadist	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj|8:nsubj	_
 5	out	out	ADV	RB	_	6	advmod	6:advmod	_
 6	there	there	ADV	RB	PronType=Dem	1	advmod	1:advmod	_
-7	who	who	PRON	WP	PronType=Rel	8	nsubj	8:nsubj	_
+7	who	who	PRON	WP	PronType=Rel	8	nsubj	4:ref	_
 8	share	share	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	same	same	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
@@ -32,21 +32,21 @@
 11	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 12	very	very	ADV	RB	_	13	advmod	13:advmod	_
 13	young	young	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	age	age	NOUN	NN	Number=Sing	17	obl	17:obl	_
+14	age	age	NOUN	NN	Number=Sing	17	obl	17:obl:since	_
 15	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
 16	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
-17	had	have	VERB	VBN	Tense=Past|VerbForm=Part	4	conj	4:conj	_
+17	had	have	VERB	VBN	Tense=Past|VerbForm=Part	4	conj	4:conj:but	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
 19	strange	strange	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
 20	but	but	CCONJ	CC	_	22	cc	22:cc	_
 21	very	very	ADV	RB	_	22	advmod	22:advmod	_
-22	gratifying	gratifying	ADJ	JJ	Degree=Pos	19	conj	19:conj	_
+22	gratifying	gratifying	ADJ	JJ	Degree=Pos	19	conj	19:conj:but|23:amod	_
 23	urge	urge	NOUN	NN	Number=Sing	17	obj	17:obj	_
 24	to	to	PART	TO	_	25	mark	25:mark	_
-25	torture	torture	VERB	VB	VerbForm=Inf	23	acl	23:acl	_
+25	torture	torture	VERB	VB	VerbForm=Inf	23	acl	23:acl:to	_
 26	or	or	CCONJ	CC	_	27	cc	27:cc	_
-27	maime	maime	VERB	VB	VerbForm=Inf	25	conj	25:conj	_
-28	animals	animal	NOUN	NNS	Number=Plur	25	obj	25:obj	SpaceAfter=No
+27	maime	maime	VERB	VB	VerbForm=Inf	25	conj	23:acl:to|25:conj:or	_
+28	animals	animal	NOUN	NNS	Number=Plur	25	obj	25:obj|27:obj	SpaceAfter=No
 29	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_2044a3376e5a87a5_ENG_20040529_135300-0003
@@ -64,11 +64,11 @@
 11	releif	releif	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	from	from	SCONJ	IN	_	14	mark	14:mark	_
 13	even	even	ADV	RB	_	14	advmod	14:advmod	_
-14	hearing	hear	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl	_
+14	hearing	hear	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl:from	_
 15	of	of	ADP	IN	_	16	case	16:case	_
-16	torture	torture	NOUN	NN	Number=Sing	14	obl	14:obl	_
+16	torture	torture	NOUN	NN	Number=Sing	14	obl	14:obl:of	_
 17	of	of	ADP	IN	_	18	case	18:case	_
-18	animals	animal	NOUN	NNS	Number=Plur	16	nmod	16:nmod	SpaceAfter=No
+18	animals	animal	NOUN	NNS	Number=Plur	16	nmod	16:nmod:of	SpaceAfter=No
 19	,	,	PUNCT	,	_	4	punct	4:punct	_
 20	now	now	ADV	RB	_	24	advmod	24:advmod	_
 21	some	some	DET	DT	_	22	det	22:det	_
@@ -80,12 +80,12 @@
 27	brute	brute	NOUN	NN	Number=Sing	25	xcomp	25:xcomp	_
 28	or	or	CCONJ	CC	_	30	cc	30:cc	_
 29	a	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
-30	coward	coward	NOUN	NN	Number=Sing	27	conj	27:conj	_
+30	coward	coward	NOUN	NN	Number=Sing	27	conj	25:xcomp|27:conj:or	_
 31	but	but	CCONJ	CC	_	35	cc	35:cc	_
 32	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	35	nsubj	35:nsubj	_
 33	ca	can	AUX	MD	VerbForm=Fin	35	aux	35:aux	SpaceAfter=No
 34	nt	not	PART	RB	_	35	advmod	35:advmod	_
-35	help	help	VERB	VB	VerbForm=Inf	24	conj	24:conj	_
+35	help	help	VERB	VB	VerbForm=Inf	24	conj	24:conj:but	_
 36	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	38	nmod:poss	38:nmod:poss	_
 37	true	true	ADJ	JJ	Degree=Pos	38	amod	38:amod	_
 38	feelings	feeling	NOUN	NNS	Number=Plur	35	obj	35:obj	SpaceAfter=No
@@ -110,7 +110,7 @@
 15	words	word	NOUN	NNS	Number=Plur	20	nsubj	20:nsubj	_
 16	in	in	ADP	IN	_	18	case	18:case	_
 17	this	this	DET	DT	Number=Sing|PronType=Dem	18	det	18:det	_
-18	group	group	NOUN	NN	Number=Sing	15	nmod	15:nmod	_
+18	group	group	NOUN	NN	Number=Sing	15	nmod	15:nmod:in	_
 19	might	might	AUX	MD	VerbForm=Fin	20	aux	20:aux	_
 20	uncover	uncover	VERB	VB	VerbForm=Inf	12	ccomp	12:ccomp	_
 21	some	some	DET	DT	_	23	det	23:det	_
@@ -123,18 +123,18 @@
 1	sincere	sincere	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
 2	appologies	appology	NOUN	NNS	Number=Plur	0	root	0:root	_
 3	to	to	ADP	IN	_	4	case	4:case	_
-4	anyone	anyone	PRON	NN	Number=Sing	2	nmod	2:nmod	_
-5	who	who	PRON	WP	PronType=Rel	7	nsubj:pass	7:nsubj:pass	_
+4	anyone	anyone	PRON	NN	Number=Sing	2	nmod	2:nmod:to|7:nsubj:pass	_
+5	who	who	PRON	WP	PronType=Rel	7	nsubj:pass	4:ref	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux:pass	7:aux:pass	_
 7	offended	offend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	acl:relcl	4:acl:relcl	_
 8	by	by	ADP	IN	_	10	case	10:case	_
 9	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	request	request	NOUN	NN	Number=Sing	7	obl	7:obl	_
+10	request	request	NOUN	NN	Number=Sing	7	obl	7:obl:by	_
 11	but	but	CCONJ	CC	_	15	cc	15:cc	_
 12	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	request	request	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
 14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
-15	genuine	genuine	ADJ	JJ	Degree=Pos	2	conj	2:conj	SpaceAfter=No
+15	genuine	genuine	ADJ	JJ	Degree=Pos	2	conj	2:conj:but	SpaceAfter=No
 16	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_2044a3376e5a87a5_ENG_20040529_135300-0006
@@ -142,7 +142,7 @@
 1	----==	----==	SYM	NFP	_	2	punct	2:punct	_
 2	Posted	post	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 3	via	via	ADP	IN	_	4	case	4:case	_
-4	Newsfeed.Com	newsfeed.com	X	ADD	_	2	obl	2:obl	_
+4	Newsfeed.Com	newsfeed.com	X	ADD	_	2	obl	2:obl:via	_
 5	-	-	PUNCT	,	_	12	punct	12:punct	_
 6	Unlimited	unlimited	ADJ	JJ	Degree=Pos	12	amod	12:amod	SpaceAfter=No
 7	-	-	PUNCT	,	_	12	punct	12:punct	SpaceAfter=No
@@ -162,7 +162,7 @@
 5	Service	service	NOUN	NN	Number=Sing	0	root	0:root	_
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	World	world	NOUN	NN	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+8	World	world	NOUN	NN	Number=Sing	5	nmod	5:nmod:in	SpaceAfter=No
 9	!	!	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_2044a3376e5a87a5_ENG_20040529_135300-0008
@@ -177,7 +177,7 @@
 2	19	19	NUM	CD	NumType=Card	9	nummod	9:nummod	_
 3	East	east	ADJ	JJ	Degree=Pos	7	amod	7:amod	SpaceAfter=No
 4	/	/	PUNCT	,	_	5	cc	5:cc	SpaceAfter=No
-5	West	west	ADJ	JJ	Degree=Pos	3	conj	3:conj	SpaceAfter=No
+5	West	west	ADJ	JJ	Degree=Pos	3	conj	3:conj|7:amod	SpaceAfter=No
 6	-	-	PUNCT	HYPH	_	7	punct	7:punct	SpaceAfter=No
 7	Coast	coast	NOUN	NN	Number=Sing	8	obl:npmod	8:obl:npmod	_
 8	Specialized	specialized	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
@@ -186,7 +186,7 @@
 11	Total	total	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	Privacy	privacy	NOUN	NN	Number=Sing	9	parataxis	9:parataxis	_
 13	via	via	ADP	IN	_	14	case	14:case	_
-14	Encryption	encryption	NOUN	NN	Number=Sing	12	nmod	12:nmod	_
+14	Encryption	encryption	NOUN	NN	Number=Sing	12	nmod	12:nmod:via	_
 15	=---	=---	SYM	NFP	_	9	punct	9:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_2044a3376e5a87a5_ENG_20040529_135300-0010
@@ -194,7 +194,7 @@
 1	----==	----==	SYM	NFP	_	2	punct	2:punct	_
 2	Posted	post	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 3	via	via	ADP	IN	_	4	case	4:case	_
-4	Newsfeed.Com	newsfeed.com	X	ADD	_	2	obl	2:obl	_
+4	Newsfeed.Com	newsfeed.com	X	ADD	_	2	obl	2:obl:via	_
 5	-	-	PUNCT	,	_	12	punct	12:punct	_
 6	Unlimited	unlimited	ADJ	JJ	Degree=Pos	12	amod	12:amod	SpaceAfter=No
 7	-	-	PUNCT	,	_	12	punct	12:punct	SpaceAfter=No
@@ -214,7 +214,7 @@
 5	Service	service	NOUN	NN	Number=Sing	0	root	0:root	_
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	World	world	NOUN	NN	Number=Sing	5	nmod	5:nmod	SpaceAfter=No
+8	World	world	NOUN	NN	Number=Sing	5	nmod	5:nmod:in	SpaceAfter=No
 9	!	!	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_2044a3376e5a87a5_ENG_20040529_135300-0012
@@ -229,7 +229,7 @@
 2	19	19	NUM	CD	NumType=Card	9	nummod	9:nummod	_
 3	East	east	ADJ	JJ	Degree=Pos	7	amod	7:amod	SpaceAfter=No
 4	/	/	PUNCT	,	_	5	cc	5:cc	SpaceAfter=No
-5	West	west	ADJ	JJ	Degree=Pos	3	conj	3:conj	SpaceAfter=No
+5	West	west	ADJ	JJ	Degree=Pos	3	conj	3:conj|7:amod	SpaceAfter=No
 6	-	-	PUNCT	HYPH	_	7	punct	7:punct	SpaceAfter=No
 7	Coast	coast	NOUN	NN	Number=Sing	8	obl:npmod	8:obl:npmod	_
 8	Specialized	specialized	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
@@ -238,6 +238,6 @@
 11	Total	total	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	Privacy	privacy	NOUN	NN	Number=Sing	9	parataxis	9:parataxis	_
 13	via	via	ADP	IN	_	14	case	14:case	_
-14	Encryption	encryption	NOUN	NN	Number=Sing	12	nmod	12:nmod	_
+14	Encryption	encryption	NOUN	NN	Number=Sing	12	nmod	12:nmod:via	_
 15	=---	=---	SYM	NFP	_	9	punct	9:punct	_
 

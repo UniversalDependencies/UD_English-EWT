@@ -25,7 +25,7 @@
 # text = All the food tasted excellent, and with the new renovation of chairs and the bathroom, it is awesome.
 1	All	all	DET	PDT	_	3	det:predet	3:det:predet	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	food	food	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
+3	food	food	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|5:nsubj:xsubj	_
 4	tasted	taste	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	excellent	excellent	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	SpaceAfter=No
 6	,	,	PUNCT	,	_	20	punct	20:punct	_
@@ -33,22 +33,22 @@
 8	with	with	ADP	IN	_	11	case	11:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	new	new	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	renovation	renovation	NOUN	NN	Number=Sing	20	obl	20:obl	_
+11	renovation	renovation	NOUN	NN	Number=Sing	20	obl	20:obl:with	_
 12	of	of	ADP	IN	_	13	case	13:case	_
-13	chairs	chair	NOUN	NNS	Number=Plur	11	nmod	11:nmod	_
+13	chairs	chair	NOUN	NNS	Number=Plur	11	nmod	11:nmod:of	_
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	bathroom	bathroom	NOUN	NN	Number=Sing	13	conj	13:conj	SpaceAfter=No
+16	bathroom	bathroom	NOUN	NN	Number=Sing	13	conj	11:nmod:of|13:conj:and	SpaceAfter=No
 17	,	,	PUNCT	,	_	20	punct	20:punct	_
 18	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	nsubj	20:nsubj	_
 19	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	20:cop	_
-20	awesome	awesome	ADJ	JJ	Degree=Pos	4	conj	4:conj	SpaceAfter=No
+20	awesome	awesome	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
 21	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-009970-0004
 # text = The people working their are also extremely polite and friendly.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	people	people	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
+2	people	people	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj|10:nsubj	_
 3	working	work	VERB	VBG	VerbForm=Ger	2	acl	2:acl	_
 4	their	their	ADV	RB	_	3	advmod	3:advmod	_
 5	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
@@ -56,7 +56,7 @@
 7	extremely	extremely	ADV	RB	_	8	advmod	8:advmod	_
 8	polite	polite	NOUN	NN	Number=Sing	0	root	0:root	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	friendly	friendly	ADJ	JJ	Degree=Pos	8	conj	8:conj	SpaceAfter=No
+10	friendly	friendly	ADJ	JJ	Degree=Pos	8	conj	8:conj:and	SpaceAfter=No
 11	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-009970-0005
@@ -77,7 +77,7 @@
 14	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	family	family	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	conj	15:conj	SpaceAfter=No
+17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	conj	13:obj|15:conj:and	SpaceAfter=No
 18	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = reviews-009970-0006
@@ -92,9 +92,9 @@
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
-11	recommend	recommend	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	conj	7:conj	_
+11	recommend	recommend	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	conj	7:conj:and	_
 12	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obj	11:obj	_
 13	to	to	ADP	IN	_	14	case	14:case	_
-14	everyone	everyone	PRON	NN	Number=Sing	11	obl	11:obl	SpaceAfter=No
+14	everyone	everyone	PRON	NN	Number=Sing	11	obl	11:obl:to	SpaceAfter=No
 15	!!!	!!!	PUNCT	,	_	7	punct	7:punct	_
 

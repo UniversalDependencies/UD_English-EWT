@@ -1,6 +1,6 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.1 -- 2017-11-15
-https://github.com/UniversalDependencies/UD_English
+Universal Dependencies English Web Treebank v2.2 -- 2018-04-15
+https://github.com/UniversalDependencies/UD_English-EWT
 
 # Summary
 
@@ -15,14 +15,14 @@ The corpus comprises 254,830 words and 16,622 sentences, taken from five genres
 of web media: weblogs, newsgroups, emails, reviews, and Yahoo! answers. See the
 LDC2012T13 documentation for more details on the sources of the sentences. The
 trees were automatically converted into Stanford Dependencies and then
-hand-corrected to Universal Dependencies. All the dependency annotations have been single-annotated, a limited portion of them have been double-annotated,
+hand-corrected to Universal Dependencies. All the basic dependency annotations have been single-annotated, a limited portion of them have been double-annotated,
 and subsequent correction has been done to improve consistency. Other aspects
-of the treebank, such as Universal POS and features, has mainly been done
+of the treebank, such as Universal POS, features and enhanced dependencies, has mainly been done
 automatically, with very limited hand-correction.
 
 # License/Copyright
 
-Universal Dependencies English Web Treebank © 2013-2017
+Universal Dependencies English Web Treebank © 2013-2018
 by The Board of Trustees of The Leland Stanford Junior University.
 All Rights Reserved.
 
@@ -65,9 +65,13 @@ The dependency taxonomy can be found on the Universal Dependencies web site:
 For the conversion to v2, we performed an automatic conversion with extensive
 spot-checking, and manual adjudication of ambiguous cases.
 
-#Deviations from UD
+The enhanced dependencies were automatically obtained by running an adapted version
+of the converter by Schuster and Manning (2016). These dependencies have **not** been
+manually checked.
 
-Version 2.1 of the English UD treebank conforms to the UD guidelines in
+# Deviations from UD
+
+Version 2.2 of the English UD treebank conforms to the UD guidelines in
 almost all respects, but there remain the following deviations:
 
  - The UD dependency `flat` is largely only used for person names.
@@ -77,6 +81,12 @@ almost all respects, but there remain the following deviations:
 
 # Changelog
 
+**2018-04-15 v2.2**
+  - Repository renamed from UD_English to UD_English-EWT
+  - Automatically added enhanced dependencies (These have not been manually checked!)
+  - Fixed some wrong lemmata and POS tags
+  - Fixed miscellaneous syntactic issues
+
 **2017-11-15 v2.1**
 
  - Fixed some wrong lemmata, POS tags
@@ -85,14 +95,14 @@ almost all respects, but there remain the following deviations:
     format
 
 **2017-02-15 v2.0**
- 
+
  - Updated treebank to conform to v2 guidelines
  - Fixed some wrong lemmata
  - Fixed miscellaneous syntactic issues
  - Added empty nodes for gapped constructions in enhanced representation
 
 **2016-11-15 v1.4**
- 
+
  - Changed POS tag of fused det-noun pronouns (e.g., *"somebody"*, *"nothing"*)
     to `PRON`
  - Added original, untokenized sentences to CoNLL-U files
@@ -100,7 +110,7 @@ almost all respects, but there remain the following deviations:
  - Fixed miscellaneous syntactic issues in a few sentences
 
 **2016-05-15 v1.3**
- 
+
  - Improved mapping of `WDT` to UPOS
  - Corrected lemma of *"n't"* to *"not"*
  - Fixed some errors between `advcl`, `ccomp` and `parataxis`
@@ -127,13 +137,13 @@ almost all respects, but there remain the following deviations:
 To help improve the corpus, please alert us to any errors you find in it.
 The best way to do this is to file a github issue at:
 
-   https://github.com/UniversalDependencies/UD_English/issues
+   https://github.com/UniversalDependencies/UD_English-EWT/issues
 
 We also welcome pull requests. If you want to make edits, please modify the
 trees in the idividual files in the `not-to-release/sources` directory instead
 of making direct changes to `en-ud-{dev,test,train}.conllu`.
 
-# Acknowledgments 
+# Acknowledgments
 
 Annotation of the Universal Dependencies English Web Treebank was carried out by
 (in order of size of contribution):
@@ -143,6 +153,7 @@ Annotation of the Universal Dependencies English Web Treebank was carried out by
  - Sebastian Schuster
  - Miriam Connor
  - Marie-Catherine de Marneffe
+ - Nathan Schneider
  - Samuel Bowman
  - Hanzhi Zhu
  - Daniel Galbraith
@@ -167,8 +178,8 @@ English Web Treebank:
 
     @inproceedings{silveira14gold,
       year = {2014},
-      author = {Natalia Silveira and Timothy Dozat and Marie-Catherine de 
-		  Marneffe and Samuel Bowman and Miriam Connor and John Bauer and 
+      author = {Natalia Silveira and Timothy Dozat and Marie-Catherine de
+		  Marneffe and Samuel Bowman and Miriam Connor and John Bauer and
 		  Christopher D. Manning},
       title = {A Gold Standard Dependency Corpus for {E}nglish},
       booktitle = {Proceedings of the Ninth International Conference on Language
@@ -188,7 +199,7 @@ UPOS: converted with corrections
 XPOS: manual native
 Features: automatic
 Relations: manual native
-Contributors: Silveira, Natalia; Dozat, Timothy; Manning, Christopher; Schuster, Sebastian; Bauer, John; Connor, Miriam; de Marneffe, Marie-Catherine; Bowman, Sam; Zhu, Hanzhi; Galbraith, Daniel
+Contributors: Silveira, Natalia; Dozat, Timothy; Manning, Christopher; Schuster, Sebastian; Bauer, John; Connor, Miriam; de Marneffe, Marie-Catherine; Schneider, Nathan; Bowman, Sam; Zhu, Hanzhi; Galbraith, Daniel
 Contributing: here source
 Contact: syntacticdependencies@lists.stanford.edu
 ===============================================================================

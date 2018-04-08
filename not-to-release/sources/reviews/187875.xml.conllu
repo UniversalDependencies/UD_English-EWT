@@ -19,7 +19,7 @@
 6	decent	decent	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	cup	cup	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	coffee	coffee	NOUN	NN	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+9	coffee	coffee	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	SpaceAfter=No
 10	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-187875-0003
@@ -31,25 +31,25 @@
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	yet	yet	CCONJ	CC	_	8	cc	8:cc	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
-8	use	use	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj	_
+8	use	use	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj:yet	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	same	same	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	grounds	grounds	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 12	over	over	ADV	RB	_	8	advmod	8:advmod	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	over	over	ADV	RB	_	15	advmod	15:advmod	_
-15	again	again	ADV	RB	_	12	conj	12:conj	SpaceAfter=No
+15	again	again	ADV	RB	_	12	conj	8:advmod|12:conj:and	SpaceAfter=No
 16	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-187875-0004
 # text = The coffee taste BURNT and very bitter.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	coffee	coffee	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
+2	coffee	coffee	NOUN	NN	Number=Sing	3	nsubj	3:nsubj|4:nsubj:xsubj|7:nsubj:xsubj	_
 3	taste	taste	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	BURNT	burnt	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	_
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
 6	very	very	ADV	RB	_	7	advmod	7:advmod	_
-7	bitter	bitter	ADJ	JJ	Degree=Pos	4	conj	4:conj	SpaceAfter=No
+7	bitter	bitter	ADJ	JJ	Degree=Pos	4	conj	3:xcomp|4:conj:and	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-187875-0005
@@ -57,9 +57,9 @@
 1	No	no	DET	DT	_	2	det	2:det	_
 2	amount	amount	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	sugar	sugar	NOUN	NN	Number=Sing	2	nmod	2:nmod	_
+4	sugar	sugar	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	milk	milk	NOUN	NN	Number=Sing	4	conj	4:conj	_
+6	milk	milk	NOUN	NN	Number=Sing	4	conj	2:nmod:of|4:conj:and	_
 7	can	can	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 8	mask	mask	VERB	VB	VerbForm=Inf	0	root	0:root	_
 9	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	obj	8:obj	SpaceAfter=No
@@ -78,7 +78,7 @@
 # text = Westfield and Rt 1 do it well, WHY CANT U????
 1	Westfield	Westfield	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	Rt	Rt	PROPN	NNP	Number=Sing	1	conj	1:conj	_
+3	Rt	Rt	PROPN	NNP	Number=Sing	1	conj	1:conj:and|5:nsubj	_
 4	1	1	NUM	CD	NumType=Card	3	nummod	3:nummod	_
 5	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj	_

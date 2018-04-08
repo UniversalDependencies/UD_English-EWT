@@ -4,7 +4,7 @@
 1	Royal	Royal	PROPN	NNP	Number=Sing	2	compound	2:compound	_
 2	Caribbean	Caribbean	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 3	or	or	CCONJ	CC	_	4	cc	4:cc	_
-4	Carnival	Carnival	PROPN	NNP	Number=Sing	2	conj	2:conj	_
+4	Carnival	Carnival	PROPN	NNP	Number=Sing	2	conj	2:conj:or|5:compound	_
 5	cruise	cruise	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 6	?	?	PUNCT	.	_	5	punct	5:punct	_
 
@@ -24,16 +24,16 @@
 
 # sent_id = answers-20111107155912AAS93e5_ans-0003
 # text = i want to know which you liked better and WHY?
-1	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj	_
 2	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	which	which	PRON	WDT	PronType=Int	7	obj	7:obj	_
-6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
+6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|10:nsubj	_
 7	liked	like	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	ccomp	4:ccomp	_
 8	better	better	ADV	RBR	Degree=Cmp	7	advmod	7:advmod	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	WHY	why	ADV	WRB	PronType=Int	7	conj	7:conj	SpaceAfter=No
+10	WHY	why	ADV	WRB	PronType=Int	7	conj	4:ccomp|7:conj:and	SpaceAfter=No
 11	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0004
@@ -81,7 +81,7 @@
 3	which	which	DET	WDT	PronType=Int	7	det	7:det	_
 4	royal	royal	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 5	or	or	CCONJ	CC	_	6	cc	6:cc	_
-6	carnival	carnival	PROPN	NNP	Number=Sing	4	conj	4:conj	_
+6	carnival	carnival	PROPN	NNP	Number=Sing	4	conj	4:conj:or|7:compound	_
 7	ship	ship	NOUN	NN	Number=Sing	2	obj	2:obj	_
 8	(:	(:	SYM	NFP	_	2	discourse	2:discourse	_
 
@@ -90,13 +90,13 @@
 1	Carnival	Carnival	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
 2	and	and	CCONJ	CC	_	4	cc	4:cc	_
 3	Royal	Royal	PROPN	NNP	Number=Sing	4	compound	4:compound	_
-4	Caribbean	Caribbean	PROPN	NNP	Number=Sing	1	conj	1:conj	_
+4	Caribbean	Caribbean	PROPN	NNP	Number=Sing	1	conj	1:conj:and|9:nsubj	_
 5	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 6	two	two	NUM	CD	NumType=Card	9	nummod	9:nummod	_
 7	popular	popular	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 8	cruise	cruise	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	lines	line	NOUN	NNS	Number=Plur	0	root	0:root	_
-10	that	that	PRON	WDT	PronType=Rel	11	nsubj	11:nsubj	_
+9	lines	line	NOUN	NNS	Number=Plur	0	root	11:nsubj	_
+10	that	that	PRON	WDT	PronType=Rel	11	nsubj	9:ref	_
 11	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
 12	strong	strong	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	followings	following	NOUN	NNS	Number=Plur	11	obj	11:obj	SpaceAfter=No
@@ -106,15 +106,15 @@
 # text = Some cruise aficionados refuse to sail on one or the other.
 1	Some	some	DET	DT	_	3	det	3:det	_
 2	cruise	cruise	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	aficionados	aficionado	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
+3	aficionados	aficionado	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 4	refuse	refuse	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	sail	sail	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	on	on	ADP	IN	_	8	case	8:case	_
-8	one	one	NUM	CD	NumType=Card	6	obl	6:obl	_
+8	one	one	NUM	CD	NumType=Card	6	obl	6:obl:on	_
 9	or	or	CCONJ	CC	_	11	cc	11:cc	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	other	other	ADJ	JJ	Degree=Pos	8	conj	8:conj	SpaceAfter=No
+11	other	other	ADJ	JJ	Degree=Pos	8	conj	6:obl:on|8:conj:or	SpaceAfter=No
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0012
@@ -125,7 +125,7 @@
 4	major	major	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	differences	difference	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	_
 6	between	between	ADP	IN	_	7	case	7:case	_
-7	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	5	nmod	5:nmod	SpaceAfter=No
+7	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	5	nmod	5:nmod:between	SpaceAfter=No
 8	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0013
@@ -145,13 +145,13 @@
 # text = For our comparison we sailed on two similar ships - the Carnival Liberty and the Royal Caribbean Mariner of the Seas.
 1	For	for	ADP	IN	_	3	case	3:case	_
 2	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	comparison	comparison	NOUN	NN	Number=Sing	5	obl	5:obl	_
+3	comparison	comparison	NOUN	NN	Number=Sing	5	obl	5:obl:for	_
 4	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 5	sailed	sail	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	on	on	ADP	IN	_	9	case	9:case	_
 7	two	two	NUM	CD	NumType=Card	9	nummod	9:nummod	_
 8	similar	similar	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	ships	ship	NOUN	NNS	Number=Plur	5	obl	5:obl	_
+9	ships	ship	NOUN	NNS	Number=Plur	5	obl	5:obl:on	_
 10	-	-	PUNCT	:	_	9	punct	9:punct	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	Carnival	Carnival	PROPN	NNP	Number=Sing	13	compound	13:compound	_
@@ -160,10 +160,10 @@
 15	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 16	Royal	Royal	PROPN	NNP	Number=Sing	17	compound	17:compound	_
 17	Caribbean	Caribbean	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-18	Mariner	Mariner	PROPN	NNP	Number=Sing	13	conj	13:conj	_
+18	Mariner	Mariner	PROPN	NNP	Number=Sing	13	conj	9:appos|13:conj:and	_
 19	of	of	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	Seas	Seas	PROPN	NNPS	Number=Plur	18	nmod	18:nmod	SpaceAfter=No
+21	Seas	Seas	PROPN	NNPS	Number=Plur	18	nmod	18:nmod:of	SpaceAfter=No
 22	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0015
@@ -174,22 +174,22 @@
 4	go	go	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	1	appos	1:appos	_
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	Caribbean	caribbean	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	Islands	island	NOUN	NNS	Number=Plur	4	obl	4:obl	_
+7	Islands	island	NOUN	NNS	Number=Plur	4	obl	4:obl:to	_
 8	like	like	ADP	IN	_	9	case	9:case	_
-9	Jamaica	Jamaica	PROPN	NNP	Number=Sing	7	nmod	7:nmod	SpaceAfter=No
+9	Jamaica	Jamaica	PROPN	NNP	Number=Sing	7	nmod	7:nmod:like	SpaceAfter=No
 10	,	,	PUNCT	,	_	12	punct	12:punct	_
 11	Grand	Grand	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	Cayman	Cayman	PROPN	NNP	Number=Sing	9	conj	9:conj	SpaceAfter=No
+12	Cayman	Cayman	PROPN	NNP	Number=Sing	9	conj	7:nmod:like|9:conj:and	SpaceAfter=No
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
-14	Cozumel	Cozumel	PROPN	NNP	Number=Sing	9	conj	9:conj	SpaceAfter=No
+14	Cozumel	Cozumel	PROPN	NNP	Number=Sing	9	conj	7:nmod:like|9:conj:and	SpaceAfter=No
 15	,	,	PUNCT	,	_	16	punct	16:punct	_
-16	St.	St.	PROPN	NNP	Number=Sing	9	conj	9:conj	_
+16	St.	St.	PROPN	NNP	Number=Sing	9	conj	7:nmod:like|9:conj:and	_
 17	Thomas	Thomas	PROPN	NNP	Number=Sing	16	flat	16:flat	SpaceAfter=No
 18	,	,	PUNCT	,	_	20	punct	20:punct	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
-20	Bahamas	Bahamas	PROPN	NNPS	Number=Plur	9	conj	9:conj	_
+20	Bahamas	Bahamas	PROPN	NNPS	Number=Plur	9	conj	7:nmod:like|9:conj:and	_
 21	and	and	CCONJ	CC	_	22	cc	22:cc	_
-22	St.	St.	PROPN	NNP	Number=Sing	9	conj	9:conj	_
+22	St.	St.	PROPN	NNP	Number=Sing	9	conj	7:nmod:like|9:conj:and	_
 23	Martin	Martin	PROPN	NNP	Number=Sing	22	flat	22:flat	_
 24	/	/	PUNCT	,	_	22	punct	22:punct	_
 25	St.	St.	PROPN	NNP	Number=Sing	22	appos	22:appos	_
@@ -210,11 +210,11 @@
 10	Cay	Cay	PROPN	NNP	Number=Sing	7	appos	7:appos	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	Puerto	Puerto	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	Rico	Rico	PROPN	NNP	Number=Sing	7	conj	7:conj	SpaceAfter=No
+13	Rico	Rico	PROPN	NNP	Number=Sing	7	conj	4:obj|7:conj:and	SpaceAfter=No
 14	,	,	PUNCT	,	_	17	punct	17:punct	_
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
 16	Grand	Grand	PROPN	NNP	Number=Sing	17	compound	17:compound	_
-17	Turk	Turk	PROPN	NNP	Number=Sing	7	conj	7:conj	SpaceAfter=No
+17	Turk	Turk	PROPN	NNP	Number=Sing	7	conj	4:obj|7:conj:and	SpaceAfter=No
 18	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0017
@@ -223,43 +223,43 @@
 2	Mariner	Mariner	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
 3	of	of	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	Seas	Seas	PROPN	NNPS	Number=Plur	2	nmod	2:nmod	_
+5	Seas	Seas	PROPN	NNPS	Number=Plur	2	nmod	2:nmod:of	_
 6	traveled	travel	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	to	to	ADP	IN	_	10	case	10:case	_
 8	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 9	private	private	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	island	island	NOUN	NN	Number=Sing	6	obl	6:obl	_
+10	island	island	NOUN	NN	Number=Sing	6	obl	6:obl:to	_
 11	Coco	Coco	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 12	Cay	Cay	PROPN	NNP	Number=Sing	10	appos	10:appos	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	Labadee	Labadee	PROPN	NNP	Number=Sing	10	conj	10:conj	_
+14	Labadee	Labadee	PROPN	NNP	Number=Sing	10	conj	6:obl:to|10:conj:and	_
 15	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	north	north	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	coast	coast	NOUN	NN	Number=Sing	14	appos	14:appos	_
 19	of	of	ADP	IN	_	20	case	20:case	_
-20	Haiti	Haiti	PROPN	NNP	Number=Sing	18	nmod	18:nmod	SpaceAfter=No
+20	Haiti	Haiti	PROPN	NNP	Number=Sing	18	nmod	18:nmod:of	SpaceAfter=No
 21	)	)	PUNCT	-RRB-	_	18	punct	18:punct	SpaceAfter=No
 22	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0018
 # text = We loved most of the locations that both of the ships visited and don't believe that this should be a distinguishing factor on deciding between the cruise lines.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj|16:nsubj	_
 2	loved	love	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	most	most	ADJ	JJS	Degree=Sup	2	obj	2:obj	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	locations	location	NOUN	NNS	Number=Plur	3	nmod	3:nmod	_
-7	that	that	PRON	WDT	PronType=Rel	12	obj	12:obj	_
+6	locations	location	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|12:obj	_
+7	that	that	PRON	WDT	PronType=Rel	12	obj	6:ref	_
 8	both	both	DET	DT	_	12	nsubj	12:nsubj	_
 9	of	of	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	ships	ship	NOUN	NNS	Number=Plur	8	nmod	8:nmod	_
+11	ships	ship	NOUN	NNS	Number=Plur	8	nmod	8:nmod:of	_
 12	visited	visit	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
 13	and	and	CCONJ	CC	_	16	cc	16:cc	_
 14	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	aux	16:aux	SpaceAfter=No
 15	n't	not	PART	RB	_	16	advmod	16:advmod	_
-16	believe	believe	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
+16	believe	believe	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
 17	that	that	SCONJ	IN	_	23	mark	23:mark	_
 18	this	this	PRON	DT	Number=Sing|PronType=Dem	23	nsubj	23:nsubj	_
 19	should	should	AUX	MD	VerbForm=Fin	23	aux	23:aux	_
@@ -268,11 +268,11 @@
 22	distinguishing	distinguishing	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
 23	factor	factor	NOUN	NN	Number=Sing	16	ccomp	16:ccomp	_
 24	on	on	SCONJ	IN	_	25	mark	25:mark	_
-25	deciding	decide	VERB	VBG	VerbForm=Ger	23	advcl	23:advcl	_
+25	deciding	decide	VERB	VBG	VerbForm=Ger	23	advcl	23:advcl:on	_
 26	between	between	ADP	IN	_	29	case	29:case	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
 28	cruise	cruise	NOUN	NN	Number=Sing	29	compound	29:compound	_
-29	lines	line	NOUN	NNS	Number=Plur	25	obl	25:obl	SpaceAfter=No
+29	lines	line	NOUN	NNS	Number=Plur	25	obl	25:obl:between	SpaceAfter=No
 30	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0019
@@ -285,7 +285,7 @@
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 7	variety	variety	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	shows	show	NOUN	NNS	Number=Plur	7	nmod	7:nmod	SpaceAfter=No
+9	shows	show	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	SpaceAfter=No
 10	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0020
@@ -298,12 +298,12 @@
 6	show	show	NOUN	NN	Number=Sing	3	obj	3:obj	_
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_
 8	some	some	DET	DT	_	9	det	9:det	_
-9	type	type	NOUN	NN	Number=Sing	6	conj	6:conj	_
+9	type	type	NOUN	NN	Number=Sing	6	conj	3:obj|6:conj:and	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	entertainment	entertainment	NOUN	NN	Number=Sing	9	nmod	9:nmod	_
+11	entertainment	entertainment	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	_
 12	before	before	ADV	RB	_	9	advmod	9:advmod	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	perhaps	perhaps	ADV	RB	_	12	conj	12:conj	_
+14	perhaps	perhaps	ADV	RB	_	12	conj	9:advmod|12:conj:and	_
 15	afterward	afterward	ADV	RB	_	14	advmod	14:advmod	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -317,10 +317,10 @@
 6	shows	show	NOUN	NNS	Number=Plur	14	nsubj	14:nsubj	_
 7	on	on	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	Mariner	Mariner	PROPN	NNP	Number=Sing	6	nmod	6:nmod	_
+9	Mariner	Mariner	PROPN	NNP	Number=Sing	6	nmod	6:nmod:on	_
 10	of	of	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	Seas	Seas	PROPN	NNPS	Number=Plur	9	nmod	9:nmod	_
+12	Seas	Seas	PROPN	NNPS	Number=Plur	9	nmod	9:nmod:of	_
 13	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
 14	better	better	ADJ	JJR	Degree=Cmp	2	ccomp	2:ccomp	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -329,21 +329,21 @@
 # text = On the Liberty we liked the comedian and juggling act.
 1	On	on	ADP	IN	_	3	case	3:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	Liberty	Liberty	PROPN	NNP	Number=Sing	5	obl	5:obl	_
+3	Liberty	Liberty	PROPN	NNP	Number=Sing	5	obl	5:obl:on	_
 4	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 5	liked	like	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	comedian	comedian	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	juggling	juggling	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	act	act	NOUN	NN	Number=Sing	7	conj	7:conj	SpaceAfter=No
+10	act	act	NOUN	NN	Number=Sing	7	conj	5:obj|7:conj:and	SpaceAfter=No
 11	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0023
 # text = If you love seeing the shows, Royal Caribbean was better for the main shows and Carnival was slightly better for the comedians.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	love	love	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|4:nsubj:xsubj	_
+3	love	love	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:if	_
 4	seeing	see	VERB	VBG	VerbForm=Ger	3	xcomp	3:xcomp	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	shows	show	NOUN	NNS	Number=Plur	4	obj	4:obj	SpaceAfter=No
@@ -355,15 +355,15 @@
 12	for	for	ADP	IN	_	15	case	15:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	main	main	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	shows	show	NOUN	NNS	Number=Plur	11	obl	11:obl	_
+15	shows	show	NOUN	NNS	Number=Plur	11	obl	11:obl:for	_
 16	and	and	CCONJ	CC	_	20	cc	20:cc	_
 17	Carnival	Carnival	PROPN	NNP	Number=Sing	20	nsubj	20:nsubj	_
 18	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	cop	20:cop	_
 19	slightly	slightly	ADV	RB	_	20	advmod	20:advmod	_
-20	better	better	ADJ	JJR	Degree=Cmp	11	conj	11:conj	_
+20	better	better	ADJ	JJR	Degree=Cmp	11	conj	11:conj:and	_
 21	for	for	ADP	IN	_	23	case	23:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
-23	comedians	comedian	NOUN	NNS	Number=Plur	20	obl	20:obl	SpaceAfter=No
+23	comedians	comedian	NOUN	NNS	Number=Plur	20	obl	20:obl:for	SpaceAfter=No
 24	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0024
@@ -377,15 +377,15 @@
 7	of	of	ADP	IN	_	10	case	10:case	_
 8	both	both	DET	DT	_	10	det	10:det	_
 9	dining	dining	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	rooms	room	NOUN	NNS	Number=Plur	6	nmod	6:nmod	_
+10	rooms	room	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	_
 11	on	on	ADP	IN	_	13	case	13:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	Liberty	Liberty	PROPN	NNP	Number=Sing	10	nmod	10:nmod	_
+13	Liberty	Liberty	PROPN	NNP	Number=Sing	10	nmod	10:nmod:on	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	Mariner	Mariner	PROPN	NNP	Number=Sing	13	conj	13:conj	_
+15	Mariner	Mariner	PROPN	NNP	Number=Sing	13	conj	10:nmod:on|13:conj:and	_
 16	of	of	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	Seas	Seas	PROPN	NNPS	Number=Plur	15	nmod	15:nmod	SpaceAfter=No
+18	Seas	Seas	PROPN	NNPS	Number=Plur	15	nmod	15:nmod:of	SpaceAfter=No
 19	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0025
@@ -402,24 +402,24 @@
 10	variety	variety	NOUN	NN	Number=Sing	6	obj	6:obj	_
 11	on	on	ADP	IN	_	13	case	13:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	Mariner	Mariner	PROPN	NNP	Number=Sing	10	nmod	10:nmod	_
+13	Mariner	Mariner	PROPN	NNP	Number=Sing	10	nmod	10:nmod:on	_
 14	of	of	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	Seas	Seas	PROPN	NNPS	Number=Plur	13	nmod	13:nmod	SpaceAfter=No
+16	Seas	Seas	PROPN	NNPS	Number=Plur	13	nmod	13:nmod:of	SpaceAfter=No
 17	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0026
 # text = Friendliness of staff The Liberty and Mariner of the Seas both get high grades.
 1	Friendliness	friendliness	NOUN	NN	Number=Sing	0	root	0:root	_
 2	of	of	ADP	IN	_	3	case	3:case	_
-3	staff	staff	NOUN	NN	Number=Sing	1	nmod	1:nmod	_
+3	staff	staff	NOUN	NN	Number=Sing	1	nmod	1:nmod:of	_
 4	The	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	Liberty	Liberty	PROPN	NNP	Number=Sing	12	nsubj	12:nsubj	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	Mariner	Mariner	PROPN	NNP	Number=Sing	5	conj	5:conj	_
+7	Mariner	Mariner	PROPN	NNP	Number=Sing	5	conj	5:conj:and|12:nsubj	_
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	Seas	Seas	PROPN	NNPS	Number=Plur	7	nmod	7:nmod	_
+10	Seas	Seas	PROPN	NNPS	Number=Plur	7	nmod	7:nmod:of	_
 11	both	both	DET	DT	_	5	cc:preconj	5:cc:preconj	_
 12	get	get	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	1	appos	1:appos	_
 13	high	high	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
@@ -432,23 +432,23 @@
 2	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	aux	3:aux	_
 3	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	one	one	NUM	CD	NumType=Card	5	nummod	5:nummod	_
-5	waiter	waiter	NOUN	NN	Number=Sing	3	obj	3:obj	_
-6	that	that	PRON	WDT	PronType=Rel	7	nsubj	7:nsubj	_
+5	waiter	waiter	NOUN	NN	Number=Sing	3	obj	3:obj|7:nsubj	_
+6	that	that	PRON	WDT	PronType=Rel	7	nsubj	5:ref	_
 7	complained	complain	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 8	some	some	ADV	RB	_	7	advmod	7:advmod	_
 9	on	on	ADP	IN	_	10	case	10:case	_
-10	one	one	NUM	CD	NumType=Card	7	obl	7:obl	_
+10	one	one	NUM	CD	NumType=Card	7	obl	7:obl:on	_
 11	of	of	ADP	IN	_	13	case	13:case	_
 12	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
-13	trips	trip	NOUN	NNS	Number=Plur	10	nmod	10:nmod	_
+13	trips	trip	NOUN	NNS	Number=Plur	10	nmod	10:nmod:of	_
 14	on	on	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	Mariner	Mariner	PROPN	NNP	Number=Sing	13	nmod	13:nmod	SpaceAfter=No
+16	Mariner	Mariner	PROPN	NNP	Number=Sing	13	nmod	13:nmod:on	SpaceAfter=No
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0028
 # text = We had a slightly better experience on the Liberty, but feel that both crews did an excellent job and that this should not be a distinguishing factor on choosing a cruise.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj|12:nsubj	_
 2	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 4	slightly	slightly	ADV	RB	_	5	advmod	5:advmod	_
@@ -456,10 +456,10 @@
 6	experience	experience	NOUN	NN	Number=Sing	2	obj	2:obj	_
 7	on	on	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	Liberty	Liberty	PROPN	NNP	Number=Sing	2	obl	2:obl	SpaceAfter=No
+9	Liberty	Liberty	PROPN	NNP	Number=Sing	2	obl	2:obl:on	SpaceAfter=No
 10	,	,	PUNCT	,	_	12	punct	12:punct	_
 11	but	but	CCONJ	CC	_	12	cc	12:cc	_
-12	feel	feel	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj	_
+12	feel	feel	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	2:conj:but	_
 13	that	that	SCONJ	IN	_	16	mark	16:mark	_
 14	both	both	DET	DT	_	15	det	15:det	_
 15	crews	crew	NOUN	NNS	Number=Plur	16	nsubj	16:nsubj	_
@@ -475,9 +475,9 @@
 25	be	be	AUX	VB	VerbForm=Inf	28	cop	28:cop	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	28	det	28:det	_
 27	distinguishing	distinguishing	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
-28	factor	factor	NOUN	NN	Number=Sing	16	conj	16:conj	_
+28	factor	factor	NOUN	NN	Number=Sing	16	conj	12:ccomp|16:conj:and	_
 29	on	on	SCONJ	IN	_	30	mark	30:mark	_
-30	choosing	choose	VERB	VBG	VerbForm=Ger	28	advcl	28:advcl	_
+30	choosing	choose	VERB	VBG	VerbForm=Ger	28	advcl	28:advcl:on	_
 31	a	a	DET	DT	Definite=Ind|PronType=Art	32	det	32:det	_
 32	cruise	cruise	NOUN	NN	Number=Sing	30	obj	30:obj	SpaceAfter=No
 33	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -489,16 +489,16 @@
 3	Mariner	Mariner	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	Seas	Seas	PROPN	NNPS	Number=Plur	3	nmod	3:nmod	_
+6	Seas	Seas	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	Liberty	Liberty	PROPN	NNP	Number=Sing	3	conj	3:conj	_
+8	Liberty	Liberty	PROPN	NNP	Number=Sing	3	conj	3:conj:and|10:nsubj	_
 9	both	both	DET	DT	_	3	cc:preconj	3:cc:preconj	_
 10	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	appos	1:appos	_
 11	salt	salt	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	water	water	NOUN	NN	Number=Sing	13	compound	13:compound	_
-13	pools	pool	NOUN	NNS	Number=Plur	10	obj	10:obj	_
+13	pools	pool	NOUN	NNS	Number=Plur	10	obj	10:obj|19:obj	_
 14	-	-	PUNCT	,	_	13	punct	13:punct	_
-15	which	which	PRON	WDT	PronType=Rel	19	obj	19:obj	_
+15	which	which	PRON	WDT	PronType=Rel	19	obj	13:ref	_
 16	most	most	ADJ	JJS	Degree=Sup	18	amod	18:amod	_
 17	cruise	cruise	NOUN	NN	Number=Sing	18	compound	18:compound	_
 18	ships	ship	NOUN	NNS	Number=Plur	19	nsubj	19:nsubj	_
@@ -512,9 +512,9 @@
 3	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	pools	pool	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 5	for	for	ADP	IN	_	6	case	6:case	_
-6	kids	kid	NOUN	NNS	Number=Plur	4	nmod	4:nmod	_
+6	kids	kid	NOUN	NNS	Number=Plur	4	nmod	4:nmod:for	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	adults	adult	NOUN	NNS	Number=Plur	6	conj	6:conj	SpaceAfter=No
+8	adults	adult	NOUN	NNS	Number=Plur	6	conj	4:nmod:for|6:conj:and	SpaceAfter=No
 9	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0031
@@ -528,7 +528,7 @@
 7	better	better	ADV	RBR	Degree=Cmp	2	advmod	2:advmod	_
 8	because	because	SCONJ	IN	_	10	mark	10:mark	_
 9	one	one	NUM	CD	NumType=Card	10	nsubj	10:nsubj	_
-10	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	advcl	2:advcl	_
+10	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	advcl	2:advcl:because	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	slide	slide	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -537,14 +537,14 @@
 # text = If you have kids, this would be something that they would definitely enjoy.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl	_
+3	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	_
 4	kids	kid	NOUN	NNS	Number=Plur	3	obj	3:obj	SpaceAfter=No
 5	,	,	PUNCT	,	_	9	punct	9:punct	_
 6	this	this	PRON	DT	Number=Sing|PronType=Dem	9	nsubj	9:nsubj	_
 7	would	would	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 8	be	be	AUX	VB	VerbForm=Inf	9	cop	9:cop	_
-9	something	something	PRON	NN	Number=Sing	0	root	0:root	_
-10	that	that	PRON	WDT	PronType=Rel	14	obj	14:obj	_
+9	something	something	PRON	NN	Number=Sing	0	root	14:obj	_
+10	that	that	PRON	WDT	PronType=Rel	14	obj	9:ref	_
 11	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
 12	would	would	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
 13	definitely	definitely	ADV	RB	_	14	advmod	14:advmod	_
@@ -554,15 +554,15 @@
 # sent_id = answers-20111107155912AAS93e5_ans-0033
 # text = Spa We tried the spa on the Liberty and loved it.
 1	Spa	spa	NOUN	NN	Number=Sing	0	root	0:root	_
-2	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+2	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|10:nsubj	_
 3	tried	try	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	appos	1:appos	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	spa	spa	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	on	on	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	Liberty	Liberty	PROPN	NNP	Number=Sing	5	nmod	5:nmod	_
+8	Liberty	Liberty	PROPN	NNP	Number=Sing	5	nmod	5:nmod:on	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	loved	love	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj	_
+10	loved	love	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	1:appos|3:conj:and	_
 11	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	obj	10:obj	SpaceAfter=No
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -576,10 +576,10 @@
 6	spa	spa	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	on	on	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	Mariner	Mariner	PROPN	NNP	Number=Sing	6	nmod	6:nmod	_
+9	Mariner	Mariner	PROPN	NNP	Number=Sing	6	nmod	6:nmod:on	_
 10	of	of	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	Seas	Seas	PROPN	NNPS	Number=Plur	9	nmod	9:nmod	SpaceAfter=No
+12	Seas	Seas	PROPN	NNPS	Number=Plur	9	nmod	9:nmod:of	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0035
@@ -591,7 +591,7 @@
 5	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	wrong	wrong	ADV	RB	_	5	advmod	5:advmod	_
 7	when	when	ADV	WRB	PronType=Int	8	mark	8:mark	_
-8	getting	get	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl	_
+8	getting	get	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl:when	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	spa	spa	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	treatment	treatment	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No
@@ -611,7 +611,7 @@
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
 11	Regent	Regent	PROPN	NNP	Number=Sing	13	compound	13:compound	_
 12	Seven	Seven	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	Seas	Seas	PROPN	NNPS	Number=Plur	4	conj	4:conj	SpaceAfter=No
+13	Seas	Seas	PROPN	NNPS	Number=Plur	4	conj	4:conj:but	SpaceAfter=No
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0037
@@ -619,7 +619,7 @@
 1	Look	look	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	on	on	ADP	IN	_	4	case	4:case	_
 3	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	website	website	NOUN	NN	Number=Sing	1	obl	1:obl	_
+4	website	website	NOUN	NN	Number=Sing	1	obl	1:obl:on	_
 5	rssc.com	rssc.com	X	ADD	_	4	appos	4:appos	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0038
@@ -630,7 +630,7 @@
 
 # sent_id = answers-20111107155912AAS93e5_ans-0039
 # text = Carnival has been called the WalMart of cruise lines...
-1	Carnival	Carnival	PROPN	NNP	Number=Sing	4	nsubj:pass	4:nsubj:pass	_
+1	Carnival	Carnival	PROPN	NNP	Number=Sing	4	nsubj:pass	4:nsubj:pass|6:nsubj:xsubj	_
 2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	4	aux:pass	4:aux:pass	_
 4	called	call	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -638,6 +638,6 @@
 6	WalMart	WalMart	PROPN	NNP	Number=Sing	4	xcomp	4:xcomp	_
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	cruise	cruise	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	lines	line	NOUN	NNS	Number=Plur	6	nmod	6:nmod	SpaceAfter=No
+9	lines	line	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	SpaceAfter=No
 10	...	...	PUNCT	.	_	4	punct	4:punct	_
 

@@ -4,15 +4,15 @@
 1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	_
 2	friend	friend	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	conj	2:conj	_
+4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	conj	2:conj:and|6:nsubj	_
 5	recently	recently	ADV	RB	_	6	advmod	6:advmod	_
 6	took	take	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
-8	16	16	NUM	CD	NumType=Card	11	nummod	11:nummod	_
-9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	18	18	NUM	CD	NumType=Card	11	conj	11:conj	_
+8	16	16	NUM	CD	NumType=Card	6	obj	6:obj	_
+9	and	and	CCONJ	CC	_	12	cc	12:cc	_
+10	18	18	NUM	CD	NumType=Card	11	nummod	11:nummod	_
 11	month	month	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	olds	old	NOUN	NNS	Number=Plur	6	obj	6:obj	_
+12	olds	old	NOUN	NNS	Number=Plur	8	conj	6:obj|8:conj:and	_
 13	here	here	ADV	RB	PronType=Dem	6	advmod	6:advmod	SpaceAfter=No
 14	.	.	PUNCT	.	_	6	punct	6:punct	_
 
@@ -20,45 +20,45 @@
 # text = While there wasn't too much available for their age (ball pit, bouncy area and a little padded pyramid to climb on), we went right when they opened at 10 am on a winter weekday and ended up being the only ones there, so we were given a little more liberty than we would have if others had been there.
 1	While	while	SCONJ	IN	_	3	mark	3:mark	_
 2	there	there	PRON	EX	_	3	expl	3:expl	_
-3	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	advcl	28:advcl	SpaceAfter=No
+3	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	advcl	28:advcl:while	SpaceAfter=No
 4	n't	not	PART	RB	_	3	advmod	3:advmod	_
 5	too	too	ADV	RB	_	6	advmod	6:advmod	_
 6	much	much	ADJ	JJ	Degree=Pos	3	nsubj	3:nsubj	_
 7	available	available	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 8	for	for	ADP	IN	_	10	case	10:case	_
 9	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	age	age	NOUN	NN	Number=Sing	6	obl	6:obl	_
+10	age	age	NOUN	NN	Number=Sing	6	obl	6:obl:for	_
 11	(	(	PUNCT	-LRB-	_	13	punct	13:punct	SpaceAfter=No
 12	ball	ball	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	pit	pit	NOUN	NN	Number=Sing	6	appos	6:appos	SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
 15	bouncy	bouncy	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	area	area	NOUN	NN	Number=Sing	13	conj	13:conj	_
+16	area	area	NOUN	NN	Number=Sing	13	conj	6:appos|13:conj:and	_
 17	and	and	CCONJ	CC	_	21	cc	21:cc	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 19	little	little	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 20	padded	padded	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
-21	pyramid	pyramid	NOUN	NN	Number=Sing	13	conj	13:conj	_
+21	pyramid	pyramid	NOUN	NN	Number=Sing	13	conj	6:appos|13:conj:and	_
 22	to	to	PART	TO	_	23	mark	23:mark	_
-23	climb	climb	VERB	VB	VerbForm=Inf	21	acl	21:acl	_
+23	climb	climb	VERB	VB	VerbForm=Inf	21	acl	21:acl:to	_
 24	on	on	ADP	IN	_	23	obl	23:obl	SpaceAfter=No
 25	)	)	PUNCT	-RRB-	_	13	punct	13:punct	SpaceAfter=No
 26	,	,	PUNCT	,	_	28	punct	28:punct	_
-27	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	28	nsubj	28:nsubj	_
+27	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	28	nsubj	28:nsubj|41:nsubj|46:nsubj:xsubj	_
 28	went	go	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 29	right	right	ADV	RB	_	32	advmod	32:advmod	_
 30	when	when	ADV	WRB	PronType=Int	32	mark	32:mark	_
 31	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	32	nsubj	32:nsubj	_
-32	opened	open	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	28	advcl	28:advcl	_
+32	opened	open	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	28	advcl	28:advcl:when	_
 33	at	at	ADP	IN	_	35	case	35:case	_
 34	10	10	NUM	CD	NumType=Card	35	nummod	35:nummod	_
-35	am	am	NOUN	NN	Number=Sing	32	obl	32:obl	_
+35	am	am	NOUN	NN	Number=Sing	32	obl	32:obl:at	_
 36	on	on	ADP	IN	_	39	case	39:case	_
 37	a	a	DET	DT	Definite=Ind|PronType=Art	39	det	39:det	_
 38	winter	winter	NOUN	NN	Number=Sing	39	compound	39:compound	_
-39	weekday	weekday	NOUN	NN	Number=Sing	35	nmod	35:nmod	_
+39	weekday	weekday	NOUN	NN	Number=Sing	35	nmod	35:nmod:on	_
 40	and	and	CCONJ	CC	_	41	cc	41:cc	_
-41	ended	end	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	28	conj	28:conj	_
+41	ended	end	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	28	conj	28:conj:and	_
 42	up	up	ADP	RP	_	41	compound:prt	41:compound:prt	_
 43	being	be	AUX	VBG	VerbForm=Ger	46	cop	46:cop	_
 44	the	the	DET	DT	Definite=Def|PronType=Art	46	det	46:det	_
@@ -77,12 +77,12 @@
 57	than	than	SCONJ	IN	_	60	mark	60:mark	_
 58	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	60	nsubj	60:nsubj	_
 59	would	would	AUX	MD	VerbForm=Fin	60	aux	60:aux	_
-60	have	have	AUX	VB	VerbForm=Inf	55	advcl	55:advcl	_
+60	have	have	AUX	VB	VerbForm=Inf	55	advcl	55:advcl:than	_
 61	if	if	SCONJ	IN	_	65	mark	65:mark	_
 62	others	other	NOUN	NNS	Number=Plur	65	nsubj	65:nsubj	_
 63	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	65	aux	65:aux	_
 64	been	be	AUX	VBN	Tense=Past|VerbForm=Part	65	cop	65:cop	_
-65	there	there	ADV	RB	PronType=Dem	60	advcl	60:advcl	SpaceAfter=No
+65	there	there	ADV	RB	PronType=Dem	60	advcl	60:advcl:if	SpaceAfter=No
 66	.	.	PUNCT	.	_	28	punct	28:punct	_
 
 # sent_id = reviews-229623-0003
@@ -97,22 +97,22 @@
 8	but	but	CCONJ	CC	_	11	cc	11:cc	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
-11	cleaner	cleaner	ADJ	JJR	Degree=Cmp	6	conj	6:conj	_
+11	cleaner	cleaner	ADJ	JJR	Degree=Cmp	6	conj	6:conj:but	_
 12	than	than	SCONJ	IN	_	14	mark	14:mark	_
 13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
-14	expected	expect	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	advcl	11:advcl	_
+14	expected	expect	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:than	_
 15	and	and	CCONJ	CC	_	20	cc	20:cc	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	staff	staff	NOUN	NN	Number=Sing	20	nsubj	20:nsubj	_
 18	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	cop	20:cop	_
 19	very	very	ADV	RB	_	20	advmod	20:advmod	_
-20	friendly	friendly	ADJ	JJ	Degree=Pos	11	conj	11:conj	SpaceAfter=No
+20	friendly	friendly	ADJ	JJ	Degree=Pos	11	conj	11:conj:and	SpaceAfter=No
 21	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-229623-0004
 # text = For $4 it was a nice break from the monotony of winter indoors with a toddler.
 1	For	for	ADP	IN	_	2	case	2:case	_
-2	$	$	SYM	$	_	8	obl	8:obl	SpaceAfter=No
+2	$	$	SYM	$	_	8	obl	8:obl:for	SpaceAfter=No
 3	4	4	NUM	CD	NumType=Card	2	nummod	2:nummod	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	8:cop	_
@@ -121,12 +121,12 @@
 8	break	break	NOUN	NN	Number=Sing	0	root	0:root	_
 9	from	from	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	monotony	monotony	NOUN	NN	Number=Sing	8	nmod	8:nmod	_
+11	monotony	monotony	NOUN	NN	Number=Sing	8	nmod	8:nmod:from	_
 12	of	of	ADP	IN	_	13	case	13:case	_
-13	winter	winter	NOUN	NN	Number=Sing	11	nmod	11:nmod	_
+13	winter	winter	NOUN	NN	Number=Sing	11	nmod	11:nmod:of	_
 14	indoors	indoors	ADV	RB	_	13	advmod	13:advmod	_
 15	with	with	ADP	IN	_	17	case	17:case	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
-17	toddler	toddler	NOUN	NN	Number=Sing	13	nmod	13:nmod	SpaceAfter=No
+17	toddler	toddler	NOUN	NN	Number=Sing	13	nmod	13:nmod:with	SpaceAfter=No
 18	.	.	PUNCT	.	_	8	punct	8:punct	_
 

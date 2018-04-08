@@ -2,7 +2,7 @@
 # sent_id = reviews-133981-0001
 # text = Smokers Haven
 1	Smoker	smoker	NOUN	NN	Number=Sing	3	nmod:poss	3:nmod:poss	SpaceAfter=No
-2	s	s	PART	POS	_	1	case	1:case	_
+2	s	's	PART	POS	_	1	case	1:case	_
 3	Haven	haven	NOUN	NN	Number=Sing	0	root	0:root	_
 
 # sent_id = reviews-133981-0002
@@ -21,15 +21,15 @@
 # text = Our bathroom fan, one electric outlet and 2 leaky sinks have yet to be fixed.
 1	Our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
 2	bathroom	bathroom	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	fan	fan	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	SpaceAfter=No
+3	fan	fan	NOUN	NN	Number=Sing	12	nsubj	12:nsubj|16:nsubj:xsubj	SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	one	one	NUM	CD	NumType=Card	7	nummod	7:nummod	_
 6	electric	electric	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	outlet	outlet	NOUN	NN	Number=Sing	3	conj	3:conj	_
+7	outlet	outlet	NOUN	NN	Number=Sing	3	conj	3:conj:and|12:nsubj|16:nsubj:xsubj	_
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
 9	2	2	NUM	CD	NumType=Card	11	nummod	11:nummod	_
 10	leaky	leaky	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	sinks	sink	NOUN	NNS	Number=Plur	3	conj	3:conj	_
+11	sinks	sink	NOUN	NNS	Number=Plur	3	conj	3:conj:and|12:nsubj|16:nsubj:xsubj	_
 12	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 13	yet	yet	ADV	RB	_	12	advmod	12:advmod	_
 14	to	to	PART	TO	_	16	mark	16:mark	_
@@ -45,26 +45,26 @@
 4	like	like	SCONJ	IN	_	7	mark	7:mark	_
 5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj:pass	7:nsubj:pass	_
 6	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	aux:pass	7:aux:pass	_
-7	flooded	flood	VERB	VBN	Tense=Past|VerbForm=Part	3	advcl	3:advcl	_
+7	flooded	flood	VERB	VBN	Tense=Past|VerbForm=Part	3	advcl	3:advcl:like	_
 8	and	and	CCONJ	CC	_	13	cc	13:cc	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	wood	wood	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	cabinets	cabinet	NOUN	NNS	Number=Plur	13	nsubj:pass	13:nsubj:pass	_
 12	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	aux:pass	13:aux:pass	_
-13	thrashed	thrash	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj	_
+13	thrashed	thrash	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj:and	_
 14	at	at	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	bottom	bottom	NOUN	NN	Number=Sing	13	obl	13:obl	_
+16	bottom	bottom	NOUN	NN	Number=Sing	13	obl	13:obl:at	_
 17	and	and	CCONJ	CC	_	19	cc	19:cc	_
 18	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	19	nsubj	19:nsubj	_
-19	slapped	slap	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	conj	13:conj	_
+19	slapped	slap	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	conj	13:conj:and	_
 20	some	some	DET	DT	_	21	det	21:det	_
 21	pieces	piece	NOUN	NNS	Number=Plur	19	obj	19:obj	_
 22	of	of	ADP	IN	_	23	case	23:case	_
-23	wood	wood	NOUN	NN	Number=Sing	21	nmod	21:nmod	_
+23	wood	wood	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	_
 24	over	over	ADV	RB	_	19	advmod	19:advmod	_
 25	to	to	PART	TO	_	26	mark	26:mark	_
-26	try	try	VERB	VB	VerbForm=Inf	19	advcl	19:advcl	_
+26	try	try	VERB	VB	VerbForm=Inf	19	advcl	19:advcl:to	_
 27	to	to	PART	TO	_	28	mark	28:mark	_
 28	cover	cover	VERB	VB	VerbForm=Inf	26	xcomp	26:xcomp	_
 29	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	28	obj	28:obj	_
@@ -86,7 +86,7 @@
 4	percent	percent	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	tenants	tenant	NOUN	NNS	Number=Plur	4	nmod	4:nmod	_
+7	tenants	tenant	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
 8	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 9	smokers	smoker	NOUN	NNS	Number=Plur	2	ccomp	2:ccomp	SpaceAfter=No
 10	!	!	PUNCT	.	_	2	punct	2:punct	_
@@ -97,7 +97,7 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
 3	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 4	not	not	PART	RB	_	5	advmod	5:advmod	_
-5	smoke	smoke	VERB	VB	VerbForm=Inf	9	advcl	9:advcl	SpaceAfter=No
+5	smoke	smoke	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:if	SpaceAfter=No
 6	,	,	PUNCT	,	_	9	punct	9:punct	_
 7	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
 8	not	not	PART	RB	_	9	advmod	9:advmod	_
@@ -113,10 +113,10 @@
 4	of	of	ADP	IN	_	7	case	7:case	_
 5	old	old	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 6	cigarette	cigarette	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	smoke	smoke	NOUN	NN	Number=Sing	3	obl	3:obl	_
+7	smoke	smoke	NOUN	NN	Number=Sing	3	obl	3:obl:of	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
-9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
-10	started	start	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj	_
+9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj|12:nsubj:xsubj	_
+10	started	start	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	become	become	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	apparent	apparent	ADJ	JJ	Degree=Pos	12	obj	12:obj	_
@@ -125,7 +125,7 @@
 16	weeks	week	NOUN	NNS	Number=Plur	17	obl:npmod	17:obl:npmod	_
 17	after	after	SCONJ	IN	_	19	mark	19:mark	_
 18	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
-19	moved	move	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	advcl	13:advcl	_
+19	moved	move	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	advcl	13:advcl:after	_
 20	in	in	ADV	RB	_	19	advmod	19:advmod	SpaceAfter=No
 21	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -138,22 +138,22 @@
 5	5	5	NUM	CD	NumType=Card	6	nummod	6:nummod	_
 6	feet	foot	NOUN	NNS	Number=Plur	4	obl:npmod	4:obl:npmod	_
 7	without	without	SCONJ	IN	_	8	mark	8:mark	_
-8	smelling	smell	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl	_
+8	smelling	smell	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl:without	_
 9	that	that	DET	DT	Number=Sing|PronType=Dem	12	det	12:det	_
 10	disgusting	disgusting	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	cigarette	cigarette	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	smoke	smoke	NOUN	NN	Number=Sing	8	obj	8:obj	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
-15	blows	blow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj	_
+15	blows	blow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	_
 16	right	right	ADV	RB	_	19	advmod	19:advmod	_
 17	into	into	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	windows	window	NOUN	NNS	Number=Plur	15	obl	15:obl	_
+19	windows	window	NOUN	NNS	Number=Plur	15	obl	15:obl:into	_
 20	all	all	DET	DT	_	21	det	21:det	_
 21	day	day	NOUN	NN	Number=Sing	15	obl:tmod	15:obl:tmod	_
 22	and	and	CCONJ	CC	_	24	cc	24:cc	_
 23	all	all	DET	DT	_	24	det	24:det	_
-24	night	night	NOUN	NN	Number=Sing	21	conj	21:conj	SpaceAfter=No
+24	night	night	NOUN	NN	Number=Sing	21	conj	15:obl:tmod|21:conj:and	SpaceAfter=No
 25	.	.	PUNCT	.	_	4	punct	4:punct	_
 

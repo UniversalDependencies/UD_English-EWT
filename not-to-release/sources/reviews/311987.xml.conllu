@@ -16,7 +16,7 @@
 7	there	there	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 8	as	as	ADP	IN	_	10	case	10:case	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	gift	gift	NOUN	NN	Number=Sing	4	obl	4:obl	_
+10	gift	gift	NOUN	NN	Number=Sing	4	obl	4:obl:as	_
 11	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	14	nsubj:pass	14:nsubj:pass	SpaceAfter=No
 12	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	aux:pass	14:aux:pass	_
 13	only	only	ADV	RB	_	14	advmod	14:advmod	_
@@ -35,11 +35,11 @@
 5	bike	bike	NOUN	NN	Number=Sing	0	root	0:root	_
 6	and	and	CCONJ	CC	_	8	cc	8:cc	_
 7	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
-8	cost	cost	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+8	cost	cost	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	5:conj:and	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	lot	lot	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	money	money	NOUN	NN	Number=Sing	10	nmod	10:nmod	SpaceAfter=No
+12	money	money	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	SpaceAfter=No
 13	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-311987-0004
@@ -60,14 +60,14 @@
 3	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obj	2:obj	_
 4	back	back	ADV	RB	_	2	advmod	2:advmod	_
 5	and	and	CCONJ	CC	_	9	cc	9:cc	_
-6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
+6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	9	nsubj	9:nsubj|13:nsubj	_
 7	would	would	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 8	not	not	PART	RB	_	9	advmod	9:advmod	_
-9	honor	honor	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
+9	honor	honor	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 11	warranty	warranty	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	conj	9:conj	_
+13	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	conj	9:conj:and	_
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 15	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	cop	17:cop	_
 16	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
@@ -75,13 +75,13 @@
 18	because	because	ADP	IN	_	21	case	21:case	_
 19	of	of	ADP	IN	_	18	fixed	18:fixed	_
 20	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
-21	shoes	shoe	NOUN	NNS	Number=Plur	17	obl	17:obl	SpaceAfter=No
+21	shoes	shoe	NOUN	NNS	Number=Plur	17	obl	17:obl:because_of	SpaceAfter=No
 22	??	??	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-311987-0006
 # text = So they were going to charge him for new peddles and proceeded to put them on without even telling him the price.
 1	So	so	ADV	RB	_	4	advmod	4:advmod	_
-2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
+2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj|12:nsubj|14:nsubj:xsubj	_
 3	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
 4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
@@ -89,16 +89,16 @@
 7	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	obj	6:obj	_
 8	for	for	ADP	IN	_	10	case	10:case	_
 9	new	new	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	peddles	peddle	NOUN	NNS	Number=Plur	6	obl	6:obl	_
+10	peddles	peddle	NOUN	NNS	Number=Plur	6	obl	6:obl:for	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	proceeded	proceed	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj	_
+12	proceeded	proceed	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	put	put	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
 15	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	14	obj	14:obj	_
 16	on	on	ADV	RB	_	14	advmod	14:advmod	_
 17	without	without	SCONJ	IN	_	19	mark	19:mark	_
 18	even	even	ADV	RB	_	19	advmod	19:advmod	_
-19	telling	tell	VERB	VBG	VerbForm=Ger	14	advcl	14:advcl	_
+19	telling	tell	VERB	VBG	VerbForm=Ger	14	advcl	14:advcl:without	_
 20	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	iobj	19:iobj	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 22	price	price	NOUN	NN	Number=Sing	19	obj	19:obj	SpaceAfter=No
@@ -119,12 +119,12 @@
 3	for	for	ADP	IN	_	6	case	6:case	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	different	different	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	pair	pair	NOUN	NN	Number=Sing	2	obl	2:obl	_
+6	pair	pair	NOUN	NN	Number=Sing	2	obl	2:obl:for	_
 7	instead	instead	ADV	RB	_	2	advmod	2:advmod	_
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 10	only	only	ADV	RB	_	11	advmod	11:advmod	_
-11	gave	give	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+11	gave	give	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 12	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	iobj	11:iobj	_
 13	five	five	NUM	CD	NumType=Card	14	nummod	14:nummod	_
 14	dollars	dollar	NOUN	NNS	Number=Plur	11	obj	11:obj	_

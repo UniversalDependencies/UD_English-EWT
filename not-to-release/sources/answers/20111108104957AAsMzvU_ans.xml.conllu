@@ -18,7 +18,7 @@
 3	something	something	PRON	NN	Number=Sing	0	root	0:root	_
 4	humid	humid	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 5	or	or	CCONJ	CC	_	6	cc	6:cc	_
-6	heat	heat	NOUN	NN	Number=Sing	4	conj	4:conj	SpaceAfter=No
+6	heat	heat	NOUN	NN	Number=Sing	4	conj	3:amod|4:conj:or	SpaceAfter=No
 7	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108104957AAsMzvU_ans-0003
@@ -31,7 +31,7 @@
 6	about	about	ADP	IN	_	9	case	9:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	pacman	pacman	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	frog	frog	NOUN	NN	Number=Sing	5	obl	5:obl	SpaceAfter=No
+9	frog	frog	NOUN	NN	Number=Sing	5	obl	5:obl:about	SpaceAfter=No
 10	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108104957AAsMzvU_ans-0004
@@ -62,7 +62,7 @@
 6	n't	not	PART	RB	_	7	advmod	7:advmod	_
 7	hurt	hurt	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	if	if	SCONJ	IN	_	10	mark	10:mark	_
-9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
+9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj|12:nsubj:xsubj	_
 10	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	csubj	7:csubj	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	provide	provide	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
@@ -78,8 +78,8 @@
 5	need	need	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	heat	heat	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	source	source	NOUN	NN	Number=Sing	5	obj	5:obj	_
-9	that	that	PRON	WDT	PronType=Rel	10	nsubj	10:nsubj	_
+8	source	source	NOUN	NN	Number=Sing	5	obj	5:obj|10:nsubj	_
+9	that	that	PRON	WDT	PronType=Rel	10	nsubj	8:ref	_
 10	creates	create	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 12	basking	basking	NOUN	NN	Number=Sing	13	compound	13:compound	_
@@ -88,14 +88,14 @@
 15	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 16	upper	upper	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 17	80's	80'	NOUN	NNS	Number=Plur	18	compound	18:compound	_
-18	F	F	PROPN	NNP	Number=Sing	10	obl	10:obl	_
+18	F	F	PROPN	NNP	Number=Sing	10	obl	10:obl:in	_
 19	for	for	ADP	IN	_	25	case	25:case	_
 20	at	at	ADV	RB	_	25	advmod	25:advmod	_
 21	least	least	ADV	RBS	Degree=Sup	20	fixed	20:fixed	_
 22	10	10	NUM	CD	NumType=Card	25	nummod	25:nummod	_
 23	-	-	SYM	SYM	_	24	case	24:case	_
 24	12	12	NUM	CD	NumType=Card	22	nmod	22:nmod	_
-25	hours	hour	NOUN	NNS	Number=Plur	10	obl	10:obl	_
+25	hours	hour	NOUN	NNS	Number=Plur	10	obl	10:obl:for	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	_
 27	day	day	NOUN	NN	Number=Sing	25	nmod:tmod	25:nmod:tmod	SpaceAfter=No
 28	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -120,6 +120,6 @@
 16	prone	prone	ADJ	JJ	Degree=Pos	3	parataxis	3:parataxis	_
 17	to	to	ADP	IN	_	19	case	19:case	_
 18	calcium	calcium	NOUN	NN	Number=Sing	19	compound	19:compound	_
-19	deficiency	deficiency	NOUN	NN	Number=Sing	16	obl	16:obl	SpaceAfter=No
+19	deficiency	deficiency	NOUN	NN	Number=Sing	16	obl	16:obl:to	SpaceAfter=No
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 

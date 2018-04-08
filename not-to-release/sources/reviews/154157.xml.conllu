@@ -3,25 +3,25 @@
 # text = FAST and reasonable$
 1	FAST	fast	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	reasonable	reasonable	ADJ	JJ	Degree=Pos	1	conj	1:conj	SpaceAfter=No
+3	reasonable	reasonable	ADJ	JJ	Degree=Pos	1	conj	1:conj:and|4:amod	SpaceAfter=No
 4	$	$	NOUN	NN	Number=Sing	0	root	0:root	_
 
 # sent_id = reviews-154157-0002
 # text = We went to Kobeys on Saturday and had our whole teams uniforms done!
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj|9:nsubj	_
 2	went	go	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	to	to	ADP	IN	_	4	case	4:case	_
-4	Kobey	Kobey	PROPN	NNP	Number=Sing	2	obl	2:obl	SpaceAfter=No
-5	s	s	PART	POS	_	4	case	4:case	_
+4	Kobey	Kobey	PROPN	NNP	Number=Sing	2	obl	2:obl:to	SpaceAfter=No
+5	s	's	PART	POS	_	4	case	4:case	_
 6	on	on	ADP	IN	_	7	case	7:case	_
-7	Saturday	Saturday	PROPN	NNP	Number=Sing	2	obl	2:obl	_
+7	Saturday	Saturday	PROPN	NNP	Number=Sing	2	obl	2:obl:on	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+9	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 10	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 11	whole	whole	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	team	team	NOUN	NN	Number=Sing	14	nmod:poss	14:nmod:poss	SpaceAfter=No
-13	s	s	PART	POS	_	12	case	12:case	_
-14	uniforms	uniform	NOUN	NNS	Number=Plur	9	obj	9:obj	_
+13	s	's	PART	POS	_	12	case	12:case	_
+14	uniforms	uniform	NOUN	NNS	Number=Plur	9	obj	9:obj|15:nsubj:xsubj	_
 15	done	do	VERB	VBN	Tense=Past|VerbForm=Part	9	xcomp	9:xcomp	SpaceAfter=No
 16	!	!	PUNCT	.	_	2	punct	2:punct	_
 
@@ -34,11 +34,11 @@
 5	half	half	NOUN	NN	Number=Sing	0	root	0:root	_
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	price	price	NOUN	NN	Number=Sing	5	nmod	5:nmod	_
+8	price	price	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
 9	of	of	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	cheapest	cheapest	ADJ	JJS	Degree=Sup	12	amod	12:amod	_
-12	quote	quote	NOUN	NN	Number=Sing	8	nmod	8:nmod	_
+12	quote	quote	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	_
 13	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
 14	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	12	acl:relcl	12:acl:relcl	SpaceAfter=No
 15	,	,	PUNCT	,	_	21	punct	21:punct	_
@@ -47,17 +47,17 @@
 18	work	work	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	_
 19	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	cop	21:cop	_
 20	top	top	ADJ	JJ	Degree=Pos	21	compound	21:compound	_
-21	notch	notch	NOUN	NN	Number=Sing	5	conj	5:conj	SpaceAfter=No
+21	notch	notch	NOUN	NN	Number=Sing	5	conj	5:conj:and	SpaceAfter=No
 22	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-154157-0004
 # text = Down to earth and fast service.
 1	Down	down	ADV	RB	_	0	root	0:root	_
 2	to	to	ADP	IN	_	3	case	3:case	_
-3	earth	earth	NOUN	NN	Number=Sing	1	obl	1:obl	_
+3	earth	earth	NOUN	NN	Number=Sing	1	obl	1:obl:to	_
 4	and	and	CCONJ	CC	_	6	cc	6:cc	_
 5	fast	fast	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	service	service	NOUN	NN	Number=Sing	1	conj	1:conj	SpaceAfter=No
+6	service	service	NOUN	NN	Number=Sing	1	conj	1:conj:and	SpaceAfter=No
 7	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-154157-0005
@@ -65,10 +65,10 @@
 1	Going	go	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 2	back	back	ADV	RB	_	1	advmod	1:advmod	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
-4	have	have	VERB	VB	VerbForm=Inf	1	advcl	1:advcl	_
+4	have	have	VERB	VB	VerbForm=Inf	1	advcl	1:advcl:to	_
 5	some	some	DET	DT	_	7	det	7:det	_
 6	lab	lab	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	coats	coat	NOUN	NNS	Number=Plur	4	obj	4:obj	_
+7	coats	coat	NOUN	NNS	Number=Plur	4	obj	4:obj|8:nsubj:xsubj	_
 8	done	do	VERB	VBN	Tense=Past|VerbForm=Part	4	xcomp	4:xcomp	_
 9	this	this	DET	DT	Number=Sing|PronType=Dem	10	det	10:det	_
 10	weekend	weekend	NOUN	NN	Number=Sing	1	obl:tmod	1:obl:tmod	SpaceAfter=No
