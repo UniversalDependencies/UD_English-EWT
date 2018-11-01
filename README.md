@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.2 -- 2018-04-15
+Universal Dependencies English Web Treebank v2.3 -- 2018-11-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
 # Summary
@@ -71,7 +71,7 @@ manually checked.
 
 # Deviations from UD
 
-Version 2.2 of the English UD treebank conforms to the UD guidelines in
+Version 2.3 of the English UD treebank conforms to the UD guidelines in
 almost all respects, but there remain the following deviations:
 
  - The UD dependency `flat` is largely only used for person names.
@@ -80,6 +80,10 @@ almost all respects, but there remain the following deviations:
     guidelines.
 
 # Changelog
+
+**2018-11-15 v2.3**
+  - Fixed several lemmata
+
 
 **2018-04-15 v2.2**
   - Repository renamed from UD_English to UD_English-EWT
