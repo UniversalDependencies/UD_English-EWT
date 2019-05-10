@@ -145,11 +145,12 @@
 13	breakfast	breakfast	NOUN	NN	Number=Sing	4	nmod	4:nmod:with	SpaceAfter=No
 14	,	,	PUNCT	,	_	17	punct	17:punct	_
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
+15.1	's	be	VERB	VBZ	_	_	_	2:conj:and	CopyOf=2
 16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
-17	market	market	NOUN	NN	Number=Sing	4	conj	2:nsubj|4:conj:and	_
+17	market	market	NOUN	NN	Number=Sing	4	conj	2:nsubj|4:conj:and|15.1:nsubj	_
 18	across	across	ADP	IN	_	20	case	20:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
-20	street	street	NOUN	NN	Number=Sing	17	nmod	17:nmod:across	SpaceAfter=No
+20	street	street	NOUN	NN	Number=Sing	17	orphan	15.1:obl:across	SpaceAfter=No
 21	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-292841-0006
@@ -166,7 +167,7 @@
 10	managers	manager	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
 11	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
 12	so	so	ADV	RB	_	13	advmod	13:advmod	_
-13	accomodating	accomodating	ADJ	JJ	Degree=Pos	6	conj	6:conj:and	SpaceAfter=No
+13	accomodating	accommodating	ADJ	JJ	Degree=Pos|Typo=Yes	6	conj	6:conj:and	SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
 15	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	SpaceAfter=No
 16	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:and	_

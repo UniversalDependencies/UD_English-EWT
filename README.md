@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.3 -- 2018-11-15
+Universal Dependencies English Web Treebank v2.4 -- 2019-05-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
 # Summary
@@ -22,7 +22,7 @@ automatically, with very limited hand-correction.
 
 # License/Copyright
 
-Universal Dependencies English Web Treebank © 2013-2018
+Universal Dependencies English Web Treebank © 2013-2019
 by The Board of Trustees of The Leland Stanford Junior University.
 All Rights Reserved.
 
@@ -71,7 +71,7 @@ manually checked.
 
 # Deviations from UD
 
-Version 2.3 of the English UD treebank conforms to the UD guidelines in
+Version 2.4 of the English UD treebank conforms to the UD guidelines in
 almost all respects, but there remain the following deviations:
 
  - The UD dependency `flat` is largely only used for person names.
@@ -80,6 +80,12 @@ almost all respects, but there remain the following deviations:
     guidelines.
 
 # Changelog
+
+**2019-05-15 v2.4**
+  - Fixed some wrong lemmata and POS tags
+  - Fixed miscellaneous syntactic issues  
+  - Fixed some punctuation attachments
+  - Fixed malformed enhanced graphs
 
 **2018-11-15 v2.3**
   - Fixed several lemmata
@@ -145,7 +151,7 @@ The best way to do this is to file a github issue at:
 
 We also welcome pull requests. If you want to make edits, please modify the
 trees in the idividual files in the `not-to-release/sources` directory instead
-of making direct changes to `en-ud-{dev,test,train}.conllu`.
+of making direct changes to `en_ewt-ud-{dev,test,train}.conllu`.
 
 # Acknowledgments
 
