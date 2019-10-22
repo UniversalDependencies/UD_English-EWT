@@ -925,25 +925,26 @@
 # text = Various mitigating actions have been and will be taken to provide focus, gain comfort over control levels and to provide assurance to senior management as to the accuracy of the Q1 DPR and business balance sheet.
 1	Various	various	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 2	mitigating	mitigating	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	actions	action	NOUN	NNS	Number=Plur	9	nsubj:pass	9:nsubj:pass	_
-4	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
-5	been	be	AUX	VBN	Tense=Past|VerbForm=Part	9	aux	9:aux	_
-6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	will	will	AUX	MD	VerbForm=Fin	5	conj	5:conj:and	_
-8	be	be	AUX	VB	VerbForm=Inf	5	conj	5:conj:and	_
-9	taken	take	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+3	actions	action	NOUN	NNS	Number=Plur	5	nsubj:pass	5.1:nsubj:pass|9:nsubj:pass	_
+4	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	5.1:aux	_
+5	been	be	AUX	VBN	Tense=Past|VerbForm=Part	0	root	5.1:aux	_
+5.1	taken	take	VERB	VBN	Tense=Past|VerbForm=Part	_	_	0:root	CopyOf=9
+6	and	and	CCONJ	CC	_	9	cc	9:cc	_
+7	will	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
+8	be	be	AUX	VB	VerbForm=Inf	9	aux	9:aux	_
+9	taken	take	VERB	VBN	Tense=Past|VerbForm=Part	5	conj	5.1:conj:and	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	provide	provide	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
+11	provide	provide	VERB	VB	VerbForm=Inf	5	advcl	5.1:advcl:to	_
 12	focus	focus	NOUN	NN	Number=Sing	11	obj	11:obj	SpaceAfter=No
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
-14	gain	gain	VERB	VB	VerbForm=Inf	11	conj	9:advcl:to|11:conj:and	_
+14	gain	gain	VERB	VB	VerbForm=Inf	11	conj	5.1:advcl:to|11:conj:and	_
 15	comfort	comfort	NOUN	NN	Number=Sing	14	obj	14:obj	_
 16	over	over	ADP	IN	_	18	case	18:case	_
 17	control	control	NOUN	NN	Number=Sing	18	compound	18:compound	_
 18	levels	level	NOUN	NNS	Number=Plur	15	nmod	15:nmod:over	_
 19	and	and	CCONJ	CC	_	21	cc	21:cc	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
-21	provide	provide	VERB	VB	VerbForm=Inf	11	conj	9:advcl:to|11:conj:and	_
+21	provide	provide	VERB	VB	VerbForm=Inf	11	conj	5.1:advcl:to|11:conj:and	_
 22	assurance	assurance	NOUN	NN	Number=Sing	21	obj	21:obj	_
 23	to	to	ADP	IN	_	25	case	25:case	_
 24	senior	senior	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
@@ -960,7 +961,7 @@
 35	business	business	NOUN	NN	Number=Sing	37	compound	37:compound	_
 36	balance	balance	NOUN	NN	Number=Sing	37	compound	37:compound	_
 37	sheet	sheet	NOUN	NN	Number=Sing	33	conj	29:nmod:of|33:conj:and	SpaceAfter=No
-38	.	.	PUNCT	.	_	5	punct	5:punct	_
+38	.	.	PUNCT	.	_	5	punct	5.1:punct	_
 
 # sent_id = email-enronsent02_01-0043
 # text = The implementation for SAP for the Merchanting business has been delayed and effectively decoupled from the higher risk ( higher benefit ) Brokerage implementation - benefit is to provide sole focus on OBSF for IT Merchanting developers.
