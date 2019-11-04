@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.4 -- 2019-05-15
+Universal Dependencies English Web Treebank v2.5 -- 2019-11-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
 # Summary
@@ -71,15 +71,22 @@ manually checked.
 
 # Deviations from UD
 
-Version 2.4 of the English UD treebank conforms to the UD guidelines in
+Version 2.5 of the English UD treebank conforms to the UD guidelines in
 almost all respects, but there remain the following deviations:
 
  - The UD dependency `flat` is largely only used for person names.
  - Dates are not annotated consistently.
  - The attachment of punctuation tokens is sometimes not according to the
     guidelines.
+ - Some of the UD dependency `goeswith` goes from right-to-left instead of
+    from left-to-right.
 
 # Changelog
+
+**2019-05-15 v2.5**
+  - Fixed some wrong lemmata and POS tags
+  - Fixed miscellaneous syntactic issues  
+  - Fixed CoNLL-U syntax error
 
 **2019-05-15 v2.4**
   - Fixed some wrong lemmata and POS tags
