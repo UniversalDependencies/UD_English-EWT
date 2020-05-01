@@ -84,7 +84,7 @@ almost all respects, but there remain the following deviations:
 **2020-05-15 v2.6**
   - Added paragraph boundaries
   - Fixed some wrong lemmata and POS tags
-  - Fixed directionality of some goeswith dependencies
+  - Fixed directionality of some `goeswith` dependencies
 
 **2019-11-15 v2.5**
   - Fixed miscellaneous syntactic issues  
