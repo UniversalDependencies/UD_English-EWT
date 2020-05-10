@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.5 -- 2019-11-15
+Universal Dependencies English Web Treebank v2.6 -- 2020-05-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
 # Summary
@@ -22,7 +22,7 @@ automatically, with very limited hand-correction.
 
 # License/Copyright
 
-Universal Dependencies English Web Treebank © 2013-2019
+Universal Dependencies English Web Treebank © 2013-2020
 by The Board of Trustees of The Leland Stanford Junior University.
 All Rights Reserved.
 
@@ -71,20 +71,22 @@ manually checked.
 
 # Deviations from UD
 
-Version 2.5 of the English UD treebank conforms to the UD guidelines in
+Version 2.6 of the English UD treebank conforms to the UD guidelines in
 almost all respects, but there remain the following deviations:
 
  - The UD dependency `flat` is largely only used for person names.
  - Dates are not annotated consistently.
  - The attachment of punctuation tokens is sometimes not according to the
     guidelines.
- - Some of the UD dependency `goeswith` goes from right-to-left instead of
-    from left-to-right.
 
 # Changelog
 
-**2019-05-15 v2.5**
+**2020-05-15 v2.6**
+  - Added paragraph boundaries
   - Fixed some wrong lemmata and POS tags
+  - Fixed directionality of some `goeswith` dependencies
+
+**2019-11-15 v2.5**
   - Fixed miscellaneous syntactic issues  
   - Fixed CoNLL-U syntax error
 
@@ -171,6 +173,7 @@ Annotation of the Universal Dependencies English Web Treebank was carried out by
  - Miriam Connor
  - Marie-Catherine de Marneffe
  - Nathan Schneider
+ - Ethan Chi
  - Samuel Bowman
  - Hanzhi Zhu
  - Daniel Galbraith
@@ -216,7 +219,7 @@ UPOS: converted with corrections
 XPOS: manual native
 Features: automatic
 Relations: manual native
-Contributors: Silveira, Natalia; Dozat, Timothy; Manning, Christopher; Schuster, Sebastian; Bauer, John; Connor, Miriam; de Marneffe, Marie-Catherine; Schneider, Nathan; Bowman, Sam; Zhu, Hanzhi; Galbraith, Daniel
+Contributors: Silveira, Natalia; Dozat, Timothy; Manning, Christopher; Schuster, Sebastian; Chi, Ethan; Bauer, John; Connor, Miriam; de Marneffe, Marie-Catherine; Schneider, Nathan; Bowman, Sam; Zhu, Hanzhi; Galbraith, Daniel
 Contributing: here source
 Contact: syntacticdependencies@lists.stanford.edu
 ===============================================================================
