@@ -2,6 +2,7 @@ Universal Dependencies - English Dependency Treebank
 Universal Dependencies English Web Treebank v2.7 -- 2020-11-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
+
 # Summary
 
 A Gold Standard Universal Dependencies Corpus for English,
@@ -15,14 +16,16 @@ The corpus comprises 254,830 words and 16,622 sentences, taken from five genres
 of web media: weblogs, newsgroups, emails, reviews, and Yahoo! answers. See the
 LDC2012T13 documentation for more details on the sources of the sentences. The
 trees were automatically converted into Stanford Dependencies and then
-hand-corrected to Universal Dependencies. All the basic dependency annotations have been single-annotated, a limited portion of them have been double-annotated,
+hand-corrected to Universal Dependencies. All the basic dependency annotations have
+been single-annotated, a limited portion of them have been double-annotated,
 and subsequent correction has been done to improve consistency. Other aspects
-of the treebank, such as Universal POS, features and enhanced dependencies, has mainly been done
-automatically, with very limited hand-correction.
+of the treebank, such as Universal POS, features and enhanced dependencies, has
+mainly been done automatically, with very limited hand-correction.
+
 
 # License/Copyright
 
-Universal Dependencies English Web Treebank © 2013-2020
+Universal Dependencies English Web Treebank annotations © 2013-2020
 by The Board of Trustees of The Leland Stanford Junior University.
 All Rights Reserved.
 
@@ -82,9 +85,8 @@ almost all respects, but there remain the following deviations:
 # Changelog
 
 **2020-11-15 v2.7**
-  - Added multiword tokens where appropriate
+  - Added multiword tokens where appropriate for contracted verb forms
   - Fixed some wrong lemmata and POS tags
-
 
 **2020-05-15 v2.6**
   - Added paragraph boundaries
@@ -103,7 +105,6 @@ almost all respects, but there remain the following deviations:
 
 **2018-11-15 v2.3**
   - Fixed several lemmata
-
 
 **2018-04-15 v2.2**
   - Repository renamed from UD_English to UD_English-EWT
@@ -141,7 +142,6 @@ almost all respects, but there remain the following deviations:
  - Fixed inconsistent analyses of sentences repeated between dev and train sets
  - Fixed miscellaneous syntactic issues in a few sentences
 
-
 **2015-11-15 v1.2**
 
  - Bugfix: removed *_NFP* suffix from some lemmas
@@ -156,6 +156,7 @@ almost all respects, but there remain the following deviations:
  - Corrected UPOS tags of subordinating conjunctions (from `ADP` to `SCONJ`)
  - Corrected UPOS tags of some main verbs (from `AUX` to `VERB`)
 
+
 # Contributing
 
 To help improve the corpus, please alert us to any errors you find in it.
@@ -166,6 +167,7 @@ The best way to do this is to file a github issue at:
 We also welcome pull requests. If you want to make edits, please modify the
 trees in the idividual files in the `not-to-release/sources` directory instead
 of making direct changes to `en_ewt-ud-{dev,test,train}.conllu`.
+
 
 # Acknowledgments
 
