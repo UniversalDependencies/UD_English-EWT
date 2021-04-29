@@ -23,7 +23,7 @@
 15	who	who	PRON	WP	PronType=Rel	16	nsubj	12:ref	_
 16	painted	paint	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	12	acl:relcl	12:acl:relcl	_
 17	_	_	PUNCT	NFP	_	18	punct	18:punct	SpaceAfter=No
-18	St.	St.	PROPN	NNP	Number=Sing	16	obj	16:obj	SpaceAfter=No
+18	St.	St.	PROPN	NNP	Number=Sing	16	obj	16:obj	SpaceAfter=No|CorrectSpaceAfter=Yes
 19	George	George	PROPN	NNP	Number=Sing	18	flat	18:flat	_
 20	Fighting	fight	VERB	VBG	VerbForm=Ger	18	acl	18:acl	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
@@ -104,7 +104,7 @@
 1-2	CLEMENT's	_	_	_	_	_	_	_	_
 1	CLEMENT	CLEMENT	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	_
 2	's	's	PART	POS	_	1	case	1:case	_
-3	St.	St.	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	SpaceAfter=No
+3	St.	St.	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	SpaceAfter=No|CorrectSpaceAfter=Yes
 4	Methodius	Methodius	PROPN	NNP	Number=Sing	3	flat	3:flat	_
 5	dies	die	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 6	:	:	PUNCT	:	_	7	punct	7:punct	_
@@ -249,7 +249,8 @@
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0020
 # text = Thomas Hobbes' birth: April 5, 1588 Good Friday
 1	Thomas	Thomas	PROPN	NNP	Number=Sing	4	nmod:poss	4:nmod:poss	_
-2	Hobbes	Hobbes	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No
+2-3	Hobbes'	_	_	_	_	_	_	_	_
+2	Hobbes	Hobbes	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	'	's	PART	POS	_	1	case	1:case	_
 4	birth	birth	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 5	:	:	PUNCT	:	_	4	punct	4:punct	_
@@ -407,7 +408,8 @@
 1	<<	<<	PUNCT	-LRB-	_	11	punct	11:punct	SpaceAfter=No
 2	In	in	SCONJ	IN	_	8	mark	8:mark	_
 3	"	"	PUNCT	``	_	8	punct	8:punct	SpaceAfter=No
-4	Love	Love	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	SpaceAfter=No
+4-5	Love's	_	_	_	_	_	_	_	_
+4	Love	Love	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	_
 5	's	's	PART	POS	_	4	case	4:case	_
 6-7	Labour's	_	_	_	_	_	_	_	_
 6	Labour	Labour	PROPN	NNP	Number=Sing	8	nsubj:pass	8:nsubj:pass	_
@@ -614,7 +616,8 @@
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	2:det	_
 2	parody	parody	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 3	on	on	ADP	IN	_	6	case	6:case	_
-4	PEREZ	PEREZ	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	SpaceAfter=No
+4-5	PEREZ'	_	_	_	_	_	_	_	_
+4	PEREZ	PEREZ	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	_
 5	'	's	PART	POS	_	4	case	4:case	_
 6	sobriquet	sobriquet	NOUN	NN	Number=Sing	2	nmod	2:nmod:on	_
 7	clearly	clearly	ADV	RB	_	8	advmod	8:advmod	_
@@ -635,10 +638,10 @@
 2	Electronic	Electronic	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 3	Conference	Conference	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
-5	Vol.	vol.	NOUN	NN	Number=Sing	3	list	3:list	_
+5	Vol.	vol.	NOUN	NN	Abbr=Yes|Number=Sing	3	list	3:list	_
 6	6	6	NUM	CD	NumType=Card	5	nummod	5:nummod	SpaceAfter=No
 7	,	,	PUNCT	,	_	3	punct	3:punct	_
-8	No.	no.	NOUN	NN	Number=Sing	3	appos	3:appos	_
+8	No.	no.	NOUN	NN	Abbr=Yes|Number=Sing	3	appos	3:appos	_
 9	0832	0832	NUM	CD	NumType=Card	8	nummod	8:nummod	SpaceAfter=No
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
 11	Monday	Monday	PROPN	NNP	Number=Sing	3	nmod:tmod	3:nmod:tmod	SpaceAfter=No
@@ -685,7 +688,7 @@
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
 11	Italy	Italy	PROPN	NNP	Number=Sing	5	conj	1:appos|5:conj	SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
-13	Jews	Jews	PROPN	NNPS	Number=Plur	5	conj	1:appos|5:conj	_
+13	Jews	Jew	PROPN	NNPS	Number=Plur	5	conj	1:appos|5:conj	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0042
 # newpar id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-p0007
@@ -694,7 +697,7 @@
 2	There	there	PRON	EX	_	3	expl	3:expl	_
 3	were	be	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	no	no	DET	DT	_	5	det	5:det	_
-5	Jews	Jews	PROPN	NNPS	Number=Plur	3	nsubj	3:nsubj	_
+5	Jews	Jew	PROPN	NNPS	Number=Plur	3	nsubj	3:nsubj	_
 6	in	in	ADP	IN	_	7	case	7:case	_
 7	England	England	PROPN	NNP	Number=Sing	3	obl	3:obl:in	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
@@ -733,7 +736,8 @@
 24	been	be	AUX	VBN	Tense=Past|VerbForm=Part	25	cop	25:cop	_
 25	physician	physician	NOUN	NN	Number=Sing	19	acl:relcl	19:acl:relcl	_
 26	to	to	ADP	IN	_	31	case	31:case	_
-27	Essex	Essex	PROPN	NNP	Number=Sing	31	nmod:poss	31:nmod:poss	SpaceAfter=No
+27-28	Essex'	_	_	_	_	_	_	_	_
+27	Essex	Essex	PROPN	NNP	Number=Sing	31	nmod:poss	31:nmod:poss	_
 28	'	's	PART	POS	_	27	case	27:case	_
 29	step	step	NOUN	NN	Number=Sing	31	compound	31:compound	SpaceAfter=No
 30	-	-	PUNCT	HYPH	_	31	punct	31:punct	SpaceAfter=No
@@ -805,7 +809,7 @@
 28	least	least	ADV	RBS	Degree=Sup	27	fixed	27:fixed	_
 29	ethnically	ethnically	ADV	RB	_	31	advmod	31:advmod	SpaceAfter=No
 30	,	,	PUNCT	,	_	31	punct	31:punct	_
-31	Jews	Jews	PROPN	NNPS	Number=Plur	15	advcl	15:advcl:as	SpaceAfter=No
+31	Jews	Jew	PROPN	NNPS	Number=Plur	15	advcl	15:advcl:as	SpaceAfter=No
 32	.	.	PUNCT	.	_	10	punct	10:punct	SpaceAfter=No
 33	>>	>>	PUNCT	-RRB-	_	10	punct	10:punct	_
 
