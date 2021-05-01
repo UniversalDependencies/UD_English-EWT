@@ -85,6 +85,7 @@ almost all respects, but there remain the following deviations:
 **2021-05-15 v2.8**
   - Fixed many wrong lemmata, POS tags, and relations
   - Reanalyzed many dependencies to conform to UD validation
+  - Retagged words in names to limit PROPN to true nouns
   - Fixed certain metadata issues
   - Fixed some typos, added CorrectForms
   - Added missing multiword tokens for clitics/contractions
