@@ -86,7 +86,8 @@ almost all respects, but there remain the following deviations:
   - Fixed many wrong lemmata, POS tags, and relations
   - Reanalyzed many dependencies to conform to UD validation
   - Fixed certain metadata issues
-  - Fixed some typos
+  - Fixed some typos, added CorrectForms
+  - Added Style=Expr feature for expressive spellings
   - Fixed many incorrectly non-projective graphs, reanalyzing as projective
   - Reannotated list items as NUM not X
 
