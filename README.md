@@ -87,6 +87,7 @@ almost all respects, but there remain the following deviations:
   - Reanalyzed many dependencies to conform to UD validation
   - Fixed certain metadata issues
   - Fixed some typos, added CorrectForms
+  - Added missing multiword tokens for clitics/contractions
   - Added Style=Expr feature for expressive spellings
   - Fixed many incorrectly non-projective graphs, reanalyzing as projective
   - Reannotated list items as NUM not X
