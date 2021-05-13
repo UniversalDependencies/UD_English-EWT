@@ -68,7 +68,7 @@
 
 # sent_id = answers-20111106144630AAadR8l_ans-0005
 # text = 1) what thes difference between a modern m16 and Vietnam m16?
-1	1	1	X	LS	_	6	nummod	6:nummod	SpaceAfter=No
+1	1	1	NUM	LS	_	6	nummod	6:nummod	SpaceAfter=No
 2	)	)	PUNCT	-RRB-	_	1	punct	1:punct	_
 3	what	what	PRON	WP	PronType=Int	6	nsubj	6:nsubj	_
 4-5	thes	_	_	_	_	_	_	_	_
@@ -83,15 +83,15 @@
 12	Vietnam	Vietnam	PROPN	NNP	Number=Sing	13	compound	13:compound	_
 13	m	m	NOUN	NN	Number=Sing	10	conj	6:nmod:between|10:conj:and	SpaceAfter=No
 14	16	16	NUM	CD	NumType=Card	13	nummod	13:nummod	SpaceAfter=No
-15	?	?	PUNCT	.	_	1	punct	1:punct	_
+15	?	?	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0006
 # text = 2) did Vietnam m16's have a 3-shot burst function?
-1	2	2	X	LS	_	7	nummod	7:nummod	SpaceAfter=No
+1	2	2	NUM	LS	_	7	nummod	7:nummod	SpaceAfter=No
 2	)	)	PUNCT	-RRB-	_	1	punct	1:punct	_
 3	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	aux	7:aux	_
 4	Vietnam	Vietnam	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-5	m	m	NOUN	NN	Number=Sing	6	compound	6:compound	SpaceAfter=No
+5	m	m	NOUN	NN	Number=Sing	6	compound	6:compound	SpaceAfter=No|CorrectSpaceAfter=Yes
 6	16's	16'	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
 7	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
@@ -100,7 +100,7 @@
 11	shot	shot	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	burst	burst	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	function	function	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
-14	?	?	PUNCT	.	_	1	punct	1:punct	_
+14	?	?	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0007
 # newpar id = answers-20111106144630AAadR8l_ans-p0003
@@ -130,9 +130,9 @@
 23	60s	60	NOUN	NNS	Number=Plur	17	obl	17:obl:in	_
 24	use	use	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	ccomp	6:ccomp	_
 25	an	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
-26	older	older	ADJ	JJR	Degree=Cmp	30	amod	30:amod	_
+26	older	old	ADJ	JJR	Degree=Cmp	30	amod	30:amod	_
 27	(	(	PUNCT	-LRB-	_	30	punct	30:punct	SpaceAfter=No
-28	dirtier	dirtier	ADJ	JJR	Degree=Cmp	30	amod	30:amod	SpaceAfter=No
+28	dirtier	dirty	ADJ	JJR	Degree=Cmp	30	amod	30:amod	SpaceAfter=No
 29	)	)	PUNCT	-RRB-	_	30	punct	30:punct	_
 30	type	type	NOUN	NN	Number=Sing	24	obj	24:obj	_
 31	of	of	ADP	IN	_	32	case	32:case	_
@@ -192,8 +192,9 @@
 15	,	,	PUNCT	,	_	14	punct	14:punct	_
 16	which	which	DET	WDT	PronType=Int	14	ccomp	14:ccomp	_
 17	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
-18	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	cop	16:cop	SpaceAfter=No
-19	n't	not	PART	RB	_	16	advmod	16:advmod	SpaceAfter=No
+18-19	wasn't	_	_	_	_	_	_	_	SpaceAfter=No
+18	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	cop	16:cop	_
+19	n't	not	PART	RB	_	16	advmod	16:advmod	_
 20	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0010
@@ -225,7 +226,7 @@
 10	even	even	ADV	RB	_	14	advmod	14:advmod	_
 11	with	with	ADP	IN	_	14	case	14:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-13	dirtier	dirtier	ADJ	JJR	Degree=Cmp	14	amod	14:amod	_
+13	dirtier	dirty	ADJ	JJR	Degree=Cmp	14	amod	14:amod	_
 14	powder	powder	NOUN	NN	Number=Sing	5	obl	5:obl:with	SpaceAfter=No
 15	)	)	PUNCT	-RRB-	_	14	punct	14:punct	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
@@ -317,14 +318,14 @@
 # sent_id = answers-20111106144630AAadR8l_ans-0014
 # newpar id = answers-20111106144630AAadR8l_ans-p0004
 # text = 1) modern m16 is alright.
-1	1	1	X	LS	_	7	nummod	7:nummod	SpaceAfter=No
+1	1	1	NUM	LS	_	7	nummod	7:nummod	SpaceAfter=No
 2	)	)	PUNCT	-RRB-	_	1	punct	1:punct	_
 3	modern	modern	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	m	m	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	SpaceAfter=No
 5	16	16	NUM	CD	NumType=Card	4	nummod	4:nummod	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 7	alright	alright	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
-8	.	.	PUNCT	.	_	1	punct	1:punct	_
+8	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0015
 # text = Vietnam m16 used to clog up and never work.
@@ -342,18 +343,18 @@
 
 # sent_id = answers-20111106144630AAadR8l_ans-0016
 # text = 2) All M16's are either automatic or semi automatic.
-1	2	2	X	LS	_	8	nummod	8:nummod	SpaceAfter=No
+1	2	2	NUM	LS	_	8	nummod	8:nummod	SpaceAfter=No
 2	)	)	PUNCT	-RRB-	_	1	punct	1:punct	_
 3	All	all	DET	DT	_	5	det	5:det	_
-4	M	m	NOUN	NN	Number=Sing	5	compound	5:compound	SpaceAfter=No
+4	M	m	NOUN	NN	Number=Sing	5	compound	5:compound	SpaceAfter=No|CorrectSpaceAfter=Yes
 5	16's	16'	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj|11:nsubj	_
 6	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 7	either	either	CCONJ	CC	_	8	cc:preconj	8:cc:preconj	_
 8	automatic	automatic	ADJ	JJ	Degree=Pos	0	root	0:root	_
 9	or	or	CCONJ	CC	_	11	cc	11:cc	_
-10	semi	semi	X	AFX	_	11	advmod	11:advmod	_
+10	semi	semi	ADJ	AFX	_	11	amod	11:amod	_
 11	automatic	automatic	ADJ	JJ	Degree=Pos	8	conj	8:conj:or	SpaceAfter=No
-12	.	.	PUNCT	.	_	1	punct	1:punct	_
+12	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = answers-20111106144630AAadR8l_ans-0017
 # text = No one uses 3 burst.
@@ -380,5 +381,5 @@
 2	m	m	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	SpaceAfter=No
 3	16	16	NUM	CD	NumType=Card	2	nummod	2:nummod	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-5	best	best	ADJ	JJS	Degree=Sup	0	root	0:root	_
+5	best	good	ADJ	JJS	Degree=Sup	0	root	0:root	_
 

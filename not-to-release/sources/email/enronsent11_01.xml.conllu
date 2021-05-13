@@ -156,7 +156,7 @@
 # sent_id = email-enronsent11_01-0013
 # text = Had 33,000 miles, Ram 2500 3/4 ton, 4 x 4, 360 Magnum Motor.
 1	Had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
-2	33,000	33,000	NUM	CD	NumType=Card	3	nummod	3:nummod	_
+2	33,000	33000	NUM	CD	NumType=Card	3	nummod	3:nummod	_
 3	miles	mile	NOUN	NNS	Number=Plur	1	obj	1:obj	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	Ram	Ram	PROPN	NNP	Number=Sing	1	parataxis	1:parataxis	_
@@ -215,7 +215,7 @@
 10	converter	converter	NOUN	NN	Number=Sing	5	obl	5:obl:through	_
 11	with	with	ADP	IN	_	13	case	13:case	_
 12	Flow	Flow	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	Masters	Masters	PROPN	NNPS	Number=Plur	10	nmod	10:nmod:with	_
+13	Masters	Master	PROPN	NNPS	Number=Plur	10	nmod	10:nmod:with	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
 15	accent	accent	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:to	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
@@ -259,7 +259,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	gave	give	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	$	$	SYM	$	_	2	obj	2:obj	SpaceAfter=No
-4	16,900	16,900	NUM	CD	NumType=Card	3	nummod	3:nummod	_
+4	16,900	16900	NUM	CD	NumType=Card	3	nummod	3:nummod	_
 5	+	+	CCONJ	CC	_	6	cc	6:cc	_
 6	tax	tax	NOUN	NN	Number=Sing	3	conj	2:obj|3:conj	SpaceAfter=No
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -301,8 +301,9 @@
 7	gray	gray	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	over	over	ADV	RB	_	4	advmod	4:advmod	_
 9	at	at	ADP	IN	_	10	case	10:case	_
-10	Jerry	Jerry	PROPN	NNP	Number=Sing	8	obl	8:obl:at	SpaceAfter=No
-11	's	's	PART	POS	_	10	case	10:case	SpaceAfter=No
+10-11	Jerry's	_	_	_	_	_	_	_	SpaceAfter=No
+10	Jerry	Jerry	PROPN	NNP	Number=Sing	8	obl	8:obl:at	_
+11	's	's	PART	POS	_	10	case	10:case	_
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent11_01-0023
@@ -331,11 +332,11 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	Yep	yep	INTJ	UH	_	5	discourse	5:discourse	SpaceAfter=No
-4	,	,	PUNCT	,	_	2	punct	2:punct	_
+4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	_
 6	that	that	DET	DT	Number=Sing|PronType=Dem	7	det	7:det	_
 7	truck	truck	NOUN	NN	Number=Sing	5	obj	5:obj	_
-8	longer	longer	ADV	RBR	Degree=Cmp	5	advmod	5:advmod	_
+8	longer	long	ADV	RBR	Degree=Cmp	5	advmod	5:advmod	_
 9	than	than	SCONJ	IN	_	12	mark	12:mark	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 11	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
@@ -403,7 +404,7 @@
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 4	back	back	ADV	RB	_	0	root	0:root	_
 5	up	up	ADP	IN	_	7	case	7:case	_
-6	over	over	ADP	IN	_	7	advmod	7:advmod	_
+6	over	over	ADV	IN	_	7	advmod	7:advmod	_
 7	$	$	SYM	$	_	4	obl	4:obl:up	SpaceAfter=No
 8	33	33	NUM	CD	NumType=Card	7	nummod	7:nummod	SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -757,8 +758,8 @@
 # text = You should e mail her sometimes.
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 2	should	should	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	e	e	X	GW	_	0	root	0:root	_
-4	mail	mail	VERB	VB	VerbForm=Inf	3	goeswith	3:goeswith	_
+3	e	e	VERB	GW	_	0	root	0:root	_
+4	mail	mail	X	VB	VerbForm=Inf	3	goeswith	3:goeswith	_
 5	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 6	sometimes	sometimes	ADV	RB	_	3	advmod	3:advmod	SpaceAfter=No
 7	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -891,8 +892,8 @@
 # text = I am half way through the first and you can borrow it when I am through.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
-3	half	half	X	GW	_	7	obl:npmod	7:obl:npmod	_
-4	way	way	ADV	RB	_	3	goeswith	3:goeswith	_
+3	half	half	ADV	GW	_	7	obl:npmod	7:obl:npmod	_
+4	way	way	X	RB	_	3	goeswith	3:goeswith	_
 5	through	through	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	0	root	0:root	_
@@ -981,7 +982,7 @@
 9	Blvd	Blvd	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	B	B	PROPN	NNP	Number=Sing	1	list	1:list	_
 11	3611	3611	NUM	CD	NumType=Card	10	nummod	10:nummod	SpaceAfter=No
-12	,	,	PUNCT	,	_	1	punct	1:punct	_
+12	,	,	PUNCT	,	_	10	punct	10:punct	_
 13	Investment	investment	NOUN	NN	Number=Sing	14	compound	14:compound	_
 14	Recovery	recovery	NOUN	NN	Number=Sing	1	list	1:list	_
 15	Freeport	Freeport	PROPN	NNP	Number=Sing	10	appos	10:appos	SpaceAfter=No
@@ -1047,8 +1048,8 @@
 # sent_id = email-enronsent11_01-0075
 # newpar id = email-enronsent11_01-p0013
 # text = 1. I found the title to the 4 wheeler and I was going to change it over to you name.
-1	1	1	X	LS	_	2	nummod	2:nummod	SpaceAfter=No
-2	.	.	PUNCT	.	_	4	punct	4:punct	_
+1	1	1	NUM	LS	_	4	nummod	4:nummod	SpaceAfter=No
+2	.	.	PUNCT	.	_	1	punct	1:punct	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 4	found	find	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
@@ -1108,8 +1109,8 @@
 
 # sent_id = email-enronsent11_01-0078
 # text = 2. I'm getting ready to divy up the Dow stock.
-1	2	2	X	LS	_	2	nummod	2:nummod	SpaceAfter=No
-2	.	.	PUNCT	.	_	6	punct	6:punct	_
+1	2	2	NUM	LS	_	5	nummod	5:nummod	SpaceAfter=No
+2	.	.	PUNCT	.	_	1	punct	1:punct	_
 3-4	I'm	_	_	_	_	_	_	_	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|6:nsubj:xsubj|8:nsubj:xsubj	_
 4	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
@@ -1166,8 +1167,8 @@
 5	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	_
 6	cashout	cashout	NOUN	NN	Number=Sing	5	obj	5:obj	SpaceAfter=No
 7	,	,	PUNCT	,	_	5	punct	5:punct	_
-8	at	at	ADV	RB	_	9	case	9:case	_
-9	most	most	ADV	RBS	_	11	nmod	11:nmod:at	_
+8	at	at	ADP	IN	_	9	case	9:case	_
+9	most	most	ADJ	JJS	Degree=Sup	11	nmod	11:nmod:at	_
 10	3	3	NUM	CD	NumType=Card	11	nummod	11:nummod	_
 11	times	time	NOUN	NNS	Number=Plur	5	obl:tmod	5:obl:tmod	SpaceAfter=No
 12	,	,	PUNCT	,	_	5	punct	5:punct	_
@@ -1272,7 +1273,7 @@
 # sent_id = email-enronsent11_01-0088
 # text = Oglethorpe over paid their invoice every month.
 1	Oglethorpe	Oglethorpe	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
-2	over	over	X	AFX	_	3	advmod	3:advmod	_
+2	over	over	ADV	AFX	_	3	advmod	3:advmod	_
 3	paid	pay	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	invoice	invoice	NOUN	NN	Number=Sing	3	obj	3:obj	_

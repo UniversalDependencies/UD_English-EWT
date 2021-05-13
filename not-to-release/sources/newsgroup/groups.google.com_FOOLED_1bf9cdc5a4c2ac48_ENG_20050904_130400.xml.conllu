@@ -7,8 +7,8 @@
 3	HOAX	hoax	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 4	:	:	PUNCT	:	_	3	punct	3:punct	_
 5	CHURCH	church	NOUN	NN	Number=Sing	3	parataxis	3:parataxis	_
-6	=	=	PUNCT	,	_	3	punct	3:punct	_
-7	TECHNOLOGY	technology	NOUN	NN	Number=Sing	6	dep	6:dep	_
+6	=	=	PUNCT	,	_	5	punct	5:punct	_
+7	TECHNOLOGY	technology	NOUN	NN	Number=Sing	3	dep	3:dep	_
 8	&	&	CCONJ	CC	_	9	cc	9:cc	_
 9	GOVERNMENT	government	NOUN	NN	Number=Sing	7	conj	6:dep|7:conj	_
 10	-	-	PUNCT	,	_	3	punct	3:punct	_
@@ -55,9 +55,9 @@
 # text = Category: Science > Astronomy
 1	Category	category	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 2	:	:	PUNCT	:	_	1	punct	1:punct	_
-3	Science	science	NOUN	NN	Number=Sing	1	appos	1:appos	_
-4	>	>	PUNCT	,	_	3	punct	3:punct	_
-5	Astronomy	astronomy	NOUN	NN	Number=Sing	4	dep	4:dep	_
+3	Science	science	NOUN	NN	Number=Sing	5	compound	5:compound	_
+4	>	>	SYM	,	_	5	case	5:case	_
+5	Astronomy	astronomy	NOUN	NN	Number=Sing	1	appos	1:appos	_
 
 # sent_id = newsgroup-groups.google.com_FOOLED_1bf9cdc5a4c2ac48_ENG_20050904_130400-0007
 # text = Asked by: yheggy-ga
@@ -229,7 +229,7 @@
 # sent_id = newsgroup-groups.google.com_FOOLED_1bf9cdc5a4c2ac48_ENG_20050904_130400-0022
 # text = "National Aeronautics and Space Administration (NASA): is funded at $16.379 billion, an increase of $200 million over the FY04 enacted level, and a reduction of $665 million from the budget request.
 1	"	"	PUNCT	``	_	12	punct	12:punct	SpaceAfter=No
-2	National	National	PROPN	NNP	Number=Sing	6	compound	6:compound	_
+2	National	National	ADJ	NNP	Degree=Pos	6	amod	6:amod	_
 3	Aeronautics	Aeronautics	PROPN	NNPS	Number=Plur	6	compound	6:compound	_
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
 5	Space	Space	PROPN	NNP	Number=Sing	3	conj	3:conj:and|6:compound	_
@@ -326,7 +326,7 @@
 # text = -- The International Space Station is funded at $1.6 billion.
 1	--	--	PUNCT	NFP	_	7	punct	7:punct	_
 2	The	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-3	International	International	PROPN	NNP	Number=Sing	5	compound	5:compound	_
+3	International	International	ADJ	NNP	Degree=Pos	5	amod	5:amod	_
 4	Space	Space	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 5	Station	Station	PROPN	NNP	Number=Sing	7	nsubj:pass	7:nsubj:pass	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux:pass	7:aux:pass	_
@@ -358,8 +358,8 @@
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 18	ISS	ISS	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	_
 19	for	for	ADP	IN	_	22	case	22:case	_
-20	at	at	ADV	RB	_	21	case	21:case	_
-21	least	least	ADV	RBS	Degree=Sup	22	nmod	22:nmod:at	_
+20	at	at	ADP	IN	_	21	case	21:case	_
+21	least	least	ADJ	JJS	Degree=Sup	22	nmod	22:nmod:at	_
 22	half	half	NOUN	NN	Number=Sing	15	nmod	15:nmod:for	_
 23	of	of	ADP	IN	_	24	case	24:case	_
 24	FY05	fy05	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	SpaceAfter=No
@@ -421,7 +421,7 @@
 6	provided	provide	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 7	for	for	ADP	IN	_	9	case	9:case	_
 8	Centennial	Centennial	PROPN	NNP	Number=Sing	9	compound	9:compound	_
-9	Challenges	Challenges	PROPN	NNPS	Number=Plur	6	obl	6:obl:for	SpaceAfter=No
+9	Challenges	Challenge	PROPN	NNPS	Number=Plur	6	obl	6:obl:for	SpaceAfter=No
 10	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_FOOLED_1bf9cdc5a4c2ac48_ENG_20050904_130400-0031
@@ -796,7 +796,7 @@
 
 # sent_id = newsgroup-groups.google.com_FOOLED_1bf9cdc5a4c2ac48_ENG_20050904_130400-0051
 # text = Best, Steve.
-1	Best	best	ADJ	JJS	Degree=Sup	0	root	0:root	SpaceAfter=No
+1	Best	good	ADJ	JJS	Degree=Sup	0	root	0:root	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	Steve	Steve	PROPN	NNP	Number=Sing	1	discourse	1:discourse	SpaceAfter=No
 4	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -826,7 +826,7 @@
 
 # sent_id = newsgroup-groups.google.com_FOOLED_1bf9cdc5a4c2ac48_ENG_20050904_130400-0053
 # text = i believe that NASA is a HUGE waste of tax payers' money, but there are so many huge wastes of tax payer monies, that i find it best not to think about it.
-1	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	believe	believe	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	that	that	SCONJ	IN	_	8	mark	8:mark	_
 4	NASA	NASA	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
@@ -836,7 +836,8 @@
 8	waste	waste	NOUN	NN	Number=Sing	2	ccomp	2:ccomp	_
 9	of	of	ADP	IN	_	13	case	13:case	_
 10	tax	tax	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	payers	payer	NOUN	NNS	Number=Plur	13	nmod:poss	13:nmod:poss	SpaceAfter=No
+11-12	payers'	_	_	_	_	_	_	_	_
+11	payers	payer	NOUN	NNS	Number=Plur	13	nmod:poss	13:nmod:poss	_
 12	'	's	PART	POS	_	11	case	11:case	_
 13	money	money	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	SpaceAfter=No
 14	,	,	PUNCT	,	_	17	punct	17:punct	_
@@ -853,10 +854,10 @@
 25	monies	money	NOUN	NNS	Number=Plur	21	nmod	21:nmod:of	SpaceAfter=No
 26	,	,	PUNCT	,	_	21	punct	21:punct	_
 27	that	that	SCONJ	IN	_	29	mark	29:mark	_
-28	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	29	nsubj	29:nsubj|31:nsubj:xsubj	_
+28	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	29	nsubj	29:nsubj|31:nsubj:xsubj	_
 29	find	find	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl:that	_
 30	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	34	expl	34:expl	_
-31	best	best	ADJ	JJS	Degree=Sup	29	xcomp	29:xcomp	_
+31	best	good	ADJ	JJS	Degree=Sup	29	xcomp	29:xcomp	_
 32	not	not	ADV	RB	_	34	advmod	34:advmod	_
 33	to	to	PART	TO	_	34	mark	34:mark	_
 34	think	think	VERB	VB	VerbForm=Inf	29	ccomp	29:ccomp	_
@@ -866,23 +867,23 @@
 
 # sent_id = newsgroup-groups.google.com_FOOLED_1bf9cdc5a4c2ac48_ENG_20050904_130400-0054
 # text = i also think the National Endowment for the Arts is a waste, but i guess i would rather see my money go to the NEA than NASA.
-1	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+1	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	also	also	ADV	RB	_	3	advmod	3:advmod	_
 3	think	think	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-5	National	National	PROPN	NNP	Number=Sing	6	compound	6:compound	_
+5	National	National	ADJ	NNP	Degree=Pos	6	amod	6:amod	_
 6	Endowment	Endowment	PROPN	NNP	Number=Sing	12	nsubj	12:nsubj	_
 7	for	for	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	Arts	Arts	PROPN	NNPS	Number=Plur	6	nmod	6:nmod:for	_
+9	Arts	Art	PROPN	NNPS	Number=Plur	6	nmod	6:nmod:for	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	waste	waste	NOUN	NN	Number=Sing	3	ccomp	3:ccomp	SpaceAfter=No
 13	,	,	PUNCT	,	_	16	punct	16:punct	_
 14	but	but	CCONJ	CC	_	16	cc	16:cc	_
-15	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
+15	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
 16	guess	guess	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:but	_
-17	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
+17	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
 18	would	would	AUX	MD	VerbForm=Fin	20	aux	20:aux	_
 19	rather	rather	ADV	RB	_	20	advmod	20:advmod	_
 20	see	see	VERB	VB	VerbForm=Inf	16	ccomp	16:ccomp	_
@@ -898,8 +899,8 @@
 
 # sent_id = newsgroup-groups.google.com_FOOLED_1bf9cdc5a4c2ac48_ENG_20050904_130400-0055
 # text = of course, in a perfect world, tax payers' money would go toward some sort of national healthcare program, and housing for the homeless, but this is far from a perfect world.
-1	of	of	ADV	RB	_	14	discourse	14:discourse	_
-2	course	course	ADV	RB	_	1	fixed	1:fixed	SpaceAfter=No
+1	of	of	ADP	IN	_	14	discourse	14:discourse	_
+2	course	course	NOUN	NN	Number=Sing	1	fixed	1:fixed	SpaceAfter=No
 3	,	,	PUNCT	,	_	14	punct	14:punct	_
 4	in	in	ADP	IN	_	7	case	7:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
@@ -907,7 +908,8 @@
 7	world	world	NOUN	NN	Number=Sing	14	obl	14:obl:in	SpaceAfter=No
 8	,	,	PUNCT	,	_	14	punct	14:punct	_
 9	tax	tax	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	payers	payer	NOUN	NNS	Number=Plur	12	nmod:poss	12:nmod:poss	SpaceAfter=No
+10-11	payers'	_	_	_	_	_	_	_	_
+10	payers	payer	NOUN	NNS	Number=Plur	12	nmod:poss	12:nmod:poss	_
 11	'	's	PART	POS	_	10	case	10:case	_
 12	money	money	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	_
 13	would	would	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
@@ -977,7 +979,7 @@
 
 # sent_id = newsgroup-groups.google.com_FOOLED_1bf9cdc5a4c2ac48_ENG_20050904_130400-0058
 # text = i find that extremely hard to believe.
-1	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	find	find	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	that	that	PRON	DT	Number=Sing|PronType=Dem	2	obj	2:obj|5:nsubj:xsubj	_
 4	extremely	extremely	ADV	RB	_	5	advmod	5:advmod	_
@@ -988,7 +990,7 @@
 
 # sent_id = newsgroup-groups.google.com_FOOLED_1bf9cdc5a4c2ac48_ENG_20050904_130400-0059
 # text = i think it could have been done in a much more cost efficient way, right here on bad-old-planet-earth.
-1	i	i	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+1	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	nsubj:pass	7:nsubj:pass	_
 4	could	could	AUX	MD	VerbForm=Fin	7	aux	7:aux	_

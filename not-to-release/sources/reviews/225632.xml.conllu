@@ -10,7 +10,7 @@
 6	school	school	NOUN	NN	Number=Sing	0	root	0:root	_
 7	--	--	PUNCT	,	_	6	punct	6:punct	_
 8	c	class	NOUN	NN	Abbr=Yes|Number=Sing	6	obl:npmod	6:obl:npmod	SpaceAfter=No
-9	/	/	SYM	SYM	_	8	punct	8:punct	SpaceAfter=No
+9	/	/	PUNCT	SYM	_	8	punct	8:punct	SpaceAfter=No
 10	o	of	ADP	IN	Abbr=Yes	11	case	11:case	_
 11	1998	1998	NUM	CD	NumType=Card	8	nmod	8:nmod:of	_
 
@@ -23,7 +23,7 @@
 4	time	time	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	at	at	ADP	IN	_	8	case	8:case	_
 6	Franklin	Franklin	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-7	High	High	PROPN	NNP	Number=Sing	8	compound	8:compound	_
+7	High	High	ADJ	NNP	Degree=Pos	8	amod	8:amod	_
 8	School	School	PROPN	NNP	Number=Sing	4	nmod	4:nmod:at	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -37,7 +37,7 @@
 6	at	at	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	time	time	NOUN	NN	Number=Sing	2	obl	2:obl:at	_
-9	--	--	PUNCT	,	_	2	punct	2:punct	_
+9	--	--	PUNCT	,	_	12	punct	12:punct	_
 10	decent	decent	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	science	science	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	labs	lab	NOUN	NNS	Number=Plur	5	appos	5:appos	SpaceAfter=No
@@ -75,8 +75,8 @@
 # text = Now, of course, there's a new building, with presumably better facilities.
 1	Now	now	ADV	RB	_	7	advmod	7:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	7	punct	7:punct	_
-3	of	of	ADV	RB	_	7	advmod	7:advmod	_
-4	course	course	ADV	RB	_	3	fixed	3:fixed	SpaceAfter=No
+3	of	of	ADP	IN	_	7	advmod	7:advmod	_
+4	course	course	NOUN	NN	Number=Sing	3	fixed	3:fixed	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6-7	there's	_	_	_	_	_	_	_	_
 6	there	there	PRON	EX	_	7	expl	7:expl	_
@@ -87,7 +87,7 @@
 11	,	,	PUNCT	,	_	10	punct	10:punct	_
 12	with	with	ADP	IN	_	15	case	15:case	_
 13	presumably	presumably	ADV	RB	_	14	advmod	14:advmod	_
-14	better	better	ADJ	JJR	Degree=Cmp	15	amod	15:amod	_
+14	better	good	ADJ	JJR	Degree=Cmp	15	amod	15:amod	_
 15	facilities	facility	NOUN	NNS	Number=Plur	10	nmod	10:nmod:with	SpaceAfter=No
 16	.	.	PUNCT	.	_	7	punct	7:punct	_
 
@@ -145,7 +145,7 @@
 7	to	to	ADP	IN	_	8	case	8:case	_
 8	Dartmouth	Dartmouth	PROPN	NNP	Number=Sing	6	obl	6:obl:to	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
-10	U.	U.	PROPN	NNP	Number=Sing	11	compound	11:compound	SpaceAfter=No
+10	U.	U.	PROPN	NNP	Number=Sing	11	compound	11:compound	SpaceAfter=No|CorrectSpaceAfter=Yes
 11	Penn	Penn	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
 13	Duke	Duke	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	SpaceAfter=No

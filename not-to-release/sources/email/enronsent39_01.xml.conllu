@@ -61,7 +61,7 @@
 21	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	cop	23:cop	_
 22	on	on	ADP	IN	_	23	case	23:case	_
 23	point	point	NOUN	NN	Number=Sing	19	ccomp	19:ccomp	SpaceAfter=No
-24	.	.	PUNCT	.	_	5	punct	5:punct	_
+24	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent39_01-0005
 # newpar id = email-enronsent39_01-p0003
@@ -106,7 +106,7 @@
 18	,	,	PUNCT	,	_	12	punct	12:punct	_
 19	at	at	ADP	IN	_	23	case	23:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
-21	Grand	Grand	PROPN	NNP	Number=Sing	23	compound	23:compound	_
+21	Grand	Grand	ADJ	NNP	Degree=Pos	23	amod	23:amod	_
 22	Hyatt	Hyatt	PROPN	NNP	Number=Sing	23	compound	23:compound	_
 23	Hotel	Hotel	PROPN	NNP	Number=Sing	12	obl	12:obl:at	_
 24	in	in	ADP	IN	_	25	case	25:case	_
@@ -235,7 +235,7 @@
 16	meetings	meeting	NOUN	NNS	Number=Plur	13	nmod	13:nmod:as	SpaceAfter=No
 17	,	,	PUNCT	,	_	24	punct	24:punct	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
-19	Grand	Grand	PROPN	NNP	Number=Sing	20	compound	20:compound	_
+19	Grand	Grand	ADJ	NNP	Degree=Pos	20	amod	20:amod	_
 20	Hyatt	Hyatt	PROPN	NNP	Number=Sing	24	nsubj:pass	24:nsubj:pass	_
 21	unfortunately	unfortunately	ADV	RB	_	24	advmod	24:advmod	_
 22	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	aux:pass	24:aux:pass	_
@@ -347,8 +347,8 @@
 7	require	require	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:or|14:advcl:if	_
 8	any	any	DET	DT	_	9	det	9:det	_
 9	assistance	assistance	NOUN	NN	Number=Sing	7	obj	7:obj	_
-10	at	at	ADV	RB	_	11	case	11:case	_
-11	all	all	ADV	RB	_	9	nmod	9:nmod:at	SpaceAfter=No
+10	at	at	ADP	IN	_	11	case	11:case	_
+11	all	all	DET	DT	_	9	nmod	9:nmod:at	SpaceAfter=No
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
 13	please	please	INTJ	UH	_	14	discourse	14:discourse	_
 14	contact	contact	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
@@ -386,7 +386,7 @@
 # sent_id = email-enronsent39_01-0021
 # newpar id = email-enronsent39_01-p0007
 # text = Grand Hyatt Hotel 1000 H Street NW Washington DC 20001 Phone: 202.582.1234 or 1.800.233.1234 Fax: 202.637.4781 Website: http://washington.hyatt.com/wasgh/index.html
-1	Grand	Grand	PROPN	NNP	Number=Sing	3	compound	3:compound	_
+1	Grand	Grand	ADJ	NNP	Degree=Pos	3	amod	3:amod	_
 2	Hyatt	Hyatt	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 3	Hotel	Hotel	PROPN	NNP	Number=Sing	0	root	0:root	_
 4	1000	1000	NUM	CD	NumType=Card	7	nummod	7:nummod	_
@@ -489,8 +489,8 @@
 4	invoices	invoice	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 5	from	from	ADP	IN	_	8	case	8:case	_
 6	Ace	Ace	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-7	Federal	Federal	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	Reporters	Reporters	PROPN	NNPS	Number=Plur	3	obl	3:obl:from	_
+7	Federal	Federal	ADJ	NNP	Degree=Pos	8	amod	8:amod	_
+8	Reporters	Reporter	PROPN	NNPS	Number=Plur	3	obl	3:obl:from	_
 9	for	for	ADP	IN	_	10	case	10:case	_
 10	transcripts	transcript	NOUN	NNS	Number=Plur	4	nmod	4:nmod:for	_
 11	of	of	ADP	IN	_	16	case	16:case	_
@@ -512,12 +512,13 @@
 7	charged	charge	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	ccomp	3:ccomp	_
 8	to	to	ADP	IN	_	13	case	13:case	_
 9	Jim	Jim	PROPN	NNP	Number=Sing	13	nmod:poss	13:nmod:poss	_
-10	Steffes	Steffes	PROPN	NNP	Number=Sing	9	flat	9:flat	SpaceAfter=No
+10-11	Steffes'	_	_	_	_	_	_	_	_
+10	Steffes	Steffes	PROPN	NNP	Number=Sing	9	flat	9:flat	_
 11	'	's	PART	POS	_	9	case	9:case	_
 12	cost	cost	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	center	center	NOUN	NN	Number=Sing	7	obl	7:obl:to	SpaceAfter=No
 14	,	,	PUNCT	,	_	13	punct	13:punct	_
-15	etc	etc	X	FW	_	13	advmod	13:advmod	SpaceAfter=No
+15	etc	etc	X	FW	_	13	conj	13:conj	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent39_01-0032
@@ -576,9 +577,9 @@
 17	DC	DC	PROPN	NNP	Number=Sing	15	appos	15:appos	_
 18	20006	20006	NUM	CD	NumType=Card	12	appos	12:appos	_
 19	202-466-9142	202-466-9142	NUM	CD	NumType=Card	1	list	1:list	_
-20	202-828-3372	202-828-3372	NUM	CD	NumType=Card	22	appos	22:appos	_
+20	202-828-3372	202-828-3372	NUM	CD	NumType=Card	1	list	1:list	_
 21	(	(	PUNCT	-LRB-	_	22	punct	22:punct	SpaceAfter=No
-22	fax	fax	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
+22	fax	fax	NOUN	NN	Number=Sing	20	appos	20:appos	SpaceAfter=No
 23	)	)	PUNCT	-RRB-	_	22	punct	22:punct	_
 24	email	email	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 25	:	:	PUNCT	:	_	24	punct	24:punct	_
@@ -920,7 +921,7 @@
 23	board	board	NOUN	NN	Number=Sing	24	compound	24:compound	_
 24	meetings	meeting	NOUN	NNS	Number=Plur	15	conj	11:obl:in|15:conj:and	SpaceAfter=No
 25	,	,	PUNCT	,	_	15	punct	15:punct	_
-26	etc.	etc.	X	FW	_	15	advmod	15:advmod	_
+26	etc.	etc.	X	FW	_	15	conj	15:conj	_
 27	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	28	aux:pass	28:aux:pass	_
 28	ignored	ignore	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No
 29	.	.	PUNCT	.	_	28	punct	28:punct	_
@@ -983,7 +984,7 @@
 3	though	though	SCONJ	IN	_	5	mark	5:mark	_
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 5	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	advcl	16:advcl:though	_
-6	bigger	bigger	ADJ	JJR	Degree=Cmp	7	amod	7:amod	_
+6	bigger	big	ADJ	JJR	Degree=Cmp	7	amod	7:amod	_
 7	things	thing	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	do	do	VERB	VB	VerbForm=Inf	7	acl	7:acl:to	_
@@ -1569,7 +1570,7 @@
 54	linked	link	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	50	acl:relcl	50:acl:relcl	_
 55	to	to	ADP	IN	_	59	case	59:case	_
 56	the	the	DET	DT	Definite=Def|PronType=Art	59	det	59:det	_
-57	Fundamentals	Fundamentals	PROPN	NNPS	Number=Plur	59	compound	59:compound	_
+57	Fundamentals	Fundamental	PROPN	NNPS	Number=Plur	59	compound	59:compound	_
 58	intranet	intranet	NOUN	NN	Number=Sing	59	compound	59:compound	_
 59	site	site	NOUN	NN	Number=Sing	54	obl	54:obl:to	_
 60	used	use	VERB	VBN	Tense=Past|VerbForm=Part	59	acl	59:acl	_

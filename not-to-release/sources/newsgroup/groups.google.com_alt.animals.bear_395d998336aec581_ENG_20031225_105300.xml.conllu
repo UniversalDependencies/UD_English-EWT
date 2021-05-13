@@ -79,11 +79,11 @@
 26	south	south	ADV	RB	_	17	advmod	17:advmod	_
 27	of	of	ADP	IN	_	30	case	30:case	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
-29	Arctic	Arctic	PROPN	NNP	Number=Sing	30	compound	30:compound	_
+29	Arctic	Arctic	ADJ	NNP	Degree=Pos	30	amod	30:amod	_
 30	Circle	Circle	PROPN	NNP	Number=Sing	25	obl	25:obl:of	SpaceAfter=No
 31	,	,	PUNCT	,	_	17	punct	17:punct	_
 32	to	to	PART	TO	_	33	mark	33:mark	_
-33	save	save	VERB	VB	VerbForm=Inf	17	advmod	17:advmod	_
+33	save	save	VERB	VB	VerbForm=Inf	17	advcl	17:advcl	_
 34	two	two	NUM	CD	NumType=Card	35	nummod	35:nummod	_
 35	friends	friend	NOUN	NNS	Number=Plur	33	obj	33:obj|39:nsubj:pass	_
 36	who	who	PRON	WP	PronType=Rel	39	nsubj:pass	35:ref	_
@@ -147,8 +147,8 @@
 7	learned	learn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 8	there	there	PRON	EX	_	9	expl	9:expl	_
 9	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	ccomp	7:ccomp	_
-10	at	at	ADV	RB	_	11	case	11:case	_
-11	least	least	ADV	RBS	Degree=Sup	12	nmod	12:nmod:at	_
+10	at	at	ADP	IN	_	11	case	11:case	_
+11	least	least	ADJ	JJS	Degree=Sup	12	nmod	12:nmod:at	_
 12	one	one	NUM	CD	NumType=Card	14	nummod	14:nummod	_
 13	polar	polar	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	bear	bear	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
@@ -558,7 +558,7 @@
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
 11	paddled	paddle	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	conj	6:conj:and	_
 12	eight	eight	NUM	CD	NumType=Card	13	nummod	13:nummod	_
-13	kilometres	kilometre	NOUN	NNS	Number=Plur	11	advmod	11:advmod	_
+13	kilometres	kilometre	NOUN	NNS	Number=Plur	11	obl:npmod	11:obl:npmod	_
 14	along	along	ADP	IN	_	17	case	17:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	Soper	Soper	PROPN	NNP	Number=Sing	17	compound	17:compound	_
@@ -572,7 +572,7 @@
 3	travelled	travel	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	another	another	DET	DT	_	6	det	6:det	_
 5	three	three	NUM	CD	NumType=Card	6	nummod	6:nummod	_
-6	kilometres	kilometre	NOUN	NNS	Number=Plur	3	advmod	3:advmod	_
+6	kilometres	kilometre	NOUN	NNS	Number=Plur	3	obl:npmod	3:obl:npmod	_
 7	by	by	ADP	IN	_	8	case	8:case	_
 8	foot	foot	NOUN	NN	Number=Sing	3	obl	3:obl:by	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
@@ -580,7 +580,7 @@
 11	help	help	NOUN	NN	Number=Sing	10	obj	10:obj	_
 12	in	in	ADP	IN	_	15	case	15:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
-14	nearest	nearest	ADJ	JJS	Degree=Sup	15	amod	15:amod	_
+14	nearest	near	ADJ	JJS	Degree=Sup	15	amod	15:amod	_
 15	settlement	settlement	NOUN	NN	Number=Sing	10	obl	10:obl:in	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -671,7 +671,7 @@
 # text = The other Canadian recipient of the medal was Ronald Joseph Crawford, 42, of Hamilton, who was killed Aug. 4, 2002, while trying to defend a Hamilton sandwich shop owner from a robber wielding a knife.
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 2	other	other	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-3	Canadian	canadian	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
+3	Canadian	Canadian	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	recipient	recipient	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
@@ -766,7 +766,7 @@
 4	with	with	ADP	IN	_	11	case	11:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 6	$	$	SYM	$	_	7	compound	7:compound	SpaceAfter=No
-7	3,500	3,500	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+7	3,500	3500	NUM	CD	NumType=Card	9	nummod	9:nummod	_
 8	(	(	PUNCT	-LRB-	_	9	punct	9:punct	SpaceAfter=No
 9	U.S.	U.S.	PROPN	NNP	Number=Sing	11	compound	11:compound	SpaceAfter=No
 10	)	)	PUNCT	-RRB-	_	9	punct	9:punct	_

@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.7 -- 2020-11-15
+Universal Dependencies English Web Treebank v2.8 -- 2021-05-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
 
@@ -74,15 +74,24 @@ manually checked.
 
 # Deviations from UD
 
-Version 2.7 of the English UD treebank conforms to the UD guidelines in
+Version 2.8 of the English UD treebank conforms to the UD guidelines in
 almost all respects, but there remain the following deviations:
 
  - The UD dependency `flat` is largely only used for person names.
  - Dates are not annotated consistently.
- - The attachment of punctuation tokens is sometimes not according to the
-    guidelines.
 
 # Changelog
+
+**2021-05-15 v2.8**
+  - Fixed many wrong lemmata, POS tags, and relations
+  - Reanalyzed many dependencies to conform to UD validation
+  - Retagged words in names to limit PROPN to true nouns
+  - Fixed certain metadata issues
+  - Fixed some typos, added CorrectForms
+  - Added missing multiword tokens for clitics/contractions
+  - Added Style=Expr feature for expressive spellings
+  - Fixed many incorrectly non-projective graphs, reanalyzing as projective
+  - Reannotated list items as NUM not X
 
 **2020-11-15 v2.7**
   - Added multiword tokens where appropriate for contracted verb forms

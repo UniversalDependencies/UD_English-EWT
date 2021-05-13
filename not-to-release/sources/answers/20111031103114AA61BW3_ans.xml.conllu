@@ -44,8 +44,8 @@
 6	"	"	PUNCT	``	_	8	punct	8:punct	SpaceAfter=No
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 8	love	love	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	21	acl	21:acl	_
-9	American	american	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	Food	Food	PROPN	NNP	Number=Sing	8	obj	8:obj	SpaceAfter=No
+9	American	American	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
+10	Food	food	PROPN	NNP	Number=Sing	8	obj	8:obj	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	good	good	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	drinks	drink	NOUN	NNS	Number=Plur	10	conj	8:obj|10:conj	_
@@ -79,8 +79,8 @@
 12	be	be	AUX	VB	VerbForm=Inf	14	cop	14:cop	_
 13	awesome	awesome	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	burgers	burger	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	SpaceAfter=No
-15	/	/	PUNCT	,	_	17	cc	17:cc	SpaceAfter=No
-16	american	american	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
+15	/	/	SYM	,	_	17	cc	17:cc	SpaceAfter=No
+16	american	American	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	food	food	NOUN	NN	Number=Sing	14	conj	10:nsubj|14:conj:and	SpaceAfter=No
 18	,	,	PUNCT	,	_	19	punct	19:punct	_
 19	atmosphere	atmosphere	NOUN	NN	Number=Sing	14	conj	10:nsubj|14:conj:and	_
@@ -88,7 +88,7 @@
 21	preferably	preferably	ADV	RB	_	29	advmod	29:advmod	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	26	det	26:det	_
 23	tavern	tavern	NOUN	NN	Number=Sing	26	compound	26:compound	SpaceAfter=No
-24	/	/	PUNCT	,	_	25	cc	25:cc	SpaceAfter=No
+24	/	/	SYM	,	_	25	cc	25:cc	SpaceAfter=No
 25	pub	pub	NOUN	NN	Number=Sing	23	conj	23:conj|26:compound	_
 26	style	style	NOUN	NN	Number=Sing	29	nsubj	29:nsubj	_
 27	would	would	AUX	MD	VerbForm=Fin	29	aux	29:aux	_
@@ -174,7 +174,7 @@
 3	or	or	CCONJ	CC	_	5	cc	5:cc	_
 4	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	feed	feed	NOUN	NN	Number=Sing	1	conj	1:conj:or	_
-6	back	back	NOUN	NN	Number=Sing	5	goeswith	5:goeswith	SpaceAfter=No
+6	back	back	X	NN	Number=Sing	5	goeswith	5:goeswith	SpaceAfter=No
 7	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111031103114AA61BW3_ans-0009
@@ -272,11 +272,11 @@
 9	,	,	PUNCT	,	_	12	punct	12:punct	_
 10	some	some	DET	DT	_	12	det	12:det	_
 11	great	great	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	fries	fries	NOUN	NNS	Number=Plur	8	conj	4:obl:for|8:conj:and	_
+12	fries	fry	NOUN	NNS	Number=Plur	8	conj	4:obl:for|8:conj:and	_
 13	(	(	PUNCT	-LRB-	_	15	punct	15:punct	SpaceAfter=No
 14	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 15	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	parataxis	12:parataxis	_
-16	too	to	PART	TO	Typo=Yes	17	mark	17:mark	_
+16	too	to	PART	TO	Typo=Yes	17	mark	17:mark	CorrectForm=to
 17	die	die	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	_
 18	for	for	ADP	IN	_	17	obl	17:obl	SpaceAfter=No
 19	!	!	PUNCT	.	_	15	punct	15:punct	SpaceAfter=No
@@ -290,8 +290,9 @@
 27	to	to	ADP	IN	_	28	case	28:case	_
 28	Chickie	Chickie	PROPN	NNP	Number=Sing	26	obl	26:obl:to	_
 29	&	&	CCONJ	CC	_	30	cc	30:cc	_
-30	Pete	Pete	PROPN	NNP	Number=Sing	28	conj	26:obl:to|28:conj	SpaceAfter=No
-31	's	's	PART	POS	_	28	case	28:case	SpaceAfter=No
+30-31	Pete's	_	_	_	_	_	_	_	SpaceAfter=No
+30	Pete	Pete	PROPN	NNP	Number=Sing	28	conj	26:obl:to|28:conj	_
+31	's	's	PART	POS	_	28	case	28:case	_
 32	!	!	PUNCT	.	_	26	punct	26:punct	_
 
 # sent_id = answers-20111031103114AA61BW3_ans-0015
@@ -317,7 +318,7 @@
 8	order	order	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	ccomp	6:ccomp	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	crab	crab	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	fries	fries	NOUN	NNS	Number=Plur	8	obj	8:obj	SpaceAfter=No
+11	fries	fry	NOUN	NNS	Number=Plur	8	obj	8:obj	SpaceAfter=No
 12	,	,	PUNCT	,	_	5	punct	5:punct	_
 13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	16	nsubj	16:nsubj	_
 14-15	won't	_	_	_	_	_	_	_	_

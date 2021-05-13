@@ -67,10 +67,10 @@
 4	targeting	target	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	raise	raise	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
-7	at	at	ADV	RB	_	8	case	8:case	_
-8	least	least	ADV	RBS	Degree=Sup	9	nmod	9:nmod:at	_
+7	at	at	ADP	IN	_	8	case	8:case	_
+8	least	least	ADJ	JJS	Degree=Sup	9	nmod	9:nmod:at	_
 9	$	$	SYM	$	_	6	obj	6:obj	SpaceAfter=No
-10	100,000	100,000	NUM	CD	NumType=Card	9	compound	9:compound	_
+10	100,000	100000	NUM	CD	NumType=Card	9	nummod	9:nummod	_
 11	so	so	ADV	RB	_	15	mark	15:mark	_
 12	company	company	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	contributions	contribution	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj	_
@@ -78,16 +78,16 @@
 15	range	range	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:so	_
 16	from	from	ADP	IN	_	17	case	17:case	_
 17	$	$	SYM	$	_	15	obl	15:obl:from	SpaceAfter=No
-18	10,000	10,000	NUM	CD	NumType=Card	15	nummod	15:nummod	SpaceAfter=No
+18	10,000	10000	NUM	CD	NumType=Card	15	nummod	15:nummod	SpaceAfter=No
 19	-	-	SYM	SYM	_	20	case	20:case	SpaceAfter=No
 20	$	$	SYM	$	_	17	nmod	17:nmod	SpaceAfter=No
-21	20,000	20,000	NUM	CD	NumType=Card	20	nummod	20:nummod	_
+21	20,000	20000	NUM	CD	NumType=Card	20	nummod	20:nummod	_
 22	per	per	ADP	IN	_	23	case	23:case	_
 23	person	person	NOUN	NN	Number=Sing	17	nmod	17:nmod:per	_
 24	(	(	PUNCT	-LRB-	_	28	punct	28:punct	SpaceAfter=No
 25	$	$	SYM	$	_	28	compound	28:compound	SpaceAfter=No
-26	10	10	NUM	CD	NumType=Card	25	compound	25:compound	SpaceAfter=No
-27	k	k	NUM	CD	NumType=Card	25	compound	25:compound	_
+26	10	10	NUM	CD	NumType=Card	27	compound	27:compound	SpaceAfter=No
+27	k	k	NUM	CD	NumType=Card	25	nummod	25:nummod	_
 28	minimum	minimum	NOUN	NN	Number=Sing	17	appos	17:appos	_
 29	per	per	ADP	IN	_	30	case	30:case	_
 30	person	person	NOUN	NN	Number=Sing	28	nmod	28:nmod:per	SpaceAfter=No
@@ -152,7 +152,7 @@
 5	direction	direction	NOUN	NN	Number=Sing	3	conj	2:obj|3:conj:or	_
 6	by	by	ADP	IN	_	8	case	8:case	_
 7	no	no	ADV	RB	_	8	advmod	8:advmod	_
-8	later	later	ADV	RBR	Degree=Cmp	2	obl	2:obl:by	_
+8	later	late	ADV	RBR	Degree=Cmp	2	obl	2:obl:by	_
 9	than	than	ADP	IN	_	10	case	10:case	_
 10	COB	cob	NOUN	NN	Number=Sing	8	obl	8:obl:than	_
 11	on	on	ADP	IN	_	12	case	12:case	_
@@ -214,7 +214,7 @@
 
 # sent_id = email-enronsent06_01-0016
 # text = Best of luck and very much looking forward to working together.
-1	Best	best	ADJ	JJS	Degree=Sup	0	root	0:root	_
+1	Best	good	ADJ	JJS	Degree=Sup	0	root	0:root	_
 2	of	of	ADP	IN	_	3	case	3:case	_
 3	luck	luck	NOUN	NN	Number=Sing	1	obl	1:obl:of	_
 4	and	and	CCONJ	CC	_	7	cc	7:cc	_
@@ -229,7 +229,7 @@
 
 # sent_id = email-enronsent06_01-0017
 # text = Best,
-1	Best	best	ADJ	JJS	Degree=Sup	0	root	0:root	SpaceAfter=No
+1	Best	good	ADJ	JJS	Degree=Sup	0	root	0:root	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent06_01-0018
@@ -264,7 +264,7 @@
 10	on	on	ADP	IN	_	11	case	11:case	_
 11	Hoecker	Hoecker	PROPN	NNP	Number=Sing	7	obl	7:obl:on	_
 12	&	&	CCONJ	CC	_	13	cc	13:cc	_
-13	Co.	Co.	PROPN	NNP	Number=Sing	11	conj	7:obl:on|11:conj	SpaceAfter=No
+13	Co.	Co.	PROPN	NNP	Number=Sing	11	conj	7:obl:on|11:conj	SpaceAfter=No|CorrectSpaceAfter=Yes
 14	right	right	ADV	RB	_	17	advmod	17:advmod	_
 15	up	up	ADP	IN	_	17	case	17:case	_
 16	until	until	ADP	IN	_	17	case	17:case	_
@@ -292,7 +292,8 @@
 10	with	with	ADP	IN	_	11	case	11:case	_
 11	Steve	Steve	PROPN	NNP	Number=Sing	7	obl	7:obl:with	_
 12	(	(	PUNCT	-LRB-	_	16	punct	16:punct	SpaceAfter=No
-13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	SpaceAfter=No
+13-14	I've	_	_	_	_	_	_	_	_
+13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
 14	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
 15	been	be	AUX	VBN	Tense=Past|VerbForm=Part	16	aux	16:aux	_
 16	pushing	push	VERB	VBG	Tense=Pres|VerbForm=Part	7	parataxis	7:parataxis	_
@@ -350,7 +351,7 @@
 
 # sent_id = email-enronsent06_01-0025
 # text = Best,
-1	Best	best	ADJ	JJS	Degree=Sup	0	root	0:root	SpaceAfter=No
+1	Best	good	ADJ	JJS	Degree=Sup	0	root	0:root	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent06_01-0026
@@ -398,7 +399,7 @@
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
 17	Robbie	Robbie	PROPN	NNP	Number=Sing	15	conj	4:obl:with|15:conj:and	_
 18	et	et	X	FW	_	19	compound	19:compound	_
-19	al	al	X	FW	_	15	advmod	15:advmod	SpaceAfter=No
+19	al	al	X	FW	_	15	conj	15:conj	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent06_01-0031
@@ -550,7 +551,7 @@
 10	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 11	Cal	Cal	PROPN	NNP	Number=Sing	13	compound	13:compound	_
 12	Energy	Energy	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	Markets	Markets	PROPN	NNPS	Number=Plur	14	compound	14:compound	_
+13	Markets	Market	PROPN	NNPS	Number=Plur	14	compound	14:compound	_
 14	conference	conference	NOUN	NN	Number=Sing	8	nmod	8:nmod:for	_
 15-16	I'm	_	_	_	_	_	_	_	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
@@ -839,8 +840,8 @@
 17	Gas	Gas	PROPN	NNP	Number=Sing	18	compound	18:compound	_
 18	Industry	Industry	PROPN	NNP	Number=Sing	19	compound	19:compound	_
 19	Restructuring	Restructuring	PROPN	NNP	Number=Sing	24	compound	24:compound	SpaceAfter=No
-20	/	/	PUNCT	,	_	23	cc	23:cc	SpaceAfter=No
-21	Natural	Natural	PROPN	NNP	Number=Sing	22	compound	22:compound	_
+20	/	/	SYM	,	_	23	cc	23:cc	SpaceAfter=No
+21	Natural	Natural	ADJ	NNP	Degree=Pos	22	amod	22:amod	_
 22	Gas	Gas	PROPN	NNP	Number=Sing	23	compound	23:compound	_
 23	Strategy	Strategy	PROPN	NNP	Number=Sing	19	conj	19:conj|24:compound	_
 24	proceeding	proceeding	NOUN	NN	Number=Sing	13	obl	13:obl:in	SpaceAfter=No
@@ -1180,10 +1181,10 @@
 24	ld2d-#69336-1.XLS	ld2d-#69336-1.xls	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
 25	>>	>>	PUNCT	-RRB-	_	24	punct	24:punct	_
 26	<<	<<	PUNCT	-LRB-	_	27	punct	27:punct	SpaceAfter=No
-27	Primary	primary	X	GW	_	2	list	2:list	_
+27	Primary	primary	NOUN	GW	_	2	list	2:list	_
 28	Rights	rights	X	GW	_	27	goeswith	27:goeswith	_
 29	4-12	4-12	X	GW	_	27	goeswith	27:goeswith	_
-30	.doc	.doc	NOUN	NN	Number=Sing	27	goeswith	27:goeswith	SpaceAfter=No
+30	.doc	.doc	X	NN	Number=Sing	27	goeswith	27:goeswith	SpaceAfter=No
 31	>>	>>	PUNCT	-RRB-	_	27	punct	27:punct	_
 32	<<	<<	PUNCT	-LRB-	_	33	punct	33:punct	SpaceAfter=No
 33	ld2d-#69334-1.DOC	ld2d-#69334-1.doc	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
@@ -1235,10 +1236,10 @@
 # sent_id = email-enronsent06_01-0081
 # text = - Primary Rights 4-12 .doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	Primary	primary	X	GW	_	0	root	0:root	_
+2	Primary	primary	NOUN	GW	_	0	root	0:root	_
 3	Rights	rights	X	GW	_	2	goeswith	2:goeswith	_
 4	4-12	4-12	X	GW	_	2	goeswith	2:goeswith	_
-5	.doc	.doc	NOUN	NN	Number=Sing	2	goeswith	2:goeswith	_
+5	.doc	.doc	X	NN	Number=Sing	2	goeswith	2:goeswith	_
 
 # sent_id = email-enronsent06_01-0082
 # text = - ld2d-#69334-1.DOC
@@ -1391,12 +1392,13 @@
 11	's	's	PART	POS	_	9	case	9:case	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
 13	Carl	Carl	PROPN	NNP	Number=Sing	9	conj	9:conj:and|17:nmod:poss	_
-14	Woods	Woods	PROPN	NNPS	Number=Plur	13	flat	13:flat	SpaceAfter=No
+14-15	Woods'	_	_	_	_	_	_	_	_
+14	Woods	Woods	PROPN	NNPS	Number=Plur	13	flat	13:flat	_
 15	'	's	PART	POS	_	13	case	13:case	_
 16	continued	continue	VERB	VBN	Tense=Past|VerbForm=Part	17	amod	17:amod	_
 17	assertions	assertion	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 18	that	that	SCONJ	IN	_	27	mark	27:mark	_
-19	1	1	X	LS	_	27	nummod	27:nummod	SpaceAfter=No
+19	1	1	NUM	LS	_	27	nummod	27:nummod	SpaceAfter=No
 20	)	)	PUNCT	-RRB-	_	19	punct	19:punct	_
 21-22	California's	_	_	_	_	_	_	_	_
 21	California	California	PROPN	NNP	Number=Sing	23	nmod:poss	23:nmod:poss	_
@@ -1415,7 +1417,7 @@
 34	in	in	ADP	IN	_	35	case	35:case	_
 35	fact	fact	NOUN	NN	Number=Sing	33	nmod	33:nmod:in	_
 36	and	and	CCONJ	CC	_	41	cc	41:cc	_
-37	2	2	X	LS	_	41	nummod	41:nummod	SpaceAfter=No
+37	2	2	NUM	LS	_	41	nummod	41:nummod	SpaceAfter=No
 38	)	)	PUNCT	-RRB-	_	37	punct	37:punct	_
 39	the	the	DET	DT	Definite=Def|PronType=Art	40	det	40:det	_
 40	solution	solution	NOUN	NN	Number=Sing	41	nsubj	41:nsubj	_
@@ -1427,9 +1429,9 @@
 46	clock	clock	NOUN	NN	Number=Sing	43	obj	43:obj	_
 47	to	to	ADP	IN	_	53	case	53:case	_
 48	command	command	VERB	VB	VerbForm=Inf	53	compound	53:compound	SpaceAfter=No
-49	-	-	PUNCT	HYPH	_	48	punct	48:punct	SpaceAfter=No
+49	-	-	PUNCT	HYPH	_	50	punct	50:punct	SpaceAfter=No
 50	and	and	CCONJ	CC	_	52	cc	52:cc	SpaceAfter=No
-51	-	-	PUNCT	HYPH	_	48	punct	48:punct	SpaceAfter=No
+51	-	-	PUNCT	HYPH	_	52	punct	52:punct	SpaceAfter=No
 52	control	control	VERB	VB	VerbForm=Inf	48	conj	48:conj:and|53:compound	_
 53	regulation	regulation	NOUN	NN	Number=Sing	43	obl	43:obl:to	SpaceAfter=No
 54	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -1460,7 +1462,7 @@
 # sent_id = email-enronsent06_01-0092
 # newpar id = email-enronsent06_01-p0016
 # text = Best,
-1	Best	best	ADJ	JJS	Degree=Sup	0	root	0:root	SpaceAfter=No
+1	Best	good	ADJ	JJS	Degree=Sup	0	root	0:root	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent06_01-0093
@@ -1588,7 +1590,7 @@
 # sent_id = email-enronsent06_01-0101
 # newpar id = email-enronsent06_01-p0019
 # text = Best,
-1	Best	best	ADJ	JJS	Degree=Sup	0	root	0:root	SpaceAfter=No
+1	Best	good	ADJ	JJS	Degree=Sup	0	root	0:root	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent06_01-0102
@@ -1611,7 +1613,7 @@
 10	and	and	CCONJ	CC	_	15	cc	15:cc	_
 11-12	it's	_	_	_	_	_	_	_	_
 11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj:pass	15:nsubj:pass	_
-12	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	aux:pass	15:aux:pass	_
+12	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	aux:pass	15:aux:pass	_
 13	renewable	renewable	ADJ	JJ	Degree=Pos	15	compound	15:compound	SpaceAfter=No
 14	-	-	PUNCT	HYPH	_	15	punct	15:punct	SpaceAfter=No
 15	focused	focus	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	conj	2:ccomp|6:conj:and	SpaceAfter=No

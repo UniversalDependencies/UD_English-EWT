@@ -82,7 +82,8 @@
 36	pass	pass	VERB	VB	VerbForm=Inf	34	xcomp	34:xcomp	_
 37	off	off	ADP	RP	_	36	compound:prt	36:compound:prt	_
 38	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	39	nmod:poss	39:nmod:poss	_
-39	banks	bank	NOUN	NNS	Number=Plur	43	nmod:poss	43:nmod:poss	SpaceAfter=No
+39-40	banks'	_	_	_	_	_	_	_	_
+39	banks	bank	NOUN	NNS	Number=Plur	43	nmod:poss	43:nmod:poss	_
 40	'	's	PART	POS	_	39	case	39:case	_
 41	biased	biased	ADJ	JJ	Degree=Pos	43	amod	43:amod	_
 42	research	research	NOUN	NN	Number=Sing	43	compound	43:compound	_
@@ -212,7 +213,7 @@
 4	Vice	vice	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	President	president	NOUN	NN	Number=Sing	1	appos	1:appos	_
 6	Emery	Emery	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-7	Financial	Financial	PROPN	NNP	Number=Sing	8	compound	8:compound	_
+7	Financial	Financial	ADJ	NNP	Degree=Pos	8	amod	8:amod	_
 8	Group	Group	PROPN	NNP	Number=Sing	1	parataxis	1:parataxis	_
 9	PaineWebber	PaineWebber	PROPN	NNP	Number=Sing	11	compound	11:compound	SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
@@ -221,10 +222,10 @@
 13	800-553-3119	800-553-3119	NUM	CD	NumType=Card	14	list	14:list	_
 14	x365	x365	NOUN	NN	Number=Sing	1	list	1:list	_
 15	Fax	fax	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-16	:	:	PUNCT	:	_	1	punct	1:punct	_
+16	:	:	PUNCT	:	_	15	punct	15:punct	_
 17	713-654-1281	713-654-1281	NUM	CD	NumType=Card	15	appos	15:appos	_
 18	Cell	cell	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-19	:	:	PUNCT	:	_	1	punct	1:punct	_
+19	:	:	PUNCT	:	_	18	punct	18:punct	_
 20	281-435-0295	281-435-0295	NUM	CD	NumType=Card	18	appos	18:appos	_
 
 # sent_id = email-enronsent00_01-0012
@@ -412,8 +413,8 @@
 
 # sent_id = email-enronsent00_01-0023
 # text = Of course, you would then be in a position to sell calls again if the stock makes a bounce.
-1	Of	of	ADV	RB	_	10	advmod	10:advmod	_
-2	course	course	ADV	RB	_	1	fixed	1:fixed	SpaceAfter=No
+1	Of	of	ADP	IN	_	10	advmod	10:advmod	_
+2	course	course	NOUN	NN	Number=Sing	1	fixed	1:fixed	SpaceAfter=No
 3	,	,	PUNCT	,	_	10	punct	10:punct	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
 5	would	would	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
@@ -474,7 +475,7 @@
 4	Vice	vice	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	President	president	NOUN	NN	Number=Sing	1	appos	1:appos	_
 6	Emery	Emery	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-7	Financial	Financial	PROPN	NNP	Number=Sing	8	compound	8:compound	_
+7	Financial	Financial	ADJ	NNP	Degree=Pos	8	amod	8:amod	_
 8	Group	Group	PROPN	NNP	Number=Sing	1	list	1:list	_
 9	PaineWebber	PaineWebber	PROPN	NNP	Number=Sing	11	compound	11:compound	SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
@@ -483,10 +484,10 @@
 13	800-553-3119	800-553-3119	NUM	CD	NumType=Card	1	list	1:list	_
 14	x365	x365	NOUN	NN	Number=Sing	1	list	1:list	_
 15	Fax	fax	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-16	:	:	PUNCT	:	_	1	punct	1:punct	_
+16	:	:	PUNCT	:	_	15	punct	15:punct	_
 17	713-654-1281	713-654-1281	NUM	CD	NumType=Card	15	appos	15:appos	_
 18	Cell	cell	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-19	:	:	PUNCT	:	_	1	punct	1:punct	_
+19	:	:	PUNCT	:	_	18	punct	18:punct	_
 20	281-435-0295	281-435-0295	NUM	CD	NumType=Card	18	appos	18:appos	_
 
 # sent_id = email-enronsent00_01-0027
@@ -504,7 +505,7 @@
 11	not	not	PART	RB	_	12	advmod	12:advmod	_
 12	transmit	transmit	VERB	VB	Mood=Imp|VerbForm=Fin	1	parataxis	1:parataxis	_
 13	orders	order	NOUN	NNS	Number=Plur	12	obj	12:obj	_
-14	and	and	CCONJ	CC	_	16	cc	16:cc	SpaceAfter=No
+14	and	and	CCONJ	CC	_	17	cc	17:cc	SpaceAfter=No
 15	/	/	PUNCT	,	_	16	punct	16:punct	SpaceAfter=No
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
 17	instructions	instruction	NOUN	NNS	Number=Plur	13	conj	12:obj|13:conj:and_or	_
@@ -513,7 +514,7 @@
 20	PaineWebber	PaineWebber	PROPN	NNP	Number=Sing	21	compound	21:compound	_
 21	account	account	NOUN	NN	Number=Sing	13	nmod	13:nmod:regarding	SpaceAfter=No
 22	(	(	PUNCT	-LRB-	_	21	punct	21:punct	SpaceAfter=No
-23	s	s	X	AFX	_	21	advmod	21:advmod	SpaceAfter=No
+23	s	s	ADJ	AFX	_	21	amod	21:amod	SpaceAfter=No
 24	)	)	PUNCT	-RRB-	_	21	punct	21:punct	_
 25	by	by	ADP	IN	_	26	case	26:case	_
 26	e-mail	e-mail	NOUN	NN	Number=Sing	12	obl	12:obl:by	SpaceAfter=No
@@ -522,7 +523,7 @@
 # sent_id = email-enronsent00_01-0028
 # text = Orders and/or instructions transmitted by e-mail will not be accepted by PaineWebber and PaineWebber will not be responsible for carrying out such orders and/or instructions.
 1	Orders	order	NOUN	NNS	Number=Plur	12	nsubj:pass	12:nsubj:pass	_
-2	and	and	CCONJ	CC	_	4	cc	4:cc	SpaceAfter=No
+2	and	and	CCONJ	CC	_	5	cc	5:cc	SpaceAfter=No
 3	/	/	PUNCT	,	_	4	punct	4:punct	SpaceAfter=No
 4	or	or	CCONJ	CC	_	5	cc	5:cc	_
 5	instructions	instruction	NOUN	NNS	Number=Plur	1	conj	1:conj:and_or|12:nsubj:pass	_
@@ -546,7 +547,7 @@
 23	out	out	ADP	RP	_	22	compound:prt	22:compound:prt	_
 24	such	such	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 25	orders	order	NOUN	NNS	Number=Plur	22	obj	22:obj	_
-26	and	and	CCONJ	CC	_	28	cc	28:cc	SpaceAfter=No
+26	and	and	CCONJ	CC	_	29	cc	29:cc	SpaceAfter=No
 27	/	/	PUNCT	,	_	28	punct	28:punct	SpaceAfter=No
 28	or	or	CCONJ	CC	_	29	cc	29:cc	_
 29	instructions	instruction	NOUN	NNS	Number=Plur	25	conj	22:obj|25:conj:and_or	SpaceAfter=No
@@ -575,7 +576,7 @@
 19	e-mail	e-mail	NOUN	NN	Number=Sing	20	compound	20:compound	_
 20	communications	communication	NOUN	NNS	Number=Plur	16	nmod	16:nmod:of	_
 21	sent	send	VERB	VBN	Tense=Past|VerbForm=Part	20	acl	20:acl	_
-22	and	and	CCONJ	CC	_	24	cc	24:cc	SpaceAfter=No
+22	and	and	CCONJ	CC	_	25	cc	25:cc	SpaceAfter=No
 23	/	/	PUNCT	,	_	24	punct	24:punct	SpaceAfter=No
 24	or	or	CCONJ	CC	_	25	cc	25:cc	_
 25	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	21	conj	20:acl|21:conj:and_or	_
@@ -599,7 +600,7 @@
 11	not	not	PART	RB	_	12	advmod	12:advmod	_
 12	transmit	transmit	VERB	VB	Mood=Imp|VerbForm=Fin	1	parataxis	1:parataxis	_
 13	orders	order	NOUN	NNS	Number=Plur	12	obj	12:obj	_
-14	and	and	CCONJ	CC	_	16	cc	16:cc	SpaceAfter=No
+14	and	and	CCONJ	CC	_	17	cc	17:cc	SpaceAfter=No
 15	/	/	PUNCT	,	_	16	punct	16:punct	SpaceAfter=No
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
 17	instructions	instruction	NOUN	NNS	Number=Plur	13	conj	12:obj|13:conj:and_or	_
@@ -608,7 +609,7 @@
 20	PaineWebber	PaineWebber	PROPN	NNP	Number=Sing	21	compound	21:compound	_
 21	account	account	NOUN	NN	Number=Sing	13	nmod	13:nmod:regarding	SpaceAfter=No
 22	(	(	PUNCT	-LRB-	_	21	punct	21:punct	SpaceAfter=No
-23	s	s	X	AFX	_	21	advmod	21:advmod	SpaceAfter=No
+23	s	s	ADJ	AFX	_	21	amod	21:amod	SpaceAfter=No
 24	)	)	PUNCT	-RRB-	_	21	punct	21:punct	_
 25	by	by	ADP	IN	_	26	case	26:case	_
 26	e-mail	e-mail	NOUN	NN	Number=Sing	12	obl	12:obl:by	SpaceAfter=No
@@ -617,7 +618,7 @@
 # sent_id = email-enronsent00_01-0031
 # text = Orders and/or instructions transmitted by e-mail will not be accepted by PaineWebber and PaineWebber will not be responsible for carrying out such orders and/or instructions.
 1	Orders	order	NOUN	NNS	Number=Plur	12	nsubj:pass	12:nsubj:pass	_
-2	and	and	CCONJ	CC	_	4	cc	4:cc	SpaceAfter=No
+2	and	and	CCONJ	CC	_	5	cc	5:cc	SpaceAfter=No
 3	/	/	PUNCT	,	_	4	punct	4:punct	SpaceAfter=No
 4	or	or	CCONJ	CC	_	5	cc	5:cc	_
 5	instructions	instruction	NOUN	NNS	Number=Plur	1	conj	1:conj:and_or|12:nsubj:pass	_
@@ -641,7 +642,7 @@
 23	out	out	ADP	RP	_	22	compound:prt	22:compound:prt	_
 24	such	such	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 25	orders	order	NOUN	NNS	Number=Plur	22	obj	22:obj	_
-26	and	and	CCONJ	CC	_	28	cc	28:cc	SpaceAfter=No
+26	and	and	CCONJ	CC	_	29	cc	29:cc	SpaceAfter=No
 27	/	/	PUNCT	,	_	28	punct	28:punct	SpaceAfter=No
 28	or	or	CCONJ	CC	_	29	cc	29:cc	_
 29	instructions	instruction	NOUN	NNS	Number=Plur	25	conj	22:obj|25:conj:and_or	SpaceAfter=No
@@ -670,7 +671,7 @@
 19	e-mail	e-mail	NOUN	NN	Number=Sing	20	compound	20:compound	_
 20	communications	communication	NOUN	NNS	Number=Plur	16	nmod	16:nmod:of	_
 21	sent	send	VERB	VBN	Tense=Past|VerbForm=Part	20	acl	20:acl	_
-22	and	and	CCONJ	CC	_	24	cc	24:cc	SpaceAfter=No
+22	and	and	CCONJ	CC	_	25	cc	25:cc	SpaceAfter=No
 23	/	/	PUNCT	,	_	24	punct	24:punct	SpaceAfter=No
 24	or	or	CCONJ	CC	_	25	cc	25:cc	_
 25	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	21	conj	20:acl|21:conj:and_or	_
@@ -694,7 +695,7 @@
 11	not	not	PART	RB	_	12	advmod	12:advmod	_
 12	transmit	transmit	VERB	VB	Mood=Imp|VerbForm=Fin	1	parataxis	1:parataxis	_
 13	orders	order	NOUN	NNS	Number=Plur	12	obj	12:obj	_
-14	and	and	CCONJ	CC	_	16	cc	16:cc	SpaceAfter=No
+14	and	and	CCONJ	CC	_	17	cc	17:cc	SpaceAfter=No
 15	/	/	PUNCT	,	_	16	punct	16:punct	SpaceAfter=No
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
 17	instructions	instruction	NOUN	NNS	Number=Plur	13	conj	12:obj|13:conj:and_or	_
@@ -703,7 +704,7 @@
 20	PaineWebber	PaineWebber	PROPN	NNP	Number=Sing	21	compound	21:compound	_
 21	account	account	NOUN	NN	Number=Sing	13	nmod	13:nmod:regarding	SpaceAfter=No
 22	(	(	PUNCT	-LRB-	_	21	punct	21:punct	SpaceAfter=No
-23	s	s	X	AFX	_	21	advmod	21:advmod	SpaceAfter=No
+23	s	s	ADJ	AFX	_	21	amod	21:amod	SpaceAfter=No
 24	)	)	PUNCT	-RRB-	_	21	punct	21:punct	_
 25	by	by	ADP	IN	_	26	case	26:case	_
 26	e-mail	e-mail	NOUN	NN	Number=Sing	12	obl	12:obl:by	SpaceAfter=No
@@ -712,7 +713,7 @@
 # sent_id = email-enronsent00_01-0034
 # text = Orders and/or instructions transmitted by e-mail will not be accepted by PaineWebber and PaineWebber will not be responsible for carrying out such orders and/or instructions.
 1	Orders	order	NOUN	NNS	Number=Plur	12	nsubj:pass	12:nsubj:pass	_
-2	and	and	CCONJ	CC	_	4	cc	4:cc	SpaceAfter=No
+2	and	and	CCONJ	CC	_	5	cc	5:cc	SpaceAfter=No
 3	/	/	PUNCT	,	_	4	punct	4:punct	SpaceAfter=No
 4	or	or	CCONJ	CC	_	5	cc	5:cc	_
 5	instructions	instruction	NOUN	NNS	Number=Plur	1	conj	1:conj:and_or|12:nsubj:pass	_
@@ -736,7 +737,7 @@
 23	out	out	ADP	RP	_	22	compound:prt	22:compound:prt	_
 24	such	such	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 25	orders	order	NOUN	NNS	Number=Plur	22	obj	22:obj	_
-26	and	and	CCONJ	CC	_	28	cc	28:cc	SpaceAfter=No
+26	and	and	CCONJ	CC	_	29	cc	29:cc	SpaceAfter=No
 27	/	/	PUNCT	,	_	28	punct	28:punct	SpaceAfter=No
 28	or	or	CCONJ	CC	_	29	cc	29:cc	_
 29	instructions	instruction	NOUN	NNS	Number=Plur	25	conj	22:obj|25:conj:and_or	SpaceAfter=No
@@ -765,7 +766,7 @@
 19	e-mail	e-mail	NOUN	NN	Number=Sing	20	compound	20:compound	_
 20	communications	communication	NOUN	NNS	Number=Plur	16	nmod	16:nmod:of	_
 21	sent	send	VERB	VBN	Tense=Past|VerbForm=Part	20	acl	20:acl	_
-22	and	and	CCONJ	CC	_	24	cc	24:cc	SpaceAfter=No
+22	and	and	CCONJ	CC	_	25	cc	25:cc	SpaceAfter=No
 23	/	/	PUNCT	,	_	24	punct	24:punct	SpaceAfter=No
 24	or	or	CCONJ	CC	_	25	cc	25:cc	_
 25	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	21	conj	20:acl|21:conj:and_or	_
@@ -854,7 +855,7 @@
 2	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	plans	plan	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 4	on	on	ADP	IN	_	5	case	5:case	_
-5	thursday	thursday	PROPN	NNP	Number=Sing	2	obl	2:obl:on	_
+5	thursday	Thursday	PROPN	NNP	Number=Sing	2	obl	2:obl:on	_
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent00_01-0044
@@ -896,7 +897,7 @@
 # text = not really...
 1	not	not	PART	RB	_	2	advmod	2:advmod	_
 2	really	really	ADV	RB	_	0	root	0:root	SpaceAfter=No
-3	...	...	PUNCT	.	_	1	punct	1:punct	_
+3	...	...	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent00_01-0048
 # newpar id = email-enronsent00_01-p0013
@@ -905,7 +906,7 @@
 2	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	plans	plan	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 4	on	on	ADP	IN	_	5	case	5:case	_
-5	thursday	thursday	PROPN	NNP	Number=Sing	2	obl	2:obl:on	_
+5	thursday	Thursday	PROPN	NNP	Number=Sing	2	obl	2:obl:on	_
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent00_01-0049
