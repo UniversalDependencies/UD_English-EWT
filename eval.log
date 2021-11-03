@@ -1,13 +1,13 @@
 Running the following version of UD tools:
-commit ca3b862e9e2871c76cd91bf78ffb089c0c60184d
+commit 3478a99bb195eb8749c367af4f7b3fd357a12a4c
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Thu May 6 20:16:19 2021 +0200
+Date:   Tue Nov 2 22:17:19 2021 +0100
 Evaluating the following revision of UD_English-EWT:
-commit 1046850d53cd440ae086d6ea6dc94ecdb6a8481d
-Merge: 2fb23529 084c3c43
+commit 8d5acefaae07c00b40d4a8ebc6eca58b202e5e81
+Merge: 2f5eba2d c491d62a
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Size: counted 254830 of 254830 words (nodes).
-Size: min(0, log((N/1000)**2)) = 11.0811933123414.
+Size: counted 254825 of 254825 words (nodes).
+Size: min(0, log((N/1000)**2)) = 11.081154070109.
 Size: maximum value 13.815511 is for 1000000 words or more.
 Split: Found more than 10000 training words.
 Split: Found at least 10000 development words.
@@ -15,65 +15,30 @@ Split: Found at least 10000 test words.
 Lemmas: source of annotation (from README) factor is 0.5.
 Universal POS tags: 17 out of 17 found in the corpus.
 Universal POS tags: source of annotation (from README) factor is 0.9.
-Features: 168005 out of 254830 total words have one or more features.
+Features: 168598 out of 254825 total words have one or more features.
 Features: source of annotation (from README) factor is 0.4.
 Universal relations: 36 out of 37 found in the corpus.
 Universal relations: source of annotation (from README) factor is 1.
 Udapi:
-               TOTAL       8214
-Udapi: found 8214 bugs.
-Udapi: worst expected case (threshold) is one bug per 10 words. There are 254830 words.
-Genres: found 4 out of 17 known.
+               TOTAL       8101
+Udapi: found 8101 bugs.
+Udapi: worst expected case (threshold) is one bug per 10 words. There are 254825 words.
+Genres: found 5 out of 17 known.
 validate.py --lang en --max-err=10 UD_English-EWT/en_ewt-ud-dev.conllu
-[Line 5652 Sent email-enronsent23_13-0001 Node 9]: [L3 Syntax rel-upos-aux] 'aux' should be 'AUX' but it is 'VERB'
-[Line 6282 Sent email-enronsent05_01-0008 Node 37]: [L3 Syntax rel-upos-mark] 'mark' should not be 'VERB'
-[Line 7354 Sent email-enronsent28_02-0007 Node 13]: [L3 Syntax rel-upos-det] 'det' should be 'DET' or 'PRON' but it is 'ADV'
-[Line 10343 Sent email-enronsent29_01-0011 Node 1]: [L3 Syntax rel-upos-advmod] 'advmod' should be 'ADV' but it is 'NOUN'
-[Line 10423 Sent email-enronsent29_01-0015 Node 6]: [L3 Syntax goeswith-nospace] 'goeswith' cannot connect nodes that are not separated by whitespace
-[Line 10452 Sent email-enronsent29_01-0018 Node 2]: [L3 Syntax goeswith-nospace] 'goeswith' cannot connect nodes that are not separated by whitespace
-[Line 12085 Sent email-enronsent00_02-0010 Node 2]: [L3 Syntax rel-upos-advmod] 'advmod' should be 'ADV' but it is 'NOUN'
-[Line 15583 Sent newsgroup-groups.google.com_alt.animals.badgers_2044a3376e5a87a5_ENG_20040529_135300-0001 Node 14]: [L3 Syntax rel-upos-advmod] 'advmod' should be 'ADV' but it is 'VERB'
-[Line 19637 Sent answers-20111108090559AAyAHCk_ans-0003 Node 6]: [L3 Syntax rel-upos-advmod] 'advmod' should be 'ADV' but it is 'VERB'
-...suppressing further errors regarding Syntax
-Syntax errors: 13
-*** FAILED *** with 13 errors
-Exit code: 1
+*** PASSED ***
 validate.py --lang en --max-err=10 UD_English-EWT/en_ewt-ud-test.conllu
-[Line 1954 Sent weblog-blogspot.com_marketview_20060625150800_ENG_20060625_150800-0009 Node 24]: [L3 Syntax rel-upos-mark] 'mark' should not be 'VERB'
-[Line 5565 Sent email-enronsent23_02-0006 Node 4]: [L3 Syntax rel-upos-advmod] 'advmod' should be 'ADV' but it is 'NOUN'
-[Line 5883 Sent email-enronsent23_03-0006 Node 16]: [L3 Syntax rel-upos-nummod] 'nummod' should be 'NUM' but it is 'ADV'
-[Line 8754 Sent email-enronsent09_02-0047 Node 2]: [L3 Syntax goeswith-nospace] 'goeswith' cannot connect nodes that are not separated by whitespace
-[Line 9018 Sent email-enronsent29_02-0020 Node 2]: [L3 Syntax rel-upos-aux] 'aux' should be 'AUX' but it is 'ADV'
-[Line 9263 Sent email-enronsent29_02-0039 Node 2]: [L3 Syntax rel-upos-aux] 'aux' should be 'AUX' but it is 'ADV'
-[Line 11507 Sent email-enronsent32_01-0060 Node 1]: [L3 Syntax rel-upos-advmod] 'advmod' should be 'ADV' but it is 'NOUN'
-[Line 21856 Sent answers-20111108104957AAsMzvU_ans-0007 Node 11]: [L3 Syntax rel-upos-advmod] 'advmod' should be 'ADV' but it is 'NOUN'
-[Line 25548 Sent reviews-120724-0001 Node 4]: [L3 Syntax rel-upos-advmod] 'advmod' should be 'ADV' but it is 'NOUN'
-Syntax errors: 9
-*** FAILED *** with 9 errors
-Exit code: 1
+*** PASSED ***
 validate.py --lang en --max-err=10 UD_English-EWT/en_ewt-ud-train.conllu
-[Line 5028 Sent weblog-juancole.com_juancole_20040708181175_ENG_20040708_181175-0038 Node 3]: [L3 Syntax rel-upos-mark] 'mark' should not be 'VERB'
-[Line 21477 Sent weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0026 Node 19]: [L3 Syntax rel-upos-mark] 'mark' should not be 'VERB'
-[Line 22690 Sent weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0072 Node 1]: [L3 Syntax rel-upos-advmod] 'advmod' should be 'ADV' but it is 'INTJ'
-[Line 22888 Sent weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0084 Node 12]: [L3 Syntax rel-upos-det] 'det' should be 'DET' or 'PRON' but it is 'NUM'
-[Line 22906 Sent weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0085 Node 5]: [L3 Syntax rel-upos-advmod] 'advmod' should be 'ADV' but it is 'NOUN'
-[Line 45627 Sent email-enronsent26_01-0011 Node 25]: [L3 Syntax rel-upos-nummod] 'nummod' should be 'NUM' but it is 'ADV'
-[Line 46375 Sent email-enronsent26_01-0054 Node 1]: [L3 Syntax rel-upos-mark] 'mark' should not be 'VERB'
-[Line 52708 Sent email-enronsent17_01-0041 Node 7]: [L3 Syntax rel-upos-advmod] 'advmod' should be 'ADV' but it is 'PROPN'
-[Line 56933 Sent email-enronsent22_01-0034 Node 6]: [L3 Syntax rel-upos-nummod] 'nummod' should be 'NUM' but it is 'ADV'
-...suppressing further errors regarding Syntax
-Syntax errors: 50
-*** FAILED *** with 50 errors
-Exit code: 1
-Validity: 0.01
+*** PASSED ***
+Validity: 1
 (weight=0.0769230769230769) * (score{features}=0.4) = 0.0307692307692308
-(weight=0.0769230769230769) * (score{genres}=0.235294117647059) = 0.0180995475113122
+(weight=0.0769230769230769) * (score{genres}=0.294117647058824) = 0.0226244343891403
 (weight=0.0769230769230769) * (score{lemmas}=0.5) = 0.0384615384615385
-(weight=0.256410256410256) * (score{size}=0.802083518075518) = 0.205662440532184
+(weight=0.256410256410256) * (score{size}=0.802080677628013) = 0.205661712212311
 (weight=0.0512820512820513) * (score{split}=1) = 0.0512820512820513
 (weight=0.0769230769230769) * (score{tags}=0.9) = 0.0692307692307692
-(weight=0.307692307692308) * (score{udapi}=0.677667464584233) = 0.208513066025918
+(weight=0.307692307692308) * (score{udapi}=0.68209555577357) = 0.209875555622637
 (weight=0.0769230769230769) * (score{udeprels}=0.972972972972973) = 0.0748440748440748
-(TOTAL score=0.696862718657079) * (availability=1) * (validity=0.01) = 0.00696862718657079
-STARS = 0
-UD_English-EWT	0.00696862718657079	0
+(TOTAL score=0.702749366811753) * (availability=1) * (validity=1) = 0.702749366811753
+STARS = 3.5
+UD_English-EWT	0.702749366811753	3.5
