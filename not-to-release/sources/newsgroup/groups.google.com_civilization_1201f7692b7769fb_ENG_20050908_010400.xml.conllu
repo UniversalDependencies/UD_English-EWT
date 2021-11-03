@@ -25,7 +25,7 @@
 4	Catastrophe	catastrophe	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
 5	Will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 6	Be	be	AUX	VB	VerbForm=Inf	12	cop	12:cop	_
-7	Most	most	ADV	RBS	_	8	advmod	8:advmod	_
+7	Most	most	ADV	RBS	Degree=Sup	8	advmod	8:advmod	_
 8	Costly	costly	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 9	Weather	weather	NOUN	NN	Number=Sing	11	compound	11:compound	SpaceAfter=No
 10	-	-	PUNCT	HYPH	_	11	punct	11:punct	SpaceAfter=No
@@ -55,7 +55,7 @@
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	Hurricane	Hurricane	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 9	Katrina	Katrina	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	_
-10	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
+10	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 11	powerful	powerful	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	evidence	evidence	NOUN	NN	Number=Sing	0	root	0:root	_
 13	that	that	SCONJ	IN	_	27	mark	27:mark	_
@@ -71,7 +71,7 @@
 23	and	and	CCONJ	CC	_	25	cc	25:cc	_
 24	other	other	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 25	countries	country	NOUN	NNS	Number=Plur	22	conj	18:obl:in|22:conj:and	_
-26	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	27	aux	27:aux	_
+26	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	27	aux	27:aux	_
 27	failed	fail	VERB	VBN	Tense=Past|VerbForm=Part	12	acl	12:acl:that	_
 28	to	to	PART	TO	_	29	mark	29:mark	_
 29	account	account	VERB	VB	VerbForm=Inf	27	xcomp	27:xcomp	_
@@ -84,10 +84,10 @@
 36	resource	resource	NOUN	NN	Number=Sing	37	compound	37:compound	_
 37	base	base	NOUN	NN	Number=Sing	32	nmod	32:nmod:on	SpaceAfter=No
 38	,	,	PUNCT	,	_	27	punct	27:punct	_
-39	according	accord	VERB	VBG	VerbForm=Ger	42	case	42:case	_
+39	according	accord	VERB	VBG	ExtPos=ADP|VerbForm=Ger	42	case	42:case	_
 40	to	to	ADP	IN	_	39	fixed	39:fixed	_
 41	an	a	DET	DT	Definite=Ind|PronType=Art	42	det	42:det	_
-42	assessment	assessment	NOUN	NN	Number=Sing	27	obl	27:obl:accord_to	_
+42	assessment	assessment	NOUN	NN	Number=Sing	27	obl	27:obl:according_to	_
 43	released	release	VERB	VBN	Tense=Past|VerbForm=Part	42	acl	42:acl	_
 44	today	today	NOUN	NN	Number=Sing	43	obl:tmod	43:obl:tmod	_
 45	by	by	ADP	IN	_	48	case	48:case	_
@@ -111,7 +111,7 @@
 11	at	at	ADP	IN	_	13	case	13:case	_
 12	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	mouth	mouth	NOUN	NN	Number=Sing	10	nmod	10:nmod:at	_
-14	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
+14	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
 15	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	area	area	NOUN	NN	Number=Sing	15	obj	15:obj|22:nsubj:xsubj	_
@@ -129,10 +129,10 @@
 
 # sent_id = newsgroup-groups.google.com_civilization_1201f7692b7769fb_ENG_20050908_010400-0007
 # text = According to many scientists, the early results of global warming—90 degree Fahrenheit water temperatures in the Gulf and rising sea levels—may have exacerbated the destructive power of Katrina.
-1	According	accord	VERB	VBG	VerbForm=Ger	4	case	4:case	_
-2	to	to	ADP	IN	_	4	case	4:case	_
+1	According	accord	VERB	VBG	ExtPos=ADP|VerbForm=Ger	4	case	4:case	_
+2	to	to	ADP	IN	_	1	fixed	1:fixed	_
 3	many	many	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	scientists	scientist	NOUN	NNS	Number=Plur	28	obl	28:obl:to	SpaceAfter=No
+4	scientists	scientist	NOUN	NNS	Number=Plur	28	obl	28:obl:according_to	SpaceAfter=No
 5	,	,	PUNCT	,	_	28	punct	28:punct	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	early	early	ADJ	JJ	Degree=Pos	8	amod	8:amod	_

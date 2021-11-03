@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.8 -- 2021-05-15
+Universal Dependencies English Web Treebank v2.9 -- 2021-11-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
 
@@ -12,7 +12,7 @@ LDC2012T13 (https://catalog.ldc.upenn.edu/LDC2012T13).
 
 # Introduction
 
-The corpus comprises 254,830 words and 16,622 sentences, taken from five genres
+The corpus comprises 254,825 words and 16,621 sentences, taken from five genres
 of web media: weblogs, newsgroups, emails, reviews, and Yahoo! answers. See the
 LDC2012T13 documentation for more details on the sources of the sentences. The
 trees were automatically converted into Stanford Dependencies and then
@@ -25,7 +25,7 @@ mainly been done automatically, with very limited hand-correction.
 
 # License/Copyright
 
-Universal Dependencies English Web Treebank annotations © 2013-2020
+Universal Dependencies English Web Treebank annotations © 2013-2021
 by The Board of Trustees of The Leland Stanford Junior University.
 All Rights Reserved.
 
@@ -46,7 +46,7 @@ Portions may be © 2012 Google Inc., © 2011 Yahoo! Inc.,
 # Structure
 
 This directory contains a corpus of sentences annotated using Universal
-Dependencies annotation. The corpus comprises 254,830 words and 16,622
+Dependencies annotation. The corpus comprises 254,825 words and 16,621
 sentences, taken from various web media including weblogs, newsgroups, emails,
 reviews, and Yahoo! answers; see the LDC2012T13 documentation for more details
 on the source of the sentences.  The trees were automatically converted into
@@ -74,13 +74,18 @@ manually checked.
 
 # Deviations from UD
 
-Version 2.8 of the English UD treebank conforms to the UD guidelines in
-almost all respects, but there remain the following deviations:
+Version 2.9 of the English UD treebank conforms to the UD guidelines in
+almost all respects - it is the first fully valid release in
+years - but there remain the following deviations:
 
  - The UD dependency `flat` is largely only used for person names.
  - Dates are not annotated consistently.
 
 # Changelog
+
+**2021-11-15 v2.9**
+  - Fixed all vailidation errors
+  - Many other improvements to annotation of assorted words and constructions
 
 **2021-05-15 v2.8**
   - Fixed many wrong lemmata, POS tags, and relations
@@ -174,7 +179,7 @@ The best way to do this is to file a github issue at:
    https://github.com/UniversalDependencies/UD_English-EWT/issues
 
 We also welcome pull requests. If you want to make edits, please modify the
-trees in the idividual files in the `not-to-release/sources` directory instead
+trees in the individual files in the `not-to-release/sources` directory instead
 of making direct changes to `en_ewt-ud-{dev,test,train}.conllu`.
 
 
@@ -191,9 +196,9 @@ Annotation of the Universal Dependencies English Web Treebank was carried out by
  - Nathan Schneider
  - Ethan Chi
  - Samuel Bowman
+ - Christopher Manning
  - Hanzhi Zhu
  - Daniel Galbraith
- - Christopher Manning
  - John Bauer
 
 Creation of the CoNLL-U files, including calculating UPOS, feature, and lemma
@@ -211,7 +216,6 @@ partially funded by a gift from Google, Inc., which we gratefully acknowledge.
 You are encouraged to cite this paper if you use the Universal Dependencies
 English Web Treebank:
 
-
     @inproceedings{silveira14gold,
       year = {2014},
       author = {Natalia Silveira and Timothy Dozat and Marie-Catherine de
@@ -222,6 +226,7 @@ English Web Treebank:
         Resources and Evaluation (LREC-2014)}
     }
 
+
 # Metadata
 
 ```
@@ -229,13 +234,13 @@ English Web Treebank:
 Data available since: UD v1.0
 License: CC BY-SA 4.0
 Includes text: yes
-Genre: blog social reviews email
+Genre: blog social reviews email web
 Lemmas: automatic with corrections
 UPOS: converted with corrections
 XPOS: manual native
 Features: automatic
 Relations: manual native
-Contributors: Silveira, Natalia; Dozat, Timothy; Manning, Christopher; Schuster, Sebastian; Chi, Ethan; Bauer, John; Connor, Miriam; de Marneffe, Marie-Catherine; Schneider, Nathan; Bowman, Sam; Zhu, Hanzhi; Galbraith, Daniel
+Contributors: Silveira, Natalia; Dozat, Timothy; Manning, Christopher; Schuster, Sebastian; Chi, Ethan; Bauer, John; Connor, Miriam; de Marneffe, Marie-Catherine; Schneider, Nathan; Bowman, Sam; Zhu, Hanzhi; Galbraith, Daniel; Bauer, John
 Contributing: here source
 Contact: syntacticdependencies@lists.stanford.edu
 ===============================================================================

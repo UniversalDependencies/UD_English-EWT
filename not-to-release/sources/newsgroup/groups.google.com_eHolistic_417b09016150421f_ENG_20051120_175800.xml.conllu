@@ -17,7 +17,7 @@
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0003
 # text = What are you searching for?
 1	What	what	PRON	WP	PronType=Int	4	obl	4:obl:for	_
-2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
+2	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 4	searching	search	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 5	for	for	ADP	IN	_	1	case	1:case	SpaceAfter=No
@@ -60,7 +60,7 @@
 # text = Whether you are looking for a part-time income to help pay off your debts or you are looking for the freedom offered by working from home on a full time basis, Agel is the vehicle that can make that happen.
 1	Whether	whether	SCONJ	IN	_	4	mark	4:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-3	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
+3	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	38	advcl	38:advcl:whether	_
 5	for	for	ADP	IN	_	10	case	10:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
@@ -76,7 +76,7 @@
 16	debts	debt	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 17	or	or	CCONJ	CC	_	20	cc	20:cc	_
 18	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	20:nsubj	_
-19	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
+19	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
 20	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	4:conj:or|38:advcl:whether	_
 21	for	for	ADP	IN	_	23	case	23:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
@@ -99,8 +99,8 @@
 39	that	that	PRON	WDT	PronType=Rel	41	nsubj	38:ref	_
 40	can	can	AUX	MD	VerbForm=Fin	41	aux	41:aux	_
 41	make	make	VERB	VB	VerbForm=Inf	38	acl:relcl	38:acl:relcl	_
-42	that	that	PRON	DT	Number=Sing|PronType=Dem	43	nsubj	43:nsubj	_
-43	happen	happen	VERB	VB	VerbForm=Inf	41	ccomp	41:ccomp	SpaceAfter=No
+42	that	that	PRON	DT	Number=Sing|PronType=Dem	41	obj	41:obj|43:nsubj:xsubj	_
+43	happen	happen	VERB	VB	VerbForm=Inf	41	xcomp	41:xcomp	SpaceAfter=No
 44	.	.	PUNCT	.	_	38	punct	38:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0009
@@ -326,7 +326,7 @@
 # text = Faster, more efficient, delivery to the body Learn More
 1	Faster	fast	ADJ	JJR	Degree=Cmp	6	amod	6:amod	SpaceAfter=No
 2	,	,	PUNCT	,	_	6	punct	6:punct	_
-3	more	more	ADV	RBR	_	4	advmod	4:advmod	_
+3	more	more	ADV	RBR	Degree=Cmp	4	advmod	4:advmod	_
 4	efficient	efficient	ADJ	JJ	Degree=Pos	6	amod	6:amod	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	delivery	delivery	NOUN	NN	Number=Sing	0	root	0:root	_
@@ -439,7 +439,7 @@
 # text = If you used to make $100k and now only make $30k, this is not long term viability.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj|12:nsubj	_
-3	used	use	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	22	advcl	22:advcl:if	_
+3	used	use	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	22	advcl	22:advcl:if	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	make	make	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	$	$	SYM	$	_	5	obj	5:obj	SpaceAfter=No
@@ -448,7 +448,7 @@
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10	now	now	ADV	RB	_	12	advmod	12:advmod	_
 11	only	only	ADV	RB	_	12	advmod	12:advmod	_
-12	make	make	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and|22:advcl:if	_
+12	make	make	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and|22:advcl:if	_
 13	$	$	SYM	$	_	12	obj	12:obj	SpaceAfter=No
 14	30	30	NUM	CD	NumType=Card	15	compound	15:compound	SpaceAfter=No
 15	k	k	NUM	CD	NumType=Card	13	nummod	13:nummod	SpaceAfter=No
@@ -465,7 +465,7 @@
 # text = Ten years later your check should still be the same or greater, fulfilling the promise of long-term residual income.
 1	Ten	ten	NUM	CD	NumType=Card	2	nummod	2:nummod	_
 2	years	year	NOUN	NNS	Number=Plur	3	obl:npmod	3:obl:npmod	_
-3	later	later	ADV	RB	_	10	advmod	10:advmod	_
+3	later	late	ADV	RBR	Degree=Cmp	10	advmod	10:advmod	_
 4	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	check	check	NOUN	NN	Number=Sing	10	nsubj	10:nsubj|12:nsubj	_
 6	should	should	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
@@ -497,7 +497,7 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	principles	principle	NOUN	NNS	Number=Plur	5	obj	5:obj|9:nsubj	_
 8	that	that	PRON	WDT	PronType=Rel	9	nsubj	7:ref	_
-9	ensure	ensure	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+9	ensure	ensure	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
 10	that	that	DET	DT	Number=Sing|PronType=Dem	11	det	11:det	_
 11	promise	promise	NOUN	NN	Number=Sing	14	nsubj:pass	14:nsubj:pass	_
 12	can	can	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
@@ -506,14 +506,14 @@
 15	for	for	ADP	IN	_	16	case	16:case	_
 16	those	that	PRON	DT	Number=Plur|PronType=Dem	14	obl	14:obl:for|18:nsubj	_
 17	who	who	PRON	WP	PronType=Rel	18	nsubj	16:ref	_
-18	work	work	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	acl:relcl	16:acl:relcl	_
+18	work	work	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	acl:relcl	16:acl:relcl	_
 19	at	at	ADP	IN	_	20	case	20:case	_
 20	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obl	18:obl:at	SpaceAfter=No
 21	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0034
 # text = Are you unsure of Agel?
-1	Are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
+1	Are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 3	unsure	unsure	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	of	of	ADP	IN	_	5	case	5:case	_
@@ -624,8 +624,8 @@
 55	Place	place	NOUN	NN	Number=Sing	53	nmod	53:nmod:in	_
 56	to	to	PART	TO	_	57	mark	57:mark	_
 57	Help	help	VERB	VB	VerbForm=Inf	55	acl	55:acl:to	_
-58	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	59	nsubj	59:nsubj	_
-59	Build	build	VERB	VB	VerbForm=Inf	57	ccomp	57:ccomp	_
+58	You	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	57	obj	57:obj|59:nsubj	_
+59	Build	build	VERB	VB	VerbForm=Inf	57	xcomp	57:xcomp	_
 60	Stronger	strong	ADV	RBR	Degree=Cmp	59	advmod	59:advmod	SpaceAfter=No
 61	;	;	PUNCT	,	_	8	punct	8:punct	_
 62	and	and	CCONJ	CC	_	65	cc	65:cc	_
@@ -645,7 +645,7 @@
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0039
 # text = Here are the numbers to call:
 1	Here	here	ADV	RB	PronType=Dem	0	root	0:root	_
-2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
+2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	numbers	number	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	_
 5	to	to	PART	TO	_	6	mark	6:mark	_

@@ -4,7 +4,7 @@
 # text = Important news such as President Bush's miniscule calibrations on his marriage amendment/anti-gay (update: he's not against gays in the bedroom, just at the altar, where of course their relationships should not only be frowned upon but should be constitutionally excluded) has pushed Sudan not just off the front pages, or the A section, but out of the NY Times and Washington Post completely.
 1	Important	important	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
 2	news	news	NOUN	NN	Number=Sing	51	nsubj	51:nsubj	_
-3	such	such	ADJ	JJ	Degree=Pos	9	case	9:case	_
+3	such	such	ADJ	JJ	Degree=Pos|ExtPos=ADP	9	case	9:case	_
 4	as	as	ADP	IN	_	3	fixed	3:fixed	_
 5	President	President	PROPN	NNP	Number=Sing	9	nmod:poss	9:nmod:poss	_
 6-7	Bush's	_	_	_	_	_	_	_	_
@@ -37,7 +37,7 @@
 31	altar	altar	NOUN	NN	Number=Sing	26	parataxis	26:parataxis	SpaceAfter=No
 32	,	,	PUNCT	,	_	31	punct	31:punct	_
 33	where	where	SCONJ	WRB	PronType=Rel	42	mark	42:mark	_
-34	of	of	ADP	IN	_	42	advmod	42:advmod	_
+34	of	of	ADP	IN	ExtPos=ADV	42	advmod	42:advmod	_
 35	course	course	NOUN	NN	Number=Sing	34	fixed	34:fixed	_
 36	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	37	nmod:poss	37:nmod:poss	_
 37	relationships	relationship	NOUN	NNS	Number=Plur	42	nsubj:pass	42:nsubj:pass|48:nsubj:pass	_
@@ -83,7 +83,7 @@
 # sent_id = weblog-blogspot.com_tacitusproject_20040715092419_ENG_20040715_092419-0002
 # text = I had to go to the BBC for this report .
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj	_
-2	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	go	go	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	to	to	ADP	IN	_	7	case	7:case	_
@@ -102,7 +102,7 @@
 3	symptomatic	symptomatic	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
-6	suppose	suppose	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	SpaceAfter=No
+6	suppose	suppose	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	SpaceAfter=No
 7	,	,	PUNCT	,	_	6	punct	6:punct	_
 8	of	of	ADP	IN	_	19	case	19:case	_
 9	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
@@ -120,9 +120,9 @@
 21	that	that	SCONJ	IN	_	35	mark	35:mark	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 23	biggest	big	ADJ	JJS	Degree=Sup	28	amod	28:amod	_
-24	short	short	ADJ	JJ	Degree=Pos	26	compound	26:compound	SpaceAfter=No
+24	short	short	ADJ	JJ	Degree=Pos	26	amod	26:amod	SpaceAfter=No
 25	-	-	PUNCT	HYPH	_	26	punct	26:punct	SpaceAfter=No
-26	term	term	NOUN	NN	Number=Sing	28	amod	28:amod	_
+26	term	term	NOUN	NN	Number=Sing	28	compound	28:compound	_
 27	humanitarian	humanitarian	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
 28	crisis	crisis	NOUN	NN	Number=Sing	35	nsubj:pass	35:nsubj:pass	_
 29	in	in	ADP	IN	_	31	case	31:case	_
@@ -161,7 +161,7 @@
 
 # sent_id = weblog-blogspot.com_tacitusproject_20040715092419_ENG_20040715_092419-0005
 # text = Most troubling, however, is the fact that the political will to end the crisis expressed a few short weeks ago seems to have ebbed.
-1	Most	most	ADV	RBS	_	2	advmod	2:advmod	_
+1	Most	most	ADV	RBS	Degree=Sup	2	advmod	2:advmod	_
 2	troubling	troubling	ADJ	JJ	Degree=Pos	8	nsubj	8:nsubj	SpaceAfter=No
 3	,	,	PUNCT	,	_	8	punct	8:punct	_
 4	however	however	ADV	RB	_	8	advmod	8:advmod	SpaceAfter=No
@@ -200,9 +200,9 @@
 7	General	General	ADJ	NNP	Degree=Pos	6	amod	6:amod	_
 8	Kofi	Kofi	PROPN	NNP	Number=Sing	6	flat	6:flat	_
 9	Annan	Annan	PROPN	NNP	Number=Sing	8	flat	8:flat	_
-10	demanded	demand	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
+10	demanded	demand	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 11	steps	step	NOUN	NNS	Number=Plur	13	nsubj:pass	13:nsubj:pass	_
-12	be	be	AUX	VB	VerbForm=Inf	13	aux:pass	13:aux:pass	_
+12	be	be	AUX	VB	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	aux:pass	13:aux:pass	_
 13	taken	take	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	ccomp	10:ccomp	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
 15	end	end	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:to	_
@@ -220,7 +220,7 @@
 # text = Two weeks later, and the violence continues.
 1	Two	two	NUM	CD	NumType=Card	2	nummod	2:nummod	_
 2	weeks	week	NOUN	NNS	Number=Plur	3	obl:npmod	3:obl:npmod	_
-3	later	later	ADV	RB	_	0	root	0:root	SpaceAfter=No
+3	later	late	ADV	RBR	Degree=Cmp	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	8	punct	8:punct	_
 5	and	and	CCONJ	CC	_	8	cc	8:cc	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
@@ -256,9 +256,9 @@
 24	need	need	VERB	VB	VerbForm=Inf	21	acl:relcl	21:acl:relcl	_
 25	15,000	15000	NUM	CD	NumType=Card	24	obj	24:obj	SpaceAfter=No
 26	,	,	PUNCT	,	_	24	punct	24:punct	_
-27	according	accord	VERB	VBG	VerbForm=Ger	29	case	29:case	_
+27	according	accord	VERB	VBG	ExtPos=ADP|VerbForm=Ger	29	case	29:case	_
 28	to	to	ADP	IN	_	27	fixed	27:fixed	_
-29	analysts	analyst	NOUN	NNS	Number=Plur	24	obl	24:obl:accord_to	SpaceAfter=No
+29	analysts	analyst	NOUN	NNS	Number=Plur	24	obl	24:obl:according_to	SpaceAfter=No
 30	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = weblog-blogspot.com_tacitusproject_20040715092419_ENG_20040715_092419-0009
@@ -266,10 +266,10 @@
 1	And	and	CCONJ	CC	_	5	cc	5:cc	_
 2	international	international	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	donors	donor	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
-4	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
+4	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 5	given	give	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 6	only	only	ADV	RB	_	7	advmod	7:advmod	_
-7	half	half	NOUN	NN	Number=Sing	5	obj	5:obj	_
+7	half	half	NOUN	NN	Number=Sing|NumType=Frac	5	obj	5:obj	_
 8	of	of	ADP	IN	_	11	case	11:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	relief	relief	NOUN	NN	Number=Sing	11	compound	11:compound	_
@@ -278,12 +278,12 @@
 13	Darfur	Darfur	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
 14	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	SpaceAfter=No
 15	,	,	PUNCT	,	_	5	punct	5:punct	_
-16	according	accord	VERB	VBG	VerbForm=Ger	21	case	21:case	_
+16	according	accord	VERB	VBG	ExtPos=ADP|VerbForm=Ger	21	case	21:case	_
 17	to	to	ADP	IN	_	16	fixed	16:fixed	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 19	local	local	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 20	UN	UN	PROPN	NNP	Number=Sing	21	compound	21:compound	_
-21	officials	official	NOUN	NNS	Number=Plur	5	obl	5:obl:accord_to	SpaceAfter=No
+21	officials	official	NOUN	NNS	Number=Plur	5	obl	5:obl:according_to	SpaceAfter=No
 22	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = weblog-blogspot.com_tacitusproject_20040715092419_ENG_20040715_092419-0010
@@ -291,11 +291,11 @@
 1	So	so	ADV	RB	_	4	advmod	4:advmod	_
 2	hear	hear	ADV	RB	_	4	advmod	4:advmod	_
 3	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-4	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+4	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	two	two	NUM	CD	NumType=Card	7	nummod	7:nummod	_
 7	weeks	week	NOUN	NNS	Number=Plur	8	obl:npmod	8:obl:npmod	_
-8	later	later	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
+8	later	late	ADV	RBR	Degree=Cmp	4	advmod	4:advmod	SpaceAfter=No
 9	,	,	PUNCT	,	_	4	punct	4:punct	_
 10	after	after	ADP	IN	_	14	case	14:case	_
 11	that	that	DET	DT	Number=Sing|PronType=Dem	14	det	14:det	_
