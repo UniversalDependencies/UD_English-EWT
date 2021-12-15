@@ -20,14 +20,14 @@
 
 # sent_id = email-enronsent28_01-0004
 # text = it is to late for me to add changes.
-1	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	CheckReln=expl
+1	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	expl	4:expl	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
-3	to	to	ADV	RB	_	4	advmod	4:advmod	_
+3	to	too	ADV	RB	Typo=Yes	4	advmod	4:advmod	CorrectForm=too
 4	late	late	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	for	for	SCONJ	IN	_	8	mark	8:mark	_
 6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	add	add	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	CheckReln=csubj
+8	add	add	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	_
 9	changes	change	NOUN	NNS	Number=Plur	8	obj	8:obj	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -49,7 +49,7 @@
 1	Thank	thank	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	obj	1:obj	_
 3	for	for	ADP	IN	_	5	case	5:case	CheckAttachment=4
-4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nmod:poss	5:nmod:poss	CheckAttachment=1|CheckReln=obl
+4	you	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs|Typo=Yes	5	nmod:poss	5:nmod:poss	CorrectForm=your
 5	patience	patience	NOUN	NN	Number=Sing	1	obl	1:obl:for	SpaceAfter=No
 6	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -343,8 +343,8 @@
 # sent_id = email-enronsent28_01-0021
 # newpar id = email-enronsent28_01-p0004
 # text = DEBRA PERLINGIERE
-1	DEBRA	DEBRA	PROPN	NNP	Number=Sing	2	compound	2:compound	CheckAttachment=0|CheckReln=root
-2	PERLINGIERE	PERLINGIERE	PROPN	NNP	Number=Sing	0	root	0:root	CheckAttachment=1|CheckReln=flat
+1	DEBRA	Debra	PROPN	NNP	Number=Sing	0	root	0:root	_
+2	PERLINGIERE	Perlingiere	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 
 # sent_id = email-enronsent28_01-0022
 # text = 09/20/2000 09:32 AM
