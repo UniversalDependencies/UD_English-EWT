@@ -24,7 +24,7 @@ for split in ('train', 'dev', 'test'):
                 subcorp, docid = fulldocid.split('-')
                 filename = f'{SOURCES_PATH}/{subcorp}/{docid}.xml.conllu'
                 #print(filename, file=sys.stderr)
-                outF = open(filename, 'w', encoding='utf-8')
+                outF = open(filename, 'w', encoding='utf-8', newline='\n')
             elif ln.startswith('# streusle_sent_id') or ln.startswith('# mwe ='):
                 continue    # STREUSLE-specific metadata lines
             outF.write(ln)
