@@ -10,7 +10,7 @@ for split in ('train', 'dev', 'test'):
     flist = FLIST_BASE_PATH + '.' + split
     with open(flist, encoding='utf-8') as inF:
         fpaths = inF.readlines()
-    with open(f'en_ewt-ud-{split}.conllu', 'w', encoding='utf-8') as outF:
+    with open(f'en_ewt-ud-{split}.conllu', 'w', encoding='utf-8', newline='\n') as outF:
         for fpath in fpaths:
             fpath = fpath.strip()
             with open('not-to-release/sources/' + fpath, encoding='utf-8') as inF:
