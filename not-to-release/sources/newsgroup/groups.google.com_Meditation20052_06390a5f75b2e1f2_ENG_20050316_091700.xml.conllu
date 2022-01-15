@@ -198,8 +198,8 @@
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
 11	feeling	feel	VERB	VBG	VerbForm=Ger	6	conj	1:xcomp|6:conj	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	air	air	NOUN	NN	Number=Sing	11	obj	11:obj	_
-14	flowing	flow	VERB	VBG	VerbForm=Ger	13	acl	13:acl	_
+13	air	air	NOUN	NN	Number=Sing	11	obj	11:obj|14:nsubj:xsubj	_
+14	flowing	flow	VERB	VBG	VerbForm=Ger	11	xcomp	11:xcomp	_
 15	through	through	ADP	IN	_	17	case	17:case	_
 16	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 17	nostrils	nostril	NOUN	NNS	Number=Plur	14	obl	14:obl:through	SpaceAfter=No
@@ -269,8 +269,8 @@
 # text = Imagine the tension melting away as you continue breathing rhythmically and naturally.
 1	Imagine	imagine	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	tension	tension	NOUN	NN	Number=Sing	1	obj	1:obj	_
-4	melting	melt	VERB	VBG	VerbForm=Ger	3	acl	3:acl	_
+3	tension	tension	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
+4	melting	melt	VERB	VBG	VerbForm=Ger	1	ccomp	1:ccomp	_
 5	away	away	ADV	RB	_	4	advmod	4:advmod	_
 6	as	as	SCONJ	IN	_	8	mark	8:mark	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj|9:nsubj:xsubj	_
@@ -284,15 +284,15 @@
 # sent_id = newsgroup-groups.google.com_Meditation20052_06390a5f75b2e1f2_ENG_20050316_091700-0016
 # text = Picture yourself sitting on a warm, tropical beach basking in the glow of the sun ... .
 1	Picture	picture	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	1	obj	1:obj	_
-3	sitting	sit	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	_
+2	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	1	obj	1:obj|3:nsubj:xsubj|10:nsubj:xsubj	_
+3	sitting	sit	VERB	VBG	VerbForm=Ger	1	xcomp	1:xcomp	_
 4	on	on	ADP	IN	_	9	case	9:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 6	warm	warm	ADJ	JJ	Degree=Pos	9	amod	9:amod	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	tropical	tropical	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	beach	beach	NOUN	NN	Number=Sing	3	obl	3:obl:on	_
-10	basking	bask	VERB	VBG	VerbForm=Ger	3	conj	2:advcl|3:conj	_
+10	basking	bask	VERB	VBG	VerbForm=Ger	3	conj	1:xcomp|3:conj	_
 11	in	in	ADP	IN	_	13	case	13:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	glow	glow	NOUN	NN	Number=Sing	10	obl	10:obl:in	_
@@ -523,8 +523,8 @@
 # sent_id = newsgroup-groups.google.com_Meditation20052_06390a5f75b2e1f2_ENG_20050316_091700-0030
 # text = Imagine yourself sitting on the beach serenely and restfully.
 1	Imagine	imagine	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	1	obj	1:obj	_
-3	sitting	sit	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	_
+2	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	1	obj	1:obj|3:nsubj:xsubj	_
+3	sitting	sit	VERB	VBG	VerbForm=Ger	1	xcomp	1:xcomp	_
 4	on	on	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	beach	beach	NOUN	NN	Number=Sing	3	obl	3:obl:on	_
@@ -547,8 +547,8 @@
 # text = Feel your body sinking slightly into the sand making that earthly connection again.
 1	Feel	feel	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	body	body	NOUN	NN	Number=Sing	1	obj	1:obj	_
-4	sinking	sink	VERB	VBG	VerbForm=Ger	3	acl	3:acl	_
+3	body	body	NOUN	NN	Number=Sing	1	obj	1:obj|4:nsubj:xsubj	_
+4	sinking	sink	VERB	VBG	VerbForm=Ger	1	xcomp	1:xcomp	_
 5	slightly	slightly	ADV	RB	_	4	advmod	4:advmod	_
 6	into	into	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
@@ -746,8 +746,8 @@
 # text = Now feel yourself returning to where you sit ... move your hands and feet a little, stretch them.
 1	Now	now	ADV	RB	_	2	advmod	2:advmod	_
 2	feel	feel	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-3	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	2	obj	2:obj	_
-4	returning	return	VERB	VBG	VerbForm=Ger	3	advcl	3:advcl	_
+3	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	2	obj	2:obj|4:nsubj:xsubj	_
+4	returning	return	VERB	VBG	VerbForm=Ger	2	xcomp	2:xcomp	_
 5	to	to	SCONJ	IN	_	6	case	6:case	_
 6	where	where	ADV	WRB	PronType=Int	4	obl	4:obl:to	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
