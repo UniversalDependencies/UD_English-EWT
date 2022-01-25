@@ -896,12 +896,12 @@
 143	for	for	ADP	IN	_	144	case	144:case	_
 144	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	142	obl	142:obl:for	_
 145	blaming	blame	VERB	VBG	VerbForm=Ger	136	advcl	136:advcl	_
-146	"	"	PUNCT	``	_	150	punct	150:punct	SpaceAfter=No
-147	whatever	whatever	PRON	WP	PronType=Int	150	nsubj	150:nsubj	_
+146	"	"	PUNCT	``	_	147	punct	145:punct	SpaceAfter=No
+147	whatever	whatever	PRON	WP	PronType=Rel	145	obj	145:obj	_
 148	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	150	cop	150:cop	_
 149	up	up	ADV	RB	_	150	advmod	150:advmod	_
-150	there	there	ADV	RB	PronType=Dem	145	ccomp	145:ccomp	SpaceAfter=No
-151	"	"	PUNCT	''	_	150	punct	150:punct	_
+150	there	there	ADV	RB	PronType=Dem	147	acl:relcl	147:acl:relcl	SpaceAfter=No
+151	"	"	PUNCT	''	_	147	punct	150:punct	_
 152	for	for	ADP	IN	_	153	case	153:case	_
 153	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	145	obl	145:obl:for	_
 154	(	(	PUNCT	-LRB-	_	155	punct	155:punct	SpaceAfter=No
@@ -1015,9 +1015,9 @@
 # sent_id = newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0024
 # text = To Paul McCartney whose company's logo was a person toying with the planets as if he was a god, and who was being very much deluded in his ego trip by the fact that he was made "Sir" (when in England even the road sweeper is made Sir, as long as he produces money for the nation), GOD provided cancer to the wife.
 1	To	to	ADP	IN	_	2	case	2:case	_
-2	Paul	Paul	PROPN	NNP	Number=Sing	67	obl	67:obl:to	_
+2	Paul	Paul	PROPN	NNP	Number=Sing	67	obl	5:nmod:poss|28:nsubj:pass|67:obl:to	_
 3	McCartney	McCartney	PROPN	NNP	Number=Sing	2	flat	2:flat	_
-4	whose	whose	PRON	WP$	Poss=Yes|PronType=Int	5	nmod:poss	5:nmod:poss	_
+4	whose	whose	PRON	WP$	Poss=Yes|PronType=Rel	5	nmod:poss	2:ref	_
 5-6	company's	_	_	_	_	_	_	_	_
 5	company	company	NOUN	NN	Number=Sing	7	nmod:poss	7:nmod:poss	_
 6	's	's	PART	POS	_	5	case	5:case	_
@@ -1037,7 +1037,7 @@
 20	god	god	NOUN	NN	Number=Sing	11	advcl	11:advcl:as	SpaceAfter=No
 21	,	,	PUNCT	,	_	28	punct	28:punct	_
 22	and	and	CCONJ	CC	_	28	cc	28:cc	_
-23	who	who	PRON	WP	PronType=Int	28	nsubj:pass	28:nsubj:pass	_
+23	who	who	PRON	WP	PronType=Rel	28	nsubj:pass	2:ref	_
 24	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	aux	28:aux	_
 25	being	be	AUX	VBG	VerbForm=Ger	28	aux:pass	28:aux:pass	_
 26	very	very	ADV	RB	_	27	advmod	27:advmod	_
@@ -2140,7 +2140,7 @@
 39	of	of	ADP	IN	_	42	case	42:case	_
 40	very	very	ADV	RB	_	41	advmod	41:advmod	_
 41	poor	poor	ADJ	JJ	Degree=Pos	42	amod	42:amod	_
-42	musicians	musician	NOUN	NNS	Number=Plur	38	nmod	38:nmod:of|52:nsubj	SpaceAfter=No
+42	musicians	musician	NOUN	NNS	Number=Plur	38	nmod	38:nmod:of|52:nsubj|63:nsubj	SpaceAfter=No
 43	,	,	PUNCT	,	_	45	punct	45:punct	_
 44	if	if	SCONJ	IN	_	45	mark	45:mark	_
 45	musicians	musician	NOUN	NNS	Number=Plur	42	parataxis	42:parataxis	_
@@ -2158,7 +2158,7 @@
 57	guitar	guitar	NOUN	NN	Number=Sing	58	compound	58:compound	_
 58	chords	chord	NOUN	NNS	Number=Plur	54	nmod	54:nmod:of	_
 59	and	and	CCONJ	CC	_	63	cc	63:cc	_
-60	who	who	PRON	WP	PronType=Int	63	nsubj	63:nsubj	_
+60	who	who	PRON	WP	PronType=Rel	63	nsubj	42:ref	_
 61	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	63	cop	63:cop	_
 62	as	as	ADV	RB	_	63	advmod	63:advmod	_
 63	untalented	untalented	ADJ	JJ	Degree=Pos	52	conj	42:acl:relcl|52:conj:and	_
@@ -2250,7 +2250,7 @@
 26	compensate	compensate	VERB	VB	VerbForm=Inf	19	ccomp	19:ccomp	_
 27	for	for	ADP	IN	_	29	case	29:case	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
-29	CURSE	curse	NOUN	NN	Number=Sing	26	obl	26:obl:for|35:nsubj	_
+29	CURSE	curse	NOUN	NN	Number=Sing	26	obl	26:obl:for|35:nsubj|38:nsubj	_
 30	OF	of	ADP	IN	_	31	case	31:case	_
 31	GOD	GOD	PROPN	NNP	Number=Sing	29	nmod	29:nmod:of	_
 32	that	that	PRON	WDT	PronType=Rel	35	nsubj	29:ref	_
@@ -2258,7 +2258,7 @@
 34	upon	upon	ADP	IN	_	35	case	35:case	_
 35	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	29	acl:relcl	29:acl:relcl	_
 36	and	and	CCONJ	CC	_	38	cc	38:cc	_
-37	that	that	PRON	WDT	PronType=Dem	38	nsubj	38:nsubj	_
+37	that	that	PRON	WDT	PronType=Rel	38	nsubj	29:ref	_
 38	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	35	conj	29:acl:relcl|35:conj:and	_
 39	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	40	nmod:poss	40:nmod:poss	_
 40-41	wife's	_	_	_	_	_	_	_	_

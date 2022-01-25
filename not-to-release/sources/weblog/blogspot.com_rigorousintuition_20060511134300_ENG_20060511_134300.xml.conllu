@@ -1382,8 +1382,8 @@
 44	of	of	ADP	IN	_	43	fixed	43:fixed	SpaceAfter=No
 45	]	]	PUNCT	-RRB-	_	47	punct	47:punct	_
 46	the	the	DET	DT	Definite=Def|PronType=Art	47	det	47:det	_
-47	impact	impact	NOUN	NN	Number=Sing	31	nmod	31:nmod:because_of	_
-48	that	that	PRON	WDT	PronType=Dem	60	obj	60:obj	_
+47	impact	impact	NOUN	NN	Number=Sing	31	nmod	31:nmod:because_of|60:obj	_
+48	that	that	PRON	WDT	PronType=Rel	60	obj	47:rel	_
 49	the	the	DET	DT	Definite=Def|PronType=Art	50	det	50:det	_
 50-51	group's	_	_	_	_	_	_	_	_
 50	group	group	NOUN	NN	Number=Sing	52	nmod:poss	52:nmod:poss	_
@@ -1393,10 +1393,10 @@
 54	law	law	NOUN	NN	Number=Sing	55	compound	55:compound	_
 55	enforcement	enforcement	NOUN	NN	Number=Sing	56	compound	56:compound	_
 56	officials	official	NOUN	NNS	Number=Plur	57	nsubj	57:nsubj	_
-57	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	47	acl:relcl	47:acl:relcl	SpaceAfter=No
+57	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	60	parataxis	60:parataxis	SpaceAfter=No
 58	,	,	PUNCT	,	_	57	punct	57:punct	_
 59	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	60	aux	60:aux	_
-60	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	57	ccomp	57:ccomp	_
+60	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	47	acl:relcl	47:acl:relcl	_
 61	on	on	ADP	IN	_	64	case	64:case	_
 62	the	the	DET	DT	Definite=Def|PronType=Art	64	det	64:det	_
 63	most	most	ADV	RBS	Degree=Sup	64	advmod	64:advmod	_
@@ -6163,7 +6163,7 @@
 5	subscribe	subscribe	VERB	VB	VerbForm=Inf	34	advcl	34:advcl:while	_
 6	to	to	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	notion	notion	NOUN	NN	Number=Sing	5	obl	5:obl:to	_
+8	notion	notion	NOUN	NN	Number=Sing	5	obl	5:obl:to|29:nsubj	_
 9	that	that	SCONJ	IN	_	17	mark	17:mark	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	things	thing	NOUN	NNS	Number=Plur	17	nsubj	17:nsubj	_
@@ -6179,12 +6179,12 @@
 21	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
 22	behavior	behavior	NOUN	NN	Number=Sing	19	nmod	19:nmod:on	_
 23	(	(	PUNCT	-LRB-	_	26	punct	26:punct	SpaceAfter=No
-24	which	which	PRON	WDT	PronType=Int	29	nsubj	29:nsubj	_
+24	which	which	PRON	WDT	PronType=Rel	29	nsubj	8:ref	_
 25	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	26	nsubj	26:nsubj	_
 26	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
 27	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	cop	29:cop	_
 28	patently	patently	ADV	RB	_	29	advmod	29:advmod	_
-29	rediculous	rediculous	ADJ	JJ	Degree=Pos	26	ccomp	26:ccomp	SpaceAfter=No
+29	rediculous	ridiculous	ADJ	JJ	Degree=Pos|Typo=Yes	26	ccomp	26:ccomp	CorrectForm=ridiculous|SpaceAfter=No
 30	)	)	PUNCT	-RRB-	_	26	punct	26:punct	SpaceAfter=No
 31	,	,	PUNCT	,	_	34	punct	34:punct	_
 32	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	34	expl	34:expl	_
