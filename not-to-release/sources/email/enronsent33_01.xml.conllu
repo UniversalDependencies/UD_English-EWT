@@ -154,7 +154,7 @@
 52	can	can	AUX	MD	VerbForm=Fin	54	aux	54:aux	_
 53	not	not	PART	RB	_	54	advmod	54:advmod	_
 54	change	change	VERB	VB	VerbForm=Inf	47	advcl	47:advcl:since	_
-55	it's	it's	PRON	PRP$	_	57	nmod:poss	57:nmod:poss	_
+55	it's	it	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	57	nmod:poss	57:nmod:poss	CorrectForm=its
 56	ineffective	ineffective	ADJ	JJ	Degree=Pos	57	amod	57:amod	_
 57	IP	ip	NOUN	NN	Number=Sing	54	obj	54:obj	_
 58	at	at	ADP	IN	_	60	case	60:case	_
@@ -211,7 +211,7 @@
 # text = What say ye?
 1	What	what	PRON	WP	PronType=Int	2	obj	2:obj	_
 2	say	say	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	ye	ye	PRON	PRP	_	2	nsubj	2:nsubj	SpaceAfter=No
+3	ye	ye	PRON	PRP	Case=Nom|Number=Plur|Person=2|PronType=Prs|Style=Arch	2	nsubj	2:nsubj	SpaceAfter=No
 4	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent33_01-0011
@@ -312,7 +312,7 @@
 # text = Thanks for you cooperation.
 1	Thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	_
 2	for	for	ADP	IN	_	4	case	4:case	_
-3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+3	you	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs|Typo=Yes	4	nmod:poss	4:nmod:poss	CorrectForm=your
 4	cooperation	cooperation	NOUN	NN	Number=Sing	1	nmod	1:nmod:for	SpaceAfter=No
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -932,10 +932,10 @@
 
 # sent_id = email-enronsent33_01-0059
 # text = It may also be privileged or otherwise protected by work product immunity or other legal rules.
-1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj:pass	5:nsubj:pass|8:nsubj:pass	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj|8:nsubj:pass	_
 2	may	may	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 3	also	also	ADV	RB	_	5	advmod	5:advmod	_
-4	be	be	AUX	VB	VerbForm=Inf	5	aux:pass	5:aux:pass	_
+4	be	be	AUX	VB	VerbForm=Inf	5	cop	5:cop	_
 5	privileged	privileged	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	or	or	CCONJ	CC	_	8	cc	8:cc	_
 7	otherwise	otherwise	ADV	RB	_	8	advmod	8:advmod	_
@@ -1198,9 +1198,9 @@
 
 # sent_id = email-enronsent33_01-0082
 # text = Robert C Williams@ENRON_DEVELOPMENT
-1	Robert	robert	X	GW	_	0	root	0:root	_
-2	C	c	X	GW	_	1	goeswith	1:goeswith	_
-3	Williams@ENRON_DEVELOPMENT	williams@enron_development	X	ADD	_	1	compound	1:compound	_
+1	Robert	robertcwilliams@enron_development	X	GW	Typo=Yes	0	root	0:root	_
+2	C	_	X	GW	_	1	goeswith	1:goeswith	_
+3	Williams@ENRON_DEVELOPMENT	_	X	ADD	_	1	goeswith	1:goeswith	_
 
 # sent_id = email-enronsent33_01-0083
 # text = 11/28/2000 09:46 AM
@@ -1360,8 +1360,8 @@
 4	file	file	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
 5	:	:	PUNCT	:	_	4	punct	4:punct	_
 6	Sanders	sanders	NOUN	GW	_	4	appos	4:appos	_
-7	Letter	letter	X	GW	_	6	goeswith	6:goeswith	_
-8	4_28_00.doc	4_28_00.doc	X	NN	Number=Sing	6	goeswith	6:goeswith	SpaceAfter=No
+7	Letter	letter	X	GW	_	6	flat	6:flat	_
+8	4_28_00.doc	4_28_00.doc	X	NN	Number=Sing	6	flat	6:flat	SpaceAfter=No
 9	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent33_01-0095
@@ -1369,8 +1369,8 @@
 # text = - Sanders Letter 4_28_00.doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
 2	Sanders	sanders	NOUN	GW	_	0	root	0:root	_
-3	Letter	letter	X	GW	_	2	goeswith	2:goeswith	_
-4	4_28_00.doc	4_28_00.doc	X	NN	Number=Sing	2	goeswith	2:goeswith	_
+3	Letter	letter	X	GW	_	2	flat	2:flat	_
+4	4_28_00.doc	4_28_00.doc	X	NN	Number=Sing	2	flat	2:flat	_
 
 # sent_id = email-enronsent33_01-0096
 # newpar id = email-enronsent33_01-p0029
@@ -1594,7 +1594,7 @@
 20	in	in	ADP	IN	_	21	case	21:case	_
 21	connection	connection	NOUN	NN	Number=Sing	19	nmod	19:nmod:in	_
 22	with	with	ADP	IN	_	24	case	24:case	_
-23	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
+23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 24	enforcement	enforcement	NOUN	NN	Number=Sing	21	nmod	21:nmod:with	SpaceAfter=No
 25	/	/	SYM	,	_	26	cc	26:cc	SpaceAfter=No
 26	nonenforcement	nonenforcement	NOUN	NN	Number=Sing	24	conj	21:nmod:with|24:conj	_
@@ -2297,7 +2297,7 @@
 # text = Thanks, Richard.
 1	Thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
-3	Richard	Richard	PROPN	NNP	Number=Sing	1	parataxis	1:parataxis	SpaceAfter=No
+3	Richard	Richard	PROPN	NNP	Number=Sing	1	vocative	1:vocative	SpaceAfter=No
 4	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent33_01-0152
@@ -2348,7 +2348,7 @@
 14	soon	soon	ADV	RB	Degree=Pos	3	advmod	3:advmod	_
 15	as	as	SCONJ	IN	_	17	mark	17:mark	_
 16	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
-17	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:as	_
+17	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:as	_
 18	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	obj	17:obj	SpaceAfter=No
 19	.	.	PUNCT	.	_	3	punct	3:punct	_
 

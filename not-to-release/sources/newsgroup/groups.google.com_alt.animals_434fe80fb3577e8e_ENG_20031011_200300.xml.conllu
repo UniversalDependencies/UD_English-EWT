@@ -22,15 +22,15 @@
 # sent_id = newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0002
 # text = It came from Liverpool, that was the port base to the Titanic, destroyed by God because of the arrogant insult of captain Smith (also from Liverpool): "Not even God can sink my ship" (not only the captain, but also the rest of the crew and even the orchestra playing at the Titanic were from Liverpool).
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root|10:nsubj	_
+2	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	from	from	ADP	IN	_	4	case	4:case	_
 4	Liverpool	Liverpool	PROPN	NNP	Number=Sing	2	obl	2:obl:from	SpaceAfter=No
 5	,	,	PUNCT	,	_	2	punct	2:punct	_
-6	that	that	PRON	DT	Number=Sing|PronType=Dem	10	nsubj	2:ref	_
+6	that	that	PRON	DT	Number=Sing|PronType=Dem	10	nsubj	10:nsubj	_
 7	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	10:cop	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	port	port	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	base	base	NOUN	NN	Number=Sing	2	acl:relcl	2:acl:relcl	_
+10	base	base	NOUN	NN	Number=Sing	2	parataxis	2:parataxis	_
 11	to	to	ADP	IN	_	13	case	13:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	Titanic	Titanic	PROPN	NNP	Number=Sing	10	nmod	10:nmod:to	SpaceAfter=No
@@ -62,7 +62,7 @@
 39	ship	ship	NOUN	NN	Number=Sing	37	obj	37:obj	SpaceAfter=No
 40	"	"	PUNCT	''	_	37	punct	37:punct	_
 41	(	(	PUNCT	-LRB-	_	64	punct	64:punct	SpaceAfter=No
-42	not	not	ADV	RB	_	45	advmod	45:advmod	_
+42	not	not	PART	RB	_	45	advmod	45:advmod	_
 43	only	only	ADV	RB	_	45	cc:preconj	45:cc:preconj	_
 44	the	the	DET	DT	Definite=Def|PronType=Art	45	det	45:det	_
 45	captain	captain	NOUN	NN	Number=Sing	64	nsubj	64:nsubj	SpaceAfter=No
@@ -70,7 +70,7 @@
 47	but	but	CCONJ	CC	_	50	cc	50:cc	_
 48	also	also	ADV	RB	_	50	advmod	50:advmod	_
 49	the	the	DET	DT	Definite=Def|PronType=Art	50	det	50:det	_
-50	rest	rest	NOUN	NN	Number=Sing	45	conj	45:conj:but_also|64:nsubj	_
+50	rest	rest	NOUN	NN	Number=Sing	45	conj	45:conj:but|64:nsubj	_
 51	of	of	ADP	IN	_	53	case	53:case	_
 52	the	the	DET	DT	Definite=Def|PronType=Art	53	det	53:det	_
 53	crew	crew	NOUN	NN	Number=Sing	50	nmod	50:nmod:of	_
@@ -146,7 +146,7 @@
 3	from	from	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	nation	nation	NOUN	NN	Number=Sing	2	obl	2:obl:from|7:nmod:poss	_
-6	whose	whose	PRON	WP$	Poss=Yes|PronType=Int	7	nmod:poss	5:ref	_
+6	whose	whose	PRON	WP$	Poss=Yes|PronType=Rel	7	nmod:poss	5:ref	_
 7	king	king	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
 8	Enrique	Enrique	PROPN	NNP	Number=Sing	7	appos	7:appos	_
 9	VIII	VIII	PROPN	NNP	Number=Sing	8	flat	8:flat	_
@@ -184,8 +184,8 @@
 41	same	same	ADJ	JJ	Degree=Pos	42	amod	42:amod	_
 42	ones	one	NOUN	NNS	Number=Plur	38	nmod	38:nmod:of	_
 43	and	and	CCONJ	CC	_	47	cc	47:cc	_
-44	to	to	ADP	TO	_	45	mark	45:mark	_
-45	whom	whom	VERB	VB	VerbForm=Inf	47	advcl	47:advcl:to	_
+44	to	to	ADP	IN	_	45	case	45:case	_
+45	whom	whom	PRON	WP	PronType=Rel	47	obl	47:obl:to	_
 46	God	God	PROPN	NNP	Number=Sing	47	nsubj	47:nsubj	_
 47	provided	provide	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	conj	5:acl:relcl|10:conj:and	_
 48	a	a	DET	DT	Definite=Ind|PronType=Art	49	det	49:det	_
@@ -214,7 +214,7 @@
 # text = It is interesting to observe that this nation is nicknamed "the Devil's Island".
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	expl	3:expl	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
-3	interesting	interest	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+3	interesting	interesting	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	observe	observe	VERB	VB	VerbForm=Inf	3	csubj	3:csubj	_
 6	that	that	SCONJ	IN	_	10	mark	10:mark	_
@@ -259,7 +259,7 @@
 24	Circus	Circus	PROPN	NNP	Number=Sing	14	appos	14:appos	SpaceAfter=No
 25	,	,	PUNCT	,	_	26	punct	26:punct	_
 26	takes	take	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-27	it's	it's	PRON	PRP$	_	28	nmod:poss	28:nmod:poss	_
+27	it's	it	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	28	nmod:poss	28:nmod:poss	CorrectForm=its
 28	name	name	NOUN	NN	Number=Sing	26	obj	26:obj	_
 29	from	from	ADP	IN	_	32	case	32:case	_
 30	an	a	DET	DT	Definite=Ind|PronType=Art	32	det	32:det	_
@@ -490,11 +490,11 @@
 3	on	on	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	Beatles	Beatles	PROPN	NNPS	Number=Plur	7	nsubj	7:nsubj|10:nsubj:xsubj|16:nsubj:xsubj	_
+6	Beatles	Beatles	PROPN	NNPS	Number=Plur	7	nsubj	7:nsubj|9:nsubj:xsubj|10:nsubj:xsubj|16:nsubj:xsubj	_
 7	began	begin	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 8	to	to	PART	TO	_	10	mark	10:mark	_
-9	get	get	AUX	VB	VerbForm=Inf	10	aux:pass	10:aux:pass	_
-10	involved	involved	ADJ	JJ	Degree=Pos	7	xcomp	7:xcomp	_
+9	get	get	AUX	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
+10	involved	involved	ADJ	JJ	Degree=Pos	9	xcomp	9:xcomp	_
 11	in	in	ADP	IN	_	13	case	13:case	_
 12	false	false	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	religions	religion	NOUN	NNS	Number=Plur	10	obl	10:obl:in	_
@@ -531,7 +531,7 @@
 19	deeply	deeply	ADV	RB	_	11	advmod	11:advmod	_
 20	as	as	SCONJ	IN	_	22	mark	22:mark	_
 21	to	to	PART	TO	_	22	mark	22:mark	_
-22	buy	buy	VERB	VB	VerbForm=Inf	18	advcl	18:advcl:to	_
+22	buy	buy	VERB	VB	VerbForm=Inf	19	advcl	19:advcl:as_to	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 24	apartment	apartment	NOUN	NN	Number=Sing	22	obj	22:obj	SpaceAfter=No
 25	.	.	PUNCT	,	_	24	punct	24:punct	_
@@ -896,12 +896,12 @@
 143	for	for	ADP	IN	_	144	case	144:case	_
 144	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	142	obl	142:obl:for	_
 145	blaming	blame	VERB	VBG	VerbForm=Ger	136	advcl	136:advcl	_
-146	"	"	PUNCT	``	_	150	punct	150:punct	SpaceAfter=No
-147	whatever	whatever	PRON	WP	PronType=Int	150	nsubj	150:nsubj	_
+146	"	"	PUNCT	``	_	147	punct	145:punct	SpaceAfter=No
+147	whatever	whatever	PRON	WP	PronType=Rel	145	obj	145:obj	_
 148	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	150	cop	150:cop	_
 149	up	up	ADV	RB	_	150	advmod	150:advmod	_
-150	there	there	ADV	RB	PronType=Dem	145	ccomp	145:ccomp	SpaceAfter=No
-151	"	"	PUNCT	''	_	150	punct	150:punct	_
+150	there	there	ADV	RB	PronType=Dem	147	acl:relcl	147:acl:relcl	SpaceAfter=No
+151	"	"	PUNCT	''	_	147	punct	150:punct	_
 152	for	for	ADP	IN	_	153	case	153:case	_
 153	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	145	obl	145:obl:for	_
 154	(	(	PUNCT	-LRB-	_	155	punct	155:punct	SpaceAfter=No
@@ -1015,9 +1015,9 @@
 # sent_id = newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0024
 # text = To Paul McCartney whose company's logo was a person toying with the planets as if he was a god, and who was being very much deluded in his ego trip by the fact that he was made "Sir" (when in England even the road sweeper is made Sir, as long as he produces money for the nation), GOD provided cancer to the wife.
 1	To	to	ADP	IN	_	2	case	2:case	_
-2	Paul	Paul	PROPN	NNP	Number=Sing	67	obl	67:obl:to	_
+2	Paul	Paul	PROPN	NNP	Number=Sing	67	obl	5:nmod:poss|28:nsubj:pass|67:obl:to	_
 3	McCartney	McCartney	PROPN	NNP	Number=Sing	2	flat	2:flat	_
-4	whose	whose	PRON	WP$	Poss=Yes|PronType=Int	5	nmod:poss	5:nmod:poss	_
+4	whose	whose	PRON	WP$	Poss=Yes|PronType=Rel	5	nmod:poss	2:ref	_
 5-6	company's	_	_	_	_	_	_	_	_
 5	company	company	NOUN	NN	Number=Sing	7	nmod:poss	7:nmod:poss	_
 6	's	's	PART	POS	_	5	case	5:case	_
@@ -1037,7 +1037,7 @@
 20	god	god	NOUN	NN	Number=Sing	11	advcl	11:advcl:as	SpaceAfter=No
 21	,	,	PUNCT	,	_	28	punct	28:punct	_
 22	and	and	CCONJ	CC	_	28	cc	28:cc	_
-23	who	who	PRON	WP	PronType=Int	28	nsubj:pass	28:nsubj:pass	_
+23	who	who	PRON	WP	PronType=Rel	28	nsubj:pass	2:ref	_
 24	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	aux	28:aux	_
 25	being	be	AUX	VBG	VerbForm=Ger	28	aux:pass	28:aux:pass	_
 26	very	very	ADV	RB	_	27	advmod	27:advmod	_
@@ -1073,7 +1073,7 @@
 56	long	long	ADV	RB	Degree=Pos	52	advmod	52:advmod	_
 57	as	as	SCONJ	IN	_	59	mark	59:mark	_
 58	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	59	nsubj	59:nsubj	_
-59	produces	produce	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	55	advcl	55:advcl:as	_
+59	produces	produce	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	56	advcl	56:advcl:as	_
 60	money	money	NOUN	NN	Number=Sing	59	obj	59:obj	_
 61	for	for	ADP	IN	_	63	case	63:case	_
 62	the	the	DET	DT	Definite=Def|PronType=Art	63	det	63:det	_
@@ -1101,7 +1101,7 @@
 9	Linda	Linda	PROPN	NNP	Number=Sing	8	obj	8:obj	_
 10	(	(	PUNCT	-LRB-	_	11	punct	11:punct	SpaceAfter=No
 11	woman	woman	NOUN	NN	Number=Sing	9	appos	9:appos|13:nmod:poss	_
-12	whose	whose	PRON	WP$	Poss=Yes|PronType=Int	13	nmod:poss	11:ref	_
+12	whose	whose	PRON	WP$	Poss=Yes|PronType=Rel	13	nmod:poss	11:ref	_
 13	quality	quality	NOUN	NN	Number=Sing	17	obj	17:obj	_
 14	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 15	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	aux	17:aux	_
@@ -1121,7 +1121,7 @@
 29	an	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
 30	affair	affair	NOUN	NN	Number=Sing	28	obj	28:obj	_
 31	with	with	ADP	IN	_	32	case	32:case	_
-32	Heather	Heather	PROPN	NNP	Number=Sing	30	nmod	30:nmod:with|43:obl	_
+32	Heather	Heather	PROPN	NNP	Number=Sing	30	nmod	30:nmod:with|43:obl:with|54:obl:to	_
 33	Mills	Mills	PROPN	NNP	Number=Sing	32	flat	32:flat	SpaceAfter=No
 34	,	,	PUNCT	,	_	32	punct	32:punct	_
 35-36	Linda's	_	_	_	_	_	_	_	_
@@ -1142,7 +1142,7 @@
 49	York	York	PROPN	NNP	Number=Sing	46	nmod	46:nmod:to	_
 50	and	and	CCONJ	CC	_	54	cc	54:cc	_
 51	to	to	ADP	IN	_	52	case	52:case	_
-52	whom	whom	PRON	WP	PronType=Int	54	obl	54:obl:to	_
+52	whom	whom	PRON	WP	PronType=Rel	54	obl	32:ref|54:obl:to	_
 53	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	54	nsubj	54:nsubj	_
 54	bought	buy	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	43	conj	32:acl:relcl|43:conj:and	_
 55	things	thing	NOUN	NNS	Number=Plur	54	obj	54:obj	_
@@ -1224,8 +1224,8 @@
 26	,	,	PUNCT	,	_	15	punct	15:punct	_
 27	for	for	ADP	IN	_	32	case	32:case	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
-29	afore	afore	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
-30	mentioned	mentioned	X	GW	_	29	goeswith	29:goeswith	_
+29	afore	aforementioned	ADJ	JJ	Degree=Pos|Typo=Yes	32	amod	32:amod	_
+30	mentioned	_	X	GW	_	29	goeswith	29:goeswith	_
 31	promotional	promotional	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
 32	ends	end	NOUN	NNS	Number=Plur	15	obl	15:obl:for	SpaceAfter=No
 33	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -1278,7 +1278,7 @@
 43	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	46	cop	46:cop	_
 44	not	not	PART	RB	_	46	advmod	46:advmod	_
 45	the	the	DET	DT	Definite=Def|PronType=Art	46	det	46:det	_
-46	same	same	ADJ	JJ	Degree=Pos	21	conj	18:advcl:because|21:conj:and_also	SpaceAfter=No
+46	same	same	ADJ	JJ	Degree=Pos	21	conj	18:advcl:because|21:conj:and	SpaceAfter=No
 47	,	,	PUNCT	,	_	46	punct	46:punct	_
 48	even	even	ADV	RB	_	54	advmod	54:advmod	_
 49	though	though	SCONJ	IN	_	54	mark	54:mark	_
@@ -1649,7 +1649,7 @@
 35	ca	can	AUX	MD	VerbForm=Fin	37	aux	37:aux	_
 36	n't	not	PART	RB	_	37	advmod	37:advmod	_
 37	hide	hide	VERB	VB	VerbForm=Inf	33	acl:relcl	33:acl:relcl	_
-38	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	39	cop	39:cop	_|CheckUPOS=VERB
+38	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	39	cop	39:cop	CheckUPOS=VERB
 39	when	when	ADV	WRB	PronType=Int	25	parataxis	25:parataxis	_
 40-41	you're	_	_	_	_	_	_	_	_
 40	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	42	nsubj	42:nsubj	_
@@ -2058,7 +2058,7 @@
 7	that	that	SCONJ	IN	_	11	mark	11:mark	_
 8	even	even	ADV	RB	_	9	advmod	9:advmod	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
-10	themselves	themselves	PRON	PRP	Number=Plur|Person=3|PronType=Prs	9	nmod:npmod	9:nmod:npmod	_
+10	themselves	themselves	PRON	PRP	Number=Plur|Person=3|PronType=Emp|Reflex=Yes	9	nmod:npmod	9:nmod:npmod	_
 11	hated	hate	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
 12	each	each	DET	DT	_	13	det	13:det	_
 13	other	other	ADJ	JJ	Degree=Pos	11	obj	11:obj	SpaceAfter=No
@@ -2140,7 +2140,7 @@
 39	of	of	ADP	IN	_	42	case	42:case	_
 40	very	very	ADV	RB	_	41	advmod	41:advmod	_
 41	poor	poor	ADJ	JJ	Degree=Pos	42	amod	42:amod	_
-42	musicians	musician	NOUN	NNS	Number=Plur	38	nmod	38:nmod:of|52:nsubj	SpaceAfter=No
+42	musicians	musician	NOUN	NNS	Number=Plur	38	nmod	38:nmod:of|52:nsubj|63:nsubj	SpaceAfter=No
 43	,	,	PUNCT	,	_	45	punct	45:punct	_
 44	if	if	SCONJ	IN	_	45	mark	45:mark	_
 45	musicians	musician	NOUN	NNS	Number=Plur	42	parataxis	42:parataxis	_
@@ -2158,12 +2158,12 @@
 57	guitar	guitar	NOUN	NN	Number=Sing	58	compound	58:compound	_
 58	chords	chord	NOUN	NNS	Number=Plur	54	nmod	54:nmod:of	_
 59	and	and	CCONJ	CC	_	63	cc	63:cc	_
-60	who	who	PRON	WP	PronType=Int	63	nsubj	63:nsubj	_
+60	who	who	PRON	WP	PronType=Rel	63	nsubj	42:ref	_
 61	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	63	cop	63:cop	_
 62	as	as	ADV	RB	_	63	advmod	63:advmod	_
 63	untalented	untalented	ADJ	JJ	Degree=Pos	52	conj	42:acl:relcl|52:conj:and	_
 64	as	as	ADP	IN	_	65	case	65:case	_
-65	Oasis	Oasis	PROPN	NNP	Number=Sing	62	obl	62:obl:as	SpaceAfter=No
+65	Oasis	Oasis	PROPN	NNP	Number=Sing	63	obl	63:obl:as	SpaceAfter=No
 66	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0051
@@ -2183,7 +2183,7 @@
 13	as	as	ADV	RB	_	14	advmod	14:advmod	_
 14	poorly	poorly	ADV	RB	_	11	advmod	11:advmod	_
 15	as	as	ADP	IN	_	16	case	16:case	_
-16	Oasis	Oasis	PROPN	NNP	Number=Sing	13	obl	13:obl:as	_
+16	Oasis	Oasis	PROPN	NNP	Number=Sing	14	obl	14:obl:as	_
 17	and	and	CCONJ	CC	_	31	cc	31:cc	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 19	little	little	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
@@ -2250,7 +2250,7 @@
 26	compensate	compensate	VERB	VB	VerbForm=Inf	19	ccomp	19:ccomp	_
 27	for	for	ADP	IN	_	29	case	29:case	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
-29	CURSE	curse	NOUN	NN	Number=Sing	26	obl	26:obl:for|35:nsubj	_
+29	CURSE	curse	NOUN	NN	Number=Sing	26	obl	26:obl:for|35:nsubj|38:nsubj	_
 30	OF	of	ADP	IN	_	31	case	31:case	_
 31	GOD	GOD	PROPN	NNP	Number=Sing	29	nmod	29:nmod:of	_
 32	that	that	PRON	WDT	PronType=Rel	35	nsubj	29:ref	_
@@ -2258,7 +2258,7 @@
 34	upon	upon	ADP	IN	_	35	case	35:case	_
 35	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	29	acl:relcl	29:acl:relcl	_
 36	and	and	CCONJ	CC	_	38	cc	38:cc	_
-37	that	that	PRON	WDT	PronType=Dem	38	nsubj	38:nsubj	_
+37	that	that	PRON	WDT	PronType=Rel	38	nsubj	29:ref	_
 38	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	35	conj	29:acl:relcl|35:conj:and	_
 39	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	40	nmod:poss	40:nmod:poss	_
 40-41	wife's	_	_	_	_	_	_	_	_
@@ -2318,8 +2318,8 @@
 
 # sent_id = newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0056
 # text = Satan deceiving mankind once again, as so many other thousands of times through the centuries....
-1	Satan	Satan	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	deceiving	deceive	VERB	VBG	VerbForm=Ger	1	acl	1:acl	_
+1	Satan	Satan	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
+2	deceiving	deceive	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 3	mankind	mankind	NOUN	NN	Number=Sing	2	obj	2:obj	_
 4	once	once	ADV	RB	NumType=Mult	5	advmod	5:advmod	_
 5	again	again	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
@@ -2334,7 +2334,7 @@
 14	through	through	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 16	centuries	century	NOUN	NNS	Number=Plur	11	nmod	11:nmod:through	SpaceAfter=No
-17	....	....	PUNCT	,	_	1	punct	1:punct	_
+17	....	....	PUNCT	,	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0057
 # text = After the Devil began his devastating job from the ghostly "Devil's Island" through his nine main puppets (Beatles-Rolling Stones), he possessed an endless amount of other schizophrenic bad musician in the afore mentioned Island and weakening their conscience with drugs, he made them proclaimers of homosexuality, aversion to religion, destruction of family values, dissipation, mental illness, antisocialism, etc., etc.,
@@ -2378,8 +2378,8 @@
 37	musician	musician	NOUN	NN	Number=Sing	32	nmod	32:nmod:of	_
 38	in	in	ADP	IN	_	42	case	42:case	_
 39	the	the	DET	DT	Definite=Def|PronType=Art	42	det	42:det	_
-40	afore	afore	ADJ	JJ	Degree=Pos	42	amod	42:amod	_
-41	mentioned	mentioned	X	GW	_	40	goeswith	40:goeswith	_
+40	afore	aforementioned	ADJ	JJ	Degree=Pos|Typo=Yes	42	amod	42:amod	_
+41	mentioned	_	X	GW	_	40	goeswith	40:goeswith	_
 42	Island	island	NOUN	NN	Number=Sing	32	nmod	32:nmod:in	_
 43	and	and	CCONJ	CC	_	51	cc	51:cc	_
 44	weakening	weaken	VERB	VBG	VerbForm=Ger	51	advcl	51:advcl	_
@@ -2469,7 +2469,7 @@
 3	ill	ill	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	humanity	humanity	NOUN	NN	Number=Sing	69	nsubj	69:nsubj	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
-6	destroyed	destroy	VERB	VBN	Tense=Past|VerbForm=Part	7	acl	7:acl	_
+6	destroyed	destroy	VERB	VBN	Tense=Past|VerbForm=Part	7	amod	7:amod	_
 7	families	family	NOUN	NNS	Number=Plur	4	conj	4:conj:and|69:nsubj	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	twisted	twisted	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
@@ -2501,8 +2501,8 @@
 35	without	without	ADP	IN	_	36	case	36:case	_
 36	direction	direction	NOUN	NN	Number=Sing	34	nmod	34:nmod:without	SpaceAfter=No
 37	,	,	PUNCT	,	_	38	punct	38:punct	_
-38	non	non	NOUN	NN	Number=Sing	4	conj	4:conj:and|69:nsubj	_
-39	respect	respect	X	GW	_	38	goeswith	38:goeswith	_
+38	non	nonrespect	NOUN	NN	Number=Sing|Typo=Yes	4	conj	4:conj:and|69:nsubj	_
+39	respect	_	X	GW	_	38	goeswith	38:goeswith	_
 40	to	to	ADP	IN	_	41	case	41:case	_
 41	hierarchies	hierarchy	NOUN	NNS	Number=Plur	38	nmod	38:nmod:to	SpaceAfter=No
 42	,	,	PUNCT	,	_	44	punct	44:punct	_

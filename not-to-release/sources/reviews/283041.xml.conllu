@@ -50,7 +50,7 @@
 34	before	before	ADP	IN	_	35	case	35:case	_
 35-36	Valentines	_	_	_	_	_	_	_	_
 35	Valentine	Valentine	PROPN	NNP	Number=Sing	33	nmod	33:nmod:before	_
-36	s	's	PART	POS	Typo=Yes	35	case	35:case	_
+36	s	's	PART	POS	Typo=Yes	35	case	35:case	CorrectForm='s
 37	and	and	CCONJ	CC	_	52	cc	52:cc	_
 38	when	when	SCONJ	WRB	PronType=Int	41	mark	41:mark	_
 39	many	many	ADJ	JJ	Degree=Pos	40	amod	40:amod	_
@@ -84,7 +84,7 @@
 
 # sent_id = reviews-283041-0003
 # text = Not only did it taste wonderful, but the texture was unbelievable, the frosting wasn't overly sweet to over power the cake, and the cake itself was just amazingly soft, and fluffy, and just perfect overall.
-1	Not	not	ADV	RB	_	5	advmod	5:advmod	_
+1	Not	not	PART	RB	_	5	advmod	5:advmod	_
 2	only	only	ADV	RB	_	5	cc:preconj	5:cc:preconj	_
 3	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj|6:nsubj:xsubj	_
@@ -105,15 +105,15 @@
 18	overly	overly	ADV	RB	_	19	advmod	19:advmod	_
 19	sweet	sweet	ADJ	JJ	Degree=Pos	12	parataxis	12:parataxis	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
-21	over	over	VERB	GW	_	19	advcl	19:advcl:to	_
-22	power	power	X	VB	VerbForm=Inf	21	goeswith	21:goeswith	_
+21	over	overpower	VERB	GW	Typo=Yes|VerbForm=Inf	19	advcl	19:advcl:to	_
+22	power	_	X	VB	_	21	goeswith	21:goeswith	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 24	cake	cake	NOUN	NN	Number=Sing	21	obj	21:obj	SpaceAfter=No
 25	,	,	PUNCT	,	_	33	punct	33:punct	_
 26	and	and	CCONJ	CC	_	33	cc	33:cc	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 28	cake	cake	NOUN	NN	Number=Sing	33	nsubj	33:nsubj|36:nsubj|40:nsubj	_
-29	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	28	nmod:npmod	28:nmod:npmod	_
+29	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Emp|Reflex=Yes	28	nmod:npmod	28:nmod:npmod	_
 30	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	33	cop	33:cop	_
 31	just	just	ADV	RB	_	33	advmod	33:advmod	_
 32	amazingly	amazingly	ADV	RB	_	33	advmod	33:advmod	_

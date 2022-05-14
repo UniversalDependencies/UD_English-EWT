@@ -101,7 +101,7 @@
 26	,	,	PUNCT	,	_	29	punct	29:punct	_
 27	so	so	ADV	RB	_	29	advmod	29:advmod	_
 28	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	29	nsubj	29:nsubj	_
-29	negotiated	negotiate	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+29	negotiated	negotiate	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	2	parataxis	2:parataxis	_
 30	a	a	DET	DT	Definite=Ind|PronType=Art	33	det	33:det	_
 31	fall	fall	VERB	VB	VerbForm=Inf	32	compound	32:compound	_
 32	back	back	ADV	RB	_	33	amod	33:amod	_
@@ -246,14 +246,14 @@
 13	have	have	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
 14	as	as	ADV	RB	_	15	advmod	15:advmod	_
 15	much	much	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	flexibiltiy	flexibiltiy	NOUN	NN	Number=Sing	13	obj	13:obj	_
+16	flexibiltiy	flexibility	NOUN	NN	Number=Sing|Typo=Yes	13	obj	13:obj	CorrectForm=flexibility
 17	to	to	PART	TO	_	18	mark	18:mark	_
 18	manage	manage	VERB	VB	VerbForm=Inf	16	acl	16:acl:to	_
 19	this	this	DET	DT	Number=Sing|PronType=Dem	20	det	20:det	_
 20	situation	situation	NOUN	NN	Number=Sing	18	obj	18:obj	_
 21	as	as	SCONJ	IN	_	23	mark	23:mark	_
 22	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	23	nsubj	23:nsubj	_
-23	expected	expect	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	14	advcl	14:advcl:as	SpaceAfter=No
+23	expected	expect	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	15	advcl	15:advcl:as	SpaceAfter=No
 24	,	,	PUNCT	,	_	26	punct	26:punct	_
 25	but	but	CCONJ	CC	_	26	cc	26:cc	_
 26	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	3	conj	3:conj:but	_
@@ -326,7 +326,7 @@
 12-13	that's	_	_	_	_	_	_	_	_
 12	that	that	PRON	DT	Number=Sing|PronType=Dem	14	nsubj	14:nsubj	_
 13	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
-14	what	what	PRON	WP	PronType=Int	19	advcl	19:advcl:it	_
+14	what	what	PRON	WP	PronType=Int	19	advcl	19:advcl:if	_
 15	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 16	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
 17	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	14	acl:relcl	14:acl:relcl	SpaceAfter=No
@@ -501,13 +501,13 @@
 13	run	run	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	compressor	compressor	NOUN	NN	Number=Sing	13	obj	13:obj	_
-16	as	as	SCONJ	IN	_	20	mark	20:mark	_
-17	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	20	nsubj	20:nsubj|22:nsubj	_
-18	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
+16	as	as	SCONJ	IN	_	18	mark	18:mark	_
+17	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
+18	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:as	_
 19	in	in	ADP	IN	_	20	case	20:case	_
-20	August	August	PROPN	NNP	Number=Sing	13	advcl	13:advcl:in	_
+20	August	August	PROPN	NNP	Number=Sing	18	obl	18:obl:in	_
 21	and	and	CCONJ	CC	_	22	cc	22:cc	_
-22	September	September	PROPN	NNP	Number=Sing	20	conj	13:advcl:in|20:conj:and	SpaceAfter=No
+22	September	September	PROPN	NNP	Number=Sing	20	conj	18:obl:in|20:conj:and	SpaceAfter=No
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent10_01-0019
@@ -718,14 +718,14 @@
 12	be	be	AUX	VB	VerbForm=Inf	13	aux:pass	13:aux:pass	_
 13	argued	argue	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	ccomp	8:ccomp	_
 14	that	that	SCONJ	IN	_	17	mark	17:mark	_
-15	not	not	ADV	RB	_	16	advmod	16:advmod	_
+15	not	not	PART	RB	_	16	advmod	16:advmod	_
 16	everyone	everyone	PRON	NN	Number=Sing	17	nsubj	17:nsubj	_
 17	knew	know	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	ccomp	13:ccomp	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 19	rate	rate	NOUN	NN	Number=Sing	23	nsubj	23:nsubj	_
 20	would	would	AUX	MD	VerbForm=Fin	23	aux	23:aux	_
-21	or	or	CCONJ	CC	_	23	cc	23:cc	_
-22	could	could	AUX	MD	VerbForm=Fin	23	aux	23:aux	_
+21	or	or	CCONJ	CC	_	22	cc	22:cc	_
+22	could	could	AUX	MD	VerbForm=Fin	20	conj	20:conj:or	_
 23	apply	apply	VERB	VB	VerbForm=Inf	17	ccomp	17:ccomp	_
 24	at	at	ADP	IN	_	26	case	26:case	_
 25	any	any	DET	DT	_	26	det	26:det	_
@@ -1568,7 +1568,7 @@
 28	and	and	CCONJ	CC	_	29	cc	29:cc	_
 29	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	27	conj	27:conj:and|30:nsubj|33:nsubj:xsubj|38:nsubj:xsubj	_
 30	decided	decide	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:but	_
-31	not	not	ADV	RB	_	33	advmod	33:advmod	_
+31	not	not	PART	RB	_	33	advmod	33:advmod	_
 32	to	to	PART	TO	_	33	mark	33:mark	_
 33	send	send	VERB	VB	VerbForm=Inf	30	xcomp	30:xcomp	_
 34	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	33	obj	33:obj	_
@@ -1643,7 +1643,7 @@
 22	example	example	NOUN	NN	Number=Sing	4	obl	4:obl:as	_
 23	of	of	SCONJ	IN	_	27	mark	27:mark	_
 24	how	how	SCONJ	WRB	PronType=Int	27	mark	27:mark	_
-25	not	not	ADV	RB	_	27	advmod	27:advmod	_
+25	not	not	PART	RB	_	27	advmod	27:advmod	_
 26	to	to	PART	TO	_	27	mark	27:mark	_
 27	handle	handle	VERB	VB	VerbForm=Inf	22	acl	22:acl:to	_
 28	this	this	DET	DT	Number=Sing|PronType=Dem	29	det	29:det	_

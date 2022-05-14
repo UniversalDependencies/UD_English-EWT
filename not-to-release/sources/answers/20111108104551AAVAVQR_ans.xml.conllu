@@ -22,7 +22,7 @@
 5	male	male	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
 7	female	female	NOUN	NN	Number=Sing	5	conj	2:obj|5:conj:and	_
-8	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj|15:nsubj	_
+8	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	10	nsubj	10:nsubj|15:nsubj	_
 9	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 10	together	together	ADV	RB	_	2	parataxis	2:parataxis	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
@@ -114,7 +114,7 @@
 10	,	,	PUNCT	,	_	13	punct	13:punct	_
 11	so	so	ADV	RB	_	13	advmod	13:advmod	_
 12	there	there	PRON	EX	_	13	expl	13:expl	_
-13	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	conj	1:conj	_
+13	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	parataxis	1:parataxis	_
 14	hope	hope	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
 15	there	there	ADV	RB	PronType=Dem	13	advmod	13:advmod	SpaceAfter=No
 16	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -202,9 +202,9 @@
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	live	live	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
-10	VS	versus	CCONJ	CC	Abbr=Yes	11	cc	11:cc	_
+10	VS	versus	CCONJ	CC	Abbr=Yes	11	case	11:case	_
 11-12	what's	_	_	_	_	_	_	_	_
-11	what	what	PRON	WP	PronType=Int	4	conj	4:conj:vs	_
+11	what	what	PRON	WP	PronType=Int	4	obl	4:obl:versus	_
 12	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
 13	ideal	ideal	ADJ	JJ	Degree=Pos	11	acl:relcl	11:acl:relcl	_
 14	for	for	ADP	IN	_	15	case	15:case	_
@@ -292,8 +292,8 @@
 9	interested	interested	ADJ	JJ	Degree=Pos	4	acl:relcl	4:acl:relcl	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
 11	put	put	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
-12	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obj	11:obj	_
-13	alone	alone	ADJ	JJ	Degree=Pos	11	advmod	11:advmod	_
+12	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obj	11:obj|13:nsubj:xsubj	_
+13	alone	alone	ADJ	JJ	Degree=Pos	11	xcomp	11:xcomp	_
 14	in	in	ADP	IN	_	17	case	17:case	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 16	breeeding	breeding	NOUN	NN	Number=Sing|Typo=Yes	17	compound	17:compound	CorrectForm=breeding
@@ -333,7 +333,7 @@
 24	cave	cave	NOUN	NN	Number=Sing	7	conj	4:obj|7:conj:but	_
 25	big	big	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
 26	enough	enough	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-27	for	for	ADP	IN	_	31	mark	31:mark	_
+27	for	for	SCONJ	IN	_	31	mark	31:mark	_
 28	two	two	NUM	CD	NumType=Card	29	nummod	29:nummod	_
 29	fish	fish	NOUN	NN	Number=Plur	31	nsubj	31:nsubj	_
 30	to	to	PART	TO	_	31	mark	31:mark	_
@@ -409,7 +409,7 @@
 13	smaller	small	ADJ	JJR	Degree=Cmp	16	nsubj	16:nsubj	_
 14	one	one	NUM	CD	NumType=Card	13	nummod	13:nummod	_
 15	can	can	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
-16	fit	fit	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
+16	fit	fit	VERB	VB	VerbForm=Inf	4	parataxis	4:parataxis	_
 17	in	in	ADP	IN	_	18	case	18:case	_
 18	one	one	NUM	CD	NumType=Card	16	obl	16:obl:in	_
 19	of	of	ADP	IN	_	21	case	21:case	_
@@ -427,7 +427,7 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3-4	males	_	_	_	_	_	_	_	_
 3	male	male	NOUN	NN	Number=Sing	6	nmod:poss	6:nmod:poss	_
-4	s	's	PART	POS	Typo=Yes	3	case	3:case	_
+4	s	's	PART	POS	Typo=Yes	3	case	3:case	CorrectForm='s
 5	aggressive	aggressive	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	behavior	behavior	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 7	stops	stop	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:when	SpaceAfter=No

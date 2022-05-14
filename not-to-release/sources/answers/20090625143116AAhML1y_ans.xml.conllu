@@ -11,7 +11,7 @@
 7	:	:	PUNCT	:	_	6	punct	6:punct	_
 8-9	McDonalds	_	_	_	_	_	_	_	SpaceAfter=No
 8	McDonald	McDonald	PROPN	NNP	Number=Sing	6	parataxis	6:parataxis	_
-9	s	's	PART	POS	Typo=Yes	8	case	8:case	_
+9	s	's	PART	POS	Typo=Yes	8	case	8:case	CorrectForm='s
 10	,	,	PUNCT	,	_	12	punct	12:punct	_
 11	Burger	Burger	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 12	King	King	PROPN	NNP	Number=Sing	8	conj	8:conj	SpaceAfter=No
@@ -21,7 +21,7 @@
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
 17-18	Wendys	_	_	_	_	_	_	_	SpaceAfter=No
 17	Wendy	Wendy	PROPN	NNP	Number=Sing	8	conj	8:conj	_
-18	s	's	PART	POS	Typo=Yes	17	case	17:case	_
+18	s	's	PART	POS	Typo=Yes	17	case	17:case	CorrectForm='s
 19	?	?	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20090625143116AAhML1y_ans-0002
@@ -44,8 +44,8 @@
 9	restaurant	restaurant	NOUN	NN	Number=Sing	2	advcl	2:advcl:at	_
 10	like	like	ADP	IN	_	11	case	11:case	_
 11-12	Applebees	_	_	_	_	_	_	_	SpaceAfter=No
-11	Applebee	Applebee	PROPN	NNP	Number=Sing	9	nmod	9:nmod:s	_
-12	s	's	PART	POS	Typo=Yes	11	case	11:case	_
+11	Applebee	Applebee	PROPN	NNP	Number=Sing	9	nmod	9:nmod:like	_
+12	s	's	PART	POS	Typo=Yes	11	case	11:case	CorrectForm='s
 13	,	,	PUNCT	,	_	2	punct	2:punct	_
 14	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	food	food	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
@@ -58,8 +58,8 @@
 # newpar id = answers-20090625143116AAhML1y_ans-p0003
 # text = McDonals the best for me
 1-2	McDonals	_	_	_	_	_	_	_	_
-1	McDonal	McDonal	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
-2	s	's	PART	POS	Typo=Yes	1	case	1:case	_
+1	McDonal	McDonald	PROPN	NNP	Number=Sing|Typo=Yes	4	nsubj	4:nsubj	CorrectForm=McDonald
+2	s	's	PART	POS	Typo=Yes	1	case	1:case	CorrectForm='s
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	best	good	ADJ	JJS	Degree=Sup	0	root	0:root	_
 5	for	for	ADP	IN	_	6	case	6:case	_

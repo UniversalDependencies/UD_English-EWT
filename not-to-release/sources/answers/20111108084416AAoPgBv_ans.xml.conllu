@@ -35,7 +35,7 @@
 19	where	where	ADV	WRB	PronType=Int	22	ccomp	22:ccomp	_
 20	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	22	aux	22:aux	_
 21	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	22:nsubj	_
-22	think	think	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp|10:ccomp	_
+22	think	think	VERB	VB	VerbForm=Inf	3	parataxis	3:parataxis	_
 23	would	would	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 24	be	be	AUX	VB	VerbForm=Inf	19	cop	19:cop	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
@@ -60,11 +60,11 @@
 3	never	never	ADV	RB	_	5	advmod	5:advmod	_
 4	been	be	AUX	VBN	Tense=Past|VerbForm=Part	5	cop	5:cop	_
 5	anywhere	anywhere	ADV	RB	_	0	root	0:root	_
-6	out	out	ADP	GW	_	10	case	10:case	_
-7	side	side	X	IN	_	6	goeswith	6:goeswith	_
+6	out	outside	ADP	GW	Typo=Yes	10	case	10:case	_
+7	side	_	X	IN	_	6	goeswith	6:goeswith	_
 8	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 9	home	home	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	town	town	NOUN	NN	_	5	obl	5:obl:side	_
+10	town	town	NOUN	NN	_	5	obl	5:obl:outside	_
 11	Charlotte	Charlotte	PROPN	NNP	Number=Sing	10	appos	10:appos	_
 12	north	north	PROPN	NNP	Number=Sing	13	compound	13:compound	_
 13	Carolina	Carolina	PROPN	NNP	Number=Sing	11	appos	11:appos	_
@@ -114,7 +114,7 @@
 1	London	London	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj|9:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-4	deliteful	deliteful	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+4	deliteful	delightful	ADJ	JJ	Degree=Pos|Typo=Yes	5	amod	5:amod	CorrectForm=delightful
 5	city	city	NOUN	NN	Number=Sing	0	root	0:root	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	visit	visit	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
@@ -226,7 +226,7 @@
 6	intermediate	intermediate	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	French	French	PROPN	NNP	Number=Sing	5	obj	5:obj	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
-9	have	have	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
+9	have	have	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 11	good	good	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	time	time	NOUN	NN	Number=Sing	9	obj	9:obj	_
@@ -387,12 +387,12 @@
 # sent_id = answers-20111108084416AAoPgBv_ans-0023
 # newpar id = answers-20111108084416AAoPgBv_ans-p0005
 # text = If your French is good/moderate, then head to Paris without a doubt.
-1	If	if	SCONJ	IN	_	7	mark	7:mark	_
+1	If	if	SCONJ	IN	_	5	mark	5:mark	_
 2	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	French	French	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
-4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
+3	French	French	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 5	good	good	ADJ	JJ	Degree=Pos	10	advcl	10:advcl	SpaceAfter=No
-6	/	/	SYM	,	_	7	cc	7:cc	SpaceAfter=No
+6	/	/	SYM	,	_	5	cc	5:cc	SpaceAfter=No
 7	moderate	moderate	ADJ	JJ	Degree=Pos	5	conj	5:conj|10:advcl:if	SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	then	then	ADV	RB	PronType=Dem	10	advmod	10:advmod	_

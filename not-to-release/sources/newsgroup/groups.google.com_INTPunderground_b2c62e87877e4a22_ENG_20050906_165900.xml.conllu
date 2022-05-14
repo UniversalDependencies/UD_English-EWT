@@ -100,7 +100,7 @@
 22	Orleans	Orleans	PROPN	NNP	Number=Sing	18	obl	18:obl:in	_
 23	following	follow	VERB	VBG	VerbForm=Ger	25	case	25:case	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
-25	breakdown	breakdown	NOUN	NN	Number=Sing	18	obl	18:obl:follow	_
+25	breakdown	breakdown	NOUN	NN	Number=Sing	18	obl	18:obl:following	_
 26	of	of	ADP	IN	_	27	case	27:case	_
 27	law	law	NOUN	NN	Number=Sing	25	nmod	25:nmod:of	_
 28	and	and	CCONJ	CC	_	29	cc	29:cc	_
@@ -138,7 +138,7 @@
 27	especially	especially	ADV	RB	_	30	advmod	30:advmod	_
 28	following	follow	VERB	VBG	VerbForm=Ger	30	case	30:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
-30	scenes	scene	NOUN	NNS	Number=Plur	11	obl	11:obl:follow	_
+30	scenes	scene	NOUN	NNS	Number=Plur	11	obl	11:obl:following	_
 31	of	of	ADP	IN	_	32	case	32:case	_
 32	poverty	poverty	NOUN	NN	Number=Sing	30	nmod	30:nmod:of	_
 33	and	and	CCONJ	CC	_	35	cc	35:cc	_
@@ -305,10 +305,10 @@
 17	system	system	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	SpaceAfter=No
 18	,	,	PUNCT	,	_	17	punct	17:punct	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
-20	form	form	NOUN	NN	Number=Sing	17	appos	17:appos	_
+20	form	form	NOUN	NN	Number=Sing	17	appos	17:appos|32:nsubj	_
 21	of	of	ADP	IN	_	22	case	22:case	_
 22	socialism	socialism	NOUN	NN	Number=Sing	20	nmod	20:nmod:of	_
-23	that	that	PRON	WDT	PronType=Dem	32	nsubj	32:nsubj	_
+23	that	that	PRON	WDT	PronType=Rel	32	nsubj	20:ref	_
 24	many	many	ADJ	JJ	Degree=Pos	28	nsubj	28:nsubj	_
 25	in	in	ADP	IN	_	27	case	27:case	_
 26	this	this	DET	DT	Number=Sing|PronType=Dem	27	det	27:det	_
@@ -508,7 +508,7 @@
 52	which	which	PRON	WDT	PronType=Rel	57	nsubj	50:ref	_
 53-54	let's	_	_	_	_	_	_	_	_
 53	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	57	parataxis	57:parataxis	_
-54	's	's	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	53	obj	53:obj|55:nsubj:xsubj	_
+54	's	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	53	obj	53:obj|55:nsubj:xsubj	_
 55	face	face	VERB	VB	VerbForm=Inf	53	xcomp	53:xcomp	_
 56	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	55	obj	55:obj	_
 57	looks	look	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	50	acl:relcl	50:acl:relcl	_
@@ -872,7 +872,7 @@
 4	poverty	poverty	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	stricken	stricken	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	and	and	CCONJ	CC	_	9	cc	9:cc	_
-7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	racial	racial	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	issue	issue	NOUN	NN	Number=Sing	5	conj	5:conj:and	SpaceAfter=No
 10	...	...	PUNCT	,	_	5	punct	5:punct	_
@@ -1107,22 +1107,22 @@
 
 # sent_id = newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0052
 # text = Unfortunately, those left behind to be filmed, where those without transportation or means.
-1	Unfortunately	unfortunately	ADV	RB	_	10	advmod	10:advmod	SpaceAfter=No
-2	,	,	PUNCT	,	_	10	punct	10:punct	_
-3	those	that	PRON	DT	Number=Plur|PronType=Dem	10	nsubj	10:nsubj	_
-4	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	3	advcl	3:advcl	_
+1	Unfortunately	unfortunately	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
+2	,	,	PUNCT	,	_	11	punct	11:punct	_
+3	those	that	PRON	DT	Number=Plur|PronType=Dem	11	nsubj	11:nsubj	_
+4	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	3	acl	3:acl	_
 5	behind	behind	ADV	RB	_	4	advmod	4:advmod	_
 6	to	to	PART	TO	_	8	mark	8:mark	_
 7	be	be	AUX	VB	VerbForm=Inf	8	aux:pass	8:aux:pass	_
 8	filmed	film	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	advcl	4:advcl:to	SpaceAfter=No
-9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	where	where	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-11	those	that	PRON	DT	Number=Plur|PronType=Dem	10	obj	10:obj	_
+9	,	,	PUNCT	,	_	11	punct	11:punct	_
+10	where	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|Typo=Yes|VerbForm=Fin	11	cop	11:cop	CorrectForm=were
+11	those	that	PRON	DT	Number=Plur|PronType=Dem	0	root	0:root	_
 12	without	without	ADP	IN	_	13	case	13:case	_
 13	transportation	transportation	NOUN	NN	Number=Sing	11	nmod	11:nmod:without	_
 14	or	or	CCONJ	CC	_	15	cc	15:cc	_
 15	means	means	NOUN	NNS	Number=Plur	13	conj	11:nmod:without|13:conj:or	SpaceAfter=No
-16	.	.	PUNCT	.	_	10	punct	10:punct	_
+16	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0053
 # text = Some refused to leave, but so many were unable to.
@@ -1258,7 +1258,7 @@
 11	affluent	affluent	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
 13	those	that	PRON	DT	Number=Plur|PronType=Dem	10	conj	8:appos|10:conj:and	_
-14	not	not	ADV	RB	_	13	acl:relcl	13:acl:relcl	SpaceAfter=No
+14	not	not	PART	RB	_	13	acl:relcl	13:acl:relcl	SpaceAfter=No
 15	)	)	PUNCT	-RRB-	_	10	punct	10:punct	_
 16	will	will	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 17	remain	remain	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
@@ -1541,7 +1541,7 @@
 18	view	view	NOUN	NN	Number=Sing	19	compound	19:compound	_
 19	point	point	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	_
 20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	cop	21:cop	_
-21	slanted	slanted	ADJ	JJ	Degree=Pos	5	ccomp	5:ccomp|13:ccomp	_
+21	slanted	slanted	ADJ	JJ	Degree=Pos	5	parataxis	5:parataxis	_
 22	and	and	CCONJ	CC	_	24	cc	24:cc	_
 23	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	24	nsubj	24:nsubj	_
 24	admit	admit	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	21	conj	5:ccomp|21:conj:and	_
@@ -1574,7 +1574,7 @@
 22	credibility	credibility	NOUN	NN	Number=Sing	21	obj	21:obj	_
 23	so	so	ADV	RB	_	24	advmod	24:advmod	_
 24-25	what's	_	_	_	_	_	_	_	_
-24	what	what	PRON	WP	PronType=Int	21	conj	17:ccomp|21:conj	_
+24	what	what	PRON	WP	PronType=Int	21	parataxis	17:ccomp|21:parataxis	_
 25	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 27	point	point	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	SpaceAfter=No
@@ -1592,7 +1592,7 @@
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	close	close	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	friend	friend	NOUN	NN	Number=Sing	7	obj	7:obj	_
-11	who's	who's	PRON	WP$	PronType=Int	12	nmod:poss	12:nmod:poss	_
+11	who's	whose	PRON	WP$	Poss=Yes|PronType=Int|Typo=Yes	12	nmod:poss	12:nmod:poss	CorrectForm=whose
 12	aunt	aunt	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
 13	disappeared	disappear	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
 14	in	in	ADP	IN	_	16	case	16:case	_
@@ -1613,7 +1613,7 @@
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	so	so	ADV	RB	_	11	advmod	11:advmod	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
-11	spent	spend	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	5	conj	5:conj	_
+11	spent	spend	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	5	parataxis	5:parataxis	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	day	day	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	searching	search	VERB	VBG	VerbForm=Ger	11	advcl	11:advcl	_
@@ -1706,7 +1706,7 @@
 4	6	6	NUM	CD	NumType=Card	3	nummod	3:nummod	SpaceAfter=No
 5	,	,	PUNCT	,	_	13	punct	13:punct	_
 6	and	and	CCONJ	CC	_	13	cc	13:cc	_
-7	not	not	ADV	RB	_	8	advmod	8:advmod	_
+7	not	not	PART	RB	_	8	advmod	8:advmod	_
 8	one	one	NUM	CD	NumType=Card	10	nummod	10:nummod	_
 9	family	family	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	member	member	NOUN	NN	Number=Sing	13	nsubj:pass	13:nsubj:pass	_
@@ -1777,9 +1777,9 @@
 32	to	to	PART	TO	_	33	mark	33:mark	_
 33	tell	tell	VERB	VB	VerbForm=Inf	28	advcl	28:advcl:to	_
 34	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	33	obj	33:obj	_
-35	what	what	PRON	WP	PronType=Int	33	obj	33:obj	_
+35	what	what	PRON	WP	PronType=Int	37	obj	37:obj	_
 36	to	to	PART	TO	_	37	mark	37:mark	_
-37	do	do	VERB	VB	VerbForm=Inf	35	acl:relcl	35:acl:relcl	SpaceAfter=No
+37	do	do	VERB	VB	VerbForm=Inf	33	ccomp	33:ccomp	SpaceAfter=No
 38	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0083
@@ -1975,8 +1975,8 @@
 34	or	or	CCONJ	CC	_	36	cc	36:cc	_
 35	crude	crude	ADJ	JJ	Degree=Pos	36	amod	36:amod	_
 36	oil	oil	NOUN	NN	Number=Sing	33	conj	31:obl:of|33:conj:or	_
-37	all	all	ADV	GW	_	31	advmod	31:advmod	_
-38	together	together	X	RB	_	37	goeswith	37:goeswith	SpaceAfter=No
+37	all	altogether	ADV	GW	Typo=Yes	31	advmod	31:advmod	CorrectForm=altogether
+38	together	_	X	RB	_	37	goeswith	37:goeswith	SpaceAfter=No
 39	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0091
@@ -2038,7 +2038,7 @@
 23	term	term	NOUN	NN	Number=Sing	24	compound	24:compound	_
 24	good	good	NOUN	NN	Number=Sing	17	obl	17:obl:for	_
 25	(	(	PUNCT	-LRB-	_	26	punct	26:punct	SpaceAfter=No
-26	theirs	theirs	PRON	PRP	_	24	nmod:poss	24:nmod:poss	SpaceAfter=No
+26	theirs	theirs	PRON	PRP	_	24	parataxis	24:parataxis	SpaceAfter=No
 27	)	)	PUNCT	-RRB-	_	26	punct	26:punct	SpaceAfter=No
 28	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -2056,7 +2056,7 @@
 9	puke	puke	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
 10	so	so	ADV	RB	_	12	advmod	12:advmod	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-12	shut	shut	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	conj	3:ccomp|5:conj	_
+12	shut	shut	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	parataxis	3:ccomp|5:parataxis	_
 13	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	obj	12:obj	_
 14	off	off	ADP	RP	_	12	compound:prt	12:compound:prt	SpaceAfter=No
 15	.	.	PUNCT	.	_	3	punct	3:punct	_

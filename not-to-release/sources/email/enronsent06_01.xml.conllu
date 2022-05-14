@@ -127,7 +127,7 @@
 10	as	as	ADV	RB	_	11	advmod	11:advmod	_
 11	soon	soon	ADV	RB	Degree=Pos	8	advmod	8:advmod	_
 12	as	as	SCONJ	IN	_	13	mark	13:mark	_
-13	possible	possible	ADJ	JJ	Degree=Pos	10	advcl	10:advcl:as	SpaceAfter=No
+13	possible	possible	ADJ	JJ	Degree=Pos	11	advcl	11:advcl:as	SpaceAfter=No
 14	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = email-enronsent06_01-0009
@@ -253,12 +253,12 @@
 # sent_id = email-enronsent06_01-0020
 # text = Seems like a good idea to keep the heat on Hoecker & Co.right up until Nov. 1.
 1	Seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-2	like	like	ADP	IN	_	5	mark	5:mark	_
+2	like	like	ADP	IN	_	5	case	5:case	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 4	good	good	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	idea	idea	NOUN	NN	Number=Sing	1	advcl	1:advcl:like	_
+5	idea	idea	NOUN	NN	Number=Sing	1	obl	1:obl:like	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	keep	keep	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
+7	keep	keep	VERB	VB	VerbForm=Inf	1	csubj	1:csubj	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	heat	heat	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	on	on	ADP	IN	_	11	case	11:case	_
@@ -329,7 +329,7 @@
 # text = Let's regroup on Monday.
 1-2	Let's	_	_	_	_	_	_	_	_
 1	Let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	's	's	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	1	obj	1:obj|3:nsubj:xsubj	_
+2	's	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	1	obj	1:obj|3:nsubj:xsubj	_
 3	regroup	regroup	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
 4	on	on	ADP	IN	_	5	case	5:case	_
 5	Monday	Monday	PROPN	NNP	Number=Sing	3	obl	3:obl:on	SpaceAfter=No
@@ -617,9 +617,9 @@
 # sent_id = email-enronsent06_01-0045
 # newpar id = email-enronsent06_01-p0011
 # text = Lara Leibman@ENRON COMMUNICATIONS
-1	Lara	lara	X	GW	_	0	root	0:root	_
-2	Leibman@ENRON	leibman@enron	X	GW	_	1	goeswith	1:goeswith	_
-3	COMMUNICATIONS	communications	X	ADD	_	1	goeswith	1:goeswith	_
+1	Lara	laraleibman@enroncommunications	X	GW	Typo=Yes	0	root	0:root	_
+2	Leibman@ENRON	_	X	GW	_	1	goeswith	1:goeswith	_
+3	COMMUNICATIONS	_	X	ADD	_	1	goeswith	1:goeswith	_
 
 # sent_id = email-enronsent06_01-0046
 # text = 10/31/2000 03:48 PM
@@ -870,7 +870,7 @@
 47	Comprehensive	comprehensive	ADJ	JJ	Degree=Pos	49	amod	49:amod	_
 48	Settlement	settlement	NOUN	NN	Number=Sing	49	compound	49:compound	_
 49	document	document	NOUN	NN	Number=Sing	28	conj	6:nmod:including|28:conj:and|37:nsubj:pass	_
-50	itself	itself	PRON	PRP	Gender=Neut|Number=Sing|Person=3|PronType=Prs	49	nmod:npmod	49:nmod:npmod	SpaceAfter=No
+50	itself	itself	PRON	PRP	Gender=Neut|Number=Sing|Person=3|PronType=Emp|Reflex=Yes	49	nmod:npmod	49:nmod:npmod	SpaceAfter=No
 51	,	,	PUNCT	,	_	55	punct	55:punct	_
 52	and	and	CCONJ	CC	_	55	cc	55:cc	_
 53	the	the	DET	DT	Definite=Def|PronType=Art	55	det	55:det	_
@@ -1182,9 +1182,9 @@
 25	>>	>>	PUNCT	-RRB-	_	24	punct	24:punct	_
 26	<<	<<	PUNCT	-LRB-	_	27	punct	27:punct	SpaceAfter=No
 27	Primary	primary	NOUN	GW	_	2	list	2:list	_
-28	Rights	rights	X	GW	_	27	goeswith	27:goeswith	_
-29	4-12	4-12	X	GW	_	27	goeswith	27:goeswith	_
-30	.doc	.doc	X	NN	Number=Sing	27	goeswith	27:goeswith	SpaceAfter=No
+28	Rights	rights	X	GW	_	27	flat	27:flat	_
+29	4-12	4-12	X	GW	_	27	flat	27:flat	_
+30	.doc	.doc	X	NN	Number=Sing	27	flat	27:flat	SpaceAfter=No
 31	>>	>>	PUNCT	-RRB-	_	27	punct	27:punct	_
 32	<<	<<	PUNCT	-LRB-	_	33	punct	33:punct	SpaceAfter=No
 33	ld2d-#69334-1.DOC	ld2d-#69334-1.doc	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
@@ -1237,9 +1237,9 @@
 # text = - Primary Rights 4-12 .doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
 2	Primary	primary	NOUN	GW	_	0	root	0:root	_
-3	Rights	rights	X	GW	_	2	goeswith	2:goeswith	_
-4	4-12	4-12	X	GW	_	2	goeswith	2:goeswith	_
-5	.doc	.doc	X	NN	Number=Sing	2	goeswith	2:goeswith	_
+3	Rights	rights	X	GW	_	2	flat	2:flat	_
+4	4-12	4-12	X	GW	_	2	flat	2:flat	_
+5	.doc	.doc	X	NN	Number=Sing	2	flat	2:flat	_
 
 # sent_id = email-enronsent06_01-0082
 # text = - ld2d-#69334-1.DOC

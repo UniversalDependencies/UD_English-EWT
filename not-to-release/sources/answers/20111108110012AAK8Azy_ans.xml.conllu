@@ -70,7 +70,7 @@
 7	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 8	gives	give	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	ccomp	6:ccomp	_
 9	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	iobj	8:iobj	_
-10	not	not	ADV	RB	_	13	advmod	13:advmod	_
+10	not	not	PART	RB	_	13	advmod	13:advmod	_
 11	only	only	ADV	RB	_	13	cc:preconj	13:cc:preconj	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	heat	heat	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No
@@ -193,7 +193,7 @@
 9	simply	simply	ADV	RB	_	5	advmod	5:advmod	_
 10	as	as	SCONJ	IN	_	12	mark	12:mark	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-12	can	can	AUX	MD	VerbForm=Fin	8	advcl	8:advcl:as	SpaceAfter=No
+12	can	can	AUX	MD	VerbForm=Fin	9	advcl	9:advcl:as	SpaceAfter=No
 13	:	:	PUNCT	:	_	1	punct	1:punct	_
 14	diurnal	diurnal	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 15	(	(	PUNCT	-LRB-	_	16	punct	16:punct	SpaceAfter=No
@@ -341,7 +341,7 @@
 26	blindness	blindness	NOUN	NN	Number=Sing	22	conj	19:obj|22:conj:and_or	_
 27	in	in	ADP	IN	_	28	case	28:case	_
 28	reptiles	reptile	NOUN	NNS	Number=Plur	19	obl	19:obl:in	_
-29	not	not	ADV	RB	_	33	cc	33:cc	_
+29	not	not	PART	RB	_	33	cc	33:cc	_
 30	to	to	PART	TO	_	29	fixed	29:fixed	_
 31	mention	mention	VERB	VB	VerbForm=Inf	29	fixed	29:fixed	_
 32	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	33	nsubj	33:nsubj	_
@@ -354,7 +354,6 @@
 39	time	time	NOUN	NN	Number=Sing	35	obl	35:obl:over	SpaceAfter=No
 40	.	.	PUNCT	.	_	3	punct	3:punct	_
 
-# TODO: Split into 2 sentences after word 15
 # sent_id = answers-20111108110012AAK8Azy_ans-0016
 # text = The long tube UVB bulbs are best, like Zoomed's Repsitun model: http://lllreptile.com/store/catalog/reptile-supplies/uvb-fluorescent-lights-mercury-vapor-bulbs/-/zoo-med-24-repti-sun-100-fluorescent-bulb/ Remember to replace UVB bulbs according to the manufacturers recommendation after which time the bulb will no longer produce UVB even if visible light still is.
 1	The	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
@@ -383,7 +382,7 @@
 23	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
 24-25	manufacturers	_	_	_	_	_	_	_	_
 24	manufacturer	manufacturer	NOUN	NN	Number=Sing	26	nmod:poss	26:nmod:poss	_
-25	s	's	PART	POS	Typo=Yes	24	case	24:case	_
+25	s	's	PART	POS	Typo=Yes	24	case	24:case	CorrectForm='s
 26	recommendation	recommendation	NOUN	NN	Number=Sing	18	obl	18:obl:according_to	_
 27	after	after	ADP	IN	_	29	case	29:case	_
 28	which	which	DET	WDT	PronType=Int	29	det	29:det	_
@@ -439,7 +438,7 @@
 31	"	"	PUNCT	``	_	30	punct	30:punct	_
 32	that	that	PRON	WDT	PronType=Rel	35	obj	30:ref	_
 33	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	34	nmod:poss	34:nmod:poss	_
-34	bearded	beard	VERB	VBN	Tense=Past|VerbForm=Part	35	nsubj	35:nsubj	_
+34	bearded	bearded	ADJ	JJ	Degree=Pos	35	nsubj	35:nsubj	_
 35	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	acl:relcl	30:acl:relcl	SpaceAfter=No
 36	.	.	PUNCT	.	_	25	punct	25:punct	_
 
@@ -454,7 +453,7 @@
 7	source	source	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	a	of	ADP	IN	Typo=Yes	10	case	10:case	CorrectForm=of
 9	UVB	UVB	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	lighting	lighting	NOUN	NN	Number=Sing	7	nmod	7:nmod:a	SpaceAfter=No
+10	lighting	lighting	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108110012AAK8Azy_ans-0019
@@ -478,13 +477,13 @@
 17	to	to	PART	TO	_	19	mark	19:mark	_
 18	second	second	ADV	RB	NumType=Ord	19	advmod	19:advmod	_
 19	guess	guess	VERB	VB	VerbForm=Inf	16	csubj	16:csubj	_
-20	what	what	PRON	WP	PronType=Int	25	obj	25:obj	_
+20	what	what	PRON	WP	PronType=Rel	19	obj	19:obj|25:obj	_
 21	most	most	ADJ	JJS	Degree=Sup	24	amod	24:amod	_
 22	pet	pet	NOUN	NN	Number=Sing	23	compound	23:compound	_
 23	store	store	NOUN	NN	Number=Sing	24	compound	24:compound	_
 24	employees	employee	NOUN	NNS	Number=Plur	25	nsubj	25:nsubj	_
-25	tell	tell	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	19	ccomp	19:ccomp	_
-26	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	25	obj	25:obj	SpaceAfter=No
+25	tell	tell	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	20	acl:relcl	20:acl:relcl	_
+26	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	25	iobj	25:iobj	SpaceAfter=No
 27	;	;	PUNCT	,	_	16	punct	16:punct	_
 28	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	31	nsubj	31:nsubj	_
 29-30	don't	_	_	_	_	_	_	_	_
@@ -532,9 +531,9 @@
 25	10	10	NUM	CD	NumType=Card	30	nummod	30:nummod	_
 26	-	-	SYM	SYM	_	27	case	27:case	_
 27	12	12	NUM	CD	NumType=Card	25	nmod	25:nmod	_
-28	hours	hour	NOUN	NNS	Number=Plur	30	case	30:case	_
+28	hours	hour	NOUN	NNS	Number=Plur	23	obl	23:obl:for	_
 29	a	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
-30	day	day	NOUN	NN	Number=Sing	23	obl	23:obl:hours	SpaceAfter=No
+30	day	day	NOUN	NN	Number=Sing	28	nmod:tmod	28:nmod:tmod	SpaceAfter=No
 31	.	.	PUNCT	.	_	23	punct	23:punct	_
 
 # sent_id = answers-20111108110012AAK8Azy_ans-0021
@@ -636,7 +635,7 @@
 30	to	to	PART	TO	_	31	mark	31:mark	_
 31	offer	offer	VERB	VB	VerbForm=Inf	29	acl	29:acl:to	_
 32	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	33	nmod:poss	33:nmod:poss	_
-33	bearded	beard	VERB	VBN	Tense=Past|VerbForm=Part	31	obj	31:obj	SpaceAfter=No
+33	bearded	bearded	ADJ	JJ	Degree=Pos	31	obj	31:obj	SpaceAfter=No
 34	.	.	PUNCT	.	_	26	punct	26:punct	_
 
 # sent_id = answers-20111108110012AAK8Azy_ans-0025
@@ -723,7 +722,7 @@
 24-25	i'm	_	_	_	_	_	_	_	_
 24	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	26	nsubj	26:nsubj	_
 25	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	26	cop	26:cop	_
-26	concerned	concerned	ADJ	JJ	Degree=Pos	21	advcl	21:advcl:as	SpaceAfter=No
+26	concerned	concerned	ADJ	JJ	Degree=Pos	22	advcl	22:advcl:as	SpaceAfter=No
 27	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108110012AAK8Azy_ans-0030
@@ -857,13 +856,13 @@
 5	light	light	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
 6	provides	provide	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
 7	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
-8	gives	give	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-9	UV	ultra-violet	NOUN	NN	Abbr=Yes|Number=Sing	10	compound	10:compound|14:nsubj	_
+8	gives	give	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root|14:csubj	_
+9	UV	ultra-violet	NOUN	NN	Abbr=Yes|Number=Sing	10	compound	10:compound	_
 10	rays	ray	VERB	NNS	Number=Plur	8	obj	8:obj	SpaceAfter=No
 11	..	..	PUNCT	,	_	10	punct	10:punct	SpaceAfter=No
-12	which	which	PRON	WDT	PronType=Rel	14	nsubj	14:nsubj	_
+12	which	which	PRON	WDT	PronType=Rel	14	nsubj	8:ref	_
 13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
-14	important	important	ADJ	JJ	Degree=Pos	10	acl:relcl	10:acl:relcl	_
+14	important	important	ADJ	JJ	Degree=Pos	8	acl:relcl	8:acl:relcl	_
 15	for	for	ADP	IN	_	16	case	16:case	_
 16	health	health	NOUN	NN	Number=Sing	14	obl	14:obl:for	_
 17	in	in	ADP	IN	_	18	case	18:case	_
@@ -982,14 +981,14 @@
 14	so	so	ADV	RB	_	19	advmod	19:advmod	_
 15-16	its	_	_	_	_	_	_	_	_
 15	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	expl	16:expl	_
-16	s	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	conj	7:conj	_
+16	s	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	parataxis	7:parataxis	_
 17-18	anyone's	_	_	_	_	_	_	_	_
 17	anyone	anyone	PRON	NN	Number=Sing	19	nmod:poss	19:nmod:poss	_
 18	's	's	PART	POS	_	17	case	17:case	_
 19	guess	guess	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	_
 20	whether	whether	SCONJ	IN	_	25	mark	25:mark	_
 21	or	or	CCONJ	CC	_	20	fixed	20:fixed	_
-22	not	not	ADV	RB	_	20	fixed	20:fixed	_
+22	not	not	PART	RB	_	20	fixed	20:fixed	_
 23-24	he'll	_	_	_	_	_	_	_	_
 23	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	25	nsubj	25:nsubj	_
 24	'll	will	AUX	MD	VerbForm=Fin	25	aux	25:aux	_

@@ -102,7 +102,7 @@
 12	sure	sure	ADJ	JJ	Degree=Pos	4	parataxis	4:parataxis	_
 13	when	when	ADV	WRB	PronType=Int	12	ccomp	12:ccomp	_
 14	exactly	exactly	ADV	RB	_	13	advmod	13:advmod	_
-15	there	there	PRON	PRP$	_	16	nmod:poss	16:nmod:poss	_
+15	there	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	16	nmod:poss	16:nmod:poss	CorrectForm=their
 16	fall	fall	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
 17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	SpaceAfter=No
 18	...	...	PUNCT	,	_	13	punct	13:punct	_
@@ -221,7 +221,7 @@
 # sent_id = answers-20111107175720AAlb2TB_ans-0009
 # text = One thing you can be sure of about Irish weather is how little you can be sure of.
 1	One	one	NUM	CD	NumType=Card	2	nummod	2:nummod	_
-2	thing	thing	NOUN	NN	Number=Sing	11	csubj	11:csubj	_
+2	thing	thing	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
 4	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 5	be	be	AUX	VB	VerbForm=Inf	6	cop	6:cop	_
@@ -232,12 +232,12 @@
 10	weather	weather	NOUN	NN	Number=Sing	2	nmod	2:nmod:about	_
 11	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 12	how	how	SCONJ	WRB	PronType=Int	13	mark	13:mark	_
-13	little	little	ADJ	JJ	Degree=Pos	17	advmod	17:advmod	_
+13	little	little	ADJ	JJ	Degree=Pos	17	obl	17:obl:of	_
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	_
 15	can	can	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 16	be	be	AUX	VB	VerbForm=Inf	17	cop	17:cop	_
 17	sure	sure	ADJ	JJ	Degree=Pos	11	ccomp	11:ccomp	_
-18	of	of	ADP	IN	_	17	obl	17:obl	SpaceAfter=No
+18	of	of	ADP	IN	_	13	case	13:case	SpaceAfter=No
 19	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = answers-20111107175720AAlb2TB_ans-0010
@@ -265,14 +265,14 @@
 
 # sent_id = answers-20111107175720AAlb2TB_ans-0011
 # text = And then there’s the rain.
-1	And	and	CCONJ	CC	_	6	cc	6:cc	_
-2	then	then	ADV	RB	PronType=Dem	6	advmod	6:advmod	_
+1	And	and	CCONJ	CC	_	4	cc	4:cc	_
+2	then	then	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 3-4	there’s	_	_	_	_	_	_	_	_
-3	there	there	PRON	EX	_	6	expl	6:expl	_
+3	there	there	PRON	EX	_	4	expl	4:expl	_
 4	’s	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	rain	rain	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	SpaceAfter=No
-7	.	.	PUNCT	.	_	6	punct	6:punct	_
+7	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111107175720AAlb2TB_ans-0012
 # text = Ireland receives a lot of rain, with certain areas getting a soaking as many as 270 days of the year.
@@ -289,10 +289,10 @@
 11	getting	get	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:with	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 13	soaking	soaking	NOUN	NN	Number=Sing	11	obj	11:obj	_
-14	as	as	ADV	RB	_	15	advmod	15:advmod	_
-15	many	many	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-16	as	as	ADP	IN	_	17	case	17:case	_
-17	270	270	NUM	CD	NumType=Card	14	obl	14:obl:as	_
+14	as	as	ADV	RB	_	17	advmod	17:advmod	_
+15	many	many	ADJ	JJ	Degree=Pos	14	fixed	14:fixed	_
+16	as	as	ADP	IN	_	14	fixed	14:fixed	_
+17	270	270	NUM	CD	NumType=Card	18	nummod	18:nummod	_
 18	days	day	NOUN	NNS	Number=Plur	11	obl:tmod	11:obl:tmod	_
 19	of	of	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
@@ -342,7 +342,7 @@
 14	principle	principle	NOUN	NN	Number=Sing	4	obl	4:obl:on|18:nsubj	SpaceAfter=No
 15	,	,	PUNCT	,	_	14	punct	14:punct	_
 16	which	which	PRON	WDT	PronType=Rel	18	nsubj	14:ref	_
-17	basic­ally	basically	ADV	RB	_	18	advmod	18:advmod	_
+17	basic­ally	basically	ADV	RB	_	18	advmod	18:advmod	CorrectForm=basically
 18	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	acl:relcl	14:acl:relcl	_
 19	that	that	SCONJ	IN	_	23	mark	23:mark	_
 20	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	23	nsubj	23:nsubj	_
@@ -894,7 +894,7 @@
 # text = It does get pretty cold in Ireland so going before winter is your best bet.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
 2	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	get	get	AUX	VB	VerbForm=Inf	0	root	0:root	_
+3	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	pretty	pretty	ADV	RB	_	5	advmod	5:advmod	_
 5	cold	cold	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	_
 6	in	in	ADP	IN	_	7	case	7:case	_
@@ -973,8 +973,8 @@
 25	as	as	ADV	RB	_	26	advmod	26:advmod	_
 26	far	far	ADV	RB	Degree=Pos	24	advmod	24:advmod	_
 27	as	as	ADP	IN	_	30	case	30:case	_
-28	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
-29	main	main	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
+28	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
+29	main	main	ADJ	JJ	Degree=Pos	30	amod	30:amod	_
 30	towns	town	NOUN	NNS	Number=Plur	26	obl	26:obl:as	SpaceAfter=No
 31	/	/	SYM	,	_	32	cc	32:cc	SpaceAfter=No
 32	cities	city	NOUN	NNS	Number=Plur	30	conj	26:obl:as|30:conj	SpaceAfter=No
@@ -1091,7 +1091,7 @@
 33	be	be	AUX	VB	Mood=Imp|VerbForm=Fin	34	cop	34:cop	_
 34	prepared	prepared	ADJ	JJ	Degree=Pos	19	parataxis	19:parataxis	_
 35	with	with	ADP	IN	_	37	case	37:case	_
-36	waterproof	waterproof	ADJ	JJ	Degree=Pos	39	amod	39:amod	_
+36	waterproof	waterproof	ADJ	JJ	Degree=Pos	37	amod	37:amod	_
 37	jackets	jacket	NOUN	NNS	Number=Plur	34	obl	34:obl:with	SpaceAfter=No
 38	/	/	SYM	,	_	39	cc	39:cc	SpaceAfter=No
 39	boots	boot	NOUN	NNS	Number=Plur	37	conj	34:obl:with|37:conj	_
@@ -1258,9 +1258,9 @@
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 6	quite	quite	ADV	RB	_	7	advmod	7:advmod	_
 7	expensive	expensive	ADJ	JJ	Degree=Pos	0	root	0:root	_
-8	compared	compare	VERB	VBN	Tense=Past|VerbForm=Part	10	case	10:case	_
+8	compared	compare	VERB	VBN	Tense=Past|VerbForm=Part	7	advcl	7:advcl	_
 9	to	to	ADP	IN	_	10	case	10:case	_
-10	America	America	PROPN	NNP	Number=Sing	7	obl	7:obl:to	_
+10	America	America	PROPN	NNP	Number=Sing	8	obl	8:obl:to	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 12	believe	believe	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	parataxis	7:parataxis	SpaceAfter=No
 13	.	.	PUNCT	.	_	7	punct	7:punct	_

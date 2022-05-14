@@ -131,7 +131,7 @@
 2	recently	recently	ADV	RB	_	9	advmod	9:advmod	_
 3	as	as	ADP	IN	_	5	case	5:case	_
 4	last	last	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	week	week	NOUN	NN	Number=Sing	1	obl	1:obl:as	_
+5	week	week	NOUN	NN	Number=Sing	2	obl	2:obl:as	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	official	official	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	line	line	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
@@ -149,7 +149,7 @@
 
 # sent_id = weblog-blogspot.com_rigorousintuition_20050518101500_ENG_20050518_101500-0010
 # text = But comfortable among the thugs, Posada overplayed his hand and embarrassed his old patron, the US government.
-1	But	but	CCONJ	CC	_	12	cc	12:cc	_
+1	But	but	CCONJ	CC	_	8	cc	8:cc	_
 2	comfortable	comfortable	ADJ	JJ	Degree=Pos	8	advcl	8:advcl	_
 3	among	among	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
@@ -398,8 +398,8 @@
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
 7	exacerbated	exacerbate	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
 8	regional	regional	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	tensions	tension	NOUN	NNS	Number=Plur	7	obj	7:obj	_
-10	which	which	PRON	WDT	PronType=Int	26	obj	26:obj	_
+9	tensions	tension	NOUN	NNS	Number=Plur	7	obj	7:obj|26:obj	_
+10	which	which	PRON	WDT	PronType=Rel	26	obj	9:ref	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	Bush	Bush	PROPN	NNP	Number=Sing	24	nsubj	24:nsubj|26:nsubj:xsubj	_
 13	regime	regime	NOUN	NN	Number=Sing	12	flat	12:flat	_
@@ -493,8 +493,8 @@
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	only	only	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	way	way	NOUN	NN	Number=Sing	2	ccomp	2:ccomp|16:det	_
-15	that	that	DET	DT	Number=Sing|PronType=Dem	16	det	14:ref	_
+14	way	way	NOUN	NN	Number=Sing	2	ccomp	2:ccomp|19:obl:npmod	_
+15	that	that	DET	DT	Number=Sing|PronType=Dem	16	det	16:det	_
 16	question	question	NOUN	NN	Number=Sing	19	nsubj:pass	19:nsubj:pass	_
 17	could	could	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 18	be	be	AUX	VB	VerbForm=Inf	19	aux:pass	19:aux:pass	_
@@ -580,7 +580,7 @@
 
 # sent_id = weblog-blogspot.com_rigorousintuition_20050518101500_ENG_20050518_101500-0027
 # text = But Posada's nearly 80 years old, and the Venezuelan people will ensure that's a vain hope.
-1	But	but	CCONJ	CC	_	14	cc	14:cc	_
+1	But	but	CCONJ	CC	_	7	cc	7:cc	_
 2-3	Posada's	_	_	_	_	_	_	_	_
 2	Posada	Posada	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
 3	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
@@ -632,7 +632,7 @@
 10	as	as	ADV	RB	_	11	advmod	11:advmod	_
 11	embarrassing	embarrassing	ADJ	JJ	Degree=Pos	2	parataxis	2:parataxis	_
 12	as	as	SCONJ	IN	_	13	mark	13:mark	_
-13	having	have	VERB	VBG	VerbForm=Ger	10	advcl	10:advcl:as	_
+13	having	have	VERB	VBG	VerbForm=Ger	11	advcl	11:advcl:as	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	old	old	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	killer	killer	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
@@ -827,16 +827,16 @@
 60	ops	op	NOUN	NNS	Number=Plur	61	compound	61:compound	_
 61	types	type	NOUN	NNS	Number=Plur	57	obl	57:obl:by	_
 62	including	include	VERB	VBG	VerbForm=Ger	63	case	63:case	_
-63	Ollie	Ollie	PROPN	NNP	Number=Sing	61	nmod	61:nmod:include	_
+63	Ollie	Ollie	PROPN	NNP	Number=Sing	61	nmod	61:nmod:including	_
 64	North	North	PROPN	NNP	Number=Sing	63	flat	63:flat	SpaceAfter=No
 65	,	,	PUNCT	,	_	66	punct	66:punct	_
-66	Robert	Robert	PROPN	NNP	Number=Sing	63	conj	61:nmod:include|63:conj:and	_
+66	Robert	Robert	PROPN	NNP	Number=Sing	63	conj	61:nmod:including|63:conj:and	_
 67	Owen	Owen	PROPN	NNP	Number=Sing	66	flat	66:flat	SpaceAfter=No
 68	,	,	PUNCT	,	_	69	punct	69:punct	_
-69	Vince	Vince	PROPN	NNP	Number=Sing	63	conj	61:nmod:include|63:conj:and	_
+69	Vince	Vince	PROPN	NNP	Number=Sing	63	conj	61:nmod:including|63:conj:and	_
 70	Cannistaro	Cannistaro	PROPN	NNP	Number=Sing	69	flat	69:flat	_
 71	and	and	CCONJ	CC	_	72	cc	72:cc	_
-72	Buck	Buck	PROPN	NNP	Number=Sing	63	conj	61:nmod:include|63:conj:and	_
+72	Buck	Buck	PROPN	NNP	Number=Sing	63	conj	61:nmod:including|63:conj:and	_
 73	Revell	Revell	PROPN	NNP	Number=Sing	72	flat	72:flat	SpaceAfter=No
 74	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -1570,9 +1570,9 @@
 3	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	obj	3:obj|5:nsubj:xsubj	_
 5	thinking	think	VERB	VBG	VerbForm=Ger	3	xcomp	3:xcomp	SpaceAfter=No
-6	,	,	PUNCT	,	_	3	punct	3:punct	_
+6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj|9:nsubj:xsubj	_
-8	enjoy	enjoy	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
+8	enjoy	enjoy	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	ccomp	5:ccomp	_
 9	reading	read	VERB	VBG	VerbForm=Ger	8	xcomp	8:xcomp	_
 10	this	this	DET	DT	Number=Sing|PronType=Dem	11	det	11:det	_
 11	blog	blog	NOUN	NN	Number=Sing	9	obj	9:obj	SpaceAfter=No
@@ -1626,7 +1626,7 @@
 # text = I like yuor blog.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	like	like	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	yuor	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs|Typo=Yes	4	nmod:poss	4:nmod:poss	CorrectForm=your
+3	yuor	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs|Typo=Yes	4	nmod:poss	4:nmod:poss	CorrectForm=your
 4	blog	blog	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
 5	.	.	PUNCT	.	_	2	punct	2:punct	_
 

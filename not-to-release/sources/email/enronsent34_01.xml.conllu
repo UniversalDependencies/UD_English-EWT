@@ -59,7 +59,7 @@
 # text = Hey there yourself,
 1	Hey	hey	INTJ	UH	_	3	discourse	3:discourse	_
 2	there	there	ADV	RB	PronType=Dem	1	advmod	1:advmod	_
-3	yourself	yourself	PRON	PRP	Number=Sing|Person=2|PronType=Prs	0	root	0:root	SpaceAfter=No
+3	yourself	yourself	PRON	PRP	Number=Sing|Person=2|PronType=Prs|Reflex=Yes	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent34_01-0006
@@ -121,7 +121,7 @@
 3	fun	fun	NOUN	NN	Number=Sing	9	parataxis	9:parataxis	_
 4	as	as	SCONJ	IN	_	6	mark	6:mark	_
 5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
-6	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	advcl	1:advcl:as	SpaceAfter=No
+6	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	advcl	2:advcl:as	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 9	figured	figure	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -481,10 +481,10 @@
 
 # sent_id = email-enronsent34_01-0025
 # text = Are you really?
-1	Are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
-2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	really	really	ADV	RB	_	0	root	0:root	SpaceAfter=No
-4	?	?	PUNCT	.	_	3	punct	3:punct	_
+1	Are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	1	nsubj	1:nsubj	_
+3	really	really	ADV	RB	_	1	advmod	1:advmod	SpaceAfter=No
+4	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent34_01-0026
 # text = Would you come with your parents or separately?
@@ -978,7 +978,7 @@
 # sent_id = email-enronsent34_01-0048
 # text = Hope you day is going well and that the move to 30 went off without a hitch.
 1	Hope	hope	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-2	you	you	PRON	PRP$	_	3	nmod:poss	3:nmod:poss	_
+2	you	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs|Typo=Yes	3	nmod:poss	3:nmod:poss	CorrectForm=your
 3	day	day	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 5	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	1	ccomp	1:ccomp	_
@@ -1128,8 +1128,8 @@
 6	night	night	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	_
 7	at	at	ADP	IN	_	8	case	8:case	_
 8-9	LWs	_	_	_	_	_	_	_	_
-8	LW	LW	PROPN	NNP	Number=Sing	2	obl	2:obl:s	_
-9	s	's	PART	POS	Typo=Yes	8	case	8:case	_
+8	LW	LW	PROPN	NNP	Number=Sing	2	obl	2:obl:at	_
+9	s	's	PART	POS	Typo=Yes	8	case	8:case	CorrectForm='s
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 12	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
@@ -1395,7 +1395,7 @@
 11	TX	TX	PROPN	NNP	Number=Sing	14	compound	14:compound	_
 12-13	drivers	_	_	_	_	_	_	_	_
 12	driver	driver	NOUN	NN	Number=Sing	14	nmod:poss	14:nmod:poss	_
-13	s	's	PART	POS	Typo=Yes	12	case	12:case	_
+13	s	's	PART	POS	Typo=Yes	12	case	12:case	CorrectForm='s
 14	exam	exam	NOUN	NN	Number=Sing	9	obj	9:obj	_
 15	both	both	CCONJ	CC	_	16	cc:preconj	16:cc:preconj	_
 16	written	write	VERB	VBN	Tense=Past|VerbForm=Part	14	amod	14:amod	_
@@ -1460,7 +1460,7 @@
 19	(	(	PUNCT	-LRB-	_	23	punct	23:punct	SpaceAfter=No
 20	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	23	nsubj	23:nsubj	_
 21	better	well	ADV	RBR	Degree=Cmp	23	advmod	23:advmod	_
-22	not	not	ADV	RB	_	23	advmod	23:advmod	_
+22	not	not	PART	RB	_	23	advmod	23:advmod	_
 23	fail	fail	VERB	VB	VerbForm=Inf	8	parataxis	8:parataxis	_
 24	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	23	obj	23:obj	SpaceAfter=No
 25	)	)	PUNCT	-RRB-	_	23	punct	23:punct	SpaceAfter=No
@@ -1485,7 +1485,7 @@
 13	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	11	obl	11:obl:about	_
 14-15	let's	_	_	_	_	_	_	_	_
 14	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	11	parataxis	11:parataxis	_
-15	's	's	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	14	obj	14:obj|16:nsubj:xsubj	_
+15	's	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	14	obj	14:obj|16:nsubj:xsubj	_
 16	talk	talk	VERB	VB	VerbForm=Inf	14	xcomp	14:xcomp	_
 17	more	more	ADV	RBR	Degree=Cmp	16	advmod	16:advmod	_
 18	about	about	ADP	IN	_	19	case	19:case	_

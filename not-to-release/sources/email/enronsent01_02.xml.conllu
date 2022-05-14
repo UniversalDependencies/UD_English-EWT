@@ -44,11 +44,11 @@
 23	operating	operating	NOUN	NN	Number=Sing	24	compound	24:compound	_
 24	standards	standard	NOUN	NNS	Number=Plur	19	nmod	19:nmod:on	_
 25	(	(	PUNCT	-LRB-	_	30	punct	30:punct	_
-26	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	30	nmod:npmod	30:nmod:npmod	_
+26	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Emp|Reflex=Yes	30	obl:npmod	30:obl:npmod	_
 27	a	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
 28	one	one	NUM	CD	NumType=Card	29	nummod	29:nummod	_
 29	page	page	NOUN	NN	Number=Sing	30	compound	30:compound	_
-30	summary	summary	NOUN	NN	Number=Sing	24	appos	24:appos	_
+30	summary	summary	NOUN	NN	Number=Sing	24	parataxis	24:parataxis	_
 31	)	)	PUNCT	-RRB-	_	30	punct	30:punct	SpaceAfter=No
 32	.	.	PUNCT	.	_	13	punct	13:punct	_
 
@@ -129,16 +129,16 @@
 11	weekend	weekend	NOUN	NN	Number=Sing	3	obl	3:obl:on	_
 12	in	in	ADP	IN	_	13	case	13:case	_
 13	January	January	PROPN	NNP	Number=Sing	3	obl	3:obl:in	_
-14	--	--	PUNCT	,	_	3	punct	3:punct	_
+14	--	--	PUNCT	,	_	19	punct	19:punct	_
 15	National	National	ADJ	NNP	Degree=Pos	17	amod	17:amod	_
 16	Charity	Charity	PROPN	NNP	Number=Sing	17	compound	17:compound	_
 17	League	League	PROPN	NNP	Number=Sing	19	compound	19:compound	_
 18	Senior	Senior	ADJ	NNP	Degree=Pos	19	amod	19:amod	_
-19	Presentation	Presentation	PROPN	NNP	Number=Sing	3	obj	3:obj	_
+19	Presentation	Presentation	PROPN	NNP	Number=Sing	8	parataxis	8:parataxis	_
 20	(	(	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
 21	big	big	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	dance	dance	NOUN	NN	Number=Sing	19	appos	19:appos	_
-23	that	that	PRON	WDT	PronType=Dem	30	obl	30:obl:with	_
+22	dance	dance	NOUN	NN	Number=Sing	19	appos	19:appos|30:obl:with	_
+23	that	that	PRON	WDT	PronType=Rel	30	obl	22:ref	_
 24	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	28	nsubj	28:nsubj|30:nsubj:xsubj	_
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_
 26	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	24	conj	24:conj:and|28:nsubj|30:nsubj:xsubj	_
@@ -390,7 +390,7 @@
 13	note	note	NOUN	NN	Number=Sing	10	obl	10:obl:from	_
 14	whether	whether	SCONJ	IN	_	19	mark	19:mark	_
 15	or	or	CCONJ	CC	_	14	fixed	14:fixed	_
-16	not	not	ADV	RB	_	14	fixed	14:fixed	_
+16	not	not	PART	RB	_	14	fixed	14:fixed	_
 17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
 18	fully	fully	ADV	RB	_	19	advmod	19:advmod	_
 19	understand	understand	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	10	ccomp	10:ccomp	_
@@ -453,7 +453,7 @@
 10	be	be	AUX	VB	VerbForm=Inf	11	aux:pass	11:aux:pass	_
 11	included	include	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	acl	8:acl:to	_
 12	as	as	ADP	IN	_	15	case	15:case	_
-13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
+13	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 14	lead	lead	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	in	in	NOUN	NN	Number=Sing	11	obl	11:obl:as	_
 16	to	to	ADP	IN	_	18	case	18:case	_
@@ -637,7 +637,7 @@
 25	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	parataxis	17:parataxis	_
 26	this	this	PRON	DT	Number=Sing|PronType=Dem	25	obj	25:obj	_
 27	to	to	PART	TO	_	28	mark	28:mark	_
-28	do	do	VERB	VB	VerbForm=Inf	26	advcl	26:advcl:to	_
+28	do	do	VERB	VB	VerbForm=Inf	26	acl	26:acl:to	_
 29	after	after	ADP	IN	_	32	case	32:case	_
 30-31	Brent's	_	_	_	_	_	_	_	_
 30	Brent	Brent	PROPN	NNP	Number=Sing	32	nmod:poss	32:nmod:poss	_
@@ -691,7 +691,7 @@
 # sent_id = email-enronsent01_02-0034
 # text = And not to belittle the process of creating the standards, the tough part (and the real meat behind this) will be an effective exception report on a global basis against these standards.
 1	And	and	CCONJ	CC	_	28	cc	28:cc	_
-2	not	not	ADV	RB	_	4	advmod	4:advmod	_
+2	not	not	PART	RB	_	4	advmod	4:advmod	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	belittle	belittle	VERB	VB	VerbForm=Inf	28	advcl	28:advcl:to	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
@@ -820,7 +820,7 @@
 3	question	question	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	whether	whether	SCONJ	IN	_	8	mark	8:mark	_
 5	or	or	CCONJ	CC	_	4	fixed	4:fixed	_
-6	not	not	ADV	RB	_	4	fixed	4:fixed	_
+6	not	not	PART	RB	_	4	fixed	4:fixed	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 8	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
 9	to	to	PART	TO	_	10	mark	10:mark	_

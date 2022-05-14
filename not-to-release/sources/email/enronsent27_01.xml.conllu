@@ -302,7 +302,7 @@
 1	At	at	ADP	IN	ExtPos=ADV	5	advmod	5:advmod	_
 2	least	least	ADJ	JJS	Degree=Sup	1	fixed	1:fixed	_
 3	that	that	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
-4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_|CheckUPOS=VERB
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	CheckUPOS=VERB
 5	what	what	PRON	WP	PronType=Int	0	root	0:root	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 7	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
@@ -446,7 +446,7 @@
 22	pronunciation	pronunciation	NOUN	NN	Number=Sing	5	parataxis	5:parataxis	_
 23	Vs	versus	ADP	IN	Abbr=Yes	25	case	25:case	_
 24	an	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
-25	attempt	attempt	NOUN	NN	Number=Sing	22	nmod	22:nmod:vs	_
+25	attempt	attempt	NOUN	NN	Number=Sing	22	nmod	22:nmod:versus	_
 26	at	at	ADP	IN	_	29	case	29:case	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
 28	proper	proper	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
@@ -547,9 +547,9 @@
 # sent_id = email-enronsent27_01-0041
 # newpar id = email-enronsent27_01-p0005
 # text = Ken Rice@ENRON COMMUNICATIONS
-1	Ken	ken	X	GW	_	0	root	0:root	_
-2	Rice@ENRON	rice@enron	X	GW	_	1	goeswith	1:goeswith	_
-3	COMMUNICATIONS	communications	X	ADD	_	1	goeswith	1:goeswith	_
+1	Ken	kenrice@enroncommunications	X	GW	Typo=Yes	0	root	0:root	_
+2	Rice@ENRON	_	X	GW	_	1	goeswith	1:goeswith	_
+3	COMMUNICATIONS	_	X	ADD	_	1	goeswith	1:goeswith	_
 
 # sent_id = email-enronsent27_01-0042
 # text = 01/19/2001 09:14 AM
@@ -569,8 +569,8 @@
 # sent_id = email-enronsent27_01-0044
 # newpar id = email-enronsent27_01-p0006
 # text = Mike McConnell@ECT
-1	Mike	mike	X	GW	_	0	root	0:root	_
-2	McConnell@ECT	mcconnell@ect	X	ADD	_	1	goeswith	1:goeswith	_
+1	Mike	mikemcconnell@ect	X	GW	Typo=Yes	0	root	0:root	_
+2	McConnell@ECT	_	X	ADD	_	1	goeswith	1:goeswith	_
 
 # sent_id = email-enronsent27_01-0045
 # text = 01/19/01 07:55 AM
@@ -611,9 +611,9 @@
 
 # sent_id = email-enronsent27_01-0050
 # text = Ken Rice@ENRON COMMUNICATIONS
-1	Ken	ken	X	GW	_	0	root	0:root	_
-2	Rice@ENRON	rice@enron	X	GW	_	1	goeswith	1:goeswith	_
-3	COMMUNICATIONS	communications	X	ADD	_	1	goeswith	1:goeswith	_
+1	Ken	kenrice@enroncommunications	X	GW	Typo=Yes	0	root	0:root	_
+2	Rice@ENRON	_	X	GW	_	1	goeswith	1:goeswith	_
+3	COMMUNICATIONS	_	X	ADD	_	1	goeswith	1:goeswith	_
 
 # sent_id = email-enronsent27_01-0051
 # text = 01/19/2001 07:24 AM
@@ -686,7 +686,7 @@
 23	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	26	nsubj	26:nsubj	_
 24	may	may	AUX	MD	VerbForm=Fin	26	aux	26:aux	_
 25	be	be	AUX	VB	VerbForm=Inf	26	aux	26:aux	_
-26	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	3:conj:and	_
+26	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	3	parataxis	3:parataxis	_
 27	over	over	ADP	IN	_	28	case	28:case	_
 28	lunch	lunch	NOUN	NN	Number=Sing	26	obl	26:obl:over	SpaceAfter=No
 29	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -708,7 +708,7 @@
 13	will	will	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 14	probably	probably	ADV	RB	_	16	advmod	16:advmod	_
 15	be	be	AUX	VB	VerbForm=Inf	16	aux	16:aux	_
-16	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	4:conj:but	_
+16	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	4	parataxis	4:parataxis	_
 17	lunch	lunch	NOUN	NN	Number=Sing	16	obj	16:obj	_
 18	but	but	CCONJ	CC	_	24	cc	24:cc	_
 19	just	just	ADV	RB	_	24	advmod	24:advmod	_
@@ -859,9 +859,9 @@
 
 # sent_id = email-enronsent27_01-0065
 # text = Ken Rice@ENRON COMMUNICATIONS
-1	Ken	ken	X	GW	_	0	root	0:root	_
-2	Rice@ENRON	rice@enron	X	GW	_	1	goeswith	1:goeswith	_
-3	COMMUNICATIONS	communications	X	ADD	_	1	goeswith	1:goeswith	_
+1	Ken	kenrice@enroncommunications	X	GW	Typo=Yes	0	root	0:root	_
+2	Rice@ENRON	_	X	GW	_	1	goeswith	1:goeswith	_
+3	COMMUNICATIONS	_	X	ADD	_	1	goeswith	1:goeswith	_
 
 # sent_id = email-enronsent27_01-0066
 # text = 01/19/2001 07:24 AM
@@ -934,7 +934,7 @@
 23	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	26	nsubj	26:nsubj	_
 24	may	may	AUX	MD	VerbForm=Fin	26	aux	26:aux	_
 25	be	be	AUX	VB	VerbForm=Inf	26	aux	26:aux	_
-26	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	3:conj:and	_
+26	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	3	parataxis	3:parataxis	_
 27	over	over	ADP	IN	_	28	case	28:case	_
 28	lunch	lunch	NOUN	NN	Number=Sing	26	obl	26:obl:over	SpaceAfter=No
 29	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -956,7 +956,7 @@
 13	will	will	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 14	probably	probably	ADV	RB	_	16	advmod	16:advmod	_
 15	be	be	AUX	VB	VerbForm=Inf	16	aux	16:aux	_
-16	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	4:conj:but	_
+16	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	4	parataxis	4:parataxis	_
 17	lunch	lunch	NOUN	NN	Number=Sing	16	obj	16:obj	_
 18	but	but	CCONJ	CC	_	24	cc	24:cc	_
 19	just	just	ADV	RB	_	24	advmod	24:advmod	_

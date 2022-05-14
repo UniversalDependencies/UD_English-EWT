@@ -173,7 +173,7 @@
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 23	individual	individual	NOUN	NN	Number=Sing	20	nmod	20:nmod:of|30:obl	_
 24	or	or	CCONJ	CC	_	25	cc	25:cc	_
-25	entity	entity	NOUN	NN	Number=Sing	23	conj	20:nmod:of|23:conj:or|30:obl	_
+25	entity	entity	NOUN	NN	Number=Sing	23	conj	20:nmod:of|23:conj:or|30:obl:to	_
 26	to	to	ADP	IN	_	27	case	27:case	_
 27	whom	whom	PRON	WP	PronType=Rel	30	obl	23:ref	_
 28	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	30	nsubj:pass	30:nsubj:pass	_
@@ -292,10 +292,10 @@
 10	call	call	NOUN	NN	Number=Sing	7	obj	7:obj	_
 11	to	to	ADP	IN	_	12	case	12:case	_
 12	Dominion	Dominion	PROPN	NNP	Number=Sing	10	nmod	10:nmod:to	_
-13	like	like	SCONJ	IN	_	16	mark	16:mark	_
-14	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
-15	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	16	aux	16:aux	_
-16	before	before	ADV	RB	_	7	advcl	7:advcl:like	_
+13	like	like	SCONJ	IN	_	15	mark	15:mark	_
+14	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
+15	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	7	advcl	7:advcl:like	_
+16	before	before	ADV	RB	_	15	advmod	15:advmod	_
 17	or	or	CCONJ	CC	_	21	cc	21:cc	_
 18	should	should	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
 19	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	21	nsubj	21:nsubj	_
@@ -303,7 +303,7 @@
 21	call	call	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 22	Jeff	Jeff	PROPN	NNP	Number=Sing	21	obj	21:obj	_
 23	Davis	Davis	PROPN	NNP	Number=Sing	22	flat	22:flat	_
-24	myself	myself	PRON	PRP	Number=Sing|Person=1|PronType=Prs	21	obl:npmod	21:obl:npmod	SpaceAfter=No
+24	myself	myself	PRON	PRP	Number=Sing|Person=1|PronType=Emp|Reflex=Yes	21	obl:npmod	21:obl:npmod	SpaceAfter=No
 25	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent12_01-0020
@@ -770,48 +770,48 @@
 # text = <<Stipulation -ECT-KEDNE re IGTS & Tennessee Cap Releases -FINAL.doc>>
 1	<<	<<	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
 2	Stipulation	stipulation	NOUN	GW	_	0	root	0:root	_
-3	-ECT-KEDNE	-ect-kedne	X	GW	_	2	goeswith	2:goeswith	_
-4	re	re	X	GW	_	2	goeswith	2:goeswith	_
-5	IGTS	igts	X	GW	_	2	goeswith	2:goeswith	_
-6	&	&	X	GW	_	2	goeswith	2:goeswith	_
-7	Tennessee	tennessee	X	GW	_	2	goeswith	2:goeswith	_
-8	Cap	cap	X	GW	_	2	goeswith	2:goeswith	_
-9	Releases	releases	X	GW	_	2	goeswith	2:goeswith	_
-10	-FINAL.doc	-final.doc	X	NN	Number=Sing	2	goeswith	2:goeswith	SpaceAfter=No
+3	-ECT-KEDNE	-ect-kedne	X	GW	_	2	flat	2:flat	_
+4	re	re	X	GW	_	2	flat	2:flat	_
+5	IGTS	igts	X	GW	_	2	flat	2:flat	_
+6	&	&	X	GW	_	2	flat	2:flat	_
+7	Tennessee	tennessee	X	GW	_	2	flat	2:flat	_
+8	Cap	cap	X	GW	_	2	flat	2:flat	_
+9	Releases	releases	X	GW	_	2	flat	2:flat	_
+10	-FINAL.doc	-final.doc	X	NN	Number=Sing	2	flat	2:flat	SpaceAfter=No
 11	>>	>>	PUNCT	-RRB-	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent12_01-0045
 # text = <<BLACKLINE -Stip -ECT-KEDNE re Cap Releases -2-F.doc>>
 1	<<	<<	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
 2	BLACKLINE	blackline	NOUN	GW	_	0	root	0:root	_
-3	-Stip	-stip	X	GW	_	2	goeswith	2:goeswith	_
-4	-ECT-KEDNE	-ect-kedne	X	GW	_	2	goeswith	2:goeswith	_
-5	re	re	X	GW	_	2	goeswith	2:goeswith	_
-6	Cap	cap	X	GW	_	2	goeswith	2:goeswith	_
-7	Releases	releases	X	GW	_	2	goeswith	2:goeswith	_
-8	-2-F.doc	-2-f.doc	X	NN	Number=Sing	2	goeswith	2:goeswith	SpaceAfter=No
+3	-Stip	-stip	X	GW	_	2	flat	2:flat	_
+4	-ECT-KEDNE	-ect-kedne	X	GW	_	2	flat	2:flat	_
+5	re	re	X	GW	_	2	flat	2:flat	_
+6	Cap	cap	X	GW	_	2	flat	2:flat	_
+7	Releases	releases	X	GW	_	2	flat	2:flat	_
+8	-2-F.doc	-2-f.doc	X	NN	Number=Sing	2	flat	2:flat	SpaceAfter=No
 9	>>	>>	PUNCT	-RRB-	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent12_01-0046
 # text = - Stipulation -ECT-KEDNE re IGTS & Tennessee Cap Releases -FINAL.doc - BLACKLINE -Stip -ECT-KEDNE re Cap Releases -2-F.doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
 2	Stipulation	stipulation	NOUN	GW	_	0	root	0:root	_
-3	-ECT-KEDNE	-ect-kedne	X	GW	_	2	goeswith	2:goeswith	_
-4	re	re	X	GW	_	2	goeswith	2:goeswith	_
-5	IGTS	igts	X	GW	_	2	goeswith	2:goeswith	_
-6	&	&	X	GW	_	2	goeswith	2:goeswith	_
-7	Tennessee	tennessee	X	GW	_	2	goeswith	2:goeswith	_
-8	Cap	cap	X	GW	_	2	goeswith	2:goeswith	_
-9	Releases	releases	X	GW	_	2	goeswith	2:goeswith	_
-10	-FINAL.doc	-final.doc	X	NN	Number=Sing	2	goeswith	2:goeswith	_
+3	-ECT-KEDNE	-ect-kedne	X	GW	_	2	flat	2:flat	_
+4	re	re	X	GW	_	2	flat	2:flat	_
+5	IGTS	igts	X	GW	_	2	flat	2:flat	_
+6	&	&	X	GW	_	2	flat	2:flat	_
+7	Tennessee	tennessee	X	GW	_	2	flat	2:flat	_
+8	Cap	cap	X	GW	_	2	flat	2:flat	_
+9	Releases	releases	X	GW	_	2	flat	2:flat	_
+10	-FINAL.doc	-final.doc	X	NN	Number=Sing	2	flat	2:flat	_
 11	-	-	PUNCT	NFP	_	12	punct	12:punct	_
 12	BLACKLINE	blackline	NOUN	GW	_	2	nmod	2:nmod	_
-13	-Stip	-stip	X	GW	_	12	goeswith	12:goeswith	_
-14	-ECT-KEDNE	-ect-kedne	X	GW	_	12	goeswith	12:goeswith	_
-15	re	re	X	GW	_	12	goeswith	12:goeswith	_
-16	Cap	cap	X	GW	_	12	goeswith	12:goeswith	_
-17	Releases	releases	X	GW	_	12	goeswith	12:goeswith	_
-18	-2-F.doc	-2-f.doc	X	NN	Number=Sing	12	goeswith	12:goeswith	_
+13	-Stip	-stip	X	GW	_	12	flat	12:flat	_
+14	-ECT-KEDNE	-ect-kedne	X	GW	_	12	flat	12:flat	_
+15	re	re	X	GW	_	12	flat	12:flat	_
+16	Cap	cap	X	GW	_	12	flat	12:flat	_
+17	Releases	releases	X	GW	_	12	flat	12:flat	_
+18	-2-F.doc	-2-f.doc	X	NN	Number=Sing	12	flat	12:flat	_
 
 # sent_id = email-enronsent12_01-0047
 # text = A heartwarming story of the advances of women in achieving equality throughout the world.
@@ -1064,11 +1064,11 @@
 4	at	at	ADP	IN	_	6	case	6:case	_
 5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	house	house	NOUN	NN	Number=Sing	0	root	0:root	_
-7	around	around	ADP	IN	_	11	case	11:case	_
-8	10:30	10:30	NUM	CD	NumType=Card	11	compound	11:compound	_
+7	around	around	ADP	IN	_	8	case	8:case	_
+8	10:30	10:30	NUM	CD	NumType=Card	6	obl	6:obl:around	_
 9	or	or	CCONJ	CC	_	10	cc	10:cc	_
-10	11	11	NUM	CD	NumType=Card	8	conj	8:conj:or|11:compound	_
-11	tonight	tonight	NOUN	NN	Number=Sing	6	obl	6:obl:around	SpaceAfter=No
+10	11	11	NUM	CD	NumType=Card	8	conj	6:obl:around|8:conj:or	_
+11	tonight	tonight	NOUN	NN	Number=Sing	6	obl:tmod	6:obl:tmod	SpaceAfter=No
 12	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = email-enronsent12_01-0061
@@ -1135,7 +1135,7 @@
 3	A	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	LOT	lot	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	ON	on	ADP	IN	_	7	case	7:case	_
-6	YOU	you	PRON	PRP$	_	7	nmod:poss	7:nmod:poss	_
+6	YOU	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs|Typo=Yes	7	nmod:poss	7:nmod:poss	CorrectForm=YOUR
 7	PLATE	plate	NOUN	NN	Number=Sing	2	obl	2:obl:on	SpaceAfter=No
 8	,	,	PUNCT	,	_	2	punct	2:punct	_
 9	DAD	dad	NOUN	NN	Number=Sing	2	vocative	2:vocative	SpaceAfter=No

@@ -126,19 +126,19 @@
 
 # sent_id = answers-20111108111312AAq4ETn_ans-0008
 # text = So my question is..
-1	So	so	ADV	RB	_	0	root	0:root	_
+1	So	so	ADV	RB	_	4	advmod	4:advmod	_
 2	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	question	question	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	_
-4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	SpaceAfter=No
-5	..	..	PUNCT	.	_	1	punct	1:punct	_
+3	question	question	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+5	..	..	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108111312AAq4ETn_ans-0009
 # text = Is it normal for dogs to throw up blood while having gastroenteritis?
 1	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	expl	3:expl	_
 3	normal	normal	ADJ	JJ	Degree=Pos	0	root	0:root	_
-4	for	for	SCONJ	IN	_	5	case	5:case	_
-5	dogs	dog	NOUN	NNS	Number=Plur	3	obl	3:obl:for	_
+4	for	for	SCONJ	IN	_	7	mark	7:mark	_
+5	dogs	dog	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	throw	throw	VERB	VB	VerbForm=Inf	3	csubj	3:csubj	_
 8	up	up	ADP	RP	_	7	compound:prt	7:compound:prt	_
@@ -192,10 +192,10 @@
 7	get	get	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 8	dehydrated	dehydrated	ADJ	JJ	Degree=Pos	7	xcomp	7:xcomp	_
 9	and	and	CCONJ	CC	_	13	cc	13:cc	_
-10	also	also	ADV	RB	_	13	cc	13:cc	_
+10	also	also	ADV	RB	_	13	advmod	13:advmod	_
 11	should	should	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
 12	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj|15:nsubj:xsubj	_
-13	try	try	VERB	VB	VerbForm=Inf	4	conj	4:conj:and_also	_
+13	try	try	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
 15	give	give	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
 16	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	iobj	15:iobj	_
@@ -313,7 +313,7 @@
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
 10	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	_
-11	the	to	PART	TO	_	12	mark	12:mark	_
+11	the	to	PART	TO	Typo=Yes	12	mark	12:mark	CorrectForm=to
 12	give	give	VERB	VBP	VerbForm=Inf	10	ccomp	10:ccomp	_
 13	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	iobj	12:iobj	_
 14	white	white	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
@@ -334,14 +334,14 @@
 # text = Seince he recieved the fluids lastnight he said not to worry about drinking water for at least a couple of days.
 1	Seince	since	SCONJ	IN	Typo=Yes	3	mark	3:mark	CorrectForm=Since
 2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	recieved	recieve	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	advcl	9:advcl:seince	_
+3	recieved	recieve	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	advcl	9:advcl:since	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	fluids	fluid	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	last	last	ADJ	JJ	Degree=Pos	7	amod	7:amod	CorrectSpaceAfter=Yes|SpaceAfter=No
 7	night	night	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
 8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj|12:nsubj:xsubj	_
 9	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-10	not	not	ADV	RB	_	12	advmod	12:advmod	_
+10	not	not	PART	RB	_	12	advmod	12:advmod	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	worry	worry	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 13	about	about	ADP	IN	_	15	case	15:case	_
@@ -376,15 +376,15 @@
 16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	nsubj	19:nsubj|22:nsubj	_
 17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	aux	19:aux	_
 18	actually	actually	ADV	RB	_	19	advmod	19:advmod	_
-19	walkin	walk	VERB	VBG	Tense=Pres|Typo=Yes|VerbForm=Part	13	parataxis	13:parataxis	CorrectForm=walking
+19	walkin	walk	VERB	VBG	Abbr=Yes|Tense=Pres|VerbForm=Part	13	parataxis	13:parataxis	CorrectForm=walking
 20	around	around	ADV	RB	_	19	advmod	19:advmod	_
 21	and	and	CCONJ	CC	_	22	cc	22:cc	_
-22	wagin	wag	VERB	VBG	Tense=Pres|VerbForm=Part	19	conj	19:conj:and	_
+22	wagin	wag	VERB	VBG	Abbr=Yes|Tense=Pres|VerbForm=Part	19	conj	19:conj:and	CorrectForm=wagging
 23	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
 24	tail	tail	NOUN	NN	Number=Sing	22	obj	22:obj	_
 25	:)	:)	SYM	NFP	_	13	discourse	13:discourse	_
 26	thanks	thanks	NOUN	NN	Number=Sing	2	parataxis	2:parataxis	_
-27	everbody	everybody	NOUN	NN	Number=Sing	26	obj	26:obj	_
+27	everbody	everybody	NOUN	NN	Number=Sing	26	vocative	26:vocative	_
 28	for	for	ADP	IN	_	30	case	30:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
 30	info	info	NOUN	NN	Number=Sing	26	nmod	26:nmod:for	_
@@ -414,8 +414,8 @@
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 5	not	not	PART	RB	_	6	advmod	6:advmod	_
 6	normal	normal	ADJ	JJ	Degree=Pos	0	root	0:root	_
-7	for	for	SCONJ	IN	_	8	case	8:case	_
-8	dogs	dog	NOUN	NNS	Number=Plur	6	obl	6:obl:for	_
+7	for	for	SCONJ	IN	_	11	mark	11:mark	_
+8	dogs	dog	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
 9	to	to	PART	TO	_	11	mark	11:mark	_
 10	be	be	AUX	VB	VerbForm=Inf	11	aux	11:aux	_
 11	vomiting	vomit	VERB	VBG	Tense=Pres|VerbForm=Part	6	csubj	6:csubj	SpaceAfter=No
