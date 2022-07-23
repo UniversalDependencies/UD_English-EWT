@@ -143,12 +143,12 @@
 10	(	(	PUNCT	-LRB-	_	13	punct	13:punct	SpaceAfter=No
 11	713	713	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	13	punct	13:punct	_
-13	853-7557	853-7557	NUM	CD	NumType=Card	1	list	1:list	_
+13	853-7557	853-7557	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 14	Phone	phone	NOUN	NN	Number=Sing	13	appos	13:appos	_
 15	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
 16	713	713	NUM	CD	NumForm=Digit|NumType=Card	18	nummod	18:nummod	SpaceAfter=No
 17	)	)	PUNCT	-RRB-	_	18	punct	18:punct	_
-18	646-5847	646-5847	NUM	CD	NumType=Card	1	list	1:list	_
+18	646-5847	646-5847	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 19	Fax	fax	NOUN	NN	Number=Sing	18	appos	18:appos	_
 
 # sent_id = email-enronsent03_01-0014
@@ -164,7 +164,7 @@
 2	assume	assume	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	this	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-5	12:30	12:30	NUM	CD	NumType=Card	2	ccomp	2:ccomp	_
+5	12:30	12:30	NUM	CD	NumForm=Digit|NumType=Card	2	ccomp	2:ccomp	_
 6	Central	Central	ADJ	NNP	Degree=Pos	7	amod	7:amod	_
 7	Time	Time	PROPN	NNP	Number=Sing	5	nmod:npmod	5:nmod:npmod	SpaceAfter=No
 8	?	?	PUNCT	.	_	2	punct	2:punct	_
@@ -180,15 +180,15 @@
 6	19	19	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	SpaceAfter=No
 7	,	,	PUNCT	,	_	3	punct	3:punct	_
 8	2001	2001	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:tmod	3:nmod:tmod	_
-9	10:30	10:30	NUM	CD	NumType=Card	10	nummod	10:nummod	_
+9	10:30	10:30	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	_
 10	AM	am	NOUN	NN	Number=Sing	3	nmod:tmod	3:nmod:tmod	SpaceAfter=No
 11	-	-	SYM	SYM	_	13	case	13:case	SpaceAfter=No
-12	11:30	11:30	NUM	CD	NumType=Card	13	nummod	13:nummod	_
+12	11:30	11:30	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
 13	AM	am	NOUN	NN	Number=Sing	10	nmod	10:nmod	_
 14	(	(	PUNCT	-LRB-	_	10	punct	10:punct	SpaceAfter=No
 15	GMT	GMT	PROPN	NNP	Number=Sing	10	appos	10:appos	SpaceAfter=No
 16	-	-	SYM	SYM	_	17	compound	17:compound	SpaceAfter=No
-17	08:00	08:00	NUM	CD	NumType=Card	15	nummod	15:nummod	SpaceAfter=No
+17	08:00	08:00	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	SpaceAfter=No
 18	)	)	PUNCT	-RRB-	_	10	punct	10:punct	_
 19	Pacific	Pacific	PROPN	NNP	Number=Sing	20	compound	20:compound	_
 20	Time	Time	PROPN	NNP	Number=Sing	10	nmod:npmod	10:nmod:npmod	_
@@ -216,9 +216,9 @@
 # sent_id = email-enronsent03_01-0019
 # newpar id = email-enronsent03_01-p0009
 # text = 10:30-11:30 PST
-1	10:30	10:30	NUM	CD	NumType=Card	0	root	0:root	SpaceAfter=No
+1	10:30	10:30	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	SpaceAfter=No
 2	-	-	SYM	SYM	_	3	case	3:case	SpaceAfter=No
-3	11:30	11:30	NUM	CD	NumType=Card	1	nmod	1:nmod	_
+3	11:30	11:30	NUM	CD	NumForm=Digit|NumType=Card	1	nmod	1:nmod	_
 4	PST	PST	PROPN	NNP	Number=Sing	1	nmod:npmod	1:nmod:npmod	_
 
 # sent_id = email-enronsent03_01-0020
@@ -229,7 +229,7 @@
 3	in	in	ADV	RB	_	1	compound:prt	1:compound:prt	_
 4	#	#	SYM	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 5	:	:	PUNCT	:	_	4	punct	4:punct	_
-6	800/711-8000	800/711-8000	NUM	CD	NumType=Card	4	appos	4:appos	_
+6	800/711-8000	800/711-8000	NUM	CD	NumForm=Digit|NumType=Card	4	appos	4:appos	_
 
 # sent_id = email-enronsent03_01-0021
 # text = Passcode: 4153030
@@ -724,8 +724,8 @@
 
 # sent_id = email-enronsent03_01-0063
 # text = 08/07/2001 12:36 PM
-1	08/07/2001	08/07/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	12:36	12:36	NUM	CD	NumType=Card	3	nummod	3:nummod	_
+1	08/07/2001	08/07/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	12:36	12:36	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
 3	PM	pm	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent03_01-0064
@@ -2002,13 +2002,13 @@
 22	USA	USA	PROPN	NNP	Number=Sing	18	appos	18:appos	_
 23	Tel	tel	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 24	:	:	PUNCT	:	_	23	punct	23:punct	_
-25	425-415-3052	425-415-3052	NUM	CD	NumType=Card	23	appos	23:appos	_
+25	425-415-3052	425-415-3052	NUM	CD	NumForm=Digit|NumType=Card	23	appos	23:appos	_
 26	Cell	cell	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 27	:	:	PUNCT	:	_	26	punct	26:punct	_
-28	425-922-0475	425-922-0475	NUM	CD	NumType=Card	26	appos	26:appos	_
+28	425-922-0475	425-922-0475	NUM	CD	NumForm=Digit|NumType=Card	26	appos	26:appos	_
 29	Fax	fax	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 30	:	:	PUNCT	:	_	29	punct	29:punct	_
-31	425-415-3098	425-415-3098	NUM	CD	NumType=Card	29	appos	29:appos	_
+31	425-415-3098	425-415-3098	NUM	CD	NumForm=Digit|NumType=Card	29	appos	29:appos	_
 32	email	email	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 33	:	:	PUNCT	:	_	32	punct	32:punct	_
 34	<	<	PUNCT	-LRB-	_	35	punct	35:punct	SpaceAfter=No
