@@ -100,8 +100,8 @@
 
 # sent_id = email-enronsent26_01-0008
 # text = 09/20/2000 04:18 PM
-1	09/20/2000	09/20/2000	NUM	CD	NumType=Card	0	root	0:root	_
-2	04:18	04:18	NUM	CD	NumType=Card	3	nummod	3:nummod	_
+1	09/20/2000	09/20/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	04:18	04:18	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
 3	PM	pm	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent26_01-0009
@@ -141,7 +141,7 @@
 3	be	be	AUX	VB	VerbForm=Inf	4	cop	4:cop	_
 4	in	in	ADV	RB	_	0	root	0:root	_
 5	around	around	ADP	IN	_	6	case	6:case	SpaceAfter=No
-6	1000	1000	NUM	CD	NumType=Card	4	obl	4:obl:around	_
+6	1000	1000	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:around	_
 
 # sent_id = email-enronsent26_01-0011
 # newpar id = email-enronsent26_01-p0002
@@ -170,7 +170,7 @@
 20	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	parataxis	9:parataxis	_
 21	leaving	leave	VERB	VBG	VerbForm=Ger	20	ccomp	20:ccomp	_
 22	by	by	ADP	IN	_	23	case	23:case	_
-23	445	445	NUM	CD	NumType=Card	21	obl	21:obl:by	_
+23	445	445	NUM	CD	NumForm=Digit|NumType=Card	21	obl	21:obl:by	_
 24	or	or	CCONJ	CC	_	25	cc	25:cc	_
 25	so	so	ADV	RB	_	23	conj	23:conj:or	SpaceAfter=No
 26	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -178,7 +178,7 @@
 # sent_id = email-enronsent26_01-0012
 # text = October 4, ENA orientation in the am.
 1	October	October	PROPN	NNP	Number=Sing	5	nmod:tmod	5:nmod:tmod	_
-2	4	4	NUM	CD	NumType=Card	1	nummod	1:nummod	SpaceAfter=No
+2	4	4	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	,	,	PUNCT	,	_	1	punct	1:punct	_
 4	ENA	ENA	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 5	orientation	orientation	NOUN	NN	Number=Sing	0	root	0:root	_
@@ -191,9 +191,9 @@
 # newpar id = email-enronsent26_01-p0003
 # text = October 19/20, Neil is out of town, so I have to pick Michael up from school (leave at 430)
 1	October	October	PROPN	NNP	Number=Sing	10	obl:tmod	10:obl:tmod	_
-2	19	19	NUM	CD	NumType=Card	1	nummod	1:nummod	SpaceAfter=No
+2	19	19	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	/	/	SYM	,	_	4	case	4:case	SpaceAfter=No
-4	20	20	NUM	CD	NumType=Card	2	nmod	2:nmod	SpaceAfter=No
+4	20	20	NUM	CD	NumForm=Digit|NumType=Card	2	nmod	2:nmod	SpaceAfter=No
 5	,	,	PUNCT	,	_	10	punct	10:punct	_
 6	Neil	Neil	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
@@ -213,15 +213,15 @@
 21	(	(	PUNCT	-LRB-	_	22	punct	22:punct	SpaceAfter=No
 22	leave	leave	VERB	VB	VerbForm=Inf	16	parataxis	16:parataxis	_
 23	at	at	ADP	IN	_	24	case	24:case	_
-24	430	430	NUM	CD	NumType=Card	22	obl	22:obl:at	SpaceAfter=No
+24	430	430	NUM	CD	NumForm=Digit|NumType=Card	22	obl	22:obl:at	SpaceAfter=No
 25	)	)	PUNCT	-RRB-	_	22	punct	22:punct	_
 
 # sent_id = email-enronsent26_01-0014
 # text = October 26/27, hope to be vacation time.
 1	October	October	PROPN	NNP	Number=Sing	6	obl:tmod	6:obl:tmod	_
-2	26	26	NUM	CD	NumType=Card	1	nummod	1:nummod	SpaceAfter=No
+2	26	26	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	/	/	SYM	,	_	4	case	4:case	SpaceAfter=No
-4	27	27	NUM	CD	NumType=Card	2	nmod	2:nmod	SpaceAfter=No
+4	27	27	NUM	CD	NumForm=Digit|NumType=Card	2	nmod	2:nmod	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	hope	hope	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 7	to	to	PART	TO	_	10	mark	10:mark	_
@@ -731,7 +731,7 @@
 11	that	that	SCONJ	IN	_	17	mark	17:mark	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	$	$	SYM	$	_	17	nsubj:pass	17:nsubj:pass	SpaceAfter=No
-14	170	170	NUM	CD	NumType=Card	15	compound	15:compound	SpaceAfter=No
+14	170	170	NUM	CD	NumForm=Digit|NumType=Card	15	compound	15:compound	SpaceAfter=No
 15	m	million	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	13	nummod	13:nummod	_
 16	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	aux:pass	17:aux:pass	_
 17	paid	pay	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	ccomp	10:ccomp	_
@@ -855,7 +855,7 @@
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	mark	mark	VERB	VB	VerbForm=Inf	11	advcl	11:advcl:to	_
 5	any	any	DET	DT	_	7	det	7:det	_
-6	2000	2000	NUM	CD	NumType=Card	7	nummod	7:nummod	_
+6	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
 7	income	income	NOUN	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	11	nsubj	11:nsubj|13:nsubj:xsubj	_
@@ -870,7 +870,7 @@
 18	Development	development	NOUN	NN	Number=Sing	19	compound	19:compound	_
 19	Agreement	agreement	NOUN	NN	Number=Sing	16	obj	16:obj	_
 20	in	in	ADP	IN	_	21	case	21:case	_
-21	2000	2000	NUM	CD	NumType=Card	16	obl	16:obl:in	SpaceAfter=No
+21	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	16	obl	16:obl:in	SpaceAfter=No
 22	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = email-enronsent26_01-0052

@@ -72,8 +72,8 @@
 4	Michael.McDermott@spectrongroup.com	michael.mcdermott@spectrongroup.com	X	ADD	_	1	list	1:list	SpaceAfter=No
 5	>	>	PUNCT	-RRB-	_	4	punct	4:punct	_
 6	on	on	ADP	IN	_	7	case	7:case	_
-7	06/01/2000	06/01/2000	NUM	CD	NumType=Card	1	nmod	1:nmod:on	_
-8	06:00:56	06:00:56	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+7	06/01/2000	06/01/2000	NUM	CD	NumForm=Digit|NumType=Card	1	nmod	1:nmod:on	_
+8	06:00:56	06:00:56	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 9	AM	am	NOUN	NN	Number=Sing	7	nmod:tmod	7:nmod:tmod	_
 
 # sent_id = email-enronsent08_02-0009
@@ -134,7 +134,7 @@
 11	doctor	doctor	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
 12	gave	give	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 13	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	12	iobj	12:iobj	_
-14	13	13	NUM	CD	NumType=Card	15	nummod	15:nummod	_
+14	13	13	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
 15	years	year	NOUN	NNS	Number=Plur	12	obj	12:obj	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	live	live	VERB	VB	VerbForm=Inf	15	acl	15:acl:to	SpaceAfter=No
@@ -263,7 +263,7 @@
 18	Maximum	maximum	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 19	Occupancy	occupancy	NOUN	NN	Number=Sing	15	ccomp	15:ccomp	SpaceAfter=No
 20	:	:	PUNCT	:	_	19	punct	19:punct	_
-21	240	240	NUM	CD	NumType=Card	22	nummod	22:nummod	_
+21	240	240	NUM	CD	NumForm=Digit|NumType=Card	22	nummod	22:nummod	_
 22	Patrons	patron	NOUN	NNS	Number=Plur	19	appos	19:appos	_
 23	OR	or	CCONJ	CC	_	25	cc	25:cc	_
 24	Yo	yo	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs|Style=Slng	25	nmod:poss	25:nmod:poss	_
@@ -306,7 +306,7 @@
 7	instead	instead	ADV	RB	_	11	case	11:case	_
 8	of	of	ADP	IN	_	7	fixed	7:fixed	_
 9	Levis	Levis	PROPN	NNPS	Number=Plur	11	compound	11:compound	_
-10	501	501	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+10	501	501	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 11	jeans	jeans	NOUN	NNS	Number=Plur	14	obl	14:obl:instead_of	SpaceAfter=No
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
 13	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
@@ -582,7 +582,7 @@
 # text = Jai Hawker 974-6721
 1	Jai	Jai	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	Hawker	Hawker	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	974-6721	974-6721	NUM	CD	NumType=Card	1	list	1:list	_
+3	974-6721	974-6721	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 
 # sent_id = email-enronsent08_02-0041
 # text = I won't forget about the $.
@@ -832,9 +832,9 @@
 2	about	about	SCONJ	IN	_	3	mark	3:mark	_
 3	meeting	meet	VERB	VBG	VerbForm=Ger	1	advcl	1:advcl:about	_
 4	at	at	ADP	IN	_	5	case	5:case	_
-5	11:30	11:30	NUM	CD	NumType=Card	3	obl	3:obl:at	_
+5	11:30	11:30	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:at	_
 6	or	or	CCONJ	CC	_	7	cc	7:cc	_
-7	12	12	NUM	CD	NumType=Card	5	conj	3:obl:at|5:conj:or	SpaceAfter=No
+7	12	12	NUM	CD	NumForm=Digit|NumType=Card	5	conj	3:obl:at|5:conj:or	SpaceAfter=No
 8	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent08_02-0064
@@ -855,7 +855,7 @@
 # newpar id = email-enronsent08_02-p0027
 # text = CD 3-1663
 1	CD	CD	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	3-1663	3-1663	NUM	CD	NumType=Card	1	list	1:list	_
+2	3-1663	3-1663	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 
 # sent_id = email-enronsent08_02-0066
 # newpar id = email-enronsent08_02-p0028
@@ -1048,9 +1048,9 @@
 3	Canada	Canada	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4	Corp.	Corp.	PROPN	NNP	Number=Sing	1	list	1:list	_
 5	Suite	suite	NOUN	NN	Number=Sing	1	list	1:list	_
-6	1100	1100	NUM	CD	NumType=Card	5	nummod	5:nummod	SpaceAfter=No
+6	1100	1100	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	SpaceAfter=No
 7	,	,	PUNCT	,	_	1	punct	1:punct	_
-8	70	70	NUM	CD	NumType=Card	10	nummod	10:nummod	_
+8	70	70	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	_
 9	York	York	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	Street	Street	PROPN	NNP	Number=Sing	1	list	1:list	_
 11	Toronto	Toronto	PROPN	NNP	Number=Sing	10	appos	10:appos	SpaceAfter=No
@@ -1058,7 +1058,7 @@
 13	Ontario	Ontario	PROPN	NNP	Number=Sing	11	appos	11:appos	_
 14	M5J	M5J	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	1S9	1S9	NOUN	NN	Number=Sing	1	list	1:list	_
-16	416-865-3700	416-865-3700	NUM	CD	NumType=Card	1	list	1:list	_
+16	416-865-3700	416-865-3700	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 
 # sent_id = email-enronsent08_02-0082
 # text = Paul DeVries - Director 416-865-3703
@@ -1066,7 +1066,7 @@
 2	DeVries	DeVries	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	-	-	PUNCT	,	_	1	punct	1:punct	_
 4	Director	director	NOUN	NN	Number=Sing	1	list	1:list	_
-5	416-865-3703	416-865-3703	NUM	CD	NumType=Card	1	list	1:list	_
+5	416-865-3703	416-865-3703	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 
 # sent_id = email-enronsent08_02-0083
 # text = Jan Wilson - Manager 416-865-3704
@@ -1074,7 +1074,7 @@
 2	Wilson	Wilson	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	-	-	PUNCT	,	_	1	punct	1:punct	_
 4	Manager	manager	NOUN	NN	Number=Sing	1	list	1:list	_
-5	416-865-3704	416-865-3704	NUM	CD	NumType=Card	1	list	1:list	_
+5	416-865-3704	416-865-3704	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 
 # sent_id = email-enronsent08_02-0084
 # text = Attached is a forecast for the rest of the summer for the X (NWP and PGT).
