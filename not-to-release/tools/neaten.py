@@ -32,8 +32,10 @@ def validate_src(fpath='../../en_ewt-ud-*.conllu'):
             for tree in conllu.parse_incr(inF):
                 if 'newdoc id'in tree.metadata:
                     doc = tree.metadata['newdoc id']
+                tree.metadata['docname'] = doc
 
                 sentid = tree.metadata['sent_id']
+                prev_line = None
                 for line in tree:
                     """ `dict(line)` e.g.:
                     {'id': 1, 'form': 'What', 'lemma': 'what', 'upos': 'PRON',
@@ -47,9 +49,25 @@ def validate_src(fpath='../../en_ewt-ud-*.conllu'):
                     form, xpos, lemma = line['form'], line['xpos'], line['lemma']
                     # for lemma error-checking purposes, uses the corrected form of the token if there is one
                     tok = (line.get('misc') or {}).get('CorrectForm',form)
-                    lemma_dict[(tok,xpos)][lemma] += 1
-                    lemma_docs[(tok,xpos,lemma)].add(sentid)
-                    tree.metadata['docname'] = doc
+
+                    # goeswith
+                    if line['deprel']=='goeswith' and prev_line['deprel']!="goeswith":
+                        # undo previous count as it has a partial form string
+                        lemma_dict[prev_key][prev_line["lemma"]] -= 1
+                        if prev_line['xpos'] in ["AFX", "GW"]:
+                            # copy substantive XPOS to the preceding token
+                            prev_line['xpos'] = line['xpos']
+
+                        prev_line['form'] += line['form']
+                        ptok = (prev_line.get('misc') or {}).get('CorrectForm',prev_line['form'])
+                        lemma_dict[ptok,prev_line['xpos']][prev_line["lemma"]] += 1
+                        lemma_docs[ptok,prev_line['xpos'],prev_line["lemma"]].add(sentid)
+                    else:
+                        lemma_dict[(tok,xpos)][lemma] += 1
+                        lemma_docs[(tok,xpos,lemma)].add(sentid)
+
+                    prev_line = line
+                    prev_key = (tok,xpos)
 
                 validate_annos(tree)
 
@@ -59,16 +77,16 @@ def validate_src(fpath='../../en_ewt-ud-*.conllu'):
 def validate_lemmas(lemma_dict, lemma_docs):
     exceptions = [("Democratic","JJ","Democratic"),("Water","NNP","Waters"),("Sun","NNP","Sunday"),("a","IN","of"),
                   ("a","IN","as"),("car","NN","card"),("lay","VB","lay"),("that","IN","than"),
-                  ("da","NNP","Danish"),("Jan","NNP","Jan"),("'s","VBZ","have"),("’s","VBZ","have"),("`s","VBZ","have")]
+                  ("da","NNP","Danish"),("Jan","NNP","Jan"),("Jan","NNP","January"),("'s","VBZ","have"),("’s","VBZ","have"),("`s","VBZ","have")]
     suspicious_types = 0
     for tok, xpos in sorted(lemma_dict):
-        if len(lemma_dict[(tok,xpos)]) > 1:
-            for i, lem in enumerate(filter(lambda x: x!='_', sorted(lemma_dict[(tok,xpos)],key=lambda x:lemma_dict[(tok,xpos)][x],reverse=True))):
+        if sum(lemma_dict[(tok,xpos)].values()) > 1:
+            for i, lem in enumerate(filter(lambda y: y!='_', sorted(lemma_dict[(tok,xpos)],key=lambda x:lemma_dict[(tok,xpos)][x],reverse=True))):
                 docs = ", ".join(list(lemma_docs[(tok,xpos,lem)]))
                 if i == 0:
                     majority = lem
                 else:
-                    if (tok,xpos,lem) not in exceptions:  # known exceptions
+                    if lemma_dict[tok,xpos][lem]>0 and (tok,xpos,lem) not in exceptions:  # known exceptions
                         suspicious_types += 1
                         sys.stderr.write("! rare lemma " + lem + " for " + tok + "/" + xpos + " in " + docs +
                                      " (majority: " + majority + ")\n")
@@ -101,17 +119,18 @@ def validate_annos(tree):
                 continue
 
             tok_num += 1
+            tok = (line.get('misc') or {}).get('CorrectForm',line['form'])
             funcs[tok_num] = line['deprel']
             if head!=0:  # Root token
                 if head == "_" or head == '' or head is None:
                     print("Invalid head '_' at line " + str(r) + " in " + docname)
                     sys.exit()
                 parent_ids[tok_num] = head
-                children[head].append(line['form'])
+                children[head].append(tok)
                 child_funcs[head].append(line['deprel'])
             else:
                 parent_ids[tok_num] = 0
-            tokens[tok_num] = line['form']
+            tokens[tok_num] = tok
 
         for i in range(1, len(tokens) + 1, 1):
             if parent_ids[i] == 0:
@@ -150,7 +169,8 @@ def validate_annos(tree):
                 continue
 
             tok_num += 1
-            tok, xpos, lemma = line['form'], line['xpos'], line['lemma']
+            tok = (line.get('misc') or {}).get('CorrectForm',line['form'])
+            xpos, lemma = line['xpos'], line['lemma']
             pos = xpos
             func = line['deprel']
             if pos not in tagset:
@@ -206,7 +226,7 @@ def flag_dep_warnings(id, tok, pos, lemma, func, parent, parent_lemma, parent_id
 
     if pos in ["VBG","VBN","VBD"] and lemma == tok:
         # check cases where VVN form is same as tok ('know' and 'notice' etc. are recorded typos, l- is a disfluency)
-        if tok not in ["shed","put","read","become","come","cut","hit","split","cast","set","hurt","run","broadcast","knit",
+        if tok not in ["shed","put","read","become","come","cut","hit","split","cast","set","hurt","run","overrun","outrun","broadcast","knit",
                        "undercut","spread","shut","upset","burst","bit","let","l-","g-","know","notice","reach","raise"]:
             print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
 
