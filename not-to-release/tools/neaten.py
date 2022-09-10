@@ -59,7 +59,7 @@ def validate_src(fpath='../../en_ewt-ud-*.conllu'):
 def validate_lemmas(lemma_dict, lemma_docs):
     exceptions = [("Democratic","JJ","Democratic"),("Water","NNP","Waters"),("Sun","NNP","Sunday"),("a","IN","of"),
                   ("a","IN","as"),("car","NN","card"),("lay","VB","lay"),("that","IN","than"),
-                  ("da","NNP","Danish")]
+                  ("da","NNP","Danish"),("Jan","NNP","Jan"),("'s","VBZ","have"),("’s","VBZ","have"),("`s","VBZ","have")]
     suspicious_types = 0
     for tok, xpos in sorted(lemma_dict):
         if len(lemma_dict[(tok,xpos)]) > 1:
