@@ -226,8 +226,8 @@ def flag_dep_warnings(id, tok, pos, lemma, func, parent, parent_lemma, parent_id
 
     if pos in ["VBG","VBN","VBD"] and lemma == tok:
         # check cases where VVN form is same as tok ('know' and 'notice' etc. are recorded typos, l- is a disfluency)
-        if tok not in ["shed","put","read","become","come","cut","hit","split","cast","set","hurt","run","overrun","outrun","broadcast","knit",
-                       "undercut","spread","shut","upset","burst","bit","let","l-","g-","know","notice","reach","raise"]:
+        if tok not in ["shed","put","read","become","come","overcome","cut","pre-cut","hit","split","cast","set","hurt","run","overrun","outrun","broadcast","knit",
+                       "undercut","spread","shut","upset","burst","bit","bid","outbid","let","l-","g-","know","notice","reach","raise","beat","forecast"]:
             print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
 
     if pos == "NNPS" and tok == lemma and tok.endswith("s") and func != "goeswith":
@@ -381,7 +381,7 @@ def flag_dep_warnings(id, tok, pos, lemma, func, parent, parent_lemma, parent_id
         print(str(id) + docname)
         print("WARN: tag "+pos+" should not have auxiliaries 'aux'" + inname)
 
-    if lemma == "not" and func not in ["advmod","root","parataxis","reparandum","advcl","conj","orphan"]:
+    if lemma == "not" and func not in ["advmod","root","parataxis","reparandum","advcl","conj","orphan","fixed"]:
         print("WARN: deprel "+func+" should not be used with lemma '"+lemma+"'" + inname)
 
     if func == "xcomp" and parent_lemma in ["see","hear","notice"]:  # find
