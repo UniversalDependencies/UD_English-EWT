@@ -352,7 +352,7 @@ def flag_dep_warnings(id, tok, pos, lemma, func, parent, parent_lemma, parent_id
     if parent_lemma == "let" and func=="ccomp":
         print("WARN: verb 'let' should take xcomp clausal object, not ccomp" + inname)
 
-    if pos == "MD" and lemma not in ["can","must","will","shall","would","could","may","might","ought","should"]:
+    if pos == "MD" and lemma not in ["can","must","will","shall","would","could","may","might","ought","should"] and func != "goeswith":
         print("WARN: lemma '"+lemma+"' is not a known modal verb for tag MD" + inname)
 
     if lemma == "like" and pos == "UH" and func not in ["discourse","conj","reparandum"]:
