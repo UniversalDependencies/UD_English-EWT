@@ -379,7 +379,7 @@ def flag_dep_warnings(id, tok, pos, lemma, func, parent, parent_lemma, parent_id
 
     if pos in ["VBD","VBD","VBP"] and "aux" in child_funcs:
         print(str(id) + docname)
-        print("WARN: tag "+pos+" should not have auxiliaries 'aux' " + inname)
+        print("WARN: tag "+pos+" should not have auxiliaries 'aux'" + inname)
 
     if lemma == "not" and func not in ["advmod","root","parataxis","reparandum","advcl","conj","orphan"]:
         print("WARN: deprel "+func+" should not be used with lemma '"+lemma+"'" + inname)
@@ -403,19 +403,19 @@ def flag_dep_warnings(id, tok, pos, lemma, func, parent, parent_lemma, parent_id
     #    print("WARN: lemma "+lemma+" should not be func '"+func+"' when it is the child of a '" + parent_func + "'" + inname)
 
     if (sent_position == "first" and pos == "''") or (sent_position == "last" and pos=="``"):
-        print("WARN: incorrect quotation mark tag " + pos + " at "+sent_position+" position in sentence " + inname)
+        print("WARN: incorrect quotation mark tag " + pos + " at "+sent_position+" position in sentence" + inname)
 
     mwe_pairs = {("accord", "to"), ("all","but"), ("as","if"), ("as", "well"), ("as", "as"), ("as","in"), ("all","of"), ("as","oppose"),("as","to"),
                  ("at","least"),("because","of"),("due","to"),("had","better"),("'d","better"),("in","between"), ("per", "se"),
                  ("in","case"),("in","of"), ("in","order"),("instead","of"), ("kind","of"),("less","than"),("let","alone"),
                  ("more","than"),("not","to"),("not","mention"),("of","course"),("prior","to"),("rather","than"),("so","as"),
-                 ("so", "to"),("sort", "of"),("so", "that"),("such","as"),("that","is"), ("up","to"),("whether","or"),
-                 ("whether","not"),("depend","on"),("out","of"),("off","of"),("long","than"),("on","board"),("as","of"),("depend","upon"),
+                 ("so", "to"),("sort", "of"),("so", "that"),("such","as"),("that","is"), ("up","to"),
+                 ("depend","on"),("out","of"),("off","of"),("long","than"),("on","board"),("as","of"),("depend","upon"),
                  ("that","be"),("just","about"),("vice","versa"),("as","such"),("next","to"),("close","to"),("one","another"),
                  ("de","facto"),("each","other"), ("as","many")}
 
-    # Ad hoc listing of triple mwe parts - All in all, in order for
-    mwe_pairs.update({("all","in"),("all","all"),("in","for")})
+    # Ad hoc listing of triple mwe parts - All in all, in order for, whether or not
+    mwe_pairs.update({("all","in"),("all","all"),("in","for"),("whether","or"),("whether","not")})
 
     if func == "fixed":
         if (parent_lemma.lower(), lemma.lower()) not in mwe_pairs:
