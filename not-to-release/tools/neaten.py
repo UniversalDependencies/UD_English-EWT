@@ -244,7 +244,7 @@ def flag_dep_warnings(id, tok, pos, lemma, func, parent, parent_lemma, parent_id
     if pos == "IN" and func=="compound:prt":
         print("WARN: function " + func + " should have pos RP, not IN" + inname)
 
-    if pos == "CC" and func not in ["cc","cc:preconj","conj","reparandum","root","dep"]:
+    if pos == "CC" and func not in ["cc","cc:preconj","conj","reparandum","root","dep"] and not (parent_lemma=="whether" and func=="fixed"):
         if not ("languages" in inname and tok == "and"):  # metalinguistic discussion in whow_languages
             print("WARN: pos " + pos + " should normally have function cc or cc:preconj, not " + func + inname)
 
@@ -405,9 +405,10 @@ def flag_dep_warnings(id, tok, pos, lemma, func, parent, parent_lemma, parent_id
     if (sent_position == "first" and pos == "''") or (sent_position == "last" and pos=="``"):
         print("WARN: incorrect quotation mark tag " + pos + " at "+sent_position+" position in sentence" + inname)
 
-    mwe_pairs = {("accord", "to"), ("all","but"), ("as","if"), ("as", "well"), ("as", "as"), ("as","in"), ("all","of"), ("as","oppose"),("as","to"),
-                 ("at","least"),("because","of"),("due","to"),("had","better"),("'d","better"),("in","between"), ("per", "se"),
-                 ("in","case"),("in","of"), ("in","order"),("instead","of"), ("kind","of"),("less","than"),("let","alone"),
+    mwe_pairs = {("accord", "to"), ("all","but"), ("as","for"), ("as","if"), ("as", "well"), ("as", "as"), ("as","in"), ("all","of"), ("as","oppose"),("as","to"),
+                 ("at","least"),("because","of"),("due","to"),("had","better"),("'d","better"),
+                 ("how","come"),("in","between"), ("per", "se"), ("in","case"),("in","of"), ("in","order"), ("in","that"),
+                 ("instead","of"), ("kind","of"),("less","than"),("let","alone"),
                  ("more","than"),("not","to"),("not","mention"),("of","course"),("prior","to"),("rather","than"),("so","as"),
                  ("so", "to"),("sort", "of"),("so", "that"),("such","as"),("that","is"), ("up","to"),
                  ("depend","on"),("out","of"),("off","of"),("long","than"),("on","board"),("as","of"),("depend","upon"),
