@@ -21,18 +21,19 @@ def isRegularNode(line):
     idS = str(line['id'])
     return not ('-' in idS or '.' in idS)
 
-def validate_src(fpath='../../en_ewt-ud-*.conllu'):
+def validate_src(infiles):
     tok_count = 0
     lemma_dict = defaultdict(lambda : defaultdict(int))  # collects tok+pos -> lemmas -> count  for consistency checks
     lemma_docs = defaultdict(set)
 
-    for inFP in glob.glob(fpath):
+    for inFP in infiles:
         with open(inFP) as inF:
             doc = None
             for tree in conllu.parse_incr(inF):
                 if 'newdoc id'in tree.metadata:
                     doc = tree.metadata['newdoc id']
                 tree.metadata['docname'] = doc
+                tree.metadata['filename'] = inFP.rsplit('/',1)[1]
 
                 sentid = tree.metadata['sent_id']
                 prev_line = None
@@ -48,7 +49,7 @@ def validate_src(fpath='../../en_ewt-ud-*.conllu'):
                     tok_count += 1
                     form, xpos, lemma = line['form'], line['xpos'], line['lemma']
                     # for lemma error-checking purposes, uses the corrected form of the token if there is one
-                    tok = (line.get('misc') or {}).get('CorrectForm',form)
+                    tok = (line.get('misc') or {}).get('CorrectForm') or form   # in GUM, some explicit CorrectForm=_ which parses as None
 
                     # goeswith
                     if line['deprel']=='goeswith' and prev_line['deprel']!="goeswith":
@@ -59,7 +60,7 @@ def validate_src(fpath='../../en_ewt-ud-*.conllu'):
                             prev_line['xpos'] = line['xpos']
 
                         prev_line['form'] += line['form']
-                        ptok = (prev_line.get('misc') or {}).get('CorrectForm',prev_line['form'])
+                        ptok = (prev_line.get('misc') or {}).get('CorrectForm') or prev_line['form']    # in GUM, some explicit CorrectForm=_ which parses as None
                         lemma_dict[ptok,prev_line['xpos']][prev_line["lemma"]] += 1
                         lemma_docs[ptok,prev_line['xpos'],prev_line["lemma"]].add(sentid)
                     else:
@@ -77,7 +78,8 @@ def validate_src(fpath='../../en_ewt-ud-*.conllu'):
 def validate_lemmas(lemma_dict, lemma_docs):
     exceptions = [("Democratic","JJ","Democratic"),("Water","NNP","Waters"),("Sun","NNP","Sunday"),("a","IN","of"),
                   ("a","IN","as"),("car","NN","card"),("lay","VB","lay"),("that","IN","than"),
-                  ("da","NNP","Danish"),("Jan","NNP","Jan"),("Jan","NNP","January"),("'s","VBZ","have"),("’s","VBZ","have"),("`s","VBZ","have")]
+                  ("da","NNP","Danish"),("Jan","NNP","Jan"),("Jan","NNP","January"),
+                  ("'s","VBZ","have"),("’s","VBZ","have"),("`s","VBZ","have"),("'d","VBD","do"),("'d","VBD","have")]
     suspicious_types = 0
     for tok, xpos in sorted(lemma_dict):
         if sum(lemma_dict[(tok,xpos)].values()) > 1:
@@ -88,7 +90,7 @@ def validate_lemmas(lemma_dict, lemma_docs):
                 else:
                     if lemma_dict[tok,xpos][lem]>0 and (tok,xpos,lem) not in exceptions:  # known exceptions
                         suspicious_types += 1
-                        sys.stderr.write("! rare lemma " + lem + " for " + tok + "/" + xpos + " in " + docs +
+                        print("! rare lemma " + lem + " for " + tok + "/" + xpos + " in " + docs +
                                      " (majority: " + majority + ")\n")
     if suspicious_types > 0:
         sys.stderr.write("! "+str(suspicious_types) + " suspicious lemma types detected\n")
@@ -119,7 +121,7 @@ def validate_annos(tree):
                 continue
 
             tok_num += 1
-            tok = (line.get('misc') or {}).get('CorrectForm',line['form'])
+            tok = (line.get('misc') or {}).get('CorrectForm') or line['form']   # in GUM, some explicit CorrectForm=_ which parses as None
             funcs[tok_num] = line['deprel']
             if head!=0:  # Root token
                 if head == "_" or head == '' or head is None:
@@ -156,7 +158,8 @@ def validate_annos(tree):
         # PTB with HYPH, ADD, NFP
         tagset = ["CC","CD","DT","EX","FW","IN","IN/that","JJ","JJR","JJS","LS","MD","NN","NNS","NNP","NNPS","PDT","POS",
                   "PRP","PRP$","RB","RBR","RBS","RP","SENT","SYM","TO","UH","VB","VBD","VBG","VBN","VBP","VBZ",
-                  "WDT","WP","WP$","WRB", ".", "``", "''", "-LRB-", "-RRB-", ",", ":", "$", "HYPH", "ADD", "AFX", "NFP", "GW"]
+                  "WDT","WP","WP$","WRB", ".", "``", "''", "-LRB-", "-RRB-", "-LSB-", "-RSB-", "-LCB-", "-RCB-",
+                   ",", ":", "$", "HYPH", "ADD", "AFX", "NFP", "GW"]
         non_lemmas = ["them","me","him","n't"]
         non_lemma_combos = [("PP","her"),("MD","wo"),("PP","us"),("DT","an")]
         lemma_pos_combos = {"which":"WDT"}
@@ -169,9 +172,11 @@ def validate_annos(tree):
                 continue
 
             tok_num += 1
-            tok = (line.get('misc') or {}).get('CorrectForm',line['form'])
+            tok = (line.get('misc') or {}).get('CorrectForm') or line['form']   # in GUM, some explicit CorrectForm=_ which parses as None
+            assert tok is not None,(docname, tree.metadata['filename'], tok_num, line)
             xpos, lemma = line['xpos'], line['lemma']
             pos = xpos
+            upos = line['upos']
             func = line['deprel']
             if pos not in tagset:
                 print("WARN: invalid POS tag " + pos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
@@ -190,20 +195,22 @@ def validate_annos(tree):
             parent_lemma = lemmas[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_func = funcs[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_pos = postags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
-            assert parent_pos is not None,(tok_num,parent_ids[tok_num],postags)
+            filename = tree.metadata['filename']
+            assert parent_pos is not None,(tok_num,parent_ids[tok_num],postags,filename)
             S_TYPE_PLACEHOLDER = None
-            flag_dep_warnings(tok_num, tok, pos, lemma, func, parent_string, parent_lemma, parent_id,
+            assert parent_string is not None,(tok_num,docname,filename)
+            flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, parent_string, parent_lemma, parent_id,
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
-                              prev_tok, prev_pos, sent_positions[tok_num], parent_func, parent_pos)
+                              prev_tok, prev_pos, sent_positions[tok_num], parent_func, parent_pos, filename)
             prev_pos = pos
             prev_tok = tok
 
 
 
-def flag_dep_warnings(id, tok, pos, lemma, func, parent, parent_lemma, parent_id, children, child_funcs, s_type,
-                      docname, prev_tok, prev_pos, sent_position, parent_func, parent_pos):
+def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, parent_id, children, child_funcs, s_type,
+                      docname, prev_tok, prev_pos, sent_position, parent_func, parent_pos, filename):
     # Shorthand for printing errors
-    inname = " in " + docname + " @ token " + str(id) + " (" + parent + " -> " + tok + ")"
+    inname = " in " + docname + " @ token " + str(id) + " (" + parent + " -> " + tok + ") " + filename
 
     if func == "amod" and pos in ["VBD"]:
         print("WARN: finite past verb labeled amod " + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
@@ -396,8 +403,29 @@ def flag_dep_warnings(id, tok, pos, lemma, func, parent, parent_lemma, parent_id
     if func.endswith("tmod") and pos.startswith("RB"):
         print("WARN: adverbs should not be tmod" + inname)
 
-    if pos == "EX" and func not in ["expl","reparandum"]:
-        print("WARN: existential 'there' tagged EX should not be " + func + inname)
+    """
+    Existential construction
+
+    X.xpos=EX <=> X.deprel=expl & X.lemma=there
+    X.xpos=EX => X.upos=PRON
+    """
+    if func!="reparandum":
+        _ex_tag = (pos=="EX")
+        _expl_there = (func=="expl" and lemma=="there")
+        if _ex_tag != _expl_there or (_ex_tag and upos!="PRON"):
+            print("WARN: 'there' with " + pos + " and " + upos + inname)
+        if lemma=="there" and not _ex_tag and 'nsubj' in func:
+            print("WARN: subject 'there' not tagged as EX/expl" + inname)
+
+    """
+    (Pre)determiner 'what'
+
+    X[lemma=what,xpos=WDT] <=> X[lemma=what,deprel=det|det:predet]
+    """
+    _what_wdt = (lemma=="what" and pos=="WDT")
+    _what_det = (lemma=="what" and func in ["det", "det:predet"])
+    if _what_wdt!=_what_det:
+        print("WARN: what/WDT should correspond with det or det:predet" + inname)
 
     #if func == "advmod" and lemma in ["where","when"] and parent_func == "acl:relcl":
     #    print("WARN: lemma "+lemma+" should not be func '"+func+"' when it is the child of a '" + parent_func + "'" + inname)
@@ -471,4 +499,4 @@ def flag_dep_warnings(id, tok, pos, lemma, func, parent, parent_lemma, parent_id
                         print("WARN: suspicious n-gram " + prev_tok + "/" + prev_pos+" " + tok + "/" + pos + inname)
 
 if __name__=='__main__':
-    validate_src()
+    validate_src(sys.argv[1:] or glob.glob('../../en_ewt-ud-*.conllu'))
