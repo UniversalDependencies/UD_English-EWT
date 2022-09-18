@@ -427,6 +427,20 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
     if _what_wdt!=_what_det:
         print("WARN: what/WDT should correspond with det or det:predet" + inname)
 
+    """
+    Numerics
+
+    X[lemma contains digits and nonalphabetics] => X.upos=NUM
+
+    (Note that pluralized years like "1960s" or "'60s" are NOUN/NNS)
+
+    pattern { X[]; X.lemma=re"\([0-9]\|[^A-Za-z0-9]\)+" }
+    without { X.lemma=re"[0-9]+" }
+    without { X.lemma=re"[^A-Za-z0-9]+" }
+    """
+    if upos not in ["NUM","X"] and re.match(r'^[\d\W_]*\d[\d\W_]*$',lemma) and pos!="NNS" and lemma!="<3":  # and not re.match(r'^\d+$',lemma):
+        print("WARN: numeric lemma '" + lemma + "' is not NUM" + inname)
+
     #if func == "advmod" and lemma in ["where","when"] and parent_func == "acl:relcl":
     #    print("WARN: lemma "+lemma+" should not be func '"+func+"' when it is the child of a '" + parent_func + "'" + inname)
 
