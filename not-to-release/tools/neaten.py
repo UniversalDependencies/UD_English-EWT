@@ -244,7 +244,7 @@ def validate_annos(tree):
             if 'cop' in dependents.values():
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has cop dependent in " + docname)
         for i in feats:
-            if feats[i] and "Voice" in feats[i] and i not in passive_verbs:
+            if feats[i] and "Voice" in feats[i] and i not in passive_verbs and funcs[i] != "conj":
                 print("WARN: Unexpected feature Voice=" + feats[i]["Voice"] + " with token of lemma '" + lemmas[i] + "' and no :pass dependents in " + docname)
         for i,f in funcs.items():
             if f=='obl:agent':
