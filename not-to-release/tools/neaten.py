@@ -255,7 +255,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
         if not ("languages" in inname and tok == "and"):  # metalinguistic discussion in whow_languages
             print("WARN: pos " + pos + " should normally have function cc or cc:preconj, not " + func + inname)
 
-    if pos == "RP" and func not in ["compound:prt","root","conj","ccomp"] or pos != "RP" and func=="compound:prt":
+    if pos == "RP" and func not in ["compound:prt","conj"] or pos != "RP" and func=="compound:prt":
         print("WARN: pos " + pos + " should not normally have function " + func + inname)
 
     if pos != "CC" and func in ["cc","cc:preconj"]:
@@ -388,7 +388,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
         print(str(id) + docname)
         print("WARN: tag "+pos+" should not have auxiliaries 'aux'" + inname)
 
-    if lemma == "not" and func not in ["advmod","root","parataxis","reparandum","advcl","conj","orphan","fixed"]:
+    if lemma == "not" and func not in ["advmod","root","ccomp","amod","parataxis","reparandum","advcl","conj","orphan","fixed"]:
         print("WARN: deprel "+func+" should not be used with lemma '"+lemma+"'" + inname)
 
     if func == "xcomp" and parent_lemma in ["see","hear","notice"]:  # find
