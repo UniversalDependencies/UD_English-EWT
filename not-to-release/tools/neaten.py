@@ -102,6 +102,7 @@ def validate_annos(tree):
         # Dictionaries to hold token annotations from conllu data
         funcs = {}
         postags = {}
+        feats = {}
         tokens = {}
         parent_ids = {}
         lemmas = {}
@@ -133,6 +134,7 @@ def validate_annos(tree):
             else:
                 parent_ids[tok_num] = 0
             tokens[tok_num] = tok
+            feats[tok_num] = line['feats']
 
         for i in range(1, len(tokens) + 1, 1):
             if parent_ids[i] == 0:
@@ -165,6 +167,8 @@ def validate_annos(tree):
         lemma_pos_combos = {"which":"WDT"}
         non_cap_lemmas = ["There","How","Why","Where","When"]
 
+        passive_verbs = set()
+
         prev_tok = ""
         prev_pos = ""
         for i, line in enumerate(tree):
@@ -178,6 +182,7 @@ def validate_annos(tree):
             pos = xpos
             upos = line['upos']
             func = line['deprel']
+
             if pos not in tagset:
                 print("WARN: invalid POS tag " + pos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
             if lemma.lower() in non_lemmas:
@@ -202,9 +207,51 @@ def validate_annos(tree):
             flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, parent_string, parent_lemma, parent_id,
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, sent_positions[tok_num], parent_func, parent_pos, filename)
+
+            if ':pass' in func:
+                passive_verbs.add(parent_id)
+
             prev_pos = pos
             prev_tok = tok
 
+        """
+        Passive Construction
+
+        A main verb is necessarily passive if any of its dependents are *:pass.
+        In such cases,
+            - the main verb should have the feature Voice=Pass
+            - the xpos should be VBN
+            - all subjects and (only) the last aux should probably be :pass varieties
+            - there should probably not be a cop
+
+        Additionally,
+            - if there is an obl:agent (by-phrase), it must be a "by"-PP attaching to a passive verb
+              (with Voice=Pass)
+            - (No other tokens should have Voice=Pass for now. But plausibly VBNs attaching as amod or acl could be passive)
+        """
+        for v in passive_verbs:
+            if feats[v].get("Voice") != "Pass":
+                print("WARN: Passive verb with lemma '" + lemmas[v] + "' should have Voice=Pass in " + docname)
+            if postags[v] != "VBN":
+                print("WARN: Passive verb with lemma '" + lemmas[v] + "' should be VBN in " + docname)
+            dependents = {j: funcs[j] for j,i in parent_ids.items() if i==v}
+            aux_dependents = sorted([(j,f) for j,f in dependents.items() if f.startswith('aux')])
+            if aux_dependents and (not all(f=='aux' for j,f in aux_dependents[:-1]) or aux_dependents[-1][1]!='aux:pass'):
+                print("WARN: Passive verb with lemma '" + lemmas[v] + "' has suspicious aux(:pass) dependents (only the last should be aux:pass) in " + docname)
+            subj_dependents = {f for f in dependents.values() if 'subj' in f}
+            if not subj_dependents < {'nsubj:pass','csubj:pass'}:
+                print("WARN: Passive verb with lemma '" + lemmas[v] + "' has subject dependents " + repr(subj_dependents) + " in " + docname)
+            if 'cop' in dependents.values():
+                print("WARN: Passive verb with lemma '" + lemmas[v] + "' has cop dependent in " + docname)
+        for i in feats:
+            if feats[i] and "Voice" in feats[i] and i not in passive_verbs:
+                print("WARN: Unexpected feature Voice=" + feats[i]["Voice"] + " with token of lemma '" + lemmas[i] + "' and no :pass dependents in " + docname)
+        for i,f in funcs.items():
+            if f=='obl:agent':
+                if (feats[parent_ids[i]] or {}).get("Voice") != "Pass":
+                    print("WARN: Token with lemma '" + lemmas[i] + "' attaches as obl:agent to verb '" + lemmas[parent_ids[i]] + "' without Voice=Pass in " + docname)
+                if not any(k==i and lemmas[j]=='by' and funcs[j]=='case' for j,k in parent_ids.items()):
+                    print("WARN: Token with lemma '" + lemmas[i] + "' attaches as obl:agent without a 'by' dependent " + docname)
 
 
 def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, parent_id, children, child_funcs, s_type,
