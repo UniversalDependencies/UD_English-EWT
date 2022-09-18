@@ -422,9 +422,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 
     X[lemma=what,xpos=WDT] <=> X[lemma=what,deprel=det|det:predet]
     """
-    _what_wdt = (lemma=="what" and pos=="WDT")
-    _what_det = (lemma=="what" and func in ["det", "det:predet"])
-    if _what_wdt!=_what_det:
+    if lemma=="what" and ((pos=="WDT") != (func in ["det", "det:predet"])):
         print("WARN: what/WDT should correspond with det or det:predet" + inname)
 
     """
