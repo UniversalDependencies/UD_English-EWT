@@ -1,5 +1,6 @@
 #!/bin/bash
 # e.g., cat en_ewt-ud-train.conllu | bash be-ccomp.sh > train.conllu
+export PATH="$HOME/.local/bin/:$PATH"
 udapy util.Eval node='if node.deprel=="ccomp" and node.parent.lemma=="be":
 	cop = node.parent
 	if not any(n for n in cop.children if n.deprel in ["expl", "compound:prt"]):
@@ -32,6 +33,7 @@ udapy util.Eval node='if node.deprel=="ccomp" and node.parent.lemma=="be":
 				d["parent"] = node
 				if "subj" in d["deprel"]:
 					esubjs.append((d["deprel"], ref))
+					d["deprel"] += ":outer"
 		rel = cop.deprel
 	
 		# rel(head,cop), ccomp(cop,node) -> rel(head,node), cop(node,cop)
@@ -63,11 +65,12 @@ udapy util.Eval node='if node.deprel=="ccomp" and node.parent.lemma=="be":
 						d["parent"] = node
 						if "subj" in d["deprel"]:
 							esubjs.append((d["deprel"], n))
+							d["deprel"] += ":outer"
 		
 		# propagate subjects across possibly coordinated clausal predicates (prior ccomps)
 		for eccomp in eccomps:
 			for (esubjrel,esubj) in esubjs:
 				d = edep_with_head(esubj, eccomp, esubjrel)
 				if d is None:
-					esubj.deps.append({"parent": eccomp, "deprel": esubjrel})
+					esubj.deps.append({"parent": eccomp, "deprel": esubjrel+":outer"})
 ' write.Conllu
