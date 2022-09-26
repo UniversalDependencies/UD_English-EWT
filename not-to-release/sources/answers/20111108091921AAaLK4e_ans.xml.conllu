@@ -688,7 +688,7 @@
 # text = The only reason I switched away from them in the first place is because my good friend who apprenticed with them was starting out on his own.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	only	only	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	reason	reason	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
+3	reason	reason	NOUN	NN	Number=Sing	23	nsubj:outer	23:nsubj:outer	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 5	switched	switch	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
 6	away	away	ADV	RB	_	5	advmod	5:advmod	_
@@ -698,7 +698,7 @@
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	12	amod	12:amod	_
 12	place	place	NOUN	NN	Number=Sing	5	obl	5:obl:in	_
-13	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	cop	23:cop	_
 14	because	because	SCONJ	IN	_	23	mark	23:mark	_
 15	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 16	good	good	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
@@ -708,12 +708,12 @@
 20	with	with	ADP	IN	_	21	case	21:case	_
 21	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	19	obl	19:obl:with	_
 22	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	aux	23:aux	_
-23	starting	start	VERB	VBG	Tense=Pres|VerbForm=Part	13	ccomp	13:ccomp	_
+23	starting	start	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 24	out	out	ADP	RP	_	23	compound:prt	23:compound:prt	_
 25	on	on	ADP	IN	_	27	case	27:case	_
 26	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	27	nmod:poss	27:nmod:poss	_
 27	own	own	ADJ	JJ	Degree=Pos	23	obl	23:obl:on	SpaceAfter=No
-28	.	.	PUNCT	.	_	13	punct	13:punct	_
+28	.	.	PUNCT	.	_	23	punct	23:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0030
 # text = However, he left my horse without a shoe for TWO WEEKS(now that's what I call a crap farrier).
@@ -729,18 +729,18 @@
 10	for	for	ADP	IN	_	12	case	12:case	_
 11	TWO	two	NUM	CD	NumForm=Word|NumType=Card	12	nummod	12:nummod	_
 12	WEEKS	week	NOUN	NNS	Number=Plur	4	obl	4:obl:for	SpaceAfter=No
-13	(	(	PUNCT	-LRB-	_	16	punct	16:punct	SpaceAfter=No
-14	now	now	ADV	RB	_	16	advmod	16:advmod	_
+13	(	(	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
+14	now	now	ADV	RB	_	19	advmod	19:advmod	_
 15-16	that's	_	_	_	_	_	_	_	_
-15	that	that	PRON	DT	Number=Sing|PronType=Dem	16	nsubj	16:nsubj	_
-16	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	parataxis	4:parataxis	_
+15	that	that	PRON	DT	Number=Sing|PronType=Dem	19	nsubj:outer	19:nsubj:outer	_
+16	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
 17	what	what	PRON	WP	PronType=Int	19	obj	19:obj|22:nsubj:xsubj	_
 18	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
-19	call	call	VERB	VB	VerbForm=Inf	16	ccomp	16:ccomp	_
+19	call	call	VERB	VB	VerbForm=Inf	4	parataxis	4:parataxis	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
 21	crap	crap	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 22	farrier	farrier	NOUN	NN	Number=Sing	19	xcomp	19:xcomp	SpaceAfter=No
-23	)	)	PUNCT	-RRB-	_	16	punct	16:punct	SpaceAfter=No
+23	)	)	PUNCT	-RRB-	_	19	punct	19:punct	SpaceAfter=No
 24	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0031
@@ -951,22 +951,22 @@
 # sent_id = answers-20111108091921AAaLK4e_ans-0042
 # text = It's always just "Okay, they're feet need to be done, better call the farrier."
 1-2	It's	_	_	_	_	_	_	_	_
-1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	always	always	ADV	RB	_	2	advmod	2:advmod	_
-4	just	just	ADV	RB	_	2	advmod	2:advmod	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj:outer	10:nsubj:outer|16:nsubj:outer	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
+3	always	always	ADV	RB	_	10	advmod	10:advmod	_
+4	just	just	ADV	RB	_	10	advmod	10:advmod	_
 5	"	"	PUNCT	``	_	10	punct	10:punct	SpaceAfter=No
 6	Okay	okay	INTJ	UH	_	10	discourse	10:discourse	SpaceAfter=No
 7	,	,	PUNCT	,	_	10	punct	10:punct	_
 8	they're	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	9	nmod:poss	9:nmod:poss	CorrectForm=their
 9	feet	foot	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj|13:nsubj:xsubj|16:nsubj	_
-10	need	need	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
+10	need	need	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 11	to	to	PART	TO	_	13	mark	13:mark	_
 12	be	be	AUX	VB	VerbForm=Inf	13	aux:pass	13:aux:pass	_
 13	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	xcomp	10:xcomp	SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
 15	better	well	ADV	RBR	Degree=Cmp	16	advmod	16:advmod	_
-16	call	call	VERB	VB	VerbForm=Inf	10	parataxis	2:ccomp|10:parataxis	_
+16	call	call	VERB	VB	VerbForm=Inf	10	parataxis	0:root|10:parataxis	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 18	farrier	farrier	NOUN	NN	Number=Sing	16	obj	16:obj	SpaceAfter=No
 19	.	.	PUNCT	.	_	10	punct	10:punct	SpaceAfter=No
