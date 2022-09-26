@@ -135,12 +135,12 @@
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0006
 # text = Thing is, it worked.
-1	Thing	thing	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
-3	,	,	PUNCT	,	_	2	punct	2:punct	_
+1	Thing	thing	NOUN	NN	Number=Sing	5	nsubj:outer	5:nsubj:outer	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	SpaceAfter=No
+3	,	,	PUNCT	,	_	5	punct	5:punct	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
-5	worked	work	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	SpaceAfter=No
-6	.	.	PUNCT	.	_	2	punct	2:punct	_
+5	worked	work	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+6	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0007
 # text = The ARVN was not having a big problem with the Local VC (the guerilla movement), they were being challenged by the Main Force VC (which was light infantry) and the North Vietnamese Army (NVA).
@@ -325,9 +325,9 @@
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0014
 # text = However, what they hoped to do during the Tet Offensive was to sneak past the Americans and attack the ARVN in the urban areas where they were deployed doing successful Clear and Defend operations.
-1	However	however	ADV	RB	_	12	advmod	12:advmod	SpaceAfter=No
-2	,	,	PUNCT	,	_	12	punct	12:punct	_
-3	what	what	PRON	WP	PronType=Int	12	nsubj	12:nsubj	_
+1	However	however	ADV	RB	_	14	advmod	14:advmod	SpaceAfter=No
+2	,	,	PUNCT	,	_	14	punct	14:punct	_
+3	what	what	PRON	WP	PronType=Int	14	nsubj:outer	14:nsubj:outer|19:nsubj:outer	_
 4	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj	_
 5	hoped	hope	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
@@ -336,14 +336,14 @@
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	Tet	Tet	PROPN	NNP	Number=Sing	11	compound	11:compound	_
 11	Offensive	Offensive	PROPN	NNP	Number=Sing	7	obl	7:obl:during	_
-12	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
-14	sneak	sneak	VERB	VB	VerbForm=Inf	12	ccomp	12:ccomp	_
+14	sneak	sneak	VERB	VB	VerbForm=Inf	0	root	0:root	_
 15	past	past	ADP	IN	_	17	case	17:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	Americans	American	PROPN	NNPS	Number=Plur	14	obl	14:obl:past	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
-19	attack	attack	VERB	VB	VerbForm=Inf	14	conj	12:ccomp|14:conj:and	_
+19	attack	attack	VERB	VB	VerbForm=Inf	14	conj	0:root|14:conj:and	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	ARVN	ARVN	PROPN	NNP	Number=Sing	19	obj	19:obj	_
 22	in	in	ADP	IN	_	25	case	25:case	_
@@ -360,7 +360,7 @@
 33	and	and	CCONJ	CC	_	34	cc	34:cc	_
 34	Defend	defend	VERB	VB	VerbForm=Inf	32	conj	32:conj:and|35:compound	_
 35	operations	operation	NOUN	NNS	Number=Plur	30	obj	30:obj	SpaceAfter=No
-36	.	.	PUNCT	.	_	12	punct	12:punct	_
+36	.	.	PUNCT	.	_	14	punct	14:punct	_
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0015
 # text = The Communists thought they could defeat the ARVN, cause the fall of the South Vietnamese government, and the people would than rally to the Communist cause and leave the Americans stranded in a sea of angry peasants.
@@ -595,7 +595,7 @@
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0028
 # text = All he had to do for a complete victory was allow the military to go into Laos and Cambodia and finish off the shattered Communist forces.
-1	All	all	DET	DT	_	10	nsubj	10:nsubj	_
+1	All	all	DET	DT	_	11	nsubj:outer	11:nsubj:outer	_
 2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 3	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -604,8 +604,8 @@
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	complete	complete	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	victory	victory	NOUN	NN	Number=Sing	5	obl	5:obl:for	_
-10	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-11	allow	allow	VERB	VB	VerbForm=Inf	10	ccomp	10:ccomp	_
+10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
+11	allow	allow	VERB	VB	VerbForm=Inf	0	root	0:root	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	military	military	NOUN	NN	Number=Sing	11	obj	11:obj|15:nsubj:xsubj|21:nsubj:xsubj	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
@@ -621,7 +621,7 @@
 24	shattered	shattered	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
 25	Communist	Communist	PROPN	NNP	Number=Sing	26	compound	26:compound	_
 26	forces	force	NOUN	NNS	Number=Plur	21	obj	21:obj	SpaceAfter=No
-27	.	.	PUNCT	.	_	10	punct	10:punct	_
+27	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0029
 # text = But Johnson was so obtuse he didn’t understand he had a victory when it was handed to him on a silver platter.

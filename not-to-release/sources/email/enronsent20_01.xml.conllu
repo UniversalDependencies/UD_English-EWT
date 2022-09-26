@@ -689,16 +689,16 @@
 # sent_id = email-enronsent20_01-0044
 # text = Another thing to consider is that these messages will be set to expire and disappear within a set period of time, meaning users cannot retrieve them and read them later (as they can with e-mail).
 1	Another	another	DET	DT	_	2	det	2:det	_
-2	thing	thing	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+2	thing	thing	NOUN	NN	Number=Sing	11	nsubj:outer	11:nsubj:outer	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	consider	consider	VERB	VB	VerbForm=Inf	2	acl	2:acl:to	_
-5	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 6	that	that	SCONJ	IN	_	11	mark	11:mark	_
 7	these	this	DET	DT	Number=Plur|PronType=Dem	8	det	8:det	_
 8	messages	message	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj|13:nsubj:xsubj|15:nsubj:xsubj	_
 9	will	will	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 10	be	be	AUX	VB	VerbForm=Inf	11	cop	11:cop	_
-11	set	set	ADJ	JJ	Degree=Pos	5	ccomp	5:ccomp	_
+11	set	set	ADJ	JJ	Degree=Pos	0	root	0:root	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	expire	expire	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
@@ -728,7 +728,7 @@
 37	with	with	ADP	IN	_	38	case	38:case	_
 38	e-mail	e-mail	NOUN	NN	Number=Sing	36	obl	36:obl:with	SpaceAfter=No
 39	)	)	PUNCT	-RRB-	_	36	punct	36:punct	SpaceAfter=No
-40	.	.	PUNCT	.	_	5	punct	5:punct	_
+40	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = email-enronsent20_01-0045
 # text = This means that I could be away from the office for several days and miss a message entirely, because it would have expired and disappeared by the time I returned.
@@ -769,8 +769,8 @@
 # text = The plain fact is that a few members of IT are pushing this initiative, but they lack commercial sponsorship.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	plain	plain	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	fact	fact	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	fact	fact	NOUN	NN	Number=Sing	12	nsubj:outer	12:nsubj:outer|18:nsubj:outer	_
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 5	that	that	SCONJ	IN	_	12	mark	12:mark	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	few	few	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
@@ -778,16 +778,16 @@
 9	of	of	ADP	IN	_	10	case	10:case	_
 10	IT	it	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	_
 11	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-12	pushing	push	VERB	VBG	Tense=Pres|VerbForm=Part	4	ccomp	4:ccomp	_
+12	pushing	push	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 13	this	this	DET	DT	Number=Sing|PronType=Dem	14	det	14:det	_
 14	initiative	initiative	NOUN	NN	Number=Sing	12	obj	12:obj	SpaceAfter=No
 15	,	,	PUNCT	,	_	18	punct	18:punct	_
 16	but	but	CCONJ	CC	_	18	cc	18:cc	_
 17	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
-18	lack	lack	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	conj	4:ccomp|12:conj:but	_
+18	lack	lack	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	conj	0:root|12:conj:but	_
 19	commercial	commercial	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
 20	sponsorship	sponsorship	NOUN	NN	Number=Sing	18	obj	18:obj	SpaceAfter=No
-21	.	.	PUNCT	.	_	4	punct	4:punct	_
+21	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = email-enronsent20_01-0047
 # text = They are hoping Corp will foot the bill for a pilot which will allow them to fully test this tool before implementing it company-wide.
