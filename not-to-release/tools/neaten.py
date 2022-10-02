@@ -157,13 +157,32 @@ def validate_annos(tree):
 
         tok_num = 0
 
-        utagset = ["ADJ","ADP","ADV","AUX","CCONJ","DET","INTJ","NOUN","NUM","PART","PRON","PROPN","PUNCT","SCONJ","SYM",
-                   "VERB","X"]
         # PTB with HYPH, ADD, NFP
         tagset = ["CC","CD","DT","EX","FW","IN","IN/that","JJ","JJR","JJS","LS","MD","NN","NNS","NNP","NNPS","PDT","POS",
                   "PRP","PRP$","RB","RBR","RBS","RP","SENT","SYM","TO","UH","VB","VBD","VBG","VBN","VBP","VBZ",
                   "WDT","WP","WP$","WRB", ".", "``", "''", "-LRB-", "-RRB-", "-LSB-", "-RSB-", "-LCB-", "-RCB-",
                    ",", ":", "$", "HYPH", "ADD", "AFX", "NFP", "GW"]
+        # Map UPOS tags to known associated PTB tags. This helps identify mismatched UPOS+POS pairs.
+        tagset_combos = {
+            "ADJ":["JJ","JJR","JJS","NN","NNP","FW","AFX"],
+            "ADP":["RP","IN","NNP","RB"],
+            "ADV":["RB","RBR","RBS","WRB","RP","CC","IN","NN","NNP","FW","AFX"],
+            "AUX":["MD","VB","VBD","VBG","VBN","VBP","VBZ"],
+            "CCONJ":["CC"],
+            "DET":["DT","PDT","WDT"],
+            "INTJ":["UH"],
+            "NOUN":["NN","NNS","GW"],
+            "NUM":["CD","LS","NNP","GW"],
+            "PART":["POS","RB","TO"],
+            "PRON":["PRP","PRP$","WP","WP$","DT","WDT","EX","NN"],
+            "PROPN":["NNP","NNPS"],
+            "PUNCT":[".",",",":","``","''","-LCB-","-RCB-","-LRB-","-RRB-","-LSB-","-RSB-","NFP","HYPH","GW","SYM"],
+            "SCONJ":["IN","WRB","VBN","VBG"],
+            "SYM":["$",",","SYM","NFP","NN","NNS","IN","HYPH"],
+            "VERB":["VB","VBD","VBG","VBN","VBP","VBZ","NNP","NNS"],
+            "X":["ADD","GW","FW","AFX","NN","NNP","VB","RB","JJ","WP","LS","IN","PRP","WRB"]
+        }
+
         non_lemmas = ["them","me","him","n't"]
         non_lemma_combos = [("PP","her"),("MD","wo"),("PP","us"),("DT","an")]
         lemma_pos_combos = {"which":"WDT"}
@@ -186,10 +205,13 @@ def validate_annos(tree):
             func = line['deprel']
             feats = line['feats'] or {}
 
-            if upos not in utagset:
+            if upos not in tagset_combos.keys():
                 print("WARN: invalid UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
             if pos not in tagset:
                 print("WARN: invalid POS tag " + pos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+            if upos in tagset_combos and pos not in tagset_combos[upos]:
+                print("WARN: invalid POS tag " + pos + " for UPOS " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+
             if lemma.lower() in non_lemmas:
                 print("WARN: invalid lemma " + lemma + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
             elif lemma in non_cap_lemmas:
