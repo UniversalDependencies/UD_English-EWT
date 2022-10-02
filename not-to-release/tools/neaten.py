@@ -605,6 +605,12 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     if upos == "PROPN" and ((pos == "NNPS") != ("Number" in feats and feats["Number"] == "Plur")):
         print("WARN: PROPN+NNPS should correspond with Number=Plur in " + docname + " @ token " + str(id))
 
+    # VBD => Tense=Past | VerbForm=Fin
+    if pos == "VBD" and not ("VerbForm" in feats and feats["VerbForm"] == "Fin"):
+        print("WARN: VBD should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
+    if pos == "VBD" and not ("Tense" in feats and feats["Tense"] == "Past"):
+        print("WARN: VBD should correspond with Tense=Past in " + docname + " @ token " + str(id))
+
     # VBG => VerbForm=Ger,Part
     if pos == "VBG" and "VerbForm" in feats and feats["VerbForm"] == "Part":
         # VBG => Tense=Pres | VerbForm=Part
