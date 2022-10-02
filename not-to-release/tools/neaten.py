@@ -613,6 +613,12 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     elif pos == "VBG" and not ("VerbForm" in feats and feats["VerbForm"] == "Ger"):
         print("WARN: VBG should correspond with VerbForm=Ger,Part in " + docname + " @ token " + str(id))
 
+    # VBN => Tense=Past | VerbForm=Part
+    if pos == "VBN" and not ("VerbForm" in feats and feats["VerbForm"] == "Part"):
+        print("WARN: VBN should correspond with VerbForm=Part in " + docname + " @ token " + str(id))
+    if pos == "VBN" and not ("Tense" in feats and feats["Tense"] == "Past"):
+        print("WARN: VBN should correspond with Tense=Past in " + docname + " @ token " + str(id))
+
     # VBZ => Number=Sing | Person=3 | Tense=Pres | VerbForm=Fin
     if pos == "VBZ" and not ("Number" in feats and feats["Number"] == "Sing"):
         print("WARN: VBZ should correspond with Number=Sing in " + docname + " @ token " + str(id))
