@@ -157,6 +157,8 @@ def validate_annos(tree):
 
         tok_num = 0
 
+        utagset = ["ADJ","ADP","ADV","AUX","CCONJ","DET","INTJ","NOUN","NUM","PART","PRON","PROPN","PUNCT","SCONJ","SYM",
+                   "VERB","X"]
         # PTB with HYPH, ADD, NFP
         tagset = ["CC","CD","DT","EX","FW","IN","IN/that","JJ","JJR","JJS","LS","MD","NN","NNS","NNP","NNPS","PDT","POS",
                   "PRP","PRP$","RB","RBR","RBS","RP","SENT","SYM","TO","UH","VB","VBD","VBG","VBN","VBP","VBZ",
@@ -184,6 +186,8 @@ def validate_annos(tree):
             func = line['deprel']
             feats = line['feats'] or {}
 
+            if upos not in utagset:
+                print("WARN: invalid UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
             if pos not in tagset:
                 print("WARN: invalid POS tag " + pos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
             if lemma.lower() in non_lemmas:
