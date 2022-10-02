@@ -561,6 +561,16 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 
 
 def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
+    # NOUN+NN <=> NOUN[Number=Sing]
+    if upos == 'NOUN' and ((pos == 'NN') != ('Number' in feats and feats['Number'] == 'Sing')):
+        # NOUN+GW can also have an optional Number=Sing feature
+        if pos != 'GW':
+            print("WARN: NOUN+NN should correspond with Number=Sing in " + docname + " @ token " + str(id))
+
+    # NOUN+NNS <=> NOUN[Number=Plur]
+    if upos == 'NOUN' and ((pos == 'NNS') != ('Number' in feats and feats['Number'] == 'Plur')):
+        print("WARN: NOUN+NNS should correspond with Number=Plur in " + docname + " @ token " + str(id))
+
     # PROPN+NNP <=> PROPN[Number=Sing]
     if upos == 'PROPN' and ((pos == 'NNP') != ('Number' in feats and feats['Number'] == 'Sing')):
         print("WARN: PROPN+NNP should correspond with Number=Sing in " + docname + " @ token " + str(id))
