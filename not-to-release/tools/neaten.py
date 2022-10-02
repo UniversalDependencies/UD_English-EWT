@@ -182,6 +182,7 @@ def validate_annos(tree):
             pos = xpos
             upos = line['upos']
             func = line['deprel']
+            feats = line['feats'] or {}
 
             if pos not in tagset:
                 print("WARN: invalid POS tag " + pos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
@@ -207,6 +208,7 @@ def validate_annos(tree):
             flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, parent_string, parent_lemma, parent_id,
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, sent_positions[tok_num], parent_func, parent_pos, filename)
+            flag_feats_warnings(tok_num, tok, pos, upos, lemma, feats, docname)
 
             if ':pass' in func:
                 passive_verbs.add(parent_id)
@@ -556,6 +558,17 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
                 if w2 == tok or w2 == "*":
                     if pos2 == pos or pos2 == "*":
                         print("WARN: suspicious n-gram " + prev_tok + "/" + prev_pos+" " + tok + "/" + pos + inname)
+
+
+def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
+    # PROPN+NNP <=> PROPN[Number=Sing]
+    if upos == 'PROPN' and ((pos == 'NNP') != ('Number' in feats and feats['Number'] == 'Sing')):
+        print("WARN: PROPN+NNP should correspond with Number=Sing in " + docname + " @ token " + str(id))
+
+    # PROPN+NNPS <=> PROPN[Number=Plur]
+    if upos == 'PROPN' and ((pos == 'NNPS') != ('Number' in feats and feats['Number'] == 'Plur')):
+        print("WARN: PROPN+NNPS should correspond with Number=Plur in " + docname + " @ token " + str(id))
+
 
 if __name__=='__main__':
     validate_src(sys.argv[1:] or glob.glob('../../en_ewt-ud-*.conllu'))
