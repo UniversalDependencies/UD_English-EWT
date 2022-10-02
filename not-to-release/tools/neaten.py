@@ -179,7 +179,7 @@ def validate_annos(tree):
             "PUNCT":[".",",",":","``","''","-LCB-","-RCB-","-LRB-","-RRB-","-LSB-","-RSB-","NFP","HYPH","GW","SYM"],
             "SCONJ":["IN","WRB","VBN","VBG"],
             "SYM":["$",",","SYM","NFP","NN","NNS","IN","HYPH"],
-            "VERB":["VB","VBD","VBG","VBN","VBP","VBZ","NNP","NNS"],
+            "VERB":["VB","VBD","VBG","VBN","VBP","VBZ","NNP"],
             "X":["ADD","GW","FW","AFX","NN","NNP","VB","RB","JJ","WP","LS","IN","PRP","WRB"]
         }
 
