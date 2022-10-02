@@ -605,6 +605,16 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     if upos == "PROPN" and ((pos == "NNPS") != ("Number" in feats and feats["Number"] == "Plur")):
         print("WARN: PROPN+NNPS should correspond with Number=Plur in " + docname + " @ token " + str(id))
 
+    # VBZ => Number=Sing | Person=3 | Tense=Pres | VerbForm=Fin
+    if pos == "VBZ" and not ("Number" in feats and feats["Number"] == "Sing"):
+        print("WARN: VBZ should correspond with Number=Sing in " + docname + " @ token " + str(id))
+    if pos == "VBZ" and not ("Person" in feats and feats["Person"] == "3"):
+        print("WARN: VBZ should correspond with Person=3 in " + docname + " @ token " + str(id))
+    if pos == "VBZ" and not ("Tense" in feats and feats["Tense"] == "Pres"):
+        print("WARN: VBZ should correspond with Tense=Pres in " + docname + " @ token " + str(id))
+    if pos == "VBZ" and not ("VerbForm" in feats and feats["VerbForm"] == "Fin"):
+        print("WARN: VBZ should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
+
 
 if __name__=='__main__':
     validate_src(sys.argv[1:] or glob.glob('../../en_ewt-ud-*.conllu'))
