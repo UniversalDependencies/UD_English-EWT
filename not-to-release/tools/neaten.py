@@ -171,7 +171,7 @@ def validate_annos(tree):
             "CCONJ":["CC"],
             "DET":["DT","PDT","WDT","NNP"],
             "INTJ":["UH","JJ","NN"],
-            "NOUN":["NN","NNS","GW","UH","NNP"],
+            "NOUN":["NN","NNS","GW"],
             "NUM":["CD","LS","NNP","GW"],
             "PART":["POS","RB","TO"],
             "PRON":["PRP","PRP$","WP","WP$","DT","WDT","EX","NN"],
