@@ -164,14 +164,14 @@ def validate_annos(tree):
                    ",", ":", "$", "HYPH", "ADD", "AFX", "NFP", "GW"]
         # Map UPOS tags to known associated PTB tags. This helps identify mismatched UPOS+POS pairs.
         tagset_combos = {
-            "ADJ":["JJ","JJR","JJS","NN","NNP","FW","AFX"],
-            "ADP":["RP","IN","NNP","RB"],
+            "ADJ":["JJ","JJR","JJS","NN","NNP","FW","AFX","VBG"],
+            "ADP":["RP","IN","NNP","RB","CC"],
             "ADV":["RB","RBR","RBS","WRB","RP","CC","IN","NN","NNP","FW","AFX"],
             "AUX":["MD","VB","VBD","VBG","VBN","VBP","VBZ"],
             "CCONJ":["CC"],
-            "DET":["DT","PDT","WDT"],
-            "INTJ":["UH"],
-            "NOUN":["NN","NNS","GW"],
+            "DET":["DT","PDT","WDT","NNP"],
+            "INTJ":["UH","JJ","NN"],
+            "NOUN":["NN","NNS","GW","UH","NNP"],
             "NUM":["CD","LS","NNP","GW"],
             "PART":["POS","RB","TO"],
             "PRON":["PRP","PRP$","WP","WP$","DT","WDT","EX","NN"],
@@ -180,7 +180,7 @@ def validate_annos(tree):
             "SCONJ":["IN","WRB","VBN","VBG"],
             "SYM":["$",",","SYM","NFP","NN","NNS","IN","HYPH"],
             "VERB":["VB","VBD","VBG","VBN","VBP","VBZ","NNP"],
-            "X":["ADD","GW","FW","AFX","NN","NNP","VB","RB","JJ","WP","LS","IN","PRP","WRB"]
+            "X":["ADD","GW","FW","AFX","NN","NNP","VB","RB","JJ","WP","LS","IN","PRP","WRB","MD","-LRB-","-RRB-"]
         }
 
         non_lemmas = ["them","me","him","n't"]
