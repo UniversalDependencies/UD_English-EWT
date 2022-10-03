@@ -203,7 +203,7 @@ def validate_annos(tree):
             pos = xpos
             upos = line['upos']
             func = line['deprel']
-            feats = line['feats'] or {}
+            featlist = line['feats'] or {}
 
             if upos not in tagset_combos.keys():
                 print("WARN: invalid UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
@@ -234,7 +234,7 @@ def validate_annos(tree):
             flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, parent_string, parent_lemma, parent_id,
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, sent_positions[tok_num], parent_func, parent_pos, filename)
-            flag_feats_warnings(tok_num, tok, pos, upos, lemma, feats, docname)
+            flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, docname)
 
             if ':pass' in func:
                 passive_verbs.add(parent_id)
