@@ -593,6 +593,18 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
         if pos != "NNP":
             print("WARN: ADJ+JJ should correspond with Degree=Pos in " + docname + " @ token " + str(id))
 
+    # ADJ+JJR <=> ADJ[Degree=Cmp]
+    if upos == "ADJ" and ((pos == "JJR") != ("Degree" in feats and feats["Degree"] == "Cmp")):
+        # ADJ+NNP occurs in proper noun phrases per PTB guidelines
+        if pos != "NNP":
+            print("WARN: ADJ+JJR should correspond with Degree=Cmp in " + docname + " @ token " + str(id))
+
+    # ADJ+JJS <=> ADJ[Degree=Sup]
+    if upos == "ADJ" and ((pos == "JJS") != ("Degree" in feats and feats["Degree"] == "Sup")):
+        # ADJ+NNP occurs in proper noun phrases per PTB guidelines
+        if pos != "NNP":
+            print("WARN: ADJ+JJS should correspond with Degree=Sup in " + docname + " @ token " + str(id))
+
     # NOUN+NN <=> NOUN[Number=Sing]
     if upos == "NOUN" and ((pos == "NN") != ("Number" in feats and feats["Number"] == "Sing")):
         # NOUN+GW can also have an optional Number=Sing feature
