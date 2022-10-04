@@ -605,6 +605,14 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
         if pos != "NNP":
             print("WARN: ADJ+JJS should correspond with Degree=Sup in " + docname + " @ token " + str(id))
 
+    # ADV+RBR <=> ADV[Degree=Cmp]
+    if upos == "ADV" and ((pos == "RBR") != ("Degree" in feats and feats["Degree"] == "Cmp")):
+        print("WARN: ADV+RBR should correspond with Degree=Cmp in " + docname + " @ token " + str(id))
+
+    # ADV+RBS <=> ADV[Degree=Sup]
+    if upos == "ADV" and ((pos == "RBS") != ("Degree" in feats and feats["Degree"] == "Sup")):
+        print("WARN: ADV+RBS should correspond with Degree=Sup in " + docname + " @ token " + str(id))
+
     # NOUN+NN <=> NOUN[Number=Sing]
     if upos == "NOUN" and ((pos == "NN") != ("Number" in feats and feats["Number"] == "Sing")):
         # NOUN+GW can also have an optional Number=Sing feature
