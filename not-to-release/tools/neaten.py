@@ -164,7 +164,7 @@ def validate_annos(tree):
                    ",", ":", "$", "HYPH", "ADD", "AFX", "NFP", "GW"]
         # Map UPOS tags to known associated PTB tags. This helps identify mismatched UPOS+POS pairs.
         tagset_combos = {
-            "ADJ":["JJ","JJR","JJS","NN","NNP","FW","AFX","VBG"],
+            "ADJ":["JJ","JJR","JJS","NN","NNP","FW","AFX"],
             "ADP":["RP","IN","NNP","RB","CC"],
             "ADV":["RB","RBR","RBS","WRB","RP","CC","IN","NN","NNP","FW","AFX"],
             "AUX":["MD","VB","VBD","VBG","VBN","VBP","VBZ"],
@@ -587,6 +587,12 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 
 
 def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
+    # ADJ+JJ <=> ADJ[Degree=Pos]
+    if upos == "ADJ" and ((pos == "JJ") != ("Degree" in feats and feats["Degree"] == "Pos")):
+        # ADJ+NNP occurs in proper noun phrases per PTB guidelines
+        if pos != "NNP":
+            print("WARN: ADJ+JJ should correspond with Degree=Pos in " + docname + " @ token " + str(id))
+
     # NOUN+NN <=> NOUN[Number=Sing]
     if upos == "NOUN" and ((pos == "NN") != ("Number" in feats and feats["Number"] == "Sing")):
         # NOUN+GW can also have an optional Number=Sing feature
