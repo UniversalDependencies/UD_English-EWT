@@ -613,6 +613,10 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     if upos == "ADV" and ((pos == "RBS") != ("Degree" in feats and feats["Degree"] == "Sup")):
         print("WARN: ADV+RBS should correspond with Degree=Sup in " + docname + " @ token " + str(id))
 
+    # NUM+CD => NUM[NumType=Card]
+    if upos == "NUM" and pos == "CD" and not ("NumType" in feats and feats["NumType"] == "Card"):
+        print("WARN: NUM+CD should correspond with NumType=Card in " + docname + " @ token " + str(id))
+
     # NOUN+NN <=> NOUN[Number=Sing]
     if upos == "NOUN" and ((pos == "NN") != ("Number" in feats and feats["Number"] == "Sing")):
         # NOUN+GW can also have an optional Number=Sing feature
