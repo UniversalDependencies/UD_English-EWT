@@ -587,52 +587,59 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 
 
 def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
+    degree = feats["Degree"] if "Degree" in feats else None
+    number = feats["Number"] if "Number" in feats else None
+    numType = feats["NumType"] if "NumType" in feats else None
+    person = feats["Person"] if "Person" in feats else None
+    tense = feats["Tense"] if "Tense" in feats else None
+    verbForm = feats["VerbForm"] if "VerbForm" in feats else None
+
     # ADJ+JJ <=> ADJ[Degree=Pos]
-    if upos == "ADJ" and ((pos == "JJ") != ("Degree" in feats and feats["Degree"] == "Pos")):
+    if upos == "ADJ" and ((pos == "JJ") != (degree == "Pos")):
         # ADJ+NNP occurs in proper noun phrases per PTB guidelines
         if pos != "NNP":
             print("WARN: ADJ+JJ should correspond with Degree=Pos in " + docname + " @ token " + str(id))
 
     # ADJ+JJR <=> ADJ[Degree=Cmp]
-    if upos == "ADJ" and ((pos == "JJR") != ("Degree" in feats and feats["Degree"] == "Cmp")):
+    if upos == "ADJ" and ((pos == "JJR") != (degree == "Cmp")):
         # ADJ+NNP occurs in proper noun phrases per PTB guidelines
         if pos != "NNP":
             print("WARN: ADJ+JJR should correspond with Degree=Cmp in " + docname + " @ token " + str(id))
 
     # ADJ+JJS <=> ADJ[Degree=Sup]
-    if upos == "ADJ" and ((pos == "JJS") != ("Degree" in feats and feats["Degree"] == "Sup")):
+    if upos == "ADJ" and ((pos == "JJS") != (degree == "Sup")):
         # ADJ+NNP occurs in proper noun phrases per PTB guidelines
         if pos != "NNP":
             print("WARN: ADJ+JJS should correspond with Degree=Sup in " + docname + " @ token " + str(id))
 
     # ADV+RBR <=> ADV[Degree=Cmp]
-    if upos == "ADV" and ((pos == "RBR") != ("Degree" in feats and feats["Degree"] == "Cmp")):
+    if upos == "ADV" and ((pos == "RBR") != (degree == "Cmp")):
         print("WARN: ADV+RBR should correspond with Degree=Cmp in " + docname + " @ token " + str(id))
 
     # ADV+RBS <=> ADV[Degree=Sup]
-    if upos == "ADV" and ((pos == "RBS") != ("Degree" in feats and feats["Degree"] == "Sup")):
+    if upos == "ADV" and ((pos == "RBS") != (degree == "Sup")):
         print("WARN: ADV+RBS should correspond with Degree=Sup in " + docname + " @ token " + str(id))
 
     # NUM+CD => NUM[NumType=Card]
-    if upos == "NUM" and pos == "CD" and not ("NumType" in feats and feats["NumType"] == "Card"):
+    if upos == "NUM" and pos == "CD" and not (numType == "Card"):
         print("WARN: NUM+CD should correspond with NumType=Card in " + docname + " @ token " + str(id))
 
     # NOUN+NN <=> NOUN[Number=Sing]
-    if upos == "NOUN" and ((pos == "NN") != ("Number" in feats and feats["Number"] == "Sing")):
+    if upos == "NOUN" and ((pos == "NN") != (number == "Sing")):
         # NOUN+GW can also have an optional Number=Sing feature
         if pos != "GW":
             print("WARN: NOUN+NN should correspond with Number=Sing in " + docname + " @ token " + str(id))
 
     # NOUN+NNS <=> NOUN[Number=Plur]
-    if upos == "NOUN" and ((pos == "NNS") != ("Number" in feats and feats["Number"] == "Plur")):
+    if upos == "NOUN" and ((pos == "NNS") != (number == "Plur")):
         print("WARN: NOUN+NNS should correspond with Number=Plur in " + docname + " @ token " + str(id))
 
     # PROPN+NNP <=> PROPN[Number=Sing]
-    if upos == "PROPN" and ((pos == "NNP") != ("Number" in feats and feats["Number"] == "Sing")):
+    if upos == "PROPN" and ((pos == "NNP") != (number == "Sing")):
         print("WARN: PROPN+NNP should correspond with Number=Sing in " + docname + " @ token " + str(id))
 
     # PROPN+NNPS <=> PROPN[Number=Plur]
-    if upos == "PROPN" and ((pos == "NNPS") != ("Number" in feats and feats["Number"] == "Plur")):
+    if upos == "PROPN" and ((pos == "NNPS") != (number == "Plur")):
         print("WARN: PROPN+NNPS should correspond with Number=Plur in " + docname + " @ token " + str(id))
 
     # VBD => Tense=Past | VerbForm=Fin
@@ -642,32 +649,32 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
         print("WARN: VBD should correspond with Tense=Past in " + docname + " @ token " + str(id))
 
     # VBG => VerbForm=Ger,Part
-    if pos == "VBG" and "VerbForm" in feats and feats["VerbForm"] == "Part":
+    if pos == "VBG" and verbForm == "Part":
         # VBG => Tense=Pres | VerbForm=Part
-        if pos == "VBG" and not ("Tense" in feats and feats["Tense"] == "Pres"):
+        if pos == "VBG" and not (tense == "Pres"):
             print("WARN: VBG should correspond with Tense=Pres in " + docname + " @ token " + str(id))
-    elif pos == "VBG" and not ("VerbForm" in feats and feats["VerbForm"] == "Ger"):
+    elif pos == "VBG" and not (verbForm == "Ger"):
         # AUX+VBG | VERB+VBG => VerbForm=Ger
         if upos in ["AUX","VERB"]:
             print("WARN: " + upos + "+VBG should correspond with VerbForm=Ger,Part in " + docname + " @ token " + str(id))
         # ADJ+VBG => Degree=Poss
-        elif upos == "ADJ" and not ("Degree" in feats and feats["Degree"] == "Pos"):
+        elif upos == "ADJ" and not (degree == "Pos"):
             print("WARN: ADJ+VBG should correspond with Degree=Pos in " + docname + " @ token " + str(id))
 
     # VBN => Tense=Past | VerbForm=Part
-    if pos == "VBN" and not ("VerbForm" in feats and feats["VerbForm"] == "Part"):
+    if pos == "VBN" and not (verbForm == "Part"):
         print("WARN: VBN should correspond with VerbForm=Part in " + docname + " @ token " + str(id))
-    if pos == "VBN" and not ("Tense" in feats and feats["Tense"] == "Past"):
+    if pos == "VBN" and not (tense == "Past"):
         print("WARN: VBN should correspond with Tense=Past in " + docname + " @ token " + str(id))
 
     # VBZ => Number=Sing | Person=3 | Tense=Pres | VerbForm=Fin
-    if pos == "VBZ" and not ("Number" in feats and feats["Number"] == "Sing"):
+    if pos == "VBZ" and not (number == "Sing"):
         print("WARN: VBZ should correspond with Number=Sing in " + docname + " @ token " + str(id))
-    if pos == "VBZ" and not ("Person" in feats and feats["Person"] == "3"):
+    if pos == "VBZ" and not (person == "3"):
         print("WARN: VBZ should correspond with Person=3 in " + docname + " @ token " + str(id))
-    if pos == "VBZ" and not ("Tense" in feats and feats["Tense"] == "Pres"):
+    if pos == "VBZ" and not (tense == "Pres"):
         print("WARN: VBZ should correspond with Tense=Pres in " + docname + " @ token " + str(id))
-    if pos == "VBZ" and not ("VerbForm" in feats and feats["VerbForm"] == "Fin"):
+    if pos == "VBZ" and not (verbForm == "Fin"):
         print("WARN: VBZ should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
 
 
