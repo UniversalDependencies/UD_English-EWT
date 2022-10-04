@@ -591,6 +591,8 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     number = feats["Number"] if "Number" in feats else None
     numType = feats["NumType"] if "NumType" in feats else None
     person = feats["Person"] if "Person" in feats else None
+    poss = feats["Poss"] if "Poss" in feats else None
+    pronType = feats["PronType"] if "PronType" in feats else None
     tense = feats["Tense"] if "Tense" in feats else None
     verbForm = feats["VerbForm"] if "VerbForm" in feats else None
 
@@ -633,6 +635,10 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     # NOUN+NNS <=> NOUN[Number=Plur]
     if upos == "NOUN" and ((pos == "NNS") != (number == "Plur")):
         print("WARN: NOUN+NNS should correspond with Number=Plur in " + docname + " @ token " + str(id))
+
+    # PRON+PRP$ <=> PRON[Poss=Yes,PronType=Prs]
+    if upos == "PRON" and ((pos == "PRP$") != (poss == "Yes" and pronType == "Prs")):
+        print("WARN: PRON+PRP$ should correspond with Poss=Yes|PronType=Prs in " + docname + " @ token " + str(id))
 
     # PROPN+NNP <=> PROPN[Number=Sing]
     if upos == "PROPN" and ((pos == "NNP") != (number == "Sing")):
