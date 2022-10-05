@@ -998,9 +998,9 @@
 28	one	one	PRON	PRP	_	27	obj	27:obj|30:nsubj:xsubj	_
 29	to	to	PART	TO	_	30	mark	30:mark	_
 30	guess	guess	VERB	VB	VerbForm=Inf	27	xcomp	27:xcomp	_
-31	that	that	SCONJ	IN	_	41	mark	41:mark	_
+31	that	that	SCONJ	IN	_	43	mark	43:mark	_
 32	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	_
-33	opinion	opinion	NOUN	NN	Number=Sing	41	nsubj	41:nsubj	_
+33	opinion	opinion	NOUN	NN	Number=Sing	43	nsubj	43:nsubj	_
 34	held	hold	VERB	VBN	Tense=Past|VerbForm=Part	33	acl	33:acl	_
 35	by	by	ADP	IN	_	39	case	39:case	_
 36	the	the	DET	DT	Definite=Def|PronType=Art	39	det	39:det	_
@@ -1008,12 +1008,12 @@
 38	taxi	taxi	NOUN	NN	Number=Sing	39	compound	39:compound	_
 39	driver	driver	NOUN	NN	Number=Sing	34	obl	34:obl:by	_
 40	above	above	ADV	RB	_	39	advmod	39:advmod	_
-41	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	ccomp	30:ccomp	_
+41	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	43	cop	43:cop	_
 42	precisely	precisely	ADV	RB	_	43	advmod	43:advmod	_
-43	what	what	PRON	WP	PronType=Int	46	obj	46:obj|48:nsubj:xsubj	_
+43	what	what	PRON	WP	PronType=Rel	30	ccomp	30:ccomp	_
 44	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	46	nsubj	46:nsubj	_
 45	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	46	aux	46:aux	_
-46	planning	plan	VERB	VBG	Tense=Pres|VerbForm=Part	41	ccomp	41:ccomp	_
+46	planning	plan	VERB	VBG	Tense=Pres|VerbForm=Part	43	acl:relcl	43:acl:relcl	_
 47	to	to	PART	TO	_	48	mark	48:mark	_
 48	implement	implement	VERB	VB	VerbForm=Inf	46	xcomp	46:xcomp	SpaceAfter=No
 49	.	.	PUNCT	.	_	20	punct	20:punct	_
@@ -1161,12 +1161,12 @@
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
 25	capital	capital	NOUN	NN	Number=Sing	16	nmod	16:nmod:with	SpaceAfter=No
 26	,	,	PUNCT	,	_	13	punct	13:punct	_
-27	if	if	SCONJ	IN	_	29	mark	29:mark	_
-28	Americans	American	PROPN	NNPS	Number=Plur	29	nsubj	29:nsubj|32:nsubj:xsubj	_
-29	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:if	_
+27	if	if	SCONJ	IN	_	32	mark	32:mark	_
+28	Americans	American	PROPN	NNPS	Number=Plur	32	nsubj	32:nsubj:pass	_
+29	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	32	aux	32:aux	_
 30	to	to	PART	TO	_	32	mark	32:mark	_
 31	be	be	AUX	VB	VerbForm=Inf	32	aux:pass	32:aux:pass	_
-32	removed	remove	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	29	xcomp	29:xcomp	_
+32	removed	remove	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	13	advcl	13:advcl	_
 33	from	from	ADP	IN	_	35	case	35:case	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
 35	picture	picture	NOUN	NN	Number=Sing	32	obl	32:obl:from	_
@@ -1279,9 +1279,9 @@
 # text = The only hope now is that, following the elections, the National Assembly would offer the hand of peace and reconciliation to the dissenting parties.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	only	only	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	hope	hope	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
-4	now	now	ADV	RB	_	5	advmod	5:advmod	_
-5	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	hope	hope	NOUN	NN	Number=Sing	16	nsubj:outer	16:nsubj:outer	_
+4	now	now	ADV	RB	_	16	advmod	16:advmod	_
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
 6	that	that	SCONJ	IN	_	16	mark	16:mark	SpaceAfter=No
 7	,	,	PUNCT	,	_	16	punct	16:punct	_
 8	following	follow	VERB	VBG	VerbForm=Ger	10	case	10:case	_
@@ -1292,7 +1292,7 @@
 13	National	National	ADJ	NNP	Degree=Pos	14	amod	14:amod	_
 14	Assembly	Assembly	PROPN	NNP	Number=Sing	16	nsubj	16:nsubj	_
 15	would	would	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
-16	offer	offer	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	_
+16	offer	offer	VERB	VB	VerbForm=Inf	0	root	0:root	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 18	hand	hand	NOUN	NN	Number=Sing	16	obj	16:obj	_
 19	of	of	ADP	IN	_	20	case	20:case	_
@@ -1303,7 +1303,7 @@
 24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
 25	dissenting	dissent	VERB	VBG	VerbForm=Ger	26	amod	26:amod	_
 26	parties	party	NOUN	NNS	Number=Plur	16	obl	16:obl:to	SpaceAfter=No
-27	.	.	PUNCT	.	_	5	punct	5:punct	_
+27	.	.	PUNCT	.	_	16	punct	16:punct	_
 
 # sent_id = weblog-blogspot.com_healingiraq_20050121235804_ENG_20050121_235804-0043
 # text = I would suggest going for tribal Sheikhs rather than clerics, since they have the upper hand in their areas and can effectively root out any Ba'athists in their midst in return for a promise of sharing power and authority.

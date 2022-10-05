@@ -472,8 +472,8 @@
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 9	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-10	that	that	SCONJ	IN	_	20	mark	20:mark	_
-11	one	one	NUM	CD	NumForm=Word|NumType=Card	20	nsubj	20:nsubj	_
+10	that	that	SCONJ	IN	_	24	mark	24:mark	_
+11	one	one	NUM	CD	NumForm=Word|NumType=Card	24	nsubj:outer	24:nsubj:outer	_
 12	of	of	ADP	IN	_	15	case	15:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	key	key	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
@@ -482,11 +482,11 @@
 17	fundamental	fundamental	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 18	operating	operating	NOUN	NN	Number=Sing	19	compound	19:compound	_
 19	standards	standard	NOUN	NNS	Number=Plur	15	nmod	15:nmod:around	_
-20	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	ccomp	9:ccomp	_
+20	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	_
 21	that	that	SCONJ	IN	_	24	mark	24:mark	_
 22	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	24	nsubj:pass	24:nsubj:pass|27:nsubj:xsubj	_
 23	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	24	aux:pass	24:aux:pass	_
-24	intended	intend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	20	ccomp	20:ccomp	_
+24	intended	intend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	ccomp	9:ccomp	_
 25	to	to	PART	TO	_	27	mark	27:mark	_
 26	be	be	AUX	VB	VerbForm=Inf	27	cop	27:cop	_
 27	global	global	ADJ	JJ	Degree=Pos	24	xcomp	24:xcomp	_
@@ -611,7 +611,7 @@
 # sent_id = email-enronsent01_02-0032
 # text = The last I knew after you and Brent drafted this starting point for fundamental operating standards was that this was being circulated (Shona took this to do after Brent's return to Houston) for comments to all business controllers.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	last	last	ADJ	JJ	Degree=Pos	17	nsubj	17:nsubj	_
+2	last	last	ADJ	JJ	Degree=Pos	22	nsubj:outer	22:nsubj:outer	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 4	knew	know	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
 5	after	after	SCONJ	IN	_	9	mark	9:mark	_
@@ -626,15 +626,15 @@
 14	fundamental	fundamental	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 15	operating	operating	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	standards	standard	NOUN	NNS	Number=Plur	12	nmod	12:nmod:for	_
-17	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	cop	22:cop	_
 18	that	that	SCONJ	IN	_	22	mark	22:mark	_
 19	this	this	PRON	DT	Number=Sing|PronType=Dem	22	nsubj:pass	22:nsubj:pass	_
 20	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	aux	22:aux	_
 21	being	be	AUX	VBG	VerbForm=Ger	22	aux:pass	22:aux:pass	_
-22	circulated	circulate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	17	ccomp	17:ccomp	_
+22	circulated	circulate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 23	(	(	PUNCT	-LRB-	_	25	punct	25:punct	SpaceAfter=No
 24	Shona	Shona	PROPN	NNP	Number=Sing	25	nsubj	25:nsubj	_
-25	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	parataxis	17:parataxis	_
+25	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	parataxis	22:parataxis	_
 26	this	this	PRON	DT	Number=Sing|PronType=Dem	25	obj	25:obj	_
 27	to	to	PART	TO	_	28	mark	28:mark	_
 28	do	do	VERB	VB	VerbForm=Inf	26	acl	26:acl:to	_
@@ -652,7 +652,7 @@
 39	all	all	DET	DT	_	41	det	41:det	_
 40	business	business	NOUN	NN	Number=Sing	41	compound	41:compound	_
 41	controllers	controller	NOUN	NNS	Number=Plur	22	obl	22:obl:to	SpaceAfter=No
-42	.	.	PUNCT	.	_	17	punct	17:punct	_
+42	.	.	PUNCT	.	_	22	punct	22:punct	_
 
 # sent_id = email-enronsent01_02-0033
 # text = I don't believe that we are quite at the point that we can say that all business controllers worldwide have reviewed, understand and have implemented these standards.
@@ -730,15 +730,15 @@
 # sent_id = email-enronsent01_02-0035
 # text = My commitment to Rick Causey is that I will have that global report in production by the end of the year.
 1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	commitment	commitment	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
+2	commitment	commitment	NOUN	NN	Number=Sing	10	nsubj:outer	10:nsubj:outer	_
 3	to	to	ADP	IN	_	4	case	4:case	_
 4	Rick	Rick	PROPN	NNP	Number=Sing	2	nmod	2:nmod:to	_
 5	Causey	Causey	PROPN	NNP	Number=Sing	4	flat	4:flat	_
-6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 7	that	that	SCONJ	IN	_	10	mark	10:mark	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 9	will	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
-10	have	have	VERB	VB	VerbForm=Inf	6	ccomp	6:ccomp	_
+10	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 11	that	that	DET	DT	Number=Sing|PronType=Dem	13	det	13:det	_
 12	global	global	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	report	report	NOUN	NN	Number=Sing	10	obj	10:obj	_
@@ -750,7 +750,7 @@
 19	of	of	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	year	year	NOUN	NN	Number=Sing	18	nmod	18:nmod:of	SpaceAfter=No
-22	.	.	PUNCT	.	_	6	punct	6:punct	_
+22	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = email-enronsent01_02-0036
 # text = There is much work to do in defining the content and regularity of the report and even more work to do to identify reliable sources of data for compiling the report.
