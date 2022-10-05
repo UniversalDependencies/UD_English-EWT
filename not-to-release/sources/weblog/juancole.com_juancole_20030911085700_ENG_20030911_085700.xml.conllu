@@ -94,13 +94,13 @@
 # sent_id = weblog-juancole.com_juancole_20030911085700_ENG_20030911_085700-0004
 # newpar id = weblog-juancole.com_juancole_20030911085700_ENG_20030911_085700-p0002
 # text = These are 1) Assassinate or overthrow Gen. Pervez Musharraf, the Pakistani military "president" who had made a coup in 1999 and has thrown in his lot with the United States against the Taliban and al-Qaeda.
-1	These	this	PRON	DT	Number=Plur|PronType=Dem	2	nsubj	2:nsubj	_
-2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	These	this	PRON	DT	Number=Plur|PronType=Dem	5	nsubj:outer	5:nsubj:outer|7:nsubj:outer	_
+2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	1	1	NUM	LS	_	5	nummod	5:nummod	SpaceAfter=No
 4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
-5	Assassinate	assassinate	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
+5	Assassinate	assassinate	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	or	or	CCONJ	CC	_	7	cc	7:cc	_
-7	overthrow	overthrow	VERB	VB	VerbForm=Inf	5	conj	2:ccomp|5:conj:or	_
+7	overthrow	overthrow	VERB	VB	VerbForm=Inf	5	conj	0:root|5:conj:or	_
 8	Gen.	Gen.	PROPN	NNP	Number=Sing	5	obj	5:obj|7:obj	_
 9	Pervez	Pervez	PROPN	NNP	Number=Sing	8	flat	8:flat	_
 10	Musharraf	Musharraf	PROPN	NNP	Number=Sing	8	flat	8:flat	SpaceAfter=No
@@ -135,7 +135,7 @@
 39	al	al	PROPN	NNP	Number=Sing	41	compound	41:compound	SpaceAfter=No
 40	-	-	PUNCT	HYPH	_	41	punct	41:punct	SpaceAfter=No
 41	Qaeda	Qaeda	PROPN	NNP	Number=Sing	37	conj	27:obl:against|37:conj:and	SpaceAfter=No
-42	.	.	PUNCT	.	_	2	punct	2:punct	_
+42	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = weblog-juancole.com_juancole_20030911085700_ENG_20030911_085700-0005
 # text = Musharraf has been trying to purge his officer corps of the substantial number of al-Qaeda sympathizers.
@@ -1005,12 +1005,12 @@
 # sent_id = weblog-juancole.com_juancole_20030911085700_ENG_20030911_085700-0035
 # text = The thing to keep in mind is that Sunni Arab nationalists and Baathists and local Sunni radicals are likely to remain far more dangerous to the US in Iraq than al-Qaeda infiltrators, and it would be dangerous to take one's eyes off the former ball.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	thing	thing	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
+2	thing	thing	NOUN	NN	Number=Sing	19	nsubj:outer	19:nsubj:outer|40:nsubj:outer	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	keep	keep	VERB	VB	VerbForm=Inf	2	acl	2:acl:to	_
 5	in	in	ADP	IN	_	6	case	6:case	_
 6	mind	mind	NOUN	NN	Number=Sing	4	obl	4:obl:in	_
-7	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
 8	that	that	SCONJ	IN	_	19	mark	19:mark	_
 9	Sunni	Sunni	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 10	Arab	Arab	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
@@ -1022,7 +1022,7 @@
 16	Sunni	Sunni	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	radicals	radical	NOUN	NNS	Number=Plur	11	conj	11:conj:and|19:nsubj|21:nsubj:xsubj|24:nsubj:xsubj	_
 18	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
-19	likely	likely	ADJ	JJ	Degree=Pos	7	ccomp	7:ccomp	_
+19	likely	likely	ADJ	JJ	Degree=Pos	0	root	0:root	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
 21	remain	remain	VERB	VB	VerbForm=Inf	19	xcomp	19:xcomp	_
 22	far	far	ADV	RB	Degree=Pos	21	advmod	21:advmod	_
@@ -1043,7 +1043,7 @@
 37	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	40	expl	40:expl	_
 38	would	would	AUX	MD	VerbForm=Fin	40	aux	40:aux	_
 39	be	be	AUX	VB	VerbForm=Inf	40	cop	40:cop	_
-40	dangerous	dangerous	ADJ	JJ	Degree=Pos	19	conj	7:ccomp|19:conj:and	_
+40	dangerous	dangerous	ADJ	JJ	Degree=Pos	19	conj	0:root|19:conj:and	_
 41	to	to	PART	TO	_	42	mark	42:mark	_
 42	take	take	VERB	VB	VerbForm=Inf	40	csubj	40:csubj	_
 43-44	one's	_	_	_	_	_	_	_	_
@@ -1054,5 +1054,5 @@
 47	the	the	DET	DT	Definite=Def|PronType=Art	49	det	49:det	_
 48	former	former	ADJ	JJ	Degree=Pos	49	amod	49:amod	_
 49	ball	ball	NOUN	NN	Number=Sing	42	obl	42:obl:off	SpaceAfter=No
-50	.	.	PUNCT	.	_	7	punct	7:punct	_
+50	.	.	PUNCT	.	_	19	punct	19:punct	_
 

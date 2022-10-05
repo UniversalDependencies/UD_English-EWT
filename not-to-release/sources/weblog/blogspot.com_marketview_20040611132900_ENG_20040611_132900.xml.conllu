@@ -94,7 +94,7 @@
 # text = That's overstating it, I know.
 1-2	That's	_	_	_	_	_	_	_	_
 1	That	that	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	3:nsubj	_
-2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	overstating	overstate	VERB	VBG	VerbForm=Ger	7	ccomp	7:ccomp	_
 4	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
@@ -104,15 +104,15 @@
 
 # sent_id = weblog-blogspot.com_marketview_20040611132900_ENG_20040611_132900-0006
 # text = What they wonder is whether Google can be anything more than what it's always been -- a great search engine with some real grass-roots support, successful by the grace of simplicity.
-1	What	what	PRON	WP	PronType=Int	4	nsubj	4:nsubj	_
+1	What	what	PRON	WP	PronType=Int	9	nsubj:outer	9:nsubj:outer	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
 3	wonder	wonder	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
-4	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 5	whether	whether	SCONJ	IN	_	9	mark	9:mark	_
 6	Google	Google	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
 7	can	can	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 8	be	be	AUX	VB	VerbForm=Inf	9	cop	9:cop	_
-9	anything	anything	PRON	NN	Number=Sing	4	ccomp	4:ccomp	_
+9	anything	anything	PRON	NN	Number=Sing	0	root	0:root	_
 10	more	more	ADJ	JJR	Degree=Cmp	9	amod	9:amod	_
 11	than	than	ADP	IN	_	12	case	12:case	_
 12	what	what	PRON	WP	PronType=Int	10	obl	10:obl:than	_
@@ -140,7 +140,7 @@
 33	grace	grace	NOUN	NN	Number=Sing	30	obl	30:obl:by	_
 34	of	of	ADP	IN	_	35	case	35:case	_
 35	simplicity	simplicity	NOUN	NN	Number=Sing	33	nmod	33:nmod:of	SpaceAfter=No
-36	.	.	PUNCT	.	_	4	punct	4:punct	_
+36	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = weblog-blogspot.com_marketview_20040611132900_ENG_20040611_132900-0007
 # text = Simplicity gave it that blessed, laudatory lack of clutter, the efficient and effective text-based ads, and the support of anyone with a dial-up connection.
@@ -180,8 +180,8 @@
 # sent_id = weblog-blogspot.com_marketview_20040611132900_ENG_20040611_132900-0008
 # text = The problem is that customers attracted by a simple interface are among the least loyal you can find -- witness the fight-for-fewest-features between low-end camera companies.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	problem	problem	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-3	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	problem	problem	NOUN	NN	Number=Sing	15	nsubj:outer	15:nsubj:outer	_
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 4	that	that	SCONJ	IN	_	15	mark	15:mark	_
 5	customers	customer	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj	_
 6	attracted	attract	VERB	VBN	Tense=Past|VerbForm=Part	5	acl	5:acl	_
@@ -193,12 +193,12 @@
 12	among	among	ADP	IN	_	15	case	15:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	least	least	ADV	RBS	Degree=Sup	15	advmod	15:advmod	_
-15	loyal	loyal	ADJ	JJ	Degree=Pos	3	ccomp	3:ccomp	_
+15	loyal	loyal	ADJ	JJ	Degree=Pos	0	root	0:root	_
 16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
 17	can	can	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
 18	find	find	VERB	VB	VerbForm=Inf	15	acl:relcl	15:acl:relcl	_
-19	--	--	PUNCT	,	_	3	punct	3:punct	_
-20	witness	witness	VERB	VB	Mood=Imp|VerbForm=Fin	3	parataxis	3:parataxis	_
+19	--	--	PUNCT	,	_	15	punct	15:punct	_
+20	witness	witness	VERB	VB	Mood=Imp|VerbForm=Fin	15	parataxis	15:parataxis	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 22	fight	fight	NOUN	NN	Number=Sing	20	obj	20:obj	SpaceAfter=No
 23	-	-	PUNCT	HYPH	_	22	punct	22:punct	SpaceAfter=No
@@ -213,7 +213,7 @@
 32	end	end	NOUN	NN	Number=Sing	34	compound	34:compound	_
 33	camera	camera	NOUN	NN	Number=Sing	34	compound	34:compound	_
 34	companies	company	NOUN	NNS	Number=Plur	22	nmod	22:nmod:between	SpaceAfter=No
-35	.	.	PUNCT	.	_	3	punct	3:punct	_
+35	.	.	PUNCT	.	_	15	punct	15:punct	_
 
 # sent_id = weblog-blogspot.com_marketview_20040611132900_ENG_20040611_132900-0009
 # text = The other problem?

@@ -30,10 +30,10 @@
 26	confirm	confirm	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:to	_
 27	details	detail	NOUN	NNS	Number=Plur	26	obj	26:obj	SpaceAfter=No
 28	)	)	PUNCT	-RRB-	_	16	punct	16:punct	_
-29	and	and	CCONJ	CC	_	42	cc	42:cc	_
+29	and	and	CCONJ	CC	_	44	cc	44:cc	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
 31	subsequent	subsequent	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
-32	delivery	delivery	NOUN	NN	Number=Sing	42	nsubj	42:nsubj	_
+32	delivery	delivery	NOUN	NN	Number=Sing	44	nsubj:outer	44:nsubj:outer	_
 33	of	of	ADP	IN	_	35	case	35:case	_
 34	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	35	nmod:poss	35:nmod:poss	_
 35	gift	gift	NOUN	NN	Number=Sing	32	nmod	32:nmod:of	_
@@ -43,22 +43,22 @@
 39	,	,	PUNCT	,	_	38	punct	38:punct	_
 40	Croatia	Croatia	PROPN	NNP	Number=Sing	38	appos	38:appos	SpaceAfter=No
 41	)	)	PUNCT	-RRB-	_	38	punct	38:punct	_
-42	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	1:conj:and	_
+42	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	44	cop	44:cop	_
 43	as	as	SCONJ	IN	_	44	mark	44:mark	_
-44	requested	request	VERB	VBN	Tense=Past|VerbForm=Part	42	advcl	42:advcl:as	SpaceAfter=No
+44	requested	request	VERB	VBN	Tense=Past|VerbForm=Part	1	conj	1:conj:and	SpaceAfter=No
 45	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-114849-0002
 # text = The gift itself was exactly as described and pictured in the catalogue and of the highest standard.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	gift	gift	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
+2	gift	gift	NOUN	NN	Number=Sing	7	nsubj:outer	7:nsubj:outer|9:nsubj:outer|17:nsubj:outer	_
 3	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Emp|Reflex=Yes	2	nmod:npmod	2:nmod:npmod	_
-4	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	7:cop	_
 5	exactly	exactly	ADV	RB	_	7	advmod	7:advmod	_
 6	as	as	SCONJ	IN	_	7	mark	7:mark	_
-7	described	describe	VERB	VBN	Tense=Past|VerbForm=Part	4	ccomp	4:ccomp	_
+7	described	describe	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	pictured	picture	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	4:ccomp|7:conj:and	_
+9	pictured	picture	VERB	VBN	Tense=Past|VerbForm=Part	7	conj	0:root|7:conj:and	_
 10	in	in	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	catalogue	catalogue	NOUN	NN	Number=Sing	7	obl	7:obl:in	_
@@ -66,8 +66,8 @@
 14	of	of	ADP	IN	_	17	case	17:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	highest	high	ADJ	JJS	Degree=Sup	17	amod	17:amod	_
-17	standard	standard	NOUN	NN	Number=Sing	7	conj	4:ccomp|7:conj:and	SpaceAfter=No
-18	.	.	PUNCT	.	_	4	punct	4:punct	_
+17	standard	standard	NOUN	NN	Number=Sing	7	conj	0:root|7:conj:and	SpaceAfter=No
+18	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-114849-0003
 # text = Would highly recommend to anyone requiring overseas gift delivery.

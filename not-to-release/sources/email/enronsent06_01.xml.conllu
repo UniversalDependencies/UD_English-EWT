@@ -664,19 +664,19 @@
 2	call	call	VERB	VB	VerbForm=Inf	5	compound	5:compound	SpaceAfter=No
 3	-	-	PUNCT	HYPH	_	4	punct	4:punct	SpaceAfter=No
 4	in	in	ADV	RB	_	2	compound:prt	2:compound:prt	_
-5	number	number	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	_
+5	number	number	NOUN	NN	Number=Sing	16	nsubj:outer	16:nsubj:outer	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	instructions	instruction	NOUN	NNS	Number=Plur	5	conj	5:conj:and|14:nsubj	_
+7	instructions	instruction	NOUN	NNS	Number=Plur	5	conj	5:conj:and|16:nsubj:outer	_
 8	for	for	ADP	IN	_	13	case	13:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 10	11/2	11/2	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
 11	8:30	8:30	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
 12	a.m.	a.m.	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	meeting	meeting	NOUN	NN	Number=Sing	5	nmod	5:nmod:for	_
-14	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+14	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
 15	as	as	SCONJ	IN	_	16	mark	16:mark	_
-16	follows	follow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	ccomp	14:ccomp	SpaceAfter=No
-17	:	:	PUNCT	:	_	14	punct	14:punct	_
+16	follows	follow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+17	:	:	PUNCT	:	_	16	punct	16:punct	_
 
 # sent_id = email-enronsent06_01-0052
 # text = Everyone will dial the toll free number 1-877-331-6867.
@@ -1378,14 +1378,14 @@
 
 # sent_id = email-enronsent06_01-0089
 # text = Goal is to (politely?) refute Loretta Lynch's and Carl Woods' continued assertions that 1) California's move to deregulate was based solely on ideology with no basis in fact and 2) the solution is to turn back the clock to command-and-control regulation.
-1	Goal	goal	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Goal	goal	NOUN	NN	Number=Sing	8	nsubj:outer	8:nsubj:outer	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 3	to	to	PART	TO	_	8	mark	8:mark	_
 4	(	(	PUNCT	-LRB-	_	8	punct	8:punct	SpaceAfter=No
 5	politely	politely	ADV	RB	_	8	advmod	8:advmod	SpaceAfter=No
 6	?	?	PUNCT	.	_	5	punct	5:punct	SpaceAfter=No
 7	)	)	PUNCT	-RRB-	_	8	punct	8:punct	_
-8	refute	refute	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
+8	refute	refute	VERB	VB	VerbForm=Inf	0	root	0:root	_
 9	Loretta	Loretta	PROPN	NNP	Number=Sing	17	nmod:poss	17:nmod:poss	_
 10-11	Lynch's	_	_	_	_	_	_	_	_
 10	Lynch	Lynch	PROPN	NNP	Number=Sing	9	flat	9:flat	_
@@ -1416,14 +1416,14 @@
 33	basis	basis	NOUN	NN	Number=Sing	27	obl	27:obl:with	_
 34	in	in	ADP	IN	_	35	case	35:case	_
 35	fact	fact	NOUN	NN	Number=Sing	33	nmod	33:nmod:in	_
-36	and	and	CCONJ	CC	_	41	cc	41:cc	_
-37	2	2	NUM	LS	_	41	nummod	41:nummod	SpaceAfter=No
+36	and	and	CCONJ	CC	_	43	cc	43:cc	_
+37	2	2	NUM	LS	_	43	nummod	43:nummod	SpaceAfter=No
 38	)	)	PUNCT	-RRB-	_	37	punct	37:punct	_
 39	the	the	DET	DT	Definite=Def|PronType=Art	40	det	40:det	_
-40	solution	solution	NOUN	NN	Number=Sing	41	nsubj	41:nsubj	_
-41	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	27	conj	17:acl:that|27:conj:and	_
+40	solution	solution	NOUN	NN	Number=Sing	43	nsubj:outer	43:nsubj:outer	_
+41	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	43	cop	17:acl:that|43:cop	_
 42	to	to	PART	TO	_	43	mark	43:mark	_
-43	turn	turn	VERB	VB	VerbForm=Inf	41	ccomp	41:ccomp	_
+43	turn	turn	VERB	VB	VerbForm=Inf	27	conj	27:conj:and	_
 44	back	back	ADP	RP	_	43	compound:prt	43:compound:prt	_
 45	the	the	DET	DT	Definite=Def|PronType=Art	46	det	46:det	_
 46	clock	clock	NOUN	NN	Number=Sing	43	obj	43:obj	_
@@ -1434,7 +1434,7 @@
 51	-	-	PUNCT	HYPH	_	52	punct	52:punct	SpaceAfter=No
 52	control	control	VERB	VB	VerbForm=Inf	48	conj	48:conj:and|53:compound	_
 53	regulation	regulation	NOUN	NN	Number=Sing	43	obl	43:obl:to	SpaceAfter=No
-54	.	.	PUNCT	.	_	2	punct	2:punct	_
+54	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = email-enronsent06_01-0090
 # text = The FERC order tomorrow is likely to alter the points somewhat.
