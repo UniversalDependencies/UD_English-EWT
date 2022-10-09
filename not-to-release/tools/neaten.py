@@ -182,6 +182,7 @@ def validate_annos(tree):
             pos = xpos
             upos = line['upos']
             func = line['deprel']
+            featlist = line['feats'] or {}
 
             if pos not in tagset:
                 print("WARN: invalid POS tag " + pos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
@@ -207,6 +208,9 @@ def validate_annos(tree):
             flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, parent_string, parent_lemma, parent_id,
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, sent_positions[tok_num], parent_func, parent_pos, filename)
+
+            if upos == "PRON":
+                flag_pronoun_warnings(tok_num, tok, pos, upos, lemma, featlist, docname)
 
             if ':pass' in func:
                 passive_verbs.add(parent_id)
@@ -556,6 +560,43 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
                 if w2 == tok or w2 == "*":
                     if pos2 == pos or pos2 == "*":
                         print("WARN: suspicious n-gram " + prev_tok + "/" + prev_pos+" " + tok + "/" + pos + inname)
+
+
+# See https://github.com/UniversalDependencies/docs/issues/517
+pronouns = {
+  # personal, nominative -- PronType=Prs|Case=Nom
+  "i":{"Case":"Nom","Number":"Sing","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"I"},
+}
+
+# See https://github.com/UniversalDependencies/docs/issues/517
+def flag_pronoun_warnings(id, tok, pos, upos, lemma, feats, docname):
+    # Shorthand for printing errors
+    inname = " in " + docname + " @ token " + str(id)
+
+    tok_lower = tok.lower()
+    data = pronouns[tok_lower] if tok_lower in pronouns else None
+
+    if data == None:
+        return
+
+    if not lemma == data["LEMMA"]:
+        print("WARN: FORM '" + tok + "' should correspond with LEMMA=" + data["LEMMA"] + inname)
+
+    if not pos == data["XPOS"]:
+        print("WARN: FORM '" + tok + "' should correspond with XPOS=" + data["XPOS"] + inname)
+
+    if not ("Case" in feats and feats["Case"] == data["Case"]):
+        print("WARN: FORM '" + tok + "' should correspond with Case=" + data["Case"] + inname)
+
+    if not ("Number" in feats and feats["Number"] == data["Number"]):
+        print("WARN: FORM '" + tok + "' should correspond with Number=" + data["Number"] + inname)
+
+    if not ("Person" in feats and feats["Person"] == data["Person"]):
+        print("WARN: FORM '" + tok + "' should correspond with Person=" + data["Person"] + inname)
+
+    if not ("PronType" in feats and feats["PronType"] == data["PronType"]):
+        print("WARN: FORM '" + tok + "' should correspond with PronType=" + data["PronType"] + inname)
+
 
 if __name__=='__main__':
     validate_src(sys.argv[1:] or glob.glob('../../en_ewt-ud-*.conllu'))
