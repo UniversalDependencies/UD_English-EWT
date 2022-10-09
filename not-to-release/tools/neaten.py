@@ -566,6 +566,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 pronouns = {
   # personal, nominative -- PronType=Prs|Case=Nom
   "i":{"Case":"Nom","Number":"Sing","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"I"},
+  "we":{"Case":"Nom","Number":"Plur","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"we"},
 }
 
 # See https://github.com/UniversalDependencies/docs/issues/517
