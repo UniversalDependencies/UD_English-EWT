@@ -562,7 +562,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
                         print("WARN: suspicious n-gram " + prev_tok + "/" + prev_pos+" " + tok + "/" + pos + inname)
 
 
-# See https://github.com/UniversalDependencies/docs/issues/517
+# See https://universaldependencies.org/en/pos/PRON.html
 pronouns = {
   # personal, nominative -- PronType=Prs|Case=Nom
   ("i","PRP"):{"Case":["Nom"],"Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
@@ -580,7 +580,7 @@ pronouns = {
   ("them","PRP"):{"Case":["Acc"],"Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they"},
 }
 
-# See https://github.com/UniversalDependencies/docs/issues/517
+# See https://universaldependencies.org/en/pos/PRON.html
 def flag_pronoun_warnings(id, tok, pos, upos, lemma, feats, docname):
     # Shorthand for printing errors
     inname = " in " + docname + " @ token " + str(id)
