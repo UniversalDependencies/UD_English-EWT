@@ -565,8 +565,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 # See https://github.com/UniversalDependencies/docs/issues/517
 pronouns = {
   # personal, nominative -- PronType=Prs|Case=Nom
-  "i":{"Case":"Nom","Number":"Sing","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"I"},
-  "we":{"Case":"Nom","Number":"Plur","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"we"},
+  "i":{"Case":["Nom"],"Number":"Sing","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"I"},
+  "we":{"Case":["Nom"],"Number":"Plur","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"we"},
+  "you":{"Case":["Acc","Nom"],"Person":"2","PronType":"Prs","XPOS":"PRP","LEMMA":"you"},
 }
 
 # See https://github.com/UniversalDependencies/docs/issues/517
@@ -586,10 +587,11 @@ def flag_pronoun_warnings(id, tok, pos, upos, lemma, feats, docname):
     if not pos == data["XPOS"]:
         print("WARN: FORM '" + tok + "' should correspond with XPOS=" + data["XPOS"] + inname)
 
-    if not ("Case" in feats and feats["Case"] == data["Case"]):
-        print("WARN: FORM '" + tok + "' should correspond with Case=" + data["Case"] + inname)
+    if not ("Case" in feats and feats["Case"] in data["Case"]):
+        feature = "Case=" + ','.join(data["Case"])
+        print("WARN: FORM '" + tok + "' should correspond with " + feature + inname)
 
-    if not ("Number" in feats and feats["Number"] == data["Number"]):
+    if "Number" in data and not ("Number" in feats and feats["Number"] == data["Number"]):
         print("WARN: FORM '" + tok + "' should correspond with Number=" + data["Number"] + inname)
 
     if not ("Person" in feats and feats["Person"] == data["Person"]):
