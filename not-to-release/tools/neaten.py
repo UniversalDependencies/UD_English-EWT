@@ -577,6 +577,7 @@ pronouns = {
   ("us","PRP"):{"Case":["Acc"],"Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
   ("him","PRP"):{"Case":["Acc"],"Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"he"},
   ("her","PRP"):{"Case":["Acc"],"Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"she"},
+  ("them","PRP"):{"Case":["Acc"],"Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they"},
 }
 
 # See https://github.com/UniversalDependencies/docs/issues/517
