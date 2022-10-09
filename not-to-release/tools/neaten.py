@@ -572,6 +572,8 @@ pronouns = {
   "she":{"Case":["Nom"],"Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","XPOS":"PRP","LEMMA":"she"},
   "it":{"Case":["Acc","Nom"],"Gender":"Neut","Number":"Sing","Person":"3","PronType":"Prs","XPOS":"PRP","LEMMA":"it"},
   "they":{"Case":["Nom"],"Number":"Plur","Person":"3","PronType":"Prs","XPOS":"PRP","LEMMA":"they"},
+  # personal, accusative -- PronType=Prs|Case=Acc
+  "me":{"Case":["Acc"],"Number":"Sing","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"I"},
 }
 
 # See https://github.com/UniversalDependencies/docs/issues/517
