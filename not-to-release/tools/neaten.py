@@ -565,17 +565,18 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 # See https://github.com/UniversalDependencies/docs/issues/517
 pronouns = {
   # personal, nominative -- PronType=Prs|Case=Nom
-  "i":{"Case":["Nom"],"Number":"Sing","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"I"},
-  "we":{"Case":["Nom"],"Number":"Plur","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"we"},
-  "you":{"Case":["Acc","Nom"],"Person":"2","PronType":"Prs","XPOS":"PRP","LEMMA":"you"},
-  "he":{"Case":["Nom"],"Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","XPOS":"PRP","LEMMA":"he"},
-  "she":{"Case":["Nom"],"Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","XPOS":"PRP","LEMMA":"she"},
-  "it":{"Case":["Acc","Nom"],"Gender":"Neut","Number":"Sing","Person":"3","PronType":"Prs","XPOS":"PRP","LEMMA":"it"},
-  "they":{"Case":["Nom"],"Number":"Plur","Person":"3","PronType":"Prs","XPOS":"PRP","LEMMA":"they"},
+  ("i","PRP"):{"Case":["Nom"],"Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
+  ("we","PRP"):{"Case":["Nom"],"Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
+  ("you","PRP"):{"Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you"},
+  ("he","PRP"):{"Case":["Nom"],"Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"he"},
+  ("she","PRP"):{"Case":["Nom"],"Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"she"},
+  ("it","PRP"):{"Case":["Acc","Nom"],"Gender":"Neut","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"it"},
+  ("they","PRP"):{"Case":["Nom"],"Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they"},
   # personal, accusative -- PronType=Prs|Case=Acc
-  "me":{"Case":["Acc"],"Number":"Sing","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"I"},
-  "us":{"Case":["Acc"],"Number":"Plur","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"we"},
-  "him":{"Case":["Acc"],"Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","XPOS":"PRP","LEMMA":"he"},
+  ("me","PRP"):{"Case":["Acc"],"Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
+  ("us","PRP"):{"Case":["Acc"],"Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
+  ("him","PRP"):{"Case":["Acc"],"Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"he"},
+  ("her","PRP"):{"Case":["Acc"],"Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"she"},
 }
 
 # See https://github.com/UniversalDependencies/docs/issues/517
@@ -583,17 +584,14 @@ def flag_pronoun_warnings(id, tok, pos, upos, lemma, feats, docname):
     # Shorthand for printing errors
     inname = " in " + docname + " @ token " + str(id)
 
-    tok_lower = tok.lower()
-    data = pronouns[tok_lower] if tok_lower in pronouns else None
+    data_key = (tok.lower(), pos)
+    data = pronouns[data_key] if data_key in pronouns else None
 
     if data == None:
         return
 
     if not lemma == data["LEMMA"]:
         print("WARN: FORM '" + tok + "' should correspond with LEMMA=" + data["LEMMA"] + inname)
-
-    if not pos == data["XPOS"]:
-        print("WARN: FORM '" + tok + "' should correspond with XPOS=" + data["XPOS"] + inname)
 
     if not ("Case" in feats and feats["Case"] in data["Case"]):
         feature = "Case=" + ','.join(data["Case"])
