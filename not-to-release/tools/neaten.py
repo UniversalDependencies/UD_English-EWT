@@ -580,6 +580,7 @@ pronouns = {
   ("them","PRP"):{"Case":["Acc"],"Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they"},
   # personal, dependent possessive -- PronType=Prs|Case=Gen|Poss=Yes
   ("my","PRP$"):{"Case":["Gen"],"Number":"Sing","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"my"},
+  ("our","PRP$"):{"Case":["Gen"],"Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"our"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
