@@ -568,6 +568,7 @@ pronouns = {
   "i":{"Case":["Nom"],"Number":"Sing","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"I"},
   "we":{"Case":["Nom"],"Number":"Plur","Person":"1","PronType":"Prs","XPOS":"PRP","LEMMA":"we"},
   "you":{"Case":["Acc","Nom"],"Person":"2","PronType":"Prs","XPOS":"PRP","LEMMA":"you"},
+  "he":{"Case":["Nom"],"Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","XPOS":"PRP","LEMMA":"he"},
 }
 
 # See https://github.com/UniversalDependencies/docs/issues/517
@@ -590,6 +591,9 @@ def flag_pronoun_warnings(id, tok, pos, upos, lemma, feats, docname):
     if not ("Case" in feats and feats["Case"] in data["Case"]):
         feature = "Case=" + ','.join(data["Case"])
         print("WARN: FORM '" + tok + "' should correspond with " + feature + inname)
+
+    if "Gender" in data and not ("Gender" in feats and feats["Gender"] == data["Gender"]):
+        print("WARN: FORM '" + tok + "' should correspond with Gender=" + data["Gender"] + inname)
 
     if "Number" in data and not ("Number" in feats and feats["Number"] == data["Number"]):
         print("WARN: FORM '" + tok + "' should correspond with Number=" + data["Number"] + inname)
