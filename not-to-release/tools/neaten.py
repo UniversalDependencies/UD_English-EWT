@@ -578,6 +578,8 @@ pronouns = {
   ("him","PRP"):{"Case":["Acc"],"Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"he"},
   ("her","PRP"):{"Case":["Acc"],"Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"she"},
   ("them","PRP"):{"Case":["Acc"],"Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they"},
+  # personal, dependent possessive -- PronType=Prs|Case=Gen|Poss=Yes
+  ("my","PRP$"):{"Case":["Gen"],"Number":"Sing","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"my"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
@@ -606,6 +608,9 @@ def flag_pronoun_warnings(id, tok, pos, upos, lemma, feats, docname):
 
     if not ("Person" in feats and feats["Person"] == data["Person"]):
         print("WARN: FORM '" + tok + "' should correspond with Person=" + data["Person"] + inname)
+
+    if "Poss" in data and not ("Poss" in feats and feats["Poss"] == data["Poss"]):
+        print("WARN: FORM '" + tok + "' should correspond with Poss=" + data["Poss"] + inname)
 
     if not ("PronType" in feats and feats["PronType"] == data["PronType"]):
         print("WARN: FORM '" + tok + "' should correspond with PronType=" + data["PronType"] + inname)
