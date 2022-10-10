@@ -565,28 +565,29 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 # See https://universaldependencies.org/en/pos/PRON.html
 pronouns = {
   # personal, nominative -- PronType=Prs|Case=Nom
-  ("i","PRP"):{"Case":["Nom"],"Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
-  ("we","PRP"):{"Case":["Nom"],"Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
+  ("i","PRP"):{"Case":"Nom","Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
+  ("we","PRP"):{"Case":"Nom","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
   ("you","PRP"):{"Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you"},
-  ("he","PRP"):{"Case":["Nom"],"Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"he"},
-  ("she","PRP"):{"Case":["Nom"],"Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"she"},
+  ("he","PRP"):{"Case":"Nom","Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"he"},
+  ("she","PRP"):{"Case":"Nom","Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"she"},
   ("it","PRP"):{"Case":["Acc","Nom"],"Gender":"Neut","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"it"},
-  ("they","PRP"):{"Case":["Nom"],"Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they"},
+  ("they","PRP"):{"Case":"Nom","Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they"},
   # personal, accusative -- PronType=Prs|Case=Acc
-  ("me","PRP"):{"Case":["Acc"],"Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
-  ("us","PRP"):{"Case":["Acc"],"Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
-  ("him","PRP"):{"Case":["Acc"],"Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"he"},
-  ("her","PRP"):{"Case":["Acc"],"Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"she"},
-  ("them","PRP"):{"Case":["Acc"],"Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they"},
+  ("me","PRP"):{"Case":"Acc","Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
+  ("us","PRP"):{"Case":"Acc","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
+  ("him","PRP"):{"Case":"Acc","Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"he"},
+  ("her","PRP"):{"Case":"Acc","Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"she"},
+  ("them","PRP"):{"Case":"Acc","Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they"},
   # personal, dependent possessive -- PronType=Prs|Case=Gen|Poss=Yes
-  ("my","PRP$"):{"Case":["Gen"],"Number":"Sing","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"my"},
-  ("our","PRP$"):{"Case":["Gen"],"Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"our"},
-  ("your","PRP$"):{"Case":["Gen"],"Person":"2","PronType":"Prs","LEMMA":"your"},
+  ("my","PRP$"):{"Case":"Gen","Number":"Sing","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"my"},
+  ("our","PRP$"):{"Case":"Gen","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"our"},
+  ("your","PRP$"):{"Case":"Gen","Person":"2","PronType":"Prs","LEMMA":"your"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
 def flag_pronoun_warnings(id, tok, pos, upos, lemma, feats, docname):
     # Shorthand for printing errors
+    tokname = "FORM '" + tok + "'"
     inname = " in " + docname + " @ token " + str(id)
 
     data_key = (tok.lower(), pos)
@@ -598,24 +599,26 @@ def flag_pronoun_warnings(id, tok, pos, upos, lemma, feats, docname):
     if not lemma == data["LEMMA"]:
         print("WARN: FORM '" + tok + "' should correspond with LEMMA=" + data["LEMMA"] + inname)
 
-    if not ("Case" in feats and feats["Case"] in data["Case"]):
-        feature = "Case=" + ','.join(data["Case"])
-        print("WARN: FORM '" + tok + "' should correspond with " + feature + inname)
+    check_has_feature("Case", feats, data, tokname, inname)
+    check_has_feature("Gender", feats, data, tokname, inname)
+    check_has_feature("Number", feats, data, tokname, inname)
+    check_has_feature("Person", feats, data, tokname, inname)
+    check_has_feature("Poss", feats, data, tokname, inname)
+    check_has_feature("PronType", feats, data, tokname, inname)
 
-    if "Gender" in data and not ("Gender" in feats and feats["Gender"] == data["Gender"]):
-        print("WARN: FORM '" + tok + "' should correspond with Gender=" + data["Gender"] + inname)
 
-    if "Number" in data and not ("Number" in feats and feats["Number"] == data["Number"]):
-        print("WARN: FORM '" + tok + "' should correspond with Number=" + data["Number"] + inname)
+def check_has_feature(name, feats, data, tokname, inname):
+    if not name in data:
+        return
 
-    if not ("Person" in feats and feats["Person"] == data["Person"]):
-        print("WARN: FORM '" + tok + "' should correspond with Person=" + data["Person"] + inname)
-
-    if "Poss" in data and not ("Poss" in feats and feats["Poss"] == data["Poss"]):
-        print("WARN: FORM '" + tok + "' should correspond with Poss=" + data["Poss"] + inname)
-
-    if not ("PronType" in feats and feats["PronType"] == data["PronType"]):
-        print("WARN: FORM '" + tok + "' should correspond with PronType=" + data["PronType"] + inname)
+    if isinstance(data[name], str):
+        if not (name in feats and feats[name] == data[name]):
+            feature = name + "=" + data[name]
+            print("WARN: " + tokname + " should correspond with " + feature + inname)
+    else:
+        if not (name in feats and feats[name] in data[name]):
+            feature = name + "=" + ','.join(data[name])
+            print("WARN: " + tokname + " should correspond with " + feature + inname)
 
 
 if __name__=='__main__':
