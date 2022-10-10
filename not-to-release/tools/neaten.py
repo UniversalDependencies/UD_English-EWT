@@ -580,8 +580,8 @@ pronouns = {
   ("them","PRP"):{"Case":"Acc","Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they"},
   # personal, dependent possessive -- PronType=Prs|Case=Gen|Poss=Yes
   ("my","PRP$"):{"Case":"Gen","Number":"Sing","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"my"},
-  ("our","PRP$"):{"Case":"Gen","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"our"},
-  ("your","PRP$"):{"Case":"Gen","Person":"2","PronType":"Prs","LEMMA":"your"},
+  ("our","PRP$"):{"Case":"Gen","Number":"Plur","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"our"},
+  ("your","PRP$"):{"Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
@@ -609,6 +609,8 @@ def flag_pronoun_warnings(id, tok, pos, upos, lemma, feats, docname):
 
 def check_has_feature(name, feats, data, tokname, inname):
     if not name in data:
+        if name in feats:
+            print("WARN: " + tokname + " should not have feature " + name + inname)
         return
 
     if isinstance(data[name], str):
