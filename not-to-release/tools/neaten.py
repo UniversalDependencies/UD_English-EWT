@@ -588,6 +588,7 @@ pronouns = {
   ("their","PRP$"):{"Case":"Gen","Gender":["Neut",None],"Number":["Plur","Sing"],"Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"their"},
   # personal, independent possessive -- PronType=Prs|Poss=Yes
   ("mine","PRP"):{"Number":"Sing","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"my"},
+  ("ours","PRP"):{"Number":"Plur","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"our"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
