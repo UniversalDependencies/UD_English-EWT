@@ -585,7 +585,7 @@ pronouns = {
   ("his","PRP$"):{"Case":"Gen","Gender":"Masc","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"his"},
   ("her","PRP$"):{"Case":"Gen","Gender":"Fem","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"her"},
   ("its","PRP$"):{"Case":"Gen","Gender":"Neut","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"its"},
-  ("their","PRP$"):{"Case":"Gen","Number":"Plur","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"their"},
+  ("their","PRP$"):{"Case":"Gen","Gender":["Neut",None],"Number":["Plur","Sing"],"Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"their"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
@@ -622,8 +622,10 @@ def check_has_feature(name, feats, data, tokname, inname):
             feature = name + "=" + data[name]
             print("WARN: " + tokname + " should correspond with " + feature + inname)
     else:
-        if not (name in feats and feats[name] in data[name]):
-            feature = name + "=" + ','.join(data[name])
+        if not name in feats and None in data[name]:
+            pass # optional feature
+        elif not (name in feats and feats[name] in data[name]):
+            feature = name + "=" + ','.join([value for value in data[name] if value != None])
             print("WARN: " + tokname + " should correspond with " + feature + inname)
 
 
