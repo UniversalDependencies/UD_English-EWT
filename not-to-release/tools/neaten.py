@@ -591,6 +591,7 @@ pronouns = {
   ("ours","PRP"):{"Number":"Plur","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"our"},
   ("yours","PRP"):{"Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your"},
   ("his","PRP"):{"Gender":"Masc","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"his"},
+  ("hers","PRP"):{"Gender":"Fem","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"her"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
