@@ -210,7 +210,8 @@ def validate_annos(tree):
                               prev_tok, prev_pos, sent_positions[tok_num], parent_func, parent_pos, filename)
 
             if upos == "PRON":
-                flag_pronoun_warnings(tok_num, tok, pos, upos, lemma, featlist, docname)
+                # Pass FORM to detect abbreviations, etc.
+                flag_pronoun_warnings(tok_num, line['form'], pos, upos, lemma, featlist, docname)
 
             if ':pass' in func:
                 passive_verbs.add(parent_id)
@@ -609,12 +610,12 @@ pronouns = {
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
-def flag_pronoun_warnings(id, tok, pos, upos, lemma, feats, docname):
+def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, docname):
     # Shorthand for printing errors
-    tokname = "FORM '" + tok + "'"
+    tokname = "FORM '" + form + "'"
     inname = " in " + docname + " @ token " + str(id)
 
-    data_key = (tok.lower(), pos)
+    data_key = (form.lower(), pos)
     data = pronouns[data_key] if data_key in pronouns else None
 
     if data == None:
@@ -623,7 +624,7 @@ def flag_pronoun_warnings(id, tok, pos, upos, lemma, feats, docname):
         return
 
     if not lemma == data["LEMMA"]:
-        print("WARN: FORM '" + tok + "' should correspond with LEMMA=" + data["LEMMA"] + inname)
+        print("WARN: FORM '" + form + "' should correspond with LEMMA=" + data["LEMMA"] + inname)
 
     check_has_feature("Abbr", feats, data, tokname, inname)
     check_has_feature("Case", feats, data, tokname, inname)
