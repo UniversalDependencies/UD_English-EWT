@@ -597,6 +597,7 @@ pronouns = {
   # personal, reflexive -- PronType=Prs|Case=Acc|Reflex=Yes
   ("myself","PRP"):{"Case":"Acc","Number":"Sing","Person":"1","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"myself"},
   ("ourselves","PRP"):{"Case":"Acc","Number":"Plur","Person":"1","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"ourselves"},
+  ("yourself","PRP"):{"Case":"Acc","Number":"Sing","Person":"2","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"yourself"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
