@@ -211,7 +211,7 @@ def validate_annos(tree):
 
             if upos == "PRON":
                 # Pass FORM to detect abbreviations, etc.
-                flag_pronoun_warnings(tok_num, line['form'], pos, upos, lemma, featlist, docname)
+                flag_pronoun_warnings(tok_num, line['form'], pos, upos, lemma, featlist, line['misc'] or {}, docname)
 
             if ':pass' in func:
                 passive_verbs.add(parent_id)
@@ -605,12 +605,12 @@ pronouns = {
   ("itself","PRP"):{"Case":"Acc","Gender":"Neut","Number":"Sing","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"itself"},
   ("themselves","PRP"):{"Case":"Acc","Number":"Plur","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"themselves"},
   # abbreviations
-  ("u","PRP"):{"Abbr":"Yes","Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you"},
-  ("ur","PRP$"):{"Abbr":"Yes","Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your"},
+  ("u","PRP"):{"Abbr":"Yes","Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you","CorrectForm":"you"},
+  ("ur","PRP$"):{"Abbr":"Yes","Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your","CorrectForm":"your"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
-def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, docname):
+def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, docname):
     # Shorthand for printing errors
     tokname = "FORM '" + form + "'"
     inname = " in " + docname + " @ token " + str(id)
@@ -633,6 +633,8 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, docname):
     check_has_feature("Person", feats, data, tokname, inname)
     check_has_feature("Poss", feats, data, tokname, inname)
     check_has_feature("PronType", feats, data, tokname, inname)
+
+    check_has_feature("CorrectForm", misc, data, tokname, inname)
 
 
 def check_has_feature(name, feats, data, tokname, inname):
