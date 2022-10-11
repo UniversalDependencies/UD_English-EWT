@@ -607,6 +607,8 @@ pronouns = {
   # abbreviations
   ("u","PRP"):{"Abbr":"Yes","Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you","CorrectForm":"you"},
   ("ur","PRP$"):{"Abbr":"Yes","Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your","CorrectForm":"your"},
+  # colloquial, vernacular, slang
+  ("ya","PRP"):{"Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you","CorrectForm":"you","Style":"Coll"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
@@ -633,6 +635,7 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, docname):
     check_has_feature("Person", feats, data, tokname, inname)
     check_has_feature("Poss", feats, data, tokname, inname)
     check_has_feature("PronType", feats, data, tokname, inname)
+    check_has_feature("Style", feats, data, tokname, inname)
 
     check_has_feature("CorrectForm", misc, data, tokname, inname)
 
