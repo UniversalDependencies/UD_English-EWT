@@ -601,6 +601,7 @@ pronouns = {
   ("yourselves","PRP"):{"Case":"Acc","Number":"Plur","Person":"2","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"yourselves"},
   ("himself","PRP"):{"Case":"Acc","Gender":"Masc","Number":"Sing","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"himself"},
   ("herself","PRP"):{"Case":"Acc","Gender":"Fem","Number":"Sing","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"herself"},
+  ("itself","PRP"):{"Case":"Acc","Gender":"Neut","Number":"Sing","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"itself"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
