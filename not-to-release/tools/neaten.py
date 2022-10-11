@@ -603,6 +603,8 @@ pronouns = {
   ("herself","PRP"):{"Case":"Acc","Gender":"Fem","Number":"Sing","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"herself"},
   ("itself","PRP"):{"Case":"Acc","Gender":"Neut","Number":"Sing","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"itself"},
   ("themselves","PRP"):{"Case":"Acc","Number":"Plur","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"themselves"},
+  # abbreviations
+  ("u","PRP"):{"Abbr":"Yes","Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
@@ -615,11 +617,14 @@ def flag_pronoun_warnings(id, tok, pos, upos, lemma, feats, docname):
     data = pronouns[data_key] if data_key in pronouns else None
 
     if data == None:
+        #if pos in ["PRP","PRP$"]:
+        #    print("WARN: FORM '" + tok + "' with XPOS=" + pos + " does not have a corresponding feature mapping " + inname)
         return
 
     if not lemma == data["LEMMA"]:
         print("WARN: FORM '" + tok + "' should correspond with LEMMA=" + data["LEMMA"] + inname)
 
+    check_has_feature("Abbr", feats, data, tokname, inname)
     check_has_feature("Case", feats, data, tokname, inname)
     check_has_feature("Gender", feats, data, tokname, inname)
     check_has_feature("Number", feats, data, tokname, inname)
