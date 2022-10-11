@@ -605,6 +605,7 @@ pronouns = {
   ("themselves","PRP"):{"Case":"Acc","Number":"Plur","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"themselves"},
   # abbreviations
   ("u","PRP"):{"Abbr":"Yes","Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you"},
+  ("ur","PRP$"):{"Abbr":"Yes","Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
