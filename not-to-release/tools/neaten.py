@@ -572,8 +572,8 @@ pronouns = {
   # personal, nominative -- PronType=Prs|Case=Nom
   ("i","PRP"):{"Case":"Nom","Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
   ("we","PRP"):{"Case":"Nom","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
-  ("thou","PRP"):{"Case":"Nom","Number":"Sing","Person":"2","PronType":"Prs","LEMMA":"thou","Style":"Arch"}, # early modern english
-  ("ye","PRP"):{"Case":"Nom","Number":"Plur","Person":"2","PronType":"Prs","LEMMA":"ye","Style":"Arch"}, # early modern english
+  ("thou","PRP"):{"Case":"Nom","Number":"Sing","Person":"2","PronType":"Prs","LEMMA":"thou","Style":"Arch","ModernForm":"you"}, # early modern english
+  ("ye","PRP"):{"Case":"Nom","Number":"Plur","Person":"2","PronType":"Prs","LEMMA":"ye","Style":"Arch","ModernForm":"you"}, # early modern english
   ("you","PRP"):{"Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you"},
   ("he","PRP"):{"Case":"Nom","Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"he"},
   ("she","PRP"):{"Case":"Nom","Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"she"},
@@ -582,14 +582,14 @@ pronouns = {
   # personal, accusative -- PronType=Prs|Case=Acc
   ("me","PRP"):{"Case":"Acc","Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
   ("us","PRP"):{"Case":"Acc","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
-  ("thee","PRP"):{"Case":"Acc","Number":"Sing","Person":"2","PronType":"Prs","LEMMA":"thou","Style":"Arch"}, # early modern english
+  ("thee","PRP"):{"Case":"Acc","Number":"Sing","Person":"2","PronType":"Prs","LEMMA":"thou","Style":"Arch","ModernForm":"you"}, # early modern english
   ("him","PRP"):{"Case":"Acc","Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"he"},
   ("her","PRP"):{"Case":"Acc","Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"she"},
   ("them","PRP"):{"Case":"Acc","Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they"},
   # personal, dependent possessive -- PronType=Prs|Case=Gen|Poss=Yes
   ("my","PRP$"):{"Case":"Gen","Number":"Sing","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"my"},
   ("our","PRP$"):{"Case":"Gen","Number":"Plur","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"our"},
-  ("thy","PRP$"):{"Case":"Gen","Number":"Sing","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"thy","Style":"Arch"}, # early modern english
+  ("thy","PRP$"):{"Case":"Gen","Number":"Sing","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"thy","Style":"Arch","ModernForm":"your"}, # early modern english
   ("your","PRP$"):{"Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your"},
   ("his","PRP$"):{"Case":"Gen","Gender":"Masc","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"his"},
   ("her","PRP$"):{"Case":"Gen","Gender":"Fem","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"her"},
@@ -598,7 +598,7 @@ pronouns = {
   # personal, independent possessive -- PronType=Prs|Poss=Yes
   ("mine","PRP"):{"Number":"Sing","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"my"},
   ("ours","PRP"):{"Number":"Plur","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"our"},
-  ("thine","PRP"):{"Number":"Sing","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"thy","Style":"Arch"}, # early modern english
+  ("thine","PRP"):{"Number":"Sing","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"thy","Style":"Arch","ModernForm":"yours"}, # early modern english
   ("yours","PRP"):{"Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your"},
   ("his","PRP"):{"Gender":"Masc","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"his"},
   ("hers","PRP"):{"Gender":"Fem","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"her"},
@@ -607,7 +607,7 @@ pronouns = {
   # personal, reflexive -- PronType=Prs|Case=Acc|Reflex=Yes
   ("myself","PRP"):{"Case":"Acc","Number":"Sing","Person":"1","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"myself"},
   ("ourselves","PRP"):{"Case":"Acc","Number":"Plur","Person":"1","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"ourselves"},
-  ("thyself","PRP"):{"Case":"Acc","Number":"Sing","Person":"2","Poss":"Yes","PronType":["Emp","Prs"],"LEMMA":"thyself","Style":"Arch"}, # early modern english
+  ("thyself","PRP"):{"Case":"Acc","Number":"Sing","Person":"2","Poss":"Yes","PronType":["Emp","Prs"],"LEMMA":"thyself","Style":"Arch","ModernForm":"yourself"}, # early modern english
   ("yourself","PRP"):{"Case":"Acc","Number":"Sing","Person":"2","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"yourself"},
   ("yourselves","PRP"):{"Case":"Acc","Number":"Plur","Person":"2","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"yourselves"},
   ("himself","PRP"):{"Case":"Acc","Gender":"Masc","Number":"Sing","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"himself"},
@@ -649,6 +649,7 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, docname):
     check_has_feature("PronType", feats, data, tokname, inname)
     check_has_feature("Style", feats, data, tokname, inname)
 
+    check_has_feature("ModernForm", misc, data, tokname, inname)
     # CorrectForm for Typo=Yes has already been handled.
     if not ("Typo" in feats and feats["Typo"] == "Yes"):
         check_has_feature("CorrectForm", misc, data, tokname, inname)
