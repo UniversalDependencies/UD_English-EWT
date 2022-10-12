@@ -614,6 +614,7 @@ pronouns = {
   # colloquial, vernacular, slang
   ("ya","PRP"):{"Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you","CorrectForm":"you","Style":"Coll"},
   ("yo","PRP$"):{"Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your","CorrectForm":"your","Style":"Slng"},
+  ("y'all","PRP"):{"Case":"Acc","Number":"Plur","Person":"2","PronType":"Prs","LEMMA":"y'all","Style":"Vrnc"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
