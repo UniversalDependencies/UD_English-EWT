@@ -608,6 +608,8 @@ pronouns = {
   ("herself","PRP"):{"Case":"Acc","Gender":"Fem","Number":"Sing","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"herself"},
   ("itself","PRP"):{"Case":"Acc","Gender":"Neut","Number":"Sing","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"itself"},
   ("themselves","PRP"):{"Case":"Acc","Number":"Plur","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"themselves"},
+  # early modern english (archaic)
+  ("thou","PRP"):{"Case":"Nom","Number":"Sing","Person":"2","PronType":"Prs","LEMMA":"thou","Style":"Arch"},
   # abbreviations
   ("u","PRP"):{"Abbr":"Yes","Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you","CorrectForm":"you"},
   ("ur","PRP$"):{"Abbr":"Yes","Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your","CorrectForm":"your"},
