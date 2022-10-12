@@ -629,6 +629,8 @@ pronouns = {
 
 # See https://universaldependencies.org/en/pos/PRON.html
 def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, docname):
+    form = form.replace("’", "'") # Normalize apostrophe characters.
+
     # Shorthand for printing errors
     tokname = "FORM '" + form + "'"
     inname = " in " + docname + " @ token " + str(id)
@@ -637,8 +639,8 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, docname):
     data = pronouns[data_key] if data_key in pronouns else None
 
     if data == None:
-        #if pos in ["PRP","PRP$"]:
-        #    print("WARN: FORM '" + tok + "' with XPOS=" + pos + " does not have a corresponding feature mapping " + inname)
+        if pos in ["PRP","PRP$"]:
+            print("WARN: FORM '" + form + "' with XPOS=" + pos + " does not have a corresponding feature mapping " + inname)
         return
 
     if not lemma == data["LEMMA"]:
