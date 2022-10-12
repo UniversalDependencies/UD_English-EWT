@@ -606,6 +606,7 @@ pronouns = {
   # personal, reflexive -- PronType=Prs|Case=Acc|Reflex=Yes
   ("myself","PRP"):{"Case":"Acc","Number":"Sing","Person":"1","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"myself"},
   ("ourselves","PRP"):{"Case":"Acc","Number":"Plur","Person":"1","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"ourselves"},
+  ("thyself","PRP"):{"Case":"Acc","Number":"Sing","Person":"2","Poss":"Yes","PronType":["Emp","Prs"],"LEMMA":"thyself","Style":"Arch"}, # early modern english
   ("yourself","PRP"):{"Case":"Acc","Number":"Sing","Person":"2","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"yourself"},
   ("yourselves","PRP"):{"Case":"Acc","Number":"Plur","Person":"2","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"yourselves"},
   ("himself","PRP"):{"Case":"Acc","Gender":"Masc","Number":"Sing","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"himself"},
