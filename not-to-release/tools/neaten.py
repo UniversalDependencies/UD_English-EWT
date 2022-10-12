@@ -59,6 +59,7 @@ def validate_src(infiles):
                             # copy substantive XPOS to the preceding token
                             prev_line['xpos'] = line['xpos']
 
+                        prev_line['merged'] = True # Typo fixed via goeswith deprel.
                         prev_line['form'] += line['form']
                         ptok = (prev_line.get('misc') or {}).get('CorrectForm') or prev_line['form']    # in GUM, some explicit CorrectForm=_ which parses as None
                         lemma_dict[ptok,prev_line['xpos']][prev_line["lemma"]] += 1
@@ -183,6 +184,9 @@ def validate_annos(tree):
             upos = line['upos']
             func = line['deprel']
             featlist = line['feats'] or {}
+            misclist = line['misc'] or {}
+            merged = 'merged' in line and line['merged']
+            form = check_and_fix_form_typos(tok_num, line['form'], featlist, misclist, merged, docname)
 
             if pos not in tagset:
                 print("WARN: invalid POS tag " + pos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
@@ -211,7 +215,7 @@ def validate_annos(tree):
 
             if upos == "PRON":
                 # Pass FORM to detect abbreviations, etc.
-                flag_pronoun_warnings(tok_num, line['form'], pos, upos, lemma, featlist, line['misc'] or {}, docname)
+                flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, misclist, docname)
 
             if ':pass' in func:
                 passive_verbs.add(parent_id)
@@ -638,7 +642,26 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, docname):
     check_has_feature("PronType", feats, data, tokname, inname)
     check_has_feature("Style", feats, data, tokname, inname)
 
-    check_has_feature("CorrectForm", misc, data, tokname, inname)
+    # CorrectForm for Typo=Yes has already been handled.
+    if not ("Typo" in feats and feats["Typo"] == "Yes"):
+        check_has_feature("CorrectForm", misc, data, tokname, inname)
+
+
+# See http://universaldependencies.org/u/overview/typos.html
+# NOTE: This does not change the form for Abbr=Yes and Style=Expr. This allows
+#       pronoun checks and other similar checks to ensure the Abbr/Style is set.
+def check_and_fix_form_typos(id, form, feats, misc, merged, docname):
+    if "Typo" in feats and feats["Typo"] == "Yes":
+        if "CorrectForm" in misc:
+            # Misspelled Word ... use the corrected form
+            return misc["CorrectForm"] or form # in GUM, some explicit CorrectForm=_ which parses as None
+        elif merged:
+            # Wrongly Split Word ... use the already combined form from the two words in the goeswith logic
+            return form
+        else:
+            inname = " in " + docname + " @ token " + str(id)
+            print("WARN: FORM '" + form + "' with Typo=Yes should have feature CorrectForm or a following goeswith dependency" + inname)
+    return form
 
 
 def check_has_feature(name, feats, data, tokname, inname):
