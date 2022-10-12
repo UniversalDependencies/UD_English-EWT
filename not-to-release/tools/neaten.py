@@ -573,6 +573,7 @@ pronouns = {
   ("i","PRP"):{"Case":"Nom","Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
   ("we","PRP"):{"Case":"Nom","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
   ("thou","PRP"):{"Case":"Nom","Number":"Sing","Person":"2","PronType":"Prs","LEMMA":"thou","Style":"Arch"}, # early modern english
+  ("ye","PRP"):{"Case":"Nom","Number":"Plur","Person":"2","PronType":"Prs","LEMMA":"ye","Style":"Arch"}, # early modern english
   ("you","PRP"):{"Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you"},
   ("he","PRP"):{"Case":"Nom","Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"he"},
   ("she","PRP"):{"Case":"Nom","Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"she"},
