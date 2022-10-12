@@ -623,6 +623,7 @@ pronouns = {
   ("y'all","PRP"):{"Case":"Acc","Number":"Plur","Person":"2","PronType":"Prs","LEMMA":"y'all","Style":"Vrnc"},
   # other
   ("one","PRP"):{"LEMMA":"one"},
+  ("'s","PRP"):{"Case":"Acc","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
 }
 
 # See https://universaldependencies.org/en/pos/PRON.html
