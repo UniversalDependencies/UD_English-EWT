@@ -643,9 +643,9 @@
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 19	devil	devil	PROPN	NNP	Number=Sing	16	nmod	16:nmod:for	SpaceAfter=No
 20	"	"	PUNCT	''	_	16	punct	16:punct	_
-21	that	that	PRON	DT	Number=Sing|PronType=Dem	22	nsubj	22:nsubj	_
-22	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	parataxis	8:parataxis	_
-23	when	when	SCONJ	WRB	PronType=Int	32	mark	32:mark	_
+21	that	that	PRON	DT	Number=Sing|PronType=Dem	23	nsubj	23:nsubj	_
+22	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	cop	23:cop	_
+23	when	when	ADV	WRB	PronType=Rel	8	parataxis	8:parataxis	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
 25	pact	pact	NOUN	NN	Number=Sing	32	nsubj	32:nsubj	_
 26	of	of	ADP	IN	_	29	case	29:case	_
@@ -654,7 +654,7 @@
 29	Stones	Stone	PROPN	NNPS	Number=Plur	25	nmod	25:nmod:of	_
 30	with	with	ADP	IN	_	31	case	31:case	_
 31	Satan	Satan	PROPN	NNP	Number=Sing	25	nmod	25:nmod:with	_
-32	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	advcl	22:advcl:when	_
+32	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	advcl:relcl	23:advcl:relcl	_
 33	the	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	_
 34	life	life	NOUN	NN	Number=Sing	32	obj	32:obj	_
 35	of	of	ADP	IN	_	37	case	37:case	_
@@ -727,9 +727,9 @@
 29	in	in	ADP	IN	_	30	case	30:case	_
 30	Jesus	Jesus	PROPN	NNP	Number=Sing	28	obl	28:obl:in	SpaceAfter=No
 31	,	,	PUNCT	,	_	32	punct	32:punct	_
-32	etc.	etc.	X	FW	_	28	conj	28:conj	SpaceAfter=No
+32	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Sing	28	conj	28:conj	SpaceAfter=No
 33	,	,	PUNCT	,	_	34	punct	34:punct	_
-34	etc.	etc.	X	FW	_	28	conj	28:conj	SpaceAfter=No
+34	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Sing	28	conj	28:conj	SpaceAfter=No
 35	,	,	PUNCT	,	_	28	punct	28:punct	SpaceAfter=No
 36	"	"	PUNCT	''	_	17	punct	17:punct	_
 37	(	(	PUNCT	-LRB-	_	38	punct	38:punct	SpaceAfter=No
@@ -1248,12 +1248,12 @@
 13	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	aux	15:aux	_
 14	n't	not	PART	RB	_	15	advmod	15:advmod	_
 15	say	say	VERB	VB	VerbForm=Inf	2	conj	2:conj:but	_
-16	that	that	SCONJ	IN	_	18	mark	18:mark	_
-17	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
-18	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	ccomp	15:ccomp	_
+16	that	that	SCONJ	IN	_	21	mark	21:mark	_
+17	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	21	nsubj:outer	21:nsubj:outer	_
+18	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	cop	21:cop	_
 19	because	because	SCONJ	IN	_	21	mark	21:mark	_
 20	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	21	nsubj	21:nsubj|22:nsubj:xsubj	_
-21	felt	feel	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	advcl	18:advcl:because	_
+21	felt	feel	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	ccomp	15:ccomp	_
 22	insecure	insecure	ADJ	JJ	Degree=Pos	21	xcomp	21:xcomp	_
 23	as	as	ADP	IN	_	25	case	25:case	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
@@ -1278,7 +1278,7 @@
 43	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	46	cop	46:cop	_
 44	not	not	PART	RB	_	46	advmod	46:advmod	_
 45	the	the	DET	DT	Definite=Def|PronType=Art	46	det	46:det	_
-46	same	same	ADJ	JJ	Degree=Pos	21	conj	18:advcl:because|21:conj:and	SpaceAfter=No
+46	same	same	ADJ	JJ	Degree=Pos	21	conj	15:ccomp|21:conj:and	SpaceAfter=No
 47	,	,	PUNCT	,	_	46	punct	46:punct	_
 48	even	even	ADV	RB	_	54	advmod	54:advmod	_
 49	though	though	SCONJ	IN	_	54	mark	54:mark	_
@@ -2411,15 +2411,15 @@
 70	,	,	PUNCT	,	_	71	punct	71:punct	_
 71	antisocialism	antisocialism	NOUN	NN	Number=Sing	55	conj	53:nmod:of|55:conj	SpaceAfter=No
 72	,	,	PUNCT	,	_	73	punct	73:punct	_
-73	etc.	etc.	X	FW	_	55	conj	53:nmod:of|55:conj	SpaceAfter=No
+73	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Sing	55	conj	53:nmod:of|55:conj	SpaceAfter=No
 74	,	,	PUNCT	,	_	75	punct	75:punct	_
-75	etc.	etc.	X	FW	_	55	conj	53:nmod:of|55:conj	SpaceAfter=No
+75	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Sing	55	conj	53:nmod:of|55:conj	SpaceAfter=No
 76	,	,	PUNCT	,	_	29	punct	29:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0058
 # text = The fact that bad apprentice musicians such as the Beatles and the Rolling Stones achieved such a giant fame that not even the real quality musicians could achieve, was because the forces of Satan were behind everything, supporting the process.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	fact	fact	NOUN	NN	Number=Sing	30	nsubj	30:nsubj	_
+2	fact	fact	NOUN	NN	Number=Sing	38	nsubj:outer	38:nsubj:outer	_
 3	that	that	SCONJ	IN	_	15	mark	15:mark	_
 4	bad	bad	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 5	apprentice	apprentice	NOUN	NN	Number=Sing	6	compound	6:compound	_
@@ -2446,8 +2446,8 @@
 26	musicians	musician	NOUN	NNS	Number=Plur	28	nsubj	28:nsubj	_
 27	could	could	AUX	MD	VerbForm=Fin	28	aux	28:aux	_
 28	achieve	achieve	VERB	VB	VerbForm=Inf	19	acl:relcl	19:acl:relcl	SpaceAfter=No
-29	,	,	PUNCT	,	_	30	punct	30:punct	_
-30	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+29	,	,	PUNCT	,	_	38	punct	38:punct	_
+30	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	38	cop	38:cop	_
 31	because	because	SCONJ	IN	_	38	mark	38:mark	_
 32	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	_
 33	forces	force	NOUN	NNS	Number=Plur	38	nsubj	38:nsubj	_
@@ -2455,12 +2455,12 @@
 35	Satan	Satan	PROPN	NNP	Number=Sing	33	nmod	33:nmod:of	_
 36	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	38	cop	38:cop	_
 37	behind	behind	ADP	IN	_	38	case	38:case	_
-38	everything	everything	PRON	NN	Number=Sing	30	advcl	30:advcl:because	SpaceAfter=No
+38	everything	everything	PRON	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 39	,	,	PUNCT	,	_	38	punct	38:punct	_
 40	supporting	support	VERB	VBG	VerbForm=Ger	38	advcl	38:advcl	_
 41	the	the	DET	DT	Definite=Def|PronType=Art	42	det	42:det	_
 42	process	process	NOUN	NN	Number=Sing	40	obj	40:obj	SpaceAfter=No
-43	.	.	PUNCT	.	_	30	punct	30:punct	_
+43	.	.	PUNCT	.	_	38	punct	38:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0059
 # text = This mentally ill humanity, destroyed families, twisted moral values, manifest or repressed homosexuality in human beings, anti natural feminism rebellion, drug addiction, corrupt social outlines, mad youths without direction, non respect to hierarchies, convulsed nations, misanthropy, misogyny, paedophilia, irrational and feeble lasciviousness and all other type of existent aberrations, are due to the vast manoeuvre that Satan executed through his main marionettes the Beatles and the Rolling Stones, from the Devil's Island.
@@ -2559,7 +2559,7 @@
 # text = If you wonder why there is misery and curse in your house, it is because you own some L.P, CD or another article related to the CURSED BY GOD Beatles and Rolling Stones.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	wonder	wonder	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl:if	_
+3	wonder	wonder	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl:if	_
 4	why	why	SCONJ	WRB	PronType=Int	6	mark	6:mark	_
 5	there	there	PRON	EX	_	6	expl	6:expl	_
 6	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl	_
@@ -2569,12 +2569,12 @@
 10	in	in	ADP	IN	_	12	case	12:case	_
 11	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 12	house	house	NOUN	NN	Number=Sing	6	obl	6:obl:in	SpaceAfter=No
-13	,	,	PUNCT	,	_	15	punct	15:punct	_
-14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
-15	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+13	,	,	PUNCT	,	_	18	punct	18:punct	_
+14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	nsubj:outer	18:nsubj:outer	_
+15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
 16	because	because	SCONJ	IN	_	18	mark	18:mark	_
 17	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
-18	own	own	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl:because	_
+18	own	own	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 19	some	some	DET	DT	_	20	det	20:det	_
 20	L.P	l.p	NOUN	NN	Number=Sing	18	obj	18:obj	SpaceAfter=No
 21	,	,	PUNCT	,	_	22	punct	22:punct	_
@@ -2592,7 +2592,7 @@
 33	and	and	CCONJ	CC	_	35	cc	35:cc	_
 34	Rolling	Roll	VERB	NNP	VerbForm=Ger	35	amod	35:amod	_
 35	Stones	Stone	PROPN	NNPS	Number=Plur	32	conj	26:obl:to|32:conj:and	SpaceAfter=No
-36	.	.	PUNCT	.	_	15	punct	15:punct	_
+36	.	.	PUNCT	.	_	18	punct	18:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0061
 # text = We recommend you to take that curse out of your house throwing away everything related to the Devil's main nine puppets....

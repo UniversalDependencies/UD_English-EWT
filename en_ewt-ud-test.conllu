@@ -1032,7 +1032,7 @@
 # newpar id = weblog-blogspot.com_aggressivevoicedaily_20060629164800_ENG_20060629_164800-p0001
 # text = The Supreme Court announced its ruling today in Hamdan v. Rumsfeld divided along idelogical lines with John Roberts abstaining due to his involvement at the D.C. Circuit level and Anthony Kennedy joining the liberals in a 5-3 decision that is 185 pages long.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-2	Supreme	Supreme	ADJ	NNP	Degree=Pos	3	amod	3:amod	_
+2	Supreme	Supreme	ADJ	NNP	Degree=Pos	3	amod	3:amod|12:nsubj:pass	_
 3	Court	Court	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
 4	announced	announce	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	its	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
@@ -1042,7 +1042,7 @@
 9	Hamdan	Hamdan	PROPN	NNP	Number=Sing	6	nmod	6:nmod:in	_
 10	v.	v.	ADP	IN	_	11	case	11:case	_
 11	Rumsfeld	Rumsfeld	PROPN	NNP	Number=Sing	9	nmod	9:nmod:versus	_
-12	divided	divide	VERB	VBN	Tense=Past|VerbForm=Part	3	acl	3:acl	_
+12	divided	divide	VERB	VBN	Tense=Past|VerbForm=Part	4	advcl	4:advcl	_
 13	along	along	ADP	IN	_	15	case	15:case	_
 14	idelogical	idelogical	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	lines	line	NOUN	NNS	Number=Plur	12	obl	12:obl:along	_
@@ -1827,8 +1827,8 @@
 15	ca	can	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 16	n't	not	PART	RB	_	17	advmod	17:advmod	_
 17	grow	grow	VERB	VB	VerbForm=Inf	10	ccomp	10:ccomp	_
-18	quickly	quickly	ADV	RB	_	19	advmod	19:advmod	_
-19	enough	enough	ADV	RB	_	17	advmod	17:advmod	_
+18	quickly	quickly	ADV	RB	_	17	advmod	17:advmod	_
+19	enough	enough	ADV	RB	_	18	advmod	18:advmod	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
 21	justify	justify	VERB	VB	VerbForm=Inf	18	advcl	18:advcl:to	_
 22	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
@@ -15997,25 +15997,25 @@
 
 # sent_id = newsgroup-groups.google.com_fineart_0339fc0ed4e53c5a_ENG_20050930_025500-0011
 # text = "...to gaze at Wei's art is like entering a floating world of dreams."
-1	"	"	PUNCT	``	_	9	punct	9:punct	SpaceAfter=No
-2	...	...	PUNCT	,	_	9	punct	9:punct	SpaceAfter=No
+1	"	"	PUNCT	``	_	11	punct	11:punct	SpaceAfter=No
+2	...	...	PUNCT	,	_	11	punct	11:punct	SpaceAfter=No
 3	to	to	PART	TO	_	4	mark	4:mark	_
-4	gaze	gaze	VERB	VB	VerbForm=Inf	9	csubj	9:csubj	_
+4	gaze	gaze	VERB	VB	VerbForm=Inf	11	csubj:outer	11:csubj:outer	_
 5	at	at	ADP	IN	_	8	case	8:case	_
 6-7	Wei's	_	_	_	_	_	_	_	_
 6	Wei	Wei	PROPN	NNP	Number=Sing	8	nmod:poss	8:nmod:poss	_
 7	's	's	PART	POS	_	6	case	6:case	_
 8	art	art	NOUN	NN	Number=Sing	4	obl	4:obl:at	_
-9	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	like	like	SCONJ	IN	_	11	mark	11:mark	_
-11	entering	enter	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl:like	_
+11	entering	enter	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 13	floating	float	VERB	VBG	VerbForm=Ger	14	amod	14:amod	_
 14	world	world	NOUN	NN	Number=Sing	11	obj	11:obj	_
 15	of	of	ADP	IN	_	16	case	16:case	_
 16	dreams	dream	NOUN	NNS	Number=Plur	14	nmod	14:nmod:of	SpaceAfter=No
-17	.	.	PUNCT	.	_	9	punct	9:punct	SpaceAfter=No
-18	"	"	PUNCT	''	_	9	punct	9:punct	_
+17	.	.	PUNCT	.	_	11	punct	11:punct	SpaceAfter=No
+18	"	"	PUNCT	''	_	11	punct	11:punct	_
 
 # sent_id = newsgroup-groups.google.com_fineart_0339fc0ed4e53c5a_ENG_20050930_025500-0012
 # text = --- The Art of Calligraphy in Modern China (British Museum Press, 2002)
@@ -18899,7 +18899,7 @@
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
 15	soccer	soccer	NOUN	NN	Number=Sing	13	conj	6:nmod:like|13:conj	SpaceAfter=No
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
-17	etc	etc	X	FW	_	13	conj	6:nmod:like|13:conj	SpaceAfter=No
+17	etc	etc.	NOUN	FW	Abbr=Yes|Number=Sing	13	conj	6:nmod:like|13:conj	SpaceAfter=No
 18	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20090717131703AARh8u2_ans-0003
@@ -18956,19 +18956,19 @@
 
 # sent_id = answers-20110101171252AA43jJo_ans-0004
 # text = He is at his best when he is doing his Nerd impression...
-1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	at	at	ADP	IN	_	5	case	5:case	_
 4	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-5	best	good	ADJ	JJS	Degree=Sup	2	obl	2:obl:at	_
+5	best	good	ADJ	JJS	Degree=Sup	0	root	0:root	_
 6	when	when	SCONJ	WRB	PronType=Int	9	mark	9:mark	_
 7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
-9	doing	do	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:when	_
+9	doing	do	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl:when	_
 10	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 11	Nerd	nerd	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	impression	impression	NOUN	NN	Number=Sing	9	obj	9:obj	SpaceAfter=No
-13	...	...	PUNCT	.	_	2	punct	2:punct	_
+13	...	...	PUNCT	.	_	5	punct	5:punct	_
 
 # newdoc id = answers-20111108101906AA2JJqq_ans
 # sent_id = answers-20111108101906AA2JJqq_ans-0001
@@ -19083,7 +19083,7 @@
 21	,	,	PUNCT	,	_	22	punct	22:punct	_
 22	smoke	smoke	NOUN	NN	Number=Sing	18	conj	16:nmod:of|18:conj	SpaceAfter=No
 23	,	,	PUNCT	,	_	24	punct	24:punct	_
-24	etc	etc	X	FW	_	18	conj	16:nmod:of|18:conj	SpaceAfter=No
+24	etc	etc.	NOUN	FW	Abbr=Yes|Number=Sing	18	conj	16:nmod:of|18:conj	SpaceAfter=No
 25	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # newdoc id = answers-20111108090345AAQiffR_ans
@@ -19579,16 +19579,16 @@
 # sent_id = answers-20111108075412AA4d7Up_ans-0005
 # text = Theyre probably just drawn for the show anyways.
 1-2	Theyre	_	_	_	_	_	_	_	_
-1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	re	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	probably	probably	ADV	RB	_	2	advmod	2:advmod	_
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj:pass	5:nsubj:pass	_
+2	re	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux:pass	5:aux:pass	_
+3	probably	probably	ADV	RB	_	5	advmod	5:advmod	_
 4	just	just	ADV	RB	_	5	advmod	5:advmod	_
-5	drawn	draw	VERB	VBN	Tense=Past|VerbForm=Part	2	advcl	2:advcl	_
+5	drawn	draw	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 6	for	for	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	show	show	NOUN	NN	Number=Sing	5	obl	5:obl:for	_
 9	anyways	anyways	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
-10	.	.	PUNCT	.	_	2	punct	2:punct	_
+10	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # newdoc id = answers-20111107163942AA08rP5_ans
 # sent_id = answers-20111107163942AA08rP5_ans-0001
@@ -24403,7 +24403,7 @@
 # text = Sounds simple enough to me .
 1	Sounds	sound	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	simple	simple	ADJ	JJ	Degree=Pos	1	xcomp	1:xcomp	_
-3	enough	enough	ADJ	JJ	Degree=Pos	2	advmod	2:advmod	_
+3	enough	enough	ADV	RB	_	2	advmod	2:advmod	_
 4	to	to	ADP	IN	_	5	case	5:case	_
 5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obl	1:obl:to	_
 6	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -28481,7 +28481,7 @@
 5	saved	save	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	bad	bad	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	situation	situation	NOUN	NN	Number=Sing	5	obj	5:obj|12:nsubj:xsubj	_
+8	situation	situation	NOUN	NN	Number=Sing	5	obj	5:obj	_
 9	getting	get	VERB	VBG	VerbForm=Ger	8	acl	8:acl	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	CorrectSpaceAfter=Yes|SpaceAfter=No
 11	lot	lot	NOUN	NN	Number=Sing	12	obl:npmod	12:obl:npmod	_
