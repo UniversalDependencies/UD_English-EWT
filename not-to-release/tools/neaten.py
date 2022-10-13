@@ -635,7 +635,7 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
         print("WARN: NUM+CD should correspond with NumType=Card in " + docname + " @ token " + str(id))
 
     # NOUN+NN <=> NOUN[Number=Sing]
-    if upos == "NOUN" and ((pos == "NN") != (number == "Sing")):
+    if upos == "NOUN" and ((pos in ["NN", "FW"]) != (number == "Sing")):
         # NOUN+GW can also have an optional Number=Sing feature
         if pos != "GW":
             print("WARN: NOUN+NN should correspond with Number=Sing in " + docname + " @ token " + str(id))
