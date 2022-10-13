@@ -59,7 +59,7 @@
 21	far	far	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 22	distance	distance	NOUN	NN	Number=Sing	16	obl	16:obl:in	_
 23	from	from	ADP	IN	_	26	case	26:case	_
-24	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
+24	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
 25	bedroom	bedroom	NOUN	NN	Number=Sing	26	compound	26:compound	_
 26	window	window	NOUN	NN	Number=Sing	16	obl	16:obl:from	SpaceAfter=No
 27	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -141,7 +141,7 @@
 37	,	,	PUNCT	,	_	36	punct	36:punct	SpaceAfter=No
 38	then	then	ADV	RB	PronType=Dem	44	advmod	44:advmod	_
 39	a	a	DET	DT	Definite=Ind|PronType=Art	40	det	40:det	_
-40	change	change	NOUN	NN	Number=Sing	44	nsubj	44:nsubj	_
+40	change	change	NOUN	NN	Number=Sing	44	nsubj	44:nsubj|50.1:nsubj	_
 41	in	in	ADP	IN	_	43	case	43:case	_
 42	the	the	DET	DT	Definite=Def|PronType=Art	43	det	43:det	_
 43	climate	climate	NOUN	NN	Number=Sing	40	nmod	40:nmod:in	_
@@ -151,10 +151,11 @@
 47	to	to	PART	TO	_	48	mark	48:mark	_
 48	cloud	cloud	VERB	VB	VerbForm=Inf	44	xcomp	44:xcomp	_
 49	over	over	ADV	RB	_	48	advmod	48:advmod	_
-50	and	and	CCONJ	CC	_	53	cc	53:cc	_
-51	rain	rain	NOUN	NN	Number=Sing	53	nsubj	53:nsubj	_
+50	and	and	CCONJ	CC	_	51	cc	50.1:cc	_
+50.1	caused	cause	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	_	_	36:parataxis|44:conj:and	CopyOf=44
+51	rain	rain	NOUN	NN	Number=Sing	46	conj	50.1:obj|53:nsubj:xsubj	_
 52	to	to	PART	TO	_	53	mark	53:mark	_
-53	wash	wash	VERB	VB	VerbForm=Inf	48	conj	44:xcomp|48:conj:and	_
+53	wash	wash	VERB	VB	VerbForm=Inf	51	orphan	50.1:xcomp	_
 54	the	the	DET	DT	Definite=Def|PronType=Art	55	det	55:det	_
 55	goodness	goodness	NOUN	NN	Number=Sing	53	obj	53:obj	_
 56	from	from	ADP	IN	_	58	case	58:case	_
@@ -167,7 +168,7 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	people	people	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
 3	abandoned	abandon	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+4	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	farms	farm	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	and	and	CCONJ	CC	_	8	cc	8:cc	_
 7	religious	religious	ADJ	JJ	Degree=Pos	8	amod	8:amod	_

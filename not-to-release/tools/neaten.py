@@ -59,6 +59,7 @@ def validate_src(infiles):
                             # copy substantive XPOS to the preceding token
                             prev_line['xpos'] = line['xpos']
 
+                        prev_line['merged'] = True # Typo fixed via goeswith deprel.
                         prev_line['form'] += line['form']
                         ptok = (prev_line.get('misc') or {}).get('CorrectForm') or prev_line['form']    # in GUM, some explicit CorrectForm=_ which parses as None
                         lemma_dict[ptok,prev_line['xpos']][prev_line["lemma"]] += 1
@@ -204,6 +205,9 @@ def validate_annos(tree):
             upos = line['upos']
             func = line['deprel']
             featlist = line['feats'] or {}
+            misclist = line['misc'] or {}
+            merged = 'merged' in line and line['merged']
+            form = check_and_fix_form_typos(tok_num, line['form'], featlist, misclist, merged, docname)
 
             if upos not in tagset_combos.keys():
                 print("WARN: invalid UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
@@ -235,6 +239,10 @@ def validate_annos(tree):
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, sent_positions[tok_num], parent_func, parent_pos, filename)
             flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, docname)
+
+            if upos == "PRON":
+                # Pass FORM to detect abbreviations, etc.
+                flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, misclist, docname)
 
             if ':pass' in func:
                 passive_verbs.add(parent_id)
@@ -686,6 +694,135 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
         print("WARN: VBZ should correspond with Tense=Pres in " + docname + " @ token " + str(id))
     if pos == "VBZ" and not (verbForm == "Fin"):
         print("WARN: VBZ should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
+
+
+# See https://universaldependencies.org/en/pos/PRON.html
+pronouns = {
+  # personal, nominative -- PronType=Prs|Case=Nom
+  ("i","PRP"):{"Case":"Nom","Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
+  ("we","PRP"):{"Case":"Nom","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
+  ("thou","PRP"):{"Case":"Nom","Number":"Sing","Person":"2","PronType":"Prs","LEMMA":"thou","Style":"Arch","ModernForm":"you"}, # early modern english
+  ("ye","PRP"):{"Case":"Nom","Number":"Plur","Person":"2","PronType":"Prs","LEMMA":"ye","Style":"Arch","ModernForm":"you"}, # early modern english
+  ("you","PRP"):{"Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you"},
+  ("he","PRP"):{"Case":"Nom","Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"he"},
+  ("she","PRP"):{"Case":"Nom","Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"she"},
+  ("it","PRP"):{"Case":["Acc","Nom"],"Gender":"Neut","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"it"},
+  ("they","PRP"):{"Case":"Nom","Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they"},
+  # personal, accusative -- PronType=Prs|Case=Acc
+  ("me","PRP"):{"Case":"Acc","Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
+  ("us","PRP"):{"Case":"Acc","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
+  ("thee","PRP"):{"Case":"Acc","Number":"Sing","Person":"2","PronType":"Prs","LEMMA":"thou","Style":"Arch","ModernForm":"you"}, # early modern english
+  ("him","PRP"):{"Case":"Acc","Gender":"Masc","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"he"},
+  ("her","PRP"):{"Case":"Acc","Gender":"Fem","Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"she"},
+  ("them","PRP"):{"Case":"Acc","Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they"},
+  # personal, dependent possessive -- PronType=Prs|Case=Gen|Poss=Yes
+  ("my","PRP$"):{"Case":"Gen","Number":"Sing","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"my"},
+  ("our","PRP$"):{"Case":"Gen","Number":"Plur","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"our"},
+  ("thy","PRP$"):{"Case":"Gen","Number":"Sing","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"thy","Style":"Arch","ModernForm":"your"}, # early modern english
+  ("your","PRP$"):{"Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your"},
+  ("his","PRP$"):{"Case":"Gen","Gender":"Masc","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"his"},
+  ("her","PRP$"):{"Case":"Gen","Gender":"Fem","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"her"},
+  ("its","PRP$"):{"Case":"Gen","Gender":"Neut","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"its"},
+  ("their","PRP$"):{"Case":"Gen","Gender":["Neut",None],"Number":["Plur","Sing"],"Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"their"},
+  # personal, independent possessive -- PronType=Prs|Poss=Yes
+  ("mine","PRP"):{"Number":"Sing","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"my"},
+  ("ours","PRP"):{"Number":"Plur","Person":"1","Poss":"Yes","PronType":"Prs","LEMMA":"our"},
+  ("thine","PRP"):{"Number":"Sing","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"thy","Style":"Arch","ModernForm":"yours"}, # early modern english
+  ("yours","PRP"):{"Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your"},
+  ("his","PRP"):{"Gender":"Masc","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"his"},
+  ("hers","PRP"):{"Gender":"Fem","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"her"},
+  ("its","PRP"):{"Gender":"Neut","Number":"Sing","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"its"},
+  ("theirs","PRP"):{"Number":"Plur","Person":"3","Poss":"Yes","PronType":"Prs","LEMMA":"their"},
+  # personal, reflexive -- PronType=Prs|Case=Acc|Reflex=Yes
+  ("myself","PRP"):{"Case":"Acc","Number":"Sing","Person":"1","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"myself"},
+  ("ourselves","PRP"):{"Case":"Acc","Number":"Plur","Person":"1","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"ourselves"},
+  ("thyself","PRP"):{"Case":"Acc","Number":"Sing","Person":"2","Poss":"Yes","PronType":["Emp","Prs"],"LEMMA":"thyself","Style":"Arch","ModernForm":"yourself"}, # early modern english
+  ("yourself","PRP"):{"Case":"Acc","Number":"Sing","Person":"2","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"yourself"},
+  ("yourselves","PRP"):{"Case":"Acc","Number":"Plur","Person":"2","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"yourselves"},
+  ("himself","PRP"):{"Case":"Acc","Gender":"Masc","Number":"Sing","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"himself"},
+  ("herself","PRP"):{"Case":"Acc","Gender":"Fem","Number":"Sing","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"herself"},
+  ("itself","PRP"):{"Case":"Acc","Gender":"Neut","Number":"Sing","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"itself"},
+  ("themselves","PRP"):{"Case":"Acc","Number":"Plur","Person":"3","PronType":["Emp","Prs"],"Reflex":"Yes","LEMMA":"themselves"},
+  # abbreviations
+  ("u","PRP"):{"Abbr":"Yes","Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you","CorrectForm":"you"},
+  ("ur","PRP$"):{"Abbr":"Yes","Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your","CorrectForm":"your"},
+  # colloquial, vernacular, slang
+  ("ya","PRP"):{"Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you","Style":"Coll"},
+  ("'em","PRP"):{"Case":"Acc","Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they","Style":"Coll"},
+  ("yo","PRP$"):{"Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your","Style":"Slng"},
+  ("y'all","PRP"):{"Case":"Acc","Number":"Plur","Person":"2","PronType":"Prs","LEMMA":"y'all","Style":"Vrnc"},
+  # other
+  ("one","PRP"):{"LEMMA":"one"},
+  ("'s","PRP"):{"Case":"Acc","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
+}
+
+# See https://universaldependencies.org/en/pos/PRON.html
+def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, docname):
+    form = form.replace("’", "'") # Normalize apostrophe characters.
+
+    # Shorthand for printing errors
+    tokname = "FORM '" + form + "'"
+    inname = " in " + docname + " @ token " + str(id)
+
+    data_key = (form.lower(), pos)
+    data = pronouns[data_key] if data_key in pronouns else None
+
+    if data == None:
+        if pos in ["PRP","PRP$"]:
+            print("WARN: FORM '" + form + "' with XPOS=" + pos + " does not have a corresponding feature mapping " + inname)
+        return
+
+    if not lemma == data["LEMMA"]:
+        print("WARN: FORM '" + form + "' should correspond with LEMMA=" + data["LEMMA"] + inname)
+
+    check_has_feature("Abbr", feats, data, tokname, inname)
+    check_has_feature("Case", feats, data, tokname, inname)
+    check_has_feature("Gender", feats, data, tokname, inname)
+    check_has_feature("Number", feats, data, tokname, inname)
+    check_has_feature("Person", feats, data, tokname, inname)
+    check_has_feature("Poss", feats, data, tokname, inname)
+    check_has_feature("PronType", feats, data, tokname, inname)
+    check_has_feature("Style", feats, data, tokname, inname)
+
+    check_has_feature("ModernForm", misc, data, tokname, inname)
+    # CorrectForm for Typo=Yes has already been handled.
+    if not ("Typo" in feats and feats["Typo"] == "Yes"):
+        check_has_feature("CorrectForm", misc, data, tokname, inname)
+
+
+# See http://universaldependencies.org/u/overview/typos.html
+# NOTE: This does not change the form for Abbr=Yes and Style=Expr. This allows
+#       pronoun checks and other similar checks to ensure the Abbr/Style is set.
+def check_and_fix_form_typos(id, form, feats, misc, merged, docname):
+    if "Typo" in feats and feats["Typo"] == "Yes":
+        if "CorrectForm" in misc:
+            # Misspelled Word ... use the corrected form
+            return misc["CorrectForm"] or form # in GUM, some explicit CorrectForm=_ which parses as None
+        elif merged:
+            # Wrongly Split Word ... use the already combined form from the two words in the goeswith logic
+            return form
+        else:
+            inname = " in " + docname + " @ token " + str(id)
+            print("WARN: FORM '" + form + "' with Typo=Yes should have feature CorrectForm or a following goeswith dependency" + inname)
+    return form
+
+
+def check_has_feature(name, feats, data, tokname, inname):
+    if not name in data:
+        if name in feats:
+            print("WARN: " + tokname + " should not have feature " + name + inname)
+        return
+
+    if isinstance(data[name], str):
+        if not (name in feats and feats[name] == data[name]):
+            feature = name + "=" + data[name]
+            print("WARN: " + tokname + " should correspond with " + feature + inname)
+    else:
+        if not name in feats and None in data[name]:
+            pass # optional feature
+        elif not (name in feats and feats[name] in data[name]):
+            feature = name + "=" + ','.join([value for value in data[name] if value != None])
+            print("WARN: " + tokname + " should correspond with " + feature + inname)
 
 
 if __name__=='__main__':
