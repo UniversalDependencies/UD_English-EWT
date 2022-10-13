@@ -644,10 +644,6 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     if upos == "NOUN" and ((pos == "NNS") != (number == "Plur")):
         print("WARN: NOUN+NNS should correspond with Number=Plur in " + docname + " @ token " + str(id))
 
-    # PRON+PRP$ <=> PRON[Poss=Yes,PronType=Prs]
-    if upos == "PRON" and ((pos == "PRP$") != (poss == "Yes" and pronType == "Prs")):
-        print("WARN: PRON+PRP$ should correspond with Poss=Yes|PronType=Prs in " + docname + " @ token " + str(id))
-
     # PRON+WP$ <=> PRON[Poss=Yes,PronType=Int,Rel]
     if upos == "PRON" and ((pos == "WP$") != (poss == "Yes" and pronType in ["Int","Rel"])):
         print("WARN: PRON+WP$ should correspond with Poss=Yes|PronType=Int,Rel in " + docname + " @ token " + str(id))
