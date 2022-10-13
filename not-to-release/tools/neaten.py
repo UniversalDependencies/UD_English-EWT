@@ -163,6 +163,27 @@ def validate_annos(tree):
                   "PRP","PRP$","RB","RBR","RBS","RP","SENT","SYM","TO","UH","VB","VBD","VBG","VBN","VBP","VBZ",
                   "WDT","WP","WP$","WRB", ".", "``", "''", "-LRB-", "-RRB-", "-LSB-", "-RSB-", "-LCB-", "-RCB-",
                    ",", ":", "$", "HYPH", "ADD", "AFX", "NFP", "GW"]
+        # Map UPOS tags to known associated PTB tags. This helps identify mismatched UPOS+POS pairs.
+        tagset_combos = {
+            "ADJ":["JJ","JJR","JJS","NN","NNP","FW","AFX"],
+            "ADP":["RP","IN","NNP","RB","CC"],
+            "ADV":["RB","RBR","RBS","WRB","RP","CC","IN","NN","NNP","FW","AFX"],
+            "AUX":["MD","VB","VBD","VBG","VBN","VBP","VBZ"],
+            "CCONJ":["CC"],
+            "DET":["DT","PDT","WDT","NNP"],
+            "INTJ":["UH","JJ","NN"],
+            "NOUN":["NN","NNS","GW"],
+            "NUM":["CD","LS","NNP","GW"],
+            "PART":["POS","RB","TO"],
+            "PRON":["PRP","PRP$","WP","WP$","DT","WDT","EX","NN"],
+            "PROPN":["NNP","NNPS"],
+            "PUNCT":[".",",",":","``","''","-LCB-","-RCB-","-LRB-","-RRB-","-LSB-","-RSB-","NFP","HYPH","GW","SYM"],
+            "SCONJ":["IN","WRB","VBN","VBG"],
+            "SYM":["$",",","SYM","NFP","NN","NNS","IN","HYPH"],
+            "VERB":["VB","VBD","VBG","VBN","VBP","VBZ","NNP"],
+            "X":["ADD","GW","FW","AFX","NN","NNP","VB","RB","JJ","WP","LS","IN","PRP","WRB","MD","-LRB-","-RRB-"]
+        }
+
         non_lemmas = ["them","me","him","n't"]
         non_lemma_combos = [("PP","her"),("MD","wo"),("PP","us"),("DT","an")]
         lemma_pos_combos = {"which":"WDT"}
@@ -188,8 +209,13 @@ def validate_annos(tree):
             merged = 'merged' in line and line['merged']
             form = check_and_fix_form_typos(tok_num, line['form'], featlist, misclist, merged, docname)
 
+            if upos not in tagset_combos.keys():
+                print("WARN: invalid UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
             if pos not in tagset:
                 print("WARN: invalid POS tag " + pos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+            if upos in tagset_combos and pos not in tagset_combos[upos]:
+                print("WARN: invalid POS tag " + pos + " for UPOS " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+
             if lemma.lower() in non_lemmas:
                 print("WARN: invalid lemma " + lemma + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
             elif lemma in non_cap_lemmas:
@@ -212,6 +238,7 @@ def validate_annos(tree):
             flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, parent_string, parent_lemma, parent_id,
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, sent_positions[tok_num], parent_func, parent_pos, filename)
+            flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, docname)
 
             if upos == "PRON":
                 # Pass FORM to detect abbreviations, etc.
@@ -565,6 +592,104 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
                 if w2 == tok or w2 == "*":
                     if pos2 == pos or pos2 == "*":
                         print("WARN: suspicious n-gram " + prev_tok + "/" + prev_pos+" " + tok + "/" + pos + inname)
+
+
+def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
+    degree = feats["Degree"] if "Degree" in feats else None
+    number = feats["Number"] if "Number" in feats else None
+    numType = feats["NumType"] if "NumType" in feats else None
+    person = feats["Person"] if "Person" in feats else None
+    poss = feats["Poss"] if "Poss" in feats else None
+    pronType = feats["PronType"] if "PronType" in feats else None
+    tense = feats["Tense"] if "Tense" in feats else None
+    verbForm = feats["VerbForm"] if "VerbForm" in feats else None
+
+    # ADJ+JJ <=> ADJ[Degree=Pos]
+    if upos == "ADJ" and ((pos == "JJ") != (degree == "Pos")):
+        # ADJ+NNP occurs in proper noun phrases per PTB guidelines
+        if pos != "NNP":
+            print("WARN: ADJ+JJ should correspond with Degree=Pos in " + docname + " @ token " + str(id))
+
+    # ADJ+JJR <=> ADJ[Degree=Cmp]
+    if upos == "ADJ" and ((pos == "JJR") != (degree == "Cmp")):
+        # ADJ+NNP occurs in proper noun phrases per PTB guidelines
+        if pos != "NNP":
+            print("WARN: ADJ+JJR should correspond with Degree=Cmp in " + docname + " @ token " + str(id))
+
+    # ADJ+JJS <=> ADJ[Degree=Sup]
+    if upos == "ADJ" and ((pos == "JJS") != (degree == "Sup")):
+        # ADJ+NNP occurs in proper noun phrases per PTB guidelines
+        if pos != "NNP":
+            print("WARN: ADJ+JJS should correspond with Degree=Sup in " + docname + " @ token " + str(id))
+
+    # ADV+RBR <=> ADV[Degree=Cmp]
+    if upos == "ADV" and ((pos == "RBR") != (degree == "Cmp")):
+        print("WARN: ADV+RBR should correspond with Degree=Cmp in " + docname + " @ token " + str(id))
+
+    # ADV+RBS <=> ADV[Degree=Sup]
+    if upos == "ADV" and ((pos == "RBS") != (degree == "Sup")):
+        print("WARN: ADV+RBS should correspond with Degree=Sup in " + docname + " @ token " + str(id))
+
+    # NUM+CD => NUM[NumType=Card]
+    if upos == "NUM" and pos == "CD" and not (numType == "Card"):
+        print("WARN: NUM+CD should correspond with NumType=Card in " + docname + " @ token " + str(id))
+
+    # NOUN+NN <=> NOUN[Number=Sing]
+    if upos == "NOUN" and ((pos in ["NN", "FW"]) != (number == "Sing")):
+        # NOUN+GW can also have an optional Number=Sing feature
+        if pos != "GW":
+            print("WARN: NOUN+NN should correspond with Number=Sing in " + docname + " @ token " + str(id))
+
+    # NOUN+NNS <=> NOUN[Number=Plur]
+    if upos == "NOUN" and ((pos == "NNS") != (number == "Plur")):
+        print("WARN: NOUN+NNS should correspond with Number=Plur in " + docname + " @ token " + str(id))
+
+    # PRON+WP$ <=> PRON[Poss=Yes,PronType=Int,Rel]
+    if upos == "PRON" and ((pos == "WP$") != (poss == "Yes" and pronType in ["Int","Rel"])):
+        print("WARN: PRON+WP$ should correspond with Poss=Yes|PronType=Int,Rel in " + docname + " @ token " + str(id))
+
+    # PROPN+NNP <=> PROPN[Number=Sing]
+    if upos == "PROPN" and ((pos == "NNP") != (number == "Sing")):
+        print("WARN: PROPN+NNP should correspond with Number=Sing in " + docname + " @ token " + str(id))
+
+    # PROPN+NNPS <=> PROPN[Number=Plur]
+    if upos == "PROPN" and ((pos == "NNPS") != (number == "Plur")):
+        print("WARN: PROPN+NNPS should correspond with Number=Plur in " + docname + " @ token " + str(id))
+
+    # VBD => Tense=Past | VerbForm=Fin
+    if pos == "VBD" and not ("VerbForm" in feats and feats["VerbForm"] == "Fin"):
+        print("WARN: VBD should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
+    if pos == "VBD" and not ("Tense" in feats and feats["Tense"] == "Past"):
+        print("WARN: VBD should correspond with Tense=Past in " + docname + " @ token " + str(id))
+
+    # VBG => VerbForm=Ger,Part
+    if pos == "VBG" and verbForm == "Part":
+        # VBG => Tense=Pres | VerbForm=Part
+        if pos == "VBG" and not (tense == "Pres"):
+            print("WARN: VBG should correspond with Tense=Pres in " + docname + " @ token " + str(id))
+    elif pos == "VBG" and not (verbForm == "Ger"):
+        # AUX+VBG | VERB+VBG => VerbForm=Ger
+        if upos in ["AUX","VERB"]:
+            print("WARN: " + upos + "+VBG should correspond with VerbForm=Ger,Part in " + docname + " @ token " + str(id))
+        # ADJ+VBG => Degree=Poss
+        elif upos == "ADJ" and not (degree == "Pos"):
+            print("WARN: ADJ+VBG should correspond with Degree=Pos in " + docname + " @ token " + str(id))
+
+    # VBN => Tense=Past | VerbForm=Part
+    if pos == "VBN" and not (verbForm == "Part"):
+        print("WARN: VBN should correspond with VerbForm=Part in " + docname + " @ token " + str(id))
+    if pos == "VBN" and not (tense == "Past"):
+        print("WARN: VBN should correspond with Tense=Past in " + docname + " @ token " + str(id))
+
+    # VBZ => Number=Sing | Person=3 | Tense=Pres | VerbForm=Fin
+    if pos == "VBZ" and not (number == "Sing"):
+        print("WARN: VBZ should correspond with Number=Sing in " + docname + " @ token " + str(id))
+    if pos == "VBZ" and not (person == "3"):
+        print("WARN: VBZ should correspond with Person=3 in " + docname + " @ token " + str(id))
+    if pos == "VBZ" and not (tense == "Pres"):
+        print("WARN: VBZ should correspond with Tense=Pres in " + docname + " @ token " + str(id))
+    if pos == "VBZ" and not (verbForm == "Fin"):
+        print("WARN: VBZ should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
 
 
 # See https://universaldependencies.org/en/pos/PRON.html
