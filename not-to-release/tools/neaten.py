@@ -242,7 +242,7 @@ def validate_annos(tree):
 
             if upos == "PRON":
                 # Pass FORM to detect abbreviations, etc.
-                flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, misclist, docname)
+                flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, misclist, prev_tok, docname)
             elif lemma in PRON_LEMMAS:
                 if not ((lemma=="one" and upos in ("NOUN","NUM"))
                         or (lemma=="I" and upos=="NUM") # Roman numeral
@@ -590,14 +590,19 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
                         print("WARN: q root may not have wh child " + wh + inname)
 
     suspicious_pos_tok = [("*","DT","only","RB"),
-                          ("*","JJ","one","CD")]
+                          ("*","JJ","one","CD"),
+                          ("no","DT","one","CD")]
 
     for w1, pos1, w2, pos2 in suspicious_pos_tok:
-        if w1 == prev_tok or w1 == "*":
+        if w1 == prev_tok.lower() or w1 == "*":
             if pos1 == prev_pos or pos1 == "*":
-                if w2 == tok or w2 == "*":
+                if w2 == lemma or w2 == "*":
                     if pos2 == pos or pos2 == "*":
                         print("WARN: suspicious n-gram " + prev_tok + "/" + prev_pos+" " + tok + "/" + pos + inname)
+
+    # UPOS bigrams
+    if prev_tok.lower()=="no" and lemma=="one" and upos!="PRON":
+        print("WARN: UPOS should be one/PRON in 'no one': " + upos + inname)
 
 
 def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
@@ -765,16 +770,20 @@ PRONOUNS = {
 }
 
 # add indefinite PRONs
+# 2-word indefinite: 'one' following 'no'
+PRONOUNS[("no one", "NN")] = {"Number":"Sing", "LEMMA":"one", "PronType":"Ind"}
+# 1-word indefinites
 for b in ("body","one","thing"):
     for a in ("any","every","some","no"):
-        PRONOUNS[(a+b, "PRP")] = {"Number":"Sing","LEMMA": a+b} # TODO: PronType=Ind
-# fix "no one" (2 words)
-del PRONOUNS[("noone","PRP")]
+        l = a+b
+        if l=="noone":
+            l = "no-one"
+        PRONOUNS[(l, "NN")] = {"Number":"Sing", "LEMMA": l, "PronType":"Ind"}
 
 PRON_LEMMAS = {v["LEMMA"] for k,v in PRONOUNS.items()}
 
 # See https://universaldependencies.org/en/pos/PRON.html
-def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, docname):
+def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, docname):
     form = form.replace("’", "'") # Normalize apostrophe characters.
 
     # Shorthand for printing errors
@@ -783,6 +792,8 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, docname):
 
     # Look up the correct features/lemma for the pronoun from the PRONOUNS lexicon
     data_key = (form.lower(), pos)
+    if form.lower()=="one" and prev_tok.lower()=="no":  # special case for 'no one/PRON'
+        data_key = ("no one", pos)
     data = PRONOUNS[data_key] if data_key in PRONOUNS else None
 
     if data == None:
