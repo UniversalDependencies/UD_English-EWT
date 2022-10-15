@@ -85,7 +85,7 @@ def validate_lemmas(lemma_dict, lemma_docs):
     for tok, xpos in sorted(lemma_dict):
         if sum(lemma_dict[(tok,xpos)].values()) > 1:
             for i, lem in enumerate(filter(lambda y: y!='_', sorted(lemma_dict[(tok,xpos)],key=lambda x:lemma_dict[(tok,xpos)][x],reverse=True))):
-                docs = ", ".join(list(lemma_docs[(tok,xpos,lem)]))
+                docs = ", ".join(sorted(lemma_docs[(tok,xpos,lem)]))
                 if i == 0:
                     majority = lem
                 else:
@@ -243,6 +243,12 @@ def validate_annos(tree):
             if upos == "PRON":
                 # Pass FORM to detect abbreviations, etc.
                 flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, misclist, docname)
+            elif lemma in PRON_LEMMAS:
+                if not ((lemma=="one" and upos in ("NOUN","NUM"))
+                        or (lemma=="I" and upos=="NUM") # Roman numeral
+                        or (lemma=="he" and upos=="INTJ")): # laughter
+                    print("WARN: invalid UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    # This warns about a few that are arguably correct, e.g. "oh my/INTJ", "I/PROPN - 24"
 
             if ':pass' in func:
                 passive_verbs.add(parent_id)
@@ -276,7 +282,7 @@ def validate_annos(tree):
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has suspicious aux(:pass) dependents (only the last should be aux:pass) in " + docname)
             subj_dependents = {f for f in dependents.values() if 'subj' in f}
             if not subj_dependents < {'nsubj:pass','csubj:pass'}:
-                print("WARN: Passive verb with lemma '" + lemmas[v] + "' has subject dependents " + repr(subj_dependents) + " in " + docname)
+                print("WARN: Passive verb with lemma '" + lemmas[v] + "' has subject dependents " + repr(sorted(subj_dependents)).replace('[','{').replace(']','}') + " in " + docname)
             if 'cop' in dependents.values():
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has cop dependent in " + docname)
         for i in feats:
@@ -595,6 +601,12 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 
 
 def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
+    """
+    Check compatibility of tags and features.
+
+    @author: Reece H. Dunn (@rhdunn)
+    """
+
     degree = feats["Degree"] if "Degree" in feats else None
     number = feats["Number"] if "Number" in feats else None
     numType = feats["NumType"] if "NumType" in feats else None
@@ -693,7 +705,7 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
 
 
 # See https://universaldependencies.org/en/pos/PRON.html
-pronouns = {
+PRONOUNS = {
   # personal, nominative -- PronType=Prs|Case=Nom
   ("i","PRP"):{"Case":"Nom","Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
   ("we","PRP"):{"Case":"Nom","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
@@ -748,9 +760,18 @@ pronouns = {
   ("yo","PRP$"):{"Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your","Style":"Slng"},
   ("y'all","PRP"):{"Case":"Acc","Number":"Plur","Person":"2","PronType":"Prs","LEMMA":"y'all","Style":"Vrnc"},
   # other
-  ("one","PRP"):{"LEMMA":"one"},
+  ("one","PRP"):{"LEMMA":"one"},    # TODO: check NUM vs. NOUN vs. PRON incl. special cases of "no one", "one another"
   ("'s","PRP"):{"Case":"Acc","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
 }
+
+# add indefinite PRONs
+for b in ("body","one","thing"):
+    for a in ("any","every","some","no"):
+        PRONOUNS[(a+b, "PRP")] = {"Number":"Sing","LEMMA": a+b} # TODO: PronType=Ind
+# fix "no one" (2 words)
+del PRONOUNS[("noone","PRP")]
+
+PRON_LEMMAS = {v["LEMMA"] for k,v in PRONOUNS.items()}
 
 # See https://universaldependencies.org/en/pos/PRON.html
 def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, docname):
@@ -760,8 +781,9 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, docname):
     tokname = "FORM '" + form + "'"
     inname = " in " + docname + " @ token " + str(id)
 
+    # Look up the correct features/lemma for the pronoun from the PRONOUNS lexicon
     data_key = (form.lower(), pos)
-    data = pronouns[data_key] if data_key in pronouns else None
+    data = PRONOUNS[data_key] if data_key in PRONOUNS else None
 
     if data == None:
         if pos in ["PRP","PRP$"]:
@@ -771,6 +793,8 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, docname):
     if not lemma == data["LEMMA"]:
         print("WARN: FORM '" + form + "' should correspond with LEMMA=" + data["LEMMA"] + inname)
 
+    # Check whether the correct features for the lexical item (data) match
+    # the observed features on the token (feats)
     check_has_feature("Abbr", feats, data, tokname, inname)
     check_has_feature("Case", feats, data, tokname, inname)
     check_has_feature("Gender", feats, data, tokname, inname)
