@@ -771,14 +771,14 @@ PRONOUNS = {
 
 # add indefinite PRONs
 # 2-word indefinite: 'one' following 'no'
-PRONOUNS[("no one", "NN")] = {"Number":"Sing", "LEMMA":"one", "PronType":"Ind"}
+PRONOUNS[("no one", "NN")] = {"Number":"Sing", "LEMMA":"one", "PronType":"Neg"}
 # 1-word indefinites
 for b in ("body","one","thing"):
-    for a in ("any","every","some","no"):
+    for a,t in {("any","Ind"),("some","Ind"),("every","Tot"),("no","Neg")}:
         l = a+b
         if l=="noone":
             l = "no-one"
-        PRONOUNS[(l, "NN")] = {"Number":"Sing", "LEMMA": l, "PronType":"Ind"}
+        PRONOUNS[(l, "NN")] = {"Number":"Sing", "LEMMA": l, "PronType": t}
 
 PRON_LEMMAS = {v["LEMMA"] for k,v in PRONOUNS.items()}
 
