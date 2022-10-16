@@ -193,6 +193,8 @@ def validate_annos(tree):
 
         prev_tok = ""
         prev_pos = ""
+        prev_upos = ""
+        prev_feats = {}
         for i, line in enumerate(tree):
             if not isRegularNode(line):
                 continue
@@ -214,7 +216,11 @@ def validate_annos(tree):
             if pos not in tagset:
                 print("WARN: invalid POS tag " + pos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
             if upos in tagset_combos and pos not in tagset_combos[upos]:
-                print("WARN: invalid POS tag " + pos + " for UPOS " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                if pos=="CD" and upos=="PRON":
+                    if featlist.get("PronType")!="Rcp":
+                        print("WARN: CD/PRON combination requires PronType=Rcp ('one another') in " + docname)
+                else:
+                    print("WARN: invalid POS tag " + pos + " for UPOS " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
             if lemma.lower() in non_lemmas:
                 print("WARN: invalid lemma " + lemma + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
@@ -237,24 +243,29 @@ def validate_annos(tree):
             assert parent_string is not None,(tok_num,docname,filename)
             flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, parent_string, parent_lemma, parent_id,
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
-                              prev_tok, prev_pos, sent_positions[tok_num], parent_func, parent_pos, filename)
+                              prev_tok, prev_pos, prev_upos, sent_positions[tok_num], parent_func, parent_pos, filename)
             flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, docname)
 
-            if upos == "PRON":
+            if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
+                # check for PronType=Rcp
+                flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, misclist, prev_tok, docname)
+            elif upos == "PRON":
                 # Pass FORM to detect abbreviations, etc.
                 flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, misclist, prev_tok, docname)
             elif lemma in PRON_LEMMAS:
                 if not ((lemma=="one" and upos in ("NOUN","NUM"))
                         or (lemma=="I" and upos=="NUM") # Roman numeral
                         or (lemma=="he" and upos=="INTJ")): # laughter
-                    print("WARN: invalid UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    print("WARN: invalid pronoun UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
                     # This warns about a few that are arguably correct, e.g. "oh my/INTJ", "I/PROPN - 24"
 
             if ':pass' in func:
                 passive_verbs.add(parent_id)
 
             prev_pos = pos
+            prev_upos = upos
             prev_tok = tok
+            prev_feats = featlist
 
         """
         Passive Construction
@@ -297,7 +308,7 @@ def validate_annos(tree):
 
 
 def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, parent_id, children, child_funcs, s_type,
-                      docname, prev_tok, prev_pos, sent_position, parent_func, parent_pos, filename):
+                      docname, prev_tok, prev_pos, prev_upos, sent_position, parent_func, parent_pos, filename):
     # Shorthand for printing errors
     inname = " in " + docname + " @ token " + str(id) + " (" + parent + " -> " + tok + ") " + filename
 
@@ -603,7 +614,26 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
     # UPOS bigrams
     if prev_tok.lower()=="no" and lemma=="one" and upos!="PRON":
         print("WARN: UPOS should be one/PRON in 'no one': " + upos + inname)
-
+    elif prev_tok.lower()=="one" and lemma=="another":
+        try:
+            assert func=="fixed"
+            assert parent_lemma=="one"
+            assert parent_pos==prev_pos=="CD"
+            assert prev_upos=="PRON"
+            assert pos=="DT"
+            assert upos=="DET"
+        except AssertionError:
+            print("WARN: structure of 'one another' should be fixed(one/CD/PRON, another/DT/DET)" + inname)
+    elif prev_tok.lower()=="each" and lemma=="other":
+        try:
+            assert func=="fixed"
+            assert parent_lemma=="each"
+            assert parent_pos==prev_pos=="DT"
+            assert prev_upos=="DET"
+            assert pos=="JJ"
+            assert upos=="ADJ"
+        except AssertionError:
+            print("WARN: structure of 'each other' should be fixed(each/DT/DET, other/JJ/ADJ)" + inname)
 
 def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     """
@@ -782,6 +812,11 @@ for b in ("body","one","thing"):
 
 PRON_LEMMAS = {v["LEMMA"] for k,v in PRONOUNS.items()}
 
+# 2-word reciprocals (fixed; store XPOS/feats of first word but lemma of second word)
+PRONOUNS[("each other", "DT")] = {"LEMMA":"other", "PronType":"Rcp", "ExtPos":"PRON"}   # ExtPos since the technical head is DET
+PRONOUNS[("one another", "CD")] = {"LEMMA":"another", "PronType":"Rcp"}
+# (we don't want to store "each" as a PRON lemma)
+
 # See https://universaldependencies.org/en/pos/PRON.html
 def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, docname):
     form = form.replace("’", "'") # Normalize apostrophe characters.
@@ -792,8 +827,8 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, doc
 
     # Look up the correct features/lemma for the pronoun from the PRONOUNS lexicon
     data_key = (form.lower(), pos)
-    if form.lower()=="one" and prev_tok.lower()=="no":  # special case for 'no one/PRON'
-        data_key = ("no one", pos)
+    if (prev_tok.lower(),form.lower()) in {("no","one"), ("one","another"), ("each","other")}:  # special case for bigrams
+        data_key = (prev_tok.lower() + " " + form.lower(), pos)
     data = PRONOUNS[data_key] if data_key in PRONOUNS else None
 
     if data == None:
@@ -814,6 +849,10 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, doc
     check_has_feature("Poss", feats, data, tokname, inname)
     check_has_feature("PronType", feats, data, tokname, inname)
     check_has_feature("Style", feats, data, tokname, inname)
+    check_has_feature("ExtPos", feats, data, tokname, inname)
+    # ensure pronominal uses of 'one' do NOT have these features
+    check_has_feature("NumForm", feats, data, tokname, inname)
+    check_has_feature("NumType", feats, data, tokname, inname)
 
     check_has_feature("ModernForm", misc, data, tokname, inname)
     # CorrectForm for Typo=Yes has already been handled.
