@@ -795,7 +795,7 @@ PRONOUNS = {
   ("yo","PRP$"):{"Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your","Style":"Slng"},
   ("y'all","PRP"):{"Case":"Acc","Number":"Plur","Person":"2","PronType":"Prs","LEMMA":"y'all","Style":"Vrnc"},
   # other
-  ("one","PRP"):{"LEMMA":"one"},    # TODO: check NUM vs. NOUN vs. PRON incl. special cases of "no one", "one another"
+  ("one","PRP"):{"Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"one"},    # one/PRP is the generic individual use
   ("'s","PRP"):{"Case":"Acc","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
 }
 
