@@ -178,7 +178,7 @@ def validate_annos(tree):
             "PRON":["PRP","PRP$","WP","WP$","DT","WDT","EX","NN"],
             "PROPN":["NNP","NNPS"],
             "PUNCT":[".",",",":","``","''","-LCB-","-RCB-","-LRB-","-RRB-","-LSB-","-RSB-","NFP","HYPH","GW","SYM"],
-            "SCONJ":["IN","WRB","VBN","VBG"],
+            "SCONJ":["IN","VBN","VBG"],
             "SYM":["$",",","SYM","NFP","NN","NNS","IN","HYPH"],
             "VERB":["VB","VBD","VBG","VBN","VBP","VBZ","NNP"],
             "X":["ADD","GW","FW","AFX","NN","NNP","VB","RB","JJ","WP","LS","IN","PRP","WRB","MD","-LRB-","-RRB-"]
@@ -370,6 +370,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 
     if pos == "UH" and func=="advmod":
         print("WARN: pos " + pos + " should not normally have function 'advmod'" + inname)
+
+    if func == "mark" and lemma in ["when", "how", "where", "why", "whenever", "wherever", "however"]:
+        print("WARN: WH adverbs should attach as advmod, not mark" + inname)
 
     if pos =="IN" and func=="discourse":
         print("WARN: pos " + pos + " should not normally have function 'discourse'" + inname)
