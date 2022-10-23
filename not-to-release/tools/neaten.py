@@ -103,6 +103,7 @@ def validate_annos(tree):
         # Dictionaries to hold token annotations from conllu data
         funcs = {}
         postags = {}
+        upostags = {}
         feats = {}
         tokens = {}
         parent_ids = {}
@@ -149,7 +150,7 @@ def validate_annos(tree):
             if not isRegularNode(line):
                 continue
             tok_num += 1
-            postags[tok_num], lemmas[tok_num] = line['xpos'], line['lemma']
+            postags[tok_num], upostags[tok_num], lemmas[tok_num] = line['xpos'], line['upos'], line['lemma']
             #sent_types[tok_num] = s_type
             if new_sent:
                 sent_positions[tok_num] = "first"
@@ -237,13 +238,17 @@ def validate_annos(tree):
             parent_lemma = lemmas[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_func = funcs[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_pos = postags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
+            parent_upos = upostags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
+            parent_feats = feats[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             filename = tree.metadata['filename']
             assert parent_pos is not None,(tok_num,parent_ids[tok_num],postags,filename)
             S_TYPE_PLACEHOLDER = None
             assert parent_string is not None,(tok_num,docname,filename)
-            flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, parent_string, parent_lemma, parent_id,
+            flag_dep_warnings(tok_num, tok, pos, upos, lemma, func,
+                              parent_string, parent_lemma, parent_id,
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
-                              prev_tok, prev_pos, prev_upos, sent_positions[tok_num], parent_func, parent_pos, filename)
+                              prev_tok, prev_pos, prev_upos, sent_positions[tok_num],
+                              parent_func, parent_pos, parent_upos, filename)
             flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, docname)
 
             if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
@@ -258,6 +263,16 @@ def validate_annos(tree):
                         or (lemma=="he" and upos=="INTJ")): # laughter
                     print("WARN: invalid pronoun UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
                     # This warns about a few that are arguably correct, e.g. "oh my/INTJ", "I/PROPN - 24"
+
+            if func.endswith(':relcl'):
+                # Check PronType=Rel for free relative headed by the WDT/WP/WRB
+                # (won't catch cases where the relativizer is a dependent in a larger relative phrase)
+                if upos=="PRON" or (upos=="ADV" and (xpos=="WRB" or (xpos=="GW" and "PronType" in featlist))):
+                    if featlist["PronType"]=="Int":
+                        print("WARN: Looks like a WH word as internal root of relative clause, should be PronType=Rel?" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                if parent_upos=="PRON" or (parent_upos=="ADV" and (parent_pos=="WRB" or (parent_pos=="GW" and "PronType" in parent_feats))):
+                    if parent_feats["PronType"]=="Int":
+                        print("WARN: Looks like a WH word-headed free relative, should be PronType=Rel" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
             if ':pass' in func:
                 passive_verbs.add(parent_id)
@@ -308,7 +323,7 @@ def validate_annos(tree):
 
 
 def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, parent_id, children, child_funcs, s_type,
-                      docname, prev_tok, prev_pos, prev_upos, sent_position, parent_func, parent_pos, filename):
+                      docname, prev_tok, prev_pos, prev_upos, sent_position, parent_func, parent_pos, parent_upos, filename):
     # Shorthand for printing errors
     inname = " in " + docname + " @ token " + str(id) + " (" + parent + " -> " + tok + ") " + filename
 
@@ -455,6 +470,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 
     if func == "acl:relcl" and pos in ["VB"] and "to" in children and "cop" not in child_funcs and "aux" not in child_funcs:
         print("WARN: infinitive with tag " + pos + " should be acl not acl:relcl" + inname)
+
+    if func == "acl:relcl" and parent_upos == "ADV":
+        print("WARN: dependent of adverb should be advcl:relcl not acl:relcl" + inname)
 
     if pos in ["VBG"] and "det" in child_funcs:
         # Exceptions for phrasal compound in GUM_reddit_card and nominalization in GUM_academic_exposure
@@ -608,7 +626,8 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 
     suspicious_pos_tok = [("*","DT","only","RB"),
                           ("*","JJ","one","CD"),    # may be redundant with new amod-dependent-of-'one' check
-                          ("no","DT","one","CD")]
+                          ("no","DT","one","CD"),
+                          ("no","RB","matter","RB")]
 
     for w1, pos1, w2, pos2 in suspicious_pos_tok:
         if w1 == prev_tok.lower() or w1 == "*":
@@ -700,6 +719,11 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     # PRON+WP$ <=> PRON[Poss=Yes,PronType=Int,Rel]
     if upos == "PRON" and ((pos == "WP$") != (poss == "Yes" and pronType in ["Int","Rel"])):
         print("WARN: PRON+WP$ should correspond with Poss=Yes|PronType=Int,Rel in " + docname + " @ token " + str(id))
+
+    # WDT|WP|WRB <=> [PronType=Int,Rel])
+    # (upos=="X" for goeswith)
+    if upos!="X" and ((pos in ["WDT","WP","WRB"]) != (poss is None and pronType in ["Int","Rel"])):
+        print("WARN: WP|WDT|WRB should correspond with PronType=Int,Rel in " + docname + " @ token " + str(id))
 
     # PROPN+NNP <=> PROPN[Number=Sing]
     if upos == "PROPN" and ((pos == "NNP") != (number == "Sing")):
