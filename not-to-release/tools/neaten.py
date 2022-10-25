@@ -1,3 +1,4 @@
+#coding=utf-8
 """
 neatEN: Validator for English UD corpora
 
@@ -625,8 +626,6 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
                         print("WARN: q root may not have wh child " + wh + inname)
 
     suspicious_pos_tok = [("*","DT","only","RB"),
-                          ("*","JJ","one","CD"),    # may be redundant with new amod-dependent-of-'one' check
-                          ("no","DT","one","CD"),
                           ("no","RB","matter","RB")]
 
     for w1, pos1, w2, pos2 in suspicious_pos_tok:
