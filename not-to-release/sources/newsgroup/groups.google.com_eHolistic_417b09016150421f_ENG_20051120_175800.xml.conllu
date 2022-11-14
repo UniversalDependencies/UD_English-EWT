@@ -2,14 +2,14 @@
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0001
 # newpar id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-p0001
 # text = One Simple Idea.
-1	One	one	NUM	CD	NumType=Card	3	nummod	3:nummod	_
+1	One	one	NUM	CD	NumForm=Word|NumType=Card	3	nummod	3:nummod	_
 2	Simple	simple	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	Idea	idea	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 4	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0002
 # text = One Huge Opportunity.
-1	One	one	NUM	CD	NumType=Card	3	nummod	3:nummod	_
+1	One	one	NUM	CD	NumForm=Word|NumType=Card	3	nummod	3:nummod	_
 2	Huge	huge	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	Opportunity	opportunity	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 4	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -35,7 +35,7 @@
 1	More	more	ADJ	JJR	Degree=Cmp	2	amod	2:amod	_
 2	time	time	NOUN	NN	Number=Sing	0	root	0:root	_
 3	with	with	ADP	IN	_	5	case	5:case	_
-4	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+4	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	family	family	NOUN	NN	Number=Sing	2	nmod	2:nmod:with	SpaceAfter=No
 6	?	?	PUNCT	.	_	2	punct	2:punct	_
 
@@ -72,7 +72,7 @@
 12	help	help	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	_
 13	pay	pay	VERB	VB	VerbForm=Inf	12	ccomp	12:ccomp	_
 14	off	off	ADP	RP	_	13	compound:prt	13:compound:prt	_
-15	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
+15	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 16	debts	debt	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 17	or	or	CCONJ	CC	_	20	cc	20:cc	_
 18	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	20:nsubj	_
@@ -214,7 +214,7 @@
 3	delivery	delivery	NOUN	NN	Number=Sing	4	compound	4:compound	_
 4	format	format	NOUN	NN	Number=Sing	10	obl	10:obl:in	SpaceAfter=No
 5	,	,	PUNCT	,	_	10	punct	10:punct	_
-6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	body	body	NOUN	NN	Number=Sing	10	nsubj	10:nsubj|11:nsubj:xsubj	_
 8	can	can	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 9	immediately	immediately	ADV	RB	_	10	advmod	10:advmod	_
@@ -360,16 +360,16 @@
 
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0026
 # text = It is our belief that this compensation plan will produce some of the largest checks in network marketing history.
-1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	expl	2:expl	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	belief	belief	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	expl	4:expl	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+3	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+4	belief	belief	NOUN	NN	Number=Sing	0	root	0:root	_
 5	that	that	SCONJ	IN	_	10	mark	10:mark	_
 6	this	this	DET	DT	Number=Sing|PronType=Dem	8	det	8:det	_
 7	compensation	compensation	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	plan	plan	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
 9	will	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
-10	produce	produce	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
+10	produce	produce	VERB	VB	VerbForm=Inf	4	csubj	4:csubj	_
 11	some	some	DET	DT	_	10	obj	10:obj	_
 12	of	of	ADP	IN	_	15	case	15:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
@@ -379,7 +379,7 @@
 17	network	network	NOUN	NN	Number=Sing	18	compound	18:compound	_
 18	marketing	marketing	NOUN	NN	Number=Sing	19	compound	19:compound	_
 19	history	history	NOUN	NN	Number=Sing	15	nmod	15:nmod:in	SpaceAfter=No
-20	.	.	PUNCT	.	_	2	punct	2:punct	_
+20	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0027
 # text = The plan can't be described as a binary, a breakaway, a unilevel, or a forced matrix.
@@ -443,15 +443,15 @@
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	make	make	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	$	$	SYM	$	_	5	obj	5:obj	SpaceAfter=No
-7	100	100	NUM	CD	NumType=Card	8	compound	8:compound	SpaceAfter=No
-8	k	k	NUM	CD	NumType=Card	6	nummod	6:nummod	_
+7	100	100	NUM	CD	NumForm=Digit|NumType=Card	8	compound	8:compound	SpaceAfter=No
+8	k	thousand	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	6	nummod	6:nummod	_
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10	now	now	ADV	RB	_	12	advmod	12:advmod	_
 11	only	only	ADV	RB	_	12	advmod	12:advmod	_
 12	make	make	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and|22:advcl:if	_
 13	$	$	SYM	$	_	12	obj	12:obj	SpaceAfter=No
-14	30	30	NUM	CD	NumType=Card	15	compound	15:compound	SpaceAfter=No
-15	k	k	NUM	CD	NumType=Card	13	nummod	13:nummod	SpaceAfter=No
+14	30	30	NUM	CD	NumForm=Digit|NumType=Card	15	compound	15:compound	SpaceAfter=No
+15	k	thousand	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	13	nummod	13:nummod	SpaceAfter=No
 16	,	,	PUNCT	,	_	22	punct	22:punct	_
 17	this	this	PRON	DT	Number=Sing|PronType=Dem	22	nsubj	22:nsubj	_
 18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
@@ -463,10 +463,10 @@
 
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0032
 # text = Ten years later your check should still be the same or greater, fulfilling the promise of long-term residual income.
-1	Ten	ten	NUM	CD	NumType=Card	2	nummod	2:nummod	_
+1	Ten	ten	NUM	CD	NumForm=Word|NumType=Card	2	nummod	2:nummod	_
 2	years	year	NOUN	NNS	Number=Plur	3	obl:npmod	3:obl:npmod	_
 3	later	late	ADV	RBR	Degree=Cmp	10	advmod	10:advmod	_
-4	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+4	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	check	check	NOUN	NN	Number=Sing	10	nsubj	10:nsubj|12:nsubj	_
 6	should	should	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 7	still	still	ADV	RB	_	10	advmod	10:advmod	_
@@ -547,7 +547,7 @@
 10	leaders	leader	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	SpaceAfter=No
 11	,	,	PUNCT	,	_	14	punct	14:punct	_
 12	and	and	CCONJ	CC	_	14	cc	14:cc	_
-13	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
+13	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 14	founder	founder	NOUN	NN	Number=Sing	6	conj	4:obj|6:conj:and	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
 16	CEO	ceo	NOUN	NN	Number=Sing	14	conj	14:conj:and	SpaceAfter=No
@@ -572,7 +572,7 @@
 3	discover	discover	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
 4	:	:	PUNCT	:	_	3	punct	3:punct	_
 5	·	·	PUNCT	NFP	_	8	punct	8:punct	_
-6	How	how	SCONJ	WRB	PronType=Int	8	mark	8:mark	_
+6	How	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	Create	create	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
@@ -582,7 +582,7 @@
 13	Income	income	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	SpaceAfter=No
 14	;	;	PUNCT	,	_	8	punct	8:punct	_
 15	·	·	PUNCT	NFP	_	21	punct	21:punct	_
-16	Why	why	SCONJ	WRB	PronType=Int	21	mark	21:mark	_
+16	Why	why	ADV	WRB	PronType=Int	21	advmod	21:advmod	_
 17	Agel	Agel	PROPN	NNP	Number=Sing	21	nsubj	21:nsubj	_
 18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	cop	21:cop	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
@@ -590,7 +590,7 @@
 21	Vehicle	vehicle	NOUN	NN	Number=Sing	8	conj	3:ccomp|8:conj:and	_
 22	to	to	PART	TO	_	23	mark	23:mark	_
 23	Live	live	VERB	VB	VerbForm=Inf	21	acl	21:acl:to	_
-24	Your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
+24	Your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
 25	Dreams	dream	NOUN	NNS	Number=Plur	23	obj	23:obj	SpaceAfter=No
 26	;	;	PUNCT	,	_	8	punct	8:punct	_
 27	·	·	PUNCT	NFP	_	31	punct	31:punct	_
@@ -603,7 +603,7 @@
 34	Products	product	NOUN	NNS	Number=Plur	31	nmod	31:nmod:behind	SpaceAfter=No
 35	;	;	PUNCT	,	_	8	punct	8:punct	_
 36	·	·	PUNCT	NFP	_	44	punct	44:punct	_
-37	How	how	SCONJ	WRB	PronType=Int	44	mark	44:mark	_
+37	How	how	ADV	WRB	PronType=Int	44	advmod	44:advmod	_
 38	the	the	DET	DT	Definite=Def|PronType=Art	42	det	42:det	_
 39	"	"	PUNCT	``	_	42	punct	42:punct	SpaceAfter=No
 40	Quadra	quadra	NOUN	NN	Number=Sing	42	compound	42:compound	SpaceAfter=No
@@ -655,9 +655,9 @@
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0040
 # newpar id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-p0011
 # text = 620-294-4000 or 620-294-3000
-1	620-294-4000	620-294-4000	NUM	CD	NumType=Card	0	root	0:root	_
+1	620-294-4000	620-294-4000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	or	or	CCONJ	CC	_	3	cc	3:cc	_
-3	620-294-3000	620-294-3000	NUM	CD	NumType=Card	1	conj	1:conj:or	_
+3	620-294-3000	620-294-3000	NUM	CD	NumForm=Digit|NumType=Card	1	conj	1:conj:or	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0041
 # text = The Passcode to participate is:5107
@@ -667,7 +667,7 @@
 4	participate	participate	VERB	VB	VerbForm=Inf	2	acl	2:acl:to	_
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	SpaceAfter=No
 6	:	:	PUNCT	:	_	7	punct	7:punct	SpaceAfter=No
-7	5107	5107	NUM	CD	NumType=Card	0	root	0:root	_
+7	5107	5107	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0042
 # newpar id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-p0012
@@ -677,16 +677,16 @@
 3	Tuesday	Tuesday	PROPN	NNP	Number=Sing	1	appos	1:appos	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	November	November	PROPN	NNP	Number=Sing	3	appos	3:appos	_
-6	22	22	NUM	CD	NumType=Card	5	nummod	5:nummod	SpaceAfter=No
+6	22	22	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	SpaceAfter=No
 7	,	,	PUNCT	,	_	3	punct	3:punct	_
-8	2005	2005	NUM	CD	NumType=Card	3	nmod:tmod	3:nmod:tmod	_
+8	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:tmod	3:nmod:tmod	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0043
 # text = TIME: 8:00 PM Eastern Standard Time
 1	TIME	time	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 2	:	:	PUNCT	:	_	1	punct	1:punct	_
-3	8:00	8:00	NUM	CD	NumType=Card	4	nummod	4:nummod	_
-4	PM	pm	NOUN	NN	Number=Sing	1	appos	1:appos	_
+3	8:00	8:00	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
+4	PM	p.m.	NOUN	NN	Number=Sing	1	appos	1:appos	_
 5	Eastern	Eastern	ADJ	NNP	Degree=Pos	7	amod	7:amod	_
 6	Standard	Standard	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 7	Time	Time	PROPN	NNP	Number=Sing	4	nmod:npmod	4:nmod:npmod	_
@@ -700,16 +700,16 @@
 
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0045
 # text = 5:00 PT ** 6:00 MT ** 7:00 CT ** 8:00 ET
-1	5:00	5:00	NUM	CD	NumType=Card	2	nummod	2:nummod	_
+1	5:00	5:00	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	_
 2	PT	pt	NOUN	NN	Number=Sing	0	root	0:root	_
 3	**	**	PUNCT	NFP	_	2	punct	2:punct	_
-4	6:00	6:00	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+4	6:00	6:00	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
 5	MT	mt	NOUN	NN	Number=Sing	2	appos	2:appos	_
 6	**	**	PUNCT	NFP	_	2	punct	2:punct	_
-7	7:00	7:00	NUM	CD	NumType=Card	8	nummod	8:nummod	_
+7	7:00	7:00	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
 8	CT	ct	NOUN	NN	Number=Sing	2	appos	2:appos	_
 9	**	**	PUNCT	NFP	_	2	punct	2:punct	_
-10	8:00	8:00	NUM	CD	NumType=Card	11	nummod	11:nummod	_
+10	8:00	8:00	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
 11	ET	et	NOUN	NN	Number=Sing	2	appos	2:appos	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_417b09016150421f_ENG_20051120_175800-0046
@@ -727,6 +727,6 @@
 # text = Steve Fillmore 612-205-9814 620-294-1909
 1	Steve	Steve	PROPN	NNP	Number=Sing	2	compound	2:compound	_
 2	Fillmore	Fillmore	PROPN	NNP	Number=Sing	0	root	0:root	_
-3	612-205-9814	612-205-9814	NUM	CD	NumType=Card	2	list	2:list	_
-4	620-294-1909	620-294-1909	NUM	CD	NumType=Card	2	list	2:list	_
+3	612-205-9814	612-205-9814	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
+4	620-294-1909	620-294-1909	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
 

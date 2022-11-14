@@ -22,14 +22,14 @@
 6-7	it's	_	_	_	_	_	_	_	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
 7	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
-8	two	two	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+8	two	two	NUM	CD	NumForm=Word|NumType=Card	9	nummod	9:nummod	_
 9	guys	guy	NOUN	NNS	Number=Plur	3	conj	3:conj:and	SpaceAfter=No
 10	...	...	PUNCT	,	_	3	punct	3:punct	SpaceAfter=No
 11	all	all	DET	DT	_	18	nsubj	18:nsubj	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 13	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
 14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
-15	100	100	NUM	CD	NumType=Card	16	nummod	16:nummod	SpaceAfter=No
+15	100	100	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	SpaceAfter=No
 16	%	%	SYM	NN	Number=Sing	18	compound	18:compound	_
 17	sales	sale	NOUN	NNS	Number=Plur	18	compound	18:compound	_
 18	pitch	pitch	NOUN	NN	Number=Sing	3	parataxis	3:parataxis	_
@@ -44,13 +44,13 @@
 25	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	27	nsubj	27:nsubj	_
 26	're	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	27	cop	27:cop	_
 27	number	number	NOUN	NN	Number=Sing	23	parataxis	23:parataxis	_
-28	50	50	NUM	CD	NumType=Card	27	nummod	27:nummod	_
+28	50	50	NUM	CD	NumForm=Digit|NumType=Card	27	nummod	27:nummod	_
 29	so	so	ADV	RB	_	33	advmod	33:advmod	_
 30	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	33	nsubj	33:nsubj	_
 31	must	must	AUX	MD	VerbForm=Fin	33	aux	33:aux	_
 32	be	be	AUX	VB	VerbForm=Inf	33	aux	33:aux	_
 33	doing	do	VERB	VBG	VerbForm=Ger	23	parataxis	23:parataxis	_
-34	something	something	PRON	NN	Number=Sing	33	obj	33:obj	_
+34	something	something	PRON	NN	Number=Sing|PronType=Ind	33	obj	33:obj	_
 35	right	right	ADV	RB	_	33	advmod	33:advmod	SpaceAfter=No
 36	...	...	PUNCT	,	_	23	punct	23:punct	SpaceAfter=No
 37	look	look	VERB	VB	Mood=Imp|VerbForm=Fin	23	parataxis	23:parataxis	_
@@ -85,7 +85,7 @@
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
 15	wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	13	acl:relcl	13:acl:relcl	SpaceAfter=No
 16	,	,	PUNCT	,	_	24	punct	24:punct	_
-17	all	all	DET	DT	_	24	nsubj	24:nsubj	_
+17	all	all	DET	DT	_	24	nsubj:outer	24:nsubj:outer	_
 18	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	20	nsubj	20:nsubj	_
 19	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	20	cop	20:cop	_
 20	interested	interested	ADJ	JJ	Degree=Pos	17	acl:relcl	17:acl:relcl	_
@@ -126,7 +126,7 @@
 3	glad	glad	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|12:nsubj:pass	_
 5	trusted	trust	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	ccomp	3:ccomp	_
-6	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+6	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	gut	gut	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	and	and	CCONJ	CC	_	12	cc	12:cc	_
 9-10	didn't	_	_	_	_	_	_	_	_
@@ -144,7 +144,7 @@
 # sent_id = reviews-376503-0006
 # text = Find someone you trust that actually hears you and wants to do the job right.
 1	Find	find	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	someone	someone	PRON	NN	Number=Sing	1	obj	1:obj|7:nsubj|10:nsubj|12:nsubj:xsubj	_
+2	someone	someone	PRON	NN	Number=Sing|PronType=Ind	1	obj	1:obj|7:nsubj|10:nsubj|12:nsubj:xsubj	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 4	trust	trust	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
 5	that	that	PRON	WDT	PronType=Rel	7	nsubj	2:ref	_

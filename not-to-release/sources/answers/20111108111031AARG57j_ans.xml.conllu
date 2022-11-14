@@ -6,7 +6,7 @@
 2	just	just	ADV	RB	_	3	advmod	3:advmod	_
 3	adopted	adopt	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-5	2	2	NUM	CD	NumType=Card	6	nummod	6:nummod	_
+5	2	2	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
 6	year	year	NOUN	NN	Number=Sing	7	obl:npmod	7:obl:npmod	_
 7	old	old	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 8	male	male	NOUN	NN	Number=Sing	10	compound	10:compound	_
@@ -27,7 +27,7 @@
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 5	adopted	adopt	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
-7	2	2	NUM	CD	NumType=Card	8	nummod	8:nummod	_
+7	2	2	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
 8	year	year	NOUN	NN	Number=Sing	9	obl:npmod	9:obl:npmod	_
 9	old	old	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 10	Male	male	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
@@ -40,7 +40,7 @@
 1	(	(	PUNCT	-LRB-	_	5	punct	5:punct	SpaceAfter=No
 2	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-4	92	92	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+4	92	92	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
 5	pounds	pound	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	_
 7	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
@@ -51,16 +51,16 @@
 12	any	any	DET	DT	_	13	det	13:det	_
 13	commands	command	NOUN	NNS	Number=Plur	10	obl	10:obl:to	SpaceAfter=No
 14	,	,	PUNCT	,	_	10	punct	10:punct	_
-15	but	but	CCONJ	CC	_	19	cc	19:cc	_
-16	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
+15	but	but	CCONJ	CC	_	24	cc	24:cc	_
+16	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 17	major	major	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	problem	problem	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
-19	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	conj	10:conj:but	_
+18	problem	problem	NOUN	NN	Number=Sing	24	nsubj:outer	24:nsubj:outer	_
+19	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	_
 20	that	that	SCONJ	IN	_	24	mark	24:mark	_
 21	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	24	nsubj	24:nsubj	_
 22	will	will	AUX	MD	VerbForm=Fin	24	aux	24:aux	_
 23	not	not	PART	RB	_	24	advmod	24:advmod	_
-24	go	go	VERB	VB	VerbForm=Inf	19	ccomp	19:ccomp	_
+24	go	go	VERB	VB	VerbForm=Inf	10	conj	10:conj:but	_
 25	outside	outside	ADV	RB	_	24	advmod	24:advmod	_
 26	on	on	ADP	IN	_	27	case	27:case	_
 27	command	command	NOUN	NN	Number=Sing	24	obl	24:obl:on	SpaceAfter=No
@@ -95,20 +95,20 @@
 
 # sent_id = answers-20111108111031AARG57j_ans-0005
 # text = My other MAJOR problem is that he will not get in his crate.
-1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 2	other	other	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 3	MAJOR	major	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	problem	problem	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
-5	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	problem	problem	NOUN	NN	Number=Sing	10	nsubj:outer	10:nsubj:outer	_
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 6	that	that	SCONJ	IN	_	10	mark	10:mark	_
 7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
 8	will	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 9	not	not	PART	RB	_	10	advmod	10:advmod	_
-10	get	get	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	_
+10	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
 11	in	in	ADP	IN	_	13	case	13:case	_
-12	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
+12	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	crate	crate	NOUN	NN	Number=Sing	10	obl	10:obl:in	SpaceAfter=No
-14	.	.	PUNCT	.	_	5	punct	5:punct	_
+14	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = answers-20111108111031AARG57j_ans-0006
 # text = I will get a treat and try to get him in there that way, it wont work.
@@ -173,7 +173,7 @@
 7	feel	feel	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 8	comfortable	comfortable	ADJ	JJ	Degree=Pos	7	xcomp	7:xcomp	_
 9	in	in	ADP	IN	_	11	case	11:case	_
-10	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+10	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	crate	crate	NOUN	NN	Number=Sing	7	obl	7:obl:in	SpaceAfter=No
 12	?	?	PUNCT	.	_	4	punct	4:punct	_
 
@@ -199,7 +199,7 @@
 2	wo	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	nt	not	PART	RB	_	4	advmod	4:advmod	_
 4	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	anything	anything	PRON	NN	Number=Sing	4	obj	4:obj	_
+5	anything	anything	PRON	NN	Number=Sing|PronType=Ind	4	obj	4:obj	_
 6	on	on	ADP	IN	_	7	case	7:case	_
 7	command	command	NOUN	NN	Number=Sing	4	obl	4:obl:on	SpaceAfter=No
 8	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -218,7 +218,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-4	9	9	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+4	9	9	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
 5	month	month	NOUN	NN	Number=Sing	6	obl:npmod	6:obl:npmod	_
 6	old	old	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 7	German	German	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
@@ -236,7 +236,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	trained	train	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	obj	2:obj	_
-4	myself	myself	PRON	PRP	Number=Sing|Person=1|PronType=Emp|Reflex=Yes	2	obl:npmod	2:obl:npmod	SpaceAfter=No
+4	myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Emp|Reflex=Yes	2	obl:npmod	2:obl:npmod	SpaceAfter=No
 5	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108111031AARG57j_ans-0015
@@ -283,7 +283,7 @@
 40	right	right	ADV	RB	_	41	advmod	41:advmod	_
 41	next	next	ADV	RB	_	37	conj	32:obl:across|37:conj:or	_
 42	to	to	ADP	IN	_	44	case	44:case	_
-43	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	44	nmod:poss	44:nmod:poss	_
+43	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	44	nmod:poss	44:nmod:poss	_
 44	paw	paw	NOUN	NN	Number=Sing	41	obl	41:obl:to	SpaceAfter=No
 45	,	,	PUNCT	,	_	50	punct	50:punct	_
 46	and	and	CCONJ	CC	_	50	cc	50:cc	_
@@ -322,7 +322,7 @@
 3	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 4	nt	not	PART	RB	_	5	advmod	5:advmod	_
 5	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
-6	how	how	SCONJ	WRB	PronType=Int	8	mark	8:mark	_
+6	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	do	do	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	_
 9	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	obj	8:obj	_
@@ -342,7 +342,7 @@
 6-7	its	_	_	_	_	_	_	_	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 7	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
-8	nothing	nothing	PRON	NN	Number=Sing	2	advcl	2:advcl:like	SpaceAfter=No
+8	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	2	advcl	2:advcl:like	SpaceAfter=No
 9	!	!	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
 
 # sent_id = answers-20111108111031AARG57j_ans-0019
@@ -361,7 +361,7 @@
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 13	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
 14	with	with	ADP	IN	_	16	case	16:case	_
-15	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
+15	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 16	puppy	puppy	NOUN	NN	Number=Sing	13	obl	13:obl:with	SpaceAfter=No
 17	...	...	PUNCT	,	_	11	punct	11:punct	SpaceAfter=No
 18	lots	lot	NOUN	NNS	Number=Plur	11	appos	11:appos	_
@@ -430,7 +430,7 @@
 3	ways	way	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	get	get	VERB	VB	VerbForm=Inf	3	acl	3:acl:to	_
-6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 7	new	new	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	dog	dog	NOUN	NN	Number=Sing	5	obj	5:obj|9:nsubj:xsubj	_
 9	used	used	ADJ	JJ	Degree=Pos	5	xcomp	5:xcomp	_
@@ -480,7 +480,7 @@
 5	off	off	ADP	RP	_	2	compound:prt	2:compound:prt	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
 7	do	do	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj:and	_
-8	nothing	nothing	PRON	NN	Number=Sing	7	obj	7:obj	_
+8	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	7	obj	7:obj	_
 9	else	else	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 10	but	but	ADP	IN	_	11	case	11:case	_
 11	that	that	PRON	DT	Number=Sing|PronType=Dem	8	nmod	8:nmod:but	SpaceAfter=No
@@ -496,7 +496,7 @@
 
 # sent_id = answers-20111108111031AARG57j_ans-0028
 # text = When the dog is ok with this, then open the door and walk around the crate, leave the door open all the time.
-1	When	when	SCONJ	WRB	PronType=Int	5	mark	5:mark	_
+1	When	when	ADV	WRB	PronType=Int	5	advmod	5:advmod	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	dog	dog	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
@@ -526,7 +526,7 @@
 # sent_id = answers-20111108111031AARG57j_ans-0029
 # text = Put something fun inside.
 1	Put	put	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	something	something	PRON	NN	Number=Sing	1	obj	1:obj	_
+2	something	something	PRON	NN	Number=Sing|PronType=Ind	1	obj	1:obj	_
 3	fun	fun	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
 4	inside	inside	ADV	RB	_	1	advmod	1:advmod	SpaceAfter=No
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -534,11 +534,11 @@
 # sent_id = answers-20111108111031AARG57j_ans-0030
 # text = Let your dog go in when he wants to for no reason.
 1	Let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
+2	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
 3	dog	dog	NOUN	NN	Number=Sing	1	obj	1:obj|4:nsubj:xsubj	_
 4	go	go	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
 5	in	in	ADV	RB	_	4	advmod	4:advmod	_
-6	when	when	SCONJ	WRB	PronType=Int	8	mark	8:mark	_
+6	when	when	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
 7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 8	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:when	_
 9	to	to	PART	TO	_	8	xcomp	8:xcomp	_
@@ -607,7 +607,7 @@
 7	out	out	ADP	RP	_	5	compound:prt	5:compound:prt	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
 9	see	see	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
-10	how	how	SCONJ	WRB	PronType=Int	12	mark	12:mark	_
+10	how	how	ADV	WRB	PronType=Int	12	advmod	12:advmod	_
 11	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 12	acts	act	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	ccomp	9:ccomp	SpaceAfter=No
 13	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -688,7 +688,7 @@
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	who	who	PRON	WP	PronType=Int	12	nsubj	12:nsubj	_
 12	knows	know	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	conj	8:conj:and	_
-13	how	how	SCONJ	WRB	PronType=Int	16	mark	16:mark	_
+13	how	how	ADV	WRB	PronType=Int	16	advmod	16:advmod	_
 14	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	nsubj:pass	16:nsubj:pass	_
 15	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	aux:pass	16:aux:pass	_
 16	treated	treat	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	ccomp	12:ccomp	_

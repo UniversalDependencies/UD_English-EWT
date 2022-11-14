@@ -22,13 +22,13 @@
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	favorite	favorite	NOUN	NN	Number=Sing	4	xcomp	4:xcomp	_
 7	of	of	ADP	IN	_	9	case	9:case	_
-8	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
+8	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	family	family	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	SpaceAfter=No
 10	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-331662-0003
 # text = Everyone can get the signature dish with ingredients and spices that they want and have the fun of watching it cook.
-1	Everyone	everyone	PRON	NN	Number=Sing	3	nsubj	3:nsubj|15:nsubj	_
+1	Everyone	everyone	PRON	NN	Number=Sing|PronType=Tot	3	nsubj	3:nsubj|15:nsubj	_
 2	can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
@@ -72,7 +72,7 @@
 6	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:if	_
 7	meat	meat	NOUN	NN	Number=Sing	6	obj	6:obj	_
 8	in	in	ADP	IN	_	10	case	10:case	_
-9	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
+9	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	dish	dish	NOUN	NN	Number=Sing	6	obl	6:obl:in	SpaceAfter=No
 11	,	,	PUNCT	,	_	3	punct	3:punct	_
 12	(	(	PUNCT	-LRB-	_	14	punct	14:punct	SpaceAfter=No
@@ -105,7 +105,7 @@
 3	n't	not	PART	RB	_	5	advmod	5:advmod	_
 4	just	just	ADV	RB	_	5	advmod	5:advmod	_
 5	dump	dump	VERB	VB	VerbForm=Inf	0	root	0:root	_
-6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	ingredients	ingredient	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 8	on	on	ADV	RB	_	5	advmod	5:advmod	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
@@ -160,14 +160,14 @@
 5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	6:nsubj|8:nsubj:xsubj	_
 6	seem	seem	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	have	have	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
+8	have	have	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp|15:csubj	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	different	different	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	ingredient	ingredient	NOUN	NN	Number=Sing	8	obj	8:obj	_
 12	or	or	CCONJ	CC	_	13	cc	13:cc	_
-13	two	two	NUM	CD	NumType=Card	11	conj	8:obj|11:conj:or	_
-14	which	which	PRON	WDT	PronType=Int	15	nsubj	15:nsubj	_
-15	keeps	keep	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	parataxis	8:parataxis	_
+13	two	two	NUM	CD	NumForm=Word|NumType=Card	11	conj	8:obj|11:conj:or	_
+14	which	which	PRON	WDT	PronType=Rel	15	nsubj	8:ref	_
+15	keeps	keep	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	advcl:relcl	8:advcl:relcl	_
 16	things	thing	NOUN	NNS	Number=Plur	15	obj	15:obj|17:nsubj:xsubj	_
 17	interesting	interesting	ADJ	JJ	Degree=Pos	15	xcomp	15:xcomp	SpaceAfter=No
 18	.	.	PUNCT	.	_	6	punct	6:punct	_
@@ -205,7 +205,7 @@
 8	meals	meal	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
 9	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	around	around	ADV	RB	_	11	advmod	11:advmod	_
-11	4.99	4.99	NUM	CD	NumType=Card	3	parataxis	3:parataxis	SpaceAfter=No
+11	4.99	4.99	NUM	CD	NumForm=Digit|NumType=Card	3	parataxis	3:parataxis	SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	11	punct	11:punct	_
 13	and	and	CCONJ	CC	_	22	cc	22:cc	_
 14	Wednesday's	Wednesday	PROPN	NNPS	Number=Plur	16	obl:tmod	16:obl:tmod	_

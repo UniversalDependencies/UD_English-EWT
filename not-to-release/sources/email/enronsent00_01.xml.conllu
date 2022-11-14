@@ -30,15 +30,15 @@
 10	present	present	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:if	_
 11	unique	unique	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 12	investment	investment	NOUN	NN	Number=Sing	13	compound	13:compound	_
-13	opportunities	opportunity	NOUN	NNS	Number=Plur	10	obj	10:obj|18:obj	_
-14	that	that	PRON	WDT	PronType=Rel	18	obj	13:ref	_
+13	opportunities	opportunity	NOUN	NNS	Number=Plur	10	obj	10:obj|19:nmod:to	_
+14	that	that	PRON	WDT	PronType=Rel	19	nmod	13:ref	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
 16-17	don't	_	_	_	_	_	_	_	_
 16	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
 17	n't	not	PART	RB	_	18	advmod	18:advmod	_
 18	have	have	VERB	VB	VerbForm=Inf	13	acl:relcl	13:acl:relcl	_
 19	access	access	NOUN	NN	Number=Sing	18	obj	18:obj	_
-20	to	to	ADP	IN	_	19	nmod	19:nmod	_
+20	to	to	ADP	IN	_	14	case	14:case	_
 21	now	now	ADV	RB	_	18	advmod	18:advmod	SpaceAfter=No
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -46,7 +46,7 @@
 # text = Most of my contact with financial advisors in the past has consisted of them suggesting a mutual fund, telling me to invest in Home Depot, Sun, and Coke, or trying to pass off their banks' biased research reports as something valuable.
 1	Most	most	ADJ	JJS	Degree=Sup	12	nsubj	12:nsubj	_
 2	of	of	ADP	IN	_	4	case	4:case	_
-3	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	contact	contact	NOUN	NN	Number=Sing	1	nmod	1:nmod:of	_
 5	with	with	ADP	IN	_	7	case	7:case	_
 6	financial	financial	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
@@ -81,7 +81,7 @@
 35	to	to	PART	TO	_	36	mark	36:mark	_
 36	pass	pass	VERB	VB	VerbForm=Inf	34	xcomp	34:xcomp	_
 37	off	off	ADP	RP	_	36	compound:prt	36:compound:prt	_
-38	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	39	nmod:poss	39:nmod:poss	_
+38	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	39	nmod:poss	39:nmod:poss	_
 39-40	banks'	_	_	_	_	_	_	_	_
 39	banks	bank	NOUN	NNS	Number=Plur	43	nmod:poss	43:nmod:poss	_
 40	'	's	PART	POS	_	39	case	39:case	_
@@ -89,7 +89,7 @@
 42	research	research	NOUN	NN	Number=Sing	43	compound	43:compound	_
 43	reports	report	NOUN	NNS	Number=Plur	36	obj	36:obj	_
 44	as	as	ADP	IN	_	45	case	45:case	_
-45	something	something	PRON	NN	Number=Sing	36	obl	36:obl:as	_
+45	something	something	PRON	NN	Number=Sing|PronType=Ind	36	obl	36:obl:as	_
 46	valuable	valuable	ADJ	JJ	Degree=Pos	45	amod	45:amod	SpaceAfter=No
 47	.	.	PUNCT	.	_	12	punct	12:punct	_
 
@@ -218,15 +218,15 @@
 9	PaineWebber	PaineWebber	PROPN	NNP	Number=Sing	11	compound	11:compound	SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
 11	Inc.	Inc.	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-12	713-654-0365	713-654-0365	NUM	CD	NumType=Card	1	list	1:list	_
-13	800-553-3119	800-553-3119	NUM	CD	NumType=Card	14	list	14:list	_
+12	713-654-0365	713-654-0365	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+13	800-553-3119	800-553-3119	NUM	CD	NumForm=Digit|NumType=Card	14	list	14:list	_
 14	x365	x365	NOUN	NN	Number=Sing	1	list	1:list	_
 15	Fax	fax	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 16	:	:	PUNCT	:	_	15	punct	15:punct	_
-17	713-654-1281	713-654-1281	NUM	CD	NumType=Card	15	appos	15:appos	_
+17	713-654-1281	713-654-1281	NUM	CD	NumForm=Digit|NumType=Card	15	appos	15:appos	_
 18	Cell	cell	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 19	:	:	PUNCT	:	_	18	punct	18:punct	_
-20	281-435-0295	281-435-0295	NUM	CD	NumType=Card	18	appos	18:appos	_
+20	281-435-0295	281-435-0295	NUM	CD	NumForm=Digit|NumType=Card	18	appos	18:appos	_
 
 # sent_id = email-enronsent00_01-0012
 # text = Michael:
@@ -245,7 +245,7 @@
 1	However	however	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	11	punct	11:punct	_
 3	with	with	ADP	IN	_	6	case	6:case	_
-4	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 5	natural	natural	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	long	long	NOUN	NN	Number=Sing	11	obl	11:obl:with	SpaceAfter=No
 7	,	,	PUNCT	,	_	11	punct	11:punct	_
@@ -288,10 +288,10 @@
 21	want	want	VERB	VB	VerbForm=Inf	2	conj	2:conj:but	_
 22	to	to	PART	TO	_	23	mark	23:mark	_
 23	forgo	forgo	VERB	VB	VerbForm=Inf	21	xcomp	21:xcomp	_
-24	50	50	NUM	CD	NumType=Card	25	nummod	25:nummod	SpaceAfter=No
+24	50	50	NUM	CD	NumForm=Digit|NumType=Card	25	nummod	25:nummod	SpaceAfter=No
 25	%	%	SYM	NN	Number=Sing	23	obj	23:obj	_
 26	of	of	ADP	IN	_	29	case	29:case	_
-27	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	29	nmod:poss	29:nmod:poss	_
+27	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	29	nmod:poss	29:nmod:poss	_
 28	option	option	NOUN	NN	Number=Sing	29	compound	29:compound	_
 29	premium	premium	NOUN	NN	Number=Sing	25	nmod	25:nmod:of	SpaceAfter=No
 30	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -303,10 +303,10 @@
 3	price	price	NOUN	NN	Number=Sing	4	compound	4:compound	_
 4	targets	target	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 5	of	of	SCONJ	IN	_	6	case	6:case	_
-6	where	where	ADV	WRB	PronType=Int	4	nmod	4:nmod:of	_
+6	where	where	ADV	WRB	PronType=Rel	4	nmod	4:nmod:of	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj|11:nsubj:xsubj	_
 8	would	would	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	like	like	VERB	VB	VerbForm=Inf	6	acl:relcl	6:acl:relcl	_
+9	like	like	VERB	VB	VerbForm=Inf	6	advcl:relcl	6:advcl:relcl	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	lighten	lighten	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 12	up	up	ADP	RP	_	11	compound:prt	11:compound:prt	_
@@ -445,7 +445,7 @@
 5	that	that	SCONJ	IN	_	11	mark	11:mark	_
 6	ENE	ENE	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj|16:nsubj	_
 7	@	@	ADP	IN	_	8	case	8:case	_
-8	75	75	NUM	CD	NumType=Card	6	nmod	6:nmod	_
+8	75	75	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	place	place	NOUN	NN	Number=Sing	4	ccomp	4:ccomp	SpaceAfter=No
@@ -453,7 +453,7 @@
 13	but	but	CCONJ	CC	_	16	cc	16:cc	_
 14	maybe	maybe	ADV	RB	_	16	advmod	16:advmod	_
 15	@	@	ADP	IN	_	16	case	16:case	_
-16	73	73	NUM	CD	NumType=Card	11	conj	4:ccomp|11:conj:but	SpaceAfter=No
+16	73	73	NUM	CD	NumForm=Digit|NumType=Card	11	conj	4:ccomp|11:conj:but	SpaceAfter=No
 17	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent00_01-0025
@@ -480,15 +480,15 @@
 9	PaineWebber	PaineWebber	PROPN	NNP	Number=Sing	11	compound	11:compound	SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
 11	Inc.	Inc.	PROPN	NNP	Number=Sing	1	list	1:list	_
-12	713-654-0365	713-654-0365	NUM	CD	NumType=Card	1	list	1:list	_
-13	800-553-3119	800-553-3119	NUM	CD	NumType=Card	1	list	1:list	_
+12	713-654-0365	713-654-0365	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+13	800-553-3119	800-553-3119	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 14	x365	x365	NOUN	NN	Number=Sing	1	list	1:list	_
 15	Fax	fax	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 16	:	:	PUNCT	:	_	15	punct	15:punct	_
-17	713-654-1281	713-654-1281	NUM	CD	NumType=Card	15	appos	15:appos	_
+17	713-654-1281	713-654-1281	NUM	CD	NumForm=Digit|NumType=Card	15	appos	15:appos	_
 18	Cell	cell	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 19	:	:	PUNCT	:	_	18	punct	18:punct	_
-20	281-435-0295	281-435-0295	NUM	CD	NumType=Card	18	appos	18:appos	_
+20	281-435-0295	281-435-0295	NUM	CD	NumForm=Digit|NumType=Card	18	appos	18:appos	_
 
 # sent_id = email-enronsent00_01-0027
 # text = Notice Regarding Entry of Orders and Instructions: Please do not transmit orders and/or instructions regarding your PaineWebber account(s) by e-mail.
@@ -510,7 +510,7 @@
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
 17	instructions	instruction	NOUN	NNS	Number=Plur	13	conj	12:obj|13:conj:and_or	_
 18	regarding	regard	VERB	VBG	VerbForm=Ger	21	case	21:case	_
-19	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
+19	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
 20	PaineWebber	PaineWebber	PROPN	NNP	Number=Sing	21	compound	21:compound	_
 21	account	account	NOUN	NN	Number=Sing	13	nmod	13:nmod:regarding	SpaceAfter=No
 22	(	(	PUNCT	-LRB-	_	21	punct	21:punct	SpaceAfter=No
@@ -581,7 +581,7 @@
 24	or	or	CCONJ	CC	_	25	cc	25:cc	_
 25	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	21	conj	20:acl|21:conj:and_or	_
 26	by	by	ADP	IN	_	28	case	28:case	_
-27	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	28	nmod:poss	28:nmod:poss	_
+27	its	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	28	nmod:poss	28:nmod:poss	_
 28	employees	employee	NOUN	NNS	Number=Plur	21	obl	21:obl:by	SpaceAfter=No
 29	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -605,7 +605,7 @@
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
 17	instructions	instruction	NOUN	NNS	Number=Plur	13	conj	12:obj|13:conj:and_or	_
 18	regarding	regard	VERB	VBG	VerbForm=Ger	21	case	21:case	_
-19	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
+19	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
 20	PaineWebber	PaineWebber	PROPN	NNP	Number=Sing	21	compound	21:compound	_
 21	account	account	NOUN	NN	Number=Sing	13	nmod	13:nmod:regarding	SpaceAfter=No
 22	(	(	PUNCT	-LRB-	_	21	punct	21:punct	SpaceAfter=No
@@ -676,7 +676,7 @@
 24	or	or	CCONJ	CC	_	25	cc	25:cc	_
 25	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	21	conj	20:acl|21:conj:and_or	_
 26	by	by	ADP	IN	_	28	case	28:case	_
-27	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	28	nmod:poss	28:nmod:poss	_
+27	its	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	28	nmod:poss	28:nmod:poss	_
 28	employees	employee	NOUN	NNS	Number=Plur	21	obl	21:obl:by	SpaceAfter=No
 29	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -700,7 +700,7 @@
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
 17	instructions	instruction	NOUN	NNS	Number=Plur	13	conj	12:obj|13:conj:and_or	_
 18	regarding	regard	VERB	VBG	VerbForm=Ger	21	case	21:case	_
-19	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
+19	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
 20	PaineWebber	PaineWebber	PROPN	NNP	Number=Sing	21	compound	21:compound	_
 21	account	account	NOUN	NN	Number=Sing	13	nmod	13:nmod:regarding	SpaceAfter=No
 22	(	(	PUNCT	-LRB-	_	21	punct	21:punct	SpaceAfter=No
@@ -771,7 +771,7 @@
 24	or	or	CCONJ	CC	_	25	cc	25:cc	_
 25	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	21	conj	20:acl|21:conj:and_or	_
 26	by	by	ADP	IN	_	28	case	28:case	_
-27	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	28	nmod:poss	28:nmod:poss	_
+27	its	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	28	nmod:poss	28:nmod:poss	_
 28	employees	employee	NOUN	NNS	Number=Plur	21	obl	21:obl:by	SpaceAfter=No
 29	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -789,7 +789,7 @@
 3	that	that	SCONJ	IN	_	10	mark	10:mark	_
 4	effective	effective	ADJ	JJ	Degree=Pos	10	advmod	10:advmod	_
 5	immediately	immediately	ADV	RB	_	4	advmod	4:advmod	_
-6	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+6	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 7	email	email	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	address	address	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
 9	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
@@ -820,7 +820,7 @@
 # sent_id = email-enronsent00_01-0040
 # newpar id = email-enronsent00_01-p0008
 # text = Your buddy Beau invited me.
-1	Your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
+1	Your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	buddy	buddy	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 3	Beau	Beau	PROPN	NNP	Number=Sing	2	appos	2:appos	_
 4	invited	invite	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_

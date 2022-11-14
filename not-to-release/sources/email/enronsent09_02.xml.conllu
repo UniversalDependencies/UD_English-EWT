@@ -7,9 +7,9 @@
 
 # sent_id = email-enronsent09_02-0002
 # text = 12/07/2000 02:29 PM
-1	12/07/2000	12/07/2000	NUM	CD	NumType=Card	0	root	0:root	_
-2	02:29	02:29	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	PM	pm	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+1	12/07/2000	12/07/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	02:29	02:29	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent09_02-0003
 # text = Daren,
@@ -34,7 +34,7 @@
 13	in	in	ADV	RB	_	12	advmod	12:advmod	_
 14	with	with	ADP	IN	_	15	case	15:case	_
 15	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	12	obl	12:obl:with	_
-16	one	one	NUM	CD	NumType=Card	17	nummod	17:nummod	_
+16	one	one	NUM	CD	NumForm=Word|NumType=Card	17	nummod	17:nummod	_
 17	day	day	NOUN	NN	Number=Sing	12	obl:tmod	12:obl:tmod	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
 19	get	get	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:to	_
@@ -42,7 +42,7 @@
 21	general	general	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 22	feel	feel	NOUN	NN	Number=Sing	19	obj	19:obj	_
 23	of	of	ADP	IN	_	25	case	25:case	_
-24	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
+24	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
 25	end	end	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	_
 26	of	of	ADP	IN	_	28	case	28:case	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
@@ -96,7 +96,7 @@
 20	to	to	PART	TO	_	24	mark	24:mark	_
 21	be	be	AUX	VB	VerbForm=Inf	24	cop	24:cop	_
 22	in	in	ADP	IN	_	24	case	24:case	_
-23	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
+23	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
 24	way	way	NOUN	NN	Number=Sing	19	acl	19:acl:in	SpaceAfter=No
 25	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -124,7 +124,7 @@
 20	there	there	ADV	RB	PronType=Dem	8	advmod	8:advmod	_
 21	with	with	ADP	IN	_	22	case	22:case	_
 22	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	8	obl	8:obl:with	_
-23	whenever	whenever	SCONJ	WRB	PronType=Int	28	mark	28:mark	_
+23	whenever	whenever	ADV	WRB	PronType=Int	28	advmod	28:advmod	_
 24	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	28	nsubj	28:nsubj	_
 25	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	28	cop	28:cop	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	28	det	28:det	_
@@ -143,7 +143,7 @@
 7	very	very	ADV	RB	_	8	advmod	8:advmod	_
 8	much	much	ADV	RB	_	5	advmod	5:advmod	_
 9	in	in	ADP	IN	_	11	case	11:case	_
-10	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+10	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	role	role	NOUN	NN	Number=Sing	5	obl	5:obl:in	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -170,7 +170,7 @@
 7	Equistar	Equistar	PROPN	NNP	Number=Sing	5	nmod	5:nmod:with	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 9	#	#	SYM	NN	Number=Sing	0	root	0:root	SpaceAfter=No
-10	365013	365013	NUM	CD	NumType=Card	9	nummod	9:nummod	SpaceAfter=No
+10	365013	365013	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	SpaceAfter=No
 11	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = email-enronsent09_02-0012
@@ -198,19 +198,19 @@
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	month	month	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	_
 12	for	for	ADP	IN	_	13	case	13:case	_
-13	10,000	10000	NUM	CD	NumType=Card	5	nmod	5:nmod:for	SpaceAfter=No
+13	10,000	10000	NUM	CD	NumForm=Digit|NumType=Card	5	nmod	5:nmod:for	SpaceAfter=No
 14	/	/	SYM	SYM	_	15	case	15:case	SpaceAfter=No
 15	d	d	NOUN	NN	Number=Sing	13	nmod	13:nmod	_
 16	at	at	ADP	IN	_	20	case	20:case	_
 17	meter	meter	NOUN	NN	Number=Sing	20	compound	20:compound	_
 18	#	#	SYM	NN	Number=Sing	20	compound	20:compound	_
-19	1552	1552	NUM	CD	NumType=Card	20	nummod	20:nummod	_
+19	1552	1552	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	_
 20	QE	qe	NOUN	NN	Number=Sing	13	nmod	13:nmod:at	SpaceAfter=No
 21	-	-	PUNCT	,	_	20	punct	20:punct	SpaceAfter=No
-22	1	1	NUM	CD	NumType=Card	20	nummod	20:nummod	_
+22	1	1	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	_
 23	@	@	ADP	IN	_	24	case	24:case	_
 24	$	$	SYM	$	_	20	nmod	20:nmod	SpaceAfter=No
-25	4.355	4.355	NUM	CD	NumType=Card	24	nummod	24:nummod	_
+25	4.355	4.355	NUM	CD	NumForm=Digit|NumType=Card	24	nummod	24:nummod	_
 26	....	....	PUNCT	,	_	3	punct	3:punct	_
 27	can	can	AUX	MD	VerbForm=Fin	29	aux	29:aux	_
 28	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	29	nsubj	29:nsubj	_
@@ -245,7 +245,7 @@
 4	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 5	also	also	ADV	RB	_	6	advmod	6:advmod	_
 6	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	_
-7	20.000	20.000	NUM	CD	NumType=Card	6	obj	6:obj	_
+7	20.000	20.000	NUM	CD	NumForm=Digit|NumType=Card	6	obj	6:obj	_
 8	at	at	ADP	IN	_	10	case	10:case	_
 9	LS	ls	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	HPL	hpl	NOUN	NN	Number=Sing	6	obl	6:obl:at	_
@@ -263,21 +263,21 @@
 # newpar id = email-enronsent09_02-p0011
 # text = August 11,2000
 1	August	August	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	11	11	NUM	CD	NumType=Card	1	nummod	1:nummod	SpaceAfter=No
+2	11	11	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	,	,	PUNCT	,	_	1	punct	1:punct	SpaceAfter=No
-4	2000	2000	NUM	CD	NumType=Card	1	nummod	1:nummod	_
+4	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	_
 
 # sent_id = email-enronsent09_02-0020
 # newpar id = email-enronsent09_02-p0012
 # text = Teco Tap 108.333 / HPL IFERC ; 20.000 / Enron
 1	Teco	Teco	PROPN	NNP	Number=Sing	2	compound	2:compound	_
 2	Tap	Tap	PROPN	NNP	Number=Sing	0	root	0:root	_
-3	108.333	108.333	NUM	CD	NumType=Card	2	list	2:list	_
+3	108.333	108.333	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
 4	/	/	PUNCT	,	_	2	punct	2:punct	_
 5	HPL	HPL	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 6	IFERC	IFERC	PROPN	NNP	Number=Sing	2	list	2:list	_
 7	;	;	PUNCT	,	_	2	punct	2:punct	_
-8	20.000	20.000	NUM	CD	NumType=Card	2	list	2:list	_
+8	20.000	20.000	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
 9	/	/	PUNCT	,	_	2	punct	2:punct	_
 10	Enron	Enron	PROPN	NNP	Number=Sing	2	list	2:list	_
 
@@ -287,28 +287,28 @@
 2	HPL	HPL	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 3	LSK	LSK	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4	IC	IC	PROPN	NNP	Number=Sing	0	root	0:root	_
-5	20.000	20.000	NUM	CD	NumType=Card	4	list	4:list	_
+5	20.000	20.000	NUM	CD	NumForm=Digit|NumType=Card	4	list	4:list	_
 6	/	/	PUNCT	,	_	4	punct	4:punct	_
 7	Enron	Enron	PROPN	NNP	Number=Sing	4	list	4:list	_
 
 # sent_id = email-enronsent09_02-0022
 # text = August 12, 2000
 1	August	August	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	12	12	NUM	CD	NumType=Card	1	nummod	1:nummod	SpaceAfter=No
+2	12	12	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	,	,	PUNCT	,	_	1	punct	1:punct	_
-4	2000	2000	NUM	CD	NumType=Card	1	nummod	1:nummod	_
+4	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	_
 
 # sent_id = email-enronsent09_02-0023
 # newpar id = email-enronsent09_02-p0013
 # text = Teco Tap 85.000 / HPL IFERC ; 20.000 / Enron
 1	Teco	Teco	PROPN	NNP	Number=Sing	2	compound	2:compound	_
 2	Tap	Tap	PROPN	NNP	Number=Sing	0	root	0:root	_
-3	85.000	85.000	NUM	CD	NumType=Card	2	list	2:list	_
+3	85.000	85.000	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
 4	/	/	PUNCT	,	_	2	punct	2:punct	_
 5	HPL	HPL	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 6	IFERC	IFERC	PROPN	NNP	Number=Sing	2	list	2:list	_
 7	;	;	PUNCT	,	_	2	punct	2:punct	_
-8	20.000	20.000	NUM	CD	NumType=Card	2	list	2:list	_
+8	20.000	20.000	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
 9	/	/	PUNCT	,	_	2	punct	2:punct	_
 10	Enron	Enron	PROPN	NNP	Number=Sing	2	list	2:list	_
 
@@ -318,28 +318,28 @@
 2	HPL	HPL	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 3	LSK	LSK	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4	IC	IC	PROPN	NNP	Number=Sing	0	root	0:root	_
-5	20.000	20.000	NUM	CD	NumType=Card	4	list	4:list	_
+5	20.000	20.000	NUM	CD	NumForm=Digit|NumType=Card	4	list	4:list	_
 6	/	/	PUNCT	,	_	4	punct	4:punct	_
 7	Enron	Enron	PROPN	NNP	Number=Sing	4	list	4:list	_
 
 # sent_id = email-enronsent09_02-0025
 # text = August 13, 2000
 1	August	August	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	13	13	NUM	CD	NumType=Card	1	nummod	1:nummod	SpaceAfter=No
+2	13	13	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	,	,	PUNCT	,	_	1	punct	1:punct	_
-4	2000	2000	NUM	CD	NumType=Card	1	nummod	1:nummod	_
+4	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	_
 
 # sent_id = email-enronsent09_02-0026
 # newpar id = email-enronsent09_02-p0014
 # text = Teco Tap 32.500 / HPL IFERC ; 20.000 / Enron
 1	Teco	Teco	PROPN	NNP	Number=Sing	2	compound	2:compound	_
 2	Tap	Tap	PROPN	NNP	Number=Sing	0	root	0:root	_
-3	32.500	32.500	NUM	CD	NumType=Card	2	list	2:list	_
+3	32.500	32.500	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
 4	/	/	PUNCT	,	_	2	punct	2:punct	_
 5	HPL	HPL	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 6	IFERC	IFERC	PROPN	NNP	Number=Sing	2	list	2:list	_
 7	;	;	PUNCT	,	_	2	punct	2:punct	_
-8	20.000	20.000	NUM	CD	NumType=Card	2	list	2:list	_
+8	20.000	20.000	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
 9	/	/	PUNCT	,	_	2	punct	2:punct	_
 10	Enron	Enron	PROPN	NNP	Number=Sing	2	list	2:list	_
 
@@ -358,7 +358,7 @@
 # text = Now at 83.5.
 1	Now	now	ADV	RB	_	0	root	0:root	_
 2	at	at	ADP	IN	_	3	case	3:case	_
-3	83.5	83.5	NUM	CD	NumType=Card	1	obl	1:obl:at	SpaceAfter=No
+3	83.5	83.5	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:at	SpaceAfter=No
 4	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent09_02-0029
@@ -425,7 +425,7 @@
 5	IT	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj	_
 6	AT	at	ADP	IN	_	7	case	7:case	_
 7	$	$	SYM	$	_	4	obl	4:obl:at	SpaceAfter=No
-8	80	80	NUM	CD	NumType=Card	7	nummod	7:nummod	SpaceAfter=No
+8	80	80	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	SpaceAfter=No
 9	+++	+++	SYM	SYM	_	7	advmod	7:advmod	_
 
 # sent_id = email-enronsent09_02-0036
@@ -559,24 +559,24 @@
 8	,	,	PUNCT	,	_	7	punct	7:punct	_
 9	Abacus	Abacus	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	Technologies	Technology	PROPN	NNPS	Number=Plur	7	list	7:list	_
-11	17611	17611	NUM	CD	NumType=Card	12	nummod	12:nummod	_
+11	17611	17611	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
 12	Loring	Loring	PROPN	NNP	Number=Sing	1	list	1:list	_
 13	Lane	Lane	PROPN	NNP	Number=Sing	12	flat	12:flat	SpaceAfter=No
 14	,	,	PUNCT	,	_	12	punct	12:punct	_
 15	Spring	Spring	PROPN	NNP	Number=Sing	12	appos	12:appos	SpaceAfter=No
 16	,	,	PUNCT	,	_	15	punct	15:punct	_
 17	TX	TX	PROPN	NNP	Number=Sing	15	appos	15:appos	_
-18	77388-5746	77388-5746	NUM	CD	NumType=Card	15	appos	15:appos	_
+18	77388-5746	77388-5746	NUM	CD	NumForm=Digit|NumType=Card	15	appos	15:appos	_
 19	(	(	PUNCT	-LRB-	_	22	punct	22:punct	SpaceAfter=No
-20	281	281	NUM	CD	NumType=Card	22	nummod	22:nummod	SpaceAfter=No
+20	281	281	NUM	CD	NumForm=Digit|NumType=Card	22	nummod	22:nummod	SpaceAfter=No
 21	)	)	PUNCT	-RRB-	_	22	punct	22:punct	SpaceAfter=No
-22	651-7106	651-7106	NUM	CD	NumType=Card	1	list	1:list	SpaceAfter=No
+22	651-7106	651-7106	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	SpaceAfter=No
 23	;	;	PUNCT	,	_	1	punct	1:punct	SpaceAfter=No
 24	Fax	fax	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 25	(	(	PUNCT	-LRB-	_	28	punct	28:punct	SpaceAfter=No
-26	281	281	NUM	CD	NumType=Card	28	nummod	28:nummod	SpaceAfter=No
+26	281	281	NUM	CD	NumForm=Digit|NumType=Card	28	nummod	28:nummod	SpaceAfter=No
 27	)	)	PUNCT	-RRB-	_	28	punct	28:punct	SpaceAfter=No
-28	528-8636	528-8636	NUM	CD	NumType=Card	24	appos	24:appos	_
+28	528-8636	528-8636	NUM	CD	NumForm=Digit|NumType=Card	24	appos	24:appos	_
 29	Web	web	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 30	:	:	PUNCT	:	_	29	punct	29:punct	_
 31	http://www.abacustech.net	http://www.abacustech.net	X	ADD	_	29	appos	29:appos	_
@@ -590,5 +590,5 @@
 5	E-mail	e-mail	X	GW	_	2	flat	2:flat	SpaceAfter=No
 6	)	)	X	-RRB-	_	2	flat	2:flat	SpaceAfter=No
 7	.vcf	.vcf	X	NN	_	2	flat	2:flat	_
-8	4222	4222	NUM	CD	NumType=Card	2	nummod	2:nummod	_
+8	4222	4222	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	_
 

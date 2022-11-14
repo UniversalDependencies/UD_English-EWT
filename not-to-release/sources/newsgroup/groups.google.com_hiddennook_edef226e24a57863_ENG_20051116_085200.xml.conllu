@@ -3,7 +3,7 @@
 # newpar id = newsgroup-groups.google.com_hiddennook_edef226e24a57863_ENG_20051116_085200-p0001
 # text = [http://www.newscientistspace.com/article.ns?id=dn8293&feedId=human-spaceflight_atom03]
 1	[	[	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
-2	http://www.newscientistspace.com/article.ns?id=dn8293&feedId=human-spaceflight_atom03	http://www.newscientistspace.com/article.ns?id=dn8293&feedid=human-spaceflight_atom03	X	ADD	_	0	root	0:root	SpaceAfter=No
+2	http://www.newscientistspace.com/article.ns?id=dn8293&feedId=human-spaceflight_atom03	http://www.newscientistspace.com/article.ns?id=dn8293&feedId=human-spaceflight_atom03	X	ADD	_	0	root	0:root	SpaceAfter=No
 3	]	]	PUNCT	-RRB-	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_hiddennook_edef226e24a57863_ENG_20051116_085200-0002
@@ -83,7 +83,7 @@
 31	Transformational	Transformational	ADJ	NNP	Degree=Pos	32	amod	32:amod	_
 32	Space	Space	PROPN	NNP	Number=Sing	29	nmod	29:nmod:of	SpaceAfter=No
 33	,	,	PUNCT	,	_	32	punct	32:punct	_
-34	one	one	NUM	CD	NumType=Card	32	appos	32:appos	_
+34	one	one	NUM	CD	NumForm=Word|NumType=Card	32	appos	32:appos	_
 35	of	of	ADP	IN	_	37	case	37:case	_
 36	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	_
 37	companies	company	NOUN	NNS	Number=Plur	34	nmod	34:nmod:of	_
@@ -101,19 +101,19 @@
 1	NASA	NASA	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
 2	intends	intend	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	upon	upon	SCONJ	IN	_	4	mark	4:mark	_
-4	retiring	retire	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:upon	_
+4	retiring	retire	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:upon|13:csubj	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	space	space	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	shuttles	shuttle	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	2010	2010	NUM	CD	NumType=Card	4	obl	4:obl:in	SpaceAfter=No
+9	2010	2010	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:in	SpaceAfter=No
 10	,	,	PUNCT	,	_	4	punct	4:punct	_
-11	which	which	PRON	WDT	PronType=Int	13	nsubj	13:nsubj	_
+11	which	which	PRON	WDT	PronType=Rel	13	nsubj	4:ref	_
 12	only	only	ADV	RB	_	13	advmod	13:advmod	_
-13	leaves	leave	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	parataxis	4:parataxis	_
+13	leaves	leave	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	advcl:relcl	4:advcl:relcl	_
 14	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	13	obj	13:obj	_
 15	with	with	ADP	IN	_	17	case	17:case	_
-16	18	18	NUM	CD	NumType=Card	17	nummod	17:nummod	_
+16	18	18	NUM	CD	NumForm=Digit|NumType=Card	17	nummod	17:nummod	_
 17	flights	flight	NOUN	NNS	Number=Plur	13	obl	13:obl:with	_
 18	towards	towards	ADP	IN	_	20	case	20:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
@@ -191,7 +191,7 @@
 # sent_id = newsgroup-groups.google.com_hiddennook_edef226e24a57863_ENG_20051116_085200-0010
 # text = On 3 November, NASA administrator Michael Griffin told the US house science committee that the agency expects to invest about $500 million in the commercial cargo and crew project over five years.
 1	On	on	ADP	IN	_	3	case	3:case	_
-2	3	3	NUM	CD	NumType=Card	3	nummod	3:nummod	_
+2	3	3	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
 3	November	November	PROPN	NNP	Number=Sing	9	obl	9:obl:on	SpaceAfter=No
 4	,	,	PUNCT	,	_	9	punct	9:punct	_
 5	NASA	NASA	PROPN	NNP	Number=Sing	6	compound	6:compound	_
@@ -201,9 +201,9 @@
 9	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 11	US	US	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	house	house	PROPN	NNP	Number=Sing	14	compound	14:compound	_
-13	science	science	PROPN	NNP	Number=Sing	14	compound	14:compound	_
-14	committee	committee	PROPN	NNP	Number=Sing	9	iobj	9:iobj	_
+12	house	House	PROPN	NNP	Number=Sing	14	compound	14:compound	_
+13	science	Science	PROPN	NNP	Number=Sing	14	compound	14:compound	_
+14	committee	Committee	PROPN	NNP	Number=Sing	9	iobj	9:iobj	_
 15	that	that	SCONJ	IN	_	18	mark	18:mark	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	agency	agency	NOUN	NN	Number=Sing	18	nsubj	18:nsubj|20:nsubj:xsubj	_
@@ -212,8 +212,8 @@
 20	invest	invest	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
 21	about	about	ADV	RB	_	22	advmod	22:advmod	_
 22	$	$	SYM	$	_	20	obj	20:obj	SpaceAfter=No
-23	500	500	NUM	CD	NumType=Card	24	compound	24:compound	_
-24	million	million	NUM	CD	NumType=Card	22	nummod	22:nummod	_
+23	500	500	NUM	CD	NumForm=Digit|NumType=Card	24	compound	24:compound	_
+24	million	million	NUM	CD	NumForm=Word|NumType=Card	22	nummod	22:nummod	_
 25	in	in	ADP	IN	_	31	case	31:case	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
 27	commercial	commercial	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
@@ -222,7 +222,7 @@
 30	crew	crew	NOUN	NN	Number=Sing	28	conj	28:conj:and|31:compound	_
 31	project	project	NOUN	NN	Number=Sing	20	obl	20:obl:in	_
 32	over	over	ADP	IN	_	34	case	34:case	_
-33	five	five	NUM	CD	NumType=Card	34	nummod	34:nummod	_
+33	five	five	NUM	CD	NumForm=Word|NumType=Card	34	nummod	34:nummod	_
 34	years	year	NOUN	NNS	Number=Plur	20	obl	20:obl:over	SpaceAfter=No
 35	.	.	PUNCT	.	_	9	punct	9:punct	_
 
@@ -311,7 +311,7 @@
 # text = But seeing how the private sector has been able to successfully transport civilians to the ISS (at about a fifth of the cost), it would come to no surprise if corporate America was able to out perform their bureaucratic friends in government.
 1	But	but	CCONJ	CC	_	29	cc	29:cc	_
 2	seeing	see	VERB	VBG	VerbForm=Ger	29	advcl	29:advcl	_
-3	how	how	SCONJ	WRB	PronType=Int	9	mark	9:mark	_
+3	how	how	ADV	WRB	PronType=Int	9	advmod	9:advmod	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	private	private	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	sector	sector	NOUN	NN	Number=Sing	9	nsubj	9:nsubj|12:nsubj:xsubj	_
@@ -329,7 +329,7 @@
 18	at	at	ADP	IN	_	21	case	21:case	_
 19	about	about	ADV	RB	_	21	advmod	21:advmod	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
-21	fifth	fifth	NOUN	NN	Number=Sing|NumType=Frac	12	obl	12:obl:at	_
+21	fifth	fifth	NOUN	NN	Number=Sing|NumForm=Word|NumType=Frac	12	obl	12:obl:at	_
 22	of	of	ADP	IN	_	24	case	24:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 24	cost	cost	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	SpaceAfter=No
@@ -349,7 +349,7 @@
 38	to	to	PART	TO	_	40	mark	40:mark	_
 39	out	out	ADV	AFX	_	40	advmod	40:advmod	_
 40	perform	perform	VERB	VB	VerbForm=Inf	37	xcomp	37:xcomp	_
-41	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	43	nmod:poss	43:nmod:poss	_
+41	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	43	nmod:poss	43:nmod:poss	_
 42	bureaucratic	bureaucratic	ADJ	JJ	Degree=Pos	43	amod	43:amod	_
 43	friends	friend	NOUN	NNS	Number=Plur	40	obj	40:obj	_
 44	in	in	ADP	IN	_	45	case	45:case	_
@@ -371,7 +371,7 @@
 6	Hidden	Hidden	ADJ	NNP	Degree=Pos	7	amod	7:amod	_
 7	Nook	Nook	PROPN	NNP	Number=Sing	1	obl	1:obl:to	_
 8	at	at	ADP	IN	_	9	case	9:case	_
-9	11/16/2005	11/16/2005	NUM	CD	NumType=Card	1	obl	1:obl:at	_
-10	08:36:00	08:36:00	NUM	CD	NumType=Card	11	nummod	11:nummod	_
-11	AM	am	NOUN	NN	Number=Sing	9	nmod:tmod	9:nmod:tmod	_
+9	11/16/2005	11/16/2005	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:at	_
+10	08:36:00	08:36:00	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
+11	AM	a.m.	NOUN	NN	Number=Sing	9	nmod:tmod	9:nmod:tmod	_
 

@@ -38,10 +38,10 @@
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	laptop	laptop	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	for	for	ADP	IN	_	9	case	9:case	_
-8	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
+8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	girlfriend	girlfriend	NOUN	NN	Number=Sing	4	obl	4:obl:for	_
 10	in	in	ADP	IN	_	11	case	11:case	_
-11	ireland	ireland	PROPN	NNP	Number=Sing	9	nmod	9:nmod:in	SpaceAfter=No
+11	ireland	Ireland	PROPN	NNP	Number=Sing	9	nmod	9:nmod:in	SpaceAfter=No
 12	,	,	PUNCT	,	_	2	punct	2:punct	SpaceAfter=No
 13	would	would	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 14	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj|19:nsubj:xsubj|28:nsubj:xsubj	_
@@ -55,7 +55,7 @@
 22	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	23	nsubj	23:nsubj	_
 23	uses	use	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	acl:relcl	21:acl:relcl	_
 24	for	for	ADP	IN	_	26	case	26:case	_
-25	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
+25	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
 26	pc	pc	NOUN	NN	Number=Sing	23	obl	23:obl:for	_
 27	and	and	CCONJ	CC	_	28	cc	28:cc	_
 28	put	put	VERB	VB	VerbForm=Inf	19	conj	16:xcomp|19:conj:and	_
@@ -82,12 +82,12 @@
 1	Yes	yes	INTJ	UH	_	7	discourse	7:discourse	_
 2	obviously	obviously	ADV	RB	_	7	advmod	7:advmod	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	USB	usb	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
+4	USB	USB	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 6	region	region	NOUN	NN	Number=Sing	7	obl:npmod	7:obl:npmod	_
-7	free	free	ADJ	JJ	Degree=Pos	0	root	0:root	_
-8	which	which	PRON	WDT	PronType=Int	9	nsubj	9:nsubj	_
-9	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	parataxis	7:parataxis	_
+7	free	free	ADJ	JJ	Degree=Pos	0	root	0:root|9:csubj	_
+8	which	which	PRON	WDT	PronType=Rel	9	nsubj	7:ref	_
+9	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	advcl:relcl	7:advcl:relcl	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
 11	can	can	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 12	use	use	VERB	VB	VerbForm=Inf	9	ccomp	9:ccomp	_
@@ -109,7 +109,7 @@
 10	UK	UK	PROPN	NNP	Number=Sing	7	conj	4:obl:in|7:conj	_
 11	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 12	Region	Region	PROPN	NNP	Number=Sing	0	root	0:root	_
-13	2	2	NUM	CD	NumType=Card	12	nummod	12:nummod	_
+13	2	2	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
 14	aka	a.k.a.	ADV	RB	Abbr=Yes	15	advmod	15:advmod	_
 15	PAL	pal	NOUN	NN	Number=Sing	12	appos	12:appos	SpaceAfter=No
 16	.	.	PUNCT	.	_	12	punct	12:punct	_
@@ -144,7 +144,7 @@
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 7	're	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 8	get	get	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:if	_
-9	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
+9	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	girlfriend	girlfriend	NOUN	NN	Number=Sing	8	iobj	8:iobj	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	laptop	laptop	NOUN	NN	Number=Sing	8	obj	8:obj	_
@@ -158,7 +158,7 @@
 19	brand	brand	NOUN	NN	Number=Sing	14	ccomp	14:ccomp	_
 20	a	and	CCONJ	CC	Typo=Yes	22	cc	22:cc	CorrectForm=and
 21	not	not	PART	RB	_	22	advmod	22:advmod	_
-22	something	something	PRON	NN	Number=Sing	19	conj	14:ccomp|19:conj:and	_
+22	something	something	PRON	NN	Number=Sing|PronType=Ind	19	conj	14:ccomp|19:conj:and	_
 23	like	like	ADP	IN	_	24	case	24:case	_
 24	DELL	DELL	PROPN	NNP	Number=Sing	22	nmod	22:nmod:like	SpaceAfter=No
 25	,	,	PUNCT	,	_	24	punct	24:punct	_
@@ -167,7 +167,7 @@
 28	Asus	Asus	PROPN	NNP	Number=Sing	24	list	24:list	SpaceAfter=No
 29	,	,	PUNCT	,	_	24	punct	24:punct	_
 30	eMachines	eMachine	PROPN	NNPS	Number=Plur	24	list	24:list	_
-31	etc	etc	X	FW	_	24	list	24:list	SpaceAfter=No
+31	etc	etc.	NOUN	FW	Abbr=Yes|Number=Sing	24	list	24:list	SpaceAfter=No
 32	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108104015AAGxHNm_ans-0008
@@ -214,11 +214,11 @@
 3	dongle	dongle	NOUN	NN	Number=Sing	5	obl	5:obl:in	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
 5	mean	mean	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:if	_
-6	USB	usb	NOUN	NN	Number=Sing	7	compound	7:compound	_
+6	USB	USB	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	stick	stick	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	then	then	ADV	RB	PronType=Dem	14	advmod	14:advmod	_
 9	yes	yes	INTJ	UH	_	14	discourse	14:discourse	_
-10	USB	usb	NOUN	NN	Number=Sing	11	compound	11:compound	_
+10	USB	USB	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	sticks	stick	NOUN	NNS	Number=Plur	14	nsubj	14:nsubj	_
 12	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
@@ -226,12 +226,12 @@
 15	any	anywhere	ADV	GW	Typo=Yes	14	advmod	14:advmod	CorrectForm=anywhere
 16	were	_	X	RB	_	15	goeswith	15:goeswith	_
 17	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
-18	go	go	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	acl:relcl	15:acl:relcl	_
+18	go	go	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	advcl:relcl	15:advcl:relcl	_
 19	:)	:)	SYM	NFP	_	14	discourse	14:discourse	_
 20	hope	hope	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	parataxis	5:parataxis	_
 21	that	that	PRON	DT	Number=Sing|PronType=Dem	22	nsubj	22:nsubj	_
 22	answered	answer	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	ccomp	20:ccomp	_
-23	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
+23	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
 24	question	question	NOUN	NN	Number=Sing	22	obj	22:obj	SpaceAfter=No
 25	.	.	PUNCT	.	_	14	punct	14:punct	_
 

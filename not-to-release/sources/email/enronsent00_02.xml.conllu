@@ -43,8 +43,8 @@
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	2:det	_
 2	afternoon	afternoon	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
 3	at	at	ADP	IN	_	5	case	5:case	_
-4	2	2	NUM	CD	NumType=Card	5	nummod	5:nummod	_
-5	PM	pm	NOUN	NN	Number=Sing	2	nmod	2:nmod:at	_
+4	2	2	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
+5	PM	p.m.	NOUN	NN	Number=Sing	2	nmod	2:nmod:at	_
 6	or	or	CCONJ	CC	_	7	cc	7:cc	_
 7	later	late	ADV	RBR	Degree=Cmp	5	conj	2:nmod:at|5:conj:or	_
 8	would	would	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
@@ -119,7 +119,7 @@
 9	tax	tax	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	basis	basis	NOUN	NN	Number=Sing	17	nsubj:pass	17:nsubj:pass	_
 11	for	for	ADP	IN	_	14	case	14:case	_
-12	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
+12	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 13	share	share	NOUN	NN	Number=Sing	14	compound	14:compound	_
 14	distribution	distribution	NOUN	NN	Number=Sing	10	nmod	10:nmod:for	_
 15	will	will	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
@@ -178,11 +178,11 @@
 6	shares	share	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 7	reflected	reflect	VERB	VBN	Tense=Past|VerbForm=Part	6	acl	6:acl	_
 8	on	on	ADP	IN	_	11	case	11:case	_
-9	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-10	9/30/01	9/30/01	NUM	CD	NumType=Card	11	nmod:tmod	11:nmod:tmod	_
+9	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+10	9/30/01	9/30/01	NUM	CD	NumForm=Digit|NumType=Card	11	nmod:tmod	11:nmod:tmod	_
 11	statement	statement	NOUN	NN	Number=Sing	7	obl	7:obl:on	_
 12	(	(	PUNCT	-LRB-	_	6	punct	6:punct	SpaceAfter=No
-13	6,606	6606	NUM	CD	NumType=Card	14	nummod	14:nummod	_
+13	6,606	6606	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	_
 14	shares	share	NOUN	NNS	Number=Plur	6	appos	6:appos	_
 15	plus	plus	CCONJ	CC	_	16	cc	16:cc	_
 16	cash	cash	NOUN	NN	Number=Sing	14	conj	6:appos|14:conj:plus	_
@@ -220,7 +220,7 @@
 2	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj|4:nsubj:xsubj	_
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-5	you	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+5	you	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs|Typo=Yes	6	nmod:poss	6:nmod:poss	CorrectForm=your
 6	preference	preference	NOUN	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -276,7 +276,7 @@
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|6:nsubj:xsubj	_
 2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	become	become	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
-4	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+4	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 5	department	department	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	expert	expert	NOUN	NN	Number=Sing	3	xcomp	3:xcomp	_
 7	on	on	ADP	IN	_	10	case	10:case	_
@@ -404,7 +404,7 @@
 5	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 6	n't	not	PART	RB	_	7	advmod	7:advmod	_
 7	understand	understand	VERB	VB	VerbForm=Inf	0	root	0:root	_
-8	which	which	DET	WDT	PronType=Int	9	det	9:det	_
+8	which	which	DET	WDT	PronType=Int	9	det	9:det	ManuallyChecked=PronType
 9	date	date	NOUN	NN	Number=Sing	12	nsubj:pass	12:nsubj:pass|14:nsubj:xsubj|18:nsubj:xsubj	_
 10	will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 11	be	be	AUX	VB	VerbForm=Inf	12	aux:pass	12:aux:pass	_
@@ -415,7 +415,7 @@
 16	value	value	NOUN	NN	Number=Sing	14	obj	14:obj	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
 18	calculate	calculate	VERB	VB	VerbForm=Inf	14	conj	12:xcomp|14:conj:and	_
-19	how	how	SCONJ	WRB	PronType=Int	20	mark	20:mark	_
+19	how	how	ADV	WRB	PronType=Int	20	advmod	20:advmod	_
 20	many	many	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 21	shares	share	NOUN	NNS	Number=Plur	18	obj	18:obj	SpaceAfter=No
 22	.	.	PUNCT	.	_	7	punct	7:punct	_
@@ -426,7 +426,7 @@
 2	plan	plan	NOUN	NN	Number=Sing	3	compound	3:compound	_
 3	document	document	NOUN	NN	Number=Sing	0	root	0:root	_
 4	under	under	ADP	IN	_	5	case	5:case	_
-5	VII	vii	NUM	CD	NumType=Card	3	nmod	3:nmod:under	SpaceAfter=No
+5	VII	VII	NUM	CD	NumForm=Roman|NumType=Card	3	nmod	3:nmod:under	SpaceAfter=No
 6	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent00_02-0027
@@ -462,7 +462,7 @@
 29	on	on	ADP	IN	_	31	case	31:case	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
 31	January	January	PROPN	NNP	Number=Sing	23	nmod	23:nmod:on	_
-32	1	1	NUM	CD	NumType=Card	31	nummod	31:nummod	_
+32	1	1	NUM	CD	NumForm=Digit|NumType=Card	31	nummod	31:nummod	_
 33	before	before	ADP	IN	_	35	case	35:case	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
 35	date	date	NOUN	NN	Number=Sing	31	nmod	31:nmod:before	_
@@ -500,7 +500,7 @@
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	numbers	number	NOUN	NNS	Number=Plur	9	obl	9:obl:through	_
 13	on	on	ADP	IN	_	15	case	15:case	_
-14	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
+14	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	account	account	NOUN	NN	Number=Sing	12	nmod	12:nmod:on	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -523,7 +523,7 @@
 1	Let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obj	1:obj|3:nsubj:xsubj	_
 3	know	know	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
-4	when	when	SCONJ	WRB	PronType=Int	6	mark	6:mark	_
+4	when	when	ADV	WRB	PronType=Int	6	advmod	6:advmod	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
 6	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:when	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
@@ -539,14 +539,14 @@
 3	expecting	expect	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	pay	pay	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-6	something	something	PRON	NN	Number=Sing	5	obj	5:obj	_
+6	something	something	PRON	NN	Number=Sing|PronType=Ind	5	obj	5:obj	_
 7	in	in	ADP	IN	_	14	case	14:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 9	$	$	SYM	$	_	14	compound	14:compound	SpaceAfter=No
-10	3,	3,	NUM	CD	NumType=Card	9	nummod	9:nummod	SpaceAfter=No
+10	3,	3,	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	SpaceAfter=No
 11	to	to	ADP	IN	_	12	case	12:case	_
 12	$	$	SYM	$	_	9	nmod	9:nmod:to	SpaceAfter=No
-13	5,000	5000	NUM	CD	NumType=Card	12	nummod	12:nummod	_
+13	5,000	5000	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
 14	range	range	NOUN	NN	Number=Sing	6	nmod	6:nmod:in	SpaceAfter=No
 15	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -574,7 +574,7 @@
 # text = It is my understanding that some rock will be removed and replaced with siding.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	expl	4:expl	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
-3	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	understanding	understanding	NOUN	NN	Number=Sing	0	root	0:root	_
 5	that	that	SCONJ	IN	_	10	mark	10:mark	_
 6	some	some	DET	DT	_	7	det	7:det	_
@@ -707,7 +707,7 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	promotional	promotional	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	on	on	ADP	IN	_	10	case	10:case	_
-7	10300	10300	NUM	CD	NumType=Card	10	nummod	10:nummod	_
+7	10300	10300	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	_
 8	Heritage	Heritage	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 9	Office	Office	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	Building	Building	PROPN	NNP	Number=Sing	5	nmod	5:nmod:on	_
@@ -824,16 +824,16 @@
 
 # sent_id = email-enronsent00_02-0055
 # text = Is this how your clients usually evaluate these properties?
-1	Is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-2	this	this	PRON	DT	Number=Sing|PronType=Dem	1	nsubj	1:nsubj	_
-3	how	how	ADV	WRB	PronType=Int	7	advmod	7:advmod	_
-4	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+1	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
+2	this	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	3:nsubj	_
+3	how	how	ADV	WRB	PronType=Rel	0	root	0:root	_
+4	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	clients	client	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
 6	usually	usually	ADV	RB	_	7	advmod	7:advmod	_
-7	evaluate	evaluate	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	ccomp	1:ccomp	_
+7	evaluate	evaluate	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	advcl:relcl	3:advcl:relcl	_
 8	these	this	DET	DT	Number=Plur|PronType=Dem	9	det	9:det	_
 9	properties	property	NOUN	NNS	Number=Plur	7	obj	7:obj	SpaceAfter=No
-10	?	?	PUNCT	.	_	1	punct	1:punct	_
+10	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent00_02-0056
 # text = The Roma deal looks much better.

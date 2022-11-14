@@ -13,7 +13,7 @@
 # sent_id = reviews-164937-0002
 # newpar id = reviews-164937-p0002
 # text = What I love most about this place, other than the food, is that eating here makes you feel like you're in a small town rather than Baltimore.
-1	What	what	PRON	WP	PronType=Int	14	nsubj	14:nsubj	_
+1	What	what	PRON	WP	PronType=Int	18	nsubj:outer	18:nsubj:outer	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 3	love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
 4	most	most	ADV	RBS	Degree=Sup	3	advmod	3:advmod	_
@@ -25,12 +25,12 @@
 10	than	than	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	food	food	NOUN	NN	Number=Sing	9	obl	9:obl:than	SpaceAfter=No
-13	,	,	PUNCT	,	_	14	punct	14:punct	_
-14	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+13	,	,	PUNCT	,	_	18	punct	18:punct	_
+14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
 15	that	that	SCONJ	IN	_	18	mark	18:mark	_
 16	eating	eat	VERB	VBG	VerbForm=Ger	18	csubj	18:csubj	_
 17	here	here	ADV	RB	PronType=Dem	16	advmod	16:advmod	_
-18	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	ccomp	14:ccomp	_
+18	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	20:nsubj	_
 20	feel	feel	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	18	ccomp	18:ccomp	_
 21	like	like	SCONJ	IN	_	27	mark	27:mark	_
@@ -44,7 +44,7 @@
 28	rather	rather	ADV	RB	_	30	cc	30:cc	_
 29	than	than	ADP	IN	_	28	fixed	28:fixed	_
 30	Baltimore	Baltimore	PROPN	NNP	Number=Sing	27	conj	20:advcl:in|27:conj:rather_than	SpaceAfter=No
-31	.	.	PUNCT	.	_	14	punct	14:punct	_
+31	.	.	PUNCT	.	_	18	punct	18:punct	_
 
 # sent_id = reviews-164937-0003
 # text = The owners are really nice, they serve good food at a good price, and the option to eat outside on the deck (esp on the weekend whether there is hardly any traffic) is great.
@@ -90,11 +90,11 @@
 
 # sent_id = reviews-164937-0004
 # text = One of my top 5 places to eat in Baltimore.
-1	One	one	NUM	CD	NumType=Card	0	root	0:root	_
+1	One	one	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	_
 2	of	of	ADP	IN	_	6	case	6:case	_
-3	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 4	top	top	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-5	5	5	NUM	CD	NumType=Card	6	nummod	6:nummod	_
+5	5	5	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
 6	places	place	NOUN	NNS	Number=Plur	1	nmod	1:nmod:of	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	eat	eat	VERB	VB	VerbForm=Inf	6	acl	6:acl:to	_

@@ -25,7 +25,7 @@
 8	sour	sour	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 9	again	again	ADV	RB	_	8	advmod	8:advmod	_
 10	after	after	ADP	IN	_	13	case	13:case	_
-11	it's	it	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	13	nmod:poss	13:nmod:poss	CorrectForm=its
+11	it's	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	13	nmod:poss	13:nmod:poss	CorrectForm=its
 12	devastating	devastating	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	loss	loss	NOUN	NN	Number=Sing	8	obl	8:obl:after	_
 14	from	from	ADP	IN	_	17	case	17:case	_
@@ -35,7 +35,7 @@
 18	which	which	PRON	WDT	PronType=Rel	19	nsubj	17:ref	_
 19	occurred	occur	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	acl:relcl	17:acl:relcl	_
 20	nearly	nearly	ADV	RB	_	21	advmod	21:advmod	_
-21	two	two	NUM	CD	NumType=Card	22	nummod	22:nummod	_
+21	two	two	NUM	CD	NumForm=Word|NumType=Card	22	nummod	22:nummod	_
 22	years	year	NOUN	NNS	Number=Plur	23	obl:npmod	23:obl:npmod	_
 23	ago	ago	ADV	RB	_	19	advmod	19:advmod	SpaceAfter=No
 24	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -76,15 +76,15 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 2	most	most	ADV	RBS	Degree=Sup	3	advmod	3:advmod	_
 3	important	important	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	question	question	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+4	question	question	NOUN	NN	Number=Sing	11	nsubj:outer	11:nsubj:outer	_
 5-6	isn't	_	_	_	_	_	_	_	_
-5	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-6	n't	not	PART	RB	_	5	advmod	5:advmod	_
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
+6	n't	not	PART	RB	_	11	advmod	11:advmod	_
 7	whether	whether	SCONJ	IN	_	11	mark	11:mark	_
 8	Discovery	Discovery	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj|13:nsubj:xsubj	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	technically	technically	ADV	RB	_	11	advmod	11:advmod	_
-11	ready	ready	ADJ	JJ	Degree=Pos	5	ccomp	5:ccomp	_
+11	ready	ready	ADJ	JJ	Degree=Pos	0	root	0:root	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	fly	fly	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	with	with	ADP	IN	_	17	case	17:case	_
@@ -99,9 +99,9 @@
 23	whether	whether	SCONJ	IN	_	28	mark	28:mark	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
 25	agency	agency	NOUN	NN	Number=Sing	28	nsubj	28:nsubj	_
-26	itself	itself	PRON	PRP	Gender=Neut|Number=Sing|Person=3|PronType=Emp|Reflex=Yes	25	nmod:npmod	25:nmod:npmod	_
+26	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Emp|Reflex=Yes	25	nmod:npmod	25:nmod:npmod	_
 27	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	28	aux	28:aux	_
-28	learned	learn	VERB	VBN	Tense=Past|VerbForm=Part	5	conj	5:conj:but	_
+28	learned	learn	VERB	VBN	Tense=Past|VerbForm=Part	11	conj	11:conj:but	_
 29	from	from	ADP	IN	_	32	case	32:case	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
 31	crucial	crucial	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
@@ -135,7 +135,7 @@
 59	budget	budget	NOUN	NN	Number=Sing	61	compound	61:compound	SpaceAfter=No
 60	-	-	PUNCT	HYPH	_	61	punct	61:punct	SpaceAfter=No
 61	cutting	cutting	NOUN	NN	Number=Sing	57	conj	52:obl:for|57:conj:and	SpaceAfter=No
-62	.	.	PUNCT	.	_	5	punct	5:punct	_
+62	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = newsgroup-groups.google.com_hiddennook_04d8cc994875d454_ENG_20050207_012300-0006
 # text = I hope so.
@@ -166,7 +166,7 @@
 18	in	in	ADP	IN	_	20	case	20:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	morning	morning	NOUN	NN	Number=Sing	13	obl	13:obl:in	_
-21	when	when	SCONJ	WRB	PronType=Int	25	mark	25:mark	_
+21	when	when	ADV	WRB	PronType=Int	25	advmod	25:advmod	_
 22	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
 23	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	25	cop	25:cop	_
 24	in	in	ADP	IN	_	25	case	25:case	_
@@ -188,10 +188,10 @@
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	cosmos	cosmos	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
-12	something	something	PRON	NN	Number=Sing	4	advcl	4:advcl:as|14:nsubj	_
+12	something	something	PRON	NN	Number=Sing|PronType=Ind	4	advcl	4:advcl:as|14:nsubj	_
 13	that	that	PRON	WDT	PronType=Rel	14	nsubj	12:ref	_
 14	keeps	keep	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	acl:relcl	12:acl:relcl	_
-15	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
+15	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 16	imagination	imagination	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
 17	going	go	VERB	VBG	VerbForm=Ger	14	ccomp	14:ccomp	_
 18	as	as	ADP	IN	_	20	case	20:case	_
@@ -202,7 +202,7 @@
 # sent_id = newsgroup-groups.google.com_hiddennook_04d8cc994875d454_ENG_20050207_012300-0009
 # text = Maybe one day they will allow space tourism, (hopefully that will be in the near future)although I would recommend that NASA build new shuttles instead of trying to preserve the older ones.
 1	Maybe	maybe	ADV	RB	_	6	advmod	6:advmod	_
-2	one	one	NUM	CD	NumType=Card	3	nummod	3:nummod	_
+2	one	one	NUM	CD	NumForm=Word|NumType=Card	3	nummod	3:nummod	_
 3	day	day	NOUN	NN	Number=Sing	6	obl:tmod	6:obl:tmod	_
 4	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
 5	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
@@ -285,7 +285,7 @@
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
 3	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	encouraging	encourage	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
-5	everyone	everyone	PRON	NN	Number=Sing	4	obj	4:obj|7:nsubj:xsubj	_
+5	everyone	everyone	PRON	NN	Number=Sing|PronType=Tot	4	obj	4:obj|7:nsubj:xsubj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	come	come	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 8	forward	forward	ADV	RB	_	7	advmod	7:advmod	_
@@ -374,7 +374,7 @@
 19	in	in	ADP	IN	_	20	case	20:case	_
 20	morale	morale	NOUN	NN	Number=Sing	18	nmod	18:nmod:in	_
 21	with	with	ADP	IN	_	24	case	24:case	_
-22	two	two	NUM	CD	NumType=Card	24	nummod	24:nummod	_
+22	two	two	NUM	CD	NumForm=Word|NumType=Card	24	nummod	24:nummod	_
 23	important	important	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 24	deliveries	delivery	NOUN	NNS	Number=Plur	13	obl	13:obl:with	_
 25	for	for	SCONJ	IN	_	30	mark	30:mark	_
@@ -387,7 +387,7 @@
 
 # sent_id = newsgroup-groups.google.com_hiddennook_04d8cc994875d454_ENG_20050207_012300-0015
 # text = One is a special tool to detect damage to the thermal-protective tile while in orbit - something the Columbia crew would have welcomed.
-1	One	one	PRON	PRP	_	5	nsubj	5:nsubj	_
+1	One	one	NUM	CD	NumForm=Word|NumType=Card	5	nsubj	5:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 4	special	special	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
@@ -405,7 +405,7 @@
 16	in	in	ADP	IN	_	17	case	17:case	_
 17	orbit	orbit	NOUN	NN	Number=Sing	7	advcl	7:advcl:while	_
 18	-	-	PUNCT	,	_	5	punct	5:punct	_
-19	something	something	PRON	NN	Number=Sing	5	appos	5:appos	_
+19	something	something	PRON	NN	Number=Sing|PronType=Ind	5	appos	5:appos	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 21	Columbia	Columbia	PROPN	NNP	Number=Sing	22	compound	22:compound	_
 22	crew	crew	NOUN	NN	Number=Sing	25	nsubj	25:nsubj	_
@@ -460,7 +460,7 @@
 3	s	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs|Typo=Yes	2	obj	2:obj|4:nsubj:xsubj	CorrectForm='s
 4	hope	hope	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	for	for	ADP	IN	_	7	case	7:case	_
-6	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+6	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	sake	sake	NOUN	NN	Number=Sing	4	obl	4:obl:for	_
 8	(	(	PUNCT	-LRB-	_	7	punct	7:punct	SpaceAfter=No
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
@@ -477,7 +477,7 @@
 20	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	22	nsubj	22:nsubj|26:nsubj	_
 21	can	can	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
 22	redefine	redefine	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	_
-23	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
+23	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
 24	image	image	NOUN	NN	Number=Sing	22	obj	22:obj	_
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_
 26	rekindle	rekindle	VERB	VB	VerbForm=Inf	22	conj	4:ccomp|22:conj:and	_
@@ -509,7 +509,7 @@
 6	Hidden	Hidden	ADJ	NNP	Degree=Pos	7	amod	7:amod	_
 7	Nook	Nook	PROPN	NNP	Number=Sing	1	obl	1:obl:to	_
 8	at	at	ADP	IN	_	11	case	11:case	_
-9	2/7/2005	2/7/2005	NUM	CD	NumType=Card	11	nummod	11:nummod	_
-10	01:09:32	01:09:32	NUM	CD	NumType=Card	11	nummod	11:nummod	_
-11	AM	am	NOUN	NN	Number=Sing	1	obl	1:obl:at	_
+9	2/7/2005	2/7/2005	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
+10	01:09:32	01:09:32	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
+11	AM	a.m.	NOUN	NN	Number=Sing	1	obl	1:obl:at	_
 

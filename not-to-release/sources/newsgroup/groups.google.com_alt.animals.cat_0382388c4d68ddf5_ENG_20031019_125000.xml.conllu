@@ -37,13 +37,13 @@
 # text = -Page 71, 72 and 73 with 48 new pictures of cats and kittens are added to The Cat Album today.
 1	-	-	PUNCT	NFP	_	17	punct	17:punct	SpaceAfter=No
 2	Page	page	NOUN	NN	Number=Sing	17	nsubj:pass	17:nsubj:pass	_
-3	71	71	NUM	CD	NumType=Card	2	nummod	2:nummod	SpaceAfter=No
+3	71	71	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
-5	72	72	NUM	CD	NumType=Card	3	conj	2:nummod|3:conj:and	_
+5	72	72	NUM	CD	NumForm=Digit|NumType=Card	3	conj	2:nummod|3:conj:and	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	73	73	NUM	CD	NumType=Card	3	conj	2:nummod|3:conj:and	_
+7	73	73	NUM	CD	NumForm=Digit|NumType=Card	3	conj	2:nummod|3:conj:and	_
 8	with	with	ADP	IN	_	11	case	11:case	_
-9	48	48	NUM	CD	NumType=Card	11	nummod	11:nummod	_
+9	48	48	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
 10	new	new	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	pictures	picture	NOUN	NNS	Number=Plur	2	nmod	2:nmod:with	_
 12	of	of	ADP	IN	_	13	case	13:case	_
@@ -71,7 +71,7 @@
 1	Now	now	ADV	RB	_	5	advmod	5:advmod	_
 2	more	more	ADJ	JJR	Degree=Cmp|ExtPos=ADV	4	advmod	4:advmod	_
 3	than	than	ADP	IN	_	2	fixed	2:fixed	_
-4	1100	1100	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+4	1100	1100	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
 5	pictures	picture	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
 6	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -104,7 +104,7 @@
 18	find	find	VERB	VB	VerbForm=Inf	13	ccomp	13:ccomp	_
 19	more	more	ADJ	JJR	Degree=Cmp|ExtPos=ADV	21	advmod	21:advmod	_
 20	than	than	ADP	IN	_	19	fixed	19:fixed	_
-21	1100	1100	NUM	CD	NumType=Card	22	nummod	22:nummod	_
+21	1100	1100	NUM	CD	NumForm=Digit|NumType=Card	22	nummod	22:nummod	_
 22	pictures	picture	NOUN	NNS	Number=Plur	18	obj	18:obj	_
 23	of	of	ADP	IN	_	25	case	25:case	_
 24	cute	cute	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
@@ -139,28 +139,28 @@
 # sent_id = newsgroup-groups.google.com_alt.animals.cat_0382388c4d68ddf5_ENG_20031019_125000-0011
 # text = The idea about this site is that the visitors can send in their own pictures and get them added to the album.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	idea	idea	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
+2	idea	idea	NOUN	NN	Number=Sing	11	nsubj:outer	11:nsubj:outer|17:nsubj:outer	_
 3	about	about	ADP	IN	_	5	case	5:case	_
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
 5	site	site	NOUN	NN	Number=Sing	2	nmod	2:nmod:about	_
-6	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 7	that	that	SCONJ	IN	_	11	mark	11:mark	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	visitors	visitor	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj|17:nsubj	_
 10	can	can	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
-11	send	send	VERB	VB	VerbForm=Inf	6	ccomp	6:ccomp	_
+11	send	send	VERB	VB	VerbForm=Inf	0	root	0:root	_
 12	in	in	ADV	RB	_	11	advmod	11:advmod	_
-13	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
+13	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 14	own	own	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	pictures	picture	NOUN	NNS	Number=Plur	11	obj	11:obj	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	get	get	VERB	VB	VerbForm=Inf	11	conj	6:ccomp|11:conj:and	_
+17	get	get	VERB	VB	VerbForm=Inf	11	conj	0:root|11:conj:and	_
 18	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	19	nsubj	19:nsubj	_
 19	added	add	VERB	VBN	Tense=Past|VerbForm=Part	17	ccomp	17:ccomp	_
 20	to	to	ADP	IN	_	22	case	22:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 22	album	album	NOUN	NN	Number=Sing	19	obl	19:obl:to	SpaceAfter=No
-23	.	.	PUNCT	.	_	6	punct	6:punct	SpaceAfter=No
+23	.	.	PUNCT	.	_	11	punct	11:punct	SpaceAfter=No
 
 # sent_id = newsgroup-groups.google.com_alt.animals.cat_0382388c4d68ddf5_ENG_20031019_125000-0012
 # text = That way we'll all be part of building a huge archive of cat pictures.
@@ -203,7 +203,7 @@
 # text = Please join our growing family !!!! :-)
 1	Please	please	INTJ	UH	_	2	discourse	2:discourse	_
 2	join	join	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-3	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+3	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 4	growing	grow	VERB	VBG	VerbForm=Ger	5	amod	5:amod	_
 5	family	family	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	!!!!	!!!!	PUNCT	.	_	2	punct	2:punct	_

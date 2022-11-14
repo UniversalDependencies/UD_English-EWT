@@ -4,7 +4,7 @@
 # text = What sort of Hotel could I expect to find in New Delhi/Agra/Varanasi for rs500 per night?
 1	What	what	DET	WDT	PronType=Int	2	det	2:det	_
 2	sort	sort	NOUN	NN	Number=Sing	9	obj	9:obj	_
-3	of	of	ADP	IN	_	2	nmod	2:nmod	_
+3	of	of	ADP	IN	_	4	case	4:case	_
 4	Hotel	hotel	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 5	could	could	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj|9:nsubj:xsubj	_
@@ -20,7 +20,7 @@
 16	Varanasi	Varanasi	PROPN	NNP	Number=Sing	12	conj	9:obl:in|12:conj	_
 17	for	for	ADP	IN	_	18	case	18:case	_
 18	rs	rs	SYM	$	_	9	obl	9:obl:for	SpaceAfter=No
-19	500	500	NUM	CD	NumType=Card	18	nummod	18:nummod	_
+19	500	500	NUM	CD	NumForm=Digit|NumType=Card	18	nummod	18:nummod	_
 20	per	per	ADP	IN	_	21	case	21:case	_
 21	night	night	NOUN	NN	Number=Sing	18	nmod	18:nmod:per	SpaceAfter=No
 22	?	?	PUNCT	.	_	7	punct	7:punct	_
@@ -64,7 +64,7 @@
 27	get	get	VERB	VB	VerbForm=Inf	20	ccomp	20:ccomp	_
 28	for	for	ADP	IN	_	29	case	29:case	_
 29	Rs	rs	SYM	$	_	27	obl	27:obl:for	_
-30	500	500	NUM	CD	NumType=Card	29	nummod	29:nummod	_
+30	500	500	NUM	CD	NumForm=Digit|NumType=Card	29	nummod	29:nummod	_
 31	per	per	ADP	IN	_	32	case	32:case	_
 32	person	person	NOUN	NN	Number=Sing	29	nmod	29:nmod:per	_
 33	per	per	ADP	IN	_	34	case	34:case	_
@@ -76,7 +76,7 @@
 1	There	there	PRON	EX	_	3	expl	3:expl	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	_
-4	four	four	NUM	CD	NumType=Card	3	nsubj	3:nsubj	_
+4	four	four	NUM	CD	NumForm=Word|NumType=Card	3	nsubj	3:nsubj	_
 5	of	of	ADP	IN	_	6	case	6:case	_
 6	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	4	nmod	4:nmod:of	_
 7	so	so	ADV	RB	_	12	advmod	12:advmod	_
@@ -86,12 +86,12 @@
 11	be	be	AUX	VB	VerbForm=Inf	12	aux	12:aux	_
 12	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	3	parataxis	3:parataxis	_
 13	at	at	ADP	IN	_	16	case	16:case	_
-14	2	2	NUM	CD	NumType=Card	16	nummod	16:nummod	_
+14	2	2	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	_
 15	twin	twin	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	rooms	room	NOUN	NNS	Number=Plur	12	obl	12:obl:at	_
 17	for	for	ADP	IN	_	18	case	18:case	_
 18	Rs	rs	SYM	$	_	16	nmod	16:nmod:for	SpaceAfter=No
-19	1000	1000	NUM	CD	NumType=Card	18	nummod	18:nummod	SpaceAfter=No
+19	1000	1000	NUM	CD	NumForm=Digit|NumType=Card	18	nummod	18:nummod	SpaceAfter=No
 20	,	,	PUNCT	,	_	16	punct	16:punct	_
 21	close	close	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 22	to	to	ADP	IN	_	24	case	24:case	_
@@ -152,7 +152,7 @@
 3	advance	advance	NOUN	NN	Number=Sing	1	nmod	1:nmod:in	_
 4	for	for	SCONJ	IN	_	5	mark	5:mark	_
 5	sharing	share	VERB	VBG	VerbForm=Ger	1	acl	1:acl:for	_
-6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	experience	experience	NOUN	NN	Number=Sing	5	obj	5:obj	SpaceAfter=No
 8	!	!	PUNCT	.	_	1	punct	1:punct	_
 
@@ -212,7 +212,7 @@
 1	Rooms	room	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
 2	start	start	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	from	from	ADP	IN	_	4	case	4:case	_
-4	500	500	NUM	CD	NumType=Card	2	obl	2:obl:from	_
+4	500	500	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:from	_
 5	per	per	ADP	IN	_	6	case	6:case	_
 6	double	double	NOUN	NN	Number=Sing	4	nmod	4:nmod:per	SpaceAfter=No
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -271,11 +271,11 @@
 6	starting	start	VERB	VBG	VerbForm=Ger	5	acl	5:acl	_
 7	with	with	ADP	IN	_	9	case	9:case	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
-9	P	p	NOUN	NN	Number=Sing	6	obl	6:obl:with	SpaceAfter=No
+9	P	P	NOUN	NN	Number=Sing	6	obl	6:obl:with	SpaceAfter=No
 10	,	,	PUNCT	,	_	5	punct	5:punct	_
 11	many	many	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 12	tourist	tourist	NOUN	NN	Number=Sing	13	compound	13:compound	_
-13	hotels	hotel	NOUN	NNS	Number=Plur	5	acl:relcl	5:acl:relcl	_
+13	hotels	hotel	NOUN	NNS	Number=Plur	5	parataxis	5:parataxis	_
 14	there	there	ADV	RB	PronType=Dem	13	advmod	13:advmod	_
 15	and	and	CCONJ	CC	_	20	cc	20:cc	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
@@ -407,7 +407,7 @@
 4	easy	easy	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	find	find	VERB	VB	VerbForm=Inf	4	csubj	4:csubj	_
-7	something	something	PRON	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
+7	something	something	PRON	NN	Number=Sing|PronType=Ind	6	obj	6:obj	SpaceAfter=No
 8	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108064026AA86V9T_ans-0022
@@ -425,7 +425,7 @@
 
 # sent_id = answers-20111108064026AA86V9T_ans-0023
 # text = One night is enough!)
-1	One	one	NUM	CD	NumType=Card	2	nummod	2:nummod	_
+1	One	one	NUM	CD	NumForm=Word|NumType=Card	2	nummod	2:nummod	_
 2	night	night	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 4	enough	enough	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
@@ -447,7 +447,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	ve	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	paid	pay	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
-4	500	500	NUM	CD	NumType=Card	3	obj	3:obj	_
+4	500	500	NUM	CD	NumForm=Digit|NumType=Card	3	obj	3:obj	_
 5	for	for	ADP	IN	_	8	case	8:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	double	double	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
@@ -467,7 +467,7 @@
 2	luck	luck	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	enjoy	enjoy	VERB	VB	Mood=Imp|VerbForm=Fin	2	parataxis	2:parataxis	_
-5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+5	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	time	time	NOUN	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No
 7	!	!	PUNCT	.	_	2	punct	2:punct	_
 
@@ -483,7 +483,7 @@
 7	hotel	hotel	NOUN	NN	Number=Sing	3	obj	3:obj	_
 8	for	for	ADP	IN	_	9	case	9:case	_
 9	Rs	rs	SYM	$	_	3	obl	3:obl:for	_
-10	1000	1000	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+10	1000	1000	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 11	per	per	ADP	IN	_	12	case	12:case	_
 12	night	night	NOUN	NN	Number=Sing	9	nmod	9:nmod:per	_
 13	in	in	ADP	IN	_	15	case	15:case	_
@@ -608,7 +608,7 @@
 6	Sandeep	Sandeep	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 7	Hotel	Hotel	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
-9	you	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs|Typo=Yes	10	nmod:poss	10:nmod:poss	CorrectForm=your
+9	you	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs|Typo=Yes	10	nmod:poss	10:nmod:poss	CorrectForm=your
 10	choice	choice	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 11	...	...	PUNCT	.	_	10	punct	10:punct	_
 

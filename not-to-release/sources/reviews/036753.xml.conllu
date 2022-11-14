@@ -22,8 +22,8 @@
 # text = I paid 2k cash for a truck with a blown motor.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	paid	pay	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	2	2	NUM	CD	NumType=Card	4	compound	4:compound	SpaceAfter=No
-4	k	k	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+3	2	2	NUM	CD	NumForm=Digit|NumType=Card	4	compound	4:compound	SpaceAfter=No
+4	k	thousand	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	5	nummod	5:nummod	_
 5	cash	cash	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	for	for	ADP	IN	_	8	case	8:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
@@ -36,7 +36,7 @@
 
 # sent_id = reviews-036753-0004
 # text = Their so called mechanic said the engine was good and "There is nothing mechanicly wrong with this truck".
-1	Their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+1	Their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 2	so	so	ADV	RB	_	3	compound	3:compound	_
 3	called	call	VERB	VBN	Tense=Past|VerbForm=Part	4	amod	4:amod	_
 4	mechanic	mechanic	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
@@ -49,7 +49,7 @@
 11	"	"	PUNCT	``	_	13	punct	13:punct	SpaceAfter=No
 12	There	there	PRON	EX	_	13	expl	13:expl	_
 13	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	conj	5:ccomp|9:conj:and	_
-14	nothing	nothing	PRON	NN	Number=Sing	13	nsubj	13:nsubj	_
+14	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	13	nsubj	13:nsubj	_
 15	mechanicly	mechanically	ADV	RB	Typo=Yes	16	advmod	16:advmod	CorrectForm=mechanically
 16	wrong	wrong	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 17	with	with	ADP	IN	_	19	case	19:case	_
@@ -99,7 +99,7 @@
 5	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj	_
 7	to	to	ADP	IN	_	10	case	10:case	_
-8	2	2	NUM	CD	NumType=Card	10	nummod	10:nummod	_
+8	2	2	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	_
 9	auto	auto	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	shops	shop	NOUN	NNS	Number=Plur	5	obl	5:obl:to	_
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
@@ -128,7 +128,7 @@
 8	on	on	ADP	IN	_	9	case	9:case	_
 9	hold	hold	NOUN	NN	Number=Sing	7	nmod	7:nmod:on	_
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
-11	noone	no-one	NOUN	NN	Number=Sing|Typo=Yes	12	nsubj	12:nsubj	CorrectForm=no-one
+11	noone	no-one	PRON	NN	Number=Sing|PronType=Neg|Typo=Yes	12	nsubj	12:nsubj	CorrectForm=no-one
 12	calls	call	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
 13	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	12	obj	12:obj	_
 14	back	back	ADV	RB	_	12	advmod	12:advmod	SpaceAfter=No
@@ -149,10 +149,10 @@
 10	gon	go	VERB	VBG	Abbr=Yes|Tense=Pres|VerbForm=Part	0	root	0:root	_
 11	na	to	PART	TO	Abbr=Yes	12	mark	12:mark	_
 12	take	take	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
-13	2,000	2000	NUM	CD	NumType=Card	14	nummod	14:nummod	_
+13	2,000	2000	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	_
 14	bucks	buck	NOUN	NNS	Number=Plur	12	obj	12:obj	_
 15	from	from	ADP	IN	_	16	case	16:case	_
-16	someone	someone	PRON	NN	Number=Sing	12	obl	12:obl:from|18:nsubj	_
+16	someone	someone	PRON	NN	Number=Sing|PronType=Ind	12	obl	12:obl:from|18:nsubj	_
 17	that	that	PRON	WDT	PronType=Rel	18	nsubj	16:ref	_
 18	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	acl:relcl	16:acl:relcl	_
 19	that	that	DET	DT	Number=Sing|PronType=Dem	20	det	20:det	_
@@ -161,9 +161,9 @@
 22	work	work	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
 23	and	and	CCONJ	CC	_	24	cc	24:cc	_
 24	support	support	VERB	VB	VerbForm=Inf	22	conj	18:xcomp|22:conj:and	_
-25	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
+25	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
 26	family	family	NOUN	NN	Number=Sing	24	obj	24:obj	_
-27	when	when	SCONJ	WRB	PronType=Int	29	mark	29:mark	_
+27	when	when	ADV	WRB	PronType=Int	29	advmod	29:advmod	_
 28	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	29	nsubj	29:nsubj	_
 29	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:when	_
 30-31	its	_	_	_	_	_	_	_	_
@@ -182,7 +182,7 @@
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
 3	lasted	last	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	advcl	8:advcl:if	_
-4	1	1	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+4	1	1	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
 5	month	month	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
 6	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj|13:nsubj	_
 7	could	could	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
@@ -190,7 +190,7 @@
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	expl	8:expl	_
 10	up	up	ADP	RP	_	8	compound:prt	8:compound:prt	_
 11	but	but	CCONJ	CC	_	13	cc	13:cc	_
-12	1	1	NUM	CD	NumType=Card	13	nummod	13:nummod	_
+12	1	1	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
 13	day	day	NOUN	NN	Number=Sing	8	conj	8:conj:but	SpaceAfter=No
 14	?	?	PUNCT	.	_	8	punct	8:punct	SpaceAfter=No
 
@@ -206,14 +206,14 @@
 # sent_id = reviews-036753-0012
 # text = Buy your kids somethin nice with my 2k bucks.
 1	Buy	buy	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
+2	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
 3	kids	kid	NOUN	NNS	Number=Plur	1	iobj	1:iobj	_
-4	somethin	something	NOUN	NN	Abbr=Yes|Number=Sing	1	obj	1:obj	_
+4	somethin	something	PRON	NN	Abbr=Yes|Number=Sing|PronType=Ind	1	obj	1:obj	CorrectForm=something
 5	nice	nice	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 6	with	with	ADP	IN	_	10	case	10:case	_
-7	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-8	2	2	NUM	CD	NumType=Card	9	compound	9:compound	SpaceAfter=No
-9	k	k	NUM	CD	NumType=Card	10	nummod	10:nummod	_
+7	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
+8	2	2	NUM	CD	NumForm=Digit|NumType=Card	9	compound	9:compound	SpaceAfter=No
+9	k	thousand	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	10	nummod	10:nummod	_
 10	bucks	buck	NOUN	NNS	Number=Plur	1	obl	1:obl:with	SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 

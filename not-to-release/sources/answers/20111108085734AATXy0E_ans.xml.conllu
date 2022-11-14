@@ -35,7 +35,7 @@
 12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	iobj	11:iobj	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 14	way	way	NOUN	NN	Number=Sing	11	obj	11:obj	_
-15	u	u	PRON	PRP	_	17	nsubj	17:nsubj	_
+15	u	you	PRON	PRP	Abbr=Yes|Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	CorrectForm=you
 16	would	would	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 17	use	use	VERB	VB	VerbForm=Inf	14	acl:relcl	14:acl:relcl	_
 18	icing	icing	NOUN	NN	Number=Sing	17	obj	17:obj	SpaceAfter=No
@@ -83,7 +83,7 @@
 37	if	if	SCONJ	IN	_	40	mark	40:mark	_
 38	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	40	nsubj	40:nsubj	_
 39	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	40	aux	40:aux	_
-40	building	build	VERB	VBG	Tense=Pres|VerbForm=Part	62	advcl	62:advcl:if	_
+40	building	build	VERB	VBG	Tense=Pres|VerbForm=Part	62	advcl	59:csubj|62:advcl:if	_
 41	up	up	ADP	RP	_	40	compound:prt	40:compound:prt	_
 42	plaster	plaster	NOUN	NN	Number=Sing	40	obj	40:obj	_
 43	(	(	PUNCT	-LRB-	_	46	punct	46:punct	SpaceAfter=No
@@ -99,10 +99,10 @@
 53	do	do	VERB	VB	VerbForm=Inf	40	advcl	40:advcl:to	_
 54	sculpting	sculpting	NOUN	NN	Number=Sing	53	obj	53:obj	SpaceAfter=No
 55	,	,	PUNCT	,	_	53	punct	53:punct	_
-56	which	which	PRON	WDT	PronType=Int	59	nsubj	59:nsubj	_
+56	which	which	PRON	WDT	PronType=Rel	59	nsubj	40:ref	_
 57	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	59	cop	59:cop	_
 58	rather	rather	ADV	RB	_	59	advmod	59:advmod	_
-59	uncommon	uncommon	ADJ	JJ	Degree=Pos	53	parataxis	53:parataxis	SpaceAfter=No
+59	uncommon	uncommon	ADJ	JJ	Degree=Pos	40	advcl:relcl	40:advcl:relcl	SpaceAfter=No
 60	,	,	PUNCT	,	_	62	punct	62:punct	_
 61	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	62	nsubj	62:nsubj	_
 62	keep	keep	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	1	parataxis	1:parataxis	_
@@ -124,7 +124,7 @@
 78	wet	wet	VERB	VB	VerbForm=Inf	76	xcomp	76:xcomp	_
 79	the	the	DET	DT	Definite=Def|PronType=Art	80	det	80:det	_
 80	area	area	NOUN	NN	Number=Sing	78	obj	78:obj	_
-81	where	where	SCONJ	WRB	PronType=Rel	85	mark	85:mark	_
+81	where	where	ADV	WRB	PronType=Rel	85	advmod	85:advmod	_
 82	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	85	nsubj	85:nsubj	_
 83	will	will	AUX	MD	VerbForm=Fin	85	aux	85:aux	_
 84	be	be	AUX	VB	VerbForm=Inf	85	aux	85:aux	_
@@ -140,7 +140,7 @@
 2	of	of	ADP	IN	_	3	case	3:case	_
 3	Paris	Paris	PROPN	NNP	Number=Sing	1	nmod	1:nmod:of	_
 4	does	do	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-5	two	two	NUM	CD	NumType=Card	6	nummod	6:nummod	_
+5	two	two	NUM	CD	NumForm=Word|NumType=Card	6	nummod	6:nummod	_
 6	things	thing	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 
 # sent_id = answers-20111108085734AATXy0E_ans-0005
@@ -187,12 +187,12 @@
 4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 5	set	set	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 6	plaster	plaster	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	mold	mold	NOUN	NN	Number=Sing	19	nsubj	9:nsubj|12:nsubj:xsubj|19:nsubj	_
-8	that	that	PRON	WDT	PronType=Rel	9	nsubj	7:ref	_
-9	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+7	mold	mold	NOUN	NN	Number=Sing	19	nsubj	12:nsubj:pass|19:nsubj	_
+8	that	that	PRON	WDT	PronType=Rel	12	nsubj:pass	7:ref	_
+9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
 10	to	to	PART	TO	_	12	mark	12:mark	_
 11	be	be	AUX	VB	VerbForm=Inf	12	aux:pass	12:aux:pass	_
-12	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	xcomp	9:xcomp	_
+12	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	acl:relcl	7:acl:relcl	_
 13	for	for	ADP	IN	_	16	case	16:case	_
 14	clay	clay	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	slip	slip	NOUN	NN	Number=Sing	16	compound	16:compound	_

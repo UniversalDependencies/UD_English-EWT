@@ -12,7 +12,7 @@
 # sent_id = answers-20111108051456AAQJaXR_ans-0002
 # newpar id = answers-20111108051456AAQJaXR_ans-p0002
 # text = my friends and I are trying to melt bras to make some little figures.
-1	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
+1	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	friends	friend	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj|8:nsubj:xsubj	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	conj	2:conj:and|6:nsubj|8:nsubj:xsubj	_
@@ -75,7 +75,7 @@
 43	brass	brass	NOUN	NN	Number=Sing	44	compound	44:compound	_
 44	scrap	scrap	NOUN	NN	Number=Sing	39	obl	39:obl:with	SpaceAfter=No
 45	,	,	PUNCT	,	_	46	punct	46:punct	_
-46	surounded	suround	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	10	conj	10:conj:and	_
+46	surounded	surround	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|Typo=Yes|VerbForm=Fin	10	conj	10:conj:and	CorrectForm=surrounded
 47	the	the	DET	DT	Definite=Def|PronType=Art	48	det	48:det	_
 48	pipe	pipe	NOUN	NN	Number=Sing	46	obj	46:obj	_
 49	with	with	ADP	IN	_	50	case	50:case	_
@@ -92,15 +92,15 @@
 60	in	in	ADP	IN	_	62	case	62:case	_
 61	the	the	DET	DT	Definite=Def|PronType=Art	62	det	62:det	_
 62	pot	pot	NOUN	NN	Number=Sing	59	nmod	59:nmod:in	SpaceAfter=No
-63	,	,	PUNCT	,	_	3	punct	3:punct	_
-64	everything	everything	PRON	NN	Number=Sing	67	nsubj	67:nsubj|71:nsubj	_
-65	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	67	parataxis	67:parataxis	_
+63	,	,	PUNCT	,	_	65	punct	65:punct	_
+64	everything	everything	PRON	NN	Number=Sing|PronType=Tot	65	nsubj	65:nsubj|67:nsubj:xsubj|71:nsubj	_
+65	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	parataxis	10:parataxis	_
 66	red	red	ADV	RB	_	67	advmod	67:advmod	_
-67	hot	hot	ADJ	JJ	Degree=Pos	3	ccomp	3:ccomp	_
+67	hot	hot	ADJ	JJ	Degree=Pos	65	xcomp	65:xcomp	_
 68	but	but	CCONJ	CC	_	71	cc	71:cc	_
 69	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	71	aux	71:aux	_
 70	not	not	PART	RB	_	71	advmod	71:advmod	_
-71	melt	melt	VERB	VB	VerbForm=Inf	67	conj	3:ccomp|67:conj:but	SpaceAfter=No
+71	melt	melt	VERB	VB	VerbForm=Inf	65	conj	65:conj:but	SpaceAfter=No
 72	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108051456AAQJaXR_ans-0004
@@ -120,7 +120,7 @@
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	start	start	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	with	with	ADP	IN	_	7	case	7:case	_
-7	something	something	PRON	NN	Number=Sing	5	obl	5:obl:with	_
+7	something	something	PRON	NN	Number=Sing|PronType=Ind	5	obl	5:obl:with	_
 8	more	more	ADV	RBR	Degree=Cmp	9	advmod	9:advmod	_
 9	simple	simple	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 10	like	like	ADP	IN	_	11	case	11:case	_
@@ -266,7 +266,7 @@
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	start	start	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	with	with	ADP	IN	_	7	case	7:case	_
-7	something	something	PRON	NN	Number=Sing	5	obl	5:obl:with	_
+7	something	something	PRON	NN	Number=Sing|PronType=Ind	5	obl	5:obl:with	_
 8	more	more	ADV	RBR	Degree=Cmp	9	advmod	9:advmod	_
 9	simple	simple	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 10	like	like	ADP	IN	_	11	case	11:case	_
@@ -304,15 +304,15 @@
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 12	would	would	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
 13	think	think	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
-14	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
-15	charcoal	charcoal	NOUN	NN	Number=Sing	19	nsubj	19:nsubj|21:nsubj:xsubj	_
+14	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
+15	charcoal	charcoal	NOUN	NN	Number=Sing	19	nsubj	19:nsubj|20:nsubj:xsubj	_
 16	just	just	ADV	RB	_	19	advmod	19:advmod	_
 17-18	doesn't	_	_	_	_	_	_	_	_
 17	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
 18	n't	not	PART	RB	_	19	advmod	19:advmod	_
 19	get	get	VERB	VB	VerbForm=Inf	13	ccomp	13:ccomp	_
-20	hot	hot	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
-21	enough	enough	ADJ	JJ	Degree=Pos	19	xcomp	19:xcomp	SpaceAfter=No
+20	hot	hot	ADJ	JJ	Degree=Pos	19	xcomp	19:xcomp	_
+21	enough	enough	ADV	RB	_	20	advmod	20:advmod	SpaceAfter=No
 22	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108051456AAQJaXR_ans-0014
@@ -343,7 +343,7 @@
 24	e.g.	e.g.	ADV	RB	_	28	advmod	28:advmod	_
 25	for	for	ADP	IN	_	26	case	26:case	_
 26	blacksmithing	blacksmithing	NOUN	NN	Number=Sing	28	obl	28:obl:for	_
-27	one	one	PRON	PRP	_	28	nsubj	28:nsubj	_
+27	one	one	PRON	PRP	Number=Sing|Person=3|PronType=Prs	28	nsubj	28:nsubj	_
 28	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	_
 29	coal	coal	NOUN	NN	Number=Sing	28	obj	28:obj	SpaceAfter=No
 30	,	,	PUNCT	,	_	29	punct	29:punct	_
@@ -370,15 +370,15 @@
 13	tried	try	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj:but	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
 15	build	build	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
-16	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
+16	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 17	own	own	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	furnace	furnace	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No
 19	,	,	PUNCT	,	_	22	punct	22:punct	_
 20	but	but	CCONJ	CC	_	22	cc	22:cc	_
 21	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	22	nsubj	22:nsubj	_
 22	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	conj	3:conj:but	_
-23	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
-24	version	version	NOUN	NN	Number=Sing	28	nsubj	28:nsubj|32:nsubj|34:nsubj:xsubj	_
+23	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
+24	version	version	NOUN	NN	Number=Sing	28	nsubj	28:nsubj|32:nsubj|33:nsubj:xsubj	_
 25	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	28	cop	28:cop	_
 26	just	just	ADV	RB	_	28	advmod	28:advmod	_
 27	too	too	ADV	RB	_	28	advmod	28:advmod	_
@@ -388,8 +388,8 @@
 30	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	aux	32:aux	_
 31	n't	not	PART	RB	_	32	advmod	32:advmod	_
 32	get	get	VERB	VB	VerbForm=Inf	28	conj	22:ccomp|28:conj:and	_
-33	hot	hot	ADJ	JJ	Degree=Pos	34	amod	34:amod	_
-34	enough	enough	ADJ	JJ	Degree=Pos	32	xcomp	32:xcomp	SpaceAfter=No
+33	hot	hot	ADJ	JJ	Degree=Pos	32	xcomp	32:xcomp	_
+34	enough	enough	ADV	RB	_	33	advmod	33:advmod	SpaceAfter=No
 35	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108051456AAQJaXR_ans-0016
@@ -454,7 +454,7 @@
 3	at	at	ADP	IN	_	7	case	7:case	_
 4	just	just	ADV	RB	_	5	advmod	5:advmod	_
 5	under	under	ADP	IN	_	7	case	7:case	_
-6	2000	2000	NUM	CD	NumType=Card	7	nummod	7:nummod	SpaceAfter=No
+6	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	SpaceAfter=No
 7	F	F	PROPN	NNP	Number=Sing	2	obl	2:obl:at|13:nsubj	_
 8	which	which	PRON	WDT	PronType=Rel	13	nsubj	7:ref	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
@@ -481,11 +481,11 @@
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	make	make	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	version	version	NOUN	NN	Number=Sing	6	obj	6:obj	_
+8	version	version	NOUN	NN	Number=Sing	6	obj	6:obj|12:nsubj:xsubj	_
 9	of	of	ADP	IN	_	11	case	11:case	_
-10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+10	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	setup	setup	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	_
-12	work	work	VERB	VB	VerbForm=Inf	6	ccomp	6:ccomp	SpaceAfter=No
+12	work	work	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	SpaceAfter=No
 13	,	,	PUNCT	,	_	17	punct	17:punct	_
 14	but	but	CCONJ	CC	_	17	cc	17:cc	_
 15	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_

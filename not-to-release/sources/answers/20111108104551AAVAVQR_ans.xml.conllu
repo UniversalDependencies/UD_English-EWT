@@ -6,7 +6,7 @@
 2	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 4	make	make	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+5	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 6	Jack	jack	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	Dempsey	dempsey	NOUN	NN	Number=Sing	4	obj	4:obj|8:nsubj:xsubj	_
 8	reproduce	reproduce	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	SpaceAfter=No
@@ -37,12 +37,12 @@
 20	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	21	nsubj	21:nsubj	_
 21	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl:as	_
 22	can	can	AUX	MD	VerbForm=Fin	24	aux	24:aux	_
-23	anyone	anyone	PRON	NN	Number=Sing	24	nsubj	24:nsubj	_
+23	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	24	nsubj	24:nsubj	_
 24	help	help	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
 25	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	24	obj	24:obj|26:nsubj:xsubj	_
 26	figure	figure	VERB	VB	VerbForm=Inf	24	xcomp	24:xcomp	_
 27	out	out	ADP	RP	_	26	compound:prt	26:compound:prt	_
-28	how	how	SCONJ	WRB	PronType=Int	30	mark	30:mark	_
+28	how	how	ADV	WRB	PronType=Int	30	advmod	30:advmod	_
 29	to	to	PART	TO	_	30	mark	30:mark	_
 30	make	make	VERB	VB	VerbForm=Inf	26	ccomp	26:ccomp	_
 31	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	30	obj	30:obj|32:nsubj:xsubj	_
@@ -69,17 +69,17 @@
 
 # sent_id = answers-20111108104551AAVAVQR_ans-0004
 # text = This is like trying to Make 2 people get married.
-1	This	this	PRON	DT	Number=Sing|PronType=Dem	2	nsubj	2:nsubj	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	4	nsubj:outer	4:nsubj:outer	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	like	like	SCONJ	IN	_	4	mark	4:mark	_
-4	trying	try	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:like	_
+4	trying	try	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	Make	make	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
-7	2	2	NUM	CD	NumType=Card	8	nummod	8:nummod	_
+7	2	2	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
 8	people	people	NOUN	NNS	Number=Plur	6	obj	6:obj|10:nsubj:xsubj	_
 9	get	get	AUX	VBP	VerbForm=Inf	10	aux:pass	10:aux:pass	_
 10	married	marry	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	xcomp	6:xcomp	SpaceAfter=No
-11	.	.	PUNCT	.	_	2	punct	2:punct	_
+11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108104551AAVAVQR_ans-0005
 # text = It doesn't work.
@@ -104,13 +104,13 @@
 # text = Sounds like your 2 at least tolerate each other, so there is hope there.
 1	Sounds	sound	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	like	like	SCONJ	IN	_	7	mark	7:mark	_
-3	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	2	2	NUM	CD	NumType=Card	7	nsubj	7:nsubj	_
+3	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+4	2	2	NUM	CD	NumForm=Digit|NumType=Card	7	nsubj	7:nsubj	_
 5	at	at	ADP	IN	_	6	case	6:case	_
 6	least	least	ADJ	JJS	Degree=Sup	7	obl	7:obl:at	_
 7	tolerate	tolerate	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	ccomp	1:ccomp	_
-8	each	each	DET	DT	_	9	det	9:det	_
-9	other	other	ADJ	JJ	Degree=Pos	7	obj	7:obj	SpaceAfter=No
+8	each	each	DET	DT	ExtPos=PRON|PronType=Rcp	7	obj	7:obj	_
+9	other	other	ADJ	JJ	Degree=Pos	8	fixed	8:fixed	SpaceAfter=No
 10	,	,	PUNCT	,	_	13	punct	13:punct	_
 11	so	so	ADV	RB	_	13	advmod	13:advmod	_
 12	there	there	PRON	EX	_	13	expl	13:expl	_
@@ -128,15 +128,15 @@
 5	be	be	AUX	VB	VerbForm=Inf	6	cop	6:cop	_
 6	mature	mature	ADJ	JJ	Degree=Pos	3	advcl	3:advcl:to	SpaceAfter=No
 7	,	,	PUNCT	,	_	6	punct	6:punct	_
-8	that	that	ADV	RB	_	12	advmod	12:advmod	_
+8	that	that	ADV	RB	_	11	advmod	11:advmod	_
 9	is	is	ADV	RB	_	8	fixed	8:fixed	SpaceAfter=No
-10	,	,	PUNCT	,	_	12	punct	12:punct	_
-11	old	old	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	enough	enough	ADJ	JJ	Degree=Pos	6	appos	6:appos	SpaceAfter=No
-13	,	,	PUNCT	,	_	16	punct	16:punct	_
-14	and	and	CCONJ	CC	_	16	cc	16:cc	_
-15	big	big	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	enough	enough	ADJ	JJ	Degree=Pos	6	conj	3:advcl:to|6:conj:and	_
+10	,	,	PUNCT	,	_	11	punct	11:punct	_
+11	old	old	ADJ	JJ	Degree=Pos	6	appos	6:appos	_
+12	enough	enough	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
+13	,	,	PUNCT	,	_	15	punct	15:punct	_
+14	and	and	CCONJ	CC	_	15	cc	15:cc	_
+15	big	big	ADJ	JJ	Degree=Pos	6	conj	3:advcl:to|6:conj:and	_
+16	enough	enough	ADV	RB	_	15	advmod	15:advmod	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
 18	breed	breed	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:to	SpaceAfter=No
 19	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -147,19 +147,19 @@
 2	may	may	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 3	be	be	AUX	VB	VerbForm=Inf	7	cop	7:cop	_
 4	around	around	ADV	RB	_	7	advmod	7:advmod	_
-5	1	1	NUM	CD	NumType=Card	7	compound	7:compound	SpaceAfter=No
+5	1	1	NUM	CD	NumForm=Digit|NumType=Card	7	compound	7:compound	SpaceAfter=No
 6	/	/	PUNCT	HYPH	_	7	punct	7:punct	SpaceAfter=No
-7	2	2	NUM	CD	NumType=Card	0	root	0:root	_
+7	2	2	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 8	of	of	ADP	IN	_	12	case	12:case	_
-9	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
+9	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 10	full	full	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	adult	adult	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	size	size	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	SpaceAfter=No
 13	,	,	PUNCT	,	_	7	punct	7:punct	_
 14	probably	probably	ADV	RB	_	18	advmod	18:advmod	_
-15	4	4	NUM	CD	NumType=Card	18	nummod	18:nummod	SpaceAfter=No
+15	4	4	NUM	CD	NumForm=Digit|NumType=Card	18	nummod	18:nummod	SpaceAfter=No
 16	-	-	SYM	SYM	_	17	case	17:case	SpaceAfter=No
-17	5	5	NUM	CD	NumType=Card	15	nmod	15:nmod	SpaceAfter=No
+17	5	5	NUM	CD	NumForm=Digit|NumType=Card	15	nmod	15:nmod	SpaceAfter=No
 18	"	"	NOUN	NNS	Number=Plur	7	appos	7:appos	_
 19	for	for	ADP	IN	_	21	case	21:case	_
 20	those	that	DET	DT	Number=Plur|PronType=Dem	21	det	21:det	_
@@ -221,7 +221,7 @@
 6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 7	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 8	mate	mate	VERB	VB	VerbForm=Inf	1	conj	1:conj:and	_
-9	when	when	SCONJ	WRB	PronType=Int	12	mark	12:mark	_
+9	when	when	ADV	WRB	PronType=Int	12	advmod	12:advmod	_
 10	THEY	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 11	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 12	ready	ready	ADJ	JJ	Degree=Pos	8	advcl	8:advcl:when	SpaceAfter=No
@@ -268,7 +268,7 @@
 2	of	of	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	time	time	NOUN	NN	Number=Sing	1	nmod	1:nmod:of	_
-5	one	one	NUM	CD	NumType=Card	8	nsubj	8:nsubj	_
+5	one	one	NUM	CD	NumForm=Word|NumType=Card	8	nsubj	8:nsubj	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 7	more	more	ADV	RBR	Degree=Cmp	8	advmod	8:advmod	_
 8	interested	interested	ADJ	JJ	Degree=Pos	0	root	0:root	_
@@ -284,7 +284,7 @@
 1	Bredders	breeder	NOUN	NNS	Number=Plur|Typo=Yes	2	nsubj	2:nsubj|11:nsubj	CorrectForm=Breeders
 2	take	take	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	one	one	NUM	CD	NumType=Card	2	obj	2:obj|9:nsubj:xsubj	_
+4	one	one	NOUN	NN	Number=Sing	2	obj	2:obj|9:nsubj:xsubj	_
 5	that	that	PRON	WDT	PronType=Rel	9	nsubj	4:ref	_
 6	in	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	9	cop	9:cop	CorrectForm=is
 7	not	not	PART	RB	_	8	advmod	8:advmod	_
@@ -299,9 +299,9 @@
 16	breeeding	breeding	NOUN	NN	Number=Sing|Typo=Yes	17	compound	17:compound	CorrectForm=breeding
 17	tank	tank	NOUN	NN	Number=Sing	11	obl	11:obl:in	_
 18	for	for	ADP	IN	_	22	case	22:case	_
-19	3	3	NUM	CD	NumType=Card	22	nummod	22:nummod	SpaceAfter=No
+19	3	3	NUM	CD	NumForm=Digit|NumType=Card	22	nummod	22:nummod	SpaceAfter=No
 20	-	-	SYM	SYM	_	21	case	21:case	SpaceAfter=No
-21	5	5	NUM	CD	NumType=Card	19	nmod	19:nmod	_
+21	5	5	NUM	CD	NumForm=Digit|NumType=Card	19	nmod	19:nmod	_
 22	days	day	NOUN	NNS	Number=Plur	11	obl	11:obl:for	SpaceAfter=No
 23	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -314,10 +314,10 @@
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	hide	hide	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	space	space	NOUN	NN	Number=Sing	4	obj	4:obj	_
-8	big	big	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	enough	enough	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
+8	big	big	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
+9	enough	enough	ADV	RB	_	8	advmod	8:advmod	_
 10	for	for	ADP	IN	_	12	case	12:case	_
-11	one	one	NUM	CD	NumType=Card	12	nummod	12:nummod	_
+11	one	one	NUM	CD	NumForm=Word|NumType=Card	12	nummod	12:nummod	_
 12	fish	fish	NOUN	NN	Number=Sing	9	obl	9:obl:for	SpaceAfter=No
 13	,	,	PUNCT	,	_	16	punct	16:punct	_
 14	or	or	CCONJ	CC	_	16	cc	16:cc	_
@@ -329,13 +329,13 @@
 20	but	but	CCONJ	CC	_	24	cc	24:cc	_
 21	at	at	ADP	IN	_	22	case	22:case	_
 22	least	least	ADJ	JJS	Degree=Sup	23	nmod	23:nmod:at	_
-23	1	1	NUM	CD	NumType=Card	24	nummod	24:nummod	_
+23	1	1	NUM	CD	NumForm=Digit|NumType=Card	24	nummod	24:nummod	_
 24	cave	cave	NOUN	NN	Number=Sing	7	conj	4:obj|7:conj:but	_
-25	big	big	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
-26	enough	enough	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
+25	big	big	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
+26	enough	enough	ADV	RB	_	25	advmod	25:advmod	_
 27	for	for	SCONJ	IN	_	31	mark	31:mark	_
-28	two	two	NUM	CD	NumType=Card	29	nummod	29:nummod	_
-29	fish	fish	NOUN	NN	Number=Plur	31	nsubj	31:nsubj	_
+28	two	two	NUM	CD	NumForm=Word|NumType=Card	29	nummod	29:nummod	_
+29	fish	fish	NOUN	NNS	Number=Plur	31	nsubj	31:nsubj	_
 30	to	to	PART	TO	_	31	mark	31:mark	_
 31	fit	fit	VERB	VB	VerbForm=Inf	26	advcl	26:advcl:to	_
 32	in	in	ADP	IN	_	31	obl	31:obl	SpaceAfter=No
@@ -345,12 +345,12 @@
 # text = The p H should be 6.5-7.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	p	p	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	H	h	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
+3	H	H	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
 4	should	should	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 5	be	be	AUX	VB	VerbForm=Inf	6	cop	6:cop	_
-6	6.5	6.5	NUM	CD	NumType=Card	0	root	0:root	SpaceAfter=No
+6	6.5	6.5	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	SpaceAfter=No
 7	-	-	SYM	SYM	_	8	case	8:case	SpaceAfter=No
-8	7	7	NUM	CD	NumType=Card	6	nmod	6:nmod	SpaceAfter=No
+8	7	7	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod	SpaceAfter=No
 9	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111108104551AAVAVQR_ans-0021
@@ -358,7 +358,7 @@
 1	Now	now	ADV	RB	_	2	advmod	2:advmod	_
 2	feed	feed	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	one	one	NUM	CD	NumType=Card	2	iobj	2:iobj	_
+4	one	one	NOUN	NN	Number=Sing	2	iobj	2:iobj	_
 5	in	in	ADP	IN	_	8	case	8:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	breeding	breeding	NOUN	NN	Number=Sing	8	compound	8:compound	_
@@ -377,9 +377,9 @@
 20	can	can	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
 21	eat	eat	VERB	VB	VerbForm=Inf	10	advcl	10:advcl:as	_
 22	for	for	ADP	IN	_	26	case	26:case	_
-23	3	3	NUM	CD	NumType=Card	26	nummod	26:nummod	SpaceAfter=No
+23	3	3	NUM	CD	NumForm=Digit|NumType=Card	26	nummod	26:nummod	SpaceAfter=No
 24	-	-	SYM	SYM	_	25	case	25:case	SpaceAfter=No
-25	5	5	NUM	CD	NumType=Card	23	nmod	23:nmod	_
+25	5	5	NUM	CD	NumForm=Digit|NumType=Card	23	nmod	23:nmod	_
 26	days	day	NOUN	NNS	Number=Plur	21	obl	21:obl:for	SpaceAfter=No
 27	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -407,11 +407,11 @@
 11	so	so	ADV	RB	_	16	advmod	16:advmod	_
 12	ther	the	DET	DT	Typo=Yes	13	det	13:det	CorrectForm=the
 13	smaller	small	ADJ	JJR	Degree=Cmp	16	nsubj	16:nsubj	_
-14	one	one	NUM	CD	NumType=Card	13	nummod	13:nummod	_
+14	one	one	NUM	CD	NumForm=Word|NumType=Card	13	nummod	13:nummod	_
 15	can	can	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 16	fit	fit	VERB	VB	VerbForm=Inf	4	parataxis	4:parataxis	_
 17	in	in	ADP	IN	_	18	case	18:case	_
-18	one	one	NUM	CD	NumType=Card	16	obl	16:obl:in	_
+18	one	one	NUM	CD	NumForm=Word|NumType=Card	16	obl	16:obl:in	_
 19	of	of	ADP	IN	_	21	case	21:case	_
 20	hide	hide	NOUN	NN	Number=Sing	21	compound	21:compound	_
 21	spaces	space	NOUN	NNS	Number=Plur	18	nmod	18:nmod:of	_
@@ -423,7 +423,7 @@
 
 # sent_id = answers-20111108104551AAVAVQR_ans-0024
 # text = When the males aggressive behavior stops, it is ready to spawn.
-1	When	when	SCONJ	WRB	PronType=Int	7	mark	7:mark	_
+1	When	when	ADV	WRB	PronType=Int	7	advmod	7:advmod	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3-4	males	_	_	_	_	_	_	_	_
 3	male	male	NOUN	NN	Number=Sing	6	nmod:poss	6:nmod:poss	_
@@ -442,9 +442,9 @@
 # sent_id = answers-20111108104551AAVAVQR_ans-0025
 # text = The two lay their eggs inside the cave you made for them.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	two	two	NUM	CD	NumType=Card	3	nsubj	3:nsubj	_
+2	two	two	NUM	CD	NumForm=Word|NumType=Card	3	nsubj	3:nsubj	_
 3	lay	lay	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-4	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+4	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	eggs	egg	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	inside	inside	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
@@ -464,6 +464,6 @@
 4	temp	temp	NOUN	NN	Number=Sing	1	obj	1:obj	_
 5	up	up	ADP	RP	_	1	compound:prt	1:compound:prt	_
 6	to	to	ADP	IN	_	8	case	8:case	_
-7	82	82	NUM	CD	NumType=Card	8	nummod	8:nummod	_
+7	82	82	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
 8	degrees	degree	NOUN	NNS	Number=Plur	1	obl	1:obl:to	_
 

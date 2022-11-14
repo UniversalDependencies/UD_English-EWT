@@ -29,7 +29,7 @@
 16.1	have	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	_	_	17:aux	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
 18	say	say	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
-19	something	something	PRON	NN	Number=Sing	18	obj	18:obj	_
+19	something	something	PRON	NN	Number=Sing|PronType=Ind	18	obj	18:obj	_
 20	about	about	ADP	IN	_	21	case	21:case	_
 21	this	this	PRON	DT	Number=Sing|PronType=Dem	19	nmod	19:nmod:about	SpaceAfter=No
 22	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -40,8 +40,8 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|8:nsubj	_
 2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	in	in	ADP	IN	_	5	case	5:case	_
-4	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-5	20's	20'	NOUN	NNS	Number=Plur	0	root	0:root	_
+4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+5	20's	20	NOUN	NNS	Number=Plur	0	root	0:root	_
 6	and	and	CCONJ	CC	_	8	cc	8:cc	_
 7	currently	currently	ADV	RB	_	8	advmod	8:advmod	_
 8	studying	study	VERB	VBG	VerbForm=Ger	5	conj	5:conj:and	_
@@ -51,30 +51,30 @@
 
 # sent_id = answers-20111108082831AAco5PI_ans-0004
 # text = Coming from an anglo-saxon country my version of dating is 'getting the number, asking her out, etc..'
-1	Coming	come	VERB	VBG	VerbForm=Ger	12	advcl	12:advcl	_
+1	Coming	come	VERB	VBG	VerbForm=Ger	14	advcl	14:advcl	_
 2	from	from	ADP	IN	_	7	case	7:case	_
 3	an	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 4	anglo	Anglo	X	AFX	_	6	compound	6:compound	SpaceAfter=No
 5	-	-	PUNCT	HYPH	_	6	punct	6:punct	SpaceAfter=No
 6	saxon	Saxon	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	country	country	NOUN	NN	Number=Sing	1	obl	1:obl:from	_
-8	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	version	version	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
+8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
+9	version	version	NOUN	NN	Number=Sing	14	nsubj:outer	14:nsubj:outer|18:nsubj:outer|22:nsubj:outer	_
 10	of	of	ADP	IN	_	11	case	11:case	_
 11	dating	dating	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	_
-12	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-13	'	'	PUNCT	``	_	12	punct	12:punct	SpaceAfter=No
-14	getting	get	VERB	VBG	VerbForm=Ger	12	ccomp	12:ccomp	_
+12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
+13	'	'	PUNCT	``	_	14	punct	14:punct	SpaceAfter=No
+14	getting	get	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 16	number	number	NOUN	NN	Number=Sing	14	obj	14:obj	SpaceAfter=No
 17	,	,	PUNCT	,	_	18	punct	18:punct	_
-18	asking	ask	VERB	VBG	VerbForm=Ger	14	conj	12:ccomp|14:conj	_
+18	asking	ask	VERB	VBG	VerbForm=Ger	14	conj	0:root|14:conj	_
 19	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	_
 20	out	out	ADP	RP	_	18	compound:prt	18:compound:prt	SpaceAfter=No
 21	,	,	PUNCT	,	_	22	punct	22:punct	_
-22	etc.	etc.	X	FW	_	14	conj	12:ccomp|14:conj	SpaceAfter=No
-23	.	.	PUNCT	.	_	12	punct	12:punct	SpaceAfter=No
-24	'	'	PUNCT	''	_	12	punct	12:punct	_
+22	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Sing	14	conj	0:root|14:conj	SpaceAfter=No
+23	.	.	PUNCT	.	_	14	punct	14:punct	SpaceAfter=No
+24	'	'	PUNCT	''	_	14	punct	14:punct	_
 
 # sent_id = answers-20111108082831AAco5PI_ans-0005
 # text = However, I've read on the internet that the French dating etiquette is totally different.
@@ -100,13 +100,13 @@
 # sent_id = answers-20111108082831AAco5PI_ans-0006
 # text = For them, dating would normally be meeting in groups or parties, then pairing off.
 1	For	for	ADP	IN	_	2	case	2:case	_
-2	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	7	obl	7:obl:for	SpaceAfter=No
-3	,	,	PUNCT	,	_	7	punct	7:punct	_
-4	dating	dating	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
-5	would	would	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
-6	normally	normally	ADV	RB	_	7	advmod	7:advmod	_
-7	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	_
-8	meeting	meet	VERB	VBG	VerbForm=Ger	7	ccomp	7:ccomp	_
+2	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	8	obl	8:obl:for	SpaceAfter=No
+3	,	,	PUNCT	,	_	8	punct	8:punct	_
+4	dating	dating	NOUN	NN	Number=Sing	8	nsubj:outer	8:nsubj:outer	_
+5	would	would	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
+6	normally	normally	ADV	RB	_	8	advmod	8:advmod	_
+7	be	be	AUX	VB	VerbForm=Inf	8	cop	8:cop	_
+8	meeting	meet	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 9	in	in	ADP	IN	_	10	case	10:case	_
 10	groups	group	NOUN	NNS	Number=Plur	8	obl	8:obl:in	_
 11	or	or	CCONJ	CC	_	12	cc	12:cc	_
@@ -115,7 +115,7 @@
 14	then	then	ADV	RB	PronType=Dem	15	advmod	15:advmod	_
 15	pairing	pair	VERB	VBG	VerbForm=Ger	8	parataxis	8:parataxis	_
 16	off	off	ADP	RP	_	15	compound:prt	15:compound:prt	SpaceAfter=No
-17	.	.	PUNCT	.	_	7	punct	7:punct	_
+17	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = answers-20111108082831AAco5PI_ans-0007
 # text = In addition, from my understanding one-on-one dates is something that comes much later and not 'straight-away' like us anglo-saxons.
@@ -123,16 +123,16 @@
 2	addition	addition	NOUN	NN	Number=Sing	14	obl	14:obl:in	SpaceAfter=No
 3	,	,	PUNCT	,	_	14	punct	14:punct	_
 4	from	from	ADP	IN	_	6	case	6:case	_
-5	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+5	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	understanding	understanding	NOUN	NN	Number=Sing	14	obl	14:obl:from	_
-7	one	one	NUM	CD	NumType=Card	12	compound	12:compound	SpaceAfter=No
+7	one	one	NUM	CD	NumForm=Word|NumType=Card	12	compound	12:compound	SpaceAfter=No
 8	-	-	PUNCT	HYPH	_	7	punct	7:punct	SpaceAfter=No
 9	on	on	ADP	IN	_	11	case	11:case	SpaceAfter=No
 10	-	-	PUNCT	HYPH	_	11	punct	11:punct	SpaceAfter=No
-11	one	one	NUM	CD	NumType=Card	7	nmod	7:nmod:on	_
+11	one	one	NUM	CD	NumForm=Word|NumType=Card	7	nmod	7:nmod:on	_
 12	dates	date	NOUN	NNS	Number=Plur	14	nsubj	14:nsubj	_
 13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
-14	something	something	PRON	NN	Number=Sing	0	root	0:root|16:nsubj	_
+14	something	something	PRON	NN	Number=Sing|PronType=Ind	0	root	0:root|16:nsubj	_
 15	that	that	PRON	WDT	PronType=Rel	16	nsubj	14:ref	_
 16	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	acl:relcl	14:acl:relcl	_
 17	much	much	ADV	RB	_	18	advmod	18:advmod	_
@@ -216,11 +216,11 @@
 1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	friendly	friendly	ADJ	JJ	Degree=Pos	0	root	0:root	_
-4	when	when	SCONJ	WRB	PronType=Int	6	mark	6:mark	_
+4	when	when	ADV	WRB	PronType=Int	6	advmod	6:advmod	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 6	see	see	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:when	_
-7	each	each	DET	DT	_	8	det	8:det	_
-8	other	other	ADJ	JJ	Degree=Pos	6	obj	6:obj	_
+7	each	each	DET	DT	ExtPos=PRON|PronType=Rcp	6	obj	6:obj	_
+8	other	other	ADJ	JJ	Degree=Pos	7	fixed	7:fixed	_
 9	on	on	ADP	IN	_	10	case	10:case	_
 10	campus	campus	NOUN	NN	Number=Sing	6	obl	6:obl:on	SpaceAfter=No
 11	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -231,7 +231,7 @@
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
 4	nicer	nice	ADJ	JJR	Degree=Cmp	0	root	0:root	_
-5	when	when	SCONJ	WRB	PronType=Int	9	mark	9:mark	_
+5	when	when	ADV	WRB	PronType=Int	9	advmod	9:advmod	_
 6	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 7	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 8	both	both	ADV	RB	_	9	advmod	9:advmod	_
@@ -242,13 +242,13 @@
 # text = However, when we are at parties or when they are people around she seems to ignore me.
 1	However	however	ADV	RB	_	15	advmod	15:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	15	punct	15:punct	_
-3	when	when	SCONJ	WRB	PronType=Int	7	mark	7:mark	_
+3	when	when	ADV	WRB	PronType=Int	7	advmod	7:advmod	_
 4	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 5	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 6	at	at	ADP	IN	_	7	case	7:case	_
 7	parties	party	NOUN	NNS	Number=Plur	15	advcl	15:advcl:at	_
 8	or	or	CCONJ	CC	_	11	cc	11:cc	_
-9	when	when	SCONJ	WRB	PronType=Int	11	mark	11:mark	_
+9	when	when	ADV	WRB	PronType=Int	11	advmod	11:advmod	_
 10	they	there	PRON	EX	Typo=Yes	11	expl	11:expl	CorrectForm=there
 11	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	conj	7:conj:or|15:advcl:at	_
 12	people	people	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
@@ -267,10 +267,10 @@
 3	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	hate	hate	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	expl	5:expl	_
-7	whenever	whenever	ADV	WRB	PronType=Int	5	obj	5:obj	_
+6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj	_
+7	whenever	whenever	ADV	WRB	PronType=Int	9	advmod	9:advmod	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-9	ask	ask	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+9	ask	ask	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl	_
 10	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj	_
 11	out	out	ADP	RP	_	9	compound:prt	9:compound:prt	_
 12	on	on	ADP	IN	_	14	case	14:case	_
@@ -287,7 +287,7 @@
 
 # sent_id = answers-20111108082831AAco5PI_ans-0016
 # text = My mind thinks she has no interest in me and just stringing me along.
-1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	mind	mind	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
 3	thinks	think	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj|12:nsubj	_
@@ -378,7 +378,7 @@
 20	apply	apply	VERB	VB	VerbForm=Inf	4	parataxis	4:parataxis	_
 21	to	to	ADP	IN	_	22	case	22:case	_
 22	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	20	obl	20:obl:to	_
-23	when	when	SCONJ	WRB	PronType=Int	25	mark	25:mark	_
+23	when	when	ADV	WRB	PronType=Int	25	advmod	25:advmod	_
 24	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	25	expl	25:expl	_
 25	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	advcl	20:advcl:when	_
 26	to	to	SCONJ	IN	_	27	mark	27:mark	_
@@ -419,15 +419,15 @@
 5	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	4	obj	4:obj	_
 6	along	along	ADV	RB	_	4	advmod	4:advmod	_
 7	since	since	SCONJ	IN	_	11	mark	11:mark	_
-8	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj|16:nsubj	_
+8	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj|15:nsubj	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
 10	actually	actually	ADV	RB	_	11	advmod	11:advmod	_
 11	discouraging	discourage	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl:since	_
 12	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	11	obj	11:obj	_
-13	and	and	CCONJ	CC	_	16	cc	16:cc	_
-14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
-15	honest	honest	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	enough	enough	ADJ	JJ	Degree=Pos	11	conj	4:advcl:since|11:conj:and	_
+13	and	and	CCONJ	CC	_	15	cc	15:cc	_
+14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
+15	honest	honest	ADJ	JJ	Degree=Pos	11	conj	4:advcl:since|11:conj:and	_
+16	enough	enough	ADV	RB	_	15	advmod	15:advmod	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
 18	tell	tell	VERB	VB	VerbForm=Inf	15	advcl	15:advcl:to	_
 19	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	18	obj	18:obj|21:nsubj:xsubj|22:nsubj:xsubj	_
@@ -509,7 +509,7 @@
 3	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj|9:nsubj:xsubj|13:nsubj:xsubj	_
 4	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
 5	not	not	PART	RB	_	6	advmod	6:advmod	_
-6	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
+6	want	want	VERB	VB	VerbForm=Inf	0	root	0:root|19:csubj	_
 7	to	to	PART	TO	_	9	mark	9:mark	_
 8	be	be	AUX	VB	VerbForm=Inf	9	aux:pass	9:aux:pass	_
 9	considered	consider	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	xcomp	6:xcomp	_
@@ -520,9 +520,9 @@
 14	to	to	ADP	IN	_	15	case	15:case	_
 15	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	13	obl	13:obl:to	SpaceAfter=No
 16	,	,	PUNCT	,	_	6	punct	6:punct	_
-17	which	which	PRON	WDT	PronType=Int	19	nsubj	19:nsubj	_
+17	which	which	PRON	WDT	PronType=Rel	19	nsubj	6:ref	_
 18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
-19	consistent	consistent	ADJ	JJ	Degree=Pos	6	parataxis	6:parataxis	SpaceAfter=No
+19	consistent	consistent	ADJ	JJ	Degree=Pos	6	advcl:relcl	6:advcl:relcl	SpaceAfter=No
 20	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111108082831AAco5PI_ans-0026
@@ -582,7 +582,7 @@
 21	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	20	obj	20:obj|22:nsubj:xsubj	_
 22	attached	attached	ADJ	JJ	Degree=Pos	20	xcomp	20:xcomp	_
 23	to	to	ADP	IN	_	26	case	26:case	_
-24	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
+24	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
 25	apron	apron	NOUN	NN	Number=Sing	26	compound	26:compound	_
 26	strings	string	NOUN	NNS	Number=Plur	22	obl	22:obl:to	_
 27	just	just	ADV	RB	_	28	advmod	28:advmod	_
@@ -614,16 +614,16 @@
 
 # sent_id = answers-20111108082831AAco5PI_ans-0030
 # text = What I have to add is that it is normal in France to have mixed gender groups of friends, there's nothing unusual in boys and girls being only friends, which is obviously what this girl wants from you.
-1	What	what	PRON	WP	PronType=Int	6	nsubj	6:nsubj	_
+1	What	what	PRON	WP	PronType=Rel	10	nsubj:outer	10:nsubj:outer	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 3	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	add	add	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-6	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 7	that	that	SCONJ	IN	_	10	mark	10:mark	_
 8	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	expl	10:expl	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
-10	normal	normal	ADJ	JJ	Degree=Pos	6	ccomp	6:ccomp	_
+10	normal	normal	ADJ	JJ	Degree=Pos	0	root	0:root	_
 11	in	in	ADP	IN	_	12	case	12:case	_
 12	France	France	PROPN	NNP	Number=Sing	10	obl	10:obl:in	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
@@ -633,11 +633,11 @@
 17	groups	group	NOUN	NNS	Number=Plur	14	obj	14:obj	_
 18	of	of	ADP	IN	_	19	case	19:case	_
 19	friends	friend	NOUN	NNS	Number=Plur	17	nmod	17:nmod:of	SpaceAfter=No
-20	,	,	PUNCT	,	_	6	punct	6:punct	_
+20	,	,	PUNCT	,	_	10	punct	10:punct	_
 21-22	there's	_	_	_	_	_	_	_	_
 21	there	there	PRON	EX	_	22	expl	22:expl	_
-22	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	parataxis	6:parataxis	_
-23	nothing	nothing	PRON	NN	Number=Sing	22	nsubj	22:nsubj	_
+22	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	parataxis	10:parataxis	_
+23	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	22	nsubj	22:nsubj	_
 24	unusual	unusual	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
 25	in	in	SCONJ	IN	_	31	mark	31:mark	_
 26	boys	boy	NOUN	NNS	Number=Plur	31	nsubj	31:nsubj	_
@@ -645,25 +645,25 @@
 28	girls	girl	NOUN	NNS	Number=Plur	26	conj	26:conj:and|31:nsubj	_
 29	being	be	AUX	VBG	VerbForm=Ger	31	cop	31:cop	_
 30	only	only	ADV	RB	_	31	advmod	31:advmod	_
-31	friends	friend	NOUN	NNS	Number=Plur	22	advcl	22:advcl:in	SpaceAfter=No
+31	friends	friend	NOUN	NNS	Number=Plur	22	advcl	22:advcl:in|36:csubj	SpaceAfter=No
 32	,	,	PUNCT	,	_	31	punct	31:punct	_
-33	which	which	PRON	WDT	PronType=Int	36	nsubj	36:nsubj	_
+33	which	which	PRON	WDT	PronType=Rel	36	nsubj	31:ref	_
 34	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	36	cop	36:cop	_
 35	obviously	obviously	ADV	RB	_	36	advmod	36:advmod	_
-36	what	what	PRON	WP	PronType=Int	31	parataxis	31:parataxis	_
+36	what	what	PRON	WP	PronType=Rel	31	advcl:relcl	31:advcl:relcl	_
 37	this	this	DET	DT	Number=Sing|PronType=Dem	38	det	38:det	_
 38	girl	girl	NOUN	NN	Number=Sing	39	nsubj	39:nsubj	_
 39	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	36	acl:relcl	36:acl:relcl	_
 40	from	from	ADP	IN	_	41	case	41:case	_
 41	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	39	obl	39:obl:from	SpaceAfter=No
-42	.	.	PUNCT	.	_	6	punct	6:punct	_
+42	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = answers-20111108082831AAco5PI_ans-0031
 # text = She probably finds your company pleasing as a friend but you are not her choice a a boyfriend and she is trying to keep it on a friendship level, and trying to make you understand that she doesn't want to go further.
 1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
 2	probably	probably	ADV	RB	_	3	advmod	3:advmod	_
 3	finds	find	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-4	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+4	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	company	company	NOUN	NN	Number=Sing	3	obj	3:obj|6:nsubj:xsubj	_
 6	pleasing	pleasing	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	_
 7	as	as	ADP	IN	_	9	case	9:case	_
@@ -673,7 +673,7 @@
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
 12	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 13	not	not	PART	RB	_	15	advmod	15:advmod	_
-14	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
+14	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	choice	choice	NOUN	NN	Number=Sing	3	conj	3:conj:but	_
 16	a	of	ADP	IN	Typo=Yes	18	case	18:case	CorrectForm=of
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
@@ -713,7 +713,7 @@
 2	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 4	nicer	nice	ADJ	JJR	Degree=Cmp	11	advcl	11:advcl:if	_
-5	when	when	SCONJ	WRB	PronType=Int	8	mark	8:mark	_
+5	when	when	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 7	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 8	alone	alone	ADJ	JJ	Degree=Pos	4	advcl	4:advcl:when	_
@@ -721,15 +721,15 @@
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 10	'd	would	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 11	say	say	VERB	VB	VerbForm=Inf	0	root	0:root	_
-12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
-13	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	ccomp	11:ccomp	_
+12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	nsubj:outer	20:nsubj:outer	_
+13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	20:cop	_
 14	because	because	SCONJ	IN	_	20	mark	20:mark	_
 15	in	in	ADP	IN	_	17	case	17:case	_
 16	public	public	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	view	view	NOUN	NN	Number=Sing	20	obl	20:obl:in	_
 18	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	20	nsubj	20:nsubj|21:nsubj:xsubj	_
 19	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
-20	making	make	VERB	VBG	Tense=Pres|VerbForm=Part	13	advcl	13:advcl:because	_
+20	making	make	VERB	VBG	Tense=Pres|VerbForm=Part	11	ccomp	11:ccomp	_
 21	sure	sure	ADJ	JJ	Degree=Pos	20	xcomp	20:xcomp	_
 22	that	that	SCONJ	IN	_	26	mark	26:mark	_
 23	people	people	NOUN	NNS	Number=Plur	26	nsubj	26:nsubj	_
@@ -740,7 +740,7 @@
 28	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	32	nsubj	32:nsubj	_
 29	might	might	AUX	MD	VerbForm=Fin	32	aux	32:aux	_
 30	be	be	AUX	VB	VerbForm=Inf	32	cop	32:cop	_
-31	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	32	nmod:poss	32:nmod:poss	_
+31	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	32	nmod:poss	32:nmod:poss	_
 32	boyfriend	boyfriend	NOUN	NN	Number=Sing	26	ccomp	26:ccomp	SpaceAfter=No
 33	.	.	PUNCT	.	_	11	punct	11:punct	_
 
@@ -796,7 +796,7 @@
 17	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 19	way	way	NOUN	NN	Number=Sing	1	conj	1:conj:but	_
-20	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
+20	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
 21	own	own	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 22	rules	rule	NOUN	NNS	Number=Plur	23	nsubj	23:nsubj	_
 23	work	work	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	19	acl:relcl	19:acl:relcl	SpaceAfter=No
@@ -820,12 +820,12 @@
 2	not	not	PART	RB	_	4	advmod	4:advmod	_
 3	just	just	ADV	RB	_	4	advmod	4:advmod	_
 4	take	take	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+5	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	chances	chance	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
 8	do	do	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 9	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	obj	8:obj	_
-10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+10	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	way	way	NOUN	NN	Number=Sing	8	obl:npmod	8:obl:npmod	SpaceAfter=No
 12	?	?	PUNCT	.	_	4	punct	4:punct	_
 

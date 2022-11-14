@@ -7,9 +7,9 @@
 
 # sent_id = email-enronsent02_01-0002
 # text = 04/04/2001 09:27 AM
-1	04/04/2001	04/04/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	09:27	09:27	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	AM	am	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+1	04/04/2001	04/04/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	09:27	09:27	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent02_01-0003
 # text = Please find attached the most recent update for Merchanting Metals.
@@ -96,13 +96,13 @@
 
 # sent_id = email-enronsent02_01-0009
 # text = 03/04/2001 16:29
-1	03/04/2001	03/04/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	16:29	16:29	NUM	CD	NumType=Card	1	nmod:tmod	1:nmod:tmod	_
+1	03/04/2001	03/04/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	16:29	16:29	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent02_01-0010
 # text = The intention of the efforts and actions documented in my earlier update ( see attached email ) was to provide a robust position signoff process for total metal tonnage, spread and brand and location a timely substantiation of stock on balance sheet forward MTM debtors and creditor balances OBSF transactional values and a reconciliation of the barclays intercompany account
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	intention	intention	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
+2	intention	intention	NOUN	NN	Number=Sing	20	nsubj:outer	20:nsubj:outer	_
 3	of	of	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	efforts	effort	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	_
@@ -110,7 +110,7 @@
 7	actions	action	NOUN	NNS	Number=Plur	5	conj	2:nmod:of|5:conj:and	_
 8	documented	document	VERB	VBN	Tense=Past|VerbForm=Part	5	acl	5:acl	_
 9	in	in	ADP	IN	_	12	case	12:case	_
-10	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
+10	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 11	earlier	early	ADJ	JJR	Degree=Cmp	12	amod	12:amod	_
 12	update	update	NOUN	NN	Number=Sing	8	obl	8:obl:in	_
 13	(	(	PUNCT	-LRB-	_	14	punct	14:punct	_
@@ -118,9 +118,9 @@
 15	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part	16	amod	16:amod	_
 16	email	email	NOUN	NN	Number=Sing	14	obj	14:obj	_
 17	)	)	PUNCT	-RRB-	_	14	punct	14:punct	_
-18	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+18	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	cop	20:cop	_
 19	to	to	PART	TO	_	20	mark	20:mark	_
-20	provide	provide	VERB	VB	VerbForm=Inf	18	ccomp	18:ccomp	_
+20	provide	provide	VERB	VB	VerbForm=Inf	0	root	0:root	_
 21	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
 22	robust	robust	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 23	position	position	NOUN	NN	Number=Sing	24	compound	24:compound	_
@@ -150,7 +150,7 @@
 47	and	and	CCONJ	CC	_	49	cc	49:cc	_
 48	creditor	creditor	NOUN	NN	Number=Sing	49	compound	49:compound	_
 49	balances	balance	NOUN	NNS	Number=Plur	46	conj	46:conj:and	_
-50	OBSF	obsf	NOUN	NN	Number=Sing	52	compound	52:compound	_
+50	OBSF	OBSF	NOUN	NN	Number=Sing	52	compound	52:compound	_
 51	transactional	transactional	ADJ	JJ	Degree=Pos	52	amod	52:amod	_
 52	values	value	NOUN	NNS	Number=Plur	29	conj	25:nmod:for|29:conj:and	_
 53	and	and	CCONJ	CC	_	55	cc	55:cc	_
@@ -169,13 +169,13 @@
 3	best	good	ADJ	JJS	Degree=Sup	4	amod	4:amod	_
 4	efforts	effort	NOUN	NNS	Number=Plur	38	obl	38:obl:despite	_
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	IT	it	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	SpaceAfter=No
+6	IT	IT	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	SpaceAfter=No
 7	,	,	PUNCT	,	_	38	punct	38:punct	_
 8	continuing	continue	VERB	VBG	VerbForm=Ger	9	amod	9:amod	_
 9	problems	problem	NOUN	NNS	Number=Plur	38	nsubj	38:nsubj	_
 10	with	with	ADP	IN	_	13	case	13:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-12	AS400	as400	NOUN	NN	Number=Sing	13	compound	13:compound	_
+12	AS400	AS400	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	application	application	NOUN	NN	Number=Sing	9	nmod	9:nmod:with	SpaceAfter=No
 14	,	,	PUNCT	,	_	17	punct	17:punct	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
@@ -214,10 +214,10 @@
 48	accurate	accurate	ADJ	JJ	Degree=Pos	49	amod	49:amod	_
 49	information	information	NOUN	NN	Number=Sing	46	obj	46:obj	_
 50	to	to	ADP	IN	_	51	case	51:case	_
-51	AA	aa	NOUN	NN	Number=Sing	46	obl	46:obl:to	_
+51	AA	AA	NOUN	NN	Number=Sing	46	obl	46:obl:to	_
 52	to	to	PART	TO	_	53	mark	53:mark	_
 53	satisfy	satisfy	VERB	VB	VerbForm=Inf	46	advcl	46:advcl:to	_
-54	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	56	nmod:poss	56:nmod:poss	_
+54	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	56	nmod:poss	56:nmod:poss	_
 55	audit	audit	NOUN	NN	Number=Sing	56	compound	56:compound	_
 56	requirements	requirement	NOUN	NNS	Number=Plur	53	obj	53:obj|67:nsubj	_
 57	-	-	PUNCT	,	_	56	punct	56:punct	_
@@ -257,7 +257,7 @@
 10	/	/	SYM	,	_	12	cc	12:cc	SpaceAfter=No
 11	or	or	CCONJ	CC	_	12	cc	12:cc	_
 12	require	require	VERB	VB	VerbForm=Inf	5	conj	3:xcomp|5:conj:and_or	_
-13	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
+13	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 14	approval	approval	NOUN	NN	Number=Sing	12	obj	12:obj	_
 15	for	for	ADP	IN	_	14	nmod	14:nmod	SpaceAfter=No
 16	,	,	PUNCT	,	_	12	punct	12:punct	_
@@ -272,14 +272,14 @@
 2	will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	discuss	discuss	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	with	with	ADP	IN	_	5	case	5:case	_
-5	AA	aa	NOUN	NN	Number=Sing	3	obl	3:obl:with	_
+5	AA	AA	NOUN	NN	Number=Sing	3	obl	3:obl:with	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	following	follow	VERB	VBG	VerbForm=Ger	3	obj	3:obj	_
 
 # sent_id = email-enronsent02_01-0014
 # text = that OBSF values within the extended trial balance may be misstated due to data issues ( above and beyond existing conversations with AA on model simplifications)
 1	that	that	SCONJ	IN	_	11	mark	11:mark	_
-2	OBSF	obsf	NOUN	NN	Number=Sing	3	compound	3:compound	_
+2	OBSF	OBSF	NOUN	NN	Number=Sing	3	compound	3:compound	_
 3	values	value	NOUN	NNS	Number=Plur	11	nsubj:pass	11:nsubj:pass	_
 4	within	within	ADP	IN	_	8	case	8:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
@@ -300,7 +300,7 @@
 20	existing	exist	VERB	VBG	VerbForm=Ger	21	amod	21:amod	_
 21	conversations	conversation	NOUN	NNS	Number=Plur	11	obl	11:obl:beyond	_
 22	with	with	ADP	IN	_	23	case	23:case	_
-23	AA	aa	NOUN	NN	Number=Sing	21	nmod	21:nmod:with	_
+23	AA	AA	NOUN	NN	Number=Sing	21	nmod	21:nmod:with	_
 24	on	on	ADP	IN	_	26	case	26:case	_
 25	model	model	NOUN	NN	Number=Sing	26	compound	26:compound	_
 26	simplifications	simplification	NOUN	NNS	Number=Plur	21	nmod	21:nmod:on	SpaceAfter=No
@@ -318,7 +318,7 @@
 8	position	position	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	analyses	analysis	NOUN	NNS	Number=Plur	5	nmod	5:nmod:between	SpaceAfter=No
 10	,	,	PUNCT	,	_	14	punct	14:punct	_
-11	AS400	as400	NOUN	NN	Number=Sing	14	compound	14:compound	_
+11	AS400	AS400	NOUN	NN	Number=Sing	14	compound	14:compound	_
 12	on	on	ADP	IN	_	13	case	13:case	_
 13	screen	screen	NOUN	NN	Number=Sing	14	compound	14:compound	_
 14	enquiries	enquiry	NOUN	NNS	Number=Plur	9	conj	5:nmod:between|9:conj:and	_
@@ -343,7 +343,7 @@
 33	be	be	AUX	VB	VerbForm=Inf	34	aux:pass	34:aux:pass	_
 34	provided	provide	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	31	xcomp	31:xcomp	_
 35	to	to	ADP	IN	_	36	case	36:case	_
-36	AA	aa	NOUN	NN	Number=Sing	34	obl	34:obl:to	_
+36	AA	AA	NOUN	NN	Number=Sing	34	obl	34:obl:to	_
 37	within	within	ADP	IN	_	40	case	40:case	_
 38	the	the	DET	DT	Definite=Def|PronType=Art	40	det	40:det	_
 39	audit	audit	NOUN	NN	Number=Sing	40	compound	40:compound	_
@@ -363,7 +363,7 @@
 9	process	process	NOUN	NN	Number=Sing	2	nmod	2:nmod:of|19:nsubj:pass|21:nsubj:pass	_
 10	described	describe	VERB	VBN	Tense=Past|VerbForm=Part	9	acl	9:acl	_
 11	in	in	ADP	IN	_	14	case	14:case	_
-12	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
+12	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 13	earlier	early	ADJ	JJR	Degree=Cmp	14	amod	14:amod	_
 14	note	note	NOUN	NN	Number=Sing	10	obl	10:obl:in	_
 15	which	which	PRON	WDT	PronType=Rel	19	nsubj:pass	9:ref	_
@@ -448,8 +448,8 @@
 3	difference	difference	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	$	$	SYM	$	_	3	nmod	3:nmod:of	SpaceAfter=No
-6	15	15	NUM	CD	NumType=Card	7	compound	7:compound	SpaceAfter=No
-7	mm	mm	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+6	15	15	NUM	CD	NumForm=Digit|NumType=Card	7	compound	7:compound	SpaceAfter=No
+7	mm	mm	NUM	CD	NumForm=Word|NumType=Card	5	nummod	5:nummod	_
 8	exists	exist	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 9	between	between	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
@@ -464,7 +464,7 @@
 19	generated	generate	VERB	VBN	Tense=Past|VerbForm=Part	17	acl	17:acl:as	_
 20	on	on	ADP	IN	_	22	case	22:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
-22	AS400	as400	NOUN	NN	Number=Sing	19	obl	19:obl:on	SpaceAfter=No
+22	AS400	AS400	NOUN	NN	Number=Sing	19	obl	19:obl:on	SpaceAfter=No
 23	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = email-enronsent02_01-0020
@@ -531,7 +531,7 @@
 2	recall	recall	NOUN	NN	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	6	case	6:case	_
 4	all	all	DET	DT	_	6	det	6:det	_
-5	OBSF	obsf	NOUN	NN	Number=Sing	6	compound	6:compound	_
+5	OBSF	OBSF	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	stock	stock	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 7	in	in	ADP	IN	_	9	case	9:case	_
 8	early	early	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
@@ -543,7 +543,7 @@
 14	sheet	sheet	NOUN	NN	Number=Sing	11	nmod	11:nmod:on	_
 15	(	(	PUNCT	-LRB-	_	16	punct	16:punct	_
 16	reduced	reduce	VERB	VBN	Tense=Past|VerbForm=Part	11	acl	11:acl	_
-17	where	where	SCONJ	WRB	PronType=Int	19	mark	19:mark	_
+17	where	where	ADV	WRB	PronType=Int	19	advmod	19:advmod	_
 18	economically	economically	ADV	RB	_	19	advmod	19:advmod	_
 19	viable	viable	ADJ	JJ	Degree=Pos	16	advcl	16:advcl:where	_
 20	)	)	PUNCT	-RRB-	_	16	punct	16:punct	_
@@ -567,12 +567,12 @@
 # text = Middle Office work being prioritised is as follows
 1	Middle	Middle	ADJ	NNP	Degree=Pos	2	amod	2:amod	_
 2	Office	Office	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	work	work	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
+3	work	work	NOUN	NN	Number=Sing	8	nsubj:outer	8:nsubj:outer	_
 4	being	be	AUX	VBG	VerbForm=Ger	5	aux:pass	5:aux:pass	_
 5	prioritised	prioritise	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	acl	3:acl	_
-6	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 7	as	as	SCONJ	IN	_	8	mark	8:mark	_
-8	follows	follow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	advcl	6:advcl:as	_
+8	follows	follow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 
 # sent_id = email-enronsent02_01-0024
 # text = the stock circularisation initiated for close of business 23rd - with full reconciliation of returns to current system data by traffic/co-ordination an audit of the stock and forward valuation report for the 30th ( replacing planned 23rd review due to system issues ), requiring full download of contract detail for later reference
@@ -657,7 +657,7 @@
 3	analysis	analysis	NOUN	NN	Number=Sing	0	root	0:root	_
 4	of	of	ADP	IN	_	7	case	7:case	_
 5	all	all	DET	DT	_	7	det	7:det	_
-6	OBSF	obsf	NOUN	NN	Number=Sing	7	compound	7:compound	_
+6	OBSF	OBSF	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	contracts	contract	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|11:nsubj:pass	_
 8	that	that	PRON	WDT	PronType=Rel	11	nsubj:pass	7:ref	_
 9	must	must	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
@@ -672,7 +672,7 @@
 1	spreadsheet	spreadsheet	NOUN	NN	Number=Sing	2	compound	2:compound	_
 2	recalculation	recalculation	NOUN	NN	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	6	case	6:case	_
-4	OBSF	obsf	NOUN	NN	Number=Sing	6	compound	6:compound	_
+4	OBSF	OBSF	NOUN	NN	Number=Sing	6	compound	6:compound	_
 5	option	option	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	premium	premium	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 7	utilising	utilise	VERB	VBG	VerbForm=Ger	2	acl	2:acl	_
@@ -694,7 +694,7 @@
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
 8	comparison	comparison	NOUN	NN	Number=Sing	2	conj	2:conj:and	_
 9	to	to	ADP	IN	_	15	case	15:case	_
-10	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
+10	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 11	cut	cut	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	off	off	NOUN	NN	Number=Sing	15	compound	15:compound	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
@@ -747,8 +747,8 @@
 
 # sent_id = email-enronsent02_01-0034
 # text = 21/03/2001 18:20
-1	21/03/2001	21/03/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	18:20	18:20	NUM	CD	NumType=Card	1	nmod:tmod	1:nmod:tmod	_
+1	21/03/2001	21/03/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	18:20	18:20	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent02_01-0035
 # text = Several related issues have resulted in an increase in the level of operating risk for the Merchanting Metals business.
@@ -788,12 +788,12 @@
 10	Facility	facility	NOUN	NN	Number=Sing	4	nmod	4:nmod:of|17:nsubj	_
 11	(	(	PUNCT	-LRB-	_	10	punct	10:punct	SpaceAfter=No
 12	"	"	PUNCT	``	_	10	punct	10:punct	SpaceAfter=No
-13	OBSF	obsf	NOUN	NN	Number=Sing	10	appos	10:appos	SpaceAfter=No
+13	OBSF	OBSF	NOUN	NN	Number=Sing	10	appos	10:appos	SpaceAfter=No
 14	"	"	PUNCT	''	_	10	punct	10:punct	SpaceAfter=No
 15	)	)	PUNCT	-RRB-	_	10	punct	10:punct	_
 16	which	which	PRON	WDT	PronType=Rel	17	nsubj	10:ref	_
 17	commenced	commence	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
-18	two	two	NUM	CD	NumType=Card	19	nummod	19:nummod	_
+18	two	two	NUM	CD	NumForm=Word|NumType=Card	19	nummod	19:nummod	_
 19	weeks	week	NOUN	NNS	Number=Plur	23	nmod:npmod	23:nmod:npmod	_
 20	before	before	ADP	IN	_	23	case	23:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
@@ -811,7 +811,7 @@
 6	revocation	revocation	NOUN	NN	Number=Sing	3	obl	3:obl:by	_
 7	of	of	ADP	IN	_	10	case	10:case	_
 8-9	AA's	_	_	_	_	_	_	_	_
-8	AA	aa	NOUN	NN	Number=Sing	10	nmod:poss	10:nmod:poss	_
+8	AA	AA	NOUN	NN	Number=Sing	10	nmod:poss	10:nmod:poss	_
 9	's	's	PART	POS	_	8	case	8:case	_
 10	signoff	signoff	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	_
 11	for	for	ADP	IN	_	13	case	13:case	_
@@ -838,7 +838,7 @@
 9	'	'	PUNCT	''	_	8	punct	8:punct	_
 10	within	within	ADP	IN	_	14	case	14:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-12	AS400	as400	NOUN	NN	Number=Sing	14	compound	14:compound	_
+12	AS400	AS400	NOUN	NN	Number=Sing	14	compound	14:compound	_
 13	Merchanting	Merchanting	PROPN	NNP	Number=Sing	14	compound	14:compound	_
 14	code	code	NOUN	NN	Number=Sing	8	nmod	8:nmod:within	SpaceAfter=No
 15	,	,	PUNCT	,	_	8	punct	8:punct	_
@@ -847,7 +847,7 @@
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 19	release	release	NOUN	NN	Number=Sing	16	obl	16:obl:from|26:nsubj	_
 20	of	of	ADP	IN	_	23	case	23:case	_
-21	OBSF	obsf	NOUN	NN	Number=Sing	22	compound	22:compound	_
+21	OBSF	OBSF	NOUN	NN	Number=Sing	22	compound	22:compound	_
 22	designed	design	VERB	VBN	Tense=Past|VerbForm=Part	23	amod	23:amod	_
 23	functionality	functionality	NOUN	NN	Number=Sing	19	nmod	19:nmod:of	SpaceAfter=No
 24	,	,	PUNCT	,	_	19	punct	19:punct	_
@@ -859,7 +859,7 @@
 30	of	of	SCONJ	IN	_	31	mark	31:mark	_
 31	supporting	support	VERB	VBG	VerbForm=Ger	29	acl	29:acl:of	_
 32	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	_
-33	OBSF	obsf	NOUN	NN	Number=Sing	31	obj	31:obj	SpaceAfter=No
+33	OBSF	OBSF	NOUN	NN	Number=Sing	31	obj	31:obj	SpaceAfter=No
 34	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent02_01-0039
@@ -872,8 +872,8 @@
 6	operational	operational	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	process	process	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
-9	OBSF	obsf	NOUN	NN	Number=Sing	11	compound	11:compound	_
-10	IT	it	NOUN	NN	Number=Sing	11	compound	11:compound	_
+9	OBSF	OBSF	NOUN	NN	Number=Sing	11	compound	11:compound	_
+10	IT	IT	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	code	code	NOUN	NN	Number=Sing	7	conj	4:obj|7:conj:and	_
 12	as	as	ADP	IN	_	14	case	14:case	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
@@ -884,12 +884,12 @@
 18	renegotiation	renegotiation	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	_
 19	of	of	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	OBSF	obsf	NOUN	NN	Number=Sing	18	nmod	18:nmod:of	_
+21	OBSF	OBSF	NOUN	NN	Number=Sing	18	nmod	18:nmod:of	_
 22	with	with	ADP	IN	_	23	case	23:case	_
 23	Barclays	Barclays	PROPN	NNP	Number=Sing	18	nmod	18:nmod:with	_
 24	(	(	PUNCT	-LRB-	_	23	punct	23:punct	_
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_
-26	AA	aa	NOUN	NN	Number=Sing	23	conj	18:nmod:with|23:conj:and	_
+26	AA	AA	NOUN	NN	Number=Sing	23	conj	18:nmod:with|23:conj:and	_
 27	)	)	PUNCT	-RRB-	_	26	punct	26:punct	SpaceAfter=No
 28	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -897,7 +897,7 @@
 # text = The senior IT developer for Merchanting has resigned and been sent on gardening leave.
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 2	senior	senior	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-3	IT	it	NOUN	NN	Number=Sing	4	compound	4:compound	_
+3	IT	IT	NOUN	NN	Number=Sing	4	compound	4:compound	_
 4	developer	developer	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|11:nsubj:pass	_
 5	for	for	ADP	IN	_	6	case	6:case	_
 6	Merchanting	Merchanting	PROPN	NNP	Number=Sing	4	nmod	4:nmod:for	_
@@ -968,7 +968,7 @@
 29	accuracy	accuracy	NOUN	NN	Number=Sing	21	obl	21:obl:as_to	_
 30	of	of	ADP	IN	_	33	case	33:case	_
 31	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	_
-32	Q1	q1	NOUN	NN	Number=Sing	33	nmod:tmod	33:nmod:tmod	_
+32	Q1	Q1	NOUN	NN	Number=Sing	33	nmod:tmod	33:nmod:tmod	_
 33	DPR	dpr	NOUN	NN	Number=Sing	29	nmod	29:nmod:of	_
 34	and	and	CCONJ	CC	_	37	cc	37:cc	_
 35	business	business	NOUN	NN	Number=Sing	37	compound	37:compound	_
@@ -982,7 +982,7 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	implementation	implementation	NOUN	NN	Number=Sing	11	nsubj:pass	11:nsubj:pass|14:nsubj:pass	_
 3	for	for	ADP	IN	_	4	case	4:case	_
-4	SAP	sap	NOUN	NN	Number=Sing	2	nmod	2:nmod:for	_
+4	SAP	SAP	NOUN	NN	Number=Sing	2	nmod	2:nmod:for	_
 5	for	for	ADP	IN	_	8	case	8:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	Merchanting	Merchanting	PROPN	NNP	Number=Sing	8	compound	8:compound	_
@@ -1004,16 +1004,16 @@
 23	Brokerage	brokerage	NOUN	NN	Number=Sing	24	compound	24:compound	_
 24	implementation	implementation	NOUN	NN	Number=Sing	14	obl	14:obl:from	_
 25	-	-	PUNCT	,	_	11	punct	11:punct	_
-26	benefit	benefit	NOUN	NN	Number=Sing	27	nsubj	27:nsubj	_
-27	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	parataxis	11:parataxis	_
+26	benefit	benefit	NOUN	NN	Number=Sing	29	nsubj:outer	29:nsubj:outer	_
+27	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	cop	29:cop	_
 28	to	to	PART	TO	_	29	mark	29:mark	_
-29	provide	provide	VERB	VB	VerbForm=Inf	27	ccomp	27:ccomp	_
+29	provide	provide	VERB	VB	VerbForm=Inf	11	parataxis	11:parataxis	_
 30	sole	sole	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
 31	focus	focus	NOUN	NN	Number=Sing	29	obj	29:obj	_
 32	on	on	ADP	IN	_	33	case	33:case	_
-33	OBSF	obsf	NOUN	NN	Number=Sing	31	nmod	31:nmod:on	_
+33	OBSF	OBSF	NOUN	NN	Number=Sing	31	nmod	31:nmod:on	_
 34	for	for	ADP	IN	_	37	case	37:case	_
-35	IT	it	NOUN	NN	Number=Sing	37	compound	37:compound	_
+35	IT	IT	NOUN	NN	Number=Sing	37	compound	37:compound	_
 36	Merchanting	Merchanting	PROPN	NNP	Number=Sing	37	compound	37:compound	_
 37	developers	developer	NOUN	NNS	Number=Plur	31	nmod	31:nmod:for	SpaceAfter=No
 38	.	.	PUNCT	.	_	11	punct	11:punct	_
@@ -1021,10 +1021,10 @@
 # sent_id = email-enronsent02_01-0044
 # text = The AR/AP SAP data quality reviews for both businesses are continuing so as to provide a detailed analysis as at end Q1.
 1	The	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-2	AR	ar	NOUN	NN	Number=Sing	8	compound	8:compound	SpaceAfter=No
+2	AR	AR	NOUN	NN	Number=Sing	8	compound	8:compound	SpaceAfter=No
 3	/	/	SYM	,	_	4	cc	4:cc	SpaceAfter=No
-4	AP	ap	NOUN	NN	Number=Sing	2	conj	2:conj|8:compound	_
-5	SAP	sap	NOUN	NN	Number=Sing	8	compound	8:compound	_
+4	AP	AP	NOUN	NN	Number=Sing	2	conj	2:conj|8:compound	_
+5	SAP	SAP	NOUN	NN	Number=Sing	8	compound	8:compound	_
 6	data	data	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	quality	quality	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	reviews	review	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
@@ -1043,7 +1043,7 @@
 21	as	as	ADP	IN	_	23	case	23:case	_
 22	at	at	ADP	IN	_	23	case	23:case	_
 23	end	end	NOUN	NN	Number=Sing	17	obl	17:obl:at	_
-24	Q1	q1	NOUN	NN	Number=Sing	23	nmod:tmod	23:nmod:tmod	SpaceAfter=No
+24	Q1	Q1	NOUN	NN	Number=Sing	23	nmod:tmod	23:nmod:tmod	SpaceAfter=No
 25	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = email-enronsent02_01-0045
@@ -1088,7 +1088,7 @@
 9	prior	prior	ADJ	JJ	Degree=Pos|ExtPos=ADP	11	case	11:case	_
 10	to	to	ADP	IN	_	9	fixed	9:fixed	_
 11	end	end	NOUN	NN	Number=Sing	8	obl	8:obl:prior_to	_
-12	Q1	q1	NOUN	NN	Number=Sing	11	nmod:tmod	11:nmod:tmod	_
+12	Q1	Q1	NOUN	NN	Number=Sing	11	nmod:tmod	11:nmod:tmod	_
 13	covering	cover	VERB	VBG	VerbForm=Ger	8	advcl	8:advcl	_
 14	gross	gross	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	tonnage	tonnage	NOUN	NN	Number=Sing	13	obj	13:obj	SpaceAfter=No
@@ -1115,7 +1115,7 @@
 7	available	available	ADJ	JJ	Degree=Pos	0	root	0:root	_
 8	within	within	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	AS400	as400	NOUN	NN	Number=Sing	7	obl	7:obl:within	SpaceAfter=No
+10	AS400	AS400	NOUN	NN	Number=Sing	7	obl	7:obl:within	SpaceAfter=No
 11	,	,	PUNCT	,	_	7	punct	7:punct	_
 12	however	however	ADV	RB	_	16	advmod	16:advmod	_
 13	contingencies	contingency	NOUN	NNS	Number=Plur	16	nsubj:pass	16:nsubj:pass	_
@@ -1132,10 +1132,10 @@
 24	outside	outside	ADP	IN	_	18	obl	18:obl	_
 25	of	of	ADP	IN	_	27	case	27:case	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
-27	AS400	as400	NOUN	NN	Number=Sing	24	nmod	24:nmod:of	_
+27	AS400	AS400	NOUN	NN	Number=Sing	24	nmod	24:nmod:of	_
 28	but	but	CCONJ	CC	_	29	cc	29:cc	_
 29	using	use	VERB	VBG	VerbForm=Ger	24	conj	18:obl|24:conj:but	_
-30	AS400	as400	NOUN	NN	Number=Sing	32	compound	32:compound	_
+30	AS400	AS400	NOUN	NN	Number=Sing	32	compound	32:compound	_
 31	data	data	NOUN	NN	Number=Sing	32	compound	32:compound	_
 32	downloads	download	NOUN	NNS	Number=Plur	29	obj	29:obj	SpaceAfter=No
 33	.	.	PUNCT	.	_	7	punct	7:punct	_
@@ -1146,7 +1146,7 @@
 2	requests	request	NOUN	NNS	Number=Plur	12	nsubj:pass	12:nsubj:pass	_
 3	for	for	ADP	IN	_	6	case	6:case	_
 4	additional	additional	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-5	AS400	as400	NOUN	NN	Number=Sing	6	compound	6:compound	_
+5	AS400	AS400	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	functionality	functionality	NOUN	NN	Number=Sing	2	nmod	2:nmod:for	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
 8	reports	report	NOUN	NNS	Number=Plur	6	conj	2:nmod:for|6:conj:and	_
@@ -1165,12 +1165,12 @@
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 22	end	end	NOUN	NN	Number=Sing	18	obl	18:obl:prior_to	_
 23	of	of	ADP	IN	_	24	case	24:case	_
-24	Q1	q1	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	_
+24	Q1	Q1	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	_
 25	following	follow	VERB	VBG	VerbForm=Ger	27	case	27:case	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 27	delivery	delivery	NOUN	NN	Number=Sing	18	obl	18:obl:following	_
 28	of	of	ADP	IN	_	30	case	30:case	_
-29	three	three	NUM	CD	NumType=Card	30	nummod	30:nummod	_
+29	three	three	NUM	CD	NumForm=Word|NumType=Card	30	nummod	30:nummod	_
 30	reports	report	NOUN	NNS	Number=Plur	27	nmod	27:nmod:of	_
 31	determined	determine	VERB	VBN	Tense=Past|VerbForm=Part	30	acl	30:acl	_
 32	as	as	ADP	IN	_	34	case	34:case	_
@@ -1180,7 +1180,7 @@
 36	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	_
 37	support	support	NOUN	NN	Number=Sing	34	nmod	34:nmod:for	_
 38	of	of	ADP	IN	_	39	case	39:case	_
-39	OBSF	obsf	NOUN	NN	Number=Sing	37	nmod	37:nmod:of	SpaceAfter=No
+39	OBSF	OBSF	NOUN	NN	Number=Sing	37	nmod	37:nmod:of	SpaceAfter=No
 40	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = email-enronsent02_01-0049
@@ -1190,7 +1190,7 @@
 3	of	of	ADP	IN	_	7	case	7:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 5	full	full	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-6	Q1	q1	NOUN	NN	Number=Sing	7	nmod:tmod	7:nmod:tmod	_
+6	Q1	Q1	NOUN	NN	Number=Sing	7	nmod:tmod	7:nmod:tmod	_
 7	DPR	dpr	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 8	will	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 9	be	be	AUX	VB	VerbForm=Inf	10	aux:pass	10:aux:pass	_
@@ -1206,10 +1206,10 @@
 19	trial	trial	NOUN	NN	Number=Sing	20	compound	20:compound	_
 20	balances	balance	NOUN	NNS	Number=Plur	16	obj	16:obj	_
 21	between	between	ADP	IN	_	23	case	23:case	_
-22	Q1	q1	NOUN	NN	Number=Sing	23	nmod:tmod	23:nmod:tmod	_
+22	Q1	Q1	NOUN	NN	Number=Sing	23	nmod:tmod	23:nmod:tmod	_
 23	open	open	NOUN	NN	Number=Sing	16	obl	16:obl:between	_
 24	and	and	CCONJ	CC	_	26	cc	26:cc	_
-25	Q1	q1	NOUN	NN	Number=Sing	26	nmod:tmod	26:nmod:tmod	_
+25	Q1	Q1	NOUN	NN	Number=Sing	26	nmod:tmod	26:nmod:tmod	_
 26	close	close	NOUN	NN	Number=Sing	23	conj	16:obl:between|23:conj:and	_
 
 # sent_id = email-enronsent02_01-0050
@@ -1225,7 +1225,7 @@
 9	completed	complete	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 10	within	within	ADP	IN	_	14	case	14:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-12	Q1	q1	NOUN	NN	Number=Sing	14	nmod:tmod	14:nmod:tmod	_
+12	Q1	Q1	NOUN	NN	Number=Sing	14	nmod:tmod	14:nmod:tmod	_
 13	audit	audit	NOUN	NN	Number=Sing	14	compound	14:compound	_
 14	timetable	timetable	NOUN	NN	Number=Sing	9	obl	9:obl:within|16:nsubj	_
 15	which	which	PRON	WDT	PronType=Rel	16	nsubj	14:ref	_
@@ -1264,7 +1264,7 @@
 12	party	party	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	inspectors	inspector	NOUN	NNS	Number=Plur	1	nmod	1:nmod:by	SpaceAfter=No
 14	,	,	PUNCT	,	_	1	punct	1:punct	_
-15	where	where	SCONJ	WRB	PronType=Rel	17	mark	17:mark	_
+15	where	where	ADV	WRB	PronType=Rel	17	advmod	17:advmod	_
 16	there	there	PRON	EX	_	17	expl	17:expl	_
 17	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
 18	an	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
@@ -1319,7 +1319,7 @@
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
 4	recalculation	recalculation	NOUN	NN	Number=Sing	2	conj	2:conj:and	_
 5	of	of	ADP	IN	_	9	case	9:case	_
-6	OBSF	obsf	NOUN	NN	Number=Sing	7	compound	7:compound	_
+6	OBSF	OBSF	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	option	option	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	premium	premium	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	values	value	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	_
@@ -1332,7 +1332,7 @@
 4	contracts	contract	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	_
 5	within	within	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	OBSF	obsf	NOUN	NN	Number=Sing	4	nmod	4:nmod:within	_
+7	OBSF	OBSF	NOUN	NN	Number=Sing	4	nmod	4:nmod:within	_
 8	to	to	ADP	IN	_	10	case	10:case	_
 9	Barclays	Barclays	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	documentation	documentation	NOUN	NN	Number=Sing	2	nmod	2:nmod:to	_
@@ -1351,7 +1351,7 @@
 23	)	)	PUNCT	-RRB-	_	13	punct	13:punct	_
 24	and	and	CCONJ	CC	_	28	cc	28:cc	_
 25	to	to	ADP	IN	_	28	case	28:case	_
-26	AS400	as400	NOUN	NN	Number=Sing	28	compound	28:compound	_
+26	AS400	AS400	NOUN	NN	Number=Sing	28	compound	28:compound	_
 27	Barclays	Barclays	PROPN	NNP	Number=Sing	28	compound	28:compound	_
 28	account	account	NOUN	NN	Number=Sing	10	conj	2:nmod:to|10:conj:and	_
 
@@ -1368,7 +1368,7 @@
 9	source	source	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	documentation	documentation	NOUN	NN	Number=Sing	7	obl	7:obl:to	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
-12	where	where	SCONJ	WRB	PronType=Int	13	mark	13:mark	_
+12	where	where	ADV	WRB	PronType=Int	13	advmod	13:advmod	_
 13	applicable	applicable	ADJ	JJ	Degree=Pos	7	advcl	7:advcl:where	SpaceAfter=No
 14	,	,	PUNCT	,	_	13	punct	13:punct	_
 15	and	and	CCONJ	CC	_	22	cc	22:cc	_

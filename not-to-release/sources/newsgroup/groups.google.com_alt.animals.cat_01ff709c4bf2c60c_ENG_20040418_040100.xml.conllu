@@ -47,7 +47,7 @@
 6	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 7	local	local	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 8	animal	animal	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	rights	rights	NOUN	NNS	Number=Plur	10	compound	10:compound	_
+9	rights	right	NOUN	NNS	Number=Plur	10	compound	10:compound	_
 10	news	news	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
@@ -96,7 +96,7 @@
 30	sheds	shed	NOUN	NNS	Number=Plur	27	nmod	27:nmod:of	_
 31	up	up	ADP	RP	_	25	compound:prt	25:compound:prt	_
 32	to	to	ADP	IN	_	34	case	34:case	_
-33	110	110	NUM	CD	NumType=Card	34	nummod	34:nummod	_
+33	110	110	NUM	CD	NumForm=Digit|NumType=Card	34	nummod	34:nummod	_
 34	degrees	degree	NOUN	NNS	Number=Plur	25	obl	25:obl:to	_
 35	with	with	ADP	IN	_	36	case	36:case	_
 36	fires	fire	NOUN	NNS	Number=Plur	25	obl	25:obl:with	SpaceAfter=No
@@ -111,7 +111,7 @@
 45	sweat	sweat	NOUN	NN	Number=Sing	43	obj	43:obj	_
 46	off	off	ADP	IN	_	49	case	49:case	_
 47	of	of	ADP	IN	_	49	case	49:case	_
-48	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	49	nmod:poss	49:nmod:poss	_
+48	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	49	nmod:poss	49:nmod:poss	_
 49	genitals	genitals	NOUN	NNS	Number=Plur	43	obl	43:obl:of	_
 50	and	and	CCONJ	CC	_	51	cc	51:cc	_
 51	sell	sell	VERB	VB	VerbForm=Inf	43	conj	25:advcl:so_that|43:conj:and	_
@@ -135,23 +135,23 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	animals	animal	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
 3	eventually	eventually	ADV	RB	_	4	advmod	4:advmod	_
-4	die	die	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
-5	,	,	PUNCT	,	_	4	punct	4:punct	_
-6	which	which	PRON	WDT	PronType=Int	7	nsubj	7:nsubj	_
-7	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
+4	die	die	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root|13:csubj:outer	SpaceAfter=No
+5	,	,	PUNCT	,	_	13	punct	13:punct	_
+6	which	which	PRON	WDT	PronType=Rel	13	nsubj:outer	4:ref	_
+7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
 8	because	because	SCONJ	IN	_	13	mark	13:mark	_
 9	these	this	DET	DT	Number=Plur|PronType=Dem	10	det	10:det	_
 10	demons	demon	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
 11	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
 12	so	so	ADV	RB	_	13	advmod	13:advmod	_
-13	GREEDY	greedy	ADJ	JJ	Degree=Pos	7	advcl	7:advcl:because	SpaceAfter=No
+13	GREEDY	greedy	ADJ	JJ	Degree=Pos	4	advcl:relcl	4:advcl:relcl:because	SpaceAfter=No
 14	,	,	PUNCT	,	_	13	punct	13:punct	_
 15	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
 16	want	want	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	ccomp	13:ccomp	_
 17	as	as	ADV	RB	_	18	advmod	18:advmod	_
 18	much	much	ADJ	JJ	Degree=Pos	16	obj	16:obj	_
 19	of	of	ADP	IN	_	22	case	22:case	_
-20	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
+20	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
 21	"	"	PUNCT	``	_	22	punct	22:punct	SpaceAfter=No
 22	product	product	NOUN	NN	Number=Sing	18	obl	18:obl:of	SpaceAfter=No
 23	"	"	PUNCT	''	_	22	punct	22:punct	_
@@ -263,7 +263,7 @@
 6	're	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 7	sitting	sit	VERB	VBG	Tense=Pres|VerbForm=Part	24	advcl	24:advcl:while	_
 8	at	at	ADP	IN	_	10	case	10:case	_
-9	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
+9	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	computers	computer	NOUN	NNS	Number=Plur	7	obl	7:obl:at	_
 11	enjoying	enjoy	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
@@ -296,15 +296,15 @@
 # text = The main reason I wrote this post is to ask anyone reading this if they know of some way I can help put a stop to this Cat Holocaust.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	main	main	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	reason	reason	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
+3	reason	reason	NOUN	NN	Number=Sing	10	nsubj:outer	10:nsubj:outer	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 5	wrote	write	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
 6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	7:det	_
 7	post	post	NOUN	NN	Number=Sing	5	obj	5:obj	_
-8	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	ask	ask	VERB	VB	VerbForm=Inf	8	ccomp	8:ccomp	_
-11	anyone	anyone	PRON	NN	Number=Sing	10	obj	10:obj	_
+10	ask	ask	VERB	VB	VerbForm=Inf	0	root	0:root	_
+11	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	10	obj	10:obj	_
 12	reading	read	VERB	VBG	VerbForm=Ger	11	acl	11:acl	_
 13	this	this	PRON	DT	Number=Sing|PronType=Dem	12	obj	12:obj	_
 14	if	if	SCONJ	IN	_	16	mark	16:mark	_
@@ -323,7 +323,7 @@
 27	this	this	DET	DT	Number=Sing|PronType=Dem	29	det	29:det	_
 28	Cat	cat	NOUN	NN	Number=Sing	29	compound	29:compound	_
 29	Holocaust	holocaust	NOUN	NN	Number=Sing	23	obl	23:obl:to	SpaceAfter=No
-30	.	.	PUNCT	.	_	8	punct	8:punct	_
+30	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0010
 # text = I am serious about doing something.
@@ -332,7 +332,7 @@
 3	serious	serious	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	about	about	SCONJ	IN	_	5	mark	5:mark	_
 5	doing	do	VERB	VBG	VerbForm=Ger	3	advcl	3:advcl:about	_
-6	something	something	PRON	NN	Number=Sing	5	obj	5:obj	SpaceAfter=No
+6	something	something	PRON	NN	Number=Sing|PronType=Ind	5	obj	5:obj	SpaceAfter=No
 7	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0011
@@ -350,7 +350,7 @@
 10	n't	not	PART	RB	_	12	advmod	12:advmod	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 12	DOING	do	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
-13	something	something	PRON	NN	Number=Sing	12	obj	12:obj	SpaceAfter=No
+13	something	something	PRON	NN	Number=Sing|PronType=Ind	12	obj	12:obj	SpaceAfter=No
 14	???	???	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0012
@@ -371,17 +371,17 @@
 13	have	have	VERB	VB	VerbForm=Inf	6	conj	4:xcomp|6:conj:and	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
 15	explain	explain	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
-16	why	why	SCONJ	WRB	PronType=Int	20	mark	20:mark	_
+16	why	why	ADV	WRB	PronType=Int	20	advmod	20:advmod	_
 17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
 18-19	didn't	_	_	_	_	_	_	_	_
 18	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	20	aux	20:aux	_
 19	n't	not	PART	RB	_	20	advmod	20:advmod	_
 20	do	do	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	_
-21	anything	anything	PRON	NN	Number=Sing	20	obj	20:obj	_
+21	anything	anything	PRON	NN	Number=Sing|PronType=Ind	20	obj	20:obj	_
 22	like	like	ADP	IN	_	23	case	23:case	_
 23	this	this	PRON	DT	Number=Sing|PronType=Dem	21	nmod	21:nmod:like	_
 24	in	in	ADP	IN	_	26	case	26:case	_
-25	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
+25	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
 26	life	life	NOUN	NN	Number=Sing	20	obl	20:obl:in	SpaceAfter=No
 27	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -431,8 +431,8 @@
 13	and	and	CCONJ	CC	_	25	cc	25:cc	_
 14	tonight	tonight	NOUN	NN	Number=Sing	25	obl:tmod	25:obl:tmod	SpaceAfter=No
 15	,	,	PUNCT	,	_	25	punct	25:punct	_
-16	when	when	SCONJ	WRB	PronType=Int	19	mark	19:mark	_
-17	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
+16	when	when	ADV	WRB	PronType=Int	19	advmod	19:advmod	_
+17	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 18	Mom	mom	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
 19	emailed	email	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	25	advcl	25:advcl:when	_
 20	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	19	obj	19:obj	_
@@ -466,7 +466,7 @@
 3	sure	sure	ADV	RB	_	16	advmod	16:advmod	_
 4	enough	enough	ADV	RB	_	3	advmod	3:advmod	SpaceAfter=No
 5	,	,	PUNCT	,	_	16	punct	16:punct	_
-6	when	when	SCONJ	WRB	PronType=Int	8	mark	8:mark	_
+6	when	when	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 8	heard	hear	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	16	advcl	16:advcl:when	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
@@ -493,7 +493,7 @@
 30	went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	29	acl:relcl	29:acl:relcl	_
 31	on	on	ADP	RP	_	30	compound:prt	30:compound:prt	_
 32	in	in	ADP	IN	_	38	case	38:case	_
-33	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	38	nmod:poss	38:nmod:poss	_
+33	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	38	nmod:poss	38:nmod:poss	_
 34	tiny	tiny	ADJ	JJ	Degree=Pos	38	amod	38:amod	SpaceAfter=No
 35	,	,	PUNCT	,	_	38	punct	38:punct	_
 36	sweet	sweet	ADJ	JJ	Degree=Pos	38	amod	38:amod	_
@@ -507,7 +507,7 @@
 44	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	41	ccomp	41:ccomp	_
 45	to	to	PART	TO	_	46	mark	46:mark	_
 46	do	do	VERB	VB	VerbForm=Inf	44	xcomp	44:xcomp	_
-47	something	something	PRON	NN	Number=Sing	46	obj	46:obj	_
+47	something	something	PRON	NN	Number=Sing|PronType=Ind	46	obj	46:obj	_
 48	about	about	ADP	IN	_	50	case	50:case	_
 49	this	this	DET	DT	Number=Sing|PronType=Dem	50	det	50:det	_
 50	torture	torture	NOUN	NN	Number=Sing	46	obl	46:obl:about	SpaceAfter=No
@@ -518,7 +518,7 @@
 1	So	so	ADV	RB	_	14	advmod	14:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	14	punct	14:punct	_
 3	if	if	SCONJ	IN	_	6	mark	6:mark	_
-4	anyone	anyone	PRON	NN	Number=Sing	6	nsubj	6:nsubj	_
+4	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	6	nsubj	6:nsubj	_
 5	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 6	give	give	VERB	VB	VerbForm=Inf	14	advcl	14:advcl:if	_
 7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	iobj	6:iobj	_
@@ -596,7 +596,7 @@
 4	got	get	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	website	website	NOUN	NN	Number=Sing	4	obj	4:obj	_
-7	where	where	SCONJ	WRB	PronType=Rel	12	mark	12:mark	_
+7	where	where	ADV	WRB	PronType=Rel	12	advmod	12:advmod	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	song	song	NOUN	NN	Number=Sing	12	nsubj:pass	12:nsubj:pass	_
 10	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
@@ -669,12 +669,12 @@
 2	:	:	PUNCT	:	_	1	punct	1:punct	_
 3	Thu	Thursday	PROPN	NNP	Abbr=Yes|Number=Sing	1	appos	1:appos	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
-5	11	11	NUM	CD	NumType=Card	6	nummod	6:nummod	_
+5	11	11	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
 6	Mar	March	PROPN	NNP	Abbr=Yes|Number=Sing	3	appos	3:appos	_
-7	2004	2004	NUM	CD	NumType=Card	6	nmod:tmod	6:nmod:tmod	_
-8	02:39:27	02:39:27	NUM	CD	NumType=Card	3	nmod:tmod	3:nmod:tmod	_
+7	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	6	nmod:tmod	6:nmod:tmod	_
+8	02:39:27	02:39:27	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:tmod	3:nmod:tmod	_
 9	-	-	PUNCT	,	_	3	punct	3:punct	SpaceAfter=No
-10	0800	0800	NUM	CD	NumType=Card	3	appos	3:appos	_
+10	0800	0800	NUM	CD	NumForm=Digit|NumType=Card	3	appos	3:appos	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0027
 # text = To: SPAR <s...@sonic.net>
@@ -703,7 +703,7 @@
 # text = This is my first time posting to the list, so I feel somewhat embarrassed by "promoting" a song I wrote, but I think it is fitting because it is directly tied to extreme animal suffering as a result of human lack of empathy, but an abundance of human greed.
 1	This	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-3	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 4	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	5	amod	5:amod	_
 5	time	time	NOUN	NN	Number=Sing	0	root	0:root	_
 6	posting	post	VERB	VBG	VerbForm=Ger	5	acl	5:acl	_
@@ -800,7 +800,7 @@
 38	many	many	ADJ	JJ	Degree=Pos	44	amod	44:amod	_
 39	other	other	ADJ	JJ	Degree=Pos	44	amod	44:amod	_
 40	animal	animal	NOUN	NN	Number=Sing	41	compound	41:compound	_
-41	rights	rights	NOUN	NNS	Number=Plur	43	compound	43:compound	SpaceAfter=No
+41	rights	right	NOUN	NNS	Number=Plur	43	compound	43:compound	SpaceAfter=No
 42	-	-	PUNCT	,	_	43	punct	43:punct	SpaceAfter=No
 43	related	relate	VERB	VBN	Tense=Past|VerbForm=Part	44	amod	44:amod	_
 44	books	book	NOUN	NNS	Number=Plur	33	nmod	33:nmod:among	_
@@ -820,7 +820,7 @@
 8	be	be	AUX	VB	VerbForm=Inf	12	cop	12:cop	_
 9	for	for	ADP	IN	_	12	case	12:case	_
 10	animal	animal	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	rights	rights	NOUN	NNS	Number=Plur	12	compound	12:compound	_
+11	rights	right	NOUN	NNS	Number=Plur	12	compound	12:compound	_
 12	theory	theory	NOUN	NN	Number=Sing	5	xcomp	5:xcomp	_
 13	as	as	SCONJ	IN	_	19	mark	19:mark	_
 14	Peter	Peter	PROPN	NNP	Number=Sing	19	nsubj	19:nsubj	_
@@ -861,7 +861,7 @@
 # sent_id = newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0033
 # text = If anyone wants the complete article, email me, as it is a very good article which no meat-eater can read and not sense their own hypocrisy.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
-2	anyone	anyone	PRON	NN	Number=Sing	3	nsubj	3:nsubj	_
+2	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	3	nsubj	3:nsubj	_
 3	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:if	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	complete	complete	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
@@ -887,7 +887,7 @@
 25	and	and	CCONJ	CC	_	27	cc	27:cc	_
 26	not	not	PART	RB	_	27	advmod	27:advmod	_
 27	sense	sense	VERB	VB	VerbForm=Inf	24	conj	17:acl:relcl|24:conj:and	_
-28	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	30	nmod:poss	30:nmod:poss	_
+28	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	30	nmod:poss	30:nmod:poss	_
 29	own	own	ADJ	JJ	Degree=Pos	30	amod	30:amod	_
 30	hypocrisy	hypocrisy	NOUN	NN	Number=Sing	27	obj	27:obj	SpaceAfter=No
 31	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -943,14 +943,14 @@
 11	darkened	darken	VERB	VBN	Tense=Past|VerbForm=Part	12	amod	12:amod	_
 12	sheds	shed	NOUN	NNS	Number=Plur	9	nmod	9:nmod:inside	SpaceAfter=No
 13	,	,	PUNCT	,	_	12	punct	12:punct	_
-14	where	where	SCONJ	WRB	PronType=Rel	18	mark	18:mark	_
+14	where	where	ADV	WRB	PronType=Rel	18	advmod	18:advmod	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 16	temperature	temperature	NOUN	NN	Number=Sing	18	nsubj:pass	18:nsubj:pass	_
 17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux:pass	18:aux:pass	_
 18	kept	keep	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	acl:relcl	12:acl:relcl	_
 19	up	up	ADP	IN	_	21	advmod	21:advmod	_
 20	to	to	ADP	IN	_	19	fixed	19:fixed	_
-21	110	110	NUM	CD	NumType=Card	22	nummod	22:nummod	_
+21	110	110	NUM	CD	NumForm=Digit|NumType=Card	22	nummod	22:nummod	_
 22	F	F	PROPN	NNP	Number=Sing	18	obj	18:obj	_
 23	by	by	ADP	IN	_	24	case	24:case	_
 24	fires	fire	NOUN	NNS	Number=Plur	18	obl	18:obl:by	SpaceAfter=No
@@ -1008,7 +1008,7 @@
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux:pass	5:aux:pass	_
 5	scraped	scrape	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	1	acl:relcl	1:acl:relcl	_
 6	from	from	ADP	IN	_	8	case	8:case	_
-7	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+7	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 8	genitals	genitals	NOUN	NNS	Number=Plur	5	obl	5:obl:from	_
 9	once	once	ADV	RB	NumType=Mult	5	advmod	5:advmod	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
@@ -1042,7 +1042,7 @@
 2	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	heat	heat	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 4	increases	increase	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-5	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+5	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 6	"	"	PUNCT	``	_	7	punct	7:punct	SpaceAfter=No
 7	production	production	NOUN	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No
 8	"	"	PUNCT	''	_	7	punct	7:punct	_
@@ -1085,7 +1085,7 @@
 # text = To promote one of the most trivial interests we have, thousands of animals are tormented for their whole lives."
 1	To	to	PART	TO	_	2	mark	2:mark	_
 2	promote	promote	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:to	_
-3	one	one	NUM	CD	NumType=Card	2	obj	2:obj	_
+3	one	one	NUM	CD	NumForm=Word|NumType=Card	2	obj	2:obj	_
 4	of	of	ADP	IN	_	8	case	8:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 6	most	most	ADV	RBS	Degree=Sup	7	advmod	7:advmod	_
@@ -1100,7 +1100,7 @@
 15	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	aux:pass	16:aux:pass	_
 16	tormented	torment	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 17	for	for	ADP	IN	_	20	case	20:case	_
-18	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
+18	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
 19	whole	whole	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
 20	lives	life	NOUN	NNS	Number=Plur	16	obl	16:obl:for	SpaceAfter=No
 21	.	.	PUNCT	.	_	16	punct	16:punct	SpaceAfter=No
@@ -1133,7 +1133,7 @@
 # sent_id = newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0045
 # text = If anyone is interested in listening to this song, and in offering their opinion, whether it be positive or negative, I'd appreciate it.
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
-2	anyone	anyone	PRON	NN	Number=Sing	4	nsubj	4:nsubj	_
+2	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	4	nsubj	4:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 4	interested	interested	ADJ	JJ	Degree=Pos	26	advcl	26:advcl:if	_
 5	in	in	SCONJ	IN	_	6	mark	6:mark	_
@@ -1145,7 +1145,7 @@
 11	and	and	CCONJ	CC	_	13	cc	13:cc	_
 12	in	in	SCONJ	IN	_	13	mark	13:mark	_
 13	offering	offer	VERB	VBG	VerbForm=Ger	6	conj	4:advcl:in|6:conj:and	_
-14	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
+14	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	opinion	opinion	NOUN	NN	Number=Sing	13	obj	13:obj	SpaceAfter=No
 16	,	,	PUNCT	,	_	13	punct	13:punct	_
 17	whether	whether	SCONJ	IN	_	20	mark	20:mark	_
@@ -1169,7 +1169,7 @@
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
 4	hope	hope	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	no	no	DET	DT	_	6	det	6:det	_
-6	one	one	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
+6	one	one	PRON	NN	Number=Sing|PronType=Neg	7	nsubj	7:nsubj	_
 7	feels	feel	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
 8	any	any	DET	DT	_	9	det	9:det	_
 9	obligation	obligation	NOUN	NN	Number=Sing	7	obj	7:obj	_
@@ -1186,10 +1186,10 @@
 20	as	as	ADV	RB	_	21	advmod	21:advmod	_
 21	slow	slow	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 21.1	_	as	ADP	IN	Typo=Yes	_	_	22:case	CorrectForm=as
-22	mine	mine	PRON	PRP	_	21	obl	21:obl:as	_
+22	mine	my	PRON	PRP	Number=Sing|Person=1|Poss=Yes|PronType=Prs	21	obl	21:obl:as	_
 23	(	(	PUNCT	-LRB-	_	25	punct	25:punct	SpaceAfter=No
-24	28	28	NUM	CD	NumType=Card	25	nummod	25:nummod	SpaceAfter=No
-25	k	k	NUM	CD	NumType=Card	22	nmod:npmod	22:nmod:npmod	SpaceAfter=No
+24	28	28	NUM	CD	NumForm=Digit|NumType=Card	25	nummod	25:nummod	SpaceAfter=No
+25	k	thousand	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	22	nmod:npmod	22:nmod:npmod	SpaceAfter=No
 26	)	)	PUNCT	-RRB-	_	25	punct	25:punct	SpaceAfter=No
 27	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -1201,7 +1201,7 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	song	song	NOUN	NN	Number=Sing	2	nmod	2:nmod:for	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
-7	http://www.sonic.net/~fsjob/TragiCore-TheCivetCat.mp3	http://www.sonic.net/~fsjob/tragicore-thecivetcat.mp3	X	ADD	_	0	root	0:root	_
+7	http://www.sonic.net/~fsjob/TragiCore-TheCivetCat.mp3	http://www.sonic.net/~fsjob/TragiCore-TheCivetCat.mp3	X	ADD	_	0	root	0:root	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0048
 # text = Although there are no human vocals/lyrics, I think it's subject matter is audible.
@@ -1216,7 +1216,7 @@
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 11	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-12	it's	it	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	14	nmod:poss	14:nmod:poss	CorrectForm=its
+12	it's	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	14	nmod:poss	14:nmod:poss	CorrectForm=its
 13	subject	subject	NOUN	NN	Number=Sing	14	compound	14:compound	_
 14	matter	matter	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	_
 15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
@@ -1228,7 +1228,7 @@
 1	Again	again	ADV	RB	_	13	advmod	13:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	13	punct	13:punct	_
 3	if	if	SCONJ	IN	_	5	mark	5:mark	_
-4	anyone	anyone	PRON	NN	Number=Sing	5	nsubj	5:nsubj|7:nsubj:xsubj	_
+4	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	5	nsubj	5:nsubj|7:nsubj:xsubj	_
 5	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:if	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	read	read	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
@@ -1261,7 +1261,7 @@
 3	already	already	ADV	RB	_	5	advmod	5:advmod	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	vegetarian	vegetarian	NOUN	NN	Number=Sing	0	root	0:root	_
-6	when	when	SCONJ	WRB	PronType=Int	8	mark	8:mark	_
+6	when	when	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 8	read	read	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	5	advcl	5:advcl:when	_
 9	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	obj	8:obj	_
@@ -1276,7 +1276,7 @@
 18	but	but	CCONJ	CC	_	21	cc	21:cc	_
 19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	21	nsubj	21:nsubj	_
 20	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	cop	21:cop	_
-21	one	one	NUM	CD	NumType=Card	5	conj	5:conj:but	_
+21	one	one	NUM	CD	NumForm=Word|NumType=Card	5	conj	5:conj:but	_
 22	of	of	ADP	IN	_	25	case	25:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
 24	bigger	big	ADJ	JJR	Degree=Cmp	25	amod	25:amod	_
@@ -1317,7 +1317,7 @@
 1	icq	icq	NOUN	NN	Number=Sing	2	compound	2:compound	_
 2	uin	uin	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 3	:	:	PUNCT	:	_	2	punct	2:punct	_
-4	5249025	5249025	NUM	CD	NumType=Card	2	list	2:list	_
+4	5249025	5249025	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0056
 # text = "Note to Wigner: Do you think your friend could feed my cat?
@@ -1329,11 +1329,11 @@
 6	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 8	think	think	VERB	VB	VerbForm=Inf	2	appos	2:appos	_
-9	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
+9	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	friend	friend	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
 11	could	could	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 12	feed	feed	VERB	VB	VerbForm=Inf	8	ccomp	8:ccomp	_
-13	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
+13	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 14	cat	cat	NOUN	NN	Number=Sing	12	obj	12:obj	SpaceAfter=No
 15	?	?	PUNCT	.	_	2	punct	2:punct	_
 

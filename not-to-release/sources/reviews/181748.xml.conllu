@@ -6,7 +6,7 @@
 2	Careful	careful	ADJ	JJ	Degree=Pos	0	root	0:root	_
 3	Of	of	SCONJ	IN	_	4	mark	4:mark	_
 4	Who	who	PRON	WP	PronType=Int	2	advcl	2:advcl:of	_
-5	Your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+5	Your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 6	Sales	sale	NOUN	NNS	Number=Plur	7	compound	7:compound	_
 7	Guy	guy	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 8	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
@@ -33,7 +33,7 @@
 
 # sent_id = reviews-181748-0003
 # text = My experience was awful though.
-1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	experience	experience	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
 4	awful	awful	ADJ	JJ	Degree=Pos	0	root	0:root	_
@@ -55,7 +55,7 @@
 11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 13	young	young	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-14	22	22	NUM	CD	NumType=Card	15	nummod	15:nummod	_
+14	22	22	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
 15	year	year	NOUN	NN	Number=Sing	9	acl:relcl	9:acl:relcl|22:nsubj	_
 16	old	old	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 17	who	who	PRON	WP	PronType=Rel	22	nsubj	15:ref	_
@@ -65,7 +65,7 @@
 21	been	be	AUX	VBN	Tense=Past|VerbForm=Part	22	aux	22:aux	_
 22	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	15	acl:relcl	15:acl:relcl	_
 23	for	for	ADP	IN	_	25	case	25:case	_
-24	2	2	NUM	CD	NumType=Card	25	nummod	25:nummod	_
+24	2	2	NUM	CD	NumForm=Digit|NumType=Card	25	nummod	25:nummod	_
 25	weeks	week	NOUN	NNS	Number=Plur	22	obl	22:obl:for	SpaceAfter=No
 26	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -169,9 +169,9 @@
 20	and	and	CCONJ	CC	_	21	cc	21:cc	_
 21	apologize	apologize	VERB	VB	VerbForm=Inf	19	conj	17:xcomp|19:conj:and	_
 22	about	about	ADP	IN	_	23	case	23:case	_
-23	nothing	nothing	PRON	NN	Number=Sing	21	obl	21:obl:about	_
+23	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	21	obl	21:obl:about	_
 24	for	for	ADP	IN	_	26	case	26:case	_
-25	10	10	NUM	CD	NumType=Card	26	nummod	26:nummod	_
+25	10	10	NUM	CD	NumForm=Digit|NumType=Card	26	nummod	26:nummod	_
 26	minutes	minute	NOUN	NNS	Number=Plur	21	obl	21:obl:for	_
 27	until	until	SCONJ	IN	_	29	mark	29:mark	_
 28	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	29	nsubj	29:nsubj	_
@@ -190,7 +190,7 @@
 6	tried	try	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	ignore	ignore	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
-9	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
+9	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	lack	lack	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	of	of	ADP	IN	_	12	case	12:case	_
 12	professionalism	professionalism	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	_
@@ -209,19 +209,19 @@
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
 5	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 6	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	iobj	5:iobj	_
-7	questions	question	NOUN	NNS	Number=Plur	5	obj	5:obj|11:obj	_
-8	that	that	PRON	WDT	PronType=Rel	11	obj	7:ref	_
+7	questions	question	NOUN	NNS	Number=Plur	5	obj	5:obj|13:nmod:to	_
+8	that	that	PRON	WDT	PronType=Rel	13	nmod	7:ref	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 10	already	already	ADV	RB	_	11	advmod	11:advmod	_
 11	knew	know	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	answers	answer	NOUN	NNS	Number=Plur	11	obj	11:obj	_
-14	to	to	ADP	IN	_	13	nmod	13:nmod	_
+14	to	to	ADP	IN	_	8	case	8:case	_
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
 16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 17	responded	respond	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 18	with	with	ADP	IN	_	20	case	20:case	_
-19	half	half	ADJ	JJ	Degree=Pos|NumType=Frac	20	amod	20:amod	_
+19	half	half	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Frac	20	amod	20:amod	_
 20	truths	truth	NOUN	NNS	Number=Plur	17	obl	17:obl:with	_
 21	and	and	CCONJ	CC	_	24	cc	24:cc	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
@@ -245,13 +245,13 @@
 12	confidence	confidence	NOUN	NN	Number=Sing	10	obl	10:obl:with	_
 13	that	that	PRON	DT	Number=Sing|PronType=Dem	15	nsubj	15:nsubj	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
-15	GM	GM	PROPN	NNP	Number=Sing	10	ccomp	10:ccomp	SpaceAfter=No
+15	GM	GM	PROPN	NNP	Number=Sing	10	ccomp	10:ccomp|20:csubj	SpaceAfter=No
 16	,	,	PUNCT	,	_	15	punct	15:punct	_
-17	which	which	PRON	WDT	PronType=Int	20	nsubj	20:nsubj	_
+17	which	which	PRON	WDT	PronType=Rel	20	nsubj	15:ref	_
 18-19	isn't	_	_	_	_	_	_	_	_
 18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	20:cop	_
 19	n't	not	PART	RB	_	20	advmod	20:advmod	_
-20	true	true	ADJ	JJ	Degree=Pos	15	parataxis	15:parataxis	SpaceAfter=No
+20	true	true	ADJ	JJ	Degree=Pos	15	advcl:relcl	15:advcl:relcl	SpaceAfter=No
 21	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-181748-0011
@@ -282,7 +282,7 @@
 22	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	21	iobj	21:iobj	_
 23	BS	bs	NOUN	NN	Number=Sing	21	obj	21:obj	_
 24	to	to	ADP	IN	_	26	case	26:case	_
-25	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
+25	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
 26	face	face	NOUN	NN	Number=Sing	21	obl	21:obl:to	SpaceAfter=No
 27	,	,	PUNCT	,	_	29	punct	29:punct	_
 28-29	there's	_	_	_	_	_	_	_	_
@@ -297,7 +297,7 @@
 35	to	to	PART	TO	_	36	mark	36:mark	_
 36	trust	trust	VERB	VB	VerbForm=Inf	34	xcomp	34:xcomp	_
 37	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	36	obj	36:obj	_
-38	when	when	SCONJ	WRB	PronType=Int	40	mark	40:mark	_
+38	when	when	ADV	WRB	PronType=Int	40	advmod	40:advmod	_
 39	matters	matter	NOUN	NNS	Number=Plur	40	nsubj	40:nsubj	_
 40	turn	turn	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	36	advcl	36:advcl:when	_
 41	to	to	ADP	IN	_	43	case	43:case	_

@@ -18,12 +18,12 @@
 # sent_id = answers-20111107092617AAgKm4X_ans-0002
 # newpar id = answers-20111107092617AAgKm4X_ans-p0002
 # text = When Johnson deployed troops in 1964 he was advised by the military it would take a half-million troops about ten years to pacify South Vietnam.
-1	When	when	SCONJ	WRB	PronType=Int	3	mark	3:mark	_
+1	When	when	ADV	WRB	PronType=Int	3	advmod	3:advmod	_
 2	Johnson	Johnson	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
 3	deployed	deploy	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	advcl	9:advcl:when	_
 4	troops	troops	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	1964	1964	NUM	CD	NumType=Card	3	obl	3:obl:in	_
+6	1964	1964	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	_
 7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	nsubj:pass	9:nsubj:pass	_
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	9:aux:pass	_
 9	advised	advise	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
@@ -34,12 +34,12 @@
 14	would	would	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
 15	take	take	VERB	VB	VerbForm=Inf	9	ccomp	9:ccomp	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
-17	half	half	NOUN	NN	Number=Sing|NumType=Frac	19	compound	19:compound	SpaceAfter=No
+17	half	half	NOUN	NN	Number=Sing|NumForm=Word|NumType=Frac	19	compound	19:compound	SpaceAfter=No
 18	-	-	PUNCT	HYPH	_	17	punct	17:punct	SpaceAfter=No
-19	million	million	NUM	CD	NumType=Card	20	nummod	20:nummod	_
+19	million	million	NUM	CD	NumForm=Word|NumType=Card	20	nummod	20:nummod	_
 20	troops	troops	NOUN	NNS	Number=Plur	15	iobj	15:iobj	_
 21	about	about	ADV	RB	_	22	advmod	22:advmod	_
-22	ten	ten	NUM	CD	NumType=Card	23	nummod	23:nummod	_
+22	ten	ten	NUM	CD	NumForm=Word|NumType=Card	23	nummod	23:nummod	_
 23	years	year	NOUN	NNS	Number=Plur	15	obj	15:obj	_
 24	to	to	PART	TO	_	25	mark	25:mark	_
 25	pacify	pacify	VERB	VB	VerbForm=Inf	15	csubj	15:csubj	_
@@ -63,9 +63,9 @@
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	war	war	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	within	within	ADP	IN	_	18	case	18:case	_
-15	two	two	NUM	CD	NumType=Card	18	nummod	18:nummod	_
+15	two	two	NUM	CD	NumForm=Word|NumType=Card	18	nummod	18:nummod	_
 16	to	to	ADP	IN	_	17	case	17:case	_
-17	three	three	NUM	CD	NumType=Card	15	nmod	15:nmod:to	_
+17	three	three	NUM	CD	NumForm=Word|NumType=Card	15	nmod	15:nmod:to	_
 18	years	year	NOUN	NNS	Number=Plur	11	obl	11:obl:within	_
 19	(	(	PUNCT	-LRB-	_	23	punct	23:punct	SpaceAfter=No
 20	before	before	ADP	IN	_	23	case	23:case	_
@@ -73,7 +73,7 @@
 22	next	next	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
 23	election	election	NOUN	NN	Number=Sing	11	obl	11:obl:before	_
 24	in	in	ADP	IN	_	25	case	25:case	_
-25	1968	1968	NUM	CD	NumType=Card	23	nmod	23:nmod:in	SpaceAfter=No
+25	1968	1968	NUM	CD	NumForm=Digit|NumType=Card	23	nmod	23:nmod:in	SpaceAfter=No
 26	)	)	PUNCT	-RRB-	_	23	punct	23:punct	SpaceAfter=No
 27	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -135,12 +135,12 @@
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0006
 # text = Thing is, it worked.
-1	Thing	thing	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
-3	,	,	PUNCT	,	_	2	punct	2:punct	_
+1	Thing	thing	NOUN	NN	Number=Sing	5	nsubj:outer	5:nsubj:outer	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	SpaceAfter=No
+3	,	,	PUNCT	,	_	5	punct	5:punct	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
-5	worked	work	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	SpaceAfter=No
-6	.	.	PUNCT	.	_	2	punct	2:punct	_
+5	worked	work	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+6	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0007
 # text = The ARVN was not having a big problem with the Local VC (the guerilla movement), they were being challenged by the Main Force VC (which was light infantry) and the North Vietnamese Army (NVA).
@@ -189,13 +189,13 @@
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0008
 # text = When the Americans swept in with their Search and Destroy operations the Communists quickly leaned they could not stand up to the US firepower, and these regular troops were forced to flee the country and take sanctuary across the borders in Laos and Cambodia.
-1	When	when	SCONJ	WRB	PronType=Int	4	mark	4:mark	_
+1	When	when	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	Americans	American	PROPN	NNPS	Number=Plur	4	nsubj	4:nsubj	_
 4	swept	sweep	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	15	advcl	15:advcl:when	_
 5	in	in	ADV	RB	_	4	advmod	4:advmod	_
 6	with	with	ADP	IN	_	11	case	11:case	_
-7	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+7	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 8	Search	search	VERB	VB	VerbForm=Inf	11	compound	11:compound	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
 10	Destroy	destroy	VERB	VB	VerbForm=Inf	8	conj	8:conj:and|11:compound	_
@@ -301,7 +301,7 @@
 19	but	but	CCONJ	CC	_	21	cc	21:cc	_
 20	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	21	nsubj	21:nsubj	_
 21	ignored	ignore	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:but	_
-22	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
+22	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
 23	military	military	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 24	advisers	adviser	NOUN	NNS	Number=Plur	21	obj	21:obj	SpaceAfter=No
 25	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -325,9 +325,9 @@
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0014
 # text = However, what they hoped to do during the Tet Offensive was to sneak past the Americans and attack the ARVN in the urban areas where they were deployed doing successful Clear and Defend operations.
-1	However	however	ADV	RB	_	12	advmod	12:advmod	SpaceAfter=No
-2	,	,	PUNCT	,	_	12	punct	12:punct	_
-3	what	what	PRON	WP	PronType=Int	12	nsubj	12:nsubj	_
+1	However	however	ADV	RB	_	14	advmod	14:advmod	SpaceAfter=No
+2	,	,	PUNCT	,	_	14	punct	14:punct	_
+3	what	what	PRON	WP	PronType=Int	14	nsubj:outer	14:nsubj:outer|19:nsubj:outer	_
 4	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj	_
 5	hoped	hope	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
@@ -336,21 +336,21 @@
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	Tet	Tet	PROPN	NNP	Number=Sing	11	compound	11:compound	_
 11	Offensive	Offensive	PROPN	NNP	Number=Sing	7	obl	7:obl:during	_
-12	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
-14	sneak	sneak	VERB	VB	VerbForm=Inf	12	ccomp	12:ccomp	_
+14	sneak	sneak	VERB	VB	VerbForm=Inf	0	root	0:root	_
 15	past	past	ADP	IN	_	17	case	17:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	Americans	American	PROPN	NNPS	Number=Plur	14	obl	14:obl:past	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
-19	attack	attack	VERB	VB	VerbForm=Inf	14	conj	12:ccomp|14:conj:and	_
+19	attack	attack	VERB	VB	VerbForm=Inf	14	conj	0:root|14:conj:and	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	ARVN	ARVN	PROPN	NNP	Number=Sing	19	obj	19:obj	_
 22	in	in	ADP	IN	_	25	case	25:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
 24	urban	urban	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 25	areas	area	NOUN	NNS	Number=Plur	19	obl	19:obl:in	_
-26	where	where	SCONJ	WRB	PronType=Rel	29	mark	29:mark	_
+26	where	where	ADV	WRB	PronType=Rel	29	advmod	29:advmod	_
 27	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	29	nsubj:pass	29:nsubj:pass	_
 28	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	29	aux:pass	29:aux:pass	_
 29	deployed	deploy	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	25	acl:relcl	25:acl:relcl	_
@@ -360,7 +360,7 @@
 33	and	and	CCONJ	CC	_	34	cc	34:cc	_
 34	Defend	defend	VERB	VB	VerbForm=Inf	32	conj	32:conj:and|35:compound	_
 35	operations	operation	NOUN	NNS	Number=Plur	30	obj	30:obj	SpaceAfter=No
-36	.	.	PUNCT	.	_	12	punct	12:punct	_
+36	.	.	PUNCT	.	_	14	punct	14:punct	_
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0015
 # text = The Communists thought they could defeat the ARVN, cause the fall of the South Vietnamese government, and the people would than rally to the Communist cause and leave the Americans stranded in a sea of angry peasants.
@@ -458,7 +458,7 @@
 # sent_id = answers-20111107092617AAgKm4X_ans-0020
 # text = Within 24 hours every Communist assault had been defeated except in the ancient capital of Hue.
 1	Within	within	ADP	IN	_	3	case	3:case	_
-2	24	24	NUM	CD	NumType=Card	3	nummod	3:nummod	_
+2	24	24	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
 3	hours	hour	NOUN	NNS	Number=Plur	9	obl	9:obl:within	_
 4	every	every	DET	DT	_	6	det	6:det	_
 5	Communist	Communist	PROPN	NNP	Number=Sing	6	compound	6:compound	_
@@ -495,8 +495,8 @@
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0023
 # text = When give the ultimate choice, they rallied…
-1	When	when	SCONJ	WRB	PronType=Int	2	mark	2:mark	_
-2	give	give	VERB	VBN	Tense=Past|VerbForm=Part	8	advcl	8:advcl:when	_
+1	When	when	ADV	WRB	PronType=Int	2	advmod	2:advmod	_
+2	give	give	VERB	VBN	Tense=Past|Typo=Yes|VerbForm=Part	8	advcl	8:advcl:when	CorrectForm=given
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	ultimate	ultimate	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	choice	choice	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
@@ -552,7 +552,7 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	people	people	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
 3	rejected	reject	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+4	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	attempt	attempt	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	topple	topple	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
@@ -595,7 +595,7 @@
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0028
 # text = All he had to do for a complete victory was allow the military to go into Laos and Cambodia and finish off the shattered Communist forces.
-1	All	all	DET	DT	_	10	nsubj	10:nsubj	_
+1	All	all	DET	DT	_	11	nsubj:outer	11:nsubj:outer	_
 2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 3	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
@@ -604,8 +604,8 @@
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	complete	complete	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	victory	victory	NOUN	NN	Number=Sing	5	obl	5:obl:for	_
-10	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-11	allow	allow	VERB	VB	VerbForm=Inf	10	ccomp	10:ccomp	_
+10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
+11	allow	allow	VERB	VB	VerbForm=Inf	0	root	0:root	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	military	military	NOUN	NN	Number=Sing	11	obj	11:obj|15:nsubj:xsubj|21:nsubj:xsubj	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
@@ -621,7 +621,7 @@
 24	shattered	shattered	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
 25	Communist	Communist	PROPN	NNP	Number=Sing	26	compound	26:compound	_
 26	forces	force	NOUN	NNS	Number=Plur	21	obj	21:obj	SpaceAfter=No
-27	.	.	PUNCT	.	_	10	punct	10:punct	_
+27	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = answers-20111107092617AAgKm4X_ans-0029
 # text = But Johnson was so obtuse he didn’t understand he had a victory when it was handed to him on a silver platter.
@@ -639,7 +639,7 @@
 11	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	ccomp	9:ccomp	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 13	victory	victory	NOUN	NN	Number=Sing	11	obj	11:obj	_
-14	when	when	SCONJ	WRB	PronType=Int	17	mark	17:mark	_
+14	when	when	ADV	WRB	PronType=Int	17	advmod	17:advmod	_
 15	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj:pass	17:nsubj:pass	_
 16	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	aux:pass	17:aux:pass	_
 17	handed	hand	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	advcl	9:advcl:when	_
@@ -678,7 +678,7 @@
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 24	rest	rest	NOUN	NN	Number=Sing	22	obj	22:obj	_
 25	of	of	ADP	IN	_	27	case	27:case	_
-26	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	27	nmod:poss	27:nmod:poss	_
+26	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	27	nmod:poss	27:nmod:poss	_
 27	term	term	NOUN	NN	Number=Sing	24	nmod	24:nmod:of	_
 28	in	in	ADP	IN	_	29	case	29:case	_
 29	office	office	NOUN	NN	Number=Sing	27	nmod	27:nmod:in	_
@@ -698,9 +698,9 @@
 4	by	by	SCONJ	IN	_	6	mark	6:mark	_
 5	not	not	PART	RB	_	6	advmod	6:advmod	_
 6	accepting	accept	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:by	_
-7	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+7	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 8	surrender	surrender	NOUN	NN	Number=Sing	6	obj	6:obj	_
-9	when	when	SCONJ	WRB	PronType=Int	11	mark	11:mark	_
+9	when	when	ADV	WRB	PronType=Int	11	advmod	11:advmod	_
 10	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 11	offered	offer	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:when	_
 12	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obj	11:obj	SpaceAfter=No
@@ -749,7 +749,7 @@
 3	end	end	NOUN	NN	Number=Sing	5	obl	5:obl:in	_
 4	Nixon	Nixon	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
 5	kept	keep	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-6	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+6	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	promise	promise	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	for	for	ADP	IN	_	11	case	11:case	_
 9	“	"	PUNCT	``	_	11	punct	11:punct	SpaceAfter=No
@@ -885,7 +885,7 @@
 34	losses	loss	NOUN	NNS	Number=Plur	32	obj	32:obj	_
 35	to	to	PART	TO	_	36	mark	36:mark	_
 36	continue	continue	VERB	VB	VerbForm=Inf	32	advcl	32:advcl:to	_
-37	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	38	nmod:poss	38:nmod:poss	_
+37	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	38	nmod:poss	38:nmod:poss	_
 38	fight	fight	NOUN	NN	Number=Sing	36	obj	36:obj	SpaceAfter=No
 39	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -913,7 +913,7 @@
 # sent_id = answers-20111107092617AAgKm4X_ans-0041
 # text = Try google to find the title if you would like to read it.
 1	Try	try	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	google	google	PROPN	NNP	Number=Sing	1	obj	1:obj	_
+2	google	Google	PROPN	NNP	Number=Sing	1	obj	1:obj	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	find	find	VERB	VB	VerbForm=Inf	1	advcl	1:advcl:to	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_

@@ -19,7 +19,7 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	tile	tile	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
 8	in	in	ADP	IN	_	10	case	10:case	_
-9	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
+9	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	bathroom	bathroom	NOUN	NN	Number=Sing	7	nmod	7:nmod:in	_
 11	coming	come	VERB	VBG	VerbForm=Ger	4	acl	4:acl:with	_
 12	apart	apart	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
@@ -57,11 +57,11 @@
 # text = The best part is I got my whole bathroom remodeled for about the same price the other company's were quoting just to fix the shower tile and fixtures.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	best	good	ADJ	JJS	Degree=Sup	3	amod	3:amod	_
-3	part	part	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	part	part	NOUN	NN	Number=Sing	6	nsubj:outer	6:nsubj:outer	_
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
-6	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	ccomp	4:ccomp	_
-7	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
+6	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+7	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 8	whole	whole	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	bathroom	bathroom	NOUN	NN	Number=Sing	6	obj	6:obj|10:nsubj:xsubj	_
 10	remodeled	remodel	VERB	VBN	Tense=Past|VerbForm=Part	6	xcomp	6:xcomp	_
@@ -83,26 +83,26 @@
 26	tile	tile	NOUN	NN	Number=Sing	23	obj	23:obj	_
 27	and	and	CCONJ	CC	_	28	cc	28:cc	_
 28	fixtures	fixture	NOUN	NNS	Number=Plur	26	conj	23:obj|26:conj:and	SpaceAfter=No
-29	.	.	PUNCT	.	_	4	punct	4:punct	_
+29	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-190256-0005
 # text = They had the work done in about half the time quoted which made me and my wife extremely happy.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root|13:csubj	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	work	work	NOUN	NN	Number=Sing	2	obj	2:obj|5:nsubj:xsubj	_
 5	done	done	ADJ	JJ	Degree=Pos	2	xcomp	2:xcomp	_
 6	in	in	ADP	IN	_	10	case	10:case	_
 7	about	about	ADV	RB	_	8	advmod	8:advmod	_
-8	half	half	DET	PDT	NumType=Frac|PronType=Ind	10	det:predet	10:det:predet	_
+8	half	half	DET	PDT	NumForm=Word|NumType=Frac|PronType=Neg	10	det:predet	10:det:predet	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	time	time	NOUN	NN	Number=Sing	2	obl	2:obl:in	_
 11	quoted	quote	VERB	VBN	Tense=Past|VerbForm=Part	10	acl	10:acl	_
-12	which	which	PRON	WDT	PronType=Int	13	nsubj	13:nsubj	_
-13	made	make	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	parataxis	2:parataxis	_
+12	which	which	PRON	WDT	PronType=Rel	13	nsubj	2:ref	_
+13	made	make	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	advcl:relcl	2:advcl:relcl	_
 14	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	13	obj	13:obj|19:nsubj:xsubj	_
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
-16	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
+16	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 17	wife	wife	NOUN	NN	Number=Sing	14	conj	13:obj|14:conj:and|19:nsubj:xsubj	_
 18	extremely	extremely	ADV	RB	_	19	advmod	19:advmod	_
 19	happy	happy	ADJ	JJ	Degree=Pos	13	xcomp	13:xcomp	SpaceAfter=No
@@ -113,14 +113,14 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
-4	nothing	nothing	PRON	NN	Number=Sing	3	obj	3:obj	_
+4	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	3	obj	3:obj	_
 5	but	but	ADP	IN	_	6	case	6:case	_
 6	compliments	compliment	NOUN	NNS	Number=Plur	4	nmod	4:nmod:but	_
 7	on	on	ADP	IN	_	9	case	9:case	_
-8	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
+8	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	bathroom	bathroom	NOUN	NN	Number=Sing	4	nmod	4:nmod:on	_
-10	when	when	SCONJ	WRB	PronType=Int	12	mark	12:mark	_
-11	guest	guest	NOUN	NN	Number=Plur|Typo=Yes	12	nsubj	12:nsubj	CorrectForm=guests
+10	when	when	ADV	WRB	PronType=Int	12	advmod	12:advmod	_
+11	guest	guest	NOUN	NNS	Number=Plur|Typo=Yes	12	nsubj	12:nsubj	CorrectForm=guests
 12	come	come	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:when	_
 13	over	over	ADV	RB	_	12	advmod	12:advmod	SpaceAfter=No
 14	-	-	PUNCT	,	_	3	punct	3:punct	_

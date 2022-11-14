@@ -65,7 +65,7 @@
 8	had	have	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	aux	9:aux	_
 9	busted	bust	VERB	VBN	Tense=Past|VerbForm=Part	5	ccomp	5:ccomp	_
 10	up	up	ADP	RP	_	9	compound:prt	9:compound:prt	_
-11	3	3	NUM	CD	NumType=Card	13	nummod	13:nummod	_
+11	3	3	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
 12	terrorist	terrorist	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	cells	cell	NOUN	NNS	Number=Plur	9	obj	9:obj	_
 14	operating	operate	VERB	VBG	VerbForm=Ger	13	acl	13:acl	_
@@ -75,14 +75,14 @@
 
 # sent_id = weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0004
 # text = Two of them were being run by 2 officials of the Ministry of the Interior!
-1	Two	two	NUM	CD	NumType=Card	6	nsubj:pass	6:nsubj:pass	_
+1	Two	two	NUM	CD	NumForm=Word|NumType=Card	6	nsubj:pass	6:nsubj:pass	_
 2	of	of	ADP	IN	_	3	case	3:case	_
 3	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	1	nmod	1:nmod:of	_
 4	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	aux	6:aux	_
 5	being	be	AUX	VBG	VerbForm=Ger	6	aux:pass	6:aux:pass	_
 6	run	run	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 7	by	by	ADP	IN	_	9	case	9:case	_
-8	2	2	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+8	2	2	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 9	officials	official	NOUN	NNS	Number=Plur	6	obl	6:obl:by	_
 10	of	of	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
@@ -106,11 +106,11 @@
 10	FBI	FBI	PROPN	NNP	Number=Sing	6	obl	6:obl:to	SpaceAfter=No
 11	,	,	PUNCT	,	_	6	punct	6:punct	_
 12	so	so	ADV	RB	_	17	advmod	17:advmod	_
-13	this	this	PRON	DT	Number=Sing|PronType=Dem	15	nsubj	15:nsubj	_
-14	would	would	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-15	be	be	VERB	VB	VerbForm=Inf	6	parataxis	6:parataxis	_
+13	this	this	PRON	DT	Number=Sing|PronType=Dem	17	nsubj:outer	17:nsubj:outer	_
+14	would	would	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
+15	be	be	AUX	VB	VerbForm=Inf	17	cop	17:cop	_
 16	like	like	SCONJ	IN	_	17	mark	17:mark	_
-17	having	have	VERB	VBG	VerbForm=Ger	15	advcl	15:advcl:like	_
+17	having	have	VERB	VBG	VerbForm=Ger	6	parataxis	6:parataxis	_
 18	J.	J.	PROPN	NNP	Number=Sing	22	nsubj	22:nsubj	_
 19	Edgar	Edgar	PROPN	NNP	Number=Sing	18	flat	18:flat	_
 20	Hoover	Hoover	PROPN	NNP	Number=Sing	18	flat	18:flat	_
@@ -128,7 +128,7 @@
 32	back	back	ADV	RB	_	35	advmod	35:advmod	_
 33	in	in	ADP	IN	_	35	case	35:case	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
-35	1960s	1960	NOUN	NNS	Number=Plur	22	obl	22:obl:in	SpaceAfter=No
+35	1960s	1960	NOUN	NNS	Number=Plur|NumForm=Digit|NumType=Card	22	obl	22:obl:in	SpaceAfter=No
 36	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0006
@@ -158,7 +158,7 @@
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	market	market	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	with	with	ADP	IN	_	12	case	12:case	_
-10	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
+10	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 11	bombing	bombing	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	targets	target	NOUN	NNS	Number=Plur	6	obl	6:obl:with	SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -279,7 +279,7 @@
 9	bombings	bombing	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
 10	had	have	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	aux	11:aux	_
 11	declined	decline	VERB	VBN	Tense=Past|VerbForm=Part	7	ccomp	7:ccomp	_
-12	80	80	NUM	CD	NumType=Card	13	nummod	13:nummod	_
+12	80	80	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
 13	percent	percent	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	in	in	ADP	IN	_	15	case	15:case	_
 15	Mosul	Mosul	PROPN	NNP	Number=Sing	11	obl	11:obl:in	SpaceAfter=No
@@ -309,13 +309,13 @@
 7	cosmetic	cosmetic	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	surgeon	surgeon	NOUN	NN	Number=Sing	5	obj	5:obj	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
-10	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+10	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	wife	wife	NOUN	NN	Number=Sing	8	conj	5:obj|8:conj:and	_
 12	while	while	SCONJ	IN	_	17	mark	17:mark	_
 13	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 14	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	17	cop	17:cop	_
 15	on	on	ADP	IN	_	17	case	17:case	_
-16	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
+16	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 17	way	way	NOUN	NN	Number=Sing	5	advcl	5:advcl:on	_
 18	home	home	ADV	RB	_	17	advmod	17:advmod	SpaceAfter=No
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -328,7 +328,7 @@
 4	Kut	Kut	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 5	Province	Province	PROPN	NNP	Number=Sing	2	appos	2:appos	SpaceAfter=No
 6	,	,	PUNCT	,	_	11	punct	11:punct	_
-7	two	two	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+7	two	two	NUM	CD	NumForm=Word|NumType=Card	9	nummod	9:nummod	_
 8	car	car	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	bombs	bombs	NOUN	NN	Number=Sing	11	nsubj:pass	11:nsubj:pass	_
 10	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	11:aux:pass	_
@@ -349,7 +349,7 @@
 5	southeastern	southeastern	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	Iraq	Iraq	PROPN	NNP	Number=Sing	0	root	0:root	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	has	have	VERB	VBZ	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:and	_
+8	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:and	_
 9	an	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 10	overwhelmingly	overwhelmingly	ADV	RB	_	11	advmod	11:advmod	_
 11	Shiite	Shiite	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
@@ -421,7 +421,7 @@
 18	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	aux:pass	19:aux:pass	_
 19	assassinated	assassinate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 20	with	with	ADP	IN	_	22	case	22:case	_
-21	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
+21	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
 22	driver	driver	NOUN	NN	Number=Sing	19	obl	19:obl:with	_
 23	in	in	ADP	IN	_	26	case	26:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
@@ -468,7 +468,7 @@
 
 # sent_id = weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0020
 # text = His mother was also killed in the attack.
-1	His	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
+1	His	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	mother	mother	NOUN	NN	Number=Sing	5	nsubj:pass	5:nsubj:pass	_
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass	_
 4	also	also	ADV	RB	_	5	advmod	5:advmod	_
@@ -480,7 +480,7 @@
 
 # sent_id = weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0021
 # text = Two other Dulaim leaders have been killed in the past week and a half.
-1	Two	two	NUM	CD	NumType=Card	4	nummod	4:nummod	_
+1	Two	two	NUM	CD	NumForm=Word|NumType=Card	4	nummod	4:nummod	_
 2	other	other	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 3	Dulaim	Dulaim	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4	leaders	leader	NOUN	NNS	Number=Plur	7	nsubj:pass	7:nsubj:pass	_
@@ -493,7 +493,7 @@
 11	week	week	NOUN	NN	Number=Sing	7	obl	7:obl:in	_
 12	and	and	CCONJ	CC	_	14	cc	14:cc	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
-14	half	half	NOUN	NN	Number=Sing|NumType=Frac	11	conj	11:conj:and	SpaceAfter=No
+14	half	half	NOUN	NN	Number=Sing|NumForm=Word|NumType=Frac	11	conj	11:conj:and	SpaceAfter=No
 15	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0022
@@ -507,18 +507,18 @@
 6	attack	attack	NOUN	NN	Number=Sing	4	obj	4:obj|8:nsubj	_
 7	that	that	PRON	WDT	PronType=Rel	8	nsubj	6:ref	_
 8	left	leave	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
-9	6	6	NUM	CD	NumType=Card	8	obj	8:obj|10:nsubj:xsubj	_
+9	6	6	NUM	CD	NumForm=Digit|NumType=Card	8	obj	8:obj|10:nsubj:xsubj	_
 10	dead	dead	ADJ	JJ	Degree=Pos	8	xcomp	8:xcomp	SpaceAfter=No
 11	,	,	PUNCT	,	_	10	punct	10:punct	_
 12	including	include	VERB	VBG	VerbForm=Ger	15	case	15:case	_
-13	4	4	NUM	CD	NumType=Card	15	nummod	15:nummod	_
+13	4	4	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
 14	Iraqi	Iraqi	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	soldiers	soldier	NOUN	NNS	Number=Plur	9	nmod	9:nmod:including	SpaceAfter=No
 16	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0023
 # text = One of them was from the Jubur tribe and was deputy commander of the Hawijah garrison.
-1	One	one	NUM	CD	NumType=Card	7	nsubj	7:nsubj|12:nsubj	_
+1	One	one	NUM	CD	NumForm=Word|NumType=Card	7	nsubj	7:nsubj|12:nsubj	_
 2	of	of	ADP	IN	_	3	case	3:case	_
 3	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	1	nmod	1:nmod:of	_
 4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	7:cop	_
@@ -538,8 +538,8 @@
 
 # sent_id = weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0024
 # text = Two hundred members of the Batawi clan of the Dulaim demonstrated in Baghdad on Friday, protesting the killing of their clan elder, Shaikh Kadhim Sarhid and 4 of his sons, by gunmen wearing Iraqi army uniforms.
-1	Two	two	NUM	CD	NumType=Card	2	compound	2:compound	_
-2	hundred	hundred	NUM	CD	NumType=Card	3	nummod	3:nummod	_
+1	Two	two	NUM	CD	NumForm=Word|NumType=Card	2	compound	2:compound	_
+2	hundred	hundred	NUM	CD	NumForm=Word|NumType=Card	3	nummod	3:nummod	_
 3	members	member	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
@@ -558,7 +558,7 @@
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 19	killing	killing	NOUN	NN	Number=Sing	17	obj	17:obj	_
 20	of	of	ADP	IN	_	23	case	23:case	_
-21	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
+21	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
 22	clan	clan	NOUN	NN	Number=Sing	23	compound	23:compound	_
 23	elder	elder	NOUN	NN	Number=Sing	19	nmod	19:nmod:of	SpaceAfter=No
 24	,	,	PUNCT	,	_	23	punct	23:punct	_
@@ -566,9 +566,9 @@
 26	Kadhim	Kadhim	PROPN	NNP	Number=Sing	25	flat	25:flat	_
 27	Sarhid	Sarhid	PROPN	NNP	Number=Sing	25	flat	25:flat	_
 28	and	and	CCONJ	CC	_	29	cc	29:cc	_
-29	4	4	NUM	CD	NumType=Card	23	conj	19:nmod:of|23:conj:and	_
+29	4	4	NUM	CD	NumForm=Digit|NumType=Card	23	conj	19:nmod:of|23:conj:and	_
 30	of	of	ADP	IN	_	32	case	32:case	_
-31	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	32	nmod:poss	32:nmod:poss	_
+31	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	32	nmod:poss	32:nmod:poss	_
 32	sons	son	NOUN	NNS	Number=Plur	29	nmod	29:nmod:of	SpaceAfter=No
 33	,	,	PUNCT	,	_	19	punct	19:punct	_
 34	by	by	ADP	IN	_	35	case	35:case	_
@@ -626,7 +626,7 @@
 43	with	with	ADP	IN	_	47	case	47:case	_
 44	the	the	DET	DT	Definite=Def|PronType=Art	47	det	47:det	_
 45	Dec.	December	PROPN	NNP	Abbr=Yes|Number=Sing	47	compound	47:compound	_
-46	15	15	NUM	CD	NumType=Card	45	nummod	45:nummod	_
+46	15	15	NUM	CD	NumForm=Digit|NumType=Card	45	nummod	45:nummod	_
 47	elections	election	NOUN	NNS	Number=Plur	42	obl	42:obl:with	SpaceAfter=No
 48	.	.	PUNCT	.	_	8	punct	8:punct	SpaceAfter=No
 49	)	)	PUNCT	-RRB-	_	8	punct	8:punct	_
@@ -653,7 +653,7 @@
 18	Commission	Commission	PROPN	NNP	Number=Sing	14	nmod	14:nmod:of	_
 19	to	to	PART	TO	_	20	mark	20:mark	_
 20	exclude	exclude	VERB	VB	VerbForm=Inf	14	acl	14:acl:to	_
-21	51	51	NUM	CD	NumType=Card	22	nummod	22:nummod	_
+21	51	51	NUM	CD	NumForm=Digit|NumType=Card	22	nummod	22:nummod	_
 22	individuals	individual	NOUN	NNS	Number=Plur	20	obj	20:obj	_
 23	from	from	SCONJ	IN	_	24	mark	24:mark	_
 24	running	run	VERB	VBG	VerbForm=Ger	20	advcl	20:advcl:from	_
@@ -663,7 +663,7 @@
 28	in	in	ADP	IN	_	32	case	32:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
 30	Dec.	December	PROPN	NNP	Abbr=Yes|Number=Sing	32	compound	32:compound	_
-31	15	15	NUM	CD	NumType=Card	30	nummod	30:nummod	_
+31	15	15	NUM	CD	NumForm=Digit|NumType=Card	30	nummod	30:nummod	_
 32	elections	election	NOUN	NNS	Number=Plur	27	nmod	27:nmod:in	_
 33	on	on	ADP	IN	_	34	case	34:case	_
 34	grounds	grounds	NOUN	NNS	Number=Plur	24	obl	24:obl:on	_
@@ -677,7 +677,7 @@
 42	activities	activity	NOUN	NNS	Number=Plur	39	obl	39:obl:in	_
 43	to	to	PART	TO	_	44	mark	44:mark	_
 44	warrant	warrant	VERB	VB	VerbForm=Inf	38	xcomp	38:xcomp	_
-45	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	47	nsubj:pass	47:nsubj:pass	_
+45	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	47	nsubj:pass	47:nsubj:pass	_
 46	being	be	AUX	VBG	VerbForm=Ger	47	aux:pass	47:aux:pass	_
 47	excluded	exclude	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	44	ccomp	44:ccomp	_
 48	from	from	ADP	IN	_	50	case	50:case	_
@@ -704,7 +704,7 @@
 # sent_id = weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0028
 # text = This item is a small one and easily missed.
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	2:det	_
-2	item	item	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|9:nsubj	_
+2	item	item	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|9:nsubj:pass	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	small	small	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
@@ -718,7 +718,7 @@
 # text = But in my view it is highly significant.
 1	But	but	CCONJ	CC	_	8	cc	8:cc	_
 2	in	in	ADP	IN	_	4	case	4:case	_
-3	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	view	view	NOUN	NN	Number=Sing	8	obl	8:obl:in	_
 5	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
@@ -738,7 +738,7 @@
 8	Ahmad	Ahmad	PROPN	NNP	Number=Sing	6	obl	6:obl:by	_
 9	Chalabi	Chalabi	PROPN	NNP	Number=Sing	8	flat	8:flat	_
 10	and	and	CCONJ	CC	_	14	cc	14:cc	_
-11	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
+11	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 12	Iraqi	Iraqi	ADJ	NNP	Degree=Pos	14	amod	14:amod	_
 13	National	National	ADJ	NNP	Degree=Pos	14	amod	14:amod	_
 14	Congress	Congress	PROPN	NNP	Number=Sing	8	conj	6:obl:by|8:conj:and	_
@@ -772,7 +772,7 @@
 9	however	however	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
 10	,	,	PUNCT	,	_	5	punct	5:punct	_
 11	despite	despite	ADP	IN	_	13	case	13:case	_
-12	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
+12	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	ties	tie	NOUN	NNS	Number=Plur	5	obl	5:obl:despite	_
 14	of	of	ADP	IN	_	15	case	15:case	_
 15	clientelage	clientelage	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	_
@@ -815,7 +815,7 @@
 # sent_id = weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0033
 # text = Some 2,000 junior officers of the old Baath army have been recalled to duty in recent months, something Chalabi would have blocked if he could have.
 1	Some	some	DET	DT	_	4	det	4:det	_
-2	2,000	2000	NUM	CD	NumType=Card	4	nummod	4:nummod	_
+2	2,000	2000	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
 3	junior	junior	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	officers	officer	NOUN	NNS	Number=Plur	12	nsubj:pass	12:nsubj:pass	_
 5	of	of	ADP	IN	_	9	case	9:case	_
@@ -832,7 +832,7 @@
 16	recent	recent	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	months	month	NOUN	NNS	Number=Plur	12	obl	12:obl:in	SpaceAfter=No
 18	,	,	PUNCT	,	_	12	punct	12:punct	_
-19	something	something	PRON	NN	Number=Sing	12	obl:npmod	12:obl:npmod	_
+19	something	something	PRON	NN	Number=Sing|PronType=Ind	12	obl:npmod	12:obl:npmod	_
 20	Chalabi	Chalabi	PROPN	NNP	Number=Sing	23	nsubj	23:nsubj	_
 21	would	would	AUX	MD	VerbForm=Fin	23	aux	23:aux	_
 22	have	have	AUX	VB	VerbForm=Inf	23	aux	23:aux	_
@@ -881,7 +881,7 @@
 # sent_id = weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0036
 # text = If someone committed a crime against humanity, prosecute the person.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
-2	someone	someone	PRON	NN	Number=Sing	3	nsubj	3:nsubj	_
+2	someone	someone	PRON	NN	Number=Sing|PronType=Ind	3	nsubj	3:nsubj	_
 3	committed	commit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	advcl	9:advcl:if	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	crime	crime	NOUN	NN	Number=Sing	3	obj	3:obj	_
@@ -909,7 +909,7 @@
 12	all	all	DET	PDT	_	15	det:predet	15:det:predet	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	same	same	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	rights	rights	NOUN	NNS	Number=Plur	11	obj	11:obj	_
+15	rights	right	NOUN	NNS	Number=Plur	11	obj	11:obj	_
 16	as	as	ADP	IN	_	18	case	18:case	_
 17	other	other	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	Iraqis	Iraqi	PROPN	NNPS	Number=Plur	15	nmod	15:nmod:as	SpaceAfter=No
@@ -936,7 +936,7 @@
 17	Hussein	Hussein	PROPN	NNP	Number=Sing	16	flat	16:flat	_
 18	for	for	ADP	IN	_	21	case	21:case	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
-20	1982	1982	NUM	CD	NumType=Card	21	nummod	21:nummod	_
+20	1982	1982	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nummod	_
 21	massacre	massacre	NOUN	NN	Number=Sing	14	nmod	14:nmod:for	_
 22	at	at	ADP	IN	_	23	case	23:case	_
 23	Dujail	Dujail	PROPN	NNP	Number=Sing	21	nmod	21:nmod:at	_
@@ -954,7 +954,7 @@
 6	managed	manage	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	take	take	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
-9	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
+9	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	deposition	deposition	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	before	before	SCONJ	IN	_	13	mark	13:mark	_
 12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
@@ -968,6 +968,6 @@
 3	begins	begin	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	again	again	ADV	RB	_	3	advmod	3:advmod	_
 5	Nov.	November	PROPN	NNP	Abbr=Yes|Number=Sing	3	obl:tmod	3:obl:tmod	SpaceAfter=No
-6	28	28	NUM	CD	NumType=Card	5	nummod	5:nummod	SpaceAfter=No
+6	28	28	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	SpaceAfter=No
 7	.	.	PUNCT	.	_	3	punct	3:punct	_
 

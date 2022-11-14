@@ -7,9 +7,9 @@
 
 # sent_id = email-enronsent37_01-0002
 # text = 02/22/2001 04:37 PM
-1	02/22/2001	02/22/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	04:37	04:37	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	PM	pm	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+1	02/22/2001	02/22/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	04:37	04:37	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent37_01-0003
 # text = This is a request for your interview participation.
@@ -18,7 +18,7 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	request	request	NOUN	NN	Number=Sing	0	root	0:root	_
 5	for	for	ADP	IN	_	8	case	8:case	_
-6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 7	interview	interview	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	participation	participation	NOUN	NN	Number=Sing	4	nmod	4:nmod:for	SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -64,7 +64,7 @@
 14	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	cancel	cancel	VERB	VB	VerbForm=Inf	14	xcomp	14:xcomp	_
-17	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
+17	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 18	participation	participation	NOUN	NN	Number=Sing	16	obj	16:obj	SpaceAfter=No
 19	.	.	PUNCT	.	_	14	punct	14:punct	_
 
@@ -74,7 +74,7 @@
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 4	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-5	three	three	NUM	CD	NumType=Card	6	nummod	6:nummod	_
+5	three	three	NUM	CD	NumForm=Word|NumType=Card	6	nummod	6:nummod	_
 6	interviewers	interviewer	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 7	for	for	ADP	IN	_	10	case	10:case	_
 8	Thursday	Thursday	PROPN	NNP	Number=Sing	10	compound	10:compound	SpaceAfter=No
@@ -82,7 +82,7 @@
 10	March	March	PROPN	NNP	Number=Sing	6	nmod	6:nmod:for	_
 11	1st	1st	NOUN	NN	Number=Sing|NumType=Ord	10	nummod	10:nummod	_
 12	and	and	CCONJ	CC	_	14	cc	14:cc	_
-13	one	one	NUM	CD	NumType=Card	14	nummod	14:nummod	_
+13	one	one	NUM	CD	NumForm=Word|NumType=Card	14	nummod	14:nummod	_
 14	interviewer	interviewer	NOUN	NN	Number=Sing	6	conj	4:obj|6:conj:and	_
 15	for	for	ADP	IN	_	16	case	16:case	_
 16	Friday	Friday	PROPN	NNP	Number=Sing	14	nmod	14:nmod:for	SpaceAfter=No
@@ -98,7 +98,7 @@
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj|4:nsubj:xsubj	_
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	of	of	ADP	IN	_	7	case	7:case	_
-6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	availability	availability	NOUN	NN	Number=Sing	4	obl	4:obl:of	SpaceAfter=No
 8	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -137,10 +137,10 @@
 # sent_id = email-enronsent37_01-0011
 # text = Day One Interviews Day Two Interviews
 1	Day	day	NOUN	NN	Number=Sing	3	compound	3:compound	_
-2	One	one	NUM	CD	NumType=Card	1	nummod	1:nummod	_
+2	One	one	NUM	CD	NumForm=Word|NumType=Card	1	nummod	1:nummod	_
 3	Interviews	interview	NOUN	NNS	Number=Plur	0	root	0:root	_
 4	Day	day	NOUN	NN	Number=Sing	6	compound	6:compound	_
-5	Two	two	NUM	CD	NumType=Card	4	nummod	4:nummod	_
+5	Two	two	NUM	CD	NumForm=Word|NumType=Card	4	nummod	4:nummod	_
 6	Interviews	interview	NOUN	NNS	Number=Plur	3	conj	3:conj	_
 
 # sent_id = email-enronsent37_01-0012
@@ -157,12 +157,12 @@
 # text = Time: 8:00 - 5:00 8:00 - 5:00
 1	Time	time	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 2	:	:	PUNCT	:	_	1	punct	1:punct	_
-3	8:00	8:00	NUM	CD	NumType=Card	1	appos	1:appos	_
+3	8:00	8:00	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	_
 4	-	-	SYM	SYM	_	5	case	5:case	_
-5	5:00	5:00	NUM	CD	NumType=Card	3	nmod	3:nmod	_
-6	8:00	8:00	NUM	CD	NumType=Card	3	conj	1:appos|3:conj	_
+5	5:00	5:00	NUM	CD	NumForm=Digit|NumType=Card	3	nmod	3:nmod	_
+6	8:00	8:00	NUM	CD	NumForm=Digit|NumType=Card	3	conj	1:appos|3:conj	_
 7	-	-	SYM	SYM	_	8	case	8:case	_
-8	5:00	5:00	NUM	CD	NumType=Card	6	nmod	6:nmod	_
+8	5:00	5:00	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod	_
 
 # sent_id = email-enronsent37_01-0014
 # text = Interviewers: Kevin McGowan- confirmed
@@ -232,7 +232,7 @@
 4	thank	thank	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	4	obj	4:obj	_
 6	for	for	ADP	IN	_	8	case	8:case	_
-7	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+7	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 8	time	time	NOUN	NN	Number=Sing	4	obl	4:obl:for	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	please	please	INTJ	UH	_	11	discourse	11:discourse	_
@@ -240,7 +240,7 @@
 12	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	11	obj	11:obj	_
 13	@	@	ADP	IN	_	14	case	14:case	_
 14	ext	ext	NOUN	NN	Number=Sing	11	obl	11:obl	_
-15	58369	58369	NUM	CD	NumType=Card	14	nummod	14:nummod	_
+15	58369	58369	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	_
 16	if	if	SCONJ	IN	_	18	mark	18:mark	_
 17	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
 18	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:if	_
@@ -270,7 +270,7 @@
 2	'll	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	not	not	PART	RB	_	4	advmod	4:advmod	_
 4	say	say	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	anything	anything	PRON	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No
+5	anything	anything	PRON	NN	Number=Sing|PronType=Ind	4	obj	4:obj	SpaceAfter=No
 6	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent37_01-0023
@@ -297,9 +297,9 @@
 
 # sent_id = email-enronsent37_01-0026
 # text = 01/26/2001 12:48 PM
-1	01/26/2001	01/26/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	12:48	12:48	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	PM	pm	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+1	01/26/2001	01/26/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	12:48	12:48	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent37_01-0027
 # text = Please don't mention my NY trip to anyone.
@@ -308,11 +308,11 @@
 2	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	4	aux	4:aux	_
 3	n't	not	PART	RB	_	4	advmod	4:advmod	_
 4	mention	mention	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-5	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+5	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 6	NY	NY	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 7	trip	trip	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	to	to	ADP	IN	_	9	case	9:case	_
-9	anyone	anyone	PRON	NN	Number=Sing	4	obl	4:obl:to	SpaceAfter=No
+9	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	4	obl	4:obl:to	SpaceAfter=No
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent37_01-0028
@@ -353,9 +353,9 @@
 
 # sent_id = email-enronsent37_01-0033
 # text = 01/25/2001 09:40 AM
-1	01/25/2001	01/25/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	09:40	09:40	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	AM	am	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+1	01/25/2001	01/25/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	09:40	09:40	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent37_01-0034
 # text = fyi
@@ -465,7 +465,7 @@
 7	bid	bid	NOUN	NN	Number=Sing	4	obl	4:obl:on	_
 8	(	(	PUNCT	-LRB-	_	9	punct	9:punct	SpaceAfter=No
 9	due	due	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-10	1/31	1/31	NUM	CD	NumType=Card	9	obl:npmod	9:obl:npmod	SpaceAfter=No
+10	1/31	1/31	NUM	CD	NumForm=Digit|NumType=Card	9	obl:npmod	9:obl:npmod	SpaceAfter=No
 11	)	)	PUNCT	-RRB-	_	9	punct	9:punct	_
 12	for	for	ADP	IN	_	15	case	15:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
@@ -486,10 +486,10 @@
 28	Canyon	Canyon	PROPN	NNP	Number=Sing	29	compound	29:compound	_
 29	Blocks	Block	PROPN	NNPS	Number=Plur	17	obl	17:obl:in	_
 30	#	#	SYM	NN	Number=Sing	29	compound	29:compound	SpaceAfter=No
-31	538	538	NUM	CD	NumType=Card	30	nummod	30:nummod	_
+31	538	538	NUM	CD	NumForm=Digit|NumType=Card	30	nummod	30:nummod	_
 32	and	and	CCONJ	CC	_	33	cc	33:cc	_
 33	#	#	SYM	NN	Number=Sing	30	conj	29:compound|30:conj:and	SpaceAfter=No
-34	582	582	NUM	CD	NumType=Card	33	nummod	33:nummod	SpaceAfter=No
+34	582	582	NUM	CD	NumForm=Digit|NumType=Card	33	nummod	33:nummod	SpaceAfter=No
 35	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent37_01-0039
@@ -501,10 +501,10 @@
 5	estimate	estimate	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	reserves	reserve	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 7	of	of	ADP	IN	_	12	case	12:case	_
-8	80	80	NUM	CD	NumType=Card	11	compound	11:compound	SpaceAfter=No
+8	80	80	NUM	CD	NumForm=Digit|NumType=Card	11	compound	11:compound	SpaceAfter=No
 9	-	-	SYM	SYM	_	10	case	10:case	SpaceAfter=No
-10	120	120	NUM	CD	NumType=Card	8	nmod	8:nmod	_
-11	million	million	NUM	CD	NumType=Card	12	nummod	12:nummod	_
+10	120	120	NUM	CD	NumForm=Digit|NumType=Card	8	nmod	8:nmod	_
+11	million	million	NUM	CD	NumForm=Word|NumType=Card	12	nummod	12:nummod	_
 12	barrels	barrel	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	_
 13	of	of	ADP	IN	_	15	case	15:case	_
 14	sour	sour	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
@@ -516,12 +516,12 @@
 20	production	production	NOUN	NN	Number=Sing	18	obj	18:obj|24:nsubj:xsubj	_
 21	to	to	PART	TO	_	24	mark	24:mark	_
 22	be	be	AUX	VB	VerbForm=Inf	24	cop	24:cop	_
-23	40,000	40000	NUM	CD	NumType=Card	24	nummod	24:nummod	_
+23	40,000	40000	NUM	CD	NumForm=Digit|NumType=Card	24	nummod	24:nummod	_
 24	bpd	bpd	NOUN	NNS	Number=Plur	18	xcomp	18:xcomp	_
 25	starting	start	VERB	VBG	VerbForm=Ger	24	acl	24:acl	_
 26	in	in	ADP	IN	_	27	case	27:case	_
 27	1Q	1q	NOUN	NN	Number=Sing	25	obl	25:obl:in	_
-28	2003	2003	NUM	CD	NumType=Card	27	nummod	27:nummod	SpaceAfter=No
+28	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	27	nummod	27:nummod	SpaceAfter=No
 29	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = email-enronsent37_01-0040
@@ -536,25 +536,25 @@
 8	type	type	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	crude	crude	NOUN	NN	Number=Sing	3	xcomp	3:xcomp	_
 10	with	with	ADP	IN	_	15	case	15:case	_
-11	25	25	NUM	CD	NumType=Card	15	compound	15:compound	SpaceAfter=No
+11	25	25	NUM	CD	NumForm=Digit|NumType=Card	15	compound	15:compound	SpaceAfter=No
 12	-	-	SYM	SYM	_	13	case	13:case	SpaceAfter=No
-13	27	27	NUM	CD	NumType=Card	11	nmod	11:nmod	_
+13	27	27	NUM	CD	NumForm=Digit|NumType=Card	11	nmod	11:nmod	_
 14	API	api	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	Gravity	gravity	NOUN	NN	Number=Sing	9	nmod	9:nmod:with	_
 16	and	and	CCONJ	CC	_	21	cc	21:cc	_
-17	1.5	1.5	NUM	CD	NumType=Card	20	nummod	20:nummod	SpaceAfter=No
+17	1.5	1.5	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	SpaceAfter=No
 18	-	-	SYM	SYM	_	19	case	19:case	SpaceAfter=No
-19	2.0	2.0	NUM	CD	NumType=Card	17	nmod	17:nmod	SpaceAfter=No
+19	2.0	2.0	NUM	CD	NumForm=Digit|NumType=Card	17	nmod	17:nmod	SpaceAfter=No
 20	%	%	SYM	NN	Number=Sing	21	compound	21:compound	_
 21	sulfur	sulfur	NOUN	NN	Number=Sing	15	conj	9:nmod:with|15:conj:and	SpaceAfter=No
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent37_01-0041
 # text = Plans are to build a private pipeline to Equilon's West Delta #143 platform and then bring the oil onshore.
-1	Plans	plan	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
-2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Plans	plan	NOUN	NNS	Number=Plur	4	nsubj:outer	4:nsubj:outer|18:nsubj:outer	_
+2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
-4	build	build	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
+4	build	build	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	private	private	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	pipeline	pipeline	NOUN	NN	Number=Sing	4	obj	4:obj	_
@@ -565,15 +565,15 @@
 11	West	West	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 12	Delta	Delta	PROPN	NNP	Number=Sing	15	compound	15:compound	_
 13	#	#	SYM	NN	Number=Sing	15	compound	15:compound	SpaceAfter=No
-14	143	143	NUM	CD	NumType=Card	13	nummod	13:nummod	_
+14	143	143	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
 15	platform	platform	NOUN	NN	Number=Sing	7	nmod	7:nmod:to	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	then	then	ADV	RB	PronType=Dem	18	advmod	18:advmod	_
-18	bring	bring	VERB	VB	VerbForm=Inf	4	conj	2:ccomp|4:conj:and	_
+18	bring	bring	VERB	VB	VerbForm=Inf	4	conj	0:root|4:conj:and	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	oil	oil	NOUN	NN	Number=Sing	18	obj	18:obj	_
 21	onshore	onshore	ADV	RB	_	18	advmod	18:advmod	SpaceAfter=No
-22	.	.	PUNCT	.	_	2	punct	2:punct	_
+22	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent37_01-0042
 # text = Peggy is finding out where WD #143 pumps to onshore.
@@ -581,10 +581,10 @@
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	finding	find	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 4	out	out	ADP	RP	_	3	compound:prt	3:compound:prt	_
-5	where	where	SCONJ	WRB	PronType=Int	9	mark	9:mark	_
+5	where	where	ADV	WRB	PronType=Int	9	advmod	9:advmod	_
 6	WD	WD	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
 7	#	#	SYM	NN	Number=Sing	6	compound	6:compound	SpaceAfter=No
-8	143	143	NUM	CD	NumType=Card	7	nummod	7:nummod	_
+8	143	143	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
 9	pumps	pump	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:where	_
 10	to	to	ADP	IN	_	9	obl	9:obl	_
 11	onshore	onshore	ADV	RB	_	9	advmod	9:advmod	SpaceAfter=No
@@ -669,7 +669,7 @@
 29	look	look	NOUN	NN	Number=Sing	22	obj	22:obj	_
 30	from	from	ADP	IN	_	31	case	31:case	_
 31	Murphy	Murphy	PROPN	NNP	Number=Sing	22	obl	22:obl:from	_
-32	when	when	SCONJ	WRB	PronType=Int	36	mark	36:mark	_
+32	when	when	ADV	WRB	PronType=Int	36	advmod	36:advmod	_
 33	the	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	_
 34	time	time	NOUN	NN	Number=Sing	36	nsubj	36:nsubj	_
 35	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	36	cop	36:cop	_
@@ -679,15 +679,15 @@
 # sent_id = email-enronsent37_01-0046
 # text = Another alternative is to give Murphy barrels at their 95,000 bpd Meraux, Louisiana refinery in exchange for the new production barrels.
 1	Another	another	DET	DT	_	2	det	2:det	_
-2	alternative	alternative	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-3	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	alternative	alternative	NOUN	NN	Number=Sing	5	nsubj:outer	5:nsubj:outer	_
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
-5	give	give	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+5	give	give	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	Murphy	Murphy	PROPN	NNP	Number=Sing	5	iobj	5:iobj	_
 7	barrels	barrel	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 8	at	at	ADP	IN	_	15	case	15:case	_
-9	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
-10	95,000	95000	NUM	CD	NumType=Card	11	nummod	11:nummod	_
+9	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
+10	95,000	95000	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
 11	bpd	bpd	NOUN	NN	Number=Sing	15	compound	15:compound	_
 12	Meraux	Meraux	PROPN	NNP	Number=Sing	15	compound	15:compound	SpaceAfter=No
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
@@ -700,14 +700,14 @@
 20	new	new	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 21	production	production	NOUN	NN	Number=Sing	22	compound	22:compound	_
 22	barrels	barrel	NOUN	NNS	Number=Plur	17	nmod	17:nmod:for	SpaceAfter=No
-23	.	.	PUNCT	.	_	3	punct	3:punct	_
+23	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = email-enronsent37_01-0047
 # text = Could someone in your group please give me a notional non binding basis differential for this quality of crude for Cal 2003?
 1	Could	could	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
-2	someone	someone	PRON	NN	Number=Sing	7	nsubj	7:nsubj	_
+2	someone	someone	PRON	NN	Number=Sing|PronType=Ind	7	nsubj	7:nsubj	_
 3	in	in	ADP	IN	_	5	case	5:case	_
-4	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+4	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	group	group	NOUN	NN	Number=Sing	2	nmod	2:nmod:in	_
 6	please	please	INTJ	UH	_	7	discourse	7:discourse	_
 7	give	give	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -725,7 +725,7 @@
 19	crude	crude	NOUN	NN	Number=Sing	17	nmod	17:nmod:of	_
 20	for	for	ADP	IN	_	21	case	21:case	_
 21	Cal	Cal	PROPN	NNP	Number=Sing	14	nmod	14:nmod:for	_
-22	2003	2003	NUM	CD	NumType=Card	21	nummod	21:nummod	SpaceAfter=No
+22	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nummod	SpaceAfter=No
 23	?	?	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = email-enronsent37_01-0048
@@ -740,9 +740,9 @@
 
 # sent_id = email-enronsent37_01-0050
 # text = 01/24/2001 01:02 PM
-1	01/24/2001	01/24/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	01:02	01:02	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	PM	pm	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+1	01/24/2001	01/24/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	01:02	01:02	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent37_01-0051
 # text = Please address, and I'll check with Legal as well.
@@ -767,8 +767,8 @@
 3	only	only	ADV	RB	_	4	advmod	4:advmod	_
 4	book	book	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	deals	deal	NOUN	NNS	Number=Plur	4	obj	4:obj	_
-6	when	when	SCONJ	WRB	PronType=Int	9	mark	9:mark	_
-7	everything	everything	PRON	NN	Number=Sing	9	nsubj:pass	9:nsubj:pass	_
+6	when	when	ADV	WRB	PronType=Int	9	advmod	9:advmod	_
+7	everything	everything	PRON	NN	Number=Sing|PronType=Tot	9	nsubj:pass	9:nsubj:pass	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux:pass	9:aux:pass	_
 9	signed	sign	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	advcl	4:advcl:when	_
 10	off	off	ADP	RP	_	9	compound:prt	9:compound:prt	SpaceAfter=No
@@ -785,16 +785,16 @@
 
 # sent_id = email-enronsent37_01-0055
 # text = 01/26/2001 09:37 AM
-1	01/26/2001	01/26/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	09:37	09:37	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	AM	am	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+1	01/26/2001	01/26/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	09:37	09:37	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent37_01-0056
 # text = following up on our discussion yesterday; for these types of deals, i dont think its necessary to have all the documentation of our counterparty's authorization to enter into the agreement.
 1	following	follow	VERB	VBG	VerbForm=Ger	17	advcl	17:advcl	_
 2	up	up	ADP	RP	_	1	compound:prt	1:compound:prt	_
 3	on	on	ADP	IN	_	5	case	5:case	_
-4	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+4	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	discussion	discussion	NOUN	NN	Number=Sing	1	obl	1:obl:on	_
 6	yesterday	yesterday	NOUN	NN	Number=Sing	5	nmod:tmod	5:nmod:tmod	SpaceAfter=No
 7	;	;	PUNCT	,	_	17	punct	17:punct	_
@@ -819,7 +819,7 @@
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
 25	documentation	documentation	NOUN	NN	Number=Sing	22	obj	22:obj	_
 26	of	of	ADP	IN	_	30	case	30:case	_
-27	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	28	nmod:poss	28:nmod:poss	_
+27	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	28	nmod:poss	28:nmod:poss	_
 28-29	counterparty's	_	_	_	_	_	_	_	_
 28	counterparty	counterparty	NOUN	NN	Number=Sing	30	nmod:poss	30:nmod:poss	_
 29	's	's	PART	POS	_	28	case	28:case	_
@@ -872,7 +872,7 @@
 9	for	for	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	scenario	scenario	NOUN	NN	Number=Sing	0	root	0:root	_
-12	where	where	SCONJ	WRB	PronType=Rel	15	mark	15:mark	_
+12	where	where	ADV	WRB	PronType=Rel	15	advmod	15:advmod	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 14	muni	muni	NOUN	NN	Number=Sing	15	nsubj	15:nsubj|26:nsubj|33:nsubj	_
 15	does	do	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
@@ -888,8 +888,8 @@
 25	,	,	PUNCT	,	_	26	punct	26:punct	_
 26	loses	lose	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	conj	11:acl:relcl|15:conj:and	_
 27	$	$	SYM	$	_	26	obj	26:obj	SpaceAfter=No
-28	50	50	NUM	CD	NumType=Card	27	nummod	27:nummod	_
-29	million	million	NUM	CD	NumType=Card	28	compound	28:compound	SpaceAfter=No
+28	50	50	NUM	CD	NumForm=Digit|NumType=Card	27	nummod	27:nummod	_
+29	million	million	NUM	CD	NumForm=Word|NumType=Card	28	compound	28:compound	SpaceAfter=No
 30	,	,	PUNCT	,	_	33	punct	33:punct	_
 31	and	and	CCONJ	CC	_	33	cc	33:cc	_
 32	then	then	ADV	RB	PronType=Dem	33	advmod	33:advmod	_
@@ -906,7 +906,7 @@
 # sent_id = email-enronsent37_01-0059
 # text = in our case, they are only hedging.
 1	in	in	ADP	IN	_	3	case	3:case	_
-2	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
+2	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
 3	case	case	NOUN	NN	Number=Sing	8	obl	8:obl:in	SpaceAfter=No
 4	,	,	PUNCT	,	_	8	punct	8:punct	_
 5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
@@ -925,7 +925,7 @@
 6	up	up	ADP	IN	_	7	case	7:case	_
 7	front	front	NOUN	NN	Number=Sing	3	obl	3:obl:up	_
 8	and	and	CCONJ	CC	_	13	cc	13:cc	_
-9	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+9	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 10	total	total	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	cost	cost	NOUN	NN	Number=Sing	13	nsubj:pass	13:nsubj:pass	_
 12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	aux:pass	13:aux:pass	_
@@ -954,7 +954,7 @@
 3	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
 4	did	do	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	advcl	9:advcl:if	SpaceAfter=No
 5	,	,	PUNCT	,	_	9	punct	9:punct	_
-6	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+6	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	risk	risk	NOUN	NN	Number=Sing	9	nsubj:pass	9:nsubj:pass	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux:pass	9:aux:pass	_
 9	limited	limit	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -987,7 +987,7 @@
 15	trying	try	VERB	VBG	VerbForm=Ger	14	acl	14:acl	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	get	get	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_
-18	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
+18	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
 19	premium	premium	NOUN	NN	Number=Sing	17	obj	17:obj	_
 20	back	back	ADP	RP	_	17	compound:prt	17:compound:prt	SpaceAfter=No
 21	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -997,7 +997,7 @@
 1	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	like	like	ADP	IN	_	6	case	6:case	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-4	5	5	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+4	5	5	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
 5	second	second	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	decision	decision	NOUN	NN	Number=Sing	1	obl	1:obl:like	_
 7	to	to	ADP	IN	_	8	case	8:case	_
@@ -1016,7 +1016,7 @@
 7	standard	standard	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	isda	isda	NOUN	NN	Number=Sing	5	obj	5:obj	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
-10	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+10	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	confirm	confirm	NOUN	NN	Number=Sing	8	conj	5:obj|8:conj:and	_
 12	into	into	ADP	IN	_	16	case	16:case	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
@@ -1046,7 +1046,7 @@
 17	liability	liability	NOUN	NN	Number=Sing	22	nsubj	22:nsubj	_
 18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
 19	only	only	ADV	RB	_	22	advmod	22:advmod	_
-20	1	1	NUM	CD	NumType=Card	22	nummod	22:nummod	SpaceAfter=No
+20	1	1	NUM	CD	NumForm=Digit|NumType=Card	22	nummod	22:nummod	SpaceAfter=No
 21	-	-	PUNCT	HYPH	_	22	punct	22:punct	SpaceAfter=No
 22	way	way	NOUN	NN	Number=Sing	11	advcl	11:advcl:because	SpaceAfter=No
 23	.	.	PUNCT	.	_	11	punct	11:punct	_
@@ -1062,9 +1062,9 @@
 
 # sent_id = email-enronsent37_01-0069
 # text = 01/26/2001 11:57 AM
-1	01/26/2001	01/26/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	11:57	11:57	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	AM	am	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+1	01/26/2001	01/26/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	11:57	11:57	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent37_01-0070
 # text = Dear Mr. Shankman,
@@ -1080,7 +1080,7 @@
 3	very	very	ADV	RB	_	4	advmod	4:advmod	_
 4	much	much	ADV	RB	_	1	advmod	1:advmod	_
 5	for	for	ADP	IN	_	8	case	8:case	_
-6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 7	quick	quick	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	reply	reply	NOUN	NN	Number=Sing	1	obl	1:obl:for	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -1089,7 +1089,7 @@
 # text = Attached is my resume.
 1	Attached	attach	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	aux:pass	1:aux:pass	_
-3	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	resume	resume	NOUN	NN	Number=Sing	1	nsubj:pass	1:nsubj:pass	SpaceAfter=No
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -1123,9 +1123,9 @@
 14	&	&	CCONJ	CC	_	15	cc	15:cc	_
 15	COMM	comm	NOUN	NN	Number=Sing	11	conj	9:appos|11:conj	SpaceAfter=No
 16	,	,	PUNCT	,	_	9	punct	9:punct	_
-17	ENRON	ENRON	PROPN	NNP	Number=Sing	19	compound	19:compound	_
-18	ENERGY	ENERGY	PROPN	NNP	Number=Sing	19	compound	19:compound	_
-19	SERVICES	SERVICES	PROPN	NNPS	Number=Plur	9	appos	9:appos	SpaceAfter=No
+17	ENRON	Enron	PROPN	NNP	Number=Sing	19	compound	19:compound	_
+18	ENERGY	Energy	PROPN	NNP	Number=Sing	19	compound	19:compound	_
+19	SERVICES	Services	PROPN	NNPS	Number=Plur	9	appos	9:appos	SpaceAfter=No
 20	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = email-enronsent37_01-0075
@@ -1135,7 +1135,7 @@
 3	posted	post	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	on	on	ADP	IN	_	5	case	5:case	_
 5	Dec.	December	PROPN	NNP	Abbr=Yes|Number=Sing	3	obl	3:obl:on	_
-6	11	11	NUM	CD	NumType=Card	5	nummod	5:nummod	SpaceAfter=No
+6	11	11	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	SpaceAfter=No
 7	,	,	PUNCT	,	_	13	punct	13:punct	_
 8	but	but	CCONJ	CC	_	13	cc	13:cc	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
@@ -1163,7 +1163,7 @@
 2	forward	forward	ADV	RB	_	1	advmod	1:advmod	_
 3	to	to	SCONJ	IN	_	4	mark	4:mark	_
 4	hearing	hear	VERB	VBG	VerbForm=Ger	1	advcl	1:advcl:to	_
-5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+5	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 6	comments	comment	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 7	/	/	SYM	,	_	8	cc	8:cc	_
 8	suggestions	suggestion	NOUN	NNS	Number=Plur	6	conj	4:obj|6:conj	SpaceAfter=No
@@ -1182,7 +1182,7 @@
 # newpar id = email-enronsent37_01-p0010
 # text = - ENRONR~1.DOC
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	ENRONR~1.DOC	enronr~1.doc	NOUN	NN	Number=Sing	0	root	0:root	_
+2	ENRONR~1.DOC	ENRONR~1.DOC	NOUN	NN	Number=Sing	0	root	0:root	_
 
 # sent_id = email-enronsent37_01-0080
 # newpar id = email-enronsent37_01-p0011
@@ -1211,7 +1211,7 @@
 2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	not	not	PART	RB	_	4	advmod	4:advmod	_
 4	sure	sure	ADJ	JJ	Degree=Pos	0	root	0:root	_
-5	how	how	SCONJ	WRB	PronType=Int	9	mark	9:mark	_
+5	how	how	ADV	WRB	PronType=Int	9	advmod	9:advmod	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 7	would	would	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 8	have	have	AUX	VB	VerbForm=Inf	9	aux	9:aux	_
@@ -1245,9 +1245,9 @@
 
 # sent_id = email-enronsent37_01-0086
 # text = 01/26/2001 11:36 AM
-1	01/26/2001	01/26/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	11:36	11:36	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	AM	am	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+1	01/26/2001	01/26/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	11:36	11:36	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent37_01-0087
 # text = What happened?
@@ -1272,8 +1272,8 @@
 12	bus	bus	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	stop	stop	NOUN	NN	Number=Sing	9	obl	9:obl:at	_
 14	(	(	PUNCT	-LRB-	_	16	punct	16:punct	SpaceAfter=No
-15	7:35	7:35	NUM	CD	NumType=Card	16	nummod	16:nummod	SpaceAfter=No
-16	am	am	NOUN	NN	Number=Sing	9	obl:tmod	9:obl:tmod	SpaceAfter=No
+15	7:35	7:35	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	SpaceAfter=No
+16	am	a.m.	NOUN	NN	Number=Sing	9	obl:tmod	9:obl:tmod	SpaceAfter=No
 17	)	)	PUNCT	-RRB-	_	16	punct	16:punct	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
 19	go	go	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
@@ -1292,7 +1292,7 @@
 31	'd	would	AUX	MD	VerbForm=Fin	32	aux	32:aux	_
 32	make	make	VERB	VB	VerbForm=Inf	28	advcl	28:advcl:if	_
 33	sure	sure	ADJ	JJ	Degree=Pos	32	xcomp	32:xcomp	_
-34	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	35	nmod:poss	35:nmod:poss	_
+34	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	35	nmod:poss	35:nmod:poss	_
 35	daughter	daughter	NOUN	NN	Number=Sing	36	nsubj	36:nsubj	_
 36	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	33	ccomp	33:ccomp	_
 37	on	on	ADP	IN	_	40	case	40:case	_
@@ -1332,8 +1332,8 @@
 11	little	little	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	girl	girl	NOUN	NN	Number=Sing	8	appos	8:appos	SpaceAfter=No
 13	-	-	PUNCT	,	_	15	punct	15:punct	SpaceAfter=No
-14	10	10	NUM	CD	NumType=Card	15	nummod	15:nummod	_
-15	yrs.	year	NOUN	NN	Abbr=Yes|Number=Plur	16	obl:npmod	16:obl:npmod	_
+14	10	10	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
+15	yrs.	year	NOUN	NNS	Abbr=Yes|Number=Plur	16	obl:npmod	16:obl:npmod	_
 16	old	old	ADJ	JJ	Degree=Pos	12	amod	12:amod	SpaceAfter=No
 17	)	)	PUNCT	-RRB-	_	12	punct	12:punct	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
@@ -1350,14 +1350,14 @@
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
 3	now	now	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
-5	8:15	8:15	NUM	CD	NumType=Card	0	root	0:root	_
+5	8:15	8:15	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 6	and	and	CCONJ	CC	_	8	cc	8:cc	_
 7	there	there	PRON	EX	_	8	expl	8:expl	_
 8	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	conj	5:conj:and	_
 9	no	no	DET	DT	_	10	det	10:det	_
 10	sign	sign	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 11	of	of	ADP	IN	_	13	case	13:case	_
-12	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
+12	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	bus	bus	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	SpaceAfter=No
 14	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -1372,13 +1372,13 @@
 7	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 8	quiz	quiz	NOUN	NN	Number=Sing	7	obj	7:obj	_
 9	at	at	ADP	IN	_	11	case	11:case	_
-10	8	8	NUM	CD	NumType=Card	11	nummod	11:nummod	SpaceAfter=No
-11	am	am	NOUN	NN	Number=Sing	7	obl	7:obl:at	SpaceAfter=No
+10	8	8	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	SpaceAfter=No
+11	am	a.m.	NOUN	NN	Number=Sing	7	obl	7:obl:at	SpaceAfter=No
 12	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = email-enronsent37_01-0093
 # text = Which I then realized I missed.
-1	Which	which	PRON	WDT	PronType=Int	6	obj	6:obj	_
+1	Which	which	PRON	WDT	PronType=Rel	6	obj	6:obj	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 3	then	then	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 4	realized	realize	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -1398,7 +1398,7 @@
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	wait	wait	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
 10	on	on	ADP	IN	_	12	case	12:case	_
-11	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
+11	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 12	own	own	ADJ	JJ	Degree=Pos	9	obl	9:obl:on	SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -1418,7 +1418,7 @@
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	know	know	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	of	of	ADP	IN	_	16	case	16:case	_
-15	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
+15	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 16	whereabouts	whereabouts	NOUN	NNS	Number=Plur	13	obl	13:obl:of	SpaceAfter=No
 17	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -1426,7 +1426,7 @@
 # text = I called her grandmother and explained things to her.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|6:nsubj	_
 2	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+3	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	grandmother	grandmother	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
 6	explained	explain	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
@@ -1488,8 +1488,8 @@
 15	to	to	ADP	IN	_	16	case	16:case	_
 16	school	school	NOUN	NN	Number=Sing	13	obl	13:obl:to	_
 17	(	(	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
-18	8:30	8:30	NUM	CD	NumType=Card	19	nummod	19:nummod	SpaceAfter=No
-19	am	am	NOUN	NN	Number=Sing	13	obl:tmod	13:obl:tmod	SpaceAfter=No
+18	8:30	8:30	NUM	CD	NumForm=Digit|NumType=Card	19	nummod	19:nummod	SpaceAfter=No
+19	am	a.m.	NOUN	NN	Number=Sing	13	obl:tmod	13:obl:tmod	SpaceAfter=No
 20	)	)	PUNCT	-RRB-	_	19	punct	19:punct	SpaceAfter=No
 21	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -1498,7 +1498,7 @@
 1	There	there	PRON	EX	_	2	expl	2:expl	_
 2	were	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	only	only	ADV	RB	_	4	advmod	4:advmod	_
-4	15	15	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+4	15	15	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
 5	minutes	minute	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
 6	left	left	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 7	of	of	ADP	IN	_	8	case	8:case	_
@@ -1530,7 +1530,7 @@
 9	and	and	CCONJ	CC	_	14	cc	14:cc	_
 10	within	within	ADP	IN	_	11	case	11:case	_
 11	minutes	minute	NOUN	NNS	Number=Plur	14	obl	14:obl:within	_
-12	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
+12	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	bus	bus	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	_
 14	arrived	arrive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -1542,7 +1542,7 @@
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	bus	bus	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	driver	driver	NOUN	NN	Number=Sing	2	obj	2:obj|8:nsubj:xsubj	_
-6	where	where	SCONJ	WRB	PronType=Int	8	mark	8:mark	_
+6	where	where	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	drop	drop	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 9	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	8	obj	8:obj	_
@@ -1553,7 +1553,7 @@
 # text = I notified her grandmother with the time of the departure.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	notified	notify	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+3	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	grandmother	grandmother	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	with	with	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
@@ -1569,7 +1569,7 @@
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
 4	relieved	relieved	ADJ	JJ	Degree=Pos	0	root	0:root	_
-5	when	when	SCONJ	WRB	PronType=Int	7	mark	7:mark	_
+5	when	when	ADV	WRB	PronType=Int	7	advmod	7:advmod	_
 6	Nicki	Nicki	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
 7	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	advcl	4:advcl:when	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
@@ -1614,9 +1614,9 @@
 
 # sent_id = email-enronsent37_01-0110
 # text = 01/26/2001 10:51 AM
-1	01/26/2001	01/26/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	10:51	10:51	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	AM	am	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+1	01/26/2001	01/26/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	10:51	10:51	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent37_01-0111
 # text = Actually, Jen has volunteered for the afternoon session.
@@ -1639,7 +1639,7 @@
 4	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	obl	2:obl:to	_
 5	prior	prior	ADJ	JJ	Degree=Pos|ExtPos=ADP	8	case	8:case	_
 6	to	to	ADP	IN	_	5	fixed	5:fixed	_
-7	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+7	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 8	note	note	NOUN	NN	Number=Sing	2	obl	2:obl:prior_to	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -1647,7 +1647,7 @@
 # text = Is there anyone else in EGM that could participate?
 1	Is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	there	there	PRON	EX	_	1	expl	1:expl	_
-3	anyone	anyone	PRON	NN	Number=Sing	1	nsubj	1:nsubj|9:nsubj	_
+3	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	1	nsubj	1:nsubj|9:nsubj	_
 4	else	else	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 5	in	in	ADP	IN	_	6	case	6:case	_
 6	EGM	EGM	PROPN	NNP	Number=Sing	3	nmod	3:nmod:in	_
@@ -1689,9 +1689,9 @@
 
 # sent_id = email-enronsent37_01-0118
 # text = 01/24/2001 11:42 AM
-1	01/24/2001	01/24/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	11:42	11:42	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	AM	am	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+1	01/24/2001	01/24/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	11:42	11:42	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent37_01-0119
 # text = All,
@@ -1772,12 +1772,12 @@
 7	Thursday	Thursday	PROPN	NNP	Number=Sing	9	compound	9:compound	SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
 9	February	February	PROPN	NNP	Number=Sing	3	obl	3:obl:for	_
-10	15	15	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+10	15	15	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 11	and	and	CCONJ	CC	_	13	cc	13:cc	_
 12	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
 13	inviting	invite	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	3:conj:and	_
 14	approximately	approximately	ADV	RB	_	15	advmod	15:advmod	_
-15	30	30	NUM	CD	NumType=Card	16	nummod	16:nummod	_
+15	30	30	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	_
 16	candidates	candidate	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 17	to	to	PART	TO	_	19	mark	19:mark	_
 18	be	be	AUX	VB	VerbForm=Inf	19	aux:pass	19:aux:pass	_
@@ -1839,20 +1839,20 @@
 9	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 10	morning	morning	NOUN	NN	Number=Sing	28	nmod:tmod	28:nmod:tmod	_
 11	(	(	PUNCT	-LRB-	_	12	punct	12:punct	SpaceAfter=No
-12	9	9	NUM	CD	NumType=Card	10	appos	10:appos	SpaceAfter=No
-13	am	am	NOUN	NN	Number=Sing	12	nmod	12:nmod:tmod	SpaceAfter=No
+12	9	9	NUM	CD	NumForm=Digit|NumType=Card	10	appos	10:appos	SpaceAfter=No
+13	am	a.m.	NOUN	NN	Number=Sing	12	nmod	12:nmod:tmod	SpaceAfter=No
 14	-	-	SYM	SYM	_	15	case	15:case	SpaceAfter=No
-15	12	12	NUM	CD	NumType=Card	12	nmod	12:nmod:to	SpaceAfter=No
-16	pm	pm	NOUN	NN	Number=Sing	15	nmod	15:nmod:tmod	SpaceAfter=No
+15	12	12	NUM	CD	NumForm=Digit|NumType=Card	12	nmod	12:nmod:to	SpaceAfter=No
+16	pm	p.m.	NOUN	NN	Number=Sing	15	nmod	15:nmod:tmod	SpaceAfter=No
 17	)	)	PUNCT	-RRB-	_	12	punct	12:punct	_
 18	or	or	CCONJ	CC	_	19	cc	19:cc	_
 19	afternoon	afternoon	NOUN	NN	Number=Sing	10	conj	10:conj:or|28:compound	_
 20	(	(	PUNCT	-LRB-	_	21	punct	21:punct	SpaceAfter=No
-21	2	2	NUM	CD	NumType=Card	19	appos	19:appos	SpaceAfter=No
-22	pm	pm	NOUN	NN	Number=Sing	21	nmod:tmod	21:nmod:tmod	SpaceAfter=No
+21	2	2	NUM	CD	NumForm=Digit|NumType=Card	19	appos	19:appos	SpaceAfter=No
+22	pm	p.m.	NOUN	NN	Number=Sing	21	nmod:tmod	21:nmod:tmod	SpaceAfter=No
 23	-	-	SYM	SYM	_	24	case	24:case	SpaceAfter=No
-24	5	5	NUM	CD	NumType=Card	21	nummod	21:nmod:to	SpaceAfter=No
-25	pm	pm	NOUN	NN	Number=Sing	24	nmod	24:nmod:tmod	SpaceAfter=No
+24	5	5	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nmod:to	SpaceAfter=No
+25	pm	p.m.	NOUN	NN	Number=Sing	24	nmod	24:nmod:tmod	SpaceAfter=No
 26	)	)	PUNCT	-RRB-	_	21	punct	21:punct	_
 27	complete	complete	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
 28	session	session	NOUN	NN	Number=Sing	6	obl	6:obl:to	SpaceAfter=No
@@ -1862,7 +1862,7 @@
 # text = Please submit your response using the buttons below and update your calendar for this date.
 1	Please	please	INTJ	UH	_	2	discourse	2:discourse	_
 2	submit	submit	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-3	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+3	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	response	response	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	using	use	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
@@ -1870,7 +1870,7 @@
 8	below	below	ADV	RB	_	7	advmod	7:advmod	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
 10	update	update	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj:and	_
-11	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
+11	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 12	calendar	calendar	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	for	for	ADP	IN	_	15	case	15:case	_
 14	this	this	DET	DT	Number=Sing|PronType=Dem	15	det	15:det	_
@@ -1895,7 +1895,7 @@
 14	commit	commit	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 15	to	to	SCONJ	IN	_	16	mark	16:mark	_
 16	taking	take	VERB	VBG	VerbForm=Ger	14	advcl	14:advcl:to	_
-17	one	one	NUM	CD	NumType=Card	16	obj	16:obj	_
+17	one	one	NUM	CD	NumForm=Word|NumType=Card	16	obj	16:obj	_
 18	or	or	CCONJ	CC	_	19	cc	19:cc	_
 19	more	more	ADJ	JJR	Degree=Cmp	17	conj	16:obj|17:conj:or	_
 20	of	of	ADP	IN	_	22	case	22:case	_
@@ -1915,7 +1915,7 @@
 2	in	in	ADP	IN	_	3	case	3:case	_
 3	advance	advance	NOUN	NN	Number=Sing	1	nmod	1:nmod:in	_
 4	for	for	ADP	IN	_	6	case	6:case	_
-5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+5	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	cooperation	cooperation	NOUN	NN	Number=Sing	1	nmod	1:nmod:for	SpaceAfter=No
 7	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -1934,13 +1934,13 @@
 # text = Where does our 50% (the 1.65 million dollars) show up?
 1	Where	where	ADV	WRB	PronType=Int	12	advmod	12:advmod	_
 2	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-3	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-4	50	50	NUM	CD	NumType=Card	5	nummod	5:nummod	SpaceAfter=No
+3	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+4	50	50	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	SpaceAfter=No
 5	%	%	SYM	NN	Number=Sing	12	nsubj	12:nsubj	_
 6	(	(	PUNCT	-LRB-	_	10	punct	10:punct	SpaceAfter=No
 7	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-8	1.65	1.65	NUM	CD	NumType=Card	9	compound	9:compound	_
-9	million	million	NUM	CD	NumType=Card	10	nummod	10:nummod	_
+8	1.65	1.65	NUM	CD	NumForm=Digit|NumType=Card	9	compound	9:compound	_
+9	million	million	NUM	CD	NumForm=Word|NumType=Card	10	nummod	10:nummod	_
 10	dollars	dollar	NOUN	NNS	Number=Plur	5	appos	5:appos	SpaceAfter=No
 11	)	)	PUNCT	-RRB-	_	10	punct	10:punct	_
 12	show	show	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -1974,9 +1974,9 @@
 
 # sent_id = email-enronsent37_01-0135
 # text = 01/25/2001 02:02 AM
-1	01/25/2001	01/25/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	02:02	02:02	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	AM	am	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+1	01/25/2001	01/25/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	02:02	02:02	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent37_01-0136
 # text = Great job gentlemen!
@@ -2024,8 +2024,8 @@
 
 # sent_id = email-enronsent37_01-0140
 # text = 25/01/2001 00:20
-1	25/01/2001	25/01/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	00:20	00:20	NUM	CD	NumType=Card	1	nmod:tmod	1:nmod:tmod	_
+1	25/01/2001	25/01/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	00:20	00:20	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent37_01-0141
 # text = Finally completed tonight
@@ -2044,10 +2044,10 @@
 6	Company	Company	PROPN	NNP	Number=Sing	1	obl	1:obl:to	_
 7	-	-	PUNCT	:	_	1	punct	1:punct	_
 8	$	$	SYM	$	_	1	appos	1:appos	_
-9	272,000	272000	NUM	CD	NumType=Card	8	nummod	8:nummod	_
+9	272,000	272000	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
 10	(	(	PUNCT	-LRB-	_	11	punct	11:punct	_
 11	$	$	SYM	$	_	8	appos	8:appos	SpaceAfter=No
-12	0.10	0.10	NUM	CD	NumType=Card	11	nummod	11:nummod	SpaceAfter=No
+12	0.10	0.10	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	SpaceAfter=No
 13	/	/	SYM	SYM	_	14	case	14:case	_
 14	mmbtu	mmbtu	NOUN	NN	Number=Sing	11	nmod	11:nmod	_
 15	)	)	PUNCT	-RRB-	_	11	punct	11:punct	_
@@ -2059,15 +2059,15 @@
 3	Eco	Eco	PROPN	NNP	Number=Sing	1	obl	1:obl:to	_
 4	about	about	ADV	RB	_	6	advmod	6:advmod	_
 5	$	$	SYM	$	_	1	appos	1:appos	SpaceAfter=No
-6	3,300,000	3300000	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+6	3,300,000	3300000	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
 7	(	(	PUNCT	-LRB-	_	11	punct	11:punct	_
 8	Enron	Enron	PROPN	NNP	Number=Sing	11	compound	11:compound	_
-9	50	50	NUM	CD	NumType=Card	10	nummod	10:nummod	SpaceAfter=No
+9	50	50	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	SpaceAfter=No
 10	%	%	SYM	NN	Number=Sing	11	compound	11:compound	_
 11	share	share	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
 12	about	about	ADV	RB	_	14	advmod	14:advmod	_
 13	$	$	SYM	$	_	11	appos	11:appos	_
-14	1,650,000	1650000	NUM	CD	NumType=Card	13	nummod	13:nummod	_
+14	1,650,000	1650000	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
 15	)	)	PUNCT	-RRB-	_	11	punct	11:punct	_
 
 # sent_id = email-enronsent37_01-0144
@@ -2085,7 +2085,7 @@
 10	margin	margin	NOUN	NN	Number=Sing	5	obj	5:obj	_
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 12	$	$	SYM	$	_	0	root	0:root	SpaceAfter=No
-13	1,922,000	1922000	NUM	CD	NumType=Card	12	nummod	12:nummod	_
+13	1,922,000	1922000	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
 
 # sent_id = email-enronsent37_01-0145
 # text = Not bad for a single cargo.

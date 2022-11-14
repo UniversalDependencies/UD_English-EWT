@@ -78,7 +78,7 @@
 17	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
 19	register	register	VERB	VB	VerbForm=Inf	17	xcomp	17:xcomp	_
-20	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
+20	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
 21-22	child's	_	_	_	_	_	_	_	_
 21	child	child	NOUN	NN	Number=Sing	23	nmod:poss	23:nmod:poss	_
 22	's	's	PART	POS	_	21	case	21:case	_
@@ -96,9 +96,9 @@
 
 # sent_id = answers-20111108092321AAK0Eqp_ans-0006
 # text = My first three children were born in Southern Ontario cities.
-1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 2	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	4	amod	4:amod	_
-3	three	three	NUM	CD	NumType=Card	4	nummod	4:nummod	_
+3	three	three	NUM	CD	NumForm=Word|NumType=Card	4	nummod	4:nummod	_
 4	children	child	NOUN	NNS	Number=Plur	6	nsubj:pass	6:nsubj:pass	_
 5	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	6:aux:pass	_
 6	born	bear	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -122,7 +122,7 @@
 
 # sent_id = answers-20111108092321AAK0Eqp_ans-0008
 # text = My last son, was born in Northern Ontario....
-1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
 2	last	last	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	son	son	NOUN	NN	Number=Sing	6	nsubj:pass	6:nsubj:pass	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
@@ -169,23 +169,23 @@
 30	city	city	NOUN	NN	Number=Sing	31	compound	31:compound	_
 31	hall	hall	NOUN	NN	Number=Sing	28	obl	28:obl:to	_
 32	within	within	ADP	IN	_	34	case	34:case	_
-33	90	90	NUM	CD	NumType=Card	34	nummod	34:nummod	_
+33	90	90	NUM	CD	NumForm=Digit|NumType=Card	34	nummod	34:nummod	_
 34	days	day	NOUN	NNS	Number=Plur	28	obl	28:obl:within	SpaceAfter=No
 35	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108092321AAK0Eqp_ans-0010
 # text = Two years later when I got around to filling for his birth certificate, I find out he was never registered.
-1	Two	two	NUM	CD	NumType=Card	2	nummod	2:nummod	_
+1	Two	two	NUM	CD	NumForm=Word|NumType=Card	2	nummod	2:nummod	_
 2	years	year	NOUN	NNS	Number=Plur	3	obl:npmod	3:obl:npmod	_
 3	later	late	ADV	RBR	Degree=Cmp	16	advmod	16:advmod	_
-4	when	when	SCONJ	WRB	PronType=Int	6	mark	6:mark	_
+4	when	when	ADV	WRB	PronType=Int	6	advmod	6:advmod	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 6	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	16	advcl	16:advcl:when	_
 7	around	around	ADV	RB	_	6	advmod	6:advmod	_
 8	to	to	SCONJ	IN	_	9	mark	9:mark	_
 9	filling	fill	VERB	VBG	VerbForm=Ger	6	advcl	6:advcl:to	_
 10	for	for	ADP	IN	_	13	case	13:case	_
-11	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
+11	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 12	birth	birth	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	certificate	certificate	NOUN	NN	Number=Sing	9	obl	9:obl:for	SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
@@ -250,7 +250,7 @@
 47	then	then	ADV	RB	PronType=Dem	48	advmod	48:advmod	_
 48	apply	apply	VERB	VB	VerbForm=Inf	4	conj	2:xcomp|4:conj	_
 49	for	for	ADP	IN	_	52	case	52:case	_
-50	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	52	nmod:poss	52:nmod:poss	_
+50	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	52	nmod:poss	52:nmod:poss	_
 51	birth	birth	NOUN	NN	Number=Sing	52	compound	52:compound	_
 52	certificate	certificate	NOUN	NN	Number=Sing	48	obl	48:obl:for	SpaceAfter=No
 53	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -287,7 +287,7 @@
 # text = For $56 you can even have it expedited and will get in three business days or your money back.
 1	For	for	ADP	IN	_	2	case	2:case	_
 2	$	$	SYM	$	_	7	obl	7:obl:for	SpaceAfter=No
-3	56	56	NUM	CD	NumType=Card	2	nummod	2:nummod	_
+3	56	56	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|12:nsubj	_
 5	can	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 6	even	even	ADV	RB	_	7	advmod	7:advmod	_
@@ -298,11 +298,11 @@
 11	will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 12	get	get	VERB	VB	VerbForm=Inf	7	conj	7:conj:and	_
 13	in	in	ADP	IN	_	16	case	16:case	_
-14	three	three	NUM	CD	NumType=Card	16	nummod	16:nummod	_
+14	three	three	NUM	CD	NumForm=Word|NumType=Card	16	nummod	16:nummod	_
 15	business	business	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	days	day	NOUN	NNS	Number=Plur	12	obl	12:obl:in	_
 17	or	or	CCONJ	CC	_	19	cc	19:cc	_
-18	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
+18	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
 19	money	money	NOUN	NN	Number=Sing	12	conj	12:conj:or	_
 20	back	back	ADV	RB	_	19	advmod	19:advmod	SpaceAfter=No
 21	.	.	PUNCT	.	_	7	punct	7:punct	_
@@ -378,7 +378,7 @@
 16	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	14	acl:relcl	14:acl:relcl	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
 18	prove	prove	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:to	_
-19	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
+19	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
 20	identity	identity	NOUN	NN	Number=Sing	18	obj	18:obj	SpaceAfter=No
 21	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -462,20 +462,20 @@
 # sent_id = answers-20111108092321AAK0Eqp_ans-0024
 # newpar id = answers-20111108092321AAK0Eqp_ans-p0005
 # text = My parents didn't send for my birth certificate until I was 16 and needed it for summer employment.
-1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	parents	parent	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
 3-4	didn't	_	_	_	_	_	_	_	_
 3	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
 4	n't	not	PART	RB	_	5	advmod	5:advmod	_
 5	send	send	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	for	for	ADP	IN	_	9	case	9:case	_
-7	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
+7	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 8	birth	birth	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	certificate	certificate	NOUN	NN	Number=Sing	5	obl	5:obl:for	_
 10	until	until	SCONJ	IN	_	13	mark	13:mark	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj|15:nsubj	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	_
-13	16	16	NUM	CD	NumType=Card	5	advcl	5:advcl:until	_
+13	16	16	NUM	CD	NumForm=Digit|NumType=Card	5	advcl	5:advcl:until	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
 15	needed	need	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	13	conj	5:advcl:until|13:conj:and	_
 16	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	obj	15:obj	_
@@ -524,10 +524,10 @@
 17	by	by	SCONJ	IN	_	18	mark	18:mark	_
 18	sending	send	VERB	VBG	VerbForm=Ger	15	advcl	15:advcl:by	_
 19	for	for	ADP	IN	_	22	case	22:case	_
-20	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
+20	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
 21	birth	birth	NOUN	NN	Number=Sing	22	compound	22:compound	_
 22	certificate	certificate	NOUN	NN	Number=Sing	18	obl	18:obl:for	_
-23	when	when	SCONJ	WRB	PronType=Int	28	mark	28:mark	_
+23	when	when	ADV	WRB	PronType=Int	28	advmod	28:advmod	_
 24	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	28	nsubj:pass	28:nsubj:pass	_
 25	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	28	aux:pass	28:aux:pass	_
 26	never	never	ADV	RB	_	28	advmod	28:advmod	_
@@ -543,7 +543,7 @@
 
 # sent_id = answers-20111108092321AAK0Eqp_ans-0027
 # text = When a child is born in Canada the birth is registered before the baby can leave the hospital.
-1	When	when	SCONJ	WRB	PronType=Int	5	mark	5:mark	_
+1	When	when	ADV	WRB	PronType=Int	5	advmod	5:advmod	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
 3	child	child	NOUN	NN	Number=Sing	5	nsubj:pass	5:nsubj:pass	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux:pass	5:aux:pass	_
@@ -599,7 +599,7 @@
 14	so	so	ADV	RB	_	23	advmod	23:advmod	_
 15	depending	depend	SCONJ	VBG	VerbForm=Ger	20	mark	20:mark	_
 16	upon	upon	SCONJ	IN	_	20	mark	20:mark	_
-17	where	where	SCONJ	WRB	PronType=Int	20	mark	20:mark	_
+17	where	where	ADV	WRB	PronType=Int	20	advmod	20:advmod	_
 18	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj:pass	20:nsubj:pass	_
 19	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	20	aux:pass	20:aux:pass	_
 20	born	bear	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	23	obl	23:obl	_

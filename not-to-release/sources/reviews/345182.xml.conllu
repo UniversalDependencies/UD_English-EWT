@@ -18,9 +18,9 @@
 4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 5	sheet	sheet	NOUN	NN	Number=Sing	7	compound	7:compound	_
 6	metal	metal	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	piece	piece	NOUN	NN	Number=Sing	2	obj	2:obj|10:obj	_
+7	piece	piece	NOUN	NN	Number=Sing	2	obj	2:obj|10:obj|11:nsubj:xsubj	_
 8	that	that	PRON	WDT	PronType=Rel	10	obj	7:ref	_
-9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj|11:nsubj:xsubj	_
+9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 10	needed	need	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
 11	copied	copy	VERB	VBN	Tense=Past|VerbForm=Part	10	xcomp	10:xcomp	_
 12	due	due	ADP	IN	_	17	mark	17:mark	_
@@ -60,7 +60,7 @@
 7	exactly	exactly	ADV	RB	_	10	advmod	10:advmod	_
 8	like	like	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	one	one	NUM	CD	NumType=Card	6	obl	6:obl:like	_
+10	one	one	NOUN	NN	Number=Sing	6	obl	6:obl:like	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj|14:nsubj:xsubj	_
 12	needed	need	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
@@ -73,19 +73,19 @@
 2	picked	pick	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obj	2:obj	_
 4	up	up	ADP	RP	_	2	compound:prt	2:compound:prt	_
-5	when	when	SCONJ	WRB	PronType=Int	8	mark	8:mark	_
+5	when	when	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 7	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	8:cop	_
 8	finished	finished	ADJ	JJ	Degree=Pos	2	advcl	2:advcl:when	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	11	aux:pass	11:aux:pass	_
-11	charge	charge	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	conj	2:conj:and	_
-12	30.00	30.00	NUM	CD	NumType=Card	11	obj	11:obj	SpaceAfter=No
+11	charge	charge	VERB	VBN	Tense=Past|Typo=Yes|VerbForm=Part|Voice=Pass	2	conj	2:conj:and	CorrectForm=charged
+12	30.00	30.00	NUM	CD	NumForm=Digit|NumType=Card	11	obj	11:obj	SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-345182-0006
 # text = When I got to the job and tried to insert the new piece of metal IT WOULD NOT FIT!!
-1	When	when	SCONJ	WRB	PronType=Int	3	mark	3:mark	_
+1	When	when	ADV	WRB	PronType=Int	3	advmod	3:advmod	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|8:nsubj|10:nsubj:xsubj	_
 3	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	19	advcl	19:advcl:when	_
 4	to	to	ADP	IN	_	6	case	6:case	_
@@ -147,7 +147,7 @@
 13	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 14	Pomper	Pomper	PROPN	NNP	Number=Sing	13	obj	13:obj	_
 15	for	for	ADP	IN	_	17	case	17:case	_
-16	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
+16	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 17	money	money	NOUN	NN	Number=Sing	13	obl	13:obl:for	_
 18	back	back	ADV	RB	_	17	advmod	17:advmod	SpaceAfter=No
 19	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -252,7 +252,7 @@
 8	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
 9	would	would	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 10	do	do	VERB	VB	VerbForm=Inf	2	conj	2:conj	_
-11	nothing	nothing	PRON	NN	Number=Sing	10	obj	10:obj	_
+11	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	10	obj	10:obj	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	help	help	VERB	VB	VerbForm=Inf	11	acl	11:acl:to	_
 14	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	13	obj	13:obj	_
@@ -294,7 +294,7 @@
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
 3	smirk	smirk	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
 4	on	on	ADP	IN	_	6	case	6:case	_
-5	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+5	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	face	face	NOUN	NN	Number=Sing	8	acl	8:acl:with	_
 7	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 8	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -331,7 +331,7 @@
 5	people	people	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj|7:nsubj	_
 6	that	that	PRON	WDT	PronType=Rel	7	nsubj	5:ref	_
 7	need	need	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
-8	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
+8	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	business	business	NOUN	NN	Number=Sing	7	obj	7:obj|11:nsubj:xsubj|13:nsubj:xsubj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	have	have	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_

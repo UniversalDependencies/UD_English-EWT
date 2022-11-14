@@ -19,14 +19,14 @@
 # text = I need one horse transported to shows throughout the 2012 show season, and the location is about 3 hours away from where I live.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	one	one	NUM	CD	NumType=Card	4	nummod	4:nummod	_
+3	one	one	NUM	CD	NumForm=Word|NumType=Card	4	nummod	4:nummod	_
 4	horse	horse	NOUN	NN	Number=Sing	2	obj	2:obj|5:nsubj:xsubj	_
 5	transported	transport	VERB	VBN	Tense=Past|VerbForm=Part	2	xcomp	2:xcomp	_
 6	to	to	ADP	IN	_	7	case	7:case	_
 7	shows	show	NOUN	NNS	Number=Plur	5	obl	5:obl:to	_
 8	throughout	throughout	ADP	IN	_	12	case	12:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-10	2012	2012	NUM	CD	NumType=Card	11	nummod	11:nummod	_
+10	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
 11	show	show	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	season	season	NOUN	NN	Number=Sing	5	obl	5:obl:throughout	SpaceAfter=No
 13	,	,	PUNCT	,	_	21	punct	21:punct	_
@@ -35,20 +35,20 @@
 16	location	location	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	_
 17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	cop	21:cop	_
 18	about	about	ADV	RB	_	19	advmod	19:advmod	_
-19	3	3	NUM	CD	NumType=Card	20	nummod	20:nummod	_
+19	3	3	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	_
 20	hours	hour	NOUN	NNS	Number=Plur	21	obl:npmod	21:obl:npmod	_
 21	away	away	ADV	RB	_	2	conj	2:conj:and	_
 22	from	from	SCONJ	IN	_	23	case	23:case	_
-23	where	where	ADV	WRB	PronType=Int	21	obl	21:obl:from	_
+23	where	where	ADV	WRB	PronType=Rel	21	obl	21:obl:from	_
 24	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
-25	live	live	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	23	acl:relcl	23:acl:relcl	SpaceAfter=No
+25	live	live	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	23	advcl:relcl	23:advcl:relcl	SpaceAfter=No
 26	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108090524AAofoXT_ans-0003
 # text = The place where I'm boarding is not likely to want to take me this far, and I do not have any ways of hauling him myself.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	place	place	NOUN	NN	Number=Sing	9	nsubj	9:nsubj|11:nsubj:xsubj|13:nsubj:xsubj	_
-3	where	where	SCONJ	WRB	PronType=Rel	6	mark	6:mark	_
+3	where	where	ADV	WRB	PronType=Rel	6	advmod	6:advmod	_
 4-5	I'm	_	_	_	_	_	_	_	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 5	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
@@ -74,7 +74,7 @@
 25	of	of	SCONJ	IN	_	26	mark	26:mark	_
 26	hauling	haul	VERB	VBG	VerbForm=Ger	24	acl	24:acl:of	_
 27	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	26	obj	26:obj	_
-28	myself	myself	PRON	PRP	Number=Sing|Person=1|PronType=Emp|Reflex=Yes	26	obl:npmod	26:obl:npmod	SpaceAfter=No
+28	myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Emp|Reflex=Yes	26	obl:npmod	26:obl:npmod	SpaceAfter=No
 29	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = answers-20111108090524AAofoXT_ans-0004
@@ -84,7 +84,7 @@
 3	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	hire	hire	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-6	someone	someone	PRON	NN	Number=Sing	5	obj	5:obj	_
+6	someone	someone	PRON	NN	Number=Sing|PronType=Ind	5	obj	5:obj	_
 7	(	(	PUNCT	-LRB-	_	6	punct	6:punct	SpaceAfter=No
 8	or	or	CCONJ	CC	_	10	cc	10:cc	_
 9	multiple	multiple	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
@@ -129,7 +129,7 @@
 5	that	that	PRON	WDT	PronType=Rel	6	nsubj	4:ref	_
 6	charges	charge	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
 7	$	$	SYM	$	_	6	obj	6:obj	SpaceAfter=No
-8	0.70	0.70	NUM	CD	NumType=Card	7	nummod	7:nummod	_
+8	0.70	0.70	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
 9	per	per	ADP	IN	_	10	case	10:case	_
 10	mile	mile	NOUN	NN	Number=Sing	7	nmod	7:nmod:per	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -222,7 +222,7 @@
 
 # sent_id = answers-20111108090524AAofoXT_ans-0010
 # text = Three hours isn't far, but you are doing multiple shows.
-1	Three	three	NUM	CD	NumType=Card	2	nummod	2:nummod	_
+1	Three	three	NUM	CD	NumForm=Word|NumType=Card	2	nummod	2:nummod	_
 2	hours	hour	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
 3-4	isn't	_	_	_	_	_	_	_	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
@@ -245,7 +245,7 @@
 4	willing	willing	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	take	take	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
-7	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+7	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 8	horse	horse	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
 9	,	,	PUNCT	,	_	13	punct	13:punct	_
 10	but	but	CCONJ	CC	_	13	cc	13:cc	_
@@ -286,7 +286,7 @@
 18	can	can	AUX	MD	VerbForm=Fin	20	aux	20:aux	_
 19	all	all	ADV	RB	_	20	advmod	20:advmod	_
 20	make	make	VERB	VB	VerbForm=Inf	0	root	0:root	_
-21	travelling	travel	VERB	VBG	VerbForm=Ger	20	obj	20:obj|22:nsubj:xsubj	_
+21	travelling	travel	NOUN	NN	Number=Sing	20	obj	20:obj|22:nsubj:xsubj	_
 22	hard	hard	ADJ	JJ	Degree=Pos	20	xcomp	20:xcomp	SpaceAfter=No
 23	,	,	PUNCT	,	_	22	punct	22:punct	_
 24	if	if	SCONJ	IN	_	27	mark	27:mark	_
@@ -295,7 +295,7 @@
 27	dangerous	dangerous	ADJ	JJ	Degree=Pos	22	advcl	22:advcl:if	SpaceAfter=No
 28	,	,	PUNCT	,	_	22	punct	22:punct	_
 29	on	on	ADP	IN	_	31	case	31:case	_
-30	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	31	nmod:poss	31:nmod:poss	_
+30	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	31	nmod:poss	31:nmod:poss	_
 31	horse	horse	NOUN	NN	Number=Sing	22	obl	22:obl:on	SpaceAfter=No
 32	.	.	PUNCT	.	_	20	punct	20:punct	_
 
@@ -303,7 +303,7 @@
 # text = I had my horse transported from CA to WA and he came on this big, open stock trailer.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	horse	horse	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 5	transported	transport	VERB	VBN	Tense=Past|VerbForm=Part	2	ccomp	2:ccomp	_
 6	from	from	ADP	IN	_	7	case	7:case	_
@@ -327,7 +327,7 @@
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|9:nsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
 3	dehydrated	dehydrated	ADJ	JJ	Degree=Pos	0	root	0:root	_
-4	when	when	SCONJ	WRB	PronType=Int	6	mark	6:mark	_
+4	when	when	ADV	WRB	PronType=Int	6	advmod	6:advmod	_
 5	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
 6	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	advcl	3:advcl:when	_
 7	there	there	ADV	RB	PronType=Dem	6	advmod	6:advmod	_
@@ -354,7 +354,7 @@
 14	who	who	PRON	WP	PronType=Rel	15	nsubj	13:ref	_
 15	ride	ride	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	acl:relcl	13:acl:relcl	_
 16	with	with	ADP	IN	_	18	case	18:case	_
-17	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
+17	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 18	horse	horse	NOUN	NN	Number=Sing	15	obl	15:obl:with	_
 19	to	to	PART	TO	_	20	mark	20:mark	_
 20	keep	keep	VERB	VB	VerbForm=Inf	15	advcl	15:advcl:to	_
@@ -371,7 +371,7 @@
 31	water	water	NOUN	NN	Number=Sing	26	obl	26:obl:for	SpaceAfter=No
 32	,	,	PUNCT	,	_	37	punct	37:punct	_
 33	and	and	CCONJ	CC	_	37	cc	37:cc	_
-34	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	35	nmod:poss	35:nmod:poss	_
+34	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	35	nmod:poss	35:nmod:poss	_
 35	trailers	trailer	NOUN	NNS	Number=Plur	37	nsubj	37:nsubj	_
 36	all	all	ADV	RB	_	35	advmod	35:advmod	_
 37	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:and	_
@@ -397,7 +397,7 @@
 12	happy	happy	ADJ	JJ	Degree=Pos	0	root	0:root	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
 14	healthy	healthy	ADJ	JJ	Degree=Pos	12	conj	12:conj:and	_
-15	when	when	SCONJ	WRB	PronType=Int	17	mark	17:mark	_
+15	when	when	ADV	WRB	PronType=Int	17	advmod	17:advmod	_
 16	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 17	arrive	arrive	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:when	SpaceAfter=No
 18	.	.	PUNCT	.	_	12	punct	12:punct	_
@@ -434,7 +434,7 @@
 14	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	13	iobj	13:iobj	_
 15	some	some	DET	DT	_	16	det	16:det	_
 16	idea	idea	NOUN	NN	Number=Sing	13	obj	13:obj	_
-17	of	of	ADP	IN	_	18	case	18:case	_
+17	of	of	ADP	IN	_	21	case	21:case	_
 18	what	what	PRON	WP	PronType=Int	21	obj	21:obj	_
 19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	21	nsubj	21:nsubj	_
 20	might	might	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
@@ -442,7 +442,7 @@
 22	and	and	CCONJ	CC	_	25	cc	25:cc	_
 23	what	what	PRON	WP	PronType=Int	25	nsubj	25:nsubj	_
 24	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	25	cop	25:cop	_
-25	fair	fair	ADJ	JJ	Degree=Pos	21	conj	18:acl:of|21:conj:and	SpaceAfter=No
+25	fair	fair	ADJ	JJ	Degree=Pos	21	conj	16:acl:of|21:conj:and	SpaceAfter=No
 26	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = answers-20111108090524AAofoXT_ans-0019
@@ -467,7 +467,7 @@
 11	insured	insure	VERB	VBN	Tense=Past|VerbForm=Part	9	conj	2:ccomp|9:conj:and	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
 13	knows	know	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	conj	2:ccomp|9:conj:and	_
-14	something	something	PRON	NN	Number=Sing	13	obj	13:obj	_
+14	something	something	PRON	NN	Number=Sing|PronType=Ind	13	obj	13:obj	_
 15	about	about	ADP	IN	_	17	case	17:case	_
 16	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	17	amod	17:amod	_
 17	aid	aid	NOUN	NN	Number=Sing	14	nmod	14:nmod:about	SpaceAfter=No

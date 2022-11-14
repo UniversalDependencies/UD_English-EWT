@@ -14,11 +14,11 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	taking	take	VERB	VBG	VerbForm=Ger	0	root	0:root	_
-4	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	wife	wife	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	out	out	ADV	RB	_	3	compound:prt	3:compound:prt	_
 7	for	for	ADP	IN	_	12	case	12:case	_
-8	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
+8	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 9	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	10	amod	10:amod	_
 10	year	year	NOUN	NN	Number=Sing	12	compound	12:compound	_
 11	wedding	wedding	NOUN	NN	Number=Sing	12	compound	12:compound	_
@@ -50,7 +50,7 @@
 11	so	so	ADV	RB	_	13	advmod	13:advmod	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 13	wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	parataxis	3:parataxis	_
-14	something	something	PRON	NN	Number=Sing	13	obj	13:obj	_
+14	something	something	PRON	NN	Number=Sing|PronType=Ind	13	obj	13:obj	_
 15	close	close	ADJ	JJ	Degree=Pos	14	amod	14:amod	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -96,7 +96,7 @@
 23	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	22	obj	22:obj	_
 24	down	down	ADP	RP	_	22	compound:prt	22:compound:prt	_
 25	to	to	ADP	IN	_	27	case	27:case	_
-26	three	three	NUM	CD	NumType=Card	27	nummod	27:nummod	_
+26	three	three	NUM	CD	NumForm=Word|NumType=Card	27	nummod	27:nummod	_
 27	establishments	establishment	NOUN	NNS	Number=Plur	22	obl	22:obl:to	SpaceAfter=No
 28	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -187,7 +187,7 @@
 25	Chris	Chris	PROPN	NNP	Number=Sing	24	flat	24:flat	_
 26	'	's	PART	POS	_	24	case	24:case	_
 27	,	,	PUNCT	,	_	28	punct	28:punct	_
-28	etc	etc	X	FW	_	9	conj	5:obl:with|9:conj	SpaceAfter=No
+28	etc	etc.	NOUN	FW	Abbr=Yes|Number=Sing	9	conj	5:obl:with|9:conj	SpaceAfter=No
 29	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111101180811AAZtKpz_ans-0010
@@ -200,20 +200,20 @@
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
 7	found	find	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj:and	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	three	three	NUM	CD	NumType=Card	7	obj	7:obj|13:obj	_
+9	three	three	NUM	CD	NumForm=Word|NumType=Card	7	obj	7:obj|13:obj|22:nsubj:xsubj	_
 10	that	that	PRON	WDT	PronType=Rel	13	obj	9:ref	_
-11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj|18:nsubj:xsubj|22:nsubj:xsubj	_
+11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj|18:nsubj:xsubj	_
 12	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
 13	chosen	choose	VERB	VBN	Tense=Past|VerbForm=Part	9	acl:relcl	9:acl:relcl	_
-14	to	to	PART	TO	_	18	mark	18:mark	_
-15	be	be	AUX	VB	VerbForm=Inf	18	cop	18:cop	_
-16	more	more	ADV	RBR	Degree=Cmp	18	advmod	18:advmod	_
-17	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
-18	wife	wife	NOUN	NN	Number=Sing	13	xcomp	13:xcomp	_
+14	to	to	PART	TO	_	22	mark	22:mark	_
+15	be	be	AUX	VB	VerbForm=Inf	22	cop	22:cop	_
+16	more	more	ADV	RBR	Degree=Cmp	18	advmod	22:advmod	_
+17	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
+18	wife	wife	NOUN	NN	Number=Sing	22	nmod:poss	22:nmod:poss	_
 19	and	and	CCONJ	CC	_	22	cc	22:cc	_
-20	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
+20	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	conj	18:conj|22:nmod:poss	_
 21	own	own	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	taste	taste	NOUN	NN	Number=Sing	18	conj	13:xcomp|18:conj:and	SpaceAfter=No
+22	taste	taste	NOUN	NN	Number=Sing	13	xcomp	13:xcomp	SpaceAfter=No
 23	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111101180811AAZtKpz_ans-0011
@@ -223,7 +223,7 @@
 3	reviews	review	NOUN	NNS	Number=Plur	0	root	0:root	_
 4	on	on	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	three	three	NUM	CD	NumType=Card	3	nmod	3:nmod:on	_
+6	three	three	NUM	CD	NumForm=Word|NumType=Card	3	nmod	3:nmod:on	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 8	mentioned	mention	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
 9	earlier	early	ADV	RBR	Degree=Cmp	8	advmod	8:advmod	SpaceAfter=No
@@ -268,7 +268,7 @@
 13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
 14	know	know	VERB	VB	VerbForm=Inf	4	conj	4:conj:nor	_
 15	of	of	ADP	IN	_	16	case	16:case	_
-16	anyone	anyone	PRON	NN	Number=Sing	14	obl	14:obl:of|18:nsubj	_
+16	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	14	obl	14:obl:of|18:nsubj	_
 17	who	who	PRON	WP	PronType=Rel	18	nsubj	16:ref	_
 18	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	acl:relcl	16:acl:relcl	SpaceAfter=No
 19	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -279,7 +279,7 @@
 2	hope	hope	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 4	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
-5	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+5	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	answer	answer	NOUN	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
 

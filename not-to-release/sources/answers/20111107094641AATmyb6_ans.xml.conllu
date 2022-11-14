@@ -29,7 +29,7 @@
 6	chi	chi	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 7	Minh	Minh	PROPN	NNP	Number=Sing	0	root	0:root	_
 8	for	for	ADP	IN	_	10	case	10:case	_
-9	4	4	NUM	CD	NumType=Card	10	nummod	10:nummod	_
+9	4	4	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	_
 10	days	day	NOUN	NNS	Number=Plur	7	obl	7:obl:for	_
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
@@ -37,10 +37,10 @@
 14	looking	look	VERB	VBG	VerbForm=Ger	7	conj	7:conj:and	_
 15	for	for	ADP	IN	_	22	case	22:case	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
-17	1	1	NUM	CD	NumType=Card	18	nummod	18:nummod	_
+17	1	1	NUM	CD	NumForm=Digit|NumType=Card	18	nummod	18:nummod	_
 18	day	day	NOUN	NN	Number=Sing	22	compound	22:compound	_
 19	or	or	CCONJ	CC	_	21	cc	21:cc	_
-20	2	2	NUM	CD	NumType=Card	21	nummod	21:nummod	_
+20	2	2	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nummod	_
 21	day	day	NOUN	NN	Number=Sing	18	conj	18:conj:or|22:compound	_
 22	trip	trip	NOUN	NN	Number=Sing	14	obl	14:obl:for	_
 23	to	to	ADP	IN	_	25	case	25:case	_
@@ -164,7 +164,7 @@
 3	located	locate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	right	right	ADV	RB	_	9	advmod	9:advmod	_
 5	at	at	ADP	IN	_	9	case	9:case	_
-6	248	248	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+6	248	248	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 7	De	De	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 8	Than	Than	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 9	St.	St.	PROPN	NNP	Number=Sing	3	obl	3:obl:at	_
@@ -225,10 +225,10 @@
 8	but	but	CCONJ	CC	_	9	cc	9:cc	_
 9	remember	remember	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	conj	4:conj:but	_
 10	thinking	think	VERB	VBG	VerbForm=Ger	9	xcomp	9:xcomp	_
-11	how	how	SCONJ	WRB	PronType=Int	12	mark	12:mark	_
-12	inexpensive	inexpensive	ADJ	JJ	Degree=Pos	14	xcomp	14:xcomp	_
-13	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj	12:nsubj:xsubj|14:nsubj	_
-14	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	ccomp	10:ccomp	SpaceAfter=No
+11	how	how	ADV	WRB	PronType=Int	12	advmod	12:advmod	_
+12	inexpensive	inexpensive	ADJ	JJ	Degree=Pos	10	ccomp	10:ccomp	_
+13	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
+14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111107094641AATmyb6_ans-0014
@@ -341,17 +341,17 @@
 6	and	and	CCONJ	CC	_	8	cc	8:cc	_
 7	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 8	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	_
-9	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+9	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 10	own	own	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	buses	bus	NOUN	NNS	Number=Plur	8	obj	8:obj	_
-12	etc	etc	X	FW	_	11	conj	11:conj	SpaceAfter=No
+12	etc	etc.	NOUN	FW	Abbr=Yes|Number=Sing	11	conj	11:conj	SpaceAfter=No
 13	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111107094641AATmyb6_ans-0023
 # text = tele#84838389593
 1	tele	tele	NOUN	NN	Number=Sing	2	compound	2:compound	SpaceAfter=No
 2	#	#	SYM	NN	Number=Sing	0	root	0:root	SpaceAfter=No
-3	84838389593	84838389593	NUM	CD	NumType=Card	2	appos	2:appos	_
+3	84838389593	84838389593	NUM	CD	NumForm=Digit|NumType=Card	2	appos	2:appos	_
 
 # sent_id = answers-20111107094641AATmyb6_ans-0024
 # text = have fun.
@@ -400,14 +400,14 @@
 11	water	water	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	taxi	taxi	NOUN	NN	Number=Sing	9	conj	7:obj|9:conj:or	_
 13	to	to	ADP	IN	_	15	case	15:case	_
-14	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
+14	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	Tho	Tho	PROPN	NNP	Number=Sing	7	obl	7:obl:to	_
-16	(	(	PUNCT	-LRB-	_	20	punct	20:punct	SpaceAfter=No
-17	near	near	SCONJ	IN	_	20	mark	20:mark	_
-18	where	where	SCONJ	WRB	PronType=Int	20	mark	20:mark	_
+16	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
+17	near	near	ADP	IN	_	18	case	18:case	_
+18	where	where	ADV	WRB	PronType=Rel	15	nmod	15:nmod:near	_
 19	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
-20	live	live	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	15	acl	15:acl:near	SpaceAfter=No
-21	)	)	PUNCT	-RRB-	_	20	punct	20:punct	_
+20	live	live	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	18	advcl:relcl	18:advcl:relcl	SpaceAfter=No
+21	)	)	PUNCT	-RRB-	_	18	punct	18:punct	_
 22	or	or	CCONJ	CC	_	24	cc	24:cc	_
 23	Can	Can	PROPN	NNP	Number=Sing	24	compound	24:compound	_
 24	Tho	Tho	PROPN	NNP	Number=Sing	15	conj	7:obl:to|15:conj:or	SpaceAfter=No
@@ -535,7 +535,7 @@
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 15	night	night	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	at	at	ADP	IN	_	21	case	21:case	_
-17	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
+17	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 18	friend	friend	NOUN	NN	Number=Sing	19	compound	19:compound	_
 19-20	Ken's	_	_	_	_	_	_	_	_
 19	Ken	Ken	PROPN	NNP	Number=Sing	21	nmod:poss	21:nmod:poss	_
@@ -589,7 +589,7 @@
 19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	21	nsubj	21:nsubj	_
 20	can	can	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
 21	get	get	VERB	VB	VerbForm=Inf	5	conj	5:conj:but	_
-22	someone	someone	PRON	NN	Number=Sing	21	obj	21:obj|26:nsubj:xsubj	_
+22	someone	someone	PRON	NN	Number=Sing|PronType=Ind	21	obj	21:obj|26:nsubj:xsubj	_
 23	to	to	PART	TO	_	26	mark	26:mark	_
 24	moto	moto	NOUN	NN	Number=Sing	26	obl:npmod	26:obl:npmod	SpaceAfter=No
 25	-	-	PUNCT	HYPH	_	26	punct	26:punct	SpaceAfter=No
@@ -615,7 +615,7 @@
 7	Zealand	Zealand	PROPN	NNP	Number=Sing	4	nmod	4:nmod:from	_
 8	and	and	CCONJ	CC	_	13	cc	13:cc	_
 9-10	he's	_	_	_	_	_	_	_	_
-9	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj:pass	13:nsubj:pass	_
+9	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
 10	's	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
 11	been	be	AUX	VBN	Tense=Past|VerbForm=Part	13	cop	13:cop	_
 12	in	in	ADP	IN	_	13	case	13:case	_
@@ -652,9 +652,9 @@
 2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 3	good	good	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	trip	trip	NOUN	NN	Number=Sing	1	obj	1:obj	_
-5	where-ever	wherever	ADV	WRB	Typo=Yes	7	advmod	7:advmod	CorrectForm=wherever
+5	where-ever	wherever	ADV	WRB	PronType=Rel|Typo=Yes	1	advmod	1:advmod	CorrectForm=wherever
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
-7	end	end	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	1	advcl	1:advcl	_
+7	end	end	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	advcl:relcl	5:advcl:relcl	_
 8	up	up	ADP	RP	_	7	compound:prt	7:compound:prt	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -669,7 +669,7 @@
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 7	part	part	NOUN	NN	Number=Sing	2	obl	2:obl:as	_
 8	of	of	ADP	IN	_	14	case	14:case	_
-9	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
+9	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 10	North	North	PROPN	NNP	Number=Sing	13	compound	13:compound	_
 11	to	to	ADP	IN	_	12	case	12:case	_
 12	South	South	PROPN	NNP	Number=Sing	10	nmod	10:nmod:to	_
@@ -681,7 +681,7 @@
 18	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
 19	offer	offer	VERB	VB	VerbForm=Inf	2	conj	2:conj:but	_
 20	this	this	DET	DT	Number=Sing|PronType=Dem	22	det	22:det	_
-21	one	one	NUM	CD	NumType=Card	22	nummod	22:nummod	_
+21	one	one	NUM	CD	NumForm=Word|NumType=Card	22	nummod	22:nummod	_
 22	day	day	NOUN	NN	Number=Sing	19	obj	19:obj	_
 23	separately	separately	ADV	RB	_	19	advmod	19:advmod	SpaceAfter=No
 24	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -697,7 +697,7 @@
 7	visited	visit	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 9	location	location	NOUN	NN	Number=Sing	7	obj	7:obj	_
-10	where	where	SCONJ	WRB	PronType=Rel	12	mark	12:mark	_
+10	where	where	ADV	WRB	PronType=Rel	12	advmod	12:advmod	_
 11	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 12	made	make	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
 13	coconut	coconut	NOUN	NN	Number=Sing	14	compound	14:compound	_
@@ -752,9 +752,9 @@
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
 14	showing	show	VERB	VBG	VerbForm=Ger	5	conj	3:advcl:at|5:conj:and	_
 15	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	14	iobj	14:iobj	_
-16	something	something	PRON	NN	Number=Sing	14	obj	14:obj	_
+16	something	something	PRON	NN	Number=Sing|PronType=Ind	14	obj	14:obj	_
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 18	little	little	ADJ	JJ	Degree=Pos	19	nmod:npmod	19:nmod:npmod	_
-19	different	different	NOUN	NN	Number=Sing	16	amod	16:amod	SpaceAfter=No
+19	different	different	ADJ	JJ	Degree=Pos	16	amod	16:amod	SpaceAfter=No
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 

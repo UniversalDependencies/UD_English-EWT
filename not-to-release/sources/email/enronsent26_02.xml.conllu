@@ -7,9 +7,9 @@
 
 # sent_id = email-enronsent26_02-0002
 # text = 04/26/2001 07:17 AM
-1	04/26/2001	04/26/2001	NUM	CD	NumType=Card	0	root	0:root	_
-2	07:17	07:17	NUM	CD	NumType=Card	3	nummod	3:nummod	_
-3	AM	am	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+1	04/26/2001	04/26/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+2	07:17	07:17	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
 
 # sent_id = email-enronsent26_02-0003
 # text = Will you be providing an execution version with questions removed/blanks filled in?
@@ -71,22 +71,22 @@
 6	following	follow	VERB	VBG	VerbForm=Ger	7	amod	7:amod	_
 7	annotations	annotation	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 8	on	on	ADP	IN	_	9	case	9:case	_
-9	04/25/01	04/25/01	NUM	CD	NumType=Card	4	obl	4:obl:on	_
-10	12:42:55	12:42:55	NUM	CD	NumType=Card	9	nmod:tmod	9:nmod:tmod	_
+9	04/25/01	04/25/01	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:on	_
+10	12:42:55	12:42:55	NUM	CD	NumForm=Digit|NumType=Card	9	nmod:tmod	9:nmod:tmod	_
 
 # sent_id = email-enronsent26_02-0009
 # text = We have changed our e-mail address.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	changed	change	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
-4	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+4	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 5	e-mail	e-mail	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	address	address	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
 7	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent26_02-0010
 # text = Our new domain name is paulhastings.com.
-1	Our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+1	Our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 2	new	new	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 3	domain	domain	NOUN	NN	Number=Sing	4	compound	4:compound	_
 4	name	name	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
@@ -100,7 +100,7 @@
 2	most	most	ADJ	JJS	Degree=Sup	3	amod	3:amod	_
 3	cases	case	NOUN	NNS	Number=Plur	8	obl	8:obl:in	SpaceAfter=No
 4	,	,	PUNCT	,	_	8	punct	8:punct	_
-5	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+5	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	address	address	NOUN	NN	Number=Sing	8	nsubj:pass	8:nsubj:pass	_
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux:pass	8:aux:pass	_
 8	composed	compose	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -119,7 +119,7 @@
 # text = Here are two examples: janesmith@paulhastings.com and danjones@paulhastings.com.
 1	Here	here	ADV	RB	PronType=Dem	0	root	0:root	_
 2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
-3	two	two	NUM	CD	NumType=Card	4	nummod	4:nummod	_
+3	two	two	NUM	CD	NumForm=Word|NumType=Card	4	nummod	4:nummod	_
 4	examples	example	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	SpaceAfter=No
 5	:	:	PUNCT	:	_	6	punct	6:punct	_
 6	janesmith@paulhastings.com	janesmith@paulhastings.com	X	ADD	_	4	appos	4:appos	_
@@ -322,11 +322,11 @@
 3	Direct	direct	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	Dial	dial	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
 5	:?	:?	PUNCT	:	_	4	punct	4:punct	_
-6	203.961.7523	203.961.7523	NUM	CD	NumType=Card	4	appos	4:appos	_
+6	203.961.7523	203.961.7523	NUM	CD	NumForm=Digit|NumType=Card	4	appos	4:appos	_
 7	Direct	direct	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	Fax	fax	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
 9	:?	:?	PUNCT	:	_	8	punct	8:punct	_
-10	203.674.7723	203.674.7723	NUM	CD	NumType=Card	8	appos	8:appos	_
+10	203.674.7723	203.674.7723	NUM	CD	NumForm=Digit|NumType=Card	8	appos	8:appos	_
 11	E-mail	e-mail	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
 12	:?	:?	PUNCT	:	_	11	punct	11:punct	_
 13	johnstaikos@paulhastings.com	johnstaikos@paulhastings.com	X	ADD	_	11	appos	11:appos	_

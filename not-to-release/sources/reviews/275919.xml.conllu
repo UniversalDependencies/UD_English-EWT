@@ -48,7 +48,7 @@
 4	shop	shop	NOUN	NN	Number=Sing	13	advcl	13:advcl	SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	maintaining	maintain	VERB	VBG	VerbForm=Ger	13	csubj	13:csubj	_
-7	5000	5000	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+7	5000	5000	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 8	different	different	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	products	product	NOUN	NNS	Number=Plur	6	obj	6:obj	_
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	_
@@ -140,31 +140,34 @@
 12	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-275919-0010
-# text = Billing takes 15 minutes and backoffice jobs takes 1 day's training How fast your support queries get answered ?
+# text = Billing takes 15 minutes and backoffice jobs takes 1 day's training
 1	Billing	billing	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
 2	takes	take	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	15	15	NUM	CD	NumType=Card	4	nummod	4:nummod	_
+3	15	15	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
 4	minutes	minute	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 5	and	and	CCONJ	CC	_	9	cc	9:cc	_
 6	back	back	ADJ	JJ	Degree=Pos	7	amod	7:amod	CorrectSpaceAfter=Yes|SpaceAfter=No
 7	office	office	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	jobs	job	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj	_
 9	takes	take	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
-10	1	1	NUM	CD	NumType=Card	11	nummod	11:nummod	_
+10	1	1	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
 11-12	day's	_	_	_	_	_	_	_	_
 11	day	day	NOUN	NN	Number=Sing	13	nmod:poss	13:nmod:poss	_
 12	's	's	PART	POS	_	11	case	11:case	_
 13	training	training	NOUN	NN	Number=Sing	9	obj	9:obj	_
-14	How	how	ADV	WRB	PronType=Int	15	advmod	15:advmod	_
-15	fast	fast	ADJ	JJ	Degree=Pos	20	advmod	20:advmod	_
-16	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
-17	support	support	NOUN	NN	Number=Sing	18	compound	18:compound	_
-18	queries	query	NOUN	NNS	Number=Plur	20	nsubj:pass	20:nsubj:pass	_
-19	get	get	AUX	VB	VerbForm=Inf	20	aux:pass	20:aux:pass	_
-20	answered	answer	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	parataxis	2:parataxis	_
-21	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-275919-0011
+# text = How fast your support queries get answered ?
+1	How	how	ADV	WRB	PronType=Int	2	advmod	2:advmod	_
+2	fast	fast	ADJ	JJ	Degree=Pos	7	advmod	7:advmod	_
+3	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+4	support	support	NOUN	NN	Number=Sing	5	compound	5:compound	_
+5	queries	query	NOUN	NNS	Number=Plur	7	nsubj:pass	7:nsubj:pass	_
+6	get	get	AUX	VB	VerbForm=Inf	7	aux:pass	7:aux:pass	_
+7	answered	answer	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+8	?	?	PUNCT	.	_	7	punct	7:punct	_
+
+# sent_id = reviews-275919-0012
 # text = Over telephone, immediate.
 1	Over	over	ADP	IN	_	2	case	2:case	_
 2	telephone	telephone	NOUN	NN	Number=Sing	4	obl	4:obl:over	SpaceAfter=No
@@ -172,7 +175,7 @@
 4	immediate	immediate	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 5	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# sent_id = reviews-275919-0012
+# sent_id = reviews-275919-0013
 # text = On call, it takes a day to get our issues resolved.
 1	On	on	ADP	IN	_	2	case	2:case	_
 2	call	call	NOUN	NN	Number=Sing	5	obl	5:obl:on	SpaceAfter=No
@@ -183,7 +186,7 @@
 7	day	day	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	get	get	VERB	VB	VerbForm=Inf	5	csubj	5:csubj	_
-10	our	we	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+10	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	issues	issue	NOUN	NNS	Number=Plur	9	obj	9:obj|12:nsubj:xsubj	_
 12	resolved	resolve	VERB	VBN	Tense=Past|VerbForm=Part	9	xcomp	9:xcomp	SpaceAfter=No
 13	.	.	PUNCT	.	_	5	punct	5:punct	_

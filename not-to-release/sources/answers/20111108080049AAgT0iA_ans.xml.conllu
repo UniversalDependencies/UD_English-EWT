@@ -2,7 +2,7 @@
 # sent_id = answers-20111108080049AAgT0iA_ans-0001
 # newpar id = answers-20111108080049AAgT0iA_ans-p0001
 # text = 3 weeks old baby budgie alone at night?
-1	3	3	NUM	CD	NumType=Card	2	nummod	2:nummod	_
+1	3	3	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	_
 2	weeks	week	NOUN	NNS	Number=Plur	3	obl:npmod	3:obl:npmod	_
 3	old	old	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 4	baby	baby	NOUN	NN	Number=Sing	5	compound	5:compound	_
@@ -18,7 +18,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-4	3	3	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+4	3	3	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
 5	week	week	NOUN	NN	Number=Sing	6	obl:npmod	6:obl:npmod	_
 6	old	old	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 7	baby	baby	NOUN	NN	Number=Sing	8	compound	8:compound	_
@@ -27,9 +27,9 @@
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 11	noticed	notice	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 12	that	that	SCONJ	IN	_	19	mark	19:mark	_
-13	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	SpaceAfter=No
+13	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	SpaceAfter=No
 14	/	/	PUNCT	,	_	16	punct	16:punct	SpaceAfter=No
-15	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
+15	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 16	mother	mother	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
 17	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
 18	not	not	PART	RB	_	19	advmod	19:advmod	_
@@ -140,7 +140,7 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	baby	baby	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	on	on	ADP	IN	_	8	case	8:case	_
-7	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+7	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 8	own	own	ADJ	JJ	Degree=Pos	2	obl	2:obl:on	SpaceAfter=No
 9	,	,	PUNCT	,	_	13	punct	13:punct	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
@@ -209,7 +209,7 @@
 11	after	after	ADP	IN	_	12	case	12:case	_
 12	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	10	obl	10:obl:after	_
 13	of	or	CCONJ	CC	Typo=Yes	14	cc	14:cc	CorrectForm=or
-14	anything	anything	PRON	NN	Number=Sing	10	conj	4:ccomp|10:conj:or	SpaceAfter=No
+14	anything	anything	PRON	NN	Number=Sing|PronType=Ind	10	conj	4:ccomp|10:conj:or	SpaceAfter=No
 15	...	...	PUNCT	,	_	10	punct	10:punct	SpaceAfter=No
 16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	nsubj	19:nsubj	SpaceAfter=No
 17	/	/	SYM	,	_	18	cc	18:cc	SpaceAfter=No
@@ -237,11 +237,11 @@
 
 # sent_id = answers-20111108080049AAgT0iA_ans-0011
 # text = When the male gets his titts out the female gets mad with him knowing he can't produce milk.
-1	When	when	SCONJ	WRB	PronType=Int	4	mark	4:mark	_
+1	When	when	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	male	male	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 4	gets	get	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl:when	_
-5	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+5	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	titts	tit	NOUN	NNS	Number=Plur|Typo=Yes	4	obj	4:obj	CorrectForm=tits
 7	out	out	ADV	RB	_	4	advmod	4:advmod	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
@@ -288,17 +288,17 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	baby	baby	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-5	feathered	feathered	ADJ	JJ	Degree=Pos	19	advcl	19:advcl:if	_
+5	feathered	feathered	ADJ	JJ	Degree=Pos	19	advcl	11:ccomp|19:advcl:if	_
 6	yet	yet	ADV	RB	_	5	advmod	5:advmod	_
 7	-	-	PUNCT	,	_	5	punct	5:punct	_
-8	which	which	PRON	WDT	PronType=Int	11	obj	11:obj	_
+8	which	which	PRON	WDT	PronType=Rel	11	ccomp	5:ref	_
 9-10	I'm	_	_	_	_	_	_	_	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 10	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
-11	sure	sure	ADJ	JJ	Degree=Pos	5	ccomp	5:ccomp	_
-12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
-13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	parataxis	11:parataxis	_
-14	mostly	mostly	ADV	RB	_	13	advmod	13:advmod	_
+11	sure	sure	ADJ	JJ	Degree=Pos	5	advcl:relcl	5:advcl:relcl	_
+12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	5:nsubj	_
+13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	5:cop	_
+14	mostly	mostly	ADV	RB	_	8	advmod	5:advmod	_
 15	-	-	PUNCT	,	_	19	punct	19:punct	_
 16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	nsubj	19:nsubj	_
 17	should	should	AUX	MD	VerbForm=Fin	19	aux	19:aux	_

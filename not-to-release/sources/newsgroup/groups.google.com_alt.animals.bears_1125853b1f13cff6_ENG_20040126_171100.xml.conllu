@@ -50,14 +50,14 @@
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0004
 # text = All I say is, it works.
-1	All	all	DET	DT	_	4	nsubj	4:nsubj	_
+1	All	all	DET	DT	_	7	nsubj:outer	7:nsubj:outer	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 3	say	say	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
-4	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
-7	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	SpaceAfter=No
-8	.	.	PUNCT	.	_	4	punct	4:punct	_
+7	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+8	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0005
 # text = Continue pre-fab crap.
@@ -78,7 +78,7 @@
 # newpar id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-p0004
 # text = Within seven days, I started getting money in the mail!!
 1	Within	within	ADP	IN	_	3	case	3:case	_
-2	seven	seven	NUM	CD	NumType=Card	3	nummod	3:nummod	_
+2	seven	seven	NUM	CD	NumForm=Word|NumType=Card	3	nummod	3:nummod	_
 3	days	day	NOUN	NNS	Number=Plur	6	obl	6:obl:within	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj|7:nsubj:xsubj	_
@@ -118,7 +118,7 @@
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0010
 # text = In my first week, I made about $25.00.
 1	In	in	ADP	IN	_	4	case	4:case	_
-2	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 3	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	4	amod	4:amod	_
 4	week	week	NOUN	NN	Number=Sing	7	obl	7:obl:in	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
@@ -126,7 +126,7 @@
 7	made	make	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 8	about	about	ADV	RB	_	9	advmod	9:advmod	_
 9	$	$	SYM	$	_	7	obj	7:obj	SpaceAfter=No
-10	25.00	25.00	NUM	CD	NumType=Card	9	nummod	9:nummod	SpaceAfter=No
+10	25.00	25.00	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	SpaceAfter=No
 11	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0011
@@ -147,7 +147,7 @@
 14	more	more	ADJ	JJR	Degree=Cmp|ExtPos=ADV	16	advmod	16:advmod	_
 15	than	than	ADP	IN	_	14	fixed	14:fixed	_
 16	$	$	SYM	$	_	12	nmod	12:nmod:of	SpaceAfter=No
-17	1000.00	1000.00	NUM	CD	NumType=Card	16	nummod	16:nummod	SpaceAfter=No
+17	1000.00	1000.00	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	SpaceAfter=No
 18	!!	!!	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0012
@@ -161,7 +161,7 @@
 7	more	more	ADJ	JJR	Degree=Cmp|ExtPos=ADV	9	advmod	9:advmod	_
 8	than	than	ADP	IN	_	7	fixed	7:fixed	_
 9	$	$	SYM	$	_	6	obj	6:obj	SpaceAfter=No
-10	10,000.00	10000.00	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+10	10,000.00	10000.00	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 11	and	and	CCONJ	CC	_	15	cc	15:cc	_
 12-13	it's	_	_	_	_	_	_	_	_
 12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
@@ -175,7 +175,7 @@
 1	This	this	PRON	DT	Number=Sing|PronType=Dem	6	nsubj	6:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 3	now	now	ADV	RB	_	6	advmod	6:advmod	_
-4	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 5	fourth	fourth	ADJ	JJ	Degree=Pos|NumType=Ord	6	amod	6:amod	_
 6	week	week	NOUN	NN	Number=Sing	0	root	0:root	_
 7	and	and	CCONJ	CC	_	10	cc	10:cc	_
@@ -186,7 +186,7 @@
 12	total	total	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	of	of	ADP	IN	_	14	case	14:case	_
 14	$	$	SYM	$	_	12	nmod	12:nmod:of	SpaceAfter=No
-15	42,000.00	42000.00	NUM	CD	NumType=Card	14	nummod	14:nummod	_
+15	42,000.00	42000.00	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	_
 16	and	and	CCONJ	CC	_	20	cc	20:cc	_
 17-18	it's	_	_	_	_	_	_	_	_
 17	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	nsubj	20:nsubj	_
@@ -204,9 +204,9 @@
 3	certainly	certainly	ADV	RB	_	5	advmod	5:advmod	_
 4	worth	worth	ADP	IN	_	5	case	5:case	_
 5	$	$	SYM	$	_	0	root	0:root	SpaceAfter=No
-6	6.00	6.00	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+6	6.00	6.00	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_
-8	six	six	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+8	six	six	NUM	CD	NumForm=Word|NumType=Card	9	nummod	9:nummod	_
 9	stamps	stamp	NOUN	NNS	Number=Plur	5	conj	5:conj:and	SpaceAfter=No
 10	,	,	PUNCT	,	_	14	punct	14:punct	_
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
@@ -230,14 +230,14 @@
 2	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obj	1:obj|3:nsubj:xsubj	_
 3	tell	tell	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
 4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	obj	3:obj	_
-5	how	how	SCONJ	WRB	PronType=Int	7	mark	7:mark	_
+5	how	how	ADV	WRB	PronType=Int	7	advmod	7:advmod	_
 6	this	this	PRON	DT	Number=Sing|PronType=Dem	7	nsubj	7:nsubj	_
 7	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
 8	and	and	CCONJ	CC	_	14	cc	14:cc	_
 9	most	most	ADV	RBS	Degree=Sup	10	advmod	10:advmod	_
 10	important	important	ADV	RB	_	14	advmod	14:advmod	SpaceAfter=No
 11	,	,	PUNCT	,	_	14	punct	14:punct	_
-12	why	why	SCONJ	WRB	PronType=Int	14	mark	14:mark	_
+12	why	why	ADV	WRB	PronType=Int	14	advmod	14:advmod	_
 13	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
 14	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	conj	3:ccomp|7:conj:and	SpaceAfter=No
 15	..........	..........	PUNCT	,	_	1	punct	1:punct	_
@@ -295,7 +295,7 @@
 21	possible	possible	ADJ	JJ	Degree=Pos	20	xcomp	20:xcomp	_
 22	by	by	SCONJ	IN	_	23	mark	23:mark	_
 23	doing	do	VERB	VBG	VerbForm=Ger	20	advcl	20:advcl:by	_
-24	something	something	PRON	NN	Number=Sing	23	obj	23:obj	_
+24	something	something	PRON	NN	Number=Sing|PronType=Ind	23	obj	23:obj	_
 25	so	so	ADV	RB	_	26	advmod	26:advmod	_
 26	easy	easy	ADJ	JJ	Degree=Pos	24	amod	24:amod	SpaceAfter=No
 27	!!	!!	PUNCT	.	_	2	punct	2:punct	_
@@ -356,12 +356,12 @@
 # text = And, your investment is only $6.00 (Plus postage) !!!
 1	And	and	CCONJ	CC	_	7	cc	7:cc	SpaceAfter=No
 2	,	,	PUNCT	,	_	7	punct	7:punct	_
-3	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+3	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	investment	investment	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 6	only	only	ADV	RB	_	7	advmod	7:advmod	_
 7	$	$	SYM	$	_	0	root	0:root	SpaceAfter=No
-8	6.00	6.00	NUM	CD	NumType=Card	7	nummod	7:nummod	_
+8	6.00	6.00	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
 9	(	(	PUNCT	-LRB-	_	11	punct	11:punct	SpaceAfter=No
 10	Plus	plus	CCONJ	CC	_	11	cc	11:cc	_
 11	postage	postage	NOUN	NN	Number=Sing	7	parataxis	7:parataxis	SpaceAfter=No
@@ -441,16 +441,16 @@
 6	,	,	PUNCT	,	_	14	punct	14:punct	_
 7	and	and	CCONJ	CC	_	14	cc	14:cc	_
 8	$	$	SYM	$	_	14	nsubj	14:nsubj	SpaceAfter=No
-9	50,000	50000	NUM	CD	NumType=Card	8	nummod	8:nummod	_
+9	50,000	50000	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
 10	or	or	CCONJ	CC	_	11	cc	11:cc	_
 11	more	more	ADJ	JJR	Degree=Cmp	8	conj	8:conj:or|14:nsubj	_
 12	can	can	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
 13	be	be	AUX	VB	VerbForm=Inf	14	cop	14:cop	_
-14	yours	yours	PRON	PRP	_	2	conj	2:conj:and	_
+14	yours	your	PRON	PRP	Person=2|Poss=Yes|PronType=Prs	2	conj	2:conj:and	_
 15	in	in	ADP	IN	_	19	case	19:case	_
-16	20	20	NUM	CD	NumType=Card	19	nummod	19:nummod	_
+16	20	20	NUM	CD	NumForm=Digit|NumType=Card	19	nummod	19:nummod	_
 17	to	to	ADP	IN	_	18	case	18:case	_
-18	60	60	NUM	CD	NumType=Card	16	nmod	16:nmod:to	_
+18	60	60	NUM	CD	NumForm=Digit|NumType=Card	16	nmod	16:nmod:to	_
 19	days	day	NOUN	NNS	Number=Plur	14	obl	14:obl:in	SpaceAfter=No
 20	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -475,7 +475,7 @@
 # text = Please continue its success by carefully adhering to the instructions.
 1	Please	please	INTJ	UH	_	2	discourse	2:discourse	_
 2	continue	continue	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-3	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+3	its	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	success	success	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	by	by	SCONJ	IN	_	7	mark	7:mark	_
 6	carefully	carefully	ADV	RB	_	7	advmod	7:advmod	_
@@ -567,7 +567,7 @@
 1	Here	here	ADV	RB	PronType=Dem	0	root	0:root	_
 2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-4	four	four	NUM	CD	NumType=Card	6	nummod	6:nummod	_
+4	four	four	NUM	CD	NumForm=Word|NumType=Card	6	nummod	6:nummod	_
 5	easy	easy	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	steps	step	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	_
 7	to	to	ADP	IN	_	8	case	8:case	_
@@ -577,14 +577,14 @@
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0036
 # text = STEP ONE:
 1	STEP	step	NOUN	NN	Number=Sing	0	root	0:root	_
-2	ONE	one	NUM	CD	NumType=Card	1	nummod	1:nummod	SpaceAfter=No
+2	ONE	one	NUM	CD	NumForm=Word|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0037
 # newpar id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-p0008
 # text = Get six separate pieces of paper and write the following on each piece of paper "PLEASE PUT ME ON YOUR MAILING LIST."
 1	Get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
-2	six	six	NUM	CD	NumType=Card	4	nummod	4:nummod	_
+2	six	six	NUM	CD	NumForm=Word|NumType=Card	4	nummod	4:nummod	_
 3	separate	separate	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	pieces	piece	NOUN	NNS	Number=Plur	1	obj	1:obj	_
 5	of	of	ADP	IN	_	6	case	6:case	_
@@ -603,7 +603,7 @@
 18	PUT	put	VERB	VB	VerbForm=Inf	10	appos	10:appos	_
 19	ME	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	18	obj	18:obj	_
 20	ON	on	ADP	IN	_	23	case	23:case	_
-21	YOUR	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
+21	YOUR	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
 22	MAILING	mailing	NOUN	NN	Number=Sing	23	compound	23:compound	_
 23	LIST	list	NOUN	NN	Number=Sing	18	obl	18:obl:on	SpaceAfter=No
 24	.	.	PUNCT	.	_	1	punct	1:punct	SpaceAfter=No
@@ -613,20 +613,20 @@
 # text = Now get 6 U.S. $1.00 bills and place ONE inside of EACH of the six pieces of paper so the bill will not be seen through the envelope (to prevent thievery).
 1	Now	now	ADV	RB	_	2	advmod	2:advmod	_
 2	get	get	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-3	6	6	NUM	CD	NumType=Card	7	nummod	7:nummod	_
+3	6	6	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
 4	U.S.	U.S.	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 5	$	$	SYM	$	_	7	compound	7:compound	SpaceAfter=No
-6	1.00	1.00	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+6	1.00	1.00	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
 7	bills	bill	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
 9	place	place	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj:and	_
-10	ONE	one	NUM	CD	NumType=Card	9	obj	9:obj	_
+10	ONE	one	NUM	CD	NumForm=Word|NumType=Card	9	obj	9:obj	_
 11	inside	inside	ADP	IN	_	13	case	13:case	_
 12	of	of	ADP	IN	_	13	case	13:case	_
 13	EACH	each	DET	DT	_	9	obl	9:obl:of	_
 14	of	of	ADP	IN	_	17	case	17:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
-16	six	six	NUM	CD	NumType=Card	17	nummod	17:nummod	_
+16	six	six	NUM	CD	NumForm=Word|NumType=Card	17	nummod	17:nummod	_
 17	pieces	piece	NOUN	NNS	Number=Plur	13	nmod	13:nmod:of	_
 18	of	of	ADP	IN	_	19	case	19:case	_
 19	paper	paper	NOUN	NN	Number=Sing	17	nmod	17:nmod:of	_
@@ -652,13 +652,13 @@
 1	Next	next	ADV	RB	_	3	advmod	3:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	3	punct	3:punct	_
 3	place	place	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-4	one	one	NUM	CD	NumType=Card	5	nummod	5:nummod	_
+4	one	one	NUM	CD	NumForm=Word|NumType=Card	5	nummod	5:nummod	_
 5	paper	paper	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	in	in	ADP	IN	_	7	case	7:case	_
 7	each	each	DET	DT	_	3	obl	3:obl:in	_
 8	of	of	ADP	IN	_	11	case	11:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-10	six	six	NUM	CD	NumType=Card	11	nummod	11:nummod	_
+10	six	six	NUM	CD	NumForm=Word|NumType=Card	11	nummod	11:nummod	_
 11	envelopes	envelope	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
 13	seal	seal	VERB	VB	Mood=Imp|VerbForm=Fin	3	conj	3:conj:and	_
@@ -671,7 +671,7 @@
 2	now	now	ADV	RB	_	4	advmod	4:advmod	_
 3	should	should	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 4	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	six	six	NUM	CD	NumType=Card	7	nummod	7:nummod	_
+5	six	six	NUM	CD	NumForm=Word|NumType=Card	7	nummod	7:nummod	_
 6	sealed	seal	VERB	VBN	Tense=Past|VerbForm=Part	7	amod	7:amod	_
 7	envelopes	envelope	NOUN	NNS	Number=Plur	4	obj	4:obj	SpaceAfter=No
 8	,	,	PUNCT	,	_	7	punct	7:punct	_
@@ -686,7 +686,7 @@
 17	above	above	ADV	RB	_	18	advmod	18:advmod	_
 18	phrase	phrase	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No
 19	,	,	PUNCT	,	_	21	punct	21:punct	_
-20	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
+20	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
 21	name	name	NOUN	NN	Number=Sing	12	conj	9:nmod:with|12:conj:and	_
 22	and	and	CCONJ	CC	_	23	cc	23:cc	_
 23	address	address	NOUN	NN	Number=Sing	21	conj	21:conj:and	SpaceAfter=No
@@ -694,7 +694,7 @@
 25	and	and	CCONJ	CC	_	29	cc	29:cc	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	29:det	_
 27	$	$	SYM	$	_	29	compound	29:compound	SpaceAfter=No
-28	1.00	1.00	NUM	CD	NumType=Card	27	nummod	27:nummod	_
+28	1.00	1.00	NUM	CD	NumForm=Digit|NumType=Card	27	nummod	27:nummod	_
 29	bill	bill	NOUN	NN	Number=Sing	12	conj	9:nmod:with|12:conj:and	SpaceAfter=No
 30	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -703,12 +703,12 @@
 1	What	what	PRON	WP	PronType=Int	4	obj	4:obj	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 3	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	5	csubj	5:csubj	_
-5	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-6	creating	create	VERB	VBG	VerbForm=Ger	5	ccomp	5:ccomp	_
+4	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	6	csubj:outer	6:csubj:outer	_
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
+6	creating	create	VERB	VBG	VerbForm=Ger	0	root	0:root	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 8	service	service	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
-9	.	.	PUNCT	.	_	5	punct	5:punct	_
+9	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0042
 # newpar id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-p0009
@@ -773,7 +773,7 @@
 9	Post	Post	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	Office	Office	PROPN	NNP	Number=Sing	3	obl	3:obl:with	_
 11	(	(	PUNCT	-LRB-	_	12	punct	12:punct	SpaceAfter=No
-12	1-800-238-5355	1-800-238-5355	NUM	CD	NumType=Card	10	list	10:list	SpaceAfter=No
+12	1-800-238-5355	1-800-238-5355	NUM	CD	NumForm=Digit|NumType=Card	10	list	10:list	SpaceAfter=No
 13	)	)	PUNCT	-RRB-	_	12	punct	12:punct	_
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
 15	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
@@ -789,7 +789,7 @@
 # text = Mail the six envelopes to the following addresses:
 1	Mail	mail	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-3	six	six	NUM	CD	NumType=Card	4	nummod	4:nummod	_
+3	six	six	NUM	CD	NumForm=Word|NumType=Card	4	nummod	4:nummod	_
 4	envelopes	envelope	NOUN	NNS	Number=Plur	1	obj	1:obj	_
 5	to	to	ADP	IN	_	8	case	8:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
@@ -804,14 +804,14 @@
 2	)	)	PUNCT	-RRB-	_	1	punct	1:punct	_
 3	G.	G.	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4	Burrows	Burrows	PROPN	NNP	Number=Sing	0	root	0:root	_
-5	1	1	NUM	CD	NumType=Card	7	nummod	7:nummod	SpaceAfter=No
+5	1	1	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	SpaceAfter=No
 6	/	/	PUNCT	,	_	7	punct	7:punct	SpaceAfter=No
-7	264	264	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+7	264	264	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 8	Tor	Tor	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 9	St	St	PROPN	NNP	Number=Sing	4	list	4:list	_
 10	Toowoomba	Toowoomba	PROPN	NNP	Number=Sing	9	appos	9:appos	_
 11	QLD	QLD	PROPN	NNP	Number=Sing	10	appos	10:appos	_
-12	4350	4350	NUM	CD	NumType=Card	9	appos	9:appos	_
+12	4350	4350	NUM	CD	NumForm=Digit|NumType=Card	9	appos	9:appos	_
 13	Australia	Australia	PROPN	NNP	Number=Sing	11	appos	11:appos	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0048
@@ -822,12 +822,12 @@
 4	Luest	Luest	PROPN	NNP	Number=Sing	3	flat	3:flat	_
 5	P.O.	p.o.	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	Box	box	NOUN	NN	Number=Sing	3	list	3:list	_
-7	366	366	NUM	CD	NumType=Card	6	nummod	6:nummod	_
+7	366	366	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
 8	Garden	Garden	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 9	Grove	Grove	PROPN	NNP	Number=Sing	6	appos	6:appos	SpaceAfter=No
 10	,	,	PUNCT	,	_	9	punct	9:punct	_
 11	CA	CA	PROPN	NNP	Number=Sing	9	appos	9:appos	_
-12	92842	92842	NUM	CD	NumType=Card	6	appos	6:appos	_
+12	92842	92842	NUM	CD	NumForm=Digit|NumType=Card	6	appos	6:appos	_
 13	USA	USA	PROPN	NNP	Number=Sing	11	appos	11:appos	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0049
@@ -839,16 +839,16 @@
 5	&	&	CCONJ	CC	_	6	cc	6:cc	_
 6	A.	A.	PROPN	NNP	Number=Sing	3	conj	3:conj	_
 7	Bourret	Bourret	PROPN	NNP	Number=Sing	3	flat	3:flat	_
-8	41	41	NUM	CD	NumType=Card	10	nummod	10:nummod	_
+8	41	41	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	_
 9	Broome	Broome	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	St	St	PROPN	NNP	Number=Sing	3	list	3:list	SpaceAfter=No
 11	,	,	PUNCT	,	_	10	punct	10:punct	_
 12	#	#	SYM	NN	Number=Sing	8	appos	8:appos	SpaceAfter=No
-13	1	1	NUM	CD	NumType=Card	12	nummod	12:nummod	_
+13	1	1	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
 14	Brooklyn	Brooklyn	PROPN	NNP	Number=Sing	10	appos	10:appos	SpaceAfter=No
 15	,	,	PUNCT	,	_	14	punct	14:punct	_
 16	NY	NY	PROPN	NNP	Number=Sing	14	appos	14:appos	_
-17	11222	11222	NUM	CD	NumType=Card	10	appos	10:appos	_
+17	11222	11222	NUM	CD	NumForm=Digit|NumType=Card	10	appos	10:appos	_
 18	USA	USA	PROPN	NNP	Number=Sing	16	appos	16:appos	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0050
@@ -859,8 +859,8 @@
 4	Ansems	Ansems	PROPN	NNP	Number=Sing	3	flat	3:flat	_
 5	Gen.	Gen.	PROPN	NNP	Number=Sing	3	flat	3:flat	_
 6	Foulkesstraat	Foulkesstraat	PROPN	NNP	Number=Sing	3	flat	3:flat	_
-7	5	5	NUM	CD	NumType=Card	9	nummod	9:nummod	_
-8	4641	4641	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+7	5	5	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
+8	4641	4641	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 9	BW	BW	PROPN	NNP	Number=Sing	6	appos	6:appos	_
 10	Ossendrecht	Ossendrecht	PROPN	NNP	Number=Sing	3	appos	3:appos	_
 11	Netherlands	Netherlands	PROPN	NNP	Number=Sing	10	appos	10:appos	_
@@ -871,27 +871,27 @@
 2	)	)	PUNCT	-RRB-	_	1	punct	1:punct	SpaceAfter=No
 3	W.	W.	PROPN	NNP	Number=Sing	0	root	0:root	_
 4	Brumbley	Brumbley	PROPN	NNP	Number=Sing	3	flat	3:flat	_
-5	4632	4632	NUM	CD	NumType=Card	7	nummod	7:nummod	_
+5	4632	4632	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
 6	Hilton	Hilton	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 7	Ave	Ave	PROPN	NNP	Number=Sing	3	list	3:list	_
 8	Suite	Suite	PROPN	NNP	Number=Sing	5	appos	5:appos	_
 9	#	#	SYM	NN	Number=Sing	8	amod	8:amod	_
-10	31	31	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+10	31	31	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 11	Columbus	Columbus	PROPN	NNP	Number=Sing	7	appos	7:appos	SpaceAfter=No
 12	,	,	PUNCT	,	_	11	punct	11:punct	_
 13	Ohio	Ohio	PROPN	NNP	Number=Sing	11	appos	11:appos	_
-14	43228	43228	NUM	CD	NumType=Card	7	appos	7:appos	_
+14	43228	43228	NUM	CD	NumForm=Digit|NumType=Card	7	appos	7:appos	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0052
 # text = STEP TWO:Now take the #1 name off the list that you see above, move the other names up (six becomes 5, 5 becomes 4, and etc.) and add YOUR NAME as number 6 on the list.
 1	STEP	step	NOUN	NN	Number=Sing	0	root	0:root	_
-2	TWO	two	NUM	CD	NumType=Card	1	nummod	1:nummod	SpaceAfter=No
+2	TWO	two	NUM	CD	NumForm=Word|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	1	punct	1:punct	SpaceAfter=No
 4	Now	now	ADV	RB	_	5	advmod	5:advmod	_
 5	take	take	VERB	VB	Mood=Imp|VerbForm=Fin	1	appos	1:appos	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 7	#	#	SYM	NN	Number=Sing	9	compound	9:compound	SpaceAfter=No
-8	1	1	NUM	CD	NumType=Card	7	nummod	7:nummod	_
+8	1	1	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
 9	name	name	NOUN	NN	Number=Sing	5	obj	5:obj	_
 10	off	off	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
@@ -907,24 +907,24 @@
 21	names	name	NOUN	NNS	Number=Plur	18	obj	18:obj	_
 22	up	up	ADV	RB	_	18	advmod	18:advmod	_
 23	(	(	PUNCT	-LRB-	_	25	punct	25:punct	SpaceAfter=No
-24	six	six	NUM	CD	NumType=Card	25	nsubj	25:nsubj|26:nsubj:xsubj|33:nsubj:xsubj	_
+24	six	six	NUM	CD	NumForm=Word|NumType=Card	25	nsubj	25:nsubj|26:nsubj:xsubj|33:nsubj:xsubj	_
 25	becomes	become	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	appos	18:appos	_
-26	5	5	NUM	CD	NumType=Card	25	xcomp	25:xcomp	SpaceAfter=No
+26	5	5	NUM	CD	NumForm=Digit|NumType=Card	25	xcomp	25:xcomp	SpaceAfter=No
 27	,	,	PUNCT	,	_	29	punct	29:punct	_
-28	5	5	NUM	CD	NumType=Card	29	nsubj	29:nsubj|30:nsubj:xsubj	_
+28	5	5	NUM	CD	NumForm=Digit|NumType=Card	29	nsubj	29:nsubj|30:nsubj:xsubj	_
 29	becomes	become	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	conj	25:xcomp|26:conj:and	_
-30	4	4	NUM	CD	NumType=Card	29	xcomp	29:xcomp	SpaceAfter=No
+30	4	4	NUM	CD	NumForm=Digit|NumType=Card	29	xcomp	29:xcomp	SpaceAfter=No
 31	,	,	PUNCT	,	_	33	punct	33:punct	_
 32	and	and	CCONJ	CC	_	33	cc	33:cc	_
-33	etc.	etc.	X	FW	_	26	conj	25:xcomp|26:conj:and	SpaceAfter=No
+33	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Sing	26	conj	25:xcomp|26:conj:and	SpaceAfter=No
 34	)	)	PUNCT	-RRB-	_	25	punct	25:punct	_
 35	and	and	CCONJ	CC	_	36	cc	36:cc	_
 36	add	add	VERB	VB	Mood=Imp|VerbForm=Fin	5	conj	1:appos|5:conj:and	_
-37	YOUR	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	38	nmod:poss	38:nmod:poss	_
+37	YOUR	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	38	nmod:poss	38:nmod:poss	_
 38	NAME	name	NOUN	NN	Number=Sing	36	obj	36:obj	_
 39	as	as	ADP	IN	_	40	case	40:case	_
 40	number	number	NOUN	NN	Number=Sing	36	obl	36:obl:as	_
-41	6	6	NUM	CD	NumType=Card	40	nummod	40:nummod	_
+41	6	6	NUM	CD	NumForm=Digit|NumType=Card	40	nummod	40:nummod	_
 42	on	on	ADP	IN	_	44	case	44:case	_
 43	the	the	DET	DT	Definite=Def|PronType=Art	44	det	44:det	_
 44	list	list	NOUN	NN	Number=Sing	40	nmod	40:nmod:on	SpaceAfter=No
@@ -933,13 +933,13 @@
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0053
 # text = STEP THREE:
 1	STEP	step	NOUN	NN	Number=Sing	0	root	0:root	_
-2	THREE	three	NUM	CD	NumType=Card	1	nummod	1:nummod	SpaceAfter=No
+2	THREE	three	NUM	CD	NumForm=Word|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0054
 # text = Change anything you need to but try to keep this article as close to original as possible.
 1	Change	change	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	anything	anything	PRON	NN	Number=Sing	1	obj	1:obj	_
+2	anything	anything	PRON	NN	Number=Sing|PronType=Ind	1	obj	1:obj	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 4	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
 5	to	to	PART	TO	_	4	xcomp	4:xcomp	_
@@ -961,13 +961,13 @@
 # text = Now post your amended article to at least 200 news groups. :
 1	Now	now	ADV	RB	_	2	advmod	2:advmod	_
 2	post	post	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-3	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+3	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 4	amended	amend	VERB	VBN	Tense=Past|VerbForm=Part	5	amod	5:amod	_
 5	article	article	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	to	to	ADP	IN	_	11	case	11:case	_
 7	at	at	ADP	IN	_	8	case	8:case	_
 8	least	least	ADJ	JJS	Degree=Sup	9	nmod	9:nmod:at	_
-9	200	200	NUM	CD	NumType=Card	11	nummod	11:nummod	_
+9	200	200	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
 10	news	news	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	groups	group	NOUN	NNS	Number=Plur	2	obl	2:obl:to	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -982,7 +982,7 @@
 5	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
 6	close	close	ADJ	JJ	Degree=Pos	9	advmod	9:advmod	_
 7	to	to	ADP	IN	_	8	case	8:case	_
-8	24,000	24000	NUM	CD	NumType=Card	6	obl	6:obl:to	_
+8	24,000	24000	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:to	_
 9	groups	group	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	SpaceAfter=No
 10	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
 
@@ -992,7 +992,7 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 3	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-5	200	200	NUM	CD	NumType=Card	0	root	0:root	SpaceAfter=No
+5	200	200	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	SpaceAfter=No
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
 7	but	but	CCONJ	CC	_	8	cc	8:cc	_
 8	remember	remember	VERB	VB	Mood=Imp|VerbForm=Fin	5	conj	5:conj:but	SpaceAfter=No
@@ -1028,11 +1028,11 @@
 7	refer	refer	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 8	to	to	ADP	IN	_	9	case	9:case	_
 9	Title	title	NOUN	NN	Number=Sing	7	obl	7:obl:to	_
-10	18	18	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+10	18	18	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 11	Sec.	sec.	NOUN	NN	Number=Sing	9	list	9:list	_
-12	1302	1302	NUM	CD	NumType=Card	11	nummod	11:nummod	_
+12	1302	1302	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
 13	&	&	CCONJ	CC	_	14	cc	14:cc	_
-14	1341	1341	NUM	CD	NumType=Card	11	conj	11:conj	_
+14	1341	1341	NUM	CD	NumForm=Digit|NumType=Card	11	conj	11:conj	_
 15	of	of	ADP	IN	_	19	case	19:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 17	Postal	postal	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
@@ -1051,7 +1051,7 @@
 7	for	for	ADP	IN	_	8	case	8:case	_
 8	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	3	nmod	3:nmod:for	_
 9	and	and	CCONJ	CC	_	17	cc	17:cc	_
-10	whenever	whenever	SCONJ	WRB	PronType=Int	12	mark	12:mark	_
+10	whenever	whenever	ADV	WRB	PronType=Int	12	advmod	12:advmod	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
 12	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl	_
 13	money	money	NOUN	NN	Number=Sing	12	obj	12:obj	SpaceAfter=No
@@ -1086,7 +1086,7 @@
 16	participants	participant	NOUN	NNS	Number=Plur	11	nmod	11:nmod:of	_
 17	and	and	CCONJ	CC	_	21	cc	21:cc	_
 18	by	by	SCONJ	IN	_	21	mark	21:mark	_
-19	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	21	nsubj	21:nsubj	_
+19	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	21	nsubj	21:nsubj	_
 20	carefully	carefully	ADV	RB	_	21	advmod	21:advmod	_
 21	adhering	adhere	VERB	VBG	VerbForm=Ger	11	conj	7:obl:because_of|11:conj:and	_
 22	to	to	ADP	IN	_	23	case	23:case	_
@@ -1125,7 +1125,7 @@
 19	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	13	acl:relcl	13:acl:relcl	_
 20	will	will	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
 21	come	come	VERB	VB	VerbForm=Inf	10	conj	10:conj:and	_
-22	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
+22	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
 23	way	way	NOUN	NN	Number=Sing	21	obj	21:obj	SpaceAfter=No
 24	.	.	PUNCT	.	_	10	punct	10:punct	_
 
@@ -1190,7 +1190,7 @@
 11	wrap	wrap	VERB	VB	VerbForm=Inf	9	csubj	9:csubj	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 13	$	$	SYM	$	_	15	compound	15:compound	SpaceAfter=No
-14	1	1	NUM	CD	NumType=Card	13	nummod	13:nummod	_
+14	1	1	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
 15	bill	bill	NOUN	NN	Number=Sing	11	obj	11:obj	_
 16	in	in	ADP	IN	_	18	case	18:case	_
 17	dark	dark	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
@@ -1226,21 +1226,21 @@
 17	be	be	AUX	VB	VerbForm=Inf	18	aux:pass	18:aux:pass	_
 18	reimbursed	reimburse	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 19	for	for	ADP	IN	_	21	case	21:case	_
-20	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
+20	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
 21	participation	participation	NOUN	NN	Number=Sing	18	obl	18:obl:for	_
 22	as	as	ADP	IN	_	25	case	25:case	_
 23	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
 24	List	list	NOUN	NN	Number=Sing	25	compound	25:compound	_
 25	Developer	developer	NOUN	NN	Number=Sing	21	nmod	21:nmod:as	_
 26	with	with	ADP	IN	_	28	case	28:case	_
-27	one	one	NUM	CD	NumType=Card	28	nummod	28:nummod	_
+27	one	one	NUM	CD	NumForm=Word|NumType=Card	28	nummod	28:nummod	_
 28	dollar	dollar	NOUN	NN	Number=Sing	18	obl	18:obl:with	_
 29	each	each	DET	DT	_	28	nmod:npmod	28:nmod:npmod	SpaceAfter=No
 30	.	.	PUNCT	.	_	18	punct	18:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0068
 # text = Your name will move up the list geometrically so that when your name reaches the #1 position you will be receiving thousands of dollars in CASH!!!
-1	Your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
+1	Your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	name	name	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 3	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 4	move	move	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -1250,13 +1250,13 @@
 8	geometrically	geometrically	ADV	RB	_	4	advmod	4:advmod	_
 9	so	so	SCONJ	IN	_	22	mark	22:mark	_
 10	that	that	SCONJ	IN	_	9	fixed	9:fixed	_
-11	when	when	SCONJ	WRB	PronType=Int	14	mark	14:mark	_
-12	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
+11	when	when	ADV	WRB	PronType=Int	14	advmod	14:advmod	_
+12	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	name	name	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	_
 14	reaches	reach	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	advcl	22:advcl:when	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 16	#	#	SYM	NN	Number=Sing	18	compound	18:compound	SpaceAfter=No
-17	1	1	NUM	CD	NumType=Card	16	nummod	16:nummod	_
+17	1	1	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	_
 18	position	position	NOUN	NN	Number=Sing	14	obj	14:obj	_
 19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	22:nsubj	_
 20	will	will	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
@@ -1277,16 +1277,16 @@
 4	for	for	ADP	IN	_	6	case	6:case	_
 5	only	only	ADV	RB	_	6	advmod	6:advmod	_
 6	$	$	SYM	$	_	3	nmod	3:nmod:for	SpaceAfter=No
-7	6.00	6.00	NUM	CD	NumType=Card	6	nummod	6:nummod	_
+7	6.00	6.00	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
 8	(	(	PUNCT	-LRB-	_	9	punct	9:punct	_
 9	$	$	SYM	$	_	6	appos	6:appos	SpaceAfter=No
-10	1.00	1.00	NUM	CD	NumType=Card	9	nummod	9:nummod	_
+10	1.00	1.00	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 11	for	for	ADP	IN	_	12	case	12:case	_
 12	each	each	DET	DT	_	9	nmod	9:nmod:for	_
 13	of	of	ADP	IN	_	17	case	17:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 15	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	17	amod	17:amod	_
-16	six	six	NUM	CD	NumType=Card	17	nummod	17:nummod	_
+16	six	six	NUM	CD	NumForm=Word|NumType=Card	17	nummod	17:nummod	_
 17	people	people	NOUN	NNS	Number=Plur	12	nmod	12:nmod:of	_
 18	listed	list	VERB	VBN	Tense=Past|VerbForm=Part	17	acl	17:acl	_
 19	above	above	ADV	RB	_	18	advmod	18:advmod	SpaceAfter=No
@@ -1299,7 +1299,7 @@
 3	now	now	ADV	RB	_	1	advmod	1:advmod	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	add	add	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
-6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 7	own	own	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	name	name	NOUN	NN	Number=Sing	5	obj	5:obj	_
 9	to	to	ADP	IN	_	11	case	11:case	_
@@ -1318,7 +1318,7 @@
 1	*****	*****	PUNCT	NFP	_	2	punct	2:punct	SpaceAfter=No
 2	DIRECTIONS	direction	NOUN	NNS	Number=Plur	0	root	0:root	_
 3	FOR	for	SCONJ	IN	_	6	mark	6:mark	_
-4	HOW	how	SCONJ	WRB	PronType=Int	6	mark	6:mark	_
+4	HOW	how	ADV	WRB	PronType=Int	6	advmod	6:advmod	_
 5	TO	to	PART	TO	_	6	mark	6:mark	_
 6	POST	post	VERB	VB	VerbForm=Inf	2	acl	2:acl:to	_
 7	TO	to	ADP	IN	_	9	case	9:case	_
@@ -1331,7 +1331,7 @@
 # newpar id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-p0012
 # text = STEP ONE: You do not need to re-type this entire letter to do your own posting.
 1	STEP	step	NOUN	NN	Number=Sing	0	root	0:root	_
-2	ONE	one	NUM	CD	NumType=Card	1	nummod	1:nummod	SpaceAfter=No
+2	ONE	one	NUM	CD	NumForm=Word|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	1	punct	1:punct	_
 4	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|9:nsubj:xsubj	_
 5	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
@@ -1344,7 +1344,7 @@
 12	letter	letter	NOUN	NN	Number=Sing	9	obj	9:obj	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	do	do	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
-15	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
+15	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 16	own	own	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	posting	posting	NOUN	NN	Number=Sing	14	obj	14:obj	SpaceAfter=No
 18	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -1353,7 +1353,7 @@
 # text = Simply put your cursor at the beginning of this letter and drag your cursor to the bottom of this document, and select 'copy' from the edit menu.
 1	Simply	simply	ADV	RB	_	2	advmod	2:advmod	_
 2	put	put	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-3	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+3	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	cursor	cursor	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	at	at	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
@@ -1363,7 +1363,7 @@
 10	letter	letter	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
 12	drag	drag	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj:and	_
-13	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
+13	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 14	cursor	cursor	NOUN	NN	Number=Sing	12	obj	12:obj	_
 15	to	to	ADP	IN	_	17	case	17:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
@@ -1402,7 +1402,7 @@
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0075
 # text = STEP TWO:
 1	STEP	step	NOUN	NN	Number=Sing	0	root	0:root	_
-2	TWO	two	NUM	CD	NumType=Card	1	nummod	1:nummod	SpaceAfter=No
+2	TWO	two	NUM	CD	NumForm=Word|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0076
@@ -1416,7 +1416,7 @@
 7	file	file	NOUN	NN	Number=Sing	1	obj	1:obj	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
 9	place	place	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
-10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+10	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	cursor	cursor	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	at	at	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
@@ -1459,7 +1459,7 @@
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	16	nsubj	16:nsubj	_
 15	will	will	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 16	add	add	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:so_that	_
-17	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
+17	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 18	name	name	NOUN	NN	Number=Sing	16	obj	16:obj	_
 19	to	to	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
@@ -1469,13 +1469,13 @@
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0079
 # text = STEP THREE:
 1	STEP	step	NOUN	NN	Number=Sing	0	root	0:root	_
-2	THREE	three	NUM	CD	NumType=Card	1	nummod	1:nummod	SpaceAfter=No
+2	THREE	three	NUM	CD	NumForm=Word|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0080
 # text = Save your new notepad file as a text file.
 1	Save	save	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+2	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 3	new	new	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 4	notepad	notepad	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	file	file	NOUN	NN	Number=Sing	1	obj	1:obj	_
@@ -1492,7 +1492,7 @@
 3	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl:if	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	do	do	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	posting	posting	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	in	in	ADP	IN	_	10	case	10:case	_
 9	different	different	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
@@ -1514,7 +1514,7 @@
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0082
 # text = STEP FOUR:
 1	STEP	step	NOUN	NN	Number=Sing	0	root	0:root	_
-2	FOUR	four	NUM	CD	NumType=Card	1	nummod	1:nummod	SpaceAfter=No
+2	FOUR	four	NUM	CD	NumForm=Word|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0083
@@ -1559,7 +1559,7 @@
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	header	header	NOUN	NN	Number=Sing	1	parataxis	1:parataxis|13:obj	_
 11	that	that	PRON	WDT	PronType=Rel	13	obj	10:ref	_
-12	everyone	everyone	PRON	NN	Number=Sing	13	nsubj	13:nsubj	_
+12	everyone	everyone	PRON	NN	Number=Sing|PronType=Tot	13	nsubj	13:nsubj	_
 13	sees	see	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
 14	as	as	SCONJ	IN	_	16	mark	16:mark	_
 15	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	16	nsubj	16:nsubj	_

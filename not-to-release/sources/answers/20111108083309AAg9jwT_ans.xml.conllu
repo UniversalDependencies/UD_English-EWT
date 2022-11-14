@@ -5,7 +5,7 @@
 1	dead	dead	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
 2	pixel	pixel	NOUN	NN	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	5	case	5:case	_
-4	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	photos	photo	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	SpaceAfter=No
 6	?	?	PUNCT	.	_	2	punct	2:punct	_
 
@@ -27,18 +27,18 @@
 12	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
 13	m	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
 14	wondering	wonder	VERB	VBG	VerbForm=Ger	2	parataxis	2:parataxis	_
-15	why	why	SCONJ	WRB	PronType=Int	31	mark	31:mark	_
+15	why	why	ADV	WRB	PronType=Int	31	advmod	31:advmod	_
 16	if	if	SCONJ	IN	_	18	mark	18:mark	_
 17	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
 18	zoom	zoom	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	31	advcl	31:advcl:if	_
-19	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
+19	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
 20	picture	picture	NOUN	NN	Number=Sing	21	compound	21:compound	_
 21	zoom	zoom	NOUN	NN	Number=Sing	18	obj	18:obj	_
 22	like	like	INTJ	UH	_	18	discourse	18:discourse	_
 23	almost	almost	ADV	RB	_	26	advmod	26:advmod	_
-24	200	200	NUM	CD	NumType=Card	27	nummod	27:nummod	SpaceAfter=No
+24	200	200	NUM	CD	NumForm=Digit|NumType=Card	27	nummod	27:nummod	SpaceAfter=No
 25	-	-	SYM	SYM	_	26	case	26:case	SpaceAfter=No
-26	300	300	NUM	CD	NumType=Card	24	nmod	24:nmod	SpaceAfter=No
+26	300	300	NUM	CD	NumForm=Digit|NumType=Card	24	nmod	24:nmod	SpaceAfter=No
 27	percent	percent	NOUN	NN	Number=Sing	18	obl:npmod	18:obl:npmod	SpaceAfter=No
 28	..	..	PUNCT	,	_	31	punct	31:punct	SpaceAfter=No
 29	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	31	nsubj	31:nsubj	_
@@ -50,10 +50,10 @@
 35	...	...	PUNCT	,	_	2	punct	2:punct	SpaceAfter=No
 36	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	_
 37	there	there	PRON	EX	_	36	expl	36:expl	_
-38	something	something	PRON	NN	Number=Sing	36	nsubj	36:nsubj	_
+38	something	something	PRON	NN	Number=Sing|PronType=Ind	36	nsubj	36:nsubj	_
 39	wrong	wrong	ADJ	JJ	Degree=Pos	38	amod	38:amod	_
 40	with	with	ADP	IN	_	43	case	43:case	_
-41	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	43	nmod:poss	43:nmod:poss	_
+41	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	43	nmod:poss	43:nmod:poss	_
 42	camera	camera	NOUN	NN	Number=Sing	43	compound	43:compound	_
 43	body	body	NOUN	NN	Number=Sing	39	obl	39:obl:with	SpaceAfter=No
 44	?	?	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
@@ -180,10 +180,10 @@
 
 # sent_id = answers-20111108083309AAg9jwT_ans-0011
 # text = Cure is to get the sensor cleaned
-1	Cure	cure	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Cure	cure	NOUN	NN	Number=Sing	4	nsubj:outer	4:nsubj:outer	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
-4	get	get	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
+4	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	sensor	sensor	NOUN	NN	Number=Sing	4	obj	4:obj|7:nsubj:xsubj	_
 7	cleaned	clean	VERB	VBN	Tense=Past|VerbForm=Part	4	xcomp	4:xcomp	_

@@ -33,7 +33,7 @@
 6	to	to	ADP	IN	_	7	case	7:case	_
 7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	obl	5:obl:to	_
 8	about	about	ADP	IN	_	11	case	11:case	_
-9	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+9	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 10	specific	specific	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	issues	issue	NOUN	NNS	Number=Plur	5	obl	5:obl:about	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
@@ -59,26 +59,26 @@
 10	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj|16:nsubj	_
 11	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
 12	very	very	ADV	RB	_	13	advmod	13:advmod	_
-13	sterile	sterile	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	_
+13	sterile	sterile	ADJ	JJ	Degree=Pos	4	conj	4:conj:and|20:ccomp	_
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
 15	medical	medical	ADJ	JJ	Degree=Pos	16	obl:npmod	16:obl:npmod	_
 16	feeling	feel	VERB	VBG	VerbForm=Ger	13	conj	13:conj:and	SpaceAfter=No
 17	,	,	PUNCT	,	_	13	punct	13:punct	_
-18	which	which	PRON	WDT	PronType=Int	20	obj	20:obj	_
+18	which	which	PRON	WDT	PronType=Rel	20	obj	13:ref	_
 19	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
-20	liked	like	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	13	parataxis	13:parataxis	SpaceAfter=No
+20	liked	like	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	13	advcl:relcl	13:advcl:relcl	SpaceAfter=No
 21	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-280844-0005
 # text = The down side was that sometimes there was a lot of noise in the hallway from other patients/doctors.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	down	down	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	side	side	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+3	side	side	NOUN	NN	Number=Sing	8	nsubj:outer	8:nsubj:outer	_
+4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	8:cop	_
 5	that	that	SCONJ	IN	_	8	mark	8:mark	_
 6	sometimes	sometimes	ADV	RB	_	8	advmod	8:advmod	_
 7	there	there	PRON	EX	_	8	expl	8:expl	_
-8	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	ccomp	4:ccomp	_
+8	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	lot	lot	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 11	of	of	ADP	IN	_	12	case	12:case	_
@@ -91,7 +91,7 @@
 18	patients	patient	NOUN	NNS	Number=Plur	15	nmod	15:nmod:from	SpaceAfter=No
 19	/	/	SYM	,	_	20	cc	20:cc	SpaceAfter=No
 20	doctors	doctor	NOUN	NNS	Number=Plur	18	conj	15:nmod:from|18:conj	SpaceAfter=No
-21	.	.	PUNCT	.	_	4	punct	4:punct	_
+21	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-280844-0006
 # text = I worked with Andrew for 2 months and did acupuncture and herbs.
@@ -100,7 +100,7 @@
 3	with	with	ADP	IN	_	4	case	4:case	_
 4	Andrew	Andrew	PROPN	NNP	Number=Sing	2	obl	2:obl:with	_
 5	for	for	ADP	IN	_	7	case	7:case	_
-6	2	2	NUM	CD	NumType=Card	7	nummod	7:nummod	_
+6	2	2	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
 7	months	month	NOUN	NNS	Number=Plur	2	obl	2:obl:for	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
 9	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
@@ -128,7 +128,7 @@
 15	any	any	DET	DT	_	16	det	16:det	_
 16	changes	change	NOUN	NNS	Number=Plur	14	obj	14:obj	_
 17	with	with	ADP	IN	_	19	case	19:case	_
-18	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
+18	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
 19	cycles	cycle	NOUN	NNS	Number=Plur	16	nmod	16:nmod:with	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -154,7 +154,7 @@
 16	,	,	PUNCT	,	_	22	punct	22:punct	_
 17	but	but	CCONJ	CC	_	22	cc	22:cc	_
 18	after	after	ADP	IN	_	20	case	20:case	_
-19	2	2	NUM	CD	NumType=Card	20	nummod	20:nummod	_
+19	2	2	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	_
 20	months	month	NOUN	NNS	Number=Plur	22	obl	22:obl:after	_
 21	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	22	nsubj	22:nsubj	_
 22	felt	feel	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
