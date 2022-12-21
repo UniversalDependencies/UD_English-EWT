@@ -522,6 +522,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
     if "obj" in child_funcs and "ccomp" in child_funcs:
         print("WARN: token has both obj and ccomp children" + inname)
 
+    if child_funcs.count("ccomp") + child_funcs.count("xcomp") > 1 and "expl" not in child_funcs:
+        print("WARN: token has multiple (c|x)comp dependents (usually an error if not extraposition)" + inname)
+
     if func == "acl" and (pos.endswith("G") or pos.endswith("N")) and parent_id == id + 1:  # premodifier V.G/N should be amod not acl
         print("WARN: back-pointing " + func + " for adjacent premodifier (should be amod?) in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
 
