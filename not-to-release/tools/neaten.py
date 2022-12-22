@@ -434,7 +434,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 
     if func == "xcomp" and pos in ["VBP","VBZ","VBD"]:
         if parent_lemma not in ["=","seem"]:
-            print("WARN: xcomp verb should be infinitive, not tag " + pos + inname)
+            print("WARN: xcomp verb should be non-finite, not tag " + pos + inname)
 
     if parent_pos is None:
         assert False,(id,docname)
