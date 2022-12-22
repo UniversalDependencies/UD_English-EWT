@@ -519,6 +519,10 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
     if func == "xcomp" and parent_lemma in ["see","hear","notice"]:  # find
         print("WARN: deprel "+func+" should not be used with perception verb lemma '"+parent_lemma+"' (should this be nsubj+ccomp?)" + inname)
 
+    if lemma == "have" and "ccomp" in child_funcs and ("obj" not in child_funcs or not set(children) & {"idea","clue"}) and "expl" not in child_funcs:
+        # exceptional idioms: 'have no idea/clue', 'rumor has it'
+        print("WARN: 'have' token has suspicious ccomp dependent (should it be xcomp?)" + inname)
+
     if "obj" in child_funcs and "ccomp" in child_funcs:
         print("WARN: token has both obj and ccomp children" + inname)
 
