@@ -535,6 +535,10 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
     if func.endswith("tmod") and pos.startswith("RB"):
         print("WARN: adverbs should not be tmod" + inname)
 
+    if func == "case" and lemma in ["back", "down", "over", "out", "up"] and parent_lemma in ["here","there"] and id+1==parent_id:
+        # adjacency check because "out of there" is OK
+        print("WARN: '"+lemma+" "+parent_lemma+"' should probably be advmod not case" + inname)
+
     """
     Existential construction
 
