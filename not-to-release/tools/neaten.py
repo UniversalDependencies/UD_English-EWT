@@ -545,6 +545,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
         # adjacency check because "out of there" is OK
         print("WARN: '"+lemma+" "+parent_lemma+"' should probably be advmod not case" + inname)
 
+    if func == "case" and upos == "SCONJ" and "fixed" not in child_funcs:
+        print("WARN: SCONJ/case combination is invalid in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+
     """
     Existential construction
 
