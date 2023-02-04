@@ -245,8 +245,9 @@ def validate_annos(tree):
             assert parent_pos is not None,(tok_num,parent_ids[tok_num],postags,filename)
             S_TYPE_PLACEHOLDER = None
             assert parent_string is not None,(tok_num,docname,filename)
+            is_parent_copular = any(funcs[x]=="cop" for x in parent_ids if parent_ids[x]==parent_id)    # if tok or any siblings attach as cop
             flag_dep_warnings(tok_num, tok, pos, upos, lemma, func,
-                              parent_string, parent_lemma, parent_id,
+                              parent_string, parent_lemma, parent_id, is_parent_copular,
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, prev_upos, sent_positions[tok_num],
                               parent_func, parent_pos, parent_upos, filename)
@@ -323,8 +324,10 @@ def validate_annos(tree):
                     print("WARN: Token with lemma '" + lemmas[i] + "' attaches as obl:agent without a 'by' dependent " + docname)
 
 
-def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, parent_id, children, child_funcs, s_type,
-                      docname, prev_tok, prev_pos, prev_upos, sent_position, parent_func, parent_pos, parent_upos, filename):
+def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, parent_id, is_parent_copular,
+                      children, child_funcs, s_type,
+                      docname, prev_tok, prev_pos, prev_upos, sent_position,
+                      parent_func, parent_pos, parent_upos, filename):
     # Shorthand for printing errors
     inname = " in " + docname + " @ token " + str(id) + " (" + parent + " -> " + tok + ") " + filename
 
@@ -531,6 +534,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 
     if func == "acl" and (pos.endswith("G") or pos.endswith("N")) and parent_id == id + 1:  # premodifier V.G/N should be amod not acl
         print("WARN: back-pointing " + func + " for adjacent premodifier (should be amod?) in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+
+    if func == "advcl" and upos=="VERB" and (pos.endswith("G") or pos.endswith("N")) and parent_upos in ["NUM","SYM","NOUN","PRON","PROPN","DET"] and not is_parent_copular and parent_func!="root":
+        print("WARN: non-predicate non-root nominal should not have advcl dependent (should be acl?) in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
 
     if func.endswith("tmod") and pos.startswith("RB"):
         print("WARN: adverbs should not be tmod" + inname)
