@@ -312,7 +312,7 @@ def validate_annos(tree):
             if aux_dependents and (not all(f=='aux' for j,f in aux_dependents[:-1]) or aux_dependents[-1][1]!='aux:pass'):
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has suspicious aux(:pass) dependents (only the last should be aux:pass) in " + docname)
             subj_dependents = {f for f in dependents.values() if 'subj' in f}
-            if not subj_dependents < {'nsubj:pass','csubj:pass'}:
+            if not subj_dependents < {'nsubj:pass','csubj:pass','nsubj:outer','csubj:outer'}:
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has subject dependents " + repr(sorted(subj_dependents)).replace('[','{').replace(']','}') + " in " + docname)
             if 'cop' in dependents.values():
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has cop dependent in " + docname)
