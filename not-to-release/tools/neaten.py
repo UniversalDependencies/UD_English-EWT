@@ -12,11 +12,13 @@ https://raw.githubusercontent.com/amir-zeldes/gum/master/_build/utils/validate.p
 @since: 2022-09-10
 """
 
-from collections import defaultdict
+from collections import defaultdict, Counter
 import glob
 import re
 import sys
 import conllu
+
+NNS_warnings = Counter()
 
 def isRegularNode(line):
     idS = str(line['id'])
@@ -75,6 +77,7 @@ def validate_src(infiles):
                 validate_annos(tree)
 
     validate_lemmas(lemma_dict,lemma_docs)
+    sys.stderr.write("!suspicious NNS lemmas: "+' '.join(k for k,v in NNS_warnings.most_common()) + '\n')
     sys.stdout.write("\r" + " "*70)
 
 def validate_lemmas(lemma_dict, lemma_docs):
@@ -369,6 +372,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
                          "biceps","triceps","news","species","economics","arrears","glasses","thanks","series"]:
             if re.match(r"[0-9]+'?s",lemma) is None:  # 1920s, 80s
                 print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
+                NNS_warnings[lemma] += 1
 
     if pos == "IN" and func=="compound:prt":
         print("WARN: function " + func + " should have pos RP, not IN" + inname)
