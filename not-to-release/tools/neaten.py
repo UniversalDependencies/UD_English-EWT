@@ -8,6 +8,10 @@ UD validator (https://github.com/UniversalDependencies/tools/)
 Parts are adapted from the GUM validator,
 https://raw.githubusercontent.com/amir-zeldes/gum/master/_build/utils/validate.py
 
+To get an overview of the distribution of error types:
+
+$ python neaten.py | sort | cut -c1-30 | uniq -c
+
 @author: Nathan Schneider
 @since: 2022-09-10
 """
@@ -434,7 +438,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
         if not tok == "following" and func=="obj":  # Exception nominalized "the following"
             print("WARN: gerund should not have noun argument structure function " + func + inname)
 
-    if pos.startswith("NN") and func=="amod":
+    if pos.startswith("NN") and not pos.startswith("NNP") and func=="amod":
         print("WARN: tag "+ pos + " should not be " + func + inname)
 
     be_funcs = ["cop", "aux", "root", "csubj", "auxpass", "rcmod", "ccomp", "advcl", "conj","xcomp","parataxis","vmod","pcomp"]
