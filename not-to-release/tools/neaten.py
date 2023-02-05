@@ -503,6 +503,16 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
     if func in ["nmod:tmod","nmod:npmod","obl:tmod","obl:npmod"] and "case" in child_funcs:
         print("WARN: function " + func +  " should not have 'case' dependents" + inname)
 
+    if func in ["nmod:npmod","obl:npmod"]:
+        if parent_id < id and (parent_lemma in ["once","twice","thrice","time"] or lemma in ["hour","minute","second","day","week","month","quarter","season","year","decade","century"]):
+            print("WARN: rate unit should be :tmod not :npmod" + inname)
+        elif parent_lemma == "ago":
+            # TODO print("WARN: 'time(s)' rate unit should be :tmod not :npmod" + inname)
+            pass
+        elif lemma == "time" and not (tok.lower()=="times" and (id+1 == parent_id or parent_upos == "NOUN")):
+            # exclude multiplicative use of "times"
+            print("WARN: 'time(s)' rate unit should be :tmod not :npmod" + inname)
+
     if func in ["aux:pass","nsubj:pass"] and parent_pos not in ["VBN"]:
         if not (("stardust" in docname and parent_lemma == "would") or parent_lemma == "Rated"):
             print("WARN: function " + func + " should not be the child of pos " + parent_pos + inname)
