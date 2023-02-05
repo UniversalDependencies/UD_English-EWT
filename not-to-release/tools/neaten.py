@@ -356,10 +356,20 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
     if func not in ["case","reparandum","goeswith"] and pos == "POS":
         print("WARN: tag POS must have function case" + inname)
 
-    if pos in ["VBG","VBN","VBD"] and lemma == tok:
-        # check cases where VVN form is same as tok ('know' and 'notice' etc. are recorded typos, l- is a disfluency)
-        if tok not in ["shed","put","read","become","come","overcome","cut","pre-cut","hit","split","cast","set","hurt","run","overrun","outrun","broadcast","knit",
-                       "undercut","spread","shut","upset","burst","bit","bid","outbid","let","l-","g-","know","notice","reach","raise","beat","forecast"]:
+    if pos in ["VBG","VBN","VBD"] and lemma.lower() == tok.lower():
+        t = tok.lower()
+        if pos == "VBN" and t in ["become","come","overcome","run","outrun","overrun"]:
+            pass
+        elif pos in ["VBN", "VBD"] and t in ["put","shut","cut","pre-cut","undercut",
+                                            "cost","cast","broadcast","forecast",
+                                            "let","set","upset","shed","spread",
+                                            "hurt","burst","bust",
+                                            "beat","read","re-read",
+                                            "bit","fit","hit","knit","slit","split","bid","outbid",
+                                            "l-","g-"]:  # disfluencies
+                                            #,"know","notice","reach","raise",]:
+            pass
+        else:
             print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
 
     if pos == "NNPS" and tok == lemma and tok.endswith("s") and func != "goeswith":
@@ -526,7 +536,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
     if "obl:agent" in child_funcs and ("nsubj" in child_funcs or "csubj" in child_funcs) and not "nsubj:pass" in child_funcs:
         print("WARN: a token cannot have both a *subj relation and obl:agent" + inname)
 
-    if pos in ["VBD","VBD","VBP"] and "aux" in child_funcs:
+    if pos in ["VBD","VBD","VBP"] and "aux" in child_funcs and "nsubj:outer" not in child_funcs:
         print(str(id) + docname)
         print("WARN: tag "+pos+" should not have auxiliaries 'aux'" + inname)
 
