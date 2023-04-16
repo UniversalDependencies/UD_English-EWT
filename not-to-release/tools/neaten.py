@@ -217,6 +217,7 @@ def validate_annos(tree):
             func = line['deprel']
             featlist = line['feats'] or {}
             misclist = line['misc'] or {}
+            edeps = line['deps']
             merged = 'merged' in line and line['merged']
             form = check_and_fix_form_typos(tok_num, line['form'], featlist, misclist, merged, docname)
 
@@ -253,7 +254,7 @@ def validate_annos(tree):
             S_TYPE_PLACEHOLDER = None
             assert parent_string is not None,(tok_num,docname,filename)
             is_parent_copular = any(funcs[x]=="cop" for x in parent_ids if parent_ids[x]==parent_id)    # if tok or any siblings attach as cop
-            flag_dep_warnings(tok_num, tok, pos, upos, lemma, func,
+            flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, edeps,
                               parent_string, parent_lemma, parent_id, is_parent_copular,
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, prev_upos, sent_positions[tok_num],
@@ -282,6 +283,10 @@ def validate_annos(tree):
                 if parent_upos=="PRON" or (parent_upos=="ADV" and (parent_pos=="WRB" or (parent_pos=="GW" and "PronType" in parent_feats))):
                     if parent_feats["PronType"]=="Int":
                         print("WARN: Looks like a WH word-headed free relative, should be PronType=Rel" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+
+            if featlist.get("PronType")=="Rel" and (len(edeps)!=1 or edeps[0][0]!="ref"):
+                if "acl:relcl" not in child_funcs[tok_num] and "advcl:relcl" not in child_funcs[tok_num]: # not free relative
+                    print("WARN: PronType=Rel should have `ref` as its sole enhanced dependency" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
             if ':pass' in func:
                 passive_verbs.add(parent_id)
@@ -331,7 +336,7 @@ def validate_annos(tree):
                     print("WARN: Token with lemma '" + lemmas[i] + "' attaches as obl:agent without a 'by' dependent " + docname)
 
 
-def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, parent_id, is_parent_copular,
+def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular,
                       children, child_funcs, s_type,
                       docname, prev_tok, prev_pos, prev_upos, sent_position,
                       parent_func, parent_pos, parent_upos, filename):
@@ -495,6 +500,11 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 
     if func == "acl:relcl" and parent_upos == "ADV":
         print("WARN: dependent of adverb should be advcl:relcl not acl:relcl" + inname)
+
+    if "acl:relcl" in child_funcs or "advcl:relcl" in child_funcs:  # relativized element
+        # should (in most cases) have an enhanced dependency out of the relative clause
+        if len(edeps)<=1 or not any(rel.startswith(('nsubj','csubj','obj','obl','nmod')) and isinstance(h,int) and h>id for (rel,h) in edeps):
+            print("WARN: relativized word should have enhanced dependency within the relative clause" + inname)
 
     if pos in ["VBG"] and "det" in child_funcs:
         # Exceptions for phrasal compound in GUM_reddit_card and nominalization in GUM_academic_exposure
