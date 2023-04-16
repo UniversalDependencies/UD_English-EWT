@@ -43,7 +43,7 @@ def validate_src(infiles):
                 tree.metadata['filename'] = inFP.rsplit('/',1)[1]
 
                 sentid = tree.metadata['sent_id']
-                prev_line = None
+                prev_line = prev_key = None
                 for line in tree:
                     """ `dict(line)` e.g.:
                     {'id': 1, 'form': 'What', 'lemma': 'what', 'upos': 'PRON',
@@ -59,7 +59,7 @@ def validate_src(infiles):
                     tok = (line.get('misc') or {}).get('CorrectForm') or form   # in GUM, some explicit CorrectForm=_ which parses as None
 
                     # goeswith
-                    if line['deprel']=='goeswith' and prev_line['deprel']!="goeswith":
+                    if line['deprel']=='goeswith' and prev_line and prev_line['deprel']!="goeswith":
                         # undo previous count as it has a partial form string
                         lemma_dict[prev_key][prev_line["lemma"]] -= 1
                         if prev_line['xpos'] in ["AFX", "GW"]:
@@ -72,6 +72,7 @@ def validate_src(infiles):
                         lemma_dict[ptok,prev_line['xpos']][prev_line["lemma"]] += 1
                         lemma_docs[ptok,prev_line['xpos'],prev_line["lemma"]].add(sentid)
                     else:
+                        assert prev_line or line['deprel']!='goeswith'
                         lemma_dict[(tok,xpos)][lemma] += 1
                         lemma_docs[(tok,xpos,lemma)].add(sentid)
 
@@ -90,6 +91,7 @@ def validate_lemmas(lemma_dict, lemma_docs):
                   ("da","NNP","Danish"),("Jan","NNP","Jan"),("Jan","NNP","January"),
                   ("'s","VBZ","have"),("’s","VBZ","have"),("`s","VBZ","have"),("'d","VBD","do"),("'d","VBD","have")]
     suspicious_types = 0
+    majority = None
     for tok, xpos in sorted(lemma_dict):
         if sum(lemma_dict[(tok,xpos)].values()) > 1:
             for i, lem in enumerate(filter(lambda y: y!='_', sorted(lemma_dict[(tok,xpos)],key=lambda x:lemma_dict[(tok,xpos)][x],reverse=True))):
