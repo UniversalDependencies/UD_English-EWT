@@ -284,9 +284,14 @@ def validate_annos(tree):
                     if parent_feats["PronType"]=="Int":
                         print("WARN: Looks like a WH word-headed free relative, should be PronType=Rel" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
-            if featlist.get("PronType")=="Rel" and (len(edeps)!=1 or edeps[0][0]!="ref"):
-                if "acl:relcl" not in child_funcs[tok_num] and "advcl:relcl" not in child_funcs[tok_num]: # not free relative
-                    print("WARN: PronType=Rel should have `ref` as its sole enhanced dependency" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+            if featlist.get("PronType")=="Rel":
+                if (len(edeps)!=1 or edeps[0][0]!="ref"):
+                    if "acl:relcl" not in child_funcs[tok_num] and "advcl:relcl" not in child_funcs[tok_num]: # not free relative
+                        print("WARN: PronType=Rel should have `ref` as its sole enhanced dependency" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                elif not {"acl:relcl","advcl:relcl"} & set(child_funcs[edeps[0][1]]):
+                    # the ref antecedent doesn't head the RC
+                    print("WARN: `ref` antecedent lacks :relcl dependent" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+
 
             if ':pass' in func:
                 passive_verbs.add(parent_id)
