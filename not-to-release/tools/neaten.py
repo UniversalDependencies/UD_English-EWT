@@ -37,10 +37,10 @@ def validate_src(infiles):
         with open(inFP) as inF:
             doc = None
             for tree in conllu.parse_incr(inF):
-                if 'newdoc id'in tree.metadata:
+                if 'newdoc id' in tree.metadata:
                     doc = tree.metadata['newdoc id']
                 tree.metadata['docname'] = doc
-                tree.metadata['filename'] = inFP.rsplit('/',1)[1]
+                tree.metadata['filename'] = ('/'+inFP).rsplit('/',1)[1] # prefix slash so it runs on GUM
 
                 sentid = tree.metadata['sent_id']
                 prev_line = prev_key = None
@@ -317,6 +317,8 @@ def validate_annos(tree):
             - if there is an obl:agent (by-phrase), it must be a "by"-PP attaching to a passive verb
               (with Voice=Pass)
             - (No other tokens should have Voice=Pass for now. But plausibly VBNs attaching as amod or acl could be passive)
+
+        TODO: additionally, VBN, no aux, not amod -> Voice=Pass?
         """
         for v in passive_verbs:
             if feats[v].get("Voice") != "Pass":
@@ -338,9 +340,9 @@ def validate_annos(tree):
         for i,f in funcs.items():
             if f=='obl:agent':
                 if (feats[parent_ids[i]] or {}).get("Voice") != "Pass":
-                    print("WARN: Token with lemma '" + lemmas[i] + "' attaches as obl:agent to verb '" + lemmas[parent_ids[i]] + "' without Voice=Pass in " + docname)
+                    print("WARN: Voice=Pass missing from verb that heads obl:agent (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ") in " + docname)
                 if not any(k==i and lemmas[j]=='by' and funcs[j]=='case' for j,k in parent_ids.items()):
-                    print("WARN: Token with lemma '" + lemmas[i] + "' attaches as obl:agent without a 'by' dependent " + docname)
+                    print("WARN: obl:agent without 'by' (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ") in " + docname)
 
 
 def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular,
@@ -510,7 +512,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
 
     if "acl:relcl" in child_funcs or "advcl:relcl" in child_funcs:  # relativized element
         # should (in most cases) have an enhanced dependency out of the relative clause
-        if len(edeps)<=1 or not any(rel.startswith(('nsubj','csubj','obj','obl','nmod','advmod')) and isinstance(h,int) and h>id for (rel,h) in edeps):
+        if len(edeps)<=1 or not any(rel.startswith(('nsubj','csubj','obj','obl','nmod','advmod','ccomp','xcomp')) and isinstance(h,int) and h>id for (rel,h) in edeps):
             print("WARN: relativized word should have enhanced dependency within the relative clause" + inname)
 
     if pos in ["VBG"] and "det" in child_funcs:
