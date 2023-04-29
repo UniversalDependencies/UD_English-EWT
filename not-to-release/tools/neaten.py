@@ -59,12 +59,16 @@ def validate_src(infiles):
                     tok = (line.get('misc') or {}).get('CorrectForm') or form   # in GUM, some explicit CorrectForm=_ which parses as None
 
                     # goeswith
+                    if line['deprel']=='goeswith' and prev_line:
+                        # copy substantive UPOS, feats from the preceding token
+                        line['upos'] = prev_line['upos']
+                        line['feats'] = dict(prev_line['feats'])
+                        if 'Typo' in line['feats']:
+                            del line['feats']['Typo']
+
                     if line['deprel']=='goeswith' and prev_line and prev_line['deprel']!="goeswith":
                         # undo previous count as it has a partial form string
                         lemma_dict[prev_key][prev_line["lemma"]] -= 1
-                        if prev_line['xpos'] in ["AFX", "GW"]:
-                            # copy substantive XPOS to the preceding token
-                            prev_line['xpos'] = line['xpos']
 
                         prev_line['merged'] = True # Typo fixed via goeswith deprel.
                         prev_line['form'] += line['form']
@@ -78,6 +82,15 @@ def validate_src(infiles):
 
                     prev_line = line
                     prev_key = (tok,xpos)
+
+                line2 = None
+                for line1 in tree[::-1]: # go backwards to propagate from last token of goeswith expression
+                    if not isRegularNode(line1):    # avoid e.g. ellipsis node
+                        continue
+                    if line2 and line2['deprel']=='goeswith' and line1['xpos'] in ["AFX", "GW"]:
+                            # copy substantive XPOS to the preceding token
+                            line1['xpos'] = line2['xpos']
+                    line2 = line1
 
                 validate_annos(tree)
 
@@ -183,12 +196,12 @@ def validate_annos(tree):
             "CCONJ":["CC"],
             "DET":["DT","PDT","WDT","NNP"],
             "INTJ":["UH","JJ","NN"],
-            "NOUN":["NN","NNS","GW"],
-            "NUM":["CD","LS","NNP","GW"],
+            "NOUN":["NN","NNS"],
+            "NUM":["CD","LS","NNP"],
             "PART":["POS","RB","TO"],
             "PRON":["PRP","PRP$","WP","WP$","DT","WDT","EX","NN"],
             "PROPN":["NNP","NNPS"],
-            "PUNCT":[".",",",":","``","''","-LCB-","-RCB-","-LRB-","-RRB-","-LSB-","-RSB-","NFP","HYPH","GW","SYM"],
+            "PUNCT":[".",",",":","``","''","-LCB-","-RCB-","-LRB-","-RRB-","-LSB-","-RSB-","NFP","HYPH","SYM"],
             "SCONJ":["IN","VBN","VBG"],
             "SYM":["$",",","SYM","NFP","NN","NNS","IN","HYPH"],
             "VERB":["VB","VBD","VBG","VBN","VBP","VBZ","NNP"],
@@ -263,18 +276,19 @@ def validate_annos(tree):
                               parent_func, parent_pos, parent_upos, filename)
             flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, docname)
 
-            if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
-                # check for PronType=Rcp
-                flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, misclist, prev_tok, docname)
-            elif upos == "PRON":
-                # Pass FORM to detect abbreviations, etc.
-                flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, misclist, prev_tok, docname)
-            elif lemma in PRON_LEMMAS:
-                if not ((lemma=="one" and upos in ("NOUN","NUM"))
-                        or (lemma=="I" and upos=="NUM") # Roman numeral
-                        or (lemma=="he" and upos=="INTJ")): # laughter
-                    print("WARN: invalid pronoun UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
-                    # This warns about a few that are arguably correct, e.g. "oh my/INTJ", "I/PROPN - 24"
+            if func!='goeswith':
+                if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
+                    # check for PronType=Rcp
+                    flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, misclist, prev_tok, docname)
+                elif upos == "PRON":
+                    # Pass FORM to detect abbreviations, etc.
+                    flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, misclist, prev_tok, docname)
+                elif lemma in PRON_LEMMAS:
+                    if not ((lemma=="one" and upos in ("NOUN","NUM"))
+                            or (lemma=="I" and upos=="NUM") # Roman numeral
+                            or (lemma=="he" and upos=="INTJ")): # laughter
+                        print("WARN: invalid pronoun UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                        # This warns about a few that are arguably correct, e.g. "oh my/INTJ", "I/PROPN - 24"
 
             if func.endswith(':relcl'):
                 # Check PronType=Rel for free relative headed by the WDT/WP/WRB
@@ -286,7 +300,7 @@ def validate_annos(tree):
                     if parent_feats["PronType"]=="Int":
                         print("WARN: Looks like a WH word-headed free relative, should be PronType=Rel" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
-            if featlist.get("PronType")=="Rel":
+            if func!='goeswith' and featlist.get("PronType")=="Rel":
                 if (len(edeps)!=1 or edeps[0][0]!="ref"):
                     if "acl:relcl" not in child_funcs[tok_num] and "advcl:relcl" not in child_funcs[tok_num]: # not free relative
                         print("WARN: PronType=Rel should have `ref` as its sole enhanced dependency" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
