@@ -491,7 +491,10 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         # So e.g. "encourage" is ruled out, while "allow" and "permit" are included because of "allow you an exception" etc.
         # Idiom exceptions: have+idea(obj) that..., give a damn(obj) that..., make up + mind(obj) that...
         # TODO: see them as they are?
-        print("WARN: verb expects iobj, not obj, with ccomp/xcomp (" + lemma + ")" + inname)
+        if lemma in ["believe","show"]:
+            print("WARN: verb expects iobj, not obj, with ccomp/xcomp (" + lemma + " -- OK if raising-to-object)" + inname)
+        else:
+            print("WARN: verb expects iobj, not obj, with ccomp/xcomp (" + lemma + ")" + inname)
 
     if func == "aux" and lemma.lower() != "be" and lemma.lower() != "have" and lemma.lower() !="do" and pos!="MD" and pos!="TO":
         print("WARN: aux must be modal, 'be,' 'have,' or 'do'" + inname)
