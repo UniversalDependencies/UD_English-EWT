@@ -477,6 +477,21 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if parent_lemma in ["tell","show","give","pay","teach","owe","text","write"] and \
             tok in ["him","her","me","us","you"] and func=="obj":
         print("WARN: person object of ditransitive expected to be iobj, not obj" + inname)
+    
+    if "obj" in child_funcs and {"ccomp", "xcomp"} & set(child_funcs) and lemma in ["tell", "ask", "show",
+        "allow", "permit", 
+        "pay",
+        "thank", # thank God that...
+        "believe", "trust",
+        "explain",  # explain me that... (not quite grammatical)
+        "convince", "persuade", "teach",
+        "urge", "advise", "inform", "notify", "warn", "command", "instruct", "remind", 
+        "promise", "assure", "reassure", "guarantee"]:
+        # Note that the test for iobj is that the verb licenses iobj+obj or iobj+ccomp. 
+        # So e.g. "encourage" is ruled out, while "allow" and "permit" are included because of "allow you an exception" etc.
+        # Idiom exceptions: have+idea(obj) that..., give a damn(obj) that..., make up + mind(obj) that...
+        # TODO: see them as they are?
+        print("WARN: verb expects iobj, not obj, with ccomp/xcomp (" + lemma + ")" + inname)
 
     if func == "aux" and lemma.lower() != "be" and lemma.lower() != "have" and lemma.lower() !="do" and pos!="MD" and pos!="TO":
         print("WARN: aux must be modal, 'be,' 'have,' or 'do'" + inname)
