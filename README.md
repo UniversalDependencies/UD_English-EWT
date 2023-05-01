@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.9 -- 2021-11-15
+Universal Dependencies English Web Treebank v2.12 -- 2023-05-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
 
@@ -74,17 +74,45 @@ manually checked.
 
 # Deviations from UD
 
-Version 2.9 of the English UD treebank conforms to the UD guidelines in
-almost all respects - it is the first fully valid release in
-years - but there remain the following deviations:
+Version 2.12 of the English UD treebank conforms to the UD guidelines in
+almost all respects, but there remain the following deviations:
 
  - The UD dependency `flat` is largely only used for person names.
  - Dates are not annotated consistently.
 
 # Changelog
 
+**2023-05-15 v2.12**
+
+Highlights:
+
+  - Implement new policy on [sole `iobj`](https://universaldependencies.org/changes.html#sole-iobj) ([#55](https://github.com/UniversalDependencies/UD_English-EWT/issues/55))
+  - Cleanup of free relatives (part of [#278](https://github.com/UniversalDependencies/UD_English-EWT/issues/278))
+  - Make use of `xcomp` more consistent
+  - For "etc.", change `Number=Sing` to `Number=Plur`
+
+**2022-11-15 v2.11**
+
+Highlights:
+
+  - Implement `:outer` per [multiple subjects](https://universaldependencies.org/changes.html#multiple-subjects) policy ([#310](https://github.com/UniversalDependencies/UD_English-EWT/issues/310))
+  - Implement `advcl:relcl` ([#346](https://github.com/UniversalDependencies/UD_English-EWT/issues/346))
+  - Implement revised guidelines for English pronouns (lemmas, features) ([issue](https://github.com/UniversalDependencies/docs/issues/517))
+  - Revise WH-adverbs to attach in a subordinate clause as `advmod` not `mark` ([#88](https://github.com/UniversalDependencies/UD_English-EWT/issues/88))
+  - Improved lemmas/features for numeric values/entities
+  - Tag "etc." as `NOUN` ([#353](https://github.com/UniversalDependencies/UD_English-EWT/issues/353))
+  - Add neaten.py, which implements English-specific validation rules
+
+**2022-05-15 v2.10**
+
+Highlights:
+
+  - Fixed all validation errors
+  - Implement new [`goeswith` policy](https://universaldependencies.org/changes.html#typos-and-goeswith) ([#314](https://github.com/UniversalDependencies/UD_English-EWT/pull/314))
+  - Use `parataxis` for "X so Y" and similar ([#313](https://github.com/UniversalDependencies/UD_English-EWT/pull/313))
+
 **2021-11-15 v2.9**
-  - Fixed all vailidation errors
+  - Fixed all validation errors
   - Many other improvements to annotation of assorted words and constructions
 
 **2021-05-15 v2.8**
