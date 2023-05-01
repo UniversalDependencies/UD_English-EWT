@@ -337,7 +337,7 @@ def validate_annos(tree):
         for v in passive_verbs:
             if feats[v].get("Voice") != "Pass":
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' should have Voice=Pass in " + docname)
-            if postags[v] != "VBN":
+            if postags[v] not in ["VBN", "MD"]:
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' should be VBN in " + docname)
             dependents = {j: funcs[j] for j,i in parent_ids.items() if i==v}
             aux_dependents = sorted([(j,f) for j,f in dependents.items() if f.startswith('aux')])
@@ -478,14 +478,17 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
             tok in ["him","her","me","us","you"] and func=="obj":
         print("WARN: person object of ditransitive expected to be iobj, not obj" + inname)
     
+    # verbs checked for obj to be converted to iobj:
+    # cause|pardon|tell|ask|show|teach|email|cc|bcc|believe|trust|ask|allow|permit|pay|explain|convince|persuade|urge|advise|inform|notify|warn|command|instruct|remind|promise|assure|reassure|guarantee
     if "obj" in child_funcs and {"ccomp", "xcomp"} & set(child_funcs) and lemma in ["tell", "ask", "show",
-        "allow", "permit", 
+        "allow", "permit", "cause", "pardon",
         "pay",
         "thank", # thank God that...
         "believe", "trust",
         "explain",  # explain me that... (not quite grammatical)
         "convince", "persuade", "teach",
         "urge", "advise", "inform", "notify", "warn", "command", "instruct", "remind", 
+        "email", "cc", "bcc",
         "promise", "assure", "reassure", "guarantee"]:
         # Note that the test for iobj is that the verb licenses iobj+obj or iobj+ccomp. 
         # So e.g. "encourage" is ruled out, while "allow" and "permit" are included because of "allow you an exception" etc.
