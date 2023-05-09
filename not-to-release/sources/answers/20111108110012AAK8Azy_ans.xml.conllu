@@ -679,8 +679,8 @@
 15	sure	sure	ADJ	JJ	Degree=Pos	14	xcomp	14:xcomp	_
 16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	_
 17	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	ccomp	15:ccomp	_
-18	everything	everything	PRON	NN	Number=Sing|PronType=Tot	19	nsubj	19:nsubj	_
-19	set	set	VERB	VBN	Tense=Past|VerbForm=Part	17	ccomp	17:ccomp	_
+18	everything	everything	PRON	NN	Number=Sing|PronType=Tot	17	obj	17:obj|19:nsubj:xsubj	_
+19	set	set	VERB	VBN	Tense=Past|VerbForm=Part	17	xcomp	17:xcomp	_
 20	up	up	ADP	RP	_	19	compound:prt	19:compound:prt	_
 21	correctly	correctly	ADV	RB	_	19	advmod	19:advmod	SpaceAfter=No
 22	:	:	PUNCT	:	_	4	punct	4:punct	_
@@ -708,11 +708,11 @@
 10	or	or	CCONJ	CC	_	11	cc	11:cc	_
 11	cage	cage	NOUN	NN	Number=Sing	9	conj	6:nmod:of|9:conj:or	_
 12	or	or	CCONJ	CC	_	13	cc	13:cc	_
-13	whatever	whatever	DET	WDT	PronType=Int	9	conj	6:nmod:of|9:conj:or	_
+13	whatever	whatever	DET	WDT	PronType=Rel	9	conj	6:nmod:of|9:conj:or|15:obl:in	_
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
 15	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	13	acl:relcl	13:acl:relcl	_
 16	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	obj	15:obj	_
-17	in	in	ADP	IN	_	16	nmod	16:nmod	SpaceAfter=No
+17	in	in	ADP	IN	_	16	obl	13:case	SpaceAfter=No
 18	..	..	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
 19	at	at	ADP	IN	ExtPos=ADV	22	advmod	22:advmod	CorrectSpaceAfter=Yes|SpaceAfter=No
 20	least	least	ADJ	JJS	Degree=Sup	19	fixed	19:fixed	_
@@ -801,7 +801,7 @@
 70	time	time	NOUN	NN	Number=Sing	67	nmod	67:nmod:at	_
 71	twice	twice	ADV	RB	NumType=Mult	67	advmod	67:advmod	_
 72	a	a	DET	DT	Definite=Ind|PronType=Art	73	det	73:det	_
-73	day	day	NOUN	NN	Number=Sing	71	nmod:npmod	71:nmod:npmod	SpaceAfter=No
+73	day	day	NOUN	NN	Number=Sing	71	nmod:tmod	71:nmod:tmod	SpaceAfter=No
 74	.	.	PUNCT	.	_	29	punct	29:punct	_
 
 # sent_id = answers-20111108110012AAK8Azy_ans-0031
@@ -849,12 +849,12 @@
 
 # sent_id = answers-20111108110012AAK8Azy_ans-0032
 # text = as to what the light provides it gives UV rays..which is important for health in lizards as it is in humans.
-1	as	as	ADP	IN	_	3	case	3:case	_
+1	as	as	ADP	IN	_	6	case	6:case	_
 2	to	to	SCONJ	IN	_	1	fixed	1:fixed	_
-3	what	what	PRON	WP	PronType=Int	8	obl	8:obl:as_to	_
+3	what	what	PRON	WP	PronType=Int	6	obj	6:obj	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	light	light	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
-6	provides	provide	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+6	provides	provide	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:as_to	_
 7	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 8	gives	give	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root|14:csubj	_
 9	UV	ultra-violet	NOUN	NN	Abbr=Yes|Number=Sing	10	compound	10:compound	_

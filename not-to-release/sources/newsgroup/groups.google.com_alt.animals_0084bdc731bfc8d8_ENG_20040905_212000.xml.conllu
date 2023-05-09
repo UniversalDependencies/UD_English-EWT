@@ -492,7 +492,7 @@
 27	pm	p.m.	NOUN	NN	Number=Sing	24	nmod	24:nmod:after	SpaceAfter=No
 28	,	,	PUNCT	,	_	24	punct	24:punct	_
 29	a	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
-30	time	time	NOUN	NN	Number=Sing	24	appos	24:appos|32:nsubj|36:nsubj:xsubj	_
+30	time	time	NOUN	NN	Number=Sing	24	appos	24:appos|32:nsubj	_
 31	that	that	PRON	WDT	PronType=Rel	32	nsubj	30:ref	_
 32	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	acl:relcl	30:acl:relcl	_
 33	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	32	expl	32:expl	_
@@ -503,7 +503,7 @@
 38	news	news	NOUN	NN	Number=Sing	39	compound	39:compound	_
 39	organisations	organisation	NOUN	NNS	Number=Plur	41	nsubj	41:nsubj	_
 40	to	to	PART	TO	_	41	mark	41:mark	_
-41	relay	relay	VERB	VB	VerbForm=Inf	32	ccomp	32:ccomp	_
+41	relay	relay	VERB	VB	VerbForm=Inf	32	ccomp	32:ccomp|36:csubj:xsubj	_
 42	the	the	DET	DT	Definite=Def|PronType=Art	43	det	43:det	_
 43	information	information	NOUN	NN	Number=Sing	41	obj	41:obj	_
 44	to	to	ADP	IN	_	48	case	48:case	_
@@ -943,7 +943,7 @@
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	allow	allow	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	government	government	NOUN	NN	Number=Sing	12	obj	12:obj|16:nsubj:xsubj	_
+14	government	government	NOUN	NN	Number=Sing	12	iobj	12:iobj|16:nsubj:xsubj	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	ignore	ignore	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
 17	indefinitely	indefinitely	ADV	RB	_	16	advmod	16:advmod	SpaceAfter=No
@@ -1041,11 +1041,11 @@
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 14	levels	level	NOUN	NNS	Number=Plur	11	obl	11:obl:than	_
 15	in	in	ADP	IN	_	16	case	16:case	_
-16	Libby	Libby	PROPN	NNP	Number=Sing	14	nmod	14:nmod:in	SpaceAfter=No
+16	Libby	Libby	PROPN	NNP	Number=Sing	14	nmod	14:nmod:in|26:obl	SpaceAfter=No
 17	,	,	PUNCT	,	_	16	punct	16:punct	_
 18	Montana	Montana	PROPN	NNP	Number=Sing	16	appos	16:appos	SpaceAfter=No
 19	,	,	PUNCT	,	_	16	punct	16:punct	_
-20	where	where	ADV	WRB	PronType=Rel	26	advmod	26:advmod	_
+20	where	where	ADV	WRB	PronType=Rel	26	advmod	16:ref	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
 22	W	W	PROPN	NNP	Number=Sing	24	compound	24:compound	_
 23	R	R	PROPN	NNP	Number=Sing	24	compound	24:compound	_
@@ -1428,8 +1428,8 @@
 23	United	United	ADJ	NNP	Degree=Pos	24	amod	24:amod	_
 24	States	State	PROPN	NNPS	Number=Plur	20	nmod	20:nmod:in	_
 25	from	from	ADP	IN	_	26	case	26:case	_
-26	countries	country	NOUN	NNS	Number=Plur	20	nmod	20:nmod:from	_
-27	where	where	ADV	WRB	PronType=Rel	32	advmod	32:advmod	_
+26	countries	country	NOUN	NNS	Number=Plur	20	nmod	20:nmod:from|32:obl	_
+27	where	where	ADV	WRB	PronType=Rel	32	advmod	26:ref	_
 28	al	al	PROPN	NNP	Number=Sing	30	compound	30:compound	SpaceAfter=No
 29	-	-	PUNCT	HYPH	_	30	punct	30:punct	SpaceAfter=No
 30	Qa'ida	Qa'ida	PROPN	NNP	Number=Sing	32	nsubj	32:nsubj	_
@@ -3026,8 +3026,8 @@
 4	of	of	ADP	IN	_	7	case	7:case	_
 5	US	US	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 6	chemical	chemical	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	plants	plant	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
-8	where	where	ADV	WRB	PronType=Rel	13	advmod	13:advmod	_
+7	plants	plant	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|13:obl	_
+8	where	where	ADV	WRB	PronType=Rel	13	advmod	7:ref	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	terrorist	terrorist	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	act	act	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
@@ -3338,9 +3338,9 @@
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	keep	keep	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
 18	track	track	NOUN	NN	Number=Sing	17	obj	17:obj	_
-19	of	of	SCONJ	IN	_	20	case	20:case	_
+19	of	of	SCONJ	IN	_	21	mark	21:mark	_
 20	who	who	PRON	WP	PronType=Int	21	nsubj	21:nsubj	_
-21	raised	raise	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	ccomp	18:ccomp	_
+21	raised	raise	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	advcl	17:advcl:of	_
 22	how	how	ADV	WRB	PronType=Int	23	advmod	23:advmod	_
 23	much	much	ADJ	JJ	Degree=Pos	21	obj	21:obj	SpaceAfter=No
 24	.	.	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
@@ -3976,9 +3976,9 @@
 5	Republican	Republican	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 6	federal	federal	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	judges	judge	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
-8	when	when	ADV	WRB	PronType=Rel	10	advmod	10:advmod	_
+8	when	when	ADV	WRB	PronType=Int	10	advmod	10:advmod	_
 9	Bush	Bush	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
-10	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+10	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	acl	3:acl	_
 11	to	to	ADP	IN	_	12	case	12:case	_
 12	office	office	NOUN	NN	Number=Sing	10	obl	10:obl:to	SpaceAfter=No
 13	.	.	PUNCT	.	_	1	punct	1:punct	_

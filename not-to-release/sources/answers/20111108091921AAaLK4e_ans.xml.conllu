@@ -16,7 +16,7 @@
 1-2	That's	_	_	_	_	_	_	_	_
 1	That	that	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	3:nsubj	_
 2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
-3	why	why	ADV	WRB	PronType=Rel	0	root	0:root	_
+3	why	why	ADV	WRB	PronType=Rel	0	root	0:root|6:advmod	_
 4-5	I'm	_	_	_	_	_	_	_	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 5	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
@@ -36,7 +36,7 @@
 2	posted	post	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	this	this	PRON	DT	Number=Sing|PronType=Dem	2	obj	2:obj	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	singles	singles	NOUN	NNS	Number=Plur	2	obl	2:obl:in	_
+5	singles	single	NOUN	NNS	Number=Plur	2	obl	2:obl:in	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
 7	dating	dating	NOUN	NN	Number=Sing	5	conj	2:obl:in|5:conj:and	_
 8	too	too	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
@@ -284,8 +284,8 @@
 25	this	this	PRON	DT	Number=Sing|PronType=Dem	24	obj	24:obj	SpaceAfter=No
 26	)	)	PUNCT	-RRB-	_	20	punct	20:punct	_
 27	and	and	CCONJ	CC	_	28	cc	28:cc	_
-28	telling	tell	VERB	VBG	VerbForm=Ger	7	conj	5:ccomp|7:conj:and	_
-29	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	28	iobj	28:iobj	_
+28	telling	tell	VERB	VBG	VerbForm=Ger	7	conj	5:xcomp|7:conj:and	_
+29	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	28	iobj	28:iobj|31:nsubj:xsubj	_
 30	to	to	PART	TO	_	31	mark	31:mark	_
 31	call	call	VERB	VB	VerbForm=Inf	28	xcomp	28:xcomp	_
 32	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	31	obj	31:obj	_
@@ -323,9 +323,9 @@
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0015
 # text = He told me to remember to call like 3 times before he left.
-1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj|5:nsubj:xsubj|7:nsubj:xsubj	_
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
 2	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	2:iobj	_
+3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	2:iobj|5:nsubj:xsubj|7:nsubj:xsubj	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	remember	remember	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
@@ -362,8 +362,8 @@
 20	out	out	ADV	RB	_	19	advmod	19:advmod	_
 21	on	on	ADP	IN	_	23	case	23:case	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
-23	day	day	NOUN	NN	Number=Sing	19	obl	19:obl:on	_
-24	when	when	ADV	WRB	PronType=Rel	28	advmod	28:advmod	_
+23	day	day	NOUN	NN	Number=Sing	19	obl	19:obl:on|28:obl:tmod	_
+24	when	when	ADV	WRB	PronType=Rel	28	advmod	23:ref	_
 25	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	28	nsubj	28:nsubj	_
 26	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	28	cop	28:cop	_
 27	more	more	ADV	RBR	Degree=Cmp	28	advmod	28:advmod	_
@@ -417,12 +417,12 @@
 5	if	if	SCONJ	IN	_	8	mark	8:mark	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj|13:nsubj	_
 7	should	should	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	call	call	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:if	_
+8	call	call	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	_
 9	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	obj	8:obj	_
 10	again	again	ADV	RB	_	8	advmod	8:advmod	_
 11	tomorrow	tomorrow	NOUN	NN	Number=Sing	8	obl:tmod	8:obl:tmod	_
 12	or	or	CCONJ	CC	_	13	cc	13:cc	_
-13	not	not	PART	RB	_	8	conj	4:advcl:if|8:conj:or	SpaceAfter=No
+13	not	not	PART	RB	_	8	conj	4:ccomp|8:conj:or	SpaceAfter=No
 14	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108091921AAaLK4e_ans-0019
@@ -734,7 +734,7 @@
 15-16	that's	_	_	_	_	_	_	_	_
 15	that	that	PRON	DT	Number=Sing|PronType=Dem	17	nsubj	17:nsubj	_
 16	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
-17	what	what	PRON	WP	PronType=Rel	4	parataxis	4:parataxis	_
+17	what	what	PRON	WP	PronType=Rel	4	parataxis	4:parataxis|19:obj	_
 18	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
 19	call	call	VERB	VB	VerbForm=Inf	17	acl:relcl	17:acl:relcl	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
@@ -1016,7 +1016,7 @@
 3	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	ask	ask	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-6	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	5	obj	5:obj	_
+6	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	5	iobj	5:iobj	_
 7	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
 9	feel	feel	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	_
@@ -1680,8 +1680,8 @@
 7	call	call	VERB	VB	VerbForm=Inf	1	advcl	1:advcl:so	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
 9	have	have	VERB	VB	VerbForm=Inf	7	conj	1:advcl:so|7:conj:and	_
-10	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
-11	come	come	VERB	VB	VerbForm=Inf	9	ccomp	9:ccomp	_
+10	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj|11:nsubj:xsubj	_
+11	come	come	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 12	back	back	ADV	RB	_	13	advmod	13:advmod	_
 13	out	out	ADV	RB	_	11	advmod	11:advmod	_
 14	later	late	ADV	RBR	Degree=Cmp	11	advmod	11:advmod	SpaceAfter=No
@@ -1728,7 +1728,7 @@
 34	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	32	conj	32:conj:or|43:advcl:whether	_
 35	to	to	PART	TO	_	36	mark	36:mark	_
 36	ask	ask	VERB	VB	VerbForm=Inf	34	xcomp	34:xcomp	_
-37	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	36	obj	36:obj	_
+37	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	36	iobj	36:iobj	_
 38	out	out	ADV	RB	_	36	advmod	36:advmod	_
 39	or	or	CCONJ	CC	_	40	cc	40:cc	_
 40	not	not	PART	RB	_	32	conj	32:conj:or|43:advcl:whether	SpaceAfter=No

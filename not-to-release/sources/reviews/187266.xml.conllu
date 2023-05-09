@@ -94,7 +94,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	tell	tell	VERB	VB	VerbForm=Inf	0	root	0:root	_
-4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	obj	3:obj	_
+4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	iobj	3:iobj	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj:pass	8:nsubj:pass	_
 6	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	8	aux:pass	8:aux:pass	_
 7	pleasantly	pleasantly	ADV	RB	_	8	advmod	8:advmod	_
@@ -112,7 +112,7 @@
 19	food	food	NOUN	NN	Number=Sing	22	nsubj	22:nsubj	_
 20	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	cop	22:cop	_
 21	consistently	consistently	ADV	RB	_	22	advmod	22:advmod	_
-22	delicious	delicious	ADJ	JJ	Degree=Pos	11	conj	3:ccomp|11:conj:and	_
+22	delicious	delicious	ADJ	JJ	Degree=Pos	11	conj	11:conj:and	_
 23	--	--	PUNCT	,	_	22	punct	22:punct	_
 24	same	same	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 25	dishes	dish	NOUN	NNS	Number=Plur	28	nsubj	28:nsubj	_
@@ -188,7 +188,7 @@
 # text = The affordable rent makes it possible for an inspired chef to serve his high quality fare at affordable prices!
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	affordable	affordable	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	rent	rent	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj	_
+3	rent	rent	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 4	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	expl	4:expl	_
 6	possible	possible	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	_
@@ -197,7 +197,7 @@
 9	inspired	inspired	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	chef	chef	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	serve	serve	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	_
+12	serve	serve	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp|6:csubj:xsubj	_
 13	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 14	high	high	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	quality	quality	NOUN	NN	Number=Sing	16	compound	16:compound	_
@@ -219,10 +219,10 @@
 2	rrly	rarely	ADV	RB	Typo=Yes	3	advmod	3:advmod	CorrectForm=rarely
 3	seek	seek	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	cehf	chef	NOUN	NN	Number=Sing|Typo=Yes	3	obj	3:obj|8:nsubj:xsubj	CorrectForm=chef
+5	cehf	chef	NOUN	NN	Number=Sing|Typo=Yes	3	obj	3:obj	CorrectForm=chef
 6	out	out	ADP	RP	_	3	compound:prt	3:compound:prt	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	introduce	introduce	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
+8	introduce	introduce	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_
 9	myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs|Reflex=Yes	8	obj	8:obj	SpaceAfter=No
 10	--	--	PUNCT	,	_	3	punct	3:punct	_
 11	but	but	CCONJ	CC	_	19	cc	19:cc	_
@@ -240,7 +240,7 @@
 23	asking	ask	VERB	VBG	VerbForm=Ger	21	acl	21:acl:of	_
 24	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
 25	wait	wait	NOUN	NN	Number=Sing	26	compound	26:compound	_
-26	person	person	NOUN	NN	Number=Sing	23	obj	23:obj|28:nsubj:xsubj	_
+26	person	person	NOUN	NN	Number=Sing	23	iobj	23:iobj|28:nsubj:xsubj	_
 27	to	to	PART	TO	_	28	mark	28:mark	_
 28	introduce	introduce	VERB	VB	VerbForm=Inf	23	xcomp	23:xcomp	_
 29	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	30	nmod:poss	30:nmod:poss	_
@@ -252,7 +252,7 @@
 35	chef	chef	NOUN	NN	Number=Sing	28	obl	28:obl:to	_
 36	to	to	PART	TO	_	37	mark	37:mark	_
 37	tell	tell	VERB	VB	VerbForm=Inf	28	advcl	28:advcl:to	_
-38	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	37	obj	37:obj	_
+38	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	37	iobj	37:iobj	_
 39	just	just	ADV	RB	_	41	advmod	41:advmod	_
 40	how	how	ADV	WRB	PronType=Int	41	advmod	41:advmod	_
 41	good	good	ADJ	JJ	Degree=Pos	37	ccomp	37:ccomp	_

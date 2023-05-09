@@ -165,7 +165,7 @@
 21	notifying	notify	VERB	VBG	VerbForm=Ger	18	acl	18:acl:prior_to	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 23	transfer	transfer	NOUN	NN	Number=Sing	24	compound	24:compound	_
-24	agent	agent	NOUN	NN	Number=Sing	21	obj	21:obj	SpaceAfter=No
+24	agent	agent	NOUN	NN	Number=Sing	21	iobj	21:iobj	SpaceAfter=No
 25	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = email-enronsent00_02-0012
@@ -254,12 +254,12 @@
 4	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 5	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
-7	CPA	cpa	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	SpaceAfter=No
+7	CPA	cpa	NOUN	NN	Number=Sing	5	obj	5:obj|12:nsubj:xsubj	SpaceAfter=No
 8	,	,	PUNCT	,	_	7	punct	7:punct	_
 9	Larry	Larry	PROPN	NNP	Number=Sing	7	appos	7:appos	_
 10	Lewis	Lewis	PROPN	NNP	Number=Sing	9	flat	9:flat	SpaceAfter=No
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
-12	working	work	VERB	VBG	VerbForm=Ger	5	ccomp	5:ccomp	_
+12	working	work	VERB	VBG	VerbForm=Ger	5	xcomp	5:xcomp	_
 13	with	with	ADP	IN	_	14	case	14:case	_
 14	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	12	obl	12:obl:with	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
@@ -405,16 +405,16 @@
 6	n't	not	PART	RB	_	7	advmod	7:advmod	_
 7	understand	understand	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	which	which	DET	WDT	PronType=Int	9	det	9:det	ManuallyChecked=PronType
-9	date	date	NOUN	NN	Number=Sing	12	nsubj:pass	12:nsubj:pass|14:nsubj:xsubj|18:nsubj:xsubj	_
+9	date	date	NOUN	NN	Number=Sing	12	nsubj:pass	12:nsubj:pass	_
 10	will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 11	be	be	AUX	VB	VerbForm=Inf	12	aux:pass	12:aux:pass	_
 12	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	ccomp	7:ccomp	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
-14	determine	determine	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
+14	determine	determine	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:to	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 16	value	value	NOUN	NN	Number=Sing	14	obj	14:obj	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	calculate	calculate	VERB	VB	VerbForm=Inf	14	conj	12:xcomp|14:conj:and	_
+18	calculate	calculate	VERB	VB	VerbForm=Inf	14	conj	12:advcl:to|14:conj:and	_
 19	how	how	ADV	WRB	PronType=Int	20	advmod	20:advmod	_
 20	many	many	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 21	shares	share	NOUN	NNS	Number=Plur	18	obj	18:obj	SpaceAfter=No
@@ -826,7 +826,7 @@
 # text = Is this how your clients usually evaluate these properties?
 1	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	3:nsubj	_
-3	how	how	ADV	WRB	PronType=Rel	0	root	0:root	_
+3	how	how	ADV	WRB	PronType=Rel	0	root	0:root|7:advmod	_
 4	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	clients	client	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
 6	usually	usually	ADV	RB	_	7	advmod	7:advmod	_

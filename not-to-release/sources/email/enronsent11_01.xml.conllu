@@ -7,7 +7,7 @@
 3	know	know	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
 4	if	if	SCONJ	IN	_	6	mark	6:mark	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
-6	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:if	_
+6	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
 7	any	any	DET	DT	_	8	det	8:det	_
 8	interest	interest	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	in	in	ADP	IN	_	15	case	15:case	_
@@ -55,10 +55,10 @@
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	det	7:det	_
 7	guys	guy	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj|12:nsubj	_
 8	could	could	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	do	do	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:if	_
+9	do	do	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	_
 10	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj	_
 11	or	or	CCONJ	CC	_	12	cc	12:cc	_
-12	not	not	PART	RB	_	9	conj	4:advcl:if|9:conj:or	SpaceAfter=No
+12	not	not	PART	RB	_	9	conj	4:ccomp|9:conj:or	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent11_01-0004
@@ -67,7 +67,7 @@
 1	Could	could	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 3	tell	tell	VERB	VB	VerbForm=Inf	0	root	0:root	_
-4	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	obj	3:obj	_
+4	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	iobj	3:iobj	_
 5	what	what	DET	WDT	PronType=Int	7	det	7:det	_
 6	deal	deal	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	tickets	ticket	NOUN	NNS	Number=Plur	10	obj	10:obj	_
@@ -497,8 +497,8 @@
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
 7	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	3:conj:and	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	tractor	tractor	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
-10	fixed	fix	VERB	VBN	Tense=Past|VerbForm=Part	7	ccomp	7:ccomp	SpaceAfter=No
+9	tractor	tractor	NOUN	NN	Number=Sing	7	obj	7:obj|10:nsubj:xsubj	_
+10	fixed	fix	VERB	VBN	Tense=Past|VerbForm=Part	7	xcomp	7:xcomp	SpaceAfter=No
 11	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent11_01-0035
@@ -508,7 +508,7 @@
 3	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 4	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 5	pay	pay	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
-6	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	5	obj	5:obj	_
+6	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	5	iobj	5:iobj	_
 7	soon	soon	ADV	RB	Degree=Pos	5	advmod	5:advmod	SpaceAfter=No
 8	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -638,7 +638,7 @@
 21	those	that	PRON	DT	Number=Plur|PronType=Dem	24	nsubj	24:nsubj	_
 22	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	24	cop	24:cop	_
 23	shuttle	shuttle	NOUN	NN	Number=Sing	24	compound	24:compound	_
-24	burns	burn	NOUN	NNS	Number=Plur	19	advcl	19:advcl:if	SpaceAfter=No
+24	burns	burn	NOUN	NNS	Number=Plur	19	ccomp	19:ccomp	SpaceAfter=No
 25	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent11_01-0044
@@ -658,7 +658,7 @@
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_
 8	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
 9	reassured	reassure	VERB	VBN	Tense=Past|VerbForm=Part	4	conj	4:conj:and	_
-10	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	9	obj	9:obj	_
+10	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	9	iobj	9:iobj	_
 11	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
 12	will	will	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
 13	graduate	graduate	VERB	VB	VerbForm=Inf	9	ccomp	9:ccomp	_
@@ -760,7 +760,7 @@
 2	should	should	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	e	email	VERB	GW	Typo=Yes|VerbForm=Inf	0	root	0:root	_
 4	mail	_	X	VB	_	3	goeswith	3:goeswith	_
-5	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
+5	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	iobj	3:iobj	_
 6	sometimes	sometimes	ADV	RB	_	3	advmod	3:advmod	SpaceAfter=No
 7	.	.	PUNCT	.	_	3	punct	3:punct	_
 

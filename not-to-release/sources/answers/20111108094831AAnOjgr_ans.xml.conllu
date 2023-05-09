@@ -120,21 +120,21 @@
 
 # sent_id = answers-20111108094831AAnOjgr_ans-0007
 # text = What matters is how well trained he is, and how good your bond it.
-1	What	what	PRON	WP	PronType=Int	0	root	0:root	_
+1	What	what	PRON	WP	PronType=Rel	6	nsubj:outer	2:nsubj|6:nsubj:outer	_
 2	matters	matter	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 4	how	how	ADV	WRB	PronType=Int	5	advmod	5:advmod	_
 5	well	well	ADV	RB	Degree=Pos	6	advmod	6:advmod	_
-6	trained	train	VERB	VBN	Tense=Past|VerbForm=Part	1	csubj	1:csubj	_
+6	trained	train	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Exclamative=No
 7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	SpaceAfter=No
-9	,	,	PUNCT	,	_	15	punct	15:punct	_
-10	and	and	CCONJ	CC	_	15	cc	15:cc	_
-11	how	how	ADV	WRB	PronType=Int	15	advmod	15:advmod	_
-12	good	good	ADJ	JJ	Degree=Pos	15	xcomp	15:xcomp	_
+9	,	,	PUNCT	,	_	12	punct	12:punct	_
+10	and	and	CCONJ	CC	_	12	cc	12:cc	_
+11	how	how	ADV	WRB	PronType=Int	12	advmod	12:advmod	_
+12	good	good	ADJ	JJ	Degree=Pos	6	conj	6:conj	Exclamative=No
 13	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
-14	bond	bond	NOUN	NN	Number=Sing	15	nsubj	12:nsubj:xsubj|15:nsubj	_
-15	it	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	6	conj	1:csubj|6:conj:and	CorrectForm=is|SpaceAfter=No
+14	bond	bond	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
+15	it	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	12	cop	12:cop	CorrectForm=is|SpaceAfter=No
 16	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111108094831AAnOjgr_ans-0008
@@ -142,8 +142,8 @@
 1	That	that	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	4:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	another	another	DET	DT	_	4	det	4:det	_
-4	reason	reason	NOUN	NN	Number=Sing	0	root	0:root	_
-5	why	why	ADV	WRB	PronType=Rel	7	advmod	7:advmod	_
+4	reason	reason	NOUN	NN	Number=Sing	0	root	0:root|7:obl	_
+5	why	why	ADV	WRB	PronType=Rel	7	advmod	4:ref	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 7	like	like	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
 8	competitive	competitive	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
@@ -156,7 +156,7 @@
 # text = Nobody pays someone to keep their horse in shape and rides once a week, then takes all the ribbons at the show because their horse is good.
 1	Nobody	nobody	PRON	NN	Number=Sing|PronType=Neg	2	nsubj	2:nsubj|11:nsubj|17:nsubj	_
 2	pays	pay	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	someone	someone	PRON	NN	Number=Sing|PronType=Ind	2	obj	2:obj	_
+3	someone	someone	PRON	NN	Number=Sing|PronType=Ind	2	iobj	2:iobj	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	keep	keep	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
 6	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
@@ -167,7 +167,7 @@
 11	rides	ride	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
 12	once	once	ADV	RB	NumType=Mult	11	advmod	11:advmod	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
-14	week	week	NOUN	NN	Number=Sing	12	obl:npmod	12:obl:npmod	SpaceAfter=No
+14	week	week	NOUN	NN	Number=Sing	12	obl:tmod	12:obl:tmod	SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	then	then	ADV	RB	PronType=Dem	17	advmod	17:advmod	_
 17	takes	take	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
@@ -217,8 +217,8 @@
 3	just	just	ADV	RB	_	6	advmod	6:advmod	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	few	few	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	reasons	reason	NOUN	NNS	Number=Plur	0	root	0:root	_
-7	why	why	ADV	WRB	PronType=Rel	9	advmod	9:advmod	_
+6	reasons	reason	NOUN	NNS	Number=Plur	0	root	0:root|9:obl	_
+7	why	why	ADV	WRB	PronType=Rel	9	advmod	6:ref	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 9	love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
 10	trail	trail	NOUN	NN	Number=Sing	11	compound	11:compound	_

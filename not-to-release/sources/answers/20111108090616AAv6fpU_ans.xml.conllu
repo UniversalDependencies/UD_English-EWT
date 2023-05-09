@@ -88,8 +88,8 @@
 # text = deleting a question where you dont like the answer won't get you better answers... i refer to my previous answer:
 1	deleting	delete	VERB	VBG	VerbForm=Ger	13	csubj	13:csubj	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
-3	question	question	NOUN	NN	Number=Sing	1	obj	1:obj	_
-4	where	where	ADV	WRB	PronType=Rel	8	advmod	8:advmod	_
+3	question	question	NOUN	NN	Number=Sing	1	obj	1:obj|8:obl	_
+4	where	where	ADV	WRB	PronType=Rel	8	advmod	3:ref	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 6-7	dont	_	_	_	_	_	_	_	_
 6	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
@@ -171,7 +171,7 @@
 6	this	this	PRON	DT	Number=Sing|PronType=Dem	5	obj	5:obj	_
 7	so	so	ADV	RB	_	8	advmod	8:advmod	_
 8	many	many	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	times	time	NOUN	NNS	Number=Plur	5	obl:npmod	5:obl:npmod	_
+9	times	time	NOUN	NNS	Number=Plur	5	obl:tmod	5:obl:tmod	_
 10	today	today	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	_
 11	already	already	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
 12	.	.	PUNCT	.	_	5	punct	5:punct	SpaceAfter=No
@@ -261,7 +261,7 @@
 10	light	light	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	fixture	fixture	NOUN	NN	Number=Sing	7	nmod	7:nmod:like	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	what	what	PRON	WP	PronType=Int	11	conj	7:nmod:like|11:conj:and	_
+13	what	what	PRON	WP	PronType=Rel	11	conj	7:nmod:like|11:conj:and|14:nsubj	_
 14	looks	look	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	acl:relcl	13:acl:relcl	_
 15	like	like	ADP	IN	_	18	case	18:case	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
@@ -303,7 +303,7 @@
 27	right	right	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
 28	corner	corner	NOUN	NN	Number=Sing	21	nmod	21:nmod:in	_
 29	and	and	CCONJ	CC	_	30	cc	30:cc	_
-30	what	what	PRON	WP	PronType=Int	13	conj	11:nsubj|13:conj:and	_
+30	what	what	PRON	WP	PronType=Rel	13	conj	11:nsubj|13:conj:and|31:nsubj	_
 31	looks	look	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	acl:relcl	30:acl:relcl	_
 32	like	like	ADP	IN	_	35	case	35:case	_
 33	a	a	DET	DT	Definite=Ind|PronType=Art	35	det	35:det	_
@@ -391,9 +391,9 @@
 5	pay	pay	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	close	close	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	attention	attention	NOUN	NN	Number=Sing	5	obj	5:obj	_
-8	to	to	SCONJ	IN	_	9	case	9:case	_
+8	to	to	ADP	IN	_	9	case	9:case	_
 9-10	what's	_	_	_	_	_	_	_	_
-9	what	what	PRON	WP	PronType=Int	5	obl	5:obl:to	_
+9	what	what	PRON	WP	PronType=Rel	5	obl	5:obl:to|11:nsubj	_
 10	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
 11	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	9	acl:relcl	9:acl:relcl	_
 12	on	on	ADP	RP	_	11	compound:prt	11:compound:prt	_
@@ -415,7 +415,7 @@
 28	ground	ground	NOUN	NN	Number=Sing	25	obl	25:obl:on	SpaceAfter=No
 29	,	,	PUNCT	,	_	30	punct	30:punct	_
 30	do	do	VERB	VBP	Mood=Imp|VerbForm=Fin	20	list	20:list	_
-31	whatever	whatever	PRON	WP	PronType=Rel	30	obj	30:obj	_
+31	whatever	whatever	PRON	WP	PronType=Rel	30	obj	30:obj|36:obj	_
 32	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	33	nsubj	33:nsubj|35:nsubj:xsubj	_
 33	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	31	acl:relcl	31:acl:relcl	_
 34	to	to	PART	TO	_	35	mark	35:mark	_

@@ -31,7 +31,7 @@
 17	needing	need	VERB	VBG	VerbForm=Ger	11	advcl	11:advcl	_
 18	to	to	PART	TO	_	20	mark	20:mark	_
 19	be	be	AUX	VB	VerbForm=Inf	20	aux:pass	20:aux:pass	_
-20	replaced	replace	VERB	VBN	Tense=Past|VerbForm=Part	17	xcomp	17:xcomp	SpaceAfter=No
+20	replaced	replace	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	17	xcomp	17:xcomp	SpaceAfter=No
 21	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-345182-0003
@@ -41,7 +41,7 @@
 3	if	if	SCONJ	IN	_	6	mark	6:mark	_
 4	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
 5	could	could	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-6	copy	copy	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:if	_
+6	copy	copy	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	piece	piece	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
@@ -145,7 +145,7 @@
 11	fit	fit	VERB	VB	VerbForm=Inf	7	acl:relcl	7:acl:relcl	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
 13	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
-14	Pomper	Pomper	PROPN	NNP	Number=Sing	13	obj	13:obj	_
+14	Pomper	Pomper	PROPN	NNP	Number=Sing	13	iobj	13:iobj	_
 15	for	for	ADP	IN	_	17	case	17:case	_
 16	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 17	money	money	NOUN	NN	Number=Sing	13	obl	13:obl:for	_
@@ -173,7 +173,7 @@
 # text = She told me she could not use the piece I was returning and the company would only put it in the trash so I could not return it.
 1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
 2	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj	_
+3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	2:iobj	_
 4	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 5	could	could	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 6	not	not	PART	RB	_	7	advmod	7:advmod	_
@@ -209,17 +209,17 @@
 4	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	6	aux	6:aux	_
 5	not	not	PART	RB	_	6	advmod	6:advmod	_
 6	get	get	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
-7	what	what	PRON	WP	PronType=Int	6	obj	6:obj	_
+7	what	what	PRON	WP	PronType=Rel	6	obj	6:obj|9:obl:for	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 9	paid	pay	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
-10	for	for	ADP	IN	_	9	obl	9:obl	SpaceAfter=No
+10	for	for	ADP	IN	_	9	obl	7:case	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-345182-0012
 # text = She asked me to bring the original piece back and I told her I had to use it on the job.
 1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
 2	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj|5:nsubj:xsubj	_
+3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	2:iobj|5:nsubj:xsubj	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	bring	bring	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
@@ -244,7 +244,7 @@
 # text = She told me that was to bad she would do nothing to help me since she could not use or resell the piece.
 1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
 2	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj	_
+3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	2:iobj	_
 4	that	that	PRON	DT	Number=Sing|PronType=Dem	7	nsubj	7:nsubj	_
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	7:cop	_
 6	to	too	ADV	RB	Typo=Yes	7	advmod	7:advmod	CorrectForm=too
@@ -298,7 +298,7 @@
 6	face	face	NOUN	NN	Number=Sing	8	acl	8:acl:with	_
 7	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 8	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-9	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	obj	8:obj	_
+9	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	iobj	8:iobj	_
 10	NO	no	DET	DT	_	11	det	11:det	_
 11	MONEY	money	NOUN	NN	Number=Sing	14	nsubj:pass	14:nsubj:pass	_
 12	IS	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_

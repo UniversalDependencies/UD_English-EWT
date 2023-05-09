@@ -38,8 +38,8 @@
 19	3	3	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	_
 20	hours	hour	NOUN	NNS	Number=Plur	21	obl:npmod	21:obl:npmod	_
 21	away	away	ADV	RB	_	2	conj	2:conj:and	_
-22	from	from	SCONJ	IN	_	23	case	23:case	_
-23	where	where	ADV	WRB	PronType=Rel	21	obl	21:obl:from	_
+22	from	from	ADP	IN	_	23	case	23:case	_
+23	where	where	ADV	WRB	PronType=Rel	21	obl	21:obl:from|25:advmod	_
 24	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
 25	live	live	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	23	advcl:relcl	23:advcl:relcl	SpaceAfter=No
 26	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -47,8 +47,8 @@
 # sent_id = answers-20111108090524AAofoXT_ans-0003
 # text = The place where I'm boarding is not likely to want to take me this far, and I do not have any ways of hauling him myself.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	place	place	NOUN	NN	Number=Sing	9	nsubj	9:nsubj|11:nsubj:xsubj|13:nsubj:xsubj	_
-3	where	where	ADV	WRB	PronType=Rel	6	advmod	6:advmod	_
+2	place	place	NOUN	NN	Number=Sing	9	nsubj	6:obl|9:nsubj|11:nsubj:xsubj|13:nsubj:xsubj	_
+3	where	where	ADV	WRB	PronType=Rel	6	advmod	2:ref	_
 4-5	I'm	_	_	_	_	_	_	_	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 5	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
@@ -214,10 +214,10 @@
 2	that	that	SCONJ	IN	_	4	mark	4:mark	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 4	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	1	ccomp	1:ccomp	_
-5	what	what	PRON	WP	PronType=Int	4	obj	4:obj	_
+5	what	what	PRON	WP	PronType=Rel	4	obj	4:obj|7:obl:for	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
 7	pay	pay	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
-8	for	for	ADP	IN	_	7	obl	7:obl	SpaceAfter=No
+8	for	for	ADP	IN	_	7	obl	5:case	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108090524AAofoXT_ans-0010
@@ -304,8 +304,8 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	horse	horse	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
-5	transported	transport	VERB	VBN	Tense=Past|VerbForm=Part	2	ccomp	2:ccomp	_
+4	horse	horse	NOUN	NN	Number=Sing	2	obj	2:obj|5:nsubj:xsubj	_
+5	transported	transport	VERB	VBN	Tense=Past|VerbForm=Part	2	xcomp	2:xcomp	_
 6	from	from	ADP	IN	_	7	case	7:case	_
 7	CA	CA	PROPN	NNP	Number=Sing	5	obl	5:obl:from	_
 8	to	to	ADP	IN	_	9	case	9:case	_

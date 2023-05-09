@@ -13,7 +13,7 @@
 # sent_id = reviews-164937-0002
 # newpar id = reviews-164937-p0002
 # text = What I love most about this place, other than the food, is that eating here makes you feel like you're in a small town rather than Baltimore.
-1	What	what	PRON	WP	PronType=Int	18	nsubj:outer	18:nsubj:outer	_
+1	What	what	PRON	WP	PronType=Rel	18	nsubj:outer	3:obj|18:nsubj:outer	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 3	love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
 4	most	most	ADV	RBS	Degree=Sup	3	advmod	3:advmod	_
@@ -31,8 +31,8 @@
 16	eating	eat	VERB	VBG	VerbForm=Ger	18	csubj	18:csubj	_
 17	here	here	ADV	RB	PronType=Dem	16	advmod	16:advmod	_
 18	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	20:nsubj	_
-20	feel	feel	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	18	ccomp	18:ccomp	_
+19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	obj	18:obj|20:nsubj:xsubj	_
+20	feel	feel	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
 21	like	like	SCONJ	IN	_	27	mark	27:mark	_
 22-23	you're	_	_	_	_	_	_	_	_
 22	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	27	nsubj	27:nsubj|30:nsubj	_
@@ -62,10 +62,10 @@
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 13	good	good	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	price	price	NOUN	NN	Number=Sing	8	obl	8:obl:at	SpaceAfter=No
-15	,	,	PUNCT	,	_	37	punct	37:punct	_
-16	and	and	CCONJ	CC	_	37	cc	37:cc	_
+15	,	,	PUNCT	,	_	38	punct	38:punct	_
+16	and	and	CCONJ	CC	_	38	cc	38:cc	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	option	option	NOUN	NN	Number=Sing	37	nsubj	37:nsubj|38:nsubj:xsubj	_
+18	option	option	NOUN	NN	Number=Sing	38	nsubj	38:nsubj	_
 19	to	to	PART	TO	_	20	mark	20:mark	_
 20	eat	eat	VERB	VB	VerbForm=Inf	18	acl	18:acl:to	_
 21	outside	outside	ADV	RB	_	20	advmod	20:advmod	_
@@ -76,7 +76,7 @@
 26	esp	esp	ADV	RB	_	29	advmod	29:advmod	_
 27	on	on	ADP	IN	_	29	case	29:case	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
-29	weekend	weekend	NOUN	NN	Number=Sing	37	obl	37:obl:on	_
+29	weekend	weekend	NOUN	NN	Number=Sing	20	obl	20:obl:on	_
 30	whether	whether	SCONJ	IN	_	32	mark	32:mark	_
 31	there	there	PRON	EX	_	32	expl	32:expl	_
 32	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	acl	29:acl:whether	_
@@ -84,8 +84,8 @@
 34	any	any	DET	DT	_	35	det	35:det	_
 35	traffic	traffic	NOUN	NN	Number=Sing	32	nsubj	32:nsubj	SpaceAfter=No
 36	)	)	PUNCT	-RRB-	_	29	punct	29:punct	_
-37	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	_
-38	great	great	ADJ	JJ	Degree=Pos	37	xcomp	37:xcomp	SpaceAfter=No
+37	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	38	cop	38:cop	_
+38	great	great	ADJ	JJ	Degree=Pos	5	conj	5:conj:and	SpaceAfter=No
 39	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-164937-0004

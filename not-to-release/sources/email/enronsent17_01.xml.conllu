@@ -35,10 +35,10 @@
 
 # sent_id = email-enronsent17_01-0005
 # text = We recently asked you to create an eSpeak "wish list" for us.
-1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|6:nsubj:xsubj	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	recently	recently	ADV	RB	_	3	advmod	3:advmod	_
 3	asked	ask	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	iobj	3:iobj	_
+4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	iobj	3:iobj|6:nsubj:xsubj	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	create	create	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 7	an	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
@@ -113,10 +113,10 @@
 5	like	like	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	know	know	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
-8	who	who	PRON	WP	PronType=Int	7	obj	7:obj	_
+8	who	who	PRON	WP	PronType=Int	11	obj	11:obj|12:nsubj:xsubj	_
 9	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	colleagues	colleague	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj|12:nsubj:xsubj	_
-11	find	find	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
+10	colleagues	colleague	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
+11	find	find	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	ccomp	7:ccomp	_
 12	interesting	interesting	ADJ	JJ	Degree=Pos	11	xcomp	11:xcomp	SpaceAfter=No
 13	,	,	PUNCT	,	_	2	punct	2:punct	_
 14	so	so	ADV	RB	_	17	advmod	17:advmod	_
@@ -643,7 +643,7 @@
 2	about	about	ADP	IN	_	3	case	3:case	_
 3	10:30	10:30	NUM	CD	NumForm=Digit|NumType=Card	1	nmod	1:nmod:about	_
 4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-5	time	time	NOUN	NN	Number=Sing	3	nmod:npmod	3:nmod:npmod	SpaceAfter=No
+5	time	time	NOUN	NN	Number=Sing	3	nmod:tmod	3:nmod:tmod	SpaceAfter=No
 6	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent17_01-0053
@@ -1152,8 +1152,8 @@
 2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	very	very	ADV	RB	_	4	advmod	4:advmod	_
 4	proud	proud	ADJ	JJ	Degree=Pos	0	root	0:root	_
-5	of	of	SCONJ	IN	_	6	case	6:case	_
-6	what	what	PRON	WP	PronType=Int	4	obl	4:obl:of	_
+5	of	of	ADP	IN	_	6	case	6:case	_
+6	what	what	PRON	WP	PronType=Rel	4	obl	4:obl:of|9:obj	_
 7-8	we've	_	_	_	_	_	_	_	_
 7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 8	've	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_

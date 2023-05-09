@@ -196,8 +196,8 @@
 5	200	200	NUM	CD	NumForm=Digit|NumType=Card	6	compound	6:compound	_
 6	million	million	NUM	CD	NumForm=Word|NumType=Card	4	nummod	4:nummod	_
 7	increase	increase	NOUN	NN	Number=Sing	0	root	0:root	_
-8	over	over	SCONJ	IN	_	9	case	9:case	_
-9	what	what	PRON	WP	PronType=Int	7	nmod	7:nmod:over	_
+8	over	over	ADP	IN	_	9	case	9:case	_
+9	what	what	PRON	WP	PronType=Rel	7	nmod	7:nmod:over|11:obj	_
 10	NASA	NASA	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	_
 11	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
 12	for	for	ADP	IN	_	14	case	14:case	_
@@ -515,7 +515,7 @@
 15	200	200	NUM	CD	NumForm=Digit|NumType=Card	16	compound	16:compound	_
 16	million	million	NUM	CD	NumForm=Word|NumType=Card	14	nummod	14:nummod	_
 17	more	more	ADJ	JJR	Degree=Cmp	7	parataxis	7:parataxis	_
-18	than	than	ADP	IN	_	19	case	19:case	CheckUPOS=SCONJ
+18	than	than	ADP	IN	_	19	case	19:case	_
 19	what	what	PRON	WP	PronType=Rel	17	obl	17:obl:than|22:obj	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	President	President	PROPN	NNP	Number=Sing	22	nsubj	22:nsubj	_
@@ -526,7 +526,7 @@
 26	1	1	NUM	CD	NumForm=Digit|NumType=Card	27	compound	27:compound	_
 27	billion	billion	NUM	CD	NumForm=Word|NumType=Card	25	nummod	25:nummod	_
 28	more	more	ADJ	JJR	Degree=Cmp	17	conj	5:obj|17:conj:and	_
-29	than	than	ADP	IN	_	30	case	30:case	CheckUPOS=SCONJ
+29	than	than	ADP	IN	_	30	case	30:case	_
 30	what	what	PRON	WP	PronType=Rel	28	obl	28:obl:than|33:obj	_
 31	House	House	PROPN	NNP	Number=Sing	32	compound	32:compound	_
 32	appropriators	appropriator	NOUN	NNS	Number=Plur	33	nsubj	33:nsubj	_
@@ -667,8 +667,8 @@
 5	own	own	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	webpage	webpage	NOUN	NN	Number=Sing	8	nmod	8:nmod:from	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	reasons	reason	NOUN	NNS	Number=Plur	0	root	0:root	_
-9	why	why	ADV	WRB	PronType=Rel	12	advmod	12:advmod	_
+8	reasons	reason	NOUN	NNS	Number=Plur	0	root	0:root|12:obl	_
+9	why	why	ADV	WRB	PronType=Rel	12	advmod	8:ref	_
 10	NASA	NASA	PROPN	NNP	Number=Sing	12	nsubj	12:nsubj	_
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 12	important	important	ADJ	JJ	Degree=Pos	8	acl:relcl	8:acl:relcl	SpaceAfter=No
@@ -757,7 +757,7 @@
 42	cellular	cellular	ADJ	JJ	Degree=Pos	43	amod	43:amod	_
 43	phone	phone	NOUN	NN	Number=Sing	40	obj	40:obj	SpaceAfter=No
 44	,	,	PUNCT	,	_	45	punct	45:punct	_
-45	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Sing	11	conj	11:conj|51:advcl:if	_
+45	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Plur	11	conj	11:conj|51:advcl:if	_
 46	then	then	ADV	RB	PronType=Dem	51	advmod	51:advmod	_
 47	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	51	nsubj	51:nsubj	_
 48	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	51	aux	51:aux	_
@@ -854,13 +854,13 @@
 25	monies	money	NOUN	NNS	Number=Plur	21	nmod	21:nmod:of	SpaceAfter=No
 26	,	,	PUNCT	,	_	21	punct	21:punct	_
 27	that	that	SCONJ	IN	_	29	mark	29:mark	_
-28	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	29	nsubj	29:nsubj|31:nsubj:xsubj	_
+28	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	29	nsubj	29:nsubj	_
 29	find	find	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl:that	_
 30	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	29	expl	29:expl	_
 31	best	good	ADJ	JJS	Degree=Sup	29	xcomp	29:xcomp	_
 32	not	not	PART	RB	_	34	advmod	34:advmod	_
 33	to	to	PART	TO	_	34	mark	34:mark	_
-34	think	think	VERB	VB	VerbForm=Inf	29	ccomp	29:ccomp	_
+34	think	think	VERB	VB	VerbForm=Inf	29	ccomp	29:ccomp|31:csubj:xsubj	_
 35	about	about	ADP	IN	_	36	case	36:case	_
 36	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	34	obl	34:obl:about	SpaceAfter=No
 37	.	.	PUNCT	.	_	2	punct	2:punct	_

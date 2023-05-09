@@ -60,7 +60,7 @@
 1-2	Here's	_	_	_	_	_	_	_	_
 1	Here	here	ADV	RB	PronType=Dem	0	root	0:root	_
 2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
-3	what	what	PRON	WP	PronType=Int	1	nsubj	1:nsubj	_
+3	what	what	PRON	WP	PronType=Rel	1	nsubj	1:nsubj|7:obj	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	owner	owner	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 6	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
@@ -107,8 +107,8 @@
 9	,	,	PUNCT	,	_	2	punct	2:punct	_
 10	because	because	SCONJ	IN	_	13	mark	13:mark	_
 11	this	this	PRON	DT	Number=Sing|PronType=Dem	13	nsubj	13:nsubj	_
-12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	CheckUPOS=VERB
-13	what	what	PRON	WP	PronType=Int	2	advcl	2:advcl:because	_
+12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
+13	what	what	PRON	WP	PronType=Rel	2	advcl	2:advcl:because|16:obj	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	vet	vet	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	_
 16	thought	think	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	acl:relcl	13:acl:relcl	_
@@ -123,7 +123,7 @@
 25	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	26	nsubj	26:nsubj	_
 26	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	conj	2:advcl:because|13:conj:and	_
 27	no	no	DET	DT	_	29	det	29:det	_
-28	theeth	theeth	NOUN	NN	Number=Sing	29	compound	29:compound	_
+28	theeth	tooth	NOUN	NNS	Number=Plur|Typo=Yes	29	compound	29:compound	CorrectForm=teeth
 29	problems	problem	NOUN	NNS	Number=Plur	26	obj	26:obj	SpaceAfter=No
 30	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -132,7 +132,7 @@
 1	So	so	ADV	RB	_	3	advmod	3:advmod	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 3	sent	send	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj|14:nsubj:xsubj	_
+4	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	trainers	trainer	NOUN	NNS	Number=Plur	3	obl	3:obl:to	_
@@ -142,7 +142,7 @@
 11	September	September	PROPN	NNP	Number=Sing	9	nmod	9:nmod:of	_
 12	to	to	PART	TO	_	14	mark	14:mark	_
 13	be	be	AUX	VB	VerbForm=Inf	14	aux:pass	14:aux:pass	_
-14	started	start	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	xcomp	3:xcomp	_
+14	started	start	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	advcl	3:advcl:to	_
 15	on	on	ADP	IN	_	17	case	17:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	barrels	barrel	NOUN	NNS	Number=Plur	14	obl	14:obl:on	SpaceAfter=No
@@ -652,7 +652,7 @@
 1	This	this	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	4:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	horse	horse	NOUN	NN	Number=Sing	0	root	0:root|11:obj	_
+4	horse	horse	NOUN	NN	Number=Sing	0	root	0:root|13:obj	_
 5	that	that	PRON	WDT	PronType=Rel	13	obj	4:ref	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj|13:nsubj:xsubj	_
 7	otherwise	otherwise	ADV	RB	_	11	advmod	11:advmod	_
@@ -860,8 +860,8 @@
 # sent_id = answers-20111108104724AAuBUR7_ans-0043
 # text = July is when he started to exhibit slight symptoms and the owner and vet originally thought it was just some nerve damage from something in the pasture with no visible injury.
 1	July	July	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
-2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	CheckUPOS=VERB
-3	when	when	ADV	WRB	PronType=Rel	0	root	0:root	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
+3	when	when	ADV	WRB	PronType=Rel	0	root	0:root|5:advmod	_
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj	_
 5	started	start	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	advcl:relcl	3:advcl:relcl	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
@@ -1435,7 +1435,7 @@
 5	horse	horse	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	8:cop	_
 7	back	back	ADV	RB	_	8	advmod	8:advmod	_
-8	when	when	ADV	WRB	PronType=Int	0	root	0:root	_
+8	when	when	ADV	WRB	PronType=Rel	0	root	0:root|10:advmod	_
 9	there	there	PRON	EX	_	10	expl	10:expl	_
 10	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	advcl:relcl	8:advcl:relcl	_
 11	no	no	DET	DT	_	12	det	12:det	_
@@ -1719,7 +1719,7 @@
 6	if	if	SCONJ	IN	_	9	mark	9:mark	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj|17:nsubj	_
 8	can	can	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	get	get	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:if	_
+9	get	get	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	_
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	touch	touch	NOUN	NN	Number=Sing	9	obl	9:obl:in	_
 12	with	with	ADP	IN	_	15	case	15:case	_
@@ -1727,7 +1727,7 @@
 14	EPM	EPM	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	group	group	NOUN	NN	Number=Sing	9	obl	9:obl:with	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	get	get	VERB	VB	VerbForm=Inf	9	conj	5:advcl:if|9:conj:and	_
+17	get	get	VERB	VB	VerbForm=Inf	9	ccomp	5:ccomp|9:conj:and	_
 18	this	this	DET	DT	Number=Sing|PronType=Dem	19	det	19:det	_
 19	guy	guy	NOUN	NN	Number=Sing	17	obj	17:obj	_
 20	in	in	ADP	IN	_	22	case	22:case	_
@@ -1830,8 +1830,8 @@
 1	Let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	1	obj	1:obj|3:nsubj:xsubj	_
 3	know	know	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
-4	what	what	PRON	WP	PronType=Int	6	obj	6:obj|8:nsubj:xsubj	_
-5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
+4	what	what	PRON	WP	PronType=Int	8	obj	8:obj	_
+5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj|8:nsubj:xsubj	_
 6	decide	decide	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	do	do	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	SpaceAfter=No
@@ -1894,11 +1894,11 @@
 9	decide	decide	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:before	_
 10	if	if	SCONJ	IN	_	12	mark	12:mark	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj|16:nsubj	_
-12	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	_
+12	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	ccomp	9:ccomp	_
 13	this	this	DET	DT	Number=Sing|PronType=Dem	14	det	14:det	_
 14	horse	horse	NOUN	NN	Number=Sing	12	obj	12:obj	_
 15	or	or	CCONJ	CC	_	16	cc	16:cc	_
-16	not	not	PART	RB	_	12	conj	9:advcl:if|12:conj:or	SpaceAfter=No
+16	not	not	PART	RB	_	12	conj	9:ccomp|12:conj:or	SpaceAfter=No
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108104724AAuBUR7_ans-0092
@@ -2082,7 +2082,7 @@
 5	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 6	might	might	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 7	have	have	AUX	VB	VerbForm=Inf	8	aux	8:aux	_
-8	had	have	VERB	VBN	Tense=Past|VerbForm=Part	3	advcl	3:advcl:if	_
+8	had	have	VERB	VBN	Tense=Past|VerbForm=Part	3	ccomp	3:ccomp	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	slight	slight	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	stroke	stroke	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No

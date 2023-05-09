@@ -24,9 +24,9 @@
 # sent_id = email-enronsent16_01-0005
 # newpar id = email-enronsent16_01-p0003
 # text = Marly asked me to respond to you.
-1	Marly	Marly	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|5:nsubj:xsubj	_
+1	Marly	Marly	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
 2	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	2:iobj	_
+3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	2:iobj|5:nsubj:xsubj	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	respond	respond	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 6	to	to	ADP	IN	_	7	case	7:case	_
@@ -275,7 +275,7 @@
 21	TM	tm	NOUN	NN	Number=Sing	26	nsubj	26:nsubj	SpaceAfter=No
 22	)	)	PUNCT	-RRB-	_	21	punct	21:punct	_
 23	,	,	PUNCT	,	_	21	punct	21:punct	_
-24	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Sing	21	conj	21:conj	_
+24	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Plur	21	conj	21:conj	_
 25	just	just	ADV	RB	_	26	advmod	26:advmod	_
 26	affords	afford	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:but	_
 27	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	26	iobj	26:iobj	_
@@ -665,7 +665,7 @@
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	if	if	SCONJ	IN	_	7	mark	7:mark	_
 6	there	there	PRON	EX	_	7	expl	7:expl	_
-7	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:if	_
+7	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
 8	any	any	DET	DT	_	9	det	9:det	_
 9	changes	change	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
 10	to	to	ADP	IN	_	12	case	12:case	_
@@ -1177,8 +1177,8 @@
 17	around	around	ADV	RB	_	16	advmod	16:advmod	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
 19	show	show	VERB	VB	VerbForm=Inf	16	conj	16:conj:and	_
-20	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	19	obj	19:obj	_
-21	how	how	ADV	WRB	PronType=Rel	23	advmod	23:advmod	_
+20	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	19	iobj	19:iobj	_
+21	how	how	ADV	WRB	PronType=Int	23	advmod	23:advmod	_
 22	to	to	PART	TO	_	23	mark	23:mark	_
 23	unfreeze	unfreeze	VERB	VB	VerbForm=Inf	19	ccomp	19:ccomp	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
@@ -1195,11 +1195,11 @@
 6	get	get	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	scoop	scoop	NOUN	NN	Number=Sing	6	obj	6:obj	_
-9	on	on	SCONJ	IN	_	10	case	10:case	_
-10	what	what	PRON	WP	PronType=Int	8	nmod	8:nmod:on	_
+9	on	on	SCONJ	IN	_	13	mark	13:mark	_
+10	what	what	PRON	WP	PronType=Int	16	obj	16:obj	_
 11	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	13	nsubj	13:nsubj|16:nsubj:xsubj	_
 12	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
-13	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	_
+13	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	8	acl	8:acl:on	_
 14	to	to	PART	TO	_	16	mark	16:mark	_
 15	be	be	AUX	VB	VerbForm=Inf	16	aux	16:aux	_
 16	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	13	xcomp	13:xcomp	_
@@ -1613,7 +1613,7 @@
 17	whole	whole	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	week	week	NOUN	NN	Number=Sing	15	obj	15:obj	_
 19	this	this	DET	DT	Number=Sing|PronType=Dem	20	det	20:det	_
-20	time	time	NOUN	NN	Number=Sing	15	obl:npmod	15:obl:npmod	_
+20	time	time	NOUN	NN	Number=Sing	15	obl:tmod	15:obl:tmod	_
 21	to	to	PART	TO	_	22	mark	22:mark	_
 22	approve	approve	VERB	VB	VerbForm=Inf	15	advcl	15:advcl:to	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_

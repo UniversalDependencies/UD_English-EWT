@@ -135,8 +135,8 @@
 2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	enemy	enemy	NOUN	NN	Number=Sing	0	root	0:root	_
-5	in	in	SCONJ	IN	_	6	case	6:case	_
-6	what	what	PRON	WP	PronType=Int	4	nmod	4:nmod:in	_
+5	in	in	ADP	IN	_	6	case	6:case	_
+6	what	what	PRON	WP	PronType=Rel	4	nmod	4:nmod:in|8:nsubj	_
 7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 8	become	become	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
@@ -269,7 +269,7 @@
 15	"	"	PUNCT	''	_	14	punct	14:punct	SpaceAfter=No
 16	,	,	PUNCT	,	_	9	punct	9:punct	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	dregs	dregs	NOUN	NNS	Number=Plur	9	appos	9:appos	SpaceAfter=No
+18	dregs	dreg	NOUN	NNS	Number=Plur	9	appos	9:appos	SpaceAfter=No
 19	,	,	PUNCT	,	_	9	punct	9:punct	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	rabble	rabble	NOUN	NN	Number=Sing	9	appos	9:appos	SpaceAfter=No
@@ -513,7 +513,7 @@
 8	Americans	American	PROPN	NNPS	Number=Plur	11	nsubj	11:nsubj|14:nsubj|17:nsubj|23:nsubj	_
 9	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	either	either	CCONJ	CC	_	11	cc:preconj	11:cc:preconj	_
-11	incarcerated	incarcerate	ADJ	JJ	Degree=Pos	3	ccomp	3:ccomp|9:conj:or	SpaceAfter=No
+11	incarcerated	incarcerate	ADJ	JJ	Degree=Pos	3	ccomp	3:ccomp	SpaceAfter=No
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
 13	on	on	ADP	IN	_	14	case	14:case	_
 14	probation	probation	NOUN	NN	Number=Sing	11	conj	11:conj	SpaceAfter=No
@@ -525,7 +525,7 @@
 20	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	23	cop	23:cop	_
 21	in	in	ADP	IN	_	23	case	23:case	_
 22	those	that	DET	DT	Number=Plur|PronType=Dem	23	det	23:det	_
-23	categories	category	NOUN	NNS	Number=Plur	9	conj	3:ccomp|9:conj:or	SpaceAfter=No
+23	categories	category	NOUN	NNS	Number=Plur	11	conj	3:ccomp|11:conj:or	SpaceAfter=No
 24	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0c155162a7dfaf28_ENG_20031127_172200-0028
@@ -612,11 +612,11 @@
 10	while	while	SCONJ	IN	_	12	mark	12:mark	_
 11	bravely	bravely	ADV	RB	_	12	advmod	12:advmod	_
 12	struggling	struggle	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl:while	_
-13	beyond	beyond	SCONJ	IN	_	14	case	14:case	_
+13	beyond	beyond	ADP	IN	_	14	case	14:case	_
 14	where	where	ADV	WRB	PronType=Rel	12	obl	12:obl:beyond	_
-15	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
-16	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
-17	now	now	ADV	RB	_	14	advcl:relcl	14:advcl:relcl	SpaceAfter=No
+15	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
+16	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	14	advcl:relcl	14:advcl:relcl	Promoted=Yes
+17	now	now	ADV	RB	_	16	advmod	16:advmod	SpaceAfter=No
 18	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0c155162a7dfaf28_ENG_20031127_172200-0033
@@ -638,8 +638,8 @@
 15	,	,	PUNCT	,	_	19	punct	19:punct	_
 16	and	and	CCONJ	CC	_	19	cc	19:cc	_
 17	this	this	PRON	DT	Number=Sing|PronType=Dem	19	nsubj	19:nsubj	_
-18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	CheckUPOS=VERB
-19	what	what	PRON	WP	PronType=Int	2	conj	2:conj:and	_
+18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
+19	what	what	PRON	WP	PronType=Rel	2	conj	2:conj:and|20:nsubj	_
 20	gives	give	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	acl:relcl	19:acl:relcl	_
 21	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	20	iobj	20:iobj	_
 22	hope	hope	NOUN	NN	Number=Sing	20	obj	20:obj	SpaceAfter=No
@@ -822,7 +822,7 @@
 36	,	,	PUNCT	,	_	37	punct	37:punct	_
 37	smail	smail	NOUN	NN	Number=Sing	35	conj	35:conj	SpaceAfter=No
 38	,	,	PUNCT	,	_	39	punct	39:punct	_
-39	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Sing	35	conj	35:conj	SpaceAfter=No
+39	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Plur	35	conj	35:conj	SpaceAfter=No
 40	)	)	PUNCT	-RRB-	_	35	punct	35:punct	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0c155162a7dfaf28_ENG_20031127_172200-0044
@@ -854,7 +854,7 @@
 6	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 7	n't	not	PART	RB	_	8	advmod	8:advmod	_
 8	have	have	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:if	_
-9	what	what	PRON	WP	PronType=Int	8	obj	8:obj	_
+9	what	what	PRON	WP	PronType=Rel	8	obj	8:obj|11:obj	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
 11	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_

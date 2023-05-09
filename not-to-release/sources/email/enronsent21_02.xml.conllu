@@ -83,7 +83,7 @@
 17	know	know	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_
 18	if	if	SCONJ	IN	_	20	mark	20:mark	_
 19	there	there	PRON	EX	_	20	expl	20:expl	_
-20	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl:if	_
+20	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	ccomp	17:ccomp	_
 21	any	any	DET	DT	_	22	det	22:det	_
 22	changes	change	NOUN	NNS	Number=Plur	20	nsubj	20:nsubj	_
 23	to	to	ADP	IN	_	24	case	24:case	_
@@ -98,7 +98,7 @@
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	if	if	SCONJ	IN	_	7	mark	7:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
-7	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:if	_
+7	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 9	change	change	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	so	so	SCONJ	IN	_	15	mark	15:mark	_
@@ -238,11 +238,11 @@
 15	accurate	accurate	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 16	head	head	NOUN	NN	Number=Sing	17	compound	17:compound	_
 17	count	count	NOUN	NN	Number=Sing	13	obj	13:obj	_
-18	of	of	SCONJ	IN	_	19	case	19:case	_
-19	who	who	PRON	WP	PronType=Int	17	nmod	17:nmod:of	_
+18	of	of	SCONJ	IN	_	22	mark	22:mark	_
+19	who	who	PRON	WP	PronType=Int	22	nsubj	22:nsubj	_
 20	will	will	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
 21	be	be	AUX	VB	VerbForm=Inf	22	aux	22:aux	_
-22	attending	attend	VERB	VBG	Tense=Pres|VerbForm=Part	19	acl:relcl	19:acl:relcl	_
+22	attending	attend	VERB	VBG	Tense=Pres|VerbForm=Part	17	acl	17:acl:of	_
 23	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
 24	wedding	wedding	NOUN	NN	Number=Sing	22	obj	22:obj	SpaceAfter=No
 25	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -551,11 +551,11 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
 4	CC	cc	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	4	obj	4:obj	_
+5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	4	iobj	4:iobj	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 7	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	9	amod	9:amod	_
 8	few	few	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	times	time	NOUN	NNS	Number=Plur	4	obl:npmod	4:obl:npmod	_
+9	times	time	NOUN	NNS	Number=Plur	4	obl:tmod	4:obl:tmod	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
 11	send	send	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
 12	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obj	11:obj	SpaceAfter=No
@@ -574,8 +574,8 @@
 9	DPR's	dpr's	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
 10	would	would	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 11	have	have	VERB	VB	VerbForm=Inf	22	advcl	22:advcl:while	_
-12	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
-13	reporting	report	VERB	VBG	VerbForm=Ger	11	ccomp	11:ccomp	_
+12	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	11	obj	11:obj|13:nsubj:xsubj	_
+13	reporting	report	VERB	VBG	VerbForm=Ger	11	xcomp	11:xcomp	_
 14-15	tomorrow's	_	_	_	_	_	_	_	_
 14	tomorrow	tomorrow	NOUN	NN	Number=Sing	16	nmod:poss	16:nmod:poss	_
 15	's	's	PART	POS	_	14	case	14:case	_
@@ -828,7 +828,7 @@
 17	people	people	NOUN	NNS	Number=Plur	20	nsubj	20:nsubj|22:nsubj:xsubj	_
 18	will	will	AUX	MD	VerbForm=Fin	20	aux	20:aux	_
 19	be	be	AUX	VB	VerbForm=Inf	20	cop	20:cop	_
-20	able	able	ADJ	JJ	Degree=Pos	9	ccomp	9:ccomp	_
+20	able	able	ADJ	JJ	Degree=Pos	9	parataxis	9:parataxis	_
 21	to	to	PART	TO	_	22	mark	22:mark	_
 22	help	help	VERB	VB	VerbForm=Inf	20	xcomp	20:xcomp	_
 23	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	22	obj	22:obj	_
@@ -951,7 +951,7 @@
 6-7	doesn't	_	_	_	_	_	_	_	_
 6	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 7	n't	not	PART	RB	_	8	advmod	8:advmod	_
-8	seem	seem	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:if	_
+8	seem	seem	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
 9	possible	possible	ADJ	JJ	Degree=Pos	8	xcomp	8:xcomp	SpaceAfter=No
 10	.	.	PUNCT	.	_	1	punct	1:punct	_
 

@@ -54,7 +54,7 @@
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	4	aux	4:aux	_
 4	researching	research	VERB	VBG	VerbForm=Ger	0	root	0:root	_
-5	on	online	ADV	RB	Typo=Yes	4	advmod	4:advmod	_
+5	on	online	ADV	AFX	Typo=Yes	4	advmod	4:advmod	_
 6	line	_	X	RB	_	5	goeswith	5:goeswith	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
 8	find	find	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	_
@@ -77,7 +77,7 @@
 4	settle	settle	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
 6	book	book	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
-7	on	online	ADV	RB	Typo=Yes	6	advmod	6:advmod	_
+7	on	online	ADV	AFX	Typo=Yes	6	advmod	6:advmod	_
 8	line	_	X	RB	_	7	goeswith	7:goeswith	SpaceAfter=No
 9	?	?	PUNCT	.	_	4	punct	4:punct	_
 
@@ -89,7 +89,7 @@
 4	better	good	ADJ	JJR	Degree=Cmp	0	root	0:root	_
 5	if	if	SCONJ	IN	_	7	mark	7:mark	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
-7	wait	wait	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
+7	wait	wait	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:if	_
 8	till	till	SCONJ	IN	_	10	mark	10:mark	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 10	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:till	_
@@ -344,7 +344,7 @@
 9	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 10	own	own	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	buses	bus	NOUN	NNS	Number=Plur	8	obj	8:obj	_
-12	etc	etc.	NOUN	FW	Abbr=Yes|Number=Sing	11	conj	11:conj	SpaceAfter=No
+12	etc	etc.	NOUN	FW	Abbr=Yes|Number=Plur	11	conj	11:conj	SpaceAfter=No
 13	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111107094641AATmyb6_ans-0023
@@ -404,7 +404,7 @@
 15	Tho	Tho	PROPN	NNP	Number=Sing	7	obl	7:obl:to	_
 16	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
 17	near	near	ADP	IN	_	18	case	18:case	_
-18	where	where	ADV	WRB	PronType=Rel	15	nmod	15:nmod:near	_
+18	where	where	ADV	WRB	PronType=Rel	15	nmod	15:nmod:near|20:advmod	_
 19	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
 20	live	live	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	18	advcl:relcl	18:advcl:relcl	SpaceAfter=No
 21	)	)	PUNCT	-RRB-	_	18	punct	18:punct	_
@@ -696,8 +696,8 @@
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
 7	visited	visit	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
-9	location	location	NOUN	NN	Number=Sing	7	obj	7:obj	_
-10	where	where	ADV	WRB	PronType=Rel	12	advmod	12:advmod	_
+9	location	location	NOUN	NN	Number=Sing	7	obj	7:obj|12:obl	_
+10	where	where	ADV	WRB	PronType=Rel	12	advmod	9:ref	_
 11	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 12	made	make	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
 13	coconut	coconut	NOUN	NN	Number=Sing	14	compound	14:compound	_
@@ -725,8 +725,8 @@
 35	some	some	DET	DT	_	37	det	37:det	_
 36	tropical	tropical	ADJ	JJ	Degree=Pos	37	amod	37:amod	_
 37	food	food	NOUN	NN	Number=Sing	34	obj	34:obj	_
-38	at	at	SCONJ	IN	_	39	case	39:case	_
-39	what	what	PRON	WP	PronType=Int	34	obl	34:obl:at	_
+38	at	at	ADP	IN	_	39	case	39:case	_
+39	what	what	PRON	WP	PronType=Rel	34	obl	34:obl:at|40:nsubj|45:nsubj:xsubj	_
 40	appeared	appear	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	39	acl:relcl	39:acl:relcl	_
 41	to	to	PART	TO	_	45	mark	45:mark	_
 42	be	be	AUX	VB	VerbForm=Inf	45	cop	45:cop	_

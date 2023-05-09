@@ -37,10 +37,10 @@
 12	"	"	PUNCT	''	_	11	punct	11:punct	_
 13	which	which	PRON	WDT	PronType=Rel	14	nsubj	11:ref	_
 14	caused	cause	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	advcl:relcl	11:advcl:relcl	_
-15	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	14	obj	14:obj|18:nsubj:xsubj	_
+15	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	14	iobj	14:iobj|18:nsubj:xsubj	_
 16	to	to	PART	TO	_	18	mark	18:mark	_
 17	be	be	AUX	VB	VerbForm=Inf	18	aux:pass	18:aux:pass	_
-18	stressed	stress	VERB	VBN	Tense=Past|VerbForm=Part	14	xcomp	14:xcomp	_
+18	stressed	stress	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	xcomp	14:xcomp	_
 19	out	out	ADP	RP	_	18	compound:prt	18:compound:prt	SpaceAfter=No
 20	.	.	PUNCT	.	_	11	punct	11:punct	_
 
@@ -73,7 +73,7 @@
 # text = I actually loss 4 pounds after my 1st treatment and 2 pounds after my 2nd treatment.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|10.1:nsubj|12:nsubj	_
 2	actually	actually	ADV	RB	_	3	advmod	3:advmod	_
-3	loss	lose	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|Typo=Yes|VerbForm=Fin	0	root	0:root	CorrectForm=lose
+3	loss	lose	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|Typo=Yes|VerbForm=Fin	0	root	0:root	CorrectForm=lost
 4	4	4	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
 5	pounds	pound	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	after	after	ADP	IN	_	9	case	9:case	_
@@ -164,7 +164,7 @@
 
 # sent_id = reviews-247097-0010
 # text = What I like most about Dr. Liau is that she is very caring.
-1	What	what	PRON	WP	PronType=Int	13	nsubj:outer	13:nsubj:outer	_
+1	What	what	PRON	WP	PronType=Rel	13	nsubj:outer	3:obj|13:nsubj:outer	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 3	like	like	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
 4	most	most	ADV	RBS	Degree=Sup	3	advmod	3:advmod	_

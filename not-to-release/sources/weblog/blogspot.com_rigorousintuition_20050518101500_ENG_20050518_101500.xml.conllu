@@ -242,7 +242,7 @@
 15	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 16	single	single	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 17	American	American	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	reporter	reporter	NOUN	NN	Number=Sing	14	obj	14:obj|20:nsubj|21:nsubj:xsubj	_
+18	reporter	reporter	NOUN	NN	Number=Sing	14	iobj	14:iobj|20:nsubj|21:nsubj:xsubj	_
 19	who	who	PRON	WP	PronType=Rel	20	nsubj	18:ref	_
 20	bothered	bother	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	acl:relcl	18:acl:relcl	_
 21	following	follow	VERB	VBG	VerbForm=Ger	20	xcomp	20:xcomp	_
@@ -380,7 +380,7 @@
 # text = (Ask Terry Nichols about the Philippines.)
 1	(	(	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
 2	Ask	ask	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-3	Terry	Terry	PROPN	NNP	Number=Sing	2	obj	2:obj	_
+3	Terry	Terry	PROPN	NNP	Number=Sing	2	iobj	2:iobj	_
 4	Nichols	Nichols	PROPN	NNP	Number=Sing	3	flat	3:flat	_
 5	about	about	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
@@ -635,8 +635,8 @@
 13	having	have	VERB	VBG	VerbForm=Ger	11	advcl	11:advcl:as	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	old	old	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	killer	killer	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
-17	strut	strut	VERB	VB	VerbForm=Inf	13	ccomp	13:ccomp	_
+16	killer	killer	NOUN	NN	Number=Sing	13	obj	13:obj|17:nsubj:xsubj|21:nsubj	_
+17	strut	strut	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
 18	about	about	ADP	IN	_	19	case	19:case	_
 19	Miami	Miami	PROPN	NNP	Number=Sing	17	obl	17:obl:about	SpaceAfter=No
 20	,	,	PUNCT	,	_	17	punct	17:punct	_
@@ -921,7 +921,7 @@
 5	could	could	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 6	convince	convince	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	jury	jury	NOUN	NN	Number=Sing	6	obj	6:obj	_
+8	jury	jury	NOUN	NN	Number=Sing	6	iobj	6:iobj	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj|14:nsubj:xsubj	_
 10	had	have	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	12	aux	12:aux	_
 11	been	be	AUX	VBN	Tense=Past|VerbForm=Part	12	cop	12:cop	_
@@ -993,7 +993,7 @@
 
 # sent_id = weblog-blogspot.com_rigorousintuition_20050518101500_ENG_20050518_101500-0044
 # text = Wilson had been able to show that he'd had more than 80 "non-social contacts" with the CIA since his retirement in 1971, leaving the prosecution's case in turmoil.
-1	Wilson	Wilson	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj|27:nsubj:xsubj	_
+1	Wilson	Wilson	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 2	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
 3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	4	cop	4:cop	_
 4	able	able	ADJ	JJ	Degree=Pos	0	root	0:root	_
@@ -1020,7 +1020,7 @@
 24	in	in	ADP	IN	_	25	case	25:case	_
 25	1971	1971	NUM	CD	NumForm=Digit|NumType=Card	23	nmod	23:nmod:in	SpaceAfter=No
 26	,	,	PUNCT	,	_	4	punct	4:punct	_
-27	leaving	leave	VERB	VBG	VerbForm=Ger	4	xcomp	4:xcomp	_
+27	leaving	leave	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
 29-30	prosecution's	_	_	_	_	_	_	_	_
 29	prosecution	prosecution	NOUN	NN	Number=Sing	31	nmod:poss	31:nmod:poss	_
@@ -1097,11 +1097,11 @@
 51	activities	activity	NOUN	NNS	Number=Plur	49	obj	49:obj	_
 52	after	after	ADP	IN	_	54	case	54:case	_
 53	February	February	PROPN	NNP	Number=Sing	54	compound	54:compound	_
-54	28th	28th	NOUN	NN	Number=Sing|NumType=Ord	51	nmod	51:nmod:after	SpaceAfter=No
+54	28th	28th	NOUN	NN	Number=Sing|NumType=Ord	51	nmod	51:nmod:after|60:obl:tmod	SpaceAfter=No
 55	,	,	PUNCT	,	_	54	punct	54:punct	_
 56	1971	1971	NUM	CD	NumForm=Digit|NumType=Card	54	nmod:tmod	54:nmod:tmod	SpaceAfter=No
 57	,	,	PUNCT	,	_	54	punct	54:punct	_
-58	when	when	ADV	WRB	PronType=Rel	60	advmod	60:advmod	_
+58	when	when	ADV	WRB	PronType=Rel	60	advmod	54:ref	_
 59	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	60	nsubj	60:nsubj	_
 60	retired	retire	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	54	acl:relcl	54:acl:relcl	_
 61	from	from	ADP	IN	_	63	case	63:case	_
@@ -1448,8 +1448,8 @@
 2	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 4	similar	similar	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	case	case	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
-6	unravelling	unravel	VERB	VBG	VerbForm=Ger	2	ccomp	2:ccomp	_
+5	case	case	NOUN	NN	Number=Sing	2	obj	2:obj|6:nsubj:xsubj	_
+6	unravelling	unravel	VERB	VBG	VerbForm=Ger	2	xcomp	2:xcomp	_
 7	up	up	ADV	RB	_	8	advmod	8:advmod	_
 8	here	here	ADV	RB	PronType=Dem	2	advmod	2:advmod	_
 9	in	in	ADP	IN	_	11	case	11:case	_
@@ -1615,11 +1615,11 @@
 7-8	aint	_	_	_	_	_	_	_	_
 7	ai	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Style=Vrnc|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 8	nt	not	PART	RB	Typo=Yes	9	advmod	9:advmod	CorrectForm=n't
-9	what	what	PRON	WP	PronType=Int	0	root	0:root	_
+9	what	what	PRON	WP	PronType=Rel	0	root	0:root	_
 10	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj|13:nsubj:xsubj	_
 11	used	use	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
-13	be	be	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	SpaceAfter=No
+13	be	be	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	Promoted=Yes|SpaceAfter=No
 14	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = weblog-blogspot.com_rigorousintuition_20050518101500_ENG_20050518_101500-0071

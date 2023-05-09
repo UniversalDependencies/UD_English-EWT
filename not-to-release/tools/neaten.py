@@ -8,15 +8,21 @@ UD validator (https://github.com/UniversalDependencies/tools/)
 Parts are adapted from the GUM validator,
 https://raw.githubusercontent.com/amir-zeldes/gum/master/_build/utils/validate.py
 
+To get an overview of the distribution of error types:
+
+$ python neaten.py | sort | cut -c1-30 | uniq -c
+
 @author: Nathan Schneider
 @since: 2022-09-10
 """
 
-from collections import defaultdict
+from collections import defaultdict, Counter
 import glob
 import re
 import sys
 import conllu
+
+NNS_warnings = Counter()
 
 def isRegularNode(line):
     idS = str(line['id'])
@@ -31,13 +37,13 @@ def validate_src(infiles):
         with open(inFP) as inF:
             doc = None
             for tree in conllu.parse_incr(inF):
-                if 'newdoc id'in tree.metadata:
+                if 'newdoc id' in tree.metadata:
                     doc = tree.metadata['newdoc id']
                 tree.metadata['docname'] = doc
-                tree.metadata['filename'] = inFP.rsplit('/',1)[1]
+                tree.metadata['filename'] = ('/'+inFP).rsplit('/',1)[1] # prefix slash so it runs on GUM
 
                 sentid = tree.metadata['sent_id']
-                prev_line = None
+                prev_line = prev_key = None
                 for line in tree:
                     """ `dict(line)` e.g.:
                     {'id': 1, 'form': 'What', 'lemma': 'what', 'upos': 'PRON',
@@ -53,12 +59,16 @@ def validate_src(infiles):
                     tok = (line.get('misc') or {}).get('CorrectForm') or form   # in GUM, some explicit CorrectForm=_ which parses as None
 
                     # goeswith
-                    if line['deprel']=='goeswith' and prev_line['deprel']!="goeswith":
+                    if line['deprel']=='goeswith' and prev_line:
+                        # copy substantive UPOS, feats from the preceding token
+                        line['upos'] = prev_line['upos']
+                        line['feats'] = dict(prev_line['feats'])
+                        if 'Typo' in line['feats']:
+                            del line['feats']['Typo']
+
+                    if line['deprel']=='goeswith' and prev_line and prev_line['deprel']!="goeswith":
                         # undo previous count as it has a partial form string
                         lemma_dict[prev_key][prev_line["lemma"]] -= 1
-                        if prev_line['xpos'] in ["AFX", "GW"]:
-                            # copy substantive XPOS to the preceding token
-                            prev_line['xpos'] = line['xpos']
 
                         prev_line['merged'] = True # Typo fixed via goeswith deprel.
                         prev_line['form'] += line['form']
@@ -66,15 +76,26 @@ def validate_src(infiles):
                         lemma_dict[ptok,prev_line['xpos']][prev_line["lemma"]] += 1
                         lemma_docs[ptok,prev_line['xpos'],prev_line["lemma"]].add(sentid)
                     else:
+                        assert prev_line or line['deprel']!='goeswith'
                         lemma_dict[(tok,xpos)][lemma] += 1
                         lemma_docs[(tok,xpos,lemma)].add(sentid)
 
                     prev_line = line
                     prev_key = (tok,xpos)
 
+                line2 = None
+                for line1 in tree[::-1]: # go backwards to propagate from last token of goeswith expression
+                    if not isRegularNode(line1):    # avoid e.g. ellipsis node
+                        continue
+                    if line2 and line2['deprel']=='goeswith' and line1['xpos'] in ["AFX", "GW"]:
+                            # copy substantive XPOS to the preceding token
+                            line1['xpos'] = line2['xpos']
+                    line2 = line1
+
                 validate_annos(tree)
 
     validate_lemmas(lemma_dict,lemma_docs)
+    sys.stderr.write("!suspicious NNS lemmas: "+' '.join(k for k,v in NNS_warnings.most_common()) + '\n')
     sys.stdout.write("\r" + " "*70)
 
 def validate_lemmas(lemma_dict, lemma_docs):
@@ -83,6 +104,7 @@ def validate_lemmas(lemma_dict, lemma_docs):
                   ("da","NNP","Danish"),("Jan","NNP","Jan"),("Jan","NNP","January"),
                   ("'s","VBZ","have"),("’s","VBZ","have"),("`s","VBZ","have"),("'d","VBD","do"),("'d","VBD","have")]
     suspicious_types = 0
+    majority = None
     for tok, xpos in sorted(lemma_dict):
         if sum(lemma_dict[(tok,xpos)].values()) > 1:
             for i, lem in enumerate(filter(lambda y: y!='_', sorted(lemma_dict[(tok,xpos)],key=lambda x:lemma_dict[(tok,xpos)][x],reverse=True))):
@@ -174,12 +196,12 @@ def validate_annos(tree):
             "CCONJ":["CC"],
             "DET":["DT","PDT","WDT","NNP"],
             "INTJ":["UH","JJ","NN"],
-            "NOUN":["NN","NNS","GW"],
-            "NUM":["CD","LS","NNP","GW"],
+            "NOUN":["NN","NNS"],
+            "NUM":["CD","LS","NNP"],
             "PART":["POS","RB","TO"],
             "PRON":["PRP","PRP$","WP","WP$","DT","WDT","EX","NN"],
             "PROPN":["NNP","NNPS"],
-            "PUNCT":[".",",",":","``","''","-LCB-","-RCB-","-LRB-","-RRB-","-LSB-","-RSB-","NFP","HYPH","GW","SYM"],
+            "PUNCT":[".",",",":","``","''","-LCB-","-RCB-","-LRB-","-RRB-","-LSB-","-RSB-","NFP","HYPH","SYM"],
             "SCONJ":["IN","VBN","VBG"],
             "SYM":["$",",","SYM","NFP","NN","NNS","IN","HYPH"],
             "VERB":["VB","VBD","VBG","VBN","VBP","VBZ","NNP"],
@@ -210,6 +232,7 @@ def validate_annos(tree):
             func = line['deprel']
             featlist = line['feats'] or {}
             misclist = line['misc'] or {}
+            edeps = line['deps']
             merged = 'merged' in line and line['merged']
             form = check_and_fix_form_typos(tok_num, line['form'], featlist, misclist, merged, docname)
 
@@ -245,25 +268,27 @@ def validate_annos(tree):
             assert parent_pos is not None,(tok_num,parent_ids[tok_num],postags,filename)
             S_TYPE_PLACEHOLDER = None
             assert parent_string is not None,(tok_num,docname,filename)
-            flag_dep_warnings(tok_num, tok, pos, upos, lemma, func,
-                              parent_string, parent_lemma, parent_id,
+            is_parent_copular = any(funcs[x]=="cop" for x in parent_ids if parent_ids[x]==parent_id)    # if tok or any siblings attach as cop
+            flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, edeps,
+                              parent_string, parent_lemma, parent_id, is_parent_copular,
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, prev_upos, sent_positions[tok_num],
                               parent_func, parent_pos, parent_upos, filename)
             flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, docname)
 
-            if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
-                # check for PronType=Rcp
-                flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, misclist, prev_tok, docname)
-            elif upos == "PRON":
-                # Pass FORM to detect abbreviations, etc.
-                flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, misclist, prev_tok, docname)
-            elif lemma in PRON_LEMMAS:
-                if not ((lemma=="one" and upos in ("NOUN","NUM"))
-                        or (lemma=="I" and upos=="NUM") # Roman numeral
-                        or (lemma=="he" and upos=="INTJ")): # laughter
-                    print("WARN: invalid pronoun UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
-                    # This warns about a few that are arguably correct, e.g. "oh my/INTJ", "I/PROPN - 24"
+            if func!='goeswith':
+                if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
+                    # check for PronType=Rcp
+                    flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, misclist, prev_tok, docname)
+                elif upos == "PRON":
+                    # Pass FORM to detect abbreviations, etc.
+                    flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, misclist, prev_tok, docname)
+                elif lemma in PRON_LEMMAS:
+                    if not ((lemma=="one" and upos in ("NOUN","NUM"))
+                            or (lemma=="I" and upos=="NUM") # Roman numeral
+                            or (lemma=="he" and upos=="INTJ")): # laughter
+                        print("WARN: invalid pronoun UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                        # This warns about a few that are arguably correct, e.g. "oh my/INTJ", "I/PROPN - 24"
 
             if func.endswith(':relcl'):
                 # Check PronType=Rel for free relative headed by the WDT/WP/WRB
@@ -274,6 +299,15 @@ def validate_annos(tree):
                 if parent_upos=="PRON" or (parent_upos=="ADV" and (parent_pos=="WRB" or (parent_pos=="GW" and "PronType" in parent_feats))):
                     if parent_feats["PronType"]=="Int":
                         print("WARN: Looks like a WH word-headed free relative, should be PronType=Rel" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+
+            if func!='goeswith' and featlist.get("PronType")=="Rel":
+                if (len(edeps)!=1 or edeps[0][0]!="ref"):
+                    if "acl:relcl" not in child_funcs[tok_num] and "advcl:relcl" not in child_funcs[tok_num]: # not free relative
+                        print("WARN: PronType=Rel should have `ref` as its sole enhanced dependency" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                elif not {"acl:relcl","advcl:relcl"} & set(child_funcs[edeps[0][1]]):
+                    # the ref antecedent doesn't head the RC
+                    print("WARN: `ref` antecedent lacks :relcl dependent" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+
 
             if ':pass' in func:
                 passive_verbs.add(parent_id)
@@ -297,18 +331,20 @@ def validate_annos(tree):
             - if there is an obl:agent (by-phrase), it must be a "by"-PP attaching to a passive verb
               (with Voice=Pass)
             - (No other tokens should have Voice=Pass for now. But plausibly VBNs attaching as amod or acl could be passive)
+
+        TODO: additionally, VBN, no aux, not amod -> Voice=Pass?
         """
         for v in passive_verbs:
             if feats[v].get("Voice") != "Pass":
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' should have Voice=Pass in " + docname)
-            if postags[v] != "VBN":
+            if postags[v] not in ["VBN", "MD"]:
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' should be VBN in " + docname)
             dependents = {j: funcs[j] for j,i in parent_ids.items() if i==v}
             aux_dependents = sorted([(j,f) for j,f in dependents.items() if f.startswith('aux')])
             if aux_dependents and (not all(f=='aux' for j,f in aux_dependents[:-1]) or aux_dependents[-1][1]!='aux:pass'):
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has suspicious aux(:pass) dependents (only the last should be aux:pass) in " + docname)
             subj_dependents = {f for f in dependents.values() if 'subj' in f}
-            if not subj_dependents < {'nsubj:pass','csubj:pass'}:
+            if not subj_dependents < {'nsubj:pass','csubj:pass','nsubj:outer','csubj:outer'}:
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has subject dependents " + repr(sorted(subj_dependents)).replace('[','{').replace(']','}') + " in " + docname)
             if 'cop' in dependents.values():
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has cop dependent in " + docname)
@@ -318,13 +354,15 @@ def validate_annos(tree):
         for i,f in funcs.items():
             if f=='obl:agent':
                 if (feats[parent_ids[i]] or {}).get("Voice") != "Pass":
-                    print("WARN: Token with lemma '" + lemmas[i] + "' attaches as obl:agent to verb '" + lemmas[parent_ids[i]] + "' without Voice=Pass in " + docname)
+                    print("WARN: Voice=Pass missing from verb that heads obl:agent (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ") in " + docname)
                 if not any(k==i and lemmas[j]=='by' and funcs[j]=='case' for j,k in parent_ids.items()):
-                    print("WARN: Token with lemma '" + lemmas[i] + "' attaches as obl:agent without a 'by' dependent " + docname)
+                    print("WARN: obl:agent without 'by' (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ") in " + docname)
 
 
-def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, parent_id, children, child_funcs, s_type,
-                      docname, prev_tok, prev_pos, prev_upos, sent_position, parent_func, parent_pos, parent_upos, filename):
+def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular,
+                      children, child_funcs, s_type,
+                      docname, prev_tok, prev_pos, prev_upos, sent_position,
+                      parent_func, parent_pos, parent_upos, filename):
     # Shorthand for printing errors
     inname = " in " + docname + " @ token " + str(id) + " (" + parent + " -> " + tok + ") " + filename
 
@@ -350,10 +388,20 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
     if func not in ["case","reparandum","goeswith"] and pos == "POS":
         print("WARN: tag POS must have function case" + inname)
 
-    if pos in ["VBG","VBN","VBD"] and lemma == tok:
-        # check cases where VVN form is same as tok ('know' and 'notice' etc. are recorded typos, l- is a disfluency)
-        if tok not in ["shed","put","read","become","come","overcome","cut","pre-cut","hit","split","cast","set","hurt","run","overrun","outrun","broadcast","knit",
-                       "undercut","spread","shut","upset","burst","bit","bid","outbid","let","l-","g-","know","notice","reach","raise","beat","forecast"]:
+    if pos in ["VBG","VBN","VBD"] and lemma.lower() == tok.lower():
+        t = tok.lower()
+        if pos == "VBN" and t in ["become","come","overcome","run","outrun","overrun"]:
+            pass
+        elif pos in ["VBN", "VBD"] and t in ["put","shut","cut","pre-cut","undercut",
+                                            "cost","cast","broadcast","forecast",
+                                            "let","set","upset","shed","spread",
+                                            "hurt","burst","bust",
+                                            "beat","read","re-read",
+                                            "bit","fit","hit","knit","slit","split","bid","outbid",
+                                            "l-","g-"]:  # disfluencies
+                                            #,"know","notice","reach","raise",]:
+            pass
+        else:
             print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
 
     if pos == "NNPS" and tok == lemma and tok.endswith("s") and func != "goeswith":
@@ -366,6 +414,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
                          "biceps","triceps","news","species","economics","arrears","glasses","thanks","series"]:
             if re.match(r"[0-9]+'?s",lemma) is None:  # 1920s, 80s
                 print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
+                NNS_warnings[lemma] += 1
 
     if pos == "IN" and func=="compound:prt":
         print("WARN: function " + func + " should have pos RP, not IN" + inname)
@@ -417,7 +466,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
         if not tok == "following" and func=="obj":  # Exception nominalized "the following"
             print("WARN: gerund should not have noun argument structure function " + func + inname)
 
-    if pos.startswith("NN") and func=="amod":
+    if pos.startswith("NN") and not pos.startswith("NNP") and func=="amod":
         print("WARN: tag "+ pos + " should not be " + func + inname)
 
     be_funcs = ["cop", "aux", "root", "csubj", "auxpass", "rcmod", "ccomp", "advcl", "conj","xcomp","parataxis","vmod","pcomp"]
@@ -428,13 +477,34 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
     if parent_lemma in ["tell","show","give","pay","teach","owe","text","write"] and \
             tok in ["him","her","me","us","you"] and func=="obj":
         print("WARN: person object of ditransitive expected to be iobj, not obj" + inname)
+    
+    # verbs checked for obj to be converted to iobj:
+    # cause|pardon|tell|ask|show|teach|email|cc|bcc|believe|trust|ask|allow|permit|pay|explain|convince|persuade|urge|advise|inform|notify|warn|command|instruct|remind|promise|assure|reassure|guarantee
+    if "obj" in child_funcs and {"ccomp", "xcomp"} & set(child_funcs) and lemma in ["tell", "ask", "show",
+        "allow", "permit", "cause", "pardon",
+        "pay",
+        "thank", # thank God that...
+        "believe", "trust",
+        "explain",  # explain me that... (not quite grammatical)
+        "convince", "persuade", "teach",
+        "urge", "advise", "inform", "notify", "warn", "command", "instruct", "remind", 
+        "email", "cc", "bcc",
+        "promise", "assure", "reassure", "guarantee"]:
+        # Note that the test for iobj is that the verb licenses iobj+obj or iobj+ccomp. 
+        # So e.g. "encourage" is ruled out, while "allow" and "permit" are included because of "allow you an exception" etc.
+        # Idiom exceptions: have+idea(obj) that..., give a damn(obj) that..., make up + mind(obj) that...
+        # TODO: see them as they are?
+        if lemma in ["believe","show"]:
+            print("WARN: verb expects iobj, not obj, with ccomp/xcomp (" + lemma + " -- OK if raising-to-object)" + inname)
+        else:
+            print("WARN: verb expects iobj, not obj, with ccomp/xcomp (" + lemma + ")" + inname)
 
     if func == "aux" and lemma.lower() != "be" and lemma.lower() != "have" and lemma.lower() !="do" and pos!="MD" and pos!="TO":
         print("WARN: aux must be modal, 'be,' 'have,' or 'do'" + inname)
 
     if func == "xcomp" and pos in ["VBP","VBZ","VBD"]:
         if parent_lemma not in ["=","seem"]:
-            print("WARN: xcomp verb should be infinitive, not tag " + pos + inname)
+            print("WARN: xcomp verb should be non-finite, not tag " + pos + inname)
 
     if parent_pos is None:
         assert False,(id,docname)
@@ -466,6 +536,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
         print("WARN: obj should not have child case" + inname + str(children))
 
     if func == "ccomp" and "mark" in child_funcs and not any([x in children for x in ["that","That","whether","if","Whether","If","wether","a"]]):
+        # TODO: may be too strict (e.g. interrogative infinitival ccomps like "know how to..." or "tell s.o. how to..." may be OK)
         if not ((lemma == "lie" and "once" in children) or  (lemma=="find" and ("see" in children or "associate" in children))):  # Exceptions
             print("WARN: ccomp should not have child mark" + inname)
 
@@ -474,6 +545,11 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
 
     if func == "acl:relcl" and parent_upos == "ADV":
         print("WARN: dependent of adverb should be advcl:relcl not acl:relcl" + inname)
+
+    if "acl:relcl" in child_funcs or "advcl:relcl" in child_funcs:  # relativized element
+        # should (in most cases) have an enhanced dependency out of the relative clause
+        if len(edeps)<=1 or not any(rel.startswith(('nsubj','csubj','obj','obl','nmod','advmod','ccomp','xcomp')) and isinstance(h,int) and h>id for (rel,h) in edeps):
+            print("WARN: relativized word should have enhanced dependency within the relative clause" + inname)
 
     if pos in ["VBG"] and "det" in child_funcs:
         # Exceptions for phrasal compound in GUM_reddit_card and nominalization in GUM_academic_exposure
@@ -496,6 +572,16 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
     if func in ["nmod:tmod","nmod:npmod","obl:tmod","obl:npmod"] and "case" in child_funcs:
         print("WARN: function " + func +  " should not have 'case' dependents" + inname)
 
+    if func in ["nmod:npmod","obl:npmod"]:
+        if parent_id < id and (parent_lemma in ["once","twice","thrice","time"] or lemma in ["hour","minute","second","day","week","month","quarter","season","year","decade","century"]):
+            print("WARN: rate unit should be :tmod not :npmod" + inname)
+        elif parent_lemma == "ago":
+            # TODO print("WARN: 'time(s)' rate unit should be :tmod not :npmod" + inname)
+            pass
+        elif lemma == "time" and not (tok.lower()=="times" and (id+1 == parent_id or parent_upos == "NOUN")):
+            # exclude multiplicative use of "times"
+            print("WARN: 'time(s)' rate unit should be :tmod not :npmod" + inname)
+
     if func in ["aux:pass","nsubj:pass"] and parent_pos not in ["VBN"]:
         if not (("stardust" in docname and parent_lemma == "would") or parent_lemma == "Rated"):
             print("WARN: function " + func + " should not be the child of pos " + parent_pos + inname)
@@ -509,7 +595,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
     if "obl:agent" in child_funcs and ("nsubj" in child_funcs or "csubj" in child_funcs) and not "nsubj:pass" in child_funcs:
         print("WARN: a token cannot have both a *subj relation and obl:agent" + inname)
 
-    if pos in ["VBD","VBD","VBP"] and "aux" in child_funcs:
+    if pos in ["VBD","VBD","VBP"] and "aux" in child_funcs and "nsubj:outer" not in child_funcs:
         print(str(id) + docname)
         print("WARN: tag "+pos+" should not have auxiliaries 'aux'" + inname)
 
@@ -519,14 +605,31 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, parent, parent_lemma, par
     if func == "xcomp" and parent_lemma in ["see","hear","notice"]:  # find
         print("WARN: deprel "+func+" should not be used with perception verb lemma '"+parent_lemma+"' (should this be nsubj+ccomp?)" + inname)
 
+    if lemma == "have" and "ccomp" in child_funcs and ("obj" not in child_funcs or not set(children) & {"idea","clue"}) and "expl" not in child_funcs:
+        # exceptional idioms: 'have no idea/clue', 'rumor has it'
+        print("WARN: 'have' token has suspicious ccomp dependent (should it be xcomp?)" + inname)
+
     if "obj" in child_funcs and "ccomp" in child_funcs:
         print("WARN: token has both obj and ccomp children" + inname)
+
+    if child_funcs.count("ccomp") + child_funcs.count("xcomp") > 1 and "expl" not in child_funcs:
+        print("WARN: token has multiple (c|x)comp dependents (usually an error if not extraposition)" + inname)
 
     if func == "acl" and (pos.endswith("G") or pos.endswith("N")) and parent_id == id + 1:  # premodifier V.G/N should be amod not acl
         print("WARN: back-pointing " + func + " for adjacent premodifier (should be amod?) in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
 
+    if func == "advcl" and upos=="VERB" and (pos.endswith("G") or pos.endswith("N")) and parent_upos in ["NUM","SYM","NOUN","PRON","PROPN","DET"] and not is_parent_copular and parent_func!="root":
+        print("WARN: non-predicate non-root nominal should not have advcl dependent (should be acl?) in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+
     if func.endswith("tmod") and pos.startswith("RB"):
         print("WARN: adverbs should not be tmod" + inname)
+
+    if func == "case" and lemma in ["back", "down", "over", "out", "up"] and parent_lemma in ["here","there"] and id+1==parent_id:
+        # adjacency check because "out of there" is OK
+        print("WARN: '"+lemma+" "+parent_lemma+"' should probably be advmod not case" + inname)
+
+    if func == "case" and upos == "SCONJ" and "fixed" not in child_funcs:
+        print("WARN: SCONJ/case combination is invalid in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
 
     """
     Existential construction
@@ -706,13 +809,16 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
         print("WARN: NUM+CD should correspond with NumType=Card in " + docname + " @ token " + str(id))
 
     # NOUN+NN <=> NOUN[Number=Sing]
-    if upos == "NOUN" and ((pos in ["NN", "FW"]) != (number == "Sing")):
+    if upos == "NOUN" and ((pos == "NN") != (number == "Sing")):
         # NOUN+GW can also have an optional Number=Sing feature
         if pos != "GW":
             print("WARN: NOUN+NN should correspond with Number=Sing in " + docname + " @ token " + str(id))
 
-    # NOUN+NNS <=> NOUN[Number=Plur]
-    if upos == "NOUN" and ((pos == "NNS") != (number == "Plur")):
+    # etc. <=> NOUN+FW <=> Number=Plur; otherwise NOUN+NNS <=> NOUN[Number=Plur]
+    if lemma == "etc.":
+        if pos != "FW" or upos != "NOUN" or number != "Plur" or not feats.get("Abbr") == "Yes":
+            print("WARN: 'etc.' should correspond with NOUN+FW, Abbr=Yes|Number=Plur in " + docname + " @ token " + str(id))
+    elif upos == "NOUN" and ((pos == "NNS") != (number == "Plur")):
         print("WARN: NOUN+NNS should correspond with Number=Plur in " + docname + " @ token " + str(id))
 
     # PRON+WP$ <=> PRON[Poss=Yes,PronType=Int,Rel]

@@ -710,10 +710,10 @@
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 5	much	much	ADV	RB	_	6	advmod	6:advmod	_
 6	larger	large	ADJ	JJR	Degree=Cmp	0	root	0:root	_
-7	than	than	SCONJ	IN	_	10	mark	10:mark	_
-8	what	what	PRON	WP	PronType=Int	10	obj	10:obj	_
+7	than	than	ADP	IN	_	8	case	8:case	_
+8	what	what	PRON	WP	PronType=Rel	6	obl	6:obl:than|10:xcomp	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
-10	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	advcl	6:advcl:than	SpaceAfter=No
+10	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	SpaceAfter=No
 11	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = weblog-blogspot.com_healingiraq_20050121235804_ENG_20050121_235804-0025
@@ -734,17 +734,17 @@
 9	two	two	NUM	CD	NumForm=Word|NumType=Card	10	nummod	10:nummod	_
 10	weeks	week	NOUN	NNS	Number=Plur	4	obl:tmod	4:obl:tmod	SpaceAfter=No
 11	,	,	PUNCT	,	_	4	punct	4:punct	_
-12	others	other	NOUN	NNS	Number=Plur	15	nsubj:pass	15:nsubj:pass	_
+12	others	other	NOUN	NNS	Number=Plur	15	nsubj:pass	15:nsubj:pass|19:nsubj:xsubj|22:nsubj:xsubj	_
 13	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
 14	been	be	AUX	VBN	Tense=Past|VerbForm=Part	15	aux:pass	15:aux:pass	_
 15	forced	force	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	ccomp	4:ccomp|6:ccomp	_
 16	under	under	ADP	IN	_	17	case	17:case	_
 17	threats	threat	NOUN	NNS	Number=Plur	15	obl	15:obl:under	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
-19	withdraw	withdraw	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	_
+19	withdraw	withdraw	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_
 20	and	and	CCONJ	CC	_	22	cc	22:cc	_
 21	to	to	PART	TO	_	22	mark	22:mark	_
-22	follow	follow	VERB	VB	VerbForm=Inf	19	conj	15:ccomp|19:conj:and	_
+22	follow	follow	VERB	VB	VerbForm=Inf	19	conj	15:xcomp|19:conj:and	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 24	example	example	NOUN	NN	Number=Sing	22	obj	22:obj	_
 25	of	of	ADP	IN	_	28	case	28:case	_
@@ -813,7 +813,7 @@
 # text = After asking me which tribe I belong to (thus assessing my sectarian background) he started hurling abuses at the Shia, calling them Persians, Majoos (fire worshippers), rabid dogs and a handful of other descriptions that I can't mention here.
 1	After	after	SCONJ	IN	_	2	mark	2:mark	_
 2	asking	ask	VERB	VBG	VerbForm=Ger	17	advcl	17:advcl:after	_
-3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj	_
+3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	2:iobj	_
 4	which	which	DET	WDT	PronType=Int	5	det	5:det	ManuallyChecked=PronType
 5	tribe	tribe	NOUN	NN	Number=Sing	7	obl	7:obl:to	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
@@ -902,7 +902,7 @@
 7	but	but	CCONJ	CC	_	9	cc	9:cc	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 9	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	conj	4:conj:but	_
-10	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj	_
+10	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	iobj	9:iobj	_
 11	what	what	PRON	WP	PronType=Int	18	nsubj	18:nsubj	_
 12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
 13	believed	believe	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	ccomp	9:ccomp	_
@@ -1010,7 +1010,7 @@
 40	above	above	ADV	RB	_	39	advmod	39:advmod	_
 41	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	43	cop	43:cop	_
 42	precisely	precisely	ADV	RB	_	43	advmod	43:advmod	_
-43	what	what	PRON	WP	PronType=Rel	30	ccomp	30:ccomp	_
+43	what	what	PRON	WP	PronType=Rel	30	ccomp	30:ccomp|48:obj	_
 44	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	46	nsubj	46:nsubj	_
 45	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	46	aux	46:aux	_
 46	planning	plan	VERB	VBG	Tense=Pres|VerbForm=Part	43	acl:relcl	43:acl:relcl	_
@@ -1235,8 +1235,8 @@
 25	its	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
 26	troops	troops	NOUN	NNS	Number=Plur	24	obj	24:obj	SpaceAfter=No
 27	,	,	PUNCT	,	_	20	punct	20:punct	_
-28	despite	despite	SCONJ	IN	_	29	case	29:case	_
-29	what	what	PRON	WP	PronType=Int	20	obl	20:obl:despite	_
+28	despite	despite	ADP	IN	_	29	case	29:case	_
+29	what	what	PRON	WP	PronType=Rel	20	obl	20:obl:despite|32:obj	_
 30	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	32	nsubj	32:nsubj	_
 31	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	aux	32:aux	_
 32	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	29	acl:relcl	29:acl:relcl	_

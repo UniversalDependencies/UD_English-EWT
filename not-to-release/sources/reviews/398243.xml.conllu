@@ -33,7 +33,7 @@
 19	now	now	ADV	RB	_	18	advmod	18:advmod	_
 20	and	and	CCONJ	CC	_	28	cc	28:cc	_
 21	getting	get	AUX	VBG	VerbForm=Ger	22	aux:pass	22:aux:pass	_
-22	charged	charge	VERB	VBN	Tense=Past|VerbForm=Part	28	csubj	28:csubj	_
+22	charged	charge	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	28	csubj	28:csubj	_
 23	dealership	dealership	NOUN	NN	Number=Sing	24	compound	24:compound	_
 24	prices	price	NOUN	NNS	Number=Plur	22	obj	22:obj	_
 25	just	just	ADV	RB	_	28	advmod	28:advmod	_
@@ -60,7 +60,7 @@
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
 11	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
 12	been	be	AUX	VBN	Tense=Past|VerbForm=Part	13	aux:pass	13:aux:pass	_
-13	ripped	rip	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj:and	_
+13	ripped	rip	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	conj	3:conj:and	_
 14	off	off	ADP	RP	_	13	compound:prt	13:compound:prt	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 16	few	few	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
@@ -111,7 +111,7 @@
 8	have	have	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 9	done	do	VERB	VBN	Tense=Past|VerbForm=Part	8	xcomp	8:xcomp	_
 10	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
-11	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	10	obj	10:obj	_
+11	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	10	iobj	10:iobj	_
 12	what	what	PRON	WP	PronType=Int	13	nsubj	13:nsubj	_
 13	needed	need	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	ccomp	10:ccomp	_
 14	be	be	AUX	VB	VerbForm=Inf	15	aux:pass	15:aux:pass	_
@@ -135,14 +135,14 @@
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
 4	actually	actually	ADV	RB	_	5	advmod	5:advmod	_
 5	lower	low	ADJ	JJR	Degree=Cmp	0	root	0:root	_
-6	than	than	SCONJ	IN	_	7	case	7:case	_
-7	what	what	PRON	WP	PronType=Int	5	obl	5:obl:than	_
-8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj|12:nsubj|14:nsubj:xsubj	_
+6	than	than	ADP	IN	_	7	case	7:case	_
+7	what	what	PRON	WP	PronType=Rel	5	obl	5:obl:than|10:obj|12:obl:to	_
+8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj|12:nsubj	_
 9	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	10	aux	10:aux	_
 10	anticipated	anticipate	VERB	VBN	Tense=Past|VerbForm=Part	7	acl:relcl	7:acl:relcl	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
 12	used	use	VERB	VBN	Tense=Past|VerbForm=Part	10	conj	7:acl:relcl|10:conj:and	_
-13	to	to	ADP	IN	_	7	case	7:case	_
+13	to	to	ADP	IN	_	12	obl	7:case	_
 14	compared	compare	VERB	VBN	Tense=Past|VerbForm=Part	10	advcl	10:advcl	_
 15	to	to	ADP	IN	_	17	case	17:case	_
 16	other	other	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
@@ -236,8 +236,8 @@
 4	in	in	ADP	IN	_	7	case	7:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	small	small	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	town	town	NOUN	NN	Number=Sing	2	obl	2:obl:in	_
-8	where	where	ADV	WRB	PronType=Rel	10	advmod	10:advmod	_
+7	town	town	NOUN	NN	Number=Sing	2	obl	2:obl:in|10:obl|12:obl	_
+8	where	where	ADV	WRB	PronType=Rel	10	advmod	7:ref	_
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj|12:nsubj	_
 10	knew	know	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
