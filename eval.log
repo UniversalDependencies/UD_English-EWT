@@ -1,0 +1,44 @@
+Running the following version of UD tools:
+commit 04abe686385f14a9a6f68784bd723a6b60ded594
+Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
+Date:   Tue May 9 00:14:39 2023 +0200
+Evaluating the following revision of UD_English-EWT:
+commit 8b5e987f3446bf2245587578115d987084ed0e44
+Merge: 776bce5f 824b3145
+Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
+Size: counted 254819 of 254819 words (nodes).
+Size: min(0, log((N/1000)**2)) = 11.0811069784136.
+Size: maximum value 13.815511 is for 1000000 words or more.
+Split: Found more than 10000 training words.
+Split: Found at least 10000 development words.
+Split: Found at least 10000 test words.
+Lemmas: source of annotation (from README) factor is 0.5.
+Universal POS tags: 17 out of 17 found in the corpus.
+Universal POS tags: source of annotation (from README) factor is 0.9.
+Features: 168904 out of 254819 total words have one or more features.
+Features: source of annotation (from README) factor is 0.4.
+Universal relations: 36 out of 37 found in the corpus.
+Universal relations: source of annotation (from README) factor is 1.
+Udapi:
+               TOTAL       7210
+Udapi: found 7210 bugs.
+Udapi: worst expected case (threshold) is one bug per 10 words. There are 254819 words.
+Genres: found 5 out of 17 known.
+/net/work/people/zeman/unidep/tools/validate.py --lang en --max-err=10 UD_English-EWT/en_ewt-ud-dev.conllu
+*** PASSED ***
+/net/work/people/zeman/unidep/tools/validate.py --lang en --max-err=10 UD_English-EWT/en_ewt-ud-test.conllu
+*** PASSED ***
+/net/work/people/zeman/unidep/tools/validate.py --lang en --max-err=10 UD_English-EWT/en_ewt-ud-train.conllu
+*** PASSED ***
+Validity: 1
+(weight=0.0769230769230769) * (score{features}=0.4) = 0.0307692307692308
+(weight=0.0769230769230769) * (score{genres}=0.294117647058824) = 0.0226244343891403
+(weight=0.0769230769230769) * (score{lemmas}=0.5) = 0.0384615384615385
+(weight=0.256410256410256) * (score{size}=0.802077269017438) = 0.2056608382096
+(weight=0.0512820512820513) * (score{split}=1) = 0.0512820512820513
+(weight=0.0769230769230769) * (score{tags}=0.9) = 0.0692307692307692
+(weight=0.307692307692308) * (score{udapi}=0.717054065827117) = 0.220632020254497
+(weight=0.0769230769230769) * (score{udeprels}=0.972972972972973) = 0.0748440748440748
+(TOTAL score=0.713504957440902) * (availability=1) * (validity=1) = 0.713504957440902
+STARS = 3.5
+UD_English-EWT	0.713504957440902	3.5
