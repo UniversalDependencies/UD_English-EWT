@@ -557,8 +557,8 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
             print(str(id) + docname)
             print("WARN: tag "+pos+" should not have a determinder 'det'" + inname)
 
-    if parent_lemma == "let" and func=="ccomp":
-        print("WARN: verb 'let' should take xcomp clausal object, not ccomp" + inname)
+    if parent_lemma in ["let", "help"] and func=="ccomp":
+        print(f"WARN: verb '{parent_lemma}' should take xcomp clausal object, not ccomp" + inname)
 
     if pos == "MD" and lemma not in ["can","must","will","shall","would","could","may","might","ought","should"] and func != "goeswith":
         print("WARN: lemma '"+lemma+"' is not a known modal verb for tag MD" + inname)
