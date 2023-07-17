@@ -218,6 +218,8 @@ def validate_annos(tree):
         prev_tok = ""
         prev_pos = ""
         prev_upos = ""
+        prev_func = ""
+        prev_parent_lemma = ""
         prev_feats = {}
         for i, line in enumerate(tree):
             if not isRegularNode(line):
@@ -272,7 +274,7 @@ def validate_annos(tree):
             flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, edeps,
                               parent_string, parent_lemma, parent_id, is_parent_copular,
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
-                              prev_tok, prev_pos, prev_upos, sent_positions[tok_num],
+                              prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_positions[tok_num],
                               parent_func, parent_pos, parent_upos, filename)
             flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, docname)
 
@@ -315,6 +317,8 @@ def validate_annos(tree):
             prev_pos = pos
             prev_upos = upos
             prev_tok = tok
+            prev_func = func
+            prev_parent_lemma = parent_lemma
             prev_feats = featlist
 
         """
@@ -361,7 +365,7 @@ def validate_annos(tree):
 
 def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular,
                       children, child_funcs, s_type,
-                      docname, prev_tok, prev_pos, prev_upos, sent_position,
+                      docname, prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_position,
                       parent_func, parent_pos, parent_upos, filename):
     # Shorthand for printing errors
     inname = " in " + docname + " @ token " + str(id) + " (" + parent + " -> " + tok + ") " + filename
@@ -761,6 +765,15 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
             assert upos=="ADJ"
         except AssertionError:
             print("WARN: structure of 'each other' should be fixed(each/DT/DET, other/JJ/ADJ)" + inname)
+    elif prev_tok.lower()=="a" and lemma=="couple":
+        try:
+            assert prev_func=="det"
+            assert prev_parent_lemma=="couple"
+            assert func not in ('nummod', 'compound', 'fixed')
+            if func=="nmod":
+                assert "case" in child_funcs
+        except AssertionError:
+            print("WARN: structure of 'a couple NOUN' should be det(couple, a), nmod:npmod(NOUN, couple)" + inname)
 
 def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     """
