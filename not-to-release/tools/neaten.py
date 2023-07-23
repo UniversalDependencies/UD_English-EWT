@@ -640,6 +640,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
 
     X.xpos=EX <=> X.deprel=expl & X.lemma=there
     X.xpos=EX => X.upos=PRON
+    X.parent.lemma=be => X.parent.upos=VERB
     """
     if func!="reparandum":
         _ex_tag = (pos=="EX")
@@ -648,6 +649,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
             print("WARN: 'there' with " + pos + " and " + upos + inname)
         if lemma=="there" and not _ex_tag and 'nsubj' in func:
             print("WARN: subject 'there' not tagged as EX/expl" + inname)
+        if _ex_tag and parent_lemma=="be" and parent_upos!="VERB":
+            print(f"WARN: existential BE should be VERB, is {parent_upos}" + inname)
+        # TODO: check "there seems to be/VERB" etc.
 
     """
     (Pre)determiner 'what'
