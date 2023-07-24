@@ -540,8 +540,10 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         print("WARN: obj should not have child case" + inname + str(children))
 
     if func == "ccomp" and "mark" in child_funcs and not any([x in children for x in ["that","That","whether","if","Whether","If","wether","a"]]):
-        # TODO: may be too strict (e.g. interrogative infinitival ccomps like "know how to..." or "tell s.o. how to..." may be OK)
-        if not ((lemma == "lie" and "once" in children) or  (lemma=="find" and ("see" in children or "associate" in children))):  # Exceptions
+        # allow interrogative infinitival ccomps like "know how to..." or "tell s.o. how to..."
+        if "advmod" in child_funcs and "how" in map(str.lower, children):
+            pass
+        elif not ((lemma == "lie" and "once" in children) or (lemma=="find" and ("see" in children or "associate" in children))):  # Exceptions
             print("WARN: ccomp should not have child mark" + inname)
 
     if func == "acl:relcl" and pos in ["VB"] and "to" in children and "cop" not in child_funcs and "aux" not in child_funcs:
