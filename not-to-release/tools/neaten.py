@@ -552,6 +552,12 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if func == "acl:relcl" and parent_upos == "ADV":
         print("WARN: dependent of adverb should be advcl:relcl not acl:relcl" + inname)
 
+    # ADV in nominal function of clause is probably a bug
+    if upos == "ADV" and func.startswith(('nsubj','obj','iobj')):
+        print("WARN: ADV with core nominal function "+ func + inname)
+    elif upos=="ADV" and func.startswith('obl') and not (set(child_funcs) & {'case','det'}):
+        print("WARN: ADV with function "+ func +" and no case or det dependent" + inname)
+
     if "acl:relcl" in child_funcs or "advcl:relcl" in child_funcs:  # relativized element
         # should (in most cases) have an enhanced dependency out of the relative clause
         if len(edeps)<=1 or not any(rel.startswith(('nsubj','csubj','obj','obl','nmod','advmod','ccomp','xcomp')) and isinstance(h,int) and h>id for (rel,h) in edeps):
