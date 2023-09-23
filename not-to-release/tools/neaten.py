@@ -540,11 +540,24 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         print("WARN: obj should not have child case" + inname + str(children))
 
     if func == "ccomp" and "mark" in child_funcs and not any([x in children for x in ["that","That","whether","if","Whether","If","wether","a"]]):
-        # allow interrogative infinitival ccomps like "know how to..." or "tell s.o. how to..."
-        if "advmod" in child_funcs and "how" in map(str.lower, children):
+        if "nsubj:outer" in child_funcs:
+            pass    # he said the reason was because...
+        # to-infinitivals can be ccomp in certain circumstances
+        elif "advmod" in child_funcs and {"how","where"} & set(map(str.lower, children)) and "to" in children:
+            pass    # "know how to..." or "tell s.o. how to..."
+        elif {"obj","obl"} & set(child_funcs) and {"what","who"} & set(map(str.lower, children)) and "to" in children:
+            pass    # what to do, who to talk to
+        elif parent_upos=="ADJ" and "to" in children:   # complement of adjective
             pass
-        elif not ((lemma == "lie" and "once" in children) or (lemma=="find" and ("see" in children or "associate" in children))):  # Exceptions
+        elif parent_lemma in {"love","leave","make","feel","find","mean","need","say"} and "to" in children:
+            # some verbs license to-infinitival ccomps (sometimes due to it-extraposition)
+            pass    # I would love to join; I leave it to you [to figure it out]; makes it impossible [to single out]; felt it necessary [to...]
+        elif "answers-20111108103354AAQzdFB_ans-0004 @ token 26" in inname:
+            pass    # sentence is missing a word
+        #elif not ((lemma == "lie" and "once" in children) or (lemma=="find" and ("see" in children or "associate" in children))):  # Exceptions
+        else:
             print("WARN: ccomp should not have child mark" + inname)
+            # TODO: should all be fixed for EWT except "answers-20111108092321AAK0Eqp_ans-0025 @ token 6" (awaiting guideline on tough-constructions)
 
     if func == "acl:relcl" and pos in ["VB"] and "to" in children and "cop" not in child_funcs and "aux" not in child_funcs:
         print("WARN: infinitive with tag " + pos + " should be acl not acl:relcl" + inname)
