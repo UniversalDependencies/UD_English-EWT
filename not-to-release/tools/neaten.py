@@ -305,7 +305,8 @@ def validate_annos(tree):
             if func!='goeswith' and featlist.get("PronType")=="Rel":
                 if (len(edeps)!=1 or edeps[0][0]!="ref"):
                     if "acl:relcl" not in child_funcs[tok_num] and "advcl:relcl" not in child_funcs[tok_num]: # not free relative
-                        print("WARN: PronType=Rel should have `ref` as its sole enhanced dependency" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                        if tok_num>1 and docname!="weblog-blogspot.com_tacitusproject_20040712123425_ENG_20040712_123425-0032":   # sentence fragment may begin with "Which"
+                            print("WARN: PronType=Rel should have `ref` as its sole enhanced dependency" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
                 elif not {"acl:relcl","advcl:relcl"} & set(child_funcs[edeps[0][1]]):
                     # the ref antecedent doesn't head the RC
                     print("WARN: `ref` antecedent lacks :relcl dependent" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
