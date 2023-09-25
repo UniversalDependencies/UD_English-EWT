@@ -467,9 +467,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         if tok not in ["losing"]:
             print("WARN: gerund compound modifier should be tagged as NN not VBG" + inname)
 
-    if pos == "VBG" and func in ["obj","nsubj","iobj","nmod","obl"]:
-        if not tok == "following" and func=="obj":  # Exception nominalized "the following"
-            print("WARN: gerund should not have noun argument structure function " + func + inname)
+    if upos=="VERB" and func.split(':')[0] in ["obj","nsubj","iobj","nmod","obl","expl"]:
+        if not (pos == "VBG" and tok == "following") and not (pos == "VBN" and tok == "attached"):  # Exception: nominalized "the following/attached"
+            print("WARN: verb should not have nominal argument structure function " + func + inname)
 
     if pos.startswith("NN") and not pos.startswith("NNP") and func=="amod":
         print("WARN: tag "+ pos + " should not be " + func + inname)
