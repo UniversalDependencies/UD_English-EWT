@@ -572,6 +572,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     elif upos=="ADV" and func.startswith('obl') and not (set(child_funcs) & {'case','det'}):
         print("WARN: ADV with function "+ func +" and no case or det dependent" + inname)
 
+    if upos == "ADV" and func.split(':')[0]=='amod':
+        print("WARN: ADV should not be amod" + inname)
+
     if "acl:relcl" in child_funcs or "advcl:relcl" in child_funcs:  # relativized element
         # should (in most cases) have an enhanced dependency out of the relative clause
         if len(edeps)<=1 or not any(rel.startswith(('nsubj','csubj','obj','obl','nmod','advmod','ccomp','xcomp')) and isinstance(h,int) and h>id for (rel,h) in edeps):
