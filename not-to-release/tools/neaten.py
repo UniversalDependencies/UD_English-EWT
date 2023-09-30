@@ -795,6 +795,17 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
             assert upos=="ADJ"
         except AssertionError:
             print("WARN: structure of 'each other' should be fixed(each/DT/DET, other/JJ/ADJ)" + inname)
+    elif prev_tok.lower() in ("kind", "sort") and lemma=="of" and func=="fixed":    # hedge usage
+        try:
+            assert prev_upos=="NOUN" and prev_pos.startswith("NN")
+            assert pos=="IN" and upos=="ADP"
+        except AssertionError:
+            print("WARN: structure of 'kind/sort of' should be fixed(kind/sort/NN*/NOUN, of/IN/ADP)" + inname)
+
+        try:
+            assert prev_func=="advmod",(prev_tok,prev_func)
+        except AssertionError:
+            print("WARN: fixed expr 'kind/sort of' should attach as advmod" + inname)
     elif prev_tok.lower()=="a" and lemma=="couple":
         try:
             assert prev_func=="det"
