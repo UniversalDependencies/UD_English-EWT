@@ -20,6 +20,7 @@ from collections import defaultdict, Counter
 import glob
 import re
 import sys
+import traceback
 import conllu
 
 NNS_warnings = Counter()
@@ -803,6 +804,31 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
                 assert "case" in child_funcs
         except AssertionError:
             print("WARN: structure of 'a couple NOUN' should be det(couple, a), nmod:npmod(NOUN, couple)" + inname)
+    elif prev_tok.lower()=="and" and lemma=="/":
+        try:
+            assert prev_pos=="CC"
+            assert prev_upos=="CCONJ"
+            assert func=="cc"
+            assert parent_lemma=="or"
+            assert pos=="SYM"
+            assert upos=="SYM"
+            assert ("cc", parent_id) in edeps,(parent_id,edeps)
+        except AssertionError as ex:
+            print("WARN: structure of 'and/or' should be conj(and/CC/CCONJ, cc(or/CC/CCONJ, '/'/SYM/SYM)) and E:cc(or, '/')" + inname)
+            traceback.print_tb(ex.__traceback__, limit=1, file=sys.stdout)
+    elif prev_tok.lower()=="/" and lemma=="or":
+        try:
+            assert prev_pos=="SYM"
+            assert prev_upos=="SYM"
+            assert func=="conj"
+            assert parent_lemma=="and"
+            assert pos=="CC"
+            assert upos=="CCONJ"
+            assert ("conj:slash", parent_id) in edeps,(parent_id,edeps)
+            assert any(rel=="cc" for (rel,h) in edeps),(parent_id,edeps)
+        except AssertionError as ex:
+            print("WARN: structure of 'and/or' should be conj(and/CC/CCONJ, cc(or/CC/CCONJ, '/'/SYM/SYM)) and E:conj(and, or) and E:cc(*, or)" + inname)
+            traceback.print_tb(ex.__traceback__, limit=1, file=sys.stdout)
 
 def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     """
