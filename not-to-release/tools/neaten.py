@@ -576,6 +576,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if upos == "ADV" and func.split(':')[0]=='amod':
         print("WARN: ADV should not be amod" + inname)
 
+    if (upos == "ADV" or pos.startswith("RB")) and lemma == "at":
+        print("WARN: at/ADV/RB is forbidden" + inname)
+
     if "acl:relcl" in child_funcs or "advcl:relcl" in child_funcs:  # relativized element
         # should (in most cases) have an enhanced dependency out of the relative clause
         if len(edeps)<=1 or not any(rel.startswith(('nsubj','csubj','obj','obl','nmod','advmod','ccomp','xcomp')) and isinstance(h,int) and h>id for (rel,h) in edeps):
@@ -772,40 +775,46 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
                     if pos2 == pos or pos2 == "*":
                         print("WARN: suspicious n-gram " + prev_tok + "/" + prev_pos+" " + tok + "/" + pos + inname)
 
+    def check_bigram_fixed(w1, w2, parent_lemma, w2func, pos1, upos1, pos2, upos2, inname, outerdeprel=None):
+        """Verify a 2-word fixed expression has the correct structure and tags"""
+
+        try:
+            assert w2func=="fixed"
+            assert w1==parent_lemma
+            match (w1,w2):
+                case ("one", "another"):
+                    assert (pos1, pos2)==("CD", "DT") and (upos1, upos2)==("PRON", "DET")
+                case ("each", "other"):
+                    assert (pos1, pos2)==("DT", "JJ") and (upos1, upos2)==("DET", "ADJ")
+                case ("kind", "of"):
+                    assert (pos1, pos2)==("NN", "IN") and (upos1, upos2)==("NOUN", "ADP")
+                case ("sort", "of"):
+                    assert (pos1, pos2)==("NN", "IN") and (upos1, upos2)==("NOUN", "ADP")
+                case ("at", "least"):
+                    assert (pos1, pos2)==("IN", "JJS") and (upos1, upos2)==("ADP", "ADJ")
+                case _:
+                    assert False,(w1,w2)
+        except AssertionError:
+            print("WARN: structure of '{w1} {w2}' should be fixed({w1}/{pos1}/{upos2}, {w2}/{pos2}/{upos2})" + inname)
+
+        try:
+            if (w1,w2) in {("kind", "of"), ("sort", "of"), ("at", "least")}:
+                assert outerdeprel=="advmod"
+        except AssertionError:
+            print("WARN: fixed expr '{w1} {w2}' should attach as advmod not {outerdeprel}" + inname)
+
+
     # UPOS bigrams
     if prev_tok.lower()=="no" and lemma=="one" and upos!="PRON":
         print("WARN: UPOS should be one/PRON in 'no one': " + upos + inname)
     elif prev_tok.lower()=="one" and lemma=="another":
-        try:
-            assert func=="fixed"
-            assert parent_lemma=="one"
-            assert parent_pos==prev_pos=="CD"
-            assert prev_upos=="PRON"
-            assert pos=="DT"
-            assert upos=="DET"
-        except AssertionError:
-            print("WARN: structure of 'one another' should be fixed(one/CD/PRON, another/DT/DET)" + inname)
+        check_bigram_fixed("one", "another", parent_lemma, func, prev_pos, prev_upos, pos, upos, inname)
     elif prev_tok.lower()=="each" and lemma=="other":
-        try:
-            assert func=="fixed"
-            assert parent_lemma=="each"
-            assert parent_pos==prev_pos=="DT"
-            assert prev_upos=="DET"
-            assert pos=="JJ"
-            assert upos=="ADJ"
-        except AssertionError:
-            print("WARN: structure of 'each other' should be fixed(each/DT/DET, other/JJ/ADJ)" + inname)
+        check_bigram_fixed("each", "other", parent_lemma, func, prev_pos, prev_upos, pos, upos, inname)
     elif prev_tok.lower() in ("kind", "sort") and lemma=="of" and func=="fixed":    # hedge usage
-        try:
-            assert prev_upos=="NOUN" and prev_pos.startswith("NN")
-            assert pos=="IN" and upos=="ADP"
-        except AssertionError:
-            print("WARN: structure of 'kind/sort of' should be fixed(kind/sort/NN*/NOUN, of/IN/ADP)" + inname)
-
-        try:
-            assert prev_func=="advmod",(prev_tok,prev_func)
-        except AssertionError:
-            print("WARN: fixed expr 'kind/sort of' should attach as advmod" + inname)
+        check_bigram_fixed(prev_tok.lower(), "of", parent_lemma, func, prev_pos, prev_upos, pos, upos, inname, prev_func)
+    elif prev_tok.lower()=="at" and lemma=="least" and func=="fixed":    # non-quantity usage
+        check_bigram_fixed("at", "least", parent_lemma, func, prev_pos, prev_upos, pos, upos, inname, prev_func)
     elif prev_tok.lower()=="a" and lemma=="couple":
         try:
             assert prev_func=="det"
