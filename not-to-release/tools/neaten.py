@@ -348,7 +348,8 @@ def validate_annos(tree):
             dependents = {j: funcs[j] for j,i in parent_ids.items() if i==v}
             aux_dependents = sorted([(j,f) for j,f in dependents.items() if f.startswith('aux')])
             if aux_dependents and (not all(f=='aux' for j,f in aux_dependents[:-1]) or aux_dependents[-1][1]!='aux:pass'):
-                print("WARN: Passive verb with lemma '" + lemmas[v] + "' has suspicious aux(:pass) dependents (only the last should be aux:pass) in " + docname)
+                if docname!="answers-20111106035951AADq0Qg_ans-0012":    # sentence has missing 'be' aux:pass
+                    print("WARN: Passive verb with lemma '" + lemmas[v] + "' has suspicious aux(:pass) dependents (only the last should be aux:pass) in " + docname)
             subj_dependents = {f for f in dependents.values() if 'subj' in f}
             if not subj_dependents < {'nsubj:pass','csubj:pass','nsubj:outer','csubj:outer'}:
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has subject dependents " + repr(sorted(subj_dependents)).replace('[','{').replace(']','}') + " in " + docname)
@@ -385,8 +386,8 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         if tok not in ["mia"]:
             print("WARN: forward-pointing func " + func + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
 
-    if func == "auxpass" and lemma != "be" and lemma != "get":
-        print("WARN: auxpass must be 'be' or 'get'" + inname)
+    if func == "aux:pass" and lemma != "be" and lemma != "get":
+        print("WARN: aux:pass must be 'be' or 'get'" + inname)
 
     if lemma == "'s" and pos != "POS":
         print("WARN: possessive 's must be tagged POS" + inname)
@@ -475,9 +476,16 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if pos.startswith("NN") and not pos.startswith("NNP") and func=="amod":
         print("WARN: tag "+ pos + " should not be " + func + inname)
 
-    be_funcs = ["cop", "aux", "root", "csubj", "auxpass", "rcmod", "ccomp", "advcl", "conj","xcomp","parataxis","vmod","pcomp"]
+    be_funcs = ["root", "cop", "aux", "aux:pass", "csubj", "ccomp", "xcomp",    # TODO: if Promoted=Yes is implemented, some of these funcs should check for it
+                "acl", "acl:relcl", "advcl", "advcl:relcl", "conj", "parataxis", "reparandum"]
     if lemma == "be" and func not in be_funcs:
-        if not parent_lemma == "that" and func == "fixed":  # Exception for 'that is' as mwe
+        if parent_lemma == "that" and func == "fixed":  # Exception for 'that is' as mwe
+            pass
+        elif parent_lemma == "all" and func == "compound":  # Exception for 'be all, end all'
+            pass
+        elif func == "appos" and parent_func == "root": # Exception for key-value pair appos
+            pass
+        else:
             print("WARN: invalid dependency of lemma 'be' > " + func + inname)
 
     if parent_lemma in ["tell","show","give","pay","teach","owe","text","write"] and \
