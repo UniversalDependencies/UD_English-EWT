@@ -196,7 +196,7 @@ def validate_annos(tree):
             "AUX":["MD","VB","VBD","VBG","VBN","VBP","VBZ"],
             "CCONJ":["CC"],
             "DET":["DT","PDT","WDT","NNP"],
-            "INTJ":["UH","JJ","NN"],
+            "INTJ":["UH","JJ","NN","FW"],
             "NOUN":["NN","NNS"],
             "NUM":["CD","LS","NNP"],
             "PART":["POS","RB","TO"],
@@ -378,6 +378,38 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
 
     if func in ["amod", "det"] and parent_lemma == "one" and parent_pos == "CD":
         print("WARN: 'one' with " + func + " dependent should be NN/NOUN not CD/NUM in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+
+    if func == "amod" and parent_upos not in ["NOUN", "PRON", "PROPN", "NUM", "SYM", "ADJ"] and parent_pos != "ADD":    # see issue #438
+        if parent_upos == "ADV" and parent_lemma in ["somewhere","anywhere","someplace","somehow","sometime"]:
+            pass    # postpositive amod e.g. "somewhere rural"
+        elif parent_upos == "DET" and parent_lemma in ["all","both"]:
+            pass    # postpositive amod e.g. "all due tomorrow"
+        elif parent_upos == "VERB" and parent_pos in ["VBN","VBG"] and parent_lemma in ["bear","train","range","look"]:
+            pass    # compounds - for now special-case things like "French-born" and "wide-ranging"
+        else:
+            print("WARN: " + parent_upos + " shouldn't have amod dependent in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+
+    if func.split(':')[0] == "acl" and parent_upos not in ["NOUN", "PRON", "PROPN", "NUM", "SYM"]:  # see issue #439 for plain acl
+        if func == "acl" and parent_lemma in ["much", "more", "enough"]:
+            pass    # e.g. "much to do"
+        elif func == "acl:relcl" and parent_upos == "ADJ":
+            pass    # coerced to nominal, e.g. "the least we can do"
+        elif func == "acl:relcl" and parent_upos == "DET" and (parent_lemma in ["all", "some", "any"]) or parent.lower()=="those":
+            pass    # e.g. "those who like cheese"
+        elif docname == "newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0001":
+            pass    # special case: "What We've Lost/VERB", published/acl by Little Brown
+        elif docname == "reviews-093655-0007":
+            pass    # special case: "the last/ADJ to get/acl my food"
+        else:
+            print("WARN: " + parent_upos + " shouldn't have " + func + " dependent in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+
+    if func == "appos" and parent_upos not in ["NOUN", "PRON", "PROPN", "NUM", "SYM", "ADJ", "DET"] and parent_pos != "ADD":    # see issue #437 for VERB heads
+        if parent_func == "root":
+            pass    # Exception: key-value appos
+        elif parent_upos == "ADV" and parent_lemma == "here":
+            pass    # "here (California)"
+        else:
+            print("WARN: " + parent_upos + " shouldn't have appos dependent in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
 
     if func in ['fixed','goeswith','flat', 'conj'] and id < parent_id:
         print("WARN: back-pointing func " + func + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
