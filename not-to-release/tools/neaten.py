@@ -966,11 +966,45 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     if upos == "PROPN" and ((pos == "NNPS") != (number == "Plur")):
         print("WARN: PROPN+NNPS should correspond with Number=Plur in " + docname + " @ token " + str(id))
 
-    # VBD => Tense=Past | VerbForm=Fin
+    # VB feats (subjunctive, imperative, or infinitive)
+    if pos == "VB" and "VerbForm" not in feats:
+        print("WARN: VB should have VerbForm in " + docname + " @ token " + str(id))
+    elif pos == "VB" and feats["VerbForm"] == "Fin" and feats["Mood"] == "Sub":
+        if not all(f in feats for f in ["Number","Person","Tense"]) or feats["Tense"] != "Pres":
+            print("WARN: VB/Mood=Sub should have Number, Person, and Tense=Pres in " + docname + " @ token " + str(id))
+    elif pos == "VB" and any(f in feats for f in ["Number","Person","Tense"]):
+        print("WARN: non-subjunctive VB should not have Number, Person, or Tense in " + docname + " @ token " + str(id))
+    elif pos == "VB" and feats["VerbForm"] == "Inf":
+        if "Mood" in feats:
+            print("WARN: VB/VerbForm=Inf should not have Mood in " + docname + " @ token " + str(id))
+    elif pos == "VB" and not (feats["VerbForm"] == "Fin" and feats["Mood"] == "Imp"):
+        print("WARN: non-inf VB should correspond with Mood=Imp, VerbForm=Fin in " + docname + " @ token " + str(id))
+    elif pos == "VB" and any(f in feats for f in ["Voice"]):
+        print("WARN: VB should not have Voice in " + docname + " @ token " + str(id))
+
+    # VBD => Tense=Past, VerbForm=Fin, Mood=Ind, ...
     if pos == "VBD" and not ("VerbForm" in feats and feats["VerbForm"] == "Fin"):
         print("WARN: VBD should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
-    if pos == "VBD" and not ("Tense" in feats and feats["Tense"] == "Past"):
-        print("WARN: VBD should correspond with Tense=Past in " + docname + " @ token " + str(id))
+    if pos == "VBD" and not all(f in feats for f in ["Number","Person","Tense","Mood"]):
+        print("WARN: VBD should have Number, Person, Tense, and Mood in " + docname + " @ token " + str(id))
+    elif pos == "VBD" and (feats["Tense"] != "Past" or feats["Mood"] != "Ind"):
+        print("WARN: VBD should correspond with Mood=Ind, Tense=Past in " + docname + " @ token " + str(id))
+    if pos == "VBD" and any(f in feats for f in ["Voice"]):
+        print("WARN: VBD should not have Voice in " + docname + " @ token " + str(id))
+
+    # {VBP,VBZ} => Tense=Pres, VerbForm=Fin, Mood=Ind, ...
+    # VBZ => Person=3, Number=Sing
+    if pos in ("VBP","VBZ") and not ("VerbForm" in feats and feats["VerbForm"] == "Fin"):
+        print("WARN: " + pos + " should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
+    if pos in ("VBP","VBZ") and not all(f in feats for f in ["Number","Person","Tense","Mood"]):
+        print("WARN: " + pos + " should have Number, Person, Tense, and Mood in " + docname + " @ token " + str(id))
+    elif pos in ("VBP","VBZ") and (feats["Tense"] != "Pres" or feats["Mood"] != "Ind"):
+        print("WARN: " + pos + " should correspond with Mood=Ind, Tense=Past in " + docname + " @ token " + str(id))
+    elif pos == "VBZ" and (feats["Number"] != "Sing" or feats["Person"] != "3"):
+        print("WARN: VBZ should have Number=Sing, Person=3 in " + docname + " @ token " + str(id))
+    if pos in ("VBP","VBZ") and any(f in feats for f in ["Voice"]):
+        print("WARN: " + pos + " should not have Voice in " + docname + " @ token " + str(id))
+
 
     # VBG => VerbForm=Ger,Part
     if pos == "VBG" and verbForm == "Part":
