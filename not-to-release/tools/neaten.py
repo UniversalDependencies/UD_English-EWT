@@ -283,13 +283,14 @@ def validate_annos(tree):
                 if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
                     # check for PronType=Rcp
                     flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, misclist, prev_tok, docname)
-                elif upos == "PRON":
+                elif upos == "PRON" or (upos == "DET" and featlist.get("ExtPos")!="PRON"):  # ExtPos exception for "each other"
                     # Pass FORM to detect abbreviations, etc.
                     flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, misclist, prev_tok, docname)
                 elif lemma in PRON_LEMMAS:
                     if not ((lemma=="one" and upos in ("NOUN","NUM"))
                             or (lemma=="I" and upos=="NUM") # Roman numeral
-                            or (lemma=="he" and upos=="INTJ")): # laughter
+                            or (lemma=="he" and upos=="INTJ") # laughter
+                            or upos=="DET"):
                         print("WARN: invalid pronoun UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
                         # This warns about a few that are arguably correct, e.g. "oh my/INTJ", "I/PROPN - 24"
 
@@ -378,6 +379,11 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
 
     if func in ["amod", "det"] and parent_lemma == "one" and parent_pos == "CD":
         print("WARN: 'one' with " + func + " dependent should be NN/NOUN not CD/NUM in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+
+    if func in ["det", "det:predet"] and lemma in ["this", "that"] and not (pos == "DT" and upos == "DET"):
+        print("WARN: '" + tok + "' attaching as " + func + " should be DT/DET not " + pos + "/" + upos + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+    elif func not in ["det", "det:predet"] and lemma in ["this", "that"] and pos not in ["IN", "RB", "WDT"] and not (pos == "DT" and upos == "PRON"):
+        print("WARN: '" + tok + "' attaching as " + func + " should be DT/PRON not " + pos + "/" + upos + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
 
     if func == "amod" and parent_upos not in ["NOUN", "PRON", "PROPN", "NUM", "SYM", "ADJ"] and parent_pos != "ADD":    # see issue #438
         if parent_upos == "ADV" and parent_lemma in ["somewhere","anywhere","someplace","somehow","sometime"]:
@@ -1107,12 +1113,51 @@ for b in ("body","one","thing"):
             l = "no-one"
         PRONOUNS[(l, "NN")] = {"Number":"Sing", "LEMMA": l, "PronType": t}
 
-PRON_LEMMAS = {v["LEMMA"] for k,v in PRONOUNS.items()}
+PRON_LEMMAS = {v["LEMMA"] for k,v in PRONOUNS.items()} # pronouns only, no DETs
 
 # 2-word reciprocals (fixed; store XPOS/feats of first word but lemma of second word)
 PRONOUNS[("each other", "DT")] = {"LEMMA":"other", "PronType":"Rcp", "ExtPos":"PRON"}   # ExtPos since the technical head is DET
 PRONOUNS[("one another", "CD")] = {"LEMMA":"another", "PronType":"Rcp"}
 # (we don't want to store "each" as a PRON lemma)
+
+DETS = {
+  # articles
+  ("a", "DT"):{"Definite":"Ind","PronType":"Art","LEMMA":"a"},
+  ("an", "DT"):{"Definite":"Ind","PronType":"Art","LEMMA":"a"},
+  ("the", "DT"):{"Definite":"Def","PronType":"Art","LEMMA":"the"},
+  # demonstratives. Note: tagged PRON if not acting as det, but script will check either way
+  ("this", "DT"):{"Number":"Sing","PronType":"Dem","LEMMA":"this"},
+  ("that", "DT"):{"Number":"Sing","PronType":"Dem","LEMMA":"that"},
+  ("these", "DT"):{"Number":"Plur","PronType":"Dem","LEMMA":"this"},
+  ("those", "DT"):{"Number":"Plur","PronType":"Dem","LEMMA":"that"},
+  ("yonder", "DT"):{"PronType":"Dem","LEMMA":"yonder"},
+  # total
+  ("all", "DT"):{"PronType":"Tot","LEMMA":"all"},
+  ("all", "PDT"):{"PronType":"Tot","LEMMA":"all"},
+  ("both", "DT"):{"PronType":"Tot","LEMMA":"both"},
+  ("both", "PDT"):{"PronType":"Tot","LEMMA":"both"},
+  ("each", "DT"):{"PronType":["Tot","Rcp"],"LEMMA":"each"},
+  ("every", "DT"):{"PronType":"Tot","LEMMA":"every"},
+  # indefinite
+  ("half", "PDT"):{"NumForm":"Word","NumType":"Frac","PronType":"Ind","LEMMA":"half"},
+  ("no", "DT"):{"PronType":"Neg","LEMMA":"no"},
+  ("neither", "DT"):{"PronType":"Neg","LEMMA":"neither"},
+  ("nary", "PDT"):{"PronType":"Neg","LEMMA":"nary"},
+  ("any", "DT"):{"PronType":"Ind","LEMMA":"any"},
+  ("some", "DT"):{"PronType":"Ind","LEMMA":"some"},
+  ("another", "DT"):{"PronType":"Ind","LEMMA":"another"},
+  ("either", "DT"):{"PronType":"Ind","LEMMA":"either"},
+  ("such", "PDT"):{"PronType":"Ind","LEMMA":"such"},
+  ("quite", "PDT"):{"PronType":"Ind","LEMMA":"quite"},
+  ("many", "PDT"):{"PronType":"Ind","LEMMA":"many"},
+  # WH (interrogative or relative)
+  ("that", "WDT"):{"PronType":"Rel","LEMMA":"that"},
+  ("which", "WDT"):{"PronType":["Int","Rel"],"LEMMA":"which"},
+  ("what", "WDT"):{"PronType":["Int","Rel"],"LEMMA":"what"},
+  ("whatever", "WDT"):{"PronType":["Int","Rel"],"LEMMA":"whatever"}
+}
+
+
 
 # See https://universaldependencies.org/en/pos/PRON.html
 def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, docname):
@@ -1126,7 +1171,8 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, doc
     data_key = (form.lower(), pos)
     if (prev_tok.lower(),form.lower()) in {("no","one"), ("one","another"), ("each","other")}:  # special case for bigrams
         data_key = (prev_tok.lower() + " " + form.lower(), pos)
-    data = PRONOUNS[data_key] if data_key in PRONOUNS else None
+
+    data = PRONOUNS.get(data_key, DETS.get(data_key))
 
     if data == None:
         if pos in ["PRP","PRP$"]:
@@ -1140,6 +1186,7 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, doc
     # the observed features on the token (feats)
     check_has_feature("Abbr", feats, data, tokname, inname)
     check_has_feature("Case", feats, data, tokname, inname)
+    check_has_feature("Definite", feats, data, tokname, inname)
     check_has_feature("Gender", feats, data, tokname, inname)
     check_has_feature("Number", feats, data, tokname, inname)
     check_has_feature("Person", feats, data, tokname, inname)
