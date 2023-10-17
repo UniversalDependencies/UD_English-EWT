@@ -382,6 +382,8 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
 
     if func in ["det", "det:predet"] and lemma in ["this", "that"] and not (pos == "DT" and upos == "DET"):
         print("WARN: '" + tok + "' attaching as " + func + " should be DT/DET not " + pos + "/" + upos + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+    elif func not in ["det", "det:predet"] and lemma in ["that", "which"] and pos == "WDT" and upos != "PRON":
+        print("WARN: '" + tok + "' attaching as " + func + " should be WDT/PRON not " + pos + "/" + upos + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
     elif func not in ["det", "det:predet"] and lemma in ["this", "that"] and pos not in ["IN", "RB", "WDT"] and not (pos == "DT" and upos == "PRON"):
         print("WARN: '" + tok + "' attaching as " + func + " should be DT/PRON not " + pos + "/" + upos + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
 
@@ -1151,8 +1153,8 @@ DETS = {
   ("quite", "PDT"):{"PronType":"Ind","LEMMA":"quite"},
   ("many", "PDT"):{"PronType":"Ind","LEMMA":"many"},
   # WH (interrogative or relative)
-  ("that", "WDT"):{"PronType":"Rel","LEMMA":"that"},
-  ("which", "WDT"):{"PronType":["Int","Rel"],"LEMMA":"which"},
+  ("that", "WDT"):{"PronType":"Rel","LEMMA":"that"},    # actually PRON
+  ("which", "WDT"):{"PronType":["Int","Rel"],"LEMMA":"which"},  # DET or PRON
   ("what", "WDT"):{"PronType":["Int","Rel"],"LEMMA":"what"},
   ("whatever", "WDT"):{"PronType":["Int","Rel"],"LEMMA":"whatever"}
 }
