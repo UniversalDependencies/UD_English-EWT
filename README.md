@@ -266,7 +266,7 @@ Genre: blog social reviews email web
 Lemmas: automatic with corrections
 UPOS: converted with corrections
 XPOS: manual native
-Features: automatic
+Features: converted with corrections
 Relations: manual native
 Contributors: Silveira, Natalia; Dozat, Timothy; Manning, Christopher; Schuster, Sebastian; Chi, Ethan; Bauer, John; Connor, Miriam; de Marneffe, Marie-Catherine; Schneider, Nathan; Bowman, Sam; Zhu, Hanzhi; Galbraith, Daniel; Bauer, John
 Contributing: here source
