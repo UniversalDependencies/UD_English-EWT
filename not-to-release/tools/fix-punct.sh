@@ -14,8 +14,11 @@ done
 #   │   │ ╰─╼ ) X flat
 #   │   ╰─╼ .doc X flat
 
+# Rarely, there are complex sentences where ud.FixPunct needs to be applied twice.
+
 udapy \
   read.Conllu files='!*.conllu !not-to-release/sources/*/*.conllu' \
+  ud.FixPunct check_paired_punct_upos=1 \
   ud.FixPunct check_paired_punct_upos=1 \
   write.Conllu overwrite=1
 
