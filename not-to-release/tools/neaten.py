@@ -667,8 +667,8 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         if not (("stardust" in docname and parent_lemma == "would") or parent_lemma == "Rated"):
             print("WARN: function " + func + " should not be the child of pos " + parent_pos + inname)
 
-    if func == "obl:agent" and (parent_pos not in ["VBN"] or "by" not in children):
-        print("WARN: function " + func +  " must by child of V.N with a 'by' dependent" + parent_pos + inname)
+    if func == "obl:agent" and (parent_pos not in ["VBN"] or "by" not in map(str.lower, children)):
+        print("WARN: function " + func +  " must be child of VBN with a 'by' dependent" + parent_pos + inname)
 
     if child_funcs.count("obl:agent") > 1:
         print("WARN: a token may have at most one obl:agent dependent" + inname)
