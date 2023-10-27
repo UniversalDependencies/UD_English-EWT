@@ -18,8 +18,8 @@ done
 
 udapy \
   read.Conllu files='!*.conllu !not-to-release/sources/*/*.conllu' \
-  ud.FixPunct check_paired_punct_upos=1 \
-  ud.FixPunct check_paired_punct_upos=1 \
+  ud.FixPunct check_paired_punct_upos=1 copy_to_enhanced=1 \
+  ud.FixPunct check_paired_punct_upos=1 copy_to_enhanced=1 \
   write.Conllu overwrite=1
 
 for f in *.conllu; do
