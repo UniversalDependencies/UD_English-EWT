@@ -136,12 +136,12 @@ Highlights:
   - Fixed directionality of some `goeswith` dependencies
 
 **2019-11-15 v2.5**
-  - Fixed miscellaneous syntactic issues  
+  - Fixed miscellaneous syntactic issues
   - Fixed CoNLL-U syntax error
 
 **2019-05-15 v2.4**
   - Fixed some wrong lemmata and POS tags
-  - Fixed miscellaneous syntactic issues  
+  - Fixed miscellaneous syntactic issues
   - Fixed some punctuation attachments
   - Fixed malformed enhanced graphs
 
