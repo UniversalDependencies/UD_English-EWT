@@ -337,9 +337,9 @@ def validate_annos(tree):
         Additionally,
             - if there is an obl:agent (by-phrase), it must be a "by"-PP attaching to a passive verb
               (with Voice=Pass)
-            - (No other tokens should have Voice=Pass for now. But plausibly VBNs attaching as amod or acl could be passive)
-
-        TODO: additionally, VBN, no aux, not amod -> Voice=Pass?
+            - if a VBN has no *:pass, obl:agent, aux, or cop dependents, it should be Voice=Pass
+        
+        Discussion: https://github.com/UniversalDependencies/UD_English-EWT/issues/290
         """
         for v in passive_verbs:
             if feats[v].get("Voice") != "Pass":
@@ -356,16 +356,36 @@ def validate_annos(tree):
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has subject dependents " + repr(sorted(subj_dependents)).replace('[','{').replace(']','}') + " in " + docname)
             if 'cop' in dependents.values():
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has cop dependent in " + docname)
-        for i in feats:
-            if feats[i] and "Voice" in feats[i] and i not in passive_verbs and funcs[i] != "conj":
-                print("WARN: Unexpected feature Voice=" + feats[i]["Voice"] + " with token of lemma '" + lemmas[i] + "' and no :pass dependents in " + docname)
+        # for i in feats:
+        #     if feats[i] and "Voice" in feats[i] and i not in passive_verbs and funcs[i] != "conj":
+        #         print("WARN: Unexpected feature Voice=" + feats[i]["Voice"] + " with token of lemma '" + lemmas[i] + "' and no :pass dependents in " + docname)
         for i,f in funcs.items():
             if f=='obl:agent':
                 if (feats[parent_ids[i]] or {}).get("Voice") != "Pass":
                     print("WARN: Voice=Pass missing from verb that heads obl:agent (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ") in " + docname)
                 if not any(k==i and lemmas[j]=='by' and funcs[j]=='case' for j,k in parent_ids.items()):
                     print("WARN: obl:agent without 'by' (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ") in " + docname)
-
+        # If a VBN has no *:pass, obl:agent, aux, or cop dependents, it should be Voice=Pass
+        for v,p in postags.items():
+            if p=='VBN':
+                isVoicePass = (feats[v] or {}).get("Voice") == "Pass"
+                if funcs[v] in ['aux', 'aux:pass', 'cop']:
+                    if isVoicePass:
+                        print("WARN: Voice=Pass prohibited on verbs functioning as auxiliaries in " + docname)
+                else:
+                    dependents = {j: funcs[j] for j,i in parent_ids.items() if i==v}
+                    pass_marking_dependents = {f for f in dependents.values() if ':pass' in f or f=='obl:agent'}
+                    other_dependents = {f for f in dependents.values() if f=='aux'}
+                    
+                    if not isVoicePass and not pass_marking_dependents and not other_dependents:
+                        if (funcs[v]=='conj' and postags[parent_ids[v]]=='VBN'):    # "have" can scope over coordination
+                            pass
+                        elif lemmas[v]=='get':  # "I (have) got to leave"
+                            pass
+                        else:
+                            print("WARN: Voice=Pass missing from VBN verb with no aux dependent in " + docname)
+                    elif isVoicePass and not pass_marking_dependents and other_dependents:
+                        print("WARN: VBN with aux but no aux:pass dependent incompatible with Voice=Pass in " + docname)
 
 def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular,
                       children, child_funcs, s_type,
