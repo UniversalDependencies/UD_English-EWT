@@ -203,7 +203,7 @@ def validate_annos(tree):
             "PRON":["PRP","PRP$","WP","WP$","DT","WDT","EX","NN"],
             "PROPN":["NNP","NNPS"],
             "PUNCT":[".",",",":","``","''","-LCB-","-RCB-","-LRB-","-RRB-","-LSB-","-RSB-","NFP","HYPH","SYM"],
-            "SCONJ":["IN","VBN","VBG"],
+            "SCONJ":["IN"],
             "SYM":["$",",","SYM","NFP","NN","NNS","IN","HYPH"],
             "VERB":["VB","VBD","VBG","VBN","VBP","VBZ","NNP"],
             "X":["ADD","GW","FW","AFX","NN","NNP","VB","RB","JJ","WP","LS","IN","PRP","WRB","MD","-LRB-","-RRB-"]
@@ -511,6 +511,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         # "'we're *losing* $X - fix it' levels of pressure
         if tok not in ["losing"]:
             print("WARN: gerund compound modifier should be tagged as NN not VBG" + inname)
+
+    if pos == "VBZ" and lemma == "be" and func in ["aux", "aux:pass"] and parent_lemma == "get" and parent_pos == "VBN":
+        print("WARN: \"'s got\" clitic lemma should be \"have\" not \"be\"? " + inname)
 
     if upos=="VERB" and func.split(':')[0] in ["obj","nsubj","iobj","nmod","obl","expl"]:
         if not (pos == "VBG" and tok == "following") and not (pos == "VBN" and tok == "attached"):  # Exception: nominalized "the following/attached"
