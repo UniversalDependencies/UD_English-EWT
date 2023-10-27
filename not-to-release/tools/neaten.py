@@ -474,8 +474,11 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         print("WARN: pos " + pos + " should not normally have function " + func + inname)
 
     if pos != "CC" and func in ["cc","cc:preconj"]:
-        if lemma not in ["/","rather","as","et","+","let","only","-"]:
+        if func == "cc:preconj" or lemma not in ["/","rather","as","et","+","let","-"]:
             print("WARN: function " + func + " should normally have pos CC, not " + pos + inname)
+
+    if func == "cc:preconj" and lemma not in ["both", "either", "neither"]:
+        print("WARN: cc:preconj should be restricted to both/either/neither, not " + pos + inname)
 
     if pos == "VBG" and "very" in children:
         print("WARN: pos " + pos + " should not normally have child 'very'" + inname)
