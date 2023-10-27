@@ -356,16 +356,13 @@ def validate_annos(tree):
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has subject dependents " + repr(sorted(subj_dependents)).replace('[','{').replace(']','}') + " in " + docname)
             if 'cop' in dependents.values():
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has cop dependent in " + docname)
-        # for i in feats:
-        #     if feats[i] and "Voice" in feats[i] and i not in passive_verbs and funcs[i] != "conj":
-        #         print("WARN: Unexpected feature Voice=" + feats[i]["Voice"] + " with token of lemma '" + lemmas[i] + "' and no :pass dependents in " + docname)
         for i,f in funcs.items():
             if f=='obl:agent':
                 if (feats[parent_ids[i]] or {}).get("Voice") != "Pass":
                     print("WARN: Voice=Pass missing from verb that heads obl:agent (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ") in " + docname)
                 if not any(k==i and lemmas[j]=='by' and funcs[j]=='case' for j,k in parent_ids.items()):
                     print("WARN: obl:agent without 'by' (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ") in " + docname)
-        # If a VBN has no *:pass, obl:agent, aux, or cop dependents, it should be Voice=Pass
+        # If a VBN has no *:pass, obl:agent, or aux dependents, it should be Voice=Pass
         for v,p in postags.items():
             if p=='VBN':
                 isVoicePass = (feats[v] or {}).get("Voice") == "Pass"
