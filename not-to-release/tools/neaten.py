@@ -371,6 +371,8 @@ def validate_annos(tree):
                 if funcs[v] in ['aux', 'aux:pass', 'cop']:
                     if isVoicePass:
                         print("WARN: Voice=Pass prohibited on verbs functioning as auxiliaries in " + docname)
+                elif lemmas[v]=='suppose' and not isVoicePass:  # (be) supposed (to)
+                    print("WARN: 'supposed (to)' missing Voice=Pass? " + docname)
                 else:
                     dependents = {j: funcs[j] for j,i in parent_ids.items() if i==v}
                     pass_marking_dependents = {f for f in dependents.values() if ':pass' in f or f=='obl:agent'}
