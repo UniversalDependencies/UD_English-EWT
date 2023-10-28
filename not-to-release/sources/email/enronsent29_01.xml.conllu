@@ -4,7 +4,7 @@
 # text = "McGilloway, Vangie" <Vangie.McGilloway@powersrc.com>
 1	"	"	PUNCT	``	_	2	punct	2:punct	SpaceAfter=No
 2	McGilloway	McGilloway	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
-3	,	,	PUNCT	,	_	4	punct	4:punct	_
+3	,	,	PUNCT	,	_	4	punct	2:punct	_
 4	Vangie	Vangie	PROPN	NNP	Number=Sing	2	flat	2:flat	SpaceAfter=No
 5	"	"	PUNCT	''	_	2	punct	2:punct	_
 6	<	<	PUNCT	-LRB-	_	7	punct	7:punct	SpaceAfter=No
@@ -71,7 +71,7 @@
 # text = In addition, I received feedback from our Gas Desk that the access to the Gas segment of Enron On-Line was cut off to CPS --- do you know who would handle this at Enron that we can speak to?
 1	In	in	ADP	IN	_	2	case	2:case	_
 2	addition	addition	NOUN	NN	Number=Sing	5	obl	5:obl:in	SpaceAfter=No
-3	,	,	PUNCT	,	_	2	punct	2:punct	_
+3	,	,	PUNCT	,	_	2	punct	5:punct	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 5	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	feedback	feedback	NOUN	NN	Number=Sing	5	obj	5:obj	_
@@ -89,14 +89,14 @@
 18	of	of	ADP	IN	_	19	case	19:case	_
 19	Enron	Enron	PROPN	NNP	Number=Sing	17	nmod	17:nmod:of	_
 20	On	on	ADP	IN	_	22	case	22:case	SpaceAfter=No
-21	-	-	PUNCT	HYPH	_	20	punct	20:punct	SpaceAfter=No
+21	-	-	PUNCT	HYPH	_	20	punct	22:punct	SpaceAfter=No
 22	Line	Line	PROPN	NNP	Number=Sing	19	nmod	19:nmod:on	_
 23	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	24	aux:pass	24:aux:pass	_
 24	cut	cut	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	parataxis	5:parataxis	_
 25	off	off	ADP	RP	_	24	compound:prt	24:compound:prt	_
 26	to	to	ADP	IN	_	27	case	27:case	_
 27	CPS	cps	NOUN	NN	Number=Sing	24	obl	24:obl:to	_
-28	---	---	PUNCT	,	_	31	punct	31:punct	_
+28	---	---	PUNCT	,	_	31	punct	5:punct	_
 29	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	31	aux	31:aux	_
 30	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	31	nsubj	31:nsubj	_
 31	know	know	VERB	VB	VerbForm=Inf	5	parataxis	5:parataxis	_
@@ -151,7 +151,7 @@
 3	Constellation	Constellation	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 4	Power	Power	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 5	Source	Source	PROPN	NNP	Number=Sing	7	compound	7:compound	SpaceAfter=No
-6	,	,	PUNCT	,	_	5	punct	5:punct	_
+6	,	,	PUNCT	,	_	5	punct	7:punct	_
 7	Inc.	Inc.	PROPN	NNP	Number=Sing	2	list	2:list	_
 8	(	(	PUNCT	-LRB-	_	10	punct	10:punct	SpaceAfter=No
 9	"	"	PUNCT	``	_	10	punct	10:punct	SpaceAfter=No
@@ -164,7 +164,7 @@
 16	Ste	ste	NOUN	NN	Number=Sing	2	list	2:list	_
 17	500	500	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	_
 18	Baltimore	Baltimore	PROPN	NNP	Number=Sing	16	appos	16:appos	SpaceAfter=No
-19	,	,	PUNCT	,	_	20	punct	20:punct	SpaceAfter=No
+19	,	,	PUNCT	,	_	20	punct	18:punct	SpaceAfter=No
 20	MD	MD	PROPN	NNP	Number=Sing	18	appos	18:appos	_
 21	21202	21202	NUM	CD	NumForm=Digit|NumType=Card	16	appos	16:appos	_
 22	Phone	phone	NOUN	NN	Number=Sing	2	list	2:list	_
@@ -177,7 +177,7 @@
 # sent_id = email-enronsent29_01-0011
 # text = PS- Were you having phone system problems this morning?
 1	PS	ps	NOUN	NN	Number=Sing	5	discourse	5:discourse	SpaceAfter=No
-2	-	-	PUNCT	,	_	1	punct	1:punct	_
+2	-	-	PUNCT	,	_	1	punct	5:punct	_
 3	Were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
 5	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
@@ -205,9 +205,9 @@
 13	into	into	ADP	IN	_	15	case	15:case	_
 14	voice	voice	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	mail	mail	NOUN	NN	Number=Sing	12	obl	12:obl:into	_
-16	(	(	PUNCT	-LRB-	_	17	punct	17:punct	SpaceAfter=No
+16	(	(	PUNCT	-LRB-	_	17	punct	5:punct	SpaceAfter=No
 17	?	?	PUNCT	.	_	5	punct	5:punct	SpaceAfter=No
-18	)	)	PUNCT	-RRB-	_	17	punct	17:punct	SpaceAfter=No
+18	)	)	PUNCT	-RRB-	_	17	punct	5:punct	SpaceAfter=No
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = email-enronsent29_01-0013
@@ -216,7 +216,7 @@
 2	to	to	ADP	IN	_	4	case	4:case	_
 3	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	conversation	conversation	NOUN	NN	Number=Sing	1	obl	1:obl:to	SpaceAfter=No
-5	,	,	PUNCT	,	_	1	punct	1:punct	_
+5	,	,	PUNCT	,	_	1	punct	7:punct	_
 6	please	please	INTJ	UH	_	7	discourse	7:discourse	_
 7	see	see	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 8	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	amod	10:amod	_
@@ -229,7 +229,7 @@
 1	Upon	upon	ADP	IN	_	3	case	3:case	_
 2	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
 3	review	review	NOUN	NN	Number=Sing	6	obl	6:obl:upon	SpaceAfter=No
-4	,	,	PUNCT	,	_	3	punct	3:punct	_
+4	,	,	PUNCT	,	_	3	punct	6:punct	_
 5	please	please	INTJ	UH	_	6	discourse	6:discourse	_
 6	give	give	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	iobj	6:iobj	_
@@ -255,7 +255,7 @@
 2	See	see	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	attached	attached	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	file	file	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
-5	:	:	PUNCT	:	_	6	punct	6:punct	_
+5	:	:	PUNCT	:	_	6	punct	4:punct	_
 6	Constellation	constellation	NOUN	NN	Number=Sing	4	appos	4:appos	_
 7	Power	power	X	GW	_	6	flat	6:flat	_
 8	(	(	X	GW	_	6	flat	6:flat	SpaceAfter=No
@@ -268,7 +268,7 @@
 15	See	see	VERB	VB	Mood=Imp|VerbForm=Fin	2	parataxis	2:parataxis	_
 16	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	17	amod	17:amod	_
 17	file	file	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No
-18	:	:	PUNCT	:	_	19	punct	19:punct	_
+18	:	:	PUNCT	:	_	19	punct	17:punct	_
 19	Sam3102.doc	Sam3102.doc	NOUN	NN	Number=Sing	17	appos	17:appos	SpaceAfter=No
 20	)	)	PUNCT	-RRB-	_	15	punct	15:punct	_
 
@@ -349,7 +349,7 @@
 # text = Jackie Taylor - she is located at Court House Concessionaire and under her name in the directory.
 1	Jackie	Jackie	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	Taylor	Taylor	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	-	-	PUNCT	,	_	6	punct	6:punct	_
+3	-	-	PUNCT	,	_	6	punct	1:punct	_
 4	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	6	nsubj:pass	6:nsubj:pass	_
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux:pass	6:aux:pass	_
 6	located	locate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	1	parataxis	1:parataxis	_
@@ -429,7 +429,7 @@
 10	Sale	sale	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	Spot	spot	NOUN	NN	Number=Sing	0	root	0:root	_
 12	w	with	ADP	IN	Abbr=Yes	14	case	14:case	SpaceAfter=No
-13	/	/	PUNCT	,	_	12	punct	12:punct	_
+13	/	/	PUNCT	,	_	12	punct	14:punct	_
 14	City	city	NOUN	NN	Number=Sing	11	nmod	11:nmod:with	_
 15	of	of	ADP	IN	_	16	case	16:case	_
 16	Springfield	Springfield	PROPN	NNP	Number=Sing	14	nmod	14:nmod:of	SpaceAfter=No
@@ -673,7 +673,7 @@
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	correct	correct	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
-4	,	,	PUNCT	,	_	7	punct	7:punct	_
+4	,	,	PUNCT	,	_	7	punct	3:punct	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj|12:nsubj	_
 6	will	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 7	make	make	VERB	VB	VerbForm=Inf	3	parataxis	3:parataxis	_
@@ -723,7 +723,7 @@
 # text = As discussed, attached is a GISB draft for Pioneer.
 1	As	as	SCONJ	IN	_	2	mark	2:mark	_
 2	discussed	discuss	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	advcl	4:advcl:as	SpaceAfter=No
-3	,	,	PUNCT	,	_	2	punct	2:punct	_
+3	,	,	PUNCT	,	_	2	punct	4:punct	_
 4	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
@@ -766,7 +766,7 @@
 11	Tax	tax	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	ID	id	NOUN	NN	Number=Sing	8	conj	5:obj|8:conj:and	_
 13	however	however	ADV	RB	_	17	advmod	17:advmod	SpaceAfter=No
-14	,	,	PUNCT	,	_	13	punct	13:punct	_
+14	,	,	PUNCT	,	_	13	punct	17:punct	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
 16	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
 17	lacking	lack	VERB	VBG	Tense=Pres|VerbForm=Part	3	parataxis	3:parataxis	_
@@ -819,7 +819,7 @@
 # text = Rudwell Johnson/ENRON@enronXgate
 1	Rudwell	Rudwell	PROPN	NNP	Number=Sing	2	compound	2:compound	_
 2	Johnson	Johnson	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
-3	/	/	PUNCT	,	_	4	punct	4:punct	SpaceAfter=No
+3	/	/	PUNCT	,	_	4	punct	2:punct	SpaceAfter=No
 4	ENRON@enronXgate	enron@enronxgate	X	ADD	_	2	list	2:list	_
 
 # sent_id = email-enronsent29_01-0076
@@ -906,7 +906,7 @@
 4	dated	date	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	August	August	PROPN	NNP	Number=Sing	4	xcomp	4:xcomp	_
 6	1	1	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	SpaceAfter=No
-7	,	,	PUNCT	,	_	8	punct	8:punct	_
+7	,	,	PUNCT	,	_	8	punct	5:punct	_
 8	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
 
