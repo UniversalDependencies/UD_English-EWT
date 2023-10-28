@@ -247,6 +247,8 @@ def validate_annos(tree):
                 if pos=="CD" and upos=="PRON":
                     if featlist.get("PronType")!="Rcp":
                         print("WARN: CD/PRON combination requires PronType=Rcp ('one another') in " + docname)
+                elif pos=="FW" and upos=="NOUN" and lemma=="etc.":
+                    pass    # this is an exception to the usual mapping of FW
                 else:
                     print("WARN: invalid POS tag " + pos + " for UPOS " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
