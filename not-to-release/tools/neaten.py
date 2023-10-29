@@ -239,6 +239,9 @@ def validate_annos(tree):
             merged = 'merged' in line and line['merged']
             form = check_and_fix_form_typos(tok_num, line['form'], featlist, misclist, merged, docname)
 
+            if featlist and featlist.get("Voice")=="Pass":
+                passive_verbs.add(tok_num)
+
             if upos not in tagset_combos.keys():
                 print("WARN: invalid UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
             if pos not in tagset:
