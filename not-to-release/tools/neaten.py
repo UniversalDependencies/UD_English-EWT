@@ -295,6 +295,9 @@ def validate_annos(tree):
                             or upos=="DET"):
                         print("WARN: invalid pronoun UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
                         # This warns about a few that are arguably correct, e.g. "oh my/INTJ", "I/PROPN - 24"
+                elif upos == "NUM":
+                    if "NumForm" not in featlist or "NumType" not in featlist:
+                        print("WARN: NUM should have NumForm and NumType in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
             if func.endswith(':relcl'):
                 # Check PronType=Rel for free relative headed by the WDT/WP/WRB
