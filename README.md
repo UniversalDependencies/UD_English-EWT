@@ -86,13 +86,17 @@ almost all respects, but there remain the following deviations:
 
 Highlights:
 
-  - **Adopt subtype `obl:agent` for passive *by*-phrases**, and apply the feature `Voice=Pass` more widely [to distinguish passive uses from active perfect uses of the past participle form](https://universaldependencies.org/en/feat/Voice.html) ([#290](https://github.com/UniversalDependencies/UD_English-EWT/issues/290))
-  - **Remove use of `flat:foreign`** in line with most other English treebanks ([#459](https://github.com/UniversalDependencies/UD_English-EWT/issues/459))
-  - Implement new guidelines on sufficiency/excess constructions ([#423](https://github.com/UniversalDependencies/UD_English-EWT/issues/423))
-  - Flesh out features on [DETs](https://universaldependencies.org/en/pos/DET.html) ([#416](https://github.com/UniversalDependencies/UD_English-EWT/issues/416))
-  - Make features on numbers more uniform and consistent with other treebanks (flagged by [@rhdunn](https://github.com/rhdunn): [#451](https://github.com/UniversalDependencies/UD_English-EWT/issues/451), [#458](https://github.com/UniversalDependencies/UD_English-EWT/issues/458), [#464](https://github.com/UniversalDependencies/UD_English-EWT/issues/464), [#465](https://github.com/UniversalDependencies/UD_English-EWT/issues/465))
+  - Structural
+     - **Adopt subtype `obl:agent` for passive *by*-phrases**, and apply the feature `Voice=Pass` more widely [to distinguish passive uses from active perfect uses of the past participle form](https://universaldependencies.org/en/feat/Voice.html) ([#290](https://github.com/UniversalDependencies/UD_English-EWT/issues/290))
+     - **Remove use of `flat:foreign`** in line with most other English treebanks ([#459](https://github.com/UniversalDependencies/UD_English-EWT/issues/459))
+     - Implement new guidelines on sufficiency/excess constructions ([#423](https://github.com/UniversalDependencies/UD_English-EWT/issues/423))
+     - Use Udapi to standardize `punct` attachments (thanks to [@martin-popel](https://github.com/martinpopel))
+  - Features
+     - Flesh out features on [DETs](https://universaldependencies.org/en/pos/DET.html) ([#416](https://github.com/UniversalDependencies/UD_English-EWT/issues/416))
+     - Make features on numbers more uniform and consistent with other treebanks (flagged by [@rhdunn](https://github.com/rhdunn): [#451](https://github.com/UniversalDependencies/UD_English-EWT/issues/451), [#458](https://github.com/UniversalDependencies/UD_English-EWT/issues/458), [#464](https://github.com/UniversalDependencies/UD_English-EWT/issues/464), [#465](https://github.com/UniversalDependencies/UD_English-EWT/issues/465))
+     - Ensure verb features are complete and consistent with tags
+  - Use AUX (not VERB) for "have" and "do" when stranded due to ellipsis ([#403](https://github.com/UniversalDependencies/UD_English-EWT/issues/403))
   - Mark verbal contractions missing apostrophes as typos (flagged by [@rhdunn](https://github.com/rhdunn): [#443](https://github.com/UniversalDependencies/UD_English-EWT/issues/443))
-  - Use Udapi to standardize `punct` attachments (thanks to [@martin-popel](https://github.com/martinpopel))
   - Extensive cleanup of/based on UPOS
 
 **2023-05-15 v2.12**
