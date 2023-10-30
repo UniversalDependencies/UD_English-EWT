@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.12 -- 2023-05-15
+Universal Dependencies English Web Treebank v2.13 -- 2023-11-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
 
@@ -12,7 +12,7 @@ LDC2012T13 (https://catalog.ldc.upenn.edu/LDC2012T13).
 
 # Introduction
 
-The corpus comprises 254,825 words and 16,621 sentences, taken from five genres
+The corpus comprises 254,820 words and 16,622 sentences, taken from five genres
 of web media: weblogs, newsgroups, emails, reviews, and Yahoo! answers. See the
 LDC2012T13 documentation for more details on the sources of the sentences. The
 trees were automatically converted into Stanford Dependencies and then
@@ -46,7 +46,7 @@ Portions may be © 2012 Google Inc., © 2011 Yahoo! Inc.,
 # Structure
 
 This directory contains a corpus of sentences annotated using Universal
-Dependencies annotation. The corpus comprises 254,825 words and 16,621
+Dependencies annotation. The corpus comprises 254,820 words and 16,622
 sentences, taken from various web media including weblogs, newsgroups, emails,
 reviews, and Yahoo! answers; see the LDC2012T13 documentation for more details
 on the source of the sentences.  The trees were automatically converted into
@@ -74,13 +74,30 @@ manually checked.
 
 # Deviations from UD
 
-Version 2.12 of the English UD treebank conforms to the UD guidelines in
+Version 2.13 of the English UD treebank conforms to the UD guidelines in
 almost all respects, but there remain the following deviations:
 
  - The UD dependency `flat` is largely only used for person names.
  - Dates are not annotated consistently.
 
 # Changelog
+
+**2023-11-15 v2.13**
+
+Highlights:
+
+  - Structural
+     - **Adopt subtype `obl:agent` for passive *by*-phrases**, and apply the feature `Voice=Pass` more widely [to distinguish passive uses from active perfect uses of the past participle form](https://universaldependencies.org/en/feat/Voice.html) ([#290](https://github.com/UniversalDependencies/UD_English-EWT/issues/290))
+     - **Remove use of `flat:foreign`** in line with most other English treebanks ([#459](https://github.com/UniversalDependencies/UD_English-EWT/issues/459))
+     - Implement new guidelines on sufficiency/excess constructions ([#423](https://github.com/UniversalDependencies/UD_English-EWT/issues/423))
+     - Use Udapi to standardize `punct` attachments (thanks to [@martin-popel](https://github.com/martinpopel))
+  - Features
+     - Flesh out features on [DETs](https://universaldependencies.org/en/pos/DET.html) ([#416](https://github.com/UniversalDependencies/UD_English-EWT/issues/416))
+     - Make features on numbers more uniform and consistent with other treebanks (flagged by [@rhdunn](https://github.com/rhdunn): [#451](https://github.com/UniversalDependencies/UD_English-EWT/issues/451), [#458](https://github.com/UniversalDependencies/UD_English-EWT/issues/458), [#464](https://github.com/UniversalDependencies/UD_English-EWT/issues/464), [#465](https://github.com/UniversalDependencies/UD_English-EWT/issues/465))
+     - Ensure verb features are complete and consistent with tags
+  - Use AUX (not VERB) for "have" and "do" when stranded due to ellipsis ([#403](https://github.com/UniversalDependencies/UD_English-EWT/issues/403))
+  - Mark verbal contractions missing apostrophes as typos (flagged by [@rhdunn](https://github.com/rhdunn): [#443](https://github.com/UniversalDependencies/UD_English-EWT/issues/443))
+  - Extensive cleanup of/based on UPOS
 
 **2023-05-15 v2.12**
 
