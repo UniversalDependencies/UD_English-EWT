@@ -363,7 +363,10 @@ def validate_annos(tree):
             if not subj_dependents < {'nsubj:pass','csubj:pass','nsubj:outer','csubj:outer'}:
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' has subject dependents " + repr(sorted(subj_dependents)).replace('[','{').replace(']','}') + " in " + docname)
             if 'cop' in dependents.values():
-                print("WARN: Passive verb with lemma '" + lemmas[v] + "' has cop dependent in " + docname)
+                if 'aux:pass' in dependents.values() and any(':outer' in d for d in dependents.values()):
+                    pass
+                else:
+                    print("WARN: Passive verb with lemma '" + lemmas[v] + "' has cop dependent in " + docname)
         for i,f in funcs.items():
             if f=='obl:agent':
                 if (feats[parent_ids[i]] or {}).get("Voice") != "Pass":
@@ -389,6 +392,8 @@ def validate_annos(tree):
                             pass
                         elif lemmas[v]=='get':  # "I (have) got to leave"
                             pass
+                        elif docname in ["reviews-122564-0003", "answers-20111108104724AAuBUR7_ans-0001"]:
+                            pass    # hardcode two exceptions interpreted as perfect
                         else:
                             print("WARN: Voice=Pass missing from VBN verb with no aux dependent in " + docname)
                     elif isVoicePass and not pass_marking_dependents and other_dependents:
