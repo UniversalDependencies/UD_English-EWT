@@ -491,7 +491,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if pos == "NNS" and tok.lower() == lemma.lower() and lemma.endswith("s") and func != "goeswith":
         if lemma not in ["surroundings","energetics","politics","jeans","clothes","electronics","means","feces",
                          "biceps","triceps","news","species","economics","arrears","glasses","thanks","series"]:
-            if re.match(r"[0-9]+'?s",lemma) is None:  # 1920s, 80s
+            if re.search(r"[0-9]+'?s$",lemma) is None and lemma not in ["sixties","eighties","mid-nineties"]:  # 1920s, 80s
                 print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
                 NNS_warnings[lemma] += 1
 
