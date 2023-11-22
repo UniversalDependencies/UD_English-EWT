@@ -461,6 +461,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if func == "aux:pass" and lemma != "be" and lemma != "get":
         print("WARN: aux:pass must be 'be' or 'get'" + inname)
 
+    if lemma == "get" and upos == "AUX" and func != "aux:pass":
+        print("WARN: get/AUX should be aux:pass" + inname)
+
     if lemma == "'s" and pos != "POS":
         print("WARN: possessive 's must be tagged POS" + inname)
 
