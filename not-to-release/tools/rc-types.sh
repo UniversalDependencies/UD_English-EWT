@@ -1,6 +1,8 @@
 #!/bin/bash
 # e.g., cat en_ewt-ud-train.conllu | bash rc-types.sh > train.conllu
 # (takes about 2 min to run on train)
+# to produce counts:
+#  egrep -o 'Cxn=[^|]+' train.conllu | sort | uniq -c | sort -rn | head -n10
 export PATH="$HOME/.local/bin/:$PATH"
 udapy util.Eval node='if node.deprel in ("acl:relcl","advcl:relcl"):
     """
@@ -32,6 +34,7 @@ udapy util.Eval node='if node.deprel in ("acl:relcl","advcl:relcl"):
         - rc-free-pred-auxstrand for "(doing) what they can"
         - rc-red-pred-pstrand for "a panel I will be on"
         - rc-wh-nmod_obl-pfront-pstrand for "the cookies (some of which I sat on)"
+        - rc-wh-ccomp-auxstrand for "If the baby is feathered yet - which I’m sure he is mostly"
     
     Many reduced RCs lack an enhanced deprel for the relativized element,
     so "missingedep" serves as a placeholder.
@@ -47,16 +50,16 @@ udapy util.Eval node='if node.deprel in ("acl:relcl","advcl:relcl"):
 
     Most frequent in training data:
 
-    581 rc-red-missingedep
-    438 rc-wh-nsubj
-    308 rc-that-nsubj
-    113 rc-that-obj
-     93 rc-wh-obl
-     77 rc-free-obj
-     50 rc-wh-nsubj:pass
-     50 rc-that-nsubj:pass
-     35 rc-wh-csubj
-     27 rc-red-obj
+    488 Cxn=rc-red-missingedep
+    431 Cxn=rc-wh-nsubj
+    305 Cxn=rc-that-nsubj
+    112 Cxn=rc-that-obj
+     76 Cxn=rc-free-obj
+     61 Cxn=rc-red-missingedep-pstrand
+     55 Cxn=rc-wh-obl
+     50 Cxn=rc-wh-nsubj:pass
+     47 Cxn=rc-that-nsubj:pass
+     35 Cxn=rc-wh-csubj
     """
     import sys
 
@@ -210,7 +213,7 @@ udapy util.Eval node='if node.deprel in ("acl:relcl","advcl:relcl"):
                 assert lastInRC.deprel in ("acl:relcl", "advcl:relcl", "obl", "nmod", "case"),lastInRC
                 assert strandfront in ("", "-pstrand"),(strandfront,lastInRC)
                 strandfront = "-pstrand"
-                #assert lastInRC.misc["Promoted"]=="Yes",lastInRC    # TODO: revisit
+                assert (lastInRC.misc["Promoted"]=="Yes") ^ (lastInRC.deprel=="case"),lastInRC
                 break
             elif lastInRC.upos=="AUX" or (lastInRC.upos=="PART" and lastInRC.lemma=="to"):
                 assert strandfront in ("", "-pstrand") or wh.lemma=="whom",(strandfront,lastInRC)   # TODO: "among whom"
