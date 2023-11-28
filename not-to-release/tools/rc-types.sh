@@ -1,6 +1,6 @@
 #!/bin/bash
 # e.g., cat en_ewt-ud-train.conllu | bash rc-types.sh > train.conllu
-# (takes about 2 min to run on train)
+# (takes about 2m30s to run on train)
 # to produce counts:
 #  egrep -o 'Cxn=[^|]+' train.conllu | sort | uniq -c | sort -rn | head -n10
 export PATH="$HOME/.local/bin/:$PATH"
@@ -71,8 +71,19 @@ udapy util.Eval node='if node.deprel in ("acl:relcl","advcl:relcl"):
 
     if node.deprel=="advcl:relcl" and any(ch.deprel=="expl" and ch.lemma=="it" for ch in head.children):
         rctype = "cleft."
-    elif head.feats["PronType"]=="Rel": # TODO: "whatever coverage this story receives"
+    elif head.feats["PronType"]=="Rel":
         rctype = "free"
+    else:   # check if relative pronoun is in a left dependent, e.g. "whatever coverage this story receives", "(that is) how fast they need to move"
+        # (one false positive in train due to 2nd RC head doubling as copular predicate embedded in first RC:
+        #   "Anthony...with whom...he seems to have been on terms...which did not last")
+        queue = head.children(preceding_only=True)
+        while queue:
+            ch = queue.pop(0)
+            if ch.deprel in ("advmod", "det", "nmod", "nmod:poss"):
+                if ch.feats["PronType"]=="Rel":
+                    rctype = "free"
+                    break
+                queue.extend(ch.children)
     
     if rctype!="free":
         isFreeRCHead = False    # free relative may be embedded as predicate of wh-relative ("which is what is needed")
