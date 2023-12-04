@@ -73,9 +73,13 @@ udapy util.Eval node='if node.deprel in ("acl:relcl","advcl:relcl"):
         rctype = "cleft."
     elif head.feats["PronType"]=="Rel":
         rctype = "free"
+    elif basic_pred.form=="last" and " ".join(map(lambda n: n.form.replace(",",""), basic_pred.descendants(add_self=True))).replace("  "," ").strip()==\
+        "which did not last very long for the Spaniard developed so much affectation & bombast that he became unpopular in Court circles":
+        pass
+        # (the free relative detection below would produce one false positive in train due to 2nd RC head 
+        # doubling as copular predicate embedded in first RC:
+        #  "Anthony...with whom...he seems to have been on terms...which did not last")
     else:   # check if relative pronoun is in a left dependent, e.g. "whatever coverage this story receives", "(that is) how fast they need to move"
-        # (one false positive in train due to 2nd RC head doubling as copular predicate embedded in first RC:
-        #   "Anthony...with whom...he seems to have been on terms...which did not last")
         queue = head.children(preceding_only=True)
         while queue:
             ch = queue.pop(0)
