@@ -201,7 +201,7 @@ def validate_annos(tree):
             "NUM":["CD","LS","NNP"],
             "PART":["POS","RB","TO"],
             "PRON":["PRP","PRP$","WP","WP$","DT","WDT","EX","NN"],
-            "PROPN":["NNP","NNPS"],
+            "PROPN":["ADD","NNP","NNPS"],
             "PUNCT":[".",",",":","``","''","-LCB-","-RCB-","-LRB-","-RRB-","-LSB-","-RSB-","NFP","HYPH","SYM"],
             "SCONJ":["IN"],
             "SYM":["$",",","SYM","NFP","NN","NNS","IN","HYPH"],
