@@ -312,8 +312,8 @@ def validate_annos(tree):
                     if parent_feats["PronType"]=="Int":
                         print("WARN: Looks like a WH word-headed free relative, should be PronType=Rel" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
-            if func!='goeswith' and featlist.get("PronType")=="Rel":
-                if (len(edeps)!=1 or edeps[0][0]!="ref"):
+            if func!='goeswith' and featlist.get("PronType")=="Rel" and edeps is not None:
+                if len(edeps)!=1 or edeps[0][0]!="ref":
                     if "acl:relcl" not in child_funcs[tok_num] and "advcl:relcl" not in child_funcs[tok_num]: # not free relative
                         if tok_num>1 and docname!="weblog-blogspot.com_tacitusproject_20040712123425_ENG_20040712_123425-0032":   # sentence fragment may begin with "Which"
                             print("WARN: PronType=Rel should have `ref` as its sole enhanced dependency" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
@@ -668,7 +668,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if (upos == "ADV" or pos.startswith("RB")) and lemma == "at":
         print("WARN: at/ADV/RB is forbidden" + inname)
 
-    if "acl:relcl" in child_funcs or "advcl:relcl" in child_funcs:  # relativized element
+    if ("acl:relcl" in child_funcs or "advcl:relcl" in child_funcs) and edeps is not None:  # relativized element
         # should (in most cases) have an enhanced dependency out of the relative clause
         if len(edeps)<=1 or not any(rel.startswith(('nsubj','csubj','obj','obl','nmod','advmod','ccomp','xcomp')) and isinstance(h,int) and h>id for (rel,h) in edeps):
             print("WARN: relativized word should have enhanced dependency within the relative clause" + inname)
@@ -682,7 +682,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if parent_lemma in ["let", "help"] and func=="ccomp":
         print(f"WARN: verb '{parent_lemma}' should take xcomp clausal object, not ccomp" + inname)
 
-    if pos == "MD" and lemma not in ["can","must","will","shall","would","could","may","might","ought","should"] and func != "goeswith":
+    if pos == "MD" and lemma not in ["can","must","will","shall","would","could","may","might","ought","should","need","dare"] and func != "goeswith":
         print("WARN: lemma '"+lemma+"' is not a known modal verb for tag MD" + inname)
 
     if lemma == "like" and pos == "UH" and func not in ["discourse","conj","reparandum"]:
