@@ -399,6 +399,24 @@ def validate_annos(tree):
                     elif isVoicePass and not pass_marking_dependents and other_dependents:
                         print("WARN: VBN with aux but no aux:pass dependent incompatible with Voice=Pass in " + docname)
 
+NNS_PTAN_LEMMAS = ["aesthetics", "arrears", "auspices", "barracks", "billiards", "clothes", "confines", "contents",
+                   "dynamics", "earnings", "eatables", "economics", "electronics", "energetics", "environs", "ergonomics",
+                   "feces", "finances", "fives", "furnishings", "genetics", "genitals", "geopolitics", "glasses", "goods",
+                   "grounds", "hackles", "headquarters", "jeans", "manners", "means", "memoirs", "news",
+                   "orthodontics", "panties", "pants", "politics", "proceedings", "regards", "remains", "respects",
+                   "savings", "scissors", "specifics", "statistics", "supplies", "surroundings",
+                   "tenterhooks", "thanks", "troops", "trousers", "wares", "whereabouts",
+                   "twenties", "thirties", "forties", "fifties", "sixties", "seventies", "eighties", "nineties"]
+
+# some of these can also be singular (NN), in which case not Ptan: politics, economics
+# "respects" only Ptan in "pay one's respects" (cf. "thanks")
+# not Ptan: biceps, triceps
+
+NNPS_PTAN_LEMMAS = ["Netherlands", "Analytics", "Olympics", "Commons", "Paralympics", "Vans", "Andes", "Philippines",
+                    "Maldives"]
+
+SING_AND_PLUR_S_LEMMAS = ["series", "species"]
+
 def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular,
                       children, child_funcs, s_type,
                       docname, prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_position,
@@ -495,10 +513,10 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
             print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
 
     if pos == "NNS" and tok.lower() == lemma.lower() and lemma.endswith("s") and func != "goeswith":
-        if lemma not in ["surroundings","energetics","politics","jeans","clothes","electronics","means","feces",
-                         "biceps","triceps","news","species","economics","arrears","glasses","thanks","series"]:
-            if re.search(r"[0-9]+'?s$",lemma) is None and lemma not in ["sixties","eighties","mid-nineties"]:  # 1920s, 80s
+        if lemma not in NNS_PTAN_LEMMAS + NNPS_PTAN_LEMMAS + SING_AND_PLUR_S_LEMMAS:
+            if re.search(r"[0-9]+'?s$",lemma) is None and lemma != "mid-nineties":  # 1920s, 80s
                 print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
+                assert False,lemma
                 NNS_warnings[lemma] += 1
 
     if pos == "IN" and func=="compound:prt":
@@ -1002,7 +1020,9 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     if lemma == "etc.":
         if pos != "FW" or upos != "NOUN" or number != "Plur" or not feats.get("Abbr") == "Yes":
             print("WARN: 'etc.' should correspond with NOUN+FW, Abbr=Yes|Number=Plur in " + docname + " @ token " + str(id))
-    elif upos == "NOUN" and ((pos == "NNS") != (number == "Plur")):
+    elif upos == "NOUN" and ((pos == "NNS") + (lemma in NNS_PTAN_LEMMAS) + (number == "Ptan")) == 2:
+        print("WARN: pluralia tantum should have NNS, Number=Ptan: " + lemma + " in " + docname + " @ token " + str(id))
+    elif upos == "NOUN" and ((pos == "NNS") != (number == "Plur")) and lemma not in NNS_PTAN_LEMMAS:
         print("WARN: NOUN+NNS should correspond with Number=Plur in " + docname + " @ token " + str(id))
 
     # PRON+WP$ <=> PRON[Poss=Yes,PronType=Int,Rel]
@@ -1019,7 +1039,7 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
         print("WARN: PROPN+NNP should correspond with Number=Sing in " + docname + " @ token " + str(id))
 
     # PROPN+NNPS <=> PROPN[Number=Plur]
-    if upos == "PROPN" and ((pos == "NNPS") != (number == "Plur")):
+    if upos == "PROPN" and ((pos == "NNPS") != (number == "Plur")) and lemma not in NNPS_PTAN_LEMMAS:
         print("WARN: PROPN+NNPS should correspond with Number=Plur in " + docname + " @ token " + str(id))
 
     # VB feats (subjunctive, imperative, or infinitive)
