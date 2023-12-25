@@ -454,6 +454,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if func in ['fixed','goeswith','flat', 'conj'] and id < parent_id:
         print("WARN: back-pointing func " + func + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
 
+    if func == "flat" and parent_upos == "PROPN" and upos == "NOUN":
+        print("WARN: PROPN-[flat]->NOUN - should be compound? " + func + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+
     if func in ['cc:preconj','cc','nmod:poss'] and id > parent_id:
         if tok not in ["mia"]:
             print("WARN: forward-pointing func " + func + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
