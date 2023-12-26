@@ -96,7 +96,8 @@ def validate_src(infiles):
                 validate_annos(tree)
 
     validate_lemmas(lemma_dict,lemma_docs)
-    sys.stderr.write("!suspicious NNS lemmas: "+' '.join(k for k,v in NNS_warnings.most_common()) + '\n')
+    if NNS_warnings:
+        sys.stderr.write("!suspicious NNS lemmas: "+' '.join(k for k,v in NNS_warnings.most_common()) + '\n')
     sys.stdout.write("\r" + " "*70)
 
 def validate_lemmas(lemma_dict, lemma_docs):
@@ -401,15 +402,16 @@ def validate_annos(tree):
 
 NNS_PTAN_LEMMAS = ["aesthetics", "arrears", "auspices", "barracks", "billiards", "clothes", "confines", "contents",
                    "dynamics", "earnings", "eatables", "economics", "electronics", "energetics", "environs", "ergonomics",
-                   "feces", "finances", "fives", "furnishings", "genetics", "genitals", "geopolitics", "glasses", "goods",
-                   "grounds", "hackles", "headquarters", "jeans", "manners", "means", "memoirs", "news",
+                   "eyeglasses", "feces", "finances", "fives", "furnishings", "genetics", "genitals", "geopolitics", "glasses",
+                   "goods", "grounds", "hackles", "headquarters", "jeans", "manners", "means", "memoirs", "news",
                    "orthodontics", "panties", "pants", "politics", "proceedings", "regards", "remains", "respects",
-                   "savings", "scissors", "specifics", "statistics", "supplies", "surroundings",
+                   "savings", "scissors", "specifics", "statistics", "sunglasses", "supplies", "surroundings",
                    "tenterhooks", "thanks", "troops", "trousers", "wares", "whereabouts",
                    "twenties", "thirties", "forties", "fifties", "sixties", "seventies", "eighties", "nineties", "mid-nineties"]
 
 # some of these can also be singular (NN), in which case not Ptan: politics, economics
 # "respects" only Ptan in "pay one's respects" (cf. "thanks")
+# "glasses" is Ptan in meaning of eyeglasses
 # not Ptan: biceps, triceps
 
 NNPS_PTAN_LEMMAS = ["Netherlands", "Analytics", "Olympics", "Commons", "Paralympics", "Vans", "Andes", "Philippines",
@@ -516,7 +518,6 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         if lemma not in NNS_PTAN_LEMMAS + NNPS_PTAN_LEMMAS + SING_AND_PLUR_S_LEMMAS:
             if re.search(r"[0-9]+'?s$",lemma) is None:  # 1920s, 80s
                 print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
-                assert False,lemma
                 NNS_warnings[lemma] += 1
 
     if pos == "IN" and func=="compound:prt":
