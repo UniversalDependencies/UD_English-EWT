@@ -406,7 +406,7 @@ NNS_PTAN_LEMMAS = ["aesthetics", "arrears", "auspices", "barracks", "billiards",
                    "orthodontics", "panties", "pants", "politics", "proceedings", "regards", "remains", "respects",
                    "savings", "scissors", "specifics", "statistics", "supplies", "surroundings",
                    "tenterhooks", "thanks", "troops", "trousers", "wares", "whereabouts",
-                   "twenties", "thirties", "forties", "fifties", "sixties", "seventies", "eighties", "nineties"]
+                   "twenties", "thirties", "forties", "fifties", "sixties", "seventies", "eighties", "nineties", "mid-nineties"]
 
 # some of these can also be singular (NN), in which case not Ptan: politics, economics
 # "respects" only Ptan in "pay one's respects" (cf. "thanks")
@@ -514,7 +514,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
 
     if pos == "NNS" and tok.lower() == lemma.lower() and lemma.endswith("s") and func != "goeswith":
         if lemma not in NNS_PTAN_LEMMAS + NNPS_PTAN_LEMMAS + SING_AND_PLUR_S_LEMMAS:
-            if re.search(r"[0-9]+'?s$",lemma) is None and lemma != "mid-nineties":  # 1920s, 80s
+            if re.search(r"[0-9]+'?s$",lemma) is None:  # 1920s, 80s
                 print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
                 assert False,lemma
                 NNS_warnings[lemma] += 1
@@ -1020,9 +1020,9 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     if lemma == "etc.":
         if pos != "FW" or upos != "NOUN" or number != "Plur" or not feats.get("Abbr") == "Yes":
             print("WARN: 'etc.' should correspond with NOUN+FW, Abbr=Yes|Number=Plur in " + docname + " @ token " + str(id))
-    elif upos == "NOUN" and ((pos == "NNS") + (lemma in NNS_PTAN_LEMMAS) + (number == "Ptan")) == 2:
+    elif upos == "NOUN" and ((pos == "NNS") + (lemma in NNS_PTAN_LEMMAS or re.search(r"[0-9]+'?s$",lemma) is not None) + (number == "Ptan")) == 2:
         print("WARN: pluralia tantum should have NNS, Number=Ptan: " + lemma + " in " + docname + " @ token " + str(id))
-    elif upos == "NOUN" and ((pos == "NNS") != (number == "Plur")) and lemma not in NNS_PTAN_LEMMAS:
+    elif upos == "NOUN" and ((pos == "NNS") != (number == "Plur")) and lemma not in NNS_PTAN_LEMMAS and re.search(r"[0-9]+'?s$",lemma) is None:
         print("WARN: NOUN+NNS should correspond with Number=Plur in " + docname + " @ token " + str(id))
 
     # PRON+WP$ <=> PRON[Poss=Yes,PronType=Int,Rel]
