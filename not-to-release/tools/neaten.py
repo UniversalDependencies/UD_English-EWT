@@ -591,7 +591,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         else:
             print("WARN: invalid dependency of lemma 'be' > " + func + inname)
 
-    if parent_lemma in ["tell","show","give","pay","teach","owe","text","write"] and \
+    if parent_lemma in ["tell","show","give","pay","charge","bill","teach","owe","text","write"] and \
             tok in ["him","her","me","us","you"] and func=="obj":
         print("WARN: person object of ditransitive expected to be iobj, not obj" + inname)
     
