@@ -209,4 +209,4 @@ def add_rctypes(file_directory, outputdir=None):
 
 if __name__=='__main__':
     file_dir = 'en_ewt-ud-train.conllu'
-    add_rctypes('en_ewt-ud-train.conllu', 'test.conllu')
+    add_rctypes(file_dir)
