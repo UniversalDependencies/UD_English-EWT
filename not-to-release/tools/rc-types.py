@@ -4,21 +4,15 @@ from tqdm import tqdm
 def add_rctypes(file_directory, outputdir=None):
     doc = udapi.Document()
     doc.load_conllu(filename=file_directory)
-    new_doc = udapi.Document()
-    possible_errors =[]
     for idx, bundle in enumerate(tqdm(doc.bundles)):
         for root in bundle.trees:
-            # Process each tree (sentence)
             for node in root.descendants:
-                # Here you can add the logic you previously had in the udapy script
                 if node.deprel in ("acl:relcl", "advcl:relcl"):
-
                     basic_pred = node
                     rctype = ""
                     head = basic_pred.parent
                     assert head.precedes(basic_pred)
                     wh = None  # relativizer if present (same as basic_pred for predicate relative) (not including head of free relative)
-
                     if node.deprel == "advcl:relcl" and any(
                             ch.deprel == "expl" and ch.lemma == "it" for ch in head.children):
                         rctype = "cleft."
