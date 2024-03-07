@@ -1065,7 +1065,8 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     if pos == "VBD" and not all(f in feats for f in ["Number","Person","Tense","Mood"]):
         print("WARN: VBD should have Number, Person, Tense, and Mood in " + docname + " @ token " + str(id))
     elif pos == "VBD" and (feats["Tense"] != "Past" or feats["Mood"] != "Ind"):
-        print("WARN: VBD should correspond with Mood=Ind, Tense=Past in " + docname + " @ token " + str(id))
+        if not (lemma=="be" and feats["Tense"]=="Past" and feats["Mood"]=="Sub"):
+            print("WARN: VBD should correspond with Tense=Past and Mood=Ind (or Mood=Sub for 'were') in " + docname + " @ token " + str(id))
     if pos == "VBD" and any(f in feats for f in ["Voice"]):
         print("WARN: VBD should not have Voice in " + docname + " @ token " + str(id))
 
