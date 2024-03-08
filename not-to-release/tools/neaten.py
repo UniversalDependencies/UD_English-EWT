@@ -283,7 +283,7 @@ def validate_annos(tree):
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_positions[tok_num],
                               parent_func, parent_pos, parent_upos, filename)
-            flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, docname)
+            flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, line.get('misc') or {}, docname)
 
             if func!='goeswith':
                 if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
@@ -961,7 +961,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
             print("WARN: structure of 'and/or' should be conj(and/CC/CCONJ, cc(or/CC/CCONJ, '/'/SYM/SYM)) and E:conj(and, or) and E:cc(*, or)" + inname)
             traceback.print_tb(ex.__traceback__, limit=1, file=sys.stdout)
 
-def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
+def flag_feats_warnings(id, tok, pos, upos, lemma, feats, misc, docname):
     """
     Check compatibility of tags and features.
 
@@ -1113,6 +1113,64 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, docname):
     if pos == "VBZ" and not (verbForm == "Fin"):
         print("WARN: VBZ should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
 
+    # VBP => Number=Sing | Person!=3 | Tense=Pres | VerbForm=Fin
+    if pos == "VBP":
+        if not (number == "Sing" or number == "Plur"):
+            print("WARN: VBP should correspond with Number=Sing|Plur in " + docname + " @ token " + str(id))
+        elif number == "Sing" and not (person == "1" or person == "2") and not misc.get("CorrectNumber")=="Sing":
+            print("WARN: singular VBP should correspond with Person=1|2 in " + docname + " @ token " + str(id))
+        elif person not in {"1", "2", "3"}:
+            print("WARN: plural VBP should correspond with Person=1|2|3 in " + docname + " @ token " + str(id))
+    if pos == "VBP" and not (tense == "Pres"):
+        print("WARN: VBP should correspond with Tense=Pres in " + docname + " @ token " + str(id))
+    if pos == "VBP" and not (verbForm == "Fin"):
+        print("WARN: VBP should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
+
+    if lemma == "be":
+        t = tok.lower()
+        if t == "be":
+            if upos=="NOUN" and docname=="newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0025":
+                pass    # "the be all end all"
+            elif pos!="VB" or not (verbForm=="Inf" or (verbForm=="Fin" and tense=="Pres" and feats["Mood"]=="Sub") or (verbForm=="Fin" and feats["Mood"]=="Imp")):
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+        elif t == "am" or t == "'m" or t == "’m":
+            if pos!="VBP" or verbForm!="Fin" or tense!="Pres" or feats["Mood"]!="Ind" or person!="1" or number!="Sing":
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+        elif t == "are":    # can be 1st person in negation: "aren't I"
+            if pos!="VBP" or verbForm!="Fin" or tense!="Pres" or feats["Mood"]!="Ind" or not ((number=="Plur" and person in {"1","2","3"}) or (number=="Sing" and person in {"1","2"})):
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+        elif t == "is" or t == "'s" or t == "’s":
+            if (pos!="VBZ" and "CorrectNumber" not in misc) or verbForm!="Fin" or tense!="Pres" or feats["Mood"]!="Ind" or person!="3" or misc.get("CorrectNumber",number)!="Sing":
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+        elif t == "art":    # thou art
+            if pos!="VBP" or verbForm!="Fin" or tense!="Pres" or feats["Mood"]!="Ind" or not (number=="Sing" and person=="2") or feats["Style"]!="Arch":
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+        elif t == "ai": # ain't = am/are/is + not (mainly)
+            if pos not in {"VBP","VBZ"} or verbForm!="Fin" or tense!="Pres" or feats["Mood"]!="Ind" or feats["Style"]!="Vrnc":
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+        elif t == "was":
+            if pos!="VBD" or verbForm!="Fin" or tense!="Past" or feats["Mood"]!="Ind" or number!="Sing":
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+        elif t == "were":
+            if pos!="VBD" or verbForm!="Fin" or tense!="Past" or not ((feats["Mood"]=="Ind" and (number=="Plur" or person=="2")) or (feats["Mood"]=="Sub" and number=="Sing")):
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+        elif t == "'re" or t == "’re":  # indicative were or are
+            if pos!="VBD" and pos!="VBP":
+                print("WARN: unexpected XPOS for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+            elif pos=="VBD":
+                if verbForm!="Fin" or tense!="Past" or not (feats["Mood"]=="Ind" and (number=="Plur" or person=="2")):
+                    print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+            elif pos=="VBP":
+                if verbForm!="Fin" or tense!="Pres" or feats["Mood"]!="Ind" or not ((number=="Plur" and person in {"1","2","3"}) or (number=="Sing" and person in {"1","2"})):
+                    print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+        elif t == "been":
+            if pos != "VBN":
+                print("WARN: 'been' should be VBN in " + docname + " @ token " + str(id))
+        elif t == "being":
+            if pos != "VBG":
+                print("WARN: 'being' should be VBG in " + docname + " @ token " + str(id))
+        else:
+            print("WARN: unknown 'be' form: " + t + " in " + docname + " @ token " + str(id))
 
 # See https://universaldependencies.org/en/pos/PRON.html
 PRONOUNS = {
