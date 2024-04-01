@@ -192,8 +192,8 @@ def validate_annos(tree):
         # Map UPOS tags to known associated PTB tags. This helps identify mismatched UPOS+POS pairs.
         tagset_combos = {
             "ADJ":["JJ","JJR","JJS","NN","NNP","FW","AFX"],
-            "ADP":["RP","IN","NNP","RB","CC"],
-            "ADV":["RB","RBR","RBS","WRB","RP","CC","IN","NN","NNP","FW","AFX"],
+            "ADP":["RP","IN","NNP","CC"],
+            "ADV":["RB","RBR","RBS","WRB","CC","NN","NNP","FW","AFX"],
             "AUX":["MD","VB","VBD","VBG","VBN","VBP","VBZ"],
             "CCONJ":["CC"],
             "DET":["DT","PDT","WDT","NNP"],
