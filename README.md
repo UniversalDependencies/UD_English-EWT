@@ -82,6 +82,22 @@ almost all respects, but there remain the following deviations:
 
 # Changelog
 
+**2024-05-15 v2.14**
+
+Highlights:
+
+  - Relative clauses (TODO)
+  - Attach list item enumerators (`LS`) as `discourse` ([#518](https://github.com/UniversalDependencies/UD_English-EWT/issues/518))
+  - Verb tags/features
+     * clean up errors
+     * `VBG`: new rules to distinguish `VerbForm=Ger` vs. `Tense=Pres|VerbForm=Part` ([#305](https://github.com/UniversalDependencies/UD_English-EWT/issues/305))
+     * implement subjunctive "were" ([#511](https://github.com/UniversalDependencies/UD_English-EWT/issues/511))
+  - Noun features: implement `Number=Ptan` for plurale tantum ([docs#999](https://github.com/UniversalDependencies/docs/issues/999))
+  - Improved treatment of internet addresses ([#440](https://github.com/UniversalDependencies/UD_English-EWT/issues/440), [#448](https://github.com/UniversalDependencies/UD_English-EWT/issues/448))
+  - Multiword expressions
+     * `goeswith` for spaced email addresses
+     * `flat` for spaced telephone numbers
+
 **2023-11-15 v2.13**
 
 Highlights:
