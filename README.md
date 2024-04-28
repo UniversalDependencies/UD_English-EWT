@@ -93,7 +93,7 @@ Highlights:
      * `VBG`: new rules to distinguish `VerbForm=Ger` vs. `Tense=Pres|VerbForm=Part` ([#305](https://github.com/UniversalDependencies/UD_English-EWT/issues/305))
      * implement subjunctive "were" ([#511](https://github.com/UniversalDependencies/UD_English-EWT/issues/511))
   - Noun features: implement `Number=Ptan` for plurale tantum ([docs#999](https://github.com/UniversalDependencies/docs/issues/999))
-  - Improved treatment of internet addresses ([#440](https://github.com/UniversalDependencies/UD_English-EWT/issues/440), [#448](https://github.com/UniversalDependencies/UD_English-EWT/issues/448))
+  - Improved treatment of internet addresses ([#440](https://github.com/UniversalDependencies/UD_English-EWT/issues/440), [#487](https://github.com/UniversalDependencies/UD_English-EWT/issues/487))
   - Multiword expressions
      * `goeswith` for spaced email addresses
      * `flat` for spaced telephone numbers
