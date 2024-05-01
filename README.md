@@ -87,7 +87,7 @@ almost all respects, but there remain the following deviations:
 Highlights:
 
   - **Relative clauses**
-     * ~700 enhanced edges added for reduced relative clauses ([#392](https://github.com/UniversalDependencies/UD_English-EWT/issues/392)) (thanks @xiulinyang!)
+     * ~700 enhanced edges added for reduced relative clauses ([#392](https://github.com/UniversalDependencies/UD_English-EWT/issues/392)) (thanks [@xiulinyang](https://github.com/xiulinyang)!)
      * relative clause types added in `Cxn` attribute of MISC ([#474](https://github.com/UniversalDependencies/UD_English-EWT/issues/474))
         - e.g. `Cxn=rc-wh-nsubj:pass` (passive subject WH), `Cxn=rc-red-obj` (reduced object), `Cxn=rc-red-obl-pstrand` (reduced oblique with preposition stranding),
           `Cxn=rc-free-obj_xcomp` (free relative, object nested under xcomp)
