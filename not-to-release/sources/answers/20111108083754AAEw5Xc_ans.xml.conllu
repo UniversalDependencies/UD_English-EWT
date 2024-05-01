@@ -72,10 +72,10 @@
 8	of	of	ADP	IN	_	7	fixed	7:fixed	_
 9	customize	customize	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	places	place	NOUN	NNS	Number=Plur	9	obj	9:obj	_
+11	places	place	NOUN	NNS	Number=Plur	9	obj	9:obj|13:obl	_
 12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj|15:nsubj:xsubj	_
 13-14	wanna	_	_	_	_	_	_	_	_
-13	wan	want	VERB	VBP	Abbr=Yes|Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
+13	wan	want	VERB	VBP	Abbr=Yes|Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	Cxn=rc-red-obl-pstrand
 14	na	to	PART	TO	Abbr=Yes	15	mark	15:mark	_
 15	go	go	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
 16	to	to	ADP	IN	_	15	obl	15:obl	Promoted=Yes|SpaceAfter=No
@@ -122,7 +122,7 @@
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	site	site	NOUN	NN	Number=Sing	3	nsubj	3:nsubj|8:nsubj	_
 7	that	that	PRON	WDT	PronType=Rel	8	nsubj	6:ref	_
-8	lists	list	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+8	lists	list	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-that-nsubj
 9	world	world	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	cruises	cruise	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 11	including	include	VERB	VBG	Tense=Pres|VerbForm=Part	12	case	12:case	_
@@ -231,10 +231,10 @@
 14	n't	not	PART	RB	_	15	advmod	15:advmod	_
 15	see	see	VERB	VB	VerbForm=Inf	0	root	0:root	_
 16	any	any	DET	DT	PronType=Ind	17	det	17:det	_
-17	way	way	NOUN	NN	Number=Sing	15	obj	15:obj	_
+17	way	way	NOUN	NN	Number=Sing	15	obj	15:obj|20:obl	_
 18	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	20:nsubj	_
 19	could	could	AUX	MD	VerbForm=Fin	20	aux	20:aux	_
-20	customize	customize	VERB	VB	VerbForm=Inf	17	acl:relcl	17:acl:relcl	_
+20	customize	customize	VERB	VB	VerbForm=Inf	17	acl:relcl	17:acl:relcl	Cxn=rc-red-obl
 21	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
 22	own	own	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
 23	itinerary	itinerary	NOUN	NN	Number=Sing	20	obj	20:obj	SpaceAfter=No
@@ -401,9 +401,9 @@
 # text = so any price you find, DOUBLE IT figure, $40K at least.
 1	so	so	ADV	RB	_	7	advmod	7:advmod	_
 2	any	any	DET	DT	PronType=Ind	3	det	3:det	_
-3	price	price	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
+3	price	price	NOUN	NN	Number=Sing	7	nsubj	5:obj|7:nsubj	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
-5	find	find	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	SpaceAfter=No
+5	find	find	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 6	,	,	PUNCT	,	_	3	punct	3:punct	_
 7	DOUBLE	double	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 8	IT	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	obj	7:obj	_

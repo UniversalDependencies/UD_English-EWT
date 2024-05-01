@@ -65,7 +65,7 @@
 13	what	what	PRON	WP	PronType=Rel	11	obl	11:obl:to|16:obj	_
 14	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
 15	can	can	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
-16	expect	expect	VERB	VB	VerbForm=Inf	13	acl:relcl	13:acl:relcl	_
+16	expect	expect	VERB	VB	VerbForm=Inf	13	acl:relcl	13:acl:relcl	Cxn=rc-free-obj
 17	in	in	ADP	IN	_	21	case	21:case	_
 18	this	this	DET	DT	Number=Sing|PronType=Dem	21	det	21:det	_
 19	new	new	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
@@ -124,9 +124,9 @@
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	limits	limit	NOUN	NNS	Number=Plur	7	obj	7:obj	_
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	freedom	freedom	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	_
+11	freedom	freedom	NOUN	NN	Number=Sing	9	nmod	9:nmod:of|13:obl	_
 12	Westerners	Westerner	PROPN	NNPS	Number=Plur	13	nsubj	13:nsubj	_
-13	believe	believe	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
+13	believe	believe	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	Cxn=rc-red-obl-pstrand
 14	in	in	ADP	IN	_	13	obl	13:obl	Promoted=Yes|SpaceAfter=No
 15	,	,	PUNCT	,	_	3	punct	3:punct	SpaceAfter=No
 16	"	"	PUNCT	''	_	3	punct	3:punct	_
@@ -159,9 +159,10 @@
 3	can	can	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 4	freely	freely	ADV	RB	_	5	advmod	5:advmod	_
 5	write	write	VERB	VB	VerbForm=Inf	32	ccomp	32:ccomp	_
-6	anything	anything	PRON	NN	Number=Sing|PronType=Ind	5	obj	5:obj	_
-7	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
-8	like	like	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+6	anything	anything	PRON	NN	Number=Sing|PronType=Ind	5	obj	5:obj|8.1:obj	_
+7	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj|8.1:nsubj:xsubj	_
+8	like	like	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj
+8.1	write	write	VERB	VB	VerbForm=Inf	_	_	8:xcomp	CopyOf=5
 9	about	about	ADP	IN	_	11	case	11:case	_
 10	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	prophet	prophet	NOUN	NN	Number=Sing	6	nmod	6:nmod:about	SpaceAfter=No

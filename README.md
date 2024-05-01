@@ -86,7 +86,14 @@ almost all respects, but there remain the following deviations:
 
 Highlights:
 
-  - Relative clauses (TODO)
+  - **Relative clauses**
+     * ~700 enhanced edges added for reduced relative clauses ([#392](https://github.com/UniversalDependencies/UD_English-EWT/issues/392)) (thanks [@xiulinyang](https://github.com/xiulinyang)!)
+     * relative clause types added in `Cxn` attribute of MISC ([#474](https://github.com/UniversalDependencies/UD_English-EWT/issues/474))
+        - e.g. `Cxn=rc-wh-nsubj:pass` (passive subject WH), `Cxn=rc-red-obj` (reduced object), `Cxn=rc-red-obl-pstrand` (reduced oblique with preposition stranding),
+          `Cxn=rc-free-obj_xcomp` (free relative, object nested under xcomp)
+        - produced by [not-to-release/tools/rc-types.sh](not-to-release/tools/rc-types.sh) - see the code for documentation
+        - cf. the [UCxn project](https://github.com/LeonieWeissweiler/UCxn/) (a larger effort which proposed construction annotation in UD,
+          though this use of it for relative clauses is EWT-specific at present)
   - Attach list item enumerators (`LS`) as `discourse` ([#518](https://github.com/UniversalDependencies/UD_English-EWT/issues/518))
   - Verb tags/features
      * clean up errors

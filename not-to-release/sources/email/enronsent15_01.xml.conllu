@@ -75,12 +75,12 @@
 45	just	just	ADV	RB	_	43	advmod	43:advmod	_
 46	the	the	DET	DT	Definite=Def|PronType=Art	48	det	48:det	_
 47	same	same	ADJ	JJ	Degree=Pos	48	amod	48:amod	_
-48	joy	joy	NOUN	NN	Number=Sing	43	nsubj	43:nsubj	_
+48	joy	joy	NOUN	NN	Number=Sing	43	nsubj	43:nsubj|53:obj	_
 49	in	in	ADP	IN	_	50	case	50:case	_
 50	cooking	cooking	NOUN	NN	Number=Sing	48	nmod	48:nmod:in	_
 51	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	53	nsubj	53:nsubj	_
 52	would	would	AUX	MD	VerbForm=Fin	53	aux	53:aux	_
-53	be	be	AUX	VB	VerbForm=Inf	48	acl:relcl	48:acl:relcl	Promoted=Yes
+53	be	be	AUX	VB	VerbForm=Inf	48	acl:relcl	48:acl:relcl	Cxn=rc-red-obj-auxstrand|Promoted=Yes
 54	elsewise	elsewise	ADV	RB	_	53	advmod	53:advmod	SpaceAfter=No
 55	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -111,7 +111,7 @@
 12	"	"	PUNCT	''	_	11	punct	11:punct	_
 13	that	that	PRON	WDT	PronType=Rel	15	nsubj	5:ref	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
-15	complex	complex	ADJ	JJ	Degree=Pos	5	acl:relcl	5:acl:relcl	SpaceAfter=No
+15	complex	complex	ADJ	JJ	Degree=Pos	5	acl:relcl	5:acl:relcl	Cxn=rc-that-nsubj|SpaceAfter=No
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
 17	fast	fast	ADJ	JJ	Degree=Pos	15	conj	5:acl:relcl|15:conj:and	_
 18	and	and	CCONJ	CC	_	23	cc	23:cc	_
@@ -601,12 +601,12 @@
 19	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 20	best	good	ADJ	JJS	Degree=Sup	22	amod	22:amod	_
 21	Thanksgiv8ing	Thanksgiving	PROPN	NNP	Number=Sing|Typo=Yes	22	compound	22:compound	CorrectForm=Thanksgiving
-22	Dinners	dinner	NOUN	NNS	Number=Plur	17	nmod	17:nmod:of	_
+22	Dinners	dinner	NOUN	NNS	Number=Plur	17	nmod	17:nmod:of|26:obj	_
 23-24	I've	_	_	_	_	_	_	_	_
 23	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	26	nsubj	26:nsubj	_
 24	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	26	aux	26:aux	_
 25	ever	ever	ADV	RB	_	26	advmod	26:advmod	_
-26	had	have	VERB	VBN	Tense=Past|VerbForm=Part	22	acl:relcl	22:acl:relcl	_
+26	had	have	VERB	VBN	Tense=Past|VerbForm=Part	22	acl:relcl	22:acl:relcl	Cxn=rc-red-obj
 27	(	(	PUNCT	-LRB-	_	30	punct	30:punct	SpaceAfter=No
 28	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	30	nsubj	30:nsubj|32:nsubj:xsubj	_
 29	not	not	PART	RB	_	30	advmod	30:advmod	_
@@ -1169,7 +1169,7 @@
 20	loan	loan	NOUN	NN	Number=Sing	21	compound	21:compound	_
 21	transaction	transaction	NOUN	NN	Number=Sing	15	obl	15:obl:under|23:nsubj	_
 22	which	which	PRON	WDT	PronType=Rel	23	nsubj	21:ref	_
-23	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	acl:relcl	21:acl:relcl	_
+23	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	acl:relcl	21:acl:relcl	Cxn=rc-wh-nsubj
 24	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
 25	swap	swap	NOUN	NN	Number=Sing	23	obj	23:obj	_
 26	as	as	ADP	IN	_	28	case	28:case	_
@@ -1247,9 +1247,9 @@
 26	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
 27	Enron	Enron	PROPN	NNP	Number=Sing	29	compound	29:compound	_
 28	trading	trading	NOUN	NN	Number=Sing	29	compound	29:compound	_
-29	entities	entity	NOUN	NNS	Number=Plur	24	obj	24:obj	_
+29	entities	entity	NOUN	NNS	Number=Plur	24	obj	24:obj|31:obl	_
 30	DB	DB	PROPN	NNP	Number=Sing	31	nsubj	31:nsubj	_
-31	trades	trade	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	acl:relcl	29:acl:relcl	_
+31	trades	trade	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	acl:relcl	29:acl:relcl	Cxn=rc-red-obl-pstrand
 32	with	with	ADP	IN	_	31	obl	31:obl	Promoted=Yes
 33	as	as	ADP	IN	_	35	case	35:case	_
 34	Specified	specify	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	35	amod	35:amod	_
@@ -1322,10 +1322,10 @@
 7	Bank	Bank	PROPN	NNP	Number=Sing	2	nmod	2:nmod:to	SpaceAfter=No
 8	,	,	PUNCT	,	_	2	punct	2:punct	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	draft	draft	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
+10	draft	draft	NOUN	NN	Number=Sing	17	nsubj	13:obl|17:nsubj	_
 11	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 12	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
-13	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	_
+13	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obl-pstrand
 14	from	from	ADP	IN	_	13	obl	13:obl	Promoted=Yes
 15	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	cop	17:cop	_
 16	so	so	ADV	RB	_	17	advmod	17:advmod	_
@@ -1343,7 +1343,7 @@
 28	agreement	agreement	NOUN	NN	Number=Sing	26	nmod	26:nmod:of	_
 29	which	which	PRON	WDT	PronType=Rel	31	nsubj:pass	26:ref	_
 30	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	31	aux:pass	31:aux:pass	_
-31	sent	send	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	26	acl:relcl	26:acl:relcl	_
+31	sent	send	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	26	acl:relcl	26:acl:relcl	Cxn=rc-wh-nsubj:pass
 32	to	to	ADP	IN	_	33	case	33:case	_
 33	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	31	obl	31:obl:to	_
 34	on	on	ADP	IN	_	35	case	35:case	_
