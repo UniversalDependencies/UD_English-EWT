@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.13 -- 2023-11-15
+Universal Dependencies English Web Treebank v2.14 -- 2024-05-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
 
@@ -59,7 +59,7 @@ of the original LDC2012T13 filename.
 This corpus is compatible with the CoNLL-U format defined for Universal
 Dependencies. See:
 
-   http://universaldependencies.github.io/docs/format.html
+   https://universaldependencies.org/format.html
 
 The dependency taxonomy can be found on the Universal Dependencies web site:
 
@@ -68,13 +68,14 @@ The dependency taxonomy can be found on the Universal Dependencies web site:
 For the conversion to v2, we performed an automatic conversion with extensive
 spot-checking, and manual adjudication of ambiguous cases.
 
-The enhanced dependencies were automatically obtained by running an adapted version
+Most enhanced dependencies were automatically obtained by running an adapted version
 of the converter by Schuster and Manning (2016). These dependencies have **not** been
-manually checked.
+manually checked. Enhanced dependencies for *reduced* relative clauses were added in
+v2.14.
 
 # Deviations from UD
 
-Version 2.13 of the English UD treebank conforms to the UD guidelines in
+Version 2.14 of the English UD treebank conforms to the UD guidelines in
 almost all respects, but there remain the following deviations:
 
  - The UD dependency `flat` is largely only used for person names.
@@ -99,7 +100,7 @@ Highlights:
      * clean up errors
      * `VBG`: new rules to distinguish `VerbForm=Ger` vs. `Tense=Pres|VerbForm=Part` ([#305](https://github.com/UniversalDependencies/UD_English-EWT/issues/305))
      * implement subjunctive "were" ([#511](https://github.com/UniversalDependencies/UD_English-EWT/issues/511))
-  - Noun features: implement `Number=Ptan` for plurale tantum ([docs#999](https://github.com/UniversalDependencies/docs/issues/999))
+  - Noun features: implement `Number=Ptan` for pluralia tantum ([docs#999](https://github.com/UniversalDependencies/docs/issues/999))
   - Improved treatment of internet addresses ([#440](https://github.com/UniversalDependencies/UD_English-EWT/issues/440), [#487](https://github.com/UniversalDependencies/UD_English-EWT/issues/487))
   - Multiword expressions
      * `goeswith` for spaced email addresses
