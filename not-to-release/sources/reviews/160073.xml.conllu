@@ -53,7 +53,7 @@
 9	one	one	NUM	CD	NumForm=Word|NumType=Card	8	obj	8:obj|12:obj	_
 10	that	that	PRON	WDT	PronType=Rel	12	obj	9:ref	_
 11	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-12	liked	like	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	SpaceAfter=No
+12	liked	like	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-that-obj|SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-160073-0004
@@ -78,7 +78,7 @@
 1	Everything	everything	PRON	NN	Number=Sing|PronType=Tot	9	nsubj	4:obj|9:nsubj|12:nsubj	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 3	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	gotten	get	VERB	VBN	Tense=Past|VerbForm=Part	1	acl:relcl	1:acl:relcl	_
+4	gotten	get	VERB	VBN	Tense=Past|VerbForm=Part	1	acl:relcl	1:acl:relcl	Cxn=rc-red-obj
 5	there	there	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 6	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
 7	been	be	AUX	VBN	Tense=Past|VerbForm=Part	9	cop	9:cop	_
@@ -91,7 +91,7 @@
 14	any	any	DET	DT	PronType=Ind	17	det	17:det	_
 15	other	other	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 16	Chinese	Chinese	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	restaurant	restaurant	NOUN	NN	Number=Sing	9	obl	9:obl:than	_
+17	restaurant	restaurant	NOUN	NN	Number=Sing	9	obl	9:obl:than|26:obl	_
 18	in	in	ADP	IN	_	22	case	22:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 20	San	San	PROPN	NNP	Number=Sing	22	compound	22:compound	_
@@ -100,7 +100,7 @@
 23	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	26	nsubj	26:nsubj	_
 24	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	26	aux	26:aux	_
 25	been	be	AUX	VBN	Tense=Past|VerbForm=Part	26	cop	26:cop	_
-26	to	to	ADP	IN	_	17	acl:relcl	17:acl:relcl	Promoted=Yes|SpaceAfter=No
+26	to	to	ADP	IN	_	17	acl:relcl	17:acl:relcl	Cxn=rc-red-obl-pstrand|Promoted=Yes|SpaceAfter=No
 27	--	--	PUNCT	:	_	36	punct	36:punct	SpaceAfter=No
 28	and	and	CCONJ	CC	_	36	cc	36:cc	_
 29	trust	trust	VERB	VB	Mood=Imp|VerbForm=Fin	36	parataxis	36:parataxis	_
@@ -171,11 +171,11 @@
 4	best	good	ADJ	JJS	Degree=Sup	7	amod	7:amod	_
 5	Egg	Egg	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 6	Drop	Drop	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	Soup	Soup	PROPN	NNP	Number=Sing	2	obj	2:obj	_
+7	Soup	Soup	PROPN	NNP	Number=Sing	2	obj	2:obj|11:obj	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 9	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
 10	ever	ever	ADV	RB	_	11	advmod	11:advmod	_
-11	tasted	taste	VERB	VBN	Tense=Past|VerbForm=Part	7	acl:relcl	7:acl:relcl	SpaceAfter=No
+11	tasted	taste	VERB	VBN	Tense=Past|VerbForm=Part	7	acl:relcl	7:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-160073-0009
@@ -195,10 +195,10 @@
 # text = And every entree we have ordered is perfect.
 1	And	and	CCONJ	CC	_	8	cc	8:cc	_
 2	every	every	DET	DT	PronType=Tot	3	det	3:det	_
-3	entree	entree	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
+3	entree	entree	NOUN	NN	Number=Sing	8	nsubj	6:obj|8:nsubj	_
 4	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 5	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
-6	ordered	order	VERB	VBN	Tense=Past|VerbForm=Part	3	acl:relcl	3:acl:relcl	_
+6	ordered	order	VERB	VBN	Tense=Past|VerbForm=Part	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obj
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 8	perfect	perfect	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 9	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -224,11 +224,11 @@
 5	reasonable	reasonable	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	for	for	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	amount	amount	NOUN	NN	Number=Sing	5	obl	5:obl:for	_
+8	amount	amount	NOUN	NN	Number=Sing	5	obl	5:obl:for|12:obj	_
 9	of	of	ADP	IN	_	10	case	10:case	_
 10	food	food	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
-12	receive	receive	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	SpaceAfter=No
+12	receive	receive	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 13	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-160073-0013

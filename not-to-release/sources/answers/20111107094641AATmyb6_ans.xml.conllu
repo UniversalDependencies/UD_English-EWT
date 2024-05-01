@@ -104,9 +104,9 @@
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	would	would	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	tours	tour	NOUN	NNS	Number=Plur	19	nsubj	19:nsubj	_
+7	tours	tour	NOUN	NNS	Number=Plur	19	nsubj	9:obj|19:nsubj	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-9	find	find	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+9	find	find	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	Cxn=rc-red-obj
 10	there	there	ADV	RB	PronType=Dem	9	advmod	9:advmod	_
 11	for	for	ADP	IN	_	13	case	13:case	_
 12	less	less	ADJ	JJR	Degree=Cmp	13	amod	13:amod	_
@@ -203,7 +203,7 @@
 8	stay	stay	NOUN	NN	Number=Sing	4	nmod	4:nmod:in	_
 9	that	that	PRON	WDT	PronType=Rel	11	nsubj	4:ref	_
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
-11	sweet	sweet	ADJ	JJ	Degree=Pos	4	acl:relcl	4:acl:relcl	_
+11	sweet	sweet	ADJ	JJ	Degree=Pos	4	acl:relcl	4:acl:relcl	Cxn=rc-that-nsubj
 12	and	and	CCONJ	CC	_	17	cc	17:cc	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	water	water	NOUN	NN	Number=Sing	15	compound	15:compound	_
@@ -406,7 +406,7 @@
 17	near	near	ADP	IN	_	18	case	18:case	_
 18	where	where	ADV	WRB	PronType=Rel	15	nmod	15:nmod:near|20:advmod	_
 19	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
-20	live	live	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	18	advcl:relcl	18:advcl:relcl	SpaceAfter=No
+20	live	live	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	18	advcl:relcl	18:advcl:relcl	Cxn=rc-free-advmod|SpaceAfter=No
 21	)	)	PUNCT	-RRB-	_	18	punct	18:punct	_
 22	or	or	CCONJ	CC	_	24	cc	24:cc	_
 23	Can	Can	PROPN	NNP	Number=Sing	24	compound	24:compound	_
@@ -444,7 +444,7 @@
 6-7	I've	_	_	_	_	_	_	_	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 7	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
-8	come	come	VERB	VBN	Tense=Past|VerbForm=Part	4	acl:relcl	4:acl:relcl	_
+8	come	come	VERB	VBN	Tense=Past|VerbForm=Part	4	acl:relcl	4:acl:relcl	Cxn=rc-that-obl-pstrand
 9	across	across	ADP	IN	_	5	case	5:case	_
 10	buy	buy	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 11	tours	tour	NOUN	NNS	Number=Plur	10	obj	10:obj	_
@@ -485,7 +485,7 @@
 26	things	thing	NOUN	NNS	Number=Plur	24	obj	24:obj|29:nsubj:pass	_
 27	that	that	PRON	WDT	PronType=Rel	29	nsubj:pass	26:ref	_
 28	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	29	aux:pass	29:aux:pass	_
-29	geared	gear	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	26	acl:relcl	26:acl:relcl	_
+29	geared	gear	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	26	acl:relcl	26:acl:relcl	Cxn=rc-that-nsubj:pass
 30	towards	towards	ADP	IN	_	31	case	31:case	_
 31	tourists	tourist	NOUN	NNS	Number=Plur	29	obl	29:obl:towards	SpaceAfter=No
 32	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -654,7 +654,7 @@
 4	trip	trip	NOUN	NN	Number=Sing	1	obj	1:obj	_
 5	where-ever	wherever	ADV	WRB	PronType=Rel|Typo=Yes	1	advmod	1:advmod|7:advmod	CorrectForm=wherever
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
-7	end	end	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	advcl:relcl	5:advcl:relcl	_
+7	end	end	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	advcl:relcl	5:advcl:relcl	Cxn=rc-free-advmod
 8	up	up	ADP	RP	_	7	compound:prt	7:compound:prt	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -699,7 +699,7 @@
 9	location	location	NOUN	NN	Number=Sing	7	obj	7:obj|12:obl	_
 10	where	where	ADV	WRB	PronType=Rel	12	advmod	9:ref	_
 11	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
-12	made	make	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
+12	made	make	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-wh-obl
 13	coconut	coconut	NOUN	NN	Number=Sing	14	compound	14:compound	_
 14	candies	candy	NOUN	NNS	Number=Plur	12	obj	12:obj	SpaceAfter=No
 15	,	,	PUNCT	,	_	16	punct	16:punct	_
@@ -709,7 +709,7 @@
 19	restaurant	restaurant	NOUN	NN	Number=Sing	16	obj	16:obj|22:nsubj:pass	_
 20	which	which	PRON	WDT	PronType=Rel	22	nsubj:pass	19:ref	_
 21	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	aux:pass	22:aux:pass	_
-22	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	19	acl:relcl	19:acl:relcl	_
+22	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	19	acl:relcl	19:acl:relcl	Cxn=rc-wh-nsubj:pass
 23	to	to	ADP	IN	_	26	case	26:case	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	26	det	26:det	_
 25	fish	fish	NOUN	NN	Number=Sing	26	compound	26:compound	_
@@ -727,7 +727,7 @@
 37	food	food	NOUN	NN	Number=Sing	34	obj	34:obj	_
 38	at	at	ADP	IN	_	39	case	39:case	_
 39	what	what	PRON	WP	PronType=Rel	34	obl	34:obl:at|40:nsubj|45:nsubj:xsubj	_
-40	appeared	appear	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	39	acl:relcl	39:acl:relcl	_
+40	appeared	appear	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	39	acl:relcl	39:acl:relcl	Cxn=rc-free-nsubj
 41	to	to	PART	TO	_	45	mark	45:mark	_
 42	be	be	AUX	VB	VerbForm=Inf	45	cop	45:cop	_
 43	a	a	DET	DT	Definite=Ind|PronType=Art	45	det	45:det	_

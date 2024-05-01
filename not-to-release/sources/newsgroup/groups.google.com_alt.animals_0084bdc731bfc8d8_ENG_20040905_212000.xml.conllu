@@ -75,7 +75,7 @@
 6	that	that	PRON	WDT	PronType=Rel	9	nsubj	5:ref	_
 7	could	could	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 8	be	be	AUX	VB	VerbForm=Inf	9	cop	9:cop	_
-9	extinct	extinct	ADJ	JJ	Degree=Pos	5	acl:relcl	5:acl:relcl	_
+9	extinct	extinct	ADJ	JJ	Degree=Pos	5	acl:relcl	5:acl:relcl	Cxn=rc-that-nsubj
 10	by	by	ADP	IN	_	11	case	11:case	_
 11	2050	2050	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:by	_
 12	if	if	SCONJ	IN	_	18	mark	18:mark	_
@@ -93,9 +93,9 @@
 2	-	-	PUNCT	:	_	3	punct	3:punct	_
 3	Number	number	NOUN	NN	Number=Sing	1	appos	1:appos	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	times	time	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
+5	times	time	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|7:obl	_
 6	Bush	Bush	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
-7	mentioned	mention	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+7	mentioned	mention	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 8	global	global	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	warming	warming	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
 10	,	,	PUNCT	,	_	12	punct	12:punct	_
@@ -185,7 +185,7 @@
 8	office	office	NOUN	NN	Number=Sing	7	obj	7:obj	_
 9	that	that	PRON	WDT	PronType=Rel	11	obl:npmod	5:ref	_
 10	Bush	Bush	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj|14:nsubj:xsubj	_
-11	decided	decide	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+11	decided	decide	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obl:npmod
 12	Not	not	PART	RB	_	14	advmod	14:advmod	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	ratify	ratify	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
@@ -251,7 +251,7 @@
 # text = 25 - Percentage of overall worldwide carbon dioxide emissions the United States is responsible for.
 1	25	25	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	-	-	PUNCT	:	_	3	punct	3:punct	_
-3	Percentage	percentage	NOUN	NN	Number=Sing	1	appos	1:appos	_
+3	Percentage	percentage	NOUN	NN	Number=Sing	1	appos	1:appos|14:obl	_
 4	of	of	ADP	IN	_	9	case	9:case	_
 5	overall	overall	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 6	worldwide	worldwide	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
@@ -262,7 +262,7 @@
 11	United	United	ADJ	NNP	Degree=Pos	12	amod	12:amod	_
 12	States	State	PROPN	NNPS	Number=Plur	14	nsubj	14:nsubj	_
 13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
-14	responsible	responsible	ADJ	JJ	Degree=Pos	3	acl:relcl	3:acl:relcl	_
+14	responsible	responsible	ADJ	JJ	Degree=Pos	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obl-pstrand
 15	for	for	ADP	IN	_	14	obl	14:obl	Promoted=Yes|SpaceAfter=No
 16	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -279,7 +279,7 @@
 8	office	office	NOUN	NN	Number=Sing	7	obj	7:obj	_
 9	that	that	PRON	WDT	PronType=Rel	11	obl:npmod	5:ref	_
 10	Bush	Bush	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	_
-11	reneged	renege	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+11	reneged	renege	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obl:npmod
 12	on	on	ADP	IN	_	15	case	15:case	_
 13	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 14	campaign	campaign	NOUN	NN	Number=Sing	15	compound	15:compound	_
@@ -298,12 +298,12 @@
 # text = 14 - Percentage carbon dioxide emissions will increase over the next 10 years under Bush's own global-warming plan (an increase of 30 per cent above their 1990 levels).
 1	14	14	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	-	-	PUNCT	:	_	3	punct	3:punct	_
-3	Percentage	percentage	NOUN	NN	Number=Sing	1	appos	1:appos	_
+3	Percentage	percentage	NOUN	NN	Number=Sing	1	appos	1:appos|8:obj	_
 4	carbon	carbon	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	dioxide	dioxide	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	emissions	emission	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
 7	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	increase	increase	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	_
+8	increase	increase	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obj
 9	over	over	ADP	IN	_	13	case	13:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 11	next	next	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
@@ -338,11 +338,11 @@
 2	-	-	PUNCT	:	_	3	punct	3:punct	_
 3	Number	number	NOUN	NN	Number=Sing	1	appos	1:appos	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	years	year	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
+5	years	year	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|9:obl	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	Bush	Bush	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 8	administration	administration	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
-9	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+9	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:in	_
 12	that	that	SCONJ	IN	_	18	mark	18:mark	_
@@ -366,7 +366,7 @@
 2	44	44	NUM	CD	NumForm=Digit|NumType=Card	3	compound	3:compound	SpaceAfter=No
 3	m	million	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 4	-	-	PUNCT	:	_	5	punct	5:punct	_
-5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|17:obj	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 7	Bush	Bush	PROPN	NNP	Number=Sing	9	compound	9:compound	SpaceAfter=No
 8	-	-	PUNCT	HYPH	_	7	punct	7:punct	SpaceAfter=No
@@ -378,7 +378,7 @@
 14	Republican	Republican	ADJ	NNP	Degree=Pos	16	amod	16:amod	_
 15	National	National	ADJ	NNP	Degree=Pos	16	amod	16:amod	_
 16	Committee	Committee	PROPN	NNP	Number=Sing	11	conj	11:conj:and|17:nsubj	_
-17	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+17	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obj
 18	in	in	ADP	IN	_	19	case	19:case	_
 19	contributions	contribution	NOUN	NNS	Number=Plur	17	obl	17:obl:in	_
 20	from	from	ADP	IN	_	31	case	31:case	_
@@ -430,7 +430,7 @@
 7	appointees	appointee	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|10:nsubj	_
 8	who	who	PRON	WP	PronType=Rel	10	nsubj	7:ref	_
 9	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
-10	alumni	alumnus	NOUN	NNS	Number=Plur	7	acl:relcl	7:acl:relcl	_
+10	alumni	alumnus	NOUN	NNS	Number=Plur	7	acl:relcl	7:acl:relcl	Cxn=rc-wh-nsubj
 11	of	of	ADP	IN	_	14	case	14:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	energy	energy	NOUN	NN	Number=Sing	14	compound	14:compound	_
@@ -480,7 +480,7 @@
 15	that	that	PRON	WDT	PronType=Rel	18	nsubj:pass	7:ref	_
 16	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
 17	been	be	AUX	VBN	Tense=Past|VerbForm=Part	18	aux:pass	18:aux:pass	_
-18	announced	announce	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	acl:relcl	7:acl:relcl	_
+18	announced	announce	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	acl:relcl	7:acl:relcl	Cxn=rc-that-nsubj:pass
 19	by	by	ADP	IN	_	22	case	22:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 21	Bush	Bush	PROPN	NNP	Number=Sing	22	compound	22:compound	_
@@ -494,7 +494,7 @@
 29	a	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
 30	time	time	NOUN	NN	Number=Sing	24	appos	24:appos|32:nsubj	_
 31	that	that	PRON	WDT	PronType=Rel	32	nsubj	30:ref	_
-32	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	acl:relcl	30:acl:relcl	_
+32	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	acl:relcl	30:acl:relcl	Cxn=rc-that-nsubj
 33	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	32	expl	32:expl	_
 34	all	all	DET	RB	ExtPos=ADV	36	advmod	36:advmod	_
 35	but	but	ADP	RB	_	34	fixed	34:fixed	_
@@ -576,11 +576,11 @@
 2	6.1	6.1	NUM	CD	NumForm=Digit|NumType=Frac	3	compound	3:compound	SpaceAfter=No
 3	m	million	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	1	nummod	1:nummod	_
 4	-	-	PUNCT	:	_	5	punct	5:punct	_
-5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|9:obl	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	EPA	EPA	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
 8	historically	historically	ADV	RB	_	9	advmod	9:advmod	_
-9	valued	value	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+9	valued	value	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 10	each	each	DET	DT	PronType=Tot	12	det	12:det	_
 11	human	human	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	life	life	NOUN	NN	Number=Sing	9	obj	9:obj	_
@@ -599,10 +599,10 @@
 2	3.7	3.7	NUM	CD	NumForm=Digit|NumType=Frac	3	compound	3:compound	SpaceAfter=No
 3	m	million	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	1	nummod	1:nummod	_
 4	-	-	PUNCT	:	_	5	punct	5:punct	_
-5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|8:obl	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	EPA	EPA	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
-8	valued	value	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+8	valued	value	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 9	each	each	DET	DT	PronType=Tot	11	det	11:det	_
 10	human	human	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	life	life	NOUN	NN	Number=Sing	8	obj	8:obj	_
@@ -679,7 +679,7 @@
 12	Energy	Energy	PROPN	NNP	Number=Sing	14	compound	14:compound	_
 13	Task	Task	PROPN	NNP	Number=Sing	14	compound	14:compound	_
 14	Force	Force	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	_
-15	investigated	investigate	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+15	investigated	investigate	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obl:npmod
 16-17	Iraq's	_	_	_	_	_	_	_	_
 16	Iraq	Iraq	PROPN	NNP	Number=Sing	19	nmod:poss	19:nmod:poss	_
 17	's	's	PART	POS	_	16	case	16:case	_
@@ -700,7 +700,7 @@
 8	population	population	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	_
 9	that	that	PRON	WDT	PronType=Rel	11	nsubj	3:ref	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
-11	British	British	ADJ	JJ	Degree=Pos	3	acl:relcl	3:acl:relcl	SpaceAfter=No
+11	British	British	ADJ	JJ	Degree=Pos	3	acl:relcl	3:acl:relcl	Cxn=rc-that-nsubj|SpaceAfter=No
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0028
@@ -734,7 +734,7 @@
 8	population	population	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	_
 9	that	that	PRON	WDT	PronType=Rel	11	nsubj	3:ref	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
-11	American	American	ADJ	JJ	Degree=Pos	3	acl:relcl	3:acl:relcl	SpaceAfter=No
+11	American	American	ADJ	JJ	Degree=Pos	3	acl:relcl	3:acl:relcl	Cxn=rc-that-nsubj|SpaceAfter=No
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0030
@@ -759,13 +759,13 @@
 # text = 63 - Percentage of oil the United States imported in 2003, a record high.
 1	63	63	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	-	-	PUNCT	:	_	3	punct	3:punct	_
-3	Percentage	percentage	NOUN	NN	Number=Sing	1	appos	1:appos	_
+3	Percentage	percentage	NOUN	NN	Number=Sing	1	appos	1:appos|9:obj	_
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	oil	oil	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	United	United	ADJ	NNP	Degree=Pos	8	amod	8:amod	_
 8	States	State	PROPN	NNPS	Number=Plur	9	nsubj	9:nsubj	_
-9	imported	import	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+9	imported	import	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obj
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:in	SpaceAfter=No
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
@@ -786,7 +786,7 @@
 7	deaths	death	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of|10:nsubj	_
 8	that	that	PRON	WDT	PronType=Rel	10	nsubj	7:ref	_
 9	will	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
-10	occur	occur	VERB	VB	VerbForm=Inf	7	acl:relcl	7:acl:relcl	_
+10	occur	occur	VERB	VB	VerbForm=Inf	7	acl:relcl	7:acl:relcl	Cxn=rc-that-nsubj
 11	under	under	ADP	IN	_	16	case	16:case	_
 12-13	Bush's	_	_	_	_	_	_	_	_
 12	Bush	Bush	PROPN	NNP	Number=Sing	16	nmod:poss	16:nmod:poss	_
@@ -820,7 +820,7 @@
 # text = 750,000 - Tons of toxic waste the US military, the world's biggest polluter, generates around the world each year.
 1	750,000	750000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	-	-	PUNCT	:	_	3	punct	3:punct	_
-3	Tons	ton	NOUN	NNS	Number=Plur	1	appos	1:appos	_
+3	Tons	ton	NOUN	NNS	Number=Plur	1	appos	1:appos|17:obj	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	toxic	toxic	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	waste	waste	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	_
@@ -835,7 +835,7 @@
 14	biggest	big	ADJ	JJS	Degree=Sup	15	amod	15:amod	_
 15	polluter	polluter	NOUN	NN	Number=Sing	9	appos	9:appos	SpaceAfter=No
 16	,	,	PUNCT	,	_	9	punct	9:punct	_
-17	generates	generate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+17	generates	generate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obj
 18	around	around	ADP	IN	_	20	case	20:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	world	world	NOUN	NN	Number=Sing	17	obl	17:obl:around	_
@@ -865,13 +865,13 @@
 18	1995	1995	NUM	CD	NumForm=Digit|NumType=Card	5	nmod	5:nmod:in	SpaceAfter=No
 19	,	,	PUNCT	,	_	21	punct	21:punct	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	Year	year	NOUN	NN	Number=Sing	18	appos	18:appos	_
+21	Year	year	NOUN	NN	Number=Sing	18	appos	18:appos|27:obl	_
 22	"	"	PUNCT	``	_	24	punct	24:punct	SpaceAfter=No
 23	polluter	polluter	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	_
 24	pays	pay	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	compound	26:compound	SpaceAfter=No
 25	"	"	PUNCT	''	_	24	punct	24:punct	_
 26	fees	fee	NOUN	NNS	Number=Plur	27	nsubj	27:nsubj	_
-27	expired	expire	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	21	acl:relcl	21:acl:relcl	SpaceAfter=No
+27	expired	expire	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	21	acl:relcl	21:acl:relcl	Cxn=rc-red-obl|SpaceAfter=No
 28	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0036
@@ -916,7 +916,7 @@
 14	species	species	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	protection	protection	NOUN	NN	Number=Sing	8	obl	8:obl:in	_
 16	that	that	PRON	WDT	PronType=Rel	17	nsubj	7:ref	_
-17	remained	remain	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+17	remained	remain	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	Cxn=rc-that-nsubj
 18	unheeded	unheeded	ADJ	JJ	Degree=Pos	17	xcomp	17:xcomp	_
 19	during	during	ADP	IN	_	22	case	22:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
@@ -939,7 +939,7 @@
 7	that	that	PRON	WDT	PronType=Rel	16	obj	3:ref	_
 8	Bush	Bush	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj|12:nsubj:xsubj	_
 9	then	then	ADV	RB	PronType=Dem	10	advmod	10:advmod	_
-10	decided	decide	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+10	decided	decide	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-that-obj_xcomp_xcomp
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	allow	allow	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
@@ -962,7 +962,7 @@
 9	Zero	Zero	PROPN	NNP	Number=Sing	6	nmod	6:nmod:at	_
 10	who	who	PRON	WP	PronType=Rel	12	nsubj	6:ref	_
 11	now	now	ADV	RB	_	12	advmod	12:advmod	_
-12	suffer	suffer	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+12	suffer	suffer	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-wh-nsubj
 13	from	from	ADP	IN	_	18	case	18:case	_
 14	long	long	ADJ	JJ	Degree=Pos	16	amod	16:amod	SpaceAfter=No
 15	-	-	PUNCT	HYPH	_	14	punct	14:punct	SpaceAfter=No
@@ -977,7 +977,7 @@
 24-25	don't	_	_	_	_	_	_	_	_
 24	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	26	aux	26:aux	_
 25	n't	not	PART	RB	_	26	advmod	26:advmod	_
-26	have	have	VERB	VB	VerbForm=Inf	6	acl:relcl	6:acl:relcl	_
+26	have	have	VERB	VB	VerbForm=Inf	6	acl:relcl	6:acl:relcl	Cxn=rc-wh-nsubj-pfront
 27	health	health	NOUN	NN	Number=Sing	28	compound	28:compound	_
 28	insurance	insurance	NOUN	NN	Number=Sing	26	obj	26:obj	SpaceAfter=No
 29	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -994,7 +994,7 @@
 8	Zero	Zero	PROPN	NNP	Number=Sing	5	nmod	5:nmod:at	_
 9	who	who	PRON	WP	PronType=Rel	11	nsubj	3:ref	_
 10	now	now	ADV	RB	_	11	advmod	11:advmod	_
-11	suffer	suffer	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+11	suffer	suffer	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 12	from	from	ADP	IN	_	14	case	14:case	_
 13	lung	lung	NOUN	NN	Number=Sing	14	compound	14:compound	_
 14	ailments	ailment	NOUN	NNS	Number=Plur	11	obl	11:obl:from	SpaceAfter=No
@@ -1013,7 +1013,7 @@
 8	Zero	Zero	PROPN	NNP	Number=Sing	5	nmod	5:nmod:at	_
 9	who	who	PRON	WP	PronType=Rel	11	nsubj	3:ref	_
 10	Now	now	ADV	RB	_	11	advmod	11:advmod	_
-11	suffer	suffer	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+11	suffer	suffer	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 12	from	from	ADP	IN	_	19	case	19:case	_
 13	ear	ear	NOUN	NN	Number=Sing	19	compound	19:compound	SpaceAfter=No
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
@@ -1051,7 +1051,7 @@
 23	R	R	PROPN	NNP	Number=Sing	24	compound	24:compound	_
 24	Grace	Grace	PROPN	NNP	Number=Sing	25	compound	25:compound	_
 25	mine	mine	NOUN	NN	Number=Sing	26	nsubj	26:nsubj	_
-26	produced	produce	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	acl:relcl	16:acl:relcl	_
+26	produced	produce	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	acl:relcl	16:acl:relcl	Cxn=rc-wh-obl
 27	one	one	NUM	CD	NumForm=Word|NumType=Card	26	obj	26:obj	_
 28	of	of	ADP	IN	_	32	case	32:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
@@ -1086,7 +1086,7 @@
 19	September	September	PROPN	NNP	Number=Sing	15	conj	12:obl:between|15:conj:and	_
 20	2001	2001	NUM	CD	NumForm=Digit|NumType=Card	19	nummod	19:nummod	_
 21	that	that	PRON	WDT	PronType=Rel	22	nsubj	8:ref	_
-22	mentioned	mention	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
+22	mentioned	mention	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	Cxn=rc-that-nsubj
 23	al	al	PROPN	NNP	Number=Sing	25	compound	25:compound	SpaceAfter=No
 24	-	-	PUNCT	HYPH	_	23	punct	23:punct	SpaceAfter=No
 25	Qa'ida	Qa'ida	PROPN	NNP	Number=Sing	22	obj	22:obj	SpaceAfter=No
@@ -1112,7 +1112,7 @@
 16	same	same	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	period	period	NOUN	NN	Number=Sing	8	nmod	8:nmod:in	_
 18	that	that	PRON	WDT	PronType=Rel	19	nsubj	8:ref	_
-19	mentioned	mention	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
+19	mentioned	mention	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	Cxn=rc-that-nsubj
 20	Iraq	Iraq	PROPN	NNP	Number=Sing	19	obj	19:obj	_
 21	or	or	CCONJ	CC	_	22	cc	22:cc	_
 22	Saddam	Saddam	PROPN	NNP	Number=Sing	20	conj	19:obj|20:conj:or	_
@@ -1139,7 +1139,7 @@
 16	same	same	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	period	period	NOUN	NN	Number=Sing	8	nmod	8:nmod:in	_
 18	that	that	PRON	WDT	PronType=Rel	19	nsubj	8:ref	_
-19	mentioned	mention	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
+19	mentioned	mention	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	Cxn=rc-that-nsubj
 20	missile	missile	NOUN	NN	Number=Sing	21	compound	21:compound	_
 21	defence	defence	NOUN	NN	Number=Sing	19	obj	19:obj	SpaceAfter=No
 22	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -1164,7 +1164,7 @@
 16	same	same	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	period	period	NOUN	NN	Number=Sing	8	nmod	8:nmod:in	_
 18	that	that	PRON	WDT	PronType=Rel	19	nsubj	8:ref	_
-19	mentioned	mention	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
+19	mentioned	mention	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	Cxn=rc-that-nsubj
 20	weapons	weapon	NOUN	NNS	Number=Plur	19	obj	19:obj	_
 21	of	of	ADP	IN	_	23	case	23:case	_
 22	mass	mass	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
@@ -1177,9 +1177,9 @@
 2	-	-	PUNCT	:	_	3	punct	3:punct	_
 3	Number	number	NOUN	NN	Number=Sing	1	appos	1:appos	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	times	time	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
+5	times	time	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|7:obl	_
 6	Bush	Bush	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
-7	mentioned	mention	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+7	mentioned	mention	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 8	Osama	Osama	PROPN	NNP	Number=Sing	7	obj	7:obj	_
 9	bin	bin	PROPN	NNP	Number=Sing	8	flat	8:flat	_
 10	Laden	Laden	PROPN	NNP	Number=Sing	8	flat	8:flat	_
@@ -1202,7 +1202,7 @@
 5	times	time	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|8:obl:npmod	_
 6	that	that	PRON	WDT	PronType=Rel	8	obl:npmod	5:ref	_
 7	Bush	Bush	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
-8	mentioned	mention	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+8	mentioned	mention	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obl:npmod
 9	terrorism	terrorism	NOUN	NN	Number=Sing	8	obj	8:obj	_
 10	or	or	CCONJ	CC	_	11	cc	11:cc	_
 11	terrorists	terrorist	NOUN	NNS	Number=Plur	9	conj	8:obj|9:conj:or	_
@@ -1222,9 +1222,9 @@
 2	-	-	PUNCT	:	_	3	punct	3:punct	_
 3	Number	number	NOUN	NN	Number=Sing	1	appos	1:appos	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	times	time	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
+5	times	time	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|7:obl	_
 6	Bush	Bush	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
-7	mentioned	mention	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+7	mentioned	mention	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 8	Saddam	Saddam	PROPN	NNP	Number=Sing	7	obj	7:obj	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
 10	Iraq	Iraq	PROPN	NNP	Number=Sing	8	conj	7:obj|8:conj:or	SpaceAfter=No
@@ -1256,7 +1256,7 @@
 6	value	value	NOUN	NN	Number=Sing	1	appos	1:appos	_
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
-9	painting	painting	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	_
+9	painting	painting	NOUN	NN	Number=Sing	6	nmod	6:nmod:of|20:obj	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 11	Bush	Bush	PROPN	NNP	Number=Sing	13	compound	13:compound	_
 12	Presidential	Presidential	ADJ	NNP	Degree=Pos	13	amod	13:amod	_
@@ -1267,7 +1267,7 @@
 17	,	,	PUNCT	,	_	18	punct	18:punct	_
 18	Texas	Texas	PROPN	NNP	Number=Sing	16	appos	16:appos	SpaceAfter=No
 19	,	,	PUNCT	,	_	13	punct	13:punct	_
-20	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
+20	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-red-obj
 21	from	from	ADP	IN	_	23	case	23:case	_
 22	Prince	Prince	PROPN	NNP	Number=Sing	23	compound	23:compound	_
 23	Bandar	Bandar	PROPN	NNP	Number=Sing	20	obl	20:obl:from	SpaceAfter=No
@@ -1293,9 +1293,9 @@
 2	-	-	PUNCT	:	_	3	punct	3:punct	_
 3	Number	number	NOUN	NN	Number=Sing	1	appos	1:appos	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	times	time	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
+5	times	time	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|7:obl	_
 6	Bush	Bush	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
-7	mentioned	mention	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+7	mentioned	mention	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 8	Saudi	Saudi	ADJ	NNP	Degree=Pos	9	amod	9:amod	_
 9	Arabia	Arabia	PROPN	NNP	Number=Sing	7	obj	7:obj	_
 10	in	in	ADP	IN	_	17	case	17:case	_
@@ -1342,7 +1342,7 @@
 7	September	September	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 8	hijackers	hijacker	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
 9	who	who	PRON	WP	PronType=Rel	10	nsubj	3:ref	_
-10	came	come	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+10	came	come	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 11	from	from	ADP	IN	_	13	case	13:case	_
 12	Saudi	Saudi	ADJ	NNP	Degree=Pos	13	amod	13:amod	_
 13	Arabia	Arabia	PROPN	NNP	Number=Sing	10	obl	10:obl:from	SpaceAfter=No
@@ -1361,7 +1361,7 @@
 8	whose	whose	PRON	WP$	Poss=Yes|PronType=Rel	10	nmod:poss	7:ref	_
 9	entry	entry	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	visas	visa	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
-11	came	come	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+11	came	come	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	Cxn=rc-wh-nmod:poss_nsubj
 12	through	through	ADP	IN	_	21	case	21:case	_
 13	special	special	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 14	US	US	PROPN	NNP	Number=Sing	21	compound	21:compound	SpaceAfter=No
@@ -1434,7 +1434,7 @@
 29	-	-	PUNCT	HYPH	_	28	punct	28:punct	SpaceAfter=No
 30	Qa'ida	Qa'ida	PROPN	NNP	Number=Sing	32	nsubj	32:nsubj	_
 31	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	cop	32:cop	_
-32	active	active	ADJ	JJ	Degree=Pos	26	acl:relcl	26:acl:relcl	SpaceAfter=No
+32	active	active	ADJ	JJ	Degree=Pos	26	acl:relcl	26:acl:relcl	Cxn=rc-wh-obl|SpaceAfter=No
 33	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0057
@@ -1443,12 +1443,12 @@
 2	3	3	NUM	CD	NumForm=Digit|NumType=Card	3	compound	3:compound	SpaceAfter=No
 3	m	million	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	1	nummod	1:nummod	_
 4	-	-	PUNCT	:	_	5	punct	5:punct	_
-5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|10:obl	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	White	White	ADJ	NNP	Degree=Pos	8	amod	8:amod	_
 8	House	House	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj|12:nsubj:xsubj	_
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	10:cop	_
-10	willing	willing	ADJ	JJ	Degree=Pos	5	acl:relcl	5:acl:relcl	_
+10	willing	willing	ADJ	JJ	Degree=Pos	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	grant	grant	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
@@ -1487,9 +1487,9 @@
 2	10	10	NUM	CD	NumForm=Digit|NumType=Card	3	compound	3:compound	SpaceAfter=No
 3	m	million	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 4	-	-	PUNCT	:	_	5	punct	5:punct	_
-5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|7:obj	_
 6	Bush	Bush	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
-7	cut	cut	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+7	cut	cut	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obj
 8	from	from	ADP	IN	_	14	case	14:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10-11	INS's	_	_	_	_	_	_	_	_
@@ -1513,7 +1513,7 @@
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	commission	commission	NOUN	NN	Number=Sing	6	obl	6:obl:to|11:nsubj	_
 10	that	that	PRON	WDT	PronType=Rel	11	nsubj	9:ref	_
-11	looked	look	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
+11	looked	look	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-that-nsubj
 12	into	into	ADP	IN	_	17	case	17:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 14	Columbia	Columbia	PROPN	NNP	Number=Sing	16	compound	16:compound	_
@@ -1528,13 +1528,13 @@
 2	5	5	NUM	CD	NumForm=Digit|NumType=Card	3	compound	3:compound	SpaceAfter=No
 3	m	million	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	1	nummod	1:nummod	_
 4	-	-	PUNCT	:	_	5	punct	5:punct	_
-5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|11:obl	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 7	1996	1996	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 8	federal	federal	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	commission	commission	NOUN	NN	Number=Sing	11	nsubj:pass	11:nsubj:pass	_
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	11:aux:pass	_
-11	given	give	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl:relcl	5:acl:relcl	_
+11	given	give	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	study	study	VERB	VB	VerbForm=Inf	11	advcl	11:advcl:to	_
 14	legalised	legalise	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	15	amod	15:amod	_
@@ -1581,7 +1581,7 @@
 3	Year	year	NOUN	NN	Number=Sing	1	appos	1:appos|6:obl:npmod	_
 4	that	that	PRON	WDT	PronType=Rel	6	obl:npmod	3:ref	_
 5	Bush	Bush	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
-6	walked	walk	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+6	walked	walk	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-that-obl:npmod
 7	away	away	ADV	RB	_	6	advmod	6:advmod	_
 8	from	from	ADP	IN	_	11	case	11:case	_
 9	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
@@ -1611,19 +1611,19 @@
 1	$	$	SYM	$	_	0	root	0:root	SpaceAfter=No
 2	3,500	3500	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	_
 3	-	-	PUNCT	:	_	4	punct	4:punct	_
-4	Reward	reward	NOUN	NN	Number=Sing	1	appos	1:appos	_
+4	Reward	reward	NOUN	NN	Number=Sing	1	appos	1:appos|9:obj	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	group	group	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
 7	of	of	ADP	IN	_	8	case	8:case	_
 8	veterans	veteran	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	_
-9	offered	offer	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
+9	offered	offer	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-red-obj
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:in	_
 12	for	for	ADP	IN	_	13	case	13:case	_
 13	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	9	obl	9:obl:for|16:nsubj	_
 14	who	who	PRON	WP	PronType=Rel	16	nsubj	13:ref	_
 15	could	could	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
-16	confirm	confirm	VERB	VB	VerbForm=Inf	13	acl:relcl	13:acl:relcl	_
+16	confirm	confirm	VERB	VB	VerbForm=Inf	13	acl:relcl	13:acl:relcl	Cxn=rc-wh-nsubj
 17-18	Bush's	_	_	_	_	_	_	_	_
 17	Bush	Bush	PROPN	NNP	Number=Sing	21	nmod:poss	21:nmod:poss	_
 18	's	's	PART	POS	_	17	case	17:case	_
@@ -1647,7 +1647,7 @@
 11-12	Bush's	_	_	_	_	_	_	_	_
 11	Bush	Bush	PROPN	NNP	Number=Sing	13	nmod:poss	13:nmod:poss	_
 12	's	's	PART	POS	_	11	case	11:case	_
-13	unit	unit	NOUN	NN	Number=Sing	7	acl:relcl	7:acl:relcl	_
+13	unit	unit	NOUN	NN	Number=Sing	7	acl:relcl	7:acl:relcl	Cxn=rc-wh-nsubj
 14	during	during	ADP	IN	_	16	case	16:case	_
 15	that	that	DET	DT	Number=Sing|PronType=Dem	16	det	16:det	_
 16	period	period	NOUN	NN	Number=Sing	13	obl	13:obl:during	SpaceAfter=No
@@ -1665,7 +1665,7 @@
 7	that	that	DET	DT	Number=Sing|PronType=Dem	8	det	8:det	_
 8	period	period	NOUN	NN	Number=Sing	5	nmod	5:nmod:from	_
 9	who	who	PRON	WP	PronType=Rel	10	nsubj	5:ref	_
-10	came	come	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+10	came	come	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-wh-nsubj
 11	forward	forward	ADV	RB	_	10	advmod	10:advmod	_
 12	with	with	ADP	IN	_	13	case	13:case	_
 13	information	information	NOUN	NN	Number=Sing	10	obl	10:obl:with	_
@@ -1741,7 +1741,7 @@
 60	in	in	ADP	IN	_	61	case	61:case	_
 61	Iraq	Iraq	PROPN	NNP	Number=Sing	59	nmod	59:nmod:in	_
 62	-	-	PUNCT	,	_	7	punct	7:punct	SpaceAfter=No
-63	served	serve	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+63	served	serve	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obl:npmod
 64	in	in	ADP	IN	_	65	case	65:case	_
 65	combat	combat	NOUN	NN	Number=Sing	63	obl	63:obl:in	_
 66	(	(	PUNCT	-LRB-	_	67	punct	67:punct	SpaceAfter=No
@@ -1762,11 +1762,11 @@
 9	staff	staff	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	members	member	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|12:nsubj|16:nsubj	_
 11	who	who	PRON	WP	PronType=Rel	12	nsubj	10:ref	_
-12	planned	plan	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
+12	planned	plan	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	10	acl:relcl	10:acl:relcl	Cxn=rc-wh-nsubj
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 14	war	war	NOUN	NN	Number=Sing	12	obj	12:obj	_
 15	who	who	PRON	WP	PronType=Rel	16	nsubj	10:ref	_
-16	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
+16	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	acl:relcl	10:acl:relcl	Cxn=rc-wh-nsubj
 17	immediate	immediate	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 18	family	family	NOUN	NN	Number=Sing	19	compound	19:compound	_
 19	members	member	NOUN	NNS	Number=Plur	16	obj	16:obj	_
@@ -1793,7 +1793,7 @@
 12	of	of	ADP	IN	_	13	case	13:case	_
 13	Representatives	Representative	PROPN	NNPS	Number=Plur	11	nmod	11:nmod:of	_
 14	who	who	PRON	WP	PronType=Rel	15	nsubj	5:ref	_
-15	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+15	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-wh-nsubj
 16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 17	child	child	NOUN	NN	Number=Sing	15	obj	15:obj	_
 18	serving	serve	VERB	VBG	VerbForm=Ger	17	acl	17:acl	_
@@ -1812,13 +1812,13 @@
 6	that	that	PRON	WDT	PronType=Rel	9	obj	5:ref	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	Pentagon	Pentagon	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
-9	spent	spend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+9	spent	spend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj
 10	investigating	investigate	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	soldier	soldier	NOUN	NN	Number=Sing	10	obj	10:obj|15:nsubj	_
 13	who	who	PRON	WP	PronType=Rel	15	nsubj	12:ref	_
 14	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	aux	15:aux	_
-15	called	call	VERB	VBN	Tense=Past|VerbForm=Part	12	acl:relcl	12:acl:relcl	_
+15	called	call	VERB	VBN	Tense=Past|VerbForm=Part	12	acl:relcl	12:acl:relcl	Cxn=rc-wh-nsubj
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	President	President	NOUN	NN	Number=Sing	15	obj	15:obj|20:nsubj:xsubj	_
 18	"	"	PUNCT	``	_	20	punct	20:punct	SpaceAfter=No
@@ -1877,7 +1877,7 @@
 7	George	George	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj|12:nsubj	_
 8	Bush	Bush	PROPN	NNP	Number=Sing	7	flat	7:flat	_
 9	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
-10	attacked	attack	VERB	VBN	Tense=Past|VerbForm=Part	5	acl:relcl	5:acl:relcl	_
+10	attacked	attack	VERB	VBN	Tense=Past|VerbForm=Part	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
 12	taken	take	VERB	VBN	Tense=Past|VerbForm=Part	10	conj	5:acl:relcl|10:conj:and	_
 13	over	over	ADP	RP	_	12	compound:prt	12:compound:prt	_
@@ -1931,7 +1931,7 @@
 11	that	that	PRON	WDT	PronType=Rel	14	obj	3:ref	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	US	US	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
-14	spends	spend	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+14	spends	spend	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-that-obj
 15	on	on	ADP	IN	_	16	case	16:case	_
 16	defence	defence	NOUN	NN	Number=Sing	14	obl	14:obl:on	SpaceAfter=No
 17	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -1998,7 +1998,7 @@
 17	Middle	Middle	ADJ	NNP	Degree=Pos	18	amod	18:amod	_
 18	East	East	PROPN	NNP	Number=Sing	14	nmod	14:nmod:to	SpaceAfter=No
 19	,	,	PUNCT	,	_	7	punct	7:punct	_
-20	gave	give	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
+20	gave	give	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-wh-obl-pfront
 21	Saddam	Saddam	PROPN	NNP	Number=Sing	20	iobj	20:iobj	_
 22	Hussein	Hussein	PROPN	NNP	Number=Sing	21	flat	21:flat	_
 23	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
@@ -2035,7 +2035,7 @@
 20	attacks	attack	NOUN	NNS	Number=Plur	15	nmod	15:nmod:in	_
 21	that	that	PRON	WDT	PronType=Rel	23	obl:npmod	5:ref	_
 22	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	23	nsubj	23:nsubj	_
-23	brought	bring	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+23	brought	bring	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obl:npmod
 24	up	up	ADP	RP	_	23	compound:prt	23:compound:prt	_
 25	reasons	reason	NOUN	NNS	Number=Plur	23	obj	23:obj	_
 26	to	to	PART	TO	_	28	mark	28:mark	_
@@ -2088,7 +2088,7 @@
 7	people	people	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of|10:nsubj	_
 8	worldwide	worldwide	ADV	RB	_	7	advmod	7:advmod	_
 9	who	who	PRON	WP	PronType=Rel	10	nsubj	7:ref	_
-10	took	take	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+10	took	take	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	Cxn=rc-wh-nsubj
 11	to	to	ADP	IN	_	13	case	13:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	streets	street	NOUN	NNS	Number=Plur	10	obl	10:obl:to	_
@@ -2194,11 +2194,11 @@
 1	$	$	SYM	$	_	0	root	0:root	SpaceAfter=No
 2	80,000	80000	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	_
 3	-	-	PUNCT	:	_	4	punct	4:punct	_
-4	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+4	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|8:obj	_
 5	an	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	Iraqi	Iraqi	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	firm	firm	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
-8	spent	spend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
+8	spent	spend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-red-obj
 9	(	(	PUNCT	-LRB-	_	10	punct	10:punct	SpaceAfter=No
 10	using	use	VERB	VBG	VerbForm=Ger	8	advcl	8:advcl	_
 11-12	Saddam's	_	_	_	_	_	_	_	_
@@ -2231,7 +2231,7 @@
 3	Year	year	NOUN	NN	Number=Sing	1	appos	1:appos|6:obl:npmod	_
 4	that	that	PRON	WDT	PronType=Rel	6	obl:npmod	3:ref	_
 5	Cheney	Cheney	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
-6	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+6	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-that-obl:npmod
 7	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 8	policy	policy	NOUN	NN	Number=Sing	21	nsubj:outer	21:nsubj:outer	_
 9	as	as	ADP	IN	_	10	case	10:case	_
@@ -2313,14 +2313,14 @@
 2	120	120	NUM	CD	NumForm=Digit|NumType=Card	3	compound	3:compound	SpaceAfter=No
 3	b	billion	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	1	nummod	1:nummod	_
 4	-	-	PUNCT	:	_	5	punct	5:punct	_
-5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|12:obl	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	war	war	NOUN	NN	Number=Sing	12	nsubj:pass	12:nsubj:pass|14:nsubj:xsubj	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	its	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	aftermath	aftermath	NOUN	NN	Number=Sing	7	conj	7:conj:and|12:nsubj:pass|14:nsubj:xsubj	_
 11	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	aux:pass	12:aux:pass	_
-12	projected	project	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl:relcl	5:acl:relcl	_
+12	projected	project	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	cost	cost	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
 15	for	for	ADP	IN	_	19	case	19:case	_
@@ -2342,7 +2342,7 @@
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	United	United	ADJ	NNP	Degree=Pos	10	amod	10:amod	_
 10	States	State	PROPN	NNPS	Number=Plur	11	nsubj	11:nsubj	_
-11	suspended	suspend	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+11	suspended	suspend	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-wh-obl-pfront
 12	military	military	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	assistance	assistance	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	after	after	SCONJ	IN	_	16	mark	16:mark	_
@@ -2416,7 +2416,7 @@
 7	workforce	workforce	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	_
 8	who	who	PRON	WP	PronType=Rel	10	nsubj	3:ref	_
 9	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	10	cop	10:cop	_
-10	unemployed	unemployed	ADJ	JJ	Degree=Pos	3	acl:relcl	3:acl:relcl	_
+10	unemployed	unemployed	ADJ	JJ	Degree=Pos	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 11	before	before	ADP	IN	_	13	case	13:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	war	war	NOUN	NN	Number=Sing	10	obl	10:obl:before	SpaceAfter=No
@@ -2434,7 +2434,7 @@
 7	workforce	workforce	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	_
 8	who	who	PRON	WP	PronType=Rel	10	nsubj	3:ref	_
 9	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
-10	unemployed	unemployed	ADJ	JJ	Degree=Pos	3	acl:relcl	3:acl:relcl	_
+10	unemployed	unemployed	ADJ	JJ	Degree=Pos	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	Year	year	NOUN	NN	Number=Sing	15	nmod:npmod	15:nmod:npmod	_
 13	after	after	ADP	IN	_	15	case	15:case	_
@@ -2479,13 +2479,13 @@
 12	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	SpaceAfter=No
 13	,	,	PUNCT	,	_	15	punct	15:punct	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
-15	month	month	NOUN	NN	Number=Sing	11	appos	11:appos	_
+15	month	month	NOUN	NN	Number=Sing	11	appos	11:appos|21:obj	_
 16	combat	combat	NOUN	NN	Number=Sing	17	compound	17:compound	_
 17	operations	operation	NOUN	NNS	Number=Plur	21	nsubj	21:nsubj	_
 18	"	"	PUNCT	``	_	19	punct	19:punct	SpaceAfter=No
 19	officially	officially	ADV	RB	_	21	advmod	21:advmod	SpaceAfter=No
 20	"	"	PUNCT	''	_	19	punct	19:punct	_
-21	ended	end	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	15	acl:relcl	15:acl:relcl	SpaceAfter=No
+21	ended	end	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	15	acl:relcl	15:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 22	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0100
@@ -2506,7 +2506,7 @@
 13	Bush	Bush	PROPN	NNP	Number=Sing	14	compound	14:compound	_
 14	administration	administration	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	_
 15	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
-16	permitted	permit	VERB	VBN	Tense=Past|VerbForm=Part	5	acl:relcl	5:acl:relcl	_
+16	permitted	permit	VERB	VBN	Tense=Past|VerbForm=Part	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj
 17	to	to	PART	TO	_	19	mark	19:mark	_
 18	be	be	AUX	VB	VerbForm=Inf	19	aux:pass	19:aux:pass	_
 19	photographed	photograph	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	16	xcomp	16:xcomp	SpaceAfter=No
@@ -2527,7 +2527,7 @@
 11	that	that	PRON	WDT	PronType=Rel	14	obj	6:ref	_
 12	Bush	Bush	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
 13	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
-14	attended	attend	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	_
+14	attended	attend	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	Cxn=rc-that-obj
 15	since	since	ADP	IN	_	17	case	17:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	beginning	beginning	NOUN	NN	Number=Sing	14	obl	14:obl:since	_
@@ -2608,7 +2608,7 @@
 7	that	that	PRON	WDT	PronType=Rel	13	nsubj	3:ref	_
 8	army	army	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	investigators	investigator	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
-10	discovered	discover	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+10	discovered	discover	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-that-nsubj_ccomp
 11	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
 12	Not	not	PART	RB	_	13	advmod	13:advmod	_
 13	work	work	VERB	VB	VerbForm=Inf	10	ccomp	10:ccomp	_
@@ -2626,7 +2626,7 @@
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	detectors	detector	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|7:nsubj	_
 6	which	which	PRON	WDT	PronType=Rel	7	nsubj	5:ref	_
-7	give	give	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+7	give	give	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-wh-nsubj
 8	early	early	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	warning	warning	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	of	of	ADP	IN	_	14	case	14:case	_
@@ -2824,7 +2824,7 @@
 15	early	early	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	7	obl	7:obl:in	_
 17	that	that	PRON	WDT	PronType=Rel	18	nsubj	3:ref	_
-18	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+18	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-that-nsubj
 19	yet	yet	ADV	RB	_	18	advmod	18:advmod	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
 21	receive	receive	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
@@ -2862,7 +2862,7 @@
 15	Transportation	Transportation	PROPN	NNP	Number=Sing	16	compound	16:compound	_
 16	Security	Security	PROPN	NNP	Number=Sing	17	compound	17:compound	_
 17	Administration	Administration	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj	_
-18	admitted	admit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+18	admitted	admit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	Cxn=rc-that-nsubj_ccomp
 19	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	aux	22:aux	_
 20	Not	not	PART	RB	_	22	advmod	22:advmod	_
 21	fully	fully	ADV	RB	_	22	advmod	22:advmod	_
@@ -2882,7 +2882,7 @@
 7	unscreened	unscreened	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	cargo	cargo	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	that	that	PRON	WDT	PronType=Rel	10	nsubj	5:ref	_
-10	fly	fly	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+10	fly	fly	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-nsubj
 11	into	into	ADP	IN	_	13	case	13:case	_
 12	New	New	ADJ	NNP	Degree=Pos	13	amod	13:amod	_
 13	York	York	PROPN	NNP	Number=Sing	10	obl	10:obl:into	_
@@ -2902,7 +2902,7 @@
 8	cargo	cargo	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
 9	that	that	PRON	WDT	PronType=Rel	11	nsubj:pass	4:ref	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux:pass	11:aux:pass	_
-11	screened	screen	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	acl:relcl	4:acl:relcl	SpaceAfter=No
+11	screened	screen	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	acl:relcl	4:acl:relcl	Cxn=rc-that-nsubj:pass|SpaceAfter=No
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
 13	including	include	VERB	VBG	VerbForm=Ger	14	case	14:case	_
 14	cargo	cargo	NOUN	NN	Number=Sing	4	nmod	4:nmod:including	_
@@ -2921,7 +2921,7 @@
 5	foreign	foreign	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	goods	goods	NOUN	NNS	Number=Ptan	3	nmod	3:nmod:of	_
 7	that	that	PRON	WDT	PronType=Rel	8	nsubj	3:ref	_
-8	arrive	arrive	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+8	arrive	arrive	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-that-nsubj
 9	in	in	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	United	United	ADJ	NNP	Degree=Pos	12	amod	12:amod	_
@@ -2971,9 +2971,9 @@
 1	$	$	SYM	$	_	0	root	0:root	SpaceAfter=No
 2	0	0	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	_
 3	-	-	PUNCT	:	_	4	punct	4:punct	_
-4	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+4	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|6:obj	_
 5	Bush	Bush	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
-6	allocated	allocate	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
+6	allocated	allocate	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-red-obj
 7	for	for	ADP	IN	_	9	case	9:case	_
 8	port	port	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	security	security	NOUN	NN	Number=Sing	6	obl	6:obl:for	_
@@ -2988,12 +2988,12 @@
 2	46	46	NUM	CD	NumForm=Digit|NumType=Card	3	compound	3:compound	SpaceAfter=No
 3	m	million	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	1	nummod	1:nummod	_
 4	-	-	PUNCT	:	_	5	punct	5:punct	_
-5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|10:obj	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	Bush	Bush	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 8	administration	administration	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
 9	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
-10	budgeted	budget	VERB	VBN	Tense=Past|VerbForm=Part	5	acl:relcl	5:acl:relcl	_
+10	budgeted	budget	VERB	VBN	Tense=Past|VerbForm=Part	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obj
 11	for	for	ADP	IN	_	13	case	13:case	_
 12	port	port	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	security	security	NOUN	NN	Number=Sing	10	obl	10:obl:for	_
@@ -3032,7 +3032,7 @@
 10	terrorist	terrorist	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	act	act	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
 12	could	could	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
-13	endanger	endanger	VERB	VB	VerbForm=Inf	7	acl:relcl	7:acl:relcl	_
+13	endanger	endanger	VERB	VB	VerbForm=Inf	7	acl:relcl	7:acl:relcl	Cxn=rc-wh-obl
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	lives	life	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 16	of	of	ADP	IN	_	21	case	21:case	_
@@ -3068,7 +3068,7 @@
 21	that	that	PRON	WDT	PronType=Rel	24	nsubj:pass	6:ref	_
 22	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	24	aux	24:aux	_
 23	been	be	AUX	VBN	Tense=Past|VerbForm=Part	24	aux:pass	24:aux:pass	_
-24	developed	develop	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	acl:relcl	6:acl:relcl	_
+24	developed	develop	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	acl:relcl	6:acl:relcl	Cxn=rc-that-nsubj:pass
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_
 26	introduced	introduce	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	24	conj	6:acl:relcl|24:conj:and	_
 27	since	since	ADP	IN	_	29	case	29:case	_
@@ -3140,14 +3140,14 @@
 2	42,000	42000	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	_
 3	-	-	PUNCT	:	_	5	punct	5:punct	_
 4	Average	average	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	savings	savings	NOUN	NNS	Number=Ptan	1	appos	1:appos	_
+5	savings	savings	NOUN	NNS	Number=Ptan	1	appos	1:appos|11:obj	_
 6	members	member	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
 7	of	of	ADP	IN	_	10	case	10:case	_
 8-9	Bush's	_	_	_	_	_	_	_	_
 8	Bush	Bush	PROPN	NNP	Number=Sing	10	nmod:poss	10:nmod:poss	_
 9	's	's	PART	POS	_	8	case	8:case	_
 10	cabinet	cabinet	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	_
-11	received	receive	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+11	received	receive	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obj
 12	in	in	ADP	IN	_	13	case	13:case	_
 13	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	11	obl	11:obl:in	_
 14	as	as	ADP	IN	_	16	case	16:case	_
@@ -3182,7 +3182,7 @@
 15	that	that	PRON	WDT	PronType=Rel	18	obj	6:ref	_
 16	Bush	Bush	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj	_
 17	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
-18	named	name	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	_
+18	named	name	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	Cxn=rc-that-obj
 19	to	to	ADP	IN	_	21	case	21:case	_
 20	important	important	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 21	positions	position	NOUN	NNS	Number=Plur	18	obl	18:obl:to	_
@@ -3217,7 +3217,7 @@
 9	appointees	appointee	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|12:nsubj	_
 10	who	who	PRON	WP	PronType=Rel	12	nsubj	9:ref	_
 11	also	also	ADV	RB	_	12	advmod	12:advmod	_
-12	served	serve	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
+12	served	serve	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-wh-nsubj
 13	in	in	ADP	IN	_	17	case	17:case	_
 14	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15-16	father's	_	_	_	_	_	_	_	_
@@ -3247,14 +3247,14 @@
 6	of	of	ADP	IN	_	9	case	9:case	_
 7	total	total	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 8	hard	hard	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	money	money	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
+9	money	money	NOUN	NN	Number=Sing	5	nmod	5:nmod:of|16:obj	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 11	Bush	Bush	PROPN	NNP	Number=Sing	13	compound	13:compound	SpaceAfter=No
 12	-	-	PUNCT	HYPH	_	11	punct	11:punct	SpaceAfter=No
 13	Cheney	Cheney	PROPN	NNP	Number=Sing	15	compound	15:compound	_
 14	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	13	flat	13:flat	_
 15	campaign	campaign	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	_
-16	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	SpaceAfter=No
+16	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 17	,	,	PUNCT	,	_	19	punct	19:punct	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
 19	record	record	NOUN	NN	Number=Sing	5	appos	5:appos	SpaceAfter=No
@@ -3327,7 +3327,7 @@
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	which	which	PRON	WDT	PronType=Rel	8	nsubj:pass	4:ref	_
 7	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	8:aux:pass	_
-8	included	include	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	acl:relcl	4:acl:relcl	_
+8	included	include	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	acl:relcl	4:acl:relcl	Cxn=rc-wh-nsubj:pass
 9	on	on	ADP	IN	_	11	case	11:case	_
 10	all	all	DET	DT	PronType=Tot	11	det	11:det	_
 11	cheques	cheque	NOUN	NNS	Number=Plur	8	obl	8:obl:on	SpaceAfter=No
@@ -3365,7 +3365,7 @@
 6	bankruptcies	bankruptcy	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of|9:nsubj:pass	_
 7	that	that	PRON	WDT	PronType=Rel	9	nsubj:pass	6:ref	_
 8	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	9:aux:pass	_
-9	declared	declare	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	acl:relcl	6:acl:relcl	_
+9	declared	declare	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	acl:relcl	6:acl:relcl	Cxn=rc-that-nsubj:pass
 10	during	during	ADP	IN	_	15	case	15:case	_
 11-12	Bush's	_	_	_	_	_	_	_	_
 11	Bush	Bush	PROPN	NNP	Number=Sing	15	nmod:poss	15:nmod:poss	_
@@ -3480,7 +3480,7 @@
 8	April	April	PROPN	NNP	Number=Sing	3	nmod	3:nmod:in	_
 9	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
 10	who	who	PRON	WP	PronType=Rel	11	nsubj	3:ref	_
-11	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+11	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
 13	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
 14	felt	feel	VERB	VBN	Tense=Past|VerbForm=Part	11	ccomp	11:ccomp	_
@@ -3504,7 +3504,7 @@
 6	cuts	cut	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
 7	that	that	PRON	WDT	PronType=Rel	9	nsubj	3:ref	_
 8	will	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	go	go	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	_
+9	go	go	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	Cxn=rc-that-nsubj
 10	to	to	ADP	IN	_	15	case	15:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 12	top	top	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
@@ -3531,7 +3531,7 @@
 7	April	April	PROPN	NNP	Number=Sing	3	nmod	3:nmod:in	_
 8	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
 9	who	who	PRON	WP	PronType=Rel	10	nsubj	3:ref	_
-10	found	find	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+10	found	find	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 11	that	that	SCONJ	IN	_	16	mark	16:mark	_
 12	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	taxes	tax	NOUN	NNS	Number=Plur	16	nsubj	16:nsubj	_
@@ -3555,7 +3555,7 @@
 6	families	family	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
 7	who	who	PRON	WP	PronType=Rel	9	nsubj	3:ref	_
 8	will	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	save	save	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	_
+9	save	save	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 10	less	less	ADJ	JJR	Degree=Cmp|ExtPos=ADV	12	advmod	12:advmod	_
 11	than	than	ADP	IN	_	10	fixed	10:fixed	_
 12	$	$	SYM	$	_	9	obj	9:obj	SpaceAfter=No
@@ -3584,10 +3584,10 @@
 1	$	$	SYM	$	_	0	root	0:root	SpaceAfter=No
 2	30,858	30858	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	_
 3	-	-	PUNCT	:	_	4	punct	4:punct	_
-4	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+4	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|7:obj	_
 5	Bush	Bush	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
 6	himself	himself	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Emp|Reflex=Yes	5	nmod:npmod	5:nmod:npmod	_
-7	saved	save	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
+7	saved	save	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-red-obj
 8	in	in	ADP	IN	_	9	case	9:case	_
 9	taxes	tax	NOUN	NNS	Number=Plur	7	obl	7:obl:in	_
 10	in	in	ADP	IN	_	11	case	11:case	_
@@ -3625,7 +3625,7 @@
 5	of	of	ADP	IN	_	6	case	6:case	_
 6	Americans	American	PROPN	NNPS	Number=Plur	4	nmod	4:nmod:of|8:nsubj	_
 7	who	who	PRON	WP	PronType=Rel	8	nsubj	6:ref	_
-8	lost	lose	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+8	lost	lose	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-wh-nsubj
 9	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	jobs	job	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 11	during	during	ADP	IN	_	14	case	14:case	_
@@ -3720,7 +3720,7 @@
 7	that	that	PRON	WDT	PronType=Rel	10	obj	6:ref	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	government	government	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
-10	defines	define	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+10	defines	define	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-that-obj
 11	as	as	ADP	IN	_	14	case	14:case	_
 12	"	"	PUNCT	``	_	14	punct	14:punct	SpaceAfter=No
 13	food	food	NOUN	NN	Number=Sing	14	obl:npmod	14:obl:npmod	_
@@ -3747,7 +3747,7 @@
 9	federal	federal	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	programme	programme	NOUN	NN	Number=Sing	6	obl	6:obl:from|12:nsubj	_
 11	that	that	PRON	WDT	PronType=Rel	12	nsubj	10:ref	_
-12	provides	provide	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
+12	provides	provide	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	acl:relcl	10:acl:relcl	Cxn=rc-that-nsubj
 13	subsidies	subsidy	NOUN	NNS	Number=Plur	12	obj	12:obj	_
 14	to	to	ADP	IN	_	16	case	16:case	_
 15	poor	poor	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
@@ -3840,12 +3840,12 @@
 2	205	205	NUM	CD	NumForm=Digit|NumType=Card	3	compound	3:compound	SpaceAfter=No
 3	m	million	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	1	nummod	1:nummod	_
 4	-	-	PUNCT	:	_	5	punct	5:punct	_
-5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|10:obj	_
 6	Enron	Enron	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 7	CEO	ceo	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	Kenneth	Kenneth	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
 9	Lay	Lay	PROPN	NNP	Number=Sing	8	flat	8:flat	_
-10	earned	earn	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+10	earned	earn	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obj
 11	from	from	ADP	IN	_	14	case	14:case	_
 12	stock	stock	NOUN	NN	Number=Sing	13	compound	13:compound	_
 13	option	option	NOUN	NN	Number=Sing	14	compound	14:compound	_
@@ -3864,9 +3864,9 @@
 2	101	101	NUM	CD	NumForm=Digit|NumType=Card	3	compound	3:compound	SpaceAfter=No
 3	m	million	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	1	nummod	1:nummod	_
 4	-	-	PUNCT	:	_	5	punct	5:punct	_
-5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|7:obj	_
 6	Lay	Lay	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
-7	made	make	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+7	made	make	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obj
 8	from	from	SCONJ	IN	_	9	mark	9:mark	_
 9	selling	sell	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl:from	_
 10	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
@@ -3885,11 +3885,11 @@
 1	$	$	SYM	$	_	0	root	0:root	SpaceAfter=No
 2	59,339	59339	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	_
 3	-	-	PUNCT	:	_	4	punct	4:punct	_
-4	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+4	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|8:obl	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	Bush	Bush	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 7	campaign	campaign	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
-8	reimbursed	reimburse	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
+8	reimbursed	reimburse	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-red-obl
 9	Enron	Enron	PROPN	NNP	Number=Sing	8	obj	8:obj	_
 10	for	for	ADP	IN	_	12	case	12:case	_
 11	14	14	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
@@ -3924,7 +3924,7 @@
 15	whom	whom	PRON	WP	PronType=Rel	18	obj	13:ref	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	President	President	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
-18	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	acl:relcl	13:acl:relcl	_
+18	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	acl:relcl	13:acl:relcl	Cxn=rc-wh-obj
 19	"	"	PUNCT	``	_	21	punct	21:punct	SpaceAfter=No
 20	Kenny	Kenny	PROPN	NNP	Number=Sing	21	compound	21:compound	_
 21	Boy	Boy	PROPN	NNP	Number=Sing	18	xcomp	18:xcomp	SpaceAfter=No
@@ -3954,9 +3954,9 @@
 3	Average	average	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	number	number	NOUN	NN	Number=Sing	1	appos	1:appos	_
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	minutes	minute	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
+6	minutes	minute	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of|8:obj	_
 7	Bush	Bush	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
-8	spent	spend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+8	spent	spend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj
 9	reviewing	review	VERB	VBG	VerbForm=Ger	8	advcl	8:advcl	_
 10	capital	capital	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	punishment	punishment	NOUN	NN	Number=Sing	12	compound	12:compound	_
@@ -4009,11 +4009,11 @@
 3	Percentage	percentage	NOUN	NN	Number=Sing	1	appos	1:appos|18:nsubj	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	$	$	SYM	$	_	3	nmod	3:nmod:of	SpaceAfter=No
+6	$	$	SYM	$	_	3	nmod	3:nmod:of|10:obl	SpaceAfter=No
 7	15	15	NUM	CD	NumForm=Digit|NumType=Card	8	compound	8:compound	SpaceAfter=No
 8	bn	billion	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	6	nummod	6:nummod	_
 9	Bush	Bush	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj|12:nsubj:xsubj	_
-10	pledged	pledge	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+10	pledged	pledge	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obl
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	fight	fight	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	Aids	aids	NOUN	NN	Number=Sing	12	obj	12:obj	_
@@ -4021,7 +4021,7 @@
 15	Africa	Africa	PROPN	NNP	Number=Sing	12	obl	12:obl:in	_
 16	that	that	PRON	WDT	PronType=Rel	18	nsubj	3:ref	_
 17	must	must	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
-18	go	go	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	_
+18	go	go	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	Cxn=rc-that-nsubj
 19	to	to	ADP	IN	_	23	case	23:case	_
 20	abstinence	abstinence	NOUN	NN	Number=Sing	23	compound	23:compound	SpaceAfter=No
 21	-	-	PUNCT	HYPH	_	22	punct	22:punct	SpaceAfter=No
@@ -4051,7 +4051,7 @@
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	United	United	ADJ	NNP	Degree=Pos	13	amod	13:amod	_
 13	States	State	PROPN	NNPS	Number=Plur	14	nsubj	14:nsubj	_
-14	admits	admit	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
+14	admits	admit	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-that-nsubj:pass_ccomp
 15	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	aux:pass	16:aux:pass	_
 16	detained	detain	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	ccomp	14:ccomp	_
 17	at	at	ADP	IN	_	19	case	19:case	_
@@ -4082,10 +4082,10 @@
 2	-	-	PUNCT	:	_	3	punct	3:punct	_
 3	Number	number	NOUN	NN	Number=Sing	1	appos	1:appos	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	hours	hour	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
+5	hours	hour	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|8:obl	_
 6	prisoners	prisoner	NOUN	NNS	Number=Plur	8	nsubj:pass	8:nsubj:pass|10:nsubj:pass|13:nsubj:pass|15:nsubj:xsubj	_
 7	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	8:aux:pass	_
-8	handcuffed	handcuff	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl:relcl	5:acl:relcl	SpaceAfter=No
+8	handcuffed	handcuff	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl|SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
 10	shackled	shackle	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	conj	5:acl:relcl|8:conj:and	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
@@ -4191,7 +4191,7 @@
 5	of	of	ADP	IN	_	6	case	6:case	_
 6	Americans	American	PROPN	NNPS	Number=Plur	4	nmod	4:nmod:of|8:nsubj	_
 7	who	who	PRON	WP	PronType=Rel	8	nsubj	6:ref	_
-8	lost	lose	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+8	lost	lose	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-wh-nsubj
 9	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 10	health	health	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	insurance	insurance	NOUN	NN	Number=Sing	8	obj	8:obj	_
@@ -4320,11 +4320,11 @@
 2	66	66	NUM	CD	NumForm=Digit|NumType=Card	3	compound	3:compound	SpaceAfter=No
 3	b	billion	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	1	nummod	1:nummod	_
 4	-	-	PUNCT	:	_	5	punct	5:punct	_
-5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|9:obj	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	United	United	ADJ	NNP	Degree=Pos	8	amod	8:amod	_
 8	States	State	PROPN	NNPS	Number=Plur	9	nsubj	9:nsubj	_
-9	spent	spend	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+9	spent	spend	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obj
 10	on	on	ADP	IN	_	12	case	12:case	_
 11	international	international	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	aid	aid	NOUN	NN	Number=Sing	9	obl	9:obl:on	_
@@ -4340,11 +4340,11 @@
 2	23.8	23.8	NUM	CD	NumForm=Digit|NumType=Frac	3	compound	3:compound	SpaceAfter=No
 3	b	billion	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	1	nummod	1:nummod	_
 4	-	-	PUNCT	:	_	5	punct	5:punct	_
-5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+5	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|9:obj	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	United	United	ADJ	NNP	Degree=Pos	8	amod	8:amod	_
 8	States	State	PROPN	NNPS	Number=Plur	9	nsubj	9:nsubj	_
-9	spent	spend	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+9	spent	spend	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obj
 10	on	on	ADP	IN	_	12	case	12:case	_
 11	international	international	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	aid	aid	NOUN	NN	Number=Sing	9	obl	9:obl:on	_
@@ -4362,7 +4362,7 @@
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	Indonesians	Indonesian	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	_
 6	who	who	PRON	WP	PronType=Rel	7	nsubj	3:ref	_
-7	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+7	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 8	an	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	unfavourable	unfavourable	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	image	image	NOUN	NN	Number=Sing	7	obj	7:obj	_
@@ -4390,13 +4390,13 @@
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	Americans	American	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	_
 6	who	who	PRON	WP	PronType=Rel	7	nsubj	3:ref	_
-7	approved	approve	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+7	approved	approve	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	way	way	NOUN	NN	Number=Sing	7	obl	7:obl:of	_
+10	way	way	NOUN	NN	Number=Sing	7	obl	7:obl:of|13:obl	_
 11	Bush	Bush	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
-13	handling	handle	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	_
+13	handling	handle	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obl
 14	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	job	job	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	as	as	ADP	IN	_	17	case	17:case	_
@@ -4415,13 +4415,13 @@
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	Americans	American	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	_
 6	who	who	PRON	WP	PronType=Rel	7	nsubj	3:ref	_
-7	approved	approve	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+7	approved	approve	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	way	way	NOUN	NN	Number=Sing	7	obl	7:obl:of	_
+10	way	way	NOUN	NN	Number=Sing	7	obl	7:obl:of|13:obl	_
 11	Bush	Bush	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
-13	handling	handle	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	_
+13	handling	handle	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obl
 14	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	job	job	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	as	as	ADP	IN	_	17	case	17:case	_
@@ -4440,13 +4440,13 @@
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	Americans	American	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	_
 6	who	who	PRON	WP	PronType=Rel	7	nsubj	3:ref	_
-7	approved	approve	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+7	approved	approve	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	way	way	NOUN	NN	Number=Sing	7	obl	7:obl:of	_
+10	way	way	NOUN	NN	Number=Sing	7	obl	7:obl:of|13:obl	_
 11	Bush	Bush	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
-13	handling	handle	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	_
+13	handling	handle	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obl
 14	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	job	job	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	as	as	ADP	IN	_	17	case	17:case	_
@@ -4466,13 +4466,13 @@
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	Americans	American	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	_
 6	who	who	PRON	WP	PronType=Rel	7	nsubj	3:ref	_
-7	approved	approve	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+7	approved	approve	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	way	way	NOUN	NN	Number=Sing	7	obl	7:obl:of	_
+10	way	way	NOUN	NN	Number=Sing	7	obl	7:obl:of|13:obl	_
 11	Bush	Bush	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
-13	handling	handle	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	_
+13	handling	handle	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obl
 14	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	job	job	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	as	as	ADP	IN	_	17	case	17:case	_
@@ -4491,13 +4491,13 @@
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	Americans	American	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	_
 6	who	who	PRON	WP	PronType=Rel	7	nsubj	3:ref	_
-7	approved	approve	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+7	approved	approve	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	way	way	NOUN	NN	Number=Sing	7	obl	7:obl:of	_
+10	way	way	NOUN	NN	Number=Sing	7	obl	7:obl:of|13:obl	_
 11	Bush	Bush	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
-13	handling	handle	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	_
+13	handling	handle	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obl
 14	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	job	job	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	as	as	ADP	IN	_	17	case	17:case	_
@@ -4528,9 +4528,9 @@
 3	Number	number	NOUN	NN	Number=Sing	1	appos	1:appos	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	vacation	vacation	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	days	day	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
+6	days	day	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|8:obj	_
 7	Bush	Bush	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
-8	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+8	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj
 9	in	in	ADP	IN	_	10	case	10:case	_
 10	August	August	PROPN	NNP	Number=Sing	8	obl	8:obl:in	_
 11	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	SpaceAfter=No
@@ -4566,11 +4566,11 @@
 3	Number	number	NOUN	NN	Number=Sing	1	appos	1:appos	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	vacation	vacation	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	days	day	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
+6	days	day	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|10:obj	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	average	average	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	American	American	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
-10	receives	receive	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+10	receives	receive	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj
 11	each	each	DET	DT	PronType=Tot	12	det	12:det	_
 12	Year	year	NOUN	NN	Number=Sing	10	obl:tmod	10:obl:tmod	SpaceAfter=No
 13	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -4583,17 +4583,17 @@
 3	Number	number	NOUN	NN	Number=Sing	1	appos	1:appos	_
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	vacation	vacation	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	days	day	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
+6	days	day	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|8:obj	_
 7	Bush	Bush	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
-8	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+8	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj
 9	in	in	ADP	IN	_	10	case	10:case	_
 10	August	August	PROPN	NNP	Number=Sing	8	obl	8:obl:in	_
 11	2001	2001	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	SpaceAfter=No
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	month	month	NOUN	NN	Number=Sing	10	appos	10:appos	_
+14	month	month	NOUN	NN	Number=Sing	10	appos	10:appos|16:obl	_
 15	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
-16	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	acl:relcl	14:acl:relcl	_
+16	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	acl:relcl	14:acl:relcl	Cxn=rc-red-obl
 17	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
 18	6	6	NUM	CD	NumForm=Digit|NumType=Card	19	nummod	19:nummod	_
 19	August	August	PROPN	NNP	Number=Sing	22	compound	22:compound	_
@@ -4619,10 +4619,10 @@
 2	-	-	PUNCT	:	_	3	punct	3:punct	_
 3	Number	number	NOUN	NN	Number=Sing	1	appos	1:appos	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	days	day	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
+5	days	day	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|8:obl	_
 6	Bush	Bush	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
 7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
-8	spent	spend	VERB	VBN	Tense=Past|VerbForm=Part	5	acl:relcl	5:acl:relcl	_
+8	spent	spend	VERB	VBN	Tense=Past|VerbForm=Part	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 9	all	all	DET	DT	PronType=Tot	8	obj	8:obj	_
 10	or	or	CCONJ	CC	_	11	cc	11:cc	_
 11	part	part	NOUN	NN	Number=Sing	9	conj	8:obj|9:conj:or	_
@@ -4692,7 +4692,7 @@
 14	in	in	ADP	IN	_	15	case	15:case	_
 15	which	which	PRON	WDT	PronType=Rel	17	obl	6:ref	_
 16	Bush	Bush	PROPN	NNP	Number=Sing	17	nsubj	17:nsubj	_
-17	referred	refer	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+17	referred	refer	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-wh-obl-pfront
 18	to	to	ADP	IN	_	19	case	19:case	_
 19	questions	question	NOUN	NNS	Number=Plur	17	obl	17:obl:to	_
 20	as	as	SCONJ	IN	_	25	mark	25:mark	_
@@ -4719,7 +4719,7 @@
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	companies	company	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|7:nsubj	_
 6	that	that	PRON	WDT	PronType=Rel	7	nsubj	5:ref	_
-7	control	control	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+7	control	control	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-nsubj
 8	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 9	US	US	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 10	voting	voting	NOUN	NN	Number=Sing	11	compound	11:compound	_
@@ -4743,7 +4743,7 @@
 11	elections	election	NOUN	NNS	Number=Plur	6	obl	6:obl:during	_
 12	that	that	PRON	WDT	PronType=Rel	14	nsubj:pass	3:ref	_
 13	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	14	aux:pass	14:aux:pass	_
-14	recorded	record	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	acl:relcl	3:acl:relcl	_
+14	recorded	record	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	acl:relcl	3:acl:relcl	Cxn=rc-that-nsubj:pass
 15	by	by	ADP	IN	_	17	case	17:case	_
 16	Election	Election	PROPN	NNP	Number=Sing	17	compound	17:compound	_
 17	Systems	System	PROPN	NNPS	Number=Plur	14	obl:agent	14:obl:agent	_
@@ -4773,7 +4773,7 @@
 6	that	that	PRON	WDT	PronType=Rel	9	nsubj:pass	3:ref	_
 7	will	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 8	be	be	AUX	VB	VerbForm=Inf	9	aux:pass	9:aux:pass	_
-9	cast	cast	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	acl:relcl	3:acl:relcl	_
+9	cast	cast	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	acl:relcl	3:acl:relcl	Cxn=rc-that-nsubj:pass
 10	via	via	ADP	IN	_	13	case	13:case	_
 11	computer	computer	NOUN	NN	Number=Sing	13	compound	13:compound	_
 12	voting	voting	NOUN	NN	Number=Sing	13	compound	13:compound	_
@@ -4782,7 +4782,7 @@
 15-16	don't	_	_	_	_	_	_	_	_
 15	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
 16	n't	not	PART	RB	_	17	advmod	17:advmod	_
-17	produce	produce	VERB	VB	VerbForm=Inf	13	acl:relcl	13:acl:relcl	_
+17	produce	produce	VERB	VB	VerbForm=Inf	13	acl:relcl	13:acl:relcl	Cxn=rc-that-nsubj
 18	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
 19	paper	paper	NOUN	NN	Number=Sing	20	compound	20:compound	_
 20	record	record	NOUN	NN	Number=Sing	17	obj	17:obj	SpaceAfter=No
@@ -4877,7 +4877,7 @@
 10	Cheney	Cheney	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 11	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	10	flat	10:flat	_
 12	campaign	campaign	NOUN	NN	Number=Sing	13	nsubj	13:nsubj|15:nsubj:xsubj	_
-13	expects	expect	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+13	expects	expect	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj_xcomp
 14	to	to	PART	TO	_	15	mark	15:mark	_
 15	raise	raise	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
 16	by	by	ADP	IN	_	17	case	17:case	_
@@ -4898,7 +4898,7 @@
 9	raisers	raiser	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of|12:nsubj	_
 10	who	who	PRON	WP	PronType=Rel	12	nsubj	9:ref	_
 11	had	have	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	12	aux	12:aux	_
-12	earned	earn	VERB	VBN	Tense=Past|VerbForm=Part	9	acl:relcl	9:acl:relcl	_
+12	earned	earn	VERB	VBN	Tense=Past|VerbForm=Part	9	acl:relcl	9:acl:relcl	Cxn=rc-wh-nsubj
 13	Pioneer	pioneer	NOUN	NN	Number=Sing	14	compound	14:compound	_
 14	status	status	NOUN	NN	Number=Sing	12	obj	12:obj	_
 15	(	(	PUNCT	-LRB-	_	17	punct	17:punct	SpaceAfter=No
@@ -4928,7 +4928,7 @@
 10	raisers	raiser	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of|13:nsubj	_
 11	who	who	PRON	WP	PronType=Rel	13	nsubj	10:ref	_
 12	had	have	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
-13	earned	earn	VERB	VBN	Tense=Past|VerbForm=Part	10	acl:relcl	10:acl:relcl	_
+13	earned	earn	VERB	VBN	Tense=Past|VerbForm=Part	10	acl:relcl	10:acl:relcl	Cxn=rc-wh-nsubj
 14	Ranger	ranger	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	status	status	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
@@ -4951,12 +4951,12 @@
 3	m	million	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	1	nummod	1:nummod	_
 4	-	-	PUNCT	:	_	6	punct	6:punct	_
 5	The	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos	_
+6	Amount	amount	NOUN	NN	Number=Sing	1	appos	1:appos|11:obj	_
 7	Pioneers	pioneer	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
 9	Rangers	ranger	NOUN	NNS	Number=Plur	7	conj	7:conj:and|11:nsubj	_
 10	had	have	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	aux	11:aux	_
-11	raised	raise	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	_
+11	raised	raise	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj
 12	for	for	ADP	IN	_	15	case	15:case	_
 13	Bush	Bush	PROPN	NNP	Number=Sing	15	compound	15:compound	SpaceAfter=No
 14	-	-	PUNCT	HYPH	_	13	punct	13:punct	SpaceAfter=No
@@ -4978,7 +4978,7 @@
 7-8	can't	_	_	_	_	_	_	_	_
 7	ca	can	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 8	n't	not	PART	RB	_	9	advmod	9:advmod	_
-9	Name	name	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	_
+9	Name	name	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	Chief	Chief	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 12	Justice	Justice	PROPN	NNP	Number=Sing	9	obj	9:obj	_
@@ -4996,7 +4996,7 @@
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	Americans	American	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	_
 6	who	who	PRON	WP	PronType=Rel	7	nsubj	3:ref	_
-7	believed	believe	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+7	believed	believe	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	White	White	ADJ	NNP	Degree=Pos	10	amod	10:amod	_
 10-11	House's	_	_	_	_	_	_	_	_
@@ -5027,7 +5027,7 @@
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	Americans	American	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	_
 6	who	who	PRON	WP	PronType=Rel	7	nsubj	3:ref	_
-7	believed	believe	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+7	believed	believe	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 8	in	in	ADP	IN	_	9	case	9:case	_
 9	June	June	PROPN	NNP	Number=Sing	7	obl	7:obl:in	_
 10	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
@@ -5054,7 +5054,7 @@
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	Americans	American	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	_
 6	who	who	PRON	WP	PronType=Rel	7	nsubj	3:ref	_
-7	believed	believe	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+7	believed	believe	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 8	in	in	ADP	IN	_	9	case	9:case	_
 9	May	May	PROPN	NNP	Number=Sing	7	obl	7:obl:in	_
 10	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
@@ -5082,7 +5082,7 @@
 9-10	cannot	_	_	_	_	_	_	_	_
 9	can	can	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 10	not	not	PART	RB	_	11	advmod	11:advmod	_
-11	find	find	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	_
+11	find	find	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 12	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	11	obj	11:obj	SpaceAfter=No
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
 14	Iraq	Iraq	PROPN	NNP	Number=Sing	12	conj	11:obj|12:conj:or	SpaceAfter=No
@@ -5107,7 +5107,7 @@
 9-10	cannot	_	_	_	_	_	_	_	_
 9	can	can	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 10	not	not	PART	RB	_	11	advmod	11:advmod	_
-11	find	find	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	_
+11	find	find	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	Pacific	Pacific	PROPN	NNP	Number=Sing	14	compound	14:compound	_
 14	Ocean	Ocean	PROPN	NNP	Number=Sing	11	obj	11:obj	_
@@ -5129,7 +5129,7 @@
 9-10	don't	_	_	_	_	_	_	_	_
 9	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
 10	n't	not	PART	RB	_	11	advmod	11:advmod	_
-11	know	know	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	_
+11	know	know	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	population	population	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	of	of	ADP	IN	_	17	case	17:case	_
@@ -5151,7 +5151,7 @@
 9-10	don't	_	_	_	_	_	_	_	_
 9	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
 10	n't	not	PART	RB	_	11	advmod	11:advmod	_
-11	know	know	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	_
+11	know	know	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	population	population	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	of	of	ADP	IN	_	17	case	17:case	_
@@ -5173,7 +5173,7 @@
 9-10	cannot	_	_	_	_	_	_	_	_
 9	can	can	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 10	not	not	PART	RB	_	11	advmod	11:advmod	_
-11	find	find	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	_
+11	find	find	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	United	United	ADJ	NNP	Degree=Pos	14	amod	14:amod	_
 14	States	State	PROPN	NNPS	Number=Plur	11	obj	11:obj	_
@@ -5190,7 +5190,7 @@
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	Americans	American	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	_
 6	who	who	PRON	WP	PronType=Rel	7	nsubj	3:ref	_
-7	believe	believe	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+7	believe	believe	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 8	that	that	SCONJ	IN	_	15	mark	15:mark	_
 9	"	"	PUNCT	``	_	15	punct	15:punct	SpaceAfter=No
 10	politics	politics	NOUN	NNS	Number=Ptan	15	nsubj	15:nsubj	_
@@ -5223,12 +5223,12 @@
 6	of	of	ADP	IN	_	7	case	7:case	_
 7	Americans	American	PROPN	NNPS	Number=Plur	5	nmod	5:nmod:of|9:nsubj	_
 8	who	who	PRON	WP	PronType=Rel	9	nsubj	7:ref	_
-9	describe	describe	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+9	describe	describe	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	Cxn=rc-wh-nsubj
 10	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs|Reflex=Yes	9	obj	9:obj	_
 11	as	as	ADP	IN	_	12	case	12:case	_
 12	Evangelicals	Evangelical	PROPN	NNPS	Number=Plur	9	obl	9:obl:as|14:nsubj|23:nsubj	_
 13	who	who	PRON	WP	PronType=Rel	14	nsubj	12:ref	_
-14	accept	accept	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	acl:relcl	12:acl:relcl	_
+14	accept	accept	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	acl:relcl	12:acl:relcl	Cxn=rc-wh-nsubj
 15	Jesus	Jesus	PROPN	NNP	Number=Sing	14	obj	14:obj	_
 16	Christ	Christ	PROPN	NNP	Number=Sing	15	flat	15:flat	_
 17	as	as	ADP	IN	_	20	case	20:case	_
@@ -5257,7 +5257,7 @@
 5	of	of	ADP	IN	_	6	case	6:case	_
 6	Evangelicals	Evangelical	PROPN	NNPS	Number=Plur	4	nmod	4:nmod:of|8:nsubj	_
 7	who	who	PRON	WP	PronType=Rel	8	nsubj	6:ref	_
-8	voted	vote	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+8	voted	vote	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-wh-nsubj
 9	for	for	ADP	IN	_	10	case	10:case	_
 10	Bush	Bush	PROPN	NNP	Number=Sing	8	obl	8:obl:for	_
 11	in	in	ADP	IN	_	12	case	12:case	_
@@ -5276,7 +5276,7 @@
 7	in	in	ADP	IN	_	8	case	8:case	_
 8	total	total	ADJ	JJ	Degree=Pos	6	nmod	6:nmod:in	_
 9	who	who	PRON	WP	PronType=Rel	10	nsubj	6:ref	_
-10	voted	vote	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+10	voted	vote	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-wh-nsubj
 11	for	for	ADP	IN	_	12	case	12:case	_
 12	Bush	Bush	PROPN	NNP	Number=Sing	10	obl	10:obl:for	_
 13	in	in	ADP	IN	_	14	case	14:case	_
@@ -5292,7 +5292,7 @@
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	voters	voter	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
 6	who	who	PRON	WP	PronType=Rel	7	nsubj	3:ref	_
-7	describe	describe	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+7	describe	describe	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-wh-nsubj
 8	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs|Reflex=Yes	7	obj	7:obj	_
 9	as	as	ADP	IN	_	13	case	13:case	_
 10	born	bear	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	13	amod	13:amod	SpaceAfter=No
@@ -5312,7 +5312,7 @@
 6	that	that	PRON	WDT	PronType=Rel	9	nsubj	5:ref	_
 7	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
 8	not	not	PART	RB	_	9	advmod	9:advmod	_
-9	use	use	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	_
+9	use	use	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	Cxn=rc-that-nsubj
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	word	word	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	"	"	PUNCT	``	_	13	punct	13:punct	SpaceAfter=No
