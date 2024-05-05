@@ -2,7 +2,7 @@
 # sent_id = email-enronsent28_01-0001
 # newpar id = email-enronsent28_01-p0001
 # text = Move-Team@ENRON
-1	Move-Team@ENRON	move-team@enron	X	ADD	_	0	root	0:root	_
+1	Move-Team@ENRON	Move-Team@ENRON	PROPN	ADD	_	0	root	0:root	_
 
 # sent_id = email-enronsent28_01-0002
 # text = 09/20/2000 03:22 PM
@@ -13,10 +13,10 @@
 # sent_id = email-enronsent28_01-0003
 # text = Sent by: John Salinardo@ENRON
 1	Sent	send	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
-2	by	by	ADP	IN	_	5	case	5:case	CheckAttachment=4|SpaceAfter=No
-3	:	:	PUNCT	:	_	2	punct	2:punct	CheckAttachment=4
-4	John	john	X	GW	_	5	compound	5:compound	CheckAttachment=1|CheckReln=obl
-5	Salinardo@ENRON	salinardo@enron	X	ADD	_	1	obl:agent	1:obl:agent	CheckAttachment=4|CheckReln=goeswith
+2	by	by	ADP	IN	_	4	case	4:case	SpaceAfter=No
+3	:	:	PUNCT	:	_	2	punct	2:punct	_
+4	John	JohnSalinardo@ENRON	PROPN	GW	Typo=Yes	1	obl:agent	1:obl:agent	_
+5	Salinardo@ENRON	_	X	ADD	_	4	goeswith	4:goeswith	_
 
 # sent_id = email-enronsent28_01-0004
 # text = it is to late for me to add changes.
@@ -191,7 +191,7 @@
 19	of	of	ADP	IN	_	20	case	20:case	_
 20	'73	'73	NUM	CD	NumForm=Digit|NumType=Card	18	nmod	18:nmod:of	SpaceAfter=No
 21	,	,	PUNCT	,	_	22	punct	22:punct	_
-22	turning	turn	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl	_
+22	turning	turn	VERB	VBG	Tense=Pres|VerbForm=Part	5	advcl	5:advcl	_
 23	everyone	everyone	PRON	NN	Number=Sing|PronType=Tot	22	obj	22:obj|24:nsubj:xsubj	_
 24	bullish	bullish	ADJ	JJ	Degree=Pos	22	xcomp	22:xcomp	CheckAttachment=23|CheckReln=amod|SpaceAfter=No
 25	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -283,7 +283,7 @@
 2	that	that	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
 3	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	way	way	NOUN	NN	Number=Sing	0	root	0:root	_
+5	way	way	NOUN	NN	Number=Sing	0	root	0:root|13:obl	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 7	greatest	great	ADJ	JJS	Degree=Sup	9	amod	9:amod	_
 8	bear	bear	NOUN	NN	Number=Sing	9	compound	9:compound	_
@@ -291,7 +291,7 @@
 10	since	since	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	Depression	Depression	PROPN	NNP	Number=Sing	9	nmod	9:nmod:since	_
-13	worked	work	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+13	worked	work	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 14	its	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	way	way	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	down	down	ADV	RB	_	13	advmod	13:advmod	SpaceAfter=No
@@ -336,7 +336,7 @@
 4	look	look	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	forward	forward	ADV	RB	_	4	advmod	4:advmod	_
 6	to	to	SCONJ	IN	_	7	mark	7:mark	_
-7	seeing	see	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl:to	_
+7	seeing	see	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl:to	_
 8	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	7	obj	7:obj	SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -376,7 +376,7 @@
 # newpar id = email-enronsent28_01-p0005
 # text = Many thanks!
 1	Many	many	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	thanks	thanks	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+2	thanks	thanks	NOUN	NNS	Number=Ptan	0	root	0:root	SpaceAfter=No
 3	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent28_01-0025
@@ -520,7 +520,7 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	spreadsheet	spreadsheet	NOUN	NN	Number=Sing	1	nsubj:pass	1:nsubj:pass|6:nsubj	_
 5	that	that	PRON	WDT	PronType=Rel	6	nsubj	4:ref	_
-6	contains	contain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
+6	contains	contain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-that-nsubj
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	values	value	NOUN	NNS	Number=Plur	6	obj	6:obj	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -572,7 +572,7 @@
 11	which	which	PRON	WDT	PronType=Rel	14	nsubj	10:ref	_
 12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	difference	difference	NOUN	NN	Number=Sing	10	acl:relcl	10:acl:relcl	_
+14	difference	difference	NOUN	NN	Number=Sing	10	acl:relcl	10:acl:relcl	Cxn=rc-wh-nsubj
 15	between	between	ADP	IN	_	18	case	18:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	SCADA	scada	NOUN	NN	Number=Sing	18	compound	18:compound	_
@@ -583,7 +583,7 @@
 22	)	)	PUNCT	-RRB-	_	21	punct	21:punct	_
 23	that	that	PRON	WDT	PronType=Rel	25	obj	18:ref	_
 24	Anita	Anita	PROPN	NNP	Number=Sing	25	nsubj	25:nsubj	_
-25	showed	show	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	acl:relcl	18:acl:relcl	_
+25	showed	show	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	acl:relcl	18:acl:relcl	Cxn=rc-that-obj
 26	on	on	ADP	IN	_	31	case	31:case	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
 28	February	February	PROPN	NNP	Number=Sing	31	compound	31:compound	_
@@ -601,7 +601,7 @@
 40	that	that	PRON	WDT	PronType=Rel	43	obj	39:ref	_
 41	Gary	Gary	PROPN	NNP	Number=Sing	43	nsubj	43:nsubj	_
 42	Wilson	Wilson	PROPN	NNP	Number=Sing	41	flat	41:flat	_
-43	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	39	acl:relcl	39:acl:relcl	_
+43	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	39	acl:relcl	39:acl:relcl	Cxn=rc-that-obj
 44	from	from	ADP	IN	_	45	case	45:case	_
 45	MIPS	mips	NOUN	NN	Number=Sing	43	obl	43:obl:from	SpaceAfter=No
 46	.	.	PUNCT	.	_	5	punct	5:punct	_

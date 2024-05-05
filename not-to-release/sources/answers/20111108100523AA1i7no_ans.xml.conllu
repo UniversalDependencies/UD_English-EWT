@@ -21,7 +21,7 @@
 1-2	Im	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	m	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|Typo=Yes|VerbForm=Fin	3	aux	3:aux	CorrectForm='m
-3	getting	get	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+3	getting	get	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	dwarf	dwarf	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	hamster	hamster	NOUN	NN	Number=Sing	3	obj	3:obj	_
@@ -103,12 +103,12 @@
 20	put	put	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	11	parataxis	11:parataxis	_
 21	some	some	DET	DT	PronType=Ind	23	det	23:det	_
 22	chicken	chicken	NOUN	NN	Number=Sing	23	compound	23:compound	_
-23	wiring	wiring	NOUN	NN	Number=Sing	20	obj	20:obj	_
+23	wiring	wiring	NOUN	NN	Number=Sing	20	obj	20:obj|28:obj	_
 24	around	around	ADP	IN	_	25	case	25:case	_
 25	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	obl	20:obl:around	_
 26	the	that	PRON	WDT	PronType=Rel|Typo=Yes	28	obj	23:ref	CorrectForm=that
 27	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	28	nsubj	28:nsubj	_
-28	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	23	acl:relcl	23:acl:relcl	_
+28	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	23	acl:relcl	23:acl:relcl	Cxn=rc-that-obj
 29	from	from	ADP	IN	_	31	case	31:case	_
 30	home	home	PROPN	NNP	Number=Sing	31	compound	31:compound	_
 31	depot	depot	PROPN	NNP	Number=Sing	28	obl	28:obl:from	_
@@ -178,20 +178,20 @@
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	cage	cage	NOUN	NN	Number=Sing	0	root	0:root|6:obj|11:nsubj|13:obl:from	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
-6	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
+6	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-red-obj
 7	whhich	which	PRON	WDT	PronType=Rel|Typo=Yes	11	nsubj	4:ref	CorrectForm=which
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 9	pretty	pretty	ADV	RB	_	10	advmod	10:advmod	_
 10	much	much	ADV	RB	_	11	advmod	11:advmod	_
-11	IMPOSSIBLE	impossible	ADJ	JJ	Degree=Pos	4	acl:relcl	4:acl:relcl	_
+11	IMPOSSIBLE	impossible	ADJ	JJ	Degree=Pos	4	acl:relcl	4:acl:relcl	Cxn=rc-wh-nsubj-pstrand
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	escape	escape	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
-14	from	from	ADP	IN	_	13	obl	13:obl	SpaceAfter=No
+14	from	from	ADP	IN	_	13	obl	13:obl	Promoted=Yes|SpaceAfter=No
 15	:	:	PUNCT	:	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108100523AA1i7no_ans-0008
 # text = http://www.petsathome.com/shop/combi-1-dwarf-hamster-cage-by-ferplast-15986
-1	http://www.petsathome.com/shop/combi-1-dwarf-hamster-cage-by-ferplast-15986	http://www.petsathome.com/shop/combi-1-dwarf-hamster-cage-by-ferplast-15986	X	ADD	_	0	root	0:root	_
+1	http://www.petsathome.com/shop/combi-1-dwarf-hamster-cage-by-ferplast-15986	http://www.petsathome.com/shop/combi-1-dwarf-hamster-cage-by-ferplast-15986	PROPN	ADD	_	0	root	0:root	_
 
 # sent_id = answers-20111108100523AA1i7no_ans-0009
 # text = I love this cage, it's easy to clean, very spacious and fun for the hamster
@@ -259,7 +259,7 @@
 
 # sent_id = answers-20111108100523AA1i7no_ans-0012
 # text = regards and have fun with your hammy
-1	regards	regards	NOUN	NNS	Number=Plur	0	root	0:root	_
+1	regards	regards	NOUN	NNS	Number=Ptan	0	root	0:root	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
 3	have	have	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 4	fun	fun	NOUN	NN	Number=Sing	3	obj	3:obj	_

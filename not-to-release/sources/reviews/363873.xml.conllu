@@ -56,7 +56,7 @@
 8	off	off	ADP	RP	_	7	compound:prt	7:compound:prt	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	there	there	PRON	EX	_	11	expl	11:expl	_
-11	were	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	_
+11	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	_
 12	always	always	ADV	RB	_	11	advmod	11:advmod	_
 13	people	people	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
 14	having	have	VERB	VBG	VerbForm=Ger	13	acl	13:acl	_
@@ -138,7 +138,7 @@
 20	tried	try	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	17	conj	17:conj:and	_
 21	to	to	PART	TO	_	22	mark	22:mark	_
 22	charge	charge	VERB	VB	VerbForm=Inf	20	xcomp	20:xcomp	_
-23	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	22	obj	22:obj	_
+23	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	22	iobj	22:iobj	_
 24	for	for	ADP	IN	_	27	case	27:case	_
 25	two	two	NUM	CD	NumForm=Word|NumType=Card	27	nummod	27:nummod	_
 26	cleaning	cleaning	NOUN	NN	Number=Sing	27	compound	27:compound	_
@@ -159,7 +159,7 @@
 41	that	that	PRON	WDT	PronType=Rel	44	nsubj:pass	39:ref	_
 42	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	44	aux:pass	44:aux:pass	_
 43	already	already	ADV	RB	_	44	advmod	44:advmod	_
-44	paid	pay	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	39	acl:relcl	39:acl:relcl	SpaceAfter=No
+44	paid	pay	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	39	acl:relcl	39:acl:relcl	Cxn=rc-that-nsubj:pass|SpaceAfter=No
 45	,	,	PUNCT	,	_	47	punct	47:punct	_
 46	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	47	nsubj	47:nsubj	_
 47	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	32	parataxis	32:parataxis	_
@@ -178,12 +178,12 @@
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	rudest	rude	ADJ	JJS	Degree=Sup	5	amod	5:amod	_
-5	person	person	NOUN	NN	Number=Sing	0	root	0:root	_
+5	person	person	NOUN	NN	Number=Sing	0	root	0:root|9:obl	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
 7	will	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 8	ever	ever	ADV	RB	_	9	advmod	9:advmod	_
-9	talk	talk	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	_
-10	to	to	ADP	IN	_	9	obl	9:obl	_
+9	talk	talk	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl-pstrand
+10	to	to	ADP	IN	_	9	obl	9:obl	Promoted=Yes
 11	and	and	CCONJ	CC	_	13	cc	13:cc	_
 12	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
 13	sticks	stick	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	_
@@ -197,7 +197,7 @@
 21	rude	rude	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 22	people	people	NOUN	NNS	Number=Plur	16	nmod	16:nmod:of|24:nsubj	_
 23	that	that	PRON	WDT	PronType=Rel	24	nsubj	22:ref	_
-24	live	live	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	22	acl:relcl	22:acl:relcl	_
+24	live	live	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	22	acl:relcl	22:acl:relcl	Cxn=rc-that-nsubj
 25	there	there	ADV	RB	PronType=Dem	24	advmod	24:advmod	SpaceAfter=No
 26	,	,	PUNCT	,	_	30	punct	30:punct	_
 27	not	not	PART	RB	_	30	advmod	30:advmod	_
@@ -206,11 +206,11 @@
 30	ones	one	NOUN	NNS	Number=Plur	22	conj	22:conj|33:nsubj	_
 31	that	that	PRON	WDT	PronType=Rel	33	nsubj	30:ref	_
 32	actually	actually	ADV	RB	_	33	advmod	33:advmod	_
-33	give	give	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	30	acl:relcl	30:acl:relcl	_
+33	give	give	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	30	acl:relcl	30:acl:relcl	Cxn=rc-that-nsubj
 34	a	a	DET	DT	Definite=Ind|PronType=Art	35	det	35:det	_
 35	crap	crap	NOUN	NN	Number=Sing	33	obj	33:obj	_
 36	about	about	SCONJ	IN	_	37	mark	37:mark	_
-37	respecting	respect	VERB	VBG	VerbForm=Ger	33	advcl	33:advcl:about	_
+37	respecting	respect	VERB	VBG	Tense=Pres|VerbForm=Part	33	advcl	33:advcl:about	_
 38	others	other	NOUN	NNS	Number=Plur	37	obj	37:obj	SpaceAfter=No
 39	.	.	PUNCT	.	_	5	punct	5:punct	_
 

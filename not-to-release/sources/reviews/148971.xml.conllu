@@ -62,7 +62,7 @@
 # text = He was going to operate and replace my bicuspid aortic valve due to critical aortic stenosis.
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj|7:nsubj:xsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	3:aux	_
-3	going	go	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+3	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	operate	operate	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
@@ -117,7 +117,7 @@
 21	for	for	ADP	IN	_	23	case	23:case	_
 22	2	2	NUM	CD	NumForm=Digit|NumType=Card	23	nummod	23:nummod	_
 23	months	month	NOUN	NNS	Number=Plur	20	obl	20:obl:for	_
-24	following	follow	VERB	VBG	VerbForm=Ger	25	case	25:case	_
+24	following	follow	VERB	VBG	Tense=Pres|VerbForm=Part	25	case	25:case	_
 25	surgery	surgery	NOUN	NN	Number=Sing	20	obl	20:obl:following	_
 26	(	(	PUNCT	-LRB-	_	31	punct	31:punct	SpaceAfter=No
 27	as	as	SCONJ	IN	_	31	mark	31:mark	_
@@ -128,7 +128,7 @@
 32	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	34	nsubj	34:nsubj	_
 33	must	must	AUX	MD	VerbForm=Fin	34	aux	34:aux	_
 34	agree	agree	VERB	VB	VerbForm=Inf	31	ccomp	31:ccomp	_
-35	to	to	ADP	IN	_	34	obl	34:obl	SpaceAfter=No
+35	to	to	ADP	IN	_	34	obl	34:obl	Promoted=Yes|SpaceAfter=No
 36	)	)	PUNCT	-RRB-	_	31	punct	31:punct	SpaceAfter=No
 37	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -143,7 +143,7 @@
 7	months	month	NOUN	NNS	Number=Plur	10	obl	10:obl:by	_
 8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
 9	"	"	PUNCT	``	_	10	punct	10:punct	SpaceAfter=No
-10	meant	mean	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+10	meant	mean	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	ccomp	3:ccomp	_
 11	at	at	ADP	IN	_	12	case	12:case	_
 12	least	least	ADJ	JJS	Degree=Sup	14	nmod	14:nmod:at	_
 13	two	two	NUM	CD	NumForm=Word|NumType=Card	14	nummod	14:nummod	_
@@ -186,10 +186,10 @@
 16	ventilator	ventilator	NOUN	NN	Number=Sing	13	obl	13:obl:on	_
 17	longer	long	ADV	RBR	Degree=Cmp	13	advmod	13:advmod	SpaceAfter=No
 18	,	,	PUNCT	,	_	19	punct	19:punct	_
-19	which	which	PRON	WDT	PronType=Rel	13	advcl:relcl	13:advcl:relcl	_
+19	which	which	PRON	WDT	PronType=Rel	13	advcl:relcl	13:advcl:relcl	Cxn=rc-wh-pred-auxstrand
 20	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
 21	would	would	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
-22	have	have	AUX	VB	VerbForm=Inf	19	aux	19:aux	Promoted=Yes|SpaceAfter=No
+22	have	have	AUX	VB	VerbForm=Inf	19	aux	19:aux	SpaceAfter=No
 23	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-148971-0009
@@ -324,17 +324,17 @@
 26	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	27	nmod:poss	27:nmod:poss	_
 27	life	life	NOUN	NN	Number=Sing	25	obj	25:obj	_
 28	by	by	SCONJ	IN	_	29	mark	29:mark	_
-29	operating	operate	VERB	VBG	VerbForm=Ger	25	advcl	25:advcl:by	SpaceAfter=No
+29	operating	operate	VERB	VBG	Tense=Pres|VerbForm=Part	25	advcl	25:advcl:by	SpaceAfter=No
 30	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-148971-0015
 # text = Even my PA i went to the other day said "it must by comforting to have gone to a heart surgeon like him who will do nothing for you".
 1	Even	even	ADV	RB	_	3	advmod	3:advmod	_
 2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	PA	PA	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
+3	PA	PA	PROPN	NNP	Number=Sing	10	nsubj	5:obl|10:nsubj	_
 4	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
-5	went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
-6	to	to	ADP	IN	_	5	obl	5:obl	_
+5	went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obl-pstrand
+6	to	to	ADP	IN	_	5	obl	5:obl	Promoted=Yes
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	other	other	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	day	day	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	_
@@ -355,7 +355,7 @@
 24	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	22	nmod	22:nmod:like	_
 25	who	who	PRON	WP	PronType=Rel	27	nsubj	22:ref	_
 26	will	will	AUX	MD	VerbForm=Fin	27	aux	27:aux	_
-27	do	do	VERB	VB	VerbForm=Inf	22	acl:relcl	22:acl:relcl	_
+27	do	do	VERB	VB	VerbForm=Inf	22	acl:relcl	22:acl:relcl	Cxn=rc-wh-nsubj
 28	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	27	obj	27:obj	_
 29	for	for	ADP	IN	_	30	case	30:case	_
 30	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	27	obl	27:obl:for	SpaceAfter=No
@@ -379,7 +379,7 @@
 5	doctor	doctor	NOUN	NN	Number=Sing	3	obj	3:obj|8:nsubj|12:nsubj|18:nsubj|24:nsubj	_
 6	who	who	PRON	WP	PronType=Rel	8	nsubj	5:ref	_
 7	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	lie	lie	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	_
+8	lie	lie	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	Cxn=rc-wh-nsubj
 9	to	to	ADP	IN	_	10	case	10:case	_
 10	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	8	obl	8:obl:to	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
@@ -414,7 +414,7 @@
 40	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	41	cop	41:cop	_
 41	what	what	PRON	WP	PronType=Rel	38	ccomp	38:ccomp|43:obj	_
 42	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	43	nsubj	43:nsubj	_
-43	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	41	acl:relcl	41:acl:relcl	SpaceAfter=No
+43	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	41	acl:relcl	41:acl:relcl	Cxn=rc-free-obj|SpaceAfter=No
 44	,	,	PUNCT	,	_	49	punct	49:punct	_
 45	when	when	ADV	WRB	PronType=Int	49	advmod	49:advmod	_
 46	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	49	nsubj	49:nsubj	_

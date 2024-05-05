@@ -9,7 +9,7 @@
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	eat	eat	VERB	VB	VerbForm=Inf	4	acl	4:acl:to	_
 7	brunch	brunch	NOUN	NN	Number=Sing	6	obj	6:obj	_
-8	at	at	ADP	IN	_	6	obl	6:obl	SpaceAfter=No
+8	at	at	ADP	IN	_	6	obl	6:obl	Promoted=Yes|SpaceAfter=No
 9	?	?	PUNCT	.	_	4	punct	4:punct	_
 10	?	?	PUNCT	.	_	4	punct	4:punct	_
 
@@ -64,9 +64,9 @@
 24	but	but	CCONJ	CC	_	31	cc	31:cc	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 26	only	only	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	places	place	NOUN	NNS	Number=Plur	31	nsubj	31:nsubj|34:nsubj	_
+27	places	place	NOUN	NNS	Number=Plur	31	nsubj	29:obj|31:nsubj|34:nsubj	_
 28	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	29	nsubj	29:nsubj	_
-29	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	27	acl:relcl	27:acl:relcl	_
+29	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	27	acl:relcl	27:acl:relcl	Cxn=rc-red-obj
 30	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	31	cop	31:cop	_
 31-32	denny's	_	_	_	_	_	_	_	_
 31	denny	denny	PROPN	NNP	Number=Sing	3	conj	3:conj:but	_
@@ -96,7 +96,7 @@
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
 18	torrance	Torrance	PROPN	NNP	Number=Sing	16	conj	11:nmod:in|16:conj:and	_
 19	etc	etc.	NOUN	FW	Abbr=Yes|Number=Plur	16	conj	16:conj	_
-20	thanx	thanks	NOUN	NNS	Abbr=Yes|Number=Plur	5	discourse	5:discourse	CorrectForm=thanks
+20	thanx	thanks	NOUN	NNS	Abbr=Yes|Number=Ptan	5	discourse	5:discourse	CorrectForm=thanks
 21	^_^	^_^	SYM	NFP	_	5	discourse	5:discourse	_
 
 # sent_id = answers-20111106215236AAycANO_ans-0005
@@ -119,7 +119,7 @@
 # text = You can definately plan on a great meal with reasonable prices.
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 2	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	definately	definately	ADV	RB	_	4	advmod	4:advmod	_
+3	definately	definitely	ADV	RB	Typo=Yes	4	advmod	4:advmod	CorrectForm=definitely
 4	plan	plan	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	on	on	ADP	IN	_	8	case	8:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
@@ -413,7 +413,7 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 3	plan	plan	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:unless	_
 4	on	on	SCONJ	IN	_	6	mark	6:mark	_
-5	being	be	AUX	VBG	VerbForm=Ger	6	cop	6:cop	_
+5	being	be	AUX	VBG	Tense=Pres|VerbForm=Part	6	cop	6:cop	_
 6	late	late	ADJ	JJ	Degree=Pos	3	advcl	3:advcl:on	_
 7	for	for	ADP	IN	_	10	case	10:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_

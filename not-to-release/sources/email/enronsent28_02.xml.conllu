@@ -20,7 +20,7 @@
 5	Garcey	Garcey	PROPN	NNP	Number=Sing	4	flat	4:flat	_
 6	at	at	ADP	IN	_	7	case	7:case	_
 7	NiMo	NiMo	PROPN	NNP	Number=Sing	4	nmod	4:nmod:at	_
-8	regarding	regard	VERB	VBG	VerbForm=Ger	10	case	10:case	_
+8	regarding	regard	VERB	VBG	Tense=Pres|VerbForm=Part	10	case	10:case	_
 9	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	RFP	rfp	NOUN	NN	Number=Sing	2	obl	2:obl:regarding	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -36,7 +36,7 @@
 7	companies	company	NOUN	NNS	Number=Plur	5	obj	5:obj|10:nsubj	_
 8	who	who	PRON	WP	PronType=Rel	10	nsubj	7:ref	_
 9	all	all	DET	DT	PronType=Tot	10	advmod	10:advmod	_
-10	bid	bid	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+10	bid	bid	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	Cxn=rc-wh-nsubj
 11	higher	high	ADV	RBR	Degree=Cmp	10	advmod	10:advmod	_
 12	than	than	ADP	IN	_	13	case	13:case	_
 13	ENA	ENA	PROPN	NNP	Number=Sing	11	obl	11:obl:than	SpaceAfter=No
@@ -115,7 +115,7 @@
 5	RFP	rfp	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	for	for	SCONJ	IN	_	7	mark	7:mark	_
 7	peaking	peak	VERB	VBG	VerbForm=Ger	5	acl	5:acl:for	_
-8	supplies	supplies	NOUN	NNS	Number=Plur	7	obj	7:obj	_
+8	supplies	supplies	NOUN	NNS	Number=Ptan	7	obj	7:obj	_
 9	for	for	ADP	IN	_	11	case	11:case	_
 10	this	this	DET	DT	Number=Sing|PronType=Dem	11	det	11:det	_
 11	winter	winter	NOUN	NN	Number=Sing	7	obl	7:obl:for	SpaceAfter=No
@@ -143,7 +143,7 @@
 7	copies	copy	NOUN	NNS	Number=Plur	6	obj	6:obj	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
 9	distribute	distribute	VERB	VB	VerbForm=Inf	6	conj	6:conj:and	_
-10	ASAP	ASAP	ADV	RB	_	9	advmod	9:advmod	SpaceAfter=No
+10	ASAP	ASAP	ADV	RB	Abbr=Yes	9	advmod	9:advmod	SpaceAfter=No
 11	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = email-enronsent28_02-0010
@@ -190,7 +190,7 @@
 
 # sent_id = email-enronsent28_02-0016
 # text = John Griffith@ENRON
-1	John	johngriffith@enron	X	GW	Typo=Yes	0	root	0:root	_
+1	John	JohnGriffith@ENRON	PROPN	GW	Typo=Yes	0	root	0:root	_
 2	Griffith@ENRON	_	X	ADD	_	1	goeswith	1:goeswith	_
 
 # sent_id = email-enronsent28_02-0017
@@ -201,7 +201,7 @@
 
 # sent_id = email-enronsent28_02-0018
 # text = SOblander@carrfut.com on 08/15/2000 06:03:48 PM
-1	SOblander@carrfut.com	soblander@carrfut.com	X	ADD	_	0	root	0:root	_
+1	SOblander@carrfut.com	SOblander@carrfut.com	PROPN	ADD	_	0	root	0:root	_
 2	on	on	ADP	IN	_	3	case	3:case	_
 3	08/15/2000	08/15/2000	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:on	_
 4	06:03:48	06:03:48	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
@@ -219,7 +219,7 @@
 8	sources	source	NOUN	NNS	Number=Plur	6	obl	6:obl:on|11:obj|14:nsubj:xsubj	_
 9	that	that	PRON	WDT	PronType=Rel	11	obj	8:ref	_
 10	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
-11	believe	believe	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
+11	believe	believe	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	Cxn=rc-that-obj
 12	to	to	PART	TO	_	14	mark	14:mark	_
 13	be	be	AUX	VB	VerbForm=Inf	14	cop	14:cop	_
 14	reliable	reliable	ADJ	JJ	Degree=Pos	11	xcomp	11:xcomp	SpaceAfter=No
@@ -289,16 +289,16 @@
 6	differ	differ	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	in	in	ADP	IN	_	9	case	9:case	_
 8	material	material	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	respects	respects	NOUN	NNS	Number=Plur	6	obl	6:obl:in	_
+9	respects	respect	NOUN	NNS	Number=Plur	6	obl	6:obl:in	_
 10	from	from	ADP	IN	_	11	case	11:case	_
 11	those	that	PRON	DT	Number=Plur|PronType=Dem	6	obl	6:obl:from	_
-12	of	of	ADP	IN	_	11	nmod	11:nmod	SpaceAfter=No
+12	of	of	ADP	IN	_	11	nmod	11:nmod	Promoted=Yes|SpaceAfter=No
 13	,	,	PUNCT	,	_	15	punct	15:punct	_
 14	or	or	CCONJ	CC	_	15	cc	15:cc	_
 15	expressed	express	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	conj	11:nmod|12:conj:or	_
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
 17	published	publish	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	15	conj	15:conj:or	_
-18	by	by	ADP	IN	_	15	obl	15:obl	_
+18	by	by	ADP	IN	_	15	obl	15:obl	Promoted=Yes
 19	on	on	ADP	IN	_	20	case	20:case	_
 20	behalf	behalf	NOUN	NN	Number=Sing	18	conj	15:obl:on|18:conj	_
 21	of	of	ADP	IN	_	22	case	22:case	_
@@ -364,7 +364,7 @@
 8	for	for	ADP	IN	_	9	case	9:case	_
 9	FREE	free	ADJ	JJ	Degree=Pos	7	obl	7:obl:for	_
 10	from	from	ADP	IN	_	11	case	11:case	_
-11	www.adobe.com	www.adobe.com	X	ADD	_	7	obl	7:obl:from	SpaceAfter=No
+11	www.adobe.com	www.adobe.com	PROPN	ADD	_	7	obl	7:obl:from	SpaceAfter=No
 12	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = email-enronsent28_02-0026

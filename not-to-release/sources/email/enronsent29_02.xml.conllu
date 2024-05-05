@@ -113,9 +113,9 @@
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	cop	2:cop	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	Master	master	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	draft	draft	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+6	draft	draft	NOUN	NN	Number=Sing	2	nsubj	2:nsubj|8:obj	_
 7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
-8	discussed	discuss	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	SpaceAfter=No
+8	discussed	discuss	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent29_02-0011
@@ -150,9 +150,9 @@
 10	of	of	ADP	IN	_	13	case	13:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	standard	standard	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	template	template	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	_
+13	template	template	NOUN	NN	Number=Sing	9	nmod	9:nmod:of|15:obj	_
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
-15	use	use	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	13	acl:relcl	13:acl:relcl	_
+15	use	use	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	13	acl:relcl	13:acl:relcl	Cxn=rc-red-obj
 16	for	for	ADP	IN	_	20	case	20:case	_
 17	Enfolio	Enfolio	PROPN	NNP	Number=Sing	20	compound	20:compound	_
 18	gas	gas	NOUN	NN	Number=Sing	19	compound	19:compound	_
@@ -206,22 +206,22 @@
 9	-	-	PUNCT	,	_	11	punct	11:punct	_
 10	Global	global	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	Contracts	contract	NOUN	NNS	Number=Plur	3	list	3:list	_
-12	Stacey.Richardson@enron.com	stacey.richardson@enron.com	X	ADD	_	3	list	3:list	_
+12	Stacey.Richardson@enron.com	Stacey.Richardson@enron.com	PROPN	ADD	_	3	list	3:list	_
 13	(	(	PUNCT	-LRB-	_	14	punct	14:punct	SpaceAfter=No
-14	713	713	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	SpaceAfter=No
+14	713	713	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	SpaceAfter=No
 15	)	)	PUNCT	-RRB-	_	14	punct	14:punct	_
-16	853-0569	853-0569	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	_
-17	Office	office	NOUN	NN	Number=Sing	16	appos	16:appos	_
+16	853-0569	853-0569	NUM	CD	NumForm=Digit|NumType=Card	14	flat	14:flat	_
+17	Office	office	NOUN	NN	Number=Sing	14	appos	14:appos	_
 18	(	(	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
-19	713	713	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nummod	SpaceAfter=No
+19	713	713	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	SpaceAfter=No
 20	)	)	PUNCT	-RRB-	_	19	punct	19:punct	_
-21	646-2495	646-2495	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	_
-22	Fax	fax	NOUN	NN	Number=Sing	21	appos	21:appos	_
+21	646-2495	646-2495	NUM	CD	NumForm=Digit|NumType=Card	19	flat	19:flat	_
+22	Fax	fax	NOUN	NN	Number=Sing	19	appos	19:appos	_
 23	(	(	PUNCT	-LRB-	_	24	punct	24:punct	SpaceAfter=No
-24	713	713	NUM	CD	NumForm=Digit|NumType=Card	26	nummod	26:nummod	SpaceAfter=No
+24	713	713	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	SpaceAfter=No
 25	)	)	PUNCT	-RRB-	_	24	punct	24:punct	_
-26	710-6084	710-6084	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	_
-27	Pager	pager	NOUN	NN	Number=Sing	26	appos	26:appos	_
+26	710-6084	710-6084	NUM	CD	NumForm=Digit|NumType=Card	24	flat	24:flat	_
+27	Pager	pager	NOUN	NN	Number=Sing	24	appos	24:appos	_
 
 # sent_id = email-enronsent29_02-0017
 # text = Today is good 12:30 ?
@@ -331,21 +331,21 @@
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
 8	EB3326	EB3326	NOUN	NN	Number=Sing	1	list	1:list	_
 9	Telephone	telephone	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-10	:	:	PUNCT	:	_	14	punct	14:punct	_
+10	:	:	PUNCT	:	_	12	punct	12:punct	_
 11	(	(	PUNCT	-LRB-	_	12	punct	12:punct	SpaceAfter=No
-12	713	713	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	SpaceAfter=No
+12	713	713	NUM	CD	NumForm=Digit|NumType=Card	9	appos	9:appos	SpaceAfter=No
 13	)	)	PUNCT	-RRB-	_	12	punct	12:punct	_
-14	853-7906	853-7906	NUM	CD	NumForm=Digit|NumType=Card	9	appos	9:appos	_
+14	853-7906	853-7906	NUM	CD	NumForm=Digit|NumType=Card	12	flat	12:flat	_
 15	Facsimile	facsimile	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-16	:	:	PUNCT	:	_	20	punct	20:punct	_
+16	:	:	PUNCT	:	_	18	punct	18:punct	_
 17	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
-18	713	713	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	SpaceAfter=No
+18	713	713	NUM	CD	NumForm=Digit|NumType=Card	15	appos	15:appos	SpaceAfter=No
 19	)	)	PUNCT	-RRB-	_	18	punct	18:punct	_
-20	646-2600	646-2600	NUM	CD	NumForm=Digit|NumType=Card	15	appos	15:appos	_
+20	646-2600	646-2600	NUM	CD	NumForm=Digit|NumType=Card	18	flat	18:flat	_
 21	e-mail	e-mail	NOUN	NN	Number=Sing	22	compound	22:compound	_
 22	address	address	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 23	:	:	PUNCT	:	_	24	punct	24:punct	_
-24	janette.elbertson@enron.com	janette.elbertson@enron.com	X	ADD	_	22	appos	22:appos	_
+24	janette.elbertson@enron.com	janette.elbertson@enron.com	PROPN	ADD	_	22	appos	22:appos	_
 
 # sent_id = email-enronsent29_02-0027
 # text = Are you free for lunch some day this week?
@@ -452,21 +452,21 @@
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
 8	EB3326	EB3326	NOUN	NN	Number=Sing	1	list	1:list	_
 9	Telephone	telephone	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-10	:	:	PUNCT	:	_	14	punct	14:punct	_
+10	:	:	PUNCT	:	_	12	punct	12:punct	_
 11	(	(	PUNCT	-LRB-	_	12	punct	12:punct	SpaceAfter=No
-12	713	713	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	SpaceAfter=No
+12	713	713	NUM	CD	NumForm=Digit|NumType=Card	9	appos	9:appos	SpaceAfter=No
 13	)	)	PUNCT	-RRB-	_	12	punct	12:punct	_
-14	853-7906	853-7906	NUM	CD	NumForm=Digit|NumType=Card	9	appos	9:appos	_
+14	853-7906	853-7906	NUM	CD	NumForm=Digit|NumType=Card	12	flat	12:flat	_
 15	Facsimile	facsimile	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-16	:	:	PUNCT	:	_	20	punct	20:punct	_
+16	:	:	PUNCT	:	_	18	punct	18:punct	_
 17	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
-18	713	713	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	SpaceAfter=No
+18	713	713	NUM	CD	NumForm=Digit|NumType=Card	15	appos	15:appos	SpaceAfter=No
 19	)	)	PUNCT	-RRB-	_	18	punct	18:punct	_
-20	646-2600	646-2600	NUM	CD	NumForm=Digit|NumType=Card	15	appos	15:appos	_
+20	646-2600	646-2600	NUM	CD	NumForm=Digit|NumType=Card	18	flat	18:flat	_
 21	e-mail	e-mail	NOUN	NN	Number=Sing	22	compound	22:compound	_
 22	address	address	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 23	:	:	PUNCT	:	_	24	punct	24:punct	_
-24	janette.elbertson@enron.com	janette.elbertson@enron.com	X	ADD	_	22	appos	22:appos	_
+24	janette.elbertson@enron.com	janette.elbertson@enron.com	PROPN	ADD	_	22	appos	22:appos	_
 
 # sent_id = email-enronsent29_02-0036
 # text = Today is good 12:30 ?
@@ -576,19 +576,19 @@
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
 8	EB3326	EB3326	NOUN	NN	Number=Sing	1	list	1:list	_
 9	Telephone	telephone	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-10	:	:	PUNCT	:	_	14	punct	14:punct	_
+10	:	:	PUNCT	:	_	12	punct	12:punct	_
 11	(	(	PUNCT	-LRB-	_	12	punct	12:punct	SpaceAfter=No
-12	713	713	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	SpaceAfter=No
+12	713	713	NUM	CD	NumForm=Digit|NumType=Card	9	appos	9:appos	SpaceAfter=No
 13	)	)	PUNCT	-RRB-	_	12	punct	12:punct	_
-14	853-7906	853-7906	NUM	CD	NumForm=Digit|NumType=Card	9	appos	9:appos	_
+14	853-7906	853-7906	NUM	CD	NumForm=Digit|NumType=Card	12	flat	12:flat	_
 15	Facsimile	facsimile	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-16	:	:	PUNCT	:	_	20	punct	20:punct	_
+16	:	:	PUNCT	:	_	18	punct	18:punct	_
 17	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
-18	713	713	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	SpaceAfter=No
+18	713	713	NUM	CD	NumForm=Digit|NumType=Card	15	appos	15:appos	SpaceAfter=No
 19	)	)	PUNCT	-RRB-	_	18	punct	18:punct	_
-20	646-2600	646-2600	NUM	CD	NumForm=Digit|NumType=Card	15	appos	15:appos	_
+20	646-2600	646-2600	NUM	CD	NumForm=Digit|NumType=Card	18	flat	18:flat	_
 21	e-mail	e-mail	NOUN	NN	Number=Sing	22	compound	22:compound	_
 22	address	address	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 23	:	:	PUNCT	:	_	24	punct	24:punct	_
-24	janette.elbertson@enron.com	janette.elbertson@enron.com	X	ADD	_	22	appos	22:appos	_
+24	janette.elbertson@enron.com	janette.elbertson@enron.com	PROPN	ADD	_	22	appos	22:appos	_
 

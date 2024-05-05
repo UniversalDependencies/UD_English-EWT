@@ -38,7 +38,7 @@
 
 # sent_id = answers-20111108092321AAK0Eqp_ans-0003
 # text = including fees and forms
-1	including	include	VERB	VBG	VerbForm=Ger	2	case	2:case	_
+1	including	include	VERB	VBG	Tense=Pres|VerbForm=Part	2	case	2:case	_
 2	fees	fee	NOUN	NNS	Number=Plur	0	root	0:root	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
 4	forms	form	NOUN	NNS	Number=Plur	2	conj	2:conj:and	_
@@ -152,10 +152,10 @@
 13	ridiculous	ridiculous	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	amount	amount	NOUN	NN	Number=Sing	9	obl	9:obl:in	_
 15	of	of	ADP	IN	_	16	case	16:case	_
-16	paperwork	paperwork	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	_
+16	paperwork	paperwork	NOUN	NN	Number=Sing	14	nmod	14:nmod:of|19:obl	_
 17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
 18	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	19	aux	19:aux	_
-19	filled	fill	VERB	VBN	Tense=Past|VerbForm=Part	16	acl:relcl	16:acl:relcl	_
+19	filled	fill	VERB	VBN	Tense=Past|VerbForm=Part	16	acl:relcl	16:acl:relcl	Cxn=rc-red-obl
 20	out	out	ADP	RP	_	19	compound:prt	19:compound:prt	_
 21	in	in	ADP	IN	_	23	case	23:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
@@ -183,7 +183,7 @@
 6	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	16	advcl	16:advcl:when	_
 7	around	around	ADV	RB	_	6	advmod	6:advmod	_
 8	to	to	SCONJ	IN	_	9	mark	9:mark	_
-9	filling	fill	VERB	VBG	VerbForm=Ger	6	advcl	6:advcl:to	_
+9	filling	fill	VERB	VBG	Tense=Pres|VerbForm=Part	6	advcl	6:advcl:to	_
 10	for	for	ADP	IN	_	13	case	13:case	_
 11	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 12	birth	birth	NOUN	NN	Number=Sing	13	compound	13:compound	_
@@ -339,7 +339,7 @@
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
 8	answer	answer	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
-9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
+9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	few	few	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	questions	question	NOUN	NNS	Number=Plur	8	obj	8:obj	_
 12	like	like	ADP	IN	_	18	mark	18:mark	_
@@ -373,9 +373,9 @@
 11	present	present	VERB	VB	Mood=Imp|VerbForm=Fin	4	conj	4:conj:and	_
 12	all	all	DET	PDT	PronType=Tot	14	det:predet	14:det:predet	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	identification	identification	NOUN	NN	Number=Sing	11	obj	11:obj	_
+14	identification	identification	NOUN	NN	Number=Sing	11	obj	11:obj|16:obj	_
 15	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	16	nsubj	16:nsubj	_
-16	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	14	acl:relcl	14:acl:relcl	_
+16	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	14	acl:relcl	14:acl:relcl	Cxn=rc-red-obj
 17	to	to	PART	TO	_	18	mark	18:mark	_
 18	prove	prove	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:to	_
 19	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
@@ -387,7 +387,7 @@
 1	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj|15:nsubj	_
 2	may	may	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	then	then	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
-4	chose	choose	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	chose	choose	VERB	VB	Typo=Yes|VerbForm=Inf	0	root	0:root	CorrectForm=choose
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	ask	ask	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	iobj	6:iobj|9:nsubj:xsubj	_
@@ -436,7 +436,7 @@
 
 # sent_id = answers-20111108092321AAK0Eqp_ans-0020
 # text = http://www.ontario.ca/en/information_bundle/birthcertificates/119274.html
-1	http://www.ontario.ca/en/information_bundle/birthcertificates/119274.html	http://www.ontario.ca/en/information_bundle/birthcertificates/119274.html	X	ADD	_	0	root	0:root	_
+1	http://www.ontario.ca/en/information_bundle/birthcertificates/119274.html	http://www.ontario.ca/en/information_bundle/birthcertificates/119274.html	PROPN	ADD	_	0	root	0:root	_
 
 # sent_id = answers-20111108092321AAK0Eqp_ans-0021
 # text = If you were born elsewhere, start here.
@@ -452,7 +452,7 @@
 
 # sent_id = answers-20111108092321AAK0Eqp_ans-0022
 # text = http://www.ontario.ca/en/information_bundle/birthcertificates/119275.html
-1	http://www.ontario.ca/en/information_bundle/birthcertificates/119275.html	http://www.ontario.ca/en/information_bundle/birthcertificates/119275.html	X	ADD	_	0	root	0:root	_
+1	http://www.ontario.ca/en/information_bundle/birthcertificates/119275.html	http://www.ontario.ca/en/information_bundle/birthcertificates/119275.html	PROPN	ADD	_	0	root	0:root	_
 
 # sent_id = answers-20111108092321AAK0Eqp_ans-0023
 # text = Good luck
@@ -517,12 +517,12 @@
 10	people	people	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj|13:nsubj|15:nsubj:xsubj	_
 11	who	who	PRON	WP	PronType=Rel	13	nsubj	10:ref	_
 12	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
-13	tried	try	VERB	VBN	Tense=Past|VerbForm=Part	10	acl:relcl	10:acl:relcl	_
+13	tried	try	VERB	VBN	Tense=Past|VerbForm=Part	10	acl:relcl	10:acl:relcl	Cxn=rc-wh-nsubj
 14	to	to	PART	TO	_	15	mark	15:mark	_
 15	claim	claim	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
 16	citizenship	citizenship	NOUN	NN	Number=Sing	15	obj	15:obj	_
 17	by	by	SCONJ	IN	_	18	mark	18:mark	_
-18	sending	send	VERB	VBG	VerbForm=Ger	15	advcl	15:advcl:by	_
+18	sending	send	VERB	VBG	Tense=Pres|VerbForm=Part	15	advcl	15:advcl:by	_
 19	for	for	ADP	IN	_	22	case	22:case	_
 20	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
 21	birth	birth	NOUN	NN	Number=Sing	22	compound	22:compound	_
@@ -590,14 +590,14 @@
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	website	website	NOUN	NN	Number=Sing	4	obj	4:obj|8:nsubj	_
 7	that	that	PRON	WDT	PronType=Rel	8	nsubj	6:ref	_
-8	lists	list	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+8	lists	list	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-that-nsubj
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	process	process	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	for	for	ADP	IN	_	13	case	13:case	_
 12	that	that	DET	DT	Number=Sing|PronType=Dem	13	det	13:det	_
 13	Province	Province	PROPN	NNP	Number=Sing	10	nmod	10:nmod:for	_
 14	so	so	ADV	RB	_	23	advmod	23:advmod	_
-15	depending	depend	VERB	VBG	VerbForm=Ger	20	mark	20:mark	_
+15	depending	depend	VERB	VBG	Tense=Pres|VerbForm=Part	20	mark	20:mark	_
 16	upon	upon	SCONJ	IN	_	20	mark	20:mark	_
 17	where	where	ADV	WRB	PronType=Int	20	advmod	20:advmod	_
 18	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj:pass	20:nsubj:pass	_

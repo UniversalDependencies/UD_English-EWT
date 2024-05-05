@@ -49,19 +49,19 @@
 8	mindset	mindset	NOUN	NN	Number=Sing	2	ccomp	2:ccomp	_
 9	from	from	ADP	IN	_	10	case	10:case	_
 10	when	when	ADV	WRB	PronType=Rel	8	nmod	8:nmod:from|15:advmod|18:advmod	_
-11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
-12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
-13	only	only	ADV	RB	_	14	advmod	14:advmod	_
-14	smokers	smoker	NOUN	NNS	Number=Plur	10	advcl:relcl	10:advcl:relcl	_
-15	sitting	sit	VERB	VBG	VerbForm=Ger	14	acl	14:acl	_
+11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj:outer	15:nsubj:outer	_
+12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
+13	only	only	ADV	RB	_	15	advmod	15:advmod	_
+14	smokers	smoker	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj|18:nsubj	_
+15	sitting	sit	VERB	VBG	Tense=Pres|VerbForm=Part	10	advcl:relcl	10:advcl:relcl	Cxn=rc-free-advmod
 16	around	around	ADV	RB	_	15	advmod	15:advmod	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	drinking	drink	VERB	VBG	VerbForm=Ger	15	conj	14:acl|15:conj:and	SpaceAfter=No
+18	drinking	drink	VERB	VBG	Tense=Pres|VerbForm=Part	15	conj	10:advcl:relcl|15:conj:and	SpaceAfter=No
 19	...	...	PUNCT	,	_	23	punct	23:punct	_
 20	not	not	PART	RB	_	23	advmod	23:advmod	_
 21	in	in	ADP	IN	_	23	case	23:case	_
 22	any	any	DET	DT	PronType=Ind	23	det	23:det	_
-23	hurry	hurry	NOUN	NN	Number=Sing	18	obl	18:obl:in	SpaceAfter=No
+23	hurry	hurry	NOUN	NN	Number=Sing	8	parataxis	8:parataxis	SpaceAfter=No
 24	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-231203-0005
@@ -103,7 +103,7 @@
 17	any	any	DET	DT	PronType=Ind	16	obj	16:obj	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
 19	begin	begin	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:to	_
-20	with	with	ADP	IN	_	19	obl	19:obl	SpaceAfter=No
+20	with	with	ADP	IN	_	19	obl	19:obl	Promoted=Yes|SpaceAfter=No
 21	)	)	PUNCT	-RRB-	_	16	punct	16:punct	_
 22	and	and	CCONJ	CC	_	23	cc	23:cc	_
 23	learn	learn	VERB	VB	VerbForm=Inf	11	conj	8:xcomp|11:conj:and	_

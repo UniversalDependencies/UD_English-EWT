@@ -15,9 +15,9 @@
 # text = I am thinking about getting a rabbit as a pet, but my parents said that it has to stay outside.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	thinking	think	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+3	thinking	think	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 4	about	about	SCONJ	IN	_	5	mark	5:mark	_
-5	getting	get	VERB	VBG	VerbForm=Ger	3	advcl	3:advcl:about	_
+5	getting	get	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:about	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 7	rabbit	rabbit	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	as	as	ADP	IN	_	10	case	10:case	_
@@ -45,7 +45,7 @@
 5	chickens	chicken	NOUN	NNS	Number=Plur	3	obj	3:obj|8:nsubj:pass	_
 6	that	that	PRON	WDT	PronType=Rel	8	nsubj:pass	5:ref	_
 7	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	aux:pass	8:aux:pass	_
-8	kept	keep	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl:relcl	5:acl:relcl	_
+8	kept	keep	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl:relcl	5:acl:relcl	Cxn=rc-that-nsubj:pass
 9	in	in	ADP	IN	_	11	case	11:case	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 11	run	run	NOUN	NN	Number=Sing	8	obl	8:obl:in	_
@@ -69,13 +69,13 @@
 8	that	that	PRON	WDT	PronType=Rel	11	obj	7:ref	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 10	would	would	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
-11	turn	turn	VERB	VB	VerbForm=Inf	7	acl:relcl	7:acl:relcl	_
+11	turn	turn	VERB	VB	VerbForm=Inf	7	acl:relcl	7:acl:relcl	Cxn=rc-that-obj
 12	into	into	ADP	IN	_	16	case	16:case	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 14	little	little	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 15	rabbit	rabbit	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	hutch	hutch	NOUN	NN	Number=Sing	11	obl	11:obl:into	_
-17	being	be	AUX	VBG	VerbForm=Ger	18	aux:pass	18:aux:pass	_
+17	being	be	AUX	VBG	Tense=Pres|VerbForm=Part	18	aux:pass	18:aux:pass	_
 18	kept	keep	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	acl	7:acl	_
 19	back	back	ADV	RB	_	20	advmod	20:advmod	_
 20	there	there	ADV	RB	PronType=Dem	18	advmod	18:advmod	_
@@ -84,7 +84,7 @@
 23	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	24	aux	24:aux	_
 24	thinking	think	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:and	_
 25	about	about	SCONJ	IN	_	26	mark	26:mark	_
-26	keeping	keep	VERB	VBG	VerbForm=Ger	24	advcl	24:advcl:about	_
+26	keeping	keep	VERB	VBG	Tense=Pres|VerbForm=Part	24	advcl	24:advcl:about	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 28	rabbit	rabbit	NOUN	NN	Number=Sing	26	obj	26:obj	_
 29	in	in	ADP	IN	_	31	case	31:case	_
@@ -95,7 +95,7 @@
 34	chickens	chicken	NOUN	NNS	Number=Plur	26	obl	26:obl:with	SpaceAfter=No
 35	,	,	PUNCT	,	_	37	punct	37:punct	_
 36	but	but	CCONJ	CC	_	37	cc	37:cc	_
-37	keeping	keep	VERB	VBG	VerbForm=Ger	26	conj	24:advcl:about|26:conj:but	_
+37	keeping	keep	VERB	VBG	Tense=Pres|VerbForm=Part	26	conj	24:advcl:about|26:conj:but	_
 38	the	the	DET	DT	Definite=Def|PronType=Art	39	det	39:det	_
 39	chickens	chicken	NOUN	NNS	Number=Plur	37	obj	37:obj	_
 40	in	in	ADP	IN	_	42	case	42:case	_
@@ -162,7 +162,7 @@
 21	would	would	AUX	MD	VerbForm=Fin	24	aux	24:aux	_
 22	n't	not	PART	RB	_	24	advmod	24:advmod	_
 23	be	be	AUX	VB	VerbForm=Inf	24	cop	24:cop	_
-24	able	able	ADJ	JJ	Degree=Pos	17	acl:relcl	17:acl:relcl	_
+24	able	able	ADJ	JJ	Degree=Pos	17	acl:relcl	17:acl:relcl	Cxn=rc-that-obj_xcomp
 25	to	to	PART	TO	_	26	mark	26:mark	_
 26	digest	digest	VERB	VB	VerbForm=Inf	24	xcomp	24:xcomp	_
 27	just	just	ADV	RB	_	28	advmod	28:advmod	_
@@ -297,10 +297,10 @@
 21	attack	attack	VERB	VB	VerbForm=Inf	5	parataxis	5:parataxis	_
 22	rabbits	rabbit	NOUN	NNS	Number=Plur	21	obj	21:obj	_
 23	or	or	CCONJ	CC	_	24	cc	24:cc	_
-24	anything	anything	PRON	NN	Number=Sing|PronType=Ind	22	conj	21:obj|22:conj:or	_
+24	anything	anything	PRON	NN	Number=Sing|PronType=Ind	22	conj	21:obj|22:conj:or|26:obj	_
 25	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	26	nsubj	26:nsubj	_
-26	see	see	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	24	acl:relcl	24:acl:relcl	_
-27	moving	move	VERB	VBG	VerbForm=Ger	26	advcl	26:advcl	SpaceAfter=No
+26	see	see	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	24	acl:relcl	24:acl:relcl	Cxn=rc-red-obj
+27	moving	move	VERB	VBG	Tense=Pres|VerbForm=Part	26	advcl	26:advcl	SpaceAfter=No
 28	,	,	PUNCT	,	_	31	punct	31:punct	SpaceAfter=No
 29	so	so	ADV	RB	_	31	advmod	31:advmod	_
 30	be	be	AUX	VB	Mood=Imp|VerbForm=Fin	31	cop	31:cop	_

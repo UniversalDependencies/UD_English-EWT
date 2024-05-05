@@ -2,9 +2,9 @@
 # sent_id = answers-20111108094504AAKrc8F_ans-0001
 # newpar id = answers-20111108094504AAKrc8F_ans-p0001
 # text = Planning on going to New Zealand in January.
-1	Planning	plan	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+1	Planning	plan	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 2	on	on	SCONJ	IN	_	3	mark	3:mark	_
-3	going	go	VERB	VBG	VerbForm=Ger	1	advcl	1:advcl:on	_
+3	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	1	advcl	1:advcl:on	_
 4	to	to	ADP	IN	_	6	case	6:case	_
 5	New	New	ADJ	NNP	Degree=Pos	6	amod	6:amod	_
 6	Zealand	Zealand	PROPN	NNP	Number=Sing	3	obl	3:obl:to	_
@@ -35,7 +35,7 @@
 4	back	back	ADV	RB	_	5	advmod	5:advmod	_
 5	up	up	ADV	RB	_	0	root	0:root	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	running	run	VERB	VBG	VerbForm=Ger	5	conj	5:conj:and	SpaceAfter=No
+7	running	run	VERB	VBG	Tense=Pres|VerbForm=Part	5	conj	5:conj:and	SpaceAfter=No
 8	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108094504AAKrc8F_ans-0004
@@ -48,9 +48,9 @@
 
 # sent_id = answers-20111108094504AAKrc8F_ans-0005
 # text = Planning on going to North and South Island.
-1	Planning	plan	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+1	Planning	plan	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 2	on	on	SCONJ	IN	_	3	mark	3:mark	_
-3	going	go	VERB	VBG	VerbForm=Ger	1	advcl	1:advcl:on	_
+3	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	1	advcl	1:advcl:on	_
 4	to	to	ADP	IN	_	8	case	8:case	_
 5	North	North	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
@@ -211,7 +211,7 @@
 9	hotels	hotel	NOUN	NNS	Number=Plur	7	obj	7:obj|12:nsubj	_
 10	that	that	PRON	WDT	PronType=Rel	12	nsubj	9:ref	_
 11	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-12	running	run	VERB	VBG	Tense=Pres|VerbForm=Part	9	acl:relcl	9:acl:relcl	_
+12	running	run	VERB	VBG	Tense=Pres|VerbForm=Part	9	acl:relcl	9:acl:relcl	Cxn=rc-that-nsubj
 13	in	in	ADP	IN	_	16	case	16:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	christchurch	christchurch	PROPN	NNP	Number=Sing	16	compound	16:compound	_
@@ -312,11 +312,11 @@
 3	discovered	discover	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	3	obj	3:obj	_
 5	last	last	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	time	time	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
+6	time	time	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod|10:obl	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	10:cop	_
 9	down	down	ADV	RB	_	10	advmod	10:advmod	_
-10	there	there	ADV	RB	PronType=Dem	6	acl:relcl	6:acl:relcl	SpaceAfter=No
+10	there	there	ADV	RB	PronType=Dem	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obl|SpaceAfter=No
 11	,	,	PUNCT	,	_	15	punct	15:punct	_
 12-13	they're	_	_	_	_	_	_	_	_
 12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
@@ -324,7 +324,7 @@
 14	very	very	ADV	RB	_	15	advmod	15:advmod	_
 15	nice	nice	ADJ	JJ	Degree=Pos	3	parataxis	3:parataxis	SpaceAfter=No
 16	)	)	PUNCT	-RRB-	_	17	punct	17:punct	_
-17	www.kaffeeeis.co.nz	www.kaffeeeis.co.nz	X	ADD	_	3	parataxis	3:parataxis	_
+17	www.kaffeeeis.co.nz	www.kaffeeeis.co.nz	PROPN	ADD	_	3	parataxis	3:parataxis	_
 
 # sent_id = answers-20111108094504AAKrc8F_ans-0017
 # newpar id = answers-20111108094504AAKrc8F_ans-p0004

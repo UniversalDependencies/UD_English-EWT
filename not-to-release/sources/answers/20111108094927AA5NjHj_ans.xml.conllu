@@ -37,7 +37,7 @@
 16-17	im	_	_	_	_	_	_	_	_
 16	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
 17	m	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|Typo=Yes|VerbForm=Fin	18	aux	18:aux	CorrectForm='m
-18	wondering	wonder	VERB	VBG	VerbForm=Ger	5	conj	5:conj:and|8:punct	_
+18	wondering	wonder	VERB	VBG	Tense=Pres|VerbForm=Part	5	conj	5:conj:and|8:punct	_
 19	what	what	DET	WDT	PronType=Int	20	det	20:det	_
 20	size	size	NOUN	NN	Number=Sing	21	compound	21:compound|30:obl:of	_
 21	horse	horse	NOUN	NN	Number=Sing	24	obj	24:obj	_
@@ -50,8 +50,8 @@
 27-28	wont	_	_	_	_	_	_	_	_
 27	wo	will	AUX	MD	VerbForm=Fin	29	aux	29:aux	_
 28	nt	not	PART	RB	Typo=Yes	29	advmod	29:advmod	CorrectForm=n't
-29	grow	grow	VERB	VB	VerbForm=Inf	20	acl:relcl	20:acl:relcl	_
-30	out	out	ADP	IN	_	29	obl	29:obl	_
+29	grow	grow	VERB	VB	VerbForm=Inf	20	acl:relcl	20:acl:relcl	Cxn=rc-that-obl_obl-pstrand
+30	out	out	ADP	IN	_	29	obl	29:obl	Promoted=Yes
 31	of	of	ADP	IN	_	25	case	30:obl:out	_
 32	quickly	quickly	ADV	RB	_	29	advmod	29:advmod	SpaceAfter=No
 33	?	?	PUNCT	.	_	5	punct	5:punct	_
@@ -78,18 +78,18 @@
 9	riding	riding	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	ability	ability	NOUN	NN	Number=Sing	6	obl	6:obl:on	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
-12	what	what	DET	WDT	PronType=Int	13	det	13:det	_
-13	disciplines	discipline	NOUN	NNS	Number=Plur	10	conj	6:obl:on|10:conj	_
+12	what	what	DET	WDT	PronType=Rel	13	det	13:det	_
+13	disciplines	discipline	NOUN	NNS	Number=Plur	10	conj	6:obl:on|10:conj|18:obj|23:obj	_
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	16	nsubj	16:nsubj|21:nsubj	_
 15	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
-16	interested	interested	ADJ	JJ	Degree=Pos	13	acl:relcl	13:acl:relcl	_
+16	interested	interested	ADJ	JJ	Degree=Pos	13	acl:relcl	13:acl:relcl	Cxn=rc-free-obj_advcl
 17	in	in	SCONJ	IN	_	18	mark	18:mark	_
-18	doing	do	AUX	VBG	VerbForm=Ger	16	advcl	16:advcl:in	SpaceAfter=No
+18	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	16	advcl	16:advcl:in	SpaceAfter=No
 19	,	,	PUNCT	,	_	21	punct	21:punct	_
 20	or	or	CCONJ	CC	_	21	cc	21:cc	_
 21	plan	plan	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	16	conj	13:acl:relcl|16:conj:or	_
 22	on	on	SCONJ	IN	_	23	mark	23:mark	_
-23	doing	do	AUX	VBG	VerbForm=Ger	21	advcl	21:advcl:on	SpaceAfter=No
+23	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	21	advcl	21:advcl:on	Promoted=Yes|SpaceAfter=No
 24	,	,	PUNCT	,	_	25	punct	25:punct	_
 25	etc	etc.	NOUN	FW	Abbr=Yes|Number=Plur	10	conj	6:obl:on|10:conj	SpaceAfter=No
 26	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -117,7 +117,7 @@
 3	"	"	PUNCT	``	_	4	punct	4:punct	SpaceAfter=No
 4	tall	tall	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 5	"	"	PUNCT	''	_	4	punct	4:punct	_
-6	being	be	AUX	VBG	VerbForm=Ger	9	cop	9:cop	_
+6	being	be	AUX	VBG	Tense=Pres|VerbForm=Part	9	cop	9:cop	_
 7-8	it's	_	_	_	_	_	_	_	_
 7	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
 8	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
@@ -176,7 +176,7 @@
 33	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	34	nmod:poss	34:nmod:poss	_
 34	horse	horse	NOUN	NN	Number=Sing	40	nsubj	40:nsubj	_
 35	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	40	cop	40:cop	_
-36	about	about	ADV	IN	_	37	advmod	37:advmod	_
+36	about	about	ADV	RB	_	37	advmod	37:advmod	_
 37	16.2	16.2	NUM	CD	NumForm=Digit|NumType=Frac	40	nummod	40:nummod	_
 38	or	or	CCONJ	CC	_	39	cc	39:cc	_
 39	16.3	16.3	NUM	CD	NumForm=Digit|NumType=Frac	37	conj	37:conj:or|40:nummod	SpaceAfter=No
@@ -224,12 +224,12 @@
 6	always	always	ADV	RB	_	7	advmod	7:advmod	_
 7	mean	mean	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
-9	horse	horse	NOUN	NN	Number=Sing	7	obj	7:obj	_
+9	horse	horse	NOUN	NN	Number=Sing	7	obj	7:obj|13:obj	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
 11-12	can't	_	_	_	_	_	_	_	_
 11	ca	can	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
 12	n't	not	PART	RB	_	13	advmod	13:advmod	_
-13	handle	handle	VERB	VB	VerbForm=Inf	9	acl:relcl	9:acl:relcl	SpaceAfter=No
+13	handle	handle	VERB	VB	VerbForm=Inf	9	acl:relcl	9:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 14	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = answers-20111108094927AA5NjHj_ans-0012
@@ -390,7 +390,7 @@
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
 4	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 5	grow	grow	VERB	VB	VerbForm=Inf	0	root	0:root	_
-6	out	out	ADP	IN	_	5	obl	5:obl	SpaceAfter=No
+6	out	out	ADP	IN	_	5	obl	5:obl	MissingWordsAfter=of|Promoted=Yes|SpaceAfter=No
 7	,	,	PUNCT	,	_	13	punct	13:punct	_
 8	anything	anything	PRON	NN	Number=Sing|PronType=Ind	13	nsubj	13:nsubj|15:nsubj	_
 9	bigger	big	ADJ	JJR	Degree=Cmp	8	amod	8:amod	_
@@ -407,7 +407,7 @@
 20	,	,	PUNCT	,	_	23	punct	23:punct	_
 21	especially	especially	ADV	RB	_	23	advmod	23:advmod	_
 22	when	when	ADV	WRB	PronType=Int	23	advmod	23:advmod	_
-23	riding	ride	VERB	VBG	VerbForm=Ger	13	advcl	13:advcl:when	SpaceAfter=No
+23	riding	ride	VERB	VBG	Tense=Pres|VerbForm=Part	13	advcl	13:advcl:when	SpaceAfter=No
 24	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108094927AA5NjHj_ans-0018

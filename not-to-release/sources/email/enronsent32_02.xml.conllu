@@ -2,8 +2,8 @@
 # sent_id = email-enronsent32_02-0001
 # newpar id = email-enronsent32_02-p0001
 # text = Andrew Edison@ENRON
-1	Andrew	andrew	X	GW	_	2	compound	2:compound	_
-2	Edison@ENRON	edison@enron	X	ADD	_	0	root	0:root	_
+1	Andrew	AndrewEdison@ENRON	PROPN	GW	Typo=Yes	0	root	0:root	_
+2	Edison@ENRON	_	X	ADD	_	1	goeswith	1:goeswith	_
 
 # sent_id = email-enronsent32_02-0002
 # text = 06/02/2001 10:53 AM
@@ -147,8 +147,8 @@
 
 # sent_id = email-enronsent32_02-0011
 # text = Becky Stephens@ENRON
-1	Becky	becky	X	GW	_	2	compound	2:compound	_
-2	Stephens@ENRON	stephens@enron	X	ADD	_	0	root	0:root	_
+1	Becky	BeckyStephens@ENRON	PROPN	GW	Typo=Yes	0	root	0:root	_
+2	Stephens@ENRON	_	X	ADD	_	1	goeswith	1:goeswith	_
 
 # sent_id = email-enronsent32_02-0012
 # text = 06/12/2000 10:20 AM
@@ -283,7 +283,7 @@
 1	Christian	Christian	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	Yoder	Yoder	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No
 3	/	/	PUNCT	,	_	4	punct	4:punct	SpaceAfter=No
-4	ENRON@enronXgate	enron@enronxgate	X	ADD	_	1	list	1:list	_
+4	ENRON@enronXgate	ENRON@enronXgate	PROPN	ADD	_	1	list	1:list	_
 
 # sent_id = email-enronsent32_02-0022
 # text = 06/04/2001 05:54 PM
@@ -346,7 +346,7 @@
 12	CASH	cash	NOUN	NN	Number=Sing	9	obj	9:obj|15:nsubj:pass	_
 13	that	that	PRON	WDT	PronType=Rel	15	nsubj:pass	12:ref	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	aux:pass	15:aux:pass	_
-15	drawn	draw	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	acl:relcl	12:acl:relcl	_
+15	drawn	draw	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	acl:relcl	12:acl:relcl	Cxn=rc-that-nsubj:pass
 16	down	down	ADV	RB	_	15	advmod	15:advmod	SpaceAfter=No
 17	...	...	PUNCT	,	_	19	punct	19:punct	SpaceAfter=No
 18	please	please	INTJ	UH	_	19	discourse	19:discourse	_
@@ -416,7 +416,7 @@
 # sent_id = email-enronsent32_02-0031
 # text = By using collateral to pay these bills are we not keeping required levels available?
 1	By	by	SCONJ	IN	_	2	mark	2:mark	_
-2	using	use	VERB	VBG	VerbForm=Ger	11	advcl	11:advcl:by	_
+2	using	use	VERB	VBG	Tense=Pres|VerbForm=Part	11	advcl	11:advcl:by	_
 3	collateral	collateral	NOUN	NN	Number=Sing	2	obj	2:obj	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	pay	pay	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_

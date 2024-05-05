@@ -8,7 +8,7 @@
 4	-	-	PUNCT	HYPH	_	3	punct	3:punct	SpaceAfter=No
 5	type	type	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux	7:aux	_
-7	getting	get	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+7	getting	get	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 8	close	close	ADJ	JJ	Degree=Pos	7	xcomp	7:xcomp	_
 9	to	to	ADP	IN	_	11	case	11:case	_
 10	100,000	100000	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
@@ -82,11 +82,11 @@
 2	showed	show	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	2:iobj	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	car	car	NOUN	NN	Number=Sing	2	obj	2:obj	_
+5	car	car	NOUN	NN	Number=Sing	2	obj	2:obj|8:obl	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 7	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	8:cop	_
-8	interested	interested	ADJ	JJ	Degree=Pos	5	acl:relcl	5:acl:relcl	_
-9	in	in	ADP	IN	_	8	obl	8:obl	_
+8	interested	interested	ADJ	JJ	Degree=Pos	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl-pstrand
+9	in	in	ADP	IN	_	8	obl	8:obl	Promoted=Yes
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 12	took	take	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
@@ -148,7 +148,7 @@
 15	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	18:cop	_
 16	within	within	ADP	IN	_	18	case	18:case	_
 17	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
-18	parameters	parameter	NOUN	NNS	Number=Plur	13	acl:relcl	13:acl:relcl	_
+18	parameters	parameter	NOUN	NNS	Number=Plur	13	acl:relcl	13:acl:relcl	Cxn=rc-that-nsubj
 19	and	and	CCONJ	CC	_	21	cc	21:cc	_
 20	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	cop	21:cop	_
 21	fair	fair	ADJ	JJ	Degree=Pos	18	conj	13:acl:relcl|18:conj:and	_
@@ -235,11 +235,11 @@
 1-2	That's	_	_	_	_	_	_	_	_
 1	That	that	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	3:nsubj	_
 2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
-3	all	all	DET	DT	PronType=Tot	0	root	0:root	_
+3	all	all	DET	DT	PronType=Tot	0	root	0:root|7:obj	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
 5	can	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 6	really	really	ADV	RB	_	7	advmod	7:advmod	_
-7	ask	ask	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	_
+7	ask	ask	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obj
 8	from	from	ADP	IN	_	11	case	11:case	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	car	car	NOUN	NN	Number=Sing	11	compound	11:compound	_

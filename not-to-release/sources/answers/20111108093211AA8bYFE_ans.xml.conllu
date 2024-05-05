@@ -4,7 +4,7 @@
 # text = Dwarf Hamster Making Too Much Noise On Wheel at Night?
 1	Dwarf	dwarf	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
 2	Hamster	hamster	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-3	Making	make	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+3	Making	make	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 4	Too	too	ADV	RB	_	5	advmod	5:advmod	_
 5	Much	much	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	Noise	noise	NOUN	NN	Number=Sing	3	obj	3:obj	_
@@ -20,7 +20,7 @@
 1-2	I'm	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	getting	get	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+3	getting	get	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	dwarf	dwarf	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	Hamster	hamster	NOUN	NN	Number=Sing	3	obj	3:obj	_
@@ -29,7 +29,7 @@
 9	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux	12:aux	_
 11	just	just	ADV	RB	_	12	advmod	12:advmod	_
-12	talking	talk	VERB	VBG	VerbForm=Ger	3	conj	3:conj:and	_
+12	talking	talk	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	3:conj:and	_
 13	to	to	ADP	IN	_	15	case	15:case	_
 14	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 15	Mom	Mom	PROPN	NNP	Number=Sing	12	obl	12:obl:to	_
@@ -62,7 +62,7 @@
 42	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	37	advcl	37:advcl:because	_
 43-44	their	_	_	_	_	_	_	_	_
 43	thei	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs|Typo=Yes	45	nsubj	45:nsubj	CorrectForm=they
-44	r	be	AUX	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	45	cop	45:cop	CorrectForm='re
+44	r	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	45	cop	45:cop	CorrectForm='re
 45	energetic	energetic	ADJ	JJ	Degree=Pos	42	ccomp	42:ccomp	_
 46	at	at	ADP	IN	_	47	case	47:case	_
 47	night	night	NOUN	NN	Number=Sing	45	obl	45:obl:at	_
@@ -85,7 +85,7 @@
 64-65	dont	_	_	_	_	_	_	_	_
 64	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	66	aux	66:aux	_
 65	nt	not	PART	RB	Typo=Yes	66	advmod	66:advmod	CorrectForm=n't
-66	make	make	VERB	VB	VerbForm=Inf	62	acl:relcl	62:acl:relcl	_
+66	make	make	VERB	VB	VerbForm=Inf	62	acl:relcl	62:acl:relcl	Cxn=rc-that-nsubj
 67	noise	noise	NOUN	NN	Number=Sing	66	obj	66:obj	_
 68	at	at	ADP	IN	_	69	case	69:case	_
 69	all	all	DET	DT	PronType=Tot	66	obl	66:obl:at	_
@@ -117,9 +117,9 @@
 12	buy	buy	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	another	another	DET	DT	PronType=Ind	12	obj	12:obj	_
 14	,	,	PUNCT	,	_	23	punct	23:punct	_
-15	all	all	DET	DT	PronType=Tot	23	nsubj:outer	23:nsubj:outer|32:nsubj:outer	_
+15	all	all	DET	DT	PronType=Tot	23	nsubj:outer	17:obj|19:obj|23:nsubj:outer|32:nsubj:outer	_
 16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj|19:nsubj:xsubj	_
-17	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	acl:relcl	15:acl:relcl	_
+17	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	acl:relcl	15:acl:relcl	Cxn=rc-red-obj_xcomp
 18	to	to	PART	TO	_	19	mark	19:mark	_
 19	do	do	VERB	VB	VerbForm=Inf	17	xcomp	17:xcomp	_
 20	,	,	PUNCT	,	_	15	punct	15:punct	_
@@ -145,7 +145,7 @@
 40	part	part	NOUN	NN	Number=Sing	37	appos	37:appos|43:nsubj	_
 41	that	that	PRON	WDT	PronType=Rel	43	nsubj	40:ref	_
 42	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	43	aux	43:aux	_
-43	making	make	VERB	VBG	Tense=Pres|VerbForm=Part	40	acl:relcl	40:acl:relcl	_
+43	making	make	VERB	VBG	Tense=Pres|VerbForm=Part	40	acl:relcl	40:acl:relcl	Cxn=rc-that-nsubj
 44	the	the	DET	DT	Definite=Def|PronType=Art	45	det	45:det	_
 45	noise	noise	NOUN	NN	Number=Sing	43	obj	43:obj	_
 46	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -195,7 +195,7 @@
 4	dwarf	dwarf	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	hamster	hamster	NOUN	NN	Number=Sing	2	obj	2:obj|7:nsubj|13:nsubj	_
 6	who	who	PRON	WP	PronType=Rel	7	nsubj	5:ref	_
-7	HATES	hate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+7	HATES	hate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-wh-nsubj
 8	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 9	wheel	wheel	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_

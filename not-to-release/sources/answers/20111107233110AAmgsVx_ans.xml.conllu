@@ -9,7 +9,7 @@
 5	place	place	NOUN	NN	Number=Sing	0	root	0:root	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	live	live	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
-8	in	in	ADP	IN	_	7	obl	7:obl	SpaceAfter=No
+8	in	in	ADP	IN	_	7	obl	7:obl	Promoted=Yes|SpaceAfter=No
 9	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111107233110AAmgsVx_ans-0002
@@ -20,7 +20,7 @@
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	conj	2:conj:and|6:nsubj|8:nsubj:xsubj	_
 5	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
-6	planning	plan	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+6	planning	plan	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	shift	shift	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 9	to	to	ADP	IN	_	10	case	10:case	_
@@ -48,7 +48,7 @@
 12	place	place	NOUN	NN	Number=Sing	6	ccomp	6:ccomp	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	live	live	VERB	VB	VerbForm=Inf	12	acl	12:acl:to	_
-15	in	in	ADP	IN	_	14	obl	14:obl	_
+15	in	in	ADP	IN	_	14	obl	14:obl	Promoted=Yes
 16	and	and	CCONJ	CC	_	19	cc	19:cc	_
 17	in	in	ADP	IN	_	19	case	19:case	_
 18	what	what	DET	WDT	PronType=Int	19	det	19:det	_
@@ -97,7 +97,7 @@
 12	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
 13	been	be	AUX	VBN	Tense=Past|VerbForm=Part	15	cop	15:cop	_
 14	to	to	ADP	IN	_	15	case	15:case	_
-15	Fujairah	Fujairah	PROPN	NNP	Number=Sing	10	acl:relcl	10:acl:relcl	_
+15	Fujairah	Fujairah	PROPN	NNP	Number=Sing	10	acl:relcl	10:acl:relcl	Cxn=rc-wh-nsubj
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
 17	lives	live	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	conj	10:acl:relcl|15:conj:or	_
 18	there	there	ADV	RB	PronType=Dem	17	advmod	17:advmod	SpaceAfter=No
@@ -211,10 +211,10 @@
 11	some	some	DET	DT	PronType=Ind	0	root	0:root	_
 12	of	of	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	things	thing	NOUN	NNS	Number=Plur	11	nmod	11:nmod:of	_
+14	things	thing	NOUN	NNS	Number=Plur	11	nmod	11:nmod:of|17:obj	_
 15	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	_
 16	can	can	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
-17	do	do	VERB	VB	VerbForm=Inf	14	acl:relcl	14:acl:relcl	_
+17	do	do	VERB	VB	VerbForm=Inf	14	acl:relcl	14:acl:relcl	Cxn=rc-red-obj
 18	for	for	ADP	IN	_	19	case	19:case	_
 19	fun	fun	NOUN	NN	Number=Sing	17	obl	17:obl:for	SpaceAfter=No
 20	.	.	PUNCT	.	_	11	punct	11:punct	_
@@ -313,7 +313,7 @@
 2	n't	not	PART	RB	_	3	advmod	3:advmod	_
 3	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	economics	economics	NOUN	NNS	Number=Plur	3	obj	3:obj	_
+5	economics	economics	NOUN	NNS	Number=Ptan	3	obj	3:obj	_
 6	of	of	ADP	IN	_	7	case	7:case	_
 7	Fujairah	Fujairah	PROPN	NNP	Number=Sing	5	nmod	5:nmod:of	_
 8	but	but	CCONJ	CC	_	12	cc	12:cc	_
@@ -341,9 +341,9 @@
 3	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	19	advcl	19:advcl:unless	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	particular	particular	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	skill	skill	NOUN	NN	Number=Sing	3	obj	3:obj	_
+6	skill	skill	NOUN	NN	Number=Sing	3	obj	3:obj|8:obj	_
 7	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
-8	need	need	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+8	need	need	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj
 9	-	-	PUNCT	,	_	13	punct	13:punct	_
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
 11	firm	firm	ADJ	JJ	Degree=Pos	13	amod	13:amod	_

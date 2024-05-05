@@ -11,11 +11,11 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj:pass	3:nsubj:pass	_
 2	got	get	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	yelled	yell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
-4	at	at	ADP	IN	_	3	obl	3:obl	SpaceAfter=No
+4	at	at	ADP	IN	_	3	obl	3:obl	Promoted=Yes|SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	literally	literally	ADV	RB	_	7	advmod	7:advmod	_
 7	yelled	yell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	advcl	3:advcl	_
-8	at	at	ADP	IN	_	7	obl	7:obl	_
+8	at	at	ADP	IN	_	7	obl	7:obl	Promoted=Yes
 9	because	because	SCONJ	IN	_	11	mark	11:mark	_
 10	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 11	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	7	advcl	7:advcl	_
@@ -71,10 +71,10 @@
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
 35	guy	guy	NOUN	NN	Number=Sing	37	nsubj	37:nsubj	_
 36	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	37	aux	37:aux	_
-37	arguing	argue	VERB	VBG	VerbForm=Ger	2	conj	2:conj:but	_
+37	arguing	argue	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:but	_
 38	with	with	ADP	IN	_	39	case	39:case	_
 39	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	37	obl	37:obl:with	_
-40	saying	say	VERB	VBG	VerbForm=Ger	37	advcl	37:advcl	_
+40	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	37	advcl	37:advcl	_
 41	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	43	nsubj	43:nsubj|45:nsubj:xsubj	_
 42	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	43	aux	43:aux	_
 43-44	gonna	_	_	_	_	_	_	_	_
@@ -102,15 +102,15 @@
 # text = Seems like all they care about is the money and getting home on time, NO care for the customers AT ALL!!!
 1	Seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	like	like	SCONJ	IN	_	9	mark	9:mark	_
-3	all	all	DET	DT	PronType=Tot	9	nsubj	9:nsubj|11:nsubj	_
+3	all	all	DET	DT	PronType=Tot	9	nsubj	5:obl:about|9:nsubj|11:nsubj	_
 4	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
-5	care	care	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
-6	about	about	ADP	IN	_	5	obl	5:obl	_
+5	care	care	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obl-pstrand
+6	about	about	ADP	IN	_	5	obl	3:case	Promoted=Yes
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	money	money	NOUN	NN	Number=Sing	1	advcl	1:advcl:like	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	getting	get	VERB	VBG	VerbForm=Ger	9	conj	1:advcl:like|9:conj:and	_
+11	getting	get	VERB	VBG	Tense=Pres|VerbForm=Part	9	conj	1:advcl:like|9:conj:and	_
 12	home	home	NOUN	NN	Number=Sing	11	obj	11:obj	_
 13	on	on	ADP	IN	_	14	case	14:case	_
 14	time	time	NOUN	NN	Number=Sing	11	obl	11:obl:on	SpaceAfter=No

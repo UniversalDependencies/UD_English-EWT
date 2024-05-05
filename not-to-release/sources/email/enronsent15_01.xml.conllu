@@ -75,12 +75,12 @@
 45	just	just	ADV	RB	_	43	advmod	43:advmod	_
 46	the	the	DET	DT	Definite=Def|PronType=Art	48	det	48:det	_
 47	same	same	ADJ	JJ	Degree=Pos	48	amod	48:amod	_
-48	joy	joy	NOUN	NN	Number=Sing	43	nsubj	43:nsubj	_
+48	joy	joy	NOUN	NN	Number=Sing	43	nsubj	43:nsubj|53:obj	_
 49	in	in	ADP	IN	_	50	case	50:case	_
 50	cooking	cooking	NOUN	NN	Number=Sing	48	nmod	48:nmod:in	_
 51	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	53	nsubj	53:nsubj	_
 52	would	would	AUX	MD	VerbForm=Fin	53	aux	53:aux	_
-53	be	be	AUX	VB	VerbForm=Inf	48	acl:relcl	48:acl:relcl	_
+53	be	be	AUX	VB	VerbForm=Inf	48	acl:relcl	48:acl:relcl	Cxn=rc-red-obj-auxstrand|Promoted=Yes
 54	elsewise	elsewise	ADV	RB	_	53	advmod	53:advmod	SpaceAfter=No
 55	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -111,7 +111,7 @@
 12	"	"	PUNCT	''	_	11	punct	11:punct	_
 13	that	that	PRON	WDT	PronType=Rel	15	nsubj	5:ref	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
-15	complex	complex	ADJ	JJ	Degree=Pos	5	acl:relcl	5:acl:relcl	SpaceAfter=No
+15	complex	complex	ADJ	JJ	Degree=Pos	5	acl:relcl	5:acl:relcl	Cxn=rc-that-nsubj|SpaceAfter=No
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
 17	fast	fast	ADJ	JJ	Degree=Pos	15	conj	5:acl:relcl|15:conj:and	_
 18	and	and	CCONJ	CC	_	23	cc	23:cc	_
@@ -404,9 +404,9 @@
 3	as	as	SCONJ	IN	_	9	mark	9:mark	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	call	call	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
-6	with	with	ADP	IN	_	7	case	7:case	_
-7	Uncle	uncle	NOUN	NN	Number=Sing	5	nmod	5:nmod:with	_
-8	Ben	Ben	PROPN	NNP	Number=Sing	7	flat	7:flat	_
+6	with	with	ADP	IN	_	8	case	8:case	_
+7	Uncle	uncle	NOUN	NN	Number=Sing	8	nmod:desc	8:nmod:desc	_
+8	Ben	Ben	PROPN	NNP	Number=Sing	5	nmod	5:nmod:with	_
 9	goes	go	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	advcl	2:advcl:as	SpaceAfter=No
 10	,	,	PUNCT	,	_	2	punct	2:punct	_
 11	if	if	SCONJ	IN	_	14	mark	14:mark	_
@@ -519,7 +519,7 @@
 # sent_id = email-enronsent15_01-0026
 # newpar id = email-enronsent15_01-p0004
 # text = Kyle.Jones@radianz.com
-1	Kyle.Jones@radianz.com	kyle.jones@radianz.com	X	ADD	_	0	root	0:root	_
+1	Kyle.Jones@radianz.com	Kyle.Jones@radianz.com	PROPN	ADD	_	0	root	0:root	_
 
 # sent_id = email-enronsent15_01-0027
 # text = 11/29/2000 05:07 PM
@@ -601,12 +601,12 @@
 19	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 20	best	good	ADJ	JJS	Degree=Sup	22	amod	22:amod	_
 21	Thanksgiv8ing	Thanksgiving	PROPN	NNP	Number=Sing|Typo=Yes	22	compound	22:compound	CorrectForm=Thanksgiving
-22	Dinners	dinner	NOUN	NNS	Number=Plur	17	nmod	17:nmod:of	_
+22	Dinners	dinner	NOUN	NNS	Number=Plur	17	nmod	17:nmod:of|26:obj	_
 23-24	I've	_	_	_	_	_	_	_	_
 23	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	26	nsubj	26:nsubj	_
 24	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	26	aux	26:aux	_
 25	ever	ever	ADV	RB	_	26	advmod	26:advmod	_
-26	had	have	VERB	VBN	Tense=Past|VerbForm=Part	22	acl:relcl	22:acl:relcl	_
+26	had	have	VERB	VBN	Tense=Past|VerbForm=Part	22	acl:relcl	22:acl:relcl	Cxn=rc-red-obj
 27	(	(	PUNCT	-LRB-	_	30	punct	30:punct	SpaceAfter=No
 28	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	30	nsubj	30:nsubj|32:nsubj:xsubj	_
 29	not	not	PART	RB	_	30	advmod	30:advmod	_
@@ -729,9 +729,9 @@
 6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 7	phone	phone	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	ocnversation	conversation	NOUN	NN	Number=Sing|Typo=Yes	4	obl	4:obl:about	CorrectForm=conversation
-9	with	with	ADP	IN	_	10	case	10:case	_
-10	Unlce	uncle	NOUN	NN	Number=Sing|Typo=Yes	8	nmod	8:nmod:with	CorrectForm=Uncle
-11	Ben	Ben	PROPN	NNP	Number=Sing	10	flat	10:flat	_
+9	with	with	ADP	IN	_	11	case	11:case	_
+10	Unlce	uncle	NOUN	NN	Number=Sing|Typo=Yes	11	nmod:desc	11:nmod:desc	CorrectForm=Uncle
+11	Ben	Ben	PROPN	NNP	Number=Sing	8	nmod	8:nmod:with	_
 12	(	(	PUNCT	-LRB-	_	16	punct	16:punct	SpaceAfter=No
 13	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	cop	16:cop	_
@@ -808,29 +808,29 @@
 13	10016	10016	NUM	CD	NumForm=Digit|NumType=Card	3	appos	3:appos	_
 14	USA	USA	PROPN	NNP	Number=Sing	12	appos	12:appos	_
 15	Phone	phone	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-16	:	:	PUNCT	:	_	21	punct	21:punct	_
-17	+1	+1	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nummod	_
+16	:	:	PUNCT	:	_	17	punct	17:punct	_
+17	+1	+1	NUM	CD	NumForm=Digit|NumType=Card	15	appos	15:appos	_
 18	(	(	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
-19	212	212	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nummod	SpaceAfter=No
+19	212	212	NUM	CD	NumForm=Digit|NumType=Card	17	flat	17:flat	SpaceAfter=No
 20	)	)	PUNCT	-RRB-	_	19	punct	19:punct	_
-21	899-4425	899-4425	NUM	CD	NumForm=Digit|NumType=Card	15	appos	15:appos	_
+21	899-4425	899-4425	NUM	CD	NumForm=Digit|NumType=Card	17	flat	17:flat	_
 22	Fax	fax	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-23	:	:	PUNCT	:	_	28	punct	28:punct	_
-24	+1	+1	NUM	CD	NumForm=Digit|NumType=Card	28	nummod	28:nummod	_
+23	:	:	PUNCT	:	_	24	punct	24:punct	_
+24	+1	+1	NUM	CD	NumForm=Digit|NumType=Card	22	appos	22:appos	_
 25	(	(	PUNCT	-LRB-	_	26	punct	26:punct	SpaceAfter=No
-26	212	212	NUM	CD	NumForm=Digit|NumType=Card	28	nummod	28:nummod	SpaceAfter=No
+26	212	212	NUM	CD	NumForm=Digit|NumType=Card	24	flat	24:flat	SpaceAfter=No
 27	)	)	PUNCT	-RRB-	_	26	punct	26:punct	_
-28	899-4310	899-4310	NUM	CD	NumForm=Digit|NumType=Card	22	appos	22:appos	_
+28	899-4310	899-4310	NUM	CD	NumForm=Digit|NumType=Card	24	flat	24:flat	_
 29	Cell	cell	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-30	:	:	PUNCT	:	_	35	punct	35:punct	_
-31	+1	+1	NUM	CD	NumForm=Digit|NumType=Card	35	nummod	35:nummod	_
+30	:	:	PUNCT	:	_	31	punct	31:punct	_
+31	+1	+1	NUM	CD	NumForm=Digit|NumType=Card	29	appos	29:appos	_
 32	(	(	PUNCT	-LRB-	_	33	punct	33:punct	SpaceAfter=No
-33	917	917	NUM	CD	NumForm=Digit|NumType=Card	35	nummod	35:nummod	SpaceAfter=No
+33	917	917	NUM	CD	NumForm=Digit|NumType=Card	31	flat	31:flat	SpaceAfter=No
 34	)	)	PUNCT	-RRB-	_	33	punct	33:punct	_
-35	859-7187	859-7187	NUM	CD	NumForm=Digit|NumType=Card	29	appos	29:appos	_
+35	859-7187	859-7187	NUM	CD	NumForm=Digit|NumType=Card	31	flat	31:flat	_
 36	Email	email	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 37	:	:	PUNCT	:	_	38	punct	38:punct	_
-38	kyle.jones@radianz.com	kyle.jones@radianz.com	X	ADD	_	36	appos	36:appos	_
+38	kyle.jones@radianz.com	kyle.jones@radianz.com	PROPN	ADD	_	36	appos	36:appos	_
 
 # sent_id = email-enronsent15_01-0045
 # text = ====================================================
@@ -844,7 +844,7 @@
 4	page	page	NOUN	NN	Number=Sing	1	obj	1:obj	_
 5	at	at	ADP	IN	_	7	case	7:case	SpaceAfter=No
 6	"	"	PUNCT	``	_	5	punct	5:punct	_
-7	http://www.radianz.com	http://www.radianz.com	X	ADD	_	1	obl	1:obl:at	_
+7	http://www.radianz.com	http://www.radianz.com	PROPN	ADD	_	1	obl	1:obl:at	_
 
 # sent_id = email-enronsent15_01-0047
 # text = ====================================================
@@ -855,11 +855,11 @@
 1	|--------+----------------------->	|--------+----------------------->	PUNCT	NFP	_	4	punct	4:punct	_
 2	|	|	PUNCT	NFP	_	4	punct	4:punct	_
 3	|	|	PUNCT	NFP	_	4	punct	4:punct	_
-4	Tana.Jones@en	tana.jones@en	X	ADD	_	0	root	0:root	SpaceAfter=No
+4	Tana.Jones@en	Tana.Jones@en	PROPN	ADD	_	0	root	0:root	SpaceAfter=No
 5	|	|	PUNCT	NFP	_	8	punct	8:punct	_
 6	|	|	PUNCT	NFP	_	8	punct	8:punct	_
 7	|	|	PUNCT	NFP	_	8	punct	8:punct	_
-8	ron.com	ron.com	X	ADD	_	4	list	4:list	_
+8	ron.com	ron.com	PROPN	ADD	_	4	list	4:list	_
 9	|	|	PUNCT	NFP	_	4	punct	4:punct	_
 10	|	|	PUNCT	NFP	_	4	punct	4:punct	_
 11	|	|	PUNCT	NFP	_	15	punct	15:punct	_
@@ -908,7 +908,7 @@
 # sent_id = email-enronsent15_01-0051
 # newpar id = email-enronsent15_01-p0012
 # text = Kyle.Jones@ra
-1	Kyle.Jones@ra	kyle.jones@ra	X	ADD	_	0	root	0:root	_
+1	Kyle.Jones@ra	Kyle.Jones@ra	PROPN	ADD	_	0	root	0:root	_
 
 # sent_id = email-enronsent15_01-0052
 # text = Return Receipt
@@ -935,7 +935,7 @@
 15	AMERICAS	AMERICAS	PROPN	NNPS	Number=Plur	10	list	10:list	SpaceAfter=No
 16	/	/	PUNCT	,	_	17	punct	17:punct	SpaceAfter=No
 17	Equant	Equant	PROPN	NNP	Number=Sing	10	list	10:list	_
-18	by	by	ADP	IN	_	9	obl	9:obl	SpaceAfter=No
+18	by	by	ADP	IN	_	9	obl	9:obl	Promoted=Yes|SpaceAfter=No
 19	:	:	PUNCT	:	_	23	punct	23:punct	_
 20	at	at	ADP	IN	_	23	case	23:case	SpaceAfter=No
 21	:	:	PUNCT	:	_	20	punct	20:punct	_
@@ -966,7 +966,7 @@
 # sent_id = email-enronsent15_01-0056
 # newpar id = email-enronsent15_01-p0014
 # text = Adnan Patel@ENRON
-1	Adnan	adnanpatel@enron	X	GW	Typo=Yes	0	root	0:root	_
+1	Adnan	AdnanPatel@ENRON	PROPN	GW	Typo=Yes	0	root	0:root	_
 2	Patel@ENRON	_	X	ADD	_	1	goeswith	1:goeswith	_
 
 # sent_id = email-enronsent15_01-0057
@@ -1002,7 +1002,7 @@
 
 # sent_id = email-enronsent15_01-0060
 # text = Bradley Diebner@ECT
-1	Bradley	bradleydiebner@ect	X	GW	Typo=Yes	0	root	0:root	_
+1	Bradley	BradleyDiebner@ECT	PROPN	GW	Typo=Yes	0	root	0:root	_
 2	Diebner@ECT	_	X	ADD	_	1	goeswith	1:goeswith	_
 
 # sent_id = email-enronsent15_01-0061
@@ -1013,7 +1013,7 @@
 
 # sent_id = email-enronsent15_01-0062
 # text = Regards,
-1	Regards	regards	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+1	Regards	regards	NOUN	NNS	Number=Ptan	0	root	0:root	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent15_01-0063
@@ -1072,7 +1072,7 @@
 
 # sent_id = email-enronsent15_01-0067
 # text = Thinking about that, what's your title?
-1	Thinking	think	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl	_
+1	Thinking	think	VERB	VBG	Tense=Pres|VerbForm=Part	5	advcl	5:advcl	_
 2	about	about	ADP	IN	_	3	case	3:case	_
 3	that	that	PRON	DT	Number=Sing|PronType=Dem	1	obl	1:obl:about	SpaceAfter=No
 4	,	,	PUNCT	,	_	1	punct	1:punct	_
@@ -1169,7 +1169,7 @@
 20	loan	loan	NOUN	NN	Number=Sing	21	compound	21:compound	_
 21	transaction	transaction	NOUN	NN	Number=Sing	15	obl	15:obl:under|23:nsubj	_
 22	which	which	PRON	WDT	PronType=Rel	23	nsubj	21:ref	_
-23	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	acl:relcl	21:acl:relcl	_
+23	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	acl:relcl	21:acl:relcl	Cxn=rc-wh-nsubj
 24	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
 25	swap	swap	NOUN	NN	Number=Sing	23	obj	23:obj	_
 26	as	as	ADP	IN	_	28	case	28:case	_
@@ -1247,10 +1247,10 @@
 26	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
 27	Enron	Enron	PROPN	NNP	Number=Sing	29	compound	29:compound	_
 28	trading	trading	NOUN	NN	Number=Sing	29	compound	29:compound	_
-29	entities	entity	NOUN	NNS	Number=Plur	24	obj	24:obj	_
+29	entities	entity	NOUN	NNS	Number=Plur	24	obj	24:obj|31:obl	_
 30	DB	DB	PROPN	NNP	Number=Sing	31	nsubj	31:nsubj	_
-31	trades	trade	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	acl:relcl	29:acl:relcl	_
-32	with	with	ADP	IN	_	31	obl	31:obl	_
+31	trades	trade	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	acl:relcl	29:acl:relcl	Cxn=rc-red-obl-pstrand
+32	with	with	ADP	IN	_	31	obl	31:obl	Promoted=Yes
 33	as	as	ADP	IN	_	35	case	35:case	_
 34	Specified	specify	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	35	amod	35:amod	_
 35	Entities	entity	NOUN	NNS	Number=Plur	24	obl	24:obl:as	_
@@ -1322,11 +1322,11 @@
 7	Bank	Bank	PROPN	NNP	Number=Sing	2	nmod	2:nmod:to	SpaceAfter=No
 8	,	,	PUNCT	,	_	2	punct	2:punct	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	draft	draft	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
+10	draft	draft	NOUN	NN	Number=Sing	17	nsubj	13:obl|17:nsubj	_
 11	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 12	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
-13	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	_
-14	from	from	ADP	IN	_	13	obl	13:obl	_
+13	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obl-pstrand
+14	from	from	ADP	IN	_	13	obl	13:obl	Promoted=Yes
 15	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	cop	17:cop	_
 16	so	so	ADV	RB	_	17	advmod	17:advmod	_
 17	old	old	ADJ	JJ	Degree=Pos	0	root	0:root	_
@@ -1343,7 +1343,7 @@
 28	agreement	agreement	NOUN	NN	Number=Sing	26	nmod	26:nmod:of	_
 29	which	which	PRON	WDT	PronType=Rel	31	nsubj:pass	26:ref	_
 30	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	31	aux:pass	31:aux:pass	_
-31	sent	send	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	26	acl:relcl	26:acl:relcl	_
+31	sent	send	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	26	acl:relcl	26:acl:relcl	Cxn=rc-wh-nsubj:pass
 32	to	to	ADP	IN	_	33	case	33:case	_
 33	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	31	obl	31:obl:to	_
 34	on	on	ADP	IN	_	35	case	35:case	_

@@ -6,7 +6,7 @@
 2	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj:pass	4:nsubj:pass	_
 3	got	get	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 4	yelled	yell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
-5	at	at	ADP	IN	_	4	obl	4:obl	_
+5	at	at	ADP	IN	_	4	obl	4:obl	Promoted=Yes
 6	also	also	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
 7	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -27,7 +27,7 @@
 12-13	wasn't	_	_	_	_	_	_	_	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	aux	14:aux	_
 13	n't	not	PART	RB	_	14	advmod	14:advmod	_
-14	having	have	VERB	VBG	VerbForm=Ger	2	conj	2:conj:but	_
+14	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:but	_
 15	any	any	DET	DT	PronType=Ind	14	obj	14:obj	_
 16	of	of	ADP	IN	_	18	case	18:case	_
 17	that	that	DET	DT	Number=Sing|PronType=Dem	18	det	18:det	_
@@ -262,7 +262,7 @@
 10	that	that	PRON	WDT	PronType=Rel	13	nsubj	1:ref	_
 11	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
 12	not	not	PART	RB	_	13	advmod	13:advmod	_
-13	relate	relate	VERB	VB	VerbForm=Inf	1	acl:relcl	1:acl:relcl	_
+13	relate	relate	VERB	VB	VerbForm=Inf	1	acl:relcl	1:acl:relcl	Cxn=rc-that-nsubj
 14	to	to	ADP	IN	_	17	case	17:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	official	official	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
@@ -330,7 +330,7 @@
 7	firm	firm	NOUN	NN	Number=Sing	0	root	0:root|10:nsubj	_
 8	that	that	PRON	WDT	PronType=Rel	10	nsubj	7:ref	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
-10	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	7	acl:relcl	7:acl:relcl	_
+10	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	7	acl:relcl	7:acl:relcl	Cxn=rc-that-nsubj
 11	for	for	ADP	IN	_	13	case	13:case	_
 12	an	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 13	individual	individual	NOUN	NN	Number=Sing	10	obl	10:obl:for	_
@@ -338,7 +338,7 @@
 15	join	join	VERB	VB	VerbForm=Inf	13	acl	13:acl:to	_
 16	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 17	team	team	NOUN	NN	Number=Sing	15	obj	15:obj	_
-18	handling	handle	VERB	VBG	VerbForm=Ger	15	advcl	15:advcl	_
+18	handling	handle	VERB	VBG	Tense=Pres|VerbForm=Part	15	advcl	15:advcl	_
 19	toxic	toxic	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
 20	tort	tort	NOUN	NN	Number=Sing	18	obj	18:obj	_
 21	with	with	ADP	IN	_	25	case	25:case	_
@@ -356,7 +356,7 @@
 4	exceptional	exceptional	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 5	compensation	compensation	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	package	package	NOUN	NN	Number=Sing	2	obj	2:obj	_
-7	including	include	VERB	VBG	VerbForm=Ger	10	case	10:case	_
+7	including	include	VERB	VBG	Tense=Pres|VerbForm=Part	10	case	10:case	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	healthy	healthy	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	salary	salary	NOUN	NN	Number=Sing	6	nmod	6:nmod:including	SpaceAfter=No
@@ -437,9 +437,9 @@
 12	USA	USA	PROPN	NNP	Number=Sing	10	appos	10:appos	_
 13	Email	email	NOUN	NN	Number=Sing	4	list	4:list	SpaceAfter=No
 14	:	:	PUNCT	:	_	15	punct	15:punct	_
-15	recruiters@marvelconsultants.com	recruiters@marvelconsultants.com	X	ADD	_	13	appos	13:appos	_
+15	recruiters@marvelconsultants.com	recruiters@marvelconsultants.com	PROPN	ADD	_	13	appos	13:appos	_
 16	<	<	PUNCT	-LRB-	_	17	punct	17:punct	SpaceAfter=No
-17	mailto:recruiters@marvelconsultants.com	mailto:recruiters@marvelconsultants.com	X	ADD	_	15	appos	15:appos	SpaceAfter=No
+17	mailto:recruiters@marvelconsultants.com	mailto:recruiters@marvelconsultants.com	PROPN	ADD	_	15	appos	15:appos	SpaceAfter=No
 18	>	>	PUNCT	-RRB-	_	17	punct	17:punct	_
 19	Phone	phone	NOUN	NN	Number=Sing	4	list	4:list	SpaceAfter=No
 20	:	:	PUNCT	:	_	21	punct	21:punct	_
@@ -498,9 +498,9 @@
 7	stuff	stuff	NOUN	NN	Number=Sing	3	obj	3:obj	_
 8	from	from	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	people	people	NOUN	NNS	Number=Plur	3	obl	3:obl:from	_
+10	people	people	NOUN	NNS	Number=Plur	3	obl	3:obl:from|12:obj	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-12	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
+12	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obj
 13	at	at	ADP	IN	_	14	case	14:case	_
 14	ENE	ENE	PROPN	NNP	Number=Sing	12	obl	12:obl:at	SpaceAfter=No
 15	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -648,7 +648,7 @@
 10	gas	gas	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	traders	trader	NOUN	NNS	Number=Plur	6	nmod	6:nmod:for|13:nsubj	_
 12	that	that	PRON	WDT	PronType=Rel	13	nsubj	11:ref	_
-13	made	make	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
+13	made	make	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	acl:relcl	11:acl:relcl	Cxn=rc-that-nsubj
 14	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 15	now	now	ADV	RB	_	17	advmod	17:advmod	_
 16	almost	almost	ADV	RB	_	17	advmod	17:advmod	_

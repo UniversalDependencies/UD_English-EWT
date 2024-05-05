@@ -6,7 +6,7 @@
 2	or	or	CCONJ	CC	_	3	cc	3:cc	_
 3	false	false	ADJ	JJ	Degree=Pos	1	conj	1:conj:or	SpaceAfter=No
 4	:	:	PUNCT	:	_	10	punct	10:punct	_
-5	being	be	AUX	VBG	VerbForm=Ger	9	cop	9:cop	_
+5	being	be	AUX	VBG	Tense=Pres|VerbForm=Part	9	cop	9:cop	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 7	young	young	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 8	New	New	ADJ	NNP	Degree=Pos	9	amod	9:amod	_
@@ -92,9 +92,9 @@
 
 # sent_id = answers-20111107211742AAHZaPe_ans-0007
 # text = Everybody I know at university intends to stay at uni for as long as possible until there are actually jobs available.
-1	Everybody	everybody	PRON	NN	Number=Sing|PronType=Tot	6	nsubj	6:nsubj|8:nsubj:xsubj	_
+1	Everybody	everybody	PRON	NN	Number=Sing|PronType=Tot	6	nsubj	3:obj|6:nsubj|8:nsubj:xsubj	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
+3	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	Cxn=rc-red-obj
 4	at	at	ADP	IN	_	5	case	5:case	_
 5	university	university	NOUN	NN	Number=Sing	1	nmod	1:nmod:at	_
 6	intends	intend	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -180,11 +180,11 @@
 19	debt	debt	NOUN	NN	Number=Sing	13	xcomp	13:xcomp	_
 20	by	by	ADP	IN	_	22	case	22:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
-22	time	time	NOUN	NN	Number=Sing	19	obl	19:obl:by	_
+22	time	time	NOUN	NN	Number=Sing	19	obl	19:obl:by|25:obl	_
 23-24	I'm	_	_	_	_	_	_	_	_
 23	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
 24	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	25	cop	25:cop	_
-25	22	22	NUM	CD	NumForm=Digit|NumType=Card	22	acl:relcl	22:acl:relcl	SpaceAfter=No
+25	22	22	NUM	CD	NumForm=Digit|NumType=Card	22	acl:relcl	22:acl:relcl	Cxn=rc-red-obl|SpaceAfter=No
 26	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111107211742AAHZaPe_ans-0011
@@ -235,13 +235,13 @@
 11	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
 12	not	not	PART	RB	_	14	advmod	14:advmod	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
-14	job	job	NOUN	NN	Number=Sing	4	conj	4:conj:but	_
+14	job	job	NOUN	NN	Number=Sing	4	conj	4:conj:but|17:obl	_
 15-16	I'm	_	_	_	_	_	_	_	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj:pass	17:nsubj:pass	_
 16	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	17	aux:pass	17:aux:pass	_
-17	cut	cut	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	acl:relcl	14:acl:relcl	_
+17	cut	cut	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	acl:relcl	14:acl:relcl	Cxn=rc-red-obl-pstrand
 18	out	out	ADP	RP	_	17	compound:prt	17:compound:prt	_
-19	for	for	ADP	IN	_	17	obl	17:obl	SpaceAfter=No
+19	for	for	ADP	IN	_	17	obl	17:obl	Promoted=Yes|SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111107211742AAHZaPe_ans-0016
@@ -333,7 +333,7 @@
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 5	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
-6	being	be	AUX	VBG	VerbForm=Ger	7	cop	7:cop	_
+6	being	be	AUX	VBG	Tense=Pres|VerbForm=Part	7	cop	7:cop	_
 7	melodramatic	melodramatic	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 8	.	.	PUNCT	.	_	7	punct	7:punct	_
 
@@ -387,7 +387,7 @@
 
 # sent_id = answers-20111107211742AAHZaPe_ans-0026
 # text = Joking.
-1	Joking	joke	VERB	VBG	VerbForm=Ger	0	root	0:root	SpaceAfter=No
+1	Joking	joke	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	SpaceAfter=No
 2	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111107211742AAHZaPe_ans-0027
@@ -651,9 +651,9 @@
 7	idea	idea	NOUN	NN	Number=Sing	0	root	0:root	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	keep	keep	VERB	VB	VerbForm=Inf	7	csubj	7:csubj	_
-10	studying	study	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl	_
+10	studying	study	VERB	VBG	Tense=Pres|VerbForm=Part	9	advcl	9:advcl	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
-12	having	have	VERB	VBG	VerbForm=Ger	10	conj	9:advcl|10:conj:and	_
+12	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	10	conj	9:advcl|10:conj:and	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 14	massive	massive	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 15	student	student	NOUN	NN	Number=Sing	16	compound	16:compound	_
@@ -706,19 +706,19 @@
 3	're	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 5	towards	towards	SCONJ	IN	_	7	mark	7:mark	_
-6	being	be	AUX	VBG	VerbForm=Ger	7	cop	7:cop	_
+6	being	be	AUX	VBG	Tense=Pres|VerbForm=Part	7	cop	7:cop	_
 7	able	able	ADJ	JJ	Degree=Pos	4	advcl	4:advcl:towards	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	extradite	extradite	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
 10	people	people	NOUN	NNS	Number=Plur	9	obj	9:obj|13:nsubj	_
 11	who	who	PRON	WP	PronType=Rel	13	nsubj	10:ref	_
 12	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
-13	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	10	acl:relcl	10:acl:relcl	_
+13	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	10	acl:relcl	10:acl:relcl	Cxn=rc-wh-nsubj
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	country	country	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	avoid	avoid	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:to	_
-18	paying	pay	VERB	VBG	VerbForm=Ger	17	advcl	17:advcl	_
+18	paying	pay	VERB	VBG	Tense=Pres|VerbForm=Part	17	advcl	17:advcl	_
 19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	_
 20	back	back	ADP	RP	_	18	compound:prt	18:compound:prt	SpaceAfter=No
 21	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -761,11 +761,11 @@
 1	And	and	CCONJ	CC	_	11	cc	11:cc	_
 2	all	all	DET	PDT	PronType=Tot	4	det:predet	4:det:predet	_
 3	that	that	DET	DT	Number=Sing|PronType=Dem	4	det	4:det	_
-4	time	time	NOUN	NN	Number=Sing	11	obl:tmod	11:obl:tmod	_
+4	time	time	NOUN	NN	Number=Sing	11	obl:tmod	7:obl|11:obl:tmod	_
 5-6	you're	_	_	_	_	_	_	_	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
 6	're	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
-7	overseas	overseas	ADV	RB	_	4	acl:relcl	4:acl:relcl	_
+7	overseas	overseas	ADV	RB	_	4	acl:relcl	4:acl:relcl	Cxn=rc-red-obl
 8-9	you'll	_	_	_	_	_	_	_	_
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
 9	'll	will	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
@@ -807,7 +807,7 @@
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 11	scholarship	scholarship	NOUN	NN	Number=Sing	9	obj	9:obj|13:nsubj	_
 12	which	which	PRON	WDT	PronType=Rel	13	nsubj	11:ref	_
-13	paid	pay	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
+13	paid	pay	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	acl:relcl	11:acl:relcl	Cxn=rc-wh-nsubj
 14	about	about	ADV	RB	_	15	advmod	15:advmod	_
 15	800	800	NUM	CD	NumForm=Digit|NumType=Card	13	obj	13:obj	SpaceAfter=No
 16	f	of	ADP	IN	Typo=Yes	19	case	19:case	CorrectForm=of
@@ -846,7 +846,7 @@
 8	out	out	ADV	RB	_	9	advmod	9:advmod	_
 9	there	there	ADV	RB	PronType=Dem	7	advmod	7:advmod	_
 10	who	who	PRON	WP	PronType=Rel	11	nsubj	7:ref	_
-11	think	think	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+11	think	think	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	Cxn=rc-wh-nsubj
 12	that	that	SCONJ	IN	_	15	mark	15:mark	_
 13	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 14	can	can	AUX	MD	VerbForm=Fin	15	aux	15:aux	_

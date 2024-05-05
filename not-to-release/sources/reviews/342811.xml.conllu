@@ -42,8 +42,8 @@
 
 # sent_id = reviews-342811-0004
 # text = Got put into the wrong room the first night, and were quite surprised to have someone with the same room key trying to get in the door at 1:00 am!
-1	Got	get	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-2	put	put	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	1	xcomp	1:xcomp	_
+1	Got	get	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	aux:pass	2:aux:pass	_
+2	put	put	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 3	into	into	ADP	IN	_	6	case	6:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	wrong	wrong	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
@@ -55,7 +55,7 @@
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
 12	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
 13	quite	quite	ADV	RB	_	14	advmod	14:advmod	_
-14	surprised	surprised	ADJ	JJ	Degree=Pos	1	conj	1:conj:and	_
+14	surprised	surprised	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	have	have	VERB	VB	VerbForm=Inf	14	advcl	14:advcl:to	_
 17	someone	someone	PRON	NN	Number=Sing|PronType=Ind	16	obj	16:obj	_
@@ -73,7 +73,7 @@
 29	at	at	ADP	IN	_	31	case	31:case	_
 30	1:00	1:00	NUM	CD	NumForm=Digit|NumType=Card	31	nummod	31:nummod	_
 31	am	a.m.	NOUN	NN	Number=Sing	25	obl	25:obl:at	SpaceAfter=No
-32	!	!	PUNCT	.	_	1	punct	1:punct	_
+32	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-342811-0005
 # text = Next day got moved into another room, on the same floor with other wedding guests.
@@ -98,7 +98,7 @@
 # sent_id = reviews-342811-0006
 # text = There were 3 adults in our room but towels for only 2, no linens for sofa bed.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	were	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	3	3	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
 4	adults	adult	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
 5	in	in	ADP	IN	_	7	case	7:case	_
@@ -131,11 +131,11 @@
 10	get	get	VERB	VB	VerbForm=Inf	6	csubj	6:csubj	_
 11	all	all	DET	PDT	PronType=Tot	13	det:predet	13:det:predet	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	towels	towel	NOUN	NNS	Number=Plur	10	obj	10:obj	_
+13	towels	towel	NOUN	NNS	Number=Plur	10	obj	10:obj|17:obj	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
 15	linens	linen	NOUN	NNS	Number=Plur	13	conj	10:obj|13:conj:and	_
 16	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
-17	requested	request	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	13	acl:relcl	13:acl:relcl	SpaceAfter=No
+17	requested	request	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	13	acl:relcl	13:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 18	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-342811-0008
@@ -146,7 +146,7 @@
 4	some	some	DET	DT	PronType=Ind	6	det	6:det	_
 5	wedding	wedding	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	cards	card	NOUN	NNS	Number=Plur	2	conj	2:conj:and|8:nsubj:pass	_
-7	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	8:aux:pass	_
+7	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	8:aux:pass	_
 8	left	leave	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 9	in	in	ADP	IN	_	12	case	12:case	_
 10	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
@@ -219,7 +219,7 @@
 7	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	8:cop	_
 8	disruptive	disruptive	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	putting	put	VERB	VBG	VerbForm=Ger	8	advcl	8:advcl	_
+10	putting	put	VERB	VBG	Tense=Pres|VerbForm=Part	8	advcl	8:advcl	_
 11	everyone	everyone	PRON	NN	Number=Sing|PronType=Tot	10	obj	10:obj	_
 12	out	out	ADP	IN	_	15	case	15:case	_
 13	of	of	ADP	IN	_	15	case	15:case	_

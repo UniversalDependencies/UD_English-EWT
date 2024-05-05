@@ -81,19 +81,19 @@
 26	which	which	PRON	WDT	PronType=Rel	29	obj	29:obj	_
 27	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	29	nsubj	29:nsubj	_
 28	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	29	aux	29:aux	_
-29	done	do	VERB	VBN	Tense=Past|VerbForm=Part	17	advcl:relcl	17:advcl:relcl	_
+29	done	do	VERB	VBN	Tense=Past|VerbForm=Part	17	advcl:relcl	17:advcl:relcl	Cxn=rc-wh-obl-pstrand
 30	with	with	ADP	IN	_	33	case	33:case	_
 31	any	any	DET	DT	PronType=Ind	33	det	33:det	_
 32	other	other	ADJ	JJ	Degree=Pos	33	amod	33:amod	_
-33	restaurant	restaurant	NOUN	NN	Number=Sing	29	obl	29:obl:with	_
+33	restaurant	restaurant	NOUN	NN	Number=Sing	29	obl	29:obl:with|36:obl	_
 34-35	I've	_	_	_	_	_	_	_	_
 34	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	36	nsubj	36:nsubj	_
 35	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	36	aux	36:aux	_
-36	gotten	get	VERB	VBN	Tense=Past|VerbForm=Part	33	acl:relcl	33:acl:relcl	_
+36	gotten	get	VERB	VBN	Tense=Past|VerbForm=Part	33	acl:relcl	33:acl:relcl	Cxn=rc-red-obl-pstrand
 37	a	a	DET	DT	Definite=Ind|PronType=Art	39	det	39:det	_
 38	gift	gift	NOUN	NN	Number=Sing	39	compound	39:compound	_
 39	certificate	certificate	NOUN	NN	Number=Sing	36	obj	36:obj	_
-40	for	for	ADP	IN	_	39	nmod	39:nmod	SpaceAfter=No
+40	for	for	ADP	IN	_	39	nmod	39:nmod	Promoted=Yes|SpaceAfter=No
 41	.	.	PUNCT	.	_	29	punct	29:punct	SpaceAfter=No
 42	)	)	PUNCT	-RRB-	_	29	punct	29:punct	_
 
@@ -126,17 +126,17 @@
 10	,	,	PUNCT	,	_	13	punct	13:punct	_
 11	who	who	PRON	WP	PronType=Rel	13	nsubj	9:ref	_
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
-13	sitting	sit	VERB	VBG	Tense=Pres|VerbForm=Part	9	acl:relcl	9:acl:relcl	_
+13	sitting	sit	VERB	VBG	Tense=Pres|VerbForm=Part	9	acl:relcl	9:acl:relcl	Cxn=rc-wh-nsubj
 14	at	at	ADP	IN	_	16	case	16:case	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 16	table	table	NOUN	NN	Number=Sing	13	obl	13:obl:at	_
-17	chatting	chat	VERB	VBG	VerbForm=Ger	13	advcl	13:advcl	_
+17	chatting	chat	VERB	VBG	Tense=Pres|VerbForm=Part	13	advcl	13:advcl	_
 18	with	with	ADP	IN	_	20	case	20:case	_
 19	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	_
 20	friends	friend	NOUN	NNS	Number=Plur	17	obl	17:obl:with|23:nsubj	_
 21	who	who	PRON	WP	PronType=Rel	23	nsubj	20:ref	_
 22	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	23	aux	23:aux	_
-23	eating	eat	VERB	VBG	Tense=Pres|VerbForm=Part	20	acl:relcl	20:acl:relcl	_
+23	eating	eat	VERB	VBG	Tense=Pres|VerbForm=Part	20	acl:relcl	20:acl:relcl	Cxn=rc-wh-nsubj
 24	there	there	ADV	RB	PronType=Dem	23	advmod	23:advmod	SpaceAfter=No
 25	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -156,7 +156,7 @@
 # text = Sorry for interrupting I guess.
 1	Sorry	sorry	ADJ	JJ	Degree=Pos	0	root	0:root	_
 2	for	for	SCONJ	IN	_	3	mark	3:mark	_
-3	interrupting	interrupt	VERB	VBG	VerbForm=Ger	1	advcl	1:advcl:for	_
+3	interrupting	interrupt	VERB	VBG	Tense=Pres|VerbForm=Part	1	advcl	1:advcl:for	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 5	guess	guess	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	discourse	1:discourse	SpaceAfter=No
 6	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -185,7 +185,7 @@
 # sent_id = reviews-188548-0010
 # text = There were no other options available (I only brought my check card to cover any overage cost) and she rang it up and applied it to the gift card before telling me about the tip policy.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	were	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	no	no	DET	DT	PronType=Neg	5	det	5:det	_
 4	other	other	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	options	option	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
@@ -216,7 +216,7 @@
 30	gift	gift	NOUN	NN	Number=Sing	31	compound	31:compound	_
 31	card	card	NOUN	NN	Number=Sing	26	obl	26:obl:to	_
 32	before	before	SCONJ	IN	_	33	mark	33:mark	_
-33	telling	tell	VERB	VBG	VerbForm=Ger	26	advcl	26:advcl:before	_
+33	telling	tell	VERB	VBG	Tense=Pres|VerbForm=Part	26	advcl	26:advcl:before	_
 34	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	33	iobj	33:iobj	_
 35	about	about	ADP	IN	_	38	case	38:case	_
 36	the	the	DET	DT	Definite=Def|PronType=Art	38	det	38:det	_
@@ -252,7 +252,7 @@
 10	with	with	ADP	IN	_	11	case	11:case	_
 11	management	management	NOUN	NN	Number=Sing	4	nmod	4:nmod:with|13:nsubj	_
 12	that	that	PRON	WDT	PronType=Rel	13	nsubj	11:ref	_
-13	values	value	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
+13	values	value	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	Cxn=rc-that-nsubj
 14	customers	customer	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
 16	employees	employee	NOUN	NNS	Number=Plur	14	conj	13:obj|14:conj:and	_

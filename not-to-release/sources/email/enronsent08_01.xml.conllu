@@ -44,7 +44,7 @@
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	n't	not	PART	RB	_	5	advmod	5:advmod	_
 4	about	about	SCONJ	IN	_	5	mark	5:mark	_
-5	finding	find	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+5	finding	find	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	meaning	meaning	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	of	of	ADP	IN	_	9	case	9:case	_
@@ -92,7 +92,7 @@
 
 # sent_id = email-enronsent08_01-0009
 # text = Moving back to Calgary in about a month which is a little sooner than I thought I would be going back but when opportunity knocks you gotta go.
-1	Moving	move	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+1	Moving	move	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 2	back	back	ADV	RB	_	1	advmod	1:advmod	_
 3	to	to	ADP	IN	_	4	case	4:case	_
 4	Calgary	Calgary	PROPN	NNP	Number=Sing	1	obl	1:obl:to	_
@@ -104,7 +104,7 @@
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	little	little	ADJ	JJ	Degree=Pos	13	obl:npmod	13:obl:npmod	_
-13	sooner	soon	ADJ	JJR	Degree=Cmp	8	acl:relcl	8:acl:relcl	_
+13	sooner	soon	ADJ	JJR	Degree=Cmp	8	acl:relcl	8:acl:relcl	Cxn=rc-wh-nsubj
 14	than	than	SCONJ	IN	_	16	mark	16:mark	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
 16	thought	think	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	13	advcl	13:advcl:than	_
@@ -119,7 +119,7 @@
 25	knocks	knock	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	27	advcl	27:advcl:when	_
 26	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	27	nsubj	27:nsubj|29:nsubj:xsubj	_
 27-28	gotta	_	_	_	_	_	_	_	_
-27	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	1	conj	1:conj:but	_
+27	got	get	VERB	VBN	Tense=Past|VerbForm=Part	1	conj	1:conj:but	_
 28	ta	to	PART	TO	Abbr=Yes	29	mark	29:mark	_
 29	go	go	VERB	VB	VerbForm=Inf	27	xcomp	27:xcomp	SpaceAfter=No
 30	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -167,7 +167,7 @@
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	send	send	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
 8	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	obj	7:obj	_
-9	to	to	ADP	IN	_	7	obl	7:obl	SpaceAfter=No
+9	to	to	ADP	IN	_	7	obl	7:obl	Promoted=Yes|SpaceAfter=No
 10	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent08_01-0013
@@ -202,8 +202,8 @@
 6	theories	theory	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj|10:nsubj	_
 7	like	like	ADP	IN	_	8	case	8:case	_
 8	that	that	PRON	DT	Number=Sing|PronType=Dem	6	nmod	6:nmod:like	_
-9	which	which	PRON	WDT	PronType=Rel	10	nsubj	6:ref	_
-10	working	work	VERB	VBG	VerbForm=Ger	6	acl:relcl	6:acl:relcl	_
+9	which	which	PRON	WDT	PronType=Rel	10	nsubj	6:ref	MissingWordAfter=Yes
+10	working	work	VERB	VBG	VerbForm=Ger	6	acl:relcl	6:acl:relcl	Cxn=rc-wh-nsubj
 11	through	through	ADV	RB	_	10	advmod	10:advmod	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -309,7 +309,7 @@
 1	Michael	Michael	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	J.	J.	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	McDermott	McDermott	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-4	mjmcdermott@hotmail.com	mjmcdermott@hotmail.com	X	ADD	_	1	list	1:list	_
+4	mjmcdermott@hotmail.com	mjmcdermott@hotmail.com	PROPN	ADD	_	1	list	1:list	_
 
 # sent_id = email-enronsent08_01-0026
 # text = _________________________________________________________________
@@ -325,7 +325,7 @@
 6	MSN	MSN	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 7	Explorer	Explorer	PROPN	NNP	Number=Sing	4	nmod	4:nmod:of	_
 8	at	at	ADP	IN	_	9	case	9:case	_
-9	http://explorer.msn.com/intl.asp	http://explorer.msn.com/intl.asp	X	ADD	_	1	obl	1:obl:at	_
+9	http://explorer.msn.com/intl.asp	http://explorer.msn.com/intl.asp	PROPN	ADD	_	1	obl	1:obl:at	_
 
 # sent_id = email-enronsent08_01-0028
 # newpar id = email-enronsent08_01-p0007
@@ -339,7 +339,7 @@
 6	about	about	ADP	IN	_	7	case	7:case	_
 7	fulfillment	fulfillment	NOUN	NN	Number=Sing	0	root	0:root	_
 8	or	or	CCONJ	CC	_	9	cc	9:cc	_
-9	finding	find	VERB	VBG	VerbForm=Ger	7	conj	7:conj:or	_
+9	finding	find	VERB	VBG	Tense=Pres|VerbForm=Part	7	conj	7:conj:or	_
 10	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11-12	life's	_	_	_	_	_	_	_	_
 11	life	life	NOUN	NN	Number=Sing	13	nmod:poss	13:nmod:poss	_
@@ -431,9 +431,9 @@
 2	's	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	1	obj	1:obj|3:nsubj:xsubj	_
 3	discuss	discuss	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
 4	next	next	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	time	time	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
+5	time	time	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod|7:obl	_
 6	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
-7	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+7	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 8	amstel	Amstel	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 9	lights	Light	PROPN	NNPS	Number=Plur	7	obj	7:obj	_
 10	together	together	ADV	RB	_	7	advmod	7:advmod	SpaceAfter=No
@@ -567,9 +567,9 @@
 24	call	call	VERB	VB	Mood=Imp|VerbForm=Fin	22	parataxis	22:parataxis	_
 25	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	24	obj	24:obj	_
 26	collect	collect	ADV	RB	_	24	advmod	24:advmod	_
-27	at	at	ADP	IN	_	29	case	29:case	_
-28	+1	+1	NUM	CD	NumForm=Digit|NumType=Card	29	nummod	29:nummod	_
-29	212-848-8400	212-848-8400	NUM	CD	NumForm=Digit|NumType=Card	24	obl	24:obl:at	SpaceAfter=No
+27	at	at	ADP	IN	_	28	case	28:case	_
+28	+1	+1	NUM	CD	NumForm=Digit|NumType=Card	24	obl	24:obl:at	_
+29	212-848-8400	212-848-8400	NUM	CD	NumForm=Digit|NumType=Card	28	flat	28:flat	SpaceAfter=No
 30	)	)	PUNCT	-RRB-	_	24	punct	24:punct	_
 31	and	and	CCONJ	CC	_	33	cc	33:cc	_
 32	immediately	immediately	ADV	RB	_	33	advmod	33:advmod	_
@@ -604,7 +604,7 @@
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	aux	3:aux	_
 3	thinking	think	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 4	of	of	SCONJ	IN	_	5	mark	5:mark	_
-5	converting	convert	VERB	VBG	VerbForm=Ger	3	advcl	3:advcl:of	_
+5	converting	convert	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:of	_
 6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj	_
 7	to	to	ADP	IN	_	10	case	10:case	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_

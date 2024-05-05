@@ -25,9 +25,9 @@
 8	two	two	NUM	CD	NumForm=Word|NumType=Card	9	nummod	9:nummod	_
 9	guys	guy	NOUN	NNS	Number=Plur	3	conj	3:conj:and	SpaceAfter=No
 10	...	...	PUNCT	,	_	18	punct	18:punct	SpaceAfter=No
-11	all	all	DET	DT	PronType=Tot	18	nsubj	18:nsubj	_
+11	all	all	DET	DT	PronType=Tot	18	nsubj	13:obj|18:nsubj	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
-13	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
+13	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	Cxn=rc-red-obj
 14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
 15	100	100	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	SpaceAfter=No
 16	%	%	SYM	NN	Number=Sing	18	compound	18:compound	_
@@ -49,7 +49,7 @@
 30	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	33	nsubj	33:nsubj	_
 31	must	must	AUX	MD	VerbForm=Fin	33	aux	33:aux	_
 32	be	be	AUX	VB	VerbForm=Inf	33	aux	33:aux	_
-33	doing	do	VERB	VBG	VerbForm=Ger	23	parataxis	23:parataxis	_
+33	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	23	parataxis	23:parataxis	_
 34	something	something	PRON	NN	Number=Sing|PronType=Ind	33	obj	33:obj	_
 35	right	right	ADV	RB	_	33	advmod	33:advmod	SpaceAfter=No
 36	...	...	PUNCT	,	_	37	punct	37:punct	SpaceAfter=No
@@ -59,7 +59,7 @@
 40	these	this	DET	DT	Number=Plur|PronType=Dem	41	det	41:det	_
 41	certificates	certificate	NOUN	NNS	Number=Plur	37	obl	37:obl:at|43:nsubj	_
 42	that	that	PRON	WDT	PronType=Rel	43	nsubj	41:ref	_
-43	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	41	acl:relcl	41:acl:relcl	_
+43	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	41	acl:relcl	41:acl:relcl	Cxn=rc-that-nsubj
 44-45	we're	_	_	_	_	_	_	_	_
 44	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	46	nsubj	46:nsubj	_
 45	're	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	46	cop	46:cop	_
@@ -75,7 +75,7 @@
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|6:nsubj:xsubj	_
 5	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	listened	listen	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	xcomp	5:xcomp	_
-7	to	to	ADP	IN	_	6	obl	6:obl	_
+7	to	to	ADP	IN	_	6	obl	6:obl	Promoted=Yes
 8	like	like	SCONJ	IN	_	11	mark	11:mark	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 10	actually	actually	ADV	RB	_	11	advmod	11:advmod	_
@@ -83,16 +83,16 @@
 12	about	about	ADP	IN	_	13	case	13:case	_
 13	what	what	PRON	WP	PronType=Rel	11	obl	11:obl:about|15:obj	_
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
-15	wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	13	acl:relcl	13:acl:relcl	SpaceAfter=No
+15	wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	13	acl:relcl	13:acl:relcl	Cxn=rc-free-obj|SpaceAfter=No
 16	,	,	PUNCT	,	_	24	punct	24:punct	_
-17	all	all	DET	DT	PronType=Tot	24	nsubj:outer	24:nsubj:outer	_
+17	all	all	DET	DT	PronType=Tot	24	nsubj:outer	20:obl|24:nsubj:outer	_
 18	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	20	nsubj	20:nsubj	_
 19	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	20	cop	20:cop	_
-20	interested	interested	ADJ	JJ	Degree=Pos	17	acl:relcl	17:acl:relcl	_
-21	in	in	ADP	IN	_	20	obl	20:obl	_
+20	interested	interested	ADJ	JJ	Degree=Pos	17	acl:relcl	17:acl:relcl	Cxn=rc-red-obl-pstrand
+21	in	in	ADP	IN	_	20	obl	20:obl	Promoted=Yes
 22	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	24	cop	24:cop	_
 23	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	24	nsubj	24:nsubj	_
-24	signing	sign	VERB	VBG	VerbForm=Ger	5	parataxis	5:parataxis	_
+24	signing	sign	VERB	VBG	Tense=Pres|VerbForm=Part	5	parataxis	5:parataxis	_
 25	a	a	DET	DT	Definite=Ind|PronType=Art	26	det	26:det	_
 26	contract	contract	NOUN	NN	Number=Sing	24	obj	24:obj	_
 27	right	right	ADV	RB	_	28	advmod	28:advmod	_
@@ -135,7 +135,7 @@
 11	get	get	AUX	VB	VerbForm=Inf	12	aux:pass	12:aux:pass	_
 12	sucked	suck	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	conj	3:ccomp|5:conj:and	_
 13	into	into	SCONJ	IN	_	14	mark	14:mark	_
-14	doing	do	VERB	VBG	VerbForm=Ger	12	advcl	12:advcl:into	_
+14	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	12	advcl	12:advcl:into	_
 15	business	business	NOUN	NN	Number=Sing	14	obj	14:obj	_
 16	with	with	ADP	IN	_	17	case	17:case	_
 17	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	15	nmod	15:nmod:with	SpaceAfter=No
@@ -144,12 +144,12 @@
 # sent_id = reviews-376503-0006
 # text = Find someone you trust that actually hears you and wants to do the job right.
 1	Find	find	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	someone	someone	PRON	NN	Number=Sing|PronType=Ind	1	obj	1:obj|7:nsubj|10:nsubj|12:nsubj:xsubj	_
+2	someone	someone	PRON	NN	Number=Sing|PronType=Ind	1	obj	1:obj|4:obj|7:nsubj|10:nsubj|12:nsubj:xsubj	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	trust	trust	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
+4	trust	trust	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	Cxn=rc-red-obj
 5	that	that	PRON	WDT	PronType=Rel	7	nsubj	2:ref	_
 6	actually	actually	ADV	RB	_	7	advmod	7:advmod	_
-7	hears	hear	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
+7	hears	hear	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	Cxn=rc-that-nsubj
 8	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	7	obj	7:obj	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
 10	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	conj	2:acl:relcl|7:conj:and	_

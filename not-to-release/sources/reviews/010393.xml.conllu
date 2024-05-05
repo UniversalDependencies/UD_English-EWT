@@ -10,19 +10,19 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 7	best	good	ADJ	JJS	Degree=Sup	9	amod	9:amod	_
 8	towing	towing	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	services	service	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
+9	services	service	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of|12:obj	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 11	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-12	used	use	VERB	VBN	Tense=Past|VerbForm=Part	9	acl:relcl	9:acl:relcl	SpaceAfter=No
+12	used	use	VERB	VBN	Tense=Past|VerbForm=Part	9	acl:relcl	9:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-010393-0002
 # text = The first time I used them they arrived on time and towed car for me to the destination I needed.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	first	first	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	3	amod	3:amod	_
-3	time	time	NOUN	NN	Number=Sing	8	obl:tmod	8:obl:tmod	_
+3	time	time	NOUN	NN	Number=Sing	8	obl:tmod	5:obl|8:obl:tmod	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
-5	used	use	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+5	used	use	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obl
 6	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	5	obj	5:obj	_
 7	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj|12:nsubj	_
 8	arrived	arrive	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -35,9 +35,9 @@
 15	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	12	obl	12:obl:for	_
 16	to	to	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	destination	destination	NOUN	NN	Number=Sing	12	obl	12:obl:to	_
+18	destination	destination	NOUN	NN	Number=Sing	12	obl	12:obl:to|20:obj	_
 19	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
-20	needed	need	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	18	acl:relcl	18:acl:relcl	SpaceAfter=No
+20	needed	need	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	18	acl:relcl	18:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 21	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-010393-0003
@@ -46,7 +46,7 @@
 2	auto	auto	NOUN	NN	Number=Sing	3	compound	3:compound	_
 3	mechanics	mechanic	NOUN	NNS	Number=Plur	11	nsubj	5:nsubj|11:nsubj|13:nsubj|15:nsubj	_
 4	that	that	PRON	WDT	PronType=Rel	5	nsubj	3:ref	_
-5	work	work	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+5	work	work	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-that-nsubj
 6	for	for	ADP	IN	_	8	case	8:case	_
 7	Auto	Auto	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 8	Towing	Towing	PROPN	NNP	Number=Sing	5	obl	5:obl:for	_
@@ -58,9 +58,9 @@
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
 15	answered	answer	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	conj	11:conj:and	_
 16	any	any	DET	DT	PronType=Ind	17	det	17:det	_
-17	question	question	NOUN	NN	Number=Sing	15	obj	15:obj	_
+17	question	question	NOUN	NN	Number=Sing	15	obj	15:obj|19:obj	_
 18	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
-19	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	17	acl:relcl	17:acl:relcl	SpaceAfter=No
+19	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	17	acl:relcl	17:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 20	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = reviews-010393-0004
@@ -96,7 +96,7 @@
 7	services	service	NOUN	NNS	Number=Plur	4	obl	4:obl:for|10:nsubj	_
 8	that	that	PRON	WDT	PronType=Rel	10	nsubj	7:ref	_
 9	can	can	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
-10	offer	offer	VERB	VB	VerbForm=Inf	7	acl:relcl	7:acl:relcl	_
+10	offer	offer	VERB	VB	VerbForm=Inf	7	acl:relcl	7:acl:relcl	Cxn=rc-that-nsubj
 11	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	10	iobj	10:iobj	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 13	good	good	ADJ	JJ	Degree=Pos	16	amod	16:amod	_

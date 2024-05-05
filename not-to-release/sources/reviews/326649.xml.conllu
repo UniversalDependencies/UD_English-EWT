@@ -24,7 +24,7 @@
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj|22:nsubj	_
 13	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
 14	been	be	AUX	VBN	Tense=Past|VerbForm=Part	15	aux	15:aux	_
-15	going	go	VERB	VBG	VerbForm=Ger	3	parataxis	3:parataxis	_
+15	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	3	parataxis	3:parataxis	_
 16	there	there	ADV	RB	PronType=Dem	15	advmod	15:advmod	_
 17	for	for	ADP	IN	_	18	case	18:case	_
 18	years	year	NOUN	NNS	Number=Plur	15	obl	15:obl:for	_
@@ -45,14 +45,14 @@
 5	personable	personable	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	&	&	CCONJ	CC	_	8	cc	8:cc	_
 7	actually	actually	ADV	RB	_	8	advmod	8:advmod	_
-8	care	care	VERB	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	5	conj	5:conj	CorrectForm=cares
+8	care	care	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	5	conj	5:conj	CorrectForm=cares|CorrectNumber=Sing
 9	about	about	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	customers	customer	NOUN	NNS	Number=Plur	12	nmod:poss	12:nmod:poss	MissingWordsAfter='
 12	safety	safety	NOUN	NN	Number=Sing	8	obl	8:obl:about	_
 13	rather	rather	ADV	RB	_	15	cc	15:cc	_
 14	than	than	ADP	IN	_	13	fixed	13:fixed	_
-15	taking	take	VERB	VBG	VerbForm=Ger	12	conj	8:obl:about|12:conj:rather_than	_
+15	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	12	conj	8:obl:about|12:conj:rather_than	_
 16	there	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	17	nmod:poss	17:nmod:poss	CorrectForm=their
 17	money	money	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No
 18	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -210,11 +210,11 @@
 # sent_id = reviews-326649-0010
 # text = When having your car worked on you have to trust the mechanic & this Midas is truly someone you can trust!
 1	When	when	ADV	WRB	PronType=Int	2	advmod	2:advmod	_
-2	having	have	VERB	VBG	VerbForm=Ger	8	advcl	8:advcl:when	_
+2	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	8	advcl	8:advcl:when	_
 3	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	car	car	NOUN	NN	Number=Sing	2	obj	2:obj|5:nsubj:xsubj	_
 5	worked	work	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	xcomp	2:xcomp	_
-6	on	on	ADP	IN	_	5	obl	5:obl	_
+6	on	on	ADP	IN	_	5	obl	5:obl	Promoted=Yes
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 8	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
@@ -226,9 +226,9 @@
 15	Midas	Midas	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj	_
 16	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
 17	truly	truly	ADV	RB	_	18	advmod	18:advmod	_
-18	someone	someone	PRON	NN	Number=Sing|PronType=Ind	8	conj	8:conj	_
+18	someone	someone	PRON	NN	Number=Sing|PronType=Ind	8	conj	8:conj|21:obj	_
 19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	21	nsubj	21:nsubj	_
 20	can	can	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
-21	trust	trust	VERB	VB	VerbForm=Inf	18	acl:relcl	18:acl:relcl	SpaceAfter=No
+21	trust	trust	VERB	VB	VerbForm=Inf	18	acl:relcl	18:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 22	!	!	PUNCT	.	_	8	punct	8:punct	_
 

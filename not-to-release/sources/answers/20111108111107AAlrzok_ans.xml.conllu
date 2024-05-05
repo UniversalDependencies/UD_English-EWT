@@ -28,7 +28,7 @@
 2-3	I'm	_	_	_	_	_	_	_	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 3	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	having	have	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+4	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 5	trouble	trouble	NOUN	NN	Number=Sing	4	obj	4:obj	_
 6	training	train	VERB	VBG	VerbForm=Ger	5	acl	5:acl	_
 7	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	obj	6:obj	SpaceAfter=No
@@ -46,9 +46,9 @@
 8	leash	leash	NOUN	NN	Number=Sing	6	obl	6:obl:with	SpaceAfter=No
 9	,	,	PUNCT	,	_	20	punct	20:punct	_
 10	every	every	DET	DT	PronType=Tot	11	det	11:det	_
-11	time	time	NOUN	NN	Number=Sing	20	obl:tmod	20:obl:tmod	_
+11	time	time	NOUN	NN	Number=Sing	20	obl:tmod	13:obl|20:obl:tmod	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
-13	put	put	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
+13	put	put	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	11	acl:relcl	11:acl:relcl	Cxn=rc-red-obl
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	leash	leash	NOUN	NN	Number=Sing	13	obj	13:obj	_
 16	on	on	ADP	RP	_	13	compound:prt	13:compound:prt	SpaceAfter=No
@@ -99,9 +99,9 @@
 1	Is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	there	there	PRON	EX	_	1	expl	1:expl	_
 3	any	any	DET	DT	PronType=Ind	4	det	4:det	_
-4	way	way	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	_
+4	way	way	NOUN	NN	Number=Sing	1	nsubj	1:nsubj|6:obl	_
 5	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-6	let	let	VERB	VB	VerbForm=Inf	4	acl:relcl	4:acl:relcl	_
+6	let	let	VERB	VB	VerbForm=Inf	4	acl:relcl	4:acl:relcl	Cxn=rc-red-obl
 7	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	obj	6:obj|8:nsubj:xsubj	_
 8	know	know	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 9	how	how	ADV	WRB	PronType=Int	11	advmod	11:advmod	_
@@ -115,9 +115,9 @@
 # text = And every time he see some one he will rush to people and jump on them, doesn't listen to me.
 1	And	and	CCONJ	CC	_	10	cc	10:cc	_
 2	every	every	DET	DT	PronType=Tot	3	det	3:det	_
-3	time	time	NOUN	NN	Number=Sing	10	obl:tmod	10:obl:tmod	_
+3	time	time	NOUN	NN	Number=Sing	10	obl:tmod	5:obl|10:obl:tmod	_
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
-5	see	see	VERB	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	3	acl:relcl	3:acl:relcl	CorrectForm=sees
+5	see	see	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	3	acl:relcl	3:acl:relcl	CorrectForm=sees|CorrectNumber=Sing|Cxn=rc-red-obl
 6	some	someone	PRON	GW	Number=Sing|PronType=Ind|Typo=Yes	5	obj	5:obj	_
 7	one	_	X	NN	_	6	goeswith	6:goeswith	_
 8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj|14:nsubj	_
@@ -145,9 +145,9 @@
 3	really	really	ADV	RB	_	4	advmod	4:advmod	_
 4	excited	excited	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	about	about	ADP	IN	_	6	case	6:case	_
-6	anybody	anybody	PRON	NN	Number=Sing|PronType=Ind	4	obl	4:obl:about	_
+6	anybody	anybody	PRON	NN	Number=Sing|PronType=Ind	4	obl	4:obl:about|8:obj	_
 7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
-8	see	see	VERB	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	6	acl:relcl	6:acl:relcl	CorrectForm=sees|SpaceAfter=No
+8	see	see	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	6	acl:relcl	6:acl:relcl	CorrectForm=sees|CorrectNumber=Sing|Cxn=rc-red-obj|SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108111107AAlrzok_ans-0010
@@ -164,9 +164,9 @@
 2	thing	thing	NOUN	NN	Number=Sing	19	nsubj:outer	19:nsubj:outer	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
 4	every	every	DET	DT	PronType=Tot	5	det	5:det	_
-5	time	time	NOUN	NN	Number=Sing	19	obl:tmod	19:obl:tmod	_
+5	time	time	NOUN	NN	Number=Sing	19	obl:tmod	7:obl|19:obl:tmod	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
-7	sit	sit	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+7	sit	sit	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 8	on	on	ADP	IN	_	10	case	10:case	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	chair	chair	NOUN	NN	Number=Sing	7	obl	7:obl:on	_
@@ -249,7 +249,7 @@
 4	purchase	purchase	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	what	what	PRON	WP	PronType=Rel	4	obj	4:obj|7:obj|11:nsubj:xsubj	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux:pass	7:aux:pass	_
-7	called	call	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl:relcl	5:acl:relcl	_
+7	called	call	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl:relcl	5:acl:relcl	Cxn=rc-free-obj
 8	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 9	shoulder	shoulder	NOUN	NN	Number=Sing	11	compound	11:compound	_
 10	point	point	NOUN	NN	Number=Sing	11	compound	11:compound	_
@@ -483,7 +483,7 @@
 7	treats	treat	NOUN	NNS	Number=Plur	5	obj	5:obj|10:obj	_
 8	that	that	PRON	WDT	PronType=Rel	10	obj	7:ref	_
 9	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
-10	loves	love	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+10	loves	love	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	Cxn=rc-that-obj
 11	and	and	CCONJ	CC	_	13	cc	13:cc	_
 12	only	only	ADV	RB	_	13	advmod	13:advmod	_
 13	give	give	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	_
@@ -530,7 +530,7 @@
 6	heel	heel	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp|9:csubj	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	which	which	PRON	WDT	PronType=Rel	9	nsubj	6:ref	_
-9	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	advcl:relcl	6:advcl:relcl	_
+9	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	advcl:relcl	6:advcl:relcl	Cxn=rc-wh-csubj
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	walk	walk	VERB	VB	VerbForm=Inf	9	ccomp	9:ccomp	_
 12	round	round	ADP	IN	_	13	case	13:case	_

@@ -9,7 +9,7 @@
 # text = Are you going to be able to make the power VAR meeting on Thursday?
 1	Are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|6:nsubj:xsubj|8:nsubj:xsubj	_
-3	going	go	VERB	VBG	VerbForm=Ger	0	root	0:root	_
+3	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 4	to	to	PART	TO	_	6	mark	6:mark	_
 5	be	be	AUX	VB	VerbForm=Inf	6	cop	6:cop	_
 6	able	able	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	_
@@ -84,7 +84,7 @@
 1	Sheridan	Sheridan	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	Titman	Titman	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	<	<	PUNCT	-LRB-	_	4	punct	4:punct	SpaceAfter=No
-4	titman@mail.utexas.edu	titman@mail.utexas.edu	X	ADD	_	1	list	1:list	SpaceAfter=No
+4	titman@mail.utexas.edu	titman@mail.utexas.edu	PROPN	ADD	_	1	list	1:list	SpaceAfter=No
 5	>	>	PUNCT	-RRB-	_	4	punct	4:punct	_
 6	on	on	ADP	IN	_	7	case	7:case	_
 7	01/24/2001	01/24/2001	NUM	CD	NumForm=Digit|NumType=Card	1	nmod	1:nmod:on	_
@@ -106,12 +106,12 @@
 5	check	check	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	with	with	ADP	IN	_	7	case	7:case	_
 7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	obl	5:obl:with	_
-8	regarding	regard	VERB	VBG	VerbForm=Ger	11	case	11:case	_
+8	regarding	regard	VERB	VBG	Tense=Pres|VerbForm=Part	11	case	11:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	consulting	consulting	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	arrangement	arrangement	NOUN	NN	Number=Sing	5	obl	5:obl:regarding	_
+11	arrangement	arrangement	NOUN	NN	Number=Sing	5	obl	5:obl:regarding|13:obj	_
 12	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
-13	discussed	discuss	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
+13	discussed	discuss	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	11	acl:relcl	11:acl:relcl	Cxn=rc-red-obj
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 15	couple	couple	NOUN	NN	Number=Sing	18	obl:npmod	18:obl:npmod	_
 16	of	of	ADP	IN	_	17	case	17:case	_
@@ -136,7 +136,7 @@
 13	contract	contract	NOUN	NN	Number=Sing	5	obl	5:obl:with|16:obl|28:obl	_
 14	where	where	ADV	WRB	PronType=Rel	16	advmod	13:ref	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj|28:nsubj	_
-16	give	give	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	13	acl:relcl	13:acl:relcl	_
+16	give	give	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	13	acl:relcl	13:acl:relcl	Cxn=rc-wh-obl
 17	some	some	DET	DT	PronType=Ind	18	det	18:det	_
 18	thoughts	thought	NOUN	NNS	Number=Plur	16	obj	16:obj	_
 19	to	to	ADP	IN	_	21	case	21:case	_
@@ -146,7 +146,7 @@
 23	issues	issue	NOUN	NNS	Number=Plur	21	nmod	21:nmod:of	_
 24	that	that	PRON	WDT	PronType=Rel	26	obj	21:ref	_
 25	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	26	nsubj	26:nsubj	_
-26	discussed	discuss	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	21	acl:relcl	21:acl:relcl	_
+26	discussed	discuss	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	21	acl:relcl	21:acl:relcl	Cxn=rc-that-obj
 27	and	and	CCONJ	CC	_	28	cc	28:cc	_
 28	come	come	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	16	conj	13:acl:relcl|16:conj:and	_
 29	to	to	ADP	IN	_	30	case	30:case	_
@@ -166,7 +166,7 @@
 
 # sent_id = email-enronsent18_02-0012
 # text = regards,
-1	regards	regards	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+1	regards	regards	NOUN	NNS	Number=Ptan	0	root	0:root	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent18_02-0013
@@ -200,7 +200,7 @@
 22	(	(	PUNCT	-LRB-	_	23	punct	23:punct	SpaceAfter=No
 23	fax	fax	NOUN	NN	Number=Sing	21	appos	21:appos	SpaceAfter=No
 24	)	)	PUNCT	-RRB-	_	23	punct	23:punct	_
-25	titman@mail.utexas.edu	titman@mail.utexas.edu	X	ADD	_	2	list	2:list	_
+25	titman@mail.utexas.edu	titman@mail.utexas.edu	PROPN	ADD	_	2	list	2:list	_
 
 # sent_id = email-enronsent18_02-0015
 # text = Bryan,
@@ -221,9 +221,9 @@
 9	look	look	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	at	at	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	resume	resume	NOUN	NN	Number=Sing	9	nmod	9:nmod:at	_
+12	resume	resume	NOUN	NN	Number=Sing	9	nmod	9:nmod:at|14:obj	_
 13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
-14	sent	send	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	12	acl:relcl	12:acl:relcl	_
+14	sent	send	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	12	acl:relcl	12:acl:relcl	Cxn=rc-red-obj
 15	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	14	iobj	14:iobj	SpaceAfter=No
 16	?	?	PUNCT	.	_	3	punct	3:punct	_
 
@@ -305,7 +305,7 @@
 # sent_id = email-enronsent18_02-0026
 # newpar id = email-enronsent18_02-p0012
 # text = Kevin Kindall@ENRON
-1	Kevin	kevinkindall@enron	X	GW	Typo=Yes	0	root	0:root	_
+1	Kevin	KevinKindall@ENRON	PROPN	GW	Typo=Yes	0	root	0:root	_
 2	Kindall@ENRON	_	X	ADD	_	1	goeswith	1:goeswith	_
 
 # sent_id = email-enronsent18_02-0027
@@ -339,9 +339,9 @@
 5	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux:pass	5:aux:pass	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	presentation	presentation	NOUN	NN	Number=Sing	5	nsubj:pass	5:nsubj:pass	_
+8	presentation	presentation	NOUN	NN	Number=Sing	5	nsubj:pass	5:nsubj:pass|10:obj	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
-10	gave	give	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
+10	gave	give	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	Cxn=rc-red-obj
 11	at	at	ADP	IN	_	16	case	16:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 13	Canadian	Canadian	ADJ	NNP	Degree=Pos	16	amod	16:amod	_
@@ -493,7 +493,7 @@
 1	Darrell	Darrell	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	Duffie	Duffie	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	<	<	PUNCT	-LRB-	_	4	punct	4:punct	SpaceAfter=No
-4	duffie@Stanford.EDU	duffie@stanford.edu	X	ADD	_	1	list	1:list	SpaceAfter=No
+4	duffie@Stanford.EDU	duffie@Stanford.EDU	PROPN	ADD	_	1	list	1:list	SpaceAfter=No
 5	>	>	PUNCT	-RRB-	_	4	punct	4:punct	_
 6	on	on	ADP	IN	_	7	case	7:case	_
 7	01/24/2001	01/24/2001	NUM	CD	NumForm=Digit|NumType=Card	1	nmod	1:nmod:on	_
@@ -508,7 +508,7 @@
 4	Darrell	Darrell	PROPN	NNP	Number=Sing	2	obl	2:obl:to	_
 5	Duffie	Duffie	PROPN	NNP	Number=Sing	4	flat	4:flat	_
 6	<	<	PUNCT	-LRB-	_	7	punct	7:punct	SpaceAfter=No
-7	duffie@Stanford.EDU	duffie@stanford.edu	X	ADD	_	4	list	4:list	SpaceAfter=No
+7	duffie@Stanford.EDU	duffie@Stanford.EDU	PROPN	ADD	_	4	list	4:list	SpaceAfter=No
 8	>	>	PUNCT	-RRB-	_	7	punct	7:punct	_
 
 # sent_id = email-enronsent18_02-0044
@@ -562,17 +562,17 @@
 7	94305-5015	94305-5015	NUM	CD	NumForm=Digit|NumType=Card	5	appos	5:appos	_
 8	USA	USA	PROPN	NNP	Number=Sing	6	appos	6:appos	_
 9	phone	phone	NOUN	NN	Number=Sing	1	list	1:list	_
-10	650	650	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
-11	723	723	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
-12	1976	1976	NUM	CD	NumForm=Digit|NumType=Card	9	appos	9:appos	_
+10	650	650	NUM	CD	NumForm=Digit|NumType=Card	9	appos	9:appos	_
+11	723	723	NUM	CD	NumForm=Digit|NumType=Card	10	flat	10:flat	_
+12	1976	1976	NUM	CD	NumForm=Digit|NumType=Card	10	flat	10:flat	_
 13	fax	fax	NOUN	NN	Number=Sing	1	list	1:list	_
-14	650	650	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	_
-15	725	725	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	_
-16	7979	7979	NUM	CD	NumForm=Digit|NumType=Card	13	appos	13:appos	_
+14	650	650	NUM	CD	NumForm=Digit|NumType=Card	13	appos	13:appos	_
+15	725	725	NUM	CD	NumForm=Digit|NumType=Card	14	flat	14:flat	_
+16	7979	7979	NUM	CD	NumForm=Digit|NumType=Card	14	flat	14:flat	_
 17	email	email	NOUN	NN	Number=Sing	1	list	1:list	_
-18	duffie@stanford.edu	duffie@stanford.edu	X	ADD	_	17	appos	17:appos	_
+18	duffie@stanford.edu	duffie@stanford.edu	PROPN	ADD	_	17	appos	17:appos	_
 19	web	web	NOUN	NN	Number=Sing	1	list	1:list	_
-20	http://www.stanford.edu/~duffie/	http://www.stanford.edu/~duffie/	X	ADD	_	19	appos	19:appos	_
+20	http://www.stanford.edu/~duffie/	http://www.stanford.edu/~duffie/	PROPN	ADD	_	19	appos	19:appos	_
 
 # sent_id = email-enronsent18_02-0050
 # text = _____________________________________________
@@ -581,7 +581,7 @@
 # sent_id = email-enronsent18_02-0051
 # text = - Paper4.pdf
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	Paper4.pdf	Paper4.pdf	X	ADD	_	0	root	0:root	_
+2	Paper4.pdf	Paper4.pdf	PROPN	ADD	_	0	root	0:root	_
 
 # sent_id = email-enronsent18_02-0052
 # newpar id = email-enronsent18_02-p0024
@@ -654,9 +654,9 @@
 # sent_id = email-enronsent18_02-0056
 # text = (713) 853-7408
 1	(	(	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
-2	713	713	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	SpaceAfter=No
+2	713	713	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	SpaceAfter=No
 3	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
-4	853-7408	853-7408	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
+4	853-7408	853-7408	NUM	CD	NumForm=Digit|NumType=Card	2	flat	2:flat	_
 
 # sent_id = email-enronsent18_02-0057
 # newpar id = email-enronsent18_02-p0026
@@ -717,7 +717,7 @@
 1	Al	Al	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	Arfsten	Arfsten	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	<	<	PUNCT	-LRB-	_	4	punct	4:punct	SpaceAfter=No
-4	arfsten@bflassociates.com	arfsten@bflassociates.com	X	ADD	_	1	list	1:list	SpaceAfter=No
+4	arfsten@bflassociates.com	arfsten@bflassociates.com	PROPN	ADD	_	1	list	1:list	SpaceAfter=No
 5	>	>	PUNCT	-RRB-	_	4	punct	4:punct	_
 6	on	on	ADP	IN	_	7	case	7:case	_
 7	01/24/2001	01/24/2001	NUM	CD	NumForm=Digit|NumType=Card	1	nmod	1:nmod:on	_
@@ -775,7 +775,7 @@
 6	and	and	CCONJ	CC	_	9	cc	9:cc	_
 7	its	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 8	potential	potential	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	economics	economics	NOUN	NNS	Number=Plur	2	conj	2:conj:and|12:nsubj	_
+9	economics	economics	NOUN	NNS	Number=Ptan	2	conj	2:conj:and|12:nsubj	_
 10	could	could	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 11	be	be	AUX	VB	VerbForm=Inf	12	cop	12:cop	_
 12	key	key	ADJ	JJ	Degree=Pos	0	root	0:root	_
@@ -808,7 +808,7 @@
 16	could	could	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 17	be	be	AUX	VB	VerbForm=Inf	19	aux:pass	19:aux:pass	_
 18	successfully	successfully	ADV	RB	_	19	advmod	19:advmod	_
-19	accomplished	accomplish	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	acl:relcl	6:acl:relcl	SpaceAfter=No
+19	accomplished	accomplish	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	acl:relcl	6:acl:relcl	Cxn=rc-wh-obl-pfront|SpaceAfter=No
 20	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = email-enronsent18_02-0070
@@ -846,22 +846,22 @@
 11	elsewhere	elsewhere	ADV	RB	_	6	conj	5:advmod|6:conj:or|14:nsubj	_
 12	that	that	PRON	WDT	PronType=Rel	14	nsubj	11:ref	_
 13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
-14	appropriate	appropriate	ADJ	JJ	Degree=Pos	11	advcl:relcl	11:advcl:relcl	SpaceAfter=No
+14	appropriate	appropriate	ADJ	JJ	Degree=Pos	11	advcl:relcl	11:advcl:relcl	Cxn=rc-that-nsubj|SpaceAfter=No
 15	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent18_02-0072
 # text = Best regards,
 1	Best	good	ADJ	JJS	Degree=Sup	2	amod	2:amod	_
-2	regards	regards	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+2	regards	regards	NOUN	NNS	Number=Ptan	0	root	0:root	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent18_02-0073
 # text = Al Arfsten 713 965 2158
 1	Al	Al	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	Arfsten	Arfsten	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	713	713	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
-4	965	965	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
-5	2158	2158	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	713	713	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+4	965	965	NUM	CD	NumForm=Digit|NumType=Card	3	flat	3:flat	_
+5	2158	2158	NUM	CD	NumForm=Digit|NumType=Card	3	flat	3:flat	_
 
 # sent_id = email-enronsent18_02-0074
 # newpar id = email-enronsent18_02-p0033

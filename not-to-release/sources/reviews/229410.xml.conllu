@@ -47,7 +47,7 @@
 11-12	didn't	_	_	_	_	_	_	_	_
 11	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
 12	n't	not	PART	RB	_	13	advmod	13:advmod	_
-13	have	have	VERB	VB	VerbForm=Inf	8	acl:relcl	8:acl:relcl	_
+13	have	have	VERB	VB	VerbForm=Inf	8	acl:relcl	8:acl:relcl	Cxn=rc-wh-nsubj
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	best	good	ADJ	JJS	Degree=Sup	16	amod	16:amod	_
 16	experience	experience	NOUN	NN	Number=Sing	13	obj	13:obj	_
@@ -91,7 +91,7 @@
 1	However	however	ADV	RB	_	23	advmod	23:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	after	after	SCONJ	IN	_	4	mark	4:mark	_
-4	giving	give	VERB	VBG	VerbForm=Ger	23	advcl	23:advcl:after	_
+4	giving	give	VERB	VBG	Tense=Pres|VerbForm=Part	23	advcl	23:advcl:after	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 6	required	require	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	13	amod	13:amod	_
 7	$	$	SYM	$	_	13	compound	13:compound	SpaceAfter=No
@@ -102,7 +102,7 @@
 12	)	)	PUNCT	-RRB-	_	11	punct	11:punct	_
 13	deposit	deposit	NOUN	NN	Number=Sing	4	obj	4:obj	_
 14	before	before	SCONJ	IN	_	15	mark	15:mark	_
-15	seeing	see	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl:before	_
+15	seeing	see	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl:before	_
 16	any	any	DET	DT	PronType=Ind	17	det	17:det	_
 17	plans	plan	NOUN	NNS	Number=Plur	15	obj	15:obj	_
 18	or	or	CCONJ	CC	_	19	cc	19:cc	_
@@ -145,7 +145,7 @@
 11	,	,	PUNCT	,	_	14	punct	14:punct	_
 12	which	which	PRON	WDT	PronType=Rel	14	nsubj	4:ref	_
 13	all	all	DET	DT	PronType=Tot	12	det	12:det	_
-14	came	come	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
+14	came	come	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-wh-nsubj
 15	way	way	ADV	RB	_	17	advmod	17:advmod	_
 16	over	over	ADP	IN	_	17	case	17:case	_
 17	budget	budget	NOUN	NN	Number=Sing	14	obl	14:obl:over	SpaceAfter=No
@@ -155,19 +155,19 @@
 # text = By the time we got to the budget i told him I could work with, there was basically no design.
 1	By	by	ADP	IN	_	3	case	3:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	time	time	NOUN	NN	Number=Sing	18	obl	18:obl:by	_
+3	time	time	NOUN	NN	Number=Sing	18	obl	5:obl|18:obl:by	_
 4	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
-5	got	get	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+5	got	get	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obl-pstrand
 6	to	to	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	budget	budget	NOUN	NN	Number=Sing	5	obl	5:obl:to	_
+8	budget	budget	NOUN	NN	Number=Sing	5	obl	5:obl:to|10:obl	_
 9	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
-10	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
+10	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	Cxn=rc-red-obl-pstrand
 11	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	iobj	10:iobj	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
 13	could	could	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
 14	work	work	VERB	VB	VerbForm=Inf	10	ccomp	10:ccomp	_
-15	with	with	ADP	IN	_	14	obl	14:obl	SpaceAfter=No
+15	with	with	ADP	IN	_	14	obl	14:obl	Promoted=Yes|SpaceAfter=No
 16	,	,	PUNCT	,	_	3	punct	3:punct	_
 17	there	there	PRON	EX	_	18	expl	18:expl	_
 18	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_

@@ -167,7 +167,7 @@
 1	"	"	PUNCT	``	_	6	punct	6:punct	SpaceAfter=No
 2	By	by	ADP	IN	_	4	case	4:case	_
 3	all	all	DET	DT	PronType=Tot	4	det	4:det	_
-4	means	means	NOUN	NNS	Number=Plur	6	obl	6:obl:by	SpaceAfter=No
+4	means	means	NOUN	NNS	Number=Ptan	6	obl	6:obl:by	SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	marry	marry	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
 7	.	.	PUNCT	.	_	6	punct	6:punct	_
@@ -505,7 +505,7 @@
 2	n't	not	PART	RB	_	3	advmod	3:advmod	_
 3	worry	worry	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 4	about	about	SCONJ	IN	_	5	mark	5:mark	_
-5	avoiding	avoid	VERB	VBG	VerbForm=Ger	3	advcl	3:advcl:about	_
+5	avoiding	avoid	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:about	_
 6	temptation	temptation	NOUN	NN	Number=Sing	5	obj	5:obj	SpaceAfter=No
 7	...	...	PUNCT	,	_	15	punct	15:punct	_
 8	as	as	SCONJ	IN	_	10	mark	10:mark	_
@@ -578,11 +578,11 @@
 # text = By the time a man is wise enough to watch his step, he's too old to go anywhere.
 1	By	by	ADP	IN	_	3	case	3:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	time	time	NOUN	NN	Number=Sing	17	obl	17:obl:by	_
+3	time	time	NOUN	NN	Number=Sing	17	obl	7:obl|17:obl:by	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	man	man	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
-7	wise	wise	ADJ	JJ	Degree=Pos	3	acl:relcl	3:acl:relcl	_
+7	wise	wise	ADJ	JJ	Degree=Pos	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obl
 8	enough	enough	ADV	RB	_	7	advmod	7:advmod	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	watch	watch	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:to	_
