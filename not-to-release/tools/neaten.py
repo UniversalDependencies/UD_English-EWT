@@ -16,6 +16,7 @@ $ python neaten.py | sort | cut -c1-30 | uniq -c
 @since: 2022-09-10
 """
 
+from typing import Dict, List
 from collections import defaultdict, Counter
 import glob
 import re
@@ -131,12 +132,12 @@ def validate_annos(tree):
         upostags = {}
         feats = {}
         tokens = {}
-        parent_ids = {}
+        parent_ids: Dict[int,int] = {}
         lemmas = {}
         sent_positions = defaultdict(lambda: "_")
-        parents = {}
-        children = defaultdict(list)
-        child_funcs = defaultdict(list)
+        parents: Dict[int,str] = {}
+        children: Dict[int,List[str]] = defaultdict(list)
+        child_funcs: Dict[int,List[str]] = defaultdict(list)
         tok_num = 0
 
         line_num = 0
@@ -321,6 +322,20 @@ def validate_annos(tree):
                 elif not {"acl:relcl","advcl:relcl"} & set(child_funcs[edeps[0][1]]):
                     # the ref antecedent doesn't head the RC
                     print("WARN: `ref` antecedent lacks :relcl dependent" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+
+            """
+            Extraposition Construction
+
+            - Check for anomalous csubj: post-head, head is not a root ADJ or VERB, head has no expl dependent
+            (and a couple of exceptions: "a real pleasure" etc.)
+            (https://github.com/UniversalDependencies/UD_English-EWT/issues/524)
+            """
+            if not (func in ('root','parataxis') and upos in ('ADJ','VERB')):
+                if 'csubj' in child_funcs[tok_num] and 'expl' not in child_funcs[tok_num]:
+                    for j in parent_ids:
+                        if parent_ids[j]==tok_num and j>tok_num and funcs[j]=='csubj':
+                            if not (func=='root' and tok in ('pleasure','joy','move')):
+                                print("WARN: suspicious post-head `csubj` in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
 
             if ':pass' in func:
@@ -665,6 +680,8 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         elif parent_lemma in {"love","leave","make","feel","find","mean","need","say"} and "to" in children:
             # some verbs license to-infinitival ccomps (sometimes due to it-extraposition)
             pass    # I would love to join; I leave it to you [to figure it out]; makes it impossible [to single out]; felt it necessary [to...]
+        elif "newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0021 @ token 8":
+            pass    # it-extraposition: have it in you to...
         elif "answers-20111108103354AAQzdFB_ans-0004 @ token 26" in inname:
             pass    # sentence is missing a word
         #elif not ((lemma == "lie" and "once" in children) or (lemma=="find" and ("see" in children or "associate" in children))):  # Exceptions
@@ -977,31 +994,32 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, misc, docname):
     tense = feats["Tense"] if "Tense" in feats else None
     verbForm = feats["VerbForm"] if "VerbForm" in feats else None
 
-    # ADJ+JJ <=> ADJ[Degree=Pos]
+    # ADJ => (JJ <=> [Degree=Pos])
     if upos == "ADJ" and ((pos == "JJ") != (degree == "Pos")):
         # ADJ+NNP occurs in proper noun phrases per PTB guidelines
         if pos != "NNP":
             print("WARN: ADJ+JJ should correspond with Degree=Pos in " + docname + " @ token " + str(id))
 
-    # ADJ+JJR <=> ADJ[Degree=Cmp]
-    if upos == "ADJ" and ((pos == "JJR") != (degree == "Cmp")):
+    # (ADJ+JJR | ADV+RBR) <=> [Degree=Cmp]
+    if (upos == "ADJ" and pos == "JJR" or upos == "ADV" and pos == "RBR") != (degree == "Cmp"):
         # ADJ+NNP occurs in proper noun phrases per PTB guidelines
         if pos != "NNP":
-            print("WARN: ADJ+JJR should correspond with Degree=Cmp in " + docname + " @ token " + str(id))
+            print("WARN: ADJ+JJR or ADV+RBR should correspond with Degree=Cmp in " + docname + " @ token " + str(id))
 
-    # ADJ+JJS <=> ADJ[Degree=Sup]
-    if upos == "ADJ" and ((pos == "JJS") != (degree == "Sup")):
+    # (ADJ+JJS | ADV+RBS) <=> [Degree=Sup]
+    if (upos == "ADJ" and pos == "JJS" or upos == "ADV" and pos == "RBS") != (degree == "Sup"):
         # ADJ+NNP occurs in proper noun phrases per PTB guidelines
         if pos != "NNP":
-            print("WARN: ADJ+JJS should correspond with Degree=Sup in " + docname + " @ token " + str(id))
+            print("WARN: ADJ+JJS or ADV+RBS should correspond with Degree=Sup in " + docname + " @ token " + str(id))
 
-    # ADV+RBR <=> ADV[Degree=Cmp]
-    if upos == "ADV" and ((pos == "RBR") != (degree == "Cmp")):
-        print("WARN: ADV+RBR should correspond with Degree=Cmp in " + docname + " @ token " + str(id))
+    if degree and upos not in ("ADJ", "ADV"):
+        print("WARN: Degree should only apply to ADJ or ADV in " + docname + " @ token " + str(id))
 
-    # ADV+RBS <=> ADV[Degree=Sup]
-    if upos == "ADV" and ((pos == "RBS") != (degree == "Sup")):
-        print("WARN: ADV+RBS should correspond with Degree=Sup in " + docname + " @ token " + str(id))
+    if upos == "ADJ" and not degree:
+        print("WARN: ADJ should have Degree in " + docname + " @ token " + str(id))
+
+    if number and upos not in ("NOUN", "PRON", "PROPN", "SYM", "AUX", "DET", "VERB"):
+        print("WARN: Number should not apply to " + upos + " in " + docname + " @ token " + str(id))
 
     # NUM+CD => NUM[NumType=Card]
     if upos == "NUM" and pos == "CD" and not (numType in ["Card","Frac"]):
