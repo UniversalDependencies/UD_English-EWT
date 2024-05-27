@@ -997,7 +997,7 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, misc, docname):
     # ADJ => (JJ <=> [Degree=Pos])
     if upos == "ADJ" and ((pos == "JJ") != (degree == "Pos")):
         # ADJ+NNP occurs in proper noun phrases per PTB guidelines
-        if pos != "NNP":
+        if pos != "NNP" and pos != "AFX":   # TODO: map all AFX to X instead (#152)? if so remove the 2nd condition
             print("WARN: ADJ+JJ should correspond with Degree=Pos in " + docname + " @ token " + str(id))
 
     # (ADJ+JJR | ADV+RBR) <=> [Degree=Cmp]
