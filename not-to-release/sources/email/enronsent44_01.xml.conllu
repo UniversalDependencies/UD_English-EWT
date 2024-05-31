@@ -345,7 +345,7 @@
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
 12	TX	TX	PROPN	NNP	Number=Sing	10	appos	10:appos	_
 13	(	(	PUNCT	-LRB-	_	14	punct	14:punct	SpaceAfter=No
-14	713	713	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	SpaceAfter=No
+14	713	713	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	FlatType=Phone|SpaceAfter=No
 15	)	)	PUNCT	-RRB-	_	14	punct	14:punct	_
 16	345-3436	345-3436	NUM	CD	NumForm=Digit|NumType=Card	14	flat	14:flat	_
 
@@ -838,7 +838,7 @@
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
 12	TX	TX	PROPN	NNP	Number=Sing	10	appos	10:appos	_
 13	(	(	PUNCT	-LRB-	_	14	punct	14:punct	SpaceAfter=No
-14	713	713	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	SpaceAfter=No
+14	713	713	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	FlatType=Phone|SpaceAfter=No
 15	)	)	PUNCT	-RRB-	_	14	punct	14:punct	_
 16	345-3436	345-3436	NUM	CD	NumForm=Digit|NumType=Card	14	flat	14:flat	_
 
@@ -1369,12 +1369,12 @@
 1	<<	<<	PUNCT	-LRB-	_	2	punct	2:punct	_
 2	File	file	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Tabors	tabors	NOUN	GW	_	2	appos	2:appos	_
+4	Tabors	tabors	X	GW	_	2	appos	2:appos	FlatType=Filename
 5	Conflict	conflict	X	GW	_	4	flat	4:flat	_
 6	Letter	letter	X	GW	_	4	flat	4:flat	_
 7	Alberta	alberta	X	GW	_	4	flat	4:flat	_
 8	Export	export	X	GW	_	4	flat	4:flat	_
-9	050901.doc	050901.doc	X	NN	Number=Sing	4	flat	4:flat	_
+9	050901.doc	050901.doc	X	NN	_	4	flat	4:flat	_
 10	>>	>>	PUNCT	-RRB-	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent44_01-0067
@@ -1439,73 +1439,73 @@
 # newpar id = email-enronsent44_01-p0033
 # text = <<Alberta Transmission Access and Pricing Analysis_0712 .doc>>
 1	<<	<<	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
-2	Alberta	alberta	NOUN	GW	_	0	root	0:root	_
+2	Alberta	alberta	X	GW	_	0	root	0:root	FlatType=Filename
 3	Transmission	transmission	X	GW	_	2	flat	2:flat	_
 4	Access	access	X	GW	_	2	flat	2:flat	_
 5	and	and	X	GW	_	2	flat	2:flat	_
 6	Pricing	pricing	X	GW	_	2	flat	2:flat	_
 7	Analysis_0712	Analysis_0712	X	GW	_	2	flat	2:flat	_
-8	.doc	.doc	X	NN	Number=Sing	2	flat	2:flat	SpaceAfter=No
+8	.doc	.doc	X	NN	_	2	flat	2:flat	SpaceAfter=No
 9	>>	>>	PUNCT	-RRB-	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent44_01-0075
 # text = <<Alberta Transmission Access and Pricing Analysis_0712 redlined .doc>>
 1	<<	<<	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
-2	Alberta	alberta	NOUN	GW	_	0	root	0:root	_
+2	Alberta	alberta	X	GW	_	0	root	0:root	FlatType=Filename
 3	Transmission	transmission	X	GW	_	2	flat	2:flat	_
 4	Access	access	X	GW	_	2	flat	2:flat	_
 5	and	and	X	GW	_	2	flat	2:flat	_
 6	Pricing	pricing	X	GW	_	2	flat	2:flat	_
 7	Analysis_0712	Analysis_0712	X	GW	_	2	flat	2:flat	_
 8	redlined	redlined	X	GW	_	2	flat	2:flat	_
-9	.doc	.doc	X	NN	Number=Sing	2	flat	2:flat	SpaceAfter=No
+9	.doc	.doc	X	NN	_	2	flat	2:flat	SpaceAfter=No
 10	>>	>>	PUNCT	-RRB-	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent44_01-0076
 # newpar id = email-enronsent44_01-p0034
 # text = - Alberta Transmission Access and Pricing Analysis_0712 .doc << File: Alberta Transmission Access and Pricing Analysis_0712 .doc >>
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	Alberta	alberta	NOUN	GW	_	0	root	0:root	_
+2	Alberta	alberta	X	GW	_	0	root	0:root	FlatType=Filename
 3	Transmission	transmission	X	GW	_	2	flat	2:flat	_
 4	Access	access	X	GW	_	2	flat	2:flat	_
 5	and	and	X	GW	_	2	flat	2:flat	_
 6	Pricing	pricing	X	GW	_	2	flat	2:flat	_
 7	Analysis_0712	Analysis_0712	X	GW	_	2	flat	2:flat	_
-8	.doc	.doc	X	NN	Number=Sing	2	flat	2:flat	_
+8	.doc	.doc	X	NN	_	2	flat	2:flat	_
 9	<<	<<	PUNCT	-LRB-	_	10	punct	10:punct	_
 10	File	file	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
 11	:	:	PUNCT	:	_	12	punct	12:punct	_
-12	Alberta	alberta	NOUN	GW	_	10	appos	10:appos	_
+12	Alberta	alberta	X	GW	_	10	appos	10:appos	FlatType=Filename
 13	Transmission	transmission	X	GW	_	12	flat	12:flat	_
 14	Access	access	X	GW	_	12	flat	12:flat	_
 15	and	and	X	GW	_	12	flat	12:flat	_
 16	Pricing	pricing	X	GW	_	12	flat	12:flat	_
 17	Analysis_0712	Analysis_0712	X	GW	_	12	flat	12:flat	_
-18	.doc	.doc	X	NN	Number=Sing	12	flat	12:flat	_
+18	.doc	.doc	X	NN	_	12	flat	12:flat	_
 19	>>	>>	PUNCT	-RRB-	_	10	punct	10:punct	_
 
 # sent_id = email-enronsent44_01-0077
 # text = - Alberta Transmission Access and Pricing Analysis_0712 redlined .doc << File: Alberta Transmission Access and Pricing Analysis_0712 redlined .doc >>
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	Alberta	alberta	NOUN	GW	_	0	root	0:root	_
+2	Alberta	alberta	X	GW	_	0	root	0:root	FlatType=Filename
 3	Transmission	transmission	X	GW	_	2	flat	2:flat	_
 4	Access	access	X	GW	_	2	flat	2:flat	_
 5	and	and	X	GW	_	2	flat	2:flat	_
 6	Pricing	pricing	X	GW	_	2	flat	2:flat	_
 7	Analysis_0712	Analysis_0712	X	GW	_	2	flat	2:flat	_
 8	redlined	redlined	X	GW	_	2	flat	2:flat	_
-9	.doc	.doc	X	NN	Number=Sing	2	flat	2:flat	_
+9	.doc	.doc	X	NN	_	2	flat	2:flat	_
 10	<<	<<	PUNCT	-LRB-	_	11	punct	11:punct	_
 11	File	file	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
 12	:	:	PUNCT	:	_	13	punct	13:punct	_
-13	Alberta	alberta	NOUN	GW	_	11	appos	11:appos	_
+13	Alberta	alberta	X	GW	_	11	appos	11:appos	FlatType=Filename
 14	Transmission	transmission	X	GW	_	13	flat	13:flat	_
 15	Access	access	X	GW	_	13	flat	13:flat	_
 16	and	and	X	GW	_	13	flat	13:flat	_
 17	Pricing	pricing	X	GW	_	13	flat	13:flat	_
 18	Analysis_0712	Analysis_0712	X	GW	_	13	flat	13:flat	_
 19	redlined	redlined	X	GW	_	13	flat	13:flat	_
-20	.doc	.doc	X	NN	Number=Sing	13	flat	13:flat	_
+20	.doc	.doc	X	NN	_	13	flat	13:flat	_
 21	>>	>>	PUNCT	-RRB-	_	11	punct	11:punct	_
 
 # sent_id = email-enronsent44_01-0078

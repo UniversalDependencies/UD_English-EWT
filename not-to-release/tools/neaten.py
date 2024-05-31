@@ -324,6 +324,11 @@ def validate_annos(tree):
                     # the ref antecedent doesn't head the RC
                     print("WARN: `ref` antecedent lacks :relcl dependent" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
+            if upos!="PROPN" and "flat" in child_funcs[tok_num] and "Foreign" not in featlist:
+                # non-PROPN-headed flat structure
+                if "FlatType" not in misclist:
+                    print("WARN: non-PROPN non-Foreign flat expression lacks FlatType" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+
             """
             Extraposition Construction
 
