@@ -130,7 +130,7 @@ def validate_annos(tree):
         funcs = {}
         postags = {}
         upostags = {}
-        feats = {}
+        feats: Dict[int,Dict[str,str]] = {}
         tokens = {}
         parent_ids: Dict[int,int] = {}
         lemmas = {}
@@ -224,6 +224,7 @@ def validate_annos(tree):
         prev_func = ""
         prev_parent_lemma = ""
         prev_feats = {}
+        prev_misc = {}
         for i, line in enumerate(tree):
             if not isRegularNode(line):
                 continue
@@ -273,7 +274,7 @@ def validate_annos(tree):
             parent_func = funcs[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_pos = postags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_upos = upostags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
-            parent_feats = feats[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
+            parent_feats = feats[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else {}
             filename = tree.metadata['filename']
             assert parent_pos is not None,(tok_num,parent_ids[tok_num],postags,filename)
             S_TYPE_PLACEHOLDER = None
@@ -289,8 +290,8 @@ def validate_annos(tree):
             if func!='goeswith':
                 if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
                     # check for PronType=Rcp
-                    flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, misclist, prev_tok, docname)
-                elif upos == "PRON" or (upos == "DET" and featlist.get("ExtPos")!="PRON"):  # ExtPos exception for "each other"
+                    flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, prev_misc, prev_tok, docname)
+                elif upos == "PRON" or (upos == "DET" and misclist.get("ExtPos")!="PRON"):  # ExtPos exception for "each other"
                     # Pass FORM to detect abbreviations, etc.
                     flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, misclist, prev_tok, docname)
                 elif lemma in PRON_LEMMAS:
@@ -347,6 +348,7 @@ def validate_annos(tree):
             prev_func = func
             prev_parent_lemma = parent_lemma
             prev_feats = featlist
+            prev_misc = misclist
 
         """
         Passive Construction
@@ -1191,7 +1193,7 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, misc, docname):
             print("WARN: unknown 'be' form: " + t + " in " + docname + " @ token " + str(id))
 
 # See https://universaldependencies.org/en/pos/PRON.html
-PRONOUNS = {
+PRONOUNS: dict[tuple[str,str],dict] = {
   # personal, nominative -- PronType=Prs|Case=Nom
   ("i","PRP"):{"Case":"Nom","Number":"Sing","Person":"1","PronType":"Prs","LEMMA":"I"},
   ("we","PRP"):{"Case":"Nom","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
@@ -1341,7 +1343,7 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, doc
     check_has_feature("Poss", feats, data, tokname, inname)
     check_has_feature("PronType", feats, data, tokname, inname)
     check_has_feature("Style", feats, data, tokname, inname)
-    check_has_feature("ExtPos", feats, data, tokname, inname)
+    check_has_feature("ExtPos", misc, data, tokname, inname)
     # ensure pronominal uses of 'one' do NOT have these features
     check_has_feature("NumForm", feats, data, tokname, inname)
     check_has_feature("NumType", feats, data, tokname, inname)
