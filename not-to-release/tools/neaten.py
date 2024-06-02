@@ -1051,6 +1051,9 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, misc, docname):
     elif upos == "NOUN" and ((pos == "NNS") != (number == "Plur")) and lemma not in NNS_PTAN_LEMMAS and re.search(r"[0-9]+'?s$",lemma) is None:
         print("WARN: NOUN+NNS should correspond with Number=Plur in " + docname + " @ token " + str(id))
 
+    if (upos == "PART" and lemma == "not") != (feats.get("Polarity")=="Neg"):
+        print("WARN: not/PART should correspond with Polarity=Neg in " + docname + " @ token " + str(id))
+
     # PRON+WP$ <=> PRON[Poss=Yes,PronType=Int,Rel]
     if upos == "PRON" and ((pos == "WP$") != (poss == "Yes" and pronType in ["Int","Rel"])):
         print("WARN: PRON+WP$ should correspond with Poss=Yes|PronType=Int,Rel in " + docname + " @ token " + str(id))
