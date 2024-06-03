@@ -285,7 +285,7 @@ def validate_annos(tree):
                               children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_positions[tok_num],
                               parent_func, parent_pos, parent_upos, filename)
-            flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, line.get('misc') or {}, docname)
+            flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, misclist, docname)
 
             if func!='goeswith':
                 if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
@@ -304,6 +304,58 @@ def validate_annos(tree):
                 elif upos == "NUM":
                     if "NumForm" not in featlist or "NumType" not in featlist:
                         print("WARN: NUM should have NumForm and NumType in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+
+            extpos_funcs: dict[str,str] = {
+                "ADP": "case",
+                "SCONJ": "mark",
+                "ADV": "advmod",
+                "CCONJ": "cc",
+                "PRON": "obj iobj obl nmod nmod:poss"
+            }
+
+            mwe_pairs: dict[tuple[str,str],str] = {("accord", "to"): 'ADP', ("all","but"): 'ADV',
+                ("as","for"): 'ADP SCONJ', ("as","if"): 'SCONJ',
+                ("as", "well"): 'CCONJ', ("as", "as"): 'CCONJ', ("as","in"): 'ADP',
+                ("all","of"): 'ADV', ("as","oppose"): 'ADP SCONJ', ("as","to"): 'ADP SCONJ',
+                ("at","least"): 'ADV', ("because","of"): 'ADP', ("due","to"): 'ADP',
+                #("had","better"): 'AUX', ("'d","better"): 'AUX',
+                ("how","come"): 'SCONJ', ("in","between"): 'ADP', ("per", "se"): 'ADV',
+                ("in","case"): 'ADP SCONJ ADV', ("in","of"): 'ADP', ("in","order"): 'SCONJ', ("in","that"): 'SCONJ',
+                ("instead","of"): 'ADP SCONJ', ("kind","of"): 'ADV', ("less","than"): 'ADV', ("let","alone"): 'CCONJ',
+                ("more","than"): 'ADV', ("not","to"): 'CCONJ', ("not","mention"): 'CCONJ',
+                ("of","course"): 'ADV', ("prior","to"): 'ADP SCONJ', ("rather","than"): 'CCONJ ADP SCONJ',
+                ("so","as"): 'SCONJ', ("so", "to"): 'SCONJ', ("sort", "of"): 'ADV', ("so", "that"): 'SCONJ',
+                ("such","as"): 'ADP SCONJ', ("that","be"): 'ADV', ("up","to"): 'ADV',
+                #("depend","on"): 'ADP SCONJ', 
+                #("out","of"): 'ADP', ("off","of"): 'ADP', 
+                #("long","than"), 
+                ("on","board"): 'ADP',
+                ("as","of"): 'ADP',
+                # ("depend","upon"),
+                #("just","about"),("vice","versa"),("as","such"),("next","to"),("close","to"),
+                ("one","another"): 'PRON',
+                #("de","facto"),
+                ("each","other"): 'PRON', ("as","many"): 'ADV'}    # TODO: only tested for EWT
+
+            # Ad hoc listing of triple mwe parts - All in all, in order for, whether or not
+            mwe_pairs.update({("all","in"): 'ADV', ("all","all"): 'ADV', ("in","for"): 'SCONJ',
+                                ("whether","or"): 'SCONJ', ("whether","not"): 'SCONJ'})
+
+            if func == "fixed":
+                if (parent_lemma.lower(), lemma.lower()) not in mwe_pairs:
+                    print("WARN: unlisted fixed expression" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+            elif "fixed" in child_funcs[tok_num]:
+                fixedChild = children[tok_num][child_funcs[tok_num].index("fixed")]
+                fixedChild = {"a": "of", "is": "be", "opposed": "oppose", "t": "to"}.get(fixedChild, fixedChild)
+                expectedExtPos = mwe_pairs.get((lemma.lower(), fixedChild.lower()))
+                if not expectedExtPos:
+                    print(f"WARN: fixed expression missing entry: {(lemma.lower(), fixedChild.lower())}" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                elif "ExtPos" not in misclist:
+                    print("WARN: fixed head missing ExtPos" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                elif (extpos := misclist["ExtPos"]) not in expectedExtPos:
+                    print(f"WARN: fixed head ExtPos={extpos} but one of {expectedExtPos} expected" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                elif func not in extpos_funcs[extpos]:
+                    print(f"WARN: fixed head ExtPos={extpos} in unexpected function {func}" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
             if func.endswith(':relcl'):
                 # Check PronType=Rel for free relative headed by the WDT/WP/WRB
@@ -442,7 +494,7 @@ NNPS_PTAN_LEMMAS = ["Netherlands", "Analytics", "Olympics", "Commons", "Paralymp
 SING_AND_PLUR_S_LEMMAS = ["series", "species"]
 
 def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular,
-                      children, child_funcs, s_type,
+                      children: List[str], child_funcs: List[str], s_type,
                       docname, prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_position,
                       parent_func, parent_pos, parent_upos, filename):
     # Shorthand for printing errors
@@ -844,23 +896,6 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
 
     if (sent_position == "first" and pos == "''") or (sent_position == "last" and pos=="``"):
         print("WARN: incorrect quotation mark tag " + pos + " at "+sent_position+" position in sentence" + inname)
-
-    mwe_pairs = {("accord", "to"), ("all","but"), ("as","for"), ("as","if"), ("as", "well"), ("as", "as"), ("as","in"), ("all","of"), ("as","oppose"),("as","to"),
-                 ("at","least"),("because","of"),("due","to"),("had","better"),("'d","better"),
-                 ("how","come"),("in","between"), ("per", "se"), ("in","case"),("in","of"), ("in","order"), ("in","that"),
-                 ("instead","of"), ("kind","of"),("less","than"),("let","alone"),
-                 ("more","than"),("not","to"),("not","mention"),("of","course"),("prior","to"),("rather","than"),("so","as"),
-                 ("so", "to"),("sort", "of"),("so", "that"),("such","as"),("that","is"), ("up","to"),
-                 ("depend","on"),("out","of"),("off","of"),("long","than"),("on","board"),("as","of"),("depend","upon"),
-                 ("that","be"),("just","about"),("vice","versa"),("as","such"),("next","to"),("close","to"),("one","another"),
-                 ("de","facto"),("each","other"), ("as","many")}
-
-    # Ad hoc listing of triple mwe parts - All in all, in order for, whether or not
-    mwe_pairs.update({("all","in"),("all","all"),("in","for"),("whether","or"),("whether","not")})
-
-    if func == "fixed":
-        if (parent_lemma.lower(), lemma.lower()) not in mwe_pairs:
-            print("WARN: unlisted fixed expression" + inname)
 
     #if pos != "CD" and "quantmod" in child_funcs:
     #    print("WARN: quantmod must be cardinal number" + inname)
