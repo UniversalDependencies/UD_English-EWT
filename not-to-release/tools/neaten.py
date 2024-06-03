@@ -293,7 +293,10 @@ def validate_annos(tree):
                     flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, prev_misc, prev_tok, docname)
                 elif upos == "PRON" or (upos == "DET" and misclist.get("ExtPos")!="PRON"):  # ExtPos exception for "each other"
                     # Pass FORM to detect abbreviations, etc.
-                    flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, misclist, prev_tok, docname)
+                    _misclist = dict(misclist)
+                    if lemma in ("all","that") and _misclist.get("ExtPos")=="ADV":  # "all of" (quantity), "that is"
+                        del _misclist["ExtPos"] # prevent complaint about ExtPos=ADV
+                    flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, _misclist, prev_tok, docname)
                 elif lemma in PRON_LEMMAS:
                     if not ((lemma=="one" and upos in ("NOUN","NUM"))
                             or (lemma=="I" and upos=="NUM") # Roman numeral
@@ -315,11 +318,11 @@ def validate_annos(tree):
 
             mwe_pairs: dict[tuple[str,str],str] = {("accord", "to"): 'ADP', ("all","but"): 'ADV',
                 ("as","for"): 'ADP SCONJ', ("as","if"): 'SCONJ',
-                ("as", "well"): 'CCONJ', ("as", "as"): 'CCONJ', ("as","in"): 'ADP',
+                ("as","well"): 'ADV CCONJ', ("as","as"): 'CCONJ', ("as","in"): 'ADP SCONJ',
                 ("all","of"): 'ADV', ("as","oppose"): 'ADP SCONJ', ("as","to"): 'ADP SCONJ',
-                ("at","least"): 'ADV', ("because","of"): 'ADP', ("due","to"): 'ADP',
+                ("at","least"): 'ADV', ("because","of"): 'ADP', ("due","to"): 'ADP SCONJ',
                 #("had","better"): 'AUX', ("'d","better"): 'AUX',
-                ("how","come"): 'SCONJ', ("in","between"): 'ADP', ("per", "se"): 'ADV',
+                ("how","come"): 'ADV', ("in","between"): 'ADP ADV', ("per", "se"): 'ADV',
                 ("in","case"): 'ADP SCONJ ADV', ("in","of"): 'ADP', ("in","order"): 'SCONJ', ("in","that"): 'SCONJ',
                 ("instead","of"): 'ADP SCONJ', ("kind","of"): 'ADV', ("less","than"): 'ADV', ("let","alone"): 'CCONJ',
                 ("more","than"): 'ADV', ("not","to"): 'CCONJ', ("not","mention"): 'CCONJ',
@@ -354,8 +357,11 @@ def validate_annos(tree):
                     print("WARN: fixed head missing ExtPos" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
                 elif (extpos := misclist["ExtPos"]) not in expectedExtPos:
                     print(f"WARN: fixed head ExtPos={extpos} but one of {expectedExtPos} expected" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
-                elif func not in extpos_funcs[extpos]:
-                    print(f"WARN: fixed head ExtPos={extpos} in unexpected function {func}" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                elif func!='conj' and func not in extpos_funcs[extpos]:
+                    if extpos=="SCONJ" and func=='ccomp' and misclist["Promoted"]=="Yes":
+                        pass
+                    else:
+                        print(f"WARN: fixed head ExtPos={extpos} in unexpected function {func}" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
             if func.endswith(':relcl'):
                 # Check PronType=Rel for free relative headed by the WDT/WP/WRB
@@ -1313,7 +1319,7 @@ PRON_LEMMAS = {v["LEMMA"] for k,v in PRONOUNS.items()} # pronouns only, no DETs
 
 # 2-word reciprocals (fixed; store XPOS/feats of first word but lemma of second word)
 PRONOUNS[("each other", "DT")] = {"LEMMA":"other", "PronType":"Rcp", "ExtPos":"PRON"}   # ExtPos since the technical head is DET
-PRONOUNS[("one another", "CD")] = {"LEMMA":"another", "PronType":"Rcp"}
+PRONOUNS[("one another", "CD")] = {"LEMMA":"another", "PronType":"Rcp", "ExtPos":"PRON"}
 # (we don't want to store "each" as a PRON lemma)
 
 DETS = {
