@@ -1393,14 +1393,17 @@ ADVS = {
     ("neither", "RB"):{"PronType":"Neg","LEMMA":"neither"},
     ("never", "RB"):{"PronType":"Neg","LEMMA":"never"},
     ("nowhere", "RB"):{"PronType":"Neg","LEMMA":"nowhere"},
+    ("always", "RB"):{"PronType":"Tot","LEMMA":"always"},
+    ("everywhere", "RB"):{"PronType":"Tot","LEMMA":"everywhere"},
     ("anyplace", "RB"):{"PronType":"Ind","LEMMA":"anyplace"},
     ("anytime", "RB"):{"PronType":"Ind","LEMMA":"anytime"},
     ("anywhere", "RB"):{"PronType":"Ind","LEMMA":"anywhere"},
     ("someplace", "RB"):{"PronType":"Ind","LEMMA":"someplace"},
     ("sometime", "RB"):{"PronType":"Ind","LEMMA":"sometime"},
     ("sometimes", "RB"):{"PronType":"Ind","LEMMA":"sometimes"},
-    ("somewhere", "RB"):{"PronType":"Ind","LEMMA":"somewhere"}
-# ever, either 	PronType=Ind
+    ("somewhere", "RB"):{"PronType":"Ind","LEMMA":"somewhere"},
+    ("ever", "RB"):{"PronType":"Ind","LEMMA":"ever"},
+    ("either", "RB"):{"PronType":"Ind","LEMMA":"either"}
 }
 ADV_LEMMAS = {v["LEMMA"] for k,v in ADVS.items()}
 
