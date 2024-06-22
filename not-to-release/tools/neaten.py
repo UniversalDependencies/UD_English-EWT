@@ -856,6 +856,14 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
 
     if func == "case" and upos == "SCONJ" and "fixed" not in child_funcs:
         print("WARN: SCONJ/case combination is invalid in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+    
+    # indefinites of time and place
+    if lemma in ["anytime", "anyplace", "anywhere", "sometime", "someplace", "somewhere", "nowhere"]:
+        if (pos != "RB" or upos != "ADV"):
+            # https://github.com/UniversalDependencies/UD_English-EWT/issues/132
+            print(f"WARN: indefinite time or place pro-form tagging {upos}/{pos} is invalid, should be ADV/RB in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+        if func.startswith("obl:"):
+            print(f"WARN: indefinite time or place pro-form tagging {upos}/{pos} is invalid, should be ADV/RB in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
 
     """
     Existential construction
@@ -1384,11 +1392,14 @@ ADVS = {
     ("there", "RB"):{"PronType":"Dem","LEMMA":"there"},
     ("neither", "RB"):{"PronType":"Neg","LEMMA":"neither"},
     ("never", "RB"):{"PronType":"Neg","LEMMA":"never"},
-    ("nowhere", "RB"):{"PronType":"Neg","LEMMA":"nowhere"}
-# neither, never, nowhere 	PronType=Neg
-# always, everywhere 	PronType=Tot
-# anyplace, anytime, anywhere 	PronType=Ind
-# someplace, sometime(s), somewhere 	PronType=Ind
+    ("nowhere", "RB"):{"PronType":"Neg","LEMMA":"nowhere"},
+    ("anyplace", "RB"):{"PronType":"Ind","LEMMA":"anyplace"},
+    ("anytime", "RB"):{"PronType":"Ind","LEMMA":"anytime"},
+    ("anywhere", "RB"):{"PronType":"Ind","LEMMA":"anywhere"},
+    ("someplace", "RB"):{"PronType":"Ind","LEMMA":"someplace"},
+    ("sometime", "RB"):{"PronType":"Ind","LEMMA":"sometime"},
+    ("sometimes", "RB"):{"PronType":"Ind","LEMMA":"sometimes"},
+    ("somewhere", "RB"):{"PronType":"Ind","LEMMA":"somewhere"}
 # ever, either 	PronType=Ind
 }
 ADV_LEMMAS = {v["LEMMA"] for k,v in ADVS.items()}
