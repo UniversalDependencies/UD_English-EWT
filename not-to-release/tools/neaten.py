@@ -291,7 +291,7 @@ def validate_annos(tree):
                 if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
                     # check for PronType=Rcp
                     flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, prev_misc, prev_tok, docname)
-                elif upos == "PRON" or (upos == "DET" and misclist.get("ExtPos")!="PRON"):  # ExtPos exception for "each other"
+                elif upos == "PRON" or (upos == "DET" and misclist.get("ExtPos")!="PRON") or upos == "ADV" and lemma in ADV_LEMMAS:  # ExtPos exception for "each other"
                     # Pass FORM to detect abbreviations, etc.
                     _misclist = dict(misclist)
                     if lemma in ("all","that") and _misclist.get("ExtPos")=="ADV":  # "all of" (quantity), "that is"
@@ -1102,10 +1102,14 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, misc, docname):
     if upos == "PRON" and ((pos == "WP$") != (poss == "Yes" and pronType in ["Int","Rel"])):
         print("WARN: PRON+WP$ should correspond with Poss=Yes|PronType=Int,Rel in " + docname + " @ token " + str(id))
 
-    # WDT|WP|WRB <=> [PronType=Int,Rel])
+    # [PronType=Int,Rel] => WDT|WP|WRB
     # (upos=="X" for goeswith)
-    if upos!="X" and ((pos in ["WDT","WP","WRB"]) != (poss is None and pronType in ["Int","Rel"])):
-        print("WARN: WP|WDT|WRB should correspond with PronType=Int,Rel in " + docname + " @ token " + str(id))
+    if upos!="X" and pos not in ["WDT","WP","WRB"] and (poss is None and pronType in ["Int","Rel"]):
+        print("WARN: PronType=Int,Rel and not poss implies WP|WDT|WRB in " + docname + " @ token " + str(id))
+    # WDT|WP|WRB => [PronType=Dem,Int,Rel]
+    # (upos=="X" for goeswith)
+    elif upos!="X" and (pos in ["WDT","WP","WRB"]) and not (poss is None and pronType in ["Dem","Int","Rel"]):
+        print("WARN: WP|WDT|WRB implies not poss and PronType=Dem,Int,Rel in " + docname + " @ token " + str(id))
 
     # PROPN+NNP <=> PROPN[Number=Sing]
     if upos == "PROPN" and ((pos == "NNP") != (number == "Sing")):
@@ -1362,6 +1366,32 @@ DETS = {
   ("whatever", "WDT"):{"PronType":["Int","Rel"],"LEMMA":"whatever"}
 }
 
+ADVS = {
+    # WH
+    ("how", "WRB"):{"PronType":["Int","Rel"],"LEMMA":"how","ExtPos":["ADV",None]},  # ExtPos=ADV for 'how come'
+    ("why", "WRB"):{"PronType":["Int","Rel"],"LEMMA":"why"},
+    ("when", "WRB"):{"PronType":["Dem","Int","Rel"],"LEMMA":"when"},
+    ("when", "IN"):{"PronType":["Dem"],"LEMMA":"when"},
+    ("where", "WRB"):{"PronType":["Dem","Int","Rel"],"LEMMA":"where"},
+    ("whither", "WRB"):{"PronType":["Dem","Int","Rel"],"LEMMA":"whither"},
+    ("whenever", "WRB"):{"PronType":["Int","Rel"],"LEMMA":"whenever"},
+    ("wherever", "WRB"):{"PronType":["Int","Rel"],"LEMMA":"wherever"},
+    ("wherein", "WRB"):{"PronType":"Rel","LEMMA":"wherein"},
+    # non-WH
+    ("here", "RB"):{"PronType":"Dem","LEMMA":"here"},
+    ("now", "RB"):{"PronType":"Dem","LEMMA":"now"},
+    ("then", "RB"):{"PronType":"Dem","LEMMA":"then"},
+    ("there", "RB"):{"PronType":"Dem","LEMMA":"there"},
+    ("neither", "RB"):{"PronType":"Neg","LEMMA":"neither"},
+    ("never", "RB"):{"PronType":"Neg","LEMMA":"never"},
+    ("nowhere", "RB"):{"PronType":"Neg","LEMMA":"nowhere"}
+# neither, never, nowhere 	PronType=Neg
+# always, everywhere 	PronType=Tot
+# anyplace, anytime, anywhere 	PronType=Ind
+# someplace, sometime(s), somewhere 	PronType=Ind
+# ever, either 	PronType=Ind
+}
+ADV_LEMMAS = {v["LEMMA"] for k,v in ADVS.items()}
 
 
 # See https://universaldependencies.org/en/pos/PRON.html
@@ -1377,7 +1407,7 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, doc
     if (prev_tok.lower(),form.lower()) in {("no","one"), ("one","another"), ("each","other")}:  # special case for bigrams
         data_key = (prev_tok.lower() + " " + form.lower(), pos)
 
-    data = PRONOUNS.get(data_key, DETS.get(data_key))
+    data = PRONOUNS.get(data_key, DETS.get(data_key, ADVS.get(data_key)))
 
     if data == None:
         if pos in ["PRP","PRP$"]:
