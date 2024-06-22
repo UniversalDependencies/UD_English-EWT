@@ -1305,9 +1305,12 @@ PRONOUNS: dict[tuple[str,str],dict] = {
 }
 
 # add indefinite PRONs
-# 2-word indefinite: 'one' following 'no'
+# 1-word simple indefinite:
+PRONOUNS[("none", "NN")] = {"LEMMA":"none", "PronType":"Neg"}
+PRONOUNS[("naught", "NN")] = {"LEMMA":"naught", "PronType":"Neg"}
+# 2-word compound indefinite: 'one' following 'no'
 PRONOUNS[("no one", "NN")] = {"Number":"Sing", "LEMMA":"one", "PronType":"Neg"}
-# 1-word indefinites
+# 1-word compound indefinites
 for b in ("body","one","thing"):
     for a,t in {("any","Ind"),("some","Ind"),("every","Tot"),("no","Neg")}:
         l = a+b
