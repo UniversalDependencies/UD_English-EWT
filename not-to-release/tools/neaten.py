@@ -795,18 +795,12 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if func in ["iobj","obj"] and parent_lemma in ["become","remain","stay"]:
         print("WARN: verb '"+parent_lemma+"' should take xcomp not "+func+" argument" + inname)
 
-    if func in ["nmod:tmod","nmod:npmod","obl:tmod","obl:npmod"] and "case" in child_funcs:
-        print("WARN: function " + func +  " should not have 'case' dependents" + inname)
+    if ":tmod" in func or ":npmod" in func:
+        # https://github.com/UniversalDependencies/docs/issues/1028
+        print("WARN: function " + func +  " is deprecated, use :unmarked instead" + inname)
 
-    if func in ["nmod:npmod","obl:npmod"]:
-        if parent_id < id and (parent_lemma in ["once","twice","thrice","time"] or lemma in ["hour","minute","second","day","week","month","quarter","season","year","decade","century"]):
-            print("WARN: rate unit should be :tmod not :npmod" + inname)
-        elif parent_lemma == "ago":
-            # TODO print("WARN: 'time(s)' rate unit should be :tmod not :npmod" + inname)
-            pass
-        elif lemma == "time" and not (tok.lower()=="times" and (id+1 == parent_id or parent_upos == "NOUN")):
-            # exclude multiplicative use of "times"
-            print("WARN: 'time(s)' rate unit should be :tmod not :npmod" + inname)
+    if func in ["nmod:unmarked","obl:unmarked"] and "case" in child_funcs:
+        print("WARN: function " + func +  " should not have 'case' dependents" + inname)
 
     if func in ["aux:pass","nsubj:pass"] and parent_pos not in ["VBN"]:
         if not (("stardust" in docname and parent_lemma == "would") or parent_lemma == "Rated"):
@@ -847,8 +841,8 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if func == "advcl" and upos=="VERB" and (pos.endswith("G") or pos.endswith("N")) and parent_upos in ["NUM","SYM","NOUN","PRON","PROPN","DET"] and not is_parent_copular and parent_func!="root":
         print("WARN: non-predicate non-root nominal should not have advcl dependent (should be acl?) in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
 
-    if func.endswith("tmod") and pos.startswith("RB"):
-        print("WARN: adverbs should not be tmod" + inname)
+    if func.endswith("unmarked") and pos.startswith("RB"):
+        print("WARN: adverbs should not be unmarked" + inname)
 
     if func == "case" and lemma in ["back", "down", "over", "out", "up"] and parent_lemma in ["here","there"] and id+1==parent_id:
         # adjacency check because "out of there" is OK
@@ -1007,7 +1001,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
             if func=="nmod":
                 assert "case" in child_funcs
         except AssertionError:
-            print("WARN: structure of 'a couple NOUN' should be det(couple, a), nmod:npmod(NOUN, couple)" + inname)
+            print("WARN: structure of 'a couple NOUN' should be det(couple, a), nmod:unmarked(NOUN, couple)" + inname)
     elif prev_tok.lower()=="and" and lemma=="/":
         try:
             assert prev_pos=="CC"

@@ -11,7 +11,7 @@
 # text = 12/22/2000 06:28 PM
 1	12/22/2000	12/22/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	06:28	06:28	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent05_02-0003
 # text = Parties, attached is the promised ruling that provides procedural guidance for the hearings on 12/27 and 12/28.
@@ -126,7 +126,7 @@
 # text = 12/21/2000 07:50 PM
 1	12/21/2000	12/21/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	07:50	07:50	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent05_02-0011
 # text = Confidential Settlement Document Per CPUC Rule 51
@@ -204,7 +204,7 @@
 14	structure	structure	NOUN	NN	Number=Sing	9	obj	9:obj	_
 15	in	in	ADP	IN	_	16	case	16:case	_
 16	place	place	NOUN	NN	Number=Sing	14	nmod	14:nmod:in	_
-17	today	today	NOUN	NN	Number=Sing	16	nmod:tmod	16:nmod:tmod	_
+17	today	today	NOUN	NN	Number=Sing	16	nmod:unmarked	16:nmod:unmarked	TemporalNPAdjunct=Yes
 18	for	for	ADP	IN	_	20	case	20:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	period	period	NOUN	NN	Number=Sing	9	obl	9:obl:for	_
@@ -232,7 +232,7 @@
 14	rates	rate	NOUN	NNS	Number=Plur	9	obl	9:obl:than	_
 15	in	in	ADP	IN	_	16	case	16:case	_
 16	effect	effect	NOUN	NN	Number=Sing	14	nmod	14:nmod:in	_
-17	today	today	NOUN	NN	Number=Sing	16	nmod:tmod	16:nmod:tmod	SpaceAfter=No
+17	today	today	NOUN	NN	Number=Sing	16	nmod:unmarked	16:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 18	.	.	PUNCT	.	_	2	punct	2:punct	_
 19	*	*	PUNCT	NFP	_	2	punct	2:punct	_
 
@@ -718,7 +718,7 @@
 5	II	II	NUM	GW	NumForm=Roman|NumType=Card	4	nummod	4:nummod	_
 6	Settlement	settlement	X	GW	_	7	compound	7:compound	_
 7	Proposal	proposal	X	GW	_	0	root	0:root	_
-8	12-20-00.doc	12-20-00.doc	NOUN	NN	Number=Sing	7	nmod:tmod	7:nmod:tmod	SpaceAfter=No
+8	12-20-00.doc	12-20-00.doc	NOUN	NN	Number=Sing	7	nmod:unmarked	7:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 9	>>	>>	PUNCT	-RRB-	_	13	punct	13:punct	_
 10	<<	<<	PUNCT	-LRB-	_	13	punct	13:punct	SpaceAfter=No
 11	Proposed	proposed	X	GW	_	13	compound	13:compound	_
@@ -734,7 +734,7 @@
 21	for	for	X	GW	_	22	case	22:case	_
 22	GA	ga	X	GW	_	20	nmod	20:nmod:for	_
 23	II	II	NUM	GW	NumForm=Roman|NumType=Card	22	nummod	22:nummod	_
-24	12-20-2000	12-20-2000	X	GW	_	20	nmod:tmod	20:nmod:tmod	_
+24	12-20-2000	12-20-2000	X	GW	_	20	nmod:unmarked	20:nmod:unmarked	TemporalNPAdjunct=Yes
 25	Proposal.xls	proposal.xls	NOUN	NN	Number=Sing	7	conj	7:conj	SpaceAfter=No
 26	>>	>>	PUNCT	-RRB-	_	25	punct	25:punct	_
 
@@ -888,7 +888,7 @@
 19	folks	folk	NOUN	NNS	Number=Plur	20	nmod:poss	20:nmod:poss	_
 20	review	review	NOUN	NN	Number=Sing	15	obl	15:obl:for	_
 21	later	late	ADV	RBR	Degree=Cmp	22	advmod	22:advmod	_
-22	today	today	NOUN	NN	Number=Sing	15	obl:tmod	15:obl:tmod	SpaceAfter=No
+22	today	today	NOUN	NN	Number=Sing	15	obl:unmarked	15:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent05_02-0045
@@ -935,8 +935,8 @@
 11	call	call	NOUN	NN	Number=Sing	6	nmod	6:nmod:on	_
 12	(	(	PUNCT	-LRB-	_	14	punct	14:punct	SpaceAfter=No
 13	10	10	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	_
-14	AM	a.m.	NOUN	NN	Number=Sing	11	nmod:tmod	11:nmod:tmod	_
-15	CST	CST	PROPN	NNP	Number=Sing	14	nmod:npmod	14:nmod:npmod	SpaceAfter=No
+14	AM	a.m.	NOUN	NN	Number=Sing	11	nmod:unmarked	11:nmod:unmarked	TemporalNPAdjunct=Yes
+15	CST	CST	PROPN	NNP	Number=Sing	14	nmod:unmarked	14:nmod:unmarked	SpaceAfter=No
 16	)	)	PUNCT	-RRB-	_	14	punct	14:punct	SpaceAfter=No
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -965,12 +965,12 @@
 3	's	's	PART	POS	_	2	case	2:case	_
 4	hearings	hearing	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
 5	begin	begin	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-6	tomorrow	tomorrow	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	_
+6	tomorrow	tomorrow	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	TemporalNPAdjunct=Yes
 7	at	at	ADP	IN	_	9	case	9:case	_
 8	10	10	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 9	AM	a.m.	NOUN	NN	Number=Sing	5	obl	5:obl:at	_
 10	(	(	PUNCT	-LRB-	_	11	punct	11:punct	SpaceAfter=No
-11	PST	PST	PROPN	NNP	Number=Sing	9	nmod:npmod	9:nmod:npmod	SpaceAfter=No
+11	PST	PST	PROPN	NNP	Number=Sing	9	nmod:unmarked	9:nmod:unmarked	SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	11	punct	11:punct	SpaceAfter=No
 13	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -992,7 +992,7 @@
 # text = 12/26/2000 03:15 PM
 1	12/26/2000	12/26/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	03:15	03:15	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent05_02-0053
 # text = Attached is a draft of the talking points for the Commission's hearings.
@@ -1075,7 +1075,7 @@
 19	folks	folk	NOUN	NNS	Number=Plur	20	nmod:poss	20:nmod:poss	_
 20	review	review	NOUN	NN	Number=Sing	15	obl	15:obl:for	_
 21	later	late	ADV	RBR	Degree=Cmp	22	advmod	22:advmod	_
-22	today	today	NOUN	NN	Number=Sing	15	obl:tmod	15:obl:tmod	SpaceAfter=No
+22	today	today	NOUN	NN	Number=Sing	15	obl:unmarked	15:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent05_02-0058
@@ -1122,8 +1122,8 @@
 11	call	call	NOUN	NN	Number=Sing	6	nmod	6:nmod:on	_
 12	(	(	PUNCT	-LRB-	_	14	punct	14:punct	SpaceAfter=No
 13	10	10	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	_
-14	AM	a.m.	NOUN	NN	Number=Sing	11	nmod:tmod	11:nmod:tmod	_
-15	CST	CST	PROPN	NNP	Number=Sing	14	nmod:npmod	14:nmod:npmod	SpaceAfter=No
+14	AM	a.m.	NOUN	NN	Number=Sing	11	nmod:unmarked	11:nmod:unmarked	TemporalNPAdjunct=Yes
+15	CST	CST	PROPN	NNP	Number=Sing	14	nmod:unmarked	14:nmod:unmarked	SpaceAfter=No
 16	)	)	PUNCT	-RRB-	_	14	punct	14:punct	SpaceAfter=No
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -1152,12 +1152,12 @@
 3	's	's	PART	POS	_	2	case	2:case	_
 4	hearings	hearing	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
 5	begin	begin	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-6	tomorrow	tomorrow	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	_
+6	tomorrow	tomorrow	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	TemporalNPAdjunct=Yes
 7	at	at	ADP	IN	_	9	case	9:case	_
 8	10	10	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 9	AM	a.m.	NOUN	NN	Number=Sing	5	obl	5:obl:at	_
 10	(	(	PUNCT	-LRB-	_	11	punct	11:punct	SpaceAfter=No
-11	PST	PST	PROPN	NNP	Number=Sing	9	nmod:npmod	9:nmod:npmod	SpaceAfter=No
+11	PST	PST	PROPN	NNP	Number=Sing	9	nmod:unmarked	9:nmod:unmarked	SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	11	punct	11:punct	SpaceAfter=No
 13	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -1220,7 +1220,7 @@
 # text = 12/26/2000 03:33 PM
 1	12/26/2000	12/26/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	03:33	03:33	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent05_02-0071
 # text = Jeff -
@@ -1413,7 +1413,7 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	administration	administration	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-4	hell	hell	NOUN	NN	Number=Sing	5	obl:npmod	5:obl:npmod	_
+4	hell	hell	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	_
 5	bent	bent	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	on	on	SCONJ	IN	_	7	mark	7:mark	_
 7	finding	find	VERB	VBG	Tense=Pres|VerbForm=Part	5	advcl	5:advcl:on	_
