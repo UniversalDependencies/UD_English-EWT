@@ -291,12 +291,20 @@ def validate_annos(tree):
                 if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
                     # check for PronType=Rcp
                     flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, prev_misc, prev_tok, docname)
-                elif upos == "PRON" or (upos == "DET" and misclist.get("ExtPos")!="PRON") or upos == "ADV" and lemma in ADV_LEMMAS:  # ExtPos exception for "each other"
-                    # Pass FORM to detect abbreviations, etc.
-                    _misclist = dict(misclist)
-                    if lemma in ("all","that") and _misclist.get("ExtPos")=="ADV":  # "all of" (quantity), "that is"
-                        del _misclist["ExtPos"] # prevent complaint about ExtPos=ADV
-                    flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, _misclist, prev_tok, docname)
+                elif upos == "PRON" or (upos == "DET" and misclist.get("ExtPos")!="PRON") or upos == "ADV" and lemma in ADV_ENTRIES:  # ExtPos exception for "each other"
+                    if lemma == "however" and "advcl:relcl" not in child_funcs[tok_num] and not (
+                            func == "advmod" and parent_upos in ("ADJ", "ADV") and not is_parent_copular
+                        ):  # don't assign PronType to discourse connective use of "however"
+                        if pos == "WRB":
+                            print(f"WARN: should however/{pos} be tagged RB? in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    elif lemma == "however" and pos == "RB":
+                        print(f"WARN: should however/{pos} be tagged WRB? in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    else:
+                        # Pass FORM to detect abbreviations, etc.
+                        _misclist = dict(misclist)
+                        if lemma in ("all","that") and _misclist.get("ExtPos")=="ADV":  # "all of" (quantity), "that is"
+                            del _misclist["ExtPos"] # prevent complaint about ExtPos=ADV
+                        flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, _misclist, prev_tok, docname)
                 elif lemma in PRON_LEMMAS:
                     if not ((lemma=="one" and upos in ("NOUN","NUM"))
                             or (lemma=="I" and upos=="NUM") # Roman numeral
@@ -1376,6 +1384,7 @@ ADVS = {
     ("when", "IN"):{"PronType":["Dem"],"LEMMA":"when"},
     ("where", "WRB"):{"PronType":["Dem","Int","Rel"],"LEMMA":"where"},
     ("whither", "WRB"):{"PronType":["Dem","Int","Rel"],"LEMMA":"whither"},
+    ("however", "WRB"):{"PronType":["Int","Rel"],"LEMMA":"however"},    # WRB for non-discourse-connective uses
     ("whenever", "WRB"):{"PronType":["Int","Rel"],"LEMMA":"whenever"},
     ("wherever", "WRB"):{"PronType":["Int","Rel"],"LEMMA":"wherever"},
     ("wherein", "WRB"):{"PronType":"Rel","LEMMA":"wherein"},
@@ -1386,6 +1395,7 @@ ADVS = {
     ("there", "RB"):{"PronType":"Dem","LEMMA":"there"},
     ("neither", "RB"):{"PronType":"Neg","LEMMA":"neither"},
     ("never", "RB"):{"PronType":"Neg","LEMMA":"never"},
+    ("NEEEEEEEEEVERRRR", "RB"):{"PronType":"Neg","LEMMA":"never","Style":"Expr","CorrectForm":"never"},
     ("nowhere", "RB"):{"PronType":"Neg","LEMMA":"nowhere"},
     ("always", "RB"):{"PronType":"Tot","LEMMA":"always"},
     ("everywhere", "RB"):{"PronType":"Tot","LEMMA":"everywhere"},
@@ -1399,7 +1409,7 @@ ADVS = {
     ("ever", "RB"):{"PronType":"Ind","LEMMA":"ever"},
     ("either", "RB"):{"PronType":"Ind","LEMMA":"either"}
 }
-ADV_LEMMAS = {v["LEMMA"] for k,v in ADVS.items()}
+ADV_ENTRIES = {f for (f,p),v in ADVS.items()}
 
 
 # See https://universaldependencies.org/en/pos/PRON.html
@@ -1411,7 +1421,13 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, doc
     inname = " in " + docname + " @ token " + str(id)
 
     # Look up the correct features/lemma for the pronoun from the PRONOUNS lexicon
-    data_key = (form.lower(), pos)
+    if upos=='PRON' or form.lower() in ('these','those'):
+        data_key = (form.lower(), pos)
+    elif form in ADV_ENTRIES:
+        data_key = (form, pos)
+    else:
+        data_key = (lemma, pos)
+    
     if (prev_tok.lower(),form.lower()) in {("no","one"), ("one","another"), ("each","other")}:  # special case for bigrams
         data_key = (prev_tok.lower() + " " + form.lower(), pos)
 
@@ -1427,7 +1443,13 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, doc
 
     # Check whether the correct features for the lexical item (data) match
     # the observed features on the token (feats)
-    check_has_feature("Abbr", feats, data, tokname, inname)
+    if upos != "PRON" and feats.get("Abbr")=="Yes":
+        pass    # OK to abbreviate determiners, and to have a CorrectForm on these
+    else:
+        check_has_feature("Abbr", feats, data, tokname, inname)
+        # CorrectForm for Typo=Yes has already been handled.
+        if not ("Typo" in feats and feats["Typo"] == "Yes"):
+            check_has_feature("CorrectForm", misc, data, tokname, inname)
     check_has_feature("Case", feats, data, tokname, inname)
     check_has_feature("Definite", feats, data, tokname, inname)
     check_has_feature("Gender", feats, data, tokname, inname)
@@ -1442,9 +1464,7 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, doc
     check_has_feature("NumType", feats, data, tokname, inname)
 
     check_has_feature("ModernForm", misc, data, tokname, inname)
-    # CorrectForm for Typo=Yes has already been handled.
-    if not ("Typo" in feats and feats["Typo"] == "Yes"):
-        check_has_feature("CorrectForm", misc, data, tokname, inname)
+    
 
 
 # See http://universaldependencies.org/u/overview/typos.html
