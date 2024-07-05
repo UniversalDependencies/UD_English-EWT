@@ -291,7 +291,7 @@ def validate_annos(tree):
                 if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
                     # check for PronType=Rcp
                     flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, prev_misc, prev_tok, docname)
-                elif upos == "PRON" or (upos == "DET" and misclist.get("ExtPos")!="PRON") or upos == "ADV" and lemma in ADV_ENTRIES:  # ExtPos exception for "each other"
+                elif upos == "PRON" or (upos == "DET" and featlist.get("ExtPos")!="PRON") or upos == "ADV" and lemma in ADV_ENTRIES:  # ExtPos exception for "each other"
                     if lemma == "however" and "advcl:relcl" not in child_funcs[tok_num] and not (
                             func == "advmod" and parent_upos in ("ADJ", "ADV") and not is_parent_copular
                         ):  # don't assign PronType to discourse connective use of "however"
@@ -301,10 +301,10 @@ def validate_annos(tree):
                         print(f"WARN: should however/{pos} be tagged WRB? in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
                     else:
                         # Pass FORM to detect abbreviations, etc.
-                        _misclist = dict(misclist)
-                        if lemma in ("all","that") and _misclist.get("ExtPos")=="ADV":  # "all of" (quantity), "that is"
-                            del _misclist["ExtPos"] # prevent complaint about ExtPos=ADV
-                        flag_pronoun_warnings(tok_num, form, pos, upos, lemma, featlist, _misclist, prev_tok, docname)
+                        _featlist = dict(featlist)
+                        if lemma in ("all","that") and _featlist.get("ExtPos")=="ADV":  # "all of" (quantity), "that is"
+                            del _featlist["ExtPos"] # prevent complaint about ExtPos=ADV
+                        flag_pronoun_warnings(tok_num, form, pos, upos, lemma, _featlist, misclist, prev_tok, docname)
                 elif lemma in PRON_LEMMAS:
                     if not ((lemma=="one" and upos in ("NOUN","NUM"))
                             or (lemma=="I" and upos=="NUM") # Roman numeral
@@ -361,9 +361,9 @@ def validate_annos(tree):
                 expectedExtPos = mwe_pairs.get((lemma.lower(), fixedChild.lower()))
                 if not expectedExtPos:
                     print(f"WARN: fixed expression missing entry: {(lemma.lower(), fixedChild.lower())}" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
-                elif "ExtPos" not in misclist:
+                elif "ExtPos" not in featlist:
                     print("WARN: fixed head missing ExtPos" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
-                elif (extpos := misclist["ExtPos"]) not in expectedExtPos:
+                elif (extpos := featlist["ExtPos"]) not in expectedExtPos:
                     print(f"WARN: fixed head ExtPos={extpos} but one of {expectedExtPos} expected" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
                 elif func!='conj' and func not in extpos_funcs[extpos]:
                     if extpos=="SCONJ" and func=='ccomp' and misclist["Promoted"]=="Yes":
@@ -1458,7 +1458,7 @@ def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, doc
     check_has_feature("Poss", feats, data, tokname, inname)
     check_has_feature("PronType", feats, data, tokname, inname)
     check_has_feature("Style", feats, data, tokname, inname)
-    check_has_feature("ExtPos", misc, data, tokname, inname)
+    check_has_feature("ExtPos", feats, data, tokname, inname)
     # ensure pronominal uses of 'one' do NOT have these features
     check_has_feature("NumForm", feats, data, tokname, inname)
     check_has_feature("NumType", feats, data, tokname, inname)
