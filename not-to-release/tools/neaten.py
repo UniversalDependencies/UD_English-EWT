@@ -395,6 +395,14 @@ def validate_annos(tree):
                 if "FlatType" not in misclist:
                     print("WARN: non-PROPN non-Foreign flat expression lacks FlatType" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
+            # check for spurious VB/VerbForm=Inf
+            # https://github.com/UniversalDependencies/UD_English-EWT/issues/284
+            if featlist.get("VerbForm")=="Inf" and "nsubj" in child_funcs[tok_num] and not (set(child_funcs[tok_num]) & {"mark","aux","aux:pass","cop"}):
+                # looks like it should be a finite verb (of course there are exceptions)
+                # TODO: "better X" cxn e.g. "you better believe". Valid VerbForm=Inf?
+                if (nsubj := children[tok_num][child_funcs[tok_num].index("nsubj")]).lower() not in ("anyone", "anybody"):
+                    print("WARN: verb "+tok+"/VB has an nsubj ('" + nsubj + "'); should it be finite? in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+
             """
             Extraposition Construction
 
