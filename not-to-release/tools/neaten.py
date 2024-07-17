@@ -1110,6 +1110,16 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, misc, docname):
     elif upos == "NOUN" and ((pos == "NNS") != (number == "Plur")) and lemma not in NNS_PTAN_LEMMAS and re.search(r"[0-9]+'?s$",lemma) is None:
         print("WARN: NOUN+NNS should correspond with Number=Plur in " + docname + " @ token " + str(id))
 
+    # pluralized years
+    if number == "Ptan" and re.search(r"[0-9]+'?s$",lemma) is not None:
+        if numType != "Card" or feats["NumForm"] != "Combi":
+            print("WARN: pluralized decimal year expecting NumForm=Combi|NumType=Card in " + docname + " @ token " + str(id))
+        if not lemma.endswith("s") or ("'" in lemma and not lemma.startswith("'")):
+            print("WARN: pluralized year expecting simplified lemma instead of: " + lemma + " in " + docname + " @ token " + str(id))
+    elif number == "Ptan" and lemma.rsplit("-",1)[-1] in ["twenties", "thirties", "forties", "fifties", "sixties", "seventies", "eighties", "nineties"]:
+        if numType != "Card" or feats["NumForm"] != "Word":
+            print("WARN: pluralized spelled-out year expecting NumForm=Word|NumType=Card in " + docname + " @ token " + str(id))
+
     if (upos == "PART" and lemma == "not" or upos == "INTJ" and lemma == "no") != (feats.get("Polarity")=="Neg"):
         print("WARN: not/PART and no/INTJ should correspond with Polarity=Neg in " + docname + " @ token " + str(id))
 
