@@ -212,7 +212,7 @@ def validate_annos(tree):
         }
 
         non_lemmas = ["them","me","him","n't"]
-        non_lemma_combos = [("PP","her"),("MD","wo"),("PP","us"),("DT","an")]
+        non_lemma_combos = [("MD","wo"),("PRP","us"),("DT","an")]
         lemma_pos_combos = {"which":"WDT"}
         non_cap_lemmas = ["There","How","Why","Where","When"]
 
