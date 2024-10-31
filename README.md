@@ -83,6 +83,17 @@ almost all respects, but there remain the following deviations:
 
 # Changelog
 
+**2024-11-15 v2.15**
+
+Highlights:
+
+  - **Construction annotations in the [UCxn](https://github.com/LeonieWeissweiler/UCxn) framework** added to MISC ([#551](https://github.com/UniversalDependencies/UD_English-EWT/pull/551))
+     * This release adds rule-based annotations of Interrogatives, Conditionals, Existentials, and NPN (noun-preposition-noun) constructions on the head of the respective phrase, plus construction elements.
+     * The UCxn v1 notation and categories are documented [here](https://github.com/LeonieWeissweiler/UCxn/blob/main/docs/UCxn-v1.pdf).
+     * Special thanks: [@LeonieWeissweiler](https://github.com/LeonieWeissweiler), [@WesScivetti](https://github.com/WesScivetti/), [@s-herrera](https://github.com/s-herrera)
+
+(TODO)
+
 **2024-05-15 v2.14**
 
 Highlights:
