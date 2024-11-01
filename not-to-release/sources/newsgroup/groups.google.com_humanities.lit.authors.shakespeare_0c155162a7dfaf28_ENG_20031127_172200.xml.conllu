@@ -46,7 +46,7 @@
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0c155162a7dfaf28_ENG_20031127_172200-0004
 # text = Who are we?
-1	Who	who	PRON	WP	PronType=Int	0	root	0:root	_
+1	Who	who	PRON	WP	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=1:Interrogative-WHInfo-Direct.Clause,1:Interrogative-WHInfo-Direct.WHWord
 2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
 3	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	1	nsubj	1:nsubj	SpaceAfter=No
 4	?	?	PUNCT	.	_	1	punct	1:punct	_
@@ -150,7 +150,7 @@
 # newpar id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0c155162a7dfaf28_ENG_20031127_172200-p0003
 # text = And who are you?
 1	And	and	CCONJ	CC	_	2	cc	2:cc	_
-2	who	who	PRON	WP	PronType=Int	0	root	0:root	_
+2	who	who	PRON	WP	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=2:Interrogative-WHInfo-Direct.Clause,2:Interrogative-WHInfo-Direct.WHWord
 3	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	2	cop	2:cop	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	2	nsubj	2:nsubj	SpaceAfter=No
 5	?	?	PUNCT	.	_	2	punct	2:punct	_
@@ -241,8 +241,8 @@
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0c155162a7dfaf28_ENG_20031127_172200-0014
 # text = And what is there to show for it?
 1	And	and	CCONJ	CC	_	3	cc	3:cc	_
-2	what	what	PRON	WP	PronType=Int	3	nsubj	3:nsubj	_
-3	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	what	what	PRON	WP	PronType=Int	3	nsubj	3:nsubj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot,3:Interrogative-WHInfo-Direct.WHWord
+3	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Direct,Interrogative-WHInfo-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause,3:Interrogative-WHInfo-Direct.Clause
 4	there	there	PRON	EX	_	3	expl	3:expl	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	show	show	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_
@@ -284,17 +284,17 @@
 2	tell	tell	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	2:iobj	_
 4	there	there	PRON	EX	_	5	expl	5:expl	_
-5	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
+5	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	Cxn=Existential-CopPred-ThereExpl
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	deeper	deep	ADJ	JJR	Degree=Cmp	8	amod	8:amod	_
-8	reason	reason	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	SpaceAfter=No
+8	reason	reason	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	CxnElt=5:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0c155162a7dfaf28_ENG_20031127_172200-0017
 # text = Do you feel safer?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|4:nsubj:xsubj	_
-3	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	safer	safe	ADJ	JJR	Degree=Cmp	3	xcomp	3:xcomp	SpaceAfter=No
 5	?	?	PUNCT	.	_	3	punct	3:punct	_
 
@@ -330,7 +330,7 @@
 # text = Do you live in a gated community or gentrified neighborhood?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	live	live	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	live	live	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	in	in	ADP	IN	_	7	case	7:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	gated	gated	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
@@ -348,7 +348,7 @@
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
-7	read	read	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+7	read	read	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=7:Interrogative-Polar-Direct.Clause
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	Declaration	Declaration	PROPN	NNP	Number=Sing	7	obj	7:obj	_
 10	of	of	ADP	IN	_	11	case	11:case	_
@@ -492,10 +492,10 @@
 34-35	wouldn't	_	_	_	_	_	_	_	_
 34	would	would	AUX	MD	VerbForm=Fin	36	aux	36:aux	_
 35	n't	not	PART	RB	Polarity=Neg	36	advmod	36:advmod	_
-36	escape	escape	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	_
+36	escape	escape	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=36:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 37	if	if	SCONJ	IN	_	39	mark	39:mark	_
 38	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	39	nsubj	39:nsubj	_
-39	opened	open	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	36	advcl	36:advcl:if	_
+39	opened	open	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	36	advcl	36:advcl:if	CxnElt=36:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 40	the	the	DET	DT	Definite=Def|PronType=Art	42	det	42:det	_
 41	front	front	ADJ	JJ	Degree=Pos	42	amod	42:amod	_
 42	door	door	NOUN	NN	Number=Sing	39	obj	39:obj	SpaceAfter=No
@@ -505,7 +505,7 @@
 # text = Did you know that approximately 10 million Americans are either incarcerated, on probation, on parole or once were in those categories?
 1	Did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	that	that	SCONJ	IN	_	11	mark	11:mark	_
 5	approximately	approximately	ADV	RB	_	7	advmod	7:advmod	_
 6	10	10	NUM	CD	NumForm=Digit|NumType=Card	7	compound	7:compound	_
@@ -562,7 +562,7 @@
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 2	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	think	think	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	think	think	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=4:Interrogative-Polar-Direct.Clause
 5-6	it's	_	_	_	_	_	_	_	_
 5	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 6	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
@@ -575,14 +575,14 @@
 # text = Are you ready?
 1	Are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	ready	ready	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
+3	ready	ready	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause|SpaceAfter=No
 4	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0c155162a7dfaf28_ENG_20031127_172200-0031
 # text = Can you accept that the road we are travelling points toward a grim and painful future?
 1	Can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	accept	accept	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	accept	accept	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	that	that	SCONJ	IN	_	10	mark	10:mark	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	road	road	NOUN	NN	Number=Sing	10	nsubj	9:obl|10:nsubj	_
@@ -602,7 +602,7 @@
 # text = Do you have the heart to face monumental failures while bravely struggling beyond where we are now?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	heart	heart	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
@@ -828,9 +828,9 @@
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0c155162a7dfaf28_ENG_20031127_172200-0044
 # text = There are a couple of packages available through the supporters of the comp.sources.unix archives.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	couple	couple	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+4	couple	couple	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 5	of	of	ADP	IN	_	6	case	6:case	_
 6	packages	package	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
 7	available	available	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
@@ -853,12 +853,12 @@
 6-7	don't	_	_	_	_	_	_	_	_
 6	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 7	n't	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
-8	have	have	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:if	_
+8	have	have	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:if	CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 9	what	what	PRON	WP	PronType=Rel	8	obj	8:obj|11:obj	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
 11	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-free-obj|SpaceAfter=No
 12	,	,	PUNCT	,	_	8	punct	8:punct	_
-13	contact	contact	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+13	contact	contact	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 14	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 15	nearest	near	ADJ	JJS	Degree=Sup	17	amod	17:amod	_
 16	comp.sources.unix	comp.sources.unix	NOUN	NN	Number=Sing	17	compound	17:compound	_

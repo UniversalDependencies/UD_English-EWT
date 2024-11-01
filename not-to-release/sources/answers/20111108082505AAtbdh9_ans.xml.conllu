@@ -2,10 +2,10 @@
 # sent_id = answers-20111108082505AAtbdh9_ans-0001
 # newpar id = answers-20111108082505AAtbdh9_ans-p0001
 # text = How long to save up for a canon t3i?
-1	How	how	ADV	WRB	PronType=Int	2	advmod	2:advmod	_
+1	How	how	ADV	WRB	PronType=Int	2	advmod	2:advmod	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	long	long	ADV	RB	Degree=Pos	4	advmod	4:advmod	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
-4	save	save	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	save	save	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	up	up	ADP	RP	_	4	compound:prt	4:compound:prt	_
 6	for	for	ADP	IN	_	9	case	9:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
@@ -116,12 +116,12 @@
 # text = Can someone cunclude how long it might take me to save up for the canan t3i or some extra tips to save/gain money? :O
 1	Can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	someone	someone	PRON	NN	Number=Sing|PronType=Ind	3	nsubj	3:nsubj|20:nsubj|27:nsubj	_
-3	cunclude	conclude	VERB	VB	Typo=Yes|VerbForm=Inf	0	root	0:root	CorrectForm=conclude
-4	how	how	ADV	WRB	PronType=Int	5	advmod	5:advmod	_
+3	cunclude	conclude	VERB	VB	Typo=Yes|VerbForm=Inf	0	root	0:root	CorrectForm=conclude|Cxn=Interrogative-Polar-Direct,Interrogative-WHInfo-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause,3:Interrogative-WHInfo-Direct.Clause
+4	how	how	ADV	WRB	PronType=Int	5	advmod	5:advmod	CxnElt=3:Interrogative-WHInfo-Direct.WHWord,8:Interrogative-WHInfo-Indirect.WHWord
 5	long	long	ADV	RB	Degree=Pos	8	advmod	8:advmod	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	expl	8:expl	_
 7	might	might	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	take	take	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+8	take	take	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=8:Interrogative-WHInfo-Indirect.Clause
 9	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	obj	8:obj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	save	save	VERB	VB	VerbForm=Inf	8	csubj	8:csubj	_
@@ -169,11 +169,11 @@
 # text = There's a Canon EOS T2i, with the exact same sensor, just no articulating screen.
 1-2	There's	_	_	_	_	_	_	_	_
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 4	Canon	Canon	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 5	EOS	eos	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	T2i	T2i	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	SpaceAfter=No
+6	T2i	T2i	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 7	,	,	PUNCT	,	_	12	punct	12:punct	_
 8	with	with	ADP	IN	_	12	case	12:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
@@ -239,7 +239,7 @@
 3	ca	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 4	n't	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 5	even	even	ADV	RB	_	6	advmod	6:advmod	_
-6	do	do	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:if	_
+6	do	do	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:if	CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 7	basic	basic	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	math	math	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
 9	,	,	PUNCT	,	_	6	punct	6:punct	_
@@ -247,11 +247,11 @@
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
 11	'll	will	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
 12	never	never	ADV	RB	PronType=Neg	13	advmod	13:advmod	_
-13	figure	figure	VERB	VB	VerbForm=Inf	0	root	0:root	_
+13	figure	figure	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 14	out	out	ADP	RP	_	13	compound:prt	13:compound:prt	_
-15	how	how	ADV	WRB	PronType=Int	17	advmod	17:advmod	_
+15	how	how	ADV	WRB	PronType=Int	17	advmod	17:advmod	CxnElt=17:Interrogative-WHInfo-Indirect.WHWord
 16	to	to	PART	TO	_	17	mark	17:mark	_
-17	use	use	VERB	VB	VerbForm=Inf	13	ccomp	13:ccomp	_
+17	use	use	VERB	VB	VerbForm=Inf	13	ccomp	13:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=17:Interrogative-WHInfo-Indirect.Clause
 18	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
 19	DSLR	dslr	NOUN	NN	Number=Sing	20	compound	20:compound	_
 20	camera	camera	NOUN	NN	Number=Sing	17	obj	17:obj	_

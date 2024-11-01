@@ -10,10 +10,10 @@
 # newpar id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-p0002
 # text = There are already several forums around the net focused on discussing Guild Wars, so why create a new one?
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	already	already	ADV	RB	_	2	advmod	2:advmod	_
 4	several	several	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	forums	forum	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
+5	forums	forum	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 6	around	around	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	net	net	NOUN	NN	Number=Sing	5	nmod	5:nmod:around	_
@@ -35,8 +35,8 @@
 # text = I say why not?
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	say	say	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	why	why	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
-4	not	not	PART	RB	Polarity=Neg	2	ccomp	2:ccomp	Promoted=Yes|SpaceAfter=No
+3	why	why	ADV	WRB	PronType=Int	4	advmod	4:advmod	CxnElt=4:Interrogative-WHInfo-Indirect.WHWord
+4	not	not	PART	RB	Polarity=Neg	2	ccomp	2:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=4:Interrogative-WHInfo-Indirect.Clause|Promoted=Yes|SpaceAfter=No
 5	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0004
@@ -345,7 +345,7 @@
 4	pre	preorder	NOUN	AFX	Number=Sing|Typo=Yes	2	obl	2:obl:as	CorrectForm=preorder
 5	order	_	X	NN	_	4	goeswith	4:goeswith	_
 6	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-7	to	to	ADP	IN	_	6	obl	6:obl	Promoted=Yes|MissingWordAfter=Yes
+7	to	to	ADP	IN	_	6	obl	6:obl	MissingWordAfter=Yes|Promoted=Yes
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
 10	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:and	_
@@ -358,11 +358,11 @@
 17	carry	carry	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	15	acl:relcl	15:acl:relcl	Cxn=rc-that-nsubj
 18	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	obj	17:obj	_
 19	there	there	PRON	EX	_	20	expl	20:expl	_
-20	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	parataxis	6:parataxis	_
+20	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	parataxis	6:parataxis	Cxn=Existential-CopPred-ThereExpl
 21	also	also	ADV	RB	_	20	advmod	20:advmod	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
 23	few	few	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-24	websites	website	NOUN	NNS	Number=Plur	20	nsubj	20:nsubj|28:obl:off_of	_
+24	websites	website	NOUN	NNS	Number=Plur	20	nsubj	20:nsubj|28:obl:off_of	CxnElt=20:Existential-CopPred-ThereExpl.Pivot
 25	that	that	PRON	WDT	PronType=Rel	28	obl	24:ref	_
 26	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	28	nsubj	28:nsubj	_
 27	could	could	AUX	MD	VerbForm=Fin	28	aux	28:aux	_
@@ -395,9 +395,9 @@
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
 3	kind	kind	NOUN	NN	ExtPos=ADV|Number=Sing	5	advmod	5:advmod	_
 4	of	of	ADP	IN	_	3	fixed	3:fixed	_
-5	curious	curious	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
+5	curious	curious	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=5:Interrogative-WHInfo-Direct.Clause|SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
-7	what	what	PRON	WP	PronType=Int	5	ccomp	5:ccomp	_
+7	what	what	PRON	WP	PronType=Int	5	ccomp	5:ccomp	CxnElt=5:Interrogative-WHInfo-Direct.WHWord
 8	exactly	exactly	ADV	RB	_	7	advmod	7:advmod	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 10	Guild	Guild	PROPN	NNP	Number=Sing	11	compound	11:compound	_
@@ -665,10 +665,10 @@
 # sent_id = newsgroup-groups.google.com_GuildWars_086f0f64ab633ab3_ENG_20041111_173500-0038
 # text = There are no other requirements other than we ask that members greet each new member and each new alliance and also feel free to post in any of the forums.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	no	no	DET	DT	PronType=Neg	5	det	5:det	_
 4	other	other	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	requirements	requirement	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
+5	requirements	requirement	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 6	other	other	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 7	than	than	SCONJ	IN	_	9	mark	9:mark	_
 8	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
@@ -861,7 +861,7 @@
 # text = If you paste this in your browser, it will take you directly to our GW website.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	paste	paste	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:if	_
+3	paste	paste	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:if	CxnElt=11:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	this	this	PRON	DT	Number=Sing|PronType=Dem	3	obj	3:obj	_
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
@@ -869,7 +869,7 @@
 8	,	,	PUNCT	,	_	3	punct	3:punct	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 10	will	will	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
-11	take	take	VERB	VB	VerbForm=Inf	0	root	0:root	_
+11	take	take	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=11:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 12	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	11	obj	11:obj	_
 13	directly	directly	ADV	RB	_	17	advmod	17:advmod	_
 14	to	to	ADP	IN	_	17	case	17:case	_

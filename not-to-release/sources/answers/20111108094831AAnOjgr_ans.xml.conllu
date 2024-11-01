@@ -3,7 +3,7 @@
 # newpar id = answers-20111108094831AAnOjgr_ans-p0001
 # text = Whats your favorite part about trail riding?
 1-2	Whats	_	_	_	_	_	_	_	_
-1	What	what	PRON	WP	PronType=Int	0	root	0:root	_
+1	What	what	PRON	WP	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=1:Interrogative-WHInfo-Direct.Clause,1:Interrogative-WHInfo-Direct.WHWord
 2	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	1	cop	1:cop	CorrectForm='s
 3	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 4	favorite	favorite	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
@@ -32,12 +32,12 @@
 # text = I love how it really depends on how good a horse your horse really is, not how talented he is.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	how	how	ADV	WRB	PronType=Int	6	advmod	6:advmod	_
+3	how	how	ADV	WRB	PronType=Int	6	advmod	6:advmod	CxnElt=6:Interrogative-WHInfo-Indirect.WHWord
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
 5	really	really	ADV	RB	_	6	advmod	6:advmod	_
-6	depends	depend	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
+6	depends	depend	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	Cxn=Interrogative-WHInfo-Indirect,Interrogative-WHInfo-Indirect#2|CxnElt=6:Interrogative-WHInfo-Indirect.Clause,6:Interrogative-WHInfo-Indirect#2.Clause
 7	on	on	ADP	IN	_	11	mark	11:mark	_
-8	how	how	ADV	WRB	PronType=Int	9	advmod	9:advmod	_
+8	how	how	ADV	WRB	PronType=Int	9	advmod	9:advmod	CxnElt=6:Interrogative-WHInfo-Indirect#2.WHWord
 9	good	good	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 11	horse	horse	NOUN	NN	Number=Sing	6	advcl	6:advcl:on	_
@@ -57,7 +57,7 @@
 # text = If you took some Olympic-level horses on a trail ride, they just couldn't do it.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	18	advcl	18:advcl:if	_
+3	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	18	advcl	18:advcl:if	CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	some	some	DET	DT	PronType=Ind	8	det	8:det	_
 5	Olympic	Olympic	ADJ	NNP	Degree=Pos	7	amod	7:amod	SpaceAfter=No
 6	-	-	PUNCT	HYPH	_	5	punct	5:punct	SpaceAfter=No
@@ -73,7 +73,7 @@
 16-17	couldn't	_	_	_	_	_	_	_	_
 16	could	could	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
 17	n't	not	PART	RB	Polarity=Neg	18	advmod	18:advmod	_
-18	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	_
+18	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	SpaceAfter=No
 20	.	.	PUNCT	.	_	18	punct	18:punct	_
 
@@ -264,11 +264,11 @@
 7	that	that	SCONJ	IN	_	14	mark	14:mark	_
 8	if	if	SCONJ	IN	_	10	mark	10:mark	_
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj|11:nsubj:xsubj	_
-10	keep	keep	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:if	_
+10	keep	keep	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:if	CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 11	quiet	quiet	ADJ	JJ	Degree=Pos	10	xcomp	10:xcomp	_
 12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	14	nsubj	14:nsubj|16:nsubj:xsubj|18:nsubj:xsubj	_
 13	can	can	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
-14	get	get	VERB	VB	VerbForm=Inf	1	advcl	1:advcl:that	_
+14	get	get	VERB	VB	VerbForm=Inf	1	advcl	1:advcl:that	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 15	up	up	ADV	RB	_	16	advmod	16:advmod	_
 16	close	close	ADJ	JJ	Degree=Pos	14	xcomp	14:xcomp	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_

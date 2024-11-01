@@ -8,9 +8,9 @@
 # sent_id = email-enronsent39_01-0002
 # newpar id = email-enronsent39_01-p0002
 # text = Who is responsible for completing all paperwork for entering a new market?
-1	Who	who	PRON	WP	PronType=Int	3	nsubj	3:nsubj	_
+1	Who	who	PRON	WP	PronType=Int	3	nsubj	3:nsubj	CxnElt=3:Interrogative-WHInfo-Direct.WHWord
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
-3	responsible	responsible	ADJ	JJ	Degree=Pos	0	root	0:root	_
+3	responsible	responsible	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=3:Interrogative-WHInfo-Direct.Clause
 4	for	for	SCONJ	IN	_	5	mark	5:mark	_
 5	completing	complete	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:for	_
 6	all	all	DET	DT	PronType=Tot	7	det	7:det	_
@@ -26,7 +26,7 @@
 # text = Is it someone on your team or someone from CEC?
 1	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|8:nsubj	_
-3	someone	someone	PRON	NN	Number=Sing|PronType=Ind	0	root	0:root	_
+3	someone	someone	PRON	NN	Number=Sing|PronType=Ind	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	on	on	ADP	IN	_	6	case	6:case	_
 5	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	team	team	NOUN	NN	Number=Sing	3	nmod	3:nmod:on	_
@@ -40,9 +40,9 @@
 # text = There have been some issues with getting everything coordinated lately and I wanted to make sure that we knew who was on point.
 1	There	there	PRON	EX	_	3	expl	3:expl	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	been	be	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+3	been	be	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 4	some	some	DET	DT	PronType=Ind	5	det	5:det	_
-5	issues	issue	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
+5	issues	issue	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot
 6	with	with	SCONJ	IN	_	7	mark	7:mark	_
 7	getting	get	VERB	VBG	VerbForm=Ger	5	acl	5:acl:with	_
 8	everything	everything	PRON	NN	Number=Sing|PronType=Tot	7	obj	7:obj|9:nsubj:xsubj	_
@@ -57,10 +57,10 @@
 17	that	that	SCONJ	IN	_	19	mark	19:mark	_
 18	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
 19	knew	know	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	16	ccomp	16:ccomp	_
-20	who	who	PRON	WP	PronType=Int	23	nsubj	23:nsubj	_
+20	who	who	PRON	WP	PronType=Int	23	nsubj	23:nsubj	CxnElt=23:Interrogative-WHInfo-Indirect.WHWord
 21	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	cop	23:cop	_
 22	on	on	ADP	IN	_	23	case	23:case	_
-23	point	point	NOUN	NN	Number=Sing	19	ccomp	19:ccomp	SpaceAfter=No
+23	point	point	NOUN	NN	Number=Sing	19	ccomp	19:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=23:Interrogative-WHInfo-Indirect.Clause|SpaceAfter=No
 24	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent39_01-0005
@@ -291,7 +291,7 @@
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 3	should	should	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-4	decide	decide	VERB	VB	VerbForm=Inf	14	advcl	14:advcl:if	_
+4	decide	decide	VERB	VB	VerbForm=Inf	14	advcl	14:advcl:if	CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	arrange	arrange	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	lodging	lodging	NOUN	NN	Number=Sing	6	obj	6:obj	_
@@ -301,14 +301,14 @@
 11	hotel	hotel	NOUN	NN	Number=Sing	7	nmod	7:nmod:at	SpaceAfter=No
 12	,	,	PUNCT	,	_	4	punct	4:punct	_
 13	please	please	INTJ	UH	_	14	discourse	14:discourse	_
-14	do	do	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+14	do	do	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 15	so	so	ADV	RB	_	14	advmod	14:advmod	_
 16	quickly	quickly	ADV	RB	_	14	advmod	14:advmod	_
 17	as	as	SCONJ	IN	_	19	mark	19:mark	_
 18	there	there	PRON	EX	_	19	expl	19:expl	_
-19	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:as	_
+19	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:as	Cxn=Existential-CopPred-ThereExpl
 20	limited	limited	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
-21	availability	availability	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
+21	availability	availability	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	CxnElt=19:Existential-CopPred-ThereExpl.Pivot
 22	in	in	ADP	IN	_	25	case	25:case	_
 23	all	all	DET	DT	PronType=Tot	25	det	25:det	_
 24	surrounding	surround	VERB	VBG	VerbForm=Ger	25	amod	25:amod	_
@@ -340,7 +340,7 @@
 # text = If you have any questions or require any assistance at all, please contact Hope Duncan at 202.739.0134 or Jeff Mangold at 703.729.2710.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|7:nsubj	_
-3	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:if	_
+3	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:if	CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	any	any	DET	DT	PronType=Ind	5	det	5:det	_
 5	questions	question	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	or	or	CCONJ	CC	_	7	cc	7:cc	_
@@ -351,7 +351,7 @@
 11	all	all	DET	DT	PronType=Tot	9	nmod	9:nmod:at	SpaceAfter=No
 12	,	,	PUNCT	,	_	3	punct	3:punct	_
 13	please	please	INTJ	UH	_	14	discourse	14:discourse	_
-14	contact	contact	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+14	contact	contact	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 15	Hope	Hope	PROPN	NNP	Number=Sing	14	obj	14:obj	_
 16	Duncan	Duncan	PROPN	NNP	Number=Sing	15	flat	15:flat	_
 17	at	at	ADP	IN	_	18	case	18:case	_
@@ -443,17 +443,17 @@
 # text = Is this correct?
 1	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	3:nsubj	_
-3	correct	correct	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
+3	correct	correct	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause|SpaceAfter=No
 4	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent39_01-0025
 # text = If so, I will handle it.
 1	If	if	SCONJ	IN	_	2	mark	2:mark	_
-2	so	so	ADV	RB	_	6	advcl	6:advcl:if	SpaceAfter=No
+2	so	so	ADV	RB	_	6	advcl	6:advcl:if	CxnElt=6:Conditional-UnspecifiedEpistemic-Reduced.Protasis|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 5	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-6	handle	handle	VERB	VB	VerbForm=Inf	0	root	0:root	_
+6	handle	handle	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-Reduced|CxnElt=6:Conditional-UnspecifiedEpistemic-Reduced.Apodosis
 7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	obj	6:obj	SpaceAfter=No
 8	.	.	PUNCT	.	_	6	punct	6:punct	_
 
@@ -525,7 +525,7 @@
 # text = Do you want me to send the invoices to you?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	obj	3:obj|6:nsubj:xsubj	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	send	send	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
@@ -618,7 +618,7 @@
 # text = Can we visit about what went on with Ursula at the PRC meeting when you catch up?
 1	Can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	visit	visit	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	visit	visit	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	about	about	SCONJ	IN	_	6	mark	6:mark	_
 5	what	what	PRON	WP	PronType=Int	6	nsubj	6:nsubj	_
 6	went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	advcl	3:advcl:about	_
@@ -751,7 +751,7 @@
 # text = Can we have a meeting this week (maybe Thursday at 3:30) to discuss this?
 1	Can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	meeting	meeting	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	7:det	_
@@ -1003,7 +1003,7 @@
 22	deregulation	deregulation	NOUN	NN	Number=Sing	25	nsubj	25:nsubj	_
 23	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	25	aux	25:aux	_
 24	not	not	PART	RB	Polarity=Neg	25	advmod	25:advmod	_
-25	work	work	VERB	VB	VerbForm=Inf	33	advcl	33:advcl:if	_
+25	work	work	VERB	VB	VerbForm=Inf	33	advcl	33:advcl:if	CxnElt=33:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 26	in	in	ADP	IN	_	27	case	27:case	_
 27	Texas	Texas	PROPN	NNP	Number=Sing	25	obl	25:obl:in	SpaceAfter=No
 28	,	,	PUNCT	,	_	25	punct	25:punct	_
@@ -1011,7 +1011,7 @@
 30	repercussions	repercussion	NOUN	NNS	Number=Plur	33	nsubj	33:nsubj	_
 31	could	could	AUX	MD	VerbForm=Fin	33	aux	33:aux	_
 32	be	be	AUX	VB	VerbForm=Inf	33	cop	33:cop	_
-33	global	global	ADJ	JJ	Degree=Pos	19	ccomp	19:ccomp	SpaceAfter=No
+33	global	global	ADJ	JJ	Degree=Pos	19	ccomp	19:ccomp	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=33:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 34	.	.	PUNCT	.	_	16	punct	16:punct	SpaceAfter=No
 35	)	)	PUNCT	-RRB-	_	16	punct	16:punct	_
 
@@ -1057,12 +1057,12 @@
 # sent_id = email-enronsent39_01-0064
 # text = There is an Electric Restructuring Committee hearing scheduled for September 6th or 7th.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	an	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 4	Electric	electric	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	Restructuring	restructuring	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	Committee	committee	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	hearing	hearing	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+7	hearing	hearing	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 8	scheduled	schedule	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	acl	7:acl	_
 9	for	for	ADP	IN	_	10	case	10:case	_
 10	September	September	PROPN	NNP	Number=Sing	8	obl	8:obl:for	_
@@ -1148,9 +1148,9 @@
 10	Governor	Governor	PROPN	NNP	Number=Sing	9	flat	9:flat	SpaceAfter=No
 11	,	,	PUNCT	,	_	1	punct	1:punct	_
 12	there	there	PRON	EX	_	13	expl	13:expl	_
-13	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+13	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 14	more	more	ADJ	JJR	Degree=Cmp	15	amod	15:amod	_
-15	freedom	freedom	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
+15	freedom	freedom	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	CxnElt=13:Existential-CopPred-ThereExpl.Pivot
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	open	open	VERB	VB	VerbForm=Inf	15	acl	15:acl:to	_
 18	up	up	ADP	RP	_	17	compound:prt	17:compound:prt	_
@@ -1196,7 +1196,7 @@
 # text = Can we find another time that works for us to meet?
 1	Can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	another	another	DET	DT	PronType=Ind	5	det	5:det	_
 5	time	time	NOUN	NN	Number=Sing	3	obj	3:obj|7:nsubj	_
 6	that	that	PRON	WDT	PronType=Rel	7	nsubj	5:ref	_
@@ -1289,8 +1289,8 @@
 8	indicated	indicate	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	that	that	SCONJ	IN	_	11	mark	11:mark	_
 10	there	there	PRON	EX	_	11	expl	11:expl	_
-11	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	ccomp	8:ccomp	_
-12	games	game	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
+11	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	ccomp	8:ccomp	Cxn=Existential-CopPred-ThereExpl
+12	games	game	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	CxnElt=11:Existential-CopPred-ThereExpl.Pivot
 13	being	be	AUX	VBG	Tense=Pres|VerbForm=Part	14	aux:pass	14:aux:pass	_
 14	played	play	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	acl	12:acl	_
 15	in	in	ADP	IN	_	16	case	16:case	_
@@ -1349,7 +1349,7 @@
 # text = If ERCOT goes the way of California - either due to market power or poor market design rules - it will be a bad day for deregulation and for Pat Wood.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	ERCOT	ERCOT	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
-3	goes	go	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	25	advcl	25:advcl:if	_
+3	goes	go	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	25	advcl	25:advcl:if	CxnElt=25:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	way	way	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	of	of	ADP	IN	_	7	case	7:case	_
@@ -1371,7 +1371,7 @@
 22	be	be	AUX	VB	VerbForm=Inf	25	cop	25:cop	_
 23	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
 24	bad	bad	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
-25	day	day	NOUN	NN	Number=Sing	0	root	0:root	_
+25	day	day	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=25:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 26	for	for	ADP	IN	_	27	case	27:case	_
 27	deregulation	deregulation	NOUN	NN	Number=Sing	25	nmod	25:nmod:for	_
 28	and	and	CCONJ	CC	_	30	cc	30:cc	_
@@ -1663,7 +1663,7 @@
 5	could	could	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 7	please	please	INTJ	UH	_	8	discourse	8:discourse	_
-8	provide	provide	VERB	VB	VerbForm=Inf	0	root	0:root	_
+8	provide	provide	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=8:Interrogative-Polar-Direct.Clause
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	contact	contact	NOUN	NN	Number=Sing	8	obj	8:obj|18:obl	_
 11	on	on	ADP	IN	_	13	case	13:case	_
@@ -1684,7 +1684,7 @@
 1	What	what	PRON	WP	PronType=Int	6	obj	6:obj	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
-4	need	need	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	need	need	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=4:Interrogative-Polar-Direct.Clause
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	do	do	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	SpaceAfter=No
 7	?	?	PUNCT	.	_	4	punct	4:punct	_

@@ -99,9 +99,9 @@
 33	,	,	PUNCT	,	_	36	punct	36:punct	_
 34	that	that	SCONJ	IN	_	36	mark	36:mark	_
 35	there	there	PRON	EX	_	36	expl	36:expl	_
-36	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	conj	9:acl:that|15:conj:and	_
+36	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	conj	9:acl:that|15:conj:and	Cxn=Existential-CopPred-ThereExpl
 37	no	no	DET	DT	PronType=Neg	38	det	38:det	_
-38	separation	separation	NOUN	NN	Number=Sing	36	nsubj	36:nsubj	_
+38	separation	separation	NOUN	NN	Number=Sing	36	nsubj	36:nsubj	CxnElt=36:Existential-CopPred-ThereExpl.Pivot
 39	between	between	ADP	IN	_	40	case	40:case	_
 40	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	38	nmod	38:nmod:between	_
 41	and	and	CCONJ	CC	_	42	cc	42:cc	_
@@ -170,14 +170,14 @@
 
 # sent_id = newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0006
 # text = Think of all life, if you will, as one great choir or one grand congregation.
-1	Think	think	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+1	Think	think	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=1:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 2	of	of	ADP	IN	_	4	case	4:case	_
 3	all	all	DET	DT	PronType=Tot	4	det	4:det	_
 4	life	life	NOUN	NN	Number=Sing	1	obl	1:obl:of	SpaceAfter=No
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	if	if	SCONJ	IN	_	8	mark	8:mark	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
-8	will	will	AUX	MD	VerbForm=Fin	1	advcl	1:advcl:if	SpaceAfter=No
+8	will	will	AUX	MD	VerbForm=Fin	1	advcl	1:advcl:if	CxnElt=1:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 9	,	,	PUNCT	,	_	13	punct	13:punct	_
 10	as	as	ADP	IN	_	13	case	13:case	_
 11	one	one	NUM	CD	NumForm=Word|NumType=Card	13	nummod	13:nummod	_
@@ -357,9 +357,9 @@
 # sent_id = newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0014
 # text = There is no escape from the collective ocean we all swim in.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	no	no	DET	DT	PronType=Neg	4	det	4:det	_
-4	escape	escape	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+4	escape	escape	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 5	from	from	ADP	IN	_	8	case	8:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	collective	collective	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
@@ -442,10 +442,10 @@
 
 # sent_id = newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0018
 # text = What are you doing to the least of the people?
-1	What	what	PRON	WP	PronType=Int	4	obj	4:obj	_
+1	What	what	PRON	WP	PronType=Int	4	obj	4:obj	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+4	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	least	least	ADJ	JJS	Degree=Sup	4	obl	4:obl:to	_
@@ -463,11 +463,11 @@
 4	all	all	ADV	RB	_	7	advmod	7:advmod	_
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	7:det	_
-7	thing	thing	NOUN	NN	Number=Sing	10	advcl	10:advcl:in	_
+7	thing	thing	NOUN	NN	Number=Sing	10	advcl	10:advcl:in	CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 8	together	together	ADV	RB	_	7	advmod	7:advmod	SpaceAfter=No
 9	,	,	PUNCT	,	_	7	punct	7:punct	_
 10-11	let's	_	_	_	_	_	_	_	_
-10	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+10	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 11	's	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	10	obj	10:obj|12:nsubj:xsubj	_
 12	play	play	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	nice	nice	ADV	RB	_	12	advmod	12:advmod	SpaceAfter=No
@@ -574,7 +574,7 @@
 # text = Will we choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard?
 1	Will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj|12:nsubj:xsubj	_
-3	choose	choose	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	choose	choose	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	live	live	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	in	in	ADP	IN	_	7	case	7:case	_
@@ -599,7 +599,7 @@
 # text = Will we choose to rise about prejudice and intolerance or go down kicking and screaming with holding on to fear and anger?
 1	Will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj|11:nsubj:xsubj	_
-3	choose	choose	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	choose	choose	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	rise	rise	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	about	about	ADP	IN	_	7	case	7:case	_
@@ -624,9 +624,9 @@
 # sent_id = newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0026
 # text = There is no health without peace and no peace without health.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	no	no	DET	DT	PronType=Neg	4	det	4:det	_
-4	health	health	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+4	health	health	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 5	without	without	ADP	IN	_	6	case	6:case	_
 6	peace	peace	NOUN	NN	Number=Sing	4	nmod	4:nmod:without	_
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_

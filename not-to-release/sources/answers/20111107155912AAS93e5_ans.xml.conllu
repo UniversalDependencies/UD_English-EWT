@@ -30,20 +30,20 @@
 2	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-5	which	which	PRON	WDT	PronType=Int	7	obj	7:obj	ManuallyChecked=PronType
+5	which	which	PRON	WDT	PronType=Int	7	obj	7:obj	CxnElt=7:Interrogative-WHInfo-Indirect.WHWord|ManuallyChecked=PronType
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|10:nsubj	_
-7	liked	like	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	4	ccomp	4:ccomp	_
+7	liked	like	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	4	ccomp	4:ccomp	Cxn=Interrogative-WHInfo-Indirect,Interrogative-WHInfo-Indirect#2|CxnElt=7:Interrogative-WHInfo-Indirect.Clause,7:Interrogative-WHInfo-Indirect#2.Clause
 8	better	well	ADV	RBR	Degree=Cmp	7	advmod	7:advmod	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	WHY	why	ADV	WRB	PronType=Int	7	conj	4:ccomp|7:conj:and	SpaceAfter=No
+10	WHY	why	ADV	WRB	PronType=Int	7	conj	4:ccomp|7:conj:and	CxnElt=7:Interrogative-WHInfo-Indirect#2.WHWord|SpaceAfter=No
 11	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0004
 # text = include which one had:
 1	include	include	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-2	which	which	DET	WDT	PronType=Int	3	det	3:det	ManuallyChecked=PronType
+2	which	which	DET	WDT	PronType=Int	3	det	3:det	CxnElt=4:Interrogative-WHInfo-Indirect.WHWord|ManuallyChecked=PronType
 3	one	one	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	ccomp	1:ccomp	SpaceAfter=No
+4	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	ccomp	1:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=4:Interrogative-WHInfo-Indirect.Clause|SpaceAfter=No
 5	:	:	PUNCT	:	_	1	punct	1:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0005
@@ -122,11 +122,11 @@
 
 # sent_id = answers-20111107155912AAS93e5_ans-0012
 # text = Are there any major differences between them?
-1	Are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Direct|CxnElt=1:Interrogative-Polar-Direct.Clause
 2	there	there	PRON	EX	_	1	expl	1:expl	_
 3	any	any	DET	DT	PronType=Ind	5	det	5:det	_
 4	major	major	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	differences	difference	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	_
+5	differences	difference	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	CxnElt=1:Existential-CopPred-ThereExpl.Pivot
 6	between	between	ADP	IN	_	7	case	7:case	_
 7	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	5	nmod	5:nmod:between	SpaceAfter=No
 8	?	?	PUNCT	.	_	1	punct	1:punct	_
@@ -285,9 +285,9 @@
 2	Each	each	DET	DT	PronType=Tot	3	det	3:det	_
 3	night	night	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	TemporalNPAdjunct=Yes
 4	there	there	PRON	EX	_	5	expl	5:expl	_
-5	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	appos	1:appos	_
+5	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	appos	1:appos	Cxn=Existential-CopPred-ThereExpl
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
-7	variety	variety	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+7	variety	variety	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	CxnElt=5:Existential-CopPred-ThereExpl.Pivot
 8	of	of	ADP	IN	_	9	case	9:case	_
 9	shows	show	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	SpaceAfter=No
 10	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -347,7 +347,7 @@
 # text = If you love seeing the shows, Royal Caribbean was better for the main shows and Carnival was slightly better for the comedians.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|4:nsubj:xsubj	_
-3	love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:if	_
+3	love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:if	CxnElt=11:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	seeing	see	VERB	VBG	VerbForm=Ger	3	xcomp	3:xcomp	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	shows	show	NOUN	NNS	Number=Plur	4	obj	4:obj	SpaceAfter=No
@@ -355,7 +355,7 @@
 8	Royal	Royal	ADJ	NNP	Degree=Pos	9	amod	9:amod	_
 9	Caribbean	Caribbean	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	_
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
-11	better	good	ADJ	JJR	Degree=Cmp	0	root	0:root	_
+11	better	good	ADJ	JJR	Degree=Cmp	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=11:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 12	for	for	ADP	IN	_	15	case	15:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	main	main	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
@@ -542,13 +542,13 @@
 # text = If you have kids, this would be something that they would definitely enjoy.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	_
+3	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	kids	kid	NOUN	NNS	Number=Plur	3	obj	3:obj	SpaceAfter=No
 5	,	,	PUNCT	,	_	3	punct	3:punct	_
 6	this	this	PRON	DT	Number=Sing|PronType=Dem	9	nsubj	9:nsubj	_
 7	would	would	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 8	be	be	AUX	VB	VerbForm=Inf	9	cop	9:cop	_
-9	something	something	PRON	NN	Number=Sing|PronType=Ind	0	root	0:root|14:obj	_
+9	something	something	PRON	NN	Number=Sing|PronType=Ind	0	root	0:root|14:obj	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 10	that	that	PRON	WDT	PronType=Rel	14	obj	9:ref	_
 11	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
 12	would	would	AUX	MD	VerbForm=Fin	14	aux	14:aux	_

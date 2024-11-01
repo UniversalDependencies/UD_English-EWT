@@ -303,13 +303,13 @@
 7	post	post	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	ask	ask	VERB	VB	VerbForm=Inf	0	root	0:root	_
+10	ask	ask	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 11	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	10	iobj	10:iobj	_
 12	reading	read	VERB	VBG	VerbForm=Ger	11	acl	11:acl	_
 13	this	this	PRON	DT	Number=Sing|PronType=Dem	12	obj	12:obj	_
 14	if	if	SCONJ	IN	_	16	mark	16:mark	_
 15	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
-16	know	know	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl:if	_
+16	know	know	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl:if	CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 17	of	of	ADP	IN	_	19	case	19:case	_
 18	some	some	DET	DT	PronType=Ind	19	det	19:det	_
 19	way	way	NOUN	NN	Number=Sing	16	obl	16:obl:of|22:obl	_
@@ -339,17 +339,17 @@
 # text = If I love cats so much, why aren't I DOING something???
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:if	_
+3	love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	cats	cat	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 5	so	so	ADV	RB	_	6	advmod	6:advmod	_
 6	much	much	ADV	RB	_	3	advmod	3:advmod	SpaceAfter=No
 7	,	,	PUNCT	,	_	3	punct	3:punct	_
-8	why	why	ADV	WRB	PronType=Int	12	advmod	12:advmod	_
+8	why	why	ADV	WRB	PronType=Int	12	advmod	12:advmod	CxnElt=12:Interrogative-WHInfo-Direct.WHWord
 9-10	aren't	_	_	_	_	_	_	_	_
 9	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
 10	n't	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-12	DOING	do	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+12	DOING	do	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion,Interrogative-WHInfo-Direct|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis,12:Interrogative-WHInfo-Direct.Clause
 13	something	something	PRON	NN	Number=Sing|PronType=Ind	12	obj	12:obj	SpaceAfter=No
 14	???	???	PUNCT	.	_	12	punct	12:punct	_
 
@@ -371,12 +371,12 @@
 13	have	have	VERB	VB	VerbForm=Inf	6	conj	4:xcomp|6:conj:and	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
 15	explain	explain	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
-16	why	why	ADV	WRB	PronType=Int	20	advmod	20:advmod	_
+16	why	why	ADV	WRB	PronType=Int	20	advmod	20:advmod	CxnElt=20:Interrogative-WHInfo-Indirect.WHWord
 17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
 18-19	didn't	_	_	_	_	_	_	_	_
 18	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	20	aux	20:aux	_
 19	n't	not	PART	RB	Polarity=Neg	20	advmod	20:advmod	_
-20	do	do	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	_
+20	do	do	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=20:Interrogative-WHInfo-Indirect.Clause
 21	anything	anything	PRON	NN	Number=Sing|PronType=Ind	20	obj	20:obj	_
 22	like	like	ADP	IN	_	23	case	23:case	_
 23	this	this	PRON	DT	Number=Sing|PronType=Dem	21	nmod	21:nmod:like	_
@@ -520,7 +520,7 @@
 3	if	if	SCONJ	IN	_	6	mark	6:mark	_
 4	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	6	nsubj	6:nsubj	_
 5	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-6	give	give	VERB	VB	VerbForm=Inf	14	advcl	14:advcl:if	_
+6	give	give	VERB	VB	VerbForm=Inf	14	advcl	14:advcl:if	CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	iobj	6:iobj	_
 8	some	some	DET	DT	PronType=Ind	9	det	9:det	_
 9	advice	advice	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
@@ -529,7 +529,7 @@
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
 12	'd	would	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
 13	sure	sure	ADV	RB	_	14	advmod	14:advmod	_
-14	appreciate	appreciate	VERB	VB	VerbForm=Inf	0	root	0:root	_
+14	appreciate	appreciate	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 15	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	obj	14:obj	SpaceAfter=No
 16	!	!	PUNCT	.	_	14	punct	14:punct	_
 
@@ -644,10 +644,10 @@
 # sent_id = newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0024
 # text = And what am I DOING about it?
 1	And	and	CCONJ	CC	_	5	cc	5:cc	_
-2	what	what	PRON	WP	PronType=Int	5	obj	5:obj	_
+2	what	what	PRON	WP	PronType=Int	5	obj	5:obj	CxnElt=5:Interrogative-WHInfo-Direct.WHWord
 3	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
-5	DOING	do	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+5	DOING	do	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=5:Interrogative-WHInfo-Direct.Clause
 6	about	about	ADP	IN	_	7	case	7:case	_
 7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obl	5:obl:about	SpaceAfter=No
 8	?	?	PUNCT	.	_	5	punct	5:punct	_
@@ -862,12 +862,12 @@
 # text = If anyone wants the complete article, email me, as it is a very good article which no meat-eater can read and not sense their own hypocrisy.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	3	nsubj	3:nsubj	_
-3	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:if	_
+3	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:if	CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	complete	complete	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	article	article	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
 7	,	,	PUNCT	,	_	3	punct	3:punct	_
-8	email	email	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+8	email	email	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 9	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	iobj	8:iobj	SpaceAfter=No
 10	,	,	PUNCT	,	_	17	punct	17:punct	_
 11	as	as	SCONJ	IN	_	17	mark	17:mark	_
@@ -972,8 +972,8 @@
 
 # sent_id = newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0038
 # text = What justifies this extraordinary mistreatment?
-1	What	what	PRON	WP	PronType=Int	2	nsubj	2:nsubj	_
-2	justifies	justify	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	What	what	PRON	WP	PronType=Int	2	nsubj	2:nsubj	CxnElt=2:Interrogative-WHInfo-Direct.WHWord
+2	justifies	justify	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=2:Interrogative-WHInfo-Direct.Clause
 3	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
 4	extraordinary	extraordinary	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	mistreatment	mistreatment	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
@@ -1135,7 +1135,7 @@
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	4	nsubj	4:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
-4	interested	interested	ADJ	JJ	Degree=Pos	26	advcl	26:advcl:if	_
+4	interested	interested	ADJ	JJ	Degree=Pos	26	advcl	26:advcl:if	CxnElt=26:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 5	in	in	SCONJ	IN	_	6	mark	6:mark	_
 6	listening	listen	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl:in	_
 7	to	to	ADP	IN	_	9	case	9:case	_
@@ -1158,7 +1158,7 @@
 24-25	I'd	_	_	_	_	_	_	_	_
 24	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	26	nsubj	26:nsubj	_
 25	'd	would	AUX	MD	VerbForm=Fin	26	aux	26:aux	_
-26	appreciate	appreciate	VERB	VB	VerbForm=Inf	0	root	0:root	_
+26	appreciate	appreciate	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=26:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 27	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	26	obj	26:obj	SpaceAfter=No
 28	.	.	PUNCT	.	_	26	punct	26:punct	_
 
@@ -1170,7 +1170,7 @@
 4	hope	hope	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	no	no	DET	DT	PronType=Neg	6	det	6:det	_
 6	one	one	PRON	NN	Number=Sing|PronType=Neg	7	nsubj	7:nsubj	_
-7	feels	feel	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
+7	feels	feel	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 8	any	any	DET	DT	PronType=Ind	9	det	9:det	_
 9	obligation	obligation	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
@@ -1179,7 +1179,7 @@
 13	especially	especially	ADV	RB	_	16	advmod	16:advmod	_
 14	if	if	SCONJ	IN	_	16	mark	16:mark	_
 15	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	16	nsubj	16:nsubj	_
-16	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	_
+16	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 17	an	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
 18	internet	internet	NOUN	NN	Number=Sing	19	compound	19:compound	_
 19	connection	connection	NOUN	NN	Number=Sing	16	obj	16:obj	_
@@ -1207,10 +1207,10 @@
 # text = Although there are no human vocals/lyrics, I think it's subject matter is audible.
 1	Although	although	SCONJ	IN	_	3	mark	3:mark	_
 2	there	there	PRON	EX	_	3	expl	3:expl	_
-3	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:although	_
+3	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:although	Cxn=Existential-CopPred-ThereExpl
 4	no	no	DET	DT	PronType=Neg	6	det	6:det	_
 5	human	human	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	vocals	vocal	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	SpaceAfter=No
+6	vocals	vocal	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 7	/	/	SYM	SYM	_	8	cc	8:cc	SpaceAfter=No
 8	lyrics	lyric	NOUN	NNS	Number=Plur	6	conj	3:nsubj|6:conj:slash	SpaceAfter=No
 9	,	,	PUNCT	,	_	3	punct	3:punct	_
@@ -1229,7 +1229,7 @@
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	if	if	SCONJ	IN	_	5	mark	5:mark	_
 4	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	5	nsubj	5:nsubj|7:nsubj:xsubj	_
-5	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:if	_
+5	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:if	CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	read	read	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
 8-9	Rachels'	_	_	_	_	_	_	_	_
@@ -1238,7 +1238,7 @@
 10	entire	entire	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	article	article	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
 12	,	,	PUNCT	,	_	5	punct	5:punct	_
-13	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+13	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 14	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	13	obj	13:obj|15:nsubj:xsubj	_
 15	know	know	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	SpaceAfter=No
 16	.	.	PUNCT	.	_	13	punct	13:punct	_

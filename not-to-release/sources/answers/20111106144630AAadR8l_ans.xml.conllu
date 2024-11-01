@@ -70,9 +70,9 @@
 # text = 1) what thes difference between a modern m16 and Vietnam m16?
 1	1	1	NUM	LS	NumForm=Digit|NumType=Card	5	discourse	5:discourse	SpaceAfter=No
 2	)	)	PUNCT	-RRB-	_	1	punct	1:punct	_
-3	what	what	PRON	WP	PronType=Int	5	nsubj	5:nsubj	_
+3	what	what	PRON	WP	PronType=Int	5	nsubj	5:nsubj	CxnElt=5:Interrogative-WHInfo-Direct.WHWord
 4	thes	the	DET	DT	Definite=Def|PronType=Art|Typo=Yes	5	det	5:det	CorrectForm=the
-5	difference	difference	NOUN	NN	Number=Sing	0	root	0:root	_
+5	difference	difference	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=5:Interrogative-WHInfo-Direct.Clause
 6	between	between	ADP	IN	_	9	case	9:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	modern	modern	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
@@ -91,7 +91,7 @@
 4	Vietnam	Vietnam	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 5	m	m	NOUN	NN	Number=Sing	6	compound	6:compound	CorrectSpaceAfter=Yes|SpaceAfter=No
 6	16's	16	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
-7	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
+7	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=7:Interrogative-Polar-Direct.Clause
 8	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 9	3	3	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	SpaceAfter=No
 10	-	-	PUNCT	HYPH	_	9	punct	9:punct	SpaceAfter=No
@@ -201,9 +201,9 @@
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
 3	result	result	NOUN	NN	Number=Sing	5	obl	5:obl:as	_
 4	there	there	PRON	EX	_	5	expl	5:expl	_
-5	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+5	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
-7	problem	problem	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+7	problem	problem	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	CxnElt=5:Existential-CopPred-ThereExpl.Pivot
 8	with	with	SCONJ	IN	_	11	mark	11:mark	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	weapon	weapon	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
@@ -274,13 +274,13 @@
 20	and	and	CCONJ	CC	_	23	cc	23:cc	_
 21	McNamara	McNamara	PROPN	NNP	Number=Sing	23	nsubj	23:nsubj	_
 22	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	cop	23:cop	_
-23	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	18	parataxis	18:parataxis	_
+23	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	18	parataxis	18:parataxis	Cxn=Conditional-UnspecifiedEpistemic-Reduced|CxnElt=23:Conditional-UnspecifiedEpistemic-Reduced.Apodosis
 24	if	if	SCONJ	IN	_	29	mark	29:mark	_
 25	not	not	PART	RB	Polarity=Neg	29	advmod	29:advmod	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	29:det	_
 27	bean	bean	NOUN	NN	Number=Sing	29	compound	29:compound	SpaceAfter=No
 28	-	-	PUNCT	HYPH	_	27	punct	27:punct	SpaceAfter=No
-29	counter	counter	NOUN	NN	Number=Sing	23	advcl	23:advcl	SpaceAfter=No
+29	counter	counter	NOUN	NN	Number=Sing	23	advcl	23:advcl	CxnElt=23:Conditional-UnspecifiedEpistemic-Reduced.Protasis|SpaceAfter=No
 30	)	)	PUNCT	-RRB-	_	23	punct	23:punct	_
 31	instead	instead	ADV	RB	ExtPos=ADP	33	case	33:case	_
 32	of	of	ADP	IN	_	31	fixed	31:fixed	_

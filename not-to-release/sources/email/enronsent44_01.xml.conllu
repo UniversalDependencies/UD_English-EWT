@@ -21,16 +21,16 @@
 10	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 11	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
 12	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	11	iobj	11:iobj	_
-13	how	how	ADV	WRB	PronType=Int	15	advmod	15:advmod	_
+13	how	how	ADV	WRB	PronType=Int	15	advmod	15:advmod	CxnElt=15:Interrogative-WHInfo-Indirect.WHWord
 14	to	to	PART	TO	_	15	mark	15:mark	_
-15	make	make	VERB	VB	VerbForm=Inf	11	ccomp	11:ccomp	_
+15	make	make	VERB	VB	VerbForm=Inf	11	ccomp	11:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=15:Interrogative-WHInfo-Indirect.Clause
 16	an	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 17	adjustment	adjustment	NOUN	NN	Number=Sing	15	obj	15:obj	_
 18	on	on	ADP	IN	_	23	case	23:case	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
-20	day	day	NOUN	NN	Number=Sing	23	compound	23:compound	_
-21	to	to	ADP	IN	_	22	case	22:case	_
-22	day	day	NOUN	NN	Number=Sing	20	nmod	20:nmod:to	_
+20	day	day	NOUN	NN	Number=Sing	23	compound	23:compound	Cxn=NPN|CxnElt=20:NPN.N1
+21	to	to	ADP	IN	_	22	case	22:case	CxnElt=20:NPN.P
+22	day	day	NOUN	NN	Number=Sing	20	nmod	20:nmod:to	CxnElt=20:NPN.N2
 23	basis	basis	NOUN	NN	Number=Sing	15	obl	15:obl:on	_
 24	in	in	ADP	IN	_	25	case	25:case	_
 25	regards	regards	NOUN	NNS	Number=Ptan	15	obl	15:obl:in	_
@@ -55,7 +55,7 @@
 44	if	if	SCONJ	IN	_	47	mark	47:mark	_
 45	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	47	nsubj:pass	47:nsubj:pass	_
 46	were	be	AUX	VBD	Mood=Sub|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	47	aux:pass	47:aux:pass	_
-47	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	55	advcl	55:advcl:if	_
+47	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	55	advcl	55:advcl:if	CxnElt=55:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 48	the	the	DET	DT	Definite=Def|PronType=Art	51	det	51:det	_
 49	month	month	NOUN	NN	Number=Sing	50	compound	50:compound	_
 50	end	end	NOUN	NN	Number=Sing	51	compound	51:compound	_
@@ -63,7 +63,7 @@
 52	would	would	AUX	MD	VerbForm=Fin	55	aux	55:aux	_
 53	still	still	ADV	RB	_	55	advmod	55:advmod	_
 54	somehow	somehow	ADV	RB	_	55	advmod	55:advmod	_
-55	work	work	VERB	VB	VerbForm=Inf	37	parataxis	37:parataxis	_
+55	work	work	VERB	VB	VerbForm=Inf	37	parataxis	37:parataxis	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=55:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 56	out	out	ADP	RP	_	55	compound:prt	55:compound:prt	_
 57	because	because	SCONJ	IN	_	61	mark	61:mark	_
 58	adjustments	adjustment	NOUN	NNS	Number=Plur	61	nsubj:pass	61:nsubj:pass	_
@@ -76,7 +76,7 @@
 # text = Does this mean that for June and for a certain portion of July we should not do anything and just make adjustments on a going forward basis (and assume everything will work out at month end)?
 1	Does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	3:nsubj	_
-3	mean	mean	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	mean	mean	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	that	that	SCONJ	IN	_	17	mark	17:mark	_
 5	for	for	ADP	IN	_	6	case	6:case	_
 6	June	June	PROPN	NNP	Number=Sing	17	obl	17:obl:for	_
@@ -120,10 +120,10 @@
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	case	case	NOUN	NN	Number=Sing	8	advcl	8:advcl:if	_
+5	case	case	NOUN	NN	Number=Sing	8	advcl	8:advcl:if	CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 7	would	would	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	like	like	VERB	VB	VerbForm=Inf	0	root	0:root	_
+8	like	like	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 9	someone	someone	PRON	NN	Number=Sing|PronType=Ind	8	obj	8:obj|11:nsubj:xsubj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	walk	walk	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
@@ -137,15 +137,15 @@
 19	numbers	number	NOUN	NNS	Number=Plur	22	nsubj	22:nsubj	_
 20	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	22	aux	22:aux	_
 21	really	really	ADV	RB	_	22	advmod	22:advmod	_
-22	work	work	VERB	VB	VerbForm=Inf	16	ccomp	16:ccomp	_
+22	work	work	VERB	VB	VerbForm=Inf	16	ccomp	16:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=22:Interrogative-Polar-Indirect.Clause
 23	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs|Reflex=Yes	22	obj	22:obj	_
 24	out	out	ADP	RP	_	22	compound:prt	22:compound:prt	_
 25	as	as	SCONJ	IN	_	27	mark	27:mark	_
 26	there	there	PRON	EX	_	27	expl	27:expl	_
-27	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	advcl	8:advcl:as	_
+27	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	advcl	8:advcl:as	Cxn=Existential-CopPred-ThereExpl
 28	a	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
 29	large	large	ADJ	JJ	Degree=Pos	30	amod	30:amod	_
-30	swing	swing	NOUN	NN	Number=Sing	27	nsubj	27:nsubj|40:nsubj:pass	_
+30	swing	swing	NOUN	NN	Number=Sing	27	nsubj	27:nsubj|40:nsubj:pass	CxnElt=27:Existential-CopPred-ThereExpl.Pivot
 31	in	in	ADP	IN	_	33	case	33:case	_
 32	second	second	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	33	amod	33:amod	_
 33	order	order	NOUN	NN	Number=Sing	30	nmod	30:nmod:in	_
@@ -170,7 +170,7 @@
 6	of	of	ADP	IN	_	7	case	7:case	_
 7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	nmod	5:nmod:of	_
 8	could	could	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	help	help	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+9	help	help	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=9:Interrogative-Polar-Indirect.Clause
 10	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	9	obj	9:obj|11:nsubj:xsubj	_
 11	do	do	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 12	this	this	PRON	DT	Number=Sing|PronType=Dem	11	obj	11:obj	SpaceAfter=No
@@ -207,9 +207,9 @@
 # sent_id = email-enronsent44_01-0008
 # text = There was a change made in the coding for the delta position and this has somehow messed up the liq value.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	change	change	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+4	change	change	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 5	made	make	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	acl	4:acl	_
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
@@ -265,12 +265,12 @@
 3	that	that	SCONJ	IN	_	6	mark	6:mark	_
 4	there	there	PRON	EX	_	6	expl	6:expl	_
 5	might	might	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-6	be	be	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
+6	be	be	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	Cxn=Existential-CopPred-ThereExpl
 7	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 8	sign	sign	NOUN	NN	Number=Sing	10	compound	10:compound	SpaceAfter=No
 9	-	-	PUNCT	HYPH	_	8	punct	8:punct	SpaceAfter=No
 10	flipping	flip	VERB	VBG	VerbForm=Ger	11	amod	11:amod	_
-11	problem	problem	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|16:nsubj	_
+11	problem	problem	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|16:nsubj	CxnElt=6:Existential-CopPred-ThereExpl.Pivot
 12	for	for	ADP	IN	_	13	case	13:case	_
 13	PUTS	put	NOUN	NNS	Number=Plur	11	nmod	11:nmod:for	_
 14	that	that	PRON	WDT	PronType=Rel	16	nsubj	11:ref	_
@@ -414,7 +414,7 @@
 12	month	month	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	_
 13	be	be	AUX	VB	VerbForm=Inf	15	cop	15:cop	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
-15	negative	negative	NOUN	NN	Number=Sing	0	root	0:root	_
+15	negative	negative	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=15:Interrogative-Polar-Direct.Clause
 16	(	(	PUNCT	-LRB-	_	17	punct	17:punct	SpaceAfter=No
 17	representing	represent	VERB	VBG	VerbForm=Ger	15	acl	15:acl	_
 18	positive	positive	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
@@ -514,16 +514,16 @@
 10	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 11	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
 12	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	11	iobj	11:iobj	_
-13	how	how	ADV	WRB	PronType=Int	15	advmod	15:advmod	_
+13	how	how	ADV	WRB	PronType=Int	15	advmod	15:advmod	CxnElt=15:Interrogative-WHInfo-Indirect.WHWord
 14	to	to	PART	TO	_	15	mark	15:mark	_
-15	make	make	VERB	VB	VerbForm=Inf	11	ccomp	11:ccomp	_
+15	make	make	VERB	VB	VerbForm=Inf	11	ccomp	11:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=15:Interrogative-WHInfo-Indirect.Clause
 16	an	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 17	adjustment	adjustment	NOUN	NN	Number=Sing	15	obj	15:obj	_
 18	on	on	ADP	IN	_	23	case	23:case	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
-20	day	day	NOUN	NN	Number=Sing	23	compound	23:compound	_
-21	to	to	ADP	IN	_	22	case	22:case	_
-22	day	day	NOUN	NN	Number=Sing	20	nmod	20:nmod:to	_
+20	day	day	NOUN	NN	Number=Sing	23	compound	23:compound	Cxn=NPN|CxnElt=20:NPN.N1
+21	to	to	ADP	IN	_	22	case	22:case	CxnElt=20:NPN.P
+22	day	day	NOUN	NN	Number=Sing	20	nmod	20:nmod:to	CxnElt=20:NPN.N2
 23	basis	basis	NOUN	NN	Number=Sing	15	obl	15:obl:on	_
 24	in	in	ADP	IN	_	25	case	25:case	_
 25	regards	regards	NOUN	NNS	Number=Ptan	15	obl	15:obl:in	_
@@ -548,7 +548,7 @@
 44	if	if	SCONJ	IN	_	47	mark	47:mark	_
 45	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	47	nsubj:pass	47:nsubj:pass	_
 46	were	be	AUX	VBD	Mood=Sub|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	47	aux:pass	47:aux:pass	_
-47	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	55	advcl	55:advcl:if	_
+47	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	55	advcl	55:advcl:if	CxnElt=55:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 48	the	the	DET	DT	Definite=Def|PronType=Art	51	det	51:det	_
 49	month	month	NOUN	NN	Number=Sing	50	compound	50:compound	_
 50	end	end	NOUN	NN	Number=Sing	51	compound	51:compound	_
@@ -556,7 +556,7 @@
 52	would	would	AUX	MD	VerbForm=Fin	55	aux	55:aux	_
 53	still	still	ADV	RB	_	55	advmod	55:advmod	_
 54	somehow	somehow	ADV	RB	_	55	advmod	55:advmod	_
-55	work	work	VERB	VB	VerbForm=Inf	37	parataxis	37:parataxis	_
+55	work	work	VERB	VB	VerbForm=Inf	37	parataxis	37:parataxis	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=55:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 56	out	out	ADP	RP	_	55	compound:prt	55:compound:prt	_
 57	because	because	SCONJ	IN	_	61	mark	61:mark	_
 58	adjustments	adjustment	NOUN	NNS	Number=Plur	61	nsubj:pass	61:nsubj:pass	_
@@ -569,7 +569,7 @@
 # text = Does this mean that for June and for a certain portion of July we should not do anything and just make adjustments on a going forward basis (and assume everything will work out at month end)?
 1	Does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	3:nsubj	_
-3	mean	mean	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	mean	mean	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	that	that	SCONJ	IN	_	17	mark	17:mark	_
 5	for	for	ADP	IN	_	6	case	6:case	_
 6	June	June	PROPN	NNP	Number=Sing	17	obl	17:obl:for	_
@@ -613,10 +613,10 @@
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	case	case	NOUN	NN	Number=Sing	8	advcl	8:advcl:if	_
+5	case	case	NOUN	NN	Number=Sing	8	advcl	8:advcl:if	CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 7	would	would	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	like	like	VERB	VB	VerbForm=Inf	0	root	0:root	_
+8	like	like	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 9	someone	someone	PRON	NN	Number=Sing|PronType=Ind	8	obj	8:obj|11:nsubj:xsubj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	walk	walk	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
@@ -630,15 +630,15 @@
 19	numbers	number	NOUN	NNS	Number=Plur	22	nsubj	22:nsubj	_
 20	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	22	aux	22:aux	_
 21	really	really	ADV	RB	_	22	advmod	22:advmod	_
-22	work	work	VERB	VB	VerbForm=Inf	16	ccomp	16:ccomp	_
+22	work	work	VERB	VB	VerbForm=Inf	16	ccomp	16:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=22:Interrogative-Polar-Indirect.Clause
 23	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs|Reflex=Yes	22	obj	22:obj	_
 24	out	out	ADP	RP	_	22	compound:prt	22:compound:prt	_
 25	as	as	SCONJ	IN	_	27	mark	27:mark	_
 26	there	there	PRON	EX	_	27	expl	27:expl	_
-27	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	advcl	8:advcl:as	_
+27	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	advcl	8:advcl:as	Cxn=Existential-CopPred-ThereExpl
 28	a	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
 29	large	large	ADJ	JJ	Degree=Pos	30	amod	30:amod	_
-30	swing	swing	NOUN	NN	Number=Sing	27	nsubj	27:nsubj|40:nsubj:pass	_
+30	swing	swing	NOUN	NN	Number=Sing	27	nsubj	27:nsubj|40:nsubj:pass	CxnElt=27:Existential-CopPred-ThereExpl.Pivot
 31	in	in	ADP	IN	_	33	case	33:case	_
 32	second	second	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	33	amod	33:amod	_
 33	order	order	NOUN	NN	Number=Sing	30	nmod	30:nmod:in	_
@@ -663,7 +663,7 @@
 6	of	of	ADP	IN	_	7	case	7:case	_
 7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	nmod	5:nmod:of	_
 8	could	could	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	help	help	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+9	help	help	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=9:Interrogative-Polar-Indirect.Clause
 10	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	9	obj	9:obj|11:nsubj:xsubj	_
 11	do	do	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 12	this	this	PRON	DT	Number=Sing|PronType=Dem	11	obj	11:obj	SpaceAfter=No
@@ -700,9 +700,9 @@
 # sent_id = email-enronsent44_01-0031
 # text = There was a change made in the coding for the delta position and this has somehow messed up the liq value.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	change	change	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+4	change	change	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 5	made	make	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	acl	4:acl	_
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
@@ -758,12 +758,12 @@
 3	that	that	SCONJ	IN	_	6	mark	6:mark	_
 4	there	there	PRON	EX	_	6	expl	6:expl	_
 5	might	might	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-6	be	be	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
+6	be	be	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	Cxn=Existential-CopPred-ThereExpl
 7	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 8	sign	sign	NOUN	NN	Number=Sing	10	compound	10:compound	SpaceAfter=No
 9	-	-	PUNCT	HYPH	_	8	punct	8:punct	SpaceAfter=No
 10	flipping	flip	VERB	VBG	VerbForm=Ger	11	amod	11:amod	_
-11	problem	problem	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|16:nsubj	_
+11	problem	problem	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|16:nsubj	CxnElt=6:Existential-CopPred-ThereExpl.Pivot
 12	for	for	ADP	IN	_	13	case	13:case	_
 13	PUTS	put	NOUN	NNS	Number=Plur	11	nmod	11:nmod:for	_
 14	that	that	PRON	WDT	PronType=Rel	16	nsubj	11:ref	_
@@ -907,7 +907,7 @@
 12	month	month	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	_
 13	be	be	AUX	VB	VerbForm=Inf	15	cop	15:cop	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
-15	negative	negative	NOUN	NN	Number=Sing	0	root	0:root	_
+15	negative	negative	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=15:Interrogative-Polar-Direct.Clause
 16	(	(	PUNCT	-LRB-	_	17	punct	17:punct	SpaceAfter=No
 17	representing	represent	VERB	VBG	VerbForm=Ger	15	acl	15:acl	_
 18	positive	positive	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
@@ -1040,8 +1040,8 @@
 18	help	help	VERB	VB	VerbForm=Inf	14	ccomp	14:ccomp	_
 19	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	18	obj	18:obj|20:nsubj:xsubj	_
 20	define	define	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
-21	what	what	PRON	WP	PronType=Int	22	nsubj	22:nsubj	_
-22	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	ccomp	20:ccomp	_
+21	what	what	PRON	WP	PronType=Int	22	nsubj	22:nsubj	CxnElt=22:Interrogative-WHInfo-Indirect.WHWord
+22	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	ccomp	20:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=22:Interrogative-WHInfo-Indirect.Clause
 23	best	well	ADV	RBS	Degree=Sup	22	advmod	22:advmod	_
 24	and	and	CCONJ	CC	_	28	cc	28:cc	_
 25	what	what	PRON	WP	PronType=Int	28	nsubj:pass	28:nsubj:pass	_
@@ -1085,14 +1085,14 @@
 3	if	if	SCONJ	IN	_	6	mark	6:mark	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
 5	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-6	wait	wait	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:if	_
+6	wait	wait	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:if	CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 7	til	till	ADP	IN	Typo=Yes	9	case	9:case	CorrectForm=till
 8	2:00	2:00	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	SpaceAfter=No
 9	pm	p.m.	NOUN	NN	Number=Sing	6	obl	6:obl:till	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	eat	eat	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:to	SpaceAfter=No
 12	,	,	PUNCT	,	_	6	punct	6:punct	_
-13	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+13	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 14	ahead	ahead	ADV	RB	_	13	advmod	13:advmod	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
 16	grab	grab	VERB	VB	Mood=Imp|VerbForm=Fin	13	conj	13:conj:and	_
@@ -1536,7 +1536,7 @@
 12	,	,	PUNCT	,	_	2	punct	2:punct	_
 13	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
 14	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	15	nsubj	15:nsubj|17:nsubj:xsubj	_
-15	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+15	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=15:Interrogative-Polar-Direct.Clause
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	propose	propose	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_
 18	an	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_

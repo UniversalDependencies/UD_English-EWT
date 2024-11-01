@@ -8,7 +8,7 @@
 4	Hotel	hotel	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 5	could	could	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj|9:nsubj:xsubj	_
-7	expect	expect	VERB	VB	VerbForm=Inf	0	root	0:root	_
+7	expect	expect	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=7:Interrogative-Polar-Direct.Clause
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	find	find	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
 10	in	in	ADP	IN	_	12	case	12:case	_
@@ -55,13 +55,13 @@
 18	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
 19	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
 20	wandering	wonder	VERB	VBG	Tense=Pres|Typo=Yes|VerbForm=Part	3	conj	3:conj:and	CorrectForm=wondering
-21	what	what	DET	WDT	PronType=Int	22	det	22:det	_
+21	what	what	DET	WDT	PronType=Int	22	det	22:det	CxnElt=27:Interrogative-WHInfo-Indirect.WHWord
 22	standard	standard	NOUN	NN	Number=Sing	27	obj	27:obj	_
 23	of	of	ADP	IN	_	24	case	24:case	_
 24	accommodation	accommodation	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	_
 25	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	27	nsubj	27:nsubj	_
 26	could	could	AUX	MD	VerbForm=Fin	27	aux	27:aux	_
-27	get	get	VERB	VB	VerbForm=Inf	20	ccomp	20:ccomp	_
+27	get	get	VERB	VB	VerbForm=Inf	20	ccomp	20:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=27:Interrogative-WHInfo-Indirect.Clause
 28	for	for	ADP	IN	_	29	case	29:case	_
 29	Rs	Rs	SYM	$	_	27	obl	27:obl:for	_
 30	500	500	NUM	CD	NumForm=Digit|NumType=Card	29	nummod	29:nummod	_
@@ -75,8 +75,8 @@
 # text = There would be four of us so we would probably be looking at 2 twin rooms for Rs1000, close to the centre of these cities.
 1	There	there	PRON	EX	_	3	expl	3:expl	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	_
-4	four	four	NUM	CD	NumForm=Word|NumType=Card	3	nsubj	3:nsubj	_
+3	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+4	four	four	NUM	CD	NumForm=Word|NumType=Card	3	nsubj	3:nsubj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot
 5	of	of	ADP	IN	_	6	case	6:case	_
 6	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	4	nmod	4:nmod:of	_
 7	so	so	ADV	RB	_	12	advmod	12:advmod	_
@@ -349,7 +349,7 @@
 4	travelling	travel	VERB	VBG	Tense=Pres|VerbForm=Part	5	advcl	5:advcl:while	_
 5	ask	ask	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 6	people	people	NOUN	NNS	Number=Plur	5	iobj	5:iobj	_
-7	where	where	ADV	WRB	PronType=Int	5	ccomp	5:ccomp	_
+7	where	where	ADV	WRB	PronType=Int	5	ccomp	5:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=7:Interrogative-WHInfo-Indirect.Clause,7:Interrogative-WHInfo-Indirect.WHWord
 8-9	they've	_	_	_	_	_	_	_	_
 8	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 9	've	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
@@ -435,9 +435,9 @@
 # sent_id = answers-20111108064026AA86V9T_ans-0024
 # text = There were many hotels there.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	many	many	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	hotels	hotel	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
+4	hotels	hotel	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 5	there	there	ADV	RB	PronType=Dem	2	advmod	2:advmod	SpaceAfter=No
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 

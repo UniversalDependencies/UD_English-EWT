@@ -2,11 +2,11 @@
 # sent_id = answers-20090717131757AAVh6rG_ans-0001
 # newpar id = answers-20090717131757AAVh6rG_ans-p0001
 # text = Why is the city called Miramar?
-1	Why	why	ADV	WRB	PronType=Int	5	advmod	5:advmod	_
+1	Why	why	ADV	WRB	PronType=Int	5	advmod	5:advmod	CxnElt=5:Interrogative-WHInfo-Direct.WHWord
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux:pass	5:aux:pass	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	city	city	NOUN	NN	Number=Sing	5	nsubj:pass	5:nsubj:pass|6:nsubj:xsubj	_
-5	called	call	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+5	called	call	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=5:Interrogative-WHInfo-Direct.Clause
 6	Miramar	Miramar	PROPN	NNP	Number=Sing	5	xcomp	5:xcomp	SpaceAfter=No
 7	?	?	PUNCT	.	_	5	punct	5:punct	_
 
@@ -26,9 +26,9 @@
 10	name	name	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	_
 11	but	but	CCONJ	CC	_	13	cc	13:cc	_
 12	they	there	PRON	EX	Typo=Yes	13	expl	13:expl	CorrectForm=there
-13	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj:but	_
+13	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj:but	Cxn=Existential-CopPred-ThereExpl
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
-15	lot	lot	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
+15	lot	lot	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	CxnElt=13:Existential-CopPred-ThereExpl.Pivot
 16	of	of	ADP	IN	_	18	case	18:case	_
 17	different	different	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	cities	city	NOUN	NNS	Number=Plur	15	nmod	15:nmod:of	_
@@ -53,8 +53,8 @@
 # text = There's lots of towns called Miramar, it'd help alot if you listed a state or some sort of context you're looking for it in.
 1-2	There's	_	_	_	_	_	_	_	_
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	lots	lot	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
+2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+3	lots	lot	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	towns	town	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
 6	called	call	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl	5:acl	_
@@ -63,12 +63,12 @@
 9-10	it'd	_	_	_	_	_	_	_	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 10	'd	would	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
-11	help	help	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
+11	help	help	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=11:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	CorrectSpaceAfter=Yes|SpaceAfter=No
 13	lot	lot	NOUN	NN	Number=Sing	11	obl:unmarked	11:obl:unmarked	_
 14	if	if	SCONJ	IN	_	16	mark	16:mark	_
 15	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	16	nsubj	16:nsubj	_
-16	listed	list	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:if	_
+16	listed	list	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:if	CxnElt=11:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 18	state	state	NOUN	NN	Number=Sing	16	obj	16:obj	_
 19	or	or	CCONJ	CC	_	21	cc	21:cc	_
@@ -98,9 +98,9 @@
 # text = There's a Miramar in Florida, just north of Miami.
 1-2	There's	_	_	_	_	_	_	_	_
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	Miramar	Miramar	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
+4	Miramar	Miramar	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 5	in	in	ADP	IN	_	6	case	6:case	_
 6	Florida	Florida	PROPN	NNP	Number=Sing	2	obl	2:obl:in	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
@@ -114,10 +114,10 @@
 # text = There's also a Miramar in California, the site of a rather large Air Force Base...
 1-2	There's	_	_	_	_	_	_	_	_
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	also	also	ADV	RB	_	2	advmod	2:advmod	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-5	Miramar	Miramar	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
+5	Miramar	Miramar	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 6	in	in	ADP	IN	_	7	case	7:case	_
 7	California	California	PROPN	NNP	Number=Sing	5	nmod	5:nmod:in	SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_

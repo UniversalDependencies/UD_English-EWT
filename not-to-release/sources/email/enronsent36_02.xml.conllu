@@ -13,10 +13,10 @@
 
 # sent_id = email-enronsent36_02-0003
 # text = what do you think?
-1	what	what	PRON	WP	PronType=Int	4	obj	4:obj	_
+1	what	what	PRON	WP	PronType=Int	4	obj	4:obj	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	think	think	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+4	think	think	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause|SpaceAfter=No
 5	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent36_02-0004
@@ -44,10 +44,10 @@
 # sent_id = email-enronsent36_02-0006
 # text = If possible, I think the cleanest way to run this biz would be to put a box around the prime broker biz.
 1	If	if	SCONJ	IN	_	2	mark	2:mark	_
-2	possible	possible	ADJ	JJ	Degree=Pos	5	advcl	5:advcl:if	SpaceAfter=No
+2	possible	possible	ADJ	JJ	Degree=Pos	5	advcl	5:advcl:if	CxnElt=5:Conditional-UnspecifiedEpistemic-Reduced.Protasis|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
-5	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+5	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-Reduced|CxnElt=5:Conditional-UnspecifiedEpistemic-Reduced.Apodosis
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	cleanest	clean	ADJ	JJS	Degree=Sup	8	amod	8:amod	_
 8	way	way	NOUN	NN	Number=Sing	16	nsubj:outer	16:nsubj:outer	_
@@ -148,7 +148,7 @@
 3	know	know	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
 4	if	if	SCONJ	IN	_	6	mark	6:mark	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
-6	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
+6	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=6:Interrogative-Polar-Indirect.Clause
 7	this	this	PRON	DT	Number=Sing|PronType=Dem	9	nsubj	9:nsubj|11:nsubj	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 9	reasonable	reasonable	ADJ	JJ	Degree=Pos	6	ccomp	6:ccomp	_
@@ -217,12 +217,12 @@
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	find	find	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	out	out	ADP	RP	_	5	compound:prt	5:compound:prt	_
-7	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
+7	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	CxnElt=12:Interrogative-WHInfo-Indirect.WHWord
 8	much	much	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	line	line	NOUN	NN	Number=Sing	12	obj	12:obj|13:nsubj:xsubj	_
 10	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 11	currently	currently	ADV	RB	_	12	advmod	12:advmod	_
-12	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	5	ccomp	5:ccomp	_
+12	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	5	ccomp	5:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=12:Interrogative-WHInfo-Indirect.Clause
 13	available	available	ADJ	JJ	Degree=Pos	12	xcomp	12:xcomp	SpaceAfter=No
 14	...	...	PUNCT	,	_	18	punct	18:punct	_
 15	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
@@ -349,7 +349,7 @@
 3	know	know	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
 4	if	if	SCONJ	IN	_	6	mark	6:mark	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	6:nsubj|8:nsubj:xsubj	_
-6	need	need	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
+6	need	need	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=6:Interrogative-Polar-Indirect.Clause
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	discuss	discuss	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 9	anything	anything	PRON	NN	Number=Sing|PronType=Ind	8	obj	8:obj	SpaceAfter=No
@@ -821,14 +821,14 @@
 
 # sent_id = email-enronsent36_02-0059
 # text = What person(s) in London prepares credit for the English and Singapore financial transactions?
-1	What	what	DET	WDT	PronType=Int	2	det	2:det	_
+1	What	what	DET	WDT	PronType=Int	2	det	2:det	CxnElt=8:Interrogative-WHInfo-Direct.WHWord
 2	person	person	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	SpaceAfter=No
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	SpaceAfter=No
 4	s	s	X	AFX	_	2	amod	2:amod	SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	_
 6	in	in	ADP	IN	_	7	case	7:case	_
 7	London	London	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	_
-8	prepares	prepare	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+8	prepares	prepare	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=8:Interrogative-WHInfo-Direct.Clause
 9	credit	credit	NOUN	NN	Number=Sing	8	obj	8:obj	_
 10	for	for	ADP	IN	_	16	case	16:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
