@@ -87,12 +87,23 @@ almost all respects, but there remain the following deviations:
 
 Highlights:
 
+  - **Merge subtypes `nmod:{npmod,tmod}` as `nmod:unmarked` and `obl:{npmod,tmod}` as `obl:unmarked`** ([docs#1028](https://github.com/UniversalDependencies/docs/issues/1028))
+     * `:unmarked` indicates a modifier that is structured as an NP without case marking
+     * Retain temporal semantics with new custom MISC feature `TemporalNPAdjunct=Yes`
+  - Many foreign names that were `compound` corrected to `flat` ([#81](https://github.com/UniversalDependencies/UD_English-EWT/issues/81))
+  - Fix a number of cases of spurious nonprojectivity ([#545](https://github.com/UniversalDependencies/UD_English-EWT/issues/545), [#548](https://github.com/UniversalDependencies/UD_English-EWT/issues/548))
   - **Construction annotations in the [UCxn](https://github.com/LeonieWeissweiler/UCxn) framework** added to MISC ([#551](https://github.com/UniversalDependencies/UD_English-EWT/pull/551))
      * This release adds rule-based annotations of Interrogatives, Conditionals, Existentials, and NPN (noun-preposition-noun) constructions on the head of the respective phrase, plus construction elements.
      * The UCxn v1 notation and categories are documented [here](https://github.com/LeonieWeissweiler/UCxn/blob/main/docs/UCxn-v1.pdf).
      * Special thanks: [@LeonieWeissweiler](https://github.com/LeonieWeissweiler), [@WesScivetti](https://github.com/WesScivetti/), [@s-herrera](https://github.com/s-herrera)
-
-(TODO)
+  - Features
+     * **Implement `ExtPos` for all fixed expressions** ([docs#1037](https://github.com/UniversalDependencies/docs/issues/1037))
+     * **Implement `Polarity=Neg` for not/PART, neither/CCONJ, nor/CCONJ, no/INTJ and `Polarity=Pos` for yes/INTJ** ([#526](https://github.com/UniversalDependencies/UD_English-EWT/issues/526), [docs#1056](https://github.com/UniversalDependencies/docs/issues/1056))
+     * **Implement `PronType` for none/PRON and ADVs "now", "never", "somewhere", "whenever", and similar**
+     * `NumForm` and `NumType` for decades expressed as pluralized years ([#527](https://github.com/UniversalDependencies/UD_English-EWT/issues/527))
+     * Correct overuses of `VerbForm=Inf` ([#284](https://github.com/UniversalDependencies/UD_English-EWT/issues/284))
+     * Improve feature consistency for `ADJ`s
+     * Add custom MISC features `FlatType=Filename` and `FlatType=Phone` (and assign these `ExtPos=PROPN`)
 
 **2024-05-15 v2.14**
 
