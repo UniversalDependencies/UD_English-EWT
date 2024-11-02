@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.14 -- 2024-05-15
+Universal Dependencies English Web Treebank v2.15 -- 2024-11-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
 
@@ -73,13 +73,13 @@ of the converter by Schuster and Manning (2016). These dependencies have **not**
 manually checked. Enhanced dependencies for *reduced* relative clauses were added in
 v2.14.
 
-# Deviations from UD
+# Known Issues
 
-Version 2.14 of the English UD treebank conforms to the UD guidelines in
-almost all respects, but there remain the following deviations:
+The issue tracker at <https://github.com/UniversalDependencies/UD_English-EWT/issues>
+documents many yet-to-be-resolved analysis challenges. Significant among these:
 
- - The UD dependency `flat` is largely only used for person names.
  - Dates are not annotated consistently.
+ - Many free relatives are incorrectly analyzed as interrogative.
 
 # Changelog
 
