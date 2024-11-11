@@ -1,13 +1,13 @@
 Running the following version of UD tools:
-commit 78ce4b21495c6e4c17a7b07925bec1267d833d14
+commit c1984d97df0ecdcc1b50fbeaa8c96419c6321432
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Sun May 5 09:21:16 2024 +0200
+Date:   Sun Nov 10 10:33:45 2024 +0100
 Evaluating the following revision of UD_English-EWT:
-commit 0608cbc7d21874bf1fd33114d35775cdf46e78c4
-Merge: f91f4cd0 b70ecaec
+commit e6b8a2bf4039b63ee29535375b7fa40068ba0bc9
+Merge: 5aefb34b 4dc8e10c
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Size: counted 254821 of 254821 words (nodes).
-Size: min(0, log((N/1000)**2)) = 11.0811226757686.
+Size: counted 254822 of 254822 words (nodes).
+Size: min(0, log((N/1000)**2)) = 11.0811305243999.
 Size: maximum value 13.815511 is for 1000000 words or more.
 Split: Found more than 10000 training words.
 Split: Found at least 10000 development words.
@@ -15,32 +15,39 @@ Split: Found at least 10000 test words.
 Lemmas: source of annotation (from README) factor is 0.5.
 Universal POS tags: 17 out of 17 found in the corpus.
 Universal POS tags: source of annotation (from README) factor is 0.9.
-Features: 171345 out of 254821 total words have one or more features.
+Features: 174752 out of 254822 total words have one or more features.
 Features: source of annotation (from README) factor is 0.9.
 Universal relations: 36 out of 37 found in the corpus.
 Universal relations: source of annotation (from README) factor is 1.
 Udapi:
-               TOTAL       4799
-Udapi: found 4799 bugs.
-Udapi: worst expected case (threshold) is one bug per 10 words. There are 254821 words.
+               TOTAL       4796
+Udapi: found 4796 bugs.
+Udapi: worst expected case (threshold) is one bug per 10 words. There are 254822 words.
 Genres: found 5 out of 17 known.
 /net/work/people/zeman/unidep/tools/validate.py --lang en --max-err=10 UD_English-EWT/en_ewt-ud-dev.conllu
+[Line 1165 Sent weblog-blogspot.com_marketview_20040611132900_ENG_20040611_132900-0001 Node 22]: [L3 Warning leaf-det] 'det' not expected to have children (22:such:det --> 47:high:advcl)
+Warnings: 1
 *** PASSED ***
 /net/work/people/zeman/unidep/tools/validate.py --lang en --max-err=10 UD_English-EWT/en_ewt-ud-test.conllu
 *** PASSED ***
 /net/work/people/zeman/unidep/tools/validate.py --lang en --max-err=10 UD_English-EWT/en_ewt-ud-train.conllu
-[Line 166706 Sent answers-20111104175256AAL21Ha_ans-0008 Node 25]: [L3 Warning fixed-gap] Gaps in fixed expression [25, 27] 'due * to'
-Warnings: 1
+[Line 12590 Sent weblog-blogspot.com_rigorousintuition_20050518101500_ENG_20050518_101500-0011 Node 13]: [L3 Warning leaf-det] 'det' not expected to have children (13:such:det --> 19:get:advcl)
+[Line 37860 Sent weblog-blogspot.com_dakbangla_20050311135387_ENG_20050311_135387-0146 Node 5]: [L3 Warning leaf-det] 'det' not expected to have children (5:some:det --> 4:least:nmod)
+[Line 111059 Sent newsgroup-groups.google.com_IdeaStockExchange_c6ea783ac3f043ba_ENG_20041120_243700-0031 Node 24]: [L3 Warning leaf-det] 'det' not expected to have children (24:such:det --> 48:price:advcl)
+[Line 112549 Sent newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0004 Node 24]: [L3 Warning leaf-det] 'det' not expected to have children (24:some:det --> 23:least:nmod)
+[Line 130568 Sent newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0032 Node 3]: [L3 Warning leaf-det] 'det' not expected to have children (3:such:det --> 30:found:advcl)
+[Line 166707 Sent answers-20111104175256AAL21Ha_ans-0008 Node 25]: [L3 Warning fixed-gap] Gaps in fixed expression [25, 27] 'due * to'
+Warnings: 6
 *** PASSED ***
 Validity: 1
 (weight=0.0769230769230769) * (score{features}=0.9) = 0.0692307692307692
 (weight=0.0769230769230769) * (score{genres}=0.294117647058824) = 0.0226244343891403
 (weight=0.0769230769230769) * (score{lemmas}=0.5) = 0.0384615384615385
-(weight=0.256410256410256) * (score{size}=0.802078405229881) = 0.205661129546123
+(weight=0.256410256410256) * (score{size}=0.802078973332758) = 0.205661275213528
 (weight=0.0512820512820513) * (score{split}=1) = 0.0512820512820513
 (weight=0.0769230769230769) * (score{tags}=0.9) = 0.0692307692307692
-(weight=0.307692307692308) * (score{udapi}=0.811671722503247) = 0.249745145385615
+(weight=0.307692307692308) * (score{udapi}=0.811790190799852) = 0.249781597169185
 (weight=0.0769230769230769) * (score{udeprels}=0.972972972972973) = 0.0748440748440748
-(TOTAL score=0.781079912370081) * (availability=1) * (validity=1) = 0.781079912370081
+(TOTAL score=0.781116509821056) * (availability=1) * (validity=1) = 0.781116509821056
 STARS = 4
-UD_English-EWT	0.781079912370081	4
+UD_English-EWT	0.781116509821056	4
