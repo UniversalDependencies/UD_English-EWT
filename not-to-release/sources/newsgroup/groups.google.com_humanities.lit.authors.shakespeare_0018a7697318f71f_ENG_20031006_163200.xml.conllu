@@ -30,7 +30,7 @@
 22	Dragon	Dragon	PROPN	NNP	Number=Sing	20	obj	20:obj	SpaceAfter=No
 23	_	_	PUNCT	NFP	_	25	punct	25:punct	_
 24	(	(	PUNCT	-LRB-	_	25	punct	25:punct	SpaceAfter=No
-25	1504	1504	NUM	CD	NumForm=Digit|NumType=Card	20	nmod:tmod	20:nmod:tmod	SpaceAfter=No
+25	1504	1504	NUM	CD	NumForm=Digit|NumType=Card	20	nmod:unmarked	20:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 26	-	-	SYM	SYM	_	27	case	27:case	SpaceAfter=No
 27	06	06	NUM	CD	NumForm=Digit|NumType=Card	25	nmod	25:nmod	SpaceAfter=No
 28	)	)	PUNCT	-RRB-	_	25	punct	25:punct	_
@@ -81,7 +81,7 @@
 6	6	6	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	648	648	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
-9	BC	bc	NOUN	NN	Number=Sing	5	nmod:tmod	5:nmod:tmod	_
+9	BC	bc	NOUN	NN	Number=Sing	5	nmod:unmarked	5:nmod:unmarked	TemporalNPAdjunct=Yes
 10	Friday	Friday	PROPN	NNP	Number=Sing	5	appos	5:appos	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0008
@@ -96,7 +96,7 @@
 7	6	6	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	610	610	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	_
-10	AD	ad	NOUN	NN	Number=Sing	6	nmod:tmod	6:nmod:tmod	_
+10	AD	ad	NOUN	NN	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	TemporalNPAdjunct=Yes
 11	Monday	Monday	PROPN	NNP	Number=Sing	6	appos	6:appos	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0009
@@ -293,9 +293,9 @@
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0023
 # text = Historian John Stow dies: April 6, 1605 Sat/Wed.
-1	Historian	historian	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	John	John	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
-3	Stow	Stow	PROPN	NNP	Number=Sing	2	flat	2:flat	_
+1	Historian	historian	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	FlatType=Embellishment
+2	John	John	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+3	Stow	Stow	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 4	dies	die	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 5	:	:	PUNCT	:	_	6	punct	6:punct	_
 6	April	April	PROPN	NNP	Number=Sing	4	appos	4:appos	_
@@ -322,7 +322,7 @@
 7	,	,	PUNCT	,	_	4	punct	4:punct	_
 8	Alexander	Alexander	PROPN	NNP	Number=Sing	12	nsubj:pass	12:nsubj:pass	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	Great	Great	PROPN	NNP	Number=Sing	8	appos	8:appos	_
+10	Great	Great	ADJ	NNP	Degree=Pos	8	appos	8:appos	_
 11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux:pass	12:aux:pass	_
 12	born	bear	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No
 13	.	.	PUNCT	.	_	12	punct	12:punct	_
@@ -348,12 +348,12 @@
 17	died	die	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	6:conj	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 19	same	same	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-20	day	day	NOUN	NN	Number=Sing	17	obl:tmod	17:obl:tmod	SpaceAfter=No
+20	day	day	NOUN	NN	Number=Sing	17	obl:unmarked	17:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 21	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0027
 # text = Neither was this day less fortunate to his father Philip; for on the same day he took Potidea; >> - JOHN AUBREY, F.R.S.
-1	Neither	neither	CCONJ	CC	_	6	cc	6:cc	_
+1	Neither	neither	ADV	RB	PronType=Neg	6	advmod	6:advmod	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	_
 3	this	this	DET	DT	Number=Sing|PronType=Dem	4	det	4:det	_
 4	day	day	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
@@ -471,7 +471,7 @@
 35	,	,	PUNCT	,	_	39	punct	39:punct	_
 36	which	which	PRON	WDT	PronType=Rel	39	nsubj	32:ref	_
 37	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	39	aux	39:aux	_
-38	not	not	PART	RB	_	39	advmod	39:advmod	_
+38	not	not	PART	RB	Polarity=Neg	39	advmod	39:advmod	_
 39	last	last	VERB	VB	VerbForm=Inf	32	acl:relcl	32:acl:relcl	Cxn=rc-wh-nsubj
 40	very	very	ADV	RB	_	41	advmod	41:advmod	_
 41	long	long	ADV	RB	Degree=Pos	39	advmod	39:advmod	SpaceAfter=No
@@ -644,7 +644,7 @@
 8	No.	no.	NOUN	NN	Abbr=Yes|Number=Sing	3	appos	3:appos	_
 9	0832	0832	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	SpaceAfter=No
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
-11	Monday	Monday	PROPN	NNP	Number=Sing	3	nmod:tmod	3:nmod:tmod	SpaceAfter=No
+11	Monday	Monday	PROPN	NNP	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
 13	23	23	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	_
 14	October	October	PROPN	NNP	Number=Sing	3	appos	3:appos	_
@@ -669,10 +669,10 @@
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	22	22	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
 6	Oct	October	PROPN	NNP	Abbr=Yes|Number=Sing	3	appos	3:appos	_
-7	1995	1995	NUM	CD	NumForm=Digit|NumType=Card	6	nmod:tmod	6:nmod:tmod	_
-8	10:57:32	10:57:32	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:tmod	1:nmod:tmod	_
+7	1995	1995	NUM	CD	NumForm=Digit|NumType=Card	6	nmod:unmarked	6:nmod:unmarked	TemporalNPAdjunct=Yes
+8	10:57:32	10:57:32	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 9	-	-	PUNCT	SYM	_	10	punct	10:punct	SpaceAfter=No
-10	0400	0400	NUM	CD	NumForm=Digit|NumType=Card	8	nmod:tmod	8:nmod:tmod	_
+10	0400	0400	NUM	CD	NumForm=Digit|NumType=Card	8	nmod:unmarked	8:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0041
 # text = Subject: Re: Facts, Purpose of List, Italy, Jews
@@ -695,9 +695,9 @@
 # text = <<There were no Jews in England to speak of in the 1590's.
 1	<<	<<	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
 2	There	there	PRON	EX	_	3	expl	3:expl	_
-3	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+3	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 4	no	no	DET	DT	PronType=Neg	5	det	5:det	_
-5	Jews	Jew	PROPN	NNPS	Number=Plur	3	nsubj	3:nsubj	_
+5	Jews	Jew	PROPN	NNPS	Number=Plur	3	nsubj	3:nsubj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot
 6	in	in	ADP	IN	_	7	case	7:case	_
 7	England	England	PROPN	NNP	Number=Sing	3	obl	3:obl:in	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
@@ -705,7 +705,7 @@
 10	of	of	ADP	IN	_	9	obl	9:obl	Promoted=Yes
 11	in	in	ADP	IN	_	13	case	13:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	1590's	1590s	NOUN	NNS	Number=Ptan	3	obl	3:obl:in	SpaceAfter=No
+13	1590's	1590s	NOUN	NNS	Number=Ptan|NumForm=Combi|NumType=Card	3	obl	3:obl:in	SpaceAfter=No
 14	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0043
@@ -774,7 +774,7 @@
 61	in	in	ADP	IN	_	64	case	64:case	_
 62	the	the	DET	DT	Definite=Def|PronType=Art	64	det	64:det	_
 63	early	early	ADJ	JJ	Degree=Pos	64	amod	64:amod	_
-64	1590's	1590s	NOUN	NNS	Number=Ptan	57	obl	57:obl:in	SpaceAfter=No
+64	1590's	1590s	NOUN	NNS	Number=Ptan|NumForm=Combi|NumType=Card	57	obl	57:obl:in	SpaceAfter=No
 65	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0044
@@ -824,7 +824,7 @@
 3	RODERIGO	Roderigo	PROPN	NNP	Number=Sing	2	flat	2:flat	_
 4	LOPEZ	Lopez	PROPN	NNP	Number=Sing	2	flat	2:flat	_
 5	(	(	PUNCT	-LRB-	_	6	punct	6:punct	SpaceAfter=No
-6	1525	1525	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:npmod	2:nmod:npmod	_
+6	1525	1525	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:unmarked	2:nmod:unmarked	_
 7	-	-	SYM	SYM	_	8	case	8:case	SpaceAfter=No
 8	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod	SpaceAfter=No
 9	)	)	PUNCT	-RRB-	_	6	punct	6:punct	_
@@ -848,7 +848,7 @@
 # text = The 69 year old Dr. Lopez was found guilty and was summarily hung and quartered on June 7, 1594 at Tyburn.
 1	The	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 2	69	69	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	year	year	NOUN	NN	Number=Sing	4	obl:npmod	4:obl:npmod	_
+3	year	year	NOUN	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	_
 4	old	old	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	Dr.	Dr.	PROPN	NNP	Number=Sing	8	nsubj:pass	8:nsubj:pass|9:nsubj:xsubj|13:nsubj:pass	_
 6	Lopez	Lopez	PROPN	NNP	Number=Sing	5	flat	5:flat	_
@@ -875,7 +875,7 @@
 1	Long	long	ADV	RB	Degree=Pos	2	advmod	2:advmod	_
 2	before	before	ADV	RB	_	14	advmod	14:advmod	_
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	SpaceAfter=No
-4	September	September	PROPN	NNP	Number=Sing	14	obl:tmod	14:obl:tmod	_
+4	September	September	PROPN	NNP	Number=Sing	14	obl:unmarked	14:obl:unmarked	TemporalNPAdjunct=Yes
 5	1560	1560	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	SpaceAfter=No
 6	)	)	PUNCT	-RRB-	_	4	punct	4:punct	_
 7	Dr.	Dr.	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
@@ -922,7 +922,7 @@
 # text = That same year (1560) a Spanish priest named RUY LOPEZ handily beat all comers at a chess tournament in Rome.
 1	That	that	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	_
 2	same	same	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	year	year	NOUN	NN	Number=Sing	14	obl:tmod	14:obl:tmod	_
+3	year	year	NOUN	NN	Number=Sing	14	obl:unmarked	14:obl:unmarked	TemporalNPAdjunct=Yes
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	SpaceAfter=No
 5	1560	1560	NUM	CD	NumForm=Digit|NumType=Card	3	appos	3:appos	SpaceAfter=No
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	_
@@ -988,7 +988,7 @@
 # text = Chess history 1530-1647
 1	Chess	chess	NOUN	NN	Number=Sing	2	compound	2:compound	_
 2	history	history	NOUN	NN	Number=Sing	0	root	0:root	_
-3	1530	1530	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	SpaceAfter=No
+3	1530	1530	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:unmarked	2:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 4	-	-	SYM	SYM	_	5	case	5:case	SpaceAfter=No
 5	1647	1647	NUM	CD	NumForm=Digit|NumType=Card	3	nmod	3:nmod	_
 
@@ -1061,9 +1061,9 @@
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	Don	Don	PROPN	NNP	Number=Sing	2	flat	2:flat	_
 5	Antonio	Antonio	PROPN	NNP	Number=Sing	2	flat	2:flat	_
-6	de	de	PROPN	NNP	Number=Sing	2	compound	2:compound	SpaceAfter=No
+6	de	de	PROPN	NNP	Number=Sing	2	flat	2:flat	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	Bishop	Bishop	PROPN	NNP	Number=Sing	6	appos	6:appos	_
+8	Bishop	Bishop	PROPN	NNP	Number=Sing	2	appos	2:appos	_
 9	of	of	ADP	IN	_	10	case	10:case	_
 10	Nicaragua	Nicaragua	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of	SpaceAfter=No
 11	,	,	PUNCT	,	_	2	punct	2:punct	_
@@ -1165,7 +1165,7 @@
 1	(	(	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
 2	Alcala	Alcala	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
-4	1561	1561	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	SpaceAfter=No
+4	1561	1561	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:unmarked	2:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0067
@@ -1222,7 +1222,7 @@
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0071
 # text = 1574 Boi and Leonardo beat Lopez & Ceron in presence of Phillip II.
-1	1574	1574	NUM	CD	NumForm=Digit|NumType=Card	5	obl:tmod	5:obl:tmod	_
+1	1574	1574	NUM	CD	NumForm=Digit|NumType=Card	5	obl:unmarked	5:obl:unmarked	TemporalNPAdjunct=Yes
 2	Boi	Boi	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
 4	Leonardo	Leonardo	PROPN	NNP	Number=Sing	2	conj	2:conj:and|5:nsubj	_
@@ -1239,7 +1239,7 @@
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0072
 # text = 1575 Leonardo beats Ruy Lopez in Madrid.
-1	1575	1575	NUM	CD	NumForm=Digit|NumType=Card	3	obl:tmod	3:obl:tmod	_
+1	1575	1575	NUM	CD	NumForm=Digit|NumType=Card	3	obl:unmarked	3:obl:unmarked	TemporalNPAdjunct=Yes
 2	Leonardo	Leonardo	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
 3	beats	beat	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	Ruy	Ruy	PROPN	NNP	Number=Sing	3	obj	3:obj	_
@@ -1391,12 +1391,12 @@
 47	those	that	PRON	DT	Number=Plur|PronType=Dem	45	nmod	45:nmod:of|51:nsubj|56:nsubj|60:nsubj|62:nsubj:xsubj	_
 48	who	who	PRON	WP	PronType=Rel	51	nsubj	47:ref	_
 49	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	51	aux	51:aux	_
-50	not	not	PART	RB	_	51	advmod	51:advmod	_
+50	not	not	PART	RB	Polarity=Neg	51	advmod	51:advmod	_
 51	care	care	VERB	VB	VerbForm=Inf	47	acl:relcl	47:acl:relcl	Cxn=rc-wh-nsubj|SpaceAfter=No
 52	,	,	PUNCT	,	_	56	punct	56:punct	_
 53	or	or	CCONJ	CC	_	56	cc	56:cc	_
 54	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	56	aux:pass	56:aux:pass	_
-55	not	not	PART	RB	_	56	advmod	56:advmod	_
+55	not	not	PART	RB	Polarity=Neg	56	advmod	56:advmod	_
 56	obliged	oblige	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	51	conj	47:acl:relcl|51:conj:or	SpaceAfter=No
 57	,	,	PUNCT	,	_	60	punct	60:punct	_
 58	or	or	CCONJ	CC	_	60	cc	60:cc	_
@@ -1429,8 +1429,8 @@
 85	,	,	PUNCT	,	_	84	punct	84:punct	_
 86	there	there	PRON	EX	_	88	expl	88:expl	_
 87	can	can	AUX	MD	VerbForm=Fin	88	aux	88:aux	_
-88	be	be	VERB	VB	VerbForm=Inf	77	acl	77:acl	_
-89	nobody	nobody	PRON	NN	Number=Sing|PronType=Neg	88	nsubj	88:nsubj	_
+88	be	be	VERB	VB	VerbForm=Inf	77	acl	77:acl	Cxn=Existential-CopPred-ThereExpl
+89	nobody	nobody	PRON	NN	Number=Sing|PronType=Neg	88	nsubj	88:nsubj	CxnElt=88:Existential-CopPred-ThereExpl.Pivot
 90	so	so	ADV	RB	_	91	advmod	91:advmod	_
 91	ignorant	ignorant	ADJ	JJ	Degree=Pos	89	amod	89:amod	_
 92	as	as	SCONJ	IN	_	94	mark	94:mark	_
@@ -1547,7 +1547,7 @@
 9	;	;	PUNCT	,	_	14	punct	14:punct	_
 10	"	"	PUNCT	``	_	14	punct	14:punct	SpaceAfter=No
 11	though	though	SCONJ	IN	_	14	mark	14:mark	_
-12	not	not	PART	RB	_	14	advmod	14:advmod	_
+12	not	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
 13	so	so	ADV	RB	_	14	advmod	14:advmod	_
 14	new	new	ADJ	JJ	Degree=Pos	7	parataxis	7:parataxis	_
 15	but	but	SCONJ	IN	_	19	mark	19:mark	_
@@ -1560,7 +1560,7 @@
 22	and	and	CCONJ	CC	_	23	cc	23:cc	_
 23	many	many	DET	PDT	PronType=Ind	21	conj	21:conj:and|25:det:predet	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
-25	time	time	NOUN	NN	Number=Sing	19	obl:tmod	19:obl:tmod	SpaceAfter=No
+25	time	time	NOUN	NN	Number=Sing	19	obl:unmarked	19:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 26	,	,	PUNCT	,	_	32	punct	32:punct	_
 27	as	as	ADV	RB	ExtPos=CCONJ	32	cc	32:cc	_
 28	well	well	ADV	RB	Degree=Pos	27	fixed	27:fixed	_
@@ -1639,7 +1639,7 @@
 8	more	more	ADV	RBR	Degree=Cmp	9	advmod	9:advmod	_
 9	shrewd	shrewd	ADJ	JJ	Degree=Pos	6	conj	4:xcomp|6:conj:and	_
 10	every	every	DET	DT	PronType=Tot	11	det	11:det	_
-11	day	day	NOUN	NN	Number=Sing	4	obl:tmod	4:obl:tmod	SpaceAfter=No
+11	day	day	NOUN	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
 13	Sancho	Sancho	PROPN	NNP	Number=Sing	4	vocative	4:vocative	SpaceAfter=No
 14	,	,	PUNCT	,	_	4	punct	4:punct	SpaceAfter=No
@@ -1686,14 +1686,14 @@
 32	dry	dry	ADJ	JJ	Degree=Pos	30	conj	23:acl:relcl|30:conj:and	SpaceAfter=No
 33	,	,	PUNCT	,	_	23	punct	23:punct	_
 34	will	will	AUX	MD	VerbForm=Fin	35	aux	35:aux	_
-35	come	come	VERB	VB	VerbForm=Inf	19	parataxis	19:parataxis	_
+35	come	come	VERB	VB	VerbForm=Inf	19	parataxis	19:parataxis	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=35:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 36	to	to	PART	TO	_	37	mark	37:mark	_
 37	yield	yield	VERB	VB	VerbForm=Inf	35	xcomp	35:xcomp	_
 38	good	good	ADJ	JJ	Degree=Pos	39	amod	39:amod	_
 39	fruit	fruit	NOUN	NN	Number=Sing	37	obj	37:obj	_
 40	if	if	SCONJ	IN	_	42	mark	42:mark	_
 41	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	42	nsubj	42:nsubj|45:nsubj	_
-42	dung	dung	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	35	advcl	35:advcl:if	_
+42	dung	dung	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	35	advcl	35:advcl:if	CxnElt=35:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 43	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	42	obj	42:obj	_
 44	and	and	CCONJ	CC	_	45	cc	45:cc	_
 45	till	till	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	42	conj	35:advcl:if|42:conj:and	_
@@ -1855,14 +1855,14 @@
 16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
 17	could	could	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
 18	see	see	VERB	VB	VerbForm=Inf	14	advcl	14:advcl:that	_
-19	neither	neither	CCONJ	CC	_	21	cc:preconj	21:cc:preconj	_
+19	neither	neither	CCONJ	CC	Polarity=Neg	21	cc:preconj	21:cc:preconj	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	mountains	mountain	NOUN	NNS	Number=Plur	18	obj	18:obj	_
-22	nor	nor	CCONJ	CC	_	24	cc	24:cc	_
+22	nor	nor	CCONJ	CC	Polarity=Neg	24	cc	24:cc	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 24	town	town	NOUN	NN	Number=Sing	21	conj	18:obj|21:conj:nor	SpaceAfter=No
 25	,	,	PUNCT	,	_	29	punct	29:punct	_
-26	nor	nor	CCONJ	CC	_	29	cc	29:cc	_
+26	nor	nor	CCONJ	CC	Polarity=Neg	29	cc	29:cc	_
 27	yet	yet	ADV	RB	_	29	advmod	29:advmod	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
 29	buildings	building	NOUN	NNS	Number=Plur	21	conj	18:obj|21:conj:nor	_
@@ -1872,10 +1872,10 @@
 33	;	;	PUNCT	,	_	36	punct	36:punct	_
 34	and	and	CCONJ	CC	_	36	cc	36:cc	_
 35	there	there	PRON	EX	_	36	expl	36:expl	_
-36	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	conj	9:conj:and	_
-37	not	not	PART	RB	_	36	advmod	36:advmod	_
+36	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	conj	9:conj:and	Cxn=Conditional-UnspecifiedEpistemic-NoInversion,Existential-CopPred-ThereExpl|CxnElt=36:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
+37	not	not	PART	RB	Polarity=Neg	36	advmod	36:advmod	_
 38	a	a	DET	DT	Definite=Ind|PronType=Art	39	det	39:det	_
-39	sound	sound	NOUN	NN	Number=Sing	36	nsubj	36:nsubj	SpaceAfter=No
+39	sound	sound	NOUN	NN	Number=Sing	36	nsubj	36:nsubj	CxnElt=36:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 40	,	,	PUNCT	,	_	60	punct	60:punct	_
 41	as	as	SCONJ	IN	_	60	mark	60:mark	_
 42	if	if	SCONJ	IN	_	60	mark	60:mark	_
@@ -1896,7 +1896,7 @@
 57	land	land	NOUN	NN	Number=Sing	51	obl	51:obl:over	SpaceAfter=No
 58	,	,	PUNCT	,	_	51	punct	51:punct	_
 59	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	60	aux	60:aux	_
-60	made	make	VERB	VBN	Tense=Past|VerbForm=Part	36	advcl	36:advcl:if	_
+60	made	make	VERB	VBN	Tense=Past|VerbForm=Part	36	advcl	36:advcl:if	CxnElt=36:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 61	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	60	obj	60:obj|62:nsubj:xsubj|66:nsubj:xsubj	_
 62	dumb	dumb	ADJ	JJ	Degree=Pos	60	xcomp	60:xcomp	_
 63	as	as	ADV	RB	ExtPos=CCONJ	66	cc	66:cc	_
@@ -2017,7 +2017,7 @@
 13	every	every	DET	DT	PronType=Tot	14	det	14:det	_
 14	precaution	precaution	NOUN	NN	Number=Sing	12	obj	12:obj	_
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
-16	never	never	ADV	RB	_	17	advmod	17:advmod	_
+16	never	never	ADV	RB	PronType=Neg	17	advmod	17:advmod	_
 17	went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	conj	12:conj:and	_
 18	out	out	ADV	RB	_	17	advmod	17:advmod	_
 19	save	save	ADP	IN	_	22	case	22:case	_
@@ -2122,12 +2122,12 @@
 25	drive	drive	NOUN	NN	Number=Sing	23	obj	23:obj	_
 26	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	28	aux	28:aux	_
 27	to	to	PART	TO	_	28	mark	28:mark	_
-28	give	give	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
+28	give	give	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=28:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 29	notice	notice	NOUN	NN	Number=Sing	28	obj	28:obj	_
 30	if	if	SCONJ	IN	_	33	mark	33:mark	_
 31	all	all	DET	DT	PronType=Tot	33	nsubj	33:nsubj	_
 32	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	33	cop	33:cop	_
-33	safe	safe	ADJ	JJ	Degree=Pos	28	advcl	28:advcl:if	_
+33	safe	safe	ADJ	JJ	Degree=Pos	28	advcl	28:advcl:if	CxnElt=28:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 34	or	or	CCONJ	CC	_	41	cc	41:cc	_
 35	if	if	SCONJ	IN	_	41	mark	41:mark	_
 36	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	_
@@ -2225,9 +2225,9 @@
 13	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 14	have	have	AUX	VB	VerbForm=Inf	15	aux	15:aux	_
 15	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	7	advcl	7:advcl	_
-16	how	how	ADV	WRB	PronType=Int	18	advmod	18:advmod	_
+16	how	how	ADV	WRB	PronType=Int	18	advmod	18:advmod	CxnElt=18:Interrogative-WHInfo-Indirect.WHWord
 17	to	to	PART	TO	_	18	mark	18:mark	_
-18	escape	escape	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	_
+18	escape	escape	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=18:Interrogative-WHInfo-Indirect.Clause
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	consequences	consequence	NOUN	NNS	Number=Plur	18	obj	18:obj	_
 21	of	of	ADP	IN	_	23	case	23:case	_
@@ -2295,12 +2295,12 @@
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 5	might	might	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 6	have	have	AUX	VB	VerbForm=Inf	7	aux	7:aux	_
-7	twisted	twist	VERB	VBN	Tense=Past|VerbForm=Part	2	ccomp	2:ccomp	_
+7	twisted	twist	VERB	VBN	Tense=Past|VerbForm=Part	2	ccomp	2:ccomp	Cxn=Conditional-NegativeEpistemic-SubjVerbInversion|CxnElt=7:Conditional-NegativeEpistemic-SubjVerbInversion.Apodosis
 8	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	obj	7:obj	_
 9	off	off	ADV	RB	_	7	advmod	7:advmod	_
 10	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	12	aux	12:aux	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-12	understood	understand	VERB	VBN	Tense=Past|VerbForm=Part	7	advcl	7:advcl	_
+12	understood	understand	VERB	VBN	Tense=Past|VerbForm=Part	7	advcl	7:advcl	CxnElt=7:Conditional-NegativeEpistemic-SubjVerbInversion.Protasis
 13	what	what	PRON	WP	PronType=Rel	12	obj	12:obj|16:obj	_
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
 15	would	would	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
@@ -2349,7 +2349,7 @@
 4	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 6	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
-7	not	not	PART	RB	_	8	advmod	8:advmod	_
+7	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 8	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
 9	,	,	PUNCT	,	_	16	punct	16:punct	_
 10	save	save	SCONJ	IN	_	16	mark	16:mark	_
@@ -2431,7 +2431,7 @@
 27	if	if	SCONJ	IN	_	30	mark	30:mark	_
 28	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	30	nsubj:pass	30:nsubj:pass	_
 29	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	30	aux:pass	30:aux:pass	_
-30	mixed	mix	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	43	advcl	43:advcl:if	_
+30	mixed	mix	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	43	advcl	43:advcl:if	CxnElt=43:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 31	up	up	ADP	RP	_	30	compound:prt	30:compound:prt	_
 32	in	in	ADP	IN	_	34	case	34:case	_
 33	an	a	DET	DT	Definite=Ind|PronType=Art	34	det	34:det	_
@@ -2444,7 +2444,7 @@
 40	once	once	ADV	RB	NumForm=Word|NumType=Mult	43	obl	43:obl:at	_
 41	be	be	AUX	VB	VerbForm=Inf	43	aux:pass	43:aux:pass	_
 42	publicly	publicly	ADV	RB	_	43	advmod	43:advmod	_
-43	disclosed	disclose	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	25	ccomp	25:ccomp	_
+43	disclosed	disclose	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	25	ccomp	25:ccomp	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=43:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 44	and	and	CCONJ	CC	_	48	cc	48:cc	_
 45	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	48	nsubj	48:nsubj	_
 46	would	would	AUX	MD	VerbForm=Fin	48	aux	48:aux	_

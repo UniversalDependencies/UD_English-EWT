@@ -39,7 +39,7 @@
 12	about	about	ADV	RB	_	14	advmod	14:advmod	_
 13	every	every	DET	DT	PronType=Tot	14	det	14:det	_
 14	3	3	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
-15	seconds	second	NOUN	NNS	Number=Plur	10	obl:tmod	10:obl:tmod	SpaceAfter=No
+15	seconds	second	NOUN	NNS	Number=Plur	10	obl:unmarked	10:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108084119AAhsBk8_ans-0004
@@ -48,7 +48,7 @@
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 3-4	can't	_	_	_	_	_	_	_	_
 3	ca	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-4	n't	not	PART	RB	_	6	advmod	6:advmod	_
+4	n't	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 5	even	even	ADV	RB	_	6	advmod	6:advmod	_
 6	load	load	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
@@ -62,7 +62,7 @@
 # sent_id = answers-20111108084119AAhsBk8_ans-0005
 # newpar id = answers-20111108084119AAhsBk8_ans-p0003
 # text = not by the company... as you voided your warrenty by installing custom roms
-1	not	not	PART	RB	_	4	advcl	4:advcl	_
+1	not	not	PART	RB	Polarity=Neg	4	advcl	4:advcl	_
 2	by	by	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	company	company	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
@@ -96,7 +96,7 @@
 15	that	that	PRON	WDT	PronType=Rel	18	nsubj	14:ref	_
 16-17	doesn't	_	_	_	_	_	_	_	_
 16	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
-17	n't	not	PART	RB	_	18	advmod	18:advmod	_
+17	n't	not	PART	RB	Polarity=Neg	18	advmod	18:advmod	_
 18	crash	crash	VERB	VB	VerbForm=Inf	14	acl:relcl	14:acl:relcl	Cxn=rc-that-nsubj|SpaceAfter=No
 19	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -113,7 +113,7 @@
 # text = Have you tried using clockwork recovery?
 1	Have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|4:nsubj:xsubj	_
-3	tried	try	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+3	tried	try	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	using	use	VERB	VBG	VerbForm=Ger	3	xcomp	3:xcomp	_
 5	clockwork	Clockwork	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 6	recovery	Recovery	PROPN	NNP	Number=Sing	4	obj	4:obj	SpaceAfter=No
@@ -197,7 +197,7 @@
 9	phone	phone	NOUN	NN	Number=Sing	6	obj	6:obj	_
 10	quite	quite	DET	PDT	PronType=Ind	12	det:predet	12:det:predet	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
-12	bit	bit	NOUN	NN	Number=Sing	6	obl:npmod	6:obl:npmod	SpaceAfter=No
+12	bit	bit	NOUN	NN	Number=Sing	6	obl:unmarked	6:obl:unmarked	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108084119AAhsBk8_ans-0015
@@ -216,9 +216,9 @@
 12	fast	fast	ADJ	JJ	Degree=Pos	7	ccomp	7:ccomp	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	their	there	PRON	EX	Typo=Yes	15	expl	15:expl	CorrectForm=there
-15	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	conj	7:ccomp|12:conj:and	_
+15	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	conj	7:ccomp|12:conj:and	Cxn=Existential-CopPred-ThereExpl
 16	no	no	DET	DT	PronType=Neg	17	det	17:det	_
-17	point	point	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
+17	point	point	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	CxnElt=15:Existential-CopPred-ThereExpl.Pivot
 18	installing	install	VERB	VBG	VerbForm=Ger	17	acl	17:acl	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
 20	rom	ROM	NOUN	NN	Number=Sing	18	obj	18:obj	SpaceAfter=No

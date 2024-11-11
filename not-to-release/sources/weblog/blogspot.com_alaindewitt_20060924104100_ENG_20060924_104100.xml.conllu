@@ -90,7 +90,7 @@
 17	multi-national	multi-national	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	corporation	corporation	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	SpaceAfter=No
 19	,	,	PUNCT	,	_	20	punct	20:punct	_
-20	April	April	PROPN	NNP	Number=Sing	2	obl:tmod	2:obl:tmod	SpaceAfter=No
+20	April	April	PROPN	NNP	Number=Sing	2	obl:unmarked	2:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 21	,	,	PUNCT	,	_	22	punct	22:punct	_
 22	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	SpaceAfter=No
 23	:	:	PUNCT	:	_	1	punct	1:punct	_
@@ -150,12 +150,12 @@
 # text = I have never been and I will never be a Government official and I have no privileged information.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	never	never	ADV	RB	_	4	advmod	4:advmod	_
+3	never	never	ADV	RB	PronType=Neg	4	advmod	4:advmod	_
 4	been	be	AUX	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 5	and	and	CCONJ	CC	_	12	cc	12:cc	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	9:nsubj|12:nsubj	_
 7	will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
-8	never	never	ADV	RB	_	12	advmod	12:advmod	_
+8	never	never	ADV	RB	PronType=Neg	12	advmod	12:advmod	_
 9	be	be	AUX	VB	VerbForm=Inf	12	cop	12:cop	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 11	Government	government	NOUN	NN	Number=Sing	12	compound	12:compound	_
@@ -327,10 +327,10 @@
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0014
 # text = Why do I put aside Israel and its own immediate neighborhood?
-1	Why	why	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
+1	Why	why	ADV	WRB	PronType=Int	4	advmod	4:advmod	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-4	put	put	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	put	put	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	aside	aside	ADP	RP	_	4	compound:prt	4:compound:prt	_
 6	Israel	Israel	PROPN	NNP	Number=Sing	4	obj	4:obj	_
 7	and	and	CCONJ	CC	_	11	cc	11:cc	_
@@ -366,14 +366,14 @@
 22	media	media	NOUN	NN	Number=Sing	16	obl	16:obl:in	SpaceAfter=No
 23	,	,	PUNCT	,	_	11	punct	11:punct	_
 24	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	28	cop	28:cop	_
-25	not	not	PART	RB	_	28	advmod	28:advmod	_
+25	not	not	PART	RB	Polarity=Neg	28	advmod	28:advmod	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 27	central	central	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
 28	issue	issue	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 29	,	,	PUNCT	,	_	36	punct	36:punct	_
 30	and	and	CCONJ	CC	_	36	cc	36:cc	_
 31	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	36	aux	36:aux	_
-32	never	never	ADV	RB	_	36	advmod	36:advmod	_
+32	never	never	ADV	RB	PronType=Neg	36	advmod	36:advmod	_
 33	been	be	AUX	VBN	Tense=Past|VerbForm=Part	36	cop	36:cop	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	36	det	36:det	_
 35	central	central	ADJ	JJ	Degree=Pos	36	amod	36:amod	_
@@ -388,24 +388,24 @@
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0016
 # text = Yes, there is a 100 year-old Israeli-Arab conflict, but it is not where the main show is.
-1	Yes	yes	INTJ	UH	_	4	discourse	4:discourse	SpaceAfter=No
+1	Yes	yes	INTJ	UH	Polarity=Pos	4	discourse	4:discourse	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	there	there	PRON	EX	_	4	expl	4:expl	_
-4	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 5	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 6	100	100	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
-7	year	year	NOUN	NN	Number=Sing	9	obl:tmod	9:obl:tmod	SpaceAfter=No
+7	year	year	NOUN	NN	Number=Sing	9	obl:unmarked	9:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 8	-	-	PUNCT	HYPH	_	7	punct	7:punct	SpaceAfter=No
 9	old	old	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 10	Israeli	Israeli	ADJ	JJ	Degree=Pos	12	amod	12:amod	SpaceAfter=No
 11	-	-	PUNCT	HYPH	_	10	punct	10:punct	SpaceAfter=No
 12	Arab	Arab	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	conflict	conflict	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	SpaceAfter=No
+13	conflict	conflict	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	CxnElt=4:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 14	,	,	PUNCT	,	_	19	punct	19:punct	_
 15	but	but	CCONJ	CC	_	19	cc	19:cc	_
 16	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	19	nsubj	19:nsubj	_
 17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
-18	not	not	PART	RB	_	19	advmod	19:advmod	_
+18	not	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 19	where	where	ADV	WRB	PronType=Rel	4	conj	4:conj:but	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 21	main	main	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
@@ -440,7 +440,7 @@
 3	murder	murder	NOUN	NN	Number=Sing	22	nsubj	22:nsubj	_
 4	happening	happen	VERB	VBG	VerbForm=Ger	3	acl	3:acl	_
 5	right	right	ADV	RB	_	6	advmod	6:advmod	_
-6	now	now	ADV	RB	_	4	advmod	4:advmod	_
+6	now	now	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 7	in	in	ADP	IN	_	8	case	8:case	_
 8	Sudan	Sudan	PROPN	NNP	Number=Sing	4	obl	4:obl:in|16:obl:in	SpaceAfter=No
 9	,	,	PUNCT	,	_	16	punct	16:punct	_
@@ -499,7 +499,7 @@
 1	Saddam	Saddam	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj|8:nsubj|12:nsubj	_
 2	Hussein	Hussein	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
-4	not	not	PART	RB	_	5	advmod	5:advmod	_
+4	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	invade	invade	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	Kuwait	Kuwait	PROPN	NNP	Number=Sing	5	obj	5:obj	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
@@ -511,7 +511,7 @@
 13	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
 14	own	own	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	people	people	NOUN	NNS	Number=Plur	12	obj	12:obj	_
-16	because	because	ADP	IN	_	18	case	18:case	_
+16	because	because	ADP	IN	ExtPos=ADP	18	case	18:case	_
 17	of	of	ADP	IN	_	16	fixed	16:fixed	_
 18	Israel	Israel	PROPN	NNP	Number=Sing	5	obl	5:obl:because_of	SpaceAfter=No
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -520,7 +520,7 @@
 # text = Egypt did not use poison gas against Yemen in the 60's because of Israel.
 1	Egypt	Egypt	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
 2	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	use	use	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	poison	poison	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	gas	gas	NOUN	NN	Number=Sing	4	obj	4:obj	_
@@ -528,8 +528,8 @@
 8	Yemen	Yemen	PROPN	NNP	Number=Sing	4	obl	4:obl:against	_
 9	in	in	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	60's	60s	NOUN	NNS	Number=Ptan	4	obl	4:obl:in	_
-12	because	because	ADP	IN	_	14	case	14:case	_
+11	60's	60s	NOUN	NNS	Number=Ptan|NumForm=Combi|NumType=Card	4	obl	4:obl:in	_
+12	because	because	ADP	IN	ExtPos=ADP	14	case	14:case	_
 13	of	of	ADP	IN	_	12	fixed	12:fixed	_
 14	Israel	Israel	PROPN	NNP	Number=Sing	4	obl	4:obl:because_of	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -540,7 +540,7 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	Father	Father	PROPN	NNP	Number=Sing	1	appos	1:appos	_
 4	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux	6:aux	_
-5	not	not	PART	RB	_	6	advmod	6:advmod	_
+5	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	kill	kill	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	tens	ten	NOUN	NNS	Number=Plur	6	obj	6:obj	_
 8	of	of	ADP	IN	_	9	case	9:case	_
@@ -552,12 +552,12 @@
 14	in	in	ADP	IN	_	16	case	16:case	_
 15	one	one	NUM	CD	NumForm=Word|NumType=Card	16	nummod	16:nummod	_
 16	week	week	NOUN	NN	Number=Sing	6	obl	6:obl:in	_
-17	in	in	ADP	IN	_	19	case	19:case	_
-18	El	El	PROPN	NNP	Number=Sing	19	compound	19:compound	_
-19	Hamma	Hamma	PROPN	NNP	Number=Sing	6	obl	6:obl:in	_
+17	in	in	ADP	IN	_	18	case	18:case	_
+18	El	El	PROPN	NNP	Number=Sing	6	obl	6:obl:in	_
+19	Hamma	Hamma	PROPN	NNP	Number=Sing	18	flat	18:flat	_
 20	in	in	ADP	IN	_	21	case	21:case	_
-21	Syria	Syria	PROPN	NNP	Number=Sing	19	nmod	19:nmod:in	_
-22	because	because	ADP	IN	_	24	case	24:case	_
+21	Syria	Syria	PROPN	NNP	Number=Sing	18	nmod	18:nmod:in	_
+22	because	because	ADP	IN	ExtPos=ADP	24	case	24:case	_
 23	of	of	ADP	IN	_	22	fixed	22:fixed	_
 24	Israel	Israel	PROPN	NNP	Number=Sing	6	obl	6:obl:because_of	SpaceAfter=No
 25	.	.	PUNCT	.	_	6	punct	6:punct	_
@@ -640,21 +640,21 @@
 24	would	would	AUX	MD	VerbForm=Fin	27	aux	27:aux	_
 25	have	have	AUX	VB	VerbForm=Inf	27	aux	27:aux	_
 26	been	be	AUX	VBN	Tense=Past|VerbForm=Part	27	cop	27:cop	_
-27	so	so	ADV	RB	_	14	conj	0:root|14:conj:and	_
+27	so	so	ADV	RB	_	14	conj	0:root|14:conj:and	Cxn=Conditional-NegativeEpistemic-NoInversion|CxnElt=27:Conditional-NegativeEpistemic-NoInversion.Apodosis
 28	even	even	ADV	RB	_	32	advmod	32:advmod	_
 29	if	if	SCONJ	IN	_	32	mark	32:mark	_
 30	Israel	Israel	PROPN	NNP	Number=Sing	32	nsubj	32:nsubj	_
 31	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	32	aux	32:aux	_
-32	joined	join	VERB	VBN	Tense=Past|VerbForm=Part	27	advcl	27:advcl:if	_
+32	joined	join	VERB	VBN	Tense=Past|VerbForm=Part	27	advcl	27:advcl:if	CxnElt=27:Conditional-NegativeEpistemic-NoInversion.Protasis
 33	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
 34	Arab	Arab	ADJ	NNP	Degree=Pos	35	amod	35:amod	_
 35	league	league	PROPN	NNP	Number=Sing	32	obj	32:obj	_
 36	and	and	CCONJ	CC	_	41	cc	41:cc	_
 37	an	a	DET	DT	Definite=Ind|PronType=Art	39	det	39:det	_
 38	independent	independent	ADJ	JJ	Degree=Pos	39	amod	39:amod	_
-39	Palestine	Palestine	PROPN	NNP	Number=Sing	41	nsubj	41:nsubj	_
+39	Palestine	Palestine	PROPN	NNP	Number=Sing	41	nsubj	41:nsubj	CxnElt=41:Existential-ExistPred-NoExpl.Pivot
 40	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	41	aux	41:aux	_
-41	existed	exist	VERB	VBN	Tense=Past|VerbForm=Part	32	conj	27:advcl:if|32:conj:and	_
+41	existed	exist	VERB	VBN	Tense=Past|VerbForm=Part	32	conj	27:advcl:if|32:conj:and	Cxn=Existential-ExistPred-NoExpl
 42	for	for	ADP	IN	_	44	case	44:case	_
 43	100	100	NUM	CD	NumForm=Digit|NumType=Card	44	nummod	44:nummod	_
 44	years	year	NOUN	NNS	Number=Plur	41	obl	41:obl:for	SpaceAfter=No
@@ -782,7 +782,7 @@
 21	made	make	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	14	conj	14:conj:and	_
 22	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
 23	money	money	NOUN	NN	Number=Sing	21	obj	21:obj	_
-24	not	not	PART	RB	_	26	advmod	26:advmod	_
+24	not	not	PART	RB	Polarity=Neg	26	advmod	26:advmod	_
 25	by	by	SCONJ	IN	_	26	mark	26:mark	_
 26	succeeding	succeed	VERB	VBG	Tense=Pres|VerbForm=Part	21	advcl	21:advcl:by	_
 27	in	in	ADP	IN	_	28	case	28:case	_
@@ -813,7 +813,7 @@
 14	Western	Western	ADJ	NNP	Degree=Pos	15	amod	15:amod	_
 15	World	World	PROPN	NNP	Number=Sing	11	obl	11:obl:in	_
 16	150	150	NUM	CD	NumForm=Digit|NumType=Card	17	nummod	17:nummod	_
-17	years	year	NOUN	NNS	Number=Plur	18	obl:tmod	18:obl:tmod	_
+17	years	year	NOUN	NNS	Number=Plur	18	obl:unmarked	18:obl:unmarked	TemporalNPAdjunct=Yes
 18	ago	ago	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 19	.	.	PUNCT	.	_	9	punct	9:punct	_
 
@@ -950,7 +950,7 @@
 11	which	which	PRON	WDT	PronType=Rel	18	nsubj:pass	9:ref	_
 12	only	only	ADV	RB	_	14	advmod	14:advmod	_
 13	30	30	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	_
-14	years	year	NOUN	NNS	Number=Plur	15	obl:tmod	15:obl:tmod	_
+14	years	year	NOUN	NNS	Number=Plur	15	obl:unmarked	15:obl:unmarked	TemporalNPAdjunct=Yes
 15	ago	ago	ADV	RB	_	18	advmod	18:advmod	SpaceAfter=No
 16	,	,	PUNCT	,	_	15	punct	15:punct	_
 17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	aux:pass	18:aux:pass	_
@@ -1086,7 +1086,7 @@
 17	Moslems	Moslem	PROPN	NNPS	Number=Plur	12	acl:relcl	12:acl:relcl	Cxn=rc-wh-nsubj
 18	or	or	CCONJ	CC	_	22	cc	22:cc	_
 19	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
-20	not	not	PART	RB	_	22	advmod	22:advmod	_
+20	not	not	PART	RB	Polarity=Neg	22	advmod	22:advmod	_
 21	very	very	ADV	RB	_	22	advmod	22:advmod	_
 22	religious	religious	ADJ	JJ	Degree=Pos	17	conj	12:acl:relcl|17:conj:or	_
 23	but	but	CCONJ	CC	_	24	cc	24:cc	_
@@ -1106,7 +1106,7 @@
 37	world	world	NOUN	NN	Number=Sing	33	nmod	33:nmod:of|41:nsubj	SpaceAfter=No
 38	,	,	PUNCT	,	_	41	punct	41:punct	_
 39	which	which	PRON	WDT	PronType=Rel	41	nsubj	37:ref	_
-40	now	now	ADV	RB	_	41	advmod	41:advmod	_
+40	now	now	ADV	RB	PronType=Dem	41	advmod	41:advmod	_
 41	develops	develop	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	37	acl:relcl	37:acl:relcl	Cxn=rc-wh-nsubj
 42	Islamophobia	islamophobia	NOUN	NN	Number=Sing	41	obj	41:obj	SpaceAfter=No
 43	,	,	PUNCT	,	_	48	punct	48:punct	_
@@ -1139,7 +1139,7 @@
 10	these	this	DET	DT	Number=Plur|PronType=Dem	11	det	11:det	_
 11	Moslems	Moslem	PROPN	NNPS	Number=Plur	8	nmod	8:nmod:of	_
 12	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
-13	not	not	PART	RB	_	14	advmod	14:advmod	_
+13	not	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
 14	part	part	NOUN	NN	Number=Sing	0	root	0:root	_
 15	of	of	ADP	IN	_	17	case	17:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
@@ -1152,7 +1152,7 @@
 23	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	27	nsubj	27:nsubj	_
 24	also	also	ADV	RB	_	27	advmod	27:advmod	_
 25	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	27	aux	27:aux	_
-26	not	not	PART	RB	_	27	advmod	27:advmod	_
+26	not	not	PART	RB	Polarity=Neg	27	advmod	27:advmod	_
 27	stand	stand	VERB	VB	VerbForm=Inf	14	conj	0:root|14:conj:but	_
 28	up	up	ADP	RP	_	27	compound:prt	27:compound:prt	_
 29	against	against	ADP	IN	_	30	case	30:case	_
@@ -1219,14 +1219,14 @@
 10	four	four	NUM	CD	NumForm=Word|NumType=Card	11	nummod	11:nummod	_
 11	issues	issue	NOUN	NNS	Number=Plur	9	obj	9:obj|16:nsubj|23:nsubj	SpaceAfter=No
 12	,	,	PUNCT	,	_	16	punct	16:punct	_
-13	which	which	PRON	WDT	PronType=Rel	16	nsubj	11:ref	_
+13	which	which	PRON	WDT	PronType=Rel	16	nsubj	11:ref	CxnElt=16:Existential-ExistPred-NoExpl.Pivot
 14	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
-15	always	always	ADV	RB	_	16	advmod	16:advmod	_
-16	existed	exist	VERB	VBN	Tense=Past|VerbForm=Part	11	acl:relcl	11:acl:relcl	Cxn=rc-wh-nsubj|SpaceAfter=No
+15	always	always	ADV	RB	PronType=Tot	16	advmod	16:advmod	_
+16	existed	exist	VERB	VBN	Tense=Past|VerbForm=Part	11	acl:relcl	11:acl:relcl	Cxn=Existential-ExistPred-NoExpl,rc-wh-nsubj|SpaceAfter=No
 17	,	,	PUNCT	,	_	23	punct	23:punct	_
 18	but	but	CCONJ	CC	_	23	cc	23:cc	_
 19	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	23	aux	23:aux	_
-20	never	never	ADV	RB	_	23	advmod	23:advmod	_
+20	never	never	ADV	RB	PronType=Neg	23	advmod	23:advmod	_
 21	been	be	AUX	VBN	Tense=Past|VerbForm=Part	23	cop	23:cop	_
 22	as	as	ADV	RB	_	23	advmod	23:advmod	_
 23	rampant	rampant	ADJ	JJ	Degree=Pos	16	conj	11:acl:relcl|16:conj:but	_
@@ -1320,7 +1320,7 @@
 1	Suicide	suicide	NOUN	NN	Number=Sing	2	compound	2:compound	_
 2	murders	murder	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
 3	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
-4	not	not	PART	RB	_	7	advmod	7:advmod	_
+4	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	new	new	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	invention	invention	NOUN	NN	Number=Sing	0	root	0:root	_
@@ -1328,13 +1328,13 @@
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj:pass	12:nsubj:pass|13:nsubj:xsubj	_
 10	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
 11	been	be	AUX	VBN	Tense=Past|VerbForm=Part	12	aux:pass	12:aux:pass	_
-12	made	make	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	conj	7:conj:but	_
+12	made	make	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	conj	7:conj:but	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 13	popular	popular	ADJ	JJ	Degree=Pos	12	xcomp	12:xcomp	SpaceAfter=No
 14	,	,	PUNCT	,	_	18	punct	18:punct	_
 15	if	if	SCONJ	IN	_	18	mark	18:mark	_
 16	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
 17	may	may	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
-18	use	use	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:if	_
+18	use	use	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 19	this	this	DET	DT	Number=Sing|PronType=Dem	20	det	20:det	_
 20	expression	expression	NOUN	NN	Number=Sing	18	obj	18:obj	SpaceAfter=No
 21	,	,	PUNCT	,	_	22	punct	22:punct	_
@@ -1358,7 +1358,7 @@
 12	Western	Western	ADJ	NNP	Degree=Pos	13	amod	13:amod	_
 13	World	World	PROPN	NNP	Number=Sing	9	nmod	9:nmod:of	_
 14	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
-15	not	not	PART	RB	_	17	advmod	17:advmod	_
+15	not	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
 16	yet	yet	ADV	RB	_	17	advmod	17:advmod	_
 17	understand	understand	VERB	VB	VerbForm=Inf	7	ccomp	7:ccomp	_
 18	this	this	DET	DT	Number=Sing|PronType=Dem	19	det	19:det	_
@@ -1411,7 +1411,7 @@
 20	smaller	small	ADJ	JJR	Degree=Cmp	0	root	0:root	_
 21	than	than	ADP	IN	_	22	case	22:case	_
 22	those	that	PRON	DT	Number=Plur|PronType=Dem	20	obl	20:obl:than	_
-23	due	due	ADP	IN	_	26	case	26:case	_
+23	due	due	ADJ	JJ	Degree=Pos|ExtPos=ADP	26	case	26:case	_
 24	to	to	ADP	IN	_	23	fixed	23:fixed	_
 25	car	car	NOUN	NN	Number=Sing	26	compound	26:compound	_
 26	accidents	accident	NOUN	NNS	Number=Plur	22	nmod	22:nmod:due_to	SpaceAfter=No
@@ -1469,7 +1469,7 @@
 1	Saddam	Saddam	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
 2	killed	kill	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	every	every	DET	DT	PronType=Tot	4	det	4:det	_
-4	month	month	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	_
+4	month	month	NOUN	NN	Number=Sing	2	obl:unmarked	2:obl:unmarked	TemporalNPAdjunct=Yes
 5	more	more	ADJ	JJR	Degree=Cmp	6	amod	6:amod	_
 6	people	people	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 7	than	than	ADP	IN	_	9	case	9:case	_
@@ -1491,11 +1491,11 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0054
 # text = So what is all the fuss about suicide killings?
 1	So	so	ADV	RB	_	6	advmod	6:advmod	_
-2	what	what	PRON	WP	PronType=Int	6	nsubj	6:nsubj	_
+2	what	what	PRON	WP	PronType=Int	6	nsubj	6:nsubj	CxnElt=6:Interrogative-WHInfo-Direct.WHWord
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 4	all	all	DET	PDT	PronType=Tot	6	det:predet	6:det:predet	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	fuss	fuss	NOUN	NN	Number=Sing	0	root	0:root	_
+6	fuss	fuss	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=6:Interrogative-WHInfo-Direct.Clause
 7	about	about	ADP	IN	_	9	case	9:case	_
 8	suicide	suicide	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	killings	killing	NOUN	NNS	Number=Plur	6	nmod	6:nmod:about	SpaceAfter=No
@@ -1549,7 +1549,7 @@
 # text = It is always shown on television in great detail.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj:pass	4:nsubj:pass	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
-3	always	always	ADV	RB	_	4	advmod	4:advmod	_
+3	always	always	ADV	RB	PronType=Tot	4	advmod	4:advmod	_
 4	shown	show	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	on	on	ADP	IN	_	6	case	6:case	_
 6	television	television	NOUN	NN	Number=Sing	4	obl	4:obl:on	_
@@ -1626,7 +1626,7 @@
 # text = This has not yet penetrated the thinking of the Western World.
 1	This	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
 2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-3	not	not	PART	RB	_	5	advmod	5:advmod	_
+3	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 4	yet	yet	ADV	RB	_	5	advmod	5:advmod	_
 5	penetrated	penetrate	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
@@ -1653,7 +1653,7 @@
 12	last	last	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	murder	murder	NOUN	NN	Number=Sing	9	nmod	9:nmod:against	SpaceAfter=No
 14	,	,	PUNCT	,	_	18	punct	18:punct	_
-15	not	not	PART	RB	_	18	advmod	18:advmod	_
+15	not	not	PART	RB	Polarity=Neg	18	advmod	18:advmod	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	next	next	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	one	one	NOUN	NN	Number=Sing	13	appos	13:appos	SpaceAfter=No
@@ -1679,7 +1679,7 @@
 1	But	but	CCONJ	CC	_	13	cc	13:cc	_
 2	if	if	SCONJ	IN	_	4	mark	4:mark	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
-4	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:if	_
+4	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:if	CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	murder	murder	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	by	by	ADP	IN	_	8	case	8:case	_
@@ -1687,13 +1687,13 @@
 9	,	,	PUNCT	,	_	4	punct	4:punct	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj|15:nsubj:xsubj	_
 11	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
-12	not	not	PART	RB	_	13	advmod	13:advmod	_
-13	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
+12	not	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
+13	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 14	to	to	PART	TO	_	15	mark	15:mark	_
 15	board	board	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 17	plane	plane	NOUN	NN	Number=Sing	15	obj	15:obj	_
-18	in	in	ADP	IN	_	21	mark	21:mark	_
+18	in	in	ADP	IN	ExtPos=SCONJ	21	mark	21:mark	_
 19	order	order	NOUN	NN	Number=Sing	18	fixed	18:fixed	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
 21	explode	explode	VERB	VB	VerbForm=Inf	15	advcl	15:advcl:to	_
@@ -1706,9 +1706,9 @@
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0066
 # text = Who could stop a suicide murder in the midst of the crowded line waiting to be checked by the airport metal detector?
-1	Who	who	PRON	WP	PronType=Int	3	nsubj	3:nsubj	_
+1	Who	who	PRON	WP	PronType=Int	3	nsubj	3:nsubj	CxnElt=3:Interrogative-WHInfo-Direct.WHWord
 2	could	could	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	stop	stop	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	stop	stop	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=3:Interrogative-WHInfo-Direct.Clause
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	suicide	suicide	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	murder	murder	NOUN	NN	Number=Sing	3	obj	3:obj	_
@@ -1732,7 +1732,7 @@
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0067
 # text = How about the lines to the check-in counters in a busy travel period?
-1	How	how	ADV	WRB	PronType=Int	0	root	0:root	_
+1	How	how	ADV	WRB	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=1:Interrogative-WHInfo-Direct.Clause,1:Interrogative-WHInfo-Direct.WHWord
 2	about	about	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	lines	line	NOUN	NNS	Number=Plur	1	obl	1:obl:about	_
@@ -1811,10 +1811,10 @@
 9	and	and	CCONJ	CC	_	13	cc	13:cc	_
 10	there	there	PRON	EX	_	13	expl	13:expl	_
 11	will	will	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
-12	always	always	ADV	RB	_	13	advmod	13:advmod	_
-13	be	be	VERB	VB	VerbForm=Inf	1	conj	1:conj:and	_
+12	always	always	ADV	RB	PronType=Tot	13	advmod	13:advmod	_
+13	be	be	VERB	VB	VerbForm=Inf	1	conj	1:conj:and	Cxn=Existential-CopPred-ThereExpl
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
-15	line	line	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
+15	line	line	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	CxnElt=13:Existential-CopPred-ThereExpl.Pivot
 16	of	of	ADP	IN	_	17	case	17:case	_
 17	people	people	NOUN	NNS	Number=Plur	15	nmod	15:nmod:of	_
 18	to	to	PART	TO	_	20	mark	20:mark	_
@@ -1831,14 +1831,14 @@
 29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
 30	target	target	NOUN	NN	Number=Sing	13	conj	13:conj:and	SpaceAfter=No
 31	,	,	PUNCT	,	_	34	punct	34:punct	_
-32	not	not	PART	RB	_	34	advmod	34:advmod	_
+32	not	not	PART	RB	Polarity=Neg	34	advmod	34:advmod	_
 33	to	to	PART	TO	_	34	mark	34:mark	_
 34	speak	speak	VERB	VB	VerbForm=Inf	30	parataxis	30:parataxis	_
 35	of	of	SCONJ	IN	_	36	mark	36:mark	_
 36	killing	kill	VERB	VBG	Tense=Pres|VerbForm=Part	34	advcl	34:advcl:of	_
 37	the	the	DET	DT	Definite=Def|PronType=Art	38	det	38:det	_
 38	guards	guard	NOUN	NNS	Number=Plur	36	obj	36:obj	_
-39	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Emp|Reflex=Yes	38	nmod:npmod	38:nmod:npmod	SpaceAfter=No
+39	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Emp|Reflex=Yes	38	nmod:unmarked	38:nmod:unmarked	SpaceAfter=No
 40	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0071
@@ -1860,12 +1860,12 @@
 15	border	border	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	controls	controls	NOUN	NN	Number=Sing	11	conj	4:obl:by|11:conj:and	_
 17	but	but	CCONJ	CC	_	19	cc	19:cc	_
-18	not	not	PART	RB	_	19	advmod	19:advmod	_
+18	not	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 19	eliminate	eliminate	VERB	VB	VerbForm=Inf	4	conj	4:conj:but	_
 20	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	19	obj	19:obj	_
 21	and	and	CCONJ	CC	_	24	cc	24:cc	_
 22	definitely	definitely	ADV	RB	_	24	advmod	24:advmod	_
-23	not	not	PART	RB	_	24	advmod	24:advmod	_
+23	not	not	PART	RB	Polarity=Neg	24	advmod	24:advmod	_
 24	win	win	VERB	VB	VerbForm=Inf	19	conj	19:conj:and	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
 26	war	war	NOUN	NN	Number=Sing	24	obj	24:obj	_
@@ -1887,12 +1887,12 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0073
 # newpar id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-p0004
 # text = What is behind the suicide murders?
-1	What	what	PRON	WP	PronType=Int	6	nsubj	6:nsubj	_
+1	What	what	PRON	WP	PronType=Int	6	nsubj	6:nsubj	CxnElt=6:Interrogative-WHInfo-Direct.WHWord
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 3	behind	behind	ADP	IN	_	6	case	6:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	suicide	suicide	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	murders	murder	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+6	murders	murder	NOUN	NNS	Number=Plur	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=6:Interrogative-WHInfo-Direct.Clause|SpaceAfter=No
 7	?	?	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0074
@@ -1934,7 +1934,7 @@
 2	Moslem	Moslem	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	preacher	preacher	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
 4	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
-5	ever	ever	ADV	RB	_	6	advmod	6:advmod	_
+5	ever	ever	ADV	RB	PronType=Ind	6	advmod	6:advmod	_
 6	blown	blow	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 7	himself	himself	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	6	obj	6:obj	_
 8	up	up	ADP	RP	_	6	compound:prt	6:compound:prt	SpaceAfter=No
@@ -1952,7 +1952,7 @@
 8	religious	religious	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	leader	leader	NOUN	NN	Number=Sing	6	conj	2:nmod:of|6:conj:or	_
 10	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-11	ever	ever	ADV	RB	_	12	advmod	12:advmod	_
+11	ever	ever	ADV	RB	PronType=Ind	12	advmod	12:advmod	_
 12	blown	blow	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 13	himself	himself	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	12	obj	12:obj	_
 14	up	up	ADP	RP	_	12	compound:prt	12:compound:prt	SpaceAfter=No
@@ -1974,9 +1974,9 @@
 # text = Wouldn't you expect some of the religious leaders to do it themselves, or to talk their sons into doing it, if this is truly a supreme act of religious fervor?
 1-2	Wouldn't	_	_	_	_	_	_	_	_
 1	Would	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-2	n't	not	PART	RB	_	4	advmod	4:advmod	_
+2	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	expect	expect	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	expect	expect	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion,Interrogative-Polar-Direct|CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis,4:Interrogative-Polar-Direct.Clause
 5	some	some	DET	DT	PronType=Ind	4	obj	4:obj|11:nsubj:xsubj|17:nsubj:xsubj	_
 6	of	of	ADP	IN	_	9	case	9:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
@@ -1985,7 +1985,7 @@
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	do	do	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 12	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obj	11:obj	_
-13	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Emp|Reflex=Yes	11	obl:npmod	11:obl:npmod	SpaceAfter=No
+13	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Emp|Reflex=Yes	11	obl:unmarked	11:obl:unmarked	SpaceAfter=No
 14	,	,	PUNCT	,	_	17	punct	17:punct	_
 15	or	or	CCONJ	CC	_	17	cc	17:cc	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
@@ -2002,7 +2002,7 @@
 27	truly	truly	ADV	RB	_	30	advmod	30:advmod	_
 28	a	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
 29	supreme	supreme	ADJ	JJ	Degree=Pos	30	amod	30:amod	_
-30	act	act	NOUN	NN	Number=Sing	4	advcl	4:advcl:if	_
+30	act	act	NOUN	NN	Number=Sing	4	advcl	4:advcl:if	CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 31	of	of	ADP	IN	_	33	case	33:case	_
 32	religious	religious	ADJ	JJ	Degree=Pos	33	amod	33:amod	_
 33	fervor	fervor	NOUN	NN	Number=Sing	30	nmod	30:nmod:of	SpaceAfter=No
@@ -2012,9 +2012,9 @@
 # text = Aren't they interested in the benefits of going to Heaven?
 1-2	Aren't	_	_	_	_	_	_	_	_
 1	Are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
-2	n't	not	PART	RB	_	4	advmod	4:advmod	_
+2	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 3	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
-4	interested	interested	ADJ	JJ	Degree=Pos	0	root	0:root	_
+4	interested	interested	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=4:Interrogative-Polar-Direct.Clause
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	benefits	benefit	NOUN	NNS	Number=Plur	4	obl	4:obl:in	_
@@ -2114,7 +2114,7 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0085
 # text = It never happens there.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-2	never	never	ADV	RB	_	3	advmod	3:advmod	_
+2	never	never	ADV	RB	PronType=Neg	3	advmod	3:advmod	_
 3	happens	happen	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	there	there	ADV	RB	PronType=Dem	3	advmod	3:advmod	SpaceAfter=No
 5	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -2122,10 +2122,10 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0086
 # text = There are numerous desperate people in the world, in different cultures, countries and continents.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	numerous	numerous	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 4	desperate	desperate	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	people	people	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
+5	people	people	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	world	world	NOUN	NN	Number=Sing	2	obl	2:obl:in	SpaceAfter=No
@@ -2143,7 +2143,7 @@
 # text = Desperation does not provide anyone with explosives, reconnaissance and transportation.
 1	Desperation	desperation	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 2	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	provide	provide	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	4	obj	4:obj	_
 6	with	with	ADP	IN	_	7	case	7:case	_
@@ -2157,10 +2157,10 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0088
 # text = There was certainly more despair in Saddam's Iraq than in Paul Bremmer's Iraq, and no one exploded himself.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	certainly	certainly	ADV	RB	_	2	advmod	2:advmod	_
 4	more	more	ADJ	JJR	Degree=Cmp	5	amod	5:amod	_
-5	despair	despair	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+5	despair	despair	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 6	in	in	ADP	IN	_	9	case	9:case	_
 7-8	Saddam's	_	_	_	_	_	_	_	_
 7	Saddam	Saddam	PROPN	NNP	Number=Sing	9	nmod:poss	9:nmod:poss	_
@@ -2316,7 +2316,7 @@
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 2-3	cannot	_	_	_	_	_	_	_	_
 2	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	eliminate	eliminate	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	organized	organized	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	crime	crime	NOUN	NN	Number=Sing	4	obj	4:obj	_
@@ -2354,7 +2354,7 @@
 3	of	of	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	public	public	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
-6	supports	support	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	36	advcl	36:advcl:if	_
+6	supports	support	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	36	advcl	36:advcl:if	CxnElt=36:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	obj	6:obj	SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	others	other	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
@@ -2384,7 +2384,7 @@
 33	organized	organized	ADJ	JJ	Degree=Pos	34	amod	34:amod	_
 34	crime	crime	NOUN	NN	Number=Sing	36	nsubj	36:nsubj	_
 35	will	will	AUX	MD	VerbForm=Fin	36	aux	36:aux	_
-36	thrive	thrive	VERB	VB	VerbForm=Inf	0	root	0:root	_
+36	thrive	thrive	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=36:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 37	and	and	CCONJ	CC	_	39	cc	39:cc	_
 38	so	so	ADV	RB	_	39	advmod	39:advmod	_
 39	will	will	AUX	MD	VerbForm=Fin	36	conj	36:conj:and	_
@@ -2398,7 +2398,7 @@
 3	States	State	PROPN	NNPS	Number=Plur	4	nsubj	4:nsubj	_
 4	understands	understand	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	this	this	PRON	DT	Number=Sing|PronType=Dem	4	obj	4:obj	_
-6	now	now	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
+6	now	now	ADV	RB	PronType=Dem	4	advmod	4:advmod	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	after	after	ADP	IN	_	9	case	9:case	_
 9	September	September	PROPN	NNP	Number=Sing	4	obl	4:obl:after	_
@@ -2436,7 +2436,7 @@
 9	Europe	Europe	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	_
 10	still	still	ADV	RB	_	13	advmod	13:advmod	_
 11	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
-12	not	not	PART	RB	_	13	advmod	13:advmod	_
+12	not	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
 13	understand	understand	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	_
 14	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	13	obj	13:obj	SpaceAfter=No
 15	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -2520,7 +2520,7 @@
 6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	7:det	_
 7	unity	unity	NOUN	NN	Number=Sing	11	nsubj:pass	11:nsubj:pass	_
 8	will	will	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
-9	not	not	PART	RB	_	11	advmod	11:advmod	_
+9	not	not	PART	RB	Polarity=Neg	11	advmod	11:advmod	_
 10	be	be	AUX	VB	VerbForm=Inf	11	aux:pass	11:aux:pass	_
 11	achieved	achieve	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No
 12	.	.	PUNCT	.	_	11	punct	11:punct	_
@@ -2577,7 +2577,7 @@
 14	business	business	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	people	people	NOUN	NNS	Number=Plur	12	conj	12:conj:and	_
 16	must	must	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
-17	sometimes	sometimes	ADV	RB	_	18	advmod	18:advmod	_
+17	sometimes	sometimes	ADV	RB	PronType=Ind	18	advmod	18:advmod	_
 18	lie	lie	VERB	VB	VerbForm=Inf	4	csubj:pass	4:csubj:pass	SpaceAfter=No
 19	,	,	PUNCT	,	_	21	punct	21:punct	_
 20	as	as	ADP	IN	_	21	case	21:case	_
@@ -2642,7 +2642,7 @@
 11	that	that	SCONJ	IN	_	15	mark	15:mark	_
 12	September	September	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj|21:nsubj	_
 13	11	11	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
-14	never	never	ADV	RB	_	15	advmod	15:advmod	_
+14	never	never	ADV	RB	PronType=Neg	15	advmod	15:advmod	_
 15	happened	happen	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	ccomp	10:ccomp	SpaceAfter=No
 16	,	,	PUNCT	,	_	21	punct	21:punct	_
 17	or	or	CCONJ	CC	_	21	cc	21:cc	_
@@ -2710,9 +2710,9 @@
 2	to	to	PART	TO	_	3	mark	3:mark	_
 3	stand	stand	VERB	VB	VerbForm=Inf	34	csubj	34:csubj	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
-5	day	day	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
-6	after	after	ADP	IN	_	7	case	7:case	_
-7	day	day	NOUN	NN	Number=Sing	5	nmod	5:nmod:after	SpaceAfter=No
+5	day	day	NOUN	NN	Number=Sing	3	obl:unmarked	3:obl:unmarked	Cxn=NPN|CxnElt=5:NPN.N1|TemporalNPAdjunct=Yes
+6	after	after	ADP	IN	_	7	case	7:case	CxnElt=5:NPN.P
+7	day	day	NOUN	NN	Number=Sing	5	nmod	5:nmod:after	CxnElt=5:NPN.N2|SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
@@ -2762,7 +2762,7 @@
 13	but	but	CCONJ	CC	_	17	cc	17:cc	_
 14	this	this	PRON	DT	Number=Sing|PronType=Dem	17	nsubj	17:nsubj	_
 15	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	aux	17:aux	_
-16	not	not	PART	RB	_	17	advmod	17:advmod	_
+16	not	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
 17	stop	stop	VERB	VB	VerbForm=Inf	7	conj	4:xcomp|7:conj:but	_
 18	some	some	DET	DT	PronType=Ind	21	det	21:det	_
 19	allegedly	allegedly	ADV	RB	_	20	advmod	20:advmod	_
@@ -2780,7 +2780,7 @@
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 2	also	also	ADV	RB	_	5	advmod	5:advmod	_
 3	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	not	not	PART	RB	_	5	advmod	5:advmod	_
+4	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	prevent	prevent	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	Western	western	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
@@ -2790,10 +2790,10 @@
 11	credence	credence	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
 13	every	every	DET	DT	PronType=Tot	14	det	14:det	_
-14	day	day	NOUN	NN	Number=Sing	10	obl:tmod	10:obl:tmod	SpaceAfter=No
+14	day	day	NOUN	NN	Number=Sing	10	obl:unmarked	10:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	even	even	ADV	RB	_	17	advmod	17:advmod	_
-17	now	now	ADV	RB	_	10	advmod	10:advmod	SpaceAfter=No
+17	now	now	ADV	RB	PronType=Dem	10	advmod	10:advmod	SpaceAfter=No
 18	,	,	PUNCT	,	_	21	punct	21:punct	_
 19	to	to	ADP	IN	_	21	case	21:case	_
 20	similar	similar	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
@@ -2807,16 +2807,16 @@
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	if	if	SCONJ	IN	_	6	mark	6:mark	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj|10:nsubj:xsubj	_
-6	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:if	_
+6	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:if	CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 7	to	to	PART	TO	_	10	mark	10:mark	_
 8	be	be	AUX	VB	VerbForm=Inf	10	cop	10:cop	_
 9	an	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	anti-Semite	anti-Semite	NOUN	NN	Number=Sing	6	xcomp	6:xcomp	SpaceAfter=No
 11	,	,	PUNCT	,	_	6	punct	6:punct	_
 12	there	there	PRON	EX	_	13	expl	13:expl	_
-13	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+13	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion,Existential-CopPred-ThereExpl|CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 14	subtle	subtle	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	ways	way	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
+15	ways	way	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	CxnElt=13:Existential-CopPred-ThereExpl.Pivot
 16	of	of	SCONJ	IN	_	17	mark	17:mark	_
 17	doing	do	VERB	VBG	VerbForm=Ger	15	acl	15:acl:of	_
 18	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	obj	17:obj	SpaceAfter=No
@@ -2826,25 +2826,25 @@
 # text = You do not have to claim that the holocaust never happened, and that the Jewish temple in Jerusalem never existed.
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	claim	claim	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	that	that	SCONJ	IN	_	11	mark	11:mark	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	holocaust	holocaust	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	_
-10	never	never	ADV	RB	_	11	advmod	11:advmod	_
+10	never	never	ADV	RB	PronType=Neg	11	advmod	11:advmod	_
 11	happened	happen	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	ccomp	6:ccomp	SpaceAfter=No
 12	,	,	PUNCT	,	_	21	punct	21:punct	_
 13	and	and	CCONJ	CC	_	21	cc	21:cc	_
 14	that	that	SCONJ	IN	_	21	mark	21:mark	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	Jewish	Jewish	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	temple	temple	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	_
+17	temple	temple	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	CxnElt=21:Existential-ExistPred-NoExpl.Pivot
 18	in	in	ADP	IN	_	19	case	19:case	_
 19	Jerusalem	Jerusalem	PROPN	NNP	Number=Sing	17	nmod	17:nmod:in	_
-20	never	never	ADV	RB	_	21	advmod	21:advmod	_
-21	existed	exist	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	conj	6:ccomp|11:conj:and	SpaceAfter=No
+20	never	never	ADV	RB	PronType=Neg	21	advmod	21:advmod	_
+21	existed	exist	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	conj	6:ccomp|11:conj:and	Cxn=Existential-ExistPred-NoExpl|SpaceAfter=No
 22	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0117
@@ -2871,21 +2871,21 @@
 2	these	this	DET	DT	Number=Plur|PronType=Dem	4	det	4:det	_
 3	same	same	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	leaders	leader	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
-5	make	make	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:when	_
+5	make	make	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:when	_
 6	other	other	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	statements	statement	NOUN	NNS	Number=Plur	5	obj	5:obj	SpaceAfter=No
 8	,	,	PUNCT	,	_	5	punct	5:punct	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	Western	western	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	media	media	NOUN	NNS	Number=Plur	12	nsubj	12:nsubj	_
-12	report	report	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+12	report	report	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 13	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	12	obj	12:obj	_
 14	as	as	SCONJ	IN	_	19	mark	19:mark	_
 15	if	if	SCONJ	IN	_	19	mark	19:mark	_
 16	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	19	nsubj	19:nsubj	_
 17	could	could	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 18	be	be	AUX	VB	VerbForm=Inf	19	cop	19:cop	_
-19	true	true	ADJ	JJ	Degree=Pos	12	advcl	12:advcl:if	SpaceAfter=No
+19	true	true	ADJ	JJ	Degree=Pos	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 20	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0119
@@ -3020,7 +3020,7 @@
 19	Western	western	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
 20	World	world	NOUN	NN	Number=Sing	23	nsubj	23:nsubj	_
 21	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	aux	23:aux	_
-22	not	not	PART	RB	_	23	advmod	23:advmod	_
+22	not	not	PART	RB	Polarity=Neg	23	advmod	23:advmod	_
 23	notice	notice	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 24	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	23	obj	23:obj	_
 25	because	because	SCONJ	IN	_	32	mark	32:mark	_
@@ -3052,26 +3052,26 @@
 9	of	of	ADP	IN	_	10	case	10:case	_
 10	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	8	nmod	8:nmod:of	_
 11	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
-12	not	not	PART	RB	_	13	advmod	13:advmod	_
+12	not	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
 13	understand	understand	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:though	_
 14	Arabic	Arabic	PROPN	NNP	Number=Sing	13	obj	13:obj	SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	watch	watch	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-18	Al	Al	PROPN	NNP	Number=Sing	19	compound	19:compound	_
-19	Jazeera	Jazeera	PROPN	NNP	Number=Sing	17	obj	17:obj	SpaceAfter=No
+18	Al	Al	PROPN	NNP	Number=Sing	17	obj	17:obj	_
+19	Jazeera	Jazeera	PROPN	NNP	Number=Sing	18	flat	18:flat	SpaceAfter=No
 20	,	,	PUNCT	,	_	22	punct	22:punct	_
 21	from	from	ADP	IN	_	22	case	22:case	_
-22	time	time	NOUN	NN	Number=Sing	17	obl	17:obl:from	_
-23	to	to	ADP	IN	_	24	case	24:case	_
-24	time	time	NOUN	NN	Number=Sing	22	nmod	22:nmod:to	SpaceAfter=No
+22	time	time	NOUN	NN	Number=Sing	17	obl	17:obl:from	Cxn=NPN|CxnElt=22:NPN.N1
+23	to	to	ADP	IN	_	24	case	24:case	CxnElt=22:NPN.P
+24	time	time	NOUN	NN	Number=Sing	22	nmod	22:nmod:to	CxnElt=22:NPN.N2|SpaceAfter=No
 25	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0124
 # text = You will not believe your own eyes.
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	believe	believe	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 6	own	own	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
@@ -3084,7 +3084,7 @@
 1	But	but	CCONJ	CC	_	4	cc	4:cc	_
 2	words	word	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
-4	work	work	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	work	work	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	other	other	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	ways	way	NOUN	NNS	Number=Plur	4	obl	4:obl:in	SpaceAfter=No
@@ -3111,7 +3111,7 @@
 13	featuring	feature	VERB	VBG	VerbForm=Ger	8	conj	7:acl|8:conj:and	_
 14	three	three	NUM	CD	NumForm=Word|NumType=Card	16	nummod	16:nummod	SpaceAfter=No
 15	-	-	PUNCT	HYPH	_	14	punct	14:punct	SpaceAfter=No
-16	year	year	NOUN	NN	Number=Sing	17	obl:npmod	17:obl:npmod	_
+16	year	year	NOUN	NN	Number=Sing	17	obl:unmarked	17:obl:unmarked	_
 17	old	old	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	babies	baby	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 19	dressed	dress	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	18	acl	18:acl	_
@@ -3164,7 +3164,7 @@
 24	activists	activist	NOUN	NNS	Number=Plur	12	obl	12:obl:as	_
 25	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	cop	29:cop	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	_
-27	bit	bit	NOUN	NN	Number=Sing	29	obl:npmod	29:obl:npmod	_
+27	bit	bit	NOUN	NN	Number=Sing	29	obl:unmarked	29:obl:unmarked	_
 28	too	too	ADV	RB	_	29	advmod	29:advmod	_
 29	much	much	ADJ	JJ	Degree=Pos	3	conj	3:conj:but	SpaceAfter=No
 30	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -3273,10 +3273,10 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0132
 # text = There is a new game in town: The actual murderer is called "the military wing", the one who pays him, equips him and sends him is now called "the political wing" and the head of the operation is called the "spiritual leader".
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 4	new	new	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	game	game	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+5	game	game	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 6	in	in	ADP	IN	_	7	case	7:case	_
 7	town	town	NOUN	NN	Number=Sing	2	obl	2:obl:in	SpaceAfter=No
 8	:	:	PUNCT	:	_	13	punct	13:punct	_
@@ -3303,7 +3303,7 @@
 29	sends	send	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	conj	21:acl:relcl|23:conj:and	_
 30	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	29	obj	29:obj	_
 31	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	33	aux:pass	33:aux:pass	_
-32	now	now	ADV	RB	_	33	advmod	33:advmod	_
+32	now	now	ADV	RB	PronType=Dem	33	advmod	33:advmod	_
 33	called	call	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	13	conj	13:conj:and	_
 34	"	"	PUNCT	``	_	37	punct	37:punct	SpaceAfter=No
 35	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	_
@@ -3328,10 +3328,10 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0133
 # text = There are numerous other examples of such Orwellian nomenclature, used every day not only by terror chiefs but also by Western media.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	numerous	numerous	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 4	other	other	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	examples	example	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
+5	examples	example	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 6	of	of	ADP	IN	_	9	case	9:case	_
 7	such	such	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 8	Orwellian	orwellian	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
@@ -3339,8 +3339,8 @@
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
 11	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	acl	9:acl	_
 12	every	every	DET	DT	PronType=Tot	13	det	13:det	_
-13	day	day	NOUN	NN	Number=Sing	11	obl:tmod	11:obl:tmod	_
-14	not	not	PART	RB	_	18	advmod	18:advmod	_
+13	day	day	NOUN	NN	Number=Sing	11	obl:unmarked	11:obl:unmarked	TemporalNPAdjunct=Yes
+14	not	not	PART	RB	Polarity=Neg	18	advmod	18:advmod	_
 15	only	only	ADV	RB	_	18	advmod	18:advmod	_
 16	by	by	ADP	IN	_	18	case	18:case	_
 17	terror	terror	NOUN	NN	Number=Sing	18	compound	18:compound	_
@@ -3388,7 +3388,7 @@
 7	that	that	SCONJ	IN	_	18	mark	18:mark	_
 8	if	if	SCONJ	IN	_	10	mark	10:mark	_
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
-10	repeat	repeat	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl:if	_
+10	repeat	repeat	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl:if	CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	lie	lie	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	often	often	ADV	RB	_	10	advmod	10:advmod	_
@@ -3396,7 +3396,7 @@
 15	,	,	PUNCT	,	_	10	punct	10:punct	_
 16	people	people	NOUN	NNS	Number=Plur	18	nsubj	18:nsubj	_
 17	will	will	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
-18	believe	believe	VERB	VB	VerbForm=Inf	6	ccomp	6:ccomp	_
+18	believe	believe	VERB	VB	VerbForm=Inf	6	ccomp	6:ccomp	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	SpaceAfter=No
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -3404,7 +3404,7 @@
 # text = He is now being outperformed by his successors.
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj:pass	5:nsubj:pass	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-3	now	now	ADV	RB	_	5	advmod	5:advmod	_
+3	now	now	ADV	RB	PronType=Dem	5	advmod	5:advmod	_
 4	being	be	AUX	VBG	Tense=Pres|VerbForm=Part	5	aux:pass	5:aux:pass	_
 5	outperformed	outperform	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 6	by	by	ADP	IN	_	8	case	8:case	_
@@ -3470,7 +3470,7 @@
 5	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	terrorists	terrorist	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
-8	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Emp|Reflex=Yes	7	nmod:npmod	7:nmod:npmod	SpaceAfter=No
+8	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Emp|Reflex=Yes	7	nmod:unmarked	7:nmod:unmarked	SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0141
@@ -3874,7 +3874,7 @@
 27	and	and	CCONJ	CC	_	28	cc	28:cc	_
 28	incitement	incitement	NOUN	NN	Number=Sing	26	conj	24:nmod:of|26:conj:and	SpaceAfter=No
 29	,	,	PUNCT	,	_	34	punct	34:punct	_
-30	rather	rather	ADV	RB	_	34	cc	34:cc	_
+30	rather	rather	ADV	RB	ExtPos=CCONJ	34	cc	34:cc	_
 31	than	than	ADP	IN	_	30	fixed	30:fixed	_
 32	to	to	ADP	IN	_	34	case	34:case	_
 33	the	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	_
@@ -3987,7 +3987,7 @@
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	Europe	Europe	PROPN	NNP	Number=Sing	9	nmod	9:nmod:in	SpaceAfter=No
 12	,	,	PUNCT	,	_	17	punct	17:punct	_
-13	not	not	PART	RB	_	17	advmod	17:advmod	_
+13	not	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
 14	in	in	ADP	IN	_	17	case	17:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	training	training	NOUN	NN	Number=Sing	17	compound	17:compound	_
@@ -4059,9 +4059,9 @@
 31	ringleader	ringleader	NOUN	NN	Number=Sing	43	nsubj	43:nsubj	_
 32	of	of	ADP	IN	_	37	case	37:case	_
 33	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	_
-34	Al	Al	PROPN	NNP	Number=Sing	36	compound	36:compound	SpaceAfter=No
+34	Al	Al	PROPN	NNP	Number=Sing	37	compound	37:compound	SpaceAfter=No
 35	-	-	PUNCT	HYPH	_	34	punct	34:punct	SpaceAfter=No
-36	Aksa	Aksa	PROPN	NNP	Number=Sing	37	compound	37:compound	_
+36	Aksa	Aksa	PROPN	NNP	Number=Sing	34	flat	34:flat	_
 37	brigade	brigade	NOUN	NN	Number=Sing	31	nmod	31:nmod:of	SpaceAfter=No
 38	,	,	PUNCT	,	_	39	punct	39:punct	_
 39	reporting	report	VERB	VBG	VerbForm=Ger	31	acl	31:acl	_
@@ -4075,7 +4075,7 @@
 47	payment	payment	NOUN	NN	Number=Sing	43	obj	43:obj	_
 48	of	of	ADP	IN	_	53	case	53:case	_
 49	a	a	DET	DT	Definite=Ind|PronType=Art	50	det	50:det	_
-50	couple	couple	NOUN	NN	Number=Sing	53	nmod:npmod	53:nmod:npmod	_
+50	couple	couple	NOUN	NN	Number=Sing	53	nmod:unmarked	53:nmod:unmarked	_
 51	of	of	ADP	IN	_	52	case	52:case	_
 52	hundred	hundred	NUM	CD	NumForm=Word|NumType=Card	50	nmod	50:nmod:of	_
 53	dollars	dollar	NOUN	NNS	Number=Plur	47	nmod	47:nmod:of	SpaceAfter=No
@@ -4147,12 +4147,12 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0162
 # text = There are naive old-fashioned habits such as respecting religious sites and symbols, not using ambulances and hospitals for acts of war, avoiding the mutilation of dead bodies and not using children as human shields or human bombs.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	naive	naive	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 4	old	old	ADJ	JJ	Degree=Pos	6	amod	6:amod	SpaceAfter=No
 5	-	-	PUNCT	HYPH	_	4	punct	4:punct	SpaceAfter=No
 6	fashioned	fashioned	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	habits	habit	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
+7	habits	habit	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 8	such	such	ADJ	JJ	Degree=Pos|ExtPos=SCONJ	10	mark	10:mark	_
 9	as	as	SCONJ	IN	_	8	fixed	8:fixed	_
 10	respecting	respect	VERB	VBG	VerbForm=Ger	7	acl	7:acl:such_as	_
@@ -4161,7 +4161,7 @@
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
 14	symbols	symbol	NOUN	NNS	Number=Plur	12	conj	10:obj|12:conj:and	SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
-16	not	not	PART	RB	_	17	advmod	17:advmod	_
+16	not	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
 17	using	use	VERB	VBG	VerbForm=Ger	10	conj	7:acl:such_as|10:conj:and	_
 18	ambulances	ambulance	NOUN	NNS	Number=Plur	17	obj	17:obj	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
@@ -4178,7 +4178,7 @@
 30	dead	dead	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
 31	bodies	body	NOUN	NNS	Number=Plur	28	nmod	28:nmod:of	_
 32	and	and	CCONJ	CC	_	34	cc	34:cc	_
-33	not	not	PART	RB	_	34	advmod	34:advmod	_
+33	not	not	PART	RB	Polarity=Neg	34	advmod	34:advmod	_
 34	using	use	VERB	VBG	VerbForm=Ger	10	conj	7:acl:such_as|10:conj:and	_
 35	children	child	NOUN	NNS	Number=Plur	34	obj	34:obj	_
 36	as	as	ADP	IN	_	38	case	38:case	_
@@ -4191,22 +4191,22 @@
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0163
 # text = Never in history, not even in the Nazi period, was there such total disregard of all of the above as we observe now.
-1	Never	never	ADV	RB	_	12	advmod	12:advmod	_
+1	Never	never	ADV	RB	PronType=Neg	12	advmod	12:advmod	_
 2	in	in	ADP	IN	_	3	case	3:case	_
 3	history	history	NOUN	NN	Number=Sing	1	obl	1:obl:in	SpaceAfter=No
 4	,	,	PUNCT	,	_	1	punct	1:punct	_
-5	not	not	PART	RB	_	10	advmod	10:advmod	_
+5	not	not	PART	RB	Polarity=Neg	10	advmod	10:advmod	_
 6	even	even	ADV	RB	_	10	advmod	10:advmod	_
 7	in	in	ADP	IN	_	10	case	10:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	Nazi	Nazi	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	period	period	NOUN	NN	Number=Sing	12	obl	12:obl:in	SpaceAfter=No
 11	,	,	PUNCT	,	_	10	punct	10:punct	_
-12	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+12	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Direct|CxnElt=12:Interrogative-Polar-Direct.Clause
 13	there	there	PRON	EX	_	12	expl	12:expl	_
 14	such	such	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 15	total	total	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	disregard	disregard	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
+16	disregard	disregard	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	CxnElt=12:Existential-CopPred-ThereExpl.Pivot
 17	of	of	ADP	IN	_	18	case	18:case	_
 18	all	all	DET	DT	PronType=Tot	16	nmod	16:nmod:of	_
 19	of	of	ADP	IN	_	21	case	21:case	_
@@ -4215,7 +4215,7 @@
 22	as	as	SCONJ	IN	_	24	mark	24:mark	_
 23	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	24	nsubj	24:nsubj	_
 24	observe	observe	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:as	_
-25	now	now	ADV	RB	_	24	advmod	24:advmod	SpaceAfter=No
+25	now	now	ADV	RB	PronType=Dem	24	advmod	24:advmod	SpaceAfter=No
 26	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0164
@@ -4226,9 +4226,9 @@
 4	political	political	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	science	science	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 6	debates	debate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-7	how	how	ADV	WRB	PronType=Int	9	advmod	9:advmod	_
+7	how	how	ADV	WRB	PronType=Int	9	advmod	9:advmod	CxnElt=9:Interrogative-WHInfo-Indirect.WHWord
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
-9	prevent	prevent	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	ccomp	6:ccomp	_
+9	prevent	prevent	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	ccomp	6:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=9:Interrogative-WHInfo-Indirect.Clause
 10	an	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 11	anti-democratic	anti-democratic	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	force	force	NOUN	NN	Number=Sing	9	obj	9:obj	_
@@ -4261,7 +4261,7 @@
 1	Can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
 3	policeman	policeman	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	open	open	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	open	open	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=4:Interrogative-Polar-Direct.Clause
 5	fire	fire	NOUN	NN	Number=Sing	4	obj	4:obj	_
 6	on	on	ADP	IN	_	7	case	7:case	_
 7	someone	someone	PRON	NN	Number=Sing|PronType=Ind	4	obl	4:obl:on	_
@@ -4276,7 +4276,7 @@
 1	Can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
 3	government	government	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	listen	listen	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	listen	listen	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=4:Interrogative-Polar-Direct.Clause
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	phone	phone	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	conversations	conversation	NOUN	NNS	Number=Plur	4	obl	4:obl:to	_
@@ -4292,7 +4292,7 @@
 1	Does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 2	free	free	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	speech	speech	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	protect	protect	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	protect	protect	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=4:Interrogative-Polar-Direct.Clause
 5	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	4	obj	4:obj	_
 6	when	when	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
@@ -4310,9 +4310,9 @@
 # text = Should there be death penalty, for deliberate multiple murders?
 1	Should	should	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	there	there	PRON	EX	_	3	expl	3:expl	_
-3	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	death	death	NOUN	NN	Number=Sing	5	compound	5:compound	_
-5	penalty	penalty	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	SpaceAfter=No
+5	penalty	penalty	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 6	,	,	PUNCT	,	_	10	punct	10:punct	_
 7	for	for	ADP	IN	_	10	case	10:case	_
 8	deliberate	deliberate	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
@@ -4334,7 +4334,7 @@
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0171
 # text = But now we have an entire new set.
 1	But	but	CCONJ	CC	_	4	cc	4:cc	_
-2	now	now	ADV	RB	_	4	advmod	4:advmod	_
+2	now	now	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 3	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 4	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	an	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
@@ -4348,7 +4348,7 @@
 # text = Do you raid a mosque, which serves as a terrorist ammunition storage?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	raid	raid	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	raid	raid	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	mosque	mosque	NOUN	NN	Number=Sing	3	obj	3:obj|8:nsubj	SpaceAfter=No
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
@@ -4365,13 +4365,13 @@
 # text = Do you return fire, if you are attacked from a hospital?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	return	return	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	return	return	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion,Interrogative-Polar-Direct|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis,3:Interrogative-Polar-Direct.Clause
 4	fire	fire	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
 5	,	,	PUNCT	,	_	9	punct	9:punct	_
 6	if	if	SCONJ	IN	_	9	mark	9:mark	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj:pass	9:nsubj:pass	_
 8	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	aux:pass	9:aux:pass	_
-9	attacked	attack	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	advcl	3:advcl:if	_
+9	attacked	attack	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	advcl	3:advcl:if	CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 10	from	from	ADP	IN	_	12	case	12:case	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	hospital	hospital	NOUN	NN	Number=Sing	9	obl	9:obl:from	SpaceAfter=No
@@ -4381,7 +4381,7 @@
 # text = Do you storm a church taken over by terrorists who took the priests hostages?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	storm	storm	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	storm	storm	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	church	church	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	taken	take	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl	5:acl	_
@@ -4399,7 +4399,7 @@
 # text = Do you search every ambulance after a few suicide murderers use ambulances to reach their targets?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	search	search	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	search	search	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	every	every	DET	DT	PronType=Tot	5	det	5:det	_
 5	ambulance	ambulance	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	after	after	SCONJ	IN	_	11	mark	11:mark	_
@@ -4419,7 +4419,7 @@
 # text = Do you strip every woman because one pretended to be pregnant and carried a suicide bomb on her belly?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	strip	strip	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	strip	strip	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	every	every	DET	DT	PronType=Tot	5	det	5:det	_
 5	woman	woman	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	because	because	SCONJ	IN	_	8	mark	8:mark	_
@@ -4442,7 +4442,7 @@
 # text = Do you shoot back at someone trying to kill you, standing deliberately behind a group of children?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	shoot	shoot	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	shoot	shoot	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	back	back	ADV	RB	_	3	advmod	3:advmod	_
 5	at	at	ADP	IN	_	6	case	6:case	_
 6	someone	someone	PRON	NN	Number=Sing|PronType=Ind	3	obl	3:obl:at	_
@@ -4464,7 +4464,7 @@
 # text = Do you raid terrorist headquarters, hidden in a mental hospital?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	raid	raid	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	raid	raid	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	terrorist	terrorist	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	headquarters	headquarters	NOUN	NNS	Number=Ptan	3	obj	3:obj	SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
@@ -4479,7 +4479,7 @@
 # text = Do you shoot an arch-murderer who deliberately moves from one location to another, always surrounded by children?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	shoot	shoot	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	shoot	shoot	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	an	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	arch-murderer	arch-murderer	NOUN	NN	Number=Sing	3	obj	3:obj|8:nsubj	_
 6	who	who	PRON	WP	PronType=Rel	8	nsubj	5:ref	_
@@ -4491,7 +4491,7 @@
 12	to	to	ADP	IN	_	13	case	13:case	_
 13	another	another	DET	DT	PronType=Ind	8	obl	8:obl:to	SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
-15	always	always	ADV	RB	_	16	advmod	16:advmod	_
+15	always	always	ADV	RB	PronType=Tot	16	advmod	16:advmod	_
 16	surrounded	surround	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	advcl	8:advcl	_
 17	by	by	ADP	IN	_	18	case	18:case	_
 18	children	child	NOUN	NNS	Number=Plur	16	obl:agent	16:obl:agent	SpaceAfter=No
@@ -4515,10 +4515,10 @@
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0181
 # text = What do you do?
-1	What	what	PRON	WP	PronType=Int	4	obj	4:obj	_
+1	What	what	PRON	WP	PronType=Int	4	obj	4:obj	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+4	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause|SpaceAfter=No
 5	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0182
@@ -4527,7 +4527,7 @@
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj|8:nsubj:xsubj	_
 4	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
-5	not	not	PART	RB	_	6	advmod	6:advmod	_
+5	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	face	face	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
@@ -4541,7 +4541,7 @@
 2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj:pass	6:nsubj:pass	_
 3-4	cannot	_	_	_	_	_	_	_	_
 3	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-4	not	not	PART	RB	_	6	advmod	6:advmod	_
+4	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 5	be	be	AUX	VB	VerbForm=Inf	6	aux:pass	6:aux:pass	_
 6	avoided	avoid	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No
 7	.	.	PUNCT	.	_	6	punct	6:punct	_
@@ -4659,13 +4659,13 @@
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	figure	figure	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
 10	out	out	ADP	RP	_	9	compound:prt	9:compound:prt	_
-11	what	what	PRON	WP	PronType=Int	17	obj	17:obj	_
+11	what	what	PRON	WP	PronType=Int	17	obj	17:obj	CxnElt=17:Interrogative-WHInfo-Indirect.WHWord
 12	Spain	Spain	PROPN	NNP	Number=Sing	17	nsubj	17:nsubj	_
 13	or	or	CCONJ	CC	_	14	cc	14:cc	_
 14	France	France	PROPN	NNP	Number=Sing	12	conj	12:conj:or|17:nsubj	_
 15	would	would	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 16	have	have	AUX	VB	VerbForm=Inf	17	aux	17:aux	_
-17	done	do	VERB	VBN	Tense=Past|VerbForm=Part	9	ccomp	9:ccomp	SpaceAfter=No
+17	done	do	VERB	VBN	Tense=Past|VerbForm=Part	9	ccomp	9:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=17:Interrogative-WHInfo-Indirect.Clause|SpaceAfter=No
 18	,	,	PUNCT	,	_	22	punct	22:punct	_
 19	in	in	ADP	IN	_	22	case	22:case	_
 20	such	such	DET	PDT	PronType=Ind	22	det:predet	22:det:predet	_
@@ -4735,11 +4735,11 @@
 1	In	in	ADP	IN	_	4	case	4:case	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 3	same	same	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	way	way	NOUN	NN	Number=Sing	29	obl	8:obl:npmod|29:obl:in	_
-5	that	that	PRON	WDT	PronType=Rel	8	obl:npmod	4:ref	_
+4	way	way	NOUN	NN	Number=Sing	29	obl	8:obl:unmarked|29:obl:in	_
+5	that	that	PRON	WDT	PronType=Rel	8	obl:unmarked	4:ref	_
 6	no	no	DET	DT	PronType=Neg	7	det	7:det	_
 7	country	country	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
-8	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-that-obl:npmod
+8	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-that-obl:unmarked
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	law	law	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	against	against	SCONJ	IN	_	13	mark	13:mark	_
@@ -4759,7 +4759,7 @@
 25	international	international	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
 26	law	law	NOUN	NN	Number=Sing	29	nsubj	29:nsubj	_
 27	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	aux	29:aux	_
-28	not	not	PART	RB	_	29	advmod	29:advmod	_
+28	not	not	PART	RB	Polarity=Neg	29	advmod	29:advmod	_
 29	address	address	VERB	VB	VerbForm=Inf	0	root	0:root	_
 30	killers	killer	NOUN	NNS	Number=Plur	31	nsubj	31:nsubj	_
 31	shooting	shoot	VERB	VBG	VerbForm=Ger	29	ccomp	29:ccomp	_
@@ -4785,11 +4785,11 @@
 1	International	international	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
 2	law	law	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 3	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	not	not	PART	RB	_	5	advmod	5:advmod	_
+4	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
-6	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
+6	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	CxnElt=8:Interrogative-WHInfo-Indirect.WHWord
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	handle	handle	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	_
+8	handle	handle	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=8:Interrogative-WHInfo-Indirect.Clause
 9	someone	someone	PRON	NN	Number=Sing|PronType=Ind	8	obj	8:obj|11:nsubj|17:nsubj|21:nsubj|28:nsubj	_
 10	who	who	PRON	WP	PronType=Rel	11	nsubj	9:ref	_
 11	sends	send	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-wh-nsubj
@@ -4808,7 +4808,7 @@
 24	and	and	CCONJ	CC	_	28	cc	28:cc	_
 25-26	cannot	_	_	_	_	_	_	_	_
 25	can	can	AUX	MD	VerbForm=Fin	28	aux	28:aux	_
-26	not	not	PART	RB	_	28	advmod	28:advmod	_
+26	not	not	PART	RB	Polarity=Neg	28	advmod	28:advmod	_
 27	be	be	AUX	VB	VerbForm=Inf	28	aux:pass	28:aux:pass	_
 28	arrested	arrest	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	11	conj	9:acl:relcl|11:conj:and	_
 29	because	because	SCONJ	IN	_	32	mark	32:mark	_
@@ -4825,11 +4825,11 @@
 1	International	international	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
 2	law	law	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 3	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	not	not	PART	RB	_	5	advmod	5:advmod	_
+4	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
-6	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
+6	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	CxnElt=8:Interrogative-WHInfo-Indirect.WHWord
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	deal	deal	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	_
+8	deal	deal	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=8:Interrogative-WHInfo-Indirect.Clause
 9	with	with	ADP	IN	_	11	case	11:case	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 11	leader	leader	NOUN	NN	Number=Sing	8	obl	8:obl:with|19:nsubj:pass	_
@@ -4922,7 +4922,7 @@
 16	international	international	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	law	law	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	_
 18	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
-19	always	always	ADV	RB	_	20	advmod	20:advmod	_
+19	always	always	ADV	RB	PronType=Tot	20	advmod	20:advmod	_
 20	adapted	adapt	VERB	VBN	Tense=Past|VerbForm=Part	10	advcl	10:advcl:because	_
 21	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	20	obj	20:obj	_
 22	to	to	ADP	IN	_	23	case	23:case	_
@@ -4945,10 +4945,10 @@
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	murder	murder	NOUN	NN	Number=Sing	8	nmod	8:nmod:before	SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
-15	not	not	PART	RB	_	16	advmod	16:advmod	_
+15	not	not	PART	RB	Polarity=Neg	16	advmod	16:advmod	_
 16	during	during	ADV	RB	_	13	conj	8:nmod:before|13:conj	_
 17	and	and	CCONJ	CC	_	19	cc	19:cc	_
-18	not	not	PART	RB	_	19	advmod	19:advmod	_
+18	not	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 19	after	after	ADV	RB	_	16	conj	16:conj:and	SpaceAfter=No
 20	.	.	PUNCT	.	_	8	punct	8:punct	_
 
@@ -5003,16 +5003,16 @@
 4	described	describe	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	acl:relcl	2:acl:relcl	Cxn=rc-red-obj
 5	here	here	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
-7	not	not	PART	RB	_	8	advmod	8:advmod	_
+7	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 8	pretty	pretty	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 9	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0197
 # text = What can we do about it?
-1	What	what	PRON	WP	PronType=Int	4	obj	4:obj	_
+1	What	what	PRON	WP	PronType=Int	4	obj	4:obj	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-4	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	about	about	ADP	IN	_	6	case	6:case	_
 6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obl	4:obl:about	SpaceAfter=No
 7	?	?	PUNCT	.	_	4	punct	4:punct	_
@@ -5071,7 +5071,7 @@
 3	circle	circle	NOUN	NN	Number=Sing	7	nsubj:pass	7:nsubj:pass	_
 4-5	cannot	_	_	_	_	_	_	_	_
 4	can	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
-5	not	not	PART	RB	_	7	advmod	7:advmod	_
+5	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 6	be	be	AUX	VB	VerbForm=Inf	7	aux:pass	7:aux:pass	_
 7	eliminated	eliminate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 8	by	by	ADP	IN	_	9	case	9:case	_
@@ -5101,8 +5101,8 @@
 19	counter-propaganda	counter-propaganda	NOUN	NN	Number=Sing	5	conj	3:obj|5:conj:and	SpaceAfter=No
 20	,	,	PUNCT	,	_	21	punct	21:punct	_
 21	boycott	boycott	NOUN	NN	Number=Sing	5	conj	3:obj|5:conj:and	_
-22	whenever	whenever	ADV	WRB	PronType=Int	23	advmod	23:advmod	_
-23	feasible	feasible	ADJ	JJ	Degree=Pos	21	acl	21:acl	_
+22	whenever	whenever	ADV	WRB	PronType=Rel	21	advmod	21:advmod|23:advmod	_
+23	feasible	feasible	ADJ	JJ	Degree=Pos	22	advcl:relcl	22:advcl:relcl	Cxn=rc-free-advmod
 24	and	and	CCONJ	CC	_	25	cc	25:cc	_
 25	access	access	NOUN	NN	Number=Sing	5	conj	3:obj|5:conj:and	_
 26	to	to	ADP	IN	_	28	case	28:case	_
@@ -5180,7 +5180,7 @@
 10	remove	remove	VERB	VB	VerbForm=Inf	0	root	0:root	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	tumor	tumor	NOUN	NN	Number=Sing	10	obj	10:obj	_
-13	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Emp|Reflex=Yes	12	nmod:npmod	12:nmod:npmod	_
+13	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Emp|Reflex=Yes	12	nmod:unmarked	12:nmod:unmarked	_
 14	surgically	surgically	ADV	RB	_	10	advmod	10:advmod	SpaceAfter=No
 15	.	.	PUNCT	.	_	10	punct	10:punct	_
 
@@ -5221,14 +5221,14 @@
 # text = If you want to be sure, it is best to do both.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|6:nsubj:xsubj	_
-3	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl:if	_
+3	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl:if	CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	to	to	PART	TO	_	6	mark	6:mark	_
 5	be	be	AUX	VB	VerbForm=Inf	6	cop	6:cop	_
 6	sure	sure	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	SpaceAfter=No
 7	,	,	PUNCT	,	_	3	punct	3:punct	_
 8	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	expl	10:expl	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
-10	best	good	ADJ	JJS	Degree=Sup	0	root	0:root	_
+10	best	good	ADJ	JJS	Degree=Sup	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	do	do	VERB	VB	VerbForm=Inf	10	csubj	10:csubj	_
 13	both	both	DET	DT	PronType=Tot	12	obj	12:obj	SpaceAfter=No
@@ -5273,7 +5273,7 @@
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0209
 # text = In order to win, it is necessary to first eliminate the terrorist regimes, so that no Government in the world will serve as a safe haven for these people.
-1	In	in	ADP	IN	_	4	mark	4:mark	_
+1	In	in	ADP	IN	ExtPos=SCONJ	4	mark	4:mark	_
 2	order	order	NOUN	NN	Number=Sing	1	fixed	1:fixed	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	win	win	VERB	VB	VerbForm=Inf	8	advcl	8:advcl	SpaceAfter=No
@@ -5288,7 +5288,7 @@
 13	terrorist	terrorist	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	regimes	regime	NOUN	NNS	Number=Plur	11	obj	11:obj	SpaceAfter=No
 15	,	,	PUNCT	,	_	24	punct	24:punct	_
-16	so	so	SCONJ	IN	_	24	mark	24:mark	_
+16	so	so	SCONJ	IN	ExtPos=SCONJ	24	mark	24:mark	_
 17	that	that	SCONJ	IN	_	16	fixed	16:fixed	_
 18	no	no	DET	DT	PronType=Neg	19	det	19:det	_
 19	Government	government	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	_
@@ -5310,7 +5310,7 @@
 # text = I do not want to comment here on whether the American-led attack on Iraq was justified from the point of view of weapons of mass destruction or any other pre-war argument, but I can look at the post-war map of Western Asia.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	comment	comment	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
@@ -5357,7 +5357,7 @@
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0211
 # text = Now that Afghanistan, Iraq and Libya are out, two and a half terrorist states remain: Iran, Syria and Lebanon, the latter being a Syrian colony.
-1	Now	now	ADV	RB	_	17	advmod	17:advmod	_
+1	Now	now	ADV	RB	PronType=Dem	17	advmod	17:advmod	_
 2	that	that	SCONJ	IN	_	9	mark	9:mark	_
 3	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
@@ -5419,7 +5419,7 @@
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
 15	Syria	Syria	PROPN	NNP	Number=Sing	13	conj	13:conj:and|19:nsubj:pass	_
 16	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	19	aux:pass	19:aux:pass	_
-17	now	now	ADV	RB	_	19	advmod	19:advmod	_
+17	now	now	ADV	RB	PronType=Dem	19	advmod	19:advmod	_
 18	totally	totally	ADV	RB	_	19	advmod	19:advmod	_
 19	surrounded	surround	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 20	by	by	ADP	IN	_	21	case	21:case	_
@@ -5492,7 +5492,7 @@
 # text = It is not surprising that Iran is so active in trying to incite a Shiite uprising in Iraq.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	expl	4:expl	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	surprising	surprising	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	that	that	SCONJ	IN	_	9	mark	9:mark	_
 6	Iran	Iran	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
@@ -5514,7 +5514,7 @@
 # text = I do not know if the American plan was actually to encircle both Iran and Syria, but that is the resulting situation.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	if	if	SCONJ	IN	_	12	mark	12:mark	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
@@ -5523,7 +5523,7 @@
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	_
 10	actually	actually	ADV	RB	_	12	advmod	12:advmod	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	encircle	encircle	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	_
+12	encircle	encircle	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=12:Interrogative-Polar-Indirect.Clause
 13	both	both	CCONJ	CC	_	14	cc:preconj	14:cc:preconj	_
 14	Iran	Iran	PROPN	NNP	Number=Sing	12	obj	12:obj	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
@@ -5551,7 +5551,7 @@
 10	to	to	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	world	world	NOUN	NN	Number=Sing	9	nmod	9:nmod:to	_
-13	today	today	NOUN	NN	Number=Sing	15	obl:tmod	15:obl:tmod	_
+13	today	today	NOUN	NN	Number=Sing	15	obl:unmarked	15:obl:unmarked	TemporalNPAdjunct=Yes
 14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 15	Iran	Iran	PROPN	NNP	Number=Sing	0	root	0:root	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
@@ -5772,7 +5772,7 @@
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0228
 # text = In order to win the war it is also necessary to dry the financial resources of the terror conglomerate.
-1	In	in	ADP	IN	_	4	mark	4:mark	_
+1	In	in	ADP	IN	ExtPos=SCONJ	4	mark	4:mark	_
 2	order	order	NOUN	NN	Number=Sing	1	fixed	1:fixed	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	win	win	VERB	VB	VerbForm=Inf	10	advcl	10:advcl:to	_
@@ -5809,11 +5809,11 @@
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	Sunni	Sunni	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	terror	terror	NOUN	NN	Number=Sing	10	nmod	10:nmod:between	_
-15	of	of	ADP	IN	_	17	case	17:case	_
-16	Al	Al	PROPN	NNP	Number=Sing	17	compound	17:compound	_
-17	Qaeda	Qaeda	PROPN	NNP	Number=Sing	14	nmod	14:nmod:of	_
+15	of	of	ADP	IN	_	16	case	16:case	_
+16	Al	Al	PROPN	NNP	Number=Sing	14	nmod	14:nmod:of	_
+17	Qaeda	Qaeda	PROPN	NNP	Number=Sing	16	flat	16:flat	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
-19	Hamas	Hamas	PROPN	NNP	Number=Sing	17	conj	14:nmod:of|17:conj:and	_
+19	Hamas	Hamas	PROPN	NNP	Number=Sing	16	conj	14:nmod:of|16:conj:and	_
 20	and	and	CCONJ	CC	_	23	cc	23:cc	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 22	Shiite	Shiite	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
@@ -5963,7 +5963,7 @@
 1	Above	above	ADP	IN	_	2	case	2:case	_
 2	all	all	DET	DT	PronType=Tot	5	obl	5:obl:above	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
-4	never	never	ADV	RB	_	5	advmod	5:advmod	_
+4	never	never	ADV	RB	PronType=Neg	5	advmod	5:advmod	_
 5	surrender	surrender	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 6	to	to	ADP	IN	_	7	case	7:case	_
 7	terror	terror	NOUN	NN	Number=Sing	5	obl	5:obl:to	SpaceAfter=No
@@ -5974,7 +5974,7 @@
 1	No	no	DET	DT	PronType=Neg	2	det	2:det	_
 2	one	one	PRON	NN	Number=Sing|PronType=Neg	5	nsubj	5:nsubj	_
 3	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
-4	ever	ever	ADV	RB	_	5	advmod	5:advmod	_
+4	ever	ever	ADV	RB	PronType=Ind	5	advmod	5:advmod	_
 5	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	whether	whether	SCONJ	IN	_	14	mark	14:mark	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
@@ -5984,20 +5984,20 @@
 11	Spain	Spain	PROPN	NNP	Number=Sing	9	nmod	9:nmod:in	_
 12	would	would	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
 13	have	have	AUX	VB	VerbForm=Inf	14	aux	14:aux	_
-14	yielded	yield	VERB	VBN	Tense=Past|VerbForm=Part	5	ccomp	5:ccomp	_
+14	yielded	yield	VERB	VBN	Tense=Past|VerbForm=Part	5	ccomp	5:ccomp	Cxn=Conditional-NegativeEpistemic-Reduced|CxnElt=14:Conditional-NegativeEpistemic-Reduced.Apodosis
 15	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 16	different	different	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	result	result	NOUN	NN	Number=Sing	14	obj	14:obj	SpaceAfter=No
 18	,	,	PUNCT	,	_	24	punct	24:punct	_
 19	if	if	SCONJ	IN	_	24	mark	24:mark	_
-20	not	not	PART	RB	_	24	advmod	24:advmod	_
+20	not	not	PART	RB	Polarity=Neg	24	advmod	24:advmod	_
 21	for	for	ADP	IN	_	24	case	24:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 23	train	train	NOUN	NN	Number=Sing	24	compound	24:compound	_
-24	bombings	bombing	NOUN	NNS	Number=Plur	14	advcl	14:advcl:for	_
+24	bombings	bombing	NOUN	NNS	Number=Plur	14	advcl	14:advcl:for	CxnElt=14:Conditional-NegativeEpistemic-Reduced.Protasis
 25	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	_
 26	few	few	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	days	day	NOUN	NNS	Number=Plur	28	obl:npmod	28:obl:npmod	_
+27	days	day	NOUN	NNS	Number=Plur	28	obl:unmarked	28:obl:unmarked	_
 28	earlier	early	ADV	RBR	Degree=Cmp	24	advmod	24:advmod	SpaceAfter=No
 29	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -6007,7 +6007,7 @@
 2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	expl	6:expl	_
 3	really	really	ADV	RB	_	6	advmod	6:advmod	_
 4	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
-5	not	not	PART	RB	_	6	advmod	6:advmod	_
+5	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	matter	matter	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
 7	.	.	PUNCT	.	_	6	punct	6:punct	_
 
@@ -6059,7 +6059,7 @@
 18	,	,	PUNCT	,	_	22	punct	22:punct	_
 19	who	who	PRON	WP	PronType=Rel	22	nsubj	17:ref	_
 20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	aux	22:aux	_
-21	now	now	ADV	RB	_	22	advmod	22:advmod	_
+21	now	now	ADV	RB	PronType=Dem	22	advmod	22:advmod	_
 22	expelling	expel	VERB	VBG	Tense=Pres|VerbForm=Part	17	acl:relcl	17:acl:relcl	Cxn=rc-wh-nsubj
 23	inciting	incite	VERB	VBG	VerbForm=Ger	24	amod	24:amod	_
 24	preachers	preacher	NOUN	NNS	Number=Plur	22	obj	22:obj	_
@@ -6084,7 +6084,7 @@
 4	run	run	NOUN	NN	Number=Sing	9	obl	9:obl:in	SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	Spain	Spain	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
-7	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Emp|Reflex=Yes	6	nmod:npmod	6:nmod:npmod	_
+7	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Emp|Reflex=Yes	6	nmod:unmarked	6:nmod:unmarked	_
 8	will	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 9	pay	pay	VERB	VB	VerbForm=Inf	0	root	0:root	_
 10	even	even	ADV	RB	_	11	advmod	11:advmod	_
@@ -6099,7 +6099,7 @@
 4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 5	democratic	democratic	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 6	Arab	Arab	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	world	world	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+7	world	world	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=7:Interrogative-Polar-Direct.Clause|SpaceAfter=No
 8	?	?	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0241
@@ -6109,7 +6109,7 @@
 2	by	by	ADP	IN	_	3	case	3:case	_
 3	democracy	democracy	NOUN	NN	Number=Sing	5	obl	5:obl:by	_
 4	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
-5	mean	mean	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	67	advcl	67:advcl:if	_
+5	mean	mean	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	67	advcl	67:advcl:if	CxnElt=67:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 6	free	free	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	elections	election	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 8	but	but	CCONJ	CC	_	11	cc	11:cc	_
@@ -6166,12 +6166,12 @@
 59	children	child	NOUN	NNS	Number=Plur	53	conj	51:nmod:regarding|53:conj:and	SpaceAfter=No
 60	,	,	PUNCT	,	_	5	punct	5:punct	_
 61	then	then	ADV	RB	PronType=Dem	67	advmod	67:advmod	_
-62	yes	yes	INTJ	UH	_	67	discourse	67:discourse	SpaceAfter=No
+62	yes	yes	INTJ	UH	Polarity=Pos	67	discourse	67:discourse	SpaceAfter=No
 63	,	,	PUNCT	,	_	62	punct	62:punct	_
 64	democracy	democracy	NOUN	NN	Number=Sing	67	nsubj	67:nsubj	_
 65	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	67	cop	67:cop	_
 66	the	the	DET	DT	Definite=Def|PronType=Art	67	det	67:det	_
-67	solution	solution	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+67	solution	solution	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=67:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 68	.	.	PUNCT	.	_	67	punct	67:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0242
@@ -6181,11 +6181,11 @@
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 4	just	just	ADV	RB	_	6	advmod	6:advmod	_
 5	free	free	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	elections	election	NOUN	NNS	Number=Plur	10	advcl	10:advcl:if	SpaceAfter=No
+6	elections	election	NOUN	NNS	Number=Plur	10	advcl	10:advcl:if	CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 7	,	,	PUNCT	,	_	6	punct	6:punct	_
 8	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	expl	10:expl	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
-10	likely	likely	ADJ	JJ	Degree=Pos	0	root	0:root	_
+10	likely	likely	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 11	that	that	SCONJ	IN	_	18	mark	18:mark	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 13	most	most	ADV	RBS	Degree=Sup	14	advmod	14:advmod	_
@@ -6231,15 +6231,15 @@
 # text = It will happen again, if the ground is not prepared very carefully.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	happen	happen	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	happen	happen	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 4	again	again	ADV	RB	_	3	advmod	3:advmod	SpaceAfter=No
 5	,	,	PUNCT	,	_	11	punct	11:punct	_
 6	if	if	SCONJ	IN	_	11	mark	11:mark	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	ground	ground	NOUN	NN	Number=Sing	11	nsubj:pass	11:nsubj:pass	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux:pass	11:aux:pass	_
-10	not	not	PART	RB	_	11	advmod	11:advmod	_
-11	prepared	prepare	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	advcl	3:advcl:if	_
+10	not	not	PART	RB	Polarity=Neg	11	advmod	11:advmod	_
+11	prepared	prepare	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	advcl	3:advcl:if	CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 12	very	very	ADV	RB	_	13	advmod	13:advmod	_
 13	carefully	carefully	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 14	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -6279,20 +6279,20 @@
 31	in	in	ADP	IN	_	34	case	34:case	_
 32	the	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	_
 33	same	same	ADJ	JJ	Degree=Pos	34	amod	34:amod	_
-34	way	way	NOUN	NN	Number=Sing	20	obl	20:obl:in|42:obl:npmod	_
-35	that	that	PRON	WDT	PronType=Rel	42	obl:npmod	34:ref	_
+34	way	way	NOUN	NN	Number=Sing	20	obl	20:obl:in|42:obl:unmarked	_
+35	that	that	PRON	WDT	PronType=Rel	42	obl:unmarked	34:ref	_
 36	an	a	DET	DT	Definite=Ind|PronType=Art	39	det	39:det	_
 37	immediate	immediate	ADJ	JJ	Degree=Pos	39	amod	39:amod	_
 38	sudden	sudden	ADJ	JJ	Degree=Pos	39	amod	39:amod	_
 39	democracy	democracy	NOUN	NN	Number=Sing	42	nsubj	42:nsubj|49:nsubj	_
 40	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	42	aux	42:aux	_
-41	not	not	PART	RB	_	42	advmod	42:advmod	_
-42	work	work	VERB	VB	VerbForm=Inf	34	acl:relcl	34:acl:relcl	Cxn=rc-that-obl:npmod
+41	not	not	PART	RB	Polarity=Neg	42	advmod	42:advmod	_
+42	work	work	VERB	VB	VerbForm=Inf	34	acl:relcl	34:acl:relcl	Cxn=rc-that-obl:unmarked
 43	in	in	ADP	IN	_	44	case	44:case	_
 44	Russia	Russia	PROPN	NNP	Number=Sing	42	obl	42:obl:in	_
 45	and	and	CCONJ	CC	_	49	cc	49:cc	_
 46	would	would	AUX	MD	VerbForm=Fin	49	aux	49:aux	_
-47	not	not	PART	RB	_	49	advmod	49:advmod	_
+47	not	not	PART	RB	Polarity=Neg	49	advmod	49:advmod	_
 48	have	have	AUX	VB	VerbForm=Inf	49	aux	49:aux	_
 49	worked	work	VERB	VBN	Tense=Past|VerbForm=Part	42	conj	34:acl:relcl|42:conj:and	_
 50	in	in	ADP	IN	_	51	case	51:case	_
@@ -6367,7 +6367,7 @@
 7	following	follow	VERB	VBG	Tense=Pres|VerbForm=Part	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	horrors	horror	NOUN	NNS	Number=Plur	3	nmod	3:nmod:following	_
-10	of	of	ADP	IN	_	13	case	13:case	_
+10	of	of	ADP	IN	_	12	case	12:case	_
 11	World	World	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 12	War	War	PROPN	NNP	Number=Sing	9	nmod	9:nmod:of	_
 13	II	II	NUM	CD	NumForm=Roman|NumType=Card	12	nummod	12:nummod	SpaceAfter=No

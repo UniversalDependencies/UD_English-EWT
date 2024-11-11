@@ -5,7 +5,7 @@
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj|7:nsubj:xsubj	_
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	seem	seem	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	to	to	PART	TO	_	7	mark	7:mark	_
 6	be	be	AUX	VB	VerbForm=Inf	7	cop	7:cop	_
@@ -20,7 +20,7 @@
 # text = Went there yesterday: we are trying to decide between two different Honda models, so we wanted to test-drive both back to back.
 1	Went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 2	there	there	ADV	RB	PronType=Dem	1	advmod	1:advmod	_
-3	yesterday	yesterday	NOUN	NN	Number=Sing	1	obl:tmod	1:obl:tmod	SpaceAfter=No
+3	yesterday	yesterday	NOUN	NN	Number=Sing	1	obl:unmarked	1:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 4	:	:	PUNCT	:	_	7	punct	7:punct	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	7	nsubj	7:nsubj|9:nsubj:xsubj	_
 6	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
@@ -37,13 +37,13 @@
 17	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	18	nsubj	18:nsubj|22:nsubj:xsubj	_
 18	wanted	want	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	7	parataxis	7:parataxis	_
 19	to	to	PART	TO	_	22	mark	22:mark	_
-20	test	test	NOUN	NN	Number=Sing	22	obl:npmod	22:obl:npmod	SpaceAfter=No
+20	test	test	NOUN	NN	Number=Sing	22	obl:unmarked	22:obl:unmarked	SpaceAfter=No
 21	-	-	PUNCT	HYPH	_	20	punct	20:punct	SpaceAfter=No
 22	drive	drive	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
 23	both	both	DET	DT	PronType=Tot	22	obj	22:obj	_
-24	back	back	NOUN	NN	Number=Sing	22	obl:npmod	22:obl:npmod	_
-25	to	to	ADP	IN	_	26	case	26:case	_
-26	back	back	NOUN	NN	Number=Sing	24	nmod	24:nmod:to	SpaceAfter=No
+24	back	back	NOUN	NN	Number=Sing	22	obl:unmarked	22:obl:unmarked	Cxn=NPN|CxnElt=24:NPN.N1
+25	to	to	ADP	IN	_	26	case	26:case	CxnElt=24:NPN.P
+26	back	back	NOUN	NN	Number=Sing	24	nmod	24:nmod:to	CxnElt=24:NPN.N2|SpaceAfter=No
 27	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-083459-0003
@@ -80,14 +80,14 @@
 # text = Don't waste time, just drive 10 minutes more down to Stevens Creek, they actually do try to help their customers there!
 1-2	Don't	_	_	_	_	_	_	_	_
 1	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	3	aux	3:aux	_
-2	n't	not	PART	RB	_	3	advmod	3:advmod	_
+2	n't	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
 3	waste	waste	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 4	time	time	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	just	just	ADV	RB	_	7	advmod	7:advmod	_
 7	drive	drive	VERB	VB	Mood=Imp|VerbForm=Fin	3	parataxis	3:parataxis	_
 8	10	10	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
-9	minutes	minute	NOUN	NNS	Number=Plur	10	obl:npmod	10:obl:npmod	_
+9	minutes	minute	NOUN	NNS	Number=Plur	10	obl:unmarked	10:obl:unmarked	_
 10	more	more	ADV	RBR	Degree=Cmp	7	advmod	7:advmod	_
 11	down	down	ADV	RB	_	7	advmod	7:advmod	_
 12	to	to	ADP	IN	_	14	case	14:case	_

@@ -6,7 +6,7 @@
 2	Tom	tom	NOUN	NN	Number=Sing	3	compound	3:compound	_
 3	cat	cat	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
 4	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-5	not	not	PART	RB	_	6	advmod	6:advmod	_
+5	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	eat	eat	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	meat	meat	NOUN	NN	Number=Sing	6	obj	6:obj	_
 8	just	just	ADV	RB	_	10	advmod	10:advmod	_
@@ -52,7 +52,7 @@
 
 # sent_id = answers-20111108110044AA4rs9f_ans-0004
 # text = Why?
-1	Why	why	ADV	WRB	PronType=Int	0	root	0:root	SpaceAfter=No
+1	Why	why	ADV	WRB	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=1:Interrogative-WHInfo-Direct.Clause,1:Interrogative-WHInfo-Direct.WHWord|SpaceAfter=No
 2	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108110044AA4rs9f_ans-0005
@@ -60,7 +60,7 @@
 # text = If you knew what kind of "meat" they put in canned cat food you'd understand this.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	knew	know	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	18	advcl	18:advcl:if	_
+3	knew	know	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	18	advcl	18:advcl:if	CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	what	what	DET	WDT	PronType=Int	5	det	5:det	_
 5	kind	kind	NOUN	NN	Number=Sing	3	obj	3:obj|11:obj	_
 6	of	of	ADP	IN	_	8	case	8:case	_
@@ -76,7 +76,7 @@
 16-17	you'd	_	_	_	_	_	_	_	_
 16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
 17	'd	would	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
-18	understand	understand	VERB	VB	VerbForm=Inf	0	root	0:root	_
+18	understand	understand	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 19	this	this	PRON	DT	Number=Sing|PronType=Dem	18	obj	18:obj	SpaceAfter=No
 20	.	.	PUNCT	.	_	18	punct	18:punct	_
 
@@ -172,7 +172,7 @@
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 4	often	often	ADV	RB	_	5	advmod	5:advmod	_
 5	suspect	suspect	ADJ	JJ	Degree=Pos	0	root	0:root	_
-6	as	as	ADP	IN	_	10	case	10:case	_
+6	as	as	ADP	IN	ExtPos=ADP	10	case	10:case	_
 7	to	to	ADP	IN	_	6	fixed	6:fixed	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	actual	actual	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
@@ -187,7 +187,7 @@
 17	high	high	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 18	moisture	moisture	NOUN	NN	Number=Sing	19	compound	19:compound	_
 19	content	content	NOUN	NN	Number=Sing	14	obl	14:obl:for	_
-20	instead	instead	ADV	RB	_	23	case	23:case	_
+20	instead	instead	ADV	RB	ExtPos=ADP	23	case	23:case	_
 21	of	of	ADP	IN	_	20	fixed	20:fixed	_
 22	food	food	NOUN	NN	Number=Sing	23	compound	23:compound	_
 23	content	content	NOUN	NN	Number=Sing	14	obl	14:obl:instead_of	SpaceAfter=No
@@ -196,9 +196,9 @@
 # sent_id = answers-20111108110044AA4rs9f_ans-0012
 # text = There are a lot of good quality dry cat foods.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	lot	lot	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+4	lot	lot	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 5	of	of	ADP	IN	_	10	case	10:case	_
 6	good	good	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	quality	quality	NOUN	NN	Number=Sing	10	compound	10:compound	_
@@ -256,7 +256,7 @@
 # text = If he always does this, welcome to the club.
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
-3	always	always	ADV	RB	_	4	advmod	4:advmod	_
+3	always	always	ADV	RB	PronType=Tot	4	advmod	4:advmod	_
 4	does	do	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	this	this	PRON	DT	Number=Sing|PronType=Dem	4	obj	4:obj	SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
@@ -314,7 +314,7 @@
 1	Even	even	ADV	RB	_	4	advmod	4:advmod	_
 2	if	if	SCONJ	IN	_	4	mark	4:mark	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	mash	mash	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:if	_
+4	mash	mash	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 5	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj	_
 6	with	with	ADP	IN	_	8	case	8:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
@@ -322,8 +322,8 @@
 9	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 10-11	can't	_	_	_	_	_	_	_	_
 10	ca	can	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
-11	n't	not	PART	RB	_	12	advmod	12:advmod	_
-12	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	_
+11	n't	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
+12	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 13	that	that	PRON	DT	Number=Sing|PronType=Dem	12	obj	12:obj	SpaceAfter=No
 14	,	,	PUNCT	.	_	12	punct	12:punct	_
 

@@ -11,7 +11,7 @@
 # text = THIS IS NOT A SCAM!!!
 1	THIS	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
 2	IS	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-3	NOT	not	PART	RB	_	5	advmod	5:advmod	_
+3	NOT	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 4	A	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	SCAM	scam	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 6	!!!	!!!	PUNCT	.	_	5	punct	5:punct	_
@@ -35,7 +35,7 @@
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
 15-16	don't	_	_	_	_	_	_	_	_
 15	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
-16	n't	not	PART	RB	_	17	advmod	17:advmod	_
+16	n't	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
 17	care	care	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
 18	about	about	ADP	IN	_	22	case	22:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
@@ -174,7 +174,7 @@
 # text = This is now my fourth week and I have made a total of $42,000.00 and it's still coming rapidly.
 1	This	this	PRON	DT	Number=Sing|PronType=Dem	6	nsubj	6:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
-3	now	now	ADV	RB	_	6	advmod	6:advmod	_
+3	now	now	ADV	RB	PronType=Dem	6	advmod	6:advmod	_
 4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 5	fourth	fourth	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	6	amod	6:amod	_
 6	week	week	NOUN	NN	Number=Sing	0	root	0:root	_
@@ -220,7 +220,7 @@
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	lottery	lottery	NOUN	NN	Number=Sing	14	obl	14:obl:on	_
 21	without	without	SCONJ	IN	_	23	mark	23:mark	_
-22	ever	ever	ADV	RB	_	23	advmod	23:advmod	_
+22	ever	ever	ADV	RB	PronType=Ind	23	advmod	23:advmod	_
 23	winning	win	VERB	VBG	Tense=Pres|VerbForm=Part	14	advcl	14:advcl:without	SpaceAfter=No
 24	!!!	!!!	PUNCT	.	_	5	punct	5:punct	_
 
@@ -230,9 +230,9 @@
 2	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obj	1:obj|3:nsubj:xsubj	_
 3	tell	tell	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
 4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	iobj	3:iobj	_
-5	how	how	ADV	WRB	PronType=Int	7	advmod	7:advmod	_
+5	how	how	ADV	WRB	PronType=Int	7	advmod	7:advmod	CxnElt=7:Interrogative-WHInfo-Indirect.WHWord
 6	this	this	PRON	DT	Number=Sing|PronType=Dem	7	nsubj	7:nsubj	_
-7	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
+7	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=7:Interrogative-WHInfo-Indirect.Clause
 8	and	and	CCONJ	CC	_	14	cc	14:cc	_
 9	most	most	ADV	RBS	Degree=Sup	10	advmod	10:advmod	_
 10	important	important	ADV	RB	_	14	advmod	14:advmod	SpaceAfter=No
@@ -251,7 +251,7 @@
 5	print	print	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
 6	this	this	PRON	DT	Number=Sing|PronType=Dem	5	obj	5:obj	_
 7	out	out	ADV	RB	_	5	advmod	5:advmod	_
-8	NOW	now	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
+8	NOW	now	ADV	RB	PronType=Dem	5	advmod	5:advmod	SpaceAfter=No
 9	,	,	PUNCT	,	_	13	punct	13:punct	_
 10	so	so	SCONJ	IN	_	13	mark	13:mark	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
@@ -278,14 +278,14 @@
 4	that	that	SCONJ	IN	_	14	mark	14:mark	_
 5	if	if	SCONJ	IN	_	7	mark	7:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
-7	follow	follow	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:if	_
+7	follow	follow	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:if	CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	directions	direction	NOUN	NNS	Number=Plur	7	obj	7:obj	_
 10	exactly	exactly	ADV	RB	_	7	advmod	7:advmod	_
-11	that	then	ADV	RB	Typo=Yes	14	advmod	14:advmod	CorrectForm=then
+11	that	then	ADV	RB	PronType=Dem|Typo=Yes	14	advmod	14:advmod	CorrectForm=then
 12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	14	nsubj	14:nsubj|15:nsubj:xsubj	_
 13	will	will	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
-14	start	start	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
+14	start	start	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 15	making	make	VERB	VBG	VerbForm=Ger	14	xcomp	14:xcomp	_
 16	more	more	ADJ	JJR	Degree=Cmp	17	amod	17:amod	_
 17	money	money	NOUN	NN	Number=Sing	15	obj	15:obj	_
@@ -379,7 +379,7 @@
 # text = This is not a rip-off, it is decent; it's legal; and it is virtually no risk - it really works!!
 1	This	this	PRON	DT	Number=Sing|PronType=Dem	7	nsubj	7:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
-3	not	not	PART	RB	_	7	advmod	7:advmod	_
+3	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 5	rip	rip	NOUN	NN	Number=Sing	7	compound	7:compound	SpaceAfter=No
 6	-	-	PUNCT	HYPH	_	5	punct	5:punct	SpaceAfter=No
@@ -414,12 +414,12 @@
 4	following	follow	VERB	VBG	VerbForm=Ger	5	amod	5:amod	_
 5	instructions	instruction	NOUN	NNS	Number=Plur	7	nsubj:pass	7:nsubj:pass	_
 6	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	aux:pass	7:aux:pass	_
-7	adhered	adhere	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	advcl	12:advcl:if	_
+7	adhered	adhere	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 8	to	to	ADP	IN	_	7	obl	7:obl	Promoted=Yes|SpaceAfter=No
 9	,	,	PUNCT	,	_	7	punct	7:punct	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
 11	will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
-12	receive	receive	VERB	VB	VerbForm=Inf	0	root	0:root	_
+12	receive	receive	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 13	extraordinary	extraordinary	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	dividends	dividend	NOUN	NNS	Number=Plur	12	obj	12:obj	SpaceAfter=No
 15	.	.	PUNCT	.	_	12	punct	12:punct	_
@@ -460,7 +460,7 @@
 2	program	program	NOUN	NN	Number=Sing	3	nsubj	3:nsubj|4:nsubj:xsubj	_
 3	remains	remain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	successful	successful	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	_
-5	because	because	ADP	IN	_	8	case	8:case	_
+5	because	because	ADP	IN	ExtPos=ADP	8	case	8:case	_
 6	of	of	ADP	IN	_	5	fixed	5:fixed	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	honesty	honesty	NOUN	NN	Number=Sing	4	obl	4:obl:because_of	_
@@ -489,7 +489,7 @@
 # text = You will now become apart of the Mail Order business.
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	now	now	ADV	RB	_	4	advmod	4:advmod	_
+3	now	now	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 4	become	become	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	CorrectSpaceAfter=Yes|SpaceAfter=No
 6	part	part	NOUN	NN	Number=Sing	4	xcomp	4:xcomp	_
@@ -583,14 +583,14 @@
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0037
 # newpar id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-p0008
 # text = Get six separate pieces of paper and write the following on each piece of paper "PLEASE PUT ME ON YOUR MAILING LIST."
-1	Get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
+1	Get	get	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	six	six	NUM	CD	NumForm=Word|NumType=Card	4	nummod	4:nummod	_
 3	separate	separate	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	pieces	piece	NOUN	NNS	Number=Plur	1	obj	1:obj	_
 5	of	of	ADP	IN	_	6	case	6:case	_
 6	paper	paper	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	write	write	VERB	VB	VerbForm=Inf	1	conj	1:conj:and	_
+8	write	write	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	following	follow	VERB	VBG	VerbForm=Ger	8	obj	8:obj	_
 11	on	on	ADP	IN	_	13	case	13:case	_
@@ -600,7 +600,7 @@
 15	paper	paper	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	_
 16	"	"	PUNCT	``	_	18	punct	18:punct	SpaceAfter=No
 17	PLEASE	please	INTJ	UH	_	18	discourse	18:discourse	_
-18	PUT	put	VERB	VB	VerbForm=Inf	8	parataxis	8:parataxis	_
+18	PUT	put	VERB	VB	Mood=Imp|VerbForm=Fin	8	parataxis	8:parataxis	_
 19	ME	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	18	obj	18:obj	_
 20	ON	on	ADP	IN	_	23	case	23:case	_
 21	YOUR	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
@@ -611,7 +611,7 @@
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0038
 # text = Now get 6 U.S. $1.00 bills and place ONE inside of EACH of the six pieces of paper so the bill will not be seen through the envelope (to prevent thievery).
-1	Now	now	ADV	RB	_	2	advmod	2:advmod	_
+1	Now	now	ADV	RB	PronType=Dem	2	advmod	2:advmod	_
 2	get	get	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	6	6	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
 4	U.S.	U.S.	PROPN	NNP	Number=Sing	5	compound	5:compound	_
@@ -634,7 +634,7 @@
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 22	bill	bill	NOUN	NN	Number=Sing	26	nsubj:pass	26:nsubj:pass	_
 23	will	will	AUX	MD	VerbForm=Fin	26	aux	26:aux	_
-24	not	not	PART	RB	_	26	advmod	26:advmod	_
+24	not	not	PART	RB	Polarity=Neg	26	advmod	26:advmod	_
 25	be	be	AUX	VB	VerbForm=Inf	26	aux:pass	26:aux:pass	_
 26	seen	see	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	advcl	9:advcl:so	_
 27	through	through	ADP	IN	_	29	case	29:case	_
@@ -668,7 +668,7 @@
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0040
 # text = You now should have six sealed envelopes, each with a piece of paper stating the above phrase, your name and address, and a $1.00 bill.
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-2	now	now	ADV	RB	_	4	advmod	4:advmod	_
+2	now	now	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 3	should	should	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 4	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	six	six	NUM	CD	NumForm=Word|NumType=Card	7	nummod	7:nummod	_
@@ -746,10 +746,10 @@
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj|12:nsubj	_
 6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	9:cop	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	little	little	ADJ	JJ	Degree=Pos	9	obl:npmod	9:obl:npmod	_
+8	little	little	ADJ	JJ	Degree=Pos	9	obl:unmarked	9:obl:unmarked	_
 9	skeptical	skeptical	ADJ	JJ	Degree=Pos	0	root	0:root	_
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
-11	little	little	ADJ	JJ	Degree=Pos	12	obl:npmod	12:obl:npmod	_
+11	little	little	ADJ	JJ	Degree=Pos	12	obl:unmarked	12:obl:unmarked	_
 12	worried	worried	ADJ	JJ	Degree=Pos	9	conj	9:conj:and	_
 13	about	about	ADP	IN	_	16	case	16:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
@@ -861,7 +861,7 @@
 6	Foulkesstraat	Foulkesstraat	PROPN	NNP	Number=Sing	3	flat	3:flat	_
 7	5	5	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 8	4641	4641	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
-9	BW	BW	PROPN	NNP	Number=Sing	6	appos	6:appos	_
+9	BW	BW	PROPN	NNP	Number=Sing	3	appos	3:appos	_
 10	Ossendrecht	Ossendrecht	PROPN	NNP	Number=Sing	3	appos	3:appos	_
 11	Netherlands	Netherlands	PROPN	NNP	Number=Sing	10	appos	10:appos	_
 
@@ -887,7 +887,7 @@
 1	STEP	step	NOUN	NN	Number=Sing	0	root	0:root	_
 2	TWO	two	NUM	CD	NumForm=Word|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	5	punct	5:punct	SpaceAfter=No
-4	Now	now	ADV	RB	_	5	advmod	5:advmod	_
+4	Now	now	ADV	RB	PronType=Dem	5	advmod	5:advmod	_
 5	take	take	VERB	VB	Mood=Imp|VerbForm=Fin	1	parataxis	1:parataxis	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 7	#	#	SYM	NN	Number=Sing	9	compound	9:compound	SpaceAfter=No
@@ -959,7 +959,7 @@
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0055
 # text = Now post your amended article to at least 200 news groups. :
-1	Now	now	ADV	RB	_	2	advmod	2:advmod	_
+1	Now	now	ADV	RB	PronType=Dem	2	advmod	2:advmod	_
 2	post	post	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 4	amended	amend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	amod	5:amod	_
@@ -979,11 +979,11 @@
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 3	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	there	there	PRON	EX	_	5	expl	5:expl	_
-5	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
+5	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	Cxn=Existential-CopPred-ThereExpl
 6	close	close	ADJ	JJ	Degree=Pos	9	advmod	9:advmod	_
 7	to	to	ADP	IN	_	8	case	8:case	_
 8	24,000	24000	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:to	_
-9	groups	group	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	SpaceAfter=No
+9	groups	group	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	CxnElt=5:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 10	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0057
@@ -1021,11 +1021,11 @@
 # text = If you have any doubts, refer to Title 18 Sec. 1302 & 1341 of the Postal Lottery laws.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	_
+3	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	any	any	DET	DT	PronType=Ind	5	det	5:det	_
 5	doubts	doubt	NOUN	NNS	Number=Plur	3	obj	3:obj	SpaceAfter=No
 6	,	,	PUNCT	,	_	3	punct	3:punct	_
-7	refer	refer	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+7	refer	refer	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 8	to	to	ADP	IN	_	9	case	9:case	_
 9	Title	title	NOUN	NN	Number=Sing	7	obl	7:obl:to	_
 10	18	18	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
@@ -1051,9 +1051,9 @@
 7	for	for	ADP	IN	_	8	case	8:case	_
 8	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	3	nmod	3:nmod:for	_
 9	and	and	CCONJ	CC	_	17	cc	17:cc	_
-10	whenever	whenever	ADV	WRB	PronType=Int	12	advmod	12:advmod	_
+10	whenever	whenever	ADV	WRB	PronType=Rel	17	advmod	12:advmod|17:advmod	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
-12	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl	_
+12	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	10	advcl:relcl	10:advcl:relcl	Cxn=rc-free-advmod
 13	money	money	NOUN	NN	Number=Sing	12	obj	12:obj	SpaceAfter=No
 14	,	,	PUNCT	,	_	12	punct	12:punct	_
 15	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	_
@@ -1075,7 +1075,7 @@
 5	program	program	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|7:nsubj:xsubj	_
 6	remains	remain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
 7	successful	successful	ADJ	JJ	Degree=Pos	6	xcomp	6:xcomp	_
-8	because	because	ADP	IN	_	11	case	11:case	_
+8	because	because	ADP	IN	ExtPos=ADP	11	case	11:case	_
 9	of	of	ADP	IN	_	8	fixed	8:fixed	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	honesty	honesty	NOUN	NN	Number=Sing	7	obl	7:obl:because_of	_
@@ -1108,12 +1108,12 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
 3	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	integrity	integrity	NOUN	NN	Number=Sing	10	advcl	10:advcl:of	SpaceAfter=No
+5	integrity	integrity	NOUN	NN	Number=Sing	10	advcl	10:advcl:of	CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	program	program	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
 9	will	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
-10	continue	continue	VERB	VB	VerbForm=Inf	0	root	0:root	_
+10	continue	continue	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 11	and	and	CCONJ	CC	_	21	cc	21:cc	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	money	money	NOUN	NN	Number=Sing	21	nsubj	19:obj|21:nsubj	_
@@ -1235,7 +1235,7 @@
 26	with	with	ADP	IN	_	28	case	28:case	_
 27	one	one	NUM	CD	NumForm=Word|NumType=Card	28	nummod	28:nummod	_
 28	dollar	dollar	NOUN	NN	Number=Sing	18	obl	18:obl:with	_
-29	each	each	DET	DT	PronType=Tot	28	nmod:npmod	28:nmod:npmod	SpaceAfter=No
+29	each	each	DET	DT	PronType=Tot	28	nmod:unmarked	28:nmod:unmarked	SpaceAfter=No
 30	.	.	PUNCT	.	_	18	punct	18:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0068
@@ -1248,7 +1248,7 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	list	list	NOUN	NN	Number=Sing	4	obl	4:obl:up	_
 8	geometrically	geometrically	ADV	RB	_	4	advmod	4:advmod	_
-9	so	so	SCONJ	IN	_	22	mark	22:mark	_
+9	so	so	SCONJ	IN	ExtPos=SCONJ	22	mark	22:mark	_
 10	that	that	SCONJ	IN	_	9	fixed	9:fixed	_
 11	when	when	ADV	WRB	PronType=Int	14	advmod	14:advmod	_
 12	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
@@ -1296,7 +1296,7 @@
 # text = Send it now, add your own name to the list and you're in business!!!
 1	Send	send	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	1	obj	1:obj	_
-3	now	now	ADV	RB	_	1	advmod	1:advmod	SpaceAfter=No
+3	now	now	ADV	RB	PronType=Dem	1	advmod	1:advmod	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	add	add	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
 6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
@@ -1335,7 +1335,7 @@
 3	:	:	PUNCT	:	_	7	punct	7:punct	_
 4	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj|9:nsubj:xsubj	_
 5	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
-6	not	not	PART	RB	_	7	advmod	7:advmod	_
+6	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 7	need	need	VERB	VB	VerbForm=Inf	1	appos	1:appos	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	re-type	re-type	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
@@ -1454,7 +1454,7 @@
 9	into	into	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	notepad	notepad	NOUN	NN	Number=Sing	3	obl	3:obl:into	_
-12	so	so	SCONJ	IN	_	16	mark	16:mark	_
+12	so	so	SCONJ	IN	ExtPos=SCONJ	16	mark	16:mark	_
 13	that	that	SCONJ	IN	_	12	fixed	12:fixed	_
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	16	nsubj	16:nsubj	_
 15	will	will	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
@@ -1489,7 +1489,7 @@
 # text = If you want to do your posting in different settings, you'll always have this file to go back to.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
-3	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl:if	_
+3	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl:if	CxnElt=15:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	do	do	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
@@ -1501,8 +1501,8 @@
 12-13	you'll	_	_	_	_	_	_	_	_
 12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
 13	'll	will	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-14	always	always	ADV	RB	_	15	advmod	15:advmod	_
-15	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
+14	always	always	ADV	RB	PronType=Tot	15	advmod	15:advmod	_
+15	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=15:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 16	this	this	DET	DT	Number=Sing|PronType=Dem	17	det	17:det	_
 17	file	file	NOUN	NN	Number=Sing	15	obj	15:obj	_
 18	to	to	PART	TO	_	19	mark	19:mark	_

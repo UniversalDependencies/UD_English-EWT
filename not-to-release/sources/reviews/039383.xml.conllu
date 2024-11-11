@@ -34,7 +34,7 @@
 23	Great	great	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 24	Dessert	dessert	NOUN	NN	Number=Sing	11	conj	1:appos|11:conj:and	_
 25	*	*	PUNCT	NFP	_	30	punct	30:punct	_
-26	Not	not	PART	RB	_	30	advmod	30:advmod	_
+26	Not	not	PART	RB	Polarity=Neg	30	advmod	30:advmod	_
 27	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	30	nmod:poss	30:nmod:poss	_
 28	typical	typical	ADJ	JJ	Degree=Pos	30	amod	30:amod	_
 29	veggie	veggie	NOUN	NN	Number=Sing	30	compound	30:compound	_
@@ -48,13 +48,13 @@
 # text = Don't know where else you can find Purple Hull Peas and some of the other sides.
 1-2	Don't	_	_	_	_	_	_	_	_
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-2	n't	not	PART	RB	_	3	advmod	3:advmod	_
+2	n't	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
 3	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
-4	where	where	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
+4	where	where	ADV	WRB	PronType=Int	8	advmod	8:advmod	CxnElt=8:Interrogative-WHInfo-Indirect.WHWord
 5	else	else	ADV	RB	_	4	advmod	4:advmod	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 7	can	can	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	find	find	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+8	find	find	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=8:Interrogative-WHInfo-Indirect.Clause
 9	Purple	purple	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 10	Hull	hull	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	Peas	pea	NOUN	NNS	Number=Plur	8	obj	8:obj	_
@@ -74,7 +74,7 @@
 4	Server	server	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|12:nsubj|19:nsubj	_
 5-6	wasn't	_	_	_	_	_	_	_	_
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	8:cop	_
-6	n't	not	PART	RB	_	8	advmod	8:advmod	_
+6	n't	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 7	very	very	ADV	RB	_	8	advmod	8:advmod	_
 8	pleasant	pleasant	ADJ	JJ	Degree=Pos	1	appos	1:appos	_
 9	*	*	PUNCT	NFP	_	12	punct	12:punct	_
@@ -131,9 +131,9 @@
 # text = There must be a reason so many people like it there.
 1	There	there	PRON	EX	_	3	expl	3:expl	_
 2	must	must	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-5	reason	reason	NOUN	NN	Number=Sing	3	nsubj	3:nsubj|9:obj	_
+5	reason	reason	NOUN	NN	Number=Sing	3	nsubj	3:nsubj|9:obj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot
 6	so	so	ADV	RB	_	7	advmod	7:advmod	_
 7	many	many	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	people	people	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj	_

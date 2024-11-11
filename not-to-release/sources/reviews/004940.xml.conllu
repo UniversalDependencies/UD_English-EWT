@@ -13,7 +13,7 @@
 9	online	online	ADV	RB	_	6	advmod	6:advmod	_
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
 11	would	would	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
-12	not	not	PART	RB	_	13	advmod	13:advmod	_
+12	not	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
 13	use	use	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 14	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	13	obj	13:obj	_
 15	else	else	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
@@ -92,7 +92,7 @@
 # text = I also appreciate their honesty.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	also	also	ADV	RB	_	3	advmod	3:advmod	_
-3	appreciate	appreciate	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	appreciate	appreciate	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	honesty	honesty	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
 6	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -107,9 +107,9 @@
 6	would	would	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 7	have	have	AUX	VB	VerbForm=Inf	9	aux	9:aux	_
 8	been	be	AUX	VBN	Tense=Past|VerbForm=Part	9	aux:pass	9:aux:pass	_
-9	distorted	distort	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	acl:relcl	4:acl:relcl	Cxn=rc-that-nsubj:pass
+9	distorted	distort	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	acl:relcl	4:acl:relcl	Cxn=Conditional-NegativeEpistemic-Reduced,rc-that-nsubj:pass|CxnElt=9:Conditional-NegativeEpistemic-Reduced.Apodosis
 10	if	if	SCONJ	IN	_	11	mark	11:mark	_
-11	printed	print	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	advcl	9:advcl:if	_
+11	printed	print	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	advcl	9:advcl:if	CxnElt=9:Conditional-NegativeEpistemic-Reduced.Protasis
 12	as	as	SCONJ	IN	_	14	mark	14:mark	_
 13	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:as	SpaceAfter=No
@@ -126,7 +126,7 @@
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	fix	fix	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	_
 9	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	obj	8:obj	_
-10	so	so	SCONJ	IN	_	14	mark	14:mark	_
+10	so	so	SCONJ	IN	ExtPos=SCONJ	14	mark	14:mark	_
 11	that	that	SCONJ	IN	_	10	fixed	10:fixed	_
 12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj|15:nsubj:xsubj	_
 13	would	would	AUX	MD	VerbForm=Fin	14	aux	14:aux	_

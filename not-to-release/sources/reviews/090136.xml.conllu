@@ -10,7 +10,7 @@
 # text = IF you want flashy fancy food stacked high with lots of fussy garnishes, this is not the place for you.
 1	IF	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	19	advcl	19:advcl:if	_
+3	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	19	advcl	19:advcl:if	CxnElt=19:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	flashy	flashy	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 5	fancy	fancy	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	food	food	NOUN	NN	Number=Sing	3	obj	3:obj	_
@@ -24,9 +24,9 @@
 14	,	,	PUNCT	,	_	3	punct	3:punct	_
 15	this	this	PRON	DT	Number=Sing|PronType=Dem	19	nsubj	19:nsubj	_
 16	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
-17	not	not	PART	RB	_	19	advmod	19:advmod	_
+17	not	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	place	place	NOUN	NN	Number=Sing	0	root	0:root	_
+19	place	place	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=19:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 20	for	for	ADP	IN	_	21	case	21:case	_
 21	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	19	nmod	19:nmod:for	SpaceAfter=No
 22	.	.	PUNCT	.	_	19	punct	19:punct	_
@@ -35,7 +35,7 @@
 # text = If you want perfectly executed simple dishes that feature a few exquisite ingredients, you'll love Vetri.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl:if	_
+3	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl:if	CxnElt=17:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	perfectly	perfectly	ADV	RB	_	5	advmod	5:advmod	_
 5	executed	execute	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	amod	7:amod	_
 6	simple	simple	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
@@ -50,13 +50,13 @@
 15-16	you'll	_	_	_	_	_	_	_	_
 15	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	_
 16	'll	will	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
-17	love	love	VERB	VB	VerbForm=Inf	0	root	0:root	_
+17	love	love	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=17:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 18	Vetri	Vetri	PROPN	NNP	Number=Sing	17	obj	17:obj	SpaceAfter=No
 19	.	.	PUNCT	.	_	17	punct	17:punct	_
 
 # sent_id = reviews-090136-0004
 # text = Hands-down the best pasta and gnocchi I've ever eaten (and I've eaten a lot).
-1	Hands	hand	NOUN	NNS	Number=Plur	5	obl:npmod	5:obl:npmod	SpaceAfter=No
+1	Hands	hand	NOUN	NNS	Number=Plur	5	obl:unmarked	5:obl:unmarked	SpaceAfter=No
 2	-	-	PUNCT	HYPH	_	3	punct	3:punct	SpaceAfter=No
 3	down	down	ADV	RB	_	1	advmod	1:advmod	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
@@ -67,7 +67,7 @@
 9-10	I've	_	_	_	_	_	_	_	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 10	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-11	ever	ever	ADV	RB	_	12	advmod	12:advmod	_
+11	ever	ever	ADV	RB	PronType=Ind	12	advmod	12:advmod	_
 12	eaten	eat	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj
 13	(	(	PUNCT	-LRB-	_	17	punct	17:punct	SpaceAfter=No
 14	and	and	CCONJ	CC	_	17	cc	17:cc	_
@@ -90,7 +90,7 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	wines	wine	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
 8	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
-9	mind	mind	NOUN	NN	Number=Sing	11	obl:npmod	11:obl:npmod	SpaceAfter=No
+9	mind	mind	NOUN	NN	Number=Sing	11	obl:unmarked	11:obl:unmarked	SpaceAfter=No
 10	-	-	PUNCT	HYPH	_	9	punct	9:punct	SpaceAfter=No
 11	blowing	blowing	ADJ	JJ	Degree=Pos	4	list	4:list	SpaceAfter=No
 12	,	,	PUNCT	,	_	19	punct	19:punct	_
@@ -98,7 +98,7 @@
 14	service	service	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
 15-16	couldn't	_	_	_	_	_	_	_	_
 15	could	could	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
-16	n't	not	PART	RB	_	19	advmod	19:advmod	_
+16	n't	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 17	have	have	AUX	VB	VerbForm=Inf	19	aux	19:aux	_
 18	been	be	AUX	VBN	Tense=Past|VerbForm=Part	19	cop	19:cop	_
 19	better	good	ADJ	JJR	Degree=Cmp	4	list	4:list	SpaceAfter=No
@@ -121,7 +121,7 @@
 12-13	I've	_	_	_	_	_	_	_	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
 13	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
-14	never	never	ADV	RB	_	15	advmod	15:advmod	_
+14	never	never	ADV	RB	PronType=Neg	15	advmod	15:advmod	_
 15	before	before	ADV	RB	_	16	advmod	16:advmod	_
 16	felt	feel	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj:and	_
 17	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_

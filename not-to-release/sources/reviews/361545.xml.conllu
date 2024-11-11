@@ -32,7 +32,7 @@
 15	Laundry	Laundry	PROPN	NNP	Number=Sing	16	compound	16:compound	_
 16	Tub	Tub	PROPN	NNP	Number=Sing	19	nsubj	19:nsubj	_
 17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
-18	not	not	PART	RB	_	19	advmod	19:advmod	_
+18	not	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 19	filthy	filthy	ADJ	JJ	Degree=Pos	0	root	0:root	_
 20	and	and	CCONJ	CC	_	24	cc	24:cc	_
 21-22	it's	_	_	_	_	_	_	_	_
@@ -55,17 +55,17 @@
 
 # sent_id = reviews-361545-0003
 # text = Yes, there are bigger, but bigger isn't necessarily better.
-1	Yes	yes	INTJ	UH	_	4	discourse	4:discourse	SpaceAfter=No
+1	Yes	yes	INTJ	UH	Polarity=Pos	4	discourse	4:discourse	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	there	there	PRON	EX	_	4	expl	4:expl	_
-4	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-5	bigger	big	ADJ	JJR	Degree=Cmp	4	nsubj	4:nsubj	SpaceAfter=No
+4	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+5	bigger	big	ADJ	JJR	Degree=Cmp	4	nsubj	4:nsubj	CxnElt=4:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 6	,	,	PUNCT	,	_	12	punct	12:punct	_
 7	but	but	CCONJ	CC	_	12	cc	12:cc	_
 8	bigger	big	ADJ	JJR	Degree=Cmp	12	nsubj	12:nsubj	_
 9-10	isn't	_	_	_	_	_	_	_	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
-10	n't	not	PART	RB	_	12	advmod	12:advmod	_
+10	n't	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
 11	necessarily	necessarily	ADV	RB	_	12	advmod	12:advmod	_
 12	better	good	ADJ	JJR	Degree=Cmp	4	conj	4:conj:but	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -150,7 +150,7 @@
 # text = Didn't hurt any that they knew my name by my second visit and greeted me warmly then and on my third visit.
 1-2	Didn't	_	_	_	_	_	_	_	_
 1	Did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	aux	3:aux	_
-2	n't	not	PART	RB	_	3	advmod	3:advmod	_
+2	n't	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
 3	hurt	hurt	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	any	any	ADV	RB	_	3	advmod	3:advmod	_
 5	that	that	SCONJ	IN	_	7	mark	7:mark	_
@@ -211,7 +211,7 @@
 33	say	say	VERB	VB	VerbForm=Inf	0	root	0:root	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
 35	answer	answer	NOUN	NN	Number=Sing	37	nsubj	37:nsubj	_
-36	now	now	ADV	RB	_	37	advmod	37:advmod	_
+36	now	now	ADV	RB	PronType=Dem	37	advmod	37:advmod	_
 37	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	33	ccomp	33:ccomp	SpaceAfter=No
 38	,	,	PUNCT	,	_	43	punct	43:punct	_
 39	"	"	PUNCT	``	_	43	punct	43:punct	SpaceAfter=No

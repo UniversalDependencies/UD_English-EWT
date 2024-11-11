@@ -15,7 +15,7 @@
 # text = 11/28/2000 06:16 PM
 1	11/28/2000	11/28/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	06:16	06:16	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0003
 # text = It's a two way street, of course.
@@ -35,7 +35,7 @@
 # text = Have they expressed any interest in negotiating?
 1	Have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	expressed	express	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+3	expressed	express	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	any	any	DET	DT	PronType=Ind	5	det	5:det	_
 5	interest	interest	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	in	in	SCONJ	IN	_	7	mark	7:mark	_
@@ -45,8 +45,8 @@
 # sent_id = email-enronsent33_01-0005
 # text = There is nothing wrong with a REAL negotiation, but nothing particularly helpful about generating one that s just for show.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	2	nsubj	2:nsubj|11:nsubj	_
+2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+3	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	2	nsubj	2:nsubj|11:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 4	wrong	wrong	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 5	with	with	ADP	IN	_	8	case	8:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
@@ -83,7 +83,7 @@
 # sent_id = email-enronsent33_01-0007
 # newpar id = email-enronsent33_01-p0002
 # text = Where is the "simple" explanation of the transportation piece?
-1	Where	where	ADV	WRB	PronType=Int	0	root	0:root	_
+1	Where	where	ADV	WRB	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=1:Interrogative-WHInfo-Direct.Clause,1:Interrogative-WHInfo-Direct.WHWord
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 4	"	"	PUNCT	``	_	5	punct	5:punct	SpaceAfter=No
@@ -117,7 +117,7 @@
 16	its	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
 17	IP	ip	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	_
 18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	cop	21:cop	_
-19	not	not	PART	RB	_	21	advmod	21:advmod	_
+19	not	not	PART	RB	Polarity=Neg	21	advmod	21:advmod	_
 20	in	in	ADP	IN	_	21	case	21:case	_
 21	conformity	conformity	NOUN	NN	Number=Sing	11	ccomp	11:ccomp	_
 22	with	with	ADP	IN	_	24	case	24:case	_
@@ -152,7 +152,7 @@
 51	clearly	clearly	ADV	RB	_	54	advmod	54:advmod	_
 52-53	cannot	_	_	_	_	_	_	_	_
 52	can	can	AUX	MD	VerbForm=Fin	54	aux	54:aux	_
-53	not	not	PART	RB	_	54	advmod	54:advmod	_
+53	not	not	PART	RB	Polarity=Neg	54	advmod	54:advmod	_
 54	change	change	VERB	VB	VerbForm=Inf	47	advcl	47:advcl:since	_
 55	it's	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	57	nmod:poss	57:nmod:poss	CorrectForm=its
 56	ineffective	ineffective	ADJ	JJ	Degree=Pos	57	amod	57:amod	_
@@ -181,7 +181,7 @@
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	cop	32:cop	_
 10	whether	whether	SCONJ	IN	_	32	mark	32:mark	_
 11	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
-12	IP	ip	NOUN	NN	Number=Sing	32	nsubj	28:nsubj|32:nsubj	_
+12	IP	ip	NOUN	NN	Number=Sing	32	nsubj	32:nsubj	_
 13	(	(	PUNCT	-LRB-	_	16	punct	16:punct	SpaceAfter=No
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	only	only	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
@@ -197,8 +197,8 @@
 25	)	)	PUNCT	-RRB-	_	16	punct	16:punct	_
 26	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	cop	32:cop	_
 27	or	or	CCONJ	CC	_	28	cc	28:cc	_
-28	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	conj	26:conj:or	_
-29	not	not	PART	RB	_	28	advmod	28:advmod	_
+28	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	conj	26:conj:or|32:cop	_
+29	not	not	PART	RB	Polarity=Neg	28	advmod	28:advmod	_
 30	an	a	DET	DT	Definite=Ind|PronType=Art	32	det	32:det	_
 31	economic	economic	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
 32	hardship	hardship	NOUN	NN	Number=Sing	0	root	0:root|26:conj:or	_
@@ -209,15 +209,15 @@
 
 # sent_id = email-enronsent33_01-0010
 # text = What say ye?
-1	What	what	PRON	WP	PronType=Int	2	obj	2:obj	_
-2	say	say	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	What	what	PRON	WP	PronType=Int	2	obj	2:obj	CxnElt=2:Interrogative-WHInfo-Direct.WHWord
+2	say	say	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=2:Interrogative-WHInfo-Direct.Clause
 3	ye	ye	PRON	PRP	Case=Nom|Number=Plur|Person=2|PronType=Prs|Style=Arch	2	nsubj	2:nsubj	ModernForm=you|SpaceAfter=No
 4	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent33_01-0011
 # newpar id = email-enronsent33_01-p0004
 # text = none
-1	none	none	NOUN	NN	Number=Sing	0	root	0:root	_
+1	none	none	PRON	NN	PronType=Neg	0	root	0:root	_
 
 # sent_id = email-enronsent33_01-0012
 # newpar id = email-enronsent33_01-p0005
@@ -229,7 +229,7 @@
 # text = 11/28/2000 03:58 PM
 1	11/28/2000	11/28/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	03:58	03:58	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0014
 # text = By Friday December 1st, could you please tell me the percentages/amount of time you spent on East Coast Power during the months of October and November.
@@ -280,10 +280,10 @@
 12	see	see	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:to	_
 13	if	if	SCONJ	IN	_	15	mark	15:mark	_
 14	there	there	PRON	EX	_	15	expl	15:expl	_
-15	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	ccomp	12:ccomp	_
+15	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	ccomp	12:ccomp	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Indirect|CxnElt=15:Interrogative-Polar-Indirect.Clause
 16	any	any	DET	DT	PronType=Ind	18	det	18:det	_
 17	additional	additional	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	employees	employee	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj|23:nsubj	_
+18	employees	employee	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj|23:nsubj	CxnElt=15:Existential-CopPred-ThereExpl.Pivot
 19	in	in	ADP	IN	_	21	case	21:case	_
 20	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
 21	group	group	NOUN	NN	Number=Sing	18	nmod	18:nmod:in	_
@@ -461,7 +461,7 @@
 # text = 11/28/2000 11:34 AM
 1	11/28/2000	11/28/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	11:34	11:34	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0029
 # text = Richard,
@@ -471,10 +471,10 @@
 # sent_id = email-enronsent33_01-0030
 # newpar id = email-enronsent33_01-p0009
 # text = How does this look?
-1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
+1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	this	this	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	4:nsubj	_
-4	look	look	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+4	look	look	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause|SpaceAfter=No
 5	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent33_01-0031
@@ -482,19 +482,19 @@
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 3	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-4	get	get	VERB	VB	VerbForm=Inf	15	advcl	15:advcl:if	_
+4	get	get	VERB	VB	VerbForm=Inf	15	advcl	15:advcl:if	CxnElt=15:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	few	few	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	minutes	minute	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 8	with	with	ADP	IN	_	9	case	9:case	_
 9	Mark	Mark	PROPN	NNP	Number=Sing	7	nmod	7:nmod:with	_
 10	H.	H.	PROPN	NNP	Number=Sing	9	flat	9:flat	_
-11	today	today	NOUN	NN	Number=Sing	4	obl:tmod	4:obl:tmod	SpaceAfter=No
+11	today	today	NOUN	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 12	,	,	PUNCT	,	_	4	punct	4:punct	_
 13-14	I'm	_	_	_	_	_	_	_	_
 13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj|17:nsubj:xsubj	_
 14	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
-15	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+15	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=15:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	propose	propose	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_
 18	that	that	SCONJ	IN	_	20	mark	20:mark	_
@@ -523,7 +523,7 @@
 3	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	help	help	NOUN	NN	Number=Sing	1	nmod	1:nmod:for	_
 5	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	_
-6	morning	morning	NOUN	NN	Number=Sing	4	nmod:tmod	4:nmod:tmod	SpaceAfter=No
+6	morning	morning	NOUN	NN	Number=Sing	4	nmod:unmarked	4:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 7	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent33_01-0033
@@ -569,10 +569,10 @@
 # sent_id = email-enronsent33_01-0036
 # text = If so, please contact Michelle.
 1	If	if	SCONJ	IN	_	2	mark	2:mark	_
-2	so	so	ADV	RB	_	5	advcl	5:advcl:if	SpaceAfter=No
+2	so	so	ADV	RB	_	5	advcl	5:advcl:if	CxnElt=5:Conditional-UnspecifiedEpistemic-Reduced.Protasis|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	please	please	INTJ	UH	_	5	discourse	5:discourse	_
-5	contact	contact	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+5	contact	contact	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-Reduced|CxnElt=5:Conditional-UnspecifiedEpistemic-Reduced.Apodosis
 6	Michelle	Michelle	PROPN	NNP	Number=Sing	5	obj	5:obj	SpaceAfter=No
 7	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -585,7 +585,7 @@
 # text = 11/28/2000 07:35 PM
 1	11/28/2000	11/28/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	07:35	07:35	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0039
 # text = Justin, I have no knowledge of any bad faith actins Enron has pending inTexas but I will call Richard Sanders who manages domestic litgation here.
@@ -673,12 +673,12 @@
 3	Houston	Houston	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4	Casualty	Casualty	PROPN	NNP	Number=Sing	2	obj	2:obj	_
 5	last	last	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	year	year	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	_
+6	year	year	NOUN	NN	Number=Sing	2	obl:unmarked	2:obl:unmarked	TemporalNPAdjunct=Yes
 7	but	but	CCONJ	CC	_	11	cc	11:cc	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj|12:nsubj:xsubj	_
 9-10	don't	_	_	_	_	_	_	_	_
 9	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
-10	n't	not	PART	RB	_	11	advmod	11:advmod	_
+10	n't	not	PART	RB	Polarity=Neg	11	advmod	11:advmod	_
 11	recall	recall	VERB	VB	VerbForm=Inf	2	conj	2:conj:but	_
 12	making	make	VERB	VBG	VerbForm=Ger	11	xcomp	11:xcomp	_
 13	any	any	DET	DT	PronType=Ind	16	det	16:det	_
@@ -695,7 +695,7 @@
 4	,	,	PUNCT	,	_	8	punct	8:punct	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	long	long	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	time	time	NOUN	NN	Number=Sing	8	obl:npmod	8:obl:npmod	_
+7	time	time	NOUN	NN	Number=Sing	8	obl:unmarked	8:obl:unmarked	_
 8	ago	ago	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -713,7 +713,7 @@
 # text = Did you get my fax on Friday?
 1	Did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	fax	fax	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	on	on	ADP	IN	_	7	case	7:case	_
@@ -785,7 +785,7 @@
 3	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
 4	Are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
-6	happy	happy	ADJ	JJ	Degree=Pos	0	root	0:root	_
+6	happy	happy	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=6:Interrogative-Polar-Direct.Clause
 7	with	with	ADP	IN	_	10	case	10:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	draft	draft	NOUN	NN	Number=Sing	10	compound	10:compound	_
@@ -800,14 +800,14 @@
 # sent_id = email-enronsent33_01-0050
 # text = Please give me a call if you would like to discuss.
 1	Please	please	INTJ	UH	_	2	discourse	2:discourse	_
-2	give	give	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+2	give	give	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=2:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	2:iobj	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	call	call	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	if	if	SCONJ	IN	_	9	mark	9:mark	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj|11:nsubj:xsubj	_
 8	would	would	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	like	like	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:if	_
+9	like	like	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:if	CxnElt=2:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	discuss	discuss	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -820,7 +820,7 @@
 # sent_id = email-enronsent33_01-0052
 # newpar id = email-enronsent33_01-p0014
 # text = Not when I was there, but I wasn't there the whole time.
-1	Not	not	PART	RB	_	0	root	0:root	_
+1	Not	not	PART	RB	Polarity=Neg	0	root	0:root	_
 2	when	when	ADV	WRB	PronType=Int	5	advmod	5:advmod	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
@@ -830,11 +830,11 @@
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 9-10	wasn't	_	_	_	_	_	_	_	_
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
-10	n't	not	PART	RB	_	11	advmod	11:advmod	_
+10	n't	not	PART	RB	Polarity=Neg	11	advmod	11:advmod	_
 11	there	there	ADV	RB	PronType=Dem	1	conj	1:conj:but	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	whole	whole	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	time	time	NOUN	NN	Number=Sing	11	obl:tmod	11:obl:tmod	SpaceAfter=No
+14	time	time	NOUN	NN	Number=Sing	11	obl:unmarked	11:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 15	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent33_01-0053
@@ -850,7 +850,7 @@
 # text = were you able to discuss the "bad faith" proceedings issue yesterday?
 1	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
-3	able	able	ADJ	JJ	Degree=Pos	0	root	0:root	_
+3	able	able	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	discuss	discuss	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
@@ -860,29 +860,29 @@
 10	"	"	PUNCT	''	_	9	punct	9:punct	_
 11	proceedings	proceedings	NOUN	NNS	Number=Ptan	12	compound	12:compound	_
 12	issue	issue	NOUN	NN	Number=Sing	5	obj	5:obj	_
-13	yesterday	yesterday	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	SpaceAfter=No
+13	yesterday	yesterday	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 14	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent33_01-0055
 # text = If you got the chance today, I should be really grateful if one of you could give me a call to discuss this issue; I think we should set out DPC's position clearly on this in correspondence without too much delay.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	12	advcl	12:advcl:if	_
+3	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	chance	chance	NOUN	NN	Number=Sing	3	obj	3:obj	_
-6	today	today	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	SpaceAfter=No
+6	today	today	NOUN	NN	Number=Sing	3	obl:unmarked	3:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 7	,	,	PUNCT	,	_	3	punct	3:punct	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 9	should	should	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 10	be	be	AUX	VB	VerbForm=Inf	12	cop	12:cop	_
 11	really	really	ADV	RB	_	12	advmod	12:advmod	_
-12	grateful	grateful	ADJ	JJ	Degree=Pos	0	root	0:root	_
+12	grateful	grateful	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion,Conditional-UnspecifiedEpistemic-NoInversion#2|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis,12:Conditional-UnspecifiedEpistemic-NoInversion#2.Apodosis
 13	if	if	SCONJ	IN	_	18	mark	18:mark	_
 14	one	one	NUM	CD	NumForm=Word|NumType=Card	18	nsubj	18:nsubj	_
 15	of	of	ADP	IN	_	16	case	16:case	_
 16	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	14	nmod	14:nmod:of	_
 17	could	could	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
-18	give	give	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:if	_
+18	give	give	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion#2.Protasis
 19	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	18	iobj	18:iobj	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 21	call	call	NOUN	NN	Number=Sing	18	obj	18:obj	_
@@ -955,12 +955,12 @@
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 3	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	9	advcl	9:advcl:if	_
+4	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	9	advcl	9:advcl:if	CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 5	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj	_
 6	by	by	ADP	IN	_	7	case	7:case	_
 7	mistake	mistake	NOUN	NN	Number=Sing	4	obl	4:obl:by	_
 8	please	please	INTJ	UH	_	9	discourse	9:discourse	_
-9	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+9	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 10	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	9	obj	9:obj|11:nsubj:xsubj	_
 11	know	know	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 12	by	by	ADP	IN	_	13	case	13:case	_
@@ -975,7 +975,7 @@
 21	;	;	PUNCT	,	_	25	punct	25:punct	_
 22	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	25	nsubj	25:nsubj|29:nsubj	_
 23	should	should	AUX	MD	VerbForm=Fin	25	aux	25:aux	_
-24	not	not	PART	RB	_	25	advmod	25:advmod	_
+24	not	not	PART	RB	Polarity=Neg	25	advmod	25:advmod	_
 25	copy	copy	VERB	VB	VerbForm=Inf	9	parataxis	9:parataxis	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 27	message	message	NOUN	NN	Number=Sing	25	obj	25:obj	_
@@ -1018,7 +1018,7 @@
 # text = 11/28/2000 08:22 AM
 1	11/28/2000	11/28/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	08:22	08:22	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0066
 # text = Richard-
@@ -1096,7 +1096,7 @@
 # text = 11/28/2000 11:25 AM
 1	11/28/2000	11/28/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	11:25	11:25	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0074
 # text = Hi Rich,
@@ -1109,12 +1109,12 @@
 # text = Have you heard if the Kinga has had little Brian II yet?
 1	Have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	heard	hear	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+3	heard	hear	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	if	if	SCONJ	IN	_	8	mark	8:mark	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	Kinga	Kinga	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
 7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
-8	had	have	VERB	VBN	Tense=Past|VerbForm=Part	3	ccomp	3:ccomp	_
+8	had	have	VERB	VBN	Tense=Past|VerbForm=Part	3	ccomp	3:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=8:Interrogative-Polar-Indirect.Clause
 9	little	little	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	Brian	Brian	PROPN	NNP	Number=Sing	8	obj	8:obj	_
 11	II	II	NUM	CD	NumForm=Roman|NumType=Card	10	nummod	10:nummod	_
@@ -1206,11 +1206,11 @@
 # text = 11/28/2000 09:46 AM
 1	11/28/2000	11/28/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	09:46	09:46	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0084
 # text = Now that Michelle is in your fold, do you want to reconsider her being the contact person with AAA on this?
-1	Now	now	ADV	RB	_	11	advmod	11:advmod	_
+1	Now	now	ADV	RB	PronType=Dem	11	advmod	11:advmod	_
 2	that	that	SCONJ	IN	_	7	mark	7:mark	_
 3	Michelle	Michelle	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
@@ -1220,7 +1220,7 @@
 8	,	,	PUNCT	,	_	1	punct	1:punct	_
 9	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj|13:nsubj:xsubj	_
-11	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
+11	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=11:Interrogative-Polar-Direct.Clause
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	reconsider	reconsider	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
@@ -1265,17 +1265,17 @@
 # text = 11/27/2000 10:25 AM
 1	11/27/2000	11/27/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	10:25	10:25	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0089
 # text = As of today, we have not received payment in full as requested in Richard Sanders' letter dated November 16, 2000.
-1	As	as	ADP	IN	_	3	case	3:case	_
+1	As	as	ADP	IN	ExtPos=ADP	3	case	3:case	_
 2	of	of	ADP	IN	_	1	fixed	1:fixed	_
 3	today	today	NOUN	NN	Number=Sing	8	obl	8:obl:as_of	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 6	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
-7	not	not	PART	RB	_	8	advmod	8:advmod	_
+7	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 8	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 9	payment	payment	NOUN	NN	Number=Sing	8	obj	8:obj	_
 10	in	in	ADP	IN	_	11	case	11:case	_
@@ -1334,7 +1334,7 @@
 2	on	on	ADP	IN	_	3	case	3:case	_
 3	04/28/2000	04/28/2000	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:on	_
 4	11:15:11	11:15:11	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
-5	AM	a.m.	NOUN	NN	Number=Sing	3	nmod:tmod	3:nmod:tmod	_
+5	AM	a.m.	NOUN	NN	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0093
 # text = The attached letter is being sent to you from Patricia Gillman.
@@ -1359,18 +1359,18 @@
 3	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	amod	4:amod	_
 4	file	file	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
 5	:	:	PUNCT	:	_	6	punct	6:punct	_
-6	Sanders	sanders	NOUN	GW	_	4	appos	4:appos	_
+6	Sanders	sanders	X	GW	_	4	appos	4:appos	ExtPos=PROPN|FlatType=Filename
 7	Letter	letter	X	GW	_	6	flat	6:flat	_
-8	4_28_00.doc	4_28_00.doc	X	NN	Number=Sing	6	flat	6:flat	SpaceAfter=No
+8	4_28_00.doc	4_28_00.doc	X	NN	_	6	flat	6:flat	SpaceAfter=No
 9	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent33_01-0095
 # newpar id = email-enronsent33_01-p0028
 # text = - Sanders Letter 4_28_00.doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	Sanders	sanders	NOUN	GW	_	0	root	0:root	_
+2	Sanders	sanders	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
 3	Letter	letter	X	GW	_	2	flat	2:flat	_
-4	4_28_00.doc	4_28_00.doc	X	NN	Number=Sing	2	flat	2:flat	_
+4	4_28_00.doc	4_28_00.doc	X	NN	_	2	flat	2:flat	_
 
 # sent_id = email-enronsent33_01-0096
 # newpar id = email-enronsent33_01-p0029
@@ -1383,7 +1383,7 @@
 # text = 11/28/2000 09:56 PM
 1	11/28/2000	11/28/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	09:56	09:56	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0098
 # text = I am sending you a letter from their atty.
@@ -1416,17 +1416,17 @@
 # text = 11/27/2000 10:25 AM
 1	11/27/2000	11/27/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	10:25	10:25	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0102
 # text = As of today, we have not received payment in full as requested in Richard Sanders' letter dated November 16, 2000.
-1	As	as	ADP	IN	_	3	case	3:case	_
+1	As	as	ADP	IN	ExtPos=ADP	3	case	3:case	_
 2	of	of	ADP	IN	_	1	fixed	1:fixed	_
 3	today	today	NOUN	NN	Number=Sing	8	obl	8:obl:as_of	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 6	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
-7	not	not	PART	RB	_	8	advmod	8:advmod	_
+7	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 8	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 9	payment	payment	NOUN	NN	Number=Sing	8	obj	8:obj	_
 10	in	in	ADP	IN	_	11	case	11:case	_
@@ -1483,7 +1483,7 @@
 # text = Has Liz finished with gathering the documents?
 1	Has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	Liz	Liz	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
-3	finished	finish	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+3	finished	finish	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	with	with	SCONJ	IN	_	5	mark	5:mark	_
 5	gathering	gather	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:with	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
@@ -1499,7 +1499,7 @@
 # text = 11/13/2000 03:43 PM
 1	11/13/2000	11/13/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	03:43	03:43	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0108
 # text = Here are the revised dates for the response/reply/and hearing dates for Enron's motion to compel.
@@ -1552,7 +1552,7 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	should	should	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	be	be	AUX	VB	VerbForm=Inf	4	aux	4:aux	_
-4	expecting	expect	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+4	expecting	expect	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	deposition	deposition	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	notice	notice	NOUN	NN	Number=Sing	4	obj	4:obj	_
@@ -1560,7 +1560,7 @@
 9	if	if	SCONJ	IN	_	12	mark	12:mark	_
 10	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj|14:nsubj:xsubj	_
 11	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-12	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl:if	_
+12	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl:if	CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	follow	follow	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
 15	through	through	ADP	RP	_	14	compound:prt	14:compound:prt	_
@@ -1661,7 +1661,7 @@
 4	and	and	CCONJ	CC	_	6	cc	6:cc	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	Court	court	NOUN	NN	Number=Sing	3	conj	1:obl:to|3:conj:and	_
-7	today	today	NOUN	NN	Number=Sing	1	obl:tmod	1:obl:tmod	SpaceAfter=No
+7	today	today	NOUN	NN	Number=Sing	1	obl:unmarked	1:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 8	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent33_01-0117
@@ -1671,7 +1671,7 @@
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	compel	compel	VERB	VB	VerbForm=Inf	2	acl	2:acl:to	_
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux:pass	7:aux:pass	_
-6	now	now	ADV	RB	_	7	advmod	7:advmod	_
+6	now	now	ADV	RB	PronType=Dem	7	advmod	7:advmod	_
 7	scheduled	schedule	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 8	for	for	ADP	IN	_	9	case	9:case	_
 9	Dec.	December	PROPN	NNP	Abbr=Yes|Number=Sing	7	obl	7:obl:for	_
@@ -1690,16 +1690,16 @@
 4	oppositon	oppositon	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	papers	paper	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
 6	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
-7	now	now	ADV	RB	_	8	advmod	8:advmod	_
+7	now	now	ADV	RB	PronType=Dem	8	advmod	8:advmod	_
 8	due	due	ADJ	JJ	Degree=Pos	0	root	0:root	_
-9	Nov	November	PROPN	NNP	Abbr=Yes|Number=Sing	8	obl:npmod	8:obl:npmod	_
+9	Nov	November	PROPN	NNP	Abbr=Yes|Number=Sing	8	obl:unmarked	8:obl:unmarked	_
 10	27	27	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 11	and	and	CCONJ	CC	_	15	cc	15:cc	_
 12	Enron	Enron	PROPN	NNP	Number=Sing	13	compound	13:compound	_
 13	reply	reply	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
 14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 15	due	due	ADJ	JJ	Degree=Pos	8	conj	8:conj:and	_
-16	Dec	December	PROPN	NNP	Abbr=Yes|Number=Sing	15	obl:npmod	15:obl:npmod	_
+16	Dec	December	PROPN	NNP	Abbr=Yes|Number=Sing	15	obl:unmarked	15:obl:unmarked	_
 17	1	1	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	SpaceAfter=No
 18	.	.	PUNCT	.	_	8	punct	8:punct	_
 
@@ -1722,7 +1722,7 @@
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	all	all	DET	DT	PronType=Tot	0	root	0:root	_
 4	for	for	ADP	IN	_	5	case	5:case	_
-5	now	now	ADV	RB	_	3	obl	3:obl:for	SpaceAfter=No
+5	now	now	ADV	RB	PronType=Dem	3	obl	3:obl:for	SpaceAfter=No
 6	.	.	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
 
 # sent_id = email-enronsent33_01-0121
@@ -1769,10 +1769,10 @@
 5	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	_
 6	message	message	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	_
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
-8	not	not	PART	RB	_	11	advmod	11:advmod	_
+8	not	not	PART	RB	Polarity=Neg	11	advmod	11:advmod	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	intended	intend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	11	amod	11:amod	_
-11	recipient	recipient	NOUN	NN	Number=Sing	30	advcl	30:advcl:if	SpaceAfter=No
+11	recipient	recipient	NOUN	NN	Number=Sing	30	advcl	30:advcl:if	CxnElt=30:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	or	or	CCONJ	CC	_	15	cc	15:cc	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
@@ -1791,7 +1791,7 @@
 27	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	30	nsubj:pass	30:nsubj:pass	_
 28	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	30	aux:pass	30:aux:pass	_
 29	hereby	hereby	ADV	RB	_	30	advmod	30:advmod	_
-30	notified	notify	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+30	notified	notify	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=30:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 31	that	that	SCONJ	IN	_	43	mark	43:mark	_
 32	any	any	DET	DT	PronType=Ind	33	det	33:det	_
 33	dissemination	dissemination	NOUN	NN	Number=Sing	43	nsubj:pass	43:nsubj:pass	SpaceAfter=No
@@ -1812,7 +1812,7 @@
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 3	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	12	advcl	12:advcl:if	_
+4	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 5	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	_
 6	communication	communication	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	in	in	ADP	IN	_	8	case	8:case	_
@@ -1820,7 +1820,7 @@
 9	,	,	PUNCT	,	_	4	punct	4:punct	_
 10	please	please	INTJ	UH	_	12	discourse	12:discourse	_
 11	immediately	immediately	ADV	RB	_	12	advmod	12:advmod	_
-12	notify	notify	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+12	notify	notify	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 13	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	12	iobj	12:iobj	_
 14	by	by	ADP	IN	_	15	case	15:case	_
 15	telephone	telephone	NOUN	NN	Number=Sing	12	obl	12:obl:by	_
@@ -1856,7 +1856,7 @@
 # text = 11/08/2000 02:19 PM
 1	11/08/2000	11/08/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	02:19	02:19	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0129
 # text = Dear Mr. Sanders -
@@ -1897,7 +1897,7 @@
 24	details	detail	NOUN	NNS	Number=Plur	20	obj	20:obj	_
 25	by	by	ADP	IN	_	26	case	26:case	_
 26	e-mail	e-mail	NOUN	NN	Number=Sing	20	obl	20:obl:by	_
-27	as	as	ADV	RB	_	20	advmod	20:advmod	_
+27	as	as	ADV	RB	ExtPos=ADV	20	advmod	20:advmod	_
 28	well	well	ADV	RB	Degree=Pos	27	fixed	27:fixed	SpaceAfter=No
 29	...	...	PUNCT	.	_	17	punct	17:punct	_
 
@@ -2104,7 +2104,7 @@
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
 17	operations	operation	NOUN	NNS	Number=Plur	12	conj	10:nmod:from|12:conj:and	_
-18	so	so	SCONJ	IN	_	21	mark	21:mark	_
+18	so	so	SCONJ	IN	ExtPos=SCONJ	21	mark	21:mark	_
 19	that	that	SCONJ	IN	_	18	fixed	18:fixed	_
 20	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	21	nsubj	21:nsubj	_
 21	get	get	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl:so_that	_
@@ -2157,10 +2157,10 @@
 7	will	will	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
 8	be	be	AUX	VB	VerbForm=Inf	13	cop	13:cop	_
 9	on	on	SCONJ	IN	_	13	mark	13:mark	_
-10	how	how	ADV	WRB	PronType=Int	13	advmod	13:advmod	_
+10	how	how	ADV	WRB	PronType=Int	13	advmod	13:advmod	CxnElt=13:Interrogative-WHInfo-Direct.WHWord
 11	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 12	should	should	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
-13	build	build	VERB	VB	VerbForm=Inf	0	root	0:root	_
+13	build	build	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=13:Interrogative-WHInfo-Direct.Clause
 14	these	this	DET	DT	Number=Plur|PronType=Dem	15	det	15:det	_
 15	services	service	NOUN	NNS	Number=Plur	13	obj	13:obj	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
@@ -2223,21 +2223,21 @@
 2	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj|4:nsubj:xsubj	_
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-5	what	what	PRON	WP	PronType=Int	7	nsubj	7:nsubj	_
+5	what	what	PRON	WP	PronType=Int	7	nsubj	7:nsubj	CxnElt=7:Interrogative-WHInfo-Indirect.WHWord
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
-7	possible	possible	ADJ	JJ	Degree=Pos	4	ccomp	4:ccomp	SpaceAfter=No
+7	possible	possible	ADJ	JJ	Degree=Pos	4	ccomp	4:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=7:Interrogative-WHInfo-Indirect.Clause|SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
 10	feel	feel	VERB	VB	Mood=Imp|VerbForm=Fin	2	conj	2:conj:and	_
 11	free	free	ADJ	JJ	Degree=Pos	10	xcomp	10:xcomp	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
-13	give	give	VERB	VB	VerbForm=Inf	11	advcl	11:advcl:to	_
+13	give	give	VERB	VB	VerbForm=Inf	11	advcl	11:advcl:to	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 14	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	13	iobj	13:iobj	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 16	call	call	NOUN	NN	Number=Sing	13	obj	13:obj	_
 17	if	if	SCONJ	IN	_	19	mark	19:mark	_
 18	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	19	nsubj	19:nsubj	_
-19	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:if	_
+19	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:if	CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 20	any	any	DET	DT	PronType=Ind	21	det	21:det	_
 21	questions	question	NOUN	NNS	Number=Plur	19	obj	19:obj	_
 22	(	(	PUNCT	-LRB-	_	23	punct	23:punct	SpaceAfter=No
@@ -2271,7 +2271,7 @@
 6	Arbitration	Arbitration	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 7	Association	Association	PROPN	NNP	Number=Sing	1	list	1:list	_
 8	(	(	PUNCT	-LRB-	_	9	punct	9:punct	SpaceAfter=No
-9	978	978	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	SpaceAfter=No
+9	978	978	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	ExtPos=PROPN|FlatType=Phone|SpaceAfter=No
 10	)	)	PUNCT	-RRB-	_	9	punct	9:punct	_
 11	376-9004	376-9004	NUM	CD	NumForm=Digit|NumType=Card	9	flat	9:flat	_
 12	303-294-4499	303-294-4499	NUM	CD	NumForm=Digit|NumType=Card	9	conj	9:conj	_
@@ -2291,7 +2291,7 @@
 # text = 11/29/2000 09:52 AM
 1	11/29/2000	11/29/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	09:52	09:52	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0151
 # text = Thanks, Richard.
@@ -2304,7 +2304,7 @@
 # text = Do you have a tel # for Mike?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	tel	tel	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	#	#	SYM	NN	Number=Sing	3	obj	3:obj	_
@@ -2327,7 +2327,7 @@
 # text = 11/29/2000 10:45 AM
 1	11/29/2000	11/29/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	10:45	10:45	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0156
 # text = I'll send a copy of the suit filed against the generators as soon as I get it.
@@ -2373,7 +2373,7 @@
 # text = 11/29/2000 10:40 AM
 1	11/29/2000	11/29/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	10:40	10:40	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent33_01-0160
 # text = Hello Energyphiles:
@@ -2397,7 +2397,7 @@
 1	But	but	CCONJ	CC	_	5	cc	5:cc	_
 2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-4	now	now	ADV	RB	_	5	advmod	5:advmod	_
+4	now	now	ADV	RB	PronType=Dem	5	advmod	5:advmod	_
 5	official	official	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 6	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -2450,7 +2450,7 @@
 44	of	of	ADP	IN	_	45	case	45:case	_
 45	California	California	PROPN	NNP	Number=Sing	43	nmod	43:nmod:of	_
 46	this	this	DET	DT	Number=Sing|PronType=Dem	47	det	47:det	_
-47	year	year	NOUN	NN	Number=Sing	38	obl:tmod	38:obl:tmod	SpaceAfter=No
+47	year	year	NOUN	NN	Number=Sing	38	obl:unmarked	38:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 48	.	.	PUNCT	.	_	15	punct	15:punct	_
 
 # sent_id = email-enronsent33_01-0164
@@ -2471,7 +2471,7 @@
 14	to	to	PART	TO	_	16	mark	16:mark	_
 15	be	be	AUX	VB	VerbForm=Inf	16	aux:pass	16:aux:pass	_
 16	filed	file	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	13	acl	13:acl:to	_
-17	today	today	NOUN	NN	Number=Sing	16	obl:tmod	16:obl:tmod	SpaceAfter=No
+17	today	today	NOUN	NN	Number=Sing	16	obl:unmarked	16:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 18	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = email-enronsent33_01-0165
@@ -2568,7 +2568,7 @@
 13	web	web	NOUN	NN	Number=Sing	14	compound	14:compound	_
 14	site	site	NOUN	NN	Number=Sing	7	obl	7:obl:to	_
 15	later	late	ADV	RBR	Degree=Cmp	16	advmod	16:advmod	_
-16	today	today	NOUN	NN	Number=Sing	7	obl:tmod	7:obl:tmod	SpaceAfter=No
+16	today	today	NOUN	NN	Number=Sing	7	obl:unmarked	7:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent33_01-0170

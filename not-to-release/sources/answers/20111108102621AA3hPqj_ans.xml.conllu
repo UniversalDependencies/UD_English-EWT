@@ -33,7 +33,7 @@
 21	and	and	CCONJ	CC	_	22	cc	22:cc	_
 22	face	face	NOUN	NN	Number=Sing	20	conj	20:conj:and|23:compound	_
 23	area	area	NOUN	NN	Number=Sing	9	nmod	9:nmod:on	_
-24	ever	ever	ADV	RB	_	25	advmod	25:advmod	_
+24	ever	ever	ADV	RB	PronType=Ind	25	advmod	25:advmod	_
 25	go	go	VERB	VB	VerbForm=Inf	1	conj	1:conj:but	_
 26	hard	hard	ADJ	JJ	Degree=Pos	25	xcomp	25:xcomp	SpaceAfter=No
 27	.	.	PUNCT	.	_	25	punct	25:punct	_
@@ -83,23 +83,23 @@
 12	mine	my	PRON	PRP	Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	obj	11:obj	_
 13	all	all	DET	PDT	PronType=Tot	15	det:predet	15:det:predet	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
-15	time	time	NOUN	NN	Number=Sing	11	obl:tmod	11:obl:tmod	SpaceAfter=No
+15	time	time	NOUN	NN	Number=Sing	11	obl:unmarked	11:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 16	..	..	PUNCT	,	_	20	punct	20:punct	_
 17	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	20	nsubj	20:nsubj|21:nsubj:xsubj	_
 18-19	dont	_	_	_	_	_	_	_	_
 18	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
-19	nt	not	PART	RB	Abbr=Yes	20	advmod	20:advmod	CorrectForm=n't
+19	nt	not	PART	RB	Abbr=Yes|Polarity=Neg	20	advmod	20:advmod	CorrectForm=n't
 20	go	go	VERB	VB	VerbForm=Inf	3	parataxis	3:parataxis	_
 21	hard	hard	ADJ	JJ	Degree=Pos	20	xcomp	20:xcomp	_
 22	lik	like	ADP	IN	Typo=Yes	24	case	24:case	CorrectForm=like
-23	eneedle	needle	NOUN	NN	Number=Sing|Typo=Yes	24	obl:npmod	24:obl:npmod	CorrectForm=needle
+23	eneedle	needle	NOUN	NN	Number=Sing|Typo=Yes	24	obl:unmarked	24:obl:unmarked	CorrectForm=needle
 24	hard	hard	ADJ	JJ	Degree=Pos	21	obl	21:obl:like	_
 25	but	but	CCONJ	CC	_	30	cc	30:cc	_
 26	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	30	nsubj	30:nsubj	_
 27-28	arnt	_	_	_	_	_	_	_	_
 27	ar	be	AUX	VBP	Abbr=Yes|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	30	cop	30:cop	CorrectForm=are
-28	nt	not	PART	RB	Abbr=Yes	30	advmod	30:advmod	CorrectForm=n't
-29	pillow	pillow	NOUN	NN	Number=Sing	30	obl:npmod	30:obl:npmod	_
+28	nt	not	PART	RB	Abbr=Yes|Polarity=Neg	30	advmod	30:advmod	CorrectForm=n't
+29	pillow	pillow	NOUN	NN	Number=Sing	30	obl:unmarked	30:obl:unmarked	_
 30	soft	soft	ADJ	JJ	Degree=Pos	20	conj	20:conj:but	SpaceAfter=No
 31	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -116,13 +116,13 @@
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj|12:nsubj:xsubj	_
 10	try	try	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	eat	eat	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
+12	eat	eat	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 14	cactus	cactus	NOUN	NN	Number=Sing	12	obj	12:obj	_
 15	[	[	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
 16	if	if	SCONJ	IN	_	18	mark	18:mark	_
 17	u	you	PRON	PRP	Abbr=Yes|Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	CorrectForm=you
-18	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	advcl	12:advcl:if	_
+18	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 19	no	no	DET	DT	PronType=Neg	20	det	20:det	_
 20	knife	knife	NOUN	NN	Number=Sing	18	obj	18:obj	SpaceAfter=No
 21	]	]	PUNCT	-RRB-	_	18	punct	18:punct	_
@@ -131,7 +131,7 @@
 24	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
 25-26	wouldnt	_	_	_	_	_	_	_	SpaceAfter=No
 25	would	would	AUX	MD	VerbForm=Fin	23	ccomp	23:ccomp	_
-26	nt	not	PART	RB	Abbr=Yes	25	advmod	25:advmod	CorrectForm=n't
+26	nt	not	PART	RB	Abbr=Yes|Polarity=Neg	25	advmod	25:advmod	CorrectForm=n't
 27	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108102621AA3hPqj_ans-0007
@@ -147,15 +147,15 @@
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 11	can	can	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
-12	scratch	scratch	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
+12	scratch	scratch	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 13	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	12	obj	12:obj	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
-15	lil	little	ADJ	JJ	Abbr=Yes|Degree=Pos	12	obl:npmod	12:obl:npmod	_
+15	lil	little	ADJ	JJ	Abbr=Yes|Degree=Pos	12	obl:unmarked	12:obl:unmarked	_
 16	if	if	SCONJ	IN	_	19	mark	19:mark	_
 17-18	ur	_	_	_	_	_	_	_	_
 17	u	you	PRON	PRP	Abbr=Yes|Case=Nom|Person=2|PronType=Prs	19	nsubj	19:nsubj	CorrectForm=you
 18	r	be	AUX	VBP	Abbr=Yes|Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	19	aux	19:aux	CorrectForm='re
-19	holding	hold	VERB	VBG	Tense=Pres|VerbForm=Part	12	advcl	12:advcl:if	_
+19	holding	hold	VERB	VBG	Tense=Pres|VerbForm=Part	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 20	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	19	obj	19:obj	_
 21	to	too	ADV	RB	Typo=Yes	22	advmod	22:advmod	CorrectForm=too
 22	tight	tight	ADV	RB	_	19	advmod	19:advmod	_
@@ -166,7 +166,7 @@
 1-2	Theyre	_	_	_	_	_	_	_	_
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 2	re	be	AUX	VBP	Abbr=Yes|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	CorrectForm='re
-3	not	not	PART	RB	_	5	advmod	5:advmod	_
+3	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 4	really	really	ADV	RB	_	5	advmod	5:advmod	_
 5	hard	hard	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 6	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -220,7 +220,7 @@
 1	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
 2-3	dont	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	nt	not	PART	RB	Typo=Yes	4	advmod	4:advmod	CorrectForm=n't
+3	nt	not	PART	RB	Polarity=Neg|Typo=Yes	4	advmod	4:advmod	CorrectForm=n't
 4	hurt	hurt	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	unless	unless	SCONJ	IN	_	8	mark	8:mark	_
 6-7	your	_	_	_	_	_	_	_	_

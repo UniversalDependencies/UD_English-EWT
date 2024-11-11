@@ -8,7 +8,7 @@
 4-5	I've	_	_	_	_	_	_	_	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 5	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
-6	Ever	ever	ADV	RB	_	7	advmod	7:advmod	_
+6	Ever	ever	ADV	RB	PronType=Ind	7	advmod	7:advmod	_
 7	Had	have	VERB	VBN	Tense=Past|VerbForm=Part	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obj
 
 # sent_id = reviews-235423-0002
@@ -24,7 +24,7 @@
 8	food	food	NOUN	NN	Number=Sing	0	root	0:root|12:obj	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 10	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-11	ever	ever	ADV	RB	_	12	advmod	12:advmod	_
+11	ever	ever	ADV	RB	PronType=Ind	12	advmod	12:advmod	_
 12	had	have	VERB	VBN	Tense=Past|VerbForm=Part	8	acl:relcl	8:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 13	.	.	PUNCT	.	_	8	punct	8:punct	_
 
@@ -96,7 +96,7 @@
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	charger	charge	VERB	VB	Typo=Yes|VerbForm=Inf	11	xcomp	11:xcomp	CorrectForm=charge
 14	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	13	iobj	13:iobj	_
-15	$	$	SYM	$	_	17	obl:npmod	17:obl:npmod	SpaceAfter=No
+15	$	$	SYM	$	_	17	obl:unmarked	17:obl:unmarked	SpaceAfter=No
 16	10	10	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
 17	more	more	ADJ	JJR	Degree=Cmp	13	obj	13:obj	_
 18	than	than	ADP	IN	_	19	case	19:case	_
@@ -145,7 +145,7 @@
 
 # sent_id = reviews-235423-0009
 # text = Not to mention that the wait staff was about as pleasant as dealing with an angry bull.
-1	Not	not	PART	RB	_	11	cc	11:cc	_
+1	Not	not	PART	RB	ExtPos=CCONJ|Polarity=Neg	11	cc	11:cc	_
 2	to	to	PART	TO	_	1	fixed	1:fixed	_
 3	mention	mention	VERB	VB	VerbForm=Inf	1	fixed	1:fixed	_
 4	that	that	SCONJ	IN	_	11	mark	11:mark	_
@@ -209,12 +209,12 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2-3	dont	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	nt	not	PART	RB	Typo=Yes	4	advmod	4:advmod	CorrectForm=n't
+3	nt	not	PART	RB	Polarity=Neg|Typo=Yes	4	advmod	4:advmod	CorrectForm=n't
 4	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
+5	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	CxnElt=8:Interrogative-WHInfo-Indirect.WHWord
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	expl	8:expl	_
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
-8	possible	possible	ADJ	JJ	Degree=Pos	4	ccomp	4:ccomp	_
+8	possible	possible	ADJ	JJ	Degree=Pos	4	ccomp	4:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=8:Interrogative-WHInfo-Indirect.Clause
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	make	make	VERB	VB	VerbForm=Inf	8	csubj	8:csubj	_
 11	orange	orange	NOUN	NN	Number=Sing	12	compound	12:compound	_
@@ -267,7 +267,7 @@
 # text = I will NEVER go here again.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	NEVER	never	ADV	RB	_	4	advmod	4:advmod	_
+3	NEVER	never	ADV	RB	PronType=Neg	4	advmod	4:advmod	_
 4	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	here	here	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 6	again	again	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
@@ -282,7 +282,7 @@
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 7	billion	billion	NUM	CD	NumForm=Word|NumType=Card	8	nummod	8:nummod	_
-8	times	time	NOUN	NNS	Number=Plur	9	obl:npmod	9:obl:npmod	_
+8	times	time	NOUN	NNS	Number=Plur	9	obl:unmarked	9:obl:unmarked	_
 9	better	good	ADJ	JJR	Degree=Cmp	0	root	0:root	_
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	service	service	NOUN	NN	Number=Sing	9	obl	9:obl:in	_
@@ -299,10 +299,10 @@
 2	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	no	no	DET	DT	PronType=Neg	4	det	4:det	_
 4	idea	idea	NOUN	NN	Number=Sing	2	obj	2:obj	_
-5	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
+5	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	CxnElt=8:Interrogative-WHInfo-Indirect.WHWord
 6	China	China	PROPN	NNP	Number=Sing	7	compound	7:compound	_
 7	Delight	Delight	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
-8	won	win	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	_
+8	won	win	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=8:Interrogative-WHInfo-Indirect.Clause
 9	number	number	NOUN	NN	Number=Sing	12	compound	12:compound	_
 10	1	1	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 11	Chinese	Chinese	ADJ	JJ	Degree=Pos	12	amod	12:amod	_

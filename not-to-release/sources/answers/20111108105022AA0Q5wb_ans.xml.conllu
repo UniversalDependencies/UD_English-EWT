@@ -8,7 +8,7 @@
 4	....	....	PUNCT	,	_	5	punct	5:punct	_
 5	NEED	need	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	_
 6	HELP	help	NOUN	NN	Number=Sing	5	obj	5:obj	_
-7	NOW	now	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
+7	NOW	now	ADV	RB	PronType=Dem	5	advmod	5:advmod	SpaceAfter=No
 8	!?	!?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108105022AA0Q5wb_ans-0002
@@ -35,7 +35,7 @@
 # text = Well last night while I was sleeping, my hamster escaped from his cage.
 1	Well	well	INTJ	UH	_	11	discourse	11:discourse	_
 2	last	last	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	night	night	NOUN	NN	Number=Sing	11	obl:tmod	11:obl:tmod	_
+3	night	night	NOUN	NN	Number=Sing	11	obl:unmarked	11:obl:unmarked	TemporalNPAdjunct=Yes
 4	while	while	SCONJ	IN	_	7	mark	7:mark	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux	7:aux	_
@@ -59,21 +59,21 @@
 6	,	,	PUNCT	,	_	9	punct	9:punct	_
 7	but	but	CCONJ	CC	_	9	cc	9:cc	_
 8	there	there	PRON	EX	_	9	expl	9:expl	_
-9	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	conj	5:conj:but	_
+9	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	conj	5:conj:but	Cxn=Existential-CopPred-ThereExpl
 10	so	so	ADV	RB	_	11	advmod	11:advmod	_
 11	many	many	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	things	thing	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj	_
+12	things	thing	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj	CxnElt=9:Existential-CopPred-ThereExpl.Pivot
 13	inside	inside	ADP	IN	_	14	case	14:case	_
 14	there	there	ADV	RB	PronType=Dem	12	nmod	12:nmod:inside	SpaceAfter=No
 15	,	,	PUNCT	,	_	19	punct	19:punct	_
 16	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
 17-19	dunno	_	_	_	_	_	_	_	_
 17	du	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
-18	n	not	PART	RB	_	19	advmod	19:advmod	_
+18	n	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 19	no	know	VERB	VB	VerbForm=Inf	5	parataxis	5:parataxis	_
-20	what	what	PRON	WP	PronType=Int	22	obj	22:obj	_
+20	what	what	PRON	WP	PronType=Int	22	obj	22:obj	CxnElt=22:Interrogative-WHInfo-Indirect.WHWord
 21	to	to	PART	TO	_	22	mark	22:mark	_
-22	do	do	VERB	VB	VerbForm=Inf	19	ccomp	19:ccomp	SpaceAfter=No
+22	do	do	VERB	VB	VerbForm=Inf	19	ccomp	19:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=22:Interrogative-WHInfo-Indirect.Clause|SpaceAfter=No
 23	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108105022AA0Q5wb_ans-0005
@@ -118,7 +118,7 @@
 1-2	I'm	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	kidding	kid	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
@@ -130,7 +130,7 @@
 12	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	house	house	NOUN	NN	Number=Sing	8	obl	8:obl:in	_
 14	3	3	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
-15	months	month	NOUN	NNS	Number=Plur	16	obl:npmod	16:obl:npmod	_
+15	months	month	NOUN	NNS	Number=Plur	16	obl:unmarked	16:obl:unmarked	_
 16	later	late	ADV	RBR	Degree=Cmp	18	advmod	18:advmod	_
 17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
 18	walk	walk	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	parataxis	4:parataxis	_
@@ -158,7 +158,7 @@
 6	food	food	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	whole	whole	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	time	time	NOUN	NN	Number=Sing	4	obl:tmod	4:obl:tmod	SpaceAfter=No
+9	time	time	NOUN	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108105022AA0Q5wb_ans-0010
@@ -183,9 +183,9 @@
 3	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
 4-5	isn't	_	_	_	_	_	_	_	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
-5	n't	not	PART	RB	_	6	advmod	6:advmod	_
+5	n't	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	trapped	trapped	ADJ	JJ	Degree=Pos	2	ccomp	2:ccomp	_
-7	somewhere	somewhere	ADV	RB	_	6	advmod	6:advmod	_
+7	somewhere	somewhere	ADV	RB	PronType=Ind	6	advmod	6:advmod	_
 8	&	&	CCONJ	CC	_	9	cc	9:cc	_
 9	put	put	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_

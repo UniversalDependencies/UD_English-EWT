@@ -25,7 +25,7 @@
 # text = I also never have to wait long for a yearly inspection sticker...and never get the usual excuses other shops always gave me..."the inspection guy isn't here today"....for example.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj|16:nsubj	_
 2	also	also	ADV	RB	_	4	advmod	4:advmod	_
-3	never	never	ADV	RB	_	4	advmod	4:advmod	_
+3	never	never	ADV	RB	PronType=Neg	4	advmod	4:advmod	_
 4	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	wait	wait	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
@@ -37,14 +37,14 @@
 12	sticker	sticker	NOUN	NN	Number=Sing	6	obl	6:obl:for	SpaceAfter=No
 13	...	...	PUNCT	,	_	16	punct	16:punct	SpaceAfter=No
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
-15	never	never	ADV	RB	_	16	advmod	16:advmod	_
+15	never	never	ADV	RB	PronType=Neg	16	advmod	16:advmod	_
 16	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 18	usual	usual	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 19	excuses	excuse	NOUN	NNS	Number=Plur	16	obj	16:obj|23:obj	_
 20	other	other	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 21	shops	shop	NOUN	NNS	Number=Plur	23	nsubj	23:nsubj	_
-22	always	always	ADV	RB	_	23	advmod	23:advmod	_
+22	always	always	ADV	RB	PronType=Tot	23	advmod	23:advmod	_
 23	gave	give	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	19	acl:relcl	19:acl:relcl	Cxn=rc-red-obj
 24	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	23	iobj	23:iobj	SpaceAfter=No
 25	...	...	PUNCT	,	_	32	punct	32:punct	SpaceAfter=No
@@ -54,9 +54,9 @@
 29	guy	guy	NOUN	NN	Number=Sing	32	nsubj	32:nsubj	_
 30-31	isn't	_	_	_	_	_	_	_	_
 30	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	cop	32:cop	_
-31	n't	not	PART	RB	_	32	advmod	32:advmod	_
+31	n't	not	PART	RB	Polarity=Neg	32	advmod	32:advmod	_
 32	here	here	ADV	RB	PronType=Dem	16	parataxis	16:parataxis	_
-33	today	today	NOUN	NN	Number=Sing	32	obl:tmod	32:obl:tmod	SpaceAfter=No
+33	today	today	NOUN	NN	Number=Sing	32	obl:unmarked	32:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 34	"	"	PUNCT	''	_	32	punct	32:punct	SpaceAfter=No
 35	....	....	PUNCT	,	_	37	punct	37:punct	SpaceAfter=No
 36	for	for	ADP	IN	_	37	case	37:case	_
@@ -65,7 +65,7 @@
 
 # sent_id = reviews-389498-0003
 # text = Today I went into Kwik Kar and there were two cars in front of me for inspection...but I was still out of there pretty quick...barely had time to read a chapter in my book.
-1	Today	today	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
+1	Today	today	NOUN	NN	Number=Sing	3	obl:unmarked	3:obl:unmarked	TemporalNPAdjunct=Yes
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 3	went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	into	into	ADP	IN	_	5	case	5:case	_
@@ -73,9 +73,9 @@
 6	Kar	Kar	PROPN	NNP	Number=Sing	5	flat	5:flat	_
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_
 8	there	there	PRON	EX	_	9	expl	9:expl	_
-9	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
+9	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	Cxn=Existential-CopPred-ThereExpl
 10	two	two	NUM	CD	NumForm=Word|NumType=Card	11	nummod	11:nummod	_
-11	cars	car	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj	_
+11	cars	car	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj	CxnElt=9:Existential-CopPred-ThereExpl.Pivot
 12	in	in	ADP	IN	_	13	case	13:case	_
 13	front	front	NOUN	NN	Number=Sing	11	nmod	11:nmod:in	_
 14	of	of	ADP	IN	_	15	case	15:case	_

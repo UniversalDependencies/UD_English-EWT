@@ -20,7 +20,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	17	17	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
-4	years	year	NOUN	NNS	Number=Plur	5	obl:npmod	5:obl:npmod	_
+4	years	year	NOUN	NNS	Number=Plur	5	obl:unmarked	5:obl:unmarked	_
 5	old	old	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 6	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -28,7 +28,7 @@
 # text = I do not get along with my family.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	along	along	ADV	RB	_	4	advmod	4:advmod	_
 6	with	with	ADP	IN	_	8	case	8:case	_
@@ -66,7 +66,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	best	good	ADJ	JJS	Degree=Sup	7	amod	7:amod	_
@@ -119,7 +119,7 @@
 1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
 2	parents	parent	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
 3	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	not	not	PART	RB	_	5	advmod	5:advmod	_
+4	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	like	like	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	obj	5:obj	SpaceAfter=No
 7	,	,	PUNCT	,	_	10	punct	10:punct	_
@@ -146,7 +146,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj	_
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-3	n't	not	PART	RB	_	5	advmod	5:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 4	particularly	particularly	ADV	RB	_	5	advmod	5:advmod	_
 5	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
@@ -154,14 +154,14 @@
 8	with	with	ADP	IN	_	9	case	9:case	_
 9	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	7	obl	7:obl:with	_
 10	atm	atm	ADV	RB	_	7	advmod	7:advmod	_
-11	either	either	ADV	RB	_	7	advmod	7:advmod	SpaceAfter=No
+11	either	either	ADV	RB	PronType=Ind	7	advmod	7:advmod	SpaceAfter=No
 12	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111107212131AACQ65F_ans-0013
 # text = But right now its the most convenient thing to do.
 1	But	but	CCONJ	CC	_	9	cc	9:cc	_
 2	right	right	ADV	RB	_	3	advmod	3:advmod	_
-3	now	now	ADV	RB	_	9	advmod	9:advmod	_
+3	now	now	ADV	RB	PronType=Dem	9	advmod	9:advmod	_
 4-5	its	_	_	_	_	_	_	_	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
 5	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	9	cop	9:cop	CorrectForm='s
@@ -183,7 +183,7 @@
 
 # sent_id = answers-20111107212131AACQ65F_ans-0015
 # text = What is the best way of doing it?
-1	What	what	PRON	WP	PronType=Int	0	root	0:root	_
+1	What	what	PRON	WP	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=1:Interrogative-WHInfo-Direct.Clause,1:Interrogative-WHInfo-Direct.WHWord
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	best	good	ADJ	JJS	Degree=Sup	5	amod	5:amod	_
@@ -233,7 +233,7 @@
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 9-10	don't	_	_	_	_	_	_	_	_
 9	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
-10	n't	not	PART	RB	_	11	advmod	11:advmod	_
+10	n't	not	PART	RB	Polarity=Neg	11	advmod	11:advmod	_
 11	have	have	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 13	set	set	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	amod	14:amod	_
@@ -286,7 +286,7 @@
 # text = You can always beg for spare change when you get hungry.
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 2	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	always	always	ADV	RB	_	4	advmod	4:advmod	_
+3	always	always	ADV	RB	PronType=Tot	4	advmod	4:advmod	_
 4	beg	beg	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	for	for	ADP	IN	_	7	case	7:case	_
 6	spare	spare	ADJ	JJ	Degree=Pos	7	amod	7:amod	_

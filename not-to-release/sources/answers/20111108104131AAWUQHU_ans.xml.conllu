@@ -2,10 +2,10 @@
 # sent_id = answers-20111108104131AAWUQHU_ans-0001
 # newpar id = answers-20111108104131AAWUQHU_ans-p0001
 # text = what does it mean when a veiled chameleon egg is soft?
-1	what	what	PRON	WP	PronType=Int	4	obj	4:obj	_
+1	what	what	PRON	WP	PronType=Int	4	obj	4:obj	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
-4	mean	mean	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	mean	mean	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	when	when	ADV	WRB	PronType=Int	11	advmod	11:advmod	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 7	veiled	veiled	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
@@ -24,9 +24,9 @@
 4	just	just	ADV	RB	_	5	advmod	5:advmod	_
 5	laid	lay	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	eggs	egg	NOUN	NNS	Number=Plur	5	obj	5:obj	_
-7	yesterday	yesterday	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	_
+7	yesterday	yesterday	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	TemporalNPAdjunct=Yes
 8	and	and	CCONJ	CC	_	15	cc	15:cc	_
-9	today	today	NOUN	NN	Number=Sing	15	obl:tmod	15:obl:tmod	_
+9	today	today	NOUN	NN	Number=Sing	15	obl:unmarked	15:obl:unmarked	TemporalNPAdjunct=Yes
 10	some	some	DET	DT	PronType=Ind	15	nsubj	15:nsubj	_
 11	of	of	ADP	IN	_	13	case	13:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
@@ -40,7 +40,7 @@
 20	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	21	nsubj	21:nsubj	_
 21	mean	mean	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	parataxis	5:parataxis	_
 22	like	like	INTJ	UH	_	21	discourse	21:discourse	_
-23	not	not	PART	RB	_	27	advmod	27:advmod	_
+23	not	not	PART	RB	Polarity=Neg	27	advmod	27:advmod	_
 24	like	like	ADP	IN	_	27	case	27:case	_
 25	ordinary	ordinary	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
 26	chameleon	chameleon	NOUN	NN	Number=Sing	27	compound	27:compound	_
@@ -60,20 +60,20 @@
 # text = If there is no male they are probably infertile!
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	there	there	PRON	EX	_	3	expl	3:expl	_
-3	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	_
+3	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	Cxn=Existential-CopPred-ThereExpl|CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	no	no	DET	DT	PronType=Neg	5	det	5:det	_
-5	male	male	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
+5	male	male	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot
 6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
 7	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 8	probably	probably	ADV	RB	_	9	advmod	9:advmod	_
-9	infertile	infertile	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
+9	infertile	infertile	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 10	!	!	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = answers-20111108104131AAWUQHU_ans-0005
 # text = If you take a flash light and shine it through the eggs and you see nothing throw them away!
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|8:nsubj	_
-3	take	take	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl:if	_
+3	take	take	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl:if	CxnElt=17:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	flash	flash	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	light	light	NOUN	NN	Number=Sing	3	obj	3:obj	_
@@ -87,7 +87,7 @@
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
 15	see	see	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and|17:advcl:if	_
 16	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	15	obj	15:obj	_
-17	throw	throw	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+17	throw	throw	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=17:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 18	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	17	obj	17:obj	_
 19	away	away	ADP	RP	_	17	compound:prt	17:compound:prt	SpaceAfter=No
 20	!	!	PUNCT	.	_	17	punct	17:punct	_
@@ -96,11 +96,11 @@
 # text = If you do not they will start to rot!
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	_
-4	not	not	PART	RB	_	3	advmod	3:advmod	_
+3	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
+4	not	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
 5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj	7:nsubj|9:nsubj:xsubj	_
 6	will	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
-7	start	start	VERB	VB	VerbForm=Inf	0	root	0:root	_
+7	start	start	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	rot	rot	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	SpaceAfter=No
 10	!	!	PUNCT	.	_	7	punct	7:punct	_
@@ -109,7 +109,7 @@
 # text = If she has no male to fertilize the eggs, the eggs will aways be infertile.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	advcl	16:advcl:if	_
+3	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	advcl	16:advcl:if	CxnElt=16:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	no	no	DET	DT	PronType=Neg	5	det	5:det	_
 5	male	male	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
@@ -122,7 +122,7 @@
 13	will	will	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 14	aways	aways	ADV	RB	_	16	advmod	16:advmod	_
 15	be	be	AUX	VB	VerbForm=Inf	16	cop	16:cop	_
-16	infertile	infertile	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
+16	infertile	infertile	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=16:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 17	.	.	PUNCT	.	_	16	punct	16:punct	_
 
 # sent_id = answers-20111108104131AAWUQHU_ans-0008
@@ -130,13 +130,13 @@
 1	if	if	SCONJ	IN	_	4	mark	4:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 3	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	have	have	VERB	VB	VerbForm=Inf	25	advcl	25:advcl:if	_
+4	have	have	VERB	VB	VerbForm=Inf	25	advcl	25:advcl:if	CxnElt=25:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	male	male	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	but	but	CCONJ	CC	_	14	cc	14:cc	_
 8	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	14	nsubj	14:nsubj|16:nsubj	_
 9	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
-10	not	not	PART	RB	_	14	advmod	14:advmod	_
+10	not	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
 11	in	in	ADP	IN	_	14	case	14:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	same	same	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
@@ -151,7 +151,7 @@
 22	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	20	parataxis	19:obj|20:parataxis	_
 23	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	25	nsubj	25:nsubj|30:nsubj	_
 24	will	will	AUX	MD	VerbForm=Fin	25	aux	25:aux	_
-25	smell	smell	VERB	VB	VerbForm=Inf	0	root	0:root	_
+25	smell	smell	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=25:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 26	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	27	nmod:poss	27:nmod:poss	_
 27	sent	sent	NOUN	NN	Number=Sing	25	obj	25:obj	_
 28	and	and	CCONJ	CC	_	30	cc	30:cc	_

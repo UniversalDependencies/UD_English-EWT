@@ -51,7 +51,7 @@
 1-2	I'm	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	fond	fond	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	of	of	ADP	IN	_	12	case	12:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
@@ -68,7 +68,7 @@
 2	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj	_
 3-4	don't	_	_	_	_	_	_	_	_
 3	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	n't	not	PART	RB	_	5	advmod	5:advmod	_
+4	n't	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	need	need	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	use	use	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
@@ -88,7 +88,7 @@
 21	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	24	nsubj	24:nsubj|26:nsubj:xsubj	_
 22-23	don't	_	_	_	_	_	_	_	_
 22	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	24	aux	24:aux	_
-23	n't	not	PART	RB	_	24	advmod	24:advmod	_
+23	n't	not	PART	RB	Polarity=Neg	24	advmod	24:advmod	_
 24	need	need	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	_
 25	to	to	PART	TO	_	26	mark	26:mark	_
 26	send	send	VERB	VB	VerbForm=Inf	24	xcomp	24:xcomp	_
@@ -103,14 +103,14 @@
 35	and	and	CCONJ	CC	_	70	cc	70:cc	_
 36	if	if	SCONJ	IN	_	44	mark	44:mark	_
 37	--	--	PUNCT	,	_	36	punct	36:punct	_
-38	wonder	wonder	NOUN	NN	Number=Sing	44	parataxis	44:parataxis	_
-39	of	of	ADP	IN	_	40	case	40:case	_
-40	wonders	wonder	NOUN	NNS	Number=Plur	38	nmod	38:nmod:of	_
+38	wonder	wonder	NOUN	NN	Number=Sing	44	parataxis	44:parataxis	Cxn=NPN|CxnElt=38:NPN.N1
+39	of	of	ADP	IN	_	40	case	40:case	CxnElt=38:NPN.P
+40	wonders	wonder	NOUN	NNS	Number=Plur	38	nmod	38:nmod:of	CxnElt=38:NPN.N2
 41	--	--	PUNCT	,	_	38	punct	38:punct	_
 42-43	you're	_	_	_	_	_	_	_	_
 42	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	44	nsubj	44:nsubj	_
 43	're	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	44	cop	44:cop	_
-44	worried	worried	ADJ	JJ	Degree=Pos	70	advcl	70:advcl:if	_
+44	worried	worried	ADJ	JJ	Degree=Pos	70	advcl	70:advcl:if	CxnElt=70:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 45	that	that	SCONJ	IN	_	48	mark	48:mark	_
 46	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	48	nsubj	48:nsubj	_
 47	might	might	AUX	MD	VerbForm=Fin	48	aux	48:aux	_
@@ -136,7 +136,7 @@
 67	account	account	NOUN	NN	Number=Sing	62	obl	62:obl:on	SpaceAfter=No
 68	...	...	PUNCT	,	_	44	punct	44:punct	_
 69	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	70	nsubj	70:nsubj	_
-70	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	_
+70	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=70:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 71	far	far	ADV	RB	Degree=Pos	75	advmod	75:advmod	SpaceAfter=No
 72	,	,	PUNCT	,	_	71	punct	71:punct	_
 73	far	far	ADV	RB	Degree=Pos	75	advmod	75:advmod	_

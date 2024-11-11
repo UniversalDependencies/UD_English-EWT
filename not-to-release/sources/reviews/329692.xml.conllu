@@ -3,14 +3,14 @@
 # newpar id = reviews-329692-p0001
 # text = Instructor never showed up!
 1	Instructor	instructor	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-2	never	never	ADV	RB	_	3	advmod	3:advmod	_
+2	never	never	ADV	RB	PronType=Neg	3	advmod	3:advmod	_
 3	showed	show	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	up	up	ADP	RP	_	3	compound:prt	3:compound:prt	SpaceAfter=No
 5	!	!	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-329692-0002
 # text = January 15th -- We were signed up for Saturday's 2 PM class "Beginning Yoga with Brittany."
-1	January	January	PROPN	NNP	Number=Sing	6	obl:tmod	6:obl:tmod	_
+1	January	January	PROPN	NNP	Number=Sing	6	obl:unmarked	6:obl:unmarked	TemporalNPAdjunct=Yes
 2	15th	15th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	1	nummod	1:nummod	_
 3	--	--	PUNCT	:	_	1	punct	1:punct	_
 4	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj:pass	6:nsubj:pass	_
@@ -38,7 +38,7 @@
 2	even	even	ADV	RB	_	3	advmod	3:advmod	_
 3	arrived	arrive	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	10	10	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
-5	minutes	minute	NOUN	NNS	Number=Plur	6	obl:npmod	6:obl:npmod	_
+5	minutes	minute	NOUN	NNS	Number=Plur	6	obl:unmarked	6:obl:unmarked	_
 6	early	early	ADV	RB	Degree=Pos	3	advmod	3:advmod	_
 7	as	as	SCONJ	IN	_	10	mark	10:mark	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
@@ -51,7 +51,7 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	instructor	instructor	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 3	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
-4	not	not	PART	RB	_	5	advmod	5:advmod	_
+4	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	show	show	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	up	up	ADP	RP	_	5	compound:prt	5:compound:prt	SpaceAfter=No
 7	!	!	PUNCT	.	_	5	punct	5:punct	_
@@ -71,8 +71,8 @@
 # sent_id = reviews-329692-0006
 # text = There were 2 in our group, and a 3rd person was also in the parking lot waiting for this class.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	2	2	NUM	CD	NumForm=Digit|NumType=Card	2	nsubj	2:nsubj	_
+2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+3	2	2	NUM	CD	NumForm=Digit|NumType=Card	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 4	in	in	ADP	IN	_	6	case	6:case	_
 5	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	group	group	NOUN	NN	Number=Sing	3	nmod	3:nmod:in	SpaceAfter=No
@@ -87,7 +87,7 @@
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	parking	parking	NOUN	NN	Number=Sing	17	compound	17:compound	_
 17	lot	lot	NOUN	NN	Number=Sing	2	conj	2:conj:and	_
-18	waiting	wait	VERB	VBG	VerbForm=Ger	11	acl	11:acl	_
+18	waiting	wait	VERB	VBG	VerbForm=Ger	17	advcl	17:advcl	Depictive=Yes
 19	for	for	ADP	IN	_	21	case	21:case	_
 20	this	this	DET	DT	Number=Sing|PronType=Dem	21	det	21:det	_
 21	class	class	NOUN	NN	Number=Sing	18	obl	18:obl:for	SpaceAfter=No
@@ -97,7 +97,7 @@
 # text = Well, not much I can say except I'm very disappointed with this experience.
 1	Well	well	INTJ	UH	_	4	discourse	4:discourse	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	much	much	ADJ	JJ	Degree=Pos	0	root	0:root|7:obj	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 6	can	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
@@ -136,17 +136,17 @@
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7-8	there's	_	_	_	_	_	_	_	_
 7	there	there	PRON	EX	_	8	expl	8:expl	_
-8	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+8	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 9	no	no	DET	DT	PronType=Neg	10	det	10:det	_
-10	reason	reason	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
+10	reason	reason	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	CxnElt=8:Existential-CopPred-ThereExpl.Pivot
 11	for	for	SCONJ	IN	_	18	mark	18:mark	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	instructor	instructor	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
-14	not	not	PART	RB	_	18	advmod	18:advmod	_
+14	not	not	PART	RB	Polarity=Neg	18	advmod	18:advmod	_
 15	to	to	PART	TO	_	18	mark	18:mark	_
 16	even	even	ADV	RB	_	18	advmod	18:advmod	_
 17	have	have	AUX	VB	VerbForm=Inf	18	aux	18:aux	_
-18	given	give	VERB	VBN	Tense=Past|VerbForm=Part	10	acl	10:acl:to	_
+18	given	give	VERB	VBN	Tense=Past|VerbForm=Part	10	acl	10:acl:to	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 19	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	18	iobj	18:iobj	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
 21	phone	phone	NOUN	NN	Number=Sing	22	compound	22:compound	_
@@ -156,7 +156,7 @@
 25	if	if	SCONJ	IN	_	28	mark	28:mark	_
 26	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	28	nsubj	28:nsubj|31:nsubj:xsubj	_
 27	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	aux	28:aux	_
-28	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	18	advcl	18:advcl:if	_
+28	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	18	advcl	18:advcl:if	CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 29	to	to	PART	TO	_	31	mark	31:mark	_
 30	be	be	AUX	VB	VerbForm=Inf	31	cop	31:cop	_
 31	late	late	ADJ	JJ	Degree=Pos	28	xcomp	28:xcomp	SpaceAfter=No
@@ -188,7 +188,7 @@
 # sent_id = reviews-329692-0011
 # text = and sometimes karma can manifest itself on a bad review on Google.
 1	and	and	CCONJ	CC	_	5	cc	5:cc	_
-2	sometimes	sometimes	ADV	RB	_	5	advmod	5:advmod	_
+2	sometimes	sometimes	ADV	RB	PronType=Ind	5	advmod	5:advmod	_
 3	karma	karma	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 4	can	can	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 5	manifest	manifest	VERB	VB	VerbForm=Inf	0	root	0:root	_

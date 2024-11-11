@@ -25,7 +25,7 @@
 9	Fernando	Fernando	PROPN	NNP	Number=Sing	7	appos	7:appos	SpaceAfter=No
 10	)	)	PUNCT	-RRB-	_	9	punct	9:punct	_
 11	just	just	ADV	RB	_	12	advmod	12:advmod	_
-12	yesterday	yesterday	NOUN	NN	Number=Sing	4	obl:tmod	4:obl:tmod	_
+12	yesterday	yesterday	NOUN	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	TemporalNPAdjunct=Yes
 13	and	and	CCONJ	CC	_	17	cc	17:cc	_
 14	as	as	SCONJ	IN	_	17	mark	17:mark	_
 15	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj:pass	17:nsubj:pass|19:nsubj:xsubj	_
@@ -83,17 +83,17 @@
 33	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	35	nsubj	35:nsubj	_
 34	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	35	cop	35:cop	_
 35	ok	ok	ADJ	JJ	Degree=Pos	10	conj	10:conj:but	_
-36	now	now	ADV	RB	_	35	advmod	35:advmod	SpaceAfter=No
+36	now	now	ADV	RB	PronType=Dem	35	advmod	35:advmod	SpaceAfter=No
 37	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = answers-20111108103354AAQzdFB_ans-0005
 # text = So now i wanted to bouild up relationship with him so i got a piece of carrot and i put it on my hand, i moved very slowly and he suddenly run away to his tube.
 1	So	so	ADV	RB	_	4	advmod	4:advmod	_
-2	now	now	ADV	RB	_	4	advmod	4:advmod	_
+2	now	now	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 3	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 4	wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
-6	bouild	bouild	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
+6	bouild	build	VERB	VB	Typo=Yes|VerbForm=Inf	4	xcomp	4:xcomp	CorrectForm=build
 7	up	up	ADP	RP	_	6	compound:prt	6:compound:prt	_
 8	relationship	relationship	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	with	with	ADP	IN	_	10	case	10:case	_
@@ -120,7 +120,7 @@
 30	and	and	CCONJ	CC	_	33	cc	33:cc	_
 31	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	33	nsubj	33:nsubj	_
 32	suddenly	suddenly	ADV	RB	_	33	advmod	33:advmod	_
-33	run	run	VERB	VB	VerbForm=Inf	13	conj	13:conj:and	_
+33	run	run	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	13	conj	13:conj:and	CorrectForm=runs|CorrectNumber=Sing
 34	away	away	ADV	RB	_	33	advmod	33:advmod	_
 35	to	to	ADP	IN	_	37	case	37:case	_
 36	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	37	nmod:poss	37:nmod:poss	_
@@ -131,10 +131,10 @@
 # text = Why, how can i build up realtion ship with him he is also not useing the thing that he runs on and he wakes up walks around and goes to sleep again ???
 1	Why	why	ADV	WRB	PronType=Int	3	advmod	3:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
-3	how	how	ADV	WRB	PronType=Int	6	advmod	6:advmod	_
+3	how	how	ADV	WRB	PronType=Int	6	advmod	6:advmod	CxnElt=6:Interrogative-WHInfo-Direct.WHWord
 4	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 5	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
-6	build	build	VERB	VB	VerbForm=Inf	0	root	0:root	_
+6	build	build	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=6:Interrogative-WHInfo-Direct.Clause
 7	up	up	ADP	RP	_	6	compound:prt	6:compound:prt	_
 8	realtion	relationship	NOUN	GW	Number=Sing|Typo=Yes	6	obj	6:obj	CorrectForm=relationship
 9	ship	_	X	NN	_	8	goeswith	8:goeswith	_
@@ -143,7 +143,7 @@
 12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
 13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
 14	also	also	ADV	RB	_	16	advmod	16:advmod	_
-15	not	not	PART	RB	_	16	advmod	16:advmod	_
+15	not	not	PART	RB	Polarity=Neg	16	advmod	16:advmod	_
 16	useing	usee	VERB	VBG	Tense=Pres|VerbForm=Part	6	parataxis	6:parataxis	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 18	thing	thing	NOUN	NN	Number=Sing	16	obj	16:obj|21:obl	_
@@ -195,7 +195,7 @@
 3	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	hammie	hammie	NOUN	NN	Number=Sing	7	nsubj:pass	7:nsubj:pass	_
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux:pass	7:aux:pass	_
-6	not	not	PART	RB	_	7	advmod	7:advmod	_
+6	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 7	stressed	stress	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 8	out	out	ADP	RP	_	7	compound:prt	7:compound:prt	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
@@ -236,7 +236,7 @@
 10	ans	and	CCONJ	CC	Typo=Yes	11	cc	11:cc	CorrectForm=and
 11	leave	leave	VERB	VB	Mood=Imp|VerbForm=Fin	4	conj	4:conj:and	_
 12	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obj	11:obj	_
-13	their	there	ADV	RB	Typo=Yes	11	advmod	11:advmod	CorrectForm=there|SpaceAfter=No
+13	their	there	ADV	RB	PronType=Dem|Typo=Yes	11	advmod	11:advmod	CorrectForm=there|SpaceAfter=No
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108103354AAQzdFB_ans-0013
@@ -249,19 +249,19 @@
 6	explore	explore	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	obj	6:obj	_
 8	and	and	CCONJ	CC	_	12	cc	12:cc	_
-9	them	then	ADV	RB	Typo=Yes	12	advmod	12:advmod	CorrectForm=then
+9	them	then	ADV	RB	PronType=Dem|Typo=Yes	12	advmod	12:advmod	CorrectForm=then
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
 11	can	can	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 12	handle	handle	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 13	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	obj	12:obj	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 15	little	little	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	bit	bit	NOUN	NN	Number=Sing	12	obl:npmod	12:obl:npmod	SpaceAfter=No
+16	bit	bit	NOUN	NN	Number=Sing	12	obl:unmarked	12:obl:unmarked	SpaceAfter=No
 17	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108103354AAQzdFB_ans-0014
 # text = Hope I helped!
-1	Hope	hope	VERB	VB	VerbForm=Inf	0	root	0:root	_
+1	Hope	hope	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 3	helped	help	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	1	ccomp	1:ccomp	SpaceAfter=No
 4	!	!	PUNCT	.	_	1	punct	1:punct	_
@@ -280,7 +280,7 @@
 2	only	only	ADV	RB	_	3	advmod	3:advmod	_
 3	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
-5	yesterday	yesterday	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	SpaceAfter=No
+5	yesterday	yesterday	NOUN	NN	Number=Sing	3	obl:unmarked	3:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 6	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108103354AAQzdFB_ans-0017
@@ -352,6 +352,6 @@
 4	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	iobj	3:iobj	_
 5	time	time	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	for	for	ADP	IN	_	7	case	7:case	_
-7	now	now	ADV	RB	_	3	obl	3:obl:for	SpaceAfter=No
+7	now	now	ADV	RB	PronType=Dem	3	obl	3:obl:for	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 

@@ -5,7 +5,7 @@
 1	In	in	ADP	IN	_	2	case	2:case	_
 2	Chicago	Chicago	PROPN	NNP	Number=Sing	4	obl	4:obl:in	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
-4	what	what	PRON	WP	PronType=Int	0	root	0:root	_
+4	what	what	PRON	WP	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause,4:Interrogative-WHInfo-Direct.WHWord
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	best	good	ADJ	JJS	Degree=Sup	8	amod	8:amod	_
@@ -94,7 +94,7 @@
 # text = BEST PLACE EVER!!!!!!!!!!!!
 1	BEST	good	ADJ	JJS	Degree=Sup	2	amod	2:amod	_
 2	PLACE	place	NOUN	NN	Number=Sing	0	root	0:root	_
-3	EVER	ever	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
+3	EVER	ever	ADV	RB	PronType=Ind	2	advmod	2:advmod	SpaceAfter=No
 4	!!!!!!!!!!!!	!!!!!!!!!!!!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111106153454AAgT9Df_ans-0009
@@ -107,7 +107,7 @@
 # sent_id = answers-20111106153454AAgT9Df_ans-0010
 # newpar id = answers-20111106153454AAgT9Df_ans-p0005
 # text = Not necessarily the restaurant but what you order when you get there and what time you go.
-1	Not	not	PART	RB	_	2	advmod	2:advmod	_
+1	Not	not	PART	RB	Polarity=Neg	2	advmod	2:advmod	_
 2	necessarily	necessarily	ADV	RB	_	4	advmod	4:advmod	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	restaurant	restaurant	NOUN	NN	Number=Sing	0	root	0:root	_
@@ -121,7 +121,7 @@
 12	there	there	ADV	RB	PronType=Dem	11	advmod	11:advmod	_
 13	and	and	CCONJ	CC	_	17	cc	17:cc	_
 14	what	what	DET	WDT	PronType=Int	15	det	15:det	_
-15	time	time	NOUN	NN	Number=Sing	17	obl:tmod	17:obl:tmod	_
+15	time	time	NOUN	NN	Number=Sing	17	obl:unmarked	17:obl:unmarked	TemporalNPAdjunct=Yes
 16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	_
 17	go	go	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	8	conj	8:conj:and	SpaceAfter=No
 18	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -145,7 +145,7 @@
 2	can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	order	order	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	appetizers	appetizer	NOUN	NNS	Number=Plur	3	obj	3:obj	_
-5	rather	rather	ADV	RB	_	9	cc	9:cc	_
+5	rather	rather	ADV	RB	ExtPos=CCONJ	9	cc	9:cc	_
 6	than	than	ADP	IN	_	5	fixed	5:fixed	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	full	full	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
@@ -209,7 +209,7 @@
 14	family	family	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	run	run	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	16	amod	16:amod	_
 16	places	place	NOUN	NNS	Number=Plur	13	obj	13:obj	_
-17	rather	rather	ADV	RB	_	22	cc	22:cc	_
+17	rather	rather	ADV	RB	ExtPos=CCONJ	22	cc	22:cc	_
 18	than	than	ADP	IN	_	17	fixed	17:fixed	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 20	large	large	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
@@ -219,11 +219,11 @@
 
 # sent_id = answers-20111106153454AAgT9Df_ans-0016
 # text = Not that there is anything wrong with that because they also employ local people that live and shop in the area.
-1	Not	not	PART	RB	_	4	advmod	4:advmod	_
+1	Not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 2	that	that	SCONJ	IN	_	4	mark	4:mark	_
 3	there	there	PRON	EX	_	4	expl	4:expl	_
-4	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-5	anything	anything	PRON	NN	Number=Sing|PronType=Ind	4	nsubj	4:nsubj	_
+4	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+5	anything	anything	PRON	NN	Number=Sing|PronType=Ind	4	nsubj	4:nsubj	CxnElt=4:Existential-CopPred-ThereExpl.Pivot
 6	wrong	wrong	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 7	with	with	ADP	IN	_	8	case	8:case	_
 8	that	that	PRON	DT	Number=Sing|PronType=Dem	6	obl	6:obl:with	_

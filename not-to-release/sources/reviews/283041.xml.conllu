@@ -30,7 +30,7 @@
 14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 15	bakery	bakery	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	cake	cake	NOUN	NN	Number=Sing	13	obj	13:obj	_
-17	instead	instead	ADV	RB	_	19	case	19:case	_
+17	instead	instead	ADV	RB	ExtPos=ADP	19	case	19:case	_
 18	of	of	ADP	IN	_	17	fixed	17:fixed	_
 19	one	one	NUM	CD	NumForm=Word|NumType=Card	13	obl	13:obl:instead_of	_
 20	pre-made	pre-make	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	19	acl	19:acl	_
@@ -84,7 +84,7 @@
 
 # sent_id = reviews-283041-0003
 # text = Not only did it taste wonderful, but the texture was unbelievable, the frosting wasn't overly sweet to over power the cake, and the cake itself was just amazingly soft, and fluffy, and just perfect overall.
-1	Not	not	PART	RB	_	5	advmod	5:advmod	_
+1	Not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 2	only	only	ADV	RB	_	5	advmod	5:advmod	_
 3	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj|6:nsubj:xsubj	_
@@ -101,11 +101,11 @@
 15	frosting	frosting	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
 16-17	wasn't	_	_	_	_	_	_	_	_
 16	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	cop	19:cop	_
-17	n't	not	PART	RB	_	19	advmod	19:advmod	_
+17	n't	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 18	overly	overly	ADV	RB	_	19	advmod	19:advmod	_
 19	sweet	sweet	ADJ	JJ	Degree=Pos	12	parataxis	12:parataxis	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
-21	over	overpower	VERB	GW	Typo=Yes|VerbForm=Inf	19	advcl	19:advcl:to	_
+21	over	overpower	VERB	AFX	Typo=Yes|VerbForm=Inf	19	advcl	19:advcl:to	_
 22	power	_	X	VB	_	21	goeswith	21:goeswith	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 24	cake	cake	NOUN	NN	Number=Sing	21	obj	21:obj	SpaceAfter=No
@@ -113,7 +113,7 @@
 26	and	and	CCONJ	CC	_	33	cc	33:cc	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 28	cake	cake	NOUN	NN	Number=Sing	33	nsubj	33:nsubj|36:nsubj|40:nsubj	_
-29	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Emp|Reflex=Yes	28	nmod:npmod	28:nmod:npmod	_
+29	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Emp|Reflex=Yes	28	nmod:unmarked	28:nmod:unmarked	_
 30	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	33	cop	33:cop	_
 31	just	just	ADV	RB	_	33	advmod	33:advmod	_
 32	amazingly	amazingly	ADV	RB	_	33	advmod	33:advmod	_
@@ -138,7 +138,7 @@
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	drive	drive	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	little	little	ADJ	JJ	Degree=Pos	12	nmod:npmod	12:nmod:npmod	_
+8	little	little	ADJ	JJ	Degree=Pos	12	nmod:unmarked	12:nmod:unmarked	_
 9	out	out	ADP	IN	_	12	case	12:case	_
 10	of	of	ADP	IN	_	12	case	12:case	_
 11	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
@@ -169,7 +169,7 @@
 34-35	she'll	_	_	_	_	_	_	_	_
 34	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	39	nsubj	39:nsubj	_
 35	'll	will	AUX	MD	VerbForm=Fin	39	aux	39:aux	_
-36	always	always	ADV	RB	_	39	advmod	39:advmod	_
+36	always	always	ADV	RB	PronType=Tot	39	advmod	39:advmod	_
 37	be	be	AUX	VB	VerbForm=Inf	39	cop	39:cop	_
 38	that	that	DET	DT	Number=Sing|PronType=Dem	39	det	39:det	_
 39	way	way	NOUN	NN	Number=Sing	22	ccomp	22:ccomp	SpaceAfter=No
@@ -201,7 +201,7 @@
 10	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 11	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	_
 12	fantastic	fantastic	ADJ	JJ	Degree=Pos	3	parataxis	3:parataxis	_
-13	as	as	ADV	RB	_	12	advmod	12:advmod	_
+13	as	as	ADV	RB	ExtPos=ADV	12	advmod	12:advmod	_
 14	well	well	ADV	RB	Degree=Pos	13	fixed	13:fixed	SpaceAfter=No
 15	!	!	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
 16	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_

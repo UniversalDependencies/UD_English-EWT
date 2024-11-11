@@ -196,13 +196,13 @@
 16	Ph	ph	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 17	:	:	PUNCT	:	_	19	punct	19:punct	_
 18	(	(	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
-19	713	713	NUM	CD	NumForm=Digit|NumType=Card	16	appos	16:appos	SpaceAfter=No
+19	713	713	NUM	CD	NumForm=Digit|NumType=Card	16	appos	16:appos	ExtPos=PROPN|FlatType=Phone|SpaceAfter=No
 20	)	)	PUNCT	-RRB-	_	19	punct	19:punct	_
 21	853-5620	853-5620	NUM	CD	NumForm=Digit|NumType=Card	19	flat	19:flat	_
 22	Fax	fax	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 23	:	:	PUNCT	:	_	25	punct	25:punct	_
 24	(	(	PUNCT	-LRB-	_	25	punct	25:punct	SpaceAfter=No
-25	713	713	NUM	CD	NumForm=Digit|NumType=Card	22	appos	22:appos	SpaceAfter=No
+25	713	713	NUM	CD	NumForm=Digit|NumType=Card	22	appos	22:appos	ExtPos=PROPN|FlatType=Phone|SpaceAfter=No
 26	)	)	PUNCT	-RRB-	_	25	punct	25:punct	_
 27	646-3490	646-3490	NUM	CD	NumForm=Digit|NumType=Card	25	flat	25:flat	_
 
@@ -281,7 +281,7 @@
 15	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 16	contact	contact	NOUN	NN	Number=Sing	13	obl	13:obl:to	_
 17	@	@	ADP	IN	_	20	case	20:case	_
-18	First	First	ADJ	NNP	NumForm=Word|NumType=Ord	19	amod	19:amod	_
+18	First	First	ADJ	NNP	Degree=Pos|NumForm=Word|NumType=Ord	19	amod	19:amod	_
 19	Union	Union	PROPN	NNP	Number=Sing	20	compound	20:compound	_
 20	Securities	Security	PROPN	NNPS	Number=Plur	16	nmod	16:nmod	SpaceAfter=No
 21	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -356,8 +356,8 @@
 7	even	even	ADV	RB	_	10	advmod	10:advmod	_
 8	though	though	SCONJ	IN	_	10	mark	10:mark	_
 9	there	there	PRON	EX	_	10	expl	10:expl	_
-10	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:though	_
-11	blanks	blank	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	SpaceAfter=No
+10	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:though	Cxn=Existential-CopPred-ThereExpl
+11	blanks	blank	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	CxnElt=10:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent36_01-0028
@@ -371,7 +371,7 @@
 
 # sent_id = email-enronsent36_01-0030
 # text = First Union Securities, Inc.
-1	First	First	ADJ	NNP	NumForm=Word|NumType=Ord	2	amod	2:amod	_
+1	First	First	ADJ	NNP	Degree=Pos|NumForm=Word|NumType=Ord	2	amod	2:amod	_
 2	Union	Union	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 3	Securities	Securities	PROPN	NNPS	Number=Plur	5	compound	5:compound	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
@@ -428,7 +428,7 @@
 2	understand	understand	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
 4	may	may	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-5	not	not	PART	RB	_	6	advmod	6:advmod	_
+5	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	have	have	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
 7	credit	credit	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	approval	approval	NOUN	NN	Number=Sing	6	obj	6:obj	_
@@ -464,7 +464,7 @@
 5	President	president	NOUN	NN	Number=Sing	1	list	1:list	_
 6	Equity	equity	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	Derivatives	derivative	NOUN	NNS	Number=Plur	1	list	1:list	_
-8	First	First	ADJ	NNP	NumForm=Word|NumType=Ord	9	amod	9:amod	_
+8	First	First	ADJ	NNP	Degree=Pos|NumForm=Word|NumType=Ord	9	amod	9:amod	_
 9	Union	Union	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 10	Securities	Security	PROPN	NNPS	Number=Plur	12	compound	12:compound	SpaceAfter=No
 11	,	,	PUNCT	,	_	10	punct	10:punct	_
@@ -472,13 +472,13 @@
 13	Telephone	telephone	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 14	:	:	PUNCT	:	_	16	punct	16:punct	_
 15	(	(	PUNCT	-LRB-	_	16	punct	16:punct	SpaceAfter=No
-16	212	212	NUM	CD	NumForm=Digit|NumType=Card	13	appos	13:appos	SpaceAfter=No
+16	212	212	NUM	CD	NumForm=Digit|NumType=Card	13	appos	13:appos	ExtPos=PROPN|FlatType=Phone|SpaceAfter=No
 17	)	)	PUNCT	-RRB-	_	16	punct	16:punct	_
 18	909-0951	909-0951	NUM	CD	NumForm=Digit|NumType=Card	16	flat	16:flat	_
 19	Facsimile	facsimile	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 20	:	:	PUNCT	:	_	22	punct	22:punct	_
 21	(	(	PUNCT	-LRB-	_	22	punct	22:punct	SpaceAfter=No
-22	212	212	NUM	CD	NumForm=Digit|NumType=Card	19	appos	19:appos	SpaceAfter=No
+22	212	212	NUM	CD	NumForm=Digit|NumType=Card	19	appos	19:appos	ExtPos=PROPN|FlatType=Phone|SpaceAfter=No
 23	)	)	PUNCT	-RRB-	_	22	punct	22:punct	_
 24	891-5042	891-5042	NUM	CD	NumForm=Digit|NumType=Card	22	flat	22:flat	_
 25	email	email	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No

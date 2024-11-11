@@ -4,7 +4,7 @@
 # text = Outdated but not bad
 1	Outdated	outdated	ADJ	JJ	Degree=Pos	0	root	0:root	_
 2	but	but	CCONJ	CC	_	4	cc	4:cc	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	bad	bad	ADJ	JJ	Degree=Pos	1	conj	1:conj:but	_
 
 # sent_id = reviews-299148-0002
@@ -39,10 +39,10 @@
 3	listed	list	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	that	that	SCONJ	IN	_	6	mark	6:mark	_
 5	there	there	PRON	EX	_	6	expl	6:expl	_
-6	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	ccomp	3:ccomp	_
+6	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	ccomp	3:ccomp	Cxn=Existential-CopPred-ThereExpl
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	hot	hot	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	breakfast	breakfast	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
+9	breakfast	breakfast	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	CxnElt=6:Existential-CopPred-ThereExpl.Pivot
 10	but	but	CCONJ	CC	_	17	cc	17:cc	_
 11	all	all	DET	DT	PronType=Tot	17	nsubj:outer	13:obj|17:nsubj:outer	_
 12	this	this	PRON	DT	Number=Sing|PronType=Dem	13	nsubj	13:nsubj	_
@@ -100,7 +100,7 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj|7:nsubj	_
 3	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	town	town	NOUN	NN	Number=Sing	13	advcl	13:advcl:in	_
+5	town	town	NOUN	NN	Number=Sing	13	advcl	13:advcl:in	CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
 7	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and|13:advcl:in	_
 8	that	that	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
@@ -108,31 +108,31 @@
 10	of	of	ADP	IN	_	11	case	11:case	_
 11	space	space	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj|29:nsubj	_
-13	say	say	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+13	say	say	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 14	stay	stay	VERB	VB	Mood=Imp|VerbForm=Fin	13	ccomp	13:ccomp	_
 15	here	here	ADV	RB	PronType=Dem	14	advmod	14:advmod	_
 16	but	but	CCONJ	CC	_	29	cc	29:cc	_
 17	if	if	SCONJ	IN	_	20	mark	20:mark	_
 18	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	20:nsubj	_
 19	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
-20	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	29	advcl	29:advcl:if	_
+20	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	29	advcl	29:advcl:if	CxnElt=29:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 21	for	for	ADP	IN	_	26	case	26:case	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
-23	little	little	ADJ	JJ	Degree=Pos	24	obl:npmod	24:obl:npmod	_
+23	little	little	ADJ	JJ	Degree=Pos	24	obl:unmarked	24:obl:unmarked	_
 24	more	more	ADV	RBR	Degree=Cmp	25	advmod	25:advmod	_
 25	upscale	upscale	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
 26	affair	affair	NOUN	NN	Number=Sing	20	obl	20:obl:for	_
 27-28	don't	_	_	_	_	_	_	_	_
 27	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	29	aux	29:aux	_
-28	n't	not	PART	RB	_	29	advmod	29:advmod	_
-29	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	13	conj	13:conj:but	_
+28	n't	not	PART	RB	Polarity=Neg	29	advmod	29:advmod	_
+29	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	13	conj	13:conj:but	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=29:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 30	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
 31	pictures	picture	NOUN	NNS	Number=Plur	29	obj	29:obj|32:nsubj:xsubj	_
 32	fool	fool	VERB	VB	VerbForm=Inf	29	xcomp	29:xcomp	_
 33	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	32	obj	32:obj	_
 34	and	and	CCONJ	CC	_	35	cc	35:cc	_
 35	book	book	VERB	VB	Mood=Imp|VerbForm=Fin	29	conj	29:conj:and	_
-36	somewhere	somewhere	ADV	RB	_	35	advmod	35:advmod	_
+36	somewhere	somewhere	ADV	RB	PronType=Ind	35	advmod	35:advmod	_
 37	else	else	ADV	RB	_	36	advmod	36:advmod	SpaceAfter=No
 38	.	.	PUNCT	.	_	13	punct	13:punct	_
 

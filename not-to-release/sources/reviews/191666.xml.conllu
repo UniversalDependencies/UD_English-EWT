@@ -7,7 +7,7 @@
 3-4	I've	_	_	_	_	_	_	_	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 4	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
-5	Ever	ever	ADV	RB	_	6	advmod	6:advmod	_
+5	Ever	ever	ADV	RB	PronType=Ind	6	advmod	6:advmod	_
 6	Experienced	experience	VERB	VBN	Tense=Past|VerbForm=Part	2	acl:relcl	2:acl:relcl	Cxn=rc-red-obj
 
 # sent_id = reviews-191666-0002
@@ -16,8 +16,8 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	wish	wish	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	there	there	PRON	EX	_	4	expl	4:expl	_
-4	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	_
-5	something	something	PRON	NN	Number=Sing|PronType=Ind	4	nsubj	4:nsubj	_
+4	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	Cxn=Existential-CopPred-ThereExpl
+5	something	something	PRON	NN	Number=Sing|PronType=Ind	4	nsubj	4:nsubj	CxnElt=4:Existential-CopPred-ThereExpl.Pivot
 6	good	good	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	say	say	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
@@ -31,7 +31,7 @@
 16	there	there	PRON	EX	_	17	expl	17:expl	_
 17-18	isn't	_	_	_	_	_	_	_	SpaceAfter=No
 17	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:but	_
-18	n't	not	PART	RB	_	17	advmod	17:advmod	_
+18	n't	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
 19	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-191666-0003
@@ -81,7 +81,7 @@
 9	)	)	PUNCT	-RRB-	_	8	punct	8:punct	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 11	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
-12	never	never	ADV	RB	_	13	advmod	13:advmod	_
+12	never	never	ADV	RB	PronType=Neg	13	advmod	13:advmod	_
 13	experienced	experience	VERB	VBN	Tense=Past|VerbForm=Part	4	parataxis	4:parataxis	_
 14	so	so	ADV	RB	_	15	advmod	15:advmod	_
 15	much	much	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
@@ -108,7 +108,7 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	invoice	invoice	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-4	not	not	PART	RB	_	5	advmod	5:advmod	_
+4	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	detailed	detailed	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 6	,	,	PUNCT	,	_	10	punct	10:punct	_
 7	so	so	ADV	RB	_	10	mark	10:mark	_
@@ -117,10 +117,10 @@
 10	difficult	difficult	ADJ	JJ	Degree=Pos	5	advcl	5:advcl:so	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	see	see	VERB	VB	VerbForm=Inf	10	csubj	10:csubj	_
-13	what	what	PRON	WP	PronType=Int	16	obl	16:obl:for	_
+13	what	what	PRON	WP	PronType=Int	16	obl	16:obl:for	CxnElt=16:Interrogative-WHInfo-Indirect.WHWord
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	16	nsubj	16:nsubj	_
 15	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
-16	paying	pay	VERB	VBG	Tense=Pres|VerbForm=Part	12	ccomp	12:ccomp	_
+16	paying	pay	VERB	VBG	Tense=Pres|VerbForm=Part	12	ccomp	12:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=16:Interrogative-WHInfo-Indirect.Clause
 17	for	for	ADP	IN	_	13	case	13:case	SpaceAfter=No
 18	.	.	PUNCT	.	_	5	punct	5:punct	_
 

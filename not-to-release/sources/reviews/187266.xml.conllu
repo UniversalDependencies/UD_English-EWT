@@ -45,7 +45,7 @@
 31	New	New	ADJ	NNP	Degree=Pos	32	amod	32:amod	_
 32	York	York	PROPN	NNP	Number=Sing	27	list	27:list	_
 33	the	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	_
-34	rest	rest	NOUN	NN	Number=Sing	25	obl:tmod	25:obl:tmod	_
+34	rest	rest	NOUN	NN	Number=Sing	25	obl:unmarked	25:obl:unmarked	TemporalNPAdjunct=Yes
 35	of	of	ADP	IN	_	37	case	37:case	_
 36	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	_
 37	year	year	NOUN	NN	Number=Sing	34	nmod	34:nmod:of	SpaceAfter=No
@@ -75,7 +75,7 @@
 9	wonderful	wonderful	ADJ	JJ	Degree=Pos	4	parataxis	4:parataxis	SpaceAfter=No
 10	---	---	PUNCT	,	_	14	punct	14:punct	_
 11	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	14	aux	14:aux	_
-12	not	not	PART	RB	_	14	advmod	14:advmod	_
+12	not	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
 13	be	be	AUX	VB	Mood=Imp|VerbForm=Fin	14	aux:pass	14:aux:pass	_
 14	put	put	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	parataxis	4:parataxis	_
 15	off	off	ADP	RP	_	14	compound:prt	14:compound:prt	_
@@ -106,7 +106,7 @@
 13	memory	memory	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	and	and	CCONJ	CC	_	22	cc	22:cc	_
 15	each	each	DET	DT	PronType=Tot	16	det	16:det	_
-16	time	time	NOUN	NN	Number=Sing	22	obl:tmod	22:obl:tmod	_
+16	time	time	NOUN	NN	Number=Sing	22	obl:unmarked	22:obl:unmarked	TemporalNPAdjunct=Yes
 17	back	back	ADV	RB	_	16	advmod	16:advmod	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 19	food	food	NOUN	NN	Number=Sing	22	nsubj	22:nsubj	_
@@ -144,10 +144,10 @@
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	2:det	_
 2	chef	chef	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
 3	knows	know	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-4	what	what	PRON	WP	PronType=Int	7	obj	7:obj	_
+4	what	what	PRON	WP	PronType=Int	7	obj	7:obj	CxnElt=7:Interrogative-WHInfo-Indirect.WHWord
 5	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
-7	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	3	ccomp	3:ccomp	SpaceAfter=No
+7	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=7:Interrogative-WHInfo-Indirect.Clause|SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-187266-0008
@@ -228,7 +228,7 @@
 11	but	but	CCONJ	CC	_	19	cc	19:cc	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	second	second	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	14	amod	14:amod	_
-14	time	time	NOUN	NN	Number=Sing	19	obl:tmod	16:obl|19:obl:tmod	_
+14	time	time	NOUN	NN	Number=Sing	19	obl:unmarked	16:obl|19:obl:unmarked	TemporalNPAdjunct=Yes
 15	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
 16	went	go	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	14	acl:relcl	14:acl:relcl	Cxn=rc-red-obl|SpaceAfter=No
 17	--	--	PUNCT	,	_	14	punct	14:punct	_
@@ -254,8 +254,8 @@
 37	tell	tell	VERB	VB	VerbForm=Inf	28	advcl	28:advcl:to	_
 38	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	37	iobj	37:iobj	_
 39	just	just	ADV	RB	_	41	advmod	41:advmod	_
-40	how	how	ADV	WRB	PronType=Int	41	advmod	41:advmod	_
-41	good	good	ADJ	JJ	Degree=Pos	37	ccomp	37:ccomp	_
+40	how	how	ADV	WRB	PronType=Int	41	advmod	41:advmod	CxnElt=41:Interrogative-WHInfo-Indirect.WHWord
+41	good	good	ADJ	JJ	Degree=Pos	37	ccomp	37:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=41:Interrogative-WHInfo-Indirect.Clause
 42	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	43	nmod:poss	43:nmod:poss	_
 43	meals	meal	NOUN	NNS	Number=Plur	41	nsubj	41:nsubj	_
 44	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	41	cop	41:cop	SpaceAfter=No
@@ -265,7 +265,7 @@
 # text = Cannot wait to go gain.
 1-2	Cannot	_	_	_	_	_	_	_	_
 1	Can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-2	not	not	PART	RB	_	3	advmod	3:advmod	_
+2	not	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
 3	wait	wait	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	go	go	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_

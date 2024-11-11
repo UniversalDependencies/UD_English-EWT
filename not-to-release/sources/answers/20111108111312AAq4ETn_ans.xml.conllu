@@ -2,9 +2,9 @@
 # sent_id = answers-20111108111312AAq4ETn_ans-0001
 # newpar id = answers-20111108111312AAq4ETn_ans-p0001
 # text = What to feed my dog after gastroenteritis?
-1	What	what	PRON	WP	PronType=Int	3	obj	3:obj	_
+1	What	what	PRON	WP	PronType=Int	3	obj	3:obj	CxnElt=3:Interrogative-WHInfo-Direct.WHWord
 2	to	to	PART	TO	_	3	mark	3:mark	_
-3	feed	feed	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	feed	feed	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=3:Interrogative-WHInfo-Direct.Clause
 4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	dog	dog	NOUN	NN	Number=Sing	3	iobj	3:iobj	_
 6	after	after	ADP	IN	_	7	case	7:case	_
@@ -23,7 +23,7 @@
 7	about	about	ADV	RB	_	8	advmod	8:advmod	_
 8	3	3	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 9	days	day	NOUN	NNS	Number=Plur	5	obl	5:obl:for	_
-10	now	now	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
+10	now	now	ADV	RB	PronType=Dem	5	advmod	5:advmod	SpaceAfter=No
 11	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108111312AAq4ETn_ans-0003
@@ -33,14 +33,14 @@
 3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	4	aux	4:aux	_
 4	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 5	diarheya	diarrhea	NOUN	NN	Number=Sing|Typo=Yes	4	obj	4:obj	CorrectForm=diarrhea
-6	everywhere	everywhere	ADV	RB	_	4	advmod	4:advmod	_
+6	everywhere	everywhere	ADV	RB	PronType=Tot	4	advmod	4:advmod	_
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_
 8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj|11:nsubj:xsubj	_
 9	began	begin	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	vomit	vomit	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 12	last	last	ADJ	JJ	Degree=Pos	13	amod	13:amod	CorrectSpaceAfter=Yes|SpaceAfter=No
-13	night	night	NOUN	NN	Number=Sing	11	obl:tmod	11:obl:tmod	SpaceAfter=No
+13	night	night	NOUN	NN	Number=Sing	11	obl:unmarked	11:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108111312AAq4ETn_ans-0004
@@ -59,7 +59,7 @@
 12	and	and	CCONJ	CC	_	15	cc	15:cc	_
 13-14	wouldnt	_	_	_	_	_	_	_	_
 13	would	would	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-14	nt	not	PART	RB	Typo=Yes	15	advmod	15:advmod	CorrectForm=n't
+14	nt	not	PART	RB	Polarity=Neg|Typo=Yes	15	advmod	15:advmod	CorrectForm=n't
 15	drink	drink	VERB	VB	VerbForm=Inf	5	conj	2:ccomp|5:conj:and	_
 16	any	any	DET	DT	PronType=Ind	17	det	17:det	_
 17	water	water	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No
@@ -154,7 +154,7 @@
 2	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 3	these	this	DET	DT	Number=Plur|PronType=Dem	4	det	4:det	_
 4	antibiotics	antibiotic	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
-5	help	help	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+5	help	help	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=5:Interrogative-Polar-Direct.Clause|SpaceAfter=No
 6	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108111312AAq4ETn_ans-0011
@@ -170,7 +170,7 @@
 9	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 10-11	wont	_	_	_	_	_	_	_	_
 10	wo	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
-11	nt	not	PART	RB	Typo=Yes	12	advmod	12:advmod	CorrectForm=n't
+11	nt	not	PART	RB	Polarity=Neg|Typo=Yes	12	advmod	12:advmod	CorrectForm=n't
 12	take	take	VERB	VB	VerbForm=Inf	3	conj	3:conj:but	_
 13	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	12	obj	12:obj	SpaceAfter=No
 14	..	..	PUNCT	,	_	18	punct	18:punct	_
@@ -185,7 +185,7 @@
 1	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2-3	dont	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	nt	not	PART	RB	Typo=Yes	4	advmod	4:advmod	CorrectForm=n't
+3	nt	not	PART	RB	Polarity=Neg|Typo=Yes	4	advmod	4:advmod	CorrectForm=n't
 4	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj|7:nsubj:xsubj|8:nsubj:xsubj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
@@ -227,7 +227,7 @@
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
 2-3	didnt	_	_	_	_	_	_	_	_
 2	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
-3	nt	not	PART	RB	Typo=Yes	4	advmod	4:advmod	CorrectForm=n't
+3	nt	not	PART	RB	Polarity=Neg|Typo=Yes	4	advmod	4:advmod	CorrectForm=n't
 4	take	take	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	x	x	NOUN	NN	Number=Sing	7	compound	7:compound	SpaceAfter=No
 6	-	-	PUNCT	HYPH	_	5	punct	5:punct	SpaceAfter=No
@@ -240,7 +240,7 @@
 13	just	just	ADV	RB	_	16	advmod	16:advmod	_
 14-15	couldnt	_	_	_	_	_	_	_	_
 14	could	could	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
-15	nt	not	PART	RB	Typo=Yes	16	advmod	16:advmod	CorrectForm=n't
+15	nt	not	PART	RB	Polarity=Neg|Typo=Yes	16	advmod	16:advmod	CorrectForm=n't
 16	afford	afford	VERB	VB	VerbForm=Inf	9	conj	9:conj:but	_
 17	any	any	DET	DT	PronType=Ind	19	det	19:det	CorrectSpaceAfter=Yes|SpaceAfter=No
 18	more	more	ADJ	JJR	Degree=Cmp	19	amod	19:amod	_
@@ -266,7 +266,7 @@
 15	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
 16-17	wont	_	_	_	_	_	_	_	_
 16	wo	will	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
-17	nt	not	PART	RB	Typo=Yes	19	advmod	19:advmod	CorrectForm=n't
+17	nt	not	PART	RB	Polarity=Neg|Typo=Yes	19	advmod	19:advmod	CorrectForm=n't
 18	be	be	AUX	VB	VerbForm=Inf	19	aux	19:aux	_
 19	buying	buy	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:but	_
 20	grocerys	grocery	NOUN	NNS	Number=Plur	19	obj	19:obj	_
@@ -287,9 +287,9 @@
 6	call	call	NOUN	NN	Number=Sing	3	obj	3:obj	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
 8	see	see	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
-9	what	what	PRON	WP	PronType=Int	11	obj	11:obj	_
+9	what	what	PRON	WP	PronType=Int	11	obj	11:obj	CxnElt=11:Interrogative-WHInfo-Indirect.WHWord
 10	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
-11	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	ccomp	8:ccomp	SpaceAfter=No
+11	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	ccomp	8:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=11:Interrogative-WHInfo-Indirect.Clause|SpaceAfter=No
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108111312AAq4ETn_ans-0018
@@ -338,10 +338,10 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	fluids	fluid	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	last	last	ADJ	JJ	Degree=Pos	7	amod	7:amod	CorrectSpaceAfter=Yes|SpaceAfter=No
-7	night	night	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
+7	night	night	NOUN	NN	Number=Sing	3	obl:unmarked	3:obl:unmarked	TemporalNPAdjunct=Yes
 8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj|12:nsubj:xsubj	_
 9	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-10	not	not	PART	RB	_	12	advmod	12:advmod	_
+10	not	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	worry	worry	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 13	about	about	ADP	IN	_	15	case	15:case	_
@@ -371,15 +371,15 @@
 11	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
 12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
 13	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:and	_
-14	1000	1000	NUM	CD	NumForm=Digit|NumType=Card	15	nmod:npmod	15:nmod:npmod	CorrectSpaceAfter=Yes|SpaceAfter=No
+14	1000	1000	NUM	CD	NumForm=Digit|NumType=Card	15	nmod:unmarked	15:nmod:unmarked	CorrectSpaceAfter=Yes|SpaceAfter=No
 15	etter	well	ADV	RBR	Degree=Cmp|Typo=Yes	13	advmod	13:advmod	CorrectForm=better
 16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	nsubj	19:nsubj|22:nsubj	_
 17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	aux	19:aux	_
 18	actually	actually	ADV	RB	_	19	advmod	19:advmod	_
-19	walkin	walk	VERB	VBG	Style=Vrnc|Tense=Pres|VerbForm=Part	13	parataxis	13:parataxis	_
+19	walkin	walk	VERB	VBG	Style=Vrnc|Tense=Pres|Typo=Yes|VerbForm=Part	13	parataxis	13:parataxis	CorrectForm=walkin'
 20	around	around	ADV	RB	_	19	advmod	19:advmod	_
 21	and	and	CCONJ	CC	_	22	cc	22:cc	_
-22	wagin	wag	VERB	VBG	Abbr=Yes|Tense=Pres|VerbForm=Part	19	conj	19:conj:and	CorrectForm=wagging
+22	wagin	wag	VERB	VBG	Style=Vrnc|Tense=Pres|Typo=Yes|VerbForm=Part	19	conj	19:conj:and	CorrectForm=waggin'
 23	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
 24	tail	tail	NOUN	NN	Number=Sing	22	obj	22:obj	_
 25	:)	:)	SYM	NFP	_	13	discourse	13:discourse	_
@@ -412,7 +412,7 @@
 2	)	)	PUNCT	-RRB-	_	1	punct	1:punct	_
 3	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	expl	6:expl	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
-5	not	not	PART	RB	_	6	advmod	6:advmod	_
+5	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	normal	normal	ADJ	JJ	Degree=Pos	0	root	0:root	_
 7	for	for	SCONJ	IN	_	11	mark	11:mark	_
 8	dogs	dog	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
@@ -437,18 +437,18 @@
 4	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 5	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 6	been	be	AUX	VBN	Tense=Past|VerbForm=Part	7	aux	7:aux	_
-7	vomiting	vomit	VERB	VBG	Tense=Pres|VerbForm=Part	18	advcl	18:advcl:if	_
+7	vomiting	vomit	VERB	VBG	Tense=Pres|VerbForm=Part	18	advcl	18:advcl:if	CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 8	numerous	numerous	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	times	time	NOUN	NNS	Number=Plur	7	obl:tmod	7:obl:tmod	SpaceAfter=No
+9	times	time	NOUN	NNS	Number=Plur	7	obl:unmarked	7:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 10	,	,	PUNCT	,	_	7	punct	7:punct	_
 11	then	then	ADV	RB	PronType=Dem	18	advmod	18:advmod	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	blood	blood	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
 14	could	could	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
 15	be	be	AUX	VB	VerbForm=Inf	18	cop	18:cop	_
-16	due	due	ADP	IN	_	18	case	18:case	_
+16	due	due	ADJ	JJ	Degree=Pos|ExtPos=ADP	18	case	18:case	_
 17	to	to	ADP	IN	_	16	fixed	16:fixed	_
-18	irritation	irritation	NOUN	NN	Number=Sing	0	root	0:root	_
+18	irritation	irritation	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 19	of	of	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	stomach	stomach	NOUN	NN	Number=Sing	18	nmod	18:nmod:of	_
@@ -481,7 +481,7 @@
 1	Did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
 2	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
 3	vet	vet	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	take	take	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	take	take	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=4:Interrogative-Polar-Direct.Clause
 5	radiographs	radiograph	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 6	(	(	PUNCT	-LRB-	_	9	punct	9:punct	SpaceAfter=No
 7	x	x	NOUN	NN	Number=Sing	9	compound	9:compound	SpaceAfter=No
@@ -497,15 +497,15 @@
 3	Your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 4	vet	vet	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 5	would	would	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
-6	not	not	PART	RB	_	7	advmod	7:advmod	_
-7	prescribe	prescribe	VERB	VB	VerbForm=Inf	0	root	0:root	_
+6	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
+7	prescribe	prescribe	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 8	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	7	obj	7:obj	_
 9	if	if	SCONJ	IN	_	13	mark	13:mark	_
 10	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
 11-12	didn't	_	_	_	_	_	_	_	_
 11	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
-12	n't	not	PART	RB	_	13	advmod	13:advmod	_
-13	think	think	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:if	_
+12	n't	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
+13	think	think	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:if	CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 15	would	would	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 16	be	be	AUX	VB	VerbForm=Inf	17	cop	17:cop	_
@@ -518,14 +518,14 @@
 2	)	)	PUNCT	-RRB-	_	1	punct	1:punct	_
 3	If	if	SCONJ	IN	_	5	mark	5:mark	_
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
-5	shows	show	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:if	_
+5	shows	show	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 6	no	no	DET	DT	PronType=Neg	7	det	7:det	_
 7	interest	interest	NOUN	NN	Number=Sing	5	obj	5:obj	_
 8	in	in	ADP	IN	_	9	case	9:case	_
 9	water	water	NOUN	NN	Number=Sing	7	nmod	7:nmod:in	SpaceAfter=No
 10	,	,	PUNCT	,	_	5	punct	5:punct	_
 11	then	then	ADV	RB	PronType=Dem	12	advmod	12:advmod	_
-12	take	take	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+12	take	take	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 13	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	obj	12:obj	_
 14	back	back	ADV	RB	_	12	advmod	12:advmod	_
 15	to	to	ADP	IN	_	17	case	17:case	_
@@ -538,7 +538,7 @@
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj|9:nsubj	_
 2	could	could	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 3	be	be	AUX	VB	VerbForm=Inf	6	cop	6:cop	_
-4	due	due	ADP	IN	_	6	case	6:case	_
+4	due	due	ADJ	JJ	Degree=Pos|ExtPos=ADP	6	case	6:case	_
 5	to	to	ADP	IN	_	4	fixed	4:fixed	_
 6	nausea	nausea	NOUN	NN	Number=Sing	0	root	0:root	_
 7	or	or	CCONJ	CC	_	9	cc	9:cc	_
@@ -552,14 +552,14 @@
 # text = He could become severly dehydrated (especially if he continues to vomit and have diarrhea).
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	could	could	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	become	become	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	become	become	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 4	severly	severly	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	dehydrated	dehydrated	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	_
 6	(	(	PUNCT	-LRB-	_	10	punct	10:punct	SpaceAfter=No
 7	especially	especially	ADV	RB	_	10	advmod	10:advmod	_
 8	if	if	SCONJ	IN	_	10	mark	10:mark	_
 9	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj|12:nsubj:xsubj|14:nsubj:xsubj	_
-10	continues	continue	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:if	_
+10	continues	continue	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:if	CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	vomit	vomit	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
@@ -603,7 +603,7 @@
 10	just	just	ADV	RB	_	13	advmod	13:advmod	_
 11-12	doesn't	_	_	_	_	_	_	_	_
 11	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
-12	n't	not	PART	RB	_	13	advmod	13:advmod	_
+12	n't	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
 13	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	_
 14	good	good	ADJ	JJ	Degree=Pos	13	xcomp	13:xcomp	SpaceAfter=No
 15	.	.	PUNCT	.	_	13	punct	13:punct	_
@@ -785,7 +785,7 @@
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
 9	vomiting	vomit	VERB	VBG	Tense=Pres|VerbForm=Part	17	advcl	17:advcl:when	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	lot	lot	NOUN	NN	Number=Sing	9	obl:npmod	9:obl:npmod	SpaceAfter=No
+11	lot	lot	NOUN	NN	Number=Sing	9	obl:unmarked	9:obl:unmarked	SpaceAfter=No
 12	,	,	PUNCT	,	_	9	punct	9:punct	_
 13	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 14	could	could	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
@@ -800,7 +800,7 @@
 # text = Did they do any x-rays?
 1	Did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	aux	3:aux	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	any	any	DET	DT	PronType=Ind	7	det	7:det	_
 5	x	x	NOUN	NN	Number=Sing	7	compound	7:compound	SpaceAfter=No
 6	-	-	PUNCT	HYPH	_	5	punct	5:punct	SpaceAfter=No
@@ -812,13 +812,13 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	if	if	SCONJ	IN	_	9	mark	9:mark	_
 6	vomiting	vomit	VERB	VBG	VerbForm=Ger	9	csubj	9:csubj	_
 7	blood	blood	NOUN	NN	Number=Sing	6	obj	6:obj	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
-9	common	common	ADJ	JJ	Degree=Pos	4	ccomp	4:ccomp	_
+9	common	common	ADJ	JJ	Degree=Pos	4	ccomp	4:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=9:Interrogative-Polar-Indirect.Clause
 10	with	with	ADP	IN	_	12	case	12:case	_
 11	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	12:det	_
 12	ailment	ailment	NOUN	NN	Number=Sing	9	obl	9:obl:with	SpaceAfter=No
@@ -831,14 +831,14 @@
 3	call	call	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	vet	vet	NOUN	NN	Number=Sing	3	obj	3:obj	_
-6	now	now	ADV	RB	_	3	advmod	3:advmod	_
+6	now	now	ADV	RB	PronType=Dem	3	advmod	3:advmod	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
 8	ask	ask	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
 9	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	8	iobj	8:iobj	_
-10	what	what	PRON	WP	PronType=Int	12	nsubj	12:nsubj|14:nsubj	_
+10	what	what	PRON	WP	PronType=Int	12	nsubj	12:nsubj|14:nsubj	CxnElt=12:Interrogative-WHInfo-Indirect.WHWord
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
-12	normal	normal	ADJ	JJ	Degree=Pos	8	ccomp	8:ccomp	_
+12	normal	normal	ADJ	JJ	Degree=Pos	8	ccomp	8:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=12:Interrogative-WHInfo-Indirect.Clause
 13	or	or	CCONJ	CC	_	14	cc	14:cc	_
-14	not	not	PART	RB	_	12	conj	8:ccomp|12:conj:or	SpaceAfter=No
+14	not	not	PART	RB	Polarity=Neg	12	conj	8:ccomp|12:conj:or	SpaceAfter=No
 15	.	.	PUNCT	.	_	3	punct	3:punct	_
 

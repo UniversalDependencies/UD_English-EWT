@@ -47,14 +47,14 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	could	could	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	certainly	certainly	ADV	RB	_	4	advmod	4:advmod	_
-4	slow	slow	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	slow	slow	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	aging	aging	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	process	process	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	down	down	ADP	RP	_	4	compound:prt	4:compound:prt	_
 9	if	if	SCONJ	IN	_	11	mark	11:mark	_
 10	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj|13:nsubj:xsubj	_
-11	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	advcl	4:advcl:if	_
+11	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	advcl	4:advcl:if	CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	work	work	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	its	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
@@ -92,7 +92,7 @@
 1	But	but	CCONJ	CC	_	5	cc	5:cc	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
-4	not	not	PART	RB	_	5	advmod	5:advmod	_
+4	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	pleased	pleased	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	read	read	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:to	_
@@ -131,8 +131,8 @@
 # sent_id = newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0014
 # newpar id = newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-p0010
 # text = Santa Claus has the right idea.
-1	Santa	Santa	PROPN	NNP	Number=Sing	2	compound	2:compound	_
-2	Claus	Claus	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
+1	Santa	Santa	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
+2	Claus	Claus	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	right	right	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
@@ -146,7 +146,7 @@
 3	only	only	ADV	RB	_	4	advmod	4:advmod	_
 4	once	once	ADV	RB	NumForm=Word|NumType=Mult	1	advmod	1:advmod	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-6	year	year	NOUN	NN	Number=Sing	4	obl:tmod	4:obl:tmod	SpaceAfter=No
+6	year	year	NOUN	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 7	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0016
@@ -169,14 +169,14 @@
 3	all	all	DET	DT	PronType=Tot	4	det	4:det	_
 4	means	means	NOUN	NNS	Number=Ptan	6	obl	6:obl:by	SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
-6	marry	marry	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+6	marry	marry	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 7	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0019
 # text = If you get a good wife, you'll become happy; if you get a bad one, you'll become a philosopher.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl:if	_
+3	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl:if	CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	good	good	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	wife	wife	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
@@ -184,12 +184,12 @@
 8-9	you'll	_	_	_	_	_	_	_	_
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj|11:nsubj:xsubj	_
 9	'll	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
-10	become	become	VERB	VB	VerbForm=Inf	0	root	0:root	_
+10	become	become	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 11	happy	happy	ADJ	JJ	Degree=Pos	10	xcomp	10:xcomp	SpaceAfter=No
 12	;	;	PUNCT	,	_	22	punct	22:punct	_
 13	if	if	SCONJ	IN	_	15	mark	15:mark	_
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
-15	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	22	advcl	22:advcl:if	_
+15	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	22	advcl	22:advcl:if	CxnElt=22:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 16	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 17	bad	bad	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	one	one	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No
@@ -197,7 +197,7 @@
 20-21	you'll	_	_	_	_	_	_	_	_
 20	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	22:nsubj|24:nsubj:xsubj	_
 21	'll	will	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
-22	become	become	VERB	VB	VerbForm=Inf	11	parataxis	11:parataxis	_
+22	become	become	VERB	VB	VerbForm=Inf	11	parataxis	11:parataxis	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=22:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 23	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
 24	philosopher	philosopher	NOUN	NN	Number=Sing	22	xcomp	22:xcomp	SpaceAfter=No
 25	.	.	PUNCT	.	_	11	punct	11:punct	_
@@ -264,7 +264,7 @@
 # sent_id = newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0027
 # text = Every now and then she stops to breathe.
 1	Every	every	ADV	RB	_	2	advmod	2:advmod	_
-2	now	now	ADV	RB	_	6	advmod	6:advmod	_
+2	now	now	ADV	RB	PronType=Dem	6	advmod	6:advmod	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
 4	then	then	ADV	RB	PronType=Dem	2	conj	2:conj:and|6:advmod	_
 5	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj|8:nsubj:xsubj	_
@@ -290,7 +290,7 @@
 # text = I have never hated a man enough to give his diamonds back.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	never	never	ADV	RB	_	4	advmod	4:advmod	_
+3	never	never	ADV	RB	PronType=Neg	4	advmod	4:advmod	_
 4	hated	hate	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	man	man	NOUN	NN	Number=Sing	4	obj	4:obj	_
@@ -359,7 +359,7 @@
 1	Money	money	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 2-3	can't	_	_	_	_	_	_	_	_
 2	ca	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	buy	buy	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	4	iobj	4:iobj	_
 6	happiness	happiness	NOUN	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No
@@ -426,12 +426,12 @@
 3	be	be	AUX	VB	VerbForm=Inf	6	cop	6:cop	_
 4	an	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	ideal	ideal	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	state	state	NOUN	NN	Number=Sing	0	root	0:root	_
+6	state	state	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=6:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 7	if	if	SCONJ	IN	_	9	mark	9:mark	_
 8	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
-9	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:if	_
+9	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:if	CxnElt=6:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	little	little	ADJ	JJ	Degree=Pos	12	obl:npmod	12:obl:npmod	_
+11	little	little	ADJ	JJ	Degree=Pos	12	obl:unmarked	12:obl:unmarked	_
 12	later	late	ADV	RBR	Degree=Cmp	9	advmod	9:advmod	_
 13	in	in	ADP	IN	_	14	case	14:case	_
 14	life	life	NOUN	NN	Number=Sing	12	obl	12:obl:in	SpaceAfter=No
@@ -456,7 +456,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|5:nsubj:xsubj	_
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	old	old	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	SpaceAfter=No
 6	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -466,7 +466,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	anything	anything	PRON	NN	Number=Sing|PronType=Ind	4	obj	4:obj	_
 6	until	until	ADP	IN	_	7	case	7:case	_
@@ -502,7 +502,7 @@
 # text = Don't worry about avoiding temptation... as you grow older, it will avoid you.
 1-2	Don't	_	_	_	_	_	_	_	_
 1	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	3	aux	3:aux	_
-2	n't	not	PART	RB	_	3	advmod	3:advmod	_
+2	n't	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
 3	worry	worry	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 4	about	about	SCONJ	IN	_	5	mark	5:mark	_
 5	avoiding	avoid	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:about	_
@@ -596,7 +596,7 @@
 17	old	old	ADJ	JJ	Degree=Pos	0	root	0:root	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
 19	go	go	VERB	VB	VerbForm=Inf	17	advcl	17:advcl:to	_
-20	anywhere	anywhere	ADV	RB	_	19	advmod	19:advmod	SpaceAfter=No
+20	anywhere	anywhere	ADV	RB	PronType=Ind	19	advmod	19:advmod	SpaceAfter=No
 21	.	.	PUNCT	.	_	17	punct	17:punct	_
 
 # sent_id = newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0057
@@ -615,7 +615,7 @@
 # text = Do You Yahoo!?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	Yahoo!	yahoo!	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+3	Yahoo!	yahoo!	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause|SpaceAfter=No
 4	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0060

@@ -66,7 +66,7 @@
 11	,	,	PUNCT	,	_	3	punct	3:punct	_
 12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 13	would	would	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-14	not	not	PART	RB	_	15	advmod	15:advmod	_
+14	not	not	PART	RB	Polarity=Neg	15	advmod	15:advmod	_
 15	let	let	VERB	VB	VerbForm=Inf	0	root	0:root	_
 16	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	15	obj	15:obj|17:nsubj:xsubj	_
 17	use	use	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_
@@ -81,7 +81,7 @@
 26	which	which	PRON	WDT	PronType=Rel	29	obj	29:obj	_
 27	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	29	nsubj	29:nsubj	_
 28	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	29	aux	29:aux	_
-29	done	do	VERB	VBN	Tense=Past|VerbForm=Part	17	advcl:relcl	17:advcl:relcl	Cxn=rc-wh-obl-pstrand
+29	done	do	VERB	VBN	Tense=Past|VerbForm=Part	17	advcl:relcl	17:advcl:relcl	Cxn=rc-wh-obj
 30	with	with	ADP	IN	_	33	case	33:case	_
 31	any	any	DET	DT	PronType=Ind	33	det	33:det	_
 32	other	other	ADJ	JJ	Degree=Pos	33	amod	33:amod	_
@@ -105,7 +105,7 @@
 4	if	if	SCONJ	IN	_	7	mark	7:mark	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 6	could	could	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
-7	have	have	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+7	have	have	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=7:Interrogative-Polar-Indirect.Clause
 8	money	money	NOUN	NN	Number=Sing	7	obj	7:obj	_
 9	back	back	ADV	RB	_	7	advmod	7:advmod	_
 10	in	in	ADP	IN	_	11	case	11:case	_
@@ -185,10 +185,10 @@
 # sent_id = reviews-188548-0010
 # text = There were no other options available (I only brought my check card to cover any overage cost) and she rang it up and applied it to the gift card before telling me about the tip policy.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	no	no	DET	DT	PronType=Neg	5	det	5:det	_
 4	other	other	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	options	option	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
+5	options	option	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 6	available	available	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 7	(	(	PUNCT	-LRB-	_	10	punct	10:punct	SpaceAfter=No
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
@@ -228,7 +228,7 @@
 # text = I will not be visiting Mama Mia's again.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
-3	not	not	PART	RB	_	5	advmod	5:advmod	_
+3	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 4	be	be	AUX	VB	VerbForm=Inf	5	aux	5:aux	_
 5	visiting	visit	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 6	Mama	Mama	PROPN	NNP	Number=Sing	7	compound	7:compound	_
@@ -241,9 +241,9 @@
 # sent_id = reviews-188548-0012
 # text = There are other places with food just as good with management that values customers and employees much more.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	other	other	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	places	place	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
+4	places	place	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 5	with	with	ADP	IN	_	6	case	6:case	_
 6	food	food	NOUN	NN	Number=Sing	4	nmod	4:nmod:with	_
 7	just	just	ADV	RB	_	9	advmod	9:advmod	_

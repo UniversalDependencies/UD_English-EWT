@@ -37,7 +37,7 @@
 19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	nsubj	20:nsubj	_
 20	announced	announce	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 21	this	this	DET	DT	Number=Sing|PronType=Dem	22	det	22:det	_
-22	week	week	NOUN	NN	Number=Sing	20	obl:tmod	20:obl:tmod	SpaceAfter=No
+22	week	week	NOUN	NN	Number=Sing	20	obl:unmarked	20:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 23	.	.	PUNCT	.	_	20	punct	20:punct	_
 
 # sent_id = newsgroup-groups.google.com_hiddennook_edef226e24a57863_ENG_20051116_085200-0004
@@ -53,8 +53,8 @@
 2-3	It's	_	_	_	_	_	_	_	_
 2	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	expl	7:expl	_
 3	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
-4	not	not	PART	RB	_	7	advmod	7:advmod	_
-5	cost	cost	NOUN	NN	Number=Sing	7	obl:npmod	7:obl:npmod	SpaceAfter=No
+4	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
+5	cost	cost	NOUN	NN	Number=Sing	7	obl:unmarked	7:obl:unmarked	SpaceAfter=No
 6	-	-	PUNCT	HYPH	_	5	punct	5:punct	SpaceAfter=No
 7	effective	effective	ADJ	JJ	Degree=Pos	25	ccomp	25:ccomp	_
 8	doing	do	VERB	VBG	VerbForm=Ger	7	csubj	7:csubj	_
@@ -263,13 +263,13 @@
 5	industry	industry	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	SpaceAfter=No
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7	if	if	SCONJ	IN	_	8	mark	8:mark	_
-8	put	put	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	advcl	14:advcl:if	_
+8	put	put	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	advcl	14:advcl:if	CxnElt=14:Conditional-UnspecifiedEpistemic-Reduced.Protasis
 9	to	to	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	test	test	NOUN	NN	Number=Sing	8	obl	8:obl:to	SpaceAfter=No
 12	,	,	PUNCT	,	_	8	punct	8:punct	_
 13	can	can	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
-14	do	do	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+14	do	do	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	Cxn=Conditional-UnspecifiedEpistemic-Reduced|CxnElt=14:Conditional-UnspecifiedEpistemic-Reduced.Apodosis
 15	better	well	ADV	RBR	Degree=Cmp	14	advmod	14:advmod	_
 16	[	[	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
 17	than	than	ADP	IN	_	19	case	19:case	_
@@ -280,7 +280,7 @@
 22	but	but	CCONJ	CC	_	26	cc	26:cc	_
 23	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	26	nsubj	26:nsubj	_
 24	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	26	aux	26:aux	_
-25	not	not	PART	RB	_	26	advmod	26:advmod	_
+25	not	not	PART	RB	Polarity=Neg	26	advmod	26:advmod	_
 26	expect	expect	VERB	VB	VerbForm=Inf	3	conj	3:conj:but|31:ccomp	_
 27	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	26	obj	26:obj	SpaceAfter=No
 28	,	,	PUNCT	,	_	3	punct	3:punct	SpaceAfter=No
@@ -311,13 +311,13 @@
 # text = But seeing how the private sector has been able to successfully transport civilians to the ISS (at about a fifth of the cost), it would come to no surprise if corporate America was able to out perform their bureaucratic friends in government.
 1	But	but	CCONJ	CC	_	29	cc	29:cc	_
 2	seeing	see	VERB	VBG	Tense=Pres|VerbForm=Part	29	advcl	29:advcl	_
-3	how	how	ADV	WRB	PronType=Int	9	advmod	9:advmod	_
+3	how	how	ADV	WRB	PronType=Int	9	advmod	9:advmod	CxnElt=9:Interrogative-WHInfo-Indirect.WHWord
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	private	private	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	sector	sector	NOUN	NN	Number=Sing	9	nsubj	9:nsubj|12:nsubj:xsubj	_
 7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
 8	been	be	AUX	VBN	Tense=Past|VerbForm=Part	9	cop	9:cop	_
-9	able	able	ADJ	JJ	Degree=Pos	2	ccomp	2:ccomp	_
+9	able	able	ADJ	JJ	Degree=Pos	2	ccomp	2:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=9:Interrogative-WHInfo-Indirect.Clause
 10	to	to	PART	TO	_	12	mark	12:mark	_
 11	successfully	successfully	ADV	RB	_	12	advmod	12:advmod	_
 12	transport	transport	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
@@ -337,21 +337,21 @@
 26	,	,	PUNCT	,	_	2	punct	2:punct	_
 27	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	29	nsubj	29:nsubj	_
 28	would	would	AUX	MD	VerbForm=Fin	29	aux	29:aux	_
-29	come	come	VERB	VB	VerbForm=Inf	0	root	0:root	_
+29	come	come	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=29:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 30	to	to	ADP	IN	_	32	case	32:case	_
 31	no	no	DET	DT	PronType=Neg	32	det	32:det	_
 32	surprise	surprise	NOUN	NN	Number=Sing	29	obl	29:obl:to	_
 33	if	if	SCONJ	IN	_	37	mark	37:mark	_
 34	corporate	corporate	ADJ	JJ	Degree=Pos	35	amod	35:amod	_
-35	America	America	PROPN	NNP	Number=Sing	37	nsubj	37:nsubj|40:nsubj:xsubj	_
+35	America	America	PROPN	NNP	Number=Sing	37	nsubj	37:nsubj|39:nsubj:xsubj	_
 36	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	37	cop	37:cop	_
-37	able	able	ADJ	JJ	Degree=Pos	29	advcl	29:advcl:if	_
-38	to	to	PART	TO	_	40	mark	40:mark	_
-39	out	out	ADV	AFX	_	40	advmod	40:advmod	_
-40	perform	perform	VERB	VB	VerbForm=Inf	37	xcomp	37:xcomp	_
+37	able	able	ADJ	JJ	Degree=Pos	29	advcl	29:advcl:if	CxnElt=29:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
+38	to	to	PART	TO	_	39	mark	39:mark	_
+39	out	outperform	VERB	AFX	Typo=Yes|VerbForm=Inf	37	xcomp	37:xcomp	_
+40	perform	_	X	VB	_	39	goeswith	39:goeswith	_
 41	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	43	nmod:poss	43:nmod:poss	_
 42	bureaucratic	bureaucratic	ADJ	JJ	Degree=Pos	43	amod	43:amod	_
-43	friends	friend	NOUN	NNS	Number=Plur	40	obj	40:obj	_
+43	friends	friend	NOUN	NNS	Number=Plur	39	obj	39:obj	_
 44	in	in	ADP	IN	_	45	case	45:case	_
 45	government	government	NOUN	NN	Number=Sing	43	nmod	43:nmod:in	SpaceAfter=No
 46	.	.	PUNCT	.	_	29	punct	29:punct	_
@@ -373,5 +373,5 @@
 8	at	at	ADP	IN	_	9	case	9:case	_
 9	11/16/2005	11/16/2005	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:at	_
 10	08:36:00	08:36:00	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
-11	AM	a.m.	NOUN	NN	Number=Sing	9	nmod:tmod	9:nmod:tmod	_
+11	AM	a.m.	NOUN	NN	Number=Sing	9	nmod:unmarked	9:nmod:unmarked	TemporalNPAdjunct=Yes
 

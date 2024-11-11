@@ -21,7 +21,7 @@
 9	car	car	NOUN	NN	Number=Sing	7	obj	7:obj|10:nsubj:xsubj	_
 10	returned	return	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	xcomp	7:xcomp	_
 11	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	12:det	_
-12	morning	morning	NOUN	NN	Number=Sing	10	obl:tmod	10:obl:tmod	SpaceAfter=No
+12	morning	morning	NOUN	NN	Number=Sing	10	obl:unmarked	10:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 13	,	,	PUNCT	,	_	16	punct	16:punct	_
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
 15	would	would	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
@@ -38,10 +38,10 @@
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
 2	certainly	certainly	ADV	RB	_	3	advmod	3:advmod	_
 3	know	know	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-4	what	what	PRON	WP	PronType=Int	7	obj	7:obj	_
+4	what	what	PRON	WP	PronType=Int	7	obj	7:obj	CxnElt=7:Interrogative-WHInfo-Indirect.WHWord
 5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 6	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
-7	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	3	ccomp	3:ccomp	SpaceAfter=No
+7	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=7:Interrogative-WHInfo-Indirect.Clause|SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-295288-0004
@@ -83,7 +83,7 @@
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
 35	gearbox	gearbox	NOUN	NN	Number=Sing	38	nsubj	38:nsubj	_
 36	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	38	aux	38:aux	_
-37	not	not	PART	RB	_	38	advmod	38:advmod	_
+37	not	not	PART	RB	Polarity=Neg	38	advmod	38:advmod	_
 38	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	29	advcl	29:advcl:as	_
 39	(	(	PUNCT	-LRB-	_	41	punct	41:punct	SpaceAfter=No
 40	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	41	nsubj	41:nsubj	_
@@ -99,7 +99,7 @@
 2	phoned	phone	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	same	same	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	day	day	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	SpaceAfter=No
+5	day	day	NOUN	NN	Number=Sing	2	obl:unmarked	2:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
 7	confirmed	confirm	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
 8	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
@@ -120,7 +120,7 @@
 
 # sent_id = reviews-295288-0006
 # text = Now my cars gears and brakes have never run so well... ever its like driving a new car.
-1	Now	now	ADV	RB	_	10	advmod	10:advmod	_
+1	Now	now	ADV	RB	PronType=Dem	10	advmod	10:advmod	_
 2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
 3-4	cars	_	_	_	_	_	_	_	_
 3	car	car	NOUN	NN	Number=Sing	5	nmod:poss	5:nmod:poss	_
@@ -129,12 +129,12 @@
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
 7	brakes	brake	NOUN	NNS	Number=Plur	5	conj	5:conj:and|10:nsubj	_
 8	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
-9	never	never	ADV	RB	_	10	advmod	10:advmod	_
+9	never	never	ADV	RB	PronType=Neg	10	advmod	10:advmod	_
 10	run	run	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 11	so	so	ADV	RB	_	12	advmod	12:advmod	_
 12	well	well	ADV	RB	Degree=Pos	10	advmod	10:advmod	SpaceAfter=No
 13	...	...	PUNCT	,	_	14	punct	14:punct	_
-14	ever	ever	ADV	RB	_	10	advmod	10:advmod	_
+14	ever	ever	ADV	RB	PronType=Ind	10	advmod	10:advmod	_
 15-16	its	_	_	_	_	_	_	_	_
 15	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	nsubj:outer	18:nsubj:outer	_
 16	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	18	cop	18:cop	CorrectForm='s
@@ -148,12 +148,12 @@
 # sent_id = reviews-295288-0007
 # text = So yes, I wouldn't hesitate in recommending the team at Just Autos for easy professional car repairs,Thank you Just Autos for your help.
 1	So	so	ADV	RB	_	7	advmod	7:advmod	_
-2	yes	yes	INTJ	UH	_	7	discourse	7:discourse	SpaceAfter=No
+2	yes	yes	INTJ	UH	Polarity=Pos	7	discourse	7:discourse	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 5-6	wouldn't	_	_	_	_	_	_	_	_
 5	would	would	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
-6	n't	not	PART	RB	_	7	advmod	7:advmod	_
+6	n't	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 7	hesitate	hesitate	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	in	in	SCONJ	IN	_	9	mark	9:mark	_
 9	recommending	recommend	VERB	VBG	Tense=Pres|VerbForm=Part	7	advcl	7:advcl:in	_

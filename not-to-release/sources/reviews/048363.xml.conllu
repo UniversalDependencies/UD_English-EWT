@@ -17,7 +17,7 @@
 6	car	car	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	accident	accident	NOUN	NN	Number=Sing	3	obl	3:obl:in	_
 8	20	20	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
-9	years	year	NOUN	NNS	Number=Plur	10	obl:npmod	10:obl:npmod	_
+9	years	year	NOUN	NNS	Number=Plur	10	obl:unmarked	10:obl:unmarked	_
 10	ago	ago	ADV	RB	_	3	advmod	3:advmod	_
 11	and	and	CCONJ	CC	_	19	cc	19:cc	_
 12	since	since	ADP	IN	_	13	case	13:case	_
@@ -32,7 +32,7 @@
 20	and	and	CCONJ	CC	_	26	cc	26:cc	_
 21-22	haven't	_	_	_	_	_	_	_	_
 21	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	26	aux	26:aux	_
-22	n't	not	PART	RB	_	26	advmod	26:advmod	_
+22	n't	not	PART	RB	Polarity=Neg	26	advmod	26:advmod	_
 23	been	be	AUX	VBN	Tense=Past|VerbForm=Part	26	cop	26:cop	_
 24	behind	behind	ADP	IN	_	26	case	26:case	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
@@ -123,7 +123,7 @@
 5	most	most	ADV	RBS	Degree=Sup	6	advmod	6:advmod	_
 6	probably	probably	ADV	RB	_	2	advmod	2:advmod	_
 7	10	10	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
-8	times	time	NOUN	NNS	Number=Plur	2	obl:tmod	2:obl:tmod	_
+8	times	time	NOUN	NNS	Number=Plur	2	obl:unmarked	2:obl:unmarked	TemporalNPAdjunct=Yes
 9	before	before	SCONJ	IN	_	12	mark	12:mark	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 11	finally	finally	ADV	RB	_	12	advmod	12:advmod	_
@@ -145,7 +145,7 @@
 6	initial	initial	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	lesson	lesson	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	4	4	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
-9	times	time	NOUN	NNS	Number=Plur	4	obl:tmod	4:obl:tmod	_
+9	times	time	NOUN	NNS	Number=Plur	4	obl:unmarked	4:obl:unmarked	TemporalNPAdjunct=Yes
 10	and	and	CCONJ	CC	_	18	cc	18:cc	_
 11	on	on	ADP	IN	_	14	case	14:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
@@ -177,7 +177,7 @@
 # sent_id = reviews-048363-0008
 # text = Five minutes before my initial lesson, I got a call from Gerry advising me of his arrival and to come down as soon as I was ready.
 1	Five	five	NUM	CD	NumForm=Word|NumType=Card	2	nummod	2:nummod	_
-2	minutes	minute	NOUN	NNS	Number=Plur	6	nmod:npmod	6:nmod:npmod	_
+2	minutes	minute	NOUN	NNS	Number=Plur	6	nmod:unmarked	6:nmod:unmarked	_
 3	before	before	ADP	IN	_	6	case	6:case	_
 4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 5	initial	initial	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
@@ -243,7 +243,7 @@
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj|14:nsubj:xsubj	_
 11-12	didn't	_	_	_	_	_	_	_	_
 11	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
-12	n't	not	PART	RB	_	13	advmod	13:advmod	_
+12	n't	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
 13	feel	feel	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:because	_
 14	comfortable	comfortable	ADJ	JJ	Degree=Pos	13	xcomp	13:xcomp	_
 15	driving	drive	VERB	VBG	Tense=Pres|VerbForm=Part	14	advcl	14:advcl	_
@@ -262,12 +262,12 @@
 7	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 8	already	already	ADV	RB	_	9	advmod	9:advmod	_
 9	here	here	ADV	RB	PronType=Dem	14	advcl	14:advcl:since	_
-10	why	why	ADV	WRB	PronType=Int	14	advmod	14:advmod	_
+10	why	why	ADV	WRB	PronType=Int	14	advmod	14:advmod	CxnElt=14:Interrogative-WHInfo-Indirect.WHWord
 11-12	don't	_	_	_	_	_	_	_	_
 11	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
-12	n't	not	PART	RB	_	14	advmod	14:advmod	_
+12	n't	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
 13	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
-14	give	give	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+14	give	give	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=14:Interrogative-WHInfo-Indirect.Clause
 15	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	iobj	14:iobj	_
 16	shot	shot	NOUN	NN	Number=Sing	14	obj	14:obj	SpaceAfter=No
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -317,7 +317,7 @@
 # text = Don't worry, I'll take care of you!"
 1-2	Don't	_	_	_	_	_	_	_	_
 1	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	3	aux	3:aux	_
-2	n't	not	PART	RB	_	3	advmod	3:advmod	_
+2	n't	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
 3	worry	worry	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5-6	I'll	_	_	_	_	_	_	_	_
@@ -344,7 +344,7 @@
 1	Here	here	ADV	RB	PronType=Dem	0	root	0:root	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	1	nsubj	1:nsubj	_
 3	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
-4	now	now	ADV	RB	_	1	advmod	1:advmod	_
+4	now	now	ADV	RB	PronType=Dem	1	advmod	1:advmod	_
 5	driving	drive	VERB	VBG	Tense=Pres|VerbForm=Part	1	advcl	1:advcl	_
 6	confidently	confidently	ADV	RB	_	5	advmod	5:advmod	_
 7	on	on	ADP	IN	_	9	case	9:case	_
@@ -359,7 +359,7 @@
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 4-5	can't	_	_	_	_	_	_	_	_
 4	ca	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-5	n't	not	PART	RB	_	6	advmod	6:advmod	_
+5	n't	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	thank	thank	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	obj	6:obj	_
 8	enough	enough	ADV	RB	_	6	advmod	6:advmod	_
@@ -400,7 +400,7 @@
 24	Instructor	instructor	NOUN	NN	Number=Sing	18	ccomp	18:ccomp	_
 25	...	...	PUNCT	,	_	30	punct	30:punct	SpaceAfter=No
 26	Absolutely	absolutely	ADV	RB	_	27	advmod	27:advmod	_
-27	Simple	simply	ADV	RB	Typo=Yes	29	advmod	29:advmod	CorrectForm=simply
+27	Simple	simply	ADV	RB	Typo=Yes	30	advmod	30:advmod	CorrectForm=simply
 28	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
 29	Best	good	ADJ	JJS	Degree=Sup	30	amod	30:amod	_
 30	Instructor	instructor	NOUN	NN	Number=Sing	5	parataxis	5:parataxis|36:obl	_

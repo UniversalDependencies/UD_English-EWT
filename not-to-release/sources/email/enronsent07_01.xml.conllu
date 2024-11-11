@@ -24,9 +24,9 @@
 20	big	big	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 21	bang	bang	NOUN	NN	Number=Sing	23	compound	23:compound	SpaceAfter=No
 22	"	"	PUNCT	''	_	21	punct	21:punct	_
-23	approach	approach	NOUN	NN	Number=Sing	12	obl:npmod	12:obl:npmod	SpaceAfter=No
+23	approach	approach	NOUN	NN	Number=Sing	12	obl:unmarked	12:obl:unmarked	SpaceAfter=No
 24	)	)	PUNCT	-RRB-	_	23	punct	23:punct	_
-25	sometime	sometime	ADV	RB	_	27	advmod	27:advmod	_
+25	sometime	sometime	ADV	RB	PronType=Ind	27	advmod	27:advmod	_
 26	in	in	ADP	IN	_	27	case	27:case	_
 27	Q1	Q1	NOUN	NN	Number=Sing	12	obl	12:obl:in	SpaceAfter=No
 28	'02	'02	NUM	CD	NumForm=Digit|NumType=Card	27	nummod	27:nummod	SpaceAfter=No
@@ -39,7 +39,7 @@
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
 4	that	that	SCONJ	IN	_	13	mark	13:mark	_
 5	between	between	ADP	IN	_	6	case	6:case	_
-6	now	now	ADV	RB	_	13	obl	13:obl:between	_
+6	now	now	ADV	RB	PronType=Dem	13	obl	13:obl:between	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
 8	then	then	ADV	RB	PronType=Dem	6	conj	6:conj:and|13:obl:between	_
 9	Dunn	Dunn	PROPN	NNP	Number=Sing	13	nsubj	12.1:nsubj	SpaceAfter=No
@@ -77,9 +77,9 @@
 1	Investors	investor	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	asking	ask	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
-4	what	what	PRON	WP	PronType=Int	6	obj	6:obj	_
+4	what	what	PRON	WP	PronType=Int	6	obj	6:obj	CxnElt=6:Interrogative-WHInfo-Indirect.WHWord
 5	Edison	Edison	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
-6	intends	intend	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
+6	intends	intend	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=6:Interrogative-WHInfo-Indirect.Clause
 7	for	for	ADP	IN	_	8	case	8:case	_
 8	QFs	qf	NOUN	NNS	Number=Plur	6	obl	6:obl:for	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
@@ -94,7 +94,7 @@
 18	and	and	CCONJ	CC	_	23	cc	23:cc	_
 19	Edison	Edison	PROPN	NNP	Number=Sing	23	nsubj	23:nsubj	_
 20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	aux	23:aux	_
-21	side	side	NOUN	NN	Number=Sing	23	obl:npmod	23:obl:npmod	SpaceAfter=No
+21	side	side	NOUN	NN	Number=Sing	23	obl:unmarked	23:obl:unmarked	SpaceAfter=No
 22	-	-	PUNCT	HYPH	_	21	punct	21:punct	SpaceAfter=No
 23	stepping	step	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	3:conj:and	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
@@ -126,8 +126,8 @@
 # sent_id = email-enronsent07_01-0006
 # text = You know when the meeting with schedulers will be?
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	2	nsubj	2:nsubj	_
-2	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	when	when	ADV	WRB	PronType=Int	2	ccomp	2:ccomp	_
+2	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=2:Interrogative-WHInfo-Direct.Clause
+3	when	when	ADV	WRB	PronType=Int	2	ccomp	2:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=2:Interrogative-WHInfo-Direct.WHWord,3:Interrogative-WHInfo-Indirect.Clause,3:Interrogative-WHInfo-Indirect.WHWord
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	meeting	meeting	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
 6	with	with	ADP	IN	_	7	case	7:case	_
@@ -150,7 +150,7 @@
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10-11	haven't	_	_	_	_	_	_	_	_
 10	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-11	n't	not	PART	RB	_	12	advmod	12:advmod	_
+11	n't	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
 12	heard	hear	VERB	VBN	Tense=Past|VerbForm=Part	8	conj	2:ccomp|8:conj:and	_
 13	when	when	ADV	WRB	PronType=Int	16	advmod	16:advmod	_
 14	that	that	PRON	DT	Number=Sing|PronType=Dem	16	nsubj	16:nsubj	_
@@ -214,13 +214,13 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
 3-4	haven't	_	_	_	_	_	_	_	_
 3	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	n't	not	PART	RB	_	5	advmod	5:advmod	_
-5	heard	hear	VERB	VBN	Tense=Past|VerbForm=Part	9	advcl	9:advcl:if	SpaceAfter=No
+4	n't	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
+5	heard	hear	VERB	VBN	Tense=Past|VerbForm=Part	9	advcl	9:advcl:if	CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7-8	SoCal's	_	_	_	_	_	_	_	_
 7	SoCal	SoCal	PROPN	NNP	Number=Sing	9	nsubj:pass	9:nsubj:pass	_
 8	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux:pass	9:aux:pass	_
-9	announced	announce	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+9	announced	announce	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 10	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nsubj	11:nsubj	_
 11	abandoning	abandon	VERB	VBG	VerbForm=Ger	9	ccomp	9:ccomp	_
 12	windows	window	NOUN	NNS	Number=Plur	11	obj	11:obj	_
@@ -328,7 +328,7 @@
 4	committee	committee	NOUN	NN	Number=Sing	6	nsubj:pass	6:nsubj:pass|9:nsubj:xsubj|10:nsubj:xsubj	_
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux:pass	6:aux:pass	_
 6	set	set	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
-7	today	today	NOUN	NN	Number=Sing	6	obl:tmod	6:obl:tmod	_
+7	today	today	NOUN	NN	Number=Sing	6	obl:unmarked	6:obl:unmarked	TemporalNPAdjunct=Yes
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	start	start	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 10	serving	serve	VERB	VBG	VerbForm=Ger	9	xcomp	9:xcomp	_
@@ -373,9 +373,9 @@
 10	Dunn	Dunn	PROPN	NNP	Number=Sing	8	flat	8:flat	SpaceAfter=No
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
 12	D	D	PROPN	NNP	Number=Sing	8	appos	8:appos	SpaceAfter=No
-13	-	-	PUNCT	,	_	15	punct	15:punct	SpaceAfter=No
-14	Santa	Santa	PROPN	NNP	Number=Sing	15	compound	15:compound	_
-15	Ana	Ana	PROPN	NNP	Number=Sing	8	appos	8:appos	SpaceAfter=No
+13	-	-	PUNCT	,	_	14	punct	14:punct	SpaceAfter=No
+14	Santa	Santa	PROPN	NNP	Number=Sing	8	appos	8:appos	_
+15	Ana	Ana	PROPN	NNP	Number=Sing	14	flat	14:flat	SpaceAfter=No
 16	,	,	PUNCT	,	_	3	punct	3:punct	_
 17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
 18	focusing	focus	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
@@ -385,7 +385,7 @@
 22	of	of	ADP	IN	_	23	case	23:case	_
 23	events	event	NOUN	NNS	Number=Plur	21	nmod	21:nmod:of	_
 24	last	last	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
-25	fall	fall	NOUN	NN	Number=Sing	23	nmod:tmod	23:nmod:tmod	_
+25	fall	fall	NOUN	NN	Number=Sing	23	nmod:unmarked	23:nmod:unmarked	TemporalNPAdjunct=Yes
 26	filled	fill	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	23	acl	23:acl	_
 27	with	with	ADP	IN	_	31	case	31:case	_
 28	enough	enough	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
@@ -541,14 +541,14 @@
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 3-4	don't	_	_	_	_	_	_	_	_
 3	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	n't	not	PART	RB	_	5	advmod	5:advmod	_
+4	n't	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	know	know	VERB	VB	VerbForm=Inf	19	ccomp	19:ccomp	_
-6	how	how	ADV	WRB	PronType=Int	11	advmod	11:advmod	_
+6	how	how	ADV	WRB	PronType=Int	11	advmod	11:advmod	CxnElt=11:Interrogative-WHInfo-Indirect.WHWord
 7	these	this	DET	DT	Number=Plur|PronType=Dem	8	det	8:det	_
 8	events	event	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
 9	could	could	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 10	have	have	AUX	VB	VerbForm=Inf	11	aux	11:aux	_
-11	taken	take	VERB	VBN	Tense=Past|VerbForm=Part	5	ccomp	5:ccomp	_
+11	taken	take	VERB	VBN	Tense=Past|VerbForm=Part	5	ccomp	5:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=11:Interrogative-WHInfo-Indirect.Clause
 12	place	place	NOUN	NN	Number=Sing	11	obj	11:obj	_
 13	without	without	ADP	IN	_	16	case	16:case	_
 14	some	some	DET	DT	PronType=Ind	16	det	16:det	_
@@ -715,7 +715,7 @@
 10	power	power	NOUN	NN	Number=Sing	9	obj	9:obj	_
 11	in	in	ADP	IN	_	12	case	12:case	_
 12	California	California	PROPN	NNP	Number=Sing	9	obl	9:obl:in	_
-13	because	because	ADP	IN	_	17	case	17:case	_
+13	because	because	ADP	IN	ExtPos=ADP	17	case	17:case	_
 14	of	of	ADP	IN	_	13	fixed	13:fixed	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	price	price	NOUN	NN	Number=Sing	17	compound	17:compound	_
@@ -797,7 +797,7 @@
 13	-	-	PUNCT	,	_	23	punct	23:punct	_
 14	nearly	nearly	ADV	RB	_	16	advmod	16:advmod	_
 15	12	12	NUM	CD	NumForm=Digit|NumType=Card	16	compound	16:compound	_
-16	times	time	NOUN	NNS	Number=Plur	23	nmod:npmod	23:nmod:npmod	_
+16	times	time	NOUN	NNS	Number=Plur	23	nmod:unmarked	23:nmod:unmarked	_
 17	below	below	ADP	IN	_	23	case	23:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 19	$	$	SYM	$	_	23	compound	23:compound	SpaceAfter=No
@@ -922,8 +922,8 @@
 # text = "If not removed immediately, the (ISO) price cap will sow confusion in the market, threaten reliability and stifle new investment in generating capacity,'' read one letter written by Duke Energy Vice President William Hall III.
 1	"	"	PUNCT	``	_	31	punct	31:punct	SpaceAfter=No
 2	If	if	SCONJ	IN	_	4	mark	4:mark	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
-4	removed	remove	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	advcl	14:advcl:if	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
+4	removed	remove	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	advcl	14:advcl:if	CxnElt=14:Conditional-UnspecifiedEpistemic-Reduced.Protasis
 5	immediately	immediately	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
 6	,	,	PUNCT	,	_	4	punct	4:punct	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
@@ -933,7 +933,7 @@
 11	price	price	NOUN	NN	Number=Sing	12	compound	12:compound	_
 12	cap	cap	NOUN	NN	Number=Sing	14	nsubj	14:nsubj|20:nsubj|23:nsubj	_
 13	will	will	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
-14	sow	sow	VERB	VB	VerbForm=Inf	31	ccomp	31:ccomp	_
+14	sow	sow	VERB	VB	VerbForm=Inf	31	ccomp	31:ccomp	Cxn=Conditional-UnspecifiedEpistemic-Reduced|CxnElt=14:Conditional-UnspecifiedEpistemic-Reduced.Apodosis
 15	confusion	confusion	NOUN	NN	Number=Sing	14	obj	14:obj	_
 16	in	in	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
@@ -968,8 +968,8 @@
 # text = Although there is nothing illegal about the generators acting together to lobby against price caps, Dunn believes the letters and other actions around the same time showed clear coordination among energy officials.
 1	Although	although	SCONJ	IN	_	3	mark	3:mark	_
 2	there	there	PRON	EX	_	3	expl	3:expl	_
-3	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl:although	_
-4	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	3	nsubj	3:nsubj	_
+3	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl:although	Cxn=Existential-CopPred-ThereExpl
+4	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	3	nsubj	3:nsubj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot
 5	illegal	illegal	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 6	about	about	SCONJ	IN	_	9	mark	9:mark	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
@@ -1051,11 +1051,11 @@
 15	caps	cap	NOUN	NNS	Number=Plur	18	nsubj:pass	18:nsubj:pass	_
 16-17	weren't	_	_	_	_	_	_	_	_
 16	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	18	aux:pass	18:aux:pass	_
-17	n't	not	PART	RB	_	18	advmod	18:advmod	_
-18	removed	remove	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	21	advcl	21:advcl:if	_
+17	n't	not	PART	RB	Polarity=Neg	18	advmod	18:advmod	_
+18	removed	remove	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	21	advcl	21:advcl:if	CxnElt=21:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	21	nsubj	21:nsubj	_
 20	would	would	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
-21	lead	lead	VERB	VB	VerbForm=Inf	9	ccomp	9:ccomp	_
+21	lead	lead	VERB	VB	VerbForm=Inf	9	ccomp	9:ccomp	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=21:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 22	to	to	ADP	IN	_	24	case	24:case	_
 23	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
 24	collapse	collapse	NOUN	NN	Number=Sing	21	obl	21:obl:to	_
@@ -1078,7 +1078,7 @@
 # text = The next day, the federal commission killed the new pricing plan.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	next	next	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	day	day	NOUN	NN	Number=Sing	8	obl:tmod	8:obl:tmod	SpaceAfter=No
+3	day	day	NOUN	NN	Number=Sing	8	obl:unmarked	8:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	federal	federal	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
@@ -1105,7 +1105,7 @@
 11	cap	cap	NOUN	NN	Number=Sing	0	root	0:root	_
 12	established	establish	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	11	acl	11:acl	_
 13	five	five	NUM	CD	NumForm=Word|NumType=Card	14	nummod	14:nummod	_
-14	months	month	NOUN	NNS	Number=Plur	15	obl:npmod	15:obl:npmod	_
+14	months	month	NOUN	NNS	Number=Plur	15	obl:unmarked	15:obl:unmarked	_
 15	earlier	early	ADV	RBR	Degree=Cmp	12	advmod	12:advmod	SpaceAfter=No
 16	.	.	PUNCT	.	_	11	punct	11:punct	_
 
@@ -1126,7 +1126,7 @@
 13	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
 14-15	couldn't	_	_	_	_	_	_	_	_
 14	could	could	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
-15	n't	not	PART	RB	_	16	advmod	16:advmod	_
+15	n't	not	PART	RB	Polarity=Neg	16	advmod	16:advmod	_
 16	make	make	VERB	VB	VerbForm=Inf	12	ccomp	12:ccomp	_
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 18	profit	profit	NOUN	NN	Number=Sing	16	obj	16:obj	_
@@ -1175,7 +1175,7 @@
 2	followed	follow	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	acl:relcl	1:acl:relcl	Cxn=rc-free-nsubj
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	next	next	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	day	day	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	_
+5	day	day	NOUN	NN	Number=Sing	2	obl:unmarked	2:obl:unmarked	TemporalNPAdjunct=Yes
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux:pass	7:aux:pass	_
 7	considered	consider	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 8	by	by	ADP	IN	_	10	case	10:case	_
@@ -1249,7 +1249,7 @@
 
 # sent_id = email-enronsent07_01-0057
 # text = Neither the ISO board, which had established the price cap, nor the governor learned of Winter's actions until the cap had been removed.
-1	Neither	neither	CCONJ	CC	_	4	cc:preconj	4:cc:preconj	_
+1	Neither	neither	CCONJ	CC	Polarity=Neg	4	cc:preconj	4:cc:preconj	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 3	ISO	ISO	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4	board	board	NOUN	NN	Number=Sing	16	nsubj	8:nsubj|16:nsubj	SpaceAfter=No
@@ -1261,7 +1261,7 @@
 10	price	price	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	cap	cap	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
-13	nor	nor	CCONJ	CC	_	15	cc	15:cc	_
+13	nor	nor	CCONJ	CC	Polarity=Neg	15	cc	15:cc	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	governor	governor	NOUN	NN	Number=Sing	4	conj	4:conj:nor|8:nsubj|16:nsubj	_
 16	learned	learn	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -1309,7 +1309,7 @@
 27	board	board	NOUN	NN	Number=Sing	28	compound	28:compound	_
 28	members	member	NOUN	NNS	Number=Plur	21	conj	19:nmod:with|21:conj:and	_
 29	just	just	ADV	RB	_	30	advmod	30:advmod	_
-30	hours	hour	NOUN	NNS	Number=Plur	19	obl:tmod	19:obl:tmod	_
+30	hours	hour	NOUN	NNS	Number=Plur	19	obl:unmarked	19:obl:unmarked	TemporalNPAdjunct=Yes
 31	before	before	SCONJ	IN	_	35	mark	35:mark	_
 32	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	_
 33	filing	filing	NOUN	NN	Number=Sing	35	nsubj:pass	35:nsubj:pass	_
@@ -1322,7 +1322,7 @@
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
 2-3	didn't	_	_	_	_	_	_	_	_
 2	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	mention	mention	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	anything	anything	PRON	NN	Number=Sing|PronType=Ind	4	obj	4:obj	_
 6	about	about	ADP	IN	_	7	case	7:case	_
@@ -1388,7 +1388,7 @@
 17	poker	poker	NOUN	NN	Number=Sing	18	compound	18:compound	_
 18	faces	face	NOUN	NNS	Number=Plur	5	obl	5:obl:with	SpaceAfter=No
 19	,	,	PUNCT	,	_	21	punct	21:punct	_
-20	not	not	PART	RB	_	21	advmod	21:advmod	_
+20	not	not	PART	RB	Polarity=Neg	21	advmod	21:advmod	_
 21	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	5	advcl	5:advcl	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
 23	word	word	NOUN	NN	Number=Sing	21	obj	21:obj	_
@@ -1468,12 +1468,12 @@
 9	$	$	SYM	$	_	7	nmod	7:nmod:of	SpaceAfter=No
 10	249	249	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
-12	megawatt	megawatt	NOUN	NN	Number=Sing	9	nmod:npmod	9:nmod:npmod	_
+12	megawatt	megawatt	NOUN	NN	Number=Sing	9	nmod:unmarked	9:nmod:unmarked	_
 13	to	to	ADP	IN	_	14	case	14:case	_
 14	$	$	SYM	$	_	4	obl	4:obl:to	SpaceAfter=No
 15	700	700	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
-17	megawatt	megawatt	NOUN	NN	Number=Sing	14	nmod:npmod	14:nmod:npmod	_
+17	megawatt	megawatt	NOUN	NN	Number=Sing	14	nmod:unmarked	14:nmod:unmarked	_
 18	within	within	ADP	IN	_	20	case	20:case	_
 19	three	three	NUM	CD	NumForm=Word|NumType=Card	20	nummod	20:nummod	_
 20	days	day	NOUN	NNS	Number=Plur	4	obl	4:obl:within	SpaceAfter=No
@@ -1507,13 +1507,13 @@
 5	-	-	PUNCT	,	_	6	punct	6:punct	_
 6	granted	grant	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	acl	4:acl	_
 7	two	two	NUM	CD	NumForm=Word|NumType=Card	8	nummod	8:nummod	_
-8	hours	hour	NOUN	NNS	Number=Plur	11	nmod:npmod	11:nmod:npmod	_
+8	hours	hour	NOUN	NNS	Number=Plur	11	nmod:unmarked	11:nmod:unmarked	_
 9	after	after	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	request	request	NOUN	NN	Number=Sing	6	obl	6:obl:after	_
 12	-	-	PUNCT	,	_	4	punct	4:punct	_
 13	helped	help	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	_
-14	rather	rather	ADP	IN	_	16	cc	16:cc	_
+14	rather	rather	ADP	IN	ExtPos=CCONJ	16	cc	16:cc	_
 15	than	than	ADP	IN	_	14	fixed	14:fixed	_
 16	hurt	hurt	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	conj	2:ccomp|13:conj:rather_than	_
 17	Californians	Californian	PROPN	NNPS	Number=Plur	13	obj	13:obj|16:obj	SpaceAfter=No
@@ -1527,7 +1527,7 @@
 4	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	parataxis	8:parataxis	SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	aux	8:aux	_
-7	not	not	PART	RB	_	8	advmod	8:advmod	_
+7	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 8	spike	spike	VERB	VB	VerbForm=Inf	0	root	0:root	_
 9	as	as	ADP	IN	_	11	case	11:case	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
@@ -1610,7 +1610,7 @@
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 7	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	9	aux	9:aux	_
-8	not	not	PART	RB	_	9	advmod	9:advmod	_
+8	not	not	PART	RB	Polarity=Neg	9	advmod	9:advmod	_
 9	believe	believe	VERB	VB	VerbForm=Inf	0	root	0:root	_
 10	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	11	nsubj	11:nsubj|13:nsubj	_
 11	changed	change	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	9	ccomp	9:ccomp	_
@@ -1672,7 +1672,7 @@
 26	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 27	Winter	Winter	PROPN	NNP	Number=Sing	30	nsubj	30:nsubj	_
 28	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	30	aux	30:aux	_
-29	not	not	PART	RB	_	30	advmod	30:advmod	_
+29	not	not	PART	RB	Polarity=Neg	30	advmod	30:advmod	_
 30	consult	consult	VERB	VB	VerbForm=Inf	26	ccomp	26:ccomp	_
 31	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	30	obj	30:obj	_
 32	about	about	SCONJ	IN	_	33	mark	33:mark	_
@@ -1762,7 +1762,7 @@
 7	meeting	meeting	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	next	next	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	week	week	NOUN	NN	Number=Sing	4	obl:tmod	4:obl:tmod	_
+10	week	week	NOUN	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	TemporalNPAdjunct=Yes
 11	demanding	demand	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl	_
 12	Winter	Winter	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	_
 13	explain	explain	VERB	VB	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	ccomp	11:ccomp	_
@@ -1783,8 +1783,8 @@
 9	,	,	PUNCT	,	_	12	punct	12:punct	_
 10	but	but	CCONJ	CC	_	12	cc	12:cc	_
 11	there	there	PRON	EX	_	12	expl	12:expl	_
-12	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:but|27:ccomp	_
-13	concerns	concern	NOUN	NNS	Number=Plur	12	nsubj	12:nsubj|17:obj	_
+12	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:but|27:ccomp	Cxn=Existential-CopPred-ThereExpl
+13	concerns	concern	NOUN	NNS	Number=Plur	12	nsubj	12:nsubj|17:obj	CxnElt=12:Existential-CopPred-ThereExpl.Pivot
 14	such	such	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	action	action	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
 16	would	would	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
@@ -1839,7 +1839,7 @@
 8	and	and	CCONJ	CC	_	12	cc	12:cc	_
 9	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	12	nsubj	12:nsubj|14:nsubj:xsubj	_
 10	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	12	cop	12:cop	_
-11	not	not	PART	RB	_	12	advmod	12:advmod	_
+11	not	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
 12	about	about	ADJ	JJ	Degree=Pos	3	conj	3:conj:and|21:ccomp	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	let	let	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
@@ -1918,7 +1918,7 @@
 2	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 3-4	don't	_	_	_	_	_	_	_	_
 3	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	n't	not	PART	RB	_	5	advmod	5:advmod	_
+4	n't	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	know	know	VERB	VB	VerbForm=Inf	23	ccomp	23:ccomp	_
 6	why	why	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
 7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
@@ -2002,14 +2002,14 @@
 # text = I can dig it up if you'd like.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	dig	dig	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	dig	dig	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 4	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 5	up	up	ADP	RP	_	3	compound:prt	3:compound:prt	_
 6	if	if	SCONJ	IN	_	9	mark	9:mark	_
 7-8	you'd	_	_	_	_	_	_	_	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
 8	'd	would	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	like	like	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:if	SpaceAfter=No
+9	like	like	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:if	CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent07_01-0089
@@ -2064,10 +2064,10 @@
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 3	discuss	discuss	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	this	this	PRON	DT	Number=Sing|PronType=Dem	3	obj	3:obj	_
-5	today	today	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
+5	today	today	NOUN	NN	Number=Sing	3	obl:unmarked	3:obl:unmarked	TemporalNPAdjunct=Yes
 6	or	or	CCONJ	CC	_	8	cc	8:cc	_
 7	soon	soon	ADV	RB	Degree=Pos	8	advmod	8:advmod	_
-8	thereafter	thereafter	ADV	RB	_	5	conj	3:obl:tmod|5:conj:or	SpaceAfter=No
+8	thereafter	thereafter	ADV	RB	_	5	conj	3:obl:unmarked|5:conj:or	SpaceAfter=No
 9	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent07_01-0092
@@ -2150,14 +2150,14 @@
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	best	good	ADJ	JJS	Degree=Sup	13	amod	13:amod	_
 13	ball	ball	NOUN	NN	Number=Sing	6	parataxis	6:parataxis	_
-14	not	not	PART	RB	_	15	advmod	15:advmod	_
+14	not	not	PART	RB	Polarity=Neg	15	advmod	15:advmod	_
 15	scramble	scramble	NOUN	NN	Number=Sing	13	conj	13:conj:not	_
 16	on	on	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 18	golf	golf	NOUN	NN	Number=Sing	15	nmod	15:nmod:on	SpaceAfter=No
 19	,	,	PUNCT	,	_	27	punct	27:punct	_
 20	and	and	CCONJ	CC	_	27	cc	27:cc	_
-21	as	as	ADP	IN	_	24	case	24:case	_
+21	as	as	ADP	IN	ExtPos=ADP	24	case	24:case	_
 22	for	for	ADP	IN	_	21	fixed	21:fixed	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 24	wager	wager	NOUN	NN	Number=Sing	27	nmod	27:nmod:as_for	SpaceAfter=No
@@ -2175,10 +2175,10 @@
 
 # sent_id = email-enronsent07_01-0097
 # text = Is there any question?
-1	Is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Direct|CxnElt=1:Interrogative-Polar-Direct.Clause
 2	there	there	PRON	EX	_	1	expl	1:expl	_
 3	any	any	DET	DT	PronType=Ind	4	det	4:det	_
-4	question	question	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	SpaceAfter=No
+4	question	question	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	CxnElt=1:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 5	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent07_01-0098
@@ -2221,7 +2221,7 @@
 21	switch	switch	VERB	VB	VerbForm=Inf	19	xcomp	19:xcomp	_
 22	around	around	ADP	RP	_	21	compound:prt	21:compound:prt	_
 23	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
-24	bit	bit	NOUN	NN	Number=Sing	21	obl:npmod	21:obl:npmod	SpaceAfter=No
+24	bit	bit	NOUN	NN	Number=Sing	21	obl:unmarked	21:obl:unmarked	SpaceAfter=No
 25	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = email-enronsent07_01-0100
@@ -2237,7 +2237,7 @@
 # text = Are you playing golf?
 1	Are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	playing	play	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+3	playing	play	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	golf	golf	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
 5	?	?	PUNCT	.	_	3	punct	3:punct	_
 
@@ -2245,10 +2245,10 @@
 # text = And if yes, what's the game and wager???
 1	And	and	CCONJ	CC	_	5	cc	5:cc	_
 2	if	if	SCONJ	IN	_	3	mark	3:mark	_
-3	yes	yes	INTJ	UH	_	5	advcl	5:advcl:if	SpaceAfter=No
+3	yes	yes	INTJ	UH	Polarity=Pos	5	advcl	5:advcl:if	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5-6	what's	_	_	_	_	_	_	_	_
-5	what	what	PRON	WP	PronType=Int	0	root	0:root	_
+5	what	what	PRON	WP	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=5:Interrogative-WHInfo-Direct.Clause,5:Interrogative-WHInfo-Direct.WHWord
 6	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	game	game	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_

@@ -5,7 +5,7 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	Worst	bad	ADJ	JJS	Degree=Sup	3	amod	3:amod	_
 3	Experience	experience	NOUN	NN	Number=Sing	0	root	0:root	_
-4	Ever	ever	ADV	RB	_	3	advmod	3:advmod	SpaceAfter=No
+4	Ever	ever	ADV	RB	PronType=Ind	3	advmod	3:advmod	SpaceAfter=No
 5	!!!	!!!	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-229410-0002
@@ -46,7 +46,7 @@
 10	who	who	PRON	WP	PronType=Rel	13	nsubj	8:ref	_
 11-12	didn't	_	_	_	_	_	_	_	_
 11	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
-12	n't	not	PART	RB	_	13	advmod	13:advmod	_
+12	n't	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
 13	have	have	VERB	VB	VerbForm=Inf	8	acl:relcl	8:acl:relcl	Cxn=rc-wh-nsubj
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	best	good	ADJ	JJS	Degree=Sup	16	amod	16:amod	_
@@ -120,7 +120,7 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	met	meet	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	couple	couple	NOUN	NN	Number=Sing	7	obl:npmod	7:obl:npmod	_
+4	couple	couple	NOUN	NN	Number=Sing	7	obl:unmarked	7:obl:unmarked	_
 5	of	of	ADP	IN	_	6	case	6:case	_
 6	weeks	week	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
 7	later	late	ADV	RBR	Degree=Cmp	2	advmod	2:advmod	SpaceAfter=No
@@ -170,10 +170,10 @@
 15	with	with	ADP	IN	_	14	obl	14:obl	Promoted=Yes|SpaceAfter=No
 16	,	,	PUNCT	,	_	3	punct	3:punct	_
 17	there	there	PRON	EX	_	18	expl	18:expl	_
-18	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+18	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 19	basically	basically	ADV	RB	_	18	advmod	18:advmod	_
 20	no	no	DET	DT	PronType=Neg	21	det	21:det	_
-21	design	design	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	SpaceAfter=No
+21	design	design	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	CxnElt=18:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 22	.	.	PUNCT	.	_	18	punct	18:punct	_
 
 # sent_id = reviews-229410-0009
@@ -189,7 +189,7 @@
 
 # sent_id = reviews-229410-0010
 # text = WHAT IS THAT?????
-1	WHAT	what	PRON	WP	PronType=Int	0	root	0:root	_
+1	WHAT	what	PRON	WP	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=1:Interrogative-WHInfo-Direct.Clause,1:Interrogative-WHInfo-Direct.WHWord
 2	IS	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
 3	THAT	that	PRON	DT	Number=Sing|PronType=Dem	1	nsubj	1:nsubj	SpaceAfter=No
 4	?????	?????	PUNCT	.	_	1	punct	1:punct	_
@@ -220,7 +220,7 @@
 6	and	and	CCONJ	CC	_	10	cc	10:cc	_
 7-8	don't	_	_	_	_	_	_	_	_
 7	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	10	aux	10:aux	_
-8	n't	not	PART	RB	_	10	advmod	10:advmod	_
+8	n't	not	PART	RB	Polarity=Neg	10	advmod	10:advmod	_
 9	get	get	AUX	VB	Mood=Imp|VerbForm=Fin	10	aux:pass	10:aux:pass	_
 10	caught	catch	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	conj	4:conj:and	_
 11	up	up	ADP	RP	_	10	compound:prt	10:compound:prt	_

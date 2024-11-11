@@ -18,7 +18,7 @@
 9	swap	swap	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	transaction	transaction	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
-12	now	now	ADV	RB	_	6	advmod	6:advmod	_
+12	now	now	ADV	RB	PronType=Dem	6	advmod	6:advmod	_
 13	that	that	SCONJ	IN	_	19	mark	19:mark	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	forex	forex	NOUN	NN	Number=Sing	16	compound	16:compound	_
@@ -135,9 +135,9 @@
 1	In	in	ADP	IN	_	2	case	2:case	_
 2	addition	addition	NOUN	NN	Number=Sing	4	obl	4:obl:in	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
-4	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Direct|CxnElt=4:Interrogative-Polar-Direct.Clause
 5	there	there	PRON	EX	_	4	expl	4:expl	_
-6	someone	someone	PRON	NN	Number=Sing|PronType=Ind	4	nsubj	4:nsubj|9:nsubj	_
+6	someone	someone	PRON	NN	Number=Sing|PronType=Ind	4	nsubj	4:nsubj|9:nsubj	CxnElt=4:Existential-CopPred-ThereExpl.Pivot
 7	who	who	PRON	WP	PronType=Rel	9	nsubj	6:ref	_
 8	could	could	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 9	consider	consider	VERB	VB	VerbForm=Inf	6	acl:relcl	6:acl:relcl	Cxn=rc-wh-nsubj
@@ -165,9 +165,9 @@
 6	assuming	assume	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 7	that	that	SCONJ	IN	_	9	mark	9:mark	_
 8	there	there	PRON	EX	_	9	expl	9:expl	_
-9	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	ccomp	6:ccomp	_
+9	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	ccomp	6:ccomp	Cxn=Existential-CopPred-ThereExpl
 10	no	no	DET	DT	PronType=Neg	11	det	11:det	_
-11	correlation	correlation	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
+11	correlation	correlation	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	CxnElt=9:Existential-CopPred-ThereExpl.Pivot
 12	and	and	CCONJ	CC	_	17	cc	17:cc	_
 13	may	may	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 14	consequently	consequently	ADV	RB	_	17	advmod	17:advmod	_
@@ -216,7 +216,7 @@
 6	Risk	risk	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	conference	conference	NOUN	NN	Number=Sing	2	obl	2:obl:at	_
 8	last	last	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	week	week	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	_
+9	week	week	NOUN	NN	Number=Sing	2	obl:unmarked	2:obl:unmarked	TemporalNPAdjunct=Yes
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	Houston	Houston	PROPN	NNP	Number=Sing	2	obl	2:obl:in	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -239,7 +239,7 @@
 4	if	if	SCONJ	IN	_	7	mark	7:mark	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
 6	could	could	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
-7	give	give	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+7	give	give	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=7:Interrogative-Polar-Indirect.Clause
 8	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	7	iobj	7:iobj	_
 9	some	some	DET	DT	PronType=Ind	10	det	10:det	_
 10	references	reference	NOUN	NNS	Number=Plur	7	obj	7:obj	_
@@ -281,7 +281,7 @@
 15	,	,	PUNCT	,	_	16	punct	16:punct	_
 16	Inc.	Inc.	PROPN	NNP	Number=Sing	12	flat	12:flat	_
 17	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
-18	202	202	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	SpaceAfter=No
+18	202	202	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	ExtPos=PROPN|FlatType=Phone|SpaceAfter=No
 19	)	)	PUNCT	-RRB-	_	18	punct	18:punct	_
 20	828-3933	828-3933	NUM	CD	NumForm=Digit|NumType=Card	18	flat	18:flat	_
 21	direct	direct	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
@@ -292,7 +292,7 @@
 26	,	,	PUNCT	,	_	25	punct	25:punct	_
 27	N.W.	N.W.	PROPN	NNP	Number=Sing	1	list	1:list	_
 28	(	(	PUNCT	-LRB-	_	29	punct	29:punct	SpaceAfter=No
-29	202	202	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	SpaceAfter=No
+29	202	202	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	ExtPos=PROPN|FlatType=Phone|SpaceAfter=No
 30	)	)	PUNCT	-RRB-	_	29	punct	29:punct	_
 31	296-3858	296-3858	NUM	CD	NumForm=Digit|NumType=Card	29	flat	29:flat	_
 32	facsimile	facsimile	NOUN	NN	Number=Sing	29	appos	29:appos	_

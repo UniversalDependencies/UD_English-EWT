@@ -20,7 +20,7 @@
 8	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 9	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 10	19	19	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
-11	years	year	NOUN	NNS	Number=Plur	12	obl:npmod	12:obl:npmod	_
+11	years	year	NOUN	NNS	Number=Plur	12	obl:unmarked	12:obl:unmarked	_
 12	old	old	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
@@ -86,9 +86,9 @@
 70	willing	willing	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	_
 71	to	to	PART	TO	_	72	mark	72:mark	_
 72	work	work	VERB	VB	VerbForm=Inf	70	xcomp	70:xcomp	_
-73	whenever	whenever	ADV	WRB	PronType=Int	75	advmod	75:advmod	_
+73	whenever	whenever	ADV	WRB	PronType=Rel	72	advmod	72:advmod|75:advmod	_
 74	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	75	nsubj	75:nsubj	_
-75	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	72	advcl	72:advcl	_
+75	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	73	advcl:relcl	73:advcl:relcl	Cxn=rc-free-advmod
 76	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	75	obj	75:obj	_
 77	but	but	CCONJ	CC	_	79	cc	79:cc	_
 78	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	79	nsubj	79:nsubj	_
@@ -107,7 +107,7 @@
 90	's	's	PART	POS	_	89	case	89:case	_
 91	appointment	appointment	NOUN	NN	Number=Sing	87	obj	87:obj	_
 92	this	this	DET	DT	Number=Sing|PronType=Dem	93	det	93:det	_
-93	thursday	Thursday	PROPN	NNP	Number=Sing	87	obl:tmod	87:obl:tmod	_
+93	thursday	Thursday	PROPN	NNP	Number=Sing	87	obl:unmarked	87:obl:unmarked	TemporalNPAdjunct=Yes
 94	at	at	ADP	IN	_	95	case	95:case	_
 95	2;30	2;30	NUM	CD	NumForm=Digit|NumType=Card	93	nmod	93:nmod:at	_
 96	and	and	CCONJ	CC	_	98	cc	98:cc	_
@@ -126,7 +126,7 @@
 109	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	112	nsubj	112:nsubj	_
 110-111	dont	_	_	_	_	_	_	_	_
 110	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	112	aux	112:aux	_
-111	nt	not	PART	RB	Typo=Yes	112	advmod	112:advmod	CorrectForm=n't
+111	nt	not	PART	RB	Polarity=Neg|Typo=Yes	112	advmod	112:advmod	CorrectForm=n't
 112	care	care	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 113	about	about	SCONJ	IN	_	118	mark	118:mark	_
 114	how	how	ADV	WRB	PronType=Int	115	advmod	115:advmod	_
@@ -143,7 +143,7 @@
 124	for	for	ADP	IN	_	126	case	126:case	_
 125	a	a	DET	DT	Definite=Ind|PronType=Art	126	det	126:det	_
 126	job	job	NOUN	NN	Number=Sing	123	obl	123:obl:for	_
-127	ever	ever	ADV	RB	_	131	advmod	131:advmod	_
+127	ever	ever	ADV	RB	PronType=Ind	131	advmod	131:advmod	_
 128	since	since	SCONJ	IN	_	131	mark	131:mark	_
 129	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	131	nsubj	131:nsubj	_
 130	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	131	aux	131:aux	_
@@ -180,7 +180,7 @@
 2-3	one's	_	_	_	_	_	_	_	_
 2	one	one	PRON	NN	Number=Sing|PronType=Neg	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 3	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion,Conditional-UnspecifiedEpistemic-NoInversion#2|CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis,4:Conditional-UnspecifiedEpistemic-NoInversion#2.Apodosis
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	hire	hire	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	obj	6:obj	_
@@ -188,9 +188,9 @@
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
 10-11	can't	_	_	_	_	_	_	_	_
 10	ca	can	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
-11	n't	not	PART	RB	_	13	advmod	13:advmod	_
+11	n't	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
 12	even	even	ADV	RB	_	13	advmod	13:advmod	_
-13	spell	spell	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:if	SpaceAfter=No
+13	spell	spell	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:if	CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 14	,	,	PUNCT	,	_	22	punct	22:punct	_
 15	especially	especially	ADV	RB	_	22	advmod	22:advmod	_
 16	if	if	SCONJ	IN	_	22	mark	22:mark	_
@@ -200,7 +200,7 @@
 19	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
 20	high	high	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 21	school	school	NOUN	NN	Number=Sing	22	compound	22:compound	_
-22	graduate	graduate	NOUN	NN	Number=Sing	4	advcl	4:advcl:if	SpaceAfter=No
+22	graduate	graduate	NOUN	NN	Number=Sing	4	advcl	4:advcl:if	CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion#2.Protasis|SpaceAfter=No
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108104228AA6z9uZ_ans-0006
@@ -221,7 +221,7 @@
 2-3	one's	_	_	_	_	_	_	_	_
 2	one	one	PRON	NN	Number=Sing|PronType=Neg	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 3	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	take	take	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	obj	6:obj	_
@@ -230,7 +230,7 @@
 10-11	they're	_	_	_	_	_	_	_	_
 10	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 11	're	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
-12	full	full	ADJ	JJ	Degree=Pos	4	advcl	4:advcl:if	_
+12	full	full	ADJ	JJ	Degree=Pos	4	advcl	4:advcl:if	CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 13	of	of	ADP	IN	_	14	case	14:case	_
 14	typos	typo	NOUN	NNS	Number=Plur	12	obl	12:obl:of	_
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_

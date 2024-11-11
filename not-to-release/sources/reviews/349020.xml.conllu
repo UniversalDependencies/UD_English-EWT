@@ -7,7 +7,7 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 4	2	2	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	SpaceAfter=No
 5	-	-	PUNCT	HYPH	_	4	punct	4:punct	SpaceAfter=No
-6	year	year	NOUN	NN	Number=Sing	7	obl:npmod	7:obl:npmod	_
+6	year	year	NOUN	NN	Number=Sing	7	obl:unmarked	7:obl:unmarked	_
 7	old	old	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 8	certified	certified	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 9	pre-owned	pre-owned	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
@@ -20,7 +20,7 @@
 # sent_id = reviews-349020-0002
 # text = The night I drove back home, I found that the rear window has some leakage.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	night	night	NOUN	NN	Number=Sing	9	obl:tmod	4:obl|9:obl:tmod	_
+2	night	night	NOUN	NN	Number=Sing	9	obl:unmarked	4:obl|9:obl:unmarked	TemporalNPAdjunct=Yes
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 4	drove	drive	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	acl:relcl	2:acl:relcl	Cxn=rc-red-obl
 5	back	back	ADV	RB	_	6	advmod	6:advmod	_
@@ -110,7 +110,7 @@
 6	back	back	ADV	RB	_	3	advmod	3:advmod	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	second	second	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	9	amod	9:amod	_
-9	day	day	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	SpaceAfter=No
+9	day	day	NOUN	NN	Number=Sing	3	obl:unmarked	3:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-349020-0008
@@ -121,7 +121,7 @@
 4	that	that	SCONJ	IN	_	9	mark	9:mark	_
 5	this	this	PRON	DT	Number=Sing|PronType=Dem	9	nsubj	9:nsubj|11:nsubj|13:nsubj:xsubj	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
-7	not	not	PART	RB	_	9	advmod	9:advmod	_
+7	not	not	PART	RB	Polarity=Neg	9	advmod	9:advmod	_
 8	under	under	ADP	IN	_	9	case	9:case	_
 9	warranty	warranty	NOUN	NN	Number=Sing	2	ccomp	2:ccomp	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
@@ -140,8 +140,8 @@
 
 # sent_id = reviews-349020-0009
 # text = Who knows how much they want me to pay to fix this thing.
-1	Who	who	PRON	WP	PronType=Int	2	nsubj	2:nsubj	_
-2	knows	know	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Who	who	PRON	WP	PronType=Int	2	nsubj	2:nsubj	CxnElt=2:Interrogative-WHInfo-Direct.WHWord
+2	knows	know	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=2:Interrogative-WHInfo-Direct.Clause
 3	how	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
 4	much	much	ADJ	JJ	Degree=Pos	9	obj	9:obj	_
 5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
@@ -169,7 +169,7 @@
 3	advice	advice	NOUN	NN	Number=Sing	7	nsubj:outer	7:nsubj:outer	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 5	that	that	SCONJ	IN	_	7	mark	7:mark	_
-6	NEVER	never	ADV	RB	_	7	advmod	7:advmod	_
+6	NEVER	never	ADV	RB	PronType=Neg	7	advmod	7:advmod	_
 7	TRUST	trust	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 8	THIS	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
 9	DEALER	dealer	NOUN	NN	Number=Sing	7	iobj	7:iobj	SpaceAfter=No

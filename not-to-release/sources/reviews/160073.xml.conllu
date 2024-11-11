@@ -22,7 +22,7 @@
 7	San	San	PROPN	NNP	Number=Sing	5	obl	5:obl:to	_
 8	Antonio	Antonio	PROPN	NNP	Number=Sing	7	flat	7:flat	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	year	year	NOUN	NN	Number=Sing	11	obl:npmod	11:obl:npmod	_
+10	year	year	NOUN	NN	Number=Sing	11	obl:unmarked	11:obl:unmarked	_
 11	ago	ago	ADV	RB	_	5	advmod	5:advmod	_
 12	and	and	CCONJ	CC	_	14	cc	14:cc	_
 13	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
@@ -62,7 +62,7 @@
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 3-4	don't	_	_	_	_	_	_	_	_
 3	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
-4	n't	not	PART	RB	_	6	advmod	6:advmod	_
+4	n't	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 5	just	just	ADV	RB	_	6	advmod	6:advmod	_
 6	like	like	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	House	house	NOUN	NN	Number=Sing	6	obj	6:obj	_
@@ -119,7 +119,7 @@
 # text = We just happen to stumble across this little restaurant one day when we had to visit the Bexar County Tax Office off of Bandera Road.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	just	just	ADV	RB	_	3	advmod	3:advmod	_
-3	happen	happen	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	happen	happen	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	stumble	stumble	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	across	across	ADP	IN	_	9	case	9:case	_
@@ -127,7 +127,7 @@
 8	little	little	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	restaurant	restaurant	NOUN	NN	Number=Sing	5	obl	5:obl:across	_
 10	one	one	NUM	CD	NumForm=Word|NumType=Card	11	nummod	11:nummod	_
-11	day	day	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	_
+11	day	day	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	TemporalNPAdjunct=Yes
 12	when	when	ADV	WRB	PronType=Int	14	advmod	14:advmod	_
 13	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	14	nsubj	14:nsubj|16:nsubj:xsubj	_
 14	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	5	advcl	5:advcl:when	_
@@ -157,7 +157,7 @@
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10-11	cannot	_	_	_	_	_	_	_	_
 10	can	can	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
-11	not	not	PART	RB	_	12	advmod	12:advmod	_
+11	not	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
 12	stop	stop	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
 13	going	go	VERB	VBG	VerbForm=Ger	12	xcomp	12:xcomp	_
 14	back	back	ADV	RB	_	13	advmod	13:advmod	SpaceAfter=No
@@ -174,7 +174,7 @@
 7	Soup	Soup	PROPN	NNP	Number=Sing	2	obj	2:obj|11:obj	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 9	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
-10	ever	ever	ADV	RB	_	11	advmod	11:advmod	_
+10	ever	ever	ADV	RB	PronType=Ind	11	advmod	11:advmod	_
 11	tasted	taste	VERB	VBN	Tense=Past|VerbForm=Part	7	acl:relcl	7:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -207,7 +207,7 @@
 # text = Everything is always cooked fresh and tastes fresh.
 1	Everything	everything	PRON	NN	Number=Sing|PronType=Tot	4	nsubj:pass	4:nsubj:pass|7:nsubj:pass|8:nsubj:xsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
-3	always	always	ADV	RB	_	4	advmod	4:advmod	_
+3	always	always	ADV	RB	PronType=Tot	4	advmod	4:advmod	_
 4	cooked	cook	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	fresh	fresh	ADV	RB	_	4	advmod	4:advmod	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
@@ -265,7 +265,7 @@
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj|8:nsubj:xsubj	_
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	sit	sit	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
@@ -310,7 +310,7 @@
 28	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	31	nsubj	31:nsubj	_
 29-30	won't	_	_	_	_	_	_	_	_
 29	wo	will	AUX	MD	VerbForm=Fin	31	aux	31:aux	_
-30	n't	not	PART	RB	_	31	advmod	31:advmod	_
+30	n't	not	PART	RB	Polarity=Neg	31	advmod	31:advmod	_
 31	regret	regret	VERB	VB	VerbForm=Inf	16	parataxis	16:parataxis	_
 32	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	31	obj	31:obj	SpaceAfter=No
 33	!!	!!	PUNCT	.	_	16	punct	16:punct	_
@@ -370,7 +370,7 @@
 33	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	36	nsubj	36:nsubj	_
 34-35	don't	_	_	_	_	_	_	_	_
 34	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	36	aux	36:aux	_
-35	n't	not	PART	RB	_	36	advmod	36:advmod	_
+35	n't	not	PART	RB	Polarity=Neg	36	advmod	36:advmod	_
 36	know	know	VERB	VB	VerbForm=Inf	30	ccomp	30:ccomp	_
 37	these	this	DET	DT	Number=Plur|PronType=Dem	38	det	38:det	_
 38	people	people	NOUN	NNS	Number=Plur	36	obj	36:obj	_
@@ -393,7 +393,7 @@
 7	moved	move	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	_
 8	here	here	ADV	RB	PronType=Dem	7	advmod	7:advmod	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	year	year	NOUN	NN	Number=Sing	11	obl:npmod	11:obl:npmod	_
+10	year	year	NOUN	NN	Number=Sing	11	obl:unmarked	11:obl:unmarked	_
 11	ago	ago	ADV	RB	_	7	advmod	7:advmod	SpaceAfter=No
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -425,7 +425,7 @@
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 3-4	don't	_	_	_	_	_	_	_	_
 3	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	n't	not	PART	RB	_	5	advmod	5:advmod	_
+4	n't	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	5	obj	5:obj	_
 7	except	except	ADP	IN	_	9	mark	9:mark	_

@@ -11,7 +11,7 @@
 1	Run	run	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	walk	walk	VERB	VB	Mood=Imp|VerbForm=Fin	1	parataxis	1:parataxis	SpaceAfter=No
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -37,7 +37,7 @@
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 3	could	could	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-4	give	give	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:if	_
+4	give	give	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 5	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	4	iobj	4:iobj	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	lower	low	ADJ	JJR	Degree=Cmp	8	amod	8:amod	_
@@ -45,7 +45,7 @@
 9	than	than	ADP	IN	_	10	case	10:case	_
 10	poor	poor	NOUN	NN	Number=Sing	8	nmod	8:nmod:than	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-12	would	would	AUX	MD	VerbForm=Fin	0	root	0:root	SpaceAfter=No
+12	would	would	AUX	MD	VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 13	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = reviews-026883-0005
@@ -105,7 +105,7 @@
 12	and	and	CCONJ	CC	_	19	cc	19:cc	_
 13	some	some	DET	DT	PronType=Ind	15	det	15:det	_
 14	future	future	NOUN	NN	Number=Sing	15	compound	15:compound	_
-15	date	date	NOUN	NN	Number=Sing	19	obl:tmod	19:obl:tmod	_
+15	date	date	NOUN	NN	Number=Sing	19	obl:unmarked	19:obl:unmarked	TemporalNPAdjunct=Yes
 16	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	19	nsubj:pass	19:nsubj:pass	_
 17	would	would	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 18	be	be	AUX	VB	VerbForm=Inf	19	aux:pass	19:aux:pass	_
@@ -211,10 +211,10 @@
 
 # sent_id = reviews-026883-0011
 # text = How do you lose a drawer.
-1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
+1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	lose	lose	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	lose	lose	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	drawer	drawer	NOUN	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No
 7	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -297,7 +297,7 @@
 7	Service	Service	PROPN	NNP	Number=Sing	3	nmod	3:nmod:at	_
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	9:cop	_
 9	terrible	terrible	ADJ	JJ	Degree=Pos	0	root	0:root	_
-10	let	let	VERB	VB	VerbForm=Inf	13	cc	13:cc	_
+10	let	let	VERB	VB	ExtPos=CCONJ|VerbForm=Inf	13	cc	13:cc	_
 11	alone	alone	ADJ	JJ	Degree=Pos	10	fixed	10:fixed	_
 12	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	promise	promise	NOUN	NN	Number=Sing	9	conj	9:conj:let_alone	_

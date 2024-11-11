@@ -2,10 +2,10 @@
 # sent_id = answers-20111108105749AABv7vx_ans-0001
 # newpar id = answers-20111108105749AABv7vx_ans-p0001
 # text = How do you make your cat adjust to a new house?
-1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
+1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	make	make	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	make	make	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	cat	cat	NOUN	NN	Number=Sing	4	obj	4:obj|7:nsubj:xsubj	_
 7	adjust	adjust	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
@@ -42,7 +42,7 @@
 3	currently	currently	ADV	RB	_	4	advmod	4:advmod	_
 4	living	live	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-6	mile	mile	NOUN	NN	Number=Sing	4	obl:npmod	4:obl:npmod	_
+6	mile	mile	NOUN	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	_
 7	from	from	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	town	town	NOUN	NN	Number=Sing	6	nmod	6:nmod:from	_
@@ -76,7 +76,7 @@
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10-11	dont	_	_	_	_	_	_	_	_
 10	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-11	nt	not	PART	RB	Typo=Yes	12	advmod	12:advmod	CorrectForm=n't
+11	nt	not	PART	RB	Polarity=Neg|Typo=Yes	12	advmod	12:advmod	CorrectForm=n't
 12	want	want	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	leave	leave	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
@@ -85,10 +85,10 @@
 
 # sent_id = answers-20111108105749AABv7vx_ans-0005
 # text = How could we make it settle in a new house.
-1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
+1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	could	could	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-4	make	make	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	make	make	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj|6:nsubj:xsubj	_
 6	settle	settle	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	in	in	ADP	IN	_	10	case	10:case	_
@@ -102,7 +102,7 @@
 # text = you are not just moving house - your cat is losing his territory.
 1	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-3	not	not	PART	RB	_	5	advmod	5:advmod	_
+3	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 4	just	just	ADV	RB	_	5	advmod	5:advmod	_
 5	moving	move	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 6	house	house	NOUN	NN	Number=Sing	5	obj	5:obj	_
@@ -271,7 +271,7 @@
 29	will	will	AUX	MD	VerbForm=Fin	30	aux	30:aux	_
 30	work	work	VERB	VB	VerbForm=Inf	7	conj	7:conj:but	_
 31	just	just	ADV	RB	_	32	advmod	32:advmod	_
-32	as	as	ADV	RB	_	30	advmod	30:advmod	_
+32	as	as	ADV	RB	ExtPos=ADV	30	advmod	30:advmod	_
 33	well	well	ADV	RB	Degree=Pos	32	fixed	32:fixed	SpaceAfter=No
 34	.	.	PUNCT	.	_	7	punct	7:punct	_
 
@@ -459,7 +459,7 @@
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 6	out	out	ADV	RB	_	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obl
 7	each	each	DET	DT	PronType=Tot	8	det	8:det	_
-8	day	day	NOUN	NN	Number=Sing	1	obl:tmod	1:obl:tmod	SpaceAfter=No
+8	day	day	NOUN	NN	Number=Sing	1	obl:unmarked	1:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 9	,	,	PUNCT	,	_	17	punct	17:punct	_
 10	but	but	CCONJ	CC	_	17	cc	17:cc	_
 11	for	for	ADP	IN	_	14	case	14:case	_
@@ -467,7 +467,7 @@
 13	first	first	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	14	amod	14:amod	_
 14	month	month	NOUN	NN	Number=Sing	17	obl	17:obl:for	SpaceAfter=No
 15	,	,	PUNCT	,	_	14	punct	14:punct	_
-16	always	always	ADV	RB	_	17	advmod	17:advmod	_
+16	always	always	ADV	RB	PronType=Tot	17	advmod	17:advmod	_
 17	put	put	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:but	_
 18	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	obj	17:obj	_
 19	in	in	ADP	IN	_	21	case	21:case	_
@@ -524,8 +524,8 @@
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
 14	tell	tell	VERB	VB	VerbForm=Inf	3	conj	1:xcomp|3:conj:and	_
 15	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	14	iobj	14:iobj	_
-16	how	how	ADV	WRB	PronType=Int	17	advmod	17:advmod	_
-17	good	good	ADJ	JJ	Degree=Pos	14	ccomp	14:ccomp	_
+16	how	how	ADV	WRB	PronType=Int	17	advmod	17:advmod	CxnElt=17:Interrogative-WHInfo-Indirect.WHWord
+17	good	good	ADJ	JJ	Degree=Pos	14	ccomp	14:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=17:Interrogative-WHInfo-Indirect.Clause
 18	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 19	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	SpaceAfter=No
 20	.	.	PUNCT	.	_	1	punct	1:punct	_

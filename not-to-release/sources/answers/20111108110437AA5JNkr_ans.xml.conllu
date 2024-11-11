@@ -2,12 +2,12 @@
 # sent_id = answers-20111108110437AA5JNkr_ans-0001
 # newpar id = answers-20111108110437AA5JNkr_ans-p0001
 # text = what is a kimberwick bit used for?
-1	what	what	PRON	WP	PronType=Int	6	obl	6:obl:for	_
+1	what	what	PRON	WP	PronType=Int	6	obl	6:obl:for	CxnElt=6:Interrogative-WHInfo-Direct.WHWord
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux:pass	6:aux:pass	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 4	kimberwick	kimberwick	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	bit	bit	NOUN	NN	Number=Sing	6	nsubj:pass	6:nsubj:pass	_
-6	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+6	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=6:Interrogative-WHInfo-Direct.Clause
 7	for	for	ADP	IN	_	1	case	1:case	SpaceAfter=No
 8	?	?	PUNCT	.	_	6	punct	6:punct	_
 
@@ -69,7 +69,7 @@
 # text = It is not as precise as a pelham bit because it only uses one rein, though the modern ones have two or three slots on which to put the reins.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-3	not	not	PART	RB	_	5	advmod	5:advmod	_
+3	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 4	as	as	ADV	RB	_	5	advmod	5:advmod	_
 5	precise	precise	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	as	as	ADP	IN	_	9	case	9:case	_
@@ -134,7 +134,7 @@
 4	kids	kid	NOUN	NNS	Number=Plur	1	obl	1:obl:for|8:nsubj	_
 5	who	who	PRON	WP	PronType=Rel	8	nsubj	4:ref	_
 6	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
-7	not	not	PART	RB	_	8	advmod	8:advmod	_
+7	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 8	have	have	VERB	VB	VerbForm=Inf	4	acl:relcl	4:acl:relcl	Cxn=rc-wh-nsubj
 9	big	big	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 10	enough	enough	ADV	RB	_	9	advmod	9:advmod	_
@@ -186,7 +186,7 @@
 6	that	that	PRON	WDT	PronType=Rel	7	nsubj	5:ref	_
 7	need	need	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-nsubj
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
-9	little	little	ADJ	JJ	Degree=Pos	10	obl:npmod	10:obl:npmod	_
+9	little	little	ADJ	JJ	Degree=Pos	10	obl:unmarked	10:obl:unmarked	_
 10	more	more	ADJ	JJR	Degree=Cmp	7	obj	7:obj	_
 11	than	than	ADP	IN	_	13	case	13:case	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
@@ -219,13 +219,13 @@
 5	have	have	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	independent	independent	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	hands	hand	NOUN	NNS	Number=Plur	5	obj	5:obj	_
-8	as	as	ADV	RB	_	5	advmod	5:advmod	_
+8	as	as	ADV	RB	ExtPos=ADV	5	advmod	5:advmod	_
 9	well	well	ADV	RB	Degree=Pos	8	fixed	8:fixed	SpaceAfter=No
 10	,	,	PUNCT	,	_	15	punct	15:punct	_
 11	because	because	SCONJ	IN	_	15	mark	15:mark	_
 12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj|17:nsubj:xsubj	_
 13	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
-14	NOT	not	PART	RB	_	15	advmod	15:advmod	_
+14	NOT	not	PART	RB	Polarity=Neg	15	advmod	15:advmod	_
 15	want	want	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:because	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
 17	pull	pull	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_

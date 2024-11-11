@@ -10,7 +10,7 @@
 # sent_id = reviews-093655-0002
 # newpar id = reviews-093655-p0002
 # text = not only is this place too expensive for what it is, its horrible!
-1	not	not	PART	RB	_	7	advmod	7:advmod	_
+1	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 2	only	only	ADV	RB	_	7	advmod	7:advmod	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
@@ -40,17 +40,17 @@
 8	steak	steak	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	there	there	PRON	EX	_	11	expl	11:expl	_
-11	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	6:conj:and	_
+11	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	6:conj:and	Cxn=Existential-CopPred-ThereExpl
 12	more	more	ADJ	JJR	Degree=Cmp	13	amod	13:amod	_
-13	fat	fat	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
+13	fat	fat	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	CxnElt=11:Existential-CopPred-ThereExpl.Pivot
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
 15	rough	rough	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	pieces	piece	NOUN	NNS	Number=Plur	13	conj	11:nsubj|13:conj:and	_
 17	than	than	SCONJ	IN	_	19	mark	19:mark	_
 18	there	there	PRON	EX	_	19	expl	19:expl	_
-19	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	advcl	12:advcl:than	_
+19	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	advcl	12:advcl:than	Cxn=Existential-CopPred-ThereExpl
 20	good	good	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
-21	steak	steak	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
+21	steak	steak	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	CxnElt=19:Existential-CopPred-ThereExpl.Pivot
 22	(	(	PUNCT	-LRB-	_	27	punct	27:punct	SpaceAfter=No
 23	and	and	CCONJ	CC	_	27	cc	27:cc	_
 24	this	this	PRON	DT	Number=Sing|PronType=Dem	27	nsubj	27:nsubj	_
@@ -71,7 +71,7 @@
 39	salad	salad	NOUN	NN	Number=Sing	46	nsubj	46:nsubj	_
 40	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	46	cop	46:cop	_
 41	a	a	DET	DT	Definite=Ind|PronType=Art	42	det	42:det	_
-42	little	little	ADJ	JJ	Degree=Pos	46	obl:npmod	46:obl:npmod	_
+42	little	little	ADJ	JJ	Degree=Pos	46	obl:unmarked	46:obl:unmarked	_
 43	on	on	ADP	IN	_	46	case	46:case	_
 44	the	the	DET	DT	Definite=Def|PronType=Art	46	det	46:det	_
 45	brown	brown	ADJ	JJ	Degree=Pos	46	amod	46:amod	_
@@ -80,7 +80,7 @@
 
 # sent_id = reviews-093655-0004
 # text = Today we went for a party (during lunch, so the place was empty) with about 25 other people.
-1	Today	today	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
+1	Today	today	NOUN	NN	Number=Sing	3	obl:unmarked	3:obl:unmarked	TemporalNPAdjunct=Yes
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 3	went	go	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	for	for	ADP	IN	_	6	case	6:case	_
@@ -133,7 +133,7 @@
 1	Does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
 3	seriously	seriously	ADV	RB	_	4	advmod	4:advmod	_
-4	take	take	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	take	take	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=4:Interrogative-Polar-Direct.Clause
 5	that	that	ADV	RB	_	6	advmod	6:advmod	_
 6	long	long	ADV	RB	Degree=Pos	4	advmod	4:advmod	_
 7	for	for	ADP	IN	_	9	case	9:case	_
@@ -180,7 +180,7 @@
 # text = I would NOT recommend having a party here or even going here.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|5:nsubj:xsubj|11:nsubj:xsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	NOT	not	PART	RB	_	4	advmod	4:advmod	_
+3	NOT	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	having	have	VERB	VBG	VerbForm=Ger	4	xcomp	4:xcomp	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_

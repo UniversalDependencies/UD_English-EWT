@@ -48,8 +48,8 @@
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
 11	"	"	PUNCT	``	_	13	punct	13:punct	SpaceAfter=No
 12	There	there	PRON	EX	_	13	expl	13:expl	_
-13	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	conj	5:ccomp|9:conj:and	_
-14	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	13	nsubj	13:nsubj	_
+13	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	conj	5:ccomp|9:conj:and	Cxn=Existential-CopPred-ThereExpl
+14	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	13	nsubj	13:nsubj	CxnElt=13:Existential-CopPred-ThereExpl.Pivot
 15	mechanicly	mechanically	ADV	RB	Typo=Yes	16	advmod	16:advmod	CorrectForm=mechanically
 16	wrong	wrong	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 17	with	with	ADP	IN	_	19	case	19:case	_
@@ -79,7 +79,7 @@
 # text = Anyway they jimmy rigged it so i could drive it home.
 1	Anyway	anyway	INTJ	UH	_	4	discourse	4:discourse	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
-3	jimmy	jimmy	NOUN	NN	Number=Sing	4	obl:npmod	4:obl:npmod	_
+3	jimmy	jimmy	NOUN	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	_
 4	rigged	rig	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj	_
 6	so	so	SCONJ	IN	_	9	mark	9:mark	_
@@ -94,7 +94,7 @@
 # text = The next day i took it to 2 auto shops and they both told me the same thing,engine is junk.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	next	next	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	day	day	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	_
+3	day	day	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	TemporalNPAdjunct=Yes
 4	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 5	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj	_
@@ -181,12 +181,12 @@
 # text = If it lasted 1 month i could suck it up but 1 day?
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	lasted	last	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	advcl	8:advcl:if	_
+3	lasted	last	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	advcl	8:advcl:if	CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	1	1	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
-5	month	month	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
+5	month	month	NOUN	NN	Number=Sing	3	obl:unmarked	3:obl:unmarked	TemporalNPAdjunct=Yes
 6	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj|13:nsubj	_
 7	could	could	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	suck	suck	VERB	VB	VerbForm=Inf	0	root	0:root	_
+8	suck	suck	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	expl	8:expl	_
 10	up	up	ADP	RP	_	8	compound:prt	8:compound:prt	_
 11	but	but	CCONJ	CC	_	13	cc	13:cc	_

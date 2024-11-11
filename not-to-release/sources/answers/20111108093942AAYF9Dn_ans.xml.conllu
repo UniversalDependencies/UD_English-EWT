@@ -2,10 +2,10 @@
 # sent_id = answers-20111108093942AAYF9Dn_ans-0001
 # newpar id = answers-20111108093942AAYF9Dn_ans-p0001
 # text = Is there any kind of public transport available between noida and greater noida?
-1	Is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Direct|CxnElt=1:Interrogative-Polar-Direct.Clause
 2	there	there	PRON	EX	_	1	expl	1:expl	_
 3	any	any	DET	DT	PronType=Ind	4	det	4:det	_
-4	kind	kind	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	_
+4	kind	kind	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	CxnElt=1:Existential-CopPred-ThereExpl.Pivot
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	public	public	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	transport	transport	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
@@ -39,9 +39,9 @@
 17	Noida	Noida	PROPN	NNP	Number=Sing	14	nmod	14:nmod:in	SpaceAfter=No
 18	,	,	PUNCT	,	_	19	punct	19:punct	_
 19	passing	pass	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl	_
-20	through	through	ADP	IN	_	22	case	22:case	_
-21	Pari	Pari	PROPN	NNP	Number=Sing	22	compound	22:compound	_
-22	Chowk	Chowk	PROPN	NNP	Number=Sing	19	obl	19:obl:through	SpaceAfter=No
+20	through	through	ADP	IN	_	21	case	21:case	_
+21	Pari	Pari	PROPN	NNP	Number=Sing	19	obl	19:obl:through	_
+22	Chowk	Chowk	PROPN	NNP	Number=Sing	21	flat	21:flat	SpaceAfter=No
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108093942AAYF9Dn_ans-0003
@@ -50,9 +50,9 @@
 2	from	from	ADP	IN	_	3	case	3:case	_
 3	these	this	PRON	DT	Number=Plur|PronType=Dem	1	obl	1:obl:from	_
 4	there	there	PRON	EX	_	5	expl	5:expl	_
-5	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+5	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 6	numerous	numerous	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	cabs	cab	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|9:nsubj	_
+7	cabs	cab	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|9:nsubj	CxnElt=5:Existential-CopPred-ThereExpl.Pivot
 8	that	that	PRON	WDT	PronType=Rel	9	nsubj	7:ref	_
 9	ferry	ferry	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	Cxn=rc-that-nsubj
 10	passengers	passenger	NOUN	NNS	Number=Plur	9	obj	9:obj	_
@@ -61,15 +61,15 @@
 13	-	-	PUNCT	HYPH	_	14	punct	14:punct	SpaceAfter=No
 14	37	37	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
 15	crossing	crossing	NOUN	NN	Number=Sing	9	obl	9:obl:between	_
-16	and	and	CCONJ	CC	_	18	cc	18:cc	_
-17	Pari	Pari	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-18	Chowk	Chowk	PROPN	NNP	Number=Sing	15	conj	9:obl:between|15:conj:and	SpaceAfter=No
+16	and	and	CCONJ	CC	_	17	cc	17:cc	_
+17	Pari	Pari	PROPN	NNP	Number=Sing	15	conj	9:obl:between|15:conj:and	_
+18	Chowk	Chowk	PROPN	NNP	Number=Sing	17	flat	17:flat	SpaceAfter=No
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108093942AAYF9Dn_ans-0004
 # newpar id = answers-20111108093942AAYF9Dn_ans-p0003
 # text = Yes bus service is available.
-1	Yes	yes	INTJ	UH	_	5	discourse	5:discourse	_
+1	Yes	yes	INTJ	UH	Polarity=Pos	5	discourse	5:discourse	_
 2	bus	bus	NOUN	NN	Number=Sing	3	compound	3:compound	_
 3	service	service	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
@@ -80,7 +80,7 @@
 # text = it is not frequent.
 1	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	frequent	frequent	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 5	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -92,7 +92,7 @@
 
 # sent_id = answers-20111108093942AAYF9Dn_ans-0007
 # text = Yes dear, You can find lots of public transport options between Noida to Greater Noida.
-1	Yes	yes	INTJ	UH	_	6	discourse	6:discourse	_
+1	Yes	yes	INTJ	UH	Polarity=Pos	6	discourse	6:discourse	_
 2	dear	dear	NOUN	NN	Number=Sing	6	vocative	6:vocative	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
@@ -113,9 +113,9 @@
 # sent_id = answers-20111108093942AAYF9Dn_ans-0008
 # text = There are UP Govt.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	UP	UP	PROPN	NNP	Number=Sing	4	compound	4:compound	_
-4	Govt	Govt	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	SpaceAfter=No
+4	Govt	Govt	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 5	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108093942AAYF9Dn_ans-0009

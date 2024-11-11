@@ -18,8 +18,8 @@
 
 # sent_id = email-enronsent09_01-0002
 # text = Who has the 2000 tax return file for 969?
-1	Who	who	PRON	WP	PronType=Int	2	nsubj	2:nsubj	_
-2	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Who	who	PRON	WP	PronType=Int	2	nsubj	2:nsubj	CxnElt=2:Interrogative-WHInfo-Direct.WHWord
+2	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=2:Interrogative-WHInfo-Direct.Clause
 3	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 4	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
 5	tax	tax	NOUN	NN	Number=Sing	6	compound	6:compound	_
@@ -44,7 +44,7 @@
 # text = 07/30/2001 05:17 PM
 1	07/30/2001	07/30/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	05:17	05:17	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent09_01-0006
 # text = <Embedded Picture (Device Independent Bitmap)>
@@ -52,7 +52,7 @@
 2	Embedded	embed	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	amod	3:amod	_
 3	Picture	picture	NOUN	NN	Number=Sing	0	root	0:root	_
 4	(	(	PUNCT	-LRB-	_	7	punct	7:punct	SpaceAfter=No
-5	Device	device	NOUN	NN	Number=Sing	6	obl:npmod	6:obl:npmod	_
+5	Device	device	NOUN	NN	Number=Sing	6	obl:unmarked	6:obl:unmarked	_
 6	Independent	independent	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	Bitmap	bitmap	NOUN	NN	Number=Sing	3	parataxis	3:parataxis	SpaceAfter=No
 8	)	)	PUNCT	-RRB-	_	7	punct	7:punct	SpaceAfter=No
@@ -72,7 +72,7 @@
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 10-11	don't	_	_	_	_	_	_	_	_
 10	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-11	n't	not	PART	RB	_	12	advmod	12:advmod	_
+11	n't	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
 12	know	know	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:since	_
 13	any	any	DET	DT	PronType=Ind	12	obj	12:obj	_
 14	of	of	ADP	IN	_	16	case	16:case	_
@@ -117,7 +117,7 @@
 7	Gray	Gray	ADJ	NNP	Degree=Pos	8	amod	8:amod	_
 8	St.	St.	PROPN	NNP	Number=Sing	5	list	5:list	_
 9	(	(	PUNCT	-LRB-	_	10	punct	10:punct	SpaceAfter=No
-10	713	713	NUM	CD	NumForm=Digit|NumType=Card	5	list	5:list	SpaceAfter=No
+10	713	713	NUM	CD	NumForm=Digit|NumType=Card	5	list	5:list	ExtPos=PROPN|FlatType=Phone|SpaceAfter=No
 11	)	)	PUNCT	-RRB-	_	10	punct	10:punct	_
 12	571-9571	571-9571	NUM	CD	NumForm=Digit|NumType=Card	10	flat	10:flat	_
 
@@ -140,7 +140,7 @@
 # text = This is NOT an Enron-sponsored event.
 1	This	this	PRON	DT	Number=Sing|PronType=Dem	8	nsubj	8:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
-3	NOT	not	PART	RB	_	8	advmod	8:advmod	_
+3	NOT	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 4	an	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 5	Enron	Enron	PROPN	NNP	Number=Sing	7	compound	7:compound	SpaceAfter=No
 6	-	-	PUNCT	HYPH	_	5	punct	5:punct	SpaceAfter=No
@@ -150,10 +150,10 @@
 
 # sent_id = email-enronsent09_01-0014
 # text = How do you feel about taking on another company?
-1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
+1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	about	about	SCONJ	IN	_	6	mark	6:mark	_
 6	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl:about	_
 7	on	on	ADP	RP	_	6	compound:prt	6:compound:prt	_
@@ -185,7 +185,7 @@
 # text = Do you concur?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	concur	concur	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+3	concur	concur	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause|SpaceAfter=No
 4	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent09_01-0017
@@ -195,7 +195,7 @@
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj|4:nsubj:xsubj	_
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	Monday	Monday	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	morning	morning	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	SpaceAfter=No
+6	morning	morning	NOUN	NN	Number=Sing	2	obl:unmarked	2:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent09_01-0018
@@ -214,9 +214,9 @@
 1	If	if	SCONJ	IN	_	6	mark	6:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
 3	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
-4	not	not	PART	RB	_	6	advmod	6:advmod	_
+4	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 5	already	already	ADV	RB	_	6	advmod	6:advmod	_
-6	made	make	VERB	VBN	Tense=Past|VerbForm=Part	15	advcl	15:advcl:if	_
+6	made	make	VERB	VBN	Tense=Past|VerbForm=Part	15	advcl	15:advcl:if	CxnElt=15:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 7	these	this	DET	DT	Number=Plur|PronType=Dem	8	det	8:det	_
 8	decisions	decision	NOUN	NNS	Number=Plur	6	obj	6:obj	SpaceAfter=No
 9	,	,	PUNCT	,	_	6	punct	6:punct	_
@@ -226,7 +226,7 @@
 12	guidance	guidance	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
 13	should	should	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
 14	be	be	AUX	VB	VerbForm=Inf	15	cop	15:cop	_
-15	helpful	helpful	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
+15	helpful	helpful	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=15:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 16	.	.	PUNCT	.	_	15	punct	15:punct	_
 
 # sent_id = email-enronsent09_01-0021
@@ -267,7 +267,7 @@
 # text = Can you recommend where these companies each fit within the new organization?
 1	Can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	where	where	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
 5	these	this	DET	DT	Number=Plur|PronType=Dem	6	det	6:det	_
 6	companies	company	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
@@ -282,12 +282,12 @@
 # sent_id = email-enronsent09_01-0026
 # text = If possible, can you also give an indication of the rank - 1 through 5?
 1	If	if	SCONJ	IN	_	2	mark	2:mark	_
-2	possible	possible	ADJ	JJ	Degree=Pos	7	advcl	7:advcl:if	SpaceAfter=No
+2	possible	possible	ADJ	JJ	Degree=Pos	7	advcl	7:advcl:if	CxnElt=7:Conditional-UnspecifiedEpistemic-Reduced.Protasis|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	can	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
 6	also	also	ADV	RB	_	7	advmod	7:advmod	_
-7	give	give	VERB	VB	VerbForm=Inf	0	root	0:root	_
+7	give	give	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-Reduced,Interrogative-Polar-Direct|CxnElt=7:Conditional-UnspecifiedEpistemic-Reduced.Apodosis,7:Interrogative-Polar-Direct.Clause
 8	an	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 9	indication	indication	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	of	of	ADP	IN	_	12	case	12:case	_
@@ -347,13 +347,13 @@
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	2:det	_
 2	entity	entity	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|8:nsubj|11:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
-4	not	not	PART	RB	_	6	advmod	6:advmod	_
+4	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 5	in	in	ADP	IN	_	6	case	6:case	_
 6	TIS	TIS	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
 8	SAP	SAP	PROPN	NNP	Number=Sing	6	conj	6:conj:nor	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
-10	nor	nor	CCONJ	CC	_	11	cc	11:cc	_
+10	nor	nor	CCONJ	CC	Polarity=Neg	11	cc	11:cc	_
 11	Hyperion	Hyperion	PROPN	NNP	Number=Sing	6	conj	6:conj:nor	SpaceAfter=No
 12	.	.	PUNCT	.	_	6	punct	6:punct	_
 
@@ -376,11 +376,11 @@
 # sent_id = email-enronsent09_01-0033
 # text = There is a corporate data sheet for this company, but this entity seems to have been inactive since it's creation.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 4	corporate	corporate	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 5	data	data	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	sheet	sheet	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+6	sheet	sheet	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 7	for	for	ADP	IN	_	9	case	9:case	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
 9	company	company	NOUN	NN	Number=Sing	6	nmod	6:nmod:for	SpaceAfter=No
@@ -467,7 +467,7 @@
 11	,	,	PUNCT	,	_	16	punct	16:punct	_
 12	and	and	CCONJ	CC	_	16	cc	16:cc	_
 13	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	16	aux	16:aux	_
-14	not	not	PART	RB	_	16	advmod	16:advmod	_
+14	not	not	PART	RB	Polarity=Neg	16	advmod	16:advmod	_
 15	get	get	AUX	VB	VerbForm=Inf	16	aux:pass	16:aux:pass	_
 16	assigned	assign	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	conj	7:conj:and	_
 17	during	during	ADP	IN	_	19	case	19:case	_
@@ -502,10 +502,10 @@
 11	WarpSpeed	WarpSpeed	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 12	Communications	Communication	PROPN	NNPS	Number=Plur	9	nmod	9:nmod:of	_
 13	(	(	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
-14	now	now	ADV	RB	_	20	advmod	20:advmod	_
-15	Enron	Enron	PROPN	NNP	Number=Sing	20	compound	20:compound	_
-16	WarpSpeed	WarpSpeed	PROPN	NNP	Number=Sing	20	compound	20:compound	_
-17	Services	Service	PROPN	NNPS	Number=Plur	20	compound	20:compound	SpaceAfter=No
+14	now	now	ADV	RB	PronType=Dem	19	advmod	19:advmod	_
+15	Enron	Enron	PROPN	NNP	Number=Sing	17	compound	17:compound	_
+16	WarpSpeed	WarpSpeed	PROPN	NNP	Number=Sing	17	compound	17:compound	_
+17	Services	Service	PROPN	NNPS	Number=Plur	19	compound	19:compound	SpaceAfter=No
 18	,	,	PUNCT	,	_	17	punct	17:punct	_
 19	Inc.	Inc.	PROPN	NNP	Number=Sing	12	appos	12:appos	_
 20	83N	83n	NOUN	NN	Number=Sing	19	appos	19:appos	SpaceAfter=No
@@ -612,7 +612,7 @@
 
 # sent_id = email-enronsent09_01-0047
 # text = Not currently on our list of companies.
-1	Not	not	PART	RB	_	2	advmod	2:advmod	_
+1	Not	not	PART	RB	Polarity=Neg	2	advmod	2:advmod	_
 2	currently	currently	ADV	RB	_	5	advmod	5:advmod	_
 3	on	on	ADP	IN	_	5	case	5:case	_
 4	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
@@ -670,7 +670,7 @@
 1	Set	set	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 2	up	up	ADP	RP	_	1	compound:prt	1:compound:prt	_
 3	last	last	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	month	month	NOUN	NN	Number=Sing	1	obl:tmod	1:obl:tmod	_
+4	month	month	NOUN	NN	Number=Sing	1	obl:unmarked	1:obl:unmarked	TemporalNPAdjunct=Yes
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	centralize	centralize	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
 7	merchant	merchant	NOUN	NN	Number=Sing	9	compound	9:compound	_
@@ -717,7 +717,7 @@
 25	assigned	assign	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	parataxis	8:parataxis	_
 26	to	to	ADP	IN	_	27	case	27:case	_
 27	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	25	obl	25:obl:to	_
-28	as	as	ADV	RB	_	25	advmod	25:advmod	_
+28	as	as	ADV	RB	ExtPos=ADV	25	advmod	25:advmod	_
 29	well	well	ADV	RB	Degree=Pos	28	fixed	28:fixed	SpaceAfter=No
 30	.	.	PUNCT	.	_	8	punct	8:punct	_
 
@@ -821,7 +821,7 @@
 1	Set	set	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 2	up	up	ADP	RP	_	1	compound:prt	1:compound:prt	_
 3	last	last	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	month	month	NOUN	NN	Number=Sing	1	obl:tmod	1:obl:tmod	_
+4	month	month	NOUN	NN	Number=Sing	1	obl:unmarked	1:obl:unmarked	TemporalNPAdjunct=Yes
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	centralize	centralize	VERB	VB	VerbForm=Inf	1	advcl	1:advcl:to	_
 7	merchant	merchant	NOUN	NN	Number=Sing	9	compound	9:compound	_
@@ -879,7 +879,7 @@
 3	know	know	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
 4	if	if	SCONJ	IN	_	6	mark	6:mark	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
-6	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
+6	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=6:Interrogative-Polar-Indirect.Clause
 7	any	any	DET	DT	PronType=Ind	8	det	8:det	_
 8	questions	question	NOUN	NNS	Number=Plur	6	obj	6:obj	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -896,7 +896,7 @@
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
 8	Services	service	NOUN	NNS	Number=Plur	6	conj	6:conj:and	_
 9	(	(	PUNCT	-LRB-	_	10	punct	10:punct	SpaceAfter=No
-10	713	713	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	SpaceAfter=No
+10	713	713	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	ExtPos=PROPN|FlatType=Phone|SpaceAfter=No
 11	)	)	PUNCT	-RRB-	_	10	punct	10:punct	_
 12	345-8702	345-8702	NUM	CD	NumForm=Digit|NumType=Card	10	flat	10:flat	_
 13	office	office	NOUN	NN	Number=Sing	2	list	2:list	_
@@ -933,10 +933,10 @@
 
 # sent_id = email-enronsent09_01-0070
 # text = How do you feel about taking on another company?
-1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
+1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	about	about	SCONJ	IN	_	6	mark	6:mark	_
 6	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl:about	_
 7	on	on	ADP	RP	_	6	compound:prt	6:compound:prt	_
@@ -968,7 +968,7 @@
 # text = Do you concur?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	concur	concur	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+3	concur	concur	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause|SpaceAfter=No
 4	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent09_01-0073
@@ -978,7 +978,7 @@
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj|4:nsubj:xsubj	_
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	Monday	Monday	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	morning	morning	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	SpaceAfter=No
+6	morning	morning	NOUN	NN	Number=Sing	2	obl:unmarked	2:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent09_01-0074
@@ -997,9 +997,9 @@
 1	If	if	SCONJ	IN	_	6	mark	6:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
 3	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
-4	not	not	PART	RB	_	6	advmod	6:advmod	_
+4	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 5	already	already	ADV	RB	_	6	advmod	6:advmod	_
-6	made	make	VERB	VBN	Tense=Past|VerbForm=Part	15	advcl	15:advcl:if	_
+6	made	make	VERB	VBN	Tense=Past|VerbForm=Part	15	advcl	15:advcl:if	CxnElt=15:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 7	these	this	DET	DT	Number=Plur|PronType=Dem	8	det	8:det	_
 8	decisions	decision	NOUN	NNS	Number=Plur	6	obj	6:obj	SpaceAfter=No
 9	,	,	PUNCT	,	_	6	punct	6:punct	_
@@ -1009,7 +1009,7 @@
 12	guidance	guidance	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
 13	should	should	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
 14	be	be	AUX	VB	VerbForm=Inf	15	cop	15:cop	_
-15	helpful	helpful	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
+15	helpful	helpful	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=15:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 16	.	.	PUNCT	.	_	15	punct	15:punct	_
 
 # sent_id = email-enronsent09_01-0077
@@ -1050,7 +1050,7 @@
 # text = Can you recommend where these companies each fit within the new organization?
 1	Can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	where	where	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
 5	these	this	DET	DT	Number=Plur|PronType=Dem	6	det	6:det	_
 6	companies	company	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
@@ -1065,12 +1065,12 @@
 # sent_id = email-enronsent09_01-0082
 # text = If possible, can you also give an indication of the rank - 1 through 5?
 1	If	if	SCONJ	IN	_	2	mark	2:mark	_
-2	possible	possible	ADJ	JJ	Degree=Pos	7	advcl	7:advcl:if	SpaceAfter=No
+2	possible	possible	ADJ	JJ	Degree=Pos	7	advcl	7:advcl:if	CxnElt=7:Conditional-UnspecifiedEpistemic-Reduced.Protasis|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	can	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
 6	also	also	ADV	RB	_	7	advmod	7:advmod	_
-7	give	give	VERB	VB	VerbForm=Inf	0	root	0:root	_
+7	give	give	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-Reduced,Interrogative-Polar-Direct|CxnElt=7:Conditional-UnspecifiedEpistemic-Reduced.Apodosis,7:Interrogative-Polar-Direct.Clause
 8	an	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 9	indication	indication	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	of	of	ADP	IN	_	12	case	12:case	_

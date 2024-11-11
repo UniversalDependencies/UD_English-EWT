@@ -2,9 +2,9 @@
 # sent_id = answers-20111107211645AA391wC_ans-0001
 # newpar id = answers-20111107211645AA391wC_ans-p0001
 # text = how many ounces in a pint in ireland?
-1	how	how	ADV	WRB	PronType=Int	2	advmod	2:advmod	_
+1	how	how	ADV	WRB	PronType=Int	2	advmod	2:advmod	CxnElt=3:Interrogative-WHInfo-Direct.WHWord
 2	many	many	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	ounces	ounce	NOUN	NNS	Number=Plur	0	root	0:root	_
+3	ounces	ounce	NOUN	NNS	Number=Plur	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=3:Interrogative-WHInfo-Direct.Clause
 4	in	in	ADP	IN	_	6	case	6:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	pint	pint	NOUN	NN	Number=Sing	3	nmod	3:nmod:in	_
@@ -35,13 +35,13 @@
 # text = If you mean fluid ounces, 20, as opposed to the 16 in America.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	mean	mean	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	_
+3	mean	mean	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	fluid	fluid	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	ounces	ounce	NOUN	NNS	Number=Plur	3	obj	3:obj	SpaceAfter=No
 6	,	,	PUNCT	,	_	3	punct	3:punct	_
-7	20	20	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	SpaceAfter=No
+7	20	20	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 8	,	,	PUNCT	,	_	13	punct	13:punct	_
-9	as	as	ADP	IN	_	13	case	13:case	_
+9	as	as	ADP	IN	ExtPos=ADP	13	case	13:case	_
 10	opposed	oppose	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	fixed	9:fixed	_
 11	to	to	ADP	IN	_	9	fixed	9:fixed	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
@@ -84,9 +84,9 @@
 5	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	advcl	8:advcl:as	SpaceAfter=No
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7	there	there	PRON	EX	_	8	expl	8:expl	_
-8	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+8	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 9	only	only	ADV	RB	_	10	advmod	10:advmod	_
-10	16	16	NUM	CD	NumForm=Digit|NumType=Card	8	nsubj	8:nsubj	_
+10	16	16	NUM	CD	NumForm=Digit|NumType=Card	8	nsubj	8:nsubj	CxnElt=8:Existential-CopPred-ThereExpl.Pivot
 11	in	in	ADP	IN	_	14	case	14:case	_
 12	an	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 13	American	American	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
@@ -95,7 +95,7 @@
 
 # sent_id = answers-20111107211645AA391wC_ans-0008
 # text = Know this well because I remember an 'irish' pub in the town in canada i grew up in used to advertise the cheapest pints of guinness in town, but they served them in american sized pints.
-1	Know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
+1	Know	know	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	1	obj	1:obj	_
 3	well	well	ADV	RB	Degree=Pos	1	advmod	1:advmod	_
 4	because	because	SCONJ	IN	_	6	mark	6:mark	_
@@ -142,7 +142,7 @@
 2	place	place	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|6:nsubj:xsubj	_
 3-4	didn't	_	_	_	_	_	_	_	_
 3	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
-4	n't	not	PART	RB	_	5	advmod	5:advmod	_
+4	n't	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	stay	stay	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	open	open	ADJ	JJ	Degree=Pos	5	xcomp	5:xcomp	_
 7	too	too	ADV	RB	_	8	advmod	8:advmod	_

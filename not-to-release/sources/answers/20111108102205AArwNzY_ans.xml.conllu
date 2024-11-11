@@ -45,11 +45,11 @@
 
 # sent_id = answers-20111108102205AArwNzY_ans-0003
 # text = Which airlines should I look into and when should I buy my ticket?
-1	Which	which	DET	WDT	PronType=Int	2	det	2:det	ManuallyChecked=PronType
+1	Which	which	DET	WDT	PronType=Int	2	det	2:det	CxnElt=5:Interrogative-WHInfo-Direct.WHWord|ManuallyChecked=PronType
 2	airlines	airline	NOUN	NNS	Number=Plur	5	obl	5:obl:into	_
 3	should	should	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
-5	look	look	VERB	VB	VerbForm=Inf	0	root	0:root	_
+5	look	look	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=5:Interrogative-WHInfo-Direct.Clause
 6	into	into	ADP	IN	_	2	case	2:case	_
 7	and	and	CCONJ	CC	_	11	cc	11:cc	_
 8	when	when	ADV	WRB	PronType=Int	11	advmod	11:advmod	_
@@ -87,9 +87,9 @@
 4	Expedia	Expedia	PROPN	NNP	Number=Sing	2	conj	1:obj|2:conj:or	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
 6	see	see	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
-7	what	what	PRON	WP	PronType=Int	9	obl	9:obl:with	_
+7	what	what	PRON	WP	PronType=Int	9	obl	9:obl:with	CxnElt=9:Interrogative-WHInfo-Indirect.WHWord
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
-9	come	come	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	ccomp	6:ccomp	_
+9	come	come	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	ccomp	6:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=9:Interrogative-WHInfo-Indirect.Clause
 10	up	up	ADV	RB	_	9	advmod	9:advmod	_
 11	with	with	ADP	IN	_	7	case	7:case	SpaceAfter=No
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -104,9 +104,9 @@
 6	Phils	Phils	PROPN	NNP	Number=Sing	3	obl	3:obl:to	_
 7	every	every	DET	DT	PronType=Tot	9	det	9:det	_
 8	6	6	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
-9	months	month	NOUN	NNS	Number=Plur	3	obl:tmod	3:obl:tmod	_
+9	months	month	NOUN	NNS	Number=Plur	3	obl:unmarked	3:obl:unmarked	TemporalNPAdjunct=Yes
 10	or	or	CCONJ	CC	_	11	cc	11:cc	_
-11	so	so	ADV	RB	_	9	conj	3:obl:npmod|9:conj:or	_
+11	so	so	ADV	RB	_	9	conj	3:obl:unmarked|9:conj:or	_
 12	and	and	CCONJ	CC	_	15	cc	15:cc	_
 13	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 14	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
@@ -181,7 +181,7 @@
 11	used	use	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 12	"	"	PUNCT	``	_	14	punct	14:punct	SpaceAfter=No
 13	Fly	Fly	PROPN	NNP	Number=Sing	14	compound	14:compound	_
-14	genesis	genesis	PROPN	NNP	Number=Sing	11	obj	11:obj	SpaceAfter=No
+14	genesis	Genesis	PROPN	NNP	Number=Sing	11	obj	11:obj	SpaceAfter=No
 15	"	"	PUNCT	''	_	14	punct	14:punct	_
 16	based	base	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	acl	14:acl	_
 17	in	in	ADP	IN	_	18	case	18:case	_

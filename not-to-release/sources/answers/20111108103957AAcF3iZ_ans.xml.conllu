@@ -16,7 +16,7 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 4	riding	riding	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	lesson	lesson	NOUN	NN	Number=Sing	2	obj	2:obj	_
-6	today	today	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	_
+6	today	today	NOUN	NN	Number=Sing	2	obl:unmarked	2:obl:unmarked	TemporalNPAdjunct=Yes
 7	on	on	ADP	IN	_	8	case	8:case	_
 8	one	one	NUM	CD	NumForm=Word|NumType=Card	2	obl	2:obl:on	_
 9	of	of	ADP	IN	_	14	case	14:case	_
@@ -32,8 +32,8 @@
 18	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	17	obj	17:obj|19:nsubj:xsubj	_
 19	realize	realize	VERB	VB	VerbForm=Inf	17	xcomp	17:xcomp	_
 20	just	just	ADV	RB	_	22	advmod	22:advmod	_
-21	how	how	ADV	WRB	PronType=Int	22	advmod	22:advmod	_
-22	unsteady	unsteady	ADJ	JJ	Degree=Pos	19	ccomp	19:ccomp	_
+21	how	how	ADV	WRB	PronType=Int	22	advmod	22:advmod	CxnElt=22:Interrogative-WHInfo-Indirect.WHWord
+22	unsteady	unsteady	ADJ	JJ	Degree=Pos	19	ccomp	19:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=22:Interrogative-WHInfo-Indirect.Clause
 23	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
 24	left	left	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
 25	leg	leg	NOUN	NN	Number=Sing	22	nsubj	22:nsubj	_
@@ -61,11 +61,11 @@
 # text = But there are just so many poses and programs!
 1	But	but	CCONJ	CC	_	3	cc	3:cc	_
 2	there	there	PRON	EX	_	3	expl	3:expl	_
-3	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 4	just	just	ADV	RB	_	7	advmod	7:advmod	_
 5	so	so	ADV	RB	_	6	advmod	6:advmod	_
 6	many	many	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	poses	pose	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
+7	poses	pose	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
 9	programs	program	NOUN	NNS	Number=Plur	7	conj	3:nsubj|7:conj:and	SpaceAfter=No
 10	!	!	PUNCT	.	_	3	punct	3:punct	_
@@ -127,7 +127,7 @@
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 3-4	don't	_	_	_	_	_	_	_	_
 3	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	n't	not	PART	RB	_	5	advmod	5:advmod	_
+4	n't	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	like	like	SCONJ	IN	_	7	mark	7:mark	_
 7	spending	spend	VERB	VBG	Tense=Pres|VerbForm=Part	5	advcl	5:advcl:like	_
@@ -207,7 +207,7 @@
 48	distribution	distribution	NOUN	NN	Number=Sing	45	conj	42:nmod:in|45:conj:and	_
 49	but	but	CCONJ	CC	_	54	cc	49.1:cc|54:cc	_
 49.1	helped	help	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	_	_	38:conj:but	CopyOf=38
-50	not	not	PART	RB	_	51	advmod	51:advmod	_
+50	not	not	PART	RB	Polarity=Neg	51	advmod	51:advmod	_
 51	really	really	ADV	RB	_	54	orphan	49.1:advmod	_
 52	for	for	ADP	IN	_	54	case	54:case	_
 53	the	the	DET	DT	Definite=Def|PronType=Art	54	det	54:det	_
@@ -227,7 +227,7 @@
 3	what	what	PRON	WP	PronType=Rel	1	nsubj	1:nsubj|5:obj	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 5	do	do	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-free-obj
-6	now	now	ADV	RB	_	5	advmod	5:advmod	_
+6	now	now	ADV	RB	PronType=Dem	5	advmod	5:advmod	_
 7	and	and	CCONJ	CC	_	10	cc	10:cc	_
 8	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
 9	really	really	ADV	RB	_	10	advmod	10:advmod	_
@@ -312,7 +312,7 @@
 22	so	so	SCONJ	IN	_	26	mark	26:mark	_
 23	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	26	nsubj	26:nsubj	_
 24	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	26	aux	26:aux	_
-25	not	not	PART	RB	_	26	advmod	26:advmod	_
+25	not	not	PART	RB	Polarity=Neg	26	advmod	26:advmod	_
 26	touching	touch	VERB	VBG	Tense=Pres|VerbForm=Part	14	advcl	14:advcl:so	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 28	saddle	saddle	NOUN	NN	Number=Sing	26	obj	26:obj	SpaceAfter=No
@@ -355,19 +355,19 @@
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
 7	down	down	ADV	RB	_	5	xcomp	5:xcomp	_
 8	2	2	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
-9	beats	beat	NOUN	NNS	Number=Plur	7	obl:npmod	7:obl:npmod	SpaceAfter=No
+9	beats	beat	NOUN	NNS	Number=Plur	7	obl:unmarked	7:obl:unmarked	SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
 11	up	up	ADV	RB	_	7	conj	5:xcomp|7:conj	_
-12	one	one	NUM	CD	NumForm=Word|NumType=Card	11	obl:npmod	11:obl:npmod	_
+12	one	one	NUM	CD	NumForm=Word|NumType=Card	11	obl:unmarked	11:obl:unmarked	_
 13	for	for	ADP	IN	_	15	case	15:case	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 15	wile	wile	NOUN	NN	Number=Sing	11	obl	11:obl:for	SpaceAfter=No
 16	,	,	PUNCT	,	_	11	punct	11:punct	_
 17	then	then	ADV	RB	PronType=Dem	18	advmod	18:advmod	_
 18	up	up	ADV	RB	_	7	parataxis	5:xcomp|7:parataxis	_
-19	2	2	NUM	CD	NumForm=Digit|NumType=Card	18	obl:npmod	18:obl:npmod	_
-20	down	down	ADV	RB	_	11	conj	11:conj	_
-21	1	1	NUM	CD	NumForm=Digit|NumType=Card	20	obl:npmod	20:obl:npmod	_
+19	2	2	NUM	CD	NumForm=Digit|NumType=Card	18	obl:unmarked	18:obl:unmarked	_
+20	down	down	ADV	RB	_	18	conj	18:conj	_
+21	1	1	NUM	CD	NumForm=Digit|NumType=Card	20	obl:unmarked	20:obl:unmarked	_
 22	making	make	VERB	VBG	Tense=Pres|VerbForm=Part	5	advcl	5:advcl	_
 23	sure	sure	ADJ	JJ	Degree=Pos	22	xcomp	22:xcomp	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
@@ -388,7 +388,7 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	weight	weight	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-5	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	16	advcl	16:advcl:if	_
+5	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	16	advcl	16:advcl:if	CxnElt=16:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 6	into	into	ADP	IN	_	8	case	8:case	_
 7	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 8	heels	heel	NOUN	NNS	Number=Plur	5	obl	5:obl:into	_
@@ -399,7 +399,7 @@
 13	leg	leg	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	forward	forward	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 15	)	)	PUNCT	-RRB-	_	11	punct	11:punct	_
-16	put	put	VERB	VB	VerbForm=Inf	0	root	0:root	_
+16	put	put	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=16:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 18	stirrups	stirrup	NOUN	NNS	Number=Plur	16	obj	16:obj	_
 19	up	up	ADV	RB	_	22	advmod	22:advmod	_
@@ -419,7 +419,7 @@
 4	working	work	VERB	VBG	VerbForm=Ger	5	amod	5:amod	_
 5	trot	trot	NOUN	NN	Number=Sing	1	obj	1:obj	SpaceAfter=No
 6	,	,	PUNCT	,	_	10	punct	10:punct	_
-7	not	not	PART	RB	_	10	advmod	10:advmod	_
+7	not	not	PART	RB	Polarity=Neg	10	advmod	10:advmod	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	slow	slow	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	trot	trot	NOUN	NN	Number=Sing	5	conj	1:obj|5:conj:not	SpaceAfter=No
@@ -462,7 +462,7 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
 3-4	dont	_	_	_	_	_	_	_	_
 3	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	nt	not	PART	RB	Typo=Yes	5	advmod	5:advmod	CorrectForm=n't
+4	nt	not	PART	RB	Polarity=Neg|Typo=Yes	5	advmod	5:advmod	CorrectForm=n't
 5	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	leg	leg	NOUN	NN	Number=Sing	5	obj	5:obj|8:nsubj:xsubj	_
@@ -477,7 +477,7 @@
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	horse	horse	NOUN	NN	Number=Sing	14	obl	14:obl:with	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
-19	bit	bit	NOUN	NN	Number=Sing	14	obl:npmod	14:obl:npmod	SpaceAfter=No
+19	bit	bit	NOUN	NN	Number=Sing	14	obl:unmarked	14:obl:unmarked	SpaceAfter=No
 20	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108103957AAcF3iZ_ans-0020
@@ -494,12 +494,12 @@
 9	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	_
 10	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj	_
 11	every	every	DET	DT	PronType=Tot	12	det	12:det	_
-12	day	day	NOUN	NN	Number=Sing	9	obl:tmod	9:obl:tmod	SpaceAfter=No
+12	day	day	NOUN	NN	Number=Sing	9	obl:unmarked	9:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 13	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = answers-20111108103957AAcF3iZ_ans-0021
 # text = Now I just do it once or twice a week or as needed.
-1	Now	now	ADV	RB	_	4	advmod	4:advmod	_
+1	Now	now	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 3	just	just	ADV	RB	_	4	advmod	4:advmod	_
 4	do	do	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -508,7 +508,7 @@
 7	or	or	CCONJ	CC	_	8	cc	8:cc	_
 8	twice	twice	ADV	RB	NumForm=Word|NumType=Mult	6	conj	4:advmod|6:conj:or	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	week	week	NOUN	NN	Number=Sing	6	obl:tmod	6:obl:tmod	_
+10	week	week	NOUN	NN	Number=Sing	6	obl:unmarked	6:obl:unmarked	TemporalNPAdjunct=Yes
 11	or	or	CCONJ	CC	_	13	cc	13:cc	_
 12	as	as	SCONJ	IN	_	13	mark	13:mark	_
 13	needed	need	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	conj	4:advmod|6:conj:or	SpaceAfter=No
@@ -516,8 +516,8 @@
 
 # sent_id = answers-20111108103957AAcF3iZ_ans-0022
 # text = Now not only is my leg better, but my back is relaxing.
-1	Now	now	ADV	RB	_	7	advmod	7:advmod	_
-2	not	not	PART	RB	_	7	advmod	7:advmod	_
+1	Now	now	ADV	RB	PronType=Dem	7	advmod	7:advmod	_
+2	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 3	only	only	ADV	RB	_	7	advmod	7:advmod	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 5	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
@@ -534,10 +534,10 @@
 # sent_id = answers-20111108103957AAcF3iZ_ans-0023
 # newpar id = answers-20111108103957AAcF3iZ_ans-p0004
 # text = what are you having problems with?
-1	what	what	PRON	WP	PronType=Int	5	nmod	5:nmod:with	_
+1	what	what	PRON	WP	PronType=Int	5	nmod	5:nmod:with	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+4	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct,Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-Polar-Direct.Clause,4:Interrogative-WHInfo-Direct.Clause
 5	problems	problem	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 6	with	with	ADP	IN	_	1	case	1:case	SpaceAfter=No
 7	?	?	PUNCT	.	_	4	punct	4:punct	_
@@ -547,7 +547,7 @@
 1	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2-3	wouldn't	_	_	_	_	_	_	_	_
 2	would	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	bother	bother	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	with	with	ADP	IN	_	6	case	6:case	_
 6	yoga	yoga	NOUN	NN	Number=Sing	4	obl	4:obl:with	_
@@ -572,10 +572,10 @@
 24	,	,	PUNCT	,	_	26	punct	26:punct	_
 25-26	theres	_	_	_	_	_	_	_	_
 25	there	there	PRON	EX	_	26	expl	26:expl	_
-26	s	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	18	parataxis	18:parataxis	CorrectForm='s
+26	s	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	18	parataxis	18:parataxis	CorrectForm='s|Cxn=Existential-CopPred-ThereExpl
 27	also	also	ADV	RB	_	26	advmod	26:advmod	_
 28	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	29:det	_
-29	way	way	NOUN	NN	Number=Sing	26	nsubj	26:nsubj	_
+29	way	way	NOUN	NN	Number=Sing	26	nsubj	26:nsubj	CxnElt=26:Existential-CopPred-ThereExpl.Pivot
 30	to	to	PART	TO	_	31	mark	31:mark	_
 31	ride	ride	VERB	VB	VerbForm=Inf	29	acl	29:acl:to	_
 32	on	on	ADP	IN	_	34	case	34:case	_
@@ -604,7 +604,7 @@
 3	really	really	ADV	RB	_	6	advmod	6:advmod	_
 4-5	wouldn't	_	_	_	_	_	_	_	_
 4	would	would	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-5	n't	not	PART	RB	_	6	advmod	6:advmod	_
+5	n't	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	bother	bother	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	with	with	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
@@ -619,7 +619,7 @@
 5	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 6	help	help	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
 7	,	,	PUNCT	,	_	12	punct	12:punct	_
-8	sometimes	sometimes	ADV	RB	_	12	advmod	12:advmod	_
+8	sometimes	sometimes	ADV	RB	PronType=Ind	12	advmod	12:advmod	_
 9	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 10	back	back	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
 11	really	really	ADV	RB	_	12	advmod	12:advmod	_
@@ -678,7 +678,7 @@
 37	more	more	ADV	RBR	Degree=Cmp	39	advmod	39:advmod	_
 38	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	39	nsubj	39:nsubj	_
 39	flops	flop	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	parataxis	7:parataxis	_
-40	:/	:/	SYM	NFP	_	37	discourse	37:discourse	_
+40	:/	:/	SYM	NFP	_	39	discourse	39:discourse	_
 41	work	work	VERB	VB	Mood=Imp|VerbForm=Fin	7	parataxis	7:parataxis	_
 42	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	44	nmod:poss	44:nmod:poss	_
 43	calf	calf	NOUN	NN	Number=Sing	44	compound	44:compound	_
@@ -714,11 +714,11 @@
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	spend	spend	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
-7	more	more	ADJ	JJR	Degree=Cmp|ExtPos=ADV	10	advmod	10:advmod	_
+7	more	more	ADJ	JJR	Degree=Cmp|ExtPos=ADV	9	advmod	9:advmod	_
 8	than	than	ADP	IN	_	7	fixed	7:fixed	_
 9	$	$	SYM	$	_	6	obj	6:obj	SpaceAfter=No
 10	20	20	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
@@ -740,7 +740,7 @@
 2	really	really	ADV	RB	_	5	advmod	5:advmod	_
 3-4	can't	_	_	_	_	_	_	_	_
 3	ca	can	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
-4	n't	not	PART	RB	_	5	advmod	5:advmod	_
+4	n't	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	help	help	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	obj	5:obj	SpaceAfter=No
 7	.	.	PUNCT	.	_	5	punct	5:punct	_

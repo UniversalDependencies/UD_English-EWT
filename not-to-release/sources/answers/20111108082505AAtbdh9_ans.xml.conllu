@@ -2,10 +2,10 @@
 # sent_id = answers-20111108082505AAtbdh9_ans-0001
 # newpar id = answers-20111108082505AAtbdh9_ans-p0001
 # text = How long to save up for a canon t3i?
-1	How	how	ADV	WRB	PronType=Int	2	advmod	2:advmod	_
+1	How	how	ADV	WRB	PronType=Int	2	advmod	2:advmod	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	long	long	ADV	RB	Degree=Pos	4	advmod	4:advmod	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
-4	save	save	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	save	save	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	up	up	ADP	RP	_	4	compound:prt	4:compound:prt	_
 6	for	for	ADP	IN	_	9	case	9:case	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
@@ -26,7 +26,7 @@
 8	canon	Canon	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 9	t3i	t3i	NOUN	NN	Number=Sing	4	obl	4:obl:for	SpaceAfter=No
 10	,	,	PUNCT	,	_	12	punct	12:punct	_
-11	around	around	ADV	RB	_	12	case	12:case	_
+11	around	around	ADV	RB	_	12	advmod	12:advmod	_
 12	750	750	NUM	CD	NumForm=Digit|NumType=Card	9	nmod	9:nmod:around	SpaceAfter=No
 13	-	-	SYM	SYM	_	14	case	14:case	SpaceAfter=No
 14	800	800	NUM	CD	NumForm=Digit|NumType=Card	12	nmod	12:nmod	_
@@ -47,13 +47,13 @@
 9	20	20	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	_
 10	dollars	dollar	NOUN	NNS	Number=Plur	7	obj	7:obj	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
-12	week	week	NOUN	NN	Number=Sing	10	nmod:tmod	10:nmod:tmod	_
+12	week	week	NOUN	NN	Number=Sing	10	nmod:unmarked	10:nmod:unmarked	TemporalNPAdjunct=Yes
 13	for	for	ADP	IN	_	14	case	14:case	_
 14	lunch	lunch	NOUN	NN	Number=Sing	10	nmod	10:nmod:for	SpaceAfter=No
 15	,	,	PUNCT	,	_	19	punct	19:punct	_
-16	sometimes	sometimes	ADV	RB	_	19	advmod	19:advmod	_
+16	sometimes	sometimes	ADV	RB	PronType=Ind	19	advmod	19:advmod	_
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
-18	bit	bit	NOUN	NN	Number=Sing	19	obl:npmod	19:obl:npmod	_
+18	bit	bit	NOUN	NN	Number=Sing	19	obl:unmarked	19:obl:unmarked	_
 19	more	more	ADJ	JJR	Degree=Cmp	10	appos	10:appos	SpaceAfter=No
 20	,	,	PUNCT	,	_	22	punct	22:punct	_
 21	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	22	nsubj	22:nsubj|24:nsubj:xsubj	_
@@ -63,7 +63,7 @@
 25	10	10	NUM	CD	NumForm=Digit|NumType=Card	26	nummod	26:nummod	_
 26	dollars	dollar	NOUN	NNS	Number=Plur	24	obj	24:obj	_
 27	every	every	DET	DT	PronType=Tot	28	det	28:det	_
-28	week	week	NOUN	NN	Number=Sing	26	nmod:tmod	26:nmod:tmod	_
+28	week	week	NOUN	NN	Number=Sing	26	nmod:unmarked	26:nmod:unmarked	TemporalNPAdjunct=Yes
 29	:)	:)	SYM	NFP	_	4	discourse	4:discourse	_
 
 # sent_id = answers-20111108082505AAtbdh9_ans-0004
@@ -116,12 +116,12 @@
 # text = Can someone cunclude how long it might take me to save up for the canan t3i or some extra tips to save/gain money? :O
 1	Can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	someone	someone	PRON	NN	Number=Sing|PronType=Ind	3	nsubj	3:nsubj|20:nsubj|27:nsubj	_
-3	cunclude	conclude	VERB	VB	Typo=Yes|VerbForm=Inf	0	root	0:root	CorrectForm=conclude
-4	how	how	ADV	WRB	PronType=Int	5	advmod	5:advmod	_
+3	cunclude	conclude	VERB	VB	Typo=Yes|VerbForm=Inf	0	root	0:root	CorrectForm=conclude|Cxn=Interrogative-Polar-Direct,Interrogative-WHInfo-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause,3:Interrogative-WHInfo-Direct.Clause
+4	how	how	ADV	WRB	PronType=Int	5	advmod	5:advmod	CxnElt=3:Interrogative-WHInfo-Direct.WHWord,8:Interrogative-WHInfo-Indirect.WHWord
 5	long	long	ADV	RB	Degree=Pos	8	advmod	8:advmod	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	expl	8:expl	_
 7	might	might	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	take	take	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+8	take	take	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=8:Interrogative-WHInfo-Indirect.Clause
 9	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	obj	8:obj	_
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	save	save	VERB	VB	VerbForm=Inf	8	csubj	8:csubj	_
@@ -160,7 +160,7 @@
 8	many	many	ADJ	JJ	Degree=Pos	12	nsubj	12:nsubj	_
 9	of	of	ADP	IN	_	10	case	10:case	_
 10	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	8	nmod	8:nmod:of	_
-11	never	never	ADV	RB	_	12	advmod	12:advmod	_
+11	never	never	ADV	RB	PronType=Neg	12	advmod	12:advmod	_
 12	got	get	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	parataxis	2:parataxis	_
 13	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	12	obj	12:obj	_
 14	:)	:)	SYM	NFP	_	2	discourse	2:discourse	_
@@ -169,11 +169,11 @@
 # text = There's a Canon EOS T2i, with the exact same sensor, just no articulating screen.
 1-2	There's	_	_	_	_	_	_	_	_
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 4	Canon	Canon	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 5	EOS	eos	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	T2i	T2i	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	SpaceAfter=No
+6	T2i	T2i	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 7	,	,	PUNCT	,	_	12	punct	12:punct	_
 8	with	with	ADP	IN	_	12	case	12:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
@@ -193,7 +193,7 @@
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
 2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 3	around	around	ADV	RB	_	4	advmod	4:advmod	_
-4	$	$	SYM	$	_	6	obl:npmod	6:obl:npmod	SpaceAfter=No
+4	$	$	SYM	$	_	6	obl:unmarked	6:obl:unmarked	SpaceAfter=No
 5	100	100	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
 6	less	less	ADJ	JJR	Degree=Cmp	0	root	0:root|9:csubj	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
@@ -225,7 +225,7 @@
 # text = Don't worry about it.
 1-2	Don't	_	_	_	_	_	_	_	_
 1	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	3	aux	3:aux	_
-2	n't	not	PART	RB	_	3	advmod	3:advmod	_
+2	n't	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
 3	worry	worry	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 4	about	about	ADP	IN	_	5	case	5:case	_
 5	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	obl	3:obl:about	SpaceAfter=No
@@ -237,21 +237,21 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
 3-4	can't	_	_	_	_	_	_	_	_
 3	ca	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-4	n't	not	PART	RB	_	6	advmod	6:advmod	_
+4	n't	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 5	even	even	ADV	RB	_	6	advmod	6:advmod	_
-6	do	do	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:if	_
+6	do	do	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:if	CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 7	basic	basic	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	math	math	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
 9	,	,	PUNCT	,	_	6	punct	6:punct	_
 10-11	you'll	_	_	_	_	_	_	_	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
 11	'll	will	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
-12	never	never	ADV	RB	_	13	advmod	13:advmod	_
-13	figure	figure	VERB	VB	VerbForm=Inf	0	root	0:root	_
+12	never	never	ADV	RB	PronType=Neg	13	advmod	13:advmod	_
+13	figure	figure	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=13:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 14	out	out	ADP	RP	_	13	compound:prt	13:compound:prt	_
-15	how	how	ADV	WRB	PronType=Int	17	advmod	17:advmod	_
+15	how	how	ADV	WRB	PronType=Int	17	advmod	17:advmod	CxnElt=17:Interrogative-WHInfo-Indirect.WHWord
 16	to	to	PART	TO	_	17	mark	17:mark	_
-17	use	use	VERB	VB	VerbForm=Inf	13	ccomp	13:ccomp	_
+17	use	use	VERB	VB	VerbForm=Inf	13	ccomp	13:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=17:Interrogative-WHInfo-Indirect.Clause
 18	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
 19	DSLR	dslr	NOUN	NN	Number=Sing	20	compound	20:compound	_
 20	camera	camera	NOUN	NN	Number=Sing	17	obj	17:obj	_

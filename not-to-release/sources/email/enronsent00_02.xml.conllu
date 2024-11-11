@@ -34,7 +34,7 @@
 7	like	like	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	attend	attend	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
-10	as	as	ADV	RB	_	9	advmod	9:advmod	_
+10	as	as	ADV	RB	ExtPos=ADV	9	advmod	9:advmod	_
 11	well	well	ADV	RB	Degree=Pos	10	fixed	10:fixed	SpaceAfter=No
 12	.	.	PUNCT	.	_	7	punct	7:punct	_
 
@@ -59,11 +59,11 @@
 2	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj|4:nsubj:xsubj	_
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-5	what	what	DET	WDT	PronType=Int	6	det	6:det	_
+5	what	what	DET	WDT	PronType=Int	6	det	6:det	CxnElt=9:Interrogative-WHInfo-Indirect.WHWord
 6	time	time	NOUN	NN	Number=Sing	9	obj	9:obj	_
 7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 8	could	could	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	meet	meet	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	SpaceAfter=No
+9	meet	meet	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=9:Interrogative-WHInfo-Indirect.Clause|SpaceAfter=No
 10	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent00_02-0006
@@ -131,7 +131,7 @@
 21	stock	stock	NOUN	NN	Number=Sing	22	compound	22:compound	_
 22	price	price	NOUN	NN	Number=Sing	17	obl	17:obl:on	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
-24	day	day	NOUN	NN	Number=Sing	22	nmod:tmod	22:nmod:tmod	_
+24	day	day	NOUN	NN	Number=Sing	22	nmod:unmarked	22:nmod:unmarked	TemporalNPAdjunct=Yes
 25	preceding	precede	VERB	VBG	VerbForm=Ger	24	acl	24:acl	_
 26	notification	notification	NOUN	NN	Number=Sing	25	obj	25:obj	_
 27	to	to	ADP	IN	_	30	case	30:case	_
@@ -159,7 +159,7 @@
 15	market	market	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	value	value	NOUN	NN	Number=Sing	12	nmod	12:nmod:at	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	day	day	NOUN	NN	Number=Sing	9	obl:tmod	9:obl:tmod	_
+18	day	day	NOUN	NN	Number=Sing	9	obl:unmarked	9:obl:unmarked	TemporalNPAdjunct=Yes
 19	prior	prior	ADJ	JJ	Degree=Pos|ExtPos=SCONJ	21	mark	21:mark	_
 20	to	to	SCONJ	IN	_	19	fixed	19:fixed	_
 21	notifying	notify	VERB	VBG	VerbForm=Ger	18	acl	18:acl:prior_to	_
@@ -179,7 +179,7 @@
 7	reflected	reflect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	acl	6:acl	_
 8	on	on	ADP	IN	_	11	case	11:case	_
 9	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-10	9/30/01	9/30/01	NUM	CD	NumForm=Digit|NumType=Card	11	nmod:tmod	11:nmod:tmod	_
+10	9/30/01	9/30/01	NUM	CD	NumForm=Digit|NumType=Card	11	nmod:unmarked	11:nmod:unmarked	TemporalNPAdjunct=Yes
 11	statement	statement	NOUN	NN	Number=Sing	7	obl	7:obl:on	_
 12	(	(	PUNCT	-LRB-	_	14	punct	14:punct	SpaceAfter=No
 13	6,606	6606	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	_
@@ -197,7 +197,7 @@
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 3	would	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-4	prefer	prefer	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:if	_
+4	prefer	prefer	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:if	CxnElt=16:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	settle	settle	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
@@ -209,7 +209,7 @@
 13	,	,	PUNCT	,	_	4	punct	4:punct	_
 14	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
 15	can	can	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
-16	distribute	distribute	VERB	VB	VerbForm=Inf	0	root	0:root	_
+16	distribute	distribute	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=16:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 17	gross	gross	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	shares	share	NOUN	NNS	Number=Plur	16	obj	16:obj	SpaceAfter=No
 19	.	.	PUNCT	.	_	16	punct	16:punct	_
@@ -303,11 +303,11 @@
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 3	would	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-4	like	like	VERB	VB	VerbForm=Inf	8	advcl	8:advcl:if	SpaceAfter=No
+4	like	like	VERB	VB	VerbForm=Inf	8	advcl	8:advcl:if	CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 7	can	can	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	set	set	VERB	VB	VerbForm=Inf	0	root	0:root	_
+8	set	set	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 9	up	up	ADP	RP	_	8	compound:prt	8:compound:prt	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 11	conference	conference	NOUN	NN	Number=Sing	12	compound	12:compound	_
@@ -402,13 +402,13 @@
 4	still	still	ADV	RB	_	7	advmod	7:advmod	_
 5-6	don't	_	_	_	_	_	_	_	_
 5	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
-6	n't	not	PART	RB	_	7	advmod	7:advmod	_
+6	n't	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 7	understand	understand	VERB	VB	VerbForm=Inf	0	root	0:root	_
-8	which	which	DET	WDT	PronType=Int	9	det	9:det	ManuallyChecked=PronType
+8	which	which	DET	WDT	PronType=Int	9	det	9:det	CxnElt=12:Interrogative-WHInfo-Indirect.WHWord|ManuallyChecked=PronType
 9	date	date	NOUN	NN	Number=Sing	12	nsubj:pass	12:nsubj:pass	_
 10	will	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 11	be	be	AUX	VB	VerbForm=Inf	12	aux:pass	12:aux:pass	_
-12	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	ccomp	7:ccomp	_
+12	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	ccomp	7:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=12:Interrogative-WHInfo-Indirect.Clause
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	determine	determine	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:to	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
@@ -593,7 +593,7 @@
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
 3	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	getting	get	VERB	VBG	Tense=Pres|VerbForm=Part	14	advcl	14:advcl:if	_
+4	getting	get	VERB	VBG	Tense=Pres|VerbForm=Part	14	advcl	14:advcl:if	CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 5	quotes	quote	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	put	put	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
@@ -603,7 +603,7 @@
 11	then	then	ADV	RB	PronType=Dem	14	advmod	14:advmod	_
 12	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	14	nsubj	14:nsubj|16:nsubj:xsubj	_
 13	will	will	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
-14	need	need	VERB	VB	VerbForm=Inf	0	root	0:root	_
+14	need	need	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 15	to	to	PART	TO	_	16	mark	16:mark	_
 16	clarify	clarify	VERB	VB	VerbForm=Inf	14	xcomp	14:xcomp	SpaceAfter=No
 17	.	.	PUNCT	.	_	14	punct	14:punct	_
@@ -629,10 +629,10 @@
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	negotiations	negotiation	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
-4	stall	stall	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	SpaceAfter=No
+4	stall	stall	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	expl	7:expl	_
-7	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+7	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 8	like	like	SCONJ	IN	_	10	mark	10:mark	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj|12:nsubj:xsubj|15:nsubj:xsubj	_
 10	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:like	_
@@ -736,8 +736,8 @@
 14	know	know	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
 15	that	that	SCONJ	IN	_	31	mark	31:mark	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
-17	kestrel	kestrel	PROPN	NNP	Number=Sing	19	compound	19:compound	_
-18	air	air	PROPN	NNP	Number=Sing	19	compound	19:compound	_
+17	kestrel	Kestrel	PROPN	NNP	Number=Sing	19	compound	19:compound	_
+18	air	Air	PROPN	NNP	Number=Sing	19	compound	19:compound	_
 19	park	park	PROPN	NNP	Number=Sing	20	compound	20:compound	_
 20	building	building	PROPN	NNP	Number=Sing	31	nsubj	31:nsubj	_
 21	and	and	CCONJ	CC	_	24	cc	24:cc	_
@@ -745,9 +745,9 @@
 23	strip	strip	NOUN	NN	Number=Sing	24	compound	24:compound	_
 24	center	center	NOUN	NN	Number=Sing	20	conj	20:conj:and|31:nsubj	_
 25	at	at	ADP	IN	_	26	case	26:case	_
-26	fm78	fm78	PROPN	NNP	Number=Sing	24	nmod	24:nmod:at	_
+26	fm78	FM78	PROPN	NNP	Number=Sing	24	nmod	24:nmod:at	_
 27	&	&	CCONJ	CC	_	28	cc	28:cc	_
-28	walzem	walzem	PROPN	NNP	Number=Sing	26	conj	24:nmod:at|26:conj	_
+28	walzem	Walzem	PROPN	NNP	Number=Sing	26	conj	24:nmod:at|26:conj	_
 29	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	31	aux	31:aux	_
 30	both	both	ADV	RB	_	31	advmod	31:advmod	_
 31	sold	sell	VERB	VBN	Tense=Past|VerbForm=Part	14	ccomp	14:ccomp	SpaceAfter=No
@@ -758,9 +758,9 @@
 1	Let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obj	1:obj|3:nsubj:xsubj	_
 3	know	know	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
-4	what	what	PRON	WP	PronType=Int	6	obj	6:obj	_
+4	what	what	PRON	WP	PronType=Int	6	obj	6:obj	CxnElt=6:Interrogative-WHInfo-Indirect.WHWord
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
-6	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
+6	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=6:Interrogative-WHInfo-Indirect.Clause
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
 9	property	property	NOUN	NN	Number=Sing	6	obl	6:obl:of	SpaceAfter=No
@@ -826,7 +826,7 @@
 # text = Is this how your clients usually evaluate these properties?
 1	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	3:nsubj	_
-3	how	how	ADV	WRB	PronType=Rel	0	root	0:root|7:advmod	_
+3	how	how	ADV	WRB	PronType=Rel	0	root	0:root|7:advmod	Cxn=Interrogative-Polar-Direct,Interrogative-WHInfo-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause,3:Interrogative-WHInfo-Direct.Clause,3:Interrogative-WHInfo-Direct.WHWord
 4	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	clients	client	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	_
 6	usually	usually	ADV	RB	_	7	advmod	7:advmod	_

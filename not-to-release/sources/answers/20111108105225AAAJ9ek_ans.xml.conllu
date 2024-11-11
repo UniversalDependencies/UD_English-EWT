@@ -30,7 +30,7 @@
 4	3	3	NUM	CD	NumForm=Digit|NumType=Card	7	compound	7:compound	SpaceAfter=No
 5	-	-	SYM	SYM	_	6	case	6:case	SpaceAfter=No
 6	4	4	NUM	CD	NumForm=Digit|NumType=Card	4	nmod	4:nmod	_
-7	month	month	NOUN	NN	Number=Sing	8	obl:npmod	8:obl:npmod	_
+7	month	month	NOUN	NN	Number=Sing	8	obl:unmarked	8:obl:unmarked	_
 8	old	old	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	kitten	kitten	NOUN	NN	Number=Sing	2	obj	2:obj	_
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
@@ -96,19 +96,19 @@
 # text = Should i bring her?
 1	Should	should	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	bring	bring	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	bring	bring	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	SpaceAfter=No
 5	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108105225AAAJ9ek_ans-0008
 # text = if so how quick will she adapt to a litter box inside?
 1	if	if	SCONJ	IN	_	2	mark	2:mark	_
-2	so	so	ADV	RB	_	7	advcl	7:advcl:if	_
-3	how	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
+2	so	so	ADV	RB	_	7	advcl	7:advcl:if	CxnElt=7:Conditional-UnspecifiedEpistemic-Reduced.Protasis
+3	how	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	CxnElt=7:Interrogative-WHInfo-Direct.WHWord
 4	quick	quick	ADV	RB	_	7	advmod	7:advmod	_
 5	will	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 6	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
-7	adapt	adapt	VERB	VB	VerbForm=Inf	0	root	0:root	_
+7	adapt	adapt	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-Reduced,Interrogative-Polar-Direct,Interrogative-WHInfo-Direct|CxnElt=7:Conditional-UnspecifiedEpistemic-Reduced.Apodosis,7:Interrogative-Polar-Direct.Clause,7:Interrogative-WHInfo-Direct.Clause
 8	to	to	ADP	IN	_	11	case	11:case	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 10	litter	litter	NOUN	NN	Number=Sing	11	compound	11:compound	_
@@ -193,8 +193,8 @@
 2	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
 3	cat	cat	NOUN	NN	Number=Sing	6	nsubj:pass	6:nsubj:pass|8:nsubj:xsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux:pass	6:aux:pass	_
-5	not	not	PART	RB	_	6	advmod	6:advmod	_
-6	trained	train	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	15	advcl	15:advcl:if	_
+5	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
+6	trained	train	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	15	advcl	15:advcl:if	CxnElt=15:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 7	to	to	PART	TO	_	8	mark	8:mark	_
 8	use	use	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
@@ -203,7 +203,7 @@
 12	,	,	PUNCT	,	_	6	punct	6:punct	_
 13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
 14	may	may	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-15	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
+15	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=15:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 17	problem	problem	NOUN	NN	Number=Sing	15	obj	15:obj	_
 18	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	15	advcl	15:advcl	_
@@ -213,7 +213,7 @@
 # sent_id = answers-20111108105225AAAJ9ek_ans-0015
 # newpar id = answers-20111108105225AAAJ9ek_ans-p0004
 # text = NO!
-1	NO	no	INTJ	UH	_	0	root	0:root	SpaceAfter=No
+1	NO	no	INTJ	UH	Polarity=Neg	0	root	0:root	SpaceAfter=No
 2	!	!	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108105225AAAJ9ek_ans-0016
@@ -239,7 +239,7 @@
 19	,	,	PUNCT	,	_	23	punct	23:punct	_
 20	or	or	CCONJ	CC	_	23	cc	23:cc	_
 21	will	will	AUX	MD	VerbForm=Fin	23	aux	23:aux	_
-22	not	not	PART	RB	_	23	advmod	23:advmod	_
+22	not	not	PART	RB	Polarity=Neg	23	advmod	23:advmod	_
 23	want	want	VERB	VB	VerbForm=Inf	13	conj	13:conj:or	_
 24	to	to	PART	TO	_	27	mark	27:mark	_
 25	be	be	AUX	VB	VerbForm=Inf	27	cop	27:cop	_

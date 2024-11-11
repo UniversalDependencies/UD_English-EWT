@@ -2,9 +2,9 @@
 # sent_id = answers-20111108111107AAlrzok_ans-0001
 # newpar id = answers-20111108111107AAlrzok_ans-p0001
 # text = How to train my puppy ?
-1	How	how	ADV	WRB	PronType=Int	3	advmod	3:advmod	_
+1	How	how	ADV	WRB	PronType=Int	3	advmod	3:advmod	CxnElt=3:Interrogative-WHInfo-Direct.WHWord
 2	to	to	PART	TO	_	3	mark	3:mark	_
-3	train	train	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	train	train	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=3:Interrogative-WHInfo-Direct.Clause
 4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	puppy	puppy	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6	?	?	PUNCT	.	_	3	punct	3:punct	_
@@ -46,7 +46,7 @@
 8	leash	leash	NOUN	NN	Number=Sing	6	obl	6:obl:with	SpaceAfter=No
 9	,	,	PUNCT	,	_	20	punct	20:punct	_
 10	every	every	DET	DT	PronType=Tot	11	det	11:det	_
-11	time	time	NOUN	NN	Number=Sing	20	obl:tmod	13:obl|20:obl:tmod	_
+11	time	time	NOUN	NN	Number=Sing	20	obl:unmarked	13:obl|20:obl:unmarked	TemporalNPAdjunct=Yes
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 13	put	put	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	11	acl:relcl	11:acl:relcl	Cxn=rc-red-obl
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
@@ -66,7 +66,7 @@
 1	And	and	CCONJ	CC	_	5	cc	5:cc	_
 2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	not	not	PART	RB	_	5	advmod	5:advmod	_
+4	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	following	follow	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	obj	5:obj	_
 7	when	when	ADV	WRB	PronType=Int	10	advmod	10:advmod	_
@@ -90,23 +90,23 @@
 11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
 12-13	didn't	_	_	_	_	_	_	_	_
 12	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	aux	14:aux	_
-13	n't	not	PART	RB	_	14	advmod	14:advmod	_
+13	n't	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
 14	help	help	VERB	VB	VerbForm=Inf	2	conj	2:conj:but	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108111107AAlrzok_ans-0007
 # text = Is there any way can let him know how to walk with leash ?
-1	Is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Direct|CxnElt=1:Interrogative-Polar-Direct.Clause
 2	there	there	PRON	EX	_	1	expl	1:expl	_
 3	any	any	DET	DT	PronType=Ind	4	det	4:det	_
-4	way	way	NOUN	NN	Number=Sing	1	nsubj	1:nsubj|6:obl	_
+4	way	way	NOUN	NN	Number=Sing	1	nsubj	1:nsubj|6:obl	CxnElt=1:Existential-CopPred-ThereExpl.Pivot
 5	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 6	let	let	VERB	VB	VerbForm=Inf	4	acl:relcl	4:acl:relcl	Cxn=rc-red-obl
 7	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	obj	6:obj|8:nsubj:xsubj	_
 8	know	know	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
-9	how	how	ADV	WRB	PronType=Int	11	advmod	11:advmod	_
+9	how	how	ADV	WRB	PronType=Int	11	advmod	11:advmod	CxnElt=11:Interrogative-WHInfo-Indirect.WHWord
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	walk	walk	VERB	VB	VerbForm=Inf	8	ccomp	8:ccomp	_
+11	walk	walk	VERB	VB	VerbForm=Inf	8	ccomp	8:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=11:Interrogative-WHInfo-Indirect.Clause
 12	with	with	ADP	IN	_	13	case	13:case	_
 13	leash	leash	NOUN	NN	Number=Sing	11	obl	11:obl:with	_
 14	?	?	PUNCT	.	_	1	punct	1:punct	_
@@ -115,7 +115,7 @@
 # text = And every time he see some one he will rush to people and jump on them, doesn't listen to me.
 1	And	and	CCONJ	CC	_	10	cc	10:cc	_
 2	every	every	DET	DT	PronType=Tot	3	det	3:det	_
-3	time	time	NOUN	NN	Number=Sing	10	obl:tmod	5:obl|10:obl:tmod	_
+3	time	time	NOUN	NN	Number=Sing	10	obl:unmarked	5:obl|10:obl:unmarked	TemporalNPAdjunct=Yes
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 5	see	see	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	3	acl:relcl	3:acl:relcl	CorrectForm=sees|CorrectNumber=Sing|Cxn=rc-red-obl
 6	some	someone	PRON	GW	Number=Sing|PronType=Ind|Typo=Yes	5	obj	5:obj	_
@@ -132,7 +132,7 @@
 17	,	,	PUNCT	,	_	20	punct	20:punct	_
 18-19	doesn't	_	_	_	_	_	_	_	_
 18	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
-19	n't	not	PART	RB	_	20	advmod	20:advmod	_
+19	n't	not	PART	RB	Polarity=Neg	20	advmod	20:advmod	_
 20	listen	listen	VERB	VB	VerbForm=Inf	10	parataxis	10:parataxis	_
 21	to	to	ADP	IN	_	22	case	22:case	_
 22	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	20	obl	20:obl:to	SpaceAfter=No
@@ -152,9 +152,9 @@
 
 # sent_id = answers-20111108111107AAlrzok_ans-0010
 # text = How to prevent this ?
-1	How	how	ADV	WRB	PronType=Int	3	advmod	3:advmod	_
+1	How	how	ADV	WRB	PronType=Int	3	advmod	3:advmod	CxnElt=3:Interrogative-WHInfo-Direct.WHWord
 2	to	to	PART	TO	_	3	mark	3:mark	_
-3	prevent	prevent	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	prevent	prevent	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=3:Interrogative-WHInfo-Direct.Clause
 4	this	this	PRON	DT	Number=Sing|PronType=Dem	3	obj	3:obj	_
 5	?	?	PUNCT	.	_	3	punct	3:punct	_
 
@@ -164,7 +164,7 @@
 2	thing	thing	NOUN	NN	Number=Sing	19	nsubj:outer	19:nsubj:outer	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
 4	every	every	DET	DT	PronType=Tot	5	det	5:det	_
-5	time	time	NOUN	NN	Number=Sing	19	obl:tmod	7:obl|19:obl:tmod	_
+5	time	time	NOUN	NN	Number=Sing	19	obl:unmarked	7:obl|19:obl:unmarked	TemporalNPAdjunct=Yes
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 7	sit	sit	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl
 8	on	on	ADP	IN	_	10	case	10:case	_
@@ -178,7 +178,7 @@
 16	,	,	PUNCT	,	_	5	punct	5:punct	_
 17	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	nsubj	19:nsubj|21:nsubj:xsubj	_
 18	will	will	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
-19	try	try	VERB	VB	VerbForm=Inf	0	root	0:root	_
+19	try	try	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=19:Interrogative-Polar-Direct.Clause
 20	to	to	PART	TO	_	21	mark	21:mark	_
 21	jump	jump	VERB	VB	VerbForm=Inf	19	xcomp	19:xcomp	_
 22	on	on	ADV	RB	_	21	advmod	21:advmod	SpaceAfter=No
@@ -186,15 +186,15 @@
 24	if	if	SCONJ	IN	_	26	mark	26:mark	_
 25	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	26	nsubj	26:nsubj	_
 26-27	can't	_	_	_	_	_	_	_	SpaceAfter=No
-26	ca	can	AUX	MD	VerbForm=Fin	31	advcl	31:advcl:if	_
-27	n't	not	PART	RB	_	26	advmod	26:advmod	_
+26	ca	can	AUX	MD	VerbForm=Fin	31	advcl	31:advcl:if	CxnElt=31:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
+27	n't	not	PART	RB	Polarity=Neg	26	advmod	26:advmod	_
 28	,	,	PUNCT	,	_	26	punct	26:punct	_
 29	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	31	nsubj	31:nsubj	_
 30	will	will	AUX	MD	VerbForm=Fin	31	aux	31:aux	_
-31	bark	bark	VERB	VB	VerbForm=Inf	19	parataxis	19:parataxis	_
+31	bark	bark	VERB	VB	VerbForm=Inf	19	parataxis	19:parataxis	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=31:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 32	all	all	DET	PDT	PronType=Tot	34	det:predet	34:det:predet	_
 33	the	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	_
-34	time	time	NOUN	NN	Number=Sing	31	obl:tmod	31:obl:tmod	_
+34	time	time	NOUN	NN	Number=Sing	31	obl:unmarked	31:obl:unmarked	TemporalNPAdjunct=Yes
 35	until	until	SCONJ	IN	_	37	mark	37:mark	_
 36	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	37	nsubj	37:nsubj	_
 37	let	let	VERB	VB	VerbForm=Inf	31	advcl	31:advcl:until	_
@@ -295,12 +295,12 @@
 # sent_id = answers-20111108111107AAlrzok_ans-0017
 # text = This way, he cannot reach the leash to chew it.
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	2:det	_
-2	way	way	NOUN	NN	Number=Sing	7	obl:npmod	7:obl:npmod	SpaceAfter=No
+2	way	way	NOUN	NN	Number=Sing	7	obl:unmarked	7:obl:unmarked	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 5-6	cannot	_	_	_	_	_	_	_	_
 5	can	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
-6	not	not	PART	RB	_	7	advmod	7:advmod	_
+6	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 7	reach	reach	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 9	leash	leash	NOUN	NN	Number=Sing	7	obj	7:obj	_
@@ -391,9 +391,9 @@
 # sent_id = answers-20111108111107AAlrzok_ans-0022
 # text = And always, always train with love and positive methods- never hit or harshly scold.
 1	And	and	CCONJ	CC	_	5	cc	5:cc	_
-2	always	always	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
+2	always	always	ADV	RB	PronType=Tot	4	advmod	4:advmod	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
-4	always	always	ADV	RB	_	5	advmod	5:advmod	_
+4	always	always	ADV	RB	PronType=Tot	5	advmod	5:advmod	_
 5	train	train	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 6	with	with	ADP	IN	_	7	case	7:case	_
 7	love	love	NOUN	NN	Number=Sing	5	obl	5:obl:with	_
@@ -401,7 +401,7 @@
 9	positive	positive	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	methods	method	NOUN	NNS	Number=Plur	7	conj	5:obl:with|7:conj:and	SpaceAfter=No
 11	-	-	PUNCT	,	_	13	punct	13:punct	_
-12	never	never	ADV	RB	_	13	advmod	13:advmod	_
+12	never	never	ADV	RB	PronType=Neg	13	advmod	13:advmod	_
 13	hit	hit	VERB	VB	Mood=Imp|VerbForm=Fin	5	parataxis	5:parataxis	_
 14	or	or	CCONJ	CC	_	16	cc	16:cc	_
 15	harshly	harshly	ADV	RB	_	16	advmod	16:advmod	_
@@ -410,7 +410,7 @@
 
 # sent_id = answers-20111108111107AAlrzok_ans-0023
 # text = Never train out of fear.
-1	Never	never	ADV	RB	_	2	advmod	2:advmod	_
+1	Never	never	ADV	RB	PronType=Neg	2	advmod	2:advmod	_
 2	train	train	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	out	out	ADP	IN	_	5	case	5:case	_
 4	of	of	ADP	IN	_	5	case	5:case	_
@@ -431,7 +431,7 @@
 10	pack	pack	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	leader	leader	NOUN	NN	Number=Sing	6	obl	6:obl:as	SpaceAfter=No
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
-13	not	not	PART	RB	_	14	advmod	14:advmod	_
+13	not	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
 14	fear	fear	VERB	VB	VerbForm=Inf	6	parataxis	6:parataxis	_
 15	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	14	obj	14:obj	SpaceAfter=No
 16	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -473,12 +473,12 @@
 # sent_id = answers-20111108111107AAlrzok_ans-0028
 # newpar id = answers-20111108111107AAlrzok_ans-p0005
 # text = why dont you get some treats that he loves and only give him them when he does something right.
-1	why	why	ADV	WRB	PronType=Int	5	advmod	5:advmod	_
+1	why	why	ADV	WRB	PronType=Int	5	advmod	5:advmod	CxnElt=5:Interrogative-WHInfo-Direct.WHWord
 2-3	dont	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-3	nt	not	PART	RB	Typo=Yes	5	advmod	5:advmod	CorrectForm=n't
+3	nt	not	PART	RB	Polarity=Neg|Typo=Yes	5	advmod	5:advmod	CorrectForm=n't
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj|13:nsubj	_
-5	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
+5	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=5:Interrogative-WHInfo-Direct.Clause
 6	some	some	DET	DT	PronType=Ind	7	det	7:det	_
 7	treats	treat	NOUN	NNS	Number=Plur	5	obj	5:obj|10:obj	_
 8	that	that	PRON	WDT	PronType=Rel	10	obj	7:ref	_
@@ -516,7 +516,7 @@
 16	thing	thing	NOUN	NN	Number=Sing	12	obj	12:obj	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
 18	treats	treat	NOUN	NNS	Number=Plur	16	conj	12:obj|16:conj:and	_
-19	as	as	ADV	RB	_	18	advmod	18:advmod	_
+19	as	as	ADV	RB	ExtPos=ADV	18	advmod	18:advmod	_
 20	well	well	ADV	RB	Degree=Pos	19	fixed	19:fixed	SpaceAfter=No
 21	.	.	PUNCT	.	_	12	punct	12:punct	_
 
@@ -576,12 +576,12 @@
 21	,	,	PUNCT	,	_	20	punct	20:punct	_
 22	if	if	SCONJ	IN	_	24	mark	24:mark	_
 23	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	24	nsubj	24:nsubj	_
-24	act	act	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	29	advcl	29:advcl:if	_
+24	act	act	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	29	advcl	29:advcl:if	CxnElt=29:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 25	quick	quick	ADV	RB	_	24	advmod	24:advmod	_
 26	enough	enough	ADV	RB	_	25	advmod	25:advmod	SpaceAfter=No
 27	,	,	PUNCT	,	_	24	punct	24:punct	_
 28	will	will	AUX	MD	VerbForm=Fin	29	aux	29:aux	_
-29	stay	stay	VERB	VB	VerbForm=Inf	15	conj	15:conj:and	_
+29	stay	stay	VERB	VB	VerbForm=Inf	15	conj	15:conj:and	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=29:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 30	on	on	ADP	IN	_	32	case	32:case	_
 31	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
 32	leash	leash	NOUN	NN	Number=Sing	29	obl	29:obl:on	SpaceAfter=No

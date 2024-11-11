@@ -10,7 +10,7 @@
 6	wish	wish	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	lists	list	NOUN	NNS	Number=Plur	3	nmod	3:nmod:on	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
-9	year	year	NOUN	NN	Number=Sing	3	nmod:tmod	3:nmod:tmod	_
+9	year	year	NOUN	NN	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	TemporalNPAdjunct=Yes
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 11	nuclear	nuclear	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	weapons	weapon	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
@@ -18,9 +18,9 @@
 
 # sent_id = weblog-blogspot.com_thelameduck_20041119192207_ENG_20041119_192207-0002
 # text = Al-Qaeda wants them, Iran wants them, Russia wants the better ones, and all the US wants is to give them all a piece of coal.
-1	Al	Al	PROPN	NNP	Number=Sing	3	compound	3:compound	SpaceAfter=No
+1	Al	Al	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	SpaceAfter=No
 2	-	-	PUNCT	HYPH	_	1	punct	1:punct	SpaceAfter=No
-3	Qaeda	Qaeda	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
+3	Qaeda	Qaeda	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 4	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	4	obj	4:obj	SpaceAfter=No
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
@@ -59,8 +59,8 @@
 5	years	year	NOUN	NNS	Number=Plur	8	obl	8:obl:for	_
 6	there	there	PRON	EX	_	8	expl	8:expl	_
 7	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
-8	been	be	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
-9	tensions	tension	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
+8	been	be	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+9	tensions	tension	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	CxnElt=8:Existential-CopPred-ThereExpl.Pivot
 10	with	with	ADP	IN	_	14	case	14:case	_
 11-12	Iran’s	_	_	_	_	_	_	_	_
 11	Iran	Iran	PROPN	NNP	Number=Sing	14	nmod:poss	14:nmod:poss	_
@@ -71,7 +71,7 @@
 16	word	word	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
 17	coming	come	VERB	VBG	Tense=Pres|VerbForm=Part	8	advcl	8:advcl:with	_
 18	this	this	DET	DT	Number=Sing|PronType=Dem	19	det	19:det	_
-19	week	week	NOUN	NN	Number=Sing	17	obl:tmod	17:obl:tmod	_
+19	week	week	NOUN	NN	Number=Sing	17	obl:unmarked	17:obl:unmarked	TemporalNPAdjunct=Yes
 20	that	that	SCONJ	IN	_	24	mark	24:mark	_
 21	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
 22	deal	deal	NOUN	NN	Number=Sing	24	nsubj:pass	24:nsubj:pass|30:nsubj	_
@@ -106,9 +106,9 @@
 8	Opposition	opposition	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	Group	group	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
 10	released	release	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-11	what	what	PRON	WP	PronType=Int	13	obj	13:obj|14:nsubj:xsubj	_
+11	what	what	PRON	WP	PronType=Int	13	obj	13:obj|14:nsubj:xsubj	CxnElt=13:Interrogative-WHInfo-Indirect.WHWord
 12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
-13	call	call	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	ccomp	10:ccomp	_
+13	call	call	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	ccomp	10:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=13:Interrogative-WHInfo-Indirect.Clause
 14	proof	proof	NOUN	NN	Number=Sing	13	xcomp	13:xcomp	_
 15	of	of	ADP	IN	_	20	case	20:case	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
@@ -158,7 +158,7 @@
 14-15	world’s	_	_	_	_	_	_	_	_
 14	world	world	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
 15	’s	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
-16	ever	ever	ADV	RB	_	17	advmod	17:advmod	_
+16	ever	ever	ADV	RB	PronType=Ind	17	advmod	17:advmod	_
 17	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	12	acl:relcl	12:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -179,10 +179,10 @@
 13	other	other	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	countries	country	NOUN	NNS	Number=Plur	20	nsubj	20:nsubj	_
 15	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
-16	not	not	PART	RB	_	20	advmod	20:advmod	_
+16	not	not	PART	RB	Polarity=Neg	20	advmod	20:advmod	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
 18	will	will	AUX	MD	VerbForm=Fin	15	conj	15:conj:and	_
-19	not	not	PART	RB	_	18	advmod	18:advmod	_
+19	not	not	PART	RB	Polarity=Neg	18	advmod	18:advmod	_
 20	have	have	VERB	VB	VerbForm=Inf	11	acl:relcl	11:acl:relcl	Cxn=rc-that-obj|SpaceAfter=No
 21	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -218,7 +218,7 @@
 # sent_id = weblog-blogspot.com_thelameduck_20041119192207_ENG_20041119_192207-0009
 # text = Right now that seems to be the US, EU, and IAEA.
 1	Right	right	ADV	RB	_	2	advmod	2:advmod	_
-2	now	now	ADV	RB	_	4	advmod	4:advmod	_
+2	now	now	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 3	that	that	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	4:nsubj|8:nsubj:xsubj|10:nsubj:xsubj|13:nsubj:xsubj	_
 4	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	to	to	PART	TO	_	8	mark	8:mark	_
@@ -235,16 +235,16 @@
 # sent_id = weblog-blogspot.com_thelameduck_20041119192207_ENG_20041119_192207-0010
 # text = But not always do those three agree, and not always are their decisions equal.
 1	But	but	CCONJ	CC	_	7	cc	7:cc	_
-2	not	not	PART	RB	_	3	advmod	3:advmod	_
-3	always	always	ADV	RB	_	7	advmod	7:advmod	_
+2	not	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
+3	always	always	ADV	RB	PronType=Tot	7	advmod	7:advmod	_
 4	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 5	those	that	DET	DT	Number=Plur|PronType=Dem	6	det	6:det	_
 6	three	three	NUM	CD	NumForm=Word|NumType=Card	7	nsubj	7:nsubj	_
 7	agree	agree	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
 8	,	,	PUNCT	,	_	15	punct	15:punct	_
 9	and	and	CCONJ	CC	_	15	cc	15:cc	_
-10	not	not	PART	RB	_	11	advmod	11:advmod	_
-11	always	always	ADV	RB	_	15	advmod	15:advmod	_
+10	not	not	PART	RB	Polarity=Neg	11	advmod	11:advmod	_
+11	always	always	ADV	RB	PronType=Tot	15	advmod	15:advmod	_
 12	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 13	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 14	decisions	decision	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj	_
@@ -273,7 +273,7 @@
 18	this	this	DET	DT	Number=Sing|PronType=Dem	19	det	19:det	_
 19	day	day	NOUN	NN	Number=Sing	23	obl	23:obl:to	_
 20	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	aux	23:aux	_
-21	never	never	ADV	RB	_	23	advmod	23:advmod	_
+21	never	never	ADV	RB	PronType=Neg	23	advmod	23:advmod	_
 22	officially	officially	ADV	RB	_	23	advmod	23:advmod	_
 23	said	say	VERB	VBN	Tense=Past|VerbForm=Part	14	acl:relcl	14:acl:relcl	Cxn=rc-wh-nsubj
 24	that	that	SCONJ	IN	_	26	mark	26:mark	_
@@ -303,10 +303,10 @@
 9	nuclear	nuclear	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	weapons	weapon	NOUN	NNS	Number=Plur	6	obj	6:obj	_
 11	yet	yet	CCONJ	CC	_	20	cc	20:cc	_
-12	neither	neither	CCONJ	CC	_	14	cc:preconj	14:cc:preconj	_
+12	neither	neither	CCONJ	CC	Polarity=Neg	14	cc:preconj	14:cc:preconj	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 14	US	US	PROPN	NNP	Number=Sing	20	nsubj	20:nsubj	_
-15	nor	nor	CCONJ	CC	_	16	cc	16:cc	_
+15	nor	nor	CCONJ	CC	Polarity=Neg	16	cc	16:cc	_
 16	any	any	DET	DT	PronType=Ind	14	conj	14:conj:nor|20:nsubj	_
 17	of	of	ADP	IN	_	19	case	19:case	_
 18	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
@@ -345,7 +345,7 @@
 23	come	come	VERB	VBN	Tense=Past|VerbForm=Part	19	xcomp	19:xcomp	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	26	det	26:det	_
 25	few	few	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
-26	years	year	NOUN	NNS	Number=Plur	27	obl:tmod	27:obl:tmod	_
+26	years	year	NOUN	NNS	Number=Plur	27	obl:unmarked	27:obl:unmarked	TemporalNPAdjunct=Yes
 27	ago	ago	ADV	RB	_	23	advmod	23:advmod	SpaceAfter=No
 28	.	.	PUNCT	.	_	8	punct	8:punct	_
 
@@ -361,7 +361,7 @@
 8	at	at	ADP	IN	_	9	case	9:case	_
 9	least	least	ADJ	JJS	Degree=Sup	11	nmod	11:nmod:at	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	couple	couple	NOUN	NN	Number=Sing	13	nmod:npmod	13:nmod:npmod	_
+11	couple	couple	NOUN	NN	Number=Sing	13	nmod:unmarked	13:nmod:unmarked	_
 12	nuclear	nuclear	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	weapons	weapon	NOUN	NNS	Number=Plur	7	obj	7:obj	SpaceAfter=No
 14	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -377,8 +377,8 @@
 7	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	6	obj	6:obj	SpaceAfter=No
 8	,	,	PUNCT	,	_	2	punct	2:punct	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
-10	who	who	PRON	WP	PronType=Int	11	nsubj	11:nsubj	_
-11	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+10	who	who	PRON	WP	PronType=Int	11	nsubj	11:nsubj	CxnElt=11:Interrogative-WHInfo-Direct.WHWord
+11	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=11:Interrogative-WHInfo-Direct.Clause
 12	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	11	obj	11:obj	SpaceAfter=No
 13	,	,	PUNCT	,	_	18	punct	18:punct	_
 14	and	and	CCONJ	CC	_	18	cc	18:cc	_

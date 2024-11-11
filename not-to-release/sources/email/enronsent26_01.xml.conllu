@@ -18,7 +18,7 @@
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
 4-5	won't	_	_	_	_	_	_	_	_
 4	wo	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-5	n't	not	PART	RB	_	6	advmod	6:advmod	_
+5	n't	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	make	make	VERB	VB	VerbForm=Inf	2	csubj	2:csubj|14:csubj	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	Compaq	Compaq	PROPN	NNP	Number=Sing	9	compound	9:compound	_
@@ -73,7 +73,7 @@
 10	Ric	Ric	PROPN	NNP	Number=Sing	9	obj	9:obj	_
 11	there	there	ADV	RB	PronType=Dem	9	advmod	9:advmod	_
 12	last	last	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	year	year	NOUN	NN	Number=Sing	9	obl:tmod	9:obl:tmod	_
+13	year	year	NOUN	NN	Number=Sing	9	obl:unmarked	9:obl:unmarked	TemporalNPAdjunct=Yes
 14	for	for	ADP	IN	_	16	case	16:case	_
 15	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
 16	birthday	birthday	NOUN	NN	Number=Sing	9	obl	9:obl:for	SpaceAfter=No
@@ -102,12 +102,12 @@
 # text = 09/20/2000 04:18 PM
 1	09/20/2000	09/20/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	04:18	04:18	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent26_01-0009
 # text = This Friday - Michael goes for a visit at St. Francis, which may be his new school (so far, so good).
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	2:det	_
-2	Friday	Friday	PROPN	NNP	Number=Sing	5	obl:tmod	5:obl:tmod	_
+2	Friday	Friday	PROPN	NNP	Number=Sing	5	obl:unmarked	5:obl:unmarked	TemporalNPAdjunct=Yes
 3	-	-	PUNCT	,	_	2	punct	2:punct	_
 4	Michael	Michael	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
 5	goes	go	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -147,7 +147,7 @@
 # newpar id = email-enronsent26_01-p0002
 # text = Most Fridays I'm going to TRY to pick Michael up since I'm away so much, which means leaving by 445 or so.
 1	Most	most	ADJ	JJS	Degree=Sup	2	amod	2:amod	_
-2	Fridays	Friday	PROPN	NNPS	Number=Plur	5	obl:tmod	5:obl:tmod	_
+2	Fridays	Friday	PROPN	NNPS	Number=Plur	5	obl:unmarked	5:obl:unmarked	TemporalNPAdjunct=Yes
 3-4	I'm	_	_	_	_	_	_	_	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj|9:nsubj:xsubj	_
 4	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
@@ -177,7 +177,7 @@
 
 # sent_id = email-enronsent26_01-0012
 # text = October 4, ENA orientation in the am.
-1	October	October	PROPN	NNP	Number=Sing	5	nmod:tmod	5:nmod:tmod	_
+1	October	October	PROPN	NNP	Number=Sing	5	nmod:unmarked	5:nmod:unmarked	TemporalNPAdjunct=Yes
 2	4	4	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	,	,	PUNCT	,	_	1	punct	1:punct	_
 4	ENA	ENA	PROPN	NNP	Number=Sing	5	compound	5:compound	_
@@ -190,7 +190,7 @@
 # sent_id = email-enronsent26_01-0013
 # newpar id = email-enronsent26_01-p0003
 # text = October 19/20, Neil is out of town, so I have to pick Michael up from school (leave at 430)
-1	October	October	PROPN	NNP	Number=Sing	10	obl:tmod	10:obl:tmod	_
+1	October	October	PROPN	NNP	Number=Sing	10	obl:unmarked	10:obl:unmarked	TemporalNPAdjunct=Yes
 2	19	19	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	/	/	SYM	,	_	4	case	4:case	SpaceAfter=No
 4	20	20	NUM	CD	NumForm=Digit|NumType=Card	2	nmod	2:nmod	SpaceAfter=No
@@ -218,7 +218,7 @@
 
 # sent_id = email-enronsent26_01-0014
 # text = October 26/27, hope to be vacation time.
-1	October	October	PROPN	NNP	Number=Sing	6	obl:tmod	6:obl:tmod	_
+1	October	October	PROPN	NNP	Number=Sing	6	obl:unmarked	6:obl:unmarked	TemporalNPAdjunct=Yes
 2	26	26	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	/	/	SYM	,	_	4	case	4:case	SpaceAfter=No
 4	27	27	NUM	CD	NumForm=Digit|NumType=Card	2	nmod	2:nmod	SpaceAfter=No
@@ -251,11 +251,11 @@
 17	,	,	PUNCT	,	_	18	punct	18:punct	_
 18	Phoenix	Phoenix	PROPN	NNP	Number=Sing	13	conj	13:conj	_
 19	-	-	PUNCT	,	_	22	punct	22:punct	_
-20	not	not	PART	RB	_	22	advmod	22:advmod	_
+20	not	not	PART	RB	Polarity=Neg	22	advmod	22:advmod	_
 21	so	so	ADV	RB	_	22	advmod	22:advmod	_
 22	great	great	ADJ	JJ	Degree=Pos	13	parataxis	13:parataxis	_
 23	this	this	DET	DT	Number=Sing|PronType=Dem	24	det	24:det	_
-24	year	year	NOUN	NN	Number=Sing	22	obl:tmod	22:obl:tmod	SpaceAfter=No
+24	year	year	NOUN	NN	Number=Sing	22	obl:unmarked	22:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 25	)	)	PUNCT	-RRB-	_	13	punct	13:punct	SpaceAfter=No
 26	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -284,7 +284,7 @@
 3	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 4-5	won't	_	_	_	_	_	_	_	_
 4	wo	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-5	n't	not	PART	RB	_	8	advmod	8:advmod	_
+5	n't	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 6	be	be	AUX	VB	VerbForm=Inf	8	cop	8:cop	_
 7	in	in	ADP	IN	_	8	case	8:case	_
 8	town	town	NOUN	NN	Number=Sing	2	ccomp	2:ccomp	_
@@ -368,7 +368,7 @@
 # text = Do we intend to reference a particular manufacturer, or should this be more generic?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
-3	intend	intend	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	intend	intend	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	reference	reference	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
@@ -387,7 +387,7 @@
 # text = Do we want to attach a draft of the Development Agreement, and condition the final deal on agreeing to terms substantially the same as what's in the draft?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj|14:nsubj:xsubj	_
-3	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	attach	attach	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
@@ -408,7 +408,7 @@
 21	terms	term	NOUN	NNS	Number=Plur	19	obl	19:obl:to	_
 22	substantially	substantially	ADV	RB	_	24	advmod	24:advmod	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
-24	same	same	ADJ	JJ	Degree=Pos	21	nmod:npmod	21:nmod:npmod	Promoted=Yes
+24	same	same	ADJ	JJ	Degree=Pos	21	nmod:unmarked	21:nmod:unmarked	Promoted=Yes
 25	as	as	SCONJ	IN	_	30	mark	30:mark	_
 26-27	what's	_	_	_	_	_	_	_	_
 26	what	what	PRON	WP	PronType=Int	30	nsubj	30:nsubj	_
@@ -444,7 +444,7 @@
 # text = Do we expect to have ONE EPC contract, or several?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
-3	expect	expect	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	expect	expect	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	have	have	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	ONE	one	NUM	CD	NumForm=Word|NumType=Card	8	nummod	8:nummod	_
@@ -477,7 +477,7 @@
 16	(	(	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
 17-18	haven't	_	_	_	_	_	_	_	_
 17	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
-18	n't	not	PART	RB	_	19	advmod	19:advmod	_
+18	n't	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 19	checked	check	VERB	VBN	Tense=Past|VerbForm=Part	3	parataxis	3:parataxis	_
 20	closely	closely	ADV	RB	_	19	advmod	19:advmod	_
 21	yet	yet	ADV	RB	_	19	advmod	19:advmod	SpaceAfter=No
@@ -488,13 +488,13 @@
 # text = If anyone has it handy, it could speed things up for me.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	3	nsubj	3:nsubj	_
-3	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	_
+3	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 5	handy	handy	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	SpaceAfter=No
 6	,	,	PUNCT	,	_	3	punct	3:punct	_
 7	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
 8	could	could	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	speed	speed	VERB	VB	VerbForm=Inf	0	root	0:root	_
+9	speed	speed	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 10	things	thing	NOUN	NNS	Number=Plur	9	obj	9:obj	_
 11	up	up	ADP	RP	_	9	compound:prt	9:compound:prt	_
 12	for	for	ADP	IN	_	13	case	13:case	_
@@ -572,7 +572,7 @@
 # text = Do we intend to reference a particular manufacturer, or should this be more generic?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
-3	intend	intend	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	intend	intend	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	reference	reference	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
@@ -591,7 +591,7 @@
 # text = Do we want to attach a draft of the Development Agreement, and condition the final deal on agreeing to terms substantially the same as what's in the draft?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj|14:nsubj:xsubj	_
-3	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	attach	attach	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
@@ -612,7 +612,7 @@
 21	terms	term	NOUN	NNS	Number=Plur	19	obl	19:obl:to	_
 22	substantially	substantially	ADV	RB	_	24	advmod	24:advmod	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
-24	same	same	ADJ	JJ	Degree=Pos	21	nmod:npmod	21:nmod:npmod	_
+24	same	same	ADJ	JJ	Degree=Pos	21	nmod:unmarked	21:nmod:unmarked	_
 25	as	as	SCONJ	IN	_	30	mark	30:mark	_
 26-27	what's	_	_	_	_	_	_	_	_
 26	what	what	PRON	WP	PronType=Int	30	nsubj	30:nsubj	_
@@ -648,7 +648,7 @@
 # text = Do we expect to have ONE EPC contract, or several?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
-3	expect	expect	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	expect	expect	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	have	have	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	ONE	one	NUM	CD	NumForm=Word|NumType=Card	8	nummod	8:nummod	_
@@ -681,7 +681,7 @@
 16	(	(	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
 17-18	haven't	_	_	_	_	_	_	_	_
 17	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
-18	n't	not	PART	RB	_	19	advmod	19:advmod	_
+18	n't	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 19	checked	check	VERB	VBN	Tense=Past|VerbForm=Part	3	parataxis	3:parataxis	_
 20	closely	closely	ADV	RB	_	19	advmod	19:advmod	_
 21	yet	yet	ADV	RB	_	19	advmod	19:advmod	SpaceAfter=No
@@ -692,13 +692,13 @@
 # text = If anyone has it handy, it could speed things up for me.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	3	nsubj	3:nsubj	_
-3	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	_
+3	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 5	handy	handy	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	SpaceAfter=No
 6	,	,	PUNCT	,	_	3	punct	3:punct	_
 7	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
 8	could	could	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	speed	speed	VERB	VB	VerbForm=Inf	0	root	0:root	_
+9	speed	speed	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 10	things	thing	NOUN	NNS	Number=Plur	9	obj	9:obj	_
 11	up	up	ADP	RP	_	9	compound:prt	9:compound:prt	_
 12	for	for	ADP	IN	_	13	case	13:case	_
@@ -747,7 +747,7 @@
 # text = Are we expecting that the portion attributable to each project will be paid as the individual EPC contracts are signed?
 1	Are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	expecting	expect	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+3	expecting	expect	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	that	that	SCONJ	IN	_	13	mark	13:mark	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	portion	portion	NOUN	NN	Number=Sing	13	nsubj:pass	13:nsubj:pass	_
@@ -796,7 +796,7 @@
 14	Energy	Energy	PROPN	NNP	Number=Sing	11	obl	11:obl:to	_
 15	and	and	CCONJ	CC	_	19	cc	19:cc	_
 16	would	would	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
-17	not	not	PART	RB	_	19	advmod	19:advmod	_
+17	not	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 18	be	be	AUX	VB	VerbForm=Inf	19	cop	19:cop	_
 19	meaningful	meaningful	ADJ	JJ	Degree=Pos	11	conj	11:conj:and	_
 20	without	without	SCONJ	IN	_	21	mark	21:mark	_
@@ -810,7 +810,7 @@
 28	would	would	AUX	MD	VerbForm=Fin	33	aux	33:aux	_
 29	be	be	AUX	VB	VerbForm=Inf	33	cop	33:cop	_
 30	a	a	DET	DT	Definite=Ind|PronType=Art	31	det	31:det	_
-31	lot	lot	NOUN	NN	Number=Sing	32	obl:npmod	32:obl:npmod	_
+31	lot	lot	NOUN	NN	Number=Sing	32	obl:unmarked	32:obl:unmarked	_
 32	more	more	ADJ	JJR	Degree=Cmp	33	amod	33:amod	_
 33	money	money	NOUN	NN	Number=Sing	11	parataxis	11:parataxis	SpaceAfter=No
 34	)	)	PUNCT	-RRB-	_	33	punct	33:punct	SpaceAfter=No
@@ -850,7 +850,7 @@
 
 # sent_id = email-enronsent26_01-0051
 # text = In order to mark any 2000 income, we will need to get CRRA to execute the Development Agreement in 2000.
-1	In	in	ADP	IN	_	4	mark	4:mark	_
+1	In	in	ADP	IN	ExtPos=SCONJ	4	mark	4:mark	_
 2	order	order	NOUN	NN	Number=Sing	1	fixed	1:fixed	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	mark	mark	VERB	VB	VerbForm=Inf	11	advcl	11:advcl:to	_
@@ -911,8 +911,8 @@
 8	Development	development	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	Agreement	agreement	NOUN	NN	Number=Sing	4	obj	4:obj	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	couple	couple	NOUN	NN	Number=Sing	12	nmod:npmod	12:nmod:npmod	_
-12	days	day	NOUN	NNS	Number=Plur	15	nmod:npmod	15:nmod:npmod	_
+11	couple	couple	NOUN	NN	Number=Sing	12	nmod:unmarked	12:nmod:unmarked	_
+12	days	day	NOUN	NNS	Number=Plur	15	nmod:unmarked	15:nmod:unmarked	_
 13	after	after	ADP	IN	_	15	case	15:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	LOI	loi	NOUN	NN	Number=Sing	4	obl	4:obl:after	SpaceAfter=No
@@ -928,14 +928,14 @@
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 8	would	would	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	make	make	VERB	VB	VerbForm=Inf	0	root	0:root	_
+9	make	make	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 10	an	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 11	ultimate	ultimate	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	determination	determination	NOUN	NN	Number=Sing	9	obj	9:obj	_
 13	if	if	SCONJ	IN	_	16	mark	16:mark	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	agreement	agreement	NOUN	NN	Number=Sing	16	nsubj	16:nsubj|19:nsubj:xsubj	_
-16	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	_
+16	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 17	to	to	PART	TO	_	19	mark	19:mark	_
 18	be	be	AUX	VB	VerbForm=Inf	19	aux:pass	19:aux:pass	_
 19	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	16	xcomp	16:xcomp	_
@@ -964,7 +964,7 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	want	want	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	condition	condition	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
@@ -995,9 +995,9 @@
 10	basis	basis	NOUN	NN	Number=Sing	6	obl	6:obl:on	_
 11	or	or	CCONJ	CC	_	16	cc	16:cc	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
-13	unit	unit	NOUN	NN	Number=Sing	16	compound	16:compound	_
-14	by	by	ADP	IN	_	15	case	15:case	_
-15	unit	unit	NOUN	NN	Number=Sing	13	nmod	13:nmod:by	_
+13	unit	unit	NOUN	NN	Number=Sing	16	compound	16:compound	Cxn=NPN|CxnElt=13:NPN.N1
+14	by	by	ADP	IN	_	15	case	15:case	CxnElt=13:NPN.P
+15	unit	unit	NOUN	NN	Number=Sing	13	nmod	13:nmod:by	CxnElt=13:NPN.N2
 16	basis	basis	NOUN	NN	Number=Sing	10	conj	6:obl:on|10:conj:or	_
 17	in	in	ADP	IN	_	20	case	20:case	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_

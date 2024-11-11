@@ -33,17 +33,17 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	hotels	hotel	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|7:nsubj	_
 4	back	back	ADV	RB	_	5	advmod	5:advmod	_
-5	up	up	ADV	RB	_	0	root	0:root	_
+5	up	up	ADV	RB	_	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=5:Interrogative-Polar-Direct.Clause
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
 7	running	run	VERB	VBG	Tense=Pres|VerbForm=Part	5	conj	5:conj:and	SpaceAfter=No
 8	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108094504AAKrc8F_ans-0004
 # text = Are there still aftershocks?
-1	Are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Direct|CxnElt=1:Interrogative-Polar-Direct.Clause
 2	there	there	PRON	EX	_	1	expl	1:expl	_
 3	still	still	ADV	RB	_	1	advmod	1:advmod	_
-4	aftershocks	aftershock	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	SpaceAfter=No
+4	aftershocks	aftershock	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	CxnElt=1:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 5	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108094504AAKrc8F_ans-0005
@@ -97,8 +97,8 @@
 11	earthquake	earthquake	NOUN	NN	Number=Sing	7	nmod	7:nmod:to	SpaceAfter=No
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13-14	don't	_	_	_	_	_	_	_	_
-13	do	do	AUX	VB	VerbForm=Inf	15	aux	15:aux	_
-14	n't	not	PART	RB	_	15	advmod	15:advmod	_
+13	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	15	aux	15:aux	_
+14	n't	not	PART	RB	Polarity=Neg	15	advmod	15:advmod	_
 15	worry	worry	VERB	VB	VerbForm=Inf	3	parataxis	3:parataxis	SpaceAfter=No
 16	,	,	PUNCT	,	_	20	punct	20:punct	_
 17	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	nsubj	20:nsubj	_
@@ -114,11 +114,11 @@
 
 # sent_id = answers-20111108094504AAKrc8F_ans-0009
 # text = As for Christchurch, yes the aftershocks are still happening, but these are fairly small - you can feel them, but the don't do any damage.
-1	As	as	ADP	IN	_	3	case	3:case	_
+1	As	as	ADP	IN	ExtPos=ADP	3	case	3:case	_
 2	for	for	ADP	IN	_	1	fixed	1:fixed	_
 3	Christchurch	Christchurch	PROPN	NNP	Number=Sing	10	obl	10:obl:as_for	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
-5	yes	yes	INTJ	UH	_	10	discourse	10:discourse	_
+5	yes	yes	INTJ	UH	Polarity=Pos	10	discourse	10:discourse	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	aftershocks	aftershock	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
 8	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
@@ -140,7 +140,7 @@
 24	the	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs|Typo=Yes	27	nsubj	27:nsubj	CorrectForm=they
 25-26	don't	_	_	_	_	_	_	_	_
 25	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	27	aux	27:aux	_
-26	n't	not	PART	RB	_	27	advmod	27:advmod	_
+26	n't	not	PART	RB	Polarity=Neg	27	advmod	27:advmod	_
 27	do	do	VERB	VB	VerbForm=Inf	20	conj	20:conj:but	_
 28	any	any	DET	DT	PronType=Ind	29	det	29:det	_
 29	damage	damage	NOUN	NN	Number=Sing	27	obj	27:obj	SpaceAfter=No
@@ -190,7 +190,7 @@
 20	and	and	CCONJ	CC	_	24	cc	24:cc	_
 21-22	hasn't	_	_	_	_	_	_	_	_
 21	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	aux	24:aux	_
-22	n't	not	PART	RB	_	24	advmod	24:advmod	_
+22	n't	not	PART	RB	Polarity=Neg	24	advmod	24:advmod	_
 23	been	be	AUX	VBN	Tense=Past|VerbForm=Part	24	aux:pass	24:aux:pass	_
 24	cleared	clear	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	17	conj	5:advcl:as|17:conj:and	_
 25	away	away	ADP	RP	_	24	compound:prt	24:compound:prt	_
@@ -219,12 +219,12 @@
 17	,	,	PUNCT	,	_	24	punct	24:punct	_
 18	but	but	CCONJ	CC	_	24	cc	24:cc	_
 19	if	if	SCONJ	IN	_	20	mark	20:mark	_
-20	not	not	PART	RB	_	24	advcl	24:advcl:if	_
+20	not	not	PART	RB	Polarity=Neg	24	advcl	24:advcl:if	CxnElt=24:Conditional-UnspecifiedEpistemic-Reduced.Protasis
 21	then	then	ADV	RB	PronType=Dem	24	advmod	24:advmod	_
 22	there	there	PRON	EX	_	24	expl	24:expl	_
 23	would	would	AUX	MD	VerbForm=Fin	24	aux	24:aux	_
-24	be	be	VERB	VB	VerbForm=Inf	3	conj	3:conj:but	_
-25	some	some	DET	DT	PronType=Ind	24	nsubj	24:nsubj	_
+24	be	be	VERB	VB	VerbForm=Inf	3	conj	3:conj:but	Cxn=Conditional-UnspecifiedEpistemic-Reduced,Existential-CopPred-ThereExpl|CxnElt=24:Conditional-UnspecifiedEpistemic-Reduced.Apodosis
+25	some	some	DET	DT	PronType=Ind	24	nsubj	24:nsubj	CxnElt=24:Existential-CopPred-ThereExpl.Pivot
 26	in	in	ADP	IN	_	29	case	29:case	_
 27	close	close	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
 28	by	by	ADV	RB	_	27	advmod	27:advmod	_
@@ -253,11 +253,11 @@
 18	can	can	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 19	see	see	VERB	VB	VerbForm=Inf	6	conj	6:conj:and	_
 20	first	first	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	21	amod	21:amod	_
-21	hand	hand	NOUN	NN	Number=Sing	19	obl:npmod	19:obl:npmod	_
-22	how	how	ADV	WRB	PronType=Int	25	advmod	25:advmod	_
+21	hand	hand	NOUN	NN	Number=Sing	19	obl:unmarked	19:obl:unmarked	_
+22	how	how	ADV	WRB	PronType=Int	25	advmod	25:advmod	CxnElt=25:Interrogative-WHInfo-Indirect.WHWord
 23	things	thing	NOUN	NNS	Number=Plur	25	nsubj:pass	25:nsubj:pass	_
 24	get	get	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	25	aux:pass	25:aux:pass	_
-25	effected	effect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	19	ccomp	19:ccomp	_
+25	effected	effect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	19	ccomp	19:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=25:Interrogative-WHInfo-Indirect.Clause
 26	by	by	ADP	IN	_	27	case	27:case	_
 27	earthquakes	earthquake	NOUN	NNS	Number=Plur	25	obl:agent	25:obl:agent	SpaceAfter=No
 28	.	.	PUNCT	.	_	6	punct	6:punct	_
@@ -312,7 +312,7 @@
 3	discovered	discover	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	3	obj	3:obj	_
 5	last	last	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	time	time	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod|10:obl	_
+6	time	time	NOUN	NN	Number=Sing	3	obl:unmarked	3:obl:unmarked|10:obl	TemporalNPAdjunct=Yes
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	10:cop	_
 9	down	down	ADV	RB	_	10	advmod	10:advmod	_
@@ -340,14 +340,14 @@
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
 10	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 11	constantly	constantly	ADV	RB	_	12	advmod	12:advmod	_
-12	paranoid	paranoid	ADJ	JJ	Degree=Pos	17	advcl	17:advcl:if	SpaceAfter=No
+12	paranoid	paranoid	ADJ	JJ	Degree=Pos	17	advcl	17:advcl:if	CxnElt=17:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 13	,	,	PUNCT	,	_	12	punct	12:punct	_
 14-15	you'll	_	_	_	_	_	_	_	_
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	_
 15	'll	will	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
-16	never	never	ADV	RB	_	17	advmod	17:advmod	_
-17	get	get	VERB	VB	VerbForm=Inf	4	parataxis	4:parataxis	_
-18	anywhere	anywhere	ADV	RB	_	17	advmod	17:advmod	_
+16	never	never	ADV	RB	PronType=Neg	17	advmod	17:advmod	_
+17	get	get	VERB	VB	VerbForm=Inf	4	parataxis	4:parataxis	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=17:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
+18	anywhere	anywhere	ADV	RB	PronType=Ind	17	advmod	17:advmod	_
 19	without	without	ADP	IN	_	21	case	21:case	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 21	sense	sense	NOUN	NN	Number=Sing	17	obl	17:obl:without	_
@@ -357,7 +357,7 @@
 
 # sent_id = answers-20111108094504AAKrc8F_ans-0018
 # text = In case of an earthquake, stay under a sturdy table and don't go outside as possible debris will fall.
-1	In	in	ADP	IN	_	5	case	5:case	_
+1	In	in	ADP	IN	ExtPos=ADP	5	case	5:case	_
 2	case	case	NOUN	NN	Number=Sing	1	fixed	1:fixed	_
 3	of	of	ADP	IN	_	1	fixed	1:fixed	_
 4	an	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
@@ -371,7 +371,7 @@
 12	and	and	CCONJ	CC	_	15	cc	15:cc	_
 13-14	don't	_	_	_	_	_	_	_	_
 13	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	15	aux	15:aux	_
-14	n't	not	PART	RB	_	15	advmod	15:advmod	_
+14	n't	not	PART	RB	Polarity=Neg	15	advmod	15:advmod	_
 15	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	7	conj	7:conj:and	_
 16	outside	outside	ADV	RB	_	15	advmod	15:advmod	_
 17	as	as	SCONJ	IN	_	21	mark	21:mark	_
@@ -384,7 +384,7 @@
 # sent_id = answers-20111108094504AAKrc8F_ans-0019
 # newpar id = answers-20111108094504AAKrc8F_ans-p0005
 # text = Yes it's ok.
-1	Yes	yes	INTJ	UH	_	4	discourse	4:discourse	_
+1	Yes	yes	INTJ	UH	Polarity=Pos	4	discourse	4:discourse	_
 2-3	it's	_	_	_	_	_	_	_	_
 2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
 3	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
@@ -393,11 +393,11 @@
 
 # sent_id = answers-20111108094504AAKrc8F_ans-0020
 # text = Yes, yes and yes.
-1	Yes	yes	INTJ	UH	_	0	root	0:root	SpaceAfter=No
+1	Yes	yes	INTJ	UH	Polarity=Pos	0	root	0:root	SpaceAfter=No
 2	,	,	PUNCT	,	_	3	punct	3:punct	_
-3	yes	yes	INTJ	UH	_	1	conj	1:conj:and	_
+3	yes	yes	INTJ	UH	Polarity=Pos	1	conj	1:conj:and	_
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
-5	yes	yes	INTJ	UH	_	1	conj	1:conj:and	SpaceAfter=No
+5	yes	yes	INTJ	UH	Polarity=Pos	1	conj	1:conj:and	SpaceAfter=No
 6	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108094504AAKrc8F_ans-0021

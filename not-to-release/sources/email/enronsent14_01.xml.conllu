@@ -10,7 +10,7 @@
 # text = 04/30/2001 02:28 PM
 1	04/30/2001	04/30/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	02:28	02:28	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent14_01-0003
 # text = I am forwarding for your attention the resume of Peter Percell who has an extensive experience in modeling physical flows of natural gas in pipeline systems.
@@ -60,7 +60,7 @@
 2	met	meet	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	obj	2:obj	_
 4	last	last	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	week	week	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	_
+5	week	week	NOUN	NN	Number=Sing	2	obl:unmarked	2:obl:unmarked	TemporalNPAdjunct=Yes
 6	at	at	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	meeting	meeting	NOUN	NN	Number=Sing	2	obl	2:obl:at	_
@@ -122,7 +122,7 @@
 5	know	know	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	if	if	SCONJ	IN	_	8	mark	8:mark	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
-8	interested	interested	ADJ	JJ	Degree=Pos	5	ccomp	5:ccomp	_
+8	interested	interested	ADJ	JJ	Degree=Pos	5	ccomp	5:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=8:Interrogative-Polar-Indirect.Clause
 9	in	in	SCONJ	IN	_	10	mark	10:mark	_
 10	introducing	introduce	VERB	VBG	Tense=Pres|VerbForm=Part	8	advcl	8:advcl:in	_
 11	Peter	Peter	PROPN	NNP	Number=Sing	10	obj	10:obj	_
@@ -164,7 +164,7 @@
 6	on	on	ADP	IN	_	7	case	7:case	_
 7	04/30/2001	04/30/2001	NUM	CD	NumForm=Digit|NumType=Card	1	nmod	1:nmod:on	_
 8	11:16:58	11:16:58	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
-9	AM	a.m.	NOUN	NN	Number=Sing	7	nmod:tmod	7:nmod:tmod	_
+9	AM	a.m.	NOUN	NN	Number=Sing	7	nmod:unmarked	7:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent14_01-0011
 # text = I enjoyed your presentation, and meeting you briefly afterwards, at the SIAM Workshop last Friday.
@@ -184,7 +184,7 @@
 14	SIAM	SIAM	PROPN	NNP	Number=Sing	15	compound	15:compound	_
 15	Workshop	workshop	NOUN	NN	Number=Sing	4	nmod	4:nmod:at	_
 16	last	last	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	Friday	Friday	PROPN	NNP	Number=Sing	4	nmod:tmod	4:nmod:tmod	SpaceAfter=No
+17	Friday	Friday	PROPN	NNP	Number=Sing	4	nmod:unmarked	4:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 18	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent14_01-0012
@@ -395,7 +395,7 @@
 9	TX	TX	PROPN	NNP	Number=Sing	7	appos	7:appos	_
 10	77042-2016	77042-2016	NUM	CD	NumForm=Digit|NumType=Card	5	appos	5:appos	_
 11	(	(	PUNCT	-LRB-	_	12	punct	12:punct	SpaceAfter=No
-12	713	713	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	SpaceAfter=No
+12	713	713	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	ExtPos=PROPN|FlatType=Phone|SpaceAfter=No
 13	)	)	PUNCT	-RRB-	_	12	punct	12:punct	_
 14	532-3836	532-3836	NUM	CD	NumForm=Digit|NumType=Card	12	flat	12:flat	_
 15	voice	voice	NOUN	NN	Number=Sing	12	appos	12:appos	_
@@ -405,20 +405,20 @@
 # sent_id = email-enronsent14_01-0023
 # text = - Percell, Peter Resume Only.doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	Percell,	percell,	NOUN	GW	_	0	root	0:root	_
+2	Percell,	percell,	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
 3	Peter	peter	X	GW	_	2	flat	2:flat	_
 4	Resume	resume	X	GW	_	2	flat	2:flat	_
-5	Only.doc	only.doc	X	NN	Number=Sing	2	flat	2:flat	_
+5	Only.doc	only.doc	X	NN	_	2	flat	2:flat	_
 
 # sent_id = email-enronsent14_01-0024
 # text = - Percell, Peter A&C Exp.doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	Percell,	percell,	NOUN	GW	_	0	root	0:root	_
+2	Percell,	percell,	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
 3	Peter	peter	X	GW	_	2	flat	2:flat	_
 4	A	A	X	GW	_	2	flat	2:flat	SpaceAfter=No
 5	&	&	X	GW	_	2	flat	2:flat	SpaceAfter=No
 6	C	C	X	GW	_	2	flat	2:flat	_
-7	Exp.doc	exp.doc	X	NN	Number=Sing	2	flat	2:flat	_
+7	Exp.doc	exp.doc	X	NN	_	2	flat	2:flat	_
 
 # sent_id = email-enronsent14_01-0025
 # newpar id = email-enronsent14_01-p0008
@@ -429,7 +429,7 @@
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 5-6	didn't	_	_	_	_	_	_	_	_
 5	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	7	aux	7:aux	_
-6	n't	not	PART	RB	_	7	advmod	7:advmod	_
+6	n't	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 7	read	read	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
 8	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	obj	7:obj	_
 9	very	very	ADV	RB	_	10	advmod	10:advmod	_
@@ -473,7 +473,7 @@
 # text = 04/30/2001 12:42 PM
 1	04/30/2001	04/30/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	12:42	12:42	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent14_01-0031
 # text = Stan:
@@ -554,11 +554,11 @@
 # text = 04/30/2001 12:35 PM
 1	04/30/2001	04/30/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	12:35	12:35	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent14_01-0038
 # text = What is the subject matter you wish to visit about?
-1	What	what	PRON	WP	PronType=Int	0	root	0:root	_
+1	What	what	PRON	WP	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=1:Interrogative-WHInfo-Direct.Clause,1:Interrogative-WHInfo-Direct.WHWord
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	subject	subject	NOUN	NN	Number=Sing	5	compound	5:compound	_
@@ -581,7 +581,7 @@
 # text = 04/30/2001 09:24 AM
 1	04/30/2001	04/30/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	09:24	09:24	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent14_01-0041
 # text = Stan:
@@ -603,14 +603,14 @@
 10	would	would	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 11	like	like	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
-13	visit	visit	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
+13	visit	visit	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	Cxn=Conditional-UnspecifiedEpistemic-Reduced|CxnElt=13:Conditional-UnspecifiedEpistemic-Reduced.Apodosis
 14	with	with	ADP	IN	_	15	case	15:case	_
 15	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	13	obl	13:obl:with	_
 16	in	in	ADP	IN	_	18	case	18:case	_
 17	early	early	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	afternoon	afternoon	NOUN	NN	Number=Sing	13	obl	13:obl:in	_
 19	if	if	SCONJ	IN	_	20	mark	20:mark	_
-20	possible	possible	ADJ	JJ	Degree=Pos	13	advcl	13:advcl:if	SpaceAfter=No
+20	possible	possible	ADJ	JJ	Degree=Pos	13	advcl	13:advcl:if	CxnElt=13:Conditional-UnspecifiedEpistemic-Reduced.Protasis|SpaceAfter=No
 21	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = email-enronsent14_01-0043
@@ -619,10 +619,10 @@
 2	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj|4:nsubj:xsubj	_
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-5	what	what	DET	WDT	PronType=Int	6	det	6:det	_
+5	what	what	DET	WDT	PronType=Int	6	det	6:det	CxnElt=8:Interrogative-WHInfo-Indirect.WHWord
 6	time	time	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 7	would	would	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	work	work	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	_
+8	work	work	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=8:Interrogative-WHInfo-Indirect.Clause
 9	for	for	ADP	IN	_	10	case	10:case	_
 10	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	8	obl	8:obl:for	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -670,7 +670,7 @@
 2	on	on	ADP	IN	_	3	case	3:case	_
 3	04/30/2001	04/30/2001	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:on	_
 4	01:39:56	01:39:56	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
-5	PM	p.m.	NOUN	NN	Number=Sing	3	nmod:tmod	3:nmod:tmod	_
+5	PM	p.m.	NOUN	NN	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent14_01-0049
 # text = Dear Mr. Horton,
@@ -749,7 +749,7 @@
 5	if	if	SCONJ	IN	_	8	mark	8:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 7	could	could	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	give	give	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+8	give	give	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=8:Interrogative-Polar-Indirect.Clause
 9	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	iobj	8:iobj	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 11	recommendation	recommendation	NOUN	NN	Number=Sing	8	obj	8:obj	_
@@ -812,7 +812,7 @@
 2	on	on	ADP	IN	_	3	case	3:case	_
 3	04/30/2001	04/30/2001	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:on	_
 4	01:39:56	01:39:56	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
-5	PM	p.m.	NOUN	NN	Number=Sing	3	nmod:tmod	3:nmod:tmod	_
+5	PM	p.m.	NOUN	NN	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent14_01-0058
 # text = Dear Mr. Horton,
@@ -891,7 +891,7 @@
 5	if	if	SCONJ	IN	_	8	mark	8:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 7	could	could	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	give	give	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	_
+8	give	give	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=8:Interrogative-Polar-Indirect.Clause
 9	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	iobj	8:iobj	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 11	recommendation	recommendation	NOUN	NN	Number=Sing	8	obj	8:obj	_
@@ -961,7 +961,7 @@
 # text = 05/01/2001 03:48 PM
 1	05/01/2001	05/01/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	03:48	03:48	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent14_01-0069
 # text = Executive Committee:
@@ -1106,7 +1106,7 @@
 5	if	if	SCONJ	IN	_	8	mark	8:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 7	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
-8	interested	interested	ADJ	JJ	Degree=Pos	4	ccomp	4:ccomp	_
+8	interested	interested	ADJ	JJ	Degree=Pos	4	ccomp	4:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=8:Interrogative-Polar-Indirect.Clause
 9	in	in	ADP	IN	_	10	case	10:case	_
 10	any	any	DET	DT	PronType=Ind	8	obl	8:obl:in	_
 11	of	of	ADP	IN	_	13	case	13:case	_
@@ -1137,7 +1137,7 @@
 2	Game	game	NOUN	NN	Number=Sing	3	compound	3:compound	_
 3	A	A	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 4	:	:	PUNCT	:	_	5	punct	5:punct	_
-5	Saturday	Saturday	PROPN	NNP	Number=Sing	3	nmod:tmod	3:nmod:tmod	SpaceAfter=No
+5	Saturday	Saturday	PROPN	NNP	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
 7	May	May	PROPN	NNP	Number=Sing	5	appos	5:appos	_
 8	12	12	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
@@ -1154,7 +1154,7 @@
 2	Game	game	NOUN	NN	Number=Sing	3	compound	3:compound	_
 3	B	B	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 4	:	:	PUNCT	:	_	5	punct	5:punct	_
-5	Thursday	Thursday	PROPN	NNP	Number=Sing	3	nmod:tmod	3:nmod:tmod	SpaceAfter=No
+5	Thursday	Thursday	PROPN	NNP	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
 7	May	May	PROPN	NNP	Number=Sing	5	appos	5:appos	_
 8	24	24	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
@@ -1170,7 +1170,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	1	1	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Monday	Monday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Monday	Monday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	May	May	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	28	28	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1178,8 +1178,8 @@
 9	2:00	2:00	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	SpaceAfter=No
 10	PM	p.m.	NOUN	NN	Number=Sing	1	nmod	1:nmod	_
 11	vs.	vs.	ADP	IN	_	14	case	14:case	_
-12	Los	Los	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	Angeles	Angeles	PROPN	NNP	Number=Sing	14	compound	14:compound	_
+12	Los	Los	PROPN	NNP	Number=Sing	14	compound	14:compound	_
+13	Angeles	Angeles	PROPN	NNP	Number=Sing	12	flat	12:flat	_
 14	SPARKS	SPARKS	PROPN	NNPS	Number=Plur	1	nmod	1:nmod:versus	_
 
 # sent_id = email-enronsent14_01-0083
@@ -1187,7 +1187,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	3	3	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Monday	Monday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Monday	Monday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	June	June	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	11	11	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1195,8 +1195,8 @@
 9	7:00	7:00	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	SpaceAfter=No
 10	PM	p.m.	NOUN	NN	Number=Sing	1	nmod	1:nmod	_
 11	vs.	vs.	ADP	IN	_	14	case	14:case	_
-12	Los	Los	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	Angeles	Angeles	PROPN	NNP	Number=Sing	14	compound	14:compound	_
+12	Los	Los	PROPN	NNP	Number=Sing	14	compound	14:compound	_
+13	Angeles	Angeles	PROPN	NNP	Number=Sing	12	flat	12:flat	_
 14	SPARKS	SPARKS	PROPN	NNPS	Number=Plur	1	nmod	1:nmod:versus	_
 
 # sent_id = email-enronsent14_01-0084
@@ -1204,7 +1204,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	4	4	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Thursday	Thursday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Thursday	Thursday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	June	June	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	14	14	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1220,7 +1220,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	5	5	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Sunday	Sunday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Sunday	Sunday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	June	June	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	17	17	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1236,7 +1236,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	6	6	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Tuesday	Tuesday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Tuesday	Tuesday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	June	June	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	19	19	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1252,7 +1252,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	7	7	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Saturday	Saturday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Saturday	Saturday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	June	June	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	23	23	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1268,7 +1268,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	8	8	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Monday	Monday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Monday	Monday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	July	July	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	2	2	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1284,7 +1284,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	9	9	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Friday	Friday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Friday	Friday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	July	July	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	6	6	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1300,7 +1300,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	10	10	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Sunday	Sunday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Sunday	Sunday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	July	July	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	8	8	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1316,7 +1316,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	11	11	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Tuesday	Tuesday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Tuesday	Tuesday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	July	July	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	24	24	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1332,7 +1332,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	12	12	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Saturday	Saturday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Saturday	Saturday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	July	July	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	28	28	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1349,7 +1349,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	13	13	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Monday	Monday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Monday	Monday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	July	July	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	30	30	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1365,7 +1365,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	14	14	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Friday	Friday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Friday	Friday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	August	August	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	3	3	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1381,7 +1381,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	15	15	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Monday	Monday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Monday	Monday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	August	August	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	6	6	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1397,7 +1397,7 @@
 1	Game	game	NOUN	NN	Number=Sing	0	root	0:root	_
 2	16	16	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
-4	Monday	Monday	PROPN	NNP	Number=Sing	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
+4	Monday	Monday	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	August	August	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 7	13	13	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
@@ -1411,7 +1411,7 @@
 # sent_id = email-enronsent14_01-0097
 # text = Please note that date and time are subject to change; please check local listings.
 1	Please	please	INTJ	UH	_	2	discourse	2:discourse	_
-2	note	note	VERB	VB	VerbForm=Inf	0	root	0:root	_
+2	note	note	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	that	that	SCONJ	IN	_	8	mark	8:mark	_
 4	date	date	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
@@ -1422,7 +1422,7 @@
 10	change	change	NOUN	NN	Number=Sing	8	obl	8:obl:to	SpaceAfter=No
 11	;	;	PUNCT	,	_	13	punct	13:punct	_
 12	please	please	INTJ	UH	_	13	discourse	13:discourse	_
-13	check	check	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
+13	check	check	VERB	VB	Mood=Imp|VerbForm=Fin	2	parataxis	2:parataxis	_
 14	local	local	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	listings	listing	NOUN	NNS	Number=Plur	13	obj	13:obj	SpaceAfter=No
 16	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -1471,7 +1471,7 @@
 2	on	on	ADP	IN	_	3	case	3:case	_
 3	05/01/2001	05/01/2001	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:on	_
 4	08:50:01	08:50:01	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
-5	PM	p.m.	NOUN	NN	Number=Sing	3	nmod:tmod	3:nmod:tmod	_
+5	PM	p.m.	NOUN	NN	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent14_01-0104
 # text = Almost done with your drafts.
@@ -1487,7 +1487,7 @@
 1	Took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 2	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obj	1:obj	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	little	little	ADJ	JJ	Degree=Pos	5	obl:npmod	5:obl:npmod	_
+4	little	little	ADJ	JJ	Degree=Pos	5	obl:unmarked	5:obl:unmarked	_
 5	longer	long	ADV	RBR	Degree=Cmp	1	advmod	1:advmod	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	review	review	VERB	VB	VerbForm=Inf	1	csubj	1:csubj	_
@@ -1505,9 +1505,9 @@
 18	(	(	PUNCT	-LRB-	_	20	punct	20:punct	SpaceAfter=No
 19-20	there's	_	_	_	_	_	_	_	_
 19	there	there	PRON	EX	_	20	expl	20:expl	_
-20	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	parataxis	1:parataxis	_
+20	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	parataxis	1:parataxis	Cxn=Existential-CopPred-HereExpl,Existential-CopPred-ThereExpl
 21	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
-22	lot	lot	NOUN	NN	Number=Sing	20	nsubj	20:nsubj	_
+22	lot	lot	NOUN	NN	Number=Sing	20	nsubj	20:nsubj	CxnElt=20:Existential-CopPred-HereExpl.Pivot,20:Existential-CopPred-ThereExpl.Pivot
 23	going	go	VERB	VBG	VerbForm=Ger	22	acl	22:acl	_
 24	on	on	ADP	RP	_	23	compound:prt	23:compound:prt	_
 25	here	here	ADV	RB	PronType=Dem	20	advmod	20:advmod	SpaceAfter=No
@@ -1531,8 +1531,8 @@
 6	out	out	ADV	RB	_	4	advmod	4:advmod	_
 7	to	to	ADP	IN	_	8	case	8:case	_
 8	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	4	obl	4:obl:to	_
-9	sometime	sometime	ADV	RB	_	10	advmod	10:advmod	_
-10	tomorrow	tomorrow	NOUN	NN	Number=Sing	4	obl:tmod	4:obl:tmod	SpaceAfter=No
+9	sometime	sometime	ADV	RB	PronType=Ind	10	advmod	10:advmod	_
+10	tomorrow	tomorrow	NOUN	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent14_01-0107
@@ -1612,7 +1612,7 @@
 # text = 05/02/2001 12:03 PM
 1	05/02/2001	05/02/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	12:03	12:03	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent14_01-0116
 # text = Executive Committee Weekly Meeting
@@ -1706,24 +1706,24 @@
 1	Please	please	INTJ	UH	_	2	discourse	2:discourse	_
 2	indicate	indicate	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	below	below	ADV	RB	_	2	advmod	2:advmod	_
-4	whether	whether	SCONJ	IN	_	8	mark	8:mark	_
+4	whether	whether	SCONJ	IN	ExtPos=SCONJ	8	mark	8:mark	_
 5	or	or	CCONJ	CC	_	4	fixed	4:fixed	_
-6	not	not	PART	RB	_	4	fixed	4:fixed	_
+6	not	not	PART	RB	Polarity=Neg	4	fixed	4:fixed	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj|10:nsubj:xsubj|16:nsubj	_
-8	plan	plan	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
+8	plan	plan	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=8:Interrogative-WHInfo-Indirect.Clause
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	attend	attend	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
 11	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	12:det	_
 12	meeting	meeting	NOUN	NN	Number=Sing	10	obj	10:obj	_
 13	and	and	CCONJ	CC	_	16	cc	16:cc	_
 14	through	through	ADP	IN	_	16	case	16:case	_
-15	what	what	DET	WDT	PronType=Int	16	det	16:det	_
+15	what	what	DET	WDT	PronType=Int	16	det	16:det	CxnElt=8:Interrogative-WHInfo-Indirect.WHWord
 16	medium	medium	NOUN	NN	Number=Sing	8	conj	2:ccomp|8:conj:and	SpaceAfter=No
 17	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent14_01-0124
 # text = Yes, I will attend in person _______
-1	Yes	yes	INTJ	UH	_	5	discourse	5:discourse	SpaceAfter=No
+1	Yes	yes	INTJ	UH	Polarity=Pos	5	discourse	5:discourse	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 4	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
@@ -1751,11 +1751,11 @@
 
 # sent_id = email-enronsent14_01-0127
 # text = No, I will not attend _______
-1	No	no	INTJ	UH	_	6	discourse	6:discourse	SpaceAfter=No
+1	No	no	INTJ	UH	Polarity=Neg	6	discourse	6:discourse	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 4	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-5	not	not	PART	RB	_	6	advmod	6:advmod	_
+5	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	attend	attend	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	_______	_______	PUNCT	NFP	_	6	punct	6:punct	_
 
@@ -1778,7 +1778,7 @@
 11	12:00	12:00	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
 12	p.m.	p.m.	NOUN	NN	Number=Sing	2	obl	2:obl:by	SpaceAfter=No
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
-14	Friday	Friday	PROPN	NNP	Number=Sing	12	nmod:tmod	12:nmod:tmod	SpaceAfter=No
+14	Friday	Friday	PROPN	NNP	Number=Sing	12	nmod:unmarked	12:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 15	,	,	PUNCT	,	_	16	punct	16:punct	_
 16	May	May	PROPN	NNP	Number=Sing	14	appos	14:appos	_
 17	4th	4th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	16	nummod	16:nummod	_
@@ -1812,12 +1812,12 @@
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	conj	2:conj:and|8:nsubj|10:nsubj:xsubj	_
 5	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-6	not	not	PART	RB	_	8	advmod	8:advmod	_
+6	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 7	be	be	AUX	VB	VerbForm=Inf	8	cop	8:cop	_
 8	able	able	ADJ	JJ	Degree=Pos	0	root	0:root	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	attend	attend	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
-11	due	due	ADP	IN	_	14	case	14:case	_
+11	due	due	ADJ	JJ	Degree=Pos|ExtPos=ADP	14	case	14:case	_
 12	to	to	ADP	IN	_	11	fixed	11:fixed	_
 13	previous	previous	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	committments	committment	NOUN	NNS	Number=Plur	8	obl	8:obl:due_to	SpaceAfter=No

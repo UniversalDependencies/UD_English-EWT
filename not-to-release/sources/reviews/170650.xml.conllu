@@ -2,7 +2,7 @@
 # sent_id = reviews-170650-0001
 # newpar id = reviews-170650-p0001
 # text = NEVER fear going to the dentist again!
-1	NEVER	never	ADV	RB	_	2	advmod	2:advmod	_
+1	NEVER	never	ADV	RB	PronType=Neg	2	advmod	2:advmod	_
 2	fear	fear	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	going	go	VERB	VBG	VerbForm=Ger	2	xcomp	2:xcomp	_
 4	to	to	ADP	IN	_	6	case	6:case	_
@@ -18,7 +18,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|7:nsubj	_
 2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	61	61	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
-4	years	year	NOUN	NNS	Number=Plur	5	obl:npmod	5:obl:npmod	_
+4	years	year	NOUN	NNS	Number=Plur	5	obl:unmarked	5:obl:unmarked	_
 5	old	old	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
 7	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	_
@@ -26,7 +26,7 @@
 9	problems	problem	NOUN	NNS	Number=Plur	7	obj	7:obj	_
 10	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
 11	entire	entire	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	life	life	NOUN	NN	Number=Sing	7	obl:tmod	7:obl:tmod	SpaceAfter=No
+12	life	life	NOUN	NN	Number=Sing	7	obl:unmarked	7:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 13	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-170650-0003
@@ -118,7 +118,7 @@
 11	people	people	NOUN	NNS	Number=Plur	0	root	0:root|15:obl	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
 13	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
-14	ever	ever	ADV	RB	_	15	advmod	15:advmod	_
+14	ever	ever	ADV	RB	PronType=Ind	15	advmod	15:advmod	_
 15	dealt	deal	VERB	VBN	Tense=Past|VerbForm=Part	11	acl:relcl	11:acl:relcl	Cxn=rc-red-obl-pstrand
 16	with	with	ADP	IN	_	15	obl	15:obl	Promoted=Yes|SpaceAfter=No
 17	.	.	PUNCT	.	_	11	punct	11:punct	_
@@ -151,7 +151,7 @@
 # sent_id = reviews-170650-0010
 # text = I never felt pain or discomfort.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-2	never	never	ADV	RB	_	3	advmod	3:advmod	_
+2	never	never	ADV	RB	PronType=Neg	3	advmod	3:advmod	_
 3	felt	feel	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	pain	pain	NOUN	NN	Number=Sing	3	obj	3:obj	_
 5	or	or	CCONJ	CC	_	6	cc	6:cc	_
@@ -200,14 +200,14 @@
 
 # sent_id = reviews-170650-0013
 # text = Rocky M. Lange Retired Coordinator, Clark County School District
-1	Rocky	Rocky	ADJ	NNP	Degree=Pos	3	amod	3:amod	_
-2	M.	M.	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Lange	Lange	PROPN	NNP	Number=Sing	0	root	0:root	_
+1	Rocky	Rocky	PROPN	NNP	Number=Sing	0	root	0:root	_
+2	M.	M.	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+3	Lange	Lange	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 4	Retired	retired	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	Coordinator	coordinator	NOUN	NN	Number=Sing	3	appos	3:appos	SpaceAfter=No
+5	Coordinator	coordinator	NOUN	NN	Number=Sing	1	appos	1:appos	SpaceAfter=No
 6	,	,	PUNCT	,	_	10	punct	10:punct	_
 7	Clark	Clark	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 8	County	County	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 9	School	School	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	District	District	PROPN	NNP	Number=Sing	3	parataxis	3:parataxis	_
+10	District	District	PROPN	NNP	Number=Sing	1	parataxis	1:parataxis	_
 

@@ -2,11 +2,11 @@
 # sent_id = answers-20111108102133AAwVd7m_ans-0001
 # newpar id = answers-20111108102133AAwVd7m_ans-p0001
 # text = Which rat cage is better?
-1	Which	which	DET	WDT	PronType=Int	3	det	3:det	ManuallyChecked=PronType
+1	Which	which	DET	WDT	PronType=Int	3	det	3:det	CxnElt=5:Interrogative-WHInfo-Direct.WHWord|ManuallyChecked=PronType
 2	rat	rat	NOUN	NN	Number=Sing	3	compound	3:compound	_
 3	cage	cage	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-5	better	good	ADJ	JJR	Degree=Cmp	0	root	0:root	SpaceAfter=No
+5	better	good	ADJ	JJR	Degree=Cmp	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=5:Interrogative-WHInfo-Direct.Clause|SpaceAfter=No
 6	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108102133AAwVd7m_ans-0002
@@ -44,13 +44,13 @@
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	cover	cover	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	SpaceAfter=No
 13	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
-14	Which	which	PRON	WDT	PronType=Int	20	nsubj	20:nsubj	ManuallyChecked=PronType
+14	Which	which	PRON	WDT	PronType=Int	20	nsubj	20:nsubj	CxnElt=20:Interrogative-WHInfo-Direct.WHWord|ManuallyChecked=PronType
 15	of	of	ADP	IN	_	18	case	18:case	_
 16	these	this	DET	DT	Number=Plur|PronType=Dem	18	det	18:det	_
 17	two	two	NUM	CD	NumForm=Word|NumType=Card	18	nummod	18:nummod	_
 18	cages	cage	NOUN	NNS	Number=Plur	14	nmod	14:nmod:of	_
 19	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	20:cop	_
-20	better	good	ADJ	JJR	Degree=Cmp	0	root	0:root	SpaceAfter=No
+20	better	good	ADJ	JJR	Degree=Cmp	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=20:Interrogative-WHInfo-Direct.Clause|SpaceAfter=No
 21	:	:	PUNCT	:	_	20	punct	20:punct	_
 
 # sent_id = answers-20111108102133AAwVd7m_ans-0004
@@ -66,7 +66,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2-3	cant	_	_	_	_	_	_	_	_
 2	ca	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	nt	not	PART	RB	Typo=Yes	4	advmod	4:advmod	CorrectForm=n't
+3	nt	not	PART	RB	Polarity=Neg|Typo=Yes	4	advmod	4:advmod	CorrectForm=n't
 4	decide	decide	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	between	between	ADP	IN	_	6	case	6:case	_
 6	height	height	NOUN	NN	Number=Sing	4	obl	4:obl:between	_
@@ -92,12 +92,12 @@
 # sent_id = answers-20111108102133AAwVd7m_ans-0009
 # text = You always want to go higher rather than wider for rats.
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
-2	always	always	ADV	RB	_	3	advmod	3:advmod	_
+2	always	always	ADV	RB	PronType=Tot	3	advmod	3:advmod	_
 3	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	go	go	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	higher	high	ADV	RBR	Degree=Cmp	5	advmod	5:advmod	_
-7	rather	rather	ADV	RB	_	9	cc	9:cc	_
+7	rather	rather	ADV	RB	ExtPos=CCONJ	9	cc	9:cc	_
 8	than	than	ADP	IN	_	7	fixed	7:fixed	_
 9	wider	wide	ADV	RBR	Degree=Cmp	6	conj	5:advmod|6:conj:rather_than	_
 10	for	for	ADP	IN	_	11	case	11:case	_
@@ -176,13 +176,13 @@
 # text = If you use this cage it's best to remove the wire shelves altogether and replace it with hammocks and the like.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	use	use	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:if	_
+3	use	use	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:if	CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
 5	cage	cage	NOUN	NN	Number=Sing	3	obj	3:obj	_
 6-7	it's	_	_	_	_	_	_	_	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	expl	8:expl	_
 7	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
-8	best	good	ADJ	JJS	Degree=Sup	0	root	0:root	_
+8	best	good	ADJ	JJS	Degree=Sup	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	remove	remove	VERB	VB	VerbForm=Inf	8	csubj	8:csubj	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
@@ -208,7 +208,7 @@
 5	these	this	DET	DT	Number=Plur|PronType=Dem	6	det	6:det	_
 6	cages	cage	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	_
 7	short	short	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	term	term	NOUN	NN	Number=Sing	2	obl:npmod	2:obl:npmod	_
+8	term	term	NOUN	NN	Number=Sing	2	obl:unmarked	2:obl:unmarked	_
 9	for	for	ADP	IN	_	11	case	11:case	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 11	pet	pet	NOUN	NN	Number=Sing	2	obl	2:obl:for	_
@@ -216,7 +216,7 @@
 13	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 14-15	wasn't	_	_	_	_	_	_	_	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	cop	17:cop	_
-15	n't	not	PART	RB	_	17	advmod	17:advmod	_
+15	n't	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
 16	that	that	ADV	RB	_	17	advmod	17:advmod	_
 17	great	great	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	_
 18	to	to	PART	TO	_	20	mark	20:mark	_
@@ -236,7 +236,7 @@
 32	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	35	nsubj	35:nsubj	_
 33-34	doesn't	_	_	_	_	_	_	_	_
 33	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	35	aux	35:aux	_
-34	n't	not	PART	RB	_	35	advmod	35:advmod	_
+34	n't	not	PART	RB	Polarity=Neg	35	advmod	35:advmod	_
 35	last	last	VERB	VB	VerbForm=Inf	24	conj	24:conj:and	_
 36	very	very	ADV	RB	_	37	advmod	37:advmod	_
 37	well	well	ADV	RB	Degree=Pos	35	advmod	35:advmod	SpaceAfter=No
@@ -278,7 +278,7 @@
 2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 3	all	all	ADV	RB	_	7	advmod	7:advmod	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-5	bit	bit	NOUN	NN	Number=Sing	6	obl:npmod	6:obl:npmod	_
+5	bit	bit	NOUN	NN	Number=Sing	6	obl:unmarked	6:obl:unmarked	_
 6	more	more	ADV	RBR	Degree=Cmp	7	advmod	7:advmod	_
 7	expensive	expensive	ADJ	JJ	Degree=Pos	0	root	0:root	_
 8	than	than	ADP	IN	_	10	case	10:case	_
@@ -287,14 +287,14 @@
 11	but	but	CCONJ	CC	_	21	cc	21:cc	_
 12	if	if	SCONJ	IN	_	15	mark	15:mark	_
 13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
-14	ebay	ebay	PROPN	NNP	Number=Sing	15	obl:npmod	15:obl:npmod	_
-15	search	search	VERB	VB	VerbForm=Inf	21	advcl	21:advcl:if	_
+14	ebay	ebay	PROPN	NNP	Number=Sing	15	obl:unmarked	15:obl:unmarked	_
+15	search	search	VERB	VB	VerbForm=Inf	21	advcl	21:advcl:if	CxnElt=21:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	names	name	NOUN	NNS	Number=Plur	15	obj	15:obj	_
 18	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	21	nsubj	21:nsubj|23:nsubj:xsubj	_
 19	may	may	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
 20	be	be	AUX	VB	VerbForm=Inf	21	cop	21:cop	_
-21	able	able	ADJ	JJ	Degree=Pos	7	conj	7:conj:but	_
+21	able	able	ADJ	JJ	Degree=Pos	7	conj	7:conj:but	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=21:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 22	to	to	PART	TO	_	23	mark	23:mark	_
 23	find	find	VERB	VB	VerbForm=Inf	21	xcomp	21:xcomp	_
 24	one	one	NOUN	NN	Number=Sing	23	obj	23:obj|26:nsubj:xsubj	_

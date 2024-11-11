@@ -17,7 +17,7 @@
 3	Bonanza	Bonanza	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4	store	store	NOUN	NN	Number=Sing	1	obj	1:obj	_
 5	2	2	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
-6	weeks	week	NOUN	NNS	Number=Plur	7	obl:npmod	7:obl:npmod	_
+6	weeks	week	NOUN	NNS	Number=Plur	7	obl:unmarked	7:obl:unmarked	_
 7	ago	ago	ADV	RB	_	1	advmod	1:advmod	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	before	before	SCONJ	IN	_	11	mark	11:mark	_
@@ -89,7 +89,7 @@
 7	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux:pass	8:aux:pass	_
 8	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	advcl	4:advcl:like	_
 9	every	every	DET	DT	PronType=Tot	10	det	10:det	_
-10	day	day	NOUN	NN	Number=Sing	8	obl:tmod	8:obl:tmod	SpaceAfter=No
+10	day	day	NOUN	NN	Number=Sing	8	obl:unmarked	8:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-210066-0005
@@ -108,9 +108,9 @@
 5	out	out	ADP	RP	_	4	compound:prt	4:compound:prt	SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
 7	call	call	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	parataxis	1:parataxis	_
-8	today	today	NOUN	NN	Number=Sing	7	obl:tmod	7:obl:tmod	SpaceAfter=No
+8	today	today	NOUN	NN	Number=Sing	7	obl:unmarked	7:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 9	,	,	PUNCT	,	_	18	punct	18:punct	_
-10	now	now	ADV	RB	_	18	advmod	18:advmod	_
+10	now	now	ADV	RB	PronType=Dem	18	advmod	18:advmod	_
 11	all	all	ADV	RB	_	13	advmod	13:advmod	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	sudden	sudden	ADV	RB	_	18	obl	18:obl	_
@@ -118,7 +118,7 @@
 15	grinder	grinder	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
 16-17	won't	_	_	_	_	_	_	_	_
 16	wo	will	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
-17	n't	not	PART	RB	_	18	advmod	18:advmod	_
+17	n't	not	PART	RB	Polarity=Neg	18	advmod	18:advmod	_
 18	leave	leave	VERB	VB	VerbForm=Inf	1	parataxis	1:parataxis	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 20	finished	finish	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	21	amod	21:amod	_
@@ -173,7 +173,7 @@
 # text = Are they serious?
 1	Are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	serious	serious	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
+3	serious	serious	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause|SpaceAfter=No
 4	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-210066-0010
@@ -184,7 +184,7 @@
 4	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 5-6	didn't	_	_	_	_	_	_	_	_
 5	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	aux	7:aux	_
-6	n't	not	PART	RB	_	7	advmod	7:advmod	_
+6	n't	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 7	tell	tell	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:like	_
 8	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	7	iobj	7:iobj	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
@@ -196,7 +196,7 @@
 15	this	this	DET	DT	Number=Sing|PronType=Dem	16	det	16:det	_
 16	tile	tile	NOUN	NN	Number=Sing	13	obj	13:obj	_
 17	and	and	CCONJ	CC	_	26	cc	26:cc	_
-18	now	now	ADV	RB	_	26	advmod	26:advmod	_
+18	now	now	ADV	RB	PronType=Dem	26	advmod	26:advmod	_
 19	that	that	SCONJ	IN	_	21	mark	21:mark	_
 20	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	21	nsubj	21:nsubj	_
 21	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	18	ccomp	18:ccomp	_
@@ -206,7 +206,7 @@
 25	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	26	nsubj	26:nsubj	_
 26	want	want	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
 27	5	5	NUM	CD	NumForm=Digit|NumType=Card	28	nummod	28:nummod	_
-28	TIMES	time	NOUN	NNS	Number=Plur	30	nmod:npmod	30:nmod:npmod	_
+28	TIMES	time	NOUN	NNS	Number=Plur	30	nmod:unmarked	30:nmod:unmarked	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
 30	price	price	NOUN	NN	Number=Sing	26	obj	26:obj	SpaceAfter=No
 31	?	?	PUNCT	.	_	2	punct	2:punct	_
@@ -218,7 +218,7 @@
 3	people	people	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
 4-5	don't	_	_	_	_	_	_	_	_
 4	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
-5	n't	not	PART	RB	_	6	advmod	6:advmod	_
+5	n't	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	anything	anything	PRON	NN	Number=Sing|PronType=Ind	6	obj	6:obj	_
 8	about	about	SCONJ	IN	_	12	mark	12:mark	_

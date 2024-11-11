@@ -30,27 +30,27 @@
 15	why	why	ADV	WRB	PronType=Int	31	advmod	31:advmod	_
 16	if	if	SCONJ	IN	_	18	mark	18:mark	_
 17	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
-18	zoom	zoom	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	31	advcl	31:advcl:if	_
+18	zoom	zoom	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	31	advcl	31:advcl:if	CxnElt=31:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 19	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
 20	picture	picture	NOUN	NN	Number=Sing	21	compound	21:compound	_
 21	zoom	zoom	NOUN	NN	Number=Sing	18	obj	18:obj	_
 22	like	like	INTJ	UH	_	18	discourse	18:discourse	_
-23	almost	almost	ADV	RB	_	26	advmod	26:advmod	_
+23	almost	almost	ADV	RB	_	24	advmod	24:advmod	_
 24	200	200	NUM	CD	NumForm=Digit|NumType=Card	27	nummod	27:nummod	SpaceAfter=No
 25	-	-	SYM	SYM	_	26	case	26:case	SpaceAfter=No
 26	300	300	NUM	CD	NumForm=Digit|NumType=Card	24	nmod	24:nmod	SpaceAfter=No
-27	percent	percent	NOUN	NN	Number=Sing	18	obl:npmod	18:obl:npmod	SpaceAfter=No
+27	percent	percent	NOUN	NN	Number=Sing	18	obl:unmarked	18:obl:unmarked	SpaceAfter=No
 28	..	..	PUNCT	,	_	18	punct	18:punct	SpaceAfter=No
 29	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	31	nsubj	31:nsubj	_
 30	can	can	AUX	MD	VerbForm=Fin	31	aux	31:aux	_
-31	see	see	VERB	VB	VerbForm=Inf	14	advcl	14:advcl	_
+31	see	see	VERB	VB	VerbForm=Inf	14	advcl	14:advcl	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=31:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 32	some	some	DET	DT	PronType=Ind	34	det	34:det	_
 33	dead	dead	ADJ	JJ	Degree=Pos	34	amod	34:amod	_
 34	pixel	pixel	NOUN	NN	Number=Sing	31	obj	31:obj	SpaceAfter=No
 35	...	...	PUNCT	,	_	36	punct	36:punct	SpaceAfter=No
-36	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	_
+36	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	Cxn=Existential-CopPred-ThereExpl
 37	there	there	PRON	EX	_	36	expl	36:expl	_
-38	something	something	PRON	NN	Number=Sing|PronType=Ind	36	nsubj	36:nsubj	_
+38	something	something	PRON	NN	Number=Sing|PronType=Ind	36	nsubj	36:nsubj	CxnElt=36:Existential-CopPred-ThereExpl.Pivot
 39	wrong	wrong	ADJ	JJ	Degree=Pos	38	amod	38:amod	_
 40	with	with	ADP	IN	_	43	case	43:case	_
 41	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	43	nmod:poss	43:nmod:poss	_
@@ -66,7 +66,7 @@
 # sent_id = answers-20111108083309AAg9jwT_ans-0004
 # text = or what?
 1	or	or	CCONJ	CC	_	2	cc	2:cc	_
-2	what	what	PRON	WP	PronType=Int	0	root	0:root	SpaceAfter=No
+2	what	what	PRON	WP	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=2:Interrogative-WHInfo-Direct.Clause,2:Interrogative-WHInfo-Direct.WHWord|SpaceAfter=No
 3	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108083309AAg9jwT_ans-0005
@@ -99,11 +99,11 @@
 # text = Are you sure it isn't dirt on the sensor?
 1	Are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	sure	sure	ADJ	JJ	Degree=Pos	0	root	0:root	_
+3	sure	sure	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 5-6	isn't	_	_	_	_	_	_	_	_
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
-6	n't	not	PART	RB	_	7	advmod	7:advmod	_
+6	n't	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 7	dirt	dirt	NOUN	NN	Number=Sing	3	ccomp	3:ccomp	_
 8	on	on	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
@@ -148,7 +148,7 @@
 20	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	21	nsubj	21:nsubj	_
 21	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	19	acl:relcl	19:acl:relcl	Cxn=rc-red-obj
 22	-	-	PUNCT	,	_	23	punct	23:punct	_
-23	over	overexpose	VERB	GW	Mood=Imp|Typo=Yes|VerbForm=Fin	1	parataxis	1:parataxis	_
+23	over	overexpose	VERB	AFX	Mood=Imp|Typo=Yes|VerbForm=Fin	1	parataxis	1:parataxis	_
 24	expose	_	X	VB	_	23	goeswith	23:goeswith	_
 25	by	by	ADP	IN	_	27	case	27:case	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	_
@@ -166,8 +166,8 @@
 6	image	image	NOUN	NN	Number=Sing	3	obl	3:obl:in	_
 7	if	if	SCONJ	IN	_	9	mark	9:mark	_
 8	there	there	PRON	EX	_	9	expl	9:expl	_
-9	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
-10	dirt	dirt	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
+9	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Indirect|CxnElt=9:Interrogative-Polar-Indirect.Clause
+10	dirt	dirt	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	CxnElt=9:Existential-CopPred-ThereExpl.Pivot
 11	as	as	SCONJ	IN	_	17	mark	17:mark	_
 12	that	that	PRON	DT	Number=Sing|PronType=Dem	17	nsubj	17:nsubj	_
 13	will	will	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
@@ -193,11 +193,11 @@
 # text = There should be a Pixel Mapping function in the menu that will get rid of them, most sensors have a few dead and flipped pixels, some only show up on long exposures.
 1	There	there	PRON	EX	_	3	expl	3:expl	_
 2	should	should	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 5	Pixel	pixel	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	Mapping	mapping	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	function	function	NOUN	NN	Number=Sing	3	nsubj	3:nsubj|13:nsubj	_
+7	function	function	NOUN	NN	Number=Sing	3	nsubj	3:nsubj|13:nsubj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot
 8	in	in	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	menu	menu	NOUN	NN	Number=Sing	7	nmod	7:nmod:in	_

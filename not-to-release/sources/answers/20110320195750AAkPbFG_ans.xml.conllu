@@ -5,8 +5,8 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-4	Nacho	Nacho	PROPN	NNP	Number=Sing	5	compound	5:compound	_
-5	Libre	Libre	PROPN	NNP	Number=Sing	6	compound	6:compound	_
+4	Nacho	Nacho	PROPN	NNP	Number=Sing	6	compound	6:compound	_
+5	Libre	Libre	PROPN	NNP	Number=Sing	4	flat	4:flat	_
 6	question	question	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
 7	.?	.?	PUNCT	.	_	2	punct	2:punct	_
 
@@ -55,7 +55,7 @@
 40	that	that	PRON	DT	Number=Sing|PronType=Dem	43	nsubj	43:nsubj	_
 41-42	wouldn't	_	_	_	_	_	_	_	_
 41	would	would	AUX	MD	VerbForm=Fin	43	aux	43:aux	_
-42	n't	not	PART	RB	_	43	advmod	43:advmod	_
+42	n't	not	PART	RB	Polarity=Neg	43	advmod	43:advmod	_
 43	make	make	VERB	VB	VerbForm=Inf	31	conj	12:advcl:because|31:conj:but	_
 44	sense	sense	NOUN	NN	Number=Sing	43	obj	43:obj	SpaceAfter=No
 45	.	.	PUNCT	.	_	12	punct	12:punct	_
@@ -83,7 +83,7 @@
 18	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
 19	reason	reason	NOUN	NN	Number=Sing	14	obl	14:obl:for	SpaceAfter=No
 20	,	,	PUNCT	,	_	25	punct	25:punct	_
-21	not	not	PART	RB	_	25	advmod	25:advmod	_
+21	not	not	PART	RB	Polarity=Neg	25	advmod	25:advmod	_
 22	for	for	SCONJ	IN	_	25	mark	25:mark	_
 23	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	25	nsubj	25:nsubj	_
 24	to	to	PART	TO	_	25	mark	25:mark	_
@@ -125,11 +125,11 @@
 # text = Do you get what's wrong with this picture?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct,Interrogative-WHInfo-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause,3:Interrogative-WHInfo-Direct.Clause
 4-5	what's	_	_	_	_	_	_	_	_
-4	what	what	PRON	WP	PronType=Int	6	nsubj	6:nsubj	_
+4	what	what	PRON	WP	PronType=Int	6	nsubj	6:nsubj	CxnElt=3:Interrogative-WHInfo-Direct.WHWord,6:Interrogative-WHInfo-Indirect.WHWord
 5	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
-6	wrong	wrong	ADJ	JJ	Degree=Pos	3	ccomp	3:ccomp	_
+6	wrong	wrong	ADJ	JJ	Degree=Pos	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=6:Interrogative-WHInfo-Indirect.Clause
 7	with	with	ADP	IN	_	9	case	9:case	_
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
 9	picture	picture	NOUN	NN	Number=Sing	6	obl	6:obl:with	SpaceAfter=No
@@ -137,7 +137,7 @@
 
 # sent_id = answers-20110320195750AAkPbFG_ans-0006
 # text = No...that's all.
-1	No	no	INTJ	UH	_	5	discourse	5:discourse	SpaceAfter=No
+1	No	no	INTJ	UH	Polarity=Neg	5	discourse	5:discourse	SpaceAfter=No
 2	...	...	PUNCT	,	_	1	punct	1:punct	SpaceAfter=No
 3-4	that's	_	_	_	_	_	_	_	_
 3	that	that	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
@@ -154,8 +154,8 @@
 # sent_id = answers-20110320195750AAkPbFG_ans-0008
 # newpar id = answers-20110320195750AAkPbFG_ans-p0004
 # text = Nacho Libre is suppose to be inspired in Mexicans, not in Argentineans.
-1	Nacho	Nacho	PROPN	NNP	Number=Sing	2	compound	2:compound	_
-2	Libre	Libre	PROPN	NNP	Number=Sing	4	nsubj:pass	4:nsubj:pass|7:nsubj:xsubj	_
+1	Nacho	Nacho	PROPN	NNP	Number=Sing	4	nsubj:pass	4:nsubj:pass|7:nsubj:xsubj	_
+2	Libre	Libre	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 4	suppose	suppose	VERB	VBN	Tense=Past|Typo=Yes|VerbForm=Part|Voice=Pass	0	root	0:root	CorrectForm=supposed
 5	to	to	PART	TO	_	7	mark	7:mark	_
@@ -164,7 +164,7 @@
 8	in	in	ADP	IN	_	9	case	9:case	_
 9	Mexicans	Mexican	PROPN	NNPS	Number=Plur	7	obl	7:obl:in	SpaceAfter=No
 10	,	,	PUNCT	,	_	13	punct	13:punct	_
-11	not	not	PART	RB	_	13	advmod	13:advmod	_
+11	not	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
 12	in	in	ADP	IN	_	13	case	13:case	_
 13	Argentineans	Argentinean	PROPN	NNPS	Number=Plur	9	nmod	9:nmod:in	SpaceAfter=No
 14	.	.	PUNCT	.	_	4	punct	4:punct	_

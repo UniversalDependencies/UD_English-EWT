@@ -4,7 +4,7 @@
 # text = Can I text from Canada to the united states?
 1	Can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	text	text	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	text	text	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	from	from	ADP	IN	_	5	case	5:case	_
 5	Canada	Canada	PROPN	NNP	Number=Sing	3	obl	3:obl:from	_
 6	to	to	ADP	IN	_	9	case	9:case	_
@@ -21,7 +21,7 @@
 3	that	that	PRON	DT	Number=Sing|PronType=Dem	8	nsubj	8:nsubj	_
 4-5	isn't	_	_	_	_	_	_	_	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
-5	n't	not	PART	RB	_	8	advmod	8:advmod	_
+5	n't	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	right	right	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	question	question	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
@@ -72,13 +72,13 @@
 1-2	Im	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	m	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|Typo=Yes|VerbForm=Fin	3	cop	3:cop	CorrectForm='m
-3	sorry	sorry	ADJ	JJ	Degree=Pos	0	root	0:root	_
+3	sorry	sorry	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 4	if	if	SCONJ	IN	_	8	mark	8:mark	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 6-7	couldn't	_	_	_	_	_	_	_	_
 6	could	could	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-7	n't	not	PART	RB	_	8	advmod	8:advmod	_
-8	say	say	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:if	_
+7	n't	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
+8	say	say	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:if	CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	question	question	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	right	right	ADV	RB	_	8	advmod	8:advmod	SpaceAfter=No
@@ -90,22 +90,22 @@
 2	hope	hope	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	somebody	somebody	PRON	NN	Number=Sing|PronType=Ind	4	nsubj	4:nsubj	_
 4	understands	understand	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
-5	what	what	PRON	WP	PronType=Int	7	obj	7:obj	_
+5	what	what	PRON	WP	PronType=Int	7	obj	7:obj	CxnElt=7:Interrogative-WHInfo-Indirect.WHWord
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
-7	mean	mean	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
+7	mean	mean	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=7:Interrogative-WHInfo-Indirect.Clause
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0006
 # newpar id = answers-20111108103333AA3eSCk_ans-p0003
 # text = In short Yes.
 1	In	in	ADP	IN	_	2	case	2:case	_
 2	short	short	ADJ	JJ	Degree=Pos	0	root	0:root	_
-3	Yes	yes	INTJ	UH	_	2	discourse	2:discourse	SpaceAfter=No
+3	Yes	yes	INTJ	UH	Polarity=Pos	2	discourse	2:discourse	SpaceAfter=No
 4	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0007
 # text = However not in all cases.
 1	However	however	ADV	RB	_	5	advmod	5:advmod	_
-2	not	not	PART	RB	_	5	advmod	5:advmod	_
+2	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 3	in	in	ADP	IN	_	5	case	5:case	_
 4	all	all	DET	DT	PronType=Tot	5	det	5:det	_
 5	cases	case	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
@@ -119,7 +119,7 @@
 4	US	US	PROPN	NNP	Number=Sing	6	compound	6:compound	SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	_
 6	provider	provider	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
-7	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	advcl	21:advcl:if	_
+7	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	advcl	21:advcl:if	CxnElt=21:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 9	deal	deal	NOUN	NN	Number=Sing	7	obj	7:obj	_
 10	with	with	ADP	IN	_	14	case	14:case	_
@@ -133,7 +133,7 @@
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
 19	calls	call	NOUN	NNS	Number=Plur	17	conj	17:conj:and|21:nsubj	_
 20	will	will	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
-21	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	_
+21	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=21:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 22	through	through	ADV	RB	_	21	advmod	21:advmod	SpaceAfter=No
 23	.	.	PUNCT	.	_	21	punct	21:punct	_
 
@@ -190,7 +190,7 @@
 12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 13-14	wouldn't	_	_	_	_	_	_	_	_
 13	would	would	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-14	n't	not	PART	RB	_	15	advmod	15:advmod	_
+14	n't	not	PART	RB	Polarity=Neg	15	advmod	15:advmod	_
 15	work	work	VERB	VB	VerbForm=Inf	11	acl:relcl	11:acl:relcl	Cxn=rc-red-obl
 16	would	would	AUX	MD	VerbForm=Fin	20	aux	20:aux	_
 17	be	be	AUX	VB	VerbForm=Inf	20	cop	20:cop	_
@@ -210,7 +210,7 @@
 # sent_id = answers-20111108103333AA3eSCk_ans-0012
 # newpar id = answers-20111108103333AA3eSCk_ans-p0004
 # text = Yes you can, but it will cost you lots of money unless you have an international plan.
-1	Yes	yes	INTJ	UH	_	3	discourse	3:discourse	_
+1	Yes	yes	INTJ	UH	Polarity=Pos	3	discourse	3:discourse	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 3	can	can	AUX	MD	VerbForm=Fin	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	8	punct	8:punct	_
@@ -233,7 +233,7 @@
 # sent_id = answers-20111108103333AA3eSCk_ans-0013
 # newpar id = answers-20111108103333AA3eSCk_ans-p0005
 # text = Ye$ you can Text in CANADA to the U$ on a U$ number.
-1	Ye$	yes	INTJ	UH	Typo=Yes	4	discourse	4:discourse	CorrectForm=Yes
+1	Ye$	yes	INTJ	UH	Polarity=Pos|Typo=Yes	4	discourse	4:discourse	CorrectForm=Yes
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 3	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 4	Text	text	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -260,9 +260,9 @@
 # text = It varie$ company to company.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
 2	varie$	vary	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	0	root	0:root	CorrectForm=varies
-3	company	company	NOUN	NN	Number=Sing	2	obj	2:obj	_
-4	to	to	ADP	IN	_	5	case	5:case	_
-5	company	company	NOUN	NN	Number=Sing	3	nmod	3:nmod:to	SpaceAfter=No
+3	company	company	NOUN	NN	Number=Sing	2	obj	2:obj	Cxn=NPN|CxnElt=3:NPN.N1
+4	to	to	ADP	IN	_	5	case	5:case	CxnElt=3:NPN.P
+5	company	company	NOUN	NN	Number=Sing	3	nmod	3:nmod:to	CxnElt=3:NPN.N2|SpaceAfter=No
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0016
@@ -284,15 +284,15 @@
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0017
 # text = Is there any other way to communicate or do your friends only understand text.
-1	Is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Direct|CxnElt=1:Interrogative-Polar-Direct.Clause
 2	there	there	PRON	EX	_	1	expl	1:expl	_
 3	any	any	DET	DT	PronType=Ind	5	det	5:det	_
 4	other	other	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	way	way	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	_
+5	way	way	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	CxnElt=1:Existential-CopPred-ThereExpl.Pivot
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	communicate	communicate	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
 8	or	or	CCONJ	CC	_	13	cc	13:cc	_
-9	do	do	AUX	VB	VerbForm=Inf	13	aux	13:aux	_
+9	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
 10	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
 11	friends	friend	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
 12	only	only	ADV	RB	_	13	advmod	13:advmod	_
@@ -304,10 +304,10 @@
 # text = Email usually free if you use a WiFi connection.
 1	Email	email	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
 2	usually	usually	ADV	RB	_	3	advmod	3:advmod	_
-3	free	free	ADJ	JJ	Degree=Pos	0	root	0:root	_
+3	free	free	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 4	if	if	SCONJ	IN	_	6	mark	6:mark	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
-6	use	use	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:if	_
+6	use	use	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:if	CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	WiFi	wifi	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	connection	connection	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
@@ -315,7 +315,7 @@
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0019
 # text = $ometime$ it is hard to explain that you are making an INTERNATIONAL call and all of the phone companie$involved what $ome of your money.
-1	$ometime$	sometimes	ADV	RB	Typo=Yes	4	advmod	4:advmod	CorrectForm=sometimes
+1	$ometime$	sometimes	ADV	RB	PronType=Ind|Typo=Yes	4	advmod	4:advmod	CorrectForm=sometimes
 2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	expl	4:expl	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 4	hard	hard	ADJ	JJ	Degree=Pos	0	root	0:root	_

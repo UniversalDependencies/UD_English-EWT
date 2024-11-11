@@ -6,7 +6,7 @@
 2	Fujairah	Fujairah	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 4	nice	nice	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	place	place	NOUN	NN	Number=Sing	0	root	0:root	_
+5	place	place	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=5:Interrogative-Polar-Direct.Clause
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	live	live	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
 8	in	in	ADP	IN	_	7	obl	7:obl	Promoted=Yes|SpaceAfter=No
@@ -45,13 +45,13 @@
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 11	suitable	suitable	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	place	place	NOUN	NN	Number=Sing	6	ccomp	6:ccomp	_
+12	place	place	NOUN	NN	Number=Sing	6	ccomp	6:ccomp	Cxn=Interrogative-Polar-Indirect,Interrogative-WHInfo-Indirect|CxnElt=12:Interrogative-Polar-Indirect.Clause,12:Interrogative-WHInfo-Indirect.Clause
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	live	live	VERB	VB	VerbForm=Inf	12	acl	12:acl:to	_
 15	in	in	ADP	IN	_	14	obl	14:obl	Promoted=Yes
 16	and	and	CCONJ	CC	_	19	cc	19:cc	_
 17	in	in	ADP	IN	_	19	case	19:case	_
-18	what	what	DET	WDT	PronType=Int	19	det	19:det	_
+18	what	what	DET	WDT	PronType=Int	19	det	19:det	CxnElt=12:Interrogative-WHInfo-Indirect.WHWord
 19	ways	way	NOUN	NNS	Number=Plur	12	conj	6:advcl:in|12:conj:and	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -86,10 +86,10 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	'd	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	be	be	AUX	VB	VerbForm=Inf	4	cop	4:cop	_
-4	happy	happy	ADJ	JJ	Degree=Pos	0	root	0:root	_
+4	happy	happy	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 5	if	if	SCONJ	IN	_	7	mark	7:mark	_
 6	someone	someone	PRON	NN	Number=Sing|PronType=Ind	7	nsubj	7:nsubj	_
-7	helps	help	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:if	SpaceAfter=No
+7	helps	help	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:if	CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	especially	especially	ADV	RB	_	10	advmod	10:advmod	_
 10	someone	someone	PRON	NN	Number=Sing|PronType=Ind	7	obj	7:obj|15:nsubj|17:nsubj	_
@@ -124,7 +124,7 @@
 7	Fujairah	Fujairah	PROPN	NNP	Number=Sing	5	obl	5:obl:in	_
 8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
 9	entire	entire	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	life	life	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	_
+10	life	life	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	TemporalNPAdjunct=Yes
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
 13	must	must	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
@@ -222,7 +222,7 @@
 # sent_id = answers-20111107233110AAmgsVx_ans-0012
 # text = And now they are finishing a road between Fujairah and Dubai in 45 minutes only!
 1	And	and	CCONJ	CC	_	5	cc	5:cc	_
-2	now	now	ADV	RB	_	5	advmod	5:advmod	_
+2	now	now	ADV	RB	PronType=Dem	5	advmod	5:advmod	_
 3	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 4	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 5	finishing	finish	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
@@ -242,10 +242,10 @@
 # text = So, no it is not as good as Dubai, but its quieter and more peaceful, and you can still go to Dubai in 45 mins.
 1	So	so	ADV	RB	_	8	advmod	8:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
-3	no	no	INTJ	UH	_	8	discourse	8:discourse	_
+3	no	no	INTJ	UH	Polarity=Neg	8	discourse	8:discourse	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
-6	not	not	PART	RB	_	8	advmod	8:advmod	_
+6	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 7	as	as	ADV	RB	_	8	advmod	8:advmod	_
 8	good	good	ADJ	JJ	Degree=Pos	0	root	0:root	_
 9	as	as	ADP	IN	_	10	case	10:case	_
@@ -280,7 +280,7 @@
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	if	if	SCONJ	IN	_	7	mark	7:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
-7	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
+7	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=7:Interrogative-Polar-Indirect.Clause
 8	anything	anything	PRON	NN	Number=Sing|PronType=Ind	7	obj	7:obj	_
 9	else	else	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 
@@ -301,7 +301,7 @@
 3	Dubai	Dubai	PROPN	NNP	Number=Sing	1	nmod	1:nmod:like	SpaceAfter=No
 4	,	,	PUNCT	,	_	8	punct	8:punct	_
 5	and	and	CCONJ	CC	_	8	cc	8:cc	_
-6	never	never	ADV	RB	_	8	advmod	8:advmod	_
+6	never	never	ADV	RB	PronType=Neg	8	advmod	8:advmod	_
 7	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
 8	be	be	AUX	VB	VerbForm=Inf	1	conj	1:conj:and	SpaceAfter=No
 9	!	!	PUNCT	.	_	8	punct	8:punct	_
@@ -310,7 +310,7 @@
 # text = Don't know the economics of Fujairah but Dubai is basically bankrupt so you wouldn't want to end up like them!
 1-2	Don't	_	_	_	_	_	_	_	_
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-2	n't	not	PART	RB	_	3	advmod	3:advmod	_
+2	n't	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
 3	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	economics	economics	NOUN	NNS	Number=Ptan	3	obj	3:obj	_
@@ -325,7 +325,7 @@
 14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj|19:nsubj:xsubj	_
 15-16	wouldn't	_	_	_	_	_	_	_	_
 15	would	would	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
-16	n't	not	PART	RB	_	17	advmod	17:advmod	_
+16	n't	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
 17	want	want	VERB	VB	VerbForm=Inf	12	parataxis	12:parataxis	_
 18	to	to	PART	TO	_	19	mark	19:mark	_
 19	end	end	VERB	VB	VerbForm=Inf	17	xcomp	17:xcomp	_

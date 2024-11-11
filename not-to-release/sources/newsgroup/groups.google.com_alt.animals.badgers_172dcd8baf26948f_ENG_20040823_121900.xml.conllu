@@ -74,7 +74,7 @@
 14	there	there	ADV	RB	PronType=Dem	12	advmod	12:advmod	_
 15	who	who	PRON	WP	PronType=Rel	19	nsubj	12:ref	_
 16	should	should	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
-17	not	not	PART	RB	_	19	advmod	19:advmod	_
+17	not	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 18	be	be	AUX	VB	VerbForm=Inf	19	aux	19:aux	_
 19	procreating	procreate	VERB	VBG	Tense=Pres|VerbForm=Part	12	acl:relcl	12:acl:relcl	Cxn=rc-wh-nsubj-auxstrand|SpaceAfter=No
 20	,	,	PUNCT	,	_	23	punct	23:punct	_
@@ -109,7 +109,7 @@
 7	destroy	destroy	VERB	VB	VerbForm=Inf	4	acl:relcl	4:acl:relcl	Cxn=rc-wh-nsubj
 8	society	society	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
 9	,	,	PUNCT	,	_	13	punct	13:punct	_
-10	because	because	ADP	IN	_	13	case	13:case	_
+10	because	because	ADP	IN	ExtPos=ADP	13	case	13:case	_
 11	of	of	ADP	IN	_	10	fixed	10:fixed	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	crapfest	crapfest	NOUN	NN	Number=Sing	7	obl	7:obl:because_of|18:obj	_
@@ -146,7 +146,7 @@
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_172dcd8baf26948f_ENG_20040823_121900-0008
 # text = Not so, Kids are what kids are and will do what they do.
-1	Not	not	PART	RB	_	2	advmod	2:advmod	_
+1	Not	not	PART	RB	Polarity=Neg	2	advmod	2:advmod	_
 2	so	so	ADV	RB	_	0	root	0:root	SpaceAfter=No
 3	,	,	PUNCT	,	_	6	punct	6:punct	_
 4	Kids	kid	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj|11:nsubj	_
@@ -181,7 +181,7 @@
 1	That	that	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 3	likely	likely	ADV	RB	_	5	advmod	5:advmod	_
-4	never	never	ADV	RB	_	5	advmod	5:advmod	_
+4	never	never	ADV	RB	PronType=Neg	5	advmod	5:advmod	_
 5	change	change	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
 6	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -203,7 +203,7 @@
 13	and	and	CCONJ	CC	_	16	cc	16:cc	_
 14-15	dont	_	_	_	_	_	_	_	_
 14	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
-15	nt	not	PART	RB	Typo=Yes	16	advmod	16:advmod	CorrectForm=n't
+15	nt	not	PART	RB	Polarity=Neg|Typo=Yes	16	advmod	16:advmod	CorrectForm=n't
 16	seem	seem	VERB	VB	VerbForm=Inf	9	conj	5:acl:relcl|9:conj:and	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
 18	understand	understand	VERB	VB	VerbForm=Inf	16	xcomp	16:xcomp	_
@@ -281,8 +281,8 @@
 8	,	,	PUNCT	,	_	3	punct	3:punct	_
 9-10	there's	_	_	_	_	_	_	_	_
 9	there	there	PRON	EX	_	10	expl	10:expl	_
-10	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-11	noone	no-one	PRON	NN	Number=Sing|PronType=Neg|Typo=Yes	10	nsubj	10:nsubj	CorrectForm=no-one
+10	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+11	noone	no-one	PRON	NN	Number=Sing|PronType=Neg|Typo=Yes	10	nsubj	10:nsubj	CorrectForm=no-one|CxnElt=10:Existential-CopPred-ThereExpl.Pivot
 12	to	to	PART	TO	_	14	reparandum	14:reparandum	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
 14	take	take	VERB	VB	VerbForm=Inf	11	acl	11:acl:to	_
@@ -324,11 +324,11 @@
 50	lazy	lazy	ADJ	JJ	Degree=Pos	31	advcl	31:advcl:because	_
 51	to	to	PART	TO	_	52	mark	52:mark	_
 52	see	see	VERB	VB	VerbForm=Inf	50	advcl	50:advcl:to	_
-53	waht	what	PRON	WP	PronType=Int|Typo=Yes	56	obj	56:obj	CorrectForm=what
+53	waht	what	PRON	WP	PronType=Int|Typo=Yes	56	obj	56:obj	CorrectForm=what|CxnElt=56:Interrogative-WHInfo-Indirect.WHWord
 54-55	they're	_	_	_	_	_	_	_	_
 54	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	56	nsubj	56:nsubj	_
 55	're	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	56	aux	56:aux	_
-56	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	52	ccomp	52:ccomp	SpaceAfter=No
+56	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	52	ccomp	52:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=56:Interrogative-WHInfo-Indirect.Clause|SpaceAfter=No
 57	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_172dcd8baf26948f_ENG_20040823_121900-0015
@@ -337,12 +337,12 @@
 2	like	like	ADP	IN	_	3	case	3:case	_
 3	this	this	PRON	DT	Number=Sing|PronType=Dem	1	nmod	1:nmod:like	_
 4	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-5	never	never	ADV	RB	_	6	advmod	6:advmod	_
+5	never	never	ADV	RB	PronType=Neg	6	advmod	6:advmod	_
 6	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 8	sympathy	sympathy	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
 9	,	,	PUNCT	,	_	13	punct	13:punct	_
-10	nor	nor	CCONJ	CC	_	13	cc	13:cc	_
+10	nor	nor	CCONJ	CC	Polarity=Neg	13	cc	13:cc	_
 11	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
 12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
 13	deserve	deserve	VERB	VB	VerbForm=Inf	6	conj	6:conj:nor	_
@@ -408,7 +408,7 @@
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
 11-12	dont	_	_	_	_	_	_	_	_
 11	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
-12	nt	not	PART	RB	Typo=Yes	13	advmod	13:advmod	CorrectForm=n't
+12	nt	not	PART	RB	Polarity=Neg|Typo=Yes	13	advmod	13:advmod	CorrectForm=n't
 13	get	get	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 15	break	break	NOUN	NN	Number=Sing	13	obj	13:obj	_
@@ -449,7 +449,7 @@
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7-8	doesnt	_	_	_	_	_	_	_	_
 7	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
-8	nt	not	PART	RB	Typo=Yes	9	advmod	9:advmod	CorrectForm=n't
+8	nt	not	PART	RB	Polarity=Neg|Typo=Yes	9	advmod	9:advmod	CorrectForm=n't
 9	give	give	VERB	VB	VerbForm=Inf	0	root	0:root	_
 10	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	9	iobj	9:iobj	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
@@ -467,7 +467,7 @@
 # sent_id = newsgroup-groups.google.com_alt.animals.badgers_172dcd8baf26948f_ENG_20040823_121900-0023
 # text = Another time I'll segueway into all the fun work related instances where "Mommies" get out of doing work and hiding behind childcare as the reason.
 1	Another	another	DET	DT	PronType=Ind	2	det	2:det	_
-2	time	time	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	_
+2	time	time	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	TemporalNPAdjunct=Yes
 3-4	I'll	_	_	_	_	_	_	_	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 4	'll	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_

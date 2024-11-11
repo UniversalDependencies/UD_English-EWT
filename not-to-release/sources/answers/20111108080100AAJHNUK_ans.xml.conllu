@@ -2,7 +2,7 @@
 # sent_id = answers-20111108080100AAJHNUK_ans-0001
 # newpar id = answers-20111108080100AAJHNUK_ans-p0001
 # text = What are good B&W software's Photography?
-1	What	what	PRON	WP	PronType=Int	0	root	0:root	_
+1	What	what	PRON	WP	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=1:Interrogative-WHInfo-Direct.Clause,1:Interrogative-WHInfo-Direct.WHWord
 2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
 3	good	good	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 4	B	B	ADJ	JJ	Degree=Pos	9	amod	9:amod	SpaceAfter=No
@@ -17,7 +17,7 @@
 # sent_id = answers-20111108080100AAJHNUK_ans-0002
 # newpar id = answers-20111108080100AAJHNUK_ans-p0002
 # text = What are really good programs for smooth crisp Black & White editing?
-1	What	what	PRON	WP	PronType=Int	0	root	0:root	_
+1	What	what	PRON	WP	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=1:Interrogative-WHInfo-Direct.Clause,1:Interrogative-WHInfo-Direct.WHWord
 2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
 3	really	really	ADV	RB	_	4	advmod	4:advmod	_
 4	good	good	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
@@ -40,7 +40,7 @@
 5-6	Its	_	_	_	_	_	_	_	_
 5	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 6	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	8	aux	8:aux	CorrectForm='s
-7	not	not	PART	RB	_	8	advmod	8:advmod	_
+7	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 8	cutting	cut	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:and	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	obj	8:obj	SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
@@ -97,7 +97,7 @@
 3	give	give	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	iobj	3:iobj	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-6	lot	lot	NOUN	NN	Number=Sing	7	obl:npmod	7:obl:npmod	_
+6	lot	lot	NOUN	NN	Number=Sing	7	obl:unmarked	7:obl:unmarked	_
 7	more	more	ADJ	JJR	Degree=Cmp	8	amod	8:amod	_
 8	power	power	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
 9	,	,	PUNCT	,	_	13	punct	13:punct	_
@@ -236,7 +236,7 @@
 
 # sent_id = answers-20111108080100AAJHNUK_ans-0016
 # text = Hope this helps.
-1	Hope	hope	VERB	VB	VerbForm=Inf	0	root	0:root	_
+1	Hope	hope	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	3:nsubj	_
 3	helps	help	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	ccomp	1:ccomp	SpaceAfter=No
 4	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -267,20 +267,20 @@
 10	r	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|Typo=Yes|VerbForm=Fin	13	cop	13:cop	CorrectForm='re
 11	on	on	ADP	IN	_	13	case	13:case	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
-13	macbook	macbook	PROPN	NNP	Number=Sing	15	advcl	15:advcl:on	_
+13	macbook	macbook	PROPN	NNP	Number=Sing	15	advcl	15:advcl:on	CxnElt=15:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 14-15	theres	_	_	_	_	_	_	_	_
 14	there	there	PRON	EX	_	15	expl	15:expl	_
-15	s	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	6	conj	6:conj:or	CorrectForm='s
-16	aperture	aperture	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	_
+15	s	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	6	conj	6:conj:or	CorrectForm='s|Cxn=Conditional-UnspecifiedEpistemic-NoInversion,Existential-CopPred-ThereExpl|CxnElt=15:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
+16	aperture	aperture	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	CxnElt=15:Existential-CopPred-ThereExpl.Pivot
 17	:)	:)	SYM	NFP	_	6	discourse	6:discourse	_
 
 # sent_id = answers-20111108080100AAJHNUK_ans-0019
 # newpar id = answers-20111108080100AAJHNUK_ans-p0005
 # text = depends what you want from "B&W"... many programs will use a generic B&W...
 1	depends	depend	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-2	what	what	PRON	WP	PronType=Int	4	obj	4:obj	_
+2	what	what	PRON	WP	PronType=Int	4	obj	4:obj	CxnElt=4:Interrogative-WHInfo-Indirect.WHWord
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	1	ccomp	1:ccomp	_
+4	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	1	ccomp	1:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=4:Interrogative-WHInfo-Indirect.Clause
 5	from	from	ADP	IN	_	7	case	7:case	_
 6	"	"	PUNCT	``	_	7	punct	7:punct	SpaceAfter=No
 7	B	B	ADJ	JJ	Degree=Pos	4	obl	4:obl:from	SpaceAfter=No

@@ -30,7 +30,7 @@
 # text = I have never seen this car before until this lady at wal mart had it and she told me she got it here and that everyone was so nice to her.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	never	never	ADV	RB	_	4	advmod	4:advmod	_
+3	never	never	ADV	RB	PronType=Neg	4	advmod	4:advmod	_
 4	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 5	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	_
 6	car	car	NOUN	NN	Number=Sing	4	obj	4:obj	_
@@ -66,9 +66,9 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	iobj	2:iobj	_
-4	who	who	PRON	WP	PronType=Int	6	obl	6:obl:with	_
+4	who	who	PRON	WP	PronType=Int	6	obl	6:obl:with	CxnElt=6:Interrogative-WHInfo-Indirect.WHWord
 5	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
-6	worked	work	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	_
+6	worked	work	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=6:Interrogative-WHInfo-Indirect.Clause
 7	with	with	ADP	IN	_	4	case	4:case	_
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
 9	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
@@ -114,7 +114,7 @@
 28	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	32	nsubj	32:nsubj	_
 29	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	32	cop	32:cop	_
 30	a	a	DET	DT	Definite=Ind|PronType=Art	31	det	31:det	_
-31	bit	bit	NOUN	NN	Number=Sing	32	obl:npmod	32:obl:npmod	_
+31	bit	bit	NOUN	NN	Number=Sing	32	obl:unmarked	32:obl:unmarked	_
 32	shocked	shocked	ADJ	JJ	Degree=Pos	24	parataxis	24:parataxis	_
 33	that	that	SCONJ	IN	_	36	mark	36:mark	_
 34	someone	someone	PRON	NN	Number=Sing|PronType=Ind	36	nsubj	36:nsubj	_
@@ -139,14 +139,14 @@
 10	up	up	ADP	RP	_	9	compound:prt	9:compound:prt	_
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
-13	test	test	NOUN	NN	Number=Sing	14	obl:npmod	14:obl:npmod	_
+13	test	test	NOUN	NN	Number=Sing	14	obl:unmarked	14:obl:unmarked	_
 14	drove	drive	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 15	with	with	ADP	IN	_	16	case	16:case	_
 16	Craig	Craig	PROPN	NNP	Number=Sing	14	obl	14:obl:with	_
 17	and	and	CCONJ	CC	_	19	cc	19:cc	_
 18	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
 19	fell	fall	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
-20	head	head	NOUN	NN	Number=Sing	19	obl:npmod	19:obl:npmod	_
+20	head	head	NOUN	NN	Number=Sing	19	obl:unmarked	19:obl:unmarked	_
 21	over	over	ADP	IN	_	22	case	22:case	_
 22	heels	heel	NOUN	NNS	Number=Plur	20	nmod	20:nmod:over	_
 23	for	for	ADP	IN	_	25	case	25:case	_
@@ -187,11 +187,11 @@
 15	with	with	ADP	IN	_	16	case	16:case	_
 16	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	14	obl	14:obl:with	_
 17	and	and	CCONJ	CC	_	23	cc	23:cc	_
-18	now	now	ADV	RB	_	23	advmod	23:advmod	_
+18	now	now	ADV	RB	PronType=Dem	23	advmod	23:advmod	_
 19	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	23	nsubj	23:nsubj	_
 20-21	couldnt	_	_	_	_	_	_	_	_
 20	could	could	AUX	MD	VerbForm=Fin	23	aux	23:aux	_
-21	nt	not	PART	RB	Typo=Yes	23	advmod	23:advmod	CorrectForm=n't
+21	nt	not	PART	RB	Polarity=Neg|Typo=Yes	23	advmod	23:advmod	CorrectForm=n't
 22	be	be	AUX	VB	VerbForm=Inf	23	cop	23:cop	_
 23	happier	happy	ADJ	JJR	Degree=Cmp	14	conj	14:conj:and	SpaceAfter=No
 24	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -211,9 +211,9 @@
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
 12	know	know	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:and	_
 13	exactly	exactly	ADV	RB	_	14	advmod	14:advmod	_
-14	how	how	ADV	WRB	PronType=Int	16	advmod	16:advmod	_
+14	how	how	ADV	WRB	PronType=Int	16	advmod	16:advmod	CxnElt=16:Interrogative-WHInfo-Indirect.WHWord
 15	to	to	PART	TO	_	16	mark	16:mark	_
-16	treat	treat	VERB	VB	VerbForm=Inf	12	ccomp	12:ccomp	_
+16	treat	treat	VERB	VB	VerbForm=Inf	12	ccomp	12:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=16:Interrogative-WHInfo-Indirect.Clause
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 18	customer	customer	NOUN	NN	Number=Sing	16	obj	16:obj	SpaceAfter=No
 19	.	.	PUNCT	.	_	6	punct	6:punct	_

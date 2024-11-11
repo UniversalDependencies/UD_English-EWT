@@ -2,7 +2,7 @@
 # sent_id = reviews-036133-0001
 # newpar id = reviews-036133-p0001
 # text = Bit sketchy, sporadic delivery times
-1	Bit	bit	NOUN	NN	Number=Sing	2	obl:npmod	2:obl:npmod	_
+1	Bit	bit	NOUN	NN	Number=Sing	2	obl:unmarked	2:obl:unmarked	_
 2	sketchy	sketchy	ADJ	JJ	Degree=Pos	6	amod	6:amod	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	sporadic	sporadic	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
@@ -28,20 +28,20 @@
 
 # sent_id = reviews-036133-0003
 # text = Why?
-1	Why	why	ADV	WRB	PronType=Int	0	root	0:root	SpaceAfter=No
+1	Why	why	ADV	WRB	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=1:Interrogative-WHInfo-Direct.Clause,1:Interrogative-WHInfo-Direct.WHWord|SpaceAfter=No
 2	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-036133-0004
 # text = Because they cut me good deals if I paid in cash.
 1	Because	because	SCONJ	IN	_	3	mark	3:mark	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	cut	cut	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+3	cut	cut	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 4	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	iobj	3:iobj	_
 5	good	good	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	deals	deal	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 7	if	if	SCONJ	IN	_	9	mark	9:mark	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-9	paid	pay	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	advcl	3:advcl:if	_
+9	paid	pay	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	advcl	3:advcl:if	CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	cash	cash	NOUN	NN	Number=Sing	9	obl	9:obl:in	SpaceAfter=No
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -120,14 +120,14 @@
 # text = Then one day, Ahmed left the country, not to return for months, WITHOUT informing me.
 1	Then	then	ADV	RB	PronType=Dem	6	advmod	6:advmod	_
 2	one	one	NUM	CD	NumForm=Word|NumType=Card	3	nummod	3:nummod	_
-3	day	day	NOUN	NN	Number=Sing	6	obl:tmod	6:obl:tmod	SpaceAfter=No
+3	day	day	NOUN	NN	Number=Sing	6	obl:unmarked	6:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	Ahmed	Ahmed	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
 6	left	leave	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	country	country	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
 9	,	,	PUNCT	,	_	12	punct	12:punct	_
-10	not	not	PART	RB	_	12	advmod	12:advmod	_
+10	not	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	return	return	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:to	_
 13	for	for	ADP	IN	_	14	case	14:case	_
@@ -182,7 +182,7 @@
 7	store	store	NOUN	NN	Number=Sing	4	obl	4:obl:at	_
 8-9	didn't	_	_	_	_	_	_	_	_
 8	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux	10:aux	_
-9	n't	not	PART	RB	_	10	advmod	10:advmod	_
+9	n't	not	PART	RB	Polarity=Neg	10	advmod	10:advmod	_
 10	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	_
 11	that	that	SCONJ	IN	_	14	mark	14:mark	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
@@ -206,7 +206,7 @@
 9	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
 10	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 11	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	ccomp	9:ccomp	_
-12	no	no	DET	DT	PronType=Neg	15	det	15:det	_
+12	no	no	DET	DT	PronType=Neg	13	det	13:det	_
 13	receipt	receipt	NOUN	NN	Number=Sing	11	obj	11:obj	SpaceAfter=No
 14	/	/	SYM	HYPH	_	15	cc	15:cc	SpaceAfter=No
 15	record	record	NOUN	NN	Number=Sing	13	conj	11:obj|13:conj	_
@@ -265,7 +265,7 @@
 # sent_id = reviews-036133-0016
 # text = He never once contacted us.
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
-2	never	never	ADV	RB	_	4	advmod	4:advmod	_
+2	never	never	ADV	RB	PronType=Neg	4	advmod	4:advmod	_
 3	once	once	ADV	RB	NumForm=Word|NumType=Mult	4	advmod	4:advmod	_
 4	contacted	contact	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	4	obj	4:obj	SpaceAfter=No
@@ -283,7 +283,7 @@
 7	new	new	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	guy	guy	NOUN	NN	Number=Sing	5	obj	5:obj	_
 9	several	several	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	times	time	NOUN	NNS	Number=Plur	5	obl:tmod	5:obl:tmod	_
+10	times	time	NOUN	NNS	Number=Plur	5	obl:unmarked	5:obl:unmarked	TemporalNPAdjunct=Yes
 11	to	to	PART	TO	_	12	mark	12:mark	_
 12	ask	ask	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:to	_
 13	when	when	ADV	WRB	PronType=Int	17	advmod	17:advmod	_
@@ -306,7 +306,7 @@
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10-11	didn't	_	_	_	_	_	_	_	_
 10	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux	12:aux	_
-11	n't	not	PART	RB	_	12	advmod	12:advmod	_
+11	n't	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
 12	seem	seem	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
 13	terribly	terribly	ADV	RB	_	14	advmod	14:advmod	_
 14	apologetic	apologetic	ADJ	JJ	Degree=Pos	12	xcomp	12:xcomp	SpaceAfter=No
@@ -324,14 +324,14 @@
 8	STILL	still	ADV	RB	_	11	advmod	11:advmod	_
 9-10	don't	_	_	_	_	_	_	_	_
 9	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
-10	n't	not	PART	RB	_	11	advmod	11:advmod	_
+10	n't	not	PART	RB	Polarity=Neg	11	advmod	11:advmod	_
 11	have	have	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	_
 12	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	table	table	NOUN	NN	Number=Sing	11	obj	11:obj|18:nsubj	_
 14	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
 15	which	which	PRON	WDT	PronType=Rel	18	nsubj	13:ref	_
 16	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	18:cop	_
-17	NOT	not	PART	RB	_	18	advmod	18:advmod	_
+17	NOT	not	PART	RB	Polarity=Neg	18	advmod	18:advmod	_
 18	cheap	cheap	ADJ	JJ	Degree=Pos	13	acl:relcl	13:acl:relcl	Cxn=rc-wh-nsubj|SpaceAfter=No
 19	,	,	PUNCT	,	_	22	punct	22:punct	_
 20	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	22	nsubj	22:nsubj	_
@@ -367,12 +367,12 @@
 23-24	they're	_	_	_	_	_	_	_	_
 23	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	27	nsubj	27:nsubj	_
 24	're	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	27	cop	27:cop	_
-25	not	not	PART	RB	_	27	advmod	27:advmod	_
+25	not	not	PART	RB	Polarity=Neg	27	advmod	27:advmod	_
 26	very	very	ADV	RB	_	27	advmod	27:advmod	_
 27	communicative	communicative	ADJ	JJ	Degree=Pos	7	conj	7:conj:but	_
 28	and	and	CCONJ	CC	_	37	cc	37:cc	_
 29	god	god	PROPN	NNP	Number=Sing	30	nsubj	30:nsubj	_
-30	forbid	forbid	VERB	VB	VerbForm=Inf	32	discourse	32:discourse	_
+30	forbid	forbid	VERB	VB	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	discourse	32:discourse	_
 31	something	something	PRON	NN	Number=Sing|PronType=Ind	32	nsubj	32:nsubj	_
 32	goes	go	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	37	advcl	37:advcl	_
 33	wrong	wrong	ADV	RB	_	32	advmod	32:advmod	SpaceAfter=No

@@ -10,7 +10,7 @@
 6	Passion	passion	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	SpaceAfter=No
 7	:	:	PUNCT	:	_	10	punct	10:punct	_
 8	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	10	aux	10:aux	_
-9	NOT	not	PART	RB	_	10	advmod	10:advmod	_
+9	NOT	not	PART	RB	Polarity=Neg	10	advmod	10:advmod	_
 10	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	2	parataxis	2:parataxis	_
 
 # sent_id = reviews-288100-0002
@@ -99,7 +99,7 @@
 16	from	from	ADP	IN	_	18	case	18:case	_
 17	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
 18	part	part	NOUN	NN	Number=Sing	15	nmod	15:nmod:from	_
-19	due	due	ADP	IN	_	22	case	22:case	_
+19	due	due	ADJ	JJ	Degree=Pos|ExtPos=ADP	22	case	22:case	_
 20	to	to	ADP	IN	_	19	fixed	19:fixed	_
 21	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
 22	lack	lack	NOUN	NN	Number=Sing	15	nmod	15:nmod:due_to	_
@@ -108,7 +108,7 @@
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_
 26	passion	passion	NOUN	NN	Number=Sing	24	conj	22:nmod:of|24:conj:and	_
 27	(	(	PUNCT	-LRB-	_	33	punct	33:punct	SpaceAfter=No
-28	not	not	PART	RB	_	33	advmod	33:advmod	_
+28	not	not	PART	RB	Polarity=Neg	33	advmod	33:advmod	_
 29	that	that	SCONJ	IN	_	33	mark	33:mark	_
 30-31	it's	_	_	_	_	_	_	_	_
 30	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	33	nsubj	33:nsubj	_
@@ -150,7 +150,7 @@
 14	,	,	PUNCT	,	_	18	punct	18:punct	_
 15	but	but	CCONJ	CC	_	18	cc	18:cc	_
 16	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
-17	never	never	ADV	RB	_	18	advmod	18:advmod	_
+17	never	never	ADV	RB	PronType=Neg	18	advmod	18:advmod	_
 18	happened	happen	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	conj	5:conj:but	SpaceAfter=No
 19	,	,	PUNCT	,	_	41	punct	41:punct	_
 20	and	and	CCONJ	CC	_	41	cc	41:cc	_
@@ -188,8 +188,8 @@
 # text = Please do not go there if it's professional, friendly, diligent medical services you're looking for.
 1	Please	please	INTJ	UH	_	4	discourse	4:discourse	_
 2	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	4	aux	4:aux	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
-4	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
+4	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 5	there	there	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 6	if	if	SCONJ	IN	_	15	mark	15:mark	_
 7-8	it's	_	_	_	_	_	_	_	_
@@ -201,7 +201,7 @@
 12	,	,	PUNCT	,	_	11	punct	11:punct	_
 13	diligent	diligent	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 14	medical	medical	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	services	service	NOUN	NNS	Number=Plur	4	advcl	4:advcl:if|18:obl:for	_
+15	services	service	NOUN	NNS	Number=Plur	4	advcl	4:advcl:if|18:obl:for	CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 16-17	you're	_	_	_	_	_	_	_	_
 16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
 17	're	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_

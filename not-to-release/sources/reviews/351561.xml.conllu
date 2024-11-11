@@ -4,7 +4,7 @@
 # text = Dumbest F'ers ever
 1	Dumbest	dumb	ADJ	JJS	Degree=Sup	2	amod	2:amod	_
 2	F'ers	fucker	NOUN	NNS	Number=Plur|Style=Expr	0	root	0:root	CorrectForm=fuckers
-3	ever	ever	ADV	RB	_	2	advmod	2:advmod	_
+3	ever	ever	ADV	RB	PronType=Ind	2	advmod	2:advmod	_
 
 # sent_id = reviews-351561-0002
 # newpar id = reviews-351561-p0002
@@ -12,7 +12,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	dominos	dominos	PROPN	NNP	Number=Sing	2	obj	2:obj	_
-4	tonight	tonight	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	SpaceAfter=No
+4	tonight	tonight	NOUN	NN	Number=Sing	2	obl:unmarked	2:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 7	rang	ring	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
@@ -73,7 +73,7 @@
 # text = They say no, Warwick in New Jersey, Call New Jersey.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
 2	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	no	no	INTJ	UH	_	5	discourse	5:discourse	SpaceAfter=No
+3	no	no	INTJ	UH	Polarity=Neg	5	discourse	5:discourse	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	Warwick	Warwick	PROPN	NNP	Number=Sing	2	ccomp	2:ccomp	_
 6	in	in	ADP	IN	_	8	case	8:case	_
@@ -92,7 +92,7 @@
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
 4	say	say	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	SpaceAfter=No
 5	,	,	PUNCT	,	_	13	punct	13:punct	_
-6	no	no	INTJ	UH	_	13	discourse	13:discourse	SpaceAfter=No
+6	no	no	INTJ	UH	Polarity=Neg	13	discourse	13:discourse	SpaceAfter=No
 7	,	,	PUNCT	,	_	6	punct	6:punct	_
 8	that	that	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
 9	Warwick	Warwick	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	_
@@ -133,7 +133,7 @@
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 3	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	9	punct	9:punct	_
-5	YES	yes	INTJ	UH	_	9	discourse	9:discourse	SpaceAfter=No
+5	YES	yes	INTJ	UH	Polarity=Pos	9	discourse	9:discourse	SpaceAfter=No
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7	CENTER	CENTER	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 8	CITY	CITY	PROPN	NNP	Number=Sing	9	compound	9:compound	_
@@ -143,7 +143,7 @@
 12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
 13	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	SpaceAfter=No
 14	,	,	PUNCT	,	_	20	punct	20:punct	_
-15	NO	no	INTJ	UH	_	20	discourse	20:discourse	SpaceAfter=No
+15	NO	no	INTJ	UH	Polarity=Neg	20	discourse	20:discourse	SpaceAfter=No
 16	,	,	PUNCT	,	_	15	punct	15:punct	_
 17	Warwick	Warwick	PROPN	NNP	Number=Sing	20	nsubj	20:nsubj	_
 18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	20:cop	_
@@ -156,14 +156,14 @@
 24	're	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	27	cop	27:cop	_
 25	at	at	ADP	IN	_	27	case	27:case	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	_
-27	Radison	Radison	PROPN	NNP	Number=Sing	33	advcl	33:advcl:at	_
+27	Radison	Radison	PROPN	NNP	Number=Sing	33	advcl	33:advcl:at	CxnElt=33:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 28	in	in	ADP	IN	_	29	case	29:case	_
 29	Warwick	Warwick	PROPN	NNP	Number=Sing	27	nmod	27:nmod:in	_
 30-31	thats	_	_	_	_	_	_	_	_
 30	that	that	PRON	DT	Number=Sing|PronType=Dem	33	nsubj	33:nsubj	_
 31	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	33	cop	33:cop	CorrectForm='s
 32	too	too	ADV	RB	_	33	advmod	33:advmod	_
-33	far	far	ADJ	JJ	Degree=Pos	20	parataxis	20:parataxis	SpaceAfter=No
+33	far	far	ADJ	JJ	Degree=Pos	20	parataxis	20:parataxis	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=33:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 34	,	,	PUNCT	,	_	35	punct	35:punct	_
 35	try	try	VERB	VB	Mood=Imp|VerbForm=Fin	20	parataxis	20:parataxis	_
 36	dominos	dominos	PROPN	NNP	Number=Sing	35	obj	35:obj	_
@@ -176,7 +176,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	say	say	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 3	,	,	PUNCT	,	_	12	punct	12:punct	_
-4	NO	no	INTJ	UH	_	12	discourse	12:discourse	SpaceAfter=No
+4	NO	no	INTJ	UH	Polarity=Neg	12	discourse	12:discourse	SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 7	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
@@ -196,7 +196,7 @@
 2	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 3	:	:	PUNCT	:	_	6	punct	6:punct	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
-5	not	not	PART	RB	_	6	advmod	6:advmod	_
+5	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
 7	that	that	DET	DT	Number=Sing|PronType=Dem	8	det	8:det	_
 8	town	town	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
@@ -274,9 +274,9 @@
 1	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
 2	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 3	:	:	PUNCT	:	_	6	punct	6:punct	_
-4	Why	why	ADV	WRB	PronType=Int	6	advmod	6:advmod	_
+4	Why	why	ADV	WRB	PronType=Int	6	advmod	6:advmod	CxnElt=6:Interrogative-WHInfo-Indirect.WHWord
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
-6	tell	tell	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
+6	tell	tell	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=6:Interrogative-WHInfo-Indirect.Clause
 7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	iobj	6:iobj	_
 8-9	your	_	_	_	_	_	_	_	_
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
@@ -345,7 +345,7 @@
 
 # sent_id = reviews-351561-0016
 # text = YES I am sure, well, she says, is that ON 17th STREET.
-1	YES	yes	INTJ	UH	_	4	discourse	4:discourse	_
+1	YES	yes	INTJ	UH	Polarity=Pos	4	discourse	4:discourse	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 3	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 4	sure	sure	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
@@ -358,13 +358,13 @@
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 12	that	that	PRON	DT	Number=Sing|PronType=Dem	15	nsubj	15:nsubj	_
 13	ON	on	ADP	IN	_	15	case	15:case	_
-14	17th	17th	ADJ	NNP	Number=Sing|NumForm=Combi|NumType=Ord	15	amod	15:amod	_
+14	17th	17th	ADJ	NNP	Degree=Pos|NumForm=Combi|NumType=Ord	15	amod	15:amod	_
 15	STREET	Street	PROPN	NNP	Number=Sing	9	ccomp	9:ccomp	SpaceAfter=No
 16	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-351561-0017
 # text = Yes, I say.
-1	Yes	yes	INTJ	UH	_	4	ccomp	4:ccomp	SpaceAfter=No
+1	Yes	yes	INTJ	UH	Polarity=Pos	4	ccomp	4:ccomp	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 4	say	say	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
@@ -374,13 +374,13 @@
 # text = 17th, like over by 16th and 15th YES, I say, one mile west of you.
 1	17th	17th	ADJ	NNP	Degree=Pos|NumForm=Combi|NumType=Ord	0	root	0:root	SpaceAfter=No
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	like	like	INTJ	UH	_	6	discourse	6:discourse	_
+3	like	like	INTJ	UH	_	4	discourse	4:discourse	_
 4	over	over	ADV	RB	_	1	nmod	1:nmod:like	_
 5	by	by	ADP	IN	_	6	case	6:case	_
 6	16th	16th	ADJ	NNP	Degree=Pos|NumForm=Combi|NumType=Ord	4	obl	4:obl:by	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
 8	15th	15th	ADJ	NNP	Degree=Pos|NumForm=Combi|NumType=Ord	6	conj	4:obl:by|6:conj:and	_
-9	YES	yes	INTJ	UH	_	15	discourse	15:discourse	SpaceAfter=No
+9	YES	yes	INTJ	UH	Polarity=Pos	15	discourse	15:discourse	SpaceAfter=No
 10	,	,	PUNCT	,	_	12	punct	12:punct	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 12	say	say	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	15	parataxis	15:parataxis	SpaceAfter=No
@@ -427,7 +427,7 @@
 
 # sent_id = reviews-351561-0022
 # text = YES, I am west of broad.
-1	YES	yes	INTJ	UH	_	5	discourse	5:discourse	SpaceAfter=No
+1	YES	yes	INTJ	UH	Polarity=Pos	5	discourse	5:discourse	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 4	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
@@ -444,18 +444,18 @@
 4	say	say	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	8	parataxis	8:parataxis	SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
-7	14th	14th	ADJ	NNP	NumForm=Combi|NumType=Ord	8	amod	8:amod	_
+7	14th	14th	ADJ	NNP	Degree=Pos|NumForm=Combi|NumType=Ord	8	amod	8:amod	_
 8	street	street	PROPN	NNP	Number=Sing	0	root	0:root	_
 9	and	and	CCONJ	CC	_	14	cc	14:cc	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj|19:nsubj	_
 11	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
 12	3	3	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
-13	blocks	block	NOUN	NNS	Number=Plur	14	obl:npmod	14:obl:npmod	_
+13	blocks	block	NOUN	NNS	Number=Plur	14	obl:unmarked	14:obl:unmarked	_
 14	west	west	ADV	RB	_	8	conj	8:conj:and	_
 15	of	of	ADP	IN	_	16	case	16:case	_
 16	broad	broad	PROPN	NNP	Number=Sing	14	obl	14:obl:of	_
 17	and	and	CCONJ	CC	_	19	cc	19:cc	_
-18	one	one	NUM	CD	NumForm=Word|NumType=Card	19	obl:npmod	19:obl:npmod	_
+18	one	one	NUM	CD	NumForm=Word|NumType=Card	19	obl:unmarked	19:obl:unmarked	_
 19	south	south	ADV	RB	_	14	conj	14:conj:and	_
 20	of	of	ADP	IN	_	21	case	21:case	_
 21	walnut	walnut	PROPN	NNP	Number=Sing	19	obl	19:obl:of	SpaceAfter=No
@@ -469,16 +469,16 @@
 4	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	parataxis	10:parataxis	SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	Then	then	ADV	RB	PronType=Dem	10	advmod	10:advmod	_
-7	why	why	ADV	WRB	PronType=Int	10	advmod	10:advmod	_
+7	why	why	ADV	WRB	PronType=Int	10	advmod	10:advmod	CxnElt=10:Interrogative-WHInfo-Direct.WHWord
 8	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
-10	calling	call	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+10	calling	call	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=10:Interrogative-WHInfo-Direct.Clause
 11	here	here	ADV	RB	PronType=Dem	10	advmod	10:advmod	SpaceAfter=No
 12	,	,	PUNCT	,	_	16	punct	16:punct	_
 13	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
 14-15	don't	_	_	_	_	_	_	_	_
 14	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
-15	n't	not	PART	RB	_	16	advmod	16:advmod	_
+15	n't	not	PART	RB	Polarity=Neg	16	advmod	16:advmod	_
 16	go	go	VERB	VB	VerbForm=Inf	10	parataxis	10:parataxis	_
 17	past	past	ADP	IN	_	18	case	18:case	_
 18	broad	broad	PROPN	NNP	Number=Sing	16	obl	16:obl:past	SpaceAfter=No

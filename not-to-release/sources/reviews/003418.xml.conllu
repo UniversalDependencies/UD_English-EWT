@@ -90,9 +90,9 @@
 5	requests	request	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	see	see	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
-8	what	what	PRON	WP	PronType=Int	10	obj	10:obj	_
+8	what	what	PRON	WP	PronType=Int	10	obj	10:obj	CxnElt=10:Interrogative-WHInfo-Indirect.WHWord
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
-10	got	get	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	ccomp	7:ccomp	_
+10	got	get	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	ccomp	7:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=10:Interrogative-WHInfo-Indirect.Clause
 11	from	from	ADP	IN	_	12	case	12:case	_
 12	BC	BC	PROPN	NNP	Number=Sing	10	obl	10:obl:from	SpaceAfter=No
 13	/	/	SYM	HYPH	_	14	cc	14:cc	SpaceAfter=No
@@ -111,9 +111,9 @@
 8	collection	collection	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	agency	agency	NOUN	NN	Number=Sing	3	obl	3:obl:to	_
 10	and	and	CCONJ	CC	_	15	cc	15:cc	_
-11	now	now	ADV	RB	_	15	advmod	15:advmod	_
+11	now	now	ADV	RB	PronType=Dem	15	advmod	15:advmod	_
 12	will	will	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-13	not	not	PART	RB	_	15	advmod	15:advmod	_
+13	not	not	PART	RB	Polarity=Neg	15	advmod	15:advmod	_
 14	even	even	ADV	RB	_	15	advmod	15:advmod	_
 15	discuss	discuss	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
@@ -140,7 +140,7 @@
 16	paid	pay	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	advcl	6:advcl:though	SpaceAfter=No
 17	,	,	PUNCT	,	_	24	punct	24:punct	_
 18	but	but	CCONJ	CC	_	24	cc	24:cc	_
-19	now	now	ADV	RB	_	24	advmod	24:advmod	_
+19	now	now	ADV	RB	PronType=Dem	24	advmod	24:advmod	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 21	collection	collection	NOUN	NN	Number=Sing	22	compound	22:compound	_
 22	agency	agency	NOUN	NN	Number=Sing	24	nsubj	24:nsubj|26:nsubj:xsubj	_
@@ -169,17 +169,17 @@
 
 # sent_id = reviews-003418-0011
 # text = How much could it possibly cost?
-1	How	how	ADV	WRB	PronType=Int	2	advmod	2:advmod	_
+1	How	how	ADV	WRB	PronType=Int	2	advmod	2:advmod	CxnElt=6:Interrogative-WHInfo-Direct.WHWord
 2	much	much	ADJ	JJ	Degree=Pos	6	obj	6:obj	_
 3	could	could	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
 5	possibly	possibly	ADV	RB	_	6	advmod	6:advmod	_
-6	cost	cost	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+6	cost	cost	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct,Interrogative-WHInfo-Direct|CxnElt=6:Interrogative-Polar-Direct.Clause,6:Interrogative-WHInfo-Direct.Clause|SpaceAfter=No
 7	?	?	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-003418-0012
 # text = Not only am I being bilked for money I do not owe, the office staff is rude to boot.
-1	Not	not	PART	RB	_	6	advmod	6:advmod	_
+1	Not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 2	only	only	ADV	RB	_	6	advmod	6:advmod	_
 3	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj:pass	6:nsubj:pass	_
@@ -189,7 +189,7 @@
 8	money	money	NOUN	NN	Number=Sing	6	obl	6:obl:for|12:obj	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 10	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-11	not	not	PART	RB	_	12	advmod	12:advmod	_
+11	not	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
 12	owe	owe	VERB	VB	VerbForm=Inf	8	acl:relcl	8:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 13	,	,	PUNCT	,	_	18	punct	18:punct	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_

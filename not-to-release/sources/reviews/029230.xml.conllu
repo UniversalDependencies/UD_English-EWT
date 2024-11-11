@@ -24,7 +24,7 @@
 
 # sent_id = reviews-029230-0003
 # text = Not the same old stuff that all the other stores have.
-1	Not	not	PART	RB	_	5	advmod	5:advmod	_
+1	Not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 3	same	same	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 4	old	old	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
@@ -61,10 +61,10 @@
 5	best	good	ADJ	JJS	Degree=Sup	6	amod	6:amod	_
 6	tea	tea	NOUN	NN	Number=Sing	3	obj	3:obj|9:obj	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-8	ever	ever	ADV	RB	_	9	advmod	9:advmod	_
+8	ever	ever	ADV	RB	PronType=Ind	9	advmod	9:advmod	_
 9	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
 10	,	,	PUNCT	,	_	16	punct	16:punct	_
-11	not	not	PART	RB	_	13	advmod	13:advmod	_
+11	not	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
 12	at	at	ADP	IN	_	13	case	13:case	_
 13	all	all	DET	DT	PronType=Tot	16	nmod	16:nmod:at	_
 14	like	like	ADP	IN	_	16	case	16:case	_
@@ -80,9 +80,9 @@
 24	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
 25	stock	stock	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	_
 26	up	up	ADP	RP	_	25	compound:prt	25:compound:prt	_
-27	when	whenever	ADV	GW	PronType=Int|Typo=Yes	29	advmod	29:advmod	_
+27	when	whenever	ADV	GW	PronType=Rel|Typo=Yes	25	advmod	25:advmod|29:advmod	_
 28	ever	_	X	WRB	_	27	goeswith	27:goeswith	_
-29	there	there	ADV	RB	PronType=Dem	25	advcl	25:advcl	_
+29	there	there	ADV	RB	PronType=Dem	27	advcl:relcl	27:advcl:relcl	Cxn=rc-free-advmod
 30	because	because	SCONJ	IN	_	33	mark	33:mark	_
 31	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	33	nsubj	33:nsubj	_
 32	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	33	cop	33:cop	_

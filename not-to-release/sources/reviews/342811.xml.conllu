@@ -50,7 +50,7 @@
 6	room	room	NOUN	NN	Number=Sing	2	obl	2:obl:into	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	first	first	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	9	amod	9:amod	_
-9	night	night	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	SpaceAfter=No
+9	night	night	NOUN	NN	Number=Sing	2	obl:unmarked	2:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 10	,	,	PUNCT	,	_	14	punct	14:punct	_
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
 12	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
@@ -78,7 +78,7 @@
 # sent_id = reviews-342811-0005
 # text = Next day got moved into another room, on the same floor with other wedding guests.
 1	Next	next	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	day	day	NOUN	NN	Number=Sing	4	obl:tmod	4:obl:tmod	_
+2	day	day	NOUN	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	TemporalNPAdjunct=Yes
 3	got	get	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 4	moved	move	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	into	into	ADP	IN	_	7	case	7:case	_
@@ -98,9 +98,9 @@
 # sent_id = reviews-342811-0006
 # text = There were 3 adults in our room but towels for only 2, no linens for sofa bed.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	3	3	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
-4	adults	adult	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
+4	adults	adult	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	room	room	NOUN	NN	Number=Sing	4	nmod	4:nmod:in	_
@@ -194,11 +194,11 @@
 10	but	but	CCONJ	CC	_	14	cc	14:cc	_
 11	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	14	nsubj:pass	14:nsubj:pass	_
 12	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	14	aux:pass	14:aux:pass	_
-13	never	never	ADV	RB	_	14	advmod	14:advmod	_
+13	never	never	ADV	RB	PronType=Neg	14	advmod	14:advmod	_
 14	given	give	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	conj	5:conj:but	_
 15	an	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 16	explanation	explanation	NOUN	NN	Number=Sing	14	obj	14:obj	_
-17	as	as	ADP	IN	_	22	mark	22:mark	_
+17	as	as	ADP	IN	ExtPos=SCONJ	22	mark	22:mark	_
 18	to	to	SCONJ	IN	_	17	fixed	17:fixed	_
 19	why	why	ADV	WRB	PronType=Int	22	advmod	22:advmod	_
 20	someone	someone	PRON	NN	Number=Sing|PronType=Ind	22	nsubj	22:nsubj	_

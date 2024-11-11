@@ -5,7 +5,7 @@
 1	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 2-3	aren't	_	_	_	_	_	_	_	_
 2	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 5	in	in	ADV	RB	_	4	advmod	4:advmod	_
 6	for	for	ADP	IN	_	8	case	8:case	_
@@ -13,7 +13,7 @@
 8	wedding	wedding	NOUN	NN	Number=Sing	4	obl	4:obl:for	_
 9	until	until	ADP	IN	_	10	case	10:case	_
 10	sunday	Sunday	PROPN	NNP	Number=Sing	4	obl	4:obl:until	_
-11	now	now	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
+11	now	now	ADV	RB	PronType=Dem	4	advmod	4:advmod	SpaceAfter=No
 12	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent23_14-0002
@@ -90,16 +90,16 @@
 9-10	woodrows	_	_	_	_	_	_	_	_
 9	woodrow	woodrow	PROPN	NNP	Number=Sing	5	obl	5:obl:at	_
 10	s	's	PART	POS	Typo=Yes	9	case	9:case	CorrectForm='s
-11	tomorrow	tomorrow	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	SpaceAfter=No
+11	tomorrow	tomorrow	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 12	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent23_14-0008
 # text = there will be some girls there and then we can get them to meet up with us at that garden in the heights party later that night.
 1	there	there	PRON	EX	_	3	expl	3:expl	_
 2	will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 4	some	some	DET	DT	PronType=Ind	5	det	5:det	_
-5	girls	girl	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
+5	girls	girl	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot
 6	there	there	ADV	RB	PronType=Dem	3	advmod	3:advmod	_
 7	and	and	CCONJ	CC	_	11	cc	11:cc	_
 8	then	then	ADV	RB	PronType=Dem	11	advmod	11:advmod	_
@@ -121,7 +121,7 @@
 24	party	party	NOUN	NN	Number=Sing	14	obl	14:obl:at	_
 25	later	late	ADV	RBR	Degree=Cmp	27	advmod	27:advmod	_
 26	that	that	DET	DT	Number=Sing|PronType=Dem	27	det	27:det	_
-27	night	night	NOUN	NN	Number=Sing	14	obl:tmod	14:obl:tmod	SpaceAfter=No
+27	night	night	NOUN	NN	Number=Sing	14	obl:unmarked	14:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 28	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent23_14-0009
@@ -159,13 +159,13 @@
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 3	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	10	advcl	10:advcl:if	_
+4	received	receive	VERB	VBN	Tense=Past|VerbForm=Part	10	advcl	10:advcl:if	CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 5	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj	_
 6	in	in	ADP	IN	_	7	case	7:case	_
 7	error	error	NOUN	NN	Number=Sing	4	obl	4:obl:in	SpaceAfter=No
 8	,	,	PUNCT	,	_	4	punct	4:punct	_
 9	please	please	INTJ	UH	_	10	discourse	10:discourse	_
-10	notify	notify	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+10	notify	notify	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	sender	sender	NOUN	NN	Number=Sing	10	iobj	10:iobj	_
 13	immediately	immediately	ADV	RB	_	10	advmod	10:advmod	_
@@ -219,10 +219,10 @@
 # sent_id = email-enronsent23_14-0015
 # newpar id = email-enronsent23_14-p0006
 # text = what do you mean i am perverted?
-1	what	what	PRON	WP	PronType=Int	4	obj	4:obj	_
+1	what	what	PRON	WP	PronType=Int	4	obj	4:obj	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	mean	mean	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	mean	mean	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 6	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 7	perverted	perverted	ADJ	JJ	Degree=Pos	4	parataxis	4:parataxis	SpaceAfter=No

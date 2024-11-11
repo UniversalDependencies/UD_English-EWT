@@ -4,7 +4,7 @@
 # text = Worst Apartments EVER
 1	Worst	bad	ADJ	JJS	Degree=Sup	2	amod	2:amod	_
 2	Apartments	apartment	NOUN	NNS	Number=Plur	0	root	0:root	_
-3	EVER	ever	ADV	RB	_	2	advmod	2:advmod	_
+3	EVER	ever	ADV	RB	PronType=Ind	2	advmod	2:advmod	_
 
 # sent_id = reviews-363873-0002
 # newpar id = reviews-363873-p0002
@@ -48,7 +48,7 @@
 # text = We were always having our water shut off, there were always people having parties at the pool, even after it was supposed to be closed.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
-3	always	always	ADV	RB	_	4	advmod	4:advmod	_
+3	always	always	ADV	RB	PronType=Tot	4	advmod	4:advmod	_
 4	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 5	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	water	water	NOUN	NN	Number=Sing	4	obj	4:obj|7:nsubj:xsubj	_
@@ -56,9 +56,9 @@
 8	off	off	ADP	RP	_	7	compound:prt	7:compound:prt	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	there	there	PRON	EX	_	11	expl	11:expl	_
-11	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	_
-12	always	always	ADV	RB	_	11	advmod	11:advmod	_
-13	people	people	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
+11	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	Cxn=Existential-CopPred-ThereExpl
+12	always	always	ADV	RB	PronType=Tot	11	advmod	11:advmod	_
+13	people	people	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	CxnElt=11:Existential-CopPred-ThereExpl.Pivot
 14	having	have	VERB	VBG	VerbForm=Ger	13	acl	13:acl	_
 15	parties	party	NOUN	NNS	Number=Plur	14	obj	14:obj	_
 16	at	at	ADP	IN	_	18	case	18:case	_
@@ -94,17 +94,17 @@
 15	there	there	ADV	RB	PronType=Dem	12	advmod	12:advmod	_
 16	until	until	ADP	IN	_	17	case	17:case	_
 17	11:45	11:45	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:until	_
-18	yelling	yell	VERB	VBG	VerbForm=Ger	13	acl	13:acl	SpaceAfter=No
+18	yelling	yell	VERB	VBG	VerbForm=Ger	12	advcl	12:advcl	Depictive=Yes|SpaceAfter=No
 19	,	,	PUNCT	,	_	20	punct	20:punct	_
-20	playing	play	VERB	VBG	VerbForm=Ger	18	conj	13:acl|18:conj:and	_
+20	playing	play	VERB	VBG	VerbForm=Ger	18	conj	12:advcl|18:conj:and	_
 21	music	music	NOUN	NN	Number=Sing	20	obj	20:obj	_
 22	and	and	CCONJ	CC	_	23	cc	23:cc	_
-23	do	do	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	18	conj	13:acl|18:conj:and	_
-24	who	who	PRON	WP	PronType=Int	26	nsubj	26:nsubj	SpaceAfter=No
+23	do	do	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	18	conj	12:advcl|18:conj:and	_
+24	who	who	PRON	WP	PronType=Int	26	nsubj	26:nsubj	CxnElt=26:Interrogative-WHInfo-Indirect.WHWord|SpaceAfter=No
 25	-	-	PUNCT	HYPH	_	24	punct	24:punct	SpaceAfter=No
-26	knows	know	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	ccomp	23:ccomp	SpaceAfter=No
+26	knows	know	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	ccomp	23:ccomp	Cxn=Interrogative-WHInfo-Indirect,Interrogative-WHInfo-Indirect#2|CxnElt=26:Interrogative-WHInfo-Indirect.Clause,26:Interrogative-WHInfo-Indirect#2.Clause|SpaceAfter=No
 27	-	-	PUNCT	HYPH	_	28	punct	28:punct	SpaceAfter=No
-28	what	what	PRON	WP	PronType=Int	26	obj	26:obj	_
+28	what	what	PRON	WP	PronType=Int	26	obj	26:obj	CxnElt=26:Interrogative-WHInfo-Indirect#2.WHWord
 29	in	in	ADP	IN	_	32	case	32:case	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
 31	dark	dark	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
@@ -127,7 +127,7 @@
 9	cleaned	clean	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	apartment	apartment	NOUN	NN	Number=Sing	9	obj	9:obj	_
-12	top	top	NOUN	NN	Number=Sing	9	obl:npmod	9:obl:npmod	_
+12	top	top	NOUN	NN	Number=Sing	9	obl:unmarked	9:obl:unmarked	_
 13	to	to	ADP	IN	_	14	case	14:case	_
 14	bottom	bottom	NOUN	NN	Number=Sing	12	nmod	12:nmod:to	SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
@@ -146,7 +146,7 @@
 28	(	(	PUNCT	-LRB-	_	32	punct	32:punct	SpaceAfter=No
 29	and	and	CCONJ	CC	_	32	cc	32:cc	_
 30	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	32	nsubj	32:nsubj	_
-31	never	never	ADV	RB	_	32	advmod	32:advmod	_
+31	never	never	ADV	RB	PronType=Neg	32	advmod	32:advmod	_
 32	got	get	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	27	parataxis	27:parataxis	_
 33	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	34	nmod:poss	34:nmod:poss	_
 34	deposit	deposit	NOUN	NN	Number=Sing	32	obj	32:obj	_
@@ -181,7 +181,7 @@
 5	person	person	NOUN	NN	Number=Sing	0	root	0:root|9:obl	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
 7	will	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-8	ever	ever	ADV	RB	_	9	advmod	9:advmod	_
+8	ever	ever	ADV	RB	PronType=Ind	9	advmod	9:advmod	_
 9	talk	talk	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl-pstrand
 10	to	to	ADP	IN	_	9	obl	9:obl	Promoted=Yes
 11	and	and	CCONJ	CC	_	13	cc	13:cc	_
@@ -200,7 +200,7 @@
 24	live	live	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	22	acl:relcl	22:acl:relcl	Cxn=rc-that-nsubj
 25	there	there	ADV	RB	PronType=Dem	24	advmod	24:advmod	SpaceAfter=No
 26	,	,	PUNCT	,	_	30	punct	30:punct	_
-27	not	not	PART	RB	_	30	advmod	30:advmod	_
+27	not	not	PART	RB	Polarity=Neg	30	advmod	30:advmod	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
 29	nice	nice	ADJ	JJ	Degree=Pos	30	amod	30:amod	_
 30	ones	one	NOUN	NNS	Number=Plur	22	conj	22:conj|33:nsubj	_
@@ -217,7 +217,7 @@
 # sent_id = reviews-363873-0008
 # text = Do not live here, you will regret it!
 1	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	3	aux	3:aux	_
-2	not	not	PART	RB	_	3	advmod	3:advmod	_
+2	not	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
 3	live	live	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 4	here	here	ADV	RB	PronType=Dem	3	advmod	3:advmod	SpaceAfter=No
 5	,	,	PUNCT	,	_	8	punct	8:punct	_

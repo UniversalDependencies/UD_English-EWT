@@ -35,7 +35,7 @@
 13	recording	recording	NOUN	NN	Number=Sing	14	compound	14:compound	_
 14	loop	loop	NOUN	NN	Number=Sing	9	obl	9:obl:to	_
 15	3	3	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	_
-16	times	time	NOUN	NNS	Number=Plur	9	obl:tmod	9:obl:tmod	_
+16	times	time	NOUN	NNS	Number=Plur	9	obl:unmarked	9:obl:unmarked	TemporalNPAdjunct=Yes
 17	before	before	SCONJ	IN	_	19	mark	19:mark	_
 18	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
 19	gave	give	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	9	advcl	9:advcl:before	_
@@ -126,7 +126,7 @@
 20	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	21	cop	21:cop	_
 21	innkeepers	innkeeper	NOUN	NNS	Number=Plur	17	ccomp	17:ccomp	SpaceAfter=No
 22	,	,	PUNCT	,	_	24	punct	24:punct	_
-23	not	not	PART	RB	_	24	advmod	24:advmod	_
+23	not	not	PART	RB	Polarity=Neg	24	advmod	24:advmod	_
 24	longshoreman	longshoreman	NOUN	NN	Number=Sing	21	conj	17:ccomp|21:conj	SpaceAfter=No
 25	.	.	PUNCT	.	_	12	punct	12:punct	_
 
@@ -138,7 +138,7 @@
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 6	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
-7	not	not	PART	RB	_	8	advmod	8:advmod	_
+7	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 8	help	help	VERB	VB	VerbForm=Inf	0	root	0:root	_
 9	with	with	ADP	IN	_	10	case	10:case	_
 10	suitcases	suitcase	NOUN	NNS	Number=Plur	8	obl	8:obl:with	SpaceAfter=No
@@ -199,7 +199,7 @@
 20	that	that	SCONJ	IN	_	25	mark	25:mark	_
 21	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	25	nsubj:pass	25:nsubj:pass|31:nsubj:pass	_
 22	could	could	AUX	MD	VerbForm=Fin	25	aux	25:aux	_
-23	not	not	PART	RB	_	25	advmod	25:advmod	_
+23	not	not	PART	RB	Polarity=Neg	25	advmod	25:advmod	_
 24	be	be	AUX	VB	VerbForm=Inf	25	aux:pass	25:aux:pass	_
 25	accommodated	accommodate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	17	ccomp	17:ccomp	_
 26	until	until	ADP	IN	_	28	case	28:case	_
@@ -256,7 +256,7 @@
 8	)	)	PUNCT	-RRB-	_	7	punct	7:punct	_
 9	if	if	SCONJ	IN	_	11	mark	11:mark	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
-11	drink	drink	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	22	advcl	22:advcl:if	_
+11	drink	drink	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	22	advcl	22:advcl:if	CxnElt=22:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	soda	soda	NOUN	NN	Number=Sing	11	obj	11:obj	_
 14	from	from	ADP	IN	_	16	case	16:case	_
@@ -267,7 +267,7 @@
 19	room	room	NOUN	NN	Number=Sing	16	nmod	16:nmod:in	_
 20	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	22:nsubj	_
 21	must	must	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
-22	prove	prove	VERB	VB	VerbForm=Inf	1	parataxis	1:parataxis	_
+22	prove	prove	VERB	VB	VerbForm=Inf	1	parataxis	1:parataxis	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=22:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 23	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	22	obj	22:obj	_
 24	by	by	SCONJ	IN	_	25	mark	25:mark	_
 25	leaving	leave	VERB	VBG	Tense=Pres|VerbForm=Part	22	advcl	22:advcl:by	_
@@ -282,7 +282,7 @@
 # text = If they think you've taken a soda from your room home with you, they will charge you $1.50 per can.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	think	think	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl:if	_
+3	think	think	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl:if	CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4-5	you've	_	_	_	_	_	_	_	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
 5	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
@@ -298,7 +298,7 @@
 15	,	,	PUNCT	,	_	3	punct	3:punct	_
 16	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
 17	will	will	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
-18	charge	charge	VERB	VB	VerbForm=Inf	0	root	0:root	_
+18	charge	charge	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 19	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	18	iobj	18:iobj	_
 20	$	$	SYM	$	_	18	obj	18:obj	SpaceAfter=No
 21	1.50	1.50	NUM	CD	NumForm=Digit|NumType=Frac	20	nummod	20:nummod	_
@@ -327,7 +327,7 @@
 3	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
 4	If	if	SCONJ	IN	_	6	mark	6:mark	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	_
-6	take	take	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:if	_
+6	take	take	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:if	CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	shampoo	shampoo	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	products	product	NOUN	NNS	Number=Plur	6	obj	6:obj	_
@@ -335,7 +335,7 @@
 11	,	,	PUNCT	,	_	6	punct	6:punct	_
 12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
 13	will	will	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
-14	charge	charge	VERB	VB	VerbForm=Inf	0	root	0:root	_
+14	charge	charge	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=14:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 15	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	14	iobj	14:iobj	_
 16	$	$	SYM	$	_	14	obj	14:obj	SpaceAfter=No
 17	8	8	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	_
@@ -349,7 +349,7 @@
 2	)	)	PUNCT	-RRB-	_	16	punct	16:punct	_
 3	If	if	SCONJ	IN	_	5	mark	5:mark	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
-5	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	16	advcl	16:advcl:if	_
+5	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	16	advcl	16:advcl:if	CxnElt=16:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	late	late	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	checkout	checkout	NOUN	NN	Number=Sing	5	obj	5:obj	SpaceAfter=No
@@ -360,7 +360,7 @@
 13	AM	a.m.	NOUN	NN	Number=Sing	8	nmod	8:nmod:after	SpaceAfter=No
 14	)	)	PUNCT	-RRB-	_	13	punct	13:punct	_
 15	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	16	nsubj	16:nsubj|24.1:nsubj|25:nsubj	_
-16	charge	charge	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	appos	1:appos	_
+16	charge	charge	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	appos	1:appos	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=16:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 17	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	16	iobj	16:iobj|24.1:iobj	_
 18	$	$	SYM	$	_	16	obj	16:obj	SpaceAfter=No
 19	15	15	NUM	CD	NumForm=Digit|NumType=Card	18	nummod	18:nummod	_
@@ -417,14 +417,14 @@
 # text = If you go later, it's all cleaned up.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	go	go	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	_
+3	go	go	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:if	CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	later	late	ADV	RBR	Degree=Cmp	3	advmod	3:advmod	SpaceAfter=No
 5	,	,	PUNCT	,	_	3	punct	3:punct	_
 6-7	it's	_	_	_	_	_	_	_	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nsubj:pass	9:nsubj:pass	_
 7	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux:pass	9:aux:pass	_
 8	all	all	ADV	RB	_	9	advmod	9:advmod	_
-9	cleaned	clean	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+9	cleaned	clean	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 10	up	up	ADP	RP	_	9	compound:prt	9:compound:prt	SpaceAfter=No
 11	.	.	PUNCT	.	_	9	punct	9:punct	_
 
@@ -432,19 +432,19 @@
 # text = (By whom, I don't know.
 1	(	(	PUNCT	-LRB-	_	8	punct	8:punct	SpaceAfter=No
 2	By	by	ADP	IN	_	3	case	3:case	_
-3	whom	whom	PRON	WP	PronType=Int	8	obl	8:obl:by	SpaceAfter=No
+3	whom	whom	PRON	WP	PronType=Int	8	obl	8:obl:by	CxnElt=8:Interrogative-WHInfo-Direct.WHWord|SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 6-7	don't	_	_	_	_	_	_	_	_
 6	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
-7	n't	not	PART	RB	_	8	advmod	8:advmod	_
-8	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+7	n't	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
+8	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=8:Interrogative-WHInfo-Direct.Clause|SpaceAfter=No
 9	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-363685-0022
 # text = I never saw anyone there.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-2	never	never	ADV	RB	_	3	advmod	3:advmod	_
+2	never	never	ADV	RB	PronType=Neg	3	advmod	3:advmod	_
 3	saw	see	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	3	obj	3:obj	_
 5	there	there	ADV	RB	PronType=Dem	4	advmod	4:advmod	SpaceAfter=No
@@ -480,11 +480,11 @@
 13	for	for	ADP	IN	_	15	case	15:case	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 15	machine	machine	NOUN	NN	Number=Sing	12	nmod	12:nmod:for|19:nsubj	_
-16	that	that	PRON	WDT	PronType=Rel	19	nsubj	15:ref	_
+16	that	that	PRON	WDT	PronType=Rel	19	nsubj	15:ref	CxnElt=19:Existential-ExistPred-NoExpl.Pivot
 17-18	didn't	_	_	_	_	_	_	_	_
 17	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	aux	19:aux	_
-18	n't	not	PART	RB	_	19	advmod	19:advmod	_
-19	exist	exist	VERB	VB	VerbForm=Inf	15	acl:relcl	15:acl:relcl	Cxn=rc-that-nsubj|SpaceAfter=No
+18	n't	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
+19	exist	exist	VERB	VB	VerbForm=Inf	15	acl:relcl	15:acl:relcl	Cxn=Existential-ExistPred-NoExpl,rc-that-nsubj|SpaceAfter=No
 20	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-363685-0025
@@ -534,7 +534,7 @@
 16	that	that	PRON	WDT	PronType=Rel	19	nsubj	15:ref	_
 17-18	didn't	_	_	_	_	_	_	_	_
 17	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	aux	19:aux	_
-18	n't	not	PART	RB	_	19	advmod	19:advmod	_
+18	n't	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 19	work	work	VERB	VB	VerbForm=Inf	15	acl:relcl	15:acl:relcl	Cxn=rc-that-nsubj|SpaceAfter=No
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -579,8 +579,8 @@
 # sent_id = reviews-363685-0031
 # text = Don't get the rooms off the two kitchens.
 1-2	Don't	_	_	_	_	_	_	_	_
-1	Do	do	AUX	VB	VerbForm=Inf	3	aux	3:aux	_
-2	n't	not	PART	RB	_	3	advmod	3:advmod	_
+1	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	3	aux	3:aux	_
+2	n't	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
 3	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	rooms	room	NOUN	NNS	Number=Plur	3	obj	3:obj	_
@@ -615,12 +615,12 @@
 1-2	I'd	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	'd	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 4	back	back	ADV	RB	_	3	advmod	3:advmod	_
 5	if	if	SCONJ	IN	_	8	mark	8:mark	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 7	could	could	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	get	get	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:if	_
+8	get	get	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:if	CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 10	last	last	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	minute	minute	NOUN	NN	Number=Sing	12	compound	12:compound	_
@@ -634,7 +634,7 @@
 19	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	22	nsubj	22:nsubj	_
 20-21	wouldn't	_	_	_	_	_	_	_	_
 20	would	would	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
-21	n't	not	PART	RB	_	22	advmod	22:advmod	_
+21	n't	not	PART	RB	Polarity=Neg	22	advmod	22:advmod	_
 22	pay	pay	VERB	VB	VerbForm=Inf	3	conj	3:conj:but	_
 23	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
 24	rack	rack	NOUN	NN	Number=Sing	25	compound	25:compound	_

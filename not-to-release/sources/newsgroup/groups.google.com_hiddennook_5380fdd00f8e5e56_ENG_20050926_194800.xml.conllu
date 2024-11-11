@@ -55,7 +55,7 @@
 
 # sent_id = newsgroup-groups.google.com_hiddennook_5380fdd00f8e5e56_ENG_20050926_194800-0005
 # text = Up to 40 rockets had been fired at Israel, weeks after its military withdrew from the territory.
-1	Up	up	ADP	IN	_	3	advmod	3:advmod	_
+1	Up	up	ADP	IN	ExtPos=ADV	3	advmod	3:advmod	_
 2	to	to	ADP	IN	_	1	fixed	1:fixed	_
 3	40	40	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
 4	rockets	rocket	NOUN	NNS	Number=Plur	7	nsubj:pass	7:nsubj:pass	_
@@ -65,7 +65,7 @@
 8	at	at	ADP	IN	_	9	case	9:case	_
 9	Israel	Israel	PROPN	NNP	Number=Sing	7	obl	7:obl:at	SpaceAfter=No
 10	,	,	PUNCT	,	_	15	punct	15:punct	_
-11	weeks	week	NOUN	NNS	Number=Plur	12	obl:npmod	12:obl:npmod	_
+11	weeks	week	NOUN	NNS	Number=Plur	12	obl:unmarked	12:obl:unmarked	_
 12	after	after	SCONJ	IN	_	15	mark	15:mark	_
 13	its	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
 14	military	military	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
@@ -122,12 +122,12 @@
 # sent_id = newsgroup-groups.google.com_hiddennook_5380fdd00f8e5e56_ENG_20050926_194800-0008
 # text = It looks as if Hamas has thrown in the towel for this round, unable to take the beating the Israeli Defense Forces have unleashed upon this terrorist group.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	looks	look	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	looks	look	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=2:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 3	as	as	SCONJ	IN	_	7	mark	7:mark	_
 4	if	if	SCONJ	IN	_	7	mark	7:mark	_
 5	Hamas	Hamas	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
 6	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
-7	thrown	throw	VERB	VBN	Tense=Past|VerbForm=Part	2	advcl	2:advcl:if	_
+7	thrown	throw	VERB	VBN	Tense=Past|VerbForm=Part	2	advcl	2:advcl:if	CxnElt=2:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 8	in	in	ADV	RB	_	7	advmod	7:advmod	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	towel	towel	NOUN	NN	Number=Sing	7	obj	7:obj	_
@@ -227,7 +227,7 @@
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 18	same	same	ADJ	JJ	Degree=Pos	22	nsubj:pass	22:nsubj:pass	_
 19	can	can	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
-20	not	not	PART	RB	_	22	advmod	22:advmod	_
+20	not	not	PART	RB	Polarity=Neg	22	advmod	22:advmod	_
 21	be	be	AUX	VB	VerbForm=Inf	22	aux:pass	22:aux:pass	_
 22	said	say	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	advcl	2:advcl:although	_
 23	of	of	ADP	IN	_	25	case	25:case	_
@@ -248,7 +248,7 @@
 2-3	We're	_	_	_	_	_	_	_	_
 2	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 3	're	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-4	not	not	PART	RB	_	5	advmod	5:advmod	_
+4	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	happy	happy	ADJ	JJ	Degree=Pos	25	ccomp	25:ccomp	_
 6	with	with	ADP	IN	_	9	case	9:case	_
 7-8	Hamas's	_	_	_	_	_	_	_	_
@@ -310,7 +310,7 @@
 2	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 3	problem	problem	NOUN	NN	Number=Sing	10	nsubj	10:nsubj|15:nsubj	_
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
-5	not	not	PART	RB	_	10	advmod	10:advmod	_
+5	not	not	PART	RB	Polarity=Neg	10	advmod	10:advmod	_
 6	with	with	ADP	IN	_	10	case	10:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 8	Palestinian	Palestinian	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
@@ -354,7 +354,7 @@
 15	Israeli	Israeli	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	occupation	occupation	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
 17	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
-18	not	not	PART	RB	_	19	advmod	19:advmod	_
+18	not	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 19	need	need	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
 20	excuses	excuse	NOUN	NNS	Number=Plur	19	obj	19:obj|22:nsubj:xsubj	_
 21	to	to	PART	TO	_	22	mark	22:mark	_

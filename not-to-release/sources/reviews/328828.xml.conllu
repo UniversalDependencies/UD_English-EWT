@@ -43,7 +43,7 @@
 11	curtains	curtain	NOUN	NNS	Number=Plur	9	nmod	9:nmod:about	_
 12	and	and	CCONJ	CC	_	15	cc	15:cc	_
 13	could	could	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-14	not	not	PART	RB	_	15	advmod	15:advmod	_
+14	not	not	PART	RB	Polarity=Neg	15	advmod	15:advmod	_
 15	show	show	VERB	VB	VerbForm=Inf	8	conj	6:ccomp|8:conj:and	_
 16	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	15	iobj	15:iobj	_
 17	fabric	fabric	NOUN	NN	Number=Sing	18	compound	18:compound	_
@@ -72,7 +72,7 @@
 14	guy	guy	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
 15-16	didn't	_	_	_	_	_	_	_	_
 15	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	aux	17:aux	_
-16	n't	not	PART	RB	_	17	advmod	17:advmod	_
+16	n't	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
 17	know	know	VERB	VB	VerbForm=Inf	12	ccomp	12:ccomp	_
 18	about	about	ADP	IN	_	19	case	19:case	_
 19	curtains	curtain	NOUN	NNS	Number=Plur	17	obl	17:obl:about	_
@@ -84,7 +84,7 @@
 25	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	conj	10:ccomp|12:conj:and	_
 26	in	in	ADV	RB	_	25	advmod	25:advmod	_
 27	sick	sick	ADJ	JJ	Degree=Pos	25	xcomp	25:xcomp	_
-28	hours	hour	NOUN	NNS	Number=Plur	25	obl:tmod	25:obl:tmod	_
+28	hours	hour	NOUN	NNS	Number=Plur	25	obl:unmarked	25:obl:unmarked	TemporalNPAdjunct=Yes
 29	earlier	early	ADV	RBR	Degree=Cmp	25	advmod	25:advmod	SpaceAfter=No
 30	!	!	PUNCT	.	_	10	punct	10:punct	_
 
@@ -105,7 +105,7 @@
 # sent_id = reviews-328828-0006
 # text = So what was the point of the appointment!?!
 1	So	so	ADV	RB	_	2	advmod	2:advmod	_
-2	what	what	PRON	WP	PronType=Int	0	root	0:root	_
+2	what	what	PRON	WP	PronType=Int	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=2:Interrogative-WHInfo-Direct.Clause,2:Interrogative-WHInfo-Direct.WHWord
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	2:cop	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	point	point	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
@@ -129,7 +129,7 @@
 # text = I will NEVER do business with this company!
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	NEVER	never	ADV	RB	_	4	advmod	4:advmod	_
+3	NEVER	never	ADV	RB	PronType=Neg	4	advmod	4:advmod	_
 4	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	business	business	NOUN	NN	Number=Sing	4	obj	4:obj	_
 6	with	with	ADP	IN	_	8	case	8:case	_
@@ -139,6 +139,6 @@
 
 # sent_id = reviews-328828-0009
 # text = EVER!!!
-1	EVER	ever	ADV	RB	_	0	root	0:root	SpaceAfter=No
+1	EVER	ever	ADV	RB	PronType=Ind	0	root	0:root	SpaceAfter=No
 2	!!!	!!!	PUNCT	.	_	1	punct	1:punct	_
 

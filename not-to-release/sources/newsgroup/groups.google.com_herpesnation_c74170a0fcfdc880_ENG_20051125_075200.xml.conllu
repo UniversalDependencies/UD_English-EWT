@@ -99,9 +99,9 @@
 33	,	,	PUNCT	,	_	36	punct	36:punct	_
 34	that	that	SCONJ	IN	_	36	mark	36:mark	_
 35	there	there	PRON	EX	_	36	expl	36:expl	_
-36	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	conj	9:acl:that|15:conj:and	_
+36	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	conj	9:acl:that|15:conj:and	Cxn=Existential-CopPred-ThereExpl
 37	no	no	DET	DT	PronType=Neg	38	det	38:det	_
-38	separation	separation	NOUN	NN	Number=Sing	36	nsubj	36:nsubj	_
+38	separation	separation	NOUN	NN	Number=Sing	36	nsubj	36:nsubj	CxnElt=36:Existential-CopPred-ThereExpl.Pivot
 39	between	between	ADP	IN	_	40	case	40:case	_
 40	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	38	nmod	38:nmod:between	_
 41	and	and	CCONJ	CC	_	42	cc	42:cc	_
@@ -151,7 +151,7 @@
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	self	self	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	so	so	ADV	RB	_	13	advmod	13:advmod	_
-12	today	today	NOUN	NN	Number=Sing	13	obl:tmod	13:obl:tmod	_
+12	today	today	NOUN	NN	Number=Sing	13	obl:unmarked	13:obl:unmarked	TemporalNPAdjunct=Yes
 13	here	here	ADV	RB	PronType=Dem	3	parataxis	3:parataxis	_
 14	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
@@ -170,14 +170,14 @@
 
 # sent_id = newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0006
 # text = Think of all life, if you will, as one great choir or one grand congregation.
-1	Think	think	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+1	Think	think	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=1:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 2	of	of	ADP	IN	_	4	case	4:case	_
 3	all	all	DET	DT	PronType=Tot	4	det	4:det	_
 4	life	life	NOUN	NN	Number=Sing	1	obl	1:obl:of	SpaceAfter=No
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	if	if	SCONJ	IN	_	8	mark	8:mark	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
-8	will	will	AUX	MD	VerbForm=Fin	1	advcl	1:advcl:if	SpaceAfter=No
+8	will	will	AUX	MD	VerbForm=Fin	1	advcl	1:advcl:if	CxnElt=1:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 9	,	,	PUNCT	,	_	13	punct	13:punct	_
 10	as	as	ADP	IN	_	13	case	13:case	_
 11	one	one	NUM	CD	NumForm=Word|NumType=Card	13	nummod	13:nummod	_
@@ -322,7 +322,7 @@
 2	those	that	PRON	DT	Number=Plur|PronType=Dem	9	nsubj	9:nsubj	_
 3	lucky	lucky	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
 4	enough	enough	ADV	RB	_	3	advmod	3:advmod	_
-5	not	not	PART	RB	_	7	advmod	7:advmod	_
+5	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	have	have	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_
 8	Herpes	herpes	NOUN	NN	Number=Sing	7	obj	7:obj	_
@@ -340,7 +340,7 @@
 20	who	who	PRON	WP	PronType=Rel	21	nsubj	17:ref	_
 21	do	do	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	acl:relcl	17:acl:relcl	Cxn=rc-wh-nsubj|SpaceAfter=No
 22	,	,	PUNCT	,	_	9	punct	9:punct	_
-23	not	not	PART	RB	_	27	advmod	27:advmod	_
+23	not	not	PART	RB	Polarity=Neg	27	advmod	27:advmod	_
 24	only	only	ADV	RB	_	27	advmod	27:advmod	_
 25	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	27	aux	27:aux	_
 26	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	27	nsubj	27:nsubj	_
@@ -357,9 +357,9 @@
 # sent_id = newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0014
 # text = There is no escape from the collective ocean we all swim in.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	no	no	DET	DT	PronType=Neg	4	det	4:det	_
-4	escape	escape	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+4	escape	escape	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 5	from	from	ADP	IN	_	8	case	8:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	collective	collective	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
@@ -376,7 +376,7 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 3	project	project	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	Cxn=rc-free-obj
 4	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-5	always	always	ADV	RB	_	6	advmod	6:advmod	_
+5	always	always	ADV	RB	PronType=Tot	6	advmod	6:advmod	_
 6	come	come	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	back	back	ADV	RB	_	6	advmod	6:advmod	_
 8	to	to	PART	TO	_	10	mark	10:mark	_
@@ -391,7 +391,7 @@
 # text = We are now suffering from the consequences of our rape of the environment, our rejection of the natural for the industrial, and our embrace of violence over peace.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	now	now	ADV	RB	_	4	advmod	4:advmod	_
+3	now	now	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 4	suffering	suffer	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 5	from	from	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
@@ -442,10 +442,10 @@
 
 # sent_id = newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0018
 # text = What are you doing to the least of the people?
-1	What	what	PRON	WP	PronType=Int	4	obj	4:obj	_
+1	What	what	PRON	WP	PronType=Int	4	obj	4:obj	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
-4	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+4	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	least	least	ADJ	JJS	Degree=Sup	4	obl	4:obl:to	_
@@ -463,11 +463,11 @@
 4	all	all	ADV	RB	_	7	advmod	7:advmod	_
 5	in	in	ADP	IN	_	7	case	7:case	_
 6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	7:det	_
-7	thing	thing	NOUN	NN	Number=Sing	10	advcl	10:advcl:in	_
+7	thing	thing	NOUN	NN	Number=Sing	10	advcl	10:advcl:in	CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 8	together	together	ADV	RB	_	7	advmod	7:advmod	SpaceAfter=No
 9	,	,	PUNCT	,	_	7	punct	7:punct	_
 10-11	let's	_	_	_	_	_	_	_	_
-10	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+10	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=10:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 11	's	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	10	obj	10:obj|12:nsubj:xsubj	_
 12	play	play	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	nice	nice	ADV	RB	_	12	advmod	12:advmod	SpaceAfter=No
@@ -506,7 +506,7 @@
 # sent_id = newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0021
 # text = No matter what progress we make as individuals in becoming healthier, we will never achieve real health until we collectively decide to create a healthier reality.
 1	No	no	DET	DT	PronType=Neg	2	det	2:det	_
-2	matter	matter	NOUN	NN	Number=Sing	16	obl:npmod	16:obl:npmod	_
+2	matter	matter	NOUN	NN	Number=Sing	16	obl:unmarked	16:obl:unmarked	_
 3	what	what	DET	WDT	PronType=Int	4	det	4:det	_
 4	progress	progress	NOUN	NN	Number=Sing	6	obj	6:obj	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
@@ -519,7 +519,7 @@
 12	,	,	PUNCT	,	_	2	punct	2:punct	_
 13	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
 14	will	will	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
-15	never	never	ADV	RB	_	16	advmod	16:advmod	_
+15	never	never	ADV	RB	PronType=Neg	16	advmod	16:advmod	_
 16	achieve	achieve	VERB	VB	VerbForm=Inf	0	root	0:root	_
 17	real	real	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	health	health	NOUN	NN	Number=Sing	16	obj	16:obj	_
@@ -550,7 +550,7 @@
 12	behaviour	behaviour	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
 13-14	cannot	_	_	_	_	_	_	_	_
 13	can	can	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-14	not	not	PART	RB	_	15	advmod	15:advmod	_
+14	not	not	PART	RB	Polarity=Neg	15	advmod	15:advmod	_
 15	continue	continue	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:since	_
 16	indefinitely	indefinitely	ADV	RB	_	15	advmod	15:advmod	SpaceAfter=No
 17	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -574,7 +574,7 @@
 # text = Will we choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard?
 1	Will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj|12:nsubj:xsubj	_
-3	choose	choose	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	choose	choose	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	live	live	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	in	in	ADP	IN	_	7	case	7:case	_
@@ -599,7 +599,7 @@
 # text = Will we choose to rise about prejudice and intolerance or go down kicking and screaming with holding on to fear and anger?
 1	Will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj|11:nsubj:xsubj	_
-3	choose	choose	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	choose	choose	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	rise	rise	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 6	about	about	ADP	IN	_	7	case	7:case	_
@@ -624,9 +624,9 @@
 # sent_id = newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0026
 # text = There is no health without peace and no peace without health.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	no	no	DET	DT	PronType=Neg	4	det	4:det	_
-4	health	health	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+4	health	health	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 5	without	without	ADP	IN	_	6	case	6:case	_
 6	peace	peace	NOUN	NN	Number=Sing	4	nmod	4:nmod:without	_
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_
@@ -653,12 +653,12 @@
 
 # sent_id = newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0029
 # text = Christopher Scipio Homeopath/Herbalist Holistic Viral Specialist
-1	Christopher	Christopher	PROPN	NNP	Number=Sing	2	compound	2:compound	_
-2	Scipio	Scipio	PROPN	NNP	Number=Sing	0	root	0:root	_
-3	Homeopath	homeopath	NOUN	NN	Number=Sing	2	compound	2:compound	SpaceAfter=No
+1	Christopher	Christopher	PROPN	NNP	Number=Sing	0	root	0:root	_
+2	Scipio	Scipio	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+3	Homeopath	homeopath	NOUN	NN	Number=Sing	1	compound	1:compound	SpaceAfter=No
 4	/	/	SYM	,	_	5	cc	5:cc	SpaceAfter=No
-5	Herbalist	herbalist	NOUN	NN	Number=Sing	3	conj	2:compound|3:conj	_
+5	Herbalist	herbalist	NOUN	NN	Number=Sing	3	conj	1:compound|3:conj	_
 6	Holistic	holistic	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 7	Viral	viral	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	Specialist	specialist	NOUN	NN	Number=Sing	3	conj	2:compound|3:conj	_
+8	Specialist	specialist	NOUN	NN	Number=Sing	3	conj	1:compound|3:conj	_
 

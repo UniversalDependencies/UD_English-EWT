@@ -4,26 +4,26 @@
 # text = i am going out tonight to get wasted if anyone is interested.
 1	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+3	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 4	out	out	ADV	RB	_	3	advmod	3:advmod	_
-5	tonight	tonight	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
-6	to	to	PART	TO	_	8	mark	8:mark	_
+5	tonight	tonight	NOUN	NN	Number=Sing	3	obl:unmarked	3:obl:unmarked	TemporalNPAdjunct=Yes
+6	to	to	PART	TO	_	7	mark	7:mark	_
 7	get	get	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_
 8	wasted	wasted	ADJ	JJ	Degree=Pos	7	xcomp	7:xcomp	_
 9	if	if	SCONJ	IN	_	12	mark	12:mark	_
 10	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	12	nsubj	12:nsubj	_
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
-12	interested	interested	ADJ	JJ	Degree=Pos	3	advcl	3:advcl:if	SpaceAfter=No
+12	interested	interested	ADJ	JJ	Degree=Pos	3	advcl	3:advcl:if	CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent23_08-0002
 # text = jill allen finishes her cpa today and she and her friends are going to party.
-1	jill	jill	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
-2	allen	allen	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+1	jill	Jill	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
+2	allen	Allen	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	finishes	finish	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-5	cpa	cpa	NOUN	NN	Number=Sing	3	obj	3:obj	_
-6	today	today	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
+5	cpa	CPA	NOUN	NN	Number=Sing	3	obj	3:obj	_
+6	today	today	NOUN	NN	Number=Sing	3	obl:unmarked	3:obl:unmarked	TemporalNPAdjunct=Yes
 7	and	and	CCONJ	CC	_	13	cc	13:cc	_
 8	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj|15:nsubj:xsubj	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
@@ -38,9 +38,9 @@
 # sent_id = email-enronsent23_08-0003
 # newpar id = email-enronsent23_08-p0002
 # text = max and jen are looking for you.
-1	max	max	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
+1	max	Max	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	jen	jen	PROPN	NNP	Number=Sing	1	conj	1:conj:and|5:nsubj	_
+3	jen	Jen	PROPN	NNP	Number=Sing	1	conj	1:conj:and|5:nsubj	_
 4	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 5	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 6	for	for	ADP	IN	_	7	case	7:case	_
@@ -60,7 +60,7 @@
 1	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
 2-3	haven't	_	_	_	_	_	_	_	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	heard	hear	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 5	from	from	ADP	IN	_	6	case	6:case	_
 6	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	4	obl	4:obl:from	_
@@ -121,7 +121,7 @@
 18	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	_
 19	balls	ball	NOUN	NNS	Number=Plur	16	obl	16:obl:on	_
 20	last	last	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
-21	night	night	NOUN	NN	Number=Sing	16	obl:tmod	16:obl:tmod	SpaceAfter=No
+21	night	night	NOUN	NN	Number=Sing	16	obl:unmarked	16:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 22	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = email-enronsent23_08-0008

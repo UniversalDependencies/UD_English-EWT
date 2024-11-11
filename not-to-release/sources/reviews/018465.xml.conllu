@@ -44,7 +44,7 @@
 4	just	just	ADV	RB	_	5	advmod	5:advmod	_
 5	moved	move	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	SpaceAfter=No
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
-7	not	not	PART	RB	_	8	advmod	8:advmod	_
+7	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 8	rich	rich	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
@@ -57,7 +57,7 @@
 # sent_id = reviews-018465-0005
 # text = I never got a price quote over the phone and they take your cc info just to make the appointment because if you don't show up, they'll charge you.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-2	never	never	ADV	RB	_	3	advmod	3:advmod	_
+2	never	never	ADV	RB	PronType=Neg	3	advmod	3:advmod	_
 3	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	price	price	NOUN	NN	Number=Sing	6	compound	6:compound	_
@@ -81,14 +81,14 @@
 23	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	26	nsubj	26:nsubj	_
 24-25	don't	_	_	_	_	_	_	_	_
 24	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	26	aux	26:aux	_
-25	n't	not	PART	RB	_	26	advmod	26:advmod	_
-26	show	show	VERB	VB	VerbForm=Inf	31	advcl	31:advcl:if	_
+25	n't	not	PART	RB	Polarity=Neg	26	advmod	26:advmod	_
+26	show	show	VERB	VB	VerbForm=Inf	31	advcl	31:advcl:if	CxnElt=31:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 27	up	up	ADP	RP	_	26	compound:prt	26:compound:prt	SpaceAfter=No
 28	,	,	PUNCT	,	_	26	punct	26:punct	_
 29-30	they'll	_	_	_	_	_	_	_	_
 29	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	31	nsubj	31:nsubj	_
 30	'll	will	AUX	MD	VerbForm=Fin	31	aux	31:aux	_
-31	charge	charge	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:because	_
+31	charge	charge	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:because	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=31:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 32	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	31	iobj	31:iobj	SpaceAfter=No
 33	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -144,7 +144,7 @@
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 10-11	can't	_	_	_	_	_	_	_	_
 10	ca	can	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
-11	n't	not	PART	RB	_	12	advmod	12:advmod	_
+11	n't	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
 12	afford	afford	VERB	VB	VerbForm=Inf	8	ccomp	8:ccomp	_
 13	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	12	obj	12:obj	_
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
@@ -214,7 +214,7 @@
 
 # sent_id = reviews-018465-0011
 # text = $400 later my jaw dropped when the receptionist told me the total.
-1	$	$	SYM	$	_	3	obl:npmod	3:obl:npmod	SpaceAfter=No
+1	$	$	SYM	$	_	3	obl:unmarked	3:obl:unmarked	SpaceAfter=No
 2	400	400	NUM	CD	NumForm=Digit|NumType=Card	1	nummod	1:nummod	_
 3	later	late	ADV	RBR	Degree=Cmp	6	advmod	6:advmod	_
 4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
@@ -243,14 +243,14 @@
 10	jerk	jerk	NOUN	NN	Number=Sing	2	conj	2:conj:and	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	entire	entire	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	time	time	NOUN	NN	Number=Sing	10	obl:tmod	10:obl:tmod	SpaceAfter=No
+13	time	time	NOUN	NN	Number=Sing	10	obl:unmarked	10:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 14	,	,	PUNCT	,	_	17	punct	17:punct	_
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
 16	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
 17	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 18	no	no	DET	DT	PronType=Neg	19	det	19:det	_
 19	warning	warning	NOUN	NN	Number=Sing	17	obj	17:obj	_
-20	as	as	ADP	IN	_	23	case	23:case	_
+20	as	as	ADP	IN	ExtPos=ADP	23	case	23:case	_
 21	to	to	ADP	IN	_	20	fixed	20:fixed	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 23	price	price	NOUN	NN	Number=Sing	19	nmod	19:nmod:as_to	SpaceAfter=No
@@ -262,7 +262,7 @@
 2	cried	cry	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	entire	entire	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	way	way	NOUN	NN	Number=Sing	6	obl:npmod	6:obl:npmod	_
+5	way	way	NOUN	NN	Number=Sing	6	obl:unmarked	6:obl:unmarked	_
 6	home	home	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -288,7 +288,7 @@
 # text = I will never go back.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	never	never	ADV	RB	_	4	advmod	4:advmod	_
+3	never	never	ADV	RB	PronType=Neg	4	advmod	4:advmod	_
 4	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	back	back	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
 6	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -357,7 +357,7 @@
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	other	other	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	way	way	NOUN	NN	Number=Sing	14	obl:npmod	14:obl:npmod	_
+13	way	way	NOUN	NN	Number=Sing	14	obl:unmarked	14:obl:unmarked	_
 14	around	around	ADV	RB	_	4	ccomp	4:ccomp	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -367,7 +367,7 @@
 2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 3-4	didn't	_	_	_	_	_	_	_	_
 3	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
-4	n't	not	PART	RB	_	5	advmod	5:advmod	_
+4	n't	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	good	good	ADJ	JJ	Degree=Pos	8	amod	8:amod	_

@@ -5,7 +5,7 @@
 1	melting	melt	VERB	VBG	VerbForm=Ger	5	csubj	5:csubj	_
 2	brass	brass	NOUN	NN	Number=Sing	1	obj	1:obj	_
 3	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
-4	not	not	PART	RB	_	5	advmod	5:advmod	_
+4	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	work	work	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
 6	?	?	PUNCT	.	_	5	punct	5:punct	_
 
@@ -99,16 +99,16 @@
 67	hot	hot	ADJ	JJ	Degree=Pos	65	xcomp	65:xcomp	_
 68	but	but	CCONJ	CC	_	71	cc	71:cc	_
 69	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	71	aux	71:aux	_
-70	not	not	PART	RB	_	71	advmod	71:advmod	_
+70	not	not	PART	RB	Polarity=Neg	71	advmod	71:advmod	_
 71	melt	melt	VERB	VB	VerbForm=Inf	65	conj	65:conj:but	SpaceAfter=No
 72	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108051456AAQJaXR_ans-0004
 # text = what am I doing wrong
-1	what	what	PRON	WP	PronType=Int	4	obj	4:obj	_
+1	what	what	PRON	WP	PronType=Int	4	obj	4:obj	CxnElt=4:Interrogative-WHInfo-Direct.WHWord
 2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-4	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+4	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-WHInfo-Direct.Clause
 5	wrong	wrong	ADV	RB	_	4	advmod	4:advmod	_
 
 # sent_id = answers-20111108051456AAQJaXR_ans-0005
@@ -182,11 +182,11 @@
 2	if	if	SCONJ	IN	_	5	mark	5:mark	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
 4	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
-5	melt	melt	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:if	_
+5	melt	melt	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:if	CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 6	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj	SpaceAfter=No
 7	,	,	PUNCT	,	_	5	punct	5:punct	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-9	doubt	doubt	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+9	doubt	doubt	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=9:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
 11	foresaw	foresee	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	9	ccomp	9:ccomp	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
@@ -225,15 +225,15 @@
 3	zinc	zinc	NOUN	NN	Number=Sing	4	compound	4:compound	_
 4	fumes	fume	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
 5	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-6	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
+6	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=6:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	obj	6:obj	SpaceAfter=No
 8	,	,	PUNCT	,	_	13	punct	13:punct	_
 9	if	if	SCONJ	IN	_	13	mark	13:mark	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
 11-12	don't	_	_	_	_	_	_	_	_
 11	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
-12	n't	not	PART	RB	_	13	advmod	13:advmod	_
-13	take	take	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:if	_
+12	n't	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
+13	take	take	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:if	CxnElt=6:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 14	precautions	precaution	NOUN	NNS	Number=Plur	13	obj	13:obj	SpaceAfter=No
 15	.	.	PUNCT	.	_	6	punct	6:punct	_
 
@@ -309,7 +309,7 @@
 16	just	just	ADV	RB	_	19	advmod	19:advmod	_
 17-18	doesn't	_	_	_	_	_	_	_	_
 17	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
-18	n't	not	PART	RB	_	19	advmod	19:advmod	_
+18	n't	not	PART	RB	Polarity=Neg	19	advmod	19:advmod	_
 19	get	get	VERB	VB	VerbForm=Inf	13	ccomp	13:ccomp	_
 20	hot	hot	ADJ	JJ	Degree=Pos	19	xcomp	19:xcomp	_
 21	enough	enough	ADV	RB	_	20	advmod	20:advmod	SpaceAfter=No
@@ -332,7 +332,7 @@
 13	barbecue	barbecue	NOUN	NN	Number=Sing	11	obl	11:obl:for	_
 14	which	which	PRON	WDT	PronType=Rel	17	nsubj	7:ref	_
 15	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
-16	not	not	PART	RB	_	17	advmod	17:advmod	_
+16	not	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
 17	get	get	VERB	VB	VerbForm=Inf	7	acl:relcl	7:acl:relcl	Cxn=rc-wh-nsubj
 18	as	as	ADV	RB	_	19	advmod	19:advmod	_
 19	hot	hot	ADJ	JJ	Degree=Pos	17	xcomp	17:xcomp	_
@@ -340,14 +340,14 @@
 21	real	real	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 22	coal	coal	NOUN	NN	Number=Sing	19	obl	19:obl:as	_
 23	(	(	PUNCT	-LRB-	_	28	punct	28:punct	SpaceAfter=No
-24	e.g.	e.g.	ADV	RB	_	28	advmod	28:advmod	_
+24	e.g.	e.g.	ADV	FW	_	28	advmod	28:advmod	_
 25	for	for	ADP	IN	_	26	case	26:case	_
 26	blacksmithing	blacksmithing	NOUN	NN	Number=Sing	28	obl	28:obl:for	_
 27	one	one	PRON	PRP	Number=Sing|Person=3|PronType=Prs	28	nsubj	28:nsubj	_
 28	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	_
 29	coal	coal	NOUN	NN	Number=Sing	28	obj	28:obj	SpaceAfter=No
 30	,	,	PUNCT	,	_	33	punct	33:punct	_
-31	not	not	PART	RB	_	33	advmod	33:advmod	_
+31	not	not	PART	RB	Polarity=Neg	33	advmod	33:advmod	_
 32	barbecue	barbecue	NOUN	NN	Number=Sing	33	compound	33:compound	_
 33	charcoal	charcoal	NOUN	NN	Number=Sing	29	conj	28:obj|29:conj	SpaceAfter=No
 34	)	)	PUNCT	-RRB-	_	28	punct	28:punct	SpaceAfter=No
@@ -366,7 +366,7 @@
 9	casting	casting	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	SpaceAfter=No
 10	,	,	PUNCT	,	_	13	punct	13:punct	_
 11	but	but	CCONJ	CC	_	13	cc	13:cc	_
-12	never	never	ADV	RB	_	13	advmod	13:advmod	_
+12	never	never	ADV	RB	PronType=Neg	13	advmod	13:advmod	_
 13	tried	try	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj:but	_
 14	to	to	PART	TO	_	15	mark	15:mark	_
 15	build	build	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
@@ -386,7 +386,7 @@
 29	and	and	CCONJ	CC	_	32	cc	32:cc	_
 30-31	doesn't	_	_	_	_	_	_	_	_
 30	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	aux	32:aux	_
-31	n't	not	PART	RB	_	32	advmod	32:advmod	_
+31	n't	not	PART	RB	Polarity=Neg	32	advmod	32:advmod	_
 32	get	get	VERB	VB	VerbForm=Inf	28	conj	22:ccomp|28:conj:and	_
 33	hot	hot	ADJ	JJ	Degree=Pos	32	xcomp	32:xcomp	_
 34	enough	enough	ADV	RB	_	33	advmod	33:advmod	SpaceAfter=No
@@ -465,7 +465,7 @@
 12	yellow	yellow	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 13	heat	heat	NOUN	NN	Number=Sing	7	acl:relcl	7:acl:relcl	Cxn=rc-wh-nsubj|SpaceAfter=No
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
-15	not	not	PART	RB	_	13	advmod	13:advmod	_
+15	not	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
 16	red	red	ADV	RB	_	17	advmod	17:advmod	_
 17	hot	hot	ADJ	JJ	Degree=Pos	13	amod	13:amod	SpaceAfter=No
 18	.	.	PUNCT	.	_	2	punct	2:punct	_

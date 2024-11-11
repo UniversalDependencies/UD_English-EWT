@@ -20,7 +20,7 @@
 9	pizza	pizza	NOUN	NN	Number=Sing	5	nmod	5:nmod:of|13:obj	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 11	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
-12	ever	ever	ADV	RB	_	13	advmod	13:advmod	_
+12	ever	ever	ADV	RB	PronType=Ind	13	advmod	13:advmod	_
 13	had	have	VERB	VBN	Tense=Past|VerbForm=Part	9	acl:relcl	9:acl:relcl	Cxn=rc-red-obj
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	misfortune	misfortune	NOUN	NN	Number=Sing	13	obj	13:obj	_
@@ -61,9 +61,9 @@
 # sent_id = reviews-361348-0005
 # text = There was minimal cheese and sauce and it completely lacked flavor.
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	minimal	minimal	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	cheese	cheese	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+4	cheese	cheese	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
 6	sauce	sauce	NOUN	NN	Number=Sing	4	conj	2:nsubj|4:conj:and	_
 7	and	and	CCONJ	CC	_	10	cc	10:cc	_
@@ -83,7 +83,7 @@
 6	and	and	CCONJ	CC	_	10	cc	10:cc	_
 7	this	this	PRON	DT	Number=Sing|PronType=Dem	10	nsubj	10:nsubj	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
-9	not	not	PART	RB	_	10	advmod	10:advmod	_
+9	not	not	PART	RB	Polarity=Neg	10	advmod	10:advmod	_
 10	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	conj	2:conj:and	SpaceAfter=No
 11	!!	!!	PUNCT	.	_	2	punct	2:punct	_
 
@@ -118,7 +118,7 @@
 # text = I would not suggest this pizza to anyone!!!
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	suggest	suggest	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	_
 6	pizza	pizza	NOUN	NN	Number=Sing	4	obj	4:obj	_

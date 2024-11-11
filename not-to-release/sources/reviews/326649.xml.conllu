@@ -30,9 +30,9 @@
 18	years	year	NOUN	NNS	Number=Plur	15	obl	15:obl:for	_
 19	&	&	CCONJ	CC	_	22	cc	22:cc	_
 20	would	would	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
-21	never	never	ADV	RB	_	22	advmod	22:advmod	_
+21	never	never	ADV	RB	PronType=Neg	22	advmod	22:advmod	_
 22	go	go	VERB	VB	VerbForm=Inf	15	conj	15:conj	_
-23	anywhere	anywhere	ADV	RB	_	22	advmod	22:advmod	_
+23	anywhere	anywhere	ADV	RB	PronType=Ind	22	advmod	22:advmod	_
 24	else	else	ADV	RB	_	23	advmod	23:advmod	SpaceAfter=No
 25	!	!	PUNCT	.	_	3	punct	3:punct	_
 
@@ -50,7 +50,7 @@
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	customers	customer	NOUN	NNS	Number=Plur	12	nmod:poss	12:nmod:poss	MissingWordsAfter='
 12	safety	safety	NOUN	NN	Number=Sing	8	obl	8:obl:about	_
-13	rather	rather	ADV	RB	_	15	cc	15:cc	_
+13	rather	rather	ADV	RB	ExtPos=CCONJ	15	cc	15:cc	_
 14	than	than	ADP	IN	_	13	fixed	13:fixed	_
 15	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	12	conj	8:obl:about|12:conj:rather_than	_
 16	there	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	17	nmod:poss	17:nmod:poss	CorrectForm=their
@@ -68,8 +68,8 @@
 7	shop	shop	NOUN	NN	Number=Sing	0	root	0:root	_
 8	but	but	CCONJ	CC	_	10	cc	10:cc	_
 9	there	there	PRON	EX	_	10	expl	10:expl	_
-10	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	conj	7:conj:but	_
-11	appointments	appointment	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
+10	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	conj	7:conj:but	Cxn=Existential-CopPred-ThereExpl
+11	appointments	appointment	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	CxnElt=10:Existential-CopPred-ThereExpl.Pivot
 12	available	available	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 13	&	&	CCONJ	CC	_	20	cc	20:cc	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
@@ -140,7 +140,7 @@
 13	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	12	iobj	12:iobj	_
 14	if	if	SCONJ	IN	_	16	mark	16:mark	_
 15	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
-16	told	tell	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	26	advcl	26:advcl:if	_
+16	told	tell	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	26	advcl	26:advcl:if	CxnElt=26:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 17	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	16	iobj	16:iobj	_
 18	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	nsubj	20:nsubj	_
 19	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	cop	20:cop	_
@@ -151,7 +151,7 @@
 24-25	its	_	_	_	_	_	_	_	_
 24	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	26	nsubj	26:nsubj	_
 25	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	26	cop	26:cop	CorrectForm='s
-26	electrical	electrical	ADJ	JJ	Degree=Pos	12	ccomp	12:ccomp	SpaceAfter=No
+26	electrical	electrical	ADJ	JJ	Degree=Pos	12	ccomp	12:ccomp	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=26:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 27	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-326649-0008
@@ -160,10 +160,10 @@
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj|10:nsubj|20:nsubj	_
 3	should	should	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 4	understand	understand	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
+5	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	CxnElt=8:Interrogative-WHInfo-Indirect.WHWord
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 7	world	world	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
-8	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
+8	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=8:Interrogative-WHInfo-Indirect.Clause
 9	&	&	CCONJ	CC	_	10	cc	10:cc	_
 10	realize	realize	VERB	VB	VerbForm=Inf	4	conj	4:conj	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	_
@@ -174,7 +174,7 @@
 16	other	other	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	person	person	NOUN	NN	Number=Sing	10	ccomp	10:ccomp	_
 18	&	&	CCONJ	CC	_	20	cc	20:cc	_
-19	not	not	PART	RB	_	20	advmod	20:advmod	_
+19	not	not	PART	RB	Polarity=Neg	20	advmod	20:advmod	_
 20	put	put	VERB	VB	VerbForm=Inf	4	conj	4:conj	_
 21	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	20	obj	20:obj	_
 22	on	on	ADP	IN	_	24	case	24:case	_

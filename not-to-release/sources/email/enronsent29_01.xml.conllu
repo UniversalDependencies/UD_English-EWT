@@ -15,7 +15,7 @@
 # text = 03/23/2001 10:13 AM
 1	03/23/2001	03/23/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	10:13	10:13	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent29_01-0003
 # text = Good Morning Debra -
@@ -100,9 +100,9 @@
 29	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	31	aux	31:aux	_
 30	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	31	nsubj	31:nsubj	_
 31	know	know	VERB	VB	VerbForm=Inf	5	parataxis	5:parataxis	_
-32	who	who	PRON	WP	PronType=Int	34	nsubj	34:nsubj|41:obl:to	_
+32	who	who	PRON	WP	PronType=Int	34	nsubj	34:nsubj|41:obl:to	CxnElt=34:Interrogative-WHInfo-Indirect.WHWord
 33	would	would	AUX	MD	VerbForm=Fin	34	aux	34:aux	_
-34	handle	handle	VERB	VB	VerbForm=Inf	31	ccomp	31:ccomp|41:obl	_
+34	handle	handle	VERB	VB	VerbForm=Inf	31	ccomp	31:ccomp|41:obl	Cxn=Interrogative-WHInfo-Indirect|CxnElt=34:Interrogative-WHInfo-Indirect.Clause
 35	this	this	PRON	DT	Number=Sing|PronType=Dem	34	obj	34:obj	_
 36	at	at	ADP	IN	_	37	case	37:case	_
 37	Enron	Enron	PROPN	NNP	Number=Sing	34	obl	34:obl:at	_
@@ -180,12 +180,12 @@
 2	-	-	PUNCT	,	_	1	punct	1:punct	_
 3	Were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
-5	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+5	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=5:Interrogative-Polar-Direct.Clause
 6	phone	phone	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	system	system	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	problems	problem	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 9	this	this	DET	DT	Number=Sing|PronType=Dem	10	det	10:det	_
-10	morning	morning	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	SpaceAfter=No
+10	morning	morning	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 11	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = email-enronsent29_01-0012
@@ -197,7 +197,7 @@
 5	calling	call	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 6	in	in	ADV	RB	_	5	advmod	5:advmod	_
 7	and	and	CCONJ	CC	_	12	cc	12:cc	_
-8	none	none	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
+8	none	none	PRON	NN	PronType=Neg	12	nsubj	12:nsubj	_
 9	of	of	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 11	calls	call	NOUN	NNS	Number=Plur	8	nmod	8:nmod:of	_
@@ -256,7 +256,7 @@
 3	attached	attached	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	file	file	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
 5	:	:	PUNCT	:	_	6	punct	6:punct	_
-6	Constellation	constellation	NOUN	NN	Number=Sing	4	appos	4:appos	_
+6	Constellation	constellation	X	NN	_	4	appos	4:appos	ExtPos=PROPN|FlatType=Filename
 7	Power	power	X	GW	_	6	flat	6:flat	_
 8	(	(	X	GW	_	6	flat	6:flat	SpaceAfter=No
 9	GISB	GISB	X	GW	_	6	flat	6:flat	_
@@ -285,12 +285,12 @@
 # sent_id = email-enronsent29_01-0018
 # text = - ENRON-CPS (GISB rev1).doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	ENRON-CPS	enron-cps	NOUN	GW	_	0	root	0:root	_
+2	ENRON-CPS	enron-cps	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
 3	(	(	X	GW	_	2	flat	2:flat	SpaceAfter=No
 4	GISB	GISB	X	GW	_	2	flat	2:flat	_
 5	rev1	rev1	X	GW	_	2	flat	2:flat	SpaceAfter=No
 6	)	)	X	GW	_	2	flat	2:flat	SpaceAfter=No
-7	.doc	.doc	X	NN	Number=Sing	2	flat	2:flat	_
+7	.doc	.doc	X	NN	_	2	flat	2:flat	_
 
 # sent_id = email-enronsent29_01-0019
 # newpar id = email-enronsent29_01-p0003
@@ -368,8 +368,8 @@
 
 # sent_id = email-enronsent29_01-0025
 # text = Debra Perlingiere
-1	Debra	Debra	PROPN	NNP	Number=Sing	2	compound	2:compound	_
-2	Perlingiere	Perlingiere	PROPN	NNP	Number=Sing	0	root	0:root	_
+1	Debra	Debra	PROPN	NNP	Number=Sing	0	root	0:root	_
+2	Perlingiere	Perlingiere	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 
 # sent_id = email-enronsent29_01-0026
 # newpar id = email-enronsent29_01-p0007
@@ -385,7 +385,7 @@
 9	10MM	10mm	NOUN	NN	Number=Sing	8	obj	8:obj	_
 10	for	for	ADP	IN	_	11	case	11:case	_
 11	ENA	ENA	PROPN	NNP	Number=Sing	8	obl	8:obl:for	_
-12	as	as	ADV	RB	_	8	advmod	8:advmod	_
+12	as	as	ADV	RB	ExtPos=ADV	8	advmod	8:advmod	_
 13	well	well	ADV	RB	Degree=Pos	12	fixed	12:fixed	SpaceAfter=No
 14	?	?	PUNCT	.	_	2	punct	2:punct	_
 
@@ -399,8 +399,8 @@
 
 # sent_id = email-enronsent29_01-0029
 # text = Debra Perlingiere
-1	Debra	Debra	PROPN	NNP	Number=Sing	2	compound	2:compound	_
-2	Perlingiere	Perlingiere	PROPN	NNP	Number=Sing	0	root	0:root	_
+1	Debra	Debra	PROPN	NNP	Number=Sing	0	root	0:root	_
+2	Perlingiere	Perlingiere	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 
 # sent_id = email-enronsent29_01-0030
 # newpar id = email-enronsent29_01-p0008
@@ -411,8 +411,8 @@
 
 # sent_id = email-enronsent29_01-0031
 # text = Debra Perlingiere
-1	Debra	Debra	PROPN	NNP	Number=Sing	2	compound	2:compound	_
-2	Perlingiere	Perlingiere	PROPN	NNP	Number=Sing	0	root	0:root	_
+1	Debra	Debra	PROPN	NNP	Number=Sing	0	root	0:root	_
+2	Perlingiere	Perlingiere	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 
 # sent_id = email-enronsent29_01-0032
 # newpar id = email-enronsent29_01-p0009
@@ -443,7 +443,7 @@
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	if	if	SCONJ	IN	_	7	mark	7:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
-7	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
+7	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=7:Interrogative-Polar-Indirect.Clause
 8	anything	anything	PRON	NN	Number=Sing|PronType=Ind	7	obj	7:obj	_
 9	else	else	ADJ	JJ	Degree=Pos	8	amod	8:amod	SpaceAfter=No
 10	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -498,10 +498,10 @@
 2	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj|4:nsubj:xsubj	_
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-5	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
+5	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	CxnElt=8:Interrogative-WHInfo-Indirect.WHWord
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 7	would	would	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	like	like	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	_
+8	like	like	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=8:Interrogative-WHInfo-Indirect.Clause
 9	to	to	PART	TO	_	10	mark	10:mark	_
 10	proceed	proceed	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -535,7 +535,7 @@
 # text = I do not find the term "Alternate Transporter Imbalance" in our agreement..
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	term	term	NOUN	NN	Number=Sing	4	obj	4:obj	_
@@ -570,7 +570,7 @@
 1	Could	could	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	4:nsubj	_
 3	be	be	AUX	VB	VerbForm=Inf	4	cop	4:cop	_
-4	what	what	PRON	WP	PronType=Rel	0	root	0:root|7:obj	_
+4	what	what	PRON	WP	PronType=Rel	0	root	0:root|7:obj	Cxn=Interrogative-Polar-Direct,Interrogative-WHInfo-Direct|CxnElt=4:Interrogative-Polar-Direct.Clause,4:Interrogative-WHInfo-Direct.Clause,4:Interrogative-WHInfo-Direct.WHWord
 5-6	your	_	_	_	_	_	_	_	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
 6	r	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|Typo=Yes|VerbForm=Fin	7	aux	7:aux	CorrectForm='re
@@ -585,8 +585,8 @@
 
 # sent_id = email-enronsent29_01-0048
 # text = Debra Perlingiere
-1	Debra	Debra	PROPN	NNP	Number=Sing	2	compound	2:compound	_
-2	Perlingiere	Perlingiere	PROPN	NNP	Number=Sing	0	root	0:root	_
+1	Debra	Debra	PROPN	NNP	Number=Sing	0	root	0:root	_
+2	Perlingiere	Perlingiere	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 
 # sent_id = email-enronsent29_01-0049
 # newpar id = email-enronsent29_01-p0018
@@ -630,26 +630,26 @@
 1	Go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	ahead	ahead	ADV	RB	_	1	advmod	1:advmod	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	forward	forward	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
+4	forward	forward	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 5	to	to	ADP	IN	_	6	case	6:case	_
 6	Brant	Brant	PROPN	NNP	Number=Sing	4	obl	4:obl:to	_
 7	if	if	SCONJ	IN	_	10	mark	10:mark	_
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
 9	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
-10	ready	ready	ADJ	JJ	Degree=Pos	4	advcl	4:advcl:if	SpaceAfter=No
+10	ready	ready	ADJ	JJ	Degree=Pos	4	advcl	4:advcl:if	CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent29_01-0055
 # newpar id = email-enronsent29_01-p0021
 # text = Debra Perlingiere
-1	Debra	Debra	PROPN	NNP	Number=Sing	2	compound	2:compound	_
-2	Perlingiere	Perlingiere	PROPN	NNP	Number=Sing	0	root	0:root	_
+1	Debra	Debra	PROPN	NNP	Number=Sing	0	root	0:root	_
+2	Perlingiere	Perlingiere	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 
 # sent_id = email-enronsent29_01-0056
 # text = 03/27/2001 01:58 PM
 1	03/27/2001	03/27/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	01:58	01:58	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent29_01-0057
 # text = Revised Article 4.6
@@ -740,9 +740,9 @@
 3	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 4	see	see	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:as	_
 5	there	there	PRON	EX	_	6	expl	6:expl	_
-6	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+6	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 7	several	several	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	blanks	blank	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
+8	blanks	blank	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	CxnElt=6:Existential-CopPred-ThereExpl.Pivot
 9	concerning	concern	VERB	VBG	Tense=Pres|VerbForm=Part	11	case	11:case	_
 10	administrative	administrative	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	information	information	NOUN	NN	Number=Sing	8	nmod	8:nmod:concerning	_
@@ -781,7 +781,7 @@
 # text = Do you have this information?
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
 5	information	information	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
 6	?	?	PUNCT	.	_	3	punct	3:punct	_
@@ -813,7 +813,7 @@
 # text = 03/29/2001 09:01 AM
 1	03/29/2001	03/29/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	09:01	09:01	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent29_01-0075
 # text = Rudwell Johnson/ENRON@enronXgate
@@ -826,7 +826,7 @@
 # text = 03/28/2001 05:09 PM
 1	03/28/2001	03/28/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 2	05:09	05:09	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:tmod	1:nmod:tmod	_
+3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent29_01-0077
 # text = Jeff!
@@ -884,13 +884,13 @@
 # newpar id = email-enronsent29_01-p0030
 # text = Please forward a copy of the J.M. Huber Corporation Guaranty to my attention.
 1	Please	please	INTJ	UH	_	2	discourse	2:discourse	_
-2	forward	forward	VERB	VB	VerbForm=Inf	0	root	0:root	_
+2	forward	forward	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	copy	copy	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	of	of	ADP	IN	_	10	case	10:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-7	J.M.	J.M.	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	Huber	Huber	PROPN	NNP	Number=Sing	9	compound	9:compound	_
+7	J.M.	J.M.	PROPN	NNP	Number=Sing	9	compound	9:compound	_
+8	Huber	Huber	PROPN	NNP	Number=Sing	7	flat	7:flat	_
 9	Corporation	Corporation	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	Guaranty	guaranty	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
 11	to	to	ADP	IN	_	13	case	13:case	_
@@ -919,8 +919,8 @@
 # sent_id = email-enronsent29_01-0086
 # newpar id = email-enronsent29_01-p0032
 # text = Debra Perlingiere
-1	Debra	Debra	PROPN	NNP	Number=Sing	2	compound	2:compound	_
-2	Perlingiere	Perlingiere	PROPN	NNP	Number=Sing	0	root	0:root	_
+1	Debra	Debra	PROPN	NNP	Number=Sing	0	root	0:root	_
+2	Perlingiere	Perlingiere	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 
 # sent_id = email-enronsent29_01-0087
 # newpar id = email-enronsent29_01-p0033

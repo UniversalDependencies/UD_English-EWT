@@ -16,9 +16,9 @@
 12	)	)	PUNCT	-RRB-	_	7	punct	7:punct	SpaceAfter=No
 13	,	,	PUNCT	,	_	7	punct	7:punct	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-15	Coca	Coca	PROPN	NNP	Number=Sing	17	compound	17:compound	SpaceAfter=No
+15	Coca	Coca	PROPN	NNP	Number=Sing	18	compound	18:compound	SpaceAfter=No
 16	-	-	PUNCT	HYPH	_	15	punct	15:punct	SpaceAfter=No
-17	Cola	Cola	PROPN	NNP	Number=Sing	18	compound	18:compound	_
+17	Cola	Cola	PROPN	NNP	Number=Sing	15	flat	15:flat	_
 18	corporation	corporation	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
 19	built	build	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
@@ -97,9 +97,9 @@
 
 # sent_id = newsgroup-groups.google.com_eHolistic_e470976a8f836699_ENG_20050829_183800-0004
 # text = Coca-Cola calmed the concerns of the people and attempted to win back their favor by giving them vast amounts of free fertilizer, saying it would grow bountiful crops beyond their wildest dreams.
-1	Coca	Coca	PROPN	NNP	Number=Sing	3	compound	3:compound	SpaceAfter=No
+1	Coca	Coca	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|11:nsubj|13:nsubj:xsubj	SpaceAfter=No
 2	-	-	PUNCT	HYPH	_	1	punct	1:punct	SpaceAfter=No
-3	Cola	Cola	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|11:nsubj|13:nsubj:xsubj	_
+3	Cola	Cola	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 4	calmed	calm	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	concerns	concern	NOUN	NNS	Number=Plur	4	obj	4:obj	_
@@ -147,14 +147,14 @@
 9	at	at	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	present	present	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	day	day	NOUN	NN	Number=Sing	8	obl	8:obl:at|19:obl:tmod	_
+12	day	day	NOUN	NN	Number=Sing	8	obl	8:obl:at|19:obl:unmarked	_
 13	when	when	ADV	WRB	PronType=Rel	19	advmod	12:ref	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	village	village	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	people	people	NOUN	NNS	Number=Plur	19	nsubj	19:nsubj	_
 17	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
 18	suddenly	suddenly	ADV	RB	_	19	advmod	19:advmod	_
-19	discovered	discover	VERB	VBN	Tense=Past|VerbForm=Part	12	acl:relcl	12:acl:relcl	Cxn=rc-wh-obl:tmod
+19	discovered	discover	VERB	VBN	Tense=Past|VerbForm=Part	12	acl:relcl	12:acl:relcl	Cxn=rc-wh-obl:unmarked
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	fertilizer	fertilizer	NOUN	NN	Number=Sing	29	nsubj	29:nsubj|32:nsubj	_
 22	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	cop	29:cop	_
@@ -191,7 +191,7 @@
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
 5	water	water	NOUN	NN	Number=Sing	3	conj	3:conj:and|10:nsubj:pass	_
 6	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	aux:pass	10:aux:pass	_
-7	now	now	ADV	RB	_	10	advmod	10:advmod	_
+7	now	now	ADV	RB	PronType=Dem	10	advmod	10:advmod	_
 8	too	too	ADV	RB	_	9	advmod	9:advmod	_
 9	heavily	heavily	ADV	RB	_	10	advmod	10:advmod	_
 10	contaminated	contaminate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -208,7 +208,7 @@
 21	shut	shut	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	parataxis	10:parataxis	_
 22	down	down	ADP	RP	_	21	compound:prt	21:compound:prt	_
 23	last	last	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-24	week	week	NOUN	NN	Number=Sing	21	obl:tmod	21:obl:tmod	SpaceAfter=No
+24	week	week	NOUN	NN	Number=Sing	21	obl:unmarked	21:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 25	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = newsgroup-groups.google.com_eHolistic_e470976a8f836699_ENG_20050829_183800-0007
@@ -220,7 +220,7 @@
 5	:	:	PUNCT	:	_	8	punct	8:punct	_
 6-7	Don't	_	_	_	_	_	_	_	_
 6	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	8	aux	8:aux	_
-7	n't	not	PART	RB	_	8	advmod	8:advmod	_
+7	n't	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 8	drink	drink	VERB	VB	Mood=Imp|VerbForm=Fin	1	parataxis	1:parataxis	_
 9	Coke	Coke	PROPN	NNP	Number=Sing	8	obj	8:obj	SpaceAfter=No
 10	..........	..........	PUNCT	,	_	11	punct	11:punct	SpaceAfter=No
@@ -249,7 +249,7 @@
 17	similar	similar	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	crimes	crime	NOUN	NNS	Number=Plur	12	obl	12:obl:for	SpaceAfter=No
 19	,	,	PUNCT	,	_	20	punct	20:punct	_
-20	as	as	ADV	RB	_	12	advmod	12:advmod	_
+20	as	as	ADV	RB	ExtPos=ADV	12	advmod	12:advmod	_
 21	well	well	ADV	RB	Degree=Pos	20	fixed	20:fixed	SpaceAfter=No
 22	.	.	PUNCT	.	_	2	punct	2:punct	_
 

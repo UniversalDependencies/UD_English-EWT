@@ -12,9 +12,9 @@
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	there	there	PRON	EX	_	11	expl	11:expl	_
-11	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
+11	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	Cxn=Existential-CopPred-ThereExpl
 12	2	2	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
-13	eggs	egg	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
+13	eggs	egg	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	CxnElt=11:Existential-CopPred-ThereExpl.Pivot
 14	in	in	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 16	bottom	bottom	NOUN	NN	Number=Sing	11	obl	11:obl:in	_
@@ -32,14 +32,14 @@
 # text = Most likely not, if there is not a bird sitting on the eggs.
 1	Most	most	ADV	RBS	Degree=Sup	2	advmod	2:advmod	_
 2	likely	likely	ADV	RB	_	3	advmod	3:advmod	_
-3	not	not	PART	RB	_	0	root	0:root	Promoted=Yes|SpaceAfter=No
+3	not	not	PART	RB	Polarity=Neg	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|Promoted=Yes|SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	if	if	SCONJ	IN	_	7	mark	7:mark	_
 6	there	there	PRON	EX	_	7	expl	7:expl	_
-7	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:if	_
-8	not	not	PART	RB	_	7	advmod	7:advmod	_
+7	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:if	Cxn=Existential-CopPred-ThereExpl|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
+8	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	bird	bird	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
+10	bird	bird	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	CxnElt=7:Existential-CopPred-ThereExpl.Pivot
 11	sitting	sit	VERB	VBG	VerbForm=Ger	10	acl	10:acl	_
 12	on	on	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
@@ -63,7 +63,7 @@
 3	lay	lay	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	unfertilized	unfertilized	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	eggs	egg	NOUN	NNS	Number=Plur	3	obj	3:obj	_
-6	as	as	ADV	RB	_	3	advmod	3:advmod	_
+6	as	as	ADV	RB	ExtPos=ADV	3	advmod	3:advmod	_
 7	well	well	ADV	RB	Degree=Pos	6	fixed	6:fixed	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -81,7 +81,7 @@
 10	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj:pass	14:nsubj:pass	_
 11-12	cannot	_	_	_	_	_	_	_	_
 11	can	can	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
-12	not	not	PART	RB	_	14	advmod	14:advmod	_
+12	not	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
 13	be	be	AUX	VB	VerbForm=Inf	14	aux:pass	14:aux:pass	_
 14	guaranteed	guarantee	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
@@ -113,7 +113,7 @@
 # text = If you see a dark spot in the egg, that means it is fertilized and will hatch if cared for properly.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	see	see	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:if	_
+3	see	see	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	dark	dark	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	spot	spot	NOUN	NN	Number=Sing	3	obj	3:obj	_
@@ -122,15 +122,15 @@
 9	egg	egg	NOUN	NN	Number=Sing	3	obl	3:obl:in	SpaceAfter=No
 10	,	,	PUNCT	,	_	3	punct	3:punct	_
 11	that	that	PRON	DT	Number=Sing|PronType=Dem	12	nsubj	12:nsubj	_
-12	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+12	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 13	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj|18:nsubj	_
 14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 15	fertilized	fertilized	ADJ	JJ	Degree=Pos	12	ccomp	12:ccomp	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	will	will	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
-18	hatch	hatch	VERB	VB	VerbForm=Inf	15	conj	12:ccomp|15:conj:and	_
+18	hatch	hatch	VERB	VB	VerbForm=Inf	15	conj	12:ccomp|15:conj:and	Cxn=Conditional-UnspecifiedEpistemic-Reduced|CxnElt=18:Conditional-UnspecifiedEpistemic-Reduced.Apodosis
 19	if	if	SCONJ	IN	_	20	mark	20:mark	_
-20	cared	care	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	18	advcl	18:advcl:if	_
+20	cared	care	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	18	advcl	18:advcl:if	CxnElt=18:Conditional-UnspecifiedEpistemic-Reduced.Protasis
 21	for	for	ADP	IN	_	20	obl	20:obl	Promoted=Yes
 22	properly	properly	ADV	RB	_	20	advmod	20:advmod	SpaceAfter=No
 23	.	.	PUNCT	.	_	12	punct	12:punct	_

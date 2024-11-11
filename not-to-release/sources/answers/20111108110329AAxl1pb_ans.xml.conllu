@@ -6,23 +6,23 @@
 2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
 3	two	two	NUM	CD	NumForm=Word|NumType=Card	4	nummod	4:nummod	_
 4	cats	cat	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|7:nsubj	_
-5	fighting	fight	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+5	fighting	fight	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=5:Interrogative-Polar-Direct.Clause
 6	or	or	CCONJ	CC	_	7	cc	7:cc	_
 7	playing	play	VERB	VBG	Tense=Pres|VerbForm=Part	5	conj	5:conj:or	SpaceAfter=No
 8	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108110329AAxl1pb_ans-0002
 # text = how rough is too rough?
-1	how	how	ADV	WRB	PronType=Int	2	advmod	2:advmod	_
+1	how	how	ADV	WRB	PronType=Int	2	advmod	2:advmod	CxnElt=5:Interrogative-WHInfo-Direct.WHWord
 2	rough	rough	ADJ	JJ	Degree=Pos	5	nsubj	5:nsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 4	too	too	ADV	RB	_	5	advmod	5:advmod	_
-5	rough	rough	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
+5	rough	rough	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=5:Interrogative-WHInfo-Direct.Clause|SpaceAfter=No
 6	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108110329AAxl1pb_ans-0003
 # text = help!?
-1	help	help	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+1	help	help	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 2	!?	!?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108110329AAxl1pb_ans-0004
@@ -35,7 +35,7 @@
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 7	half	half	NOUN	NN	Number=Sing|NumForm=Word|NumType=Frac	4	conj	4:conj:and	_
-8	year	year	NOUN	NN	Number=Sing	9	obl:npmod	9:obl:npmod	_
+8	year	year	NOUN	NN	Number=Sing	9	obl:unmarked	9:obl:unmarked	_
 9	old	old	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 10	male	male	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	neutered	neuter	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	amod	12:amod	_
@@ -44,7 +44,7 @@
 14	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
 15	new	new	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 16	2	2	NUM	CD	NumForm=Digit|NumType=Card	17	nummod	17:nummod	_
-17	month	month	NOUN	NN	Number=Sing	18	obl:npmod	18:obl:npmod	_
+17	month	month	NOUN	NN	Number=Sing	18	obl:unmarked	18:obl:unmarked	_
 18	old	old	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 19	spayed	spay	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	21	amod	21:amod	_
 20	female	female	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
@@ -55,7 +55,7 @@
 # text = the first night i brought her home i did the sniffing under the door thing and left it at that.
 1	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	first	first	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	3	amod	3:amod	_
-3	night	night	NOUN	NN	Number=Sing	9	obl:tmod	5:obl|9:obl:tmod	_
+3	night	night	NOUN	NN	Number=Sing	9	obl:unmarked	5:obl|9:obl:unmarked	TemporalNPAdjunct=Yes
 4	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 5	brought	bring	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obl
 6	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj	_
@@ -79,7 +79,7 @@
 # text = the next day i let her out of the bedroom so they could check each other out, and the kitten hissed twice within the first 20 minutes of meeting each other and now she no longer hisses and they have been playing(chasing each other up and down the hall, rolling around on the ground and pawing at each other).
 1	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	next	next	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	day	day	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	_
+3	day	day	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	TemporalNPAdjunct=Yes
 4	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 5	let	let	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	obj	5:obj	_
@@ -110,7 +110,7 @@
 31	each	each	DET	DT	ExtPos=PRON|PronType=Rcp	30	obj	30:obj	_
 32	other	other	ADJ	JJ	Degree=Pos	31	fixed	31:fixed	_
 33	and	and	CCONJ	CC	_	38	cc	38:cc	_
-34	now	now	ADV	RB	_	38	advmod	38:advmod	_
+34	now	now	ADV	RB	PronType=Dem	38	advmod	38:advmod	_
 35	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	38	nsubj	38:nsubj	_
 36	no	no	ADV	RB	_	37	advmod	37:advmod	_
 37	longer	long	ADV	RBR	Degree=Cmp	38	advmod	38:advmod	_
@@ -176,7 +176,7 @@
 29	backed	back	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	_
 30	off	off	ADP	RP	_	29	compound:prt	29:compound:prt	_
 31	and	and	CCONJ	CC	_	35	cc	35:cc	_
-32	now	now	ADV	RB	_	35	advmod	35:advmod	_
+32	now	now	ADV	RB	PronType=Dem	35	advmod	35:advmod	_
 33	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	35	nsubj	35:nsubj	_
 34	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	35	cop	35:cop	_
 35	fine	fine	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
@@ -187,7 +187,7 @@
 1	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
 3	roughhouse	roughhouse	NOUN	NN	Number=Sing	4	compound	4:compound	_
-4	playing	play	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	SpaceAfter=No
+4	playing	play	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=4:Interrogative-Polar-Direct.Clause|SpaceAfter=No
 5	?	?	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = answers-20111108110329AAxl1pb_ans-0009
@@ -196,7 +196,7 @@
 2	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
 3	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 4	actually	actually	ADV	RB	_	5	advmod	5:advmod	_
-5	fighting	fight	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	SpaceAfter=No
+5	fighting	fight	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=5:Interrogative-Polar-Direct.Clause|SpaceAfter=No
 6	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108110329AAxl1pb_ans-0010
@@ -228,14 +228,14 @@
 24	wondering	wonder	VERB	VBG	Tense=Pres|VerbForm=Part	5	parataxis	5:parataxis	_
 25	if	if	SCONJ	IN	_	27	mark	27:mark	_
 26	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	27	nsubj	27:nsubj	_
-27	went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	24	ccomp	24:ccomp	_
+27	went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	24	ccomp	24:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=27:Interrogative-Polar-Indirect.Clause
 28	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	29:det	_
-29	little	little	ADJ	JJ	Degree=Pos	31	obl:npmod	31:obl:npmod	_
+29	little	little	ADJ	JJ	Degree=Pos	31	obl:unmarked	31:obl:unmarked	_
 30	to	too	ADV	RB	Typo=Yes	31	advmod	31:advmod	CorrectForm=too
 31	far	far	ADV	RB	Degree=Pos	27	advmod	27:advmod	_
 32	that	that	DET	DT	Number=Sing|PronType=Dem	34	det	34:det	_
 33	one	one	NUM	CD	NumForm=Word|NumType=Card	34	nummod	34:nummod	_
-34	time	time	NOUN	NN	Number=Sing	27	obl:tmod	27:obl:tmod	SpaceAfter=No
+34	time	time	NOUN	NN	Number=Sing	27	obl:unmarked	27:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 35	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108110329AAxl1pb_ans-0011
@@ -250,7 +250,7 @@
 # text = you did not leave the new kitten in the room long enough.
 1	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 2	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	leave	leave	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	new	new	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
@@ -318,7 +318,7 @@
 # sent_id = answers-20111108110329AAxl1pb_ans-0015
 # text = right now, your male is fighting off an intruder, and he feels that all of the house is his.
 1	right	right	ADV	RB	_	2	advmod	2:advmod	_
-2	now	now	ADV	RB	_	7	advmod	7:advmod	SpaceAfter=No
+2	now	now	ADV	RB	PronType=Dem	7	advmod	7:advmod	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
 5	male	male	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
@@ -377,7 +377,7 @@
 3	fifteen	fifteen	NUM	CD	NumForm=Word|NumType=Card	1	xcomp	1:xcomp	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	next	next	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	day	day	NOUN	NN	Number=Sing	1	obl:tmod	1:obl:tmod	SpaceAfter=No
+6	day	day	NOUN	NN	Number=Sing	1	obl:unmarked	1:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	then	then	ADV	RB	PronType=Dem	9	advmod	9:advmod	_
 9	twenty	twenty	NUM	CD	NumForm=Word|NumType=Card	1	conj	1:conj:and	SpaceAfter=No
@@ -433,8 +433,8 @@
 14	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 15-16	doesn't	_	_	_	_	_	_	_	_
 15	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	ccomp	13:ccomp	_
-16	n't	not	PART	RB	_	15	advmod	15:advmod	_
-17	now	now	ADV	RB	_	15	advmod	15:advmod	SpaceAfter=No
+16	n't	not	PART	RB	Polarity=Neg	15	advmod	15:advmod	_
+17	now	now	ADV	RB	PronType=Dem	15	advmod	15:advmod	SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108110329AAxl1pb_ans-0021
@@ -453,16 +453,16 @@
 11	but	but	CCONJ	CC	_	14	cc	14:cc	_
 12-13	can't	_	_	_	_	_	_	_	_
 12	ca	can	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
-13	n't	not	PART	RB	_	14	advmod	14:advmod	_
+13	n't	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
 14	help	help	VERB	VB	VerbForm=Inf	2	conj	2:conj:but	_
 15	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	obj	14:obj	SpaceAfter=No
 16	,	,	PUNCT	,	_	18	punct	18:punct	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
 18	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	conj	14:conj:and	_
-19	no	nowhere	NOUN	GW	Number=Sing|Typo=Yes	18	obj	18:obj	_
-20	where	_	X	NN	_	19	goeswith	19:goeswith	_
+19	no	nowhere	ADV	GW	PronType=Neg|Typo=Yes	18	obj	18:obj	_
+20	where	_	X	RB	_	19	goeswith	19:goeswith	_
 21	to	to	PART	TO	_	22	mark	22:mark	_
-22	go	go	VERB	VB	VerbForm=Inf	19	acl	19:acl:to	SpaceAfter=No
+22	go	go	VERB	VB	VerbForm=Inf	19	advcl	19:advcl:to	SpaceAfter=No
 23	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108110329AAxl1pb_ans-0022
@@ -480,7 +480,7 @@
 
 # sent_id = answers-20111108110329AAxl1pb_ans-0023
 # text = as well, your male will be able to see that his territory is not threatened.
-1	as	as	ADV	RB	_	8	advmod	8:advmod	_
+1	as	as	ADV	RB	ExtPos=ADV	8	advmod	8:advmod	_
 2	well	well	ADV	RB	Degree=Pos	1	fixed	1:fixed	SpaceAfter=No
 3	,	,	PUNCT	,	_	1	punct	1:punct	_
 4	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
@@ -494,7 +494,7 @@
 12	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
 13	territory	territory	NOUN	NN	Number=Sing	16	nsubj:pass	16:nsubj:pass	_
 14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	aux:pass	16:aux:pass	_
-15	not	not	PART	RB	_	16	advmod	16:advmod	_
+15	not	not	PART	RB	Polarity=Neg	16	advmod	16:advmod	_
 16	threatened	threaten	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	ccomp	10:ccomp	SpaceAfter=No
 17	.	.	PUNCT	.	_	8	punct	8:punct	_
 
@@ -579,7 +579,7 @@
 # text = this is not good.
 1	this	this	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	4:nsubj	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	good	good	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 5	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -674,7 +674,7 @@
 6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
 7-8	don't	_	_	_	_	_	_	_	_
 7	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
-8	n't	not	PART	RB	_	9	advmod	9:advmod	_
+8	n't	not	PART	RB	Polarity=Neg	9	advmod	9:advmod	_
 9	hiss	hiss	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
 10	.	.	PUNCT	.	_	9	punct	9:punct	_
 
@@ -682,19 +682,19 @@
 # text = if they hiss, they are not playing.
 1	if	if	SCONJ	IN	_	3	mark	3:mark	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	hiss	hiss	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:if	SpaceAfter=No
+3	hiss	hiss	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	advcl	8:advcl:if	CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
 6	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
-7	not	not	PART	RB	_	8	advmod	8:advmod	_
-8	playing	play	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	SpaceAfter=No
+7	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
+8	playing	play	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=8:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 9	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = answers-20111108110329AAxl1pb_ans-0033
 # text = if they bite, and one cries, you must separate them, and you must keep an eye on them.
 1	if	if	SCONJ	IN	_	3	mark	3:mark	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	bite	bite	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:if	SpaceAfter=No
+3	bite	bite	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	advcl	11:advcl:if	CxnElt=11:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
 6	one	one	NUM	CD	NumForm=Word|NumType=Card	7	nsubj	7:nsubj	_
@@ -702,7 +702,7 @@
 8	,	,	PUNCT	,	_	3	punct	3:punct	_
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
 10	must	must	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
-11	separate	separate	VERB	VB	VerbForm=Inf	0	root	0:root	_
+11	separate	separate	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=11:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 12	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	11	obj	11:obj	SpaceAfter=No
 13	,	,	PUNCT	,	_	17	punct	17:punct	_
 14	and	and	CCONJ	CC	_	17	cc	17:cc	_
@@ -732,9 +732,9 @@
 # text = if that happens, separate them, and give them time apart.
 1	if	if	SCONJ	IN	_	3	mark	3:mark	_
 2	that	that	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	3:nsubj	_
-3	happens	happen	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl:if	SpaceAfter=No
+3	happens	happen	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl:if	CxnElt=5:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
-5	separate	separate	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+5	separate	separate	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=5:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 6	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	5	obj	5:obj	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
@@ -782,7 +782,7 @@
 6	"	"	PUNCT	``	_	7	punct	7:punct	SpaceAfter=No
 7	get	get	VERB	VB	Mood=Imp|VerbForm=Fin	12	acl	12:acl	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	f*ck	fuck	NOUN	NN	Number=Sing|Style=Expr	10	obl:npmod	10:obl:npmod	CorrectForm=fuck
+9	f*ck	fuck	NOUN	NN	Number=Sing|Style=Expr	10	obl:unmarked	10:obl:unmarked	CorrectForm=fuck
 10	away	away	ADV	RB	_	7	advmod	7:advmod	SpaceAfter=No
 11	"	"	PUNCT	''	_	7	punct	7:punct	_
 12	sound	sound	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
@@ -821,7 +821,7 @@
 2-3	they're	_	_	_	_	_	_	_	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj|10:nsubj	_
 3	're	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	39	advcl	39:advcl:if	_
+4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	39	advcl	39:advcl:if	CxnElt=39:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 5	kinda	kinda	ADV	RB	_	6	advmod	6:advmod	_
 6	slow	slow	ADV	RB	_	4	advmod	4:advmod	_
 7	and	and	CCONJ	CC	_	10	cc	10:cc	_
@@ -829,7 +829,7 @@
 9	fake	fake	ADJ	JJ	Degree=Pos	10	compound	10:compound	_
 10	biting	bite	VERB	VBG	Tense=Pres|VerbForm=Part	4	conj	4:conj:and|39:advcl:if	_
 11	(	(	PUNCT	-LRB-	_	13	punct	13:punct	SpaceAfter=No
-12	not	not	PART	RB	_	13	advmod	13:advmod	_
+12	not	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
 13	biting	bite	VERB	VBG	Tense=Pres|VerbForm=Part	10	advcl	10:advcl	_
 14	as	as	ADV	RB	_	15	advmod	15:advmod	_
 15	hard	hard	ADV	RB	Degree=Pos	13	advmod	13:advmod	_
@@ -842,7 +842,7 @@
 22	fake	fake	ADJ	JJ	Degree=Pos	23	compound	23:compound	_
 23	scratching	scratch	VERB	VBG	Tense=Pres|VerbForm=Part	10	conj	10:conj:and	_
 24	(	(	PUNCT	-LRB-	_	26	punct	26:punct	SpaceAfter=No
-25	not	not	PART	RB	_	26	advmod	26:advmod	_
+25	not	not	PART	RB	Polarity=Neg	26	advmod	26:advmod	_
 26	hitting	hit	VERB	VBG	Tense=Pres|VerbForm=Part	23	advcl	23:advcl	_
 27	as	as	ADV	RB	_	28	advmod	28:advmod	_
 28	hard	hard	ADV	RB	Degree=Pos	26	advmod	26:advmod	_
@@ -857,7 +857,7 @@
 37-38	they're	_	_	_	_	_	_	_	_
 37	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	39	nsubj	39:nsubj	_
 38	're	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	39	aux	39:aux	_
-39	playing	play	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	SpaceAfter=No
+39	playing	play	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=39:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 40	.	.	PUNCT	.	_	39	punct	39:punct	_
 
 # sent_id = answers-20111108110329AAxl1pb_ans-0042
@@ -883,7 +883,7 @@
 18	territorial	territorial	ADJ	JJ	Degree=Pos	10	advcl	10:advcl:because	SpaceAfter=No
 19	,	,	PUNCT	,	_	24	punct	24:punct	_
 20	but	but	CCONJ	CC	_	24	cc	24:cc	_
-21	now	now	ADV	RB	_	24	advmod	24:advmod	_
+21	now	now	ADV	RB	PronType=Dem	24	advmod	24:advmod	_
 22	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	24	nsubj	24:nsubj|26:nsubj	_
 23	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	24	aux	24:aux	_
 24	fight	fight	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
@@ -954,9 +954,9 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 3	see	see	VERB	VB	VerbForm=Inf	0	root	0:root	_
-4	how	how	ADV	WRB	PronType=Int	6	advmod	6:advmod	_
+4	how	how	ADV	WRB	PronType=Int	6	advmod	6:advmod	CxnElt=6:Interrogative-WHInfo-Indirect.WHWord
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj|7:nsubj:xsubj	_
-6	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
+6	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=6:Interrogative-WHInfo-Indirect.Clause
 7	confused	confused	ADJ	JJ	Degree=Pos	6	xcomp	6:xcomp	_
 8	though	though	ADV	RB	_	6	advmod	6:advmod	SpaceAfter=No
 9	.	.	PUNCT	.	_	3	punct	3:punct	_

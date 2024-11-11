@@ -15,7 +15,7 @@
 # newpar id = answers-20111106035951AADq0Qg_ans-p0002
 # text = I always thought Mayko or Meiko is a Japanese name.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-2	always	always	ADV	RB	_	3	advmod	3:advmod	_
+2	always	always	ADV	RB	PronType=Tot	3	advmod	3:advmod	_
 3	thought	think	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	Mayko	Mayko	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
 5	or	or	CCONJ	CC	_	6	cc	6:cc	_
@@ -52,7 +52,7 @@
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 4-5	couldn't	_	_	_	_	_	_	_	_
 4	could	could	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-5	n't	not	PART	RB	_	6	advmod	6:advmod	_
+5	n't	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	_
 7	any	any	DET	DT	PronType=Ind	9	det	9:det	_
 8	proven	prove	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	amod	9:amod	_
@@ -159,7 +159,7 @@
 15	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
 16	orphans	orphan	NOUN	NNS	Number=Plur	3	parataxis	3:parataxis	_
 17	or	or	CCONJ	CC	_	20	cc	20:cc	_
-18	not	not	PART	RB	_	20	advmod	20:advmod	_
+18	not	not	PART	RB	Polarity=Neg	20	advmod	20:advmod	_
 19	to	to	PART	TO	_	20	mark	20:mark	_
 20	have	have	VERB	VB	VerbForm=Inf	16	conj	16:conj:or	_
 21	father	father	NOUN	NN	Number=Sing	20	obj	20:obj	SpaceAfter=No
@@ -217,13 +217,13 @@
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	babies	baby	NOUN	NNS	Number=Plur	6	nsubj:pass	6:nsubj:pass	_
 5	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	6:aux:pass	_
-6	born	bear	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	advcl	12:advcl:if	_
+6	born	bear	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 7	in	in	ADP	IN	_	8	case	8:case	_
 8	American	American	ADJ	JJ	Degree=Pos	6	obl	6:obl:in	_
 9	so	so	ADV	RB	_	12	advmod	12:advmod	_
 10	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj:pass	12:nsubj:pass|18:nsubj:pass|21:nsubj:xsubj	_
 11	would	would	AUX	MD	VerbForm=Fin	12	aux	12:aux	MissingWordsAfter=be
-12	named	name	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+12	named	name	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 13	in	in	ADP	IN	_	15	case	15:case	_
 14	other	other	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	way	way	NOUN	NN	Number=Sing	12	obl	12:obl:in	_
@@ -234,7 +234,7 @@
 20	First	first	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	21	amod	21:amod	_
 21	name	name	NOUN	NN	Number=Sing	18	xcomp	18:xcomp	SpaceAfter=No
 22	"	"	PUNCT	''	_	21	punct	21:punct	_
-23	in	in	ADP	IN	_	26	mark	26:mark	_
+23	in	in	ADP	IN	ExtPos=SCONJ	26	mark	26:mark	_
 24	order	order	NOUN	NN	Number=Sing	23	fixed	23:fixed	_
 25	to	to	PART	TO	_	26	mark	26:mark	_
 26	recall	recall	VERB	VB	VerbForm=Inf	18	advcl	18:advcl:to	_
@@ -273,7 +273,7 @@
 1-2	I'm	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
-3	not	not	PART	RB	_	4	advmod	4:advmod	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	sure	sure	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	where	where	ADV	WRB	PronType=Int	4	ccomp	4:ccomp	_
 6	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_

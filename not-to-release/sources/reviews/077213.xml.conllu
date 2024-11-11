@@ -23,12 +23,12 @@
 9	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	obj	8:obj|10:nsubj:xsubj	_
 10	that	that	PRON	DT	Number=Sing|PronType=Dem	8	xcomp	8:xcomp	_
 11	all	all	DET	DT	PronType=Tot	12	det	12:det	_
-12	night	night	NOUN	NN	Number=Sing	8	obl:tmod	8:obl:tmod	SpaceAfter=No
+12	night	night	NOUN	NN	Number=Sing	8	obl:unmarked	8:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-077213-0003
 # text = not sure how I feel about that one.
-1	not	not	PART	RB	_	2	advmod	2:advmod	_
+1	not	not	PART	RB	Polarity=Neg	2	advmod	2:advmod	_
 2	sure	sure	ADJ	JJ	Degree=Pos	0	root	0:root	_
 3	how	how	ADV	WRB	PronType=Int	5	advmod	5:advmod	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
@@ -52,7 +52,7 @@
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 10	pizza	pizza	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	_
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
-12	not	not	PART	RB	_	14	advmod	14:advmod	_
+12	not	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
 13	that	that	ADV	RB	_	14	advmod	14:advmod	_
 14	great	great	ADJ	JJ	Degree=Pos	3	conj	3:conj:but	SpaceAfter=No
 15	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -61,11 +61,11 @@
 # text = if you want good pizza, go to famoso.
 1	if	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	_
+3	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:if	CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	good	good	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	pizza	pizza	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
 6	,	,	PUNCT	,	_	3	punct	3:punct	_
-7	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+7	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=7:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 8	to	to	ADP	IN	_	9	case	9:case	_
 9	famoso	famoso	PROPN	NNP	Number=Sing	7	obl	7:obl:to	SpaceAfter=No
 10	.	.	PUNCT	.	_	7	punct	7:punct	_

@@ -25,7 +25,7 @@
 1	Baghdadis	Baghdadi	PROPN	NNPS	Number=Plur	4	nsubj	4:nsubj	_
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	venture	venture	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	much	much	ADV	RB	_	4	advmod	4:advmod	_
 6	out	out	ADP	IN	_	9	case	9:case	_
@@ -36,12 +36,12 @@
 11	more	more	ADV	RBR	Degree=Cmp	4	advmod	4:advmod	SpaceAfter=No
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
-14	never	never	ADV	RB	_	15	advmod	15:advmod	_
+14	never	never	ADV	RB	PronType=Neg	15	advmod	15:advmod	_
 15	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
-16	where	where	ADV	WRB	PronType=Int	19	advmod	19:advmod	_
+16	where	where	ADV	WRB	PronType=Int	19	advmod	19:advmod	CxnElt=19:Interrogative-WHInfo-Indirect.WHWord
 17	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	19	nsubj	19:nsubj	_
 18	might	might	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
-19	get	get	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	_
+19	get	get	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=19:Interrogative-WHInfo-Indirect.Clause
 20	stuck	stuck	ADJ	JJ	Degree=Pos	19	xcomp	19:xcomp	SpaceAfter=No
 21	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -49,8 +49,8 @@
 # text = There has been talk that the night curfew might be implemented again.
 1	There	there	PRON	EX	_	3	expl	3:expl	_
 2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	been	be	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
-4	talk	talk	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
+3	been	be	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+4	talk	talk	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot
 5	that	that	SCONJ	IN	_	11	mark	11:mark	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	night	night	NOUN	NN	Number=Sing	8	compound	8:compound	_
@@ -74,7 +74,7 @@
 9	for	for	ADP	IN	_	11	case	11:case	_
 10	three	three	NUM	CD	NumForm=Word|NumType=Card	11	nummod	11:nummod	_
 11	days	day	NOUN	NNS	Number=Plur	5	obl	5:obl:for	_
-12	now	now	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
+12	now	now	ADV	RB	PronType=Dem	5	advmod	5:advmod	SpaceAfter=No
 13	,	,	PUNCT	,	_	17	punct	17:punct	_
 14	helicopters	helicopter	NOUN	NNS	Number=Plur	17	nsubj	17:nsubj	_
 15	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
@@ -90,7 +90,7 @@
 # text = Fedayeen are now visible on the street and they have become bolder than ever.
 1	Fedayeen	fedayeen	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
 2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
-3	now	now	ADV	RB	_	4	advmod	4:advmod	_
+3	now	now	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 4	visible	visible	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	on	on	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
@@ -101,15 +101,15 @@
 11	become	become	VERB	VBN	Tense=Past|VerbForm=Part	4	conj	4:conj:and	_
 12	bolder	bold	ADJ	JJR	Degree=Cmp	11	xcomp	11:xcomp	_
 13	than	than	ADP	IN	_	14	case	14:case	_
-14	ever	ever	ADV	RB	_	12	obl	12:obl:than	SpaceAfter=No
+14	ever	ever	ADV	RB	PronType=Ind	12	obl	12:obl:than	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0006
 # text = Yesterday there were tens of them putting road blocks on our street and setting up mortars, they only come out in the open when Americans leave the area, then they start firing mortars indiscriminately and shooting their AK-47's in the air.
-1	Yesterday	yesterday	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	_
+1	Yesterday	yesterday	NOUN	NN	Number=Sing	3	obl:unmarked	3:obl:unmarked	TemporalNPAdjunct=Yes
 2	there	there	PRON	EX	_	3	expl	3:expl	_
-3	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	tens	ten	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
+3	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+4	tens	ten	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot
 5	of	of	ADP	IN	_	6	case	6:case	_
 6	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	4	nmod	4:nmod:of	_
 7	putting	put	VERB	VBG	VerbForm=Ger	4	acl	4:acl	_
@@ -138,7 +138,7 @@
 30	,	,	PUNCT	,	_	33	punct	33:punct	_
 31	then	then	ADV	RB	PronType=Dem	33	advmod	33:advmod	_
 32	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	33	nsubj	33:nsubj|34:nsubj:xsubj|38:nsubj:xsubj	_
-33	start	start	VERB	VB	VerbForm=Inf	20	parataxis	20:parataxis	_
+33	start	start	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	20	parataxis	20:parataxis	_
 34	firing	fire	VERB	VBG	VerbForm=Ger	33	xcomp	33:xcomp	_
 35	mortars	mortar	NOUN	NNS	Number=Plur	34	obj	34:obj	_
 36	indiscriminately	indiscriminately	ADV	RB	_	34	advmod	34:advmod	_
@@ -172,7 +172,7 @@
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 16	war	war	NOUN	NN	Number=Sing	13	obl	13:obl:during	_
 17	last	last	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	year	year	NOUN	NN	Number=Sing	16	nmod:tmod	16:nmod:tmod	SpaceAfter=No
+18	year	year	NOUN	NN	Number=Sing	16	nmod:unmarked	16:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 19	,	,	PUNCT	,	_	21	punct	21:punct	_
 20	which	which	PRON	WDT	PronType=Rel	21	nsubj	3:ref	_
 21	indicates	indicate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl:relcl	3:advcl:relcl	Cxn=rc-wh-csubj
@@ -187,8 +187,8 @@
 # text = And there is nothing we can do about it really, people who are suggesting that we go out and fight them are living in dream land.
 1	And	and	CCONJ	CC	_	3	cc	3:cc	_
 2	there	there	PRON	EX	_	3	expl	3:expl	_
-3	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-4	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	3	nsubj	3:nsubj|7:obj	_
+3	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+4	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	3	nsubj	3:nsubj|7:obj	CxnElt=3:Existential-CopPred-ThereExpl.Pivot
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 6	can	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 7	do	do	VERB	VB	VerbForm=Inf	4	acl:relcl	4:acl:relcl	Cxn=rc-red-obj
@@ -236,7 +236,7 @@
 18	so	so	ADV	RB	_	21	advmod	21:advmod	_
 19-20	don't	_	_	_	_	_	_	_	_
 19	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	21	aux	21:aux	_
-20	n't	not	PART	RB	_	21	advmod	21:advmod	_
+20	n't	not	PART	RB	Polarity=Neg	21	advmod	21:advmod	_
 21	expect	expect	VERB	VB	Mood=Imp|VerbForm=Fin	7	parataxis	7:parataxis	_
 22	scared	scared	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
 23	civilians	civilian	NOUN	NNS	Number=Plur	21	obj	21:obj|25:nsubj:xsubj	_
@@ -256,7 +256,7 @@
 37	tank	tank	NOUN	NN	Number=Sing	34	conj	34:conj:or|40:nsubj	_
 38-39	doesn't	_	_	_	_	_	_	_	_
 38	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	40	aux	40:aux	_
-39	n't	not	PART	RB	_	40	advmod	40:advmod	_
+39	n't	not	PART	RB	Polarity=Neg	40	advmod	40:advmod	_
 40	bomb	bomb	VERB	VB	VerbForm=Inf	32	ccomp	32:ccomp	_
 41	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	40	obj	40:obj	SpaceAfter=No
 42	,	,	PUNCT	,	_	49	punct	49:punct	_
@@ -286,9 +286,9 @@
 3	apprehensive	apprehensive	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	there	there	PRON	EX	_	6	expl	6:expl	_
-6	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	_
+6	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	Cxn=Existential-CopPred-ThereExpl
 7	some	some	DET	DT	PronType=Ind	8	det	8:det	_
-8	talk	talk	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
+8	talk	talk	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	CxnElt=6:Existential-CopPred-ThereExpl.Pivot
 9	that	that	SCONJ	IN	_	15	mark	15:mark	_
 10	April	April	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj|19:nsubj:xsubj	_
 11	9th	9th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	10	nummod	10:nummod	_
@@ -308,14 +308,14 @@
 2	people	people	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
 3-4	haven't	_	_	_	_	_	_	_	_
 3	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	n't	not	PART	RB	_	5	advmod	5:advmod	_
+4	n't	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 5	gone	go	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 6	to	to	ADP	IN	_	7	case	7:case	_
 7	work	work	NOUN	NN	Number=Sing	5	obl	5:obl:to	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 9	last	last	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 10	few	few	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	days	day	NOUN	NNS	Number=Plur	5	obl:tmod	5:obl:tmod	SpaceAfter=No
+11	days	day	NOUN	NNS	Number=Plur	5	obl:unmarked	5:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	although	although	SCONJ	IN	_	15	mark	15:mark	_
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	expl	15:expl	_
@@ -327,13 +327,13 @@
 20	Baghdad	Baghdad	PROPN	NNP	Number=Sing	18	nmod	18:nmod:of	_
 21	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	cop	23:cop	_
 22	'	'	PUNCT	``	_	23	punct	23:punct	SpaceAfter=No
-23	normal	normal	ADJ	JJ	Degree=Pos	15	ccomp	15:ccomp	SpaceAfter=No
+23	normal	normal	ADJ	JJ	Degree=Pos	15	ccomp	15:ccomp	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=23:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 24	'	'	PUNCT	''	_	23	punct	23:punct	_
 25	(	(	PUNCT	-LRB-	_	29	punct	29:punct	SpaceAfter=No
 26	if	if	SCONJ	IN	_	29	mark	29:mark	_
 27	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	29	nsubj	29:nsubj	_
 28	can	can	AUX	MD	VerbForm=Fin	29	aux	29:aux	_
-29	define	define	VERB	VB	VerbForm=Inf	23	advcl	23:advcl:if	_
+29	define	define	VERB	VB	VerbForm=Inf	23	advcl	23:advcl:if	CxnElt=23:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 30	what	what	PRON	WP	PronType=Rel	29	obj	29:obj	_
 31	normal	normal	NOUN	NN	Number=Sing	32	nsubj	32:nsubj	_
 32	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	acl:relcl	30:acl:relcl	Cxn=rc-free-pred-auxstrand|Promoted=Yes|SpaceAfter=No
@@ -343,8 +343,8 @@
 # sent_id = weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0012
 # text = There are rumours about preparations by slum dwellers for another looting spree against banks, governmental and public property similar to the one that took place last April, and I have already overheard youngsters in my neighbourhood joking about it and saying things like "This time we will be the first to loot, we didn't get anything the last time".
 1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	rumours	rumour	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	_
+2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+3	rumours	rumour	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 4	about	about	ADP	IN	_	5	case	5:case	_
 5	preparations	preparation	NOUN	NNS	Number=Plur	3	nmod	3:nmod:about	_
 6	by	by	ADP	IN	_	8	case	8:case	_
@@ -369,7 +369,7 @@
 25	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	acl:relcl	23:acl:relcl	Cxn=rc-that-nsubj
 26	place	place	NOUN	NN	Number=Sing	25	obj	25:obj	_
 27	last	last	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
-28	April	April	PROPN	NNP	Number=Sing	25	obl:tmod	25:obl:tmod	SpaceAfter=No
+28	April	April	PROPN	NNP	Number=Sing	25	obl:unmarked	25:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 29	,	,	PUNCT	,	_	34	punct	34:punct	_
 30	and	and	CCONJ	CC	_	34	cc	34:cc	_
 31	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	34	nsubj	34:nsubj	_
@@ -389,7 +389,7 @@
 45	like	like	SCONJ	IN	_	53	mark	53:mark	_
 46	"	"	PUNCT	``	_	53	punct	53:punct	SpaceAfter=No
 47	This	this	DET	DT	Number=Sing|PronType=Dem	48	det	48:det	_
-48	time	time	NOUN	NN	Number=Sing	53	obl:tmod	53:obl:tmod	_
+48	time	time	NOUN	NN	Number=Sing	53	obl:unmarked	53:obl:unmarked	TemporalNPAdjunct=Yes
 49	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	53	nsubj	53:nsubj	_
 50	will	will	AUX	MD	VerbForm=Fin	53	aux	53:aux	_
 51	be	be	AUX	VB	VerbForm=Inf	53	cop	53:cop	_
@@ -401,12 +401,12 @@
 57	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	60	nsubj	60:nsubj	_
 58-59	didn't	_	_	_	_	_	_	_	_
 58	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	60	aux	60:aux	_
-59	n't	not	PART	RB	_	60	advmod	60:advmod	_
+59	n't	not	PART	RB	Polarity=Neg	60	advmod	60:advmod	_
 60	get	get	VERB	VB	VerbForm=Inf	53	parataxis	53:parataxis	_
 61	anything	anything	PRON	NN	Number=Sing|PronType=Ind	60	obj	60:obj	_
 62	the	the	DET	DT	Definite=Def|PronType=Art	64	det	64:det	_
 63	last	last	ADJ	JJ	Degree=Pos	64	amod	64:amod	_
-64	time	time	NOUN	NN	Number=Sing	60	obl:tmod	60:obl:tmod	SpaceAfter=No
+64	time	time	NOUN	NN	Number=Sing	60	obl:unmarked	60:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
 65	"	"	PUNCT	''	_	53	punct	53:punct	SpaceAfter=No
 66	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -511,15 +511,15 @@
 62	just	just	ADV	RB	_	65	advmod	65:advmod	_
 63	a	a	DET	DT	Definite=Ind|PronType=Art	65	det	65:det	_
 64	few	few	ADJ	JJ	Degree=Pos	65	amod	65:amod	_
-65	days	day	NOUN	NNS	Number=Plur	66	obl:npmod	66:obl:npmod	_
+65	days	day	NOUN	NNS	Number=Plur	66	obl:unmarked	66:obl:unmarked	_
 66	ago	ago	ADV	RB	_	42	advmod	42:advmod	SpaceAfter=No
 67	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0015
 # text = So what happened?
 1	So	so	ADV	RB	_	3	advmod	3:advmod	_
-2	what	what	PRON	WP	PronType=Int	3	nsubj	3:nsubj	_
-3	happened	happen	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+2	what	what	PRON	WP	PronType=Int	3	nsubj	3:nsubj	CxnElt=3:Interrogative-WHInfo-Direct.WHWord
+3	happened	happen	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=3:Interrogative-WHInfo-Direct.Clause|SpaceAfter=No
 4	?	?	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0016
@@ -582,12 +582,12 @@
 4	,	,	PUNCT	,	_	1	punct	1:punct	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 6	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-7	only	only	ADV	RB	_	10	advmod	10:advmod	_
-8	Al	Al	PROPN	NNP	Number=Sing	10	compound	10:compound	SpaceAfter=No
+7	only	only	ADV	RB	_	8	advmod	8:advmod	_
+8	Al	Al	PROPN	NNP	Number=Sing	6	obj	6:obj	SpaceAfter=No
 9	-	-	PUNCT	HYPH	_	8	punct	8:punct	SpaceAfter=No
-10	Jazeera	Jazeera	PROPN	NNP	Number=Sing	6	obj	6:obj	_
+10	Jazeera	Jazeera	PROPN	NNP	Number=Sing	8	flat	8:flat	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	rely	rely	VERB	VB	VerbForm=Inf	10	acl	10:acl:to	_
+12	rely	rely	VERB	VB	VerbForm=Inf	8	acl	8:acl:to	_
 13	on	on	ADP	IN	_	12	obl	12:obl	Promoted=Yes
 14	for	for	ADP	IN	_	16	case	16:case	_
 15	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
@@ -659,7 +659,7 @@
 27	civilians	civilian	NOUN	NNS	Number=Plur	23	obl	23:obl:against	SpaceAfter=No
 28	"	"	PUNCT	''	_	23	punct	23:punct	_
 29	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	cop	30:cop	_
-30	all	all	DET	DT	PronType=Tot	0	root	0:root|32:obj|34:obj	_
+30	all	all	DET	DT	PronType=Tot	0	root	0:root|34:obj	_
 31	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	32	nsubj	32:nsubj|34:nsubj:xsubj	_
 32	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	30	acl:relcl	30:acl:relcl	Cxn=rc-red-obj_xcomp
 33	to	to	PART	TO	_	34	mark	34:mark	_
@@ -695,11 +695,11 @@
 23	mosques	mosque	NOUN	NNS	Number=Plur	21	nmod	21:nmod:of	_
 24	and	and	CCONJ	CC	_	25	cc	25:cc	_
 25	houses	house	NOUN	NNS	Number=Plur	23	conj	21:nmod:of|23:conj:and	_
-26	in	in	ADP	IN	_	30	case	30:case	_
-27	Hay	Hay	PROPN	NNP	Number=Sing	30	compound	30:compound	_
-28	Al	Al	PROPN	NNP	Number=Sing	30	compound	30:compound	SpaceAfter=No
+26	in	in	ADP	IN	_	27	case	27:case	_
+27	Hay	Hay	PROPN	NNP	Number=Sing	15	obl	15:obl:in	_
+28	Al	Al	PROPN	NNP	Number=Sing	27	flat	27:flat	SpaceAfter=No
 29	-	-	PUNCT	HYPH	_	28	punct	28:punct	SpaceAfter=No
-30	Golan	Golan	PROPN	NNP	Number=Sing	15	obl	15:obl:in	SpaceAfter=No
+30	Golan	Golan	PROPN	NNP	Number=Sing	27	flat	27:flat	SpaceAfter=No
 31	,	,	PUNCT	,	_	37	punct	37:punct	_
 32	but	but	CCONJ	CC	_	37	cc	37:cc	_
 33	of	of	ADP	IN	ExtPos=ADV	37	advmod	37:advmod	_
@@ -707,15 +707,15 @@
 35	that	that	PRON	DT	Number=Sing|PronType=Dem	37	nsubj	37:nsubj	_
 36	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	37	cop	37:cop	_
 37	okay	okay	ADJ	JJ	Degree=Pos	4	conj	4:conj:but	_
-38	for	for	ADP	IN	_	41	case	41:case	_
-39	Al	Al	PROPN	NNP	Number=Sing	41	compound	41:compound	SpaceAfter=No
+38	for	for	ADP	IN	_	39	case	39:case	_
+39	Al	Al	PROPN	NNP	Number=Sing	37	obl	37:obl:for	SpaceAfter=No
 40	-	-	PUNCT	HYPH	_	39	punct	39:punct	SpaceAfter=No
-41	Jazeera	Jazeera	PROPN	NNP	Number=Sing	37	obl	37:obl:for	SpaceAfter=No
+41	Jazeera	Jazeera	PROPN	NNP	Number=Sing	39	flat	39:flat	SpaceAfter=No
 42	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0021
 # text = Someone who called himself Abu Hafs from the Ibn Al-Khattab Brigades (another new group) was on Al-Jazeera describing the enormous casualties among the Marines and he sweared that American soldiers were mutilating the bodies of dead insurgents.
-1	Someone	someone	PRON	NN	Number=Sing|PronType=Ind	23	nsubj	3:nsubj|23:nsubj	_
+1	Someone	someone	PRON	NN	Number=Sing|PronType=Ind	21	nsubj	3:nsubj|21:nsubj	_
 2	who	who	PRON	WP	PronType=Rel	3	nsubj	1:ref	_
 3	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	acl:relcl	1:acl:relcl	Cxn=rc-wh-nsubj
 4	himself	himself	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	3	obj	3:obj|5:nsubj:xsubj	_
@@ -723,21 +723,21 @@
 6	Hafs	Hafs	PROPN	NNP	Number=Sing	5	flat	5:flat	_
 7	from	from	ADP	IN	_	13	case	13:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-9	Ibn	Ibn	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-10	Al	Al	PROPN	NNP	Number=Sing	12	compound	12:compound	SpaceAfter=No
+9	Ibn	Ibn	PROPN	NNP	Number=Sing	13	compound	13:compound	_
+10	Al	Al	PROPN	NNP	Number=Sing	9	flat	9:flat	SpaceAfter=No
 11	-	-	PUNCT	HYPH	_	10	punct	10:punct	SpaceAfter=No
-12	Khattab	Khattab	PROPN	NNP	Number=Sing	13	compound	13:compound	_
+12	Khattab	Khattab	PROPN	NNP	Number=Sing	9	flat	9:flat	_
 13	Brigades	Brigade	PROPN	NNPS	Number=Plur	1	nmod	1:nmod:from	_
 14	(	(	PUNCT	-LRB-	_	17	punct	17:punct	SpaceAfter=No
 15	another	another	DET	DT	PronType=Ind	17	det	17:det	_
 16	new	new	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	group	group	NOUN	NN	Number=Sing	13	appos	13:appos	SpaceAfter=No
 18	)	)	PUNCT	-RRB-	_	17	punct	17:punct	_
-19	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	cop	23:cop	_
-20	on	on	ADP	IN	_	23	case	23:case	_
-21	Al	Al	PROPN	NNP	Number=Sing	23	compound	23:compound	SpaceAfter=No
+19	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	cop	21:cop	_
+20	on	on	ADP	IN	_	21	case	21:case	_
+21	Al	Al	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
 22	-	-	PUNCT	HYPH	_	21	punct	21:punct	SpaceAfter=No
-23	Jazeera	Jazeera	PROPN	NNP	Number=Sing	0	root	0:root	_
+23	Jazeera	Jazeera	PROPN	NNP	Number=Sing	21	flat	21:flat	_
 24	describing	describe	VERB	VBG	VerbForm=Ger	1	acl	1:acl	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 26	enormous	enormous	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
@@ -747,7 +747,7 @@
 30	Marines	Marine	PROPN	NNPS	Number=Plur	27	nmod	27:nmod:among	_
 31	and	and	CCONJ	CC	_	33	cc	33:cc	_
 32	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	33	nsubj	33:nsubj	_
-33	sweared	swear	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	conj	23:conj:and	_
+33	sweared	swear	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	conj	21:conj:and	_
 34	that	that	SCONJ	IN	_	38	mark	38:mark	_
 35	American	American	ADJ	JJ	Degree=Pos	36	amod	36:amod	_
 36	soldiers	soldier	NOUN	NNS	Number=Plur	38	nsubj	38:nsubj	_
@@ -758,7 +758,7 @@
 41	of	of	ADP	IN	_	43	case	43:case	_
 42	dead	dead	ADJ	JJ	Degree=Pos	43	amod	43:amod	_
 43	insurgents	insurgent	NOUN	NNS	Number=Plur	40	nmod	40:nmod:of	SpaceAfter=No
-44	.	.	PUNCT	.	_	23	punct	23:punct	_
+44	.	.	PUNCT	.	_	21	punct	21:punct	_
 
 # sent_id = weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022
 # text = Over 300 Iraqis are reported dead and 500 wounded in Fallujah alone.
@@ -807,9 +807,9 @@
 11	Muqrin	Muqrin	PROPN	NNP	Number=Sing	8	flat	8:flat	SpaceAfter=No
 12	,	,	PUNCT	,	_	17	punct	17:punct	_
 13	an	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
-14	Al	Al	PROPN	NNP	Number=Sing	16	compound	16:compound	SpaceAfter=No
+14	Al	Al	PROPN	NNP	Number=Sing	17	compound	17:compound	SpaceAfter=No
 15	-	-	PUNCT	HYPH	_	14	punct	14:punct	SpaceAfter=No
-16	Qaeda	Qaeda	PROPN	NNP	Number=Sing	17	compound	17:compound	_
+16	Qaeda	Qaeda	PROPN	NNP	Number=Sing	14	flat	14:flat	_
 17	operative	operative	NOUN	NN	Number=Sing	8	appos	8:appos	_
 18	in	in	ADP	IN	_	20	case	20:case	_
 19	Saudi	Saudi	ADJ	NNP	Degree=Pos	20	amod	20:amod	_
@@ -836,7 +836,7 @@
 40	dead	dead	ADJ	JJ	Degree=Pos	41	amod	41:amod	_
 41	bodies	body	NOUN	NNS	Number=Plur	39	obj	39:obj	_
 42	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	45	aux:pass	45:aux:pass	_
-43	not	not	PART	RB	_	45	advmod	45:advmod	_
+43	not	not	PART	RB	Polarity=Neg	45	advmod	45:advmod	_
 44	originally	originally	ADV	RB	_	45	advmod	45:advmod	_
 45	permitted	permit	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	55	advcl	55:advcl:although	_
 46	in	in	ADP	IN	_	47	case	47:case	_
@@ -848,10 +848,10 @@
 52	case	case	NOUN	NN	Number=Sing	55	obl	55:obl:in	_
 53	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	55	nsubj:pass	55:nsubj:pass	_
 54	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	55	aux:pass	55:aux:pass	_
-55	allowed	allow	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	35	ccomp	35:ccomp	_
+55	allowed	allow	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	35	ccomp	35:ccomp	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=55:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 56	if	if	SCONJ	IN	_	58	mark	58:mark	_
 57	Muslims	Muslim	PROPN	NNPS	Number=Plur	58	nsubj	58:nsubj	_
-58	use	use	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	55	advcl	55:advcl:if	_
+58	use	use	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	55	advcl	55:advcl:if	CxnElt=55:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 59	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	58	obj	58:obj	_
 60	against	against	ADP	IN	_	61	case	61:case	_
 61	infidels	infidel	NOUN	NNS	Number=Plur	58	obl	58:obl:against	_
@@ -873,7 +873,7 @@
 4	"	"	PUNCT	``	_	8	punct	8:punct	SpaceAfter=No
 5	America	America	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
 6	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
-7	not	not	PART	RB	_	8	advmod	8:advmod	_
+7	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 8	understand	understand	VERB	VB	VerbForm=Inf	2	ccomp	2:ccomp	_
 9	anything	anything	PRON	NN	Number=Sing|PronType=Ind	8	obj	8:obj	_
 10	except	except	ADP	IN	_	12	case	12:case	_

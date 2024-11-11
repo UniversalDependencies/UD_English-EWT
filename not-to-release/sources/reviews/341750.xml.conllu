@@ -2,14 +2,14 @@
 # sent_id = reviews-341750-0001
 # newpar id = reviews-341750-p0001
 # text = Not so good
-1	Not	not	PART	RB	_	3	advmod	3:advmod	_
+1	Not	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
 2	so	so	ADV	RB	_	3	advmod	3:advmod	_
 3	good	good	ADJ	JJ	Degree=Pos	0	root	0:root	_
 
 # sent_id = reviews-341750-0002
 # newpar id = reviews-341750-p0002
 # text = Not worth the money.
-1	Not	not	PART	RB	_	2	advmod	2:advmod	_
+1	Not	not	PART	RB	Polarity=Neg	2	advmod	2:advmod	_
 2	worth	worth	ADJ	JJ	Degree=Pos	0	root	0:root	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	money	money	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
@@ -19,24 +19,24 @@
 # text = Bland and over cooked.
 1	Bland	bland	ADJ	JJ	Degree=Pos	0	root	0:root	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	over	overcooked	ADJ	GW	Degree=Pos|Typo=Yes	1	conj	1:conj:and	_
+3	over	overcooked	ADJ	AFX	Degree=Pos|Typo=Yes	1	conj	1:conj:and	_
 4	cooked	_	X	JJ	_	3	goeswith	3:goeswith	SpaceAfter=No
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-341750-0004
 # text = I felt as if I was in an over priced Olive Garden.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	felt	feel	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	felt	feel	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=2:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 3	as	as	SCONJ	IN	_	12	mark	12:mark	_
 4	if	if	SCONJ	IN	_	12	mark	12:mark	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	_
 7	in	in	ADP	IN	_	12	case	12:case	_
 8	an	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
-9	over	overpriced	ADJ	GW	Degree=Pos|Typo=Yes	12	amod	12:amod	_
+9	over	overpriced	ADJ	AFX	Degree=Pos|Typo=Yes	12	amod	12:amod	_
 10	priced	_	X	JJ	_	9	goeswith	9:goeswith	_
 11	Olive	Olive	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	Garden	Garden	PROPN	NNP	Number=Sing	2	advcl	2:advcl:in	SpaceAfter=No
+12	Garden	Garden	PROPN	NNP	Number=Sing	2	advcl	2:advcl:in	CxnElt=2:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-341750-0005
@@ -57,7 +57,7 @@
 # sent_id = reviews-341750-0006
 # text = But not so.
 1	But	but	CCONJ	CC	_	2	cc	2:cc	_
-2	not	not	PART	RB	_	3	advmod	3:advmod	_
+2	not	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
 3	so	so	ADV	RB	_	0	root	0:root	SpaceAfter=No
 4	.	.	PUNCT	.	_	3	punct	3:punct	_
 

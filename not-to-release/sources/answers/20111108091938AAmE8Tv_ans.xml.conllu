@@ -89,7 +89,7 @@
 9	Street	Street	PROPN	NNP	Number=Sing	6	nmod	6:nmod:on	SpaceAfter=No
 10	,	,	PUNCT	,	_	12	punct	12:punct	_
 11	right	right	ADV	RB	_	12	advmod	12:advmod	_
-12	downtown	downtown	NOUN	NN	Number=Sing	6	nmod:npmod	6:nmod:npmod	SpaceAfter=No
+12	downtown	downtown	NOUN	NN	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = answers-20111108091938AAmE8Tv_ans-0007
@@ -98,7 +98,7 @@
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	full	full	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	of	of	ADP	IN	_	8	case	8:case	_
-5	gay	gay	NOUN	NN	Number=Sing	6	obl:npmod	6:obl:npmod	_
+5	gay	gay	NOUN	NN	Number=Sing	6	obl:unmarked	6:obl:unmarked	_
 6	friendly	friendly	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 7	"	"	PUNCT	``	_	8	punct	8:punct	SpaceAfter=No
 8	everything	everything	PRON	NN	Number=Sing|PronType=Tot	3	obl	3:obl:of	SpaceAfter=No
@@ -127,9 +127,9 @@
 3	reasons	reason	NOUN	NNS	Number=Plur	22	obl	22:obl:for	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	knowing	know	VERB	VBG	Tense=Pres|VerbForm=Part	22	advcl	22:advcl	_
-6	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	_
+6	how	how	ADV	WRB	PronType=Int	8	advmod	8:advmod	CxnElt=8:Interrogative-WHInfo-Indirect.WHWord
 7	extremely	extremely	ADV	RB	_	8	advmod	8:advmod	_
-8	difficult	difficult	ADJ	JJ	Degree=Pos	5	ccomp	5:ccomp	_
+8	difficult	difficult	ADJ	JJ	Degree=Pos	5	ccomp	5:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=8:Interrogative-WHInfo-Indirect.Clause
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	expl	8:expl	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
@@ -158,7 +158,7 @@
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	can	can	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
-5	immigrate	immigrate	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+5	immigrate	immigrate	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=5:Interrogative-Polar-Direct.Clause|SpaceAfter=No
 6	?	?	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = answers-20111108091938AAmE8Tv_ans-0011
@@ -181,7 +181,7 @@
 
 # sent_id = answers-20111108091938AAmE8Tv_ans-0012
 # text = Start your process here, if you haven't already.
-1	Start	start	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+1	Start	start	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=1:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 2	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
 3	process	process	NOUN	NN	Number=Sing	1	obj	1:obj	_
 4	here	here	ADV	RB	PronType=Dem	1	advmod	1:advmod	SpaceAfter=No
@@ -189,8 +189,8 @@
 6	if	if	SCONJ	IN	_	8	mark	8:mark	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 8-9	haven't	_	_	_	_	_	_	_	_
-8	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	1	advcl	1:advcl:if	Promoted=Yes
-9	n't	not	PART	RB	_	8	advmod	8:advmod	_
+8	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	1	advcl	1:advcl:if	CxnElt=1:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|Promoted=Yes
+9	n't	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 10	already	already	ADV	RB	_	8	advmod	8:advmod	SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -201,13 +201,13 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	Canadian	Canadian	PROPN	NNP	Number=Sing	2	obj	2:obj	_
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
-6	not	not	PART	RB	_	7	advmod	7:advmod	_
+6	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 7	enough	enough	ADJ	JJ	Degree=Pos	0	root	0:root	_
 8	-	-	PUNCT	:	_	12	punct	12:punct	_
 9	that	that	PRON	DT	Number=Sing|PronType=Dem	12	nsubj	12:nsubj	_
 10-11	doesn't	_	_	_	_	_	_	_	_
 10	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-11	n't	not	PART	RB	_	12	advmod	12:advmod	_
+11	n't	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
 12	count	count	VERB	VB	VerbForm=Inf	7	parataxis	7:parataxis	_
 13	for	for	ADP	IN	_	17	case	17:case	_
 14	at	at	ADP	IN	_	15	case	15:case	_
@@ -274,7 +274,7 @@
 22	to	to	ADP	IN	_	23	case	23:case	_
 23	Canada	Canada	PROPN	NNP	Number=Sing	21	obl	21:obl:to	_
 24	-	-	PUNCT	,	_	26	punct	26:punct	_
-25	NOT	not	PART	RB	_	26	advmod	26:advmod	_
+25	NOT	not	PART	RB	Polarity=Neg	26	advmod	26:advmod	_
 26	GOOD	good	ADJ	JJ	Degree=Pos	12	parataxis	12:parataxis	SpaceAfter=No
 27	.	.	PUNCT	.	_	12	punct	12:punct	_
 
@@ -301,7 +301,7 @@
 7	Canada	Canada	PROPN	NNP	Number=Sing	5	obl	5:obl:to	_
 8	"	"	PUNCT	''	_	3	punct	3:punct	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
-10	NOT	not	PART	RB	_	11	advmod	11:advmod	_
+10	NOT	not	PART	RB	Polarity=Neg	11	advmod	11:advmod	_
 11	enough	enough	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 12	.	.	PUNCT	.	_	11	punct	11:punct	_
 
@@ -416,12 +416,12 @@
 1	IF	if	SCONJ	IN	_	5	mark	5:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj	_
 3	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-4	NOT	not	PART	RB	_	5	advmod	5:advmod	_
-5	begun	begin	VERB	VBN	Tense=Past|VerbForm=Part	18	advcl	18:advcl:if	_
+4	NOT	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
+5	begun	begin	VERB	VBN	Tense=Past|VerbForm=Part	18	advcl	18:advcl:if	CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 7	Application	application	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	process's	process	NOUN	NN	Number=Sing|Typo=Yes	5	obj	5:obj	CorrectForm=process
-9	NOW	now	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
+9	NOW	now	ADV	RB	PronType=Dem	5	advmod	5:advmod	SpaceAfter=No
 10	<	<	PUNCT	NFP	_	5	punct	5:punct	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
 12	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
@@ -429,8 +429,8 @@
 14	2	2	NUM	CD	NumForm=Digit|NumType=Card	17	nummod	17:nummod	_
 15	to	to	ADP	IN	_	16	case	16:case	_
 16	3	3	NUM	CD	NumForm=Digit|NumType=Card	14	nmod	14:nmod:to	_
-17	years	year	NOUN	NNS	Number=Plur	18	obl:npmod	18:obl:npmod	_
-18	away	away	ADV	RB	_	0	root	0:root	_
+17	years	year	NOUN	NNS	Number=Plur	18	obl:unmarked	18:obl:unmarked	_
+18	away	away	ADV	RB	_	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 19	from	from	SCONJ	IN	_	21	mark	21:mark	_
 20	being	be	AUX	VBG	Tense=Pres|VerbForm=Part	21	aux:pass	21:aux:pass	_
 21	approved	approve	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	18	advcl	18:advcl:from	_
@@ -444,7 +444,7 @@
 1	So	so	ADV	RB	_	4	advmod	4:advmod	_
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	4	aux	4:aux	_
-3	n't	not	PART	RB	_	4	advmod	4:advmod	_
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	pack	pack	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 5	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
 6	bags	bag	NOUN	NNS	Number=Plur	4	obj	4:obj	_
@@ -459,7 +459,7 @@
 3	do	do	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	parataxis	7:parataxis	_
 4	...............	...............	PUNCT	,	_	3	punct	3:punct	SpaceAfter=No
 5	DO	do	AUX	VB	Mood=Imp|VerbForm=Fin	7	aux	7:aux	_
-6	NOT	not	PART	RB	_	7	advmod	7:advmod	_
+6	NOT	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 7	try	try	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	come	come	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
@@ -474,7 +474,7 @@
 # text = You will not be able to seek work or take a job, in Canada, with out having to show your Immigration VISA and Canadian Social Insurance Number card to any potential employer.
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj|10:nsubj:xsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
-3	not	not	PART	RB	_	5	advmod	5:advmod	_
+3	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 4	be	be	AUX	VB	VerbForm=Inf	5	cop	5:cop	_
 5	able	able	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
