@@ -616,6 +616,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
                 print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
                 NNS_warnings[lemma] += 1
 
+    if pos in ("NN", "NNS") and parent_upos == "PROPN" and func == "compound":
+        print("WARN: consider nmod:desc instead of compound" + inname)
+
     if pos == "IN" and func=="compound:prt":
         print("WARN: function " + func + " should have pos RP, not IN" + inname)
 
