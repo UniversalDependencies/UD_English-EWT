@@ -393,7 +393,8 @@ def validate_annos(tree):
             if upos!="PROPN" and "flat" in child_funcs[tok_num] and "Foreign" not in featlist:
                 # non-PROPN-headed flat structure
                 if "FlatType" not in misclist:
-                    print("WARN: non-PROPN non-Foreign flat expression lacks FlatType" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    if not (upos=="SYM" and lemma=="#" or upos=="NOUN" and lemma in ("number","no.")):    # e.g. "# 1"
+                        print("WARN: non-PROPN non-Foreign flat expression lacks FlatType" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
             # check for spurious VB/VerbForm=Inf
             # https://github.com/UniversalDependencies/UD_English-EWT/issues/284
@@ -617,7 +618,19 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
                 NNS_warnings[lemma] += 1
 
     if pos in ("NN", "NNS") and parent_upos == "PROPN" and func == "compound":
-        print("WARN: consider nmod:desc instead of compound" + inname)
+        # test for exceptions (including several cases with determiners, though we don't check for the determiner directly)
+        if lemma in "rat|planet|person|house|extremist|degree|state|piece|day|downtown|age|level|era|foot|defence|force|re-run".split('|'):
+            pass
+        elif lemma[0] in '0123456789':
+            pass
+        elif (lemma,docname) in {('assistant','newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0068'),
+                                 ('polyglot','weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012'),
+                                 ('boy','answers-20111107200249AAIyCy5_ans-0005'),
+                                 ('man','answers-20111107200249AAIyCy5_ans-0005'),
+                                 ('majority','weblog-blogspot.com_dakbangla_20041028153019_ENG_20041028_153019-0017')}:
+            pass
+        else:
+            print("WARN: consider nmod:desc instead of compound" + inname)
 
     if pos == "IN" and func=="compound:prt":
         print("WARN: function " + func + " should have pos RP, not IN" + inname)
