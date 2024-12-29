@@ -917,7 +917,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if lemma=="what" and ((pos=="WDT") != (func in ["det", "det:predet"])):
         print("WARN: what/WDT should correspond with det or det:predet" + inname)
 
-    """
+    r"""
     Numerics
 
     X[lemma contains digits and nonalphabetics] => X.upos=NUM
@@ -945,7 +945,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
             print("WARN: mistagged fixed expression" + inname)
 
     if tok == "rather" and "fixed" in child_funcs and func not in ["cc","mark"]:
-        print("WARN: 'rather than' fixed expression must be cc or mark" + inname)
+        print("WARN: 'rather than' fixed expression must be cc or mark" + inname)   # TODO: case might also be acceptable
 
     if s_type == "imp" or s_type == "frag" or s_type == "ger" or s_type == "inf":
         if func == "root" and "nsubj" in child_funcs:
@@ -991,27 +991,29 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         try:
             assert w2func=="fixed"
             assert w1==parent_lemma
-            match (w1,w2):
-                case ("one", "another"):
-                    assert (pos1, pos2)==("CD", "DT") and (upos1, upos2)==("PRON", "DET")
-                case ("each", "other"):
-                    assert (pos1, pos2)==("DT", "JJ") and (upos1, upos2)==("DET", "ADJ")
-                case ("kind", "of"):
-                    assert (pos1, pos2)==("NN", "IN") and (upos1, upos2)==("NOUN", "ADP")
-                case ("sort", "of"):
-                    assert (pos1, pos2)==("NN", "IN") and (upos1, upos2)==("NOUN", "ADP")
-                case ("at", "least"):
-                    assert (pos1, pos2)==("IN", "JJS") and (upos1, upos2)==("ADP", "ADJ")
+            match (w1,w2, pos1,upos1, pos2,upos2):
+                case ("one", "another", "CD","PRON", "DT","DET"):
+                    pass
+                case ("each", "other", "DT","DET", "JJ","ADJ"):
+                    pass
+                case ("kind"|"sort", "of", "NN","NOUN", "IN","ADP"):
+                    pass
+                case ("at", "least", "IN","ADP", "JJS","ADJ"):
+                    pass
+                case ("rather", "than", "RB","ADV", "IN","ADP"|"SCONJ"):
+                    pass
+                case ("instead", "of", "RB","ADV", "IN","ADP"|"SCONJ"):
+                    pass
                 case _:
                     assert False,(w1,w2)
         except AssertionError:
-            print("WARN: structure of '{w1} {w2}' should be fixed({w1}/{pos1}/{upos2}, {w2}/{pos2}/{upos2})" + inname)
+            print(f"WARN: structure of '{w1} {w2}' should not be fixed({w1}/{pos1}/{upos2}, {w2}/{pos2}/{upos2})" + inname)
 
         try:
             if (w1,w2) in {("kind", "of"), ("sort", "of"), ("at", "least")}:
                 assert outerdeprel=="advmod"
         except AssertionError:
-            print("WARN: fixed expr '{w1} {w2}' should attach as advmod not {outerdeprel}" + inname)
+            print(f"WARN: fixed expr '{w1} {w2}' should attach as advmod not {outerdeprel}" + inname)
 
 
     # UPOS bigrams
@@ -1021,10 +1023,8 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         check_bigram_fixed("one", "another", parent_lemma, func, prev_pos, prev_upos, pos, upos, inname)
     elif prev_tok.lower()=="each" and lemma=="other":
         check_bigram_fixed("each", "other", parent_lemma, func, prev_pos, prev_upos, pos, upos, inname)
-    elif prev_tok.lower() in ("kind", "sort") and lemma=="of" and func=="fixed":    # hedge usage
-        check_bigram_fixed(prev_tok.lower(), "of", parent_lemma, func, prev_pos, prev_upos, pos, upos, inname, prev_func)
-    elif prev_tok.lower()=="at" and lemma=="least" and func=="fixed":    # non-quantity usage
-        check_bigram_fixed("at", "least", parent_lemma, func, prev_pos, prev_upos, pos, upos, inname, prev_func)
+    elif func=="fixed" and (prev_tok.lower(),lemma) in {("kind","of"),("sort","of"),("instead","of"),("rather","than"),("at","least")}:
+        check_bigram_fixed(prev_tok.lower(), lemma, parent_lemma, func, prev_pos, prev_upos, pos, upos, inname, prev_func)
     elif prev_tok.lower()=="a" and lemma=="couple":
         try:
             assert prev_func=="det"
