@@ -992,18 +992,12 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
             assert w2func=="fixed"
             assert w1==parent_lemma
             match (w1,w2, pos1,upos1, pos2,upos2):
-                case ("one", "another", "CD","PRON", "DT","DET"):
-                    pass
-                case ("each", "other", "DT","DET", "JJ","ADJ"):
-                    pass
-                case ("kind"|"sort", "of", "NN","NOUN", "IN","ADP"):
-                    pass
-                case ("at", "least", "IN","ADP", "JJS","ADJ"):
-                    pass
-                case ("rather", "than", "RB","ADV", "IN","ADP"|"SCONJ"):
-                    pass
-                case ("instead", "of", "RB","ADV", "IN","ADP"|"SCONJ"):
-                    pass
+                case ("one", "another", "CD","PRON", "DT","DET"): pass
+                case ("each", "other", "DT","DET", "JJ","ADJ"): pass
+                case ("kind"|"sort", "of", "NN","NOUN", "IN","ADP"): pass
+                case ("at", "least", "IN","ADP", "JJS","ADJ"): pass
+                case ("rather", "than", "RB","ADV", "IN","ADP"|"SCONJ"): pass
+                case ("instead", "of", "RB","ADV", "IN","ADP"|"SCONJ"): pass
                 case _:
                     assert False,(w1,w2)
         except AssertionError:
