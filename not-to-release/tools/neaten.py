@@ -284,7 +284,8 @@ def validate_annos(tree):
             S_TYPE_PLACEHOLDER = None
             assert parent_string is not None,(tok_num,docname,filename)
             is_parent_copular = any(funcs[x]=="cop" for x in parent_ids if parent_ids[x]==parent_id)    # if tok or any siblings attach as cop
-            flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, edeps,
+            extpos = featlist.get("ExtPos")
+            flag_dep_warnings(tok_num, tok, pos, upos, extpos, lemma, func, edeps,
                               parent_string, parent_lemma, parent_id, is_parent_copular,
                               children[tok_num], child_funcs[tok_num], child_pos[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_positions[tok_num],
@@ -520,7 +521,7 @@ NNPS_PTAN_LEMMAS = ["Netherlands", "Analytics", "Olympics", "Commons", "Paralymp
 
 SING_AND_PLUR_S_LEMMAS = ["series", "species"]
 
-def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular,
+def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular,
                       children: List[str], child_funcs: List[str], child_pos: List[str], s_type,
                       docname, prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_position,
                       parent_func, parent_pos, parent_upos, filename):
@@ -754,7 +755,8 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     # Implements check from UniversalDependencies/docs#1066
     if func not in ["csubj","ccomp","xcomp","advcl","acl","acl:relcl","advcl:relcl","csubj:pass","root","list","parataxis","conj","appos","reparandum","dislocated","orphan","compound"]:
         if any([x in child_funcs for x in ["csubj","nsubj","nsubj:pass","csubj:pass"]]):
-            print("WARN: "+func+" should not have subject child" + inname)
+            if extpos!="PROPN":   # exception for sentences used as names
+                print("WARN: "+func+" should not have subject child" + inname)
 
     IN_not_like_lemma = ["vs", "vs.", "v", "ca", "that", "then", "a", "fro", "too", "til", "wether", "b/c"]  # incl. known typos
     if pos == "IN" and tok.lower() not in IN_not_like_lemma and lemma != tok.lower() and func != "goeswith" and "goeswith" not in child_funcs:
