@@ -126,18 +126,33 @@ def validate_lemmas(lemma_dict, lemma_docs):
 def validate_annos(tree):
         docname = tree.metadata['sent_id']
 
+        tok_num = 0
+        upostags = {}
+        postags = {}
+        lemmas = {}
+        sent_positions = defaultdict(lambda: "_")
+
+        new_sent = True
+        for line in tree:
+            if not isRegularNode(line):
+                continue
+            tok_num += 1
+            postags[tok_num], upostags[tok_num], lemmas[tok_num] = line['xpos'], line['upos'], line['lemma']
+            #sent_types[tok_num] = s_type
+            if new_sent:
+                sent_positions[tok_num] = "first"
+                new_sent = False
+        sent_positions[tok_num] = "last"
+
         # Dictionaries to hold token annotations from conllu data
         funcs = {}
-        postags = {}
-        upostags = {}
         feats: Dict[int,Dict[str,str]] = {}
         tokens = {}
         parent_ids: Dict[int,int] = {}
-        lemmas = {}
-        sent_positions = defaultdict(lambda: "_")
         parents: Dict[int,str] = {}
         children: Dict[int,List[str]] = defaultdict(list)
         child_funcs: Dict[int,List[str]] = defaultdict(list)
+        child_pos: Dict[int,List[str]] = defaultdict(list)
         tok_num = 0
 
         line_num = 0
@@ -159,6 +174,7 @@ def validate_annos(tree):
                 parent_ids[tok_num] = head
                 children[head].append(tok)
                 child_funcs[head].append(line['deprel'])
+                child_pos[head].append(postags[tok_num])
             else:
                 parent_ids[tok_num] = 0
             tokens[tok_num] = tok
@@ -170,18 +186,6 @@ def validate_annos(tree):
             else:
                 parents[i] = tokens[parent_ids[i]]
 
-        tok_num = 0
-        new_sent = True
-        for line in tree:
-            if not isRegularNode(line):
-                continue
-            tok_num += 1
-            postags[tok_num], upostags[tok_num], lemmas[tok_num] = line['xpos'], line['upos'], line['lemma']
-            #sent_types[tok_num] = s_type
-            if new_sent:
-                sent_positions[tok_num] = "first"
-                new_sent = False
-        sent_positions[tok_num] = "last"
 
         tok_num = 0
 
@@ -282,7 +286,7 @@ def validate_annos(tree):
             is_parent_copular = any(funcs[x]=="cop" for x in parent_ids if parent_ids[x]==parent_id)    # if tok or any siblings attach as cop
             flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, edeps,
                               parent_string, parent_lemma, parent_id, is_parent_copular,
-                              children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
+                              children[tok_num], child_funcs[tok_num], child_pos[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_positions[tok_num],
                               parent_func, parent_pos, parent_upos, filename)
             flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, misclist, docname)
@@ -512,12 +516,12 @@ NNS_PTAN_LEMMAS = ["aesthetics", "arrears", "auspices", "barracks", "billiards",
 # not Ptan: biceps, triceps
 
 NNPS_PTAN_LEMMAS = ["Netherlands", "Analytics", "Olympics", "Commons", "Paralympics", "Vans", "Andes", "Philippines",
-                    "Maldives"]
+                    "Maldives", "Politics", "Species"]
 
 SING_AND_PLUR_S_LEMMAS = ["series", "species"]
 
 def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular,
-                      children: List[str], child_funcs: List[str], s_type,
+                      children: List[str], child_funcs: List[str], child_pos: List[str], s_type,
                       docname, prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_position,
                       parent_func, parent_pos, parent_upos, filename):
     # Shorthand for printing errors
@@ -639,6 +643,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         if not ("languages" in inname and tok == "and"):  # metalinguistic discussion in whow_languages
             print("WARN: pos " + pos + " should normally have function cc or cc:preconj, not " + func + inname)
 
+    if func == "cc" and parent_func not in ["root","ccomp","conj","reparandum","parataxis"]:
+        print("WARN: function " + func + " should not have parent function " + parent_func + inname)
+
     if pos == "RP" and func not in ["compound:prt","conj"] or pos != "RP" and func=="compound:prt":
         print("WARN: pos " + pos + " should not normally have function " + func + inname)
 
@@ -744,6 +751,11 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if func =="xcomp" and parent_lemma == "be":
         print("WARN: verb lemma 'be' should not have xcomp child" + inname)
 
+    # Implements check from UniversalDependencies/docs#1066
+    if func not in ["csubj","ccomp","xcomp","advcl","acl","acl:relcl","advcl:relcl","csubj:pass","root","list","parataxis","conj","appos","reparandum","dislocated","orphan","compound"]:
+        if any([x in child_funcs for x in ["csubj","nsubj","nsubj:pass","csubj:pass"]]):
+            print("WARN: "+func+" should not have subject child" + inname)
+
     IN_not_like_lemma = ["vs", "vs.", "v", "ca", "that", "then", "a", "fro", "too", "til", "wether", "b/c"]  # incl. known typos
     if pos == "IN" and tok.lower() not in IN_not_like_lemma and lemma != tok.lower() and func != "goeswith" and "goeswith" not in child_funcs:
         print("WARN: pos IN should have lemma identical to lower cased token" + inname)
@@ -826,6 +838,9 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
 
     if func in ["iobj","obj"] and parent_lemma in ["become","remain","stay"]:
         print("WARN: verb '"+parent_lemma+"' should take xcomp not "+func+" argument" + inname)
+
+    if func in ["iobj","obj"] and "case" in child_funcs and "POS" not in child_pos:
+        print("WARN: function " + func +  " should not have non-possessive 'case' dependents" + inname)
 
     if ":tmod" in func or ":npmod" in func:
         # https://github.com/UniversalDependencies/docs/issues/1028
