@@ -505,7 +505,7 @@ def validate_annos(tree):
 NNS_PTAN_LEMMAS = ["aesthetics", "arrears", "auspices", "barracks", "billiards", "clothes", "confines", "contents",
                    "dynamics", "earnings", "eatables", "economics", "electronics", "energetics", "environs", "ergonomics",
                    "eyeglasses", "feces", "finances", "fives", "furnishings", "genetics", "genitals", "geopolitics", "glasses",
-                   "goods", "grounds", "hackles", "headquarters", "jeans", "manners", "means", "memoirs", "news",
+                   "goods", "grounds", "hackles", "headquarters", "jeans", "manners", "means", "news",
                    "orthodontics", "panties", "pants", "politics", "proceedings", "regards", "remains", "respects",
                    "savings", "scissors", "specifics", "statistics", "sunglasses", "supplies", "surroundings",
                    "tenterhooks", "thanks", "troops", "trousers", "wares", "whereabouts",
