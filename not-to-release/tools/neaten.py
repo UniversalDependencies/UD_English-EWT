@@ -755,7 +755,12 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
     # Implements check from UniversalDependencies/docs#1066
     if func not in ["csubj","ccomp","xcomp","advcl","acl","acl:relcl","advcl:relcl","csubj:pass","root","list","parataxis","conj","appos","reparandum","dislocated","orphan","compound"]:
         if any([x in child_funcs for x in ["csubj","nsubj","nsubj:pass","csubj:pass"]]):
-            if extpos!="PROPN":   # exception for sentences used as names
+            if extpos=="PROPN":   # exception for sentences used as names
+                pass
+            elif func=="discourse" and lemma in {"forbid", "guess", "know", "mean", "think"}:
+                # some common discourse expressions: god forbid, you know, I mean
+                pass
+            else:
                 print("WARN: "+func+" should not have subject child" + inname)
 
     IN_not_like_lemma = ["vs", "vs.", "v", "ca", "that", "then", "a", "fro", "too", "til", "wether", "b/c"]  # incl. known typos
