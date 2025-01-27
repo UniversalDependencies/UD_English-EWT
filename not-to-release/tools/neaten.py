@@ -16,7 +16,7 @@ $ python neaten.py | sort | cut -c1-30 | uniq -c
 @since: 2022-09-10
 """
 
-from typing import Dict, List
+from typing import Dict, List, Literal
 from collections import defaultdict, Counter
 import glob
 import re
@@ -279,6 +279,10 @@ def validate_annos(tree):
             parent_pos = postags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_upos = upostags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_feats = feats[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else {}
+            parent_child_funcs = child_funcs[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else []
+            edge_direction = ""
+            if parent_ids[tok_num] != 0:
+                edge_direction = "R" if parent_ids[tok_num] < tok_num else "L"
             filename = tree.metadata['filename']
             assert parent_pos is not None,(tok_num,parent_ids[tok_num],postags,filename)
             S_TYPE_PLACEHOLDER = None
@@ -289,7 +293,8 @@ def validate_annos(tree):
                               parent_string, parent_lemma, parent_id, is_parent_copular,
                               children[tok_num], child_funcs[tok_num], child_pos[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_positions[tok_num],
-                              parent_func, parent_pos, parent_upos, filename)
+                              parent_func, parent_pos, parent_upos, parent_child_funcs,
+                              edge_direction, filename)
             flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, misclist, docname)
 
             if func!='goeswith':
@@ -524,7 +529,8 @@ SING_AND_PLUR_S_LEMMAS = ["series", "species"]
 def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular,
                       children: List[str], child_funcs: List[str], child_pos: List[str], s_type,
                       docname, prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_position,
-                      parent_func, parent_pos, parent_upos, filename):
+                      parent_func, parent_pos, parent_upos, parent_child_funcs: List[str],
+                      edge_direction: Literal["","L","R"], filename):
     # Shorthand for printing errors
     inname = " in " + docname + " @ token " + str(id) + " (" + parent + " -> " + tok + ") " + filename
 
@@ -856,12 +862,16 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
     if func in ["nmod:unmarked","obl:unmarked"] and "case" in child_funcs:
         print("WARN: function " + func +  " should not have 'case' dependents" + inname)
     
-    if func.startswith("nmod") and parent_func.startswith(("det","nummod")):
-        print("WARN: nominal dependent of det or nummod dependent should be obl, not nmod" + inname)
+    if func.startswith("nmod") and parent_upos in ("DET","NUM") and parent_func.startswith(("det","nummod","compound")):
+        print("WARN: nominal dependent of " + parent_func + " dependent should be obl, not nmod" + inname)
 
     if func in ["aux:pass","nsubj:pass"] and parent_pos not in ["VBN"]:
         if not (("stardust" in docname and parent_lemma == "would") or parent_lemma == "Rated"):
             print("WARN: function " + func + " should not be the child of pos " + parent_pos + inname)
+
+    # https://github.com/UniversalDependencies/UD_English-EWT/issues/572
+    if func == "obl" and parent_lemma == "be" and edge_direction == "R" and "expl" not in parent_child_funcs:
+        print("WARN: 'be' should not be the head of 'be' + PP (it may be OK if the 'be' is promoted)" + inname)
 
     if func == "obl:agent" and (parent_pos not in ["VBN"] or "by" not in map(str.lower, children)):
         print("WARN: function " + func +  " must be child of VBN with a 'by' dependent" + parent_pos + inname)
