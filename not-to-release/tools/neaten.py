@@ -862,8 +862,10 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
     if func in ["nmod:unmarked","obl:unmarked"] and "case" in child_funcs:
         print("WARN: function " + func +  " should not have 'case' dependents" + inname)
     
-    if func.startswith("nmod") and parent_upos in ("DET","NUM") and parent_func.startswith(("det","nummod","compound")):
+    if func.startswith("nmod") and parent_upos in ("DET","NUM") and parent_func.startswith("det"):
         print("WARN: nominal dependent of " + parent_func + " dependent should be obl, not nmod" + inname)
+    elif func.startswith("obl") and parent_upos in ("DET","NUM") and parent_func.startswith(("nummod","compound")):
+        print("WARN: nominal dependent of " + parent_func + " dependent should be nmod, not obl" + inname)
 
     if func in ["aux:pass","nsubj:pass"] and parent_pos not in ["VBN"]:
         if not (("stardust" in docname and parent_lemma == "would") or parent_lemma == "Rated"):
