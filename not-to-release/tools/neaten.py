@@ -262,7 +262,11 @@ def validate_annos(tree):
                 else:
                     print("WARN: invalid POS tag " + pos + " for UPOS " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
-            if lemma.lower() in non_lemmas:
+            if upos=="DET" and lemma.lower()=="them":
+                # vernacular substitute for 'those'
+                assert pos=="DT"
+                assert featlist["Style"]=="Vrnc"
+            elif lemma.lower() in non_lemmas:
                 print("WARN: invalid lemma " + lemma + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
             elif lemma in non_cap_lemmas:
                 print("WARN: invalid lemma " + lemma + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
