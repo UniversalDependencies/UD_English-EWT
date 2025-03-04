@@ -655,7 +655,8 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
             print("WARN: pos " + pos + " should normally have function cc or cc:preconj, not " + func + inname)
 
     if func == "cc" and parent_func not in ["root","ccomp","conj","reparandum","parataxis"]:
-        print("WARN: function " + func + " should not have parent function " + parent_func + inname)
+        if docname!="email-enronsent23_08-0006":   # exception for quoted acl
+            print("WARN: function " + func + " should not have parent function " + parent_func + inname)
 
     if pos == "RP" and func not in ["compound:prt","conj"] or pos != "RP" and func=="compound:prt":
         print("WARN: pos " + pos + " should not normally have function " + func + inname)
