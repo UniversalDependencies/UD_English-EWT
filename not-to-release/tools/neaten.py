@@ -16,7 +16,7 @@ $ python neaten.py | sort | cut -c1-30 | uniq -c
 @since: 2022-09-10
 """
 
-from typing import Dict, List, Literal
+from typing import Dict, List, Tuple, Literal
 from collections import defaultdict, Counter
 import glob
 import re
@@ -147,6 +147,8 @@ def validate_annos(tree):
         # Dictionaries to hold token annotations from conllu data
         funcs = {}
         feats: Dict[int,Dict[str,str]] = {}
+        all_edeps: Dict[int,Dict[str,str]] = {}
+        misc: Dict[int,Dict[str,str]] = {}
         tokens = {}
         parent_ids: Dict[int,int] = {}
         parents: Dict[int,str] = {}
@@ -179,6 +181,11 @@ def validate_annos(tree):
                 parent_ids[tok_num] = 0
             tokens[tok_num] = tok
             feats[tok_num] = line['feats']
+            if line['deps'] is not None:
+                all_edeps[tok_num] = line['deps']
+            if line['misc'] is not None:
+                misc[tok_num] = line['misc']
+            del head
 
         for i in range(1, len(tokens) + 1, 1):
             if parent_ids[i] == 0:
@@ -242,7 +249,7 @@ def validate_annos(tree):
             func = line['deprel']
             featlist = line['feats'] or {}
             misclist = line['misc'] or {}
-            edeps = line['deps']
+            edeps: List[Tuple[str,int]] = line['deps']
             merged = 'merged' in line and line['merged']
             form = check_and_fix_form_typos(tok_num, line['form'], featlist, misclist, merged, docname)
 
@@ -283,6 +290,8 @@ def validate_annos(tree):
             parent_pos = postags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_upos = upostags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_feats = feats[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else {}
+            parent_edeps = all_edeps[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else []
+            is_parent_promoted = parent_ids[tok_num] != 0 and misc.get(parent_ids[tok_num],{}).get("Promoted")=="Yes"
             parent_child_funcs = child_funcs[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else []
             edge_direction = ""
             if parent_ids[tok_num] != 0:
@@ -294,7 +303,7 @@ def validate_annos(tree):
             is_parent_copular = any(funcs[x]=="cop" for x in parent_ids if parent_ids[x]==parent_id)    # if tok or any siblings attach as cop
             extpos = featlist.get("ExtPos")
             flag_dep_warnings(tok_num, tok, pos, upos, extpos, lemma, func, edeps,
-                              parent_string, parent_lemma, parent_id, is_parent_copular,
+                              parent_string, parent_lemma, parent_id, is_parent_copular, is_parent_promoted,
                               children[tok_num], child_funcs[tok_num], child_pos[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_positions[tok_num],
                               parent_func, parent_pos, parent_upos, parent_child_funcs,
@@ -403,6 +412,16 @@ def validate_annos(tree):
                 elif not {"acl:relcl","advcl:relcl"} & set(child_funcs[edeps[0][1]]):
                     # the ref antecedent doesn't head the RC
                     print("WARN: `ref` antecedent lacks :relcl dependent" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+
+            # Ensure that most basic deps are duplicated in edeps
+            if edeps[0][0]!="ref" and not (parent_edeps and parent_edeps[0][0]=="ref"):
+                if func!="orphan" and (func,parent_id) not in edeps and not any(e[0].startswith(func+":") and e[1]==parent_id for e in edeps):
+                    if misclist.get("Promoted")=="Yes" or is_parent_promoted:
+                        pass    # e.g. elliptical stranding
+                    elif func in ("obl","case") and any(e[0]=="case" for e in edeps):
+                        pass    # preposition stranding: without relativizer -> promotion to obl; with relativizer -> different head in edeps
+                    else:
+                        print(f"WARN: dependency `{parent_id}:{func}` appears in basic tree but not enhanced graph" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
             if upos!="PROPN" and "flat" in child_funcs[tok_num] and "Foreign" not in featlist:
                 # non-PROPN-headed flat structure
@@ -530,7 +549,7 @@ NNPS_PTAN_LEMMAS = ["Netherlands", "Analytics", "Olympics", "Commons", "Paralymp
 
 SING_AND_PLUR_S_LEMMAS = ["series", "species"]
 
-def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular,
+def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular, is_parent_promoted,
                       children: List[str], child_funcs: List[str], child_pos: List[str], s_type,
                       docname, prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_position,
                       parent_func, parent_pos, parent_upos, parent_child_funcs: List[str],
@@ -878,7 +897,9 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
 
     # https://github.com/UniversalDependencies/UD_English-EWT/issues/572
     if func == "obl" and parent_lemma == "be" and edge_direction == "R" and "expl" not in parent_child_funcs:
-        print("WARN: 'be' should not be the head of 'be' + PP (it may be OK if the 'be' is promoted)" + inname)
+        #print("WARN: 'be' should not be the head of 'be' + PP (it may be OK if the 'be' is promoted)" + inname)
+        if not is_parent_promoted:
+            print("WARN: 'be' should not be the head of 'be' + PP" + inname)
 
     if func == "obl:agent" and (parent_pos not in ["VBN"] or "by" not in map(str.lower, children)):
         print("WARN: function " + func +  " must be child of VBN with a 'by' dependent" + parent_pos + inname)
