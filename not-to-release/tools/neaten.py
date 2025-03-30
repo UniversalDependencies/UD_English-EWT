@@ -407,7 +407,7 @@ def validate_annos(tree):
             if upos!="PROPN" and "flat" in child_funcs[tok_num] and "Foreign" not in featlist:
                 # non-PROPN-headed flat structure
                 if "FlatType" not in misclist:
-                    if not (upos=="SYM" and lemma=="#" or upos=="NOUN" and lemma in ("number","no.")):    # e.g. "# 1"
+                    if not (upos=="SYM" and lemma=="#" or upos=="NOUN" and lemma in ("number","no.") or upos=="ADJ" and lemma=="Sri"):    # e.g. "# 1" "Sri/ADJ Lankan/ADJ"
                         print("WARN: non-PROPN non-Foreign flat expression lacks FlatType" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
             # check for spurious VB/VerbForm=Inf
