@@ -71,7 +71,7 @@
 2	AND	and	CCONJ	CC	_	5	cc	5:cc	_
 3	JUST	just	ADV	RB	_	5	advmod	5:advmod	_
 4	MORE	more	ADJ	JJR	Degree=Cmp	5	amod	5:amod	_
-5	STUFF	STUFF	PROPN	NNP	Number=Sing	0	root	0:root|7:obj	_
+5	STUFF	stuff	NOUN	NN	Number=Sing	0	root	0:root|7:obj	_
 6	YOU	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
 7	LIKED	like	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obj
 8	OVERALL	overall	ADV	RB	_	7	advmod	7:advmod	_
@@ -135,9 +135,9 @@
 # text = Explore which cruise may fit your needs the best.
 1	Explore	explore	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	which	which	DET	WDT	PronType=Int	3	det	3:det	ManuallyChecked=PronType
-3	cruise	cruise	NOUN	NN	Number=Sing	1	obj	1:obj|5:nsubj	_
+3	cruise	cruise	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 4	may	may	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
-5	fit	fit	VERB	VB	VerbForm=Inf	3	acl:relcl	3:acl:relcl	Cxn=rc-red-nsubj
+5	fit	fit	VERB	VB	VerbForm=Inf	1	ccomp	1:ccomp	_
 6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
 7	needs	need	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
@@ -185,18 +185,18 @@
 12	Cayman	Cayman	PROPN	NNP	Number=Sing	9	conj	7:nmod:like|9:conj:and	SpaceAfter=No
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
 14	Cozumel	Cozumel	PROPN	NNP	Number=Sing	9	conj	7:nmod:like|9:conj:and	SpaceAfter=No
-15	,	,	PUNCT	,	_	16	punct	16:punct	_
-16	St.	St.	PROPN	NNP	Number=Sing	9	conj	7:nmod:like|9:conj:and	_
-17	Thomas	Thomas	PROPN	NNP	Number=Sing	16	flat	16:flat	SpaceAfter=No
+15	,	,	PUNCT	,	_	17	punct	17:punct	_
+16	St.	St.	PROPN	NNP	Number=Sing	17	nmod:desc	17:nmod:desc	_
+17	Thomas	Thomas	PROPN	NNP	Number=Sing	9	conj	7:nmod:like|9:conj:and	SpaceAfter=No
 18	,	,	PUNCT	,	_	20	punct	20:punct	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	Bahamas	Bahamas	PROPN	NNPS	Number=Plur	9	conj	7:nmod:like|9:conj:and	_
-21	and	and	CCONJ	CC	_	22	cc	22:cc	_
-22	St.	St.	PROPN	NNP	Number=Sing	9	conj	7:nmod:like|9:conj:and	_
-23	Martin	Martin	PROPN	NNP	Number=Sing	22	flat	22:flat	_
-24	/	/	PUNCT	,	_	25	punct	25:punct	_
-25	St.	St.	PROPN	NNP	Number=Sing	22	appos	22:appos	_
-26	Maarten	Maarten	PROPN	NNP	Number=Sing	25	flat	25:flat	SpaceAfter=No
+21	and	and	CCONJ	CC	_	23	cc	23:cc	_
+22	St.	St.	PROPN	NNP	Number=Sing	23	nmod:desc	23:nmod:desc	_
+23	Martin	Martin	PROPN	NNP	Number=Sing	9	conj	7:nmod:like|9:conj:and	_
+24	/	/	PUNCT	,	_	26	punct	26:punct	_
+25	St.	St.	PROPN	NNP	Number=Sing	26	nmod:desc	26:nmod:desc	_
+26	Maarten	Maarten	PROPN	NNP	Number=Sing	23	appos	23:appos	SpaceAfter=No
 27	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111107155912AAS93e5_ans-0016
@@ -512,7 +512,7 @@
 # sent_id = answers-20111107155912AAS93e5_ans-0030
 # text = They both had pools for kids and adults.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-2	both	both	DET	DT	PronType=Tot	1	det	1:det	_
+2	both	both	DET	DT	PronType=Tot	3	advmod	3:advmod	_
 3	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	pools	pool	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 5	for	for	ADP	IN	_	6	case	6:case	_

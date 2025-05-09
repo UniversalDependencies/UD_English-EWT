@@ -56,9 +56,9 @@
 # newpar id = newsgroup-groups.google.com_misc.consumers_a534e32067078b08_ENG_20060116_030800-p0003
 # text = Monday 09 January 2006
 1	Monday	Monday	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	09	09	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	January	January	PROPN	NNP	Number=Sing	1	appos	1:appos	_
-4	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+2	09	09	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	_
+3	January	January	PROPN	NNP	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	_
+4	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:unmarked	2:nmod:unmarked	_
 
 # sent_id = newsgroup-groups.google.com_misc.consumers_a534e32067078b08_ENG_20060116_030800-0007
 # newpar id = newsgroup-groups.google.com_misc.consumers_a534e32067078b08_ENG_20060116_030800-p0004
@@ -132,9 +132,9 @@
 41	"	"	PUNCT	''	_	6	punct	6:punct	_
 42	reported	report	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 43	UPI	UPI	PROPN	NNP	Number=Sing	42	nsubj	42:nsubj	_
-44	on	on	ADP	IN	_	45	case	45:case	_
-45	December	December	PROPN	NNP	Number=Sing	42	obl	42:obl:on	_
-46	30th	30th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	45	nummod	45:nummod	SpaceAfter=No
+44	on	on	ADP	IN	_	46	case	46:case	_
+45	December	December	PROPN	NNP	Number=Sing	46	nmod:unmarked	46:nmod:unmarked	_
+46	30th	30th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	42	obl	42:obl:on	SpaceAfter=No
 47	.	.	PUNCT	.	_	42	punct	42:punct	_
 
 # sent_id = newsgroup-groups.google.com_misc.consumers_a534e32067078b08_ENG_20060116_030800-0009
@@ -204,12 +204,12 @@
 8	line	line	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
 9	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
 10	been	be	AUX	VBN	Tense=Past|VerbForm=Part	18	cop	18:cop	_
-11	President	President	PROPN	NNP	Number=Sing	18	nmod:poss	18:nmod:poss	_
-12	George	George	PROPN	NNP	Number=Sing	11	flat	11:flat	_
-13	W	W	PROPN	NNP	Number=Sing	11	flat	11:flat	_
+11	President	President	PROPN	NNP	Number=Sing	12	nmod:desc	12:nmod:desc	_
+12	George	George	PROPN	NNP	Number=Sing	18	nmod:poss	18:nmod:poss	_
+13	W	W	PROPN	NNP	Number=Sing	12	flat	12:flat	_
 14-15	Bush's	_	_	_	_	_	_	_	_
-14	Bush	Bush	PROPN	NNP	Number=Sing	11	flat	11:flat	_
-15	's	's	PART	POS	_	11	case	11:case	_
+14	Bush	Bush	PROPN	NNP	Number=Sing	12	flat	12:flat	_
+15	's	's	PART	POS	_	12	case	12:case	_
 16	publicly	publicly	ADV	RB	_	17	advmod	17:advmod	_
 17	stated	state	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	18	amod	18:amod	_
 18	policy	policy	NOUN	NN	Number=Sing	0	root	0:root	_
@@ -262,7 +262,7 @@
 11	of	of	ADP	IN	_	15	case	15:case	_
 12	religiously	religiously	ADV	RB	_	13	advmod	13:advmod	_
 13	fundamentalist	fundamentalist	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-14	Shi'ite	shi'ite	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
+14	Shi'ite	Shi'ite	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	organizations	organization	NOUN	NNS	Number=Plur	10	nmod	10:nmod:of	SpaceAfter=No
 16	,	,	PUNCT	,	_	20	punct	20:punct	_
 17	principally	principally	ADV	RB	_	20	advmod	20:advmod	_
@@ -295,7 +295,7 @@
 8	to	to	ADP	IN	_	12	case	12:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 10	fundamentalist	fundamentalist	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	Shi'ite	shi'ite	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
+11	Shi'ite	Shi'ite	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	leadership	leadership	NOUN	NN	Number=Sing	7	nmod	7:nmod:to	_
 13	in	in	ADP	IN	_	14	case	14:case	_
 14	Iran	Iran	PROPN	NNP	Number=Sing	12	nmod	12:nmod:in	_
@@ -450,7 +450,7 @@
 27	in	in	ADP	IN	_	28	case	28:case	_
 28	Iraq	Iraq	PROPN	NNP	Number=Sing	24	obl	24:obl:in	_
 29	from	from	ADP	IN	_	31	case	31:case	_
-30	Shi'ite	shi'ite	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
+30	Shi'ite	Shi'ite	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
 31	factions	faction	NOUN	NNS	Number=Plur	24	obl	24:obl:from	_
 32	loyal	loyal	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
 33	to	to	ADP	IN	_	34	case	34:case	_
@@ -819,7 +819,7 @@
 4	issued	issue	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	acl	3:acl	_
 5	in	in	ADP	IN	_	6	case	6:case	_
 6	February	February	PROPN	NNP	Number=Sing	4	obl	4:obl:in	_
-7	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
+7	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	6	nmod:unmarked	6:nmod:unmarked	_
 8	reports	report	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 9	,	,	PUNCT	,	_	25	punct	25:punct	_
 10	"	"	PUNCT	``	_	25	punct	25:punct	SpaceAfter=No
@@ -1170,8 +1170,8 @@
 2	Sunburn	Sunburn	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
 3	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 4	reach	reach	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	Mach	Mach	PROPN	NNP	Number=Sing	4	obj	4:obj	_
-6	3	3	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
+5	Mach	Mach	PROPN	NNP	Number=Sing	4	obj	4:obj	FlatType=Enumerated
+6	3	3	NUM	CD	NumForm=Digit|NumType=Card	5	flat	5:flat	_
 7	at	at	ADP	IN	_	9	case	9:case	_
 8	high	high	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	altitude	altitude	NOUN	NN	Number=Sing	4	obl	4:obl:at	SpaceAfter=No
@@ -1186,8 +1186,8 @@
 5	altitude	altitude	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	speed	speed	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
-8	Mach	mach	NOUN	NN	Number=Sing	0	root	0:root	_
-9	2.2	2.2	NUM	CD	NumForm=Digit|NumType=Frac	8	nummod	8:nummod	SpaceAfter=No
+8	Mach	mach	NOUN	NN	Number=Sing	0	root	0:root	FlatType=Enumerated
+9	2.2	2.2	NUM	CD	NumForm=Digit|NumType=Frac	8	flat	8:flat	SpaceAfter=No
 10	,	,	PUNCT	,	_	14	punct	14:punct	_
 11	some	some	DET	DT	PronType=Ind	13	det	13:det	_
 12	three	three	NUM	CD	NumForm=Word|NumType=Card	13	nummod	13:nummod	_
@@ -1608,12 +1608,12 @@
 22	after	after	ADP	IN	_	24	case	24:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 24	death	death	NOUN	NN	Number=Sing	19	nmod	19:nmod:after|35:nsubj:pass	_
-25	of	of	ADP	IN	_	28	case	28:case	_
+25	of	of	ADP	IN	_	29	case	29:case	_
 26	Lebanese	Lebanese	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
 27	Prime	Prime	ADJ	NNP	Degree=Pos	28	amod	28:amod	_
-28	Minister	Minister	PROPN	NNP	Number=Sing	24	nmod	24:nmod	_
-29	Rafik	Rafik	PROPN	NNP	Number=Sing	28	flat	28:flat	_
-30	Hariri	Hariri	PROPN	NNP	Number=Sing	28	flat	28:flat	SpaceAfter=No
+28	Minister	Minister	PROPN	NNP	Number=Sing	29	nmod:desc	29:nmod:desc	_
+29	Rafik	Rafik	PROPN	NNP	Number=Sing	24	nmod	24:nmod	_
+30	Hariri	Hariri	PROPN	NNP	Number=Sing	29	flat	29:flat	SpaceAfter=No
 31	,	,	PUNCT	,	_	35	punct	35:punct	_
 32	which	which	PRON	WDT	PronType=Rel	35	nsubj:pass	24:ref	_
 33	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	35	aux:pass	35:aux:pass	_
@@ -2630,7 +2630,7 @@
 
 # sent_id = newsgroup-groups.google.com_misc.consumers_a534e32067078b08_ENG_20060116_030800-0103
 # text = Thanks to repeated deployments to Iraq and Afghanistan, recruiting is at an all-time low.
-1	Thanks	thanks	NOUN	NN	Number=Sing	11	obl:unmarked	11:obl:unmarked	_
+1	Thanks	thanks	NOUN	NN	Number=Sing	17	obl:unmarked	17:obl:unmarked	_
 2	to	to	ADP	IN	_	4	case	4:case	_
 3	repeated	repeat	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	amod	4:amod	_
 4	deployments	deployment	NOUN	NNS	Number=Plur	1	nmod	1:nmod:to	_
@@ -2639,15 +2639,15 @@
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
 8	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	6	conj	4:nmod:to|6:conj:and	SpaceAfter=No
 9	,	,	PUNCT	,	_	1	punct	1:punct	_
-10	recruiting	recruiting	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
-11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+10	recruiting	recruiting	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
+11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
 12	at	at	ADP	IN	_	17	case	17:case	_
 13	an	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 14	all	all	DET	DT	PronType=Tot	16	det	16:det	SpaceAfter=No
 15	-	-	PUNCT	HYPH	_	14	punct	14:punct	SpaceAfter=No
 16	time	time	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	low	low	NOUN	NN	Number=Sing	11	obl	11:obl:at	SpaceAfter=No
-18	.	.	PUNCT	.	_	11	punct	11:punct	_
+17	low	low	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+18	.	.	PUNCT	.	_	17	punct	17:punct	_
 
 # sent_id = newsgroup-groups.google.com_misc.consumers_a534e32067078b08_ENG_20060116_030800-0104
 # text = Soldiers with vital training and know-how are refusing to re-enlist.
@@ -3062,7 +3062,7 @@
 1	Recently	recently	ADV	RB	_	8	advmod	8:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	Russian	Russian	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	president	president	NOUN	NN	Number=Sing	5	compound	5:compound	_
+4	president	president	NOUN	NN	Number=Sing	5	nmod:desc	5:nmod:desc	_
 5	Vladimir	Vladimir	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|26:nsubj|28:nsubj:xsubj|29:nsubj:xsubj	_
 6	Putin	Putin	PROPN	NNP	Number=Sing	5	flat	5:flat	_
 7	bluntly	bluntly	ADV	RB	_	8	advmod	8:advmod	_

@@ -43,13 +43,13 @@
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 21	arrogant	arrogant	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 22	insult	insult	NOUN	NN	Number=Sing	15	obl	15:obl:because_of	_
-23	of	of	ADP	IN	_	24	case	24:case	_
-24	captain	captain	PROPN	NNP	Number=Sing	22	nmod	22:nmod:of	_
-25	Smith	Smith	PROPN	NNP	Number=Sing	24	flat	24:flat	_
+23	of	of	ADP	IN	_	25	case	25:case	_
+24	captain	Captain	PROPN	NNP	Number=Sing	25	nmod:desc	25:nmod:desc	_
+25	Smith	Smith	PROPN	NNP	Number=Sing	22	nmod	22:nmod:of	_
 26	(	(	PUNCT	-LRB-	_	29	punct	29:punct	SpaceAfter=No
 27	also	also	ADV	RB	_	29	advmod	29:advmod	_
 28	from	from	ADP	IN	_	29	case	29:case	_
-29	Liverpool	Liverpool	PROPN	NNP	Number=Sing	24	nmod	24:nmod:from	SpaceAfter=No
+29	Liverpool	Liverpool	PROPN	NNP	Number=Sing	25	nmod	25:nmod:from	SpaceAfter=No
 30	)	)	PUNCT	-RRB-	_	29	punct	29:punct	SpaceAfter=No
 31	:	:	PUNCT	:	_	37	punct	37:punct	_
 32	"	"	PUNCT	``	_	37	punct	37:punct	SpaceAfter=No
@@ -148,8 +148,8 @@
 5	nation	nation	NOUN	NN	Number=Sing	2	obl	2:obl:from|7:nmod:poss	_
 6	whose	whose	PRON	WP$	Poss=Yes|PronType=Rel	7	nmod:poss	5:ref	_
 7	king	king	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
-8	Enrique	Enrique	PROPN	NNP	Number=Sing	7	appos	7:appos	_
-9	VIII	VIII	NUM	CD	NumForm=Roman|NumType=Card	8	nummod	8:nummod	_
+8	Enrique	Enrique	PROPN	NNP	Number=Sing	7	appos	7:appos	FlatType=Enumerated
+9	VIII	VIII	NUM	CD	NumForm=Roman|NumType=Card	8	flat	8:flat	_
 10	adulterated	adulterate	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-wh-nmod:poss_nsubj
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	Bible	Bible	PROPN	NNP	Number=Sing	10	obj	10:obj	_
@@ -377,8 +377,8 @@
 3	demons	demon	NOUN	NNS	Number=Plur	18	nsubj	5:nsubj|18:nsubj	_
 4	that	that	PRON	WDT	PronType=Rel	5	nsubj	3:ref	_
 5	made	make	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-that-nsubj
-6	captain	captain	PROPN	NNP	Number=Sing	5	obj	5:obj|8:nsubj:xsubj	_
-7	Smith	Smith	PROPN	NNP	Number=Sing	6	flat	6:flat	_
+6	captain	Captain	PROPN	NNP	Number=Sing	7	nmod:desc	7:nmod:desc	_
+7	Smith	Smith	PROPN	NNP	Number=Sing	5	obj	5:obj|8:nsubj:xsubj	_
 8	say	say	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
 9	"	"	PUNCT	``	_	14	punct	14:punct	SpaceAfter=No
 10	Not	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
@@ -444,9 +444,9 @@
 4	day	day	NOUN	NN	Number=Sing	0	root	0:root|9:obl:unmarked	_
 5	that	that	PRON	WDT	PronType=Rel	9	obl:unmarked	4:ref	_
 6-7	GOD'S	_	_	_	_	_	_	_	_
-6	GOD	GOD	PROPN	NNP	Number=Sing	8	nmod:poss	8:nmod:poss	_
+6	GOD	God	PROPN	NNP	Number=Sing	8	nmod:poss	8:nmod:poss	_
 7	'S	's	PART	POS	_	6	case	6:case	_
-8	CURSE	CURSE	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
+8	CURSE	curse	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
 9	fell	fall	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-that-obl:unmarked
 10	upon	upon	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
@@ -616,8 +616,8 @@
 33	like	like	ADP	IN	_	36	case	36:case	_
 34	"	"	PUNCT	``	_	36	punct	36:punct	SpaceAfter=No
 35	Revolution	Revolution	PROPN	NNP	Number=Sing	36	compound	36:compound	_
-36	number	number	PROPN	NNP	Number=Sing	32	nmod	32:nmod:like	_
-37	9	9	NUM	CD	NumForm=Digit|NumType=Card	36	nummod	36:nummod	SpaceAfter=No
+36	number	number	PROPN	NNP	Number=Sing	32	nmod	32:nmod:like	FlatType=Enumerated
+37	9	9	NUM	CD	NumForm=Digit|NumType=Card	36	flat	36:flat	SpaceAfter=No
 38	"	"	PUNCT	''	_	36	punct	36:punct	SpaceAfter=No
 39	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -847,7 +847,7 @@
 94	The	the	DET	DT	Definite=Def|PronType=Art	95	det	95:det	_
 95	CURSE	curse	NOUN	NN	Number=Sing	101	nsubj	101:nsubj	_
 96	OF	of	ADP	IN	_	97	case	97:case	_
-97	GOD	GOD	PROPN	NNP	Number=Sing	95	nmod	95:nmod:of	_
+97	GOD	God	PROPN	NNP	Number=Sing	95	nmod	95:nmod:of	_
 98	upon	upon	ADP	IN	_	99	case	99:case	_
 99	John	John	PROPN	NNP	Number=Sing	95	nmod	95:nmod:upon	_
 100	Lennon	Lennon	PROPN	NNP	Number=Sing	99	flat	99:flat	_
@@ -916,7 +916,7 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	CURSE	curse	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 3	OF	of	ADP	IN	_	4	case	4:case	_
-4	GOD	GOD	PROPN	NNP	Number=Sing	2	nmod	2:nmod:of	_
+4	GOD	God	PROPN	NNP	Number=Sing	2	nmod	2:nmod:of	_
 5	carried	carry	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	on	on	ADV	RB	_	5	advmod	5:advmod	_
 7	until	until	SCONJ	IN	_	10	mark	10:mark	_
@@ -995,7 +995,7 @@
 34	throat	throat	NOUN	NN	Number=Sing	35	compound	35:compound	_
 35	cancer	cancer	NOUN	NN	Number=Sing	33	obj	33:obj|44:nsubj|47:nsubj	_
 36	by	by	ADP	IN	_	37	case	37:case	_
-37	GOD	GOD	PROPN	NNP	Number=Sing	33	obl:agent	33:obl:agent	_
+37	GOD	God	PROPN	NNP	Number=Sing	33	obl:agent	33:obl:agent	_
 38	because	because	ADP	IN	ExtPos=ADP	41	case	41:case	_
 39	of	of	ADP	IN	_	38	fixed	38:fixed	_
 40	those	that	DET	DT	Number=Plur|PronType=Dem	41	det	41:det	_
@@ -1080,7 +1080,7 @@
 63	nation	nation	NOUN	NN	Number=Sing	59	obl	59:obl:for	SpaceAfter=No
 64	)	)	PUNCT	-RRB-	_	52	punct	52:punct	SpaceAfter=No
 65	,	,	PUNCT	,	_	2	punct	2:punct	_
-66	GOD	GOD	PROPN	NNP	Number=Sing	67	nsubj	67:nsubj	_
+66	GOD	God	PROPN	NNP	Number=Sing	67	nsubj	67:nsubj	_
 67	provided	provide	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 68	cancer	cancer	NOUN	NN	Number=Sing	67	obj	67:obj	_
 69	to	to	ADP	IN	_	71	case	71:case	_
@@ -1491,7 +1491,7 @@
 27	,	,	PUNCT	,	_	30	punct	30:punct	_
 28	that	that	SCONJ	IN	_	30	mark	30:mark	_
 29	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	30	nsubj	30:nsubj	_
-30	found	find	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	advcl	3:advcl:that	_
+30	found	find	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	acl	7:acl:that	_
 31	himself	himself	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	30	iobj	30:iobj	_
 32	a	a	DET	DT	Definite=Ind|PronType=Art	34	det	34:det	_
 33	handicapped	handicapped	ADJ	JJ	Degree=Pos	34	amod	34:amod	_
@@ -1584,7 +1584,7 @@
 9	sexual	sexual	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	intercourse	intercourse	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	with	with	ADP	IN	_	13	case	13:case	_
-12	homosexual	homosexual	NOUN	NN	Number=Sing	13	compound	13:compound	_
+12	homosexual	homosexual	NOUN	NN	Number=Sing	13	nmod:desc	13:nmod:desc	_
 13	Brian	Brian	PROPN	NNP	Number=Sing	10	nmod	10:nmod:with	_
 14	Epstein	Epstein	PROPN	NNP	Number=Sing	13	flat	13:flat	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
@@ -1780,8 +1780,8 @@
 26	that	that	SCONJ	IN	_	29	mark	29:mark	_
 27	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	29	nsubj	29:nsubj	_
 28	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	29	cop	29:cop	_
-29	number	number	NOUN	NN	Number=Sing	25	ccomp	25:ccomp	_
-30	one	one	NUM	CD	NumForm=Word|NumType=Card	29	nummod	29:nummod	_
+29	number	number	NOUN	NN	Number=Sing	25	ccomp	25:ccomp	FlatType=Enumerated
+30	one	one	NUM	CD	NumForm=Word|NumType=Card	29	flat	29:flat	_
 31	in	in	ADP	IN	_	35	case	35:case	_
 32	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
 33	Swedish	Swedish	ADJ	JJ	Degree=Pos	35	amod	35:amod	_
@@ -2252,7 +2252,7 @@
 28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
 29	CURSE	curse	NOUN	NN	Number=Sing	26	obl	26:obl:for|35:nsubj|38:nsubj	_
 30	OF	of	ADP	IN	_	31	case	31:case	_
-31	GOD	GOD	PROPN	NNP	Number=Sing	29	nmod	29:nmod:of	_
+31	GOD	God	PROPN	NNP	Number=Sing	29	nmod	29:nmod:of	_
 32	that	that	PRON	WDT	PronType=Rel	35	nsubj	29:ref	_
 33	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	35	cop	35:cop	_
 34	upon	upon	ADP	IN	_	35	case	35:case	_
@@ -2576,9 +2576,9 @@
 17	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
 18	own	own	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=18:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
 19	some	some	DET	DT	PronType=Ind	20	det	20:det	_
-20	L.P	l.p	NOUN	NN	Number=Sing	18	obj	18:obj	SpaceAfter=No
+20	L.P	LP	NOUN	NN	Number=Sing	18	obj	18:obj	SpaceAfter=No
 21	,	,	PUNCT	,	_	22	punct	22:punct	_
-22	CD	cd	NOUN	NN	Number=Sing	20	conj	20:conj:or	_
+22	CD	CD	NOUN	NN	Number=Sing	20	conj	20:conj:or	_
 23	or	or	CCONJ	CC	_	25	cc	25:cc	_
 24	another	another	DET	DT	PronType=Ind	25	det	25:det	_
 25	article	article	NOUN	NN	Number=Sing	20	conj	18:obj|20:conj:or	_
@@ -2587,7 +2587,7 @@
 28	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
 29	CURSED	curse	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	32	acl	32:acl	_
 30	BY	by	ADP	IN	_	31	case	31:case	_
-31	GOD	GOD	PROPN	NNP	Number=Sing	29	obl:agent	29:obl:agent	_
+31	GOD	God	PROPN	NNP	Number=Sing	29	obl:agent	29:obl:agent	_
 32	Beatles	Beatles	PROPN	NNPS	Number=Plur	26	obl	26:obl:to	_
 33	and	and	CCONJ	CC	_	35	cc	35:cc	_
 34	Rolling	Roll	VERB	NNP	VerbForm=Ger	35	amod	35:amod	_

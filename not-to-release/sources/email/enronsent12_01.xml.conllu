@@ -252,13 +252,13 @@
 7	talk	talk	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
 8	to	to	ADP	IN	_	9	case	9:case	_
 9	Ruth	Ruth	PROPN	NNP	Number=Sing	7	obl	7:obl:to	_
-10	because	because	SCONJ	IN	_	12	mark	12:mark	_
-11	SHE	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
-12	IS	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	advcl	7:advcl:because	_
-13	ALWAYS	always	ADV	RB	PronType=Tot	12	advmod	12:advmod	_
+10	because	because	SCONJ	IN	_	16	mark	16:mark	_
+11	SHE	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
+12	IS	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
+13	ALWAYS	always	ADV	RB	PronType=Tot	16	advmod	16:advmod	_
 14	ON	on	ADP	IN	_	16	case	16:case	_
 15	THE	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	PHONE	phone	NOUN	NN	Number=Sing	12	obl	12:obl:on	SpaceAfter=No
+16	PHONE	phone	NOUN	NN	Number=Sing	7	advcl	7:advcl:because	SpaceAfter=No
 17	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = email-enronsent12_01-0018
@@ -282,7 +282,7 @@
 # text = Should we all get together and make a conference call to Dominion like we did before or should I just call Jeff Davis myself?
 1	Should	should	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj|7:nsubj	_
-3	all	all	DET	DT	PronType=Tot	2	det	2:det	_
+3	all	all	DET	DT	PronType=Tot	4	advmod	4:advmod	_
 4	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=4:Interrogative-Polar-Direct.Clause
 5	together	together	ADV	RB	_	4	advmod	4:advmod	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
@@ -357,7 +357,7 @@
 14	gas	gas	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	on	on	NOUN	NN	Number=Sing	19	compound	19:compound	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
-17	ENA	ena	NOUN	NN	Number=Sing	18	compound	18:compound	_
+17	ENA	ENA	NOUN	NN	Number=Sing	18	compound	18:compound	_
 18	tabs	tabs	NOUN	NN	Number=Sing	15	conj	15:conj:and|19:compound	_
 19	agreement	agreement	NOUN	NN	Number=Sing	13	obj	13:obj	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -422,13 +422,13 @@
 6	should	should	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 7	be	be	AUX	VB	VerbForm=Inf	9	cop	9:cop	_
 8	either	either	CCONJ	CC	_	9	cc:preconj	9:cc:preconj	_
-9	NET	net	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+9	NET	net	NOUN	NN	Number=Sing	0	root	0:root	FlatType=Enumerated|SpaceAfter=No
 10	-	-	PUNCT	HYPH	_	11	punct	11:punct	SpaceAfter=No
-11	2	2	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
+11	2	2	NUM	CD	NumForm=Digit|NumType=Card	9	flat	9:flat	_
 12	or	or	CCONJ	CC	_	13	cc	13:cc	_
-13	NET	net	NOUN	NN	Number=Sing	9	conj	9:conj:or	SpaceAfter=No
+13	NET	net	NOUN	NN	Number=Sing	9	conj	9:conj:or	FlatType=Enumerated|SpaceAfter=No
 14	-	-	PUNCT	HYPH	_	15	punct	15:punct	SpaceAfter=No
-15	284	284	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	SpaceAfter=No
+15	284	284	NUM	CD	NumForm=Digit|NumType=Card	13	flat	13:flat	SpaceAfter=No
 16	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = email-enronsent12_01-0027
@@ -769,7 +769,7 @@
 # sent_id = email-enronsent12_01-0044
 # text = <<Stipulation -ECT-KEDNE re IGTS & Tennessee Cap Releases -FINAL.doc>>
 1	<<	<<	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
-2	Stipulation	stipulation	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
+2	Stipulation	stipulation	X	GW	ExtPos=PROPN	0	root	0:root	FlatType=Filename
 3	-ECT-KEDNE	-ect-kedne	X	GW	_	2	flat	2:flat	_
 4	re	re	X	GW	_	2	flat	2:flat	_
 5	IGTS	igts	X	GW	_	2	flat	2:flat	_
@@ -783,7 +783,7 @@
 # sent_id = email-enronsent12_01-0045
 # text = <<BLACKLINE -Stip -ECT-KEDNE re Cap Releases -2-F.doc>>
 1	<<	<<	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
-2	BLACKLINE	blackline	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
+2	BLACKLINE	blackline	X	GW	ExtPos=PROPN	0	root	0:root	FlatType=Filename
 3	-Stip	-stip	X	GW	_	2	flat	2:flat	_
 4	-ECT-KEDNE	-ect-kedne	X	GW	_	2	flat	2:flat	_
 5	re	re	X	GW	_	2	flat	2:flat	_
@@ -795,7 +795,7 @@
 # sent_id = email-enronsent12_01-0046
 # text = - Stipulation -ECT-KEDNE re IGTS & Tennessee Cap Releases -FINAL.doc - BLACKLINE -Stip -ECT-KEDNE re Cap Releases -2-F.doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	Stipulation	stipulation	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
+2	Stipulation	stipulation	X	GW	ExtPos=PROPN	0	root	0:root	FlatType=Filename
 3	-ECT-KEDNE	-ect-kedne	X	GW	_	2	flat	2:flat	_
 4	re	re	X	GW	_	2	flat	2:flat	_
 5	IGTS	igts	X	GW	_	2	flat	2:flat	_
@@ -805,7 +805,7 @@
 9	Releases	releases	X	GW	_	2	flat	2:flat	_
 10	-FINAL.doc	-final.doc	X	NN	_	2	flat	2:flat	_
 11	-	-	PUNCT	NFP	_	12	punct	12:punct	_
-12	BLACKLINE	blackline	X	GW	_	2	list	2:list	ExtPos=PROPN|FlatType=Filename
+12	BLACKLINE	blackline	X	GW	ExtPos=PROPN	2	list	2:list	FlatType=Filename
 13	-Stip	-stip	X	GW	_	12	flat	12:flat	_
 14	-ECT-KEDNE	-ect-kedne	X	GW	_	12	flat	12:flat	_
 15	re	re	X	GW	_	12	flat	12:flat	_
@@ -891,8 +891,8 @@
 
 # sent_id = email-enronsent12_01-0051
 # text = Ms. Walters approached one of the women and said, "This is marvelous.
-1	Ms.	Ms.	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj|9:nsubj	_
-2	Walters	Walters	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+1	Ms.	Ms.	PROPN	NNP	Number=Sing	2	nmod:desc	2:nmod:desc	_
+2	Walters	Walters	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj|9:nsubj	_
 3	approached	approach	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	one	one	NUM	CD	NumForm=Word|NumType=Card	3	obj	3:obj	_
 5	of	of	ADP	IN	_	7	case	7:case	_
@@ -1001,12 +1001,12 @@
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	bottom	bottom	NOUN	NN	Number=Sing	10	obl	10:obl:at	_
 22	of	of	ADP	IN	_	23	case	23:case	_
-23	page	page	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	_
-24	2	2	NUM	CD	NumForm=Digit|NumType=Card	23	nummod	23:nummod	_
+23	page	page	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	FlatType=Enumerated
+24	2	2	NUM	CD	NumForm=Digit|NumType=Card	23	flat	23:flat	_
 25	under	under	ADP	IN	_	27	case	27:case	_
 26	item	item	NOUN	NN	Number=Sing	27	compound	27:compound	_
-27	#	#	SYM	NN	Number=Sing	10	obl	10:obl:under	SpaceAfter=No
-28	1	1	NUM	CD	NumForm=Digit|NumType=Card	27	nummod	27:nummod	SpaceAfter=No
+27	#	#	SYM	NN	Number=Sing	10	obl	10:obl:under	FlatType=Enumerated|SpaceAfter=No
+28	1	1	NUM	CD	NumForm=Digit|NumType=Card	27	flat	27:flat	SpaceAfter=No
 29	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent12_01-0056
@@ -1147,8 +1147,8 @@
 1	Chris.Germany@enron.com	Chris.Germany@enron.com	PROPN	ADD	_	0	root	0:root	_
 2	on	on	ADP	IN	_	3	case	3:case	_
 3	01/25/2002	01/25/2002	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:on	_
-4	03:13:58	03:13:58	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
-5	PM	p.m.	NOUN	NN	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	TemporalNPAdjunct=Yes
+4	03:13:58	03:13:58	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	_
+5	PM	p.m.	NOUN	NN	Number=Sing	4	nmod:unmarked	4:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent12_01-0067
 # text = Funny.

@@ -16,7 +16,7 @@ $ python neaten.py | sort | cut -c1-30 | uniq -c
 @since: 2022-09-10
 """
 
-from typing import Dict, List
+from typing import Dict, List, Tuple, Literal
 from collections import defaultdict, Counter
 import glob
 import re
@@ -126,18 +126,35 @@ def validate_lemmas(lemma_dict, lemma_docs):
 def validate_annos(tree):
         docname = tree.metadata['sent_id']
 
-        # Dictionaries to hold token annotations from conllu data
-        funcs = {}
-        postags = {}
+        tok_num = 0
         upostags = {}
-        feats: Dict[int,Dict[str,str]] = {}
-        tokens = {}
-        parent_ids: Dict[int,int] = {}
+        postags = {}
         lemmas = {}
         sent_positions = defaultdict(lambda: "_")
+
+        new_sent = True
+        for line in tree:
+            if not isRegularNode(line):
+                continue
+            tok_num += 1
+            postags[tok_num], upostags[tok_num], lemmas[tok_num] = line['xpos'], line['upos'], line['lemma']
+            #sent_types[tok_num] = s_type
+            if new_sent:
+                sent_positions[tok_num] = "first"
+                new_sent = False
+        sent_positions[tok_num] = "last"
+
+        # Dictionaries to hold token annotations from conllu data
+        funcs = {}
+        feats: Dict[int,Dict[str,str]] = {}
+        all_edeps: Dict[int,Dict[str,str]] = {}
+        misc: Dict[int,Dict[str,str]] = {}
+        tokens = {}
+        parent_ids: Dict[int,int] = {}
         parents: Dict[int,str] = {}
         children: Dict[int,List[str]] = defaultdict(list)
         child_funcs: Dict[int,List[str]] = defaultdict(list)
+        child_pos: Dict[int,List[str]] = defaultdict(list)
         tok_num = 0
 
         line_num = 0
@@ -159,10 +176,16 @@ def validate_annos(tree):
                 parent_ids[tok_num] = head
                 children[head].append(tok)
                 child_funcs[head].append(line['deprel'])
+                child_pos[head].append(postags[tok_num])
             else:
                 parent_ids[tok_num] = 0
             tokens[tok_num] = tok
             feats[tok_num] = line['feats']
+            if line['deps'] is not None:
+                all_edeps[tok_num] = line['deps']
+            if line['misc'] is not None:
+                misc[tok_num] = line['misc']
+            del head
 
         for i in range(1, len(tokens) + 1, 1):
             if parent_ids[i] == 0:
@@ -170,18 +193,6 @@ def validate_annos(tree):
             else:
                 parents[i] = tokens[parent_ids[i]]
 
-        tok_num = 0
-        new_sent = True
-        for line in tree:
-            if not isRegularNode(line):
-                continue
-            tok_num += 1
-            postags[tok_num], upostags[tok_num], lemmas[tok_num] = line['xpos'], line['upos'], line['lemma']
-            #sent_types[tok_num] = s_type
-            if new_sent:
-                sent_positions[tok_num] = "first"
-                new_sent = False
-        sent_positions[tok_num] = "last"
 
         tok_num = 0
 
@@ -238,7 +249,7 @@ def validate_annos(tree):
             func = line['deprel']
             featlist = line['feats'] or {}
             misclist = line['misc'] or {}
-            edeps = line['deps']
+            edeps: List[Tuple[str,int]] = line['deps']
             merged = 'merged' in line and line['merged']
             form = check_and_fix_form_typos(tok_num, line['form'], featlist, misclist, merged, docname)
 
@@ -258,7 +269,11 @@ def validate_annos(tree):
                 else:
                     print("WARN: invalid POS tag " + pos + " for UPOS " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
-            if lemma.lower() in non_lemmas:
+            if upos=="DET" and lemma.lower()=="them":
+                # vernacular substitute for 'those'
+                assert pos=="DT"
+                assert featlist["Style"]=="Vrnc"
+            elif lemma.lower() in non_lemmas:
                 print("WARN: invalid lemma " + lemma + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
             elif lemma in non_cap_lemmas:
                 print("WARN: invalid lemma " + lemma + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
@@ -275,16 +290,24 @@ def validate_annos(tree):
             parent_pos = postags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_upos = upostags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_feats = feats[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else {}
+            parent_edeps = all_edeps[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else []
+            is_parent_promoted = parent_ids[tok_num] != 0 and misc.get(parent_ids[tok_num],{}).get("Promoted")=="Yes"
+            parent_child_funcs = child_funcs[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else []
+            edge_direction = ""
+            if parent_ids[tok_num] != 0:
+                edge_direction = "R" if parent_ids[tok_num] < tok_num else "L"
             filename = tree.metadata['filename']
             assert parent_pos is not None,(tok_num,parent_ids[tok_num],postags,filename)
             S_TYPE_PLACEHOLDER = None
             assert parent_string is not None,(tok_num,docname,filename)
             is_parent_copular = any(funcs[x]=="cop" for x in parent_ids if parent_ids[x]==parent_id)    # if tok or any siblings attach as cop
-            flag_dep_warnings(tok_num, tok, pos, upos, lemma, func, edeps,
-                              parent_string, parent_lemma, parent_id, is_parent_copular,
-                              children[tok_num], child_funcs[tok_num], S_TYPE_PLACEHOLDER, docname,
+            extpos = featlist.get("ExtPos")
+            flag_dep_warnings(tok_num, tok, pos, upos, extpos, lemma, func, edeps,
+                              parent_string, parent_lemma, parent_id, is_parent_copular, is_parent_promoted,
+                              children[tok_num], child_funcs[tok_num], child_pos[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_positions[tok_num],
-                              parent_func, parent_pos, parent_upos, filename)
+                              parent_func, parent_pos, parent_upos, parent_child_funcs,
+                              edge_direction, filename)
             flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, misclist, docname)
 
             if func!='goeswith':
@@ -390,10 +413,21 @@ def validate_annos(tree):
                     # the ref antecedent doesn't head the RC
                     print("WARN: `ref` antecedent lacks :relcl dependent" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
+            # Ensure that most basic deps are duplicated in edeps
+            if edeps[0][0]!="ref" and not (parent_edeps and parent_edeps[0][0]=="ref"):
+                if func!="orphan" and (func,parent_id) not in edeps and not any(e[0].startswith(func+":") and e[1]==parent_id for e in edeps):
+                    if misclist.get("Promoted")=="Yes" or is_parent_promoted:
+                        pass    # e.g. elliptical stranding
+                    elif func in ("obl","case") and any(e[0]=="case" for e in edeps):
+                        pass    # preposition stranding: without relativizer -> promotion to obl; with relativizer -> different head in edeps
+                    else:
+                        print(f"WARN: dependency `{parent_id}:{func}` appears in basic tree but not enhanced graph" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+
             if upos!="PROPN" and "flat" in child_funcs[tok_num] and "Foreign" not in featlist:
                 # non-PROPN-headed flat structure
                 if "FlatType" not in misclist:
-                    print("WARN: non-PROPN non-Foreign flat expression lacks FlatType" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    if not (upos=="SYM" and lemma=="#" or upos=="NOUN" and lemma in ("number","no.") or upos=="ADJ" and lemma=="Sri"):    # e.g. "# 1" "Sri/ADJ Lankan/ADJ"
+                        print("WARN: non-PROPN non-Foreign flat expression lacks FlatType" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
             # check for spurious VB/VerbForm=Inf
             # https://github.com/UniversalDependencies/UD_English-EWT/issues/284
@@ -499,7 +533,7 @@ def validate_annos(tree):
 NNS_PTAN_LEMMAS = ["aesthetics", "arrears", "auspices", "barracks", "billiards", "clothes", "confines", "contents",
                    "dynamics", "earnings", "eatables", "economics", "electronics", "energetics", "environs", "ergonomics",
                    "eyeglasses", "feces", "finances", "fives", "furnishings", "genetics", "genitals", "geopolitics", "glasses",
-                   "goods", "grounds", "hackles", "headquarters", "jeans", "manners", "means", "memoirs", "news",
+                   "goods", "grounds", "hackles", "headquarters", "jeans", "manners", "means", "news",
                    "orthodontics", "panties", "pants", "politics", "proceedings", "regards", "remains", "respects",
                    "savings", "scissors", "specifics", "statistics", "sunglasses", "supplies", "surroundings",
                    "tenterhooks", "thanks", "troops", "trousers", "wares", "whereabouts",
@@ -511,14 +545,15 @@ NNS_PTAN_LEMMAS = ["aesthetics", "arrears", "auspices", "barracks", "billiards",
 # not Ptan: biceps, triceps
 
 NNPS_PTAN_LEMMAS = ["Netherlands", "Analytics", "Olympics", "Commons", "Paralympics", "Vans", "Andes", "Philippines",
-                    "Maldives"]
+                    "Maldives", "Politics", "Species"]
 
 SING_AND_PLUR_S_LEMMAS = ["series", "species"]
 
-def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular,
-                      children: List[str], child_funcs: List[str], s_type,
+def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular, is_parent_promoted,
+                      children: List[str], child_funcs: List[str], child_pos: List[str], s_type,
                       docname, prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_position,
-                      parent_func, parent_pos, parent_upos, filename):
+                      parent_func, parent_pos, parent_upos, parent_child_funcs: List[str],
+                      edge_direction: Literal["","L","R"], filename):
     # Shorthand for printing errors
     inname = " in " + docname + " @ token " + str(id) + " (" + parent + " -> " + tok + ") " + filename
 
@@ -616,12 +651,31 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
                 print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
                 NNS_warnings[lemma] += 1
 
+    if pos in ("NN", "NNS") and parent_upos == "PROPN" and func == "compound":
+        # test for exceptions (including several cases with determiners, though we don't check for the determiner directly)
+        if lemma in "rat|planet|person|house|extremist|degree|state|piece|day|downtown|age|level|era|foot|defence|force|re-run".split('|'):
+            pass
+        elif lemma[0] in '0123456789':
+            pass
+        elif (lemma,docname) in {('assistant','newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0068'),
+                                 ('polyglot','weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012'),
+                                 ('boy','answers-20111107200249AAIyCy5_ans-0005'),
+                                 ('man','answers-20111107200249AAIyCy5_ans-0005'),
+                                 ('majority','weblog-blogspot.com_dakbangla_20041028153019_ENG_20041028_153019-0017')}:
+            pass
+        else:
+            print("WARN: consider nmod:desc instead of compound" + inname)
+
     if pos == "IN" and func=="compound:prt":
         print("WARN: function " + func + " should have pos RP, not IN" + inname)
 
     if pos == "CC" and func not in ["cc","cc:preconj","conj","reparandum","root","dep"] and not (parent_lemma=="whether" and func=="fixed"):
         if not ("languages" in inname and tok == "and"):  # metalinguistic discussion in whow_languages
             print("WARN: pos " + pos + " should normally have function cc or cc:preconj, not " + func + inname)
+
+    if func == "cc" and parent_func not in ["root","ccomp","conj","reparandum","parataxis"]:
+        if docname!="email-enronsent23_08-0006":   # exception for quoted acl
+            print("WARN: function " + func + " should not have parent function " + parent_func + inname)
 
     if pos == "RP" and func not in ["compound:prt","conj"] or pos != "RP" and func=="compound:prt":
         print("WARN: pos " + pos + " should not normally have function " + func + inname)
@@ -728,6 +782,17 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if func =="xcomp" and parent_lemma == "be":
         print("WARN: verb lemma 'be' should not have xcomp child" + inname)
 
+    # Implements check from UniversalDependencies/docs#1066
+    if func not in ["csubj","ccomp","xcomp","advcl","acl","acl:relcl","advcl:relcl","csubj:pass","root","list","parataxis","conj","appos","reparandum","dislocated","orphan","compound"]:
+        if any([x in child_funcs for x in ["csubj","nsubj","nsubj:pass","csubj:pass"]]):
+            if extpos=="PROPN":   # exception for sentences used as names
+                pass
+            elif func=="discourse" and lemma in {"forbid", "guess", "know", "mean", "think"}:
+                # some common discourse expressions: god forbid, you know, I mean
+                pass
+            else:
+                print("WARN: "+func+" should not have subject child" + inname)
+
     IN_not_like_lemma = ["vs", "vs.", "v", "ca", "that", "then", "a", "fro", "too", "til", "wether", "b/c"]  # incl. known typos
     if pos == "IN" and tok.lower() not in IN_not_like_lemma and lemma != tok.lower() and func != "goeswith" and "goeswith" not in child_funcs:
         print("WARN: pos IN should have lemma identical to lower cased token" + inname)
@@ -811,16 +876,30 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if func in ["iobj","obj"] and parent_lemma in ["become","remain","stay"]:
         print("WARN: verb '"+parent_lemma+"' should take xcomp not "+func+" argument" + inname)
 
+    if func in ["iobj","obj"] and "case" in child_funcs and "POS" not in child_pos:
+        print("WARN: function " + func +  " should not have non-possessive 'case' dependents" + inname)
+
     if ":tmod" in func or ":npmod" in func:
         # https://github.com/UniversalDependencies/docs/issues/1028
         print("WARN: function " + func +  " is deprecated, use :unmarked instead" + inname)
 
     if func in ["nmod:unmarked","obl:unmarked"] and "case" in child_funcs:
         print("WARN: function " + func +  " should not have 'case' dependents" + inname)
+    
+    if func.startswith("nmod") and parent_upos in ("DET","NUM") and parent_func.startswith("det"):
+        print("WARN: nominal dependent of " + parent_func + " dependent should be obl, not nmod" + inname)
+    elif func.startswith("obl") and parent_upos in ("DET","NUM") and parent_func.startswith(("nummod","compound")):
+        print("WARN: nominal dependent of " + parent_func + " dependent should be nmod, not obl" + inname)
 
     if func in ["aux:pass","nsubj:pass"] and parent_pos not in ["VBN"]:
         if not (("stardust" in docname and parent_lemma == "would") or parent_lemma == "Rated"):
             print("WARN: function " + func + " should not be the child of pos " + parent_pos + inname)
+
+    # https://github.com/UniversalDependencies/UD_English-EWT/issues/572
+    if func == "obl" and parent_lemma == "be" and edge_direction == "R" and "expl" not in parent_child_funcs:
+        #print("WARN: 'be' should not be the head of 'be' + PP (it may be OK if the 'be' is promoted)" + inname)
+        if not is_parent_promoted:
+            print("WARN: 'be' should not be the head of 'be' + PP" + inname)
 
     if func == "obl:agent" and (parent_pos not in ["VBN"] or "by" not in map(str.lower, children)):
         print("WARN: function " + func +  " must be child of VBN with a 'by' dependent" + parent_pos + inname)
@@ -901,7 +980,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
     if lemma=="what" and ((pos=="WDT") != (func in ["det", "det:predet"])):
         print("WARN: what/WDT should correspond with det or det:predet" + inname)
 
-    """
+    r"""
     Numerics
 
     X[lemma contains digits and nonalphabetics] => X.upos=NUM
@@ -929,7 +1008,7 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
             print("WARN: mistagged fixed expression" + inname)
 
     if tok == "rather" and "fixed" in child_funcs and func not in ["cc","mark"]:
-        print("WARN: 'rather than' fixed expression must be cc or mark" + inname)
+        print("WARN: 'rather than' fixed expression must be cc or mark" + inname)   # TODO: case might also be acceptable
 
     if s_type == "imp" or s_type == "frag" or s_type == "ger" or s_type == "inf":
         if func == "root" and "nsubj" in child_funcs:
@@ -975,27 +1054,23 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         try:
             assert w2func=="fixed"
             assert w1==parent_lemma
-            match (w1,w2):
-                case ("one", "another"):
-                    assert (pos1, pos2)==("CD", "DT") and (upos1, upos2)==("PRON", "DET")
-                case ("each", "other"):
-                    assert (pos1, pos2)==("DT", "JJ") and (upos1, upos2)==("DET", "ADJ")
-                case ("kind", "of"):
-                    assert (pos1, pos2)==("NN", "IN") and (upos1, upos2)==("NOUN", "ADP")
-                case ("sort", "of"):
-                    assert (pos1, pos2)==("NN", "IN") and (upos1, upos2)==("NOUN", "ADP")
-                case ("at", "least"):
-                    assert (pos1, pos2)==("IN", "JJS") and (upos1, upos2)==("ADP", "ADJ")
+            match (w1,w2, pos1,upos1, pos2,upos2):
+                case ("one", "another", "CD","PRON", "DT","DET"): pass
+                case ("each", "other", "DT","DET", "JJ","ADJ"): pass
+                case ("kind"|"sort", "of", "NN","NOUN", "IN","ADP"): pass
+                case ("at", "least", "IN","ADP", "JJS","ADJ"): pass
+                case ("rather", "than", "RB","ADV", "IN","ADP"|"SCONJ"): pass
+                case ("instead", "of", "RB","ADV", "IN","ADP"|"SCONJ"): pass
                 case _:
                     assert False,(w1,w2)
         except AssertionError:
-            print("WARN: structure of '{w1} {w2}' should be fixed({w1}/{pos1}/{upos2}, {w2}/{pos2}/{upos2})" + inname)
+            print(f"WARN: structure of '{w1} {w2}' should not be fixed({w1}/{pos1}/{upos2}, {w2}/{pos2}/{upos2})" + inname)
 
         try:
             if (w1,w2) in {("kind", "of"), ("sort", "of"), ("at", "least")}:
                 assert outerdeprel=="advmod"
         except AssertionError:
-            print("WARN: fixed expr '{w1} {w2}' should attach as advmod not {outerdeprel}" + inname)
+            print(f"WARN: fixed expr '{w1} {w2}' should attach as advmod not {outerdeprel}" + inname)
 
 
     # UPOS bigrams
@@ -1005,10 +1080,8 @@ def flag_dep_warnings(id, tok, pos, upos, lemma, func, edeps, parent, parent_lem
         check_bigram_fixed("one", "another", parent_lemma, func, prev_pos, prev_upos, pos, upos, inname)
     elif prev_tok.lower()=="each" and lemma=="other":
         check_bigram_fixed("each", "other", parent_lemma, func, prev_pos, prev_upos, pos, upos, inname)
-    elif prev_tok.lower() in ("kind", "sort") and lemma=="of" and func=="fixed":    # hedge usage
-        check_bigram_fixed(prev_tok.lower(), "of", parent_lemma, func, prev_pos, prev_upos, pos, upos, inname, prev_func)
-    elif prev_tok.lower()=="at" and lemma=="least" and func=="fixed":    # non-quantity usage
-        check_bigram_fixed("at", "least", parent_lemma, func, prev_pos, prev_upos, pos, upos, inname, prev_func)
+    elif func=="fixed" and (prev_tok.lower(),lemma) in {("kind","of"),("sort","of"),("instead","of"),("rather","than"),("at","least")}:
+        check_bigram_fixed(prev_tok.lower(), lemma, parent_lemma, func, prev_pos, prev_upos, pos, upos, inname, prev_func)
     elif prev_tok.lower()=="a" and lemma=="couple":
         try:
             assert prev_func=="det"

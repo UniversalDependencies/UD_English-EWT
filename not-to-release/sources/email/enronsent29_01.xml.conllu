@@ -14,8 +14,8 @@
 # sent_id = email-enronsent29_01-0002
 # text = 03/23/2001 10:13 AM
 1	03/23/2001	03/23/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	10:13	10:13	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	10:13	10:13	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	AM	a.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent29_01-0003
 # text = Good Morning Debra -
@@ -161,8 +161,8 @@
 13	111	111	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
 14	Market	Market	PROPN	NNP	Number=Sing	15	compound	15:compound	_
 15	Place	Place	PROPN	NNP	Number=Sing	2	list	2:list	_
-16	Ste	ste	NOUN	NN	Number=Sing	2	list	2:list	_
-17	500	500	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	_
+16	Ste	ste	NOUN	NN	Number=Sing	2	list	2:list	FlatType=Enumerated
+17	500	500	NUM	CD	NumForm=Digit|NumType=Card	16	flat	16:flat	_
 18	Baltimore	Baltimore	PROPN	NNP	Number=Sing	16	appos	16:appos	SpaceAfter=No
 19	,	,	PUNCT	,	_	20	punct	20:punct	SpaceAfter=No
 20	MD	MD	PROPN	NNP	Number=Sing	18	appos	18:appos	_
@@ -256,7 +256,7 @@
 3	attached	attached	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	file	file	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
 5	:	:	PUNCT	:	_	6	punct	6:punct	_
-6	Constellation	constellation	X	NN	_	4	appos	4:appos	ExtPos=PROPN|FlatType=Filename
+6	Constellation	constellation	X	NN	ExtPos=PROPN	4	appos	4:appos	FlatType=Filename
 7	Power	power	X	GW	_	6	flat	6:flat	_
 8	(	(	X	GW	_	6	flat	6:flat	SpaceAfter=No
 9	GISB	GISB	X	GW	_	6	flat	6:flat	_
@@ -285,7 +285,7 @@
 # sent_id = email-enronsent29_01-0018
 # text = - ENRON-CPS (GISB rev1).doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	ENRON-CPS	enron-cps	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
+2	ENRON-CPS	enron-cps	X	GW	ExtPos=PROPN	0	root	0:root	FlatType=Filename
 3	(	(	X	GW	_	2	flat	2:flat	SpaceAfter=No
 4	GISB	GISB	X	GW	_	2	flat	2:flat	_
 5	rev1	rev1	X	GW	_	2	flat	2:flat	SpaceAfter=No
@@ -406,8 +406,8 @@
 # newpar id = email-enronsent29_01-p0008
 # text = Revised Article 4.6
 1	Revised	revise	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	amod	2:amod	_
-2	Article	article	NOUN	NN	Number=Sing	0	root	0:root	_
-3	4.6	4.6	NUM	CD	NumForm=Digit|NumType=Frac	2	nummod	2:nummod	_
+2	Article	article	NOUN	NN	Number=Sing	0	root	0:root	FlatType=Enumerated
+3	4.6	4.6	NUM	CD	NumForm=Digit|NumType=Frac	2	flat	2:flat	_
 
 # sent_id = email-enronsent29_01-0031
 # text = Debra Perlingiere
@@ -445,7 +445,7 @@
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
 7	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=7:Interrogative-Polar-Indirect.Clause
 8	anything	anything	PRON	NN	Number=Sing|PronType=Ind	7	obj	7:obj	_
-9	else	else	ADJ	JJ	Degree=Pos	8	amod	8:amod	SpaceAfter=No
+9	else	else	ADV	RB	_	8	advmod	8:advmod	SpaceAfter=No
 10	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent29_01-0034
@@ -594,8 +594,8 @@
 1	See	see	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 2	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	amod	6:amod	_
 3	revised	revise	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	amod	6:amod	_
-4	Article	article	NOUN	NN	Number=Sing	6	compound	6:compound	_
-5	4.6	4.6	NUM	CD	NumForm=Digit|NumType=Frac	4	nummod	4:nummod	_
+4	Article	article	NOUN	NN	Number=Sing	6	compound	6:compound	FlatType=Enumerated
+5	4.6	4.6	NUM	CD	NumForm=Digit|NumType=Frac	4	flat	4:flat	_
 6	Masters	master	NOUN	NNS	Number=Plur	1	obj	1:obj	_
 7	below	below	ADV	RB	_	1	advmod	1:advmod	SpaceAfter=No
 8	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -648,14 +648,14 @@
 # sent_id = email-enronsent29_01-0056
 # text = 03/27/2001 01:58 PM
 1	03/27/2001	03/27/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	01:58	01:58	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	01:58	01:58	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	PM	p.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent29_01-0057
 # text = Revised Article 4.6
 1	Revised	revise	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	amod	2:amod	_
-2	Article	article	NOUN	NN	Number=Sing	0	root	0:root	_
-3	4.6	4.6	NUM	CD	NumForm=Digit|NumType=Frac	2	nummod	2:nummod	_
+2	Article	article	NOUN	NN	Number=Sing	0	root	0:root	FlatType=Enumerated
+3	4.6	4.6	NUM	CD	NumForm=Digit|NumType=Frac	2	flat	2:flat	_
 
 # sent_id = email-enronsent29_01-0058
 # text = Debra Perlingiere
@@ -812,8 +812,8 @@
 # sent_id = email-enronsent29_01-0074
 # text = 03/29/2001 09:01 AM
 1	03/29/2001	03/29/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	09:01	09:01	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	09:01	09:01	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	AM	a.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent29_01-0075
 # text = Rudwell Johnson/ENRON@enronXgate
@@ -825,8 +825,8 @@
 # sent_id = email-enronsent29_01-0076
 # text = 03/28/2001 05:09 PM
 1	03/28/2001	03/28/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	05:09	05:09	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	05:09	05:09	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	PM	p.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent29_01-0077
 # text = Jeff!
@@ -901,13 +901,13 @@
 # sent_id = email-enronsent29_01-0084
 # text = The Guaranty is dated August 1, 2000.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	Guaranty	guaranty	NOUN	NN	Number=Sing	4	nsubj:pass	4:nsubj:pass|5:nsubj:xsubj	_
+2	Guaranty	guaranty	NOUN	NN	Number=Sing	4	nsubj:pass	4:nsubj:pass|6:nsubj:xsubj	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 4	dated	date	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
-5	August	August	PROPN	NNP	Number=Sing	4	xcomp	4:xcomp	_
-6	1	1	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	SpaceAfter=No
-7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	SpaceAfter=No
+5	August	August	PROPN	NNP	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	_
+6	1	1	NUM	CD	NumForm=Digit|NumType=Card	4	xcomp	4:xcomp	SpaceAfter=No
+7	,	,	PUNCT	,	_	6	punct	6:punct	_
+8	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	6	nmod:unmarked	6:nmod:unmarked	SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent29_01-0085

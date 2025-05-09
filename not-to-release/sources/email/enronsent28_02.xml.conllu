@@ -8,8 +8,8 @@
 # sent_id = email-enronsent28_02-0002
 # text = 08/17/2000 11:21 AM
 1	08/17/2000	08/17/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	11:21	11:21	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	11:21	11:21	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	AM	a.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent28_02-0003
 # text = I spoke to Bruce Garcey at NiMo regarding their RFP.
@@ -185,8 +185,8 @@
 # sent_id = email-enronsent28_02-0015
 # text = 08/16/2000 03:48 PM
 1	08/16/2000	08/16/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	03:48	03:48	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	03:48	03:48	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	PM	p.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent28_02-0016
 # text = John Griffith@ENRON
@@ -196,16 +196,16 @@
 # sent_id = email-enronsent28_02-0017
 # text = 08/15/2000 06:23 PM
 1	08/15/2000	08/15/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	06:23	06:23	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	06:23	06:23	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	PM	p.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent28_02-0018
 # text = SOblander@carrfut.com on 08/15/2000 06:03:48 PM
 1	SOblander@carrfut.com	SOblander@carrfut.com	PROPN	ADD	_	0	root	0:root	_
 2	on	on	ADP	IN	_	3	case	3:case	_
 3	08/15/2000	08/15/2000	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:on	_
-4	06:03:48	06:03:48	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
-5	PM	p.m.	NOUN	NN	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	TemporalNPAdjunct=Yes
+4	06:03:48	06:03:48	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	_
+5	PM	p.m.	NOUN	NN	Number=Sing	4	nmod:unmarked	4:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent28_02-0019
 # text = The information contained herein is based on sources that we believe to be reliable, but we do not represent that it is accurate or complete.
@@ -336,8 +336,8 @@
 9	version	version	NOUN	NN	Number=Sing	0	root	0:root	_
 10	of	of	ADP	IN	_	12	case	12:case	_
 11	Adobe	Adobe	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	Acrobat	Acrobat	PROPN	NNP	Number=Sing	9	nmod	9:nmod:of	_
-13	4.0	4.0	NUM	CD	NumForm=Digit|NumType=Frac	12	nummod	12:nummod	_
+12	Acrobat	Acrobat	PROPN	NNP	Number=Sing	9	nmod	9:nmod:of	FlatType=Enumerated
+13	4.0	4.0	NUM	CD	NumForm=Digit|NumType=Frac	12	flat	12:flat	_
 14	and	and	CCONJ	CC	_	17	cc	17:cc	_
 15	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 16	should	should	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
@@ -356,8 +356,8 @@
 # text = Adobe Acrobat Reader 4.0 may be downloaded for FREE from www.adobe.com.
 1	Adobe	Adobe	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 2	Acrobat	Acrobat	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Reader	Reader	PROPN	NNP	Number=Sing	7	nsubj:pass	7:nsubj:pass	_
-4	4.0	4.0	NUM	CD	NumForm=Digit|NumType=Frac	3	nummod	3:nummod	_
+3	Reader	Reader	PROPN	NNP	Number=Sing	7	nsubj:pass	7:nsubj:pass	FlatType=Enumerated
+4	4.0	4.0	NUM	CD	NumForm=Digit|NumType=Frac	3	flat	3:flat	_
 5	may	may	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 6	be	be	AUX	VB	VerbForm=Inf	7	aux:pass	7:aux:pass	_
 7	downloaded	download	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_

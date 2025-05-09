@@ -162,9 +162,9 @@
 3	ago	ago	ADV	RB	_	10	advmod	10:advmod	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	Pakistani	Pakistani	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	President	President	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
-7	Pervez	Pervez	PROPN	NNP	Number=Sing	6	flat	6:flat	_
-8	Musharraf	Musharraf	PROPN	NNP	Number=Sing	6	flat	6:flat	_
+6	President	President	PROPN	NNP	Number=Sing	7	nmod:desc	7:nmod:desc	_
+7	Pervez	Pervez	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	_
+8	Musharraf	Musharraf	PROPN	NNP	Number=Sing	7	flat	7:flat	_
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	10:cop	_
 10	surprised	surprised	ADJ	JJ	Degree=Pos	0	root	0:root	_
 11	when	when	ADV	WRB	PronType=Int	24	advmod	24:advmod	_
@@ -272,7 +272,7 @@
 3	and	and	CCONJ	CC	_	6	cc	6:cc	_
 4	this	this	PRON	DT	Number=Sing|PronType=Dem	6	nsubj	6:nsubj	_
 5	even	even	ADV	RB	_	6	advmod	6:advmod	_
-6	includes	include	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	parataxis	1:parataxis	_
+6	includes	include	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	conj	1:conj	_
 7	members	member	NOUN	NNS	Number=Plur	6	obj	6:obj|23:nsubj|25:nsubj:xsubj	_
 8	of	of	ADP	IN	_	14	case	14:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
@@ -423,15 +423,15 @@
 37	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	40	aux	40:aux	_
 38	once	once	ADV	RB	NumForm=Word|NumType=Mult	39	advmod	39:advmod	_
 39	again	again	ADV	RB	_	40	advmod	40:advmod	_
-40	swung	swing	VERB	VBN	Tense=Past|VerbForm=Part	3	parataxis	3:parataxis	_
+40	swung	swing	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj	_
 41	toward	toward	ADP	IN	_	44	case	44:case	_
 42	a	a	DET	DT	Definite=Ind|PronType=Art	44	det	44:det	_
 43	quixotic	quixotic	ADJ	JJ	Degree=Pos	44	amod	44:amod	_
 44	effort	effort	NOUN	NN	Number=Sing	40	obl	40:obl:toward	_
 45	to	to	PART	TO	_	46	mark	46:mark	_
 46	prize	prize	VERB	VB	VerbForm=Inf	44	acl	44:acl:to	_
-47	at	at	ADP	IN	ExtPos=ADV	46	advmod	46:advmod	_
-48	least	least	ADJ	JJS	Degree=Sup	47	fixed	47:fixed	_
+47	at	at	ADP	IN	ExtPos=ADV	48	case	48:case	_
+48	least	least	ADJ	JJS	Degree=Sup	50	nmod	50:nmod	_
 49	the	the	DET	DT	Definite=Def|PronType=Art	50	det	50:det	_
 50	Valley	Valley	PROPN	NNP	Number=Sing	46	obj	46:obj	_
 51	of	of	ADP	IN	_	52	case	52:case	_
@@ -766,10 +766,10 @@
 
 # sent_id = weblog-blogspot.com_dakbangla_20041028153019_ENG_20041028_153019-0024
 # text = Despite Sept. 11, the United States still supports the Kashmir groups that back jihad as part of the price Washington is paying to keep Pervez Musharraf happy.
-1	Despite	despite	ADP	IN	_	2	case	2:case	_
-2	Sept.	September	PROPN	NNP	Abbr=Yes|Number=Sing	9	obl	9:obl:despite	_
-3	11	11	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	SpaceAfter=No
-4	,	,	PUNCT	,	_	2	punct	2:punct	_
+1	Despite	despite	ADP	IN	_	3	case	3:case	_
+2	Sept.	September	PROPN	NNP	Abbr=Yes|Number=Sing	3	nmod:unmarked	3:nmod:unmarked	_
+3	11	11	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:despite	SpaceAfter=No
+4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	United	United	ADJ	NNP	Degree=Pos	7	amod	7:amod	_
 7	States	State	PROPN	NNPS	Number=Plur	9	nsubj	9:nsubj	_
@@ -1285,11 +1285,11 @@
 
 # sent_id = weblog-blogspot.com_dakbangla_20041028153019_ENG_20041028_153019-0035
 # text = Under President Hu Jintao, Beijing has opened out to New Delhi and Prime Minister Wen Jiabao is expected to visit early next year, making friends by formally accepting Sikkim as part of India and backing India as a permanent member of the U.N. Security Council -- thus leaving Washington as the only one of the "permanent five" that has not yet done so.
-1	Under	under	ADP	IN	_	2	case	2:case	_
-2	President	President	PROPN	NNP	Number=Sing	8	obl	8:obl:under	_
-3	Hu	Hu	PROPN	NNP	Number=Sing	2	flat	2:flat	_
-4	Jintao	Jintao	PROPN	NNP	Number=Sing	2	flat	2:flat	SpaceAfter=No
-5	,	,	PUNCT	,	_	2	punct	2:punct	_
+1	Under	under	ADP	IN	_	3	case	3:case	_
+2	President	President	PROPN	NNP	Number=Sing	3	nmod:desc	3:nmod:desc	_
+3	Hu	Hu	PROPN	NNP	Number=Sing	8	obl	8:obl:under	_
+4	Jintao	Jintao	PROPN	NNP	Number=Sing	3	flat	3:flat	SpaceAfter=No
+5	,	,	PUNCT	,	_	3	punct	3:punct	_
 6	Beijing	Beijing	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
 7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 8	opened	open	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
@@ -1299,9 +1299,9 @@
 12	Delhi	Delhi	PROPN	NNP	Number=Sing	8	obl	8:obl:to	_
 13	and	and	CCONJ	CC	_	19	cc	19:cc	_
 14	Prime	Prime	ADJ	NNP	Degree=Pos	15	amod	15:amod	_
-15	Minister	Minister	PROPN	NNP	Number=Sing	19	nsubj:pass	19:nsubj:pass|21:nsubj:xsubj	_
-16	Wen	Wen	PROPN	NNP	Number=Sing	15	flat	15:flat	_
-17	Jiabao	Jiabao	PROPN	NNP	Number=Sing	15	flat	15:flat	_
+15	Minister	Minister	PROPN	NNP	Number=Sing	16	nmod:desc	16:nmod:desc	_
+16	Wen	Wen	PROPN	NNP	Number=Sing	19	nsubj:pass	19:nsubj:pass|21:nsubj:xsubj	_
+17	Jiabao	Jiabao	PROPN	NNP	Number=Sing	16	flat	16:flat	_
 18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	aux:pass	19:aux:pass	_
 19	expected	expect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	conj	8:conj:and	_
 20	to	to	PART	TO	_	21	mark	21:mark	_

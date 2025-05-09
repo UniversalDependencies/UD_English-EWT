@@ -138,15 +138,15 @@
 5	-	-	PUNCT	HYPH	_	4	punct	4:punct	SpaceAfter=No
 6	hourly	hourly	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	price	price	NOUN	NN	Number=Sing	2	obj	2:obj	_
-8	during	during	ADP	IN	_	10	case	10:case	_
-9	13	13	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	_
-10	December	December	PROPN	NNP	Number=Sing	2	obl	2:obl:during	SpaceAfter=No
-11	,	,	PUNCT	,	_	12	punct	12:punct	_
-12	1998	1998	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	SpaceAfter=No
-13	-	-	SYM	SYM	_	15	case	15:case	SpaceAfter=No
-14	30	30	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
-15	June	June	PROPN	NNP	Number=Sing	10	nmod	10:nmod	_
-16	2001	2001	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
+8	during	during	ADP	IN	_	9	case	9:case	_
+9	13	13	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:during	_
+10	December	December	PROPN	NNP	Number=Sing	9	nmod:unmarked	9:nmod:unmarked	SpaceAfter=No
+11	,	,	PUNCT	,	_	9	punct	9:punct	_
+12	1998	1998	NUM	CD	NumForm=Digit|NumType=Card	9	nmod:unmarked	9:nmod:unmarked	SpaceAfter=No
+13	-	-	SYM	SYM	_	14	case	14:case	SpaceAfter=No
+14	30	30	NUM	CD	NumForm=Digit|NumType=Card	9	nmod	9:nmod	_
+15	June	June	PROPN	NNP	Number=Sing	14	nmod:unmarked	14:nmod:unmarked	_
+16	2001	2001	NUM	CD	NumForm=Digit|NumType=Card	14	nmod:unmarked	14:nmod:unmarked	_
 17	giving	give	VERB	VBG	Tense=Pres|VerbForm=Part	2	advcl	2:advcl	_
 18	about	about	ADV	RB	_	19	advmod	19:advmod	_
 19	44,000	44000	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nummod	_
@@ -439,10 +439,10 @@
 
 # sent_id = email-enronsent19_02-0032
 # text = What I would like to do in this case is get the information to Jeff Davis, who is responsible for Georgia Tech and ask him to get Sungjoo's resume and start a file on him with a notation that you would like to hire him for summer.
-1	What	what	PRON	WP	PronType=Int	6	obj	6:obj	_
+1	What	what	PRON	WP	PronType=Rel	11	nsubj:outer	6:obj|11:nsubj:outer|25:nsubj:outer	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	_
 3	would	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-4	like	like	VERB	VB	VerbForm=Inf	11	csubj:outer	11:csubj:outer|25:csubj:outer	_
+4	like	like	VERB	VB	VerbForm=Inf	1	acl:relcl	1:acl:relcl	Cxn=rc-free-obj
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	do	do	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	in	in	ADP	IN	_	9	case	9:case	_
@@ -611,11 +611,11 @@
 # sent_id = email-enronsent19_02-0044
 # newpar id = email-enronsent19_02-p0013
 # text = Dear Dr. Vincent Kaminski,
-1	Dear	dear	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	Dr.	Dr.	PROPN	NNP	Number=Sing	0	root	0:root	_
-3	Vincent	Vincent	PROPN	NNP	Number=Sing	2	flat	2:flat	_
-4	Kaminski	Kaminski	PROPN	NNP	Number=Sing	2	flat	2:flat	SpaceAfter=No
-5	,	,	PUNCT	,	_	2	punct	2:punct	_
+1	Dear	dear	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
+2	Dr.	Dr.	PROPN	NNP	Number=Sing	3	nmod:desc	3:nmod:desc	_
+3	Vincent	Vincent	PROPN	NNP	Number=Sing	0	root	0:root	_
+4	Kaminski	Kaminski	PROPN	NNP	Number=Sing	3	flat	3:flat	SpaceAfter=No
+5	,	,	PUNCT	,	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent19_02-0045
 # newpar id = email-enronsent19_02-p0014

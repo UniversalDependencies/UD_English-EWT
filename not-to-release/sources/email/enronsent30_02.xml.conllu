@@ -40,10 +40,10 @@
 18	,	,	PUNCT	,	_	21	punct	21:punct	_
 19	self	self	NOUN	NN	Number=Sing	21	compound	21:compound	SpaceAfter=No
 20	-	-	PUNCT	HYPH	_	19	punct	19:punct	SpaceAfter=No
-21	sacrifice	sacrifice	NOUN	NN	Number=Sing	17	conj	17:acl:relcl|17:conj:and	_
+21	sacrifice	sacrifice	NOUN	NN	Number=Sing	17	conj	11:acl:relcl|17:conj:and	_
 22	and	and	CCONJ	CC	_	24	cc	24:cc	_
 23	mutual	mutual	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-24	trust	trust	NOUN	NN	Number=Sing	17	conj	17:acl:relcl|17:conj:and	SpaceAfter=No
+24	trust	trust	NOUN	NN	Number=Sing	17	conj	11:acl:relcl|17:conj:and	SpaceAfter=No
 25	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = email-enronsent30_02-0003
@@ -526,11 +526,11 @@
 14	employee	employee	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	meeting	meeting	NOUN	NN	Number=Sing	10	obj	10:obj	_
 16	today	today	NOUN	NN	Number=Sing	15	nmod:unmarked	15:nmod:unmarked	TemporalNPAdjunct=Yes
-17	at	at	ADP	IN	_	19	case	19:case	_
-18	10	10	NUM	CD	NumForm=Digit|NumType=Card	19	nummod	19:nummod	_
-19	a.m.	a.m.	NOUN	NN	Number=Sing	15	nmod	15:nmod:at	_
+17	at	at	ADP	IN	_	18	case	18:case	_
+18	10	10	NUM	CD	NumForm=Digit|NumType=Card	15	nmod	15:nmod:at	_
+19	a.m.	a.m.	NOUN	NN	Number=Sing	18	nmod:unmarked	18:nmod:unmarked	_
 20	(	(	PUNCT	-LRB-	_	21	punct	21:punct	SpaceAfter=No
-21	CDT	CDT	PROPN	NNP	Number=Sing	19	appos	19:appos	SpaceAfter=No
+21	CDT	CDT	PROPN	NNP	Number=Sing	18	appos	18:appos	SpaceAfter=No
 22	)	)	PUNCT	-RRB-	_	21	punct	21:punct	_
 23	at	at	ADP	IN	_	27	case	27:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
@@ -589,12 +589,12 @@
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
 3	on	on	ADP	IN	_	4	case	4:case	_
 4	vacation	vacation	NOUN	NN	Number=Sing	0	root	0:root	_
-5	from	from	ADP	IN	_	6	case	6:case	_
-6	October	October	PROPN	NNP	Number=Sing	4	obl	4:obl:from	_
-7	4th	4th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	6	nummod	6:nummod	_
-8	to	to	ADP	IN	_	9	case	9:case	_
-9	October	October	PROPN	NNP	Number=Sing	4	obl	4:obl:to	_
-10	19th	19th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	9	nummod	9:nummod	_
+5	from	from	ADP	IN	_	7	case	7:case	_
+6	October	October	PROPN	NNP	Number=Sing	7	nmod:unmarked	7:nmod:unmarked	_
+7	4th	4th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	4	obl	4:obl:from	_
+8	to	to	ADP	IN	_	10	case	10:case	_
+9	October	October	PROPN	NNP	Number=Sing	10	nmod:unmarked	10:nmod:unmarked	_
+10	19th	19th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	4	obl	4:obl:to	_
 11	and	and	CCONJ	CC	_	15	cc	15:cc	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
 13-14	didn't	_	_	_	_	_	_	_	_
@@ -637,7 +637,7 @@
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
 6	or	or	CCONJ	CC	_	7	cc	7:cc	_
 7	somebody	somebody	PRON	NN	Number=Sing|PronType=Ind	5	conj	5:conj:or|13:nsubj	_
-8	else	else	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
+8	else	else	ADV	RB	_	7	advmod	7:advmod	_
 9	in	in	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 11	HR	HR	NOUN	NN	Number=Sing	12	compound	12:compound	_
@@ -669,6 +669,6 @@
 # text = Vladi Pimenov ext. 37625
 1	Vladi	Vladi	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	Pimenov	Pimenov	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	ext.	ext.	NOUN	NN	Number=Sing	1	list	1:list	_
-4	37625	37625	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
+3	ext.	ext.	NOUN	NN	Number=Sing	1	list	1:list	FlatType=Enumerated
+4	37625	37625	NUM	CD	NumForm=Digit|NumType=Card	3	flat	3:flat	_
 

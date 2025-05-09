@@ -8,8 +8,8 @@
 # sent_id = email-enronsent36_02-0002
 # text = 03/02/2001 10:46 AM
 1	03/02/2001	03/02/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	10:46	10:46	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	10:46	10:46	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	AM	a.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent36_02-0003
 # text = what do you think?
@@ -24,8 +24,8 @@
 1	Joe_Lardy@cargill.com	Joe_Lardy@cargill.com	PROPN	ADD	_	0	root	0:root	_
 2	on	on	ADP	IN	_	3	case	3:case	_
 3	03/02/2001	03/02/2001	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:on	_
-4	10:39:03	10:39:03	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
-5	AM	a.m.	NOUN	NN	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	TemporalNPAdjunct=Yes
+4	10:39:03	10:39:03	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	_
+5	AM	a.m.	NOUN	NN	Number=Sing	4	nmod:unmarked	4:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent36_02-0005
 # text = Currently Cargill and Enron have a 15MM collateral threshold.
@@ -103,13 +103,13 @@
 6	20,000,000	20000000	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
 7	line	line	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	referenced	reference	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	acl	7:acl	_
-9	in	in	ADP	IN	_	11	case	11:case	_
-10	Schedule	schedule	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	B	B	NOUN	NN	Number=Sing	8	obl	8:obl:in	_
+9	in	in	ADP	IN	_	10	case	10:case	_
+10	Schedule	schedule	NOUN	NN	Number=Sing	8	obl	8:obl:in	FlatType=Enumerated
+11	B	B	NOUN	NN	Number=Sing	10	flat	10:flat	_
 12	of	of	ADP	IN	_	15	case	15:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	POA	POA	NOUN	NN	Number=Sing	15	compound	15:compound	_
-15	agreement	agreement	NOUN	NN	Number=Sing	11	nmod	11:nmod:of	SpaceAfter=No
+15	agreement	agreement	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	SpaceAfter=No
 16	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent36_02-0009
@@ -389,8 +389,8 @@
 # sent_id = email-enronsent36_02-0031
 # text = 02/27/2001 08:23 AM
 1	02/27/2001	02/27/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	08:23	08:23	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	08:23	08:23	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	AM	a.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent36_02-0032
 # text = Dee,
@@ -419,8 +419,8 @@
 17	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
 18	b	b	NUM	LS	_	20	discourse	20:discourse	SpaceAfter=No
 19	)	)	PUNCT	-RRB-	_	18	punct	18:punct	_
-20	Paragraph	paragraph	NOUN	NN	Number=Sing	15	conj	8:nmod:of|15:conj:and	_
-21	13	13	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	_
+20	Paragraph	paragraph	NOUN	NN	Number=Sing	15	conj	8:nmod:of|15:conj:and	FlatType=Enumerated
+21	13	13	NUM	CD	NumForm=Digit|NumType=Card	20	flat	20:flat	_
 22	to	to	ADP	IN	_	26	case	26:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
 24	ISDA	isda	NOUN	NN	Number=Sing	26	compound	26:compound	_
@@ -457,11 +457,11 @@
 24	transmitted	transmit	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	23	acl	23:acl	_
 25	to	to	ADP	IN	_	26	case	26:case	_
 26	ENA	ENA	PROPN	NNP	Number=Sing	24	obl	24:obl:to	_
-27	on	on	ADP	IN	_	28	case	28:case	_
-28	January	January	PROPN	NNP	Number=Sing	24	obl	24:obl:on	_
-29	5	5	NUM	CD	NumForm=Digit|NumType=Card	28	nummod	28:nummod	SpaceAfter=No
-30	,	,	PUNCT	,	_	31	punct	31:punct	_
-31	2001	2001	NUM	CD	NumForm=Digit|NumType=Card	28	nummod	28:nummod	SpaceAfter=No
+27	on	on	ADP	IN	_	29	case	29:case	_
+28	January	January	PROPN	NNP	Number=Sing	29	nmod:unmarked	29:nmod:unmarked	_
+29	5	5	NUM	CD	NumForm=Digit|NumType=Card	24	obl	24:obl:on	SpaceAfter=No
+30	,	,	PUNCT	,	_	29	punct	29:punct	_
+31	2001	2001	NUM	CD	NumForm=Digit|NumType=Card	29	nmod:unmarked	29:nmod:unmarked	SpaceAfter=No
 32	,	,	PUNCT	,	_	38	punct	38:punct	_
 33	and	and	CCONJ	CC	_	38	cc	38:cc	_
 34	(	(	PUNCT	-LRB-	_	35	punct	35:punct	SpaceAfter=No
@@ -473,10 +473,10 @@
 40	to	to	ADP	IN	_	41	case	41:case	_
 41	ENA	ENA	PROPN	NNP	Number=Sing	39	obl	39:obl:to	_
 42	on	on	ADP	IN	_	44	case	44:case	_
-43	January	January	PROPN	NNP	Number=Sing	44	compound	44:compound	_
+43	January	January	PROPN	NNP	Number=Sing	44	nmod:unmarked	44:nmod:unmarked	_
 44	19th	19th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	39	obl	39:obl:on	SpaceAfter=No
 45	,	,	PUNCT	,	_	46	punct	46:punct	_
-46	2001	2001	NUM	CD	NumForm=Digit|NumType=Card	44	nummod	44:nummod	SpaceAfter=No
+46	2001	2001	NUM	CD	NumForm=Digit|NumType=Card	44	nmod:unmarked	44:nmod:unmarked	SpaceAfter=No
 47	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = email-enronsent36_02-0035
@@ -530,8 +530,8 @@
 # sent_id = email-enronsent36_02-0041
 # text = 03/01/2001 01:35 PM
 1	03/01/2001	03/01/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	01:35	01:35	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	01:35	01:35	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	PM	p.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent36_02-0042
 # text = Good Afternoon Sara,
@@ -674,7 +674,7 @@
 12	Price	price	NOUN	NN	Number=Sing	6	nmod	6:nmod:x	SpaceAfter=No
 13	)	)	PUNCT	-RRB-	_	6	punct	6:punct	_
 14	-	-	PUNCT	:	_	15	punct	15:punct	_
-15	USD	usd	NOUN	NNS	Number=Plur	6	parataxis	6:parataxis	SpaceAfter=No
+15	USD	USD	SYM	$	_	6	parataxis	6:parataxis	SpaceAfter=No
 16	[	[	PUNCT	-LRB-	_	17	punct	17:punct	SpaceAfter=No
 17	38,000	38000	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	SpaceAfter=No
 18	?	?	PUNCT	.	_	17	punct	17:punct	SpaceAfter=No
@@ -713,7 +713,7 @@
 23	equal	equal	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 24	to	to	ADP	IN	_	26	case	26:case	SpaceAfter=No
 25	]	]	PUNCT	-RRB-	_	24	punct	24:punct	_
-26	USD	usd	NOUN	NNS	Number=Plur	23	obl	23:obl:to	SpaceAfter=No
+26	USD	USD	SYM	$	_	23	obl	23:obl:to	SpaceAfter=No
 27	{	{	PUNCT	-LRB-	_	28	punct	28:punct	SpaceAfter=No
 28	38,000	38000	NUM	CD	NumForm=Digit|NumType=Card	26	nummod	26:nummod	SpaceAfter=No
 29	?	?	PUNCT	.	_	26	punct	26:punct	SpaceAfter=No
@@ -758,8 +758,8 @@
 # sent_id = email-enronsent36_02-0055
 # text = 03/02/2001 02:10 PM
 1	03/02/2001	03/02/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	02:10	02:10	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	02:10	02:10	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	PM	p.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent36_02-0056
 # text = "Calculation of Floating Amount: The Floating Amount payable by [ENA] on a Payment Date will be calculated for that Payment Date as follows:
@@ -808,7 +808,7 @@
 12	Price	price	NOUN	NN	Number=Sing	6	nmod	6:nmod:x	SpaceAfter=No
 13	)	)	PUNCT	-RRB-	_	6	punct	6:punct	_
 14	-	-	PUNCT	:	_	15	punct	15:punct	_
-15	USD	usd	NOUN	NNS	Number=Plur	6	parataxis	6:parataxis	SpaceAfter=No
+15	USD	USD	SYM	$	_	6	parataxis	6:parataxis	SpaceAfter=No
 16	[	[	PUNCT	-LRB-	_	17	punct	17:punct	SpaceAfter=No
 17	38,000	38000	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	SpaceAfter=No
 18	?	?	PUNCT	.	_	17	punct	17:punct	SpaceAfter=No
@@ -961,8 +961,8 @@
 # sent_id = email-enronsent36_02-0070
 # text = 02/27/2001 06:07 PM
 1	02/27/2001	02/27/2001	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	06:07	06:07	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	06:07	06:07	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	PM	p.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent36_02-0071
 # text = Sara:
@@ -1027,9 +1027,9 @@
 5	(	(	PUNCT	-LRB-	_	6	punct	6:punct	SpaceAfter=No
 6	Spot	Spot	PROPN	NNP	Number=Sing	3	appos	3:appos	SpaceAfter=No
 7	)	)	PUNCT	-RRB-	_	6	punct	6:punct	_
-8	01	01	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	SpaceAfter=No
-9	Mar	March	PROPN	NNP	Abbr=Yes|Number=Sing	3	nmod:unmarked	3:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
-10	01	01	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
+8	01	01	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:unmarked	3:nmod:unmarked	SpaceAfter=No
+9	Mar	March	PROPN	NNP	Abbr=Yes|Number=Sing	8	nmod:unmarked	8:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
+10	01	01	NUM	CD	NumForm=Digit|NumType=Card	8	nmod:unmarked	8:nmod:unmarked	_
 11	JPY	jpy	NOUN	NN	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	SpaceAfter=No
 12	/	/	SYM	,	_	13	cc	13:cc	SpaceAfter=No
 13	USD	usd	NOUN	NN	Number=Sing	11	conj	3:nmod:unmarked|11:conj	_

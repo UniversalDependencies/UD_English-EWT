@@ -46,15 +46,15 @@ Portions may be © 2012 Google Inc., © 2011 Yahoo! Inc.,
 # Structure
 
 This directory contains a corpus of sentences annotated using Universal
-Dependencies annotation. The corpus comprises 254,820 words and 16,622
-sentences, taken from various web media including weblogs, newsgroups, emails,
-reviews, and Yahoo! answers; see the LDC2012T13 documentation for more details
-on the source of the sentences.  The trees were automatically converted into
-Stanford Dependencies and then hand-corrected to Universal Dependencies. All
-the dependency annotations have been single-annotated, and a limited portion of
-them have been double-annotated with interannotator agreement at approximately
-96%. The sentence IDs include the genre and the filename
-of the original LDC2012T13 filename.
+Dependencies annotation. The corpus comprises 254,818 words and 16,622
+sentences (see [stats](stats.xml)), taken from various web media including
+weblogs, newsgroups, emails, reviews, and Yahoo! answers;
+see the LDC2012T13 documentation for more details on the source of the sentences.
+The trees were automatically converted into Stanford Dependencies and then
+hand-corrected to Universal Dependencies. All the dependency annotations have been
+single-annotated, and a limited portion of them have been double-annotated with
+interannotator agreement at approximately 96%. The sentence IDs include the genre
+and the original LDC2012T13 filename.
 
 This corpus is compatible with the CoNLL-U format defined for Universal
 Dependencies. See:
@@ -78,10 +78,24 @@ v2.14.
 The issue tracker at <https://github.com/UniversalDependencies/UD_English-EWT/issues>
 documents many yet-to-be-resolved analysis challenges. Significant among these:
 
- - Dates are not annotated consistently.
  - Many free relatives are incorrectly analyzed as interrogative.
 
 # Changelog
+
+**2025-05-15 v2.16**
+
+Highlights:
+
+  - **Implement new [`nmod:desc`](https://universaldependencies.org/en/dep/nmod-desc.html) subtype for prefixes/suffixes/embellishments in names ([#561](https://github.com/UniversalDependencies/UD_English-EWT/issues/561), [#559](https://github.com/UniversalDependencies/UD_English-EWT/issues/559), [#59](https://github.com/UniversalDependencies/UD_English-EWT/issues/59))**
+  - **Implement new [guidelines for dates](https://universaldependencies.org/en/dep/nmod-unmarked.html#dates)** ([#575](https://github.com/UniversalDependencies/UD_English-EWT/issues/575))
+  - **Implement new [guidelines for numbered entities](https://universaldependencies.org/en/dep/nmod-desc.html#numbered-entities) like "Chapter 1"** ([#558](https://github.com/UniversalDependencies/UD_English-EWT/issues/558))
+  - New policy for "you guys" and similar ([#436](https://github.com/UniversalDependencies/UD_English-EWT/issues/436))
+  - Reanalyze some constructions to comply with newly enforced requirements on `det` dependents ("at least", [#553](https://github.com/UniversalDependencies/UD_English-EWT/issues/553); predeterminer "such", [docs#1114](https://github.com/UniversalDependencies/docs/issues/1114))
+  - Consistent treatment for "else" ([#556](https://github.com/UniversalDependencies/UD_English-EWT/issues/556)), "rather than" ([#562](https://github.com/UniversalDependencies/UD_English-EWT/issues/562))
+  - Clean up postnominal `advmod`s ([#557](https://github.com/UniversalDependencies/UD_English-EWT/issues/557))
+  - Clean up tokenization of "#" and "@" in web text ([#577](https://github.com/UniversalDependencies/UD_English-EWT/issues/577))
+  - Clean up various phone numbers, addresses, and filenames
+  - Clean up lemmas where the word is in all-caps for stylistic reasons ([#560](https://github.com/UniversalDependencies/UD_English-EWT/issues/560))
 
 **2024-11-15 v2.15**
 

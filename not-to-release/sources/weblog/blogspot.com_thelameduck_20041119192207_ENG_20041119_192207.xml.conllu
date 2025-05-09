@@ -43,7 +43,7 @@
 23	to	to	PART	TO	_	24	mark	24:mark	_
 24	give	give	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 25	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	24	iobj	24:iobj	_
-26	all	all	DET	DT	PronType=Tot	25	det	25:det	_
+26	all	all	DET	DT	PronType=Tot	25	nmod:unmarked	25:nmod:unmarked	_
 27	a	a	DET	DT	Definite=Ind|PronType=Art	28	det	28:det	_
 28	piece	piece	NOUN	NN	Number=Sing	24	obj	24:obj	_
 29	of	of	ADP	IN	_	30	case	30:case	_
@@ -164,9 +164,9 @@
 
 # sent_id = weblog-blogspot.com_thelameduck_20041119192207_ENG_20041119_192207-0007
 # text = President Vladimir Putin said Russia is will have new nuclear weapons that other countries do not and will not have.
-1	President	President	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
-2	Vladimir	Vladimir	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Putin	Putin	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+1	President	President	PROPN	NNP	Number=Sing	2	nmod:desc	2:nmod:desc	_
+2	Vladimir	Vladimir	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
+3	Putin	Putin	PROPN	NNP	Number=Sing	2	flat	2:flat	_
 4	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	Russia	Russia	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	reparandum	8:reparandum	_
@@ -368,7 +368,7 @@
 
 # sent_id = weblog-blogspot.com_thelameduck_20041119192207_ENG_20041119_192207-0015
 # text = But getting past who should get them, is who has them, and who is really close.
-1	But	but	CCONJ	CC	_	2	cc	2:cc	_
+1	But	but	CCONJ	CC	_	11	cc	11:cc	_
 2	getting	get	VERB	VBG	Tense=Pres|VerbForm=Part	11	advcl	11:advcl	_
 3	past	past	SCONJ	IN	_	6	mark	6:mark	_
 4	who	who	PRON	WP	PronType=Int	6	nsubj	6:nsubj	_
@@ -436,9 +436,9 @@
 6	,	,	PUNCT	,	_	21	punct	21:punct	_
 7	and	and	CCONJ	CC	_	21	cc	21:cc	_
 8-9	what’s	_	_	_	_	_	_	_	_
-8	what	what	PRON	WP	PronType=Int	10	nsubj	10:nsubj	_
+8	what	what	PRON	WP	PronType=Rel	21	nsubj:outer	10:nsubj|21:nsubj:outer	_
 9	’s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
-10	scary	scary	ADJ	JJ	Degree=Pos	21	csubj:outer	21:csubj:outer	_
+10	scary	scary	ADJ	JJ	Degree=Pos	8	acl:relcl	8:acl:relcl	Cxn=rc-free-nsubj
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	cop	21:cop	_
 12	that	that	SCONJ	IN	_	21	mark	21:mark	_
 13	sooner	soon	ADV	RBR	Degree=Cmp	21	advmod	21:advmod	_

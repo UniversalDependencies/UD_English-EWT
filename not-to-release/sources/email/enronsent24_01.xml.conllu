@@ -8,8 +8,8 @@
 # sent_id = email-enronsent24_01-0002
 # text = 10/23/2000 12:12 PM
 1	10/23/2000	10/23/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	12:12	12:12	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	12:12	12:12	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	PM	p.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent24_01-0003
 # text = Kay -
@@ -123,8 +123,8 @@
 # sent_id = email-enronsent24_01-0011
 # text = 10/20/2000 11:32 AM
 1	10/20/2000	10/20/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	11:32	11:32	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	11:32	11:32	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	AM	a.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent24_01-0012
 # text = Attached please find the latest enovate risk policy.
@@ -152,8 +152,8 @@
 10	language	language	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	revision	revision	NOUN	NN	Number=Sing	8	obj	8:obj	_
 12	concerning	concern	VERB	VBG	Tense=Pres|VerbForm=Part	16	case	16:case	_
-13	Section	section	NOUN	NN	Number=Sing	16	compound	16:compound	_
-14	XIII	XIII	NUM	CD	NumForm=Roman|NumType=Card	13	nummod	13:nummod	_
+13	Section	section	NOUN	NN	Number=Sing	16	compound	16:compound	FlatType=Enumerated
+14	XIII	XIII	NUM	CD	NumForm=Roman|NumType=Card	13	flat	13:flat	_
 15	Audit	audit	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	Rights	right	NOUN	NNS	Number=Plur	11	nmod	11:nmod:concerning	SpaceAfter=No
 17	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -162,7 +162,7 @@
 # text = Mary <<MEH-risk Oct 20>>
 1	Mary	Mary	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	<<	<<	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	MEH-risk	MEH-risk	X	GW	_	1	parataxis	1:parataxis	ExtPos=PROPN|FlatType=Filename
+3	MEH-risk	MEH-risk	X	GW	ExtPos=PROPN	1	parataxis	1:parataxis	FlatType=Filename
 4	Oct	Oct	X	GW	_	3	flat	3:flat	_
 5	20	20	X	NN	_	3	flat	3:flat	SpaceAfter=No
 6	>>	>>	PUNCT	-RRB-	_	3	punct	3:punct	_
@@ -171,7 +171,7 @@
 # newpar id = email-enronsent24_01-p0004
 # text = - MEH-risk Oct 20.doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	MEH-risk	MEH-risk	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
+2	MEH-risk	MEH-risk	X	GW	ExtPos=PROPN	0	root	0:root	FlatType=Filename
 3	Oct	Oct	X	GW	_	2	flat	2:flat	_
 4	20.doc	20.doc	X	NN	_	2	flat	2:flat	_
 
@@ -179,12 +179,12 @@
 # newpar id = email-enronsent24_01-p0005
 # text = I'm still at home.
 1-2	I'm	_	_	_	_	_	_	_	_
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	still	still	ADV	RB	_	2	advmod	2:advmod	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
+2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+3	still	still	ADV	RB	_	5	advmod	5:advmod	_
 4	at	at	ADP	IN	_	5	case	5:case	_
-5	home	home	NOUN	NN	Number=Sing	2	obl	2:obl:at	SpaceAfter=No
-6	.	.	PUNCT	.	_	2	punct	2:punct	_
+5	home	home	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+6	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = email-enronsent24_01-0017
 # text = I'll be in tomorrow.
@@ -278,7 +278,7 @@
 4	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-Reduced,Existential-CopPred-ThereExpl,Interrogative-Polar-Direct|CxnElt=4:Conditional-UnspecifiedEpistemic-Reduced.Apodosis,4:Interrogative-Polar-Direct.Clause
 5	there	there	PRON	EX	_	4	expl	4:expl	_
 6	someone	someone	PRON	NN	Number=Sing|PronType=Ind	4	nsubj	4:nsubj|9:nsubj	CxnElt=4:Existential-CopPred-ThereExpl.Pivot
-7	else	else	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
+7	else	else	ADV	RB	_	6	advmod	6:advmod	_
 8	that	that	PRON	WDT	PronType=Rel	9	nsubj	6:ref	_
 9	will	will	AUX	MD	VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-that-nsubj-auxstrand|Promoted=Yes|SpaceAfter=No
 10	?	?	PUNCT	.	_	4	punct	4:punct	_
@@ -308,8 +308,8 @@
 # sent_id = email-enronsent24_01-0027
 # text = 10/26/2000 11:07 AM
 1	10/26/2000	10/26/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	11:07	11:07	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	11:07	11:07	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	AM	a.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent24_01-0028
 # text = If Jeff is happy, I'm happy.
@@ -554,8 +554,8 @@
 # sent_id = email-enronsent24_01-0044
 # text = 10/23/2000 12:12 PM
 1	10/23/2000	10/23/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	12:12	12:12	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	12:12	12:12	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	PM	p.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent24_01-0045
 # text = Kay -
@@ -669,8 +669,8 @@
 # sent_id = email-enronsent24_01-0053
 # text = 10/20/2000 11:32 AM
 1	10/20/2000	10/20/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	11:32	11:32	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	11:32	11:32	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	AM	a.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent24_01-0054
 # text = Attached please find the latest enovate risk policy.
@@ -698,8 +698,8 @@
 10	language	language	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	revision	revision	NOUN	NN	Number=Sing	8	obj	8:obj	_
 12	concerning	concern	VERB	VBG	Tense=Pres|VerbForm=Part	16	case	16:case	_
-13	Section	section	NOUN	NN	Number=Sing	16	compound	16:compound	_
-14	XIII	XIII	NUM	CD	NumForm=Roman|NumType=Card	13	nummod	13:nummod	_
+13	Section	section	NOUN	NN	Number=Sing	16	compound	16:compound	FlatType=Enumerated
+14	XIII	XIII	NUM	CD	NumForm=Roman|NumType=Card	13	flat	13:flat	_
 15	Audit	audit	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	Rights	right	NOUN	NN	Number=Sing	11	nmod	11:nmod:concerning	SpaceAfter=No
 17	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -711,7 +711,7 @@
 # sent_id = email-enronsent24_01-0057
 # text = <<MEH-risk Oct 20>>
 1	<<	<<	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
-2	MEH-risk	MEH-risk	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
+2	MEH-risk	MEH-risk	X	GW	ExtPos=PROPN	0	root	0:root	FlatType=Filename
 3	Oct	Oct	X	GW	_	2	flat	2:flat	_
 4	20	20	X	NN	_	2	flat	2:flat	SpaceAfter=No
 5	>>	>>	PUNCT	-RRB-	_	2	punct	2:punct	_
@@ -720,7 +720,7 @@
 # newpar id = email-enronsent24_01-p0015
 # text = - MEH-risk Oct 20.doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	MEH-risk	MEH-risk	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
+2	MEH-risk	MEH-risk	X	GW	ExtPos=PROPN	0	root	0:root	FlatType=Filename
 3	Oct	Oct	X	GW	_	2	flat	2:flat	_
 4	20.doc	20.doc	X	NN	_	2	flat	2:flat	_
 
@@ -780,7 +780,7 @@
 
 # sent_id = email-enronsent24_01-0061
 # text = Plus, I work with Janet a lot so she may get some comfort from that, instead of having a lawyer she hasn't dealt with initial it.
-1	Plus	plus	CCONJ	CC	_	5	cc	5:cc	SpaceAfter=No
+1	Plus	plus	CCONJ	CC	_	4	cc	4:cc	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 4	work	work	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -894,7 +894,7 @@
 2	fax	fax	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
 3	or	or	CCONJ	CC	_	4	cc	4:cc	_
 4	someone	someone	PRON	NN	Number=Sing|PronType=Ind	2	conj	2:conj:or|6:nsubj	_
-5	else	else	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
+5	else	else	ADV	RB	_	4	advmod	4:advmod	_
 6	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 7	fine	fine	ADV	RB	_	6	advmod	6:advmod	SpaceAfter=No
 8	.	.	PUNCT	.	_	6	punct	6:punct	_
@@ -926,8 +926,8 @@
 # sent_id = email-enronsent24_01-0072
 # text = 10/26/2000 11:26 AM
 1	10/26/2000	10/26/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	11:26	11:26	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	11:26	11:26	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	AM	a.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent24_01-0073
 # text = I'm still at home.
@@ -1030,7 +1030,7 @@
 4	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-Reduced,Existential-CopPred-ThereExpl,Interrogative-Polar-Direct|CxnElt=4:Conditional-UnspecifiedEpistemic-Reduced.Apodosis,4:Interrogative-Polar-Direct.Clause
 5	there	there	PRON	EX	_	4	expl	4:expl	_
 6	someone	someone	PRON	NN	Number=Sing|PronType=Ind	4	nsubj	4:nsubj|9:nsubj	CxnElt=4:Existential-CopPred-ThereExpl.Pivot
-7	else	else	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
+7	else	else	ADV	RB	_	6	advmod	6:advmod	_
 8	that	that	PRON	WDT	PronType=Rel	9	nsubj	6:ref	_
 9	will	will	AUX	MD	VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-that-nsubj-auxstrand|Promoted=Yes|SpaceAfter=No
 10	?	?	PUNCT	.	_	4	punct	4:punct	_
@@ -1060,8 +1060,8 @@
 # sent_id = email-enronsent24_01-0084
 # text = 10/26/2000 11:07 AM
 1	10/26/2000	10/26/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	11:07	11:07	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	11:07	11:07	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	AM	a.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent24_01-0085
 # text = If Jeff is happy, I'm happy.
@@ -1306,8 +1306,8 @@
 # sent_id = email-enronsent24_01-0101
 # text = 10/23/2000 12:12 PM
 1	10/23/2000	10/23/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	12:12	12:12	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	PM	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	12:12	12:12	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	PM	p.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent24_01-0102
 # text = Kay -
@@ -1421,8 +1421,8 @@
 # sent_id = email-enronsent24_01-0110
 # text = 10/20/2000 11:32 AM
 1	10/20/2000	10/20/2000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
-2	11:32	11:32	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
-3	AM	a.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+2	11:32	11:32	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+3	AM	a.m.	NOUN	NN	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent24_01-0111
 # text = Attached please find the latest enovate risk policy.
@@ -1450,8 +1450,8 @@
 10	language	language	NOUN	NN	Number=Sing	11	compound	11:compound	_
 11	revision	revision	NOUN	NN	Number=Sing	8	obj	8:obj	_
 12	concerning	concern	VERB	VBG	Tense=Pres|VerbForm=Part	16	case	16:case	_
-13	Section	section	NOUN	NN	Number=Sing	16	compound	16:compound	_
-14	XIII	XIII	NUM	CD	NumForm=Roman|NumType=Card	13	nummod	13:nummod	_
+13	Section	section	NOUN	NN	Number=Sing	16	compound	16:compound	FlatType=Enumerated
+14	XIII	XIII	NUM	CD	NumForm=Roman|NumType=Card	13	flat	13:flat	_
 15	Audit	audit	NOUN	NN	Number=Sing	16	compound	16:compound	_
 16	Rights	right	NOUN	NNS	Number=Plur	11	nmod	11:nmod:concerning	SpaceAfter=No
 17	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -1463,7 +1463,7 @@
 # sent_id = email-enronsent24_01-0114
 # text = <<MEH-risk Oct 20>>
 1	<<	<<	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
-2	MEH-risk	MEH-risk	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
+2	MEH-risk	MEH-risk	X	GW	ExtPos=PROPN	0	root	0:root	FlatType=Filename
 3	Oct	Oct	X	GW	_	2	flat	2:flat	_
 4	20	20	X	NN	_	2	flat	2:flat	SpaceAfter=No
 5	>>	>>	PUNCT	-RRB-	_	2	punct	2:punct	_
@@ -1472,7 +1472,7 @@
 # newpar id = email-enronsent24_01-p0027
 # text = - MEH-risk Oct 20.doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	MEH-risk	MEH-risk	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
+2	MEH-risk	MEH-risk	X	GW	ExtPos=PROPN	0	root	0:root	FlatType=Filename
 3	Oct	Oct	X	GW	_	2	flat	2:flat	_
 4	20.doc	20.doc	X	NN	_	2	flat	2:flat	_
 

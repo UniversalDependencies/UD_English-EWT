@@ -337,8 +337,8 @@
 # sent_id = email-enronsent13_01-0025
 # text = (Clauses 2 & 3).
 1	(	(	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
-2	Clauses	clause	NOUN	NNS	Number=Plur	0	root	0:root	_
-3	2	2	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	_
+2	Clauses	clause	NOUN	NNS	Number=Plur	0	root	0:root	FlatType=Enumerated
+3	2	2	NUM	CD	NumForm=Digit|NumType=Card	2	flat	2:flat	_
 4	&	&	CCONJ	CC	_	5	cc	5:cc	_
 5	3	3	NUM	CD	NumForm=Digit|NumType=Card	2	conj	2:conj	SpaceAfter=No
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	SpaceAfter=No
@@ -415,29 +415,29 @@
 10	Abbotsford	Abbotsford	PROPN	NNP	Number=Sing	9	appos	9:appos	SpaceAfter=No
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
 12	VIC	VIC	PROPN	NNP	Number=Sing	10	appos	10:appos	_
-13	3067	3067	NUM	CD	NumForm=Digit|NumType=Card	12	compound	12:compound	SpaceAfter=No
+13	3067	3067	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	SpaceAfter=No
 14	.	.	PUNCT	.	_	1	punct	1:punct	_
 15	Ph.	ph.	NOUN	NN	Number=Sing	1	list	1:list	_
 16	(	(	PUNCT	-LRB-	_	17	punct	17:punct	SpaceAfter=No
-17	03	03	NUM	CD	NumForm=Digit|NumType=Card	15	appos	15:appos	ExtPos=PROPN|FlatType=Phone|SpaceAfter=No
+17	03	03	NUM	CD	ExtPos=PROPN|NumForm=Digit|NumType=Card	15	appos	15:appos	FlatType=Phone|SpaceAfter=No
 18	)	)	PUNCT	-RRB-	_	17	punct	17:punct	_
 19	9221	9221	NUM	CD	NumForm=Digit|NumType=Card	17	flat	17:flat	_
 20	4101	4101	NUM	CD	NumForm=Digit|NumType=Card	17	flat	17:flat	_
 21	Fax.	fax.	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 22	(	(	PUNCT	-LRB-	_	23	punct	23:punct	SpaceAfter=No
-23	03	03	NUM	CD	NumForm=Digit|NumType=Card	21	appos	21:appos	ExtPos=PROPN|FlatType=Phone|SpaceAfter=No
+23	03	03	NUM	CD	ExtPos=PROPN|NumForm=Digit|NumType=Card	21	appos	21:appos	FlatType=Phone|SpaceAfter=No
 24	)	)	PUNCT	-RRB-	_	23	punct	23:punct	_
 25	9221	9221	NUM	CD	NumForm=Digit|NumType=Card	23	flat	23:flat	_
 26	4193	4193	NUM	CD	NumForm=Digit|NumType=Card	23	flat	23:flat	_
 27	Mob.	mob.	NOUN	NN	Number=Sing	1	list	1:list	_
-28	0417	0417	NUM	CD	NumForm=Digit|NumType=Card	27	appos	27:appos	ExtPos=PROPN|FlatType=Phone
+28	0417	0417	NUM	CD	ExtPos=PROPN|NumForm=Digit|NumType=Card	27	appos	27:appos	FlatType=Phone
 29	575	575	NUM	CD	NumForm=Digit|NumType=Card	28	flat	28:flat	_
 30	920	920	NUM	CD	NumForm=Digit|NumType=Card	28	flat	28:flat	_
 
 # sent_id = email-enronsent13_01-0031
 # text = <<Enron - UC Master Agreement - 0308.doc>>
 1	<<	<<	PUNCT	-LRB-	_	2	punct	2:punct	SpaceAfter=No
-2	Enron	enron	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
+2	Enron	enron	X	GW	ExtPos=PROPN	0	root	0:root	FlatType=Filename
 3	-	-	X	GW	_	2	flat	2:flat	_
 4	UC	uc	X	GW	_	2	flat	2:flat	_
 5	Master	master	X	GW	_	2	flat	2:flat	_
@@ -539,7 +539,7 @@
 10	or	or	CCONJ	CC	_	11	cc	11:cc	_
 11	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	conj	4:ccomp|7:conj:or	_
 12	anything	anything	PRON	NN	Number=Sing|PronType=Ind	11	obj	11:obj	_
-13	else	else	ADJ	JJ	Degree=Pos	12	amod	12:amod	SpaceAfter=No
+13	else	else	ADV	RB	_	12	advmod	12:advmod	SpaceAfter=No
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent13_01-0039
@@ -640,7 +640,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj|8:nsubj:xsubj	_
-4	all	all	DET	DT	PronType=Tot	3	det	3:det	_
+4	all	all	DET	DT	PronType=Tot	6	advmod	6:advmod	_
 5	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
 6	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	2	ccomp	2:ccomp	_
 7	to	to	PART	TO	_	8	mark	8:mark	_
@@ -754,8 +754,8 @@
 10	gave	give	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	ccomp	7:ccomp	_
 11	birth	birth	NOUN	NN	Number=Sing	10	obj	10:obj	_
 12	at	at	ADP	IN	_	13	case	13:case	_
-13	week	week	NOUN	NN	Number=Sing	10	obl	10:obl:at	_
-14	34	34	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
+13	week	week	NOUN	NN	Number=Sing	10	obl	10:obl:at	FlatType=Enumerated
+14	34	34	NUM	CD	NumForm=Digit|NumType=Card	13	flat	13:flat	_
 15	on	on	ADP	IN	_	16	case	16:case	_
 16	Friday	Friday	PROPN	NNP	Number=Sing	10	obl	10:obl:on	SpaceAfter=No
 17	,	,	PUNCT	,	_	19	punct	19:punct	_
@@ -772,10 +772,10 @@
 # text = Benjamin James - at 12.45 pm - 3 lbs 4 ozs
 1	Benjamin	Benjamin	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	James	James	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	-	-	PUNCT	,	_	6	punct	6:punct	_
-4	at	at	ADP	IN	_	6	case	6:case	_
-5	12.45	12.45	NUM	CD	NumForm=Digit|NumType=Frac	6	nummod	6:nummod	_
-6	pm	p.m.	NOUN	NN	Number=Sing	1	nmod	1:nmod:at	_
+3	-	-	PUNCT	,	_	5	punct	5:punct	_
+4	at	at	ADP	IN	_	5	case	5:case	_
+5	12.45	12.45	NUM	CD	NumForm=Digit|NumType=Frac	1	nmod	1:nmod:at	_
+6	pm	p.m.	NOUN	NN	Number=Sing	5	nmod:unmarked	5:nmod:unmarked	_
 7	-	-	PUNCT	,	_	9	punct	9:punct	_
 8	3	3	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
 9	lbs	lb	NOUN	NNS	Number=Plur	1	parataxis	1:parataxis	_
@@ -787,9 +787,9 @@
 # text = Toby William - 12.46 pm - 4 lbs
 1	Toby	Toby	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	William	William	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	-	-	PUNCT	,	_	5	punct	5:punct	_
-4	12.46	12.46	NUM	CD	NumForm=Digit|NumType=Frac	5	nummod	5:nummod	_
-5	pm	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+3	-	-	PUNCT	,	_	4	punct	4:punct	_
+4	12.46	12.46	NUM	CD	NumForm=Digit|NumType=Frac	1	nmod:unmarked	1:nmod:unmarked	_
+5	pm	p.m.	NOUN	NN	Number=Sing	4	nmod:unmarked	4:nmod:unmarked	TemporalNPAdjunct=Yes
 6	-	-	PUNCT	,	_	8	punct	8:punct	_
 7	4	4	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
 8	lbs	lb	NOUN	NNS	Number=Plur	1	parataxis	1:parataxis	_
@@ -799,9 +799,9 @@
 # text = Hannah May - 12.48 pm - 3 lbs 15 ozs.
 1	Hannah	Hannah	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	May	May	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	-	-	PUNCT	,	_	5	punct	5:punct	_
-4	12.48	12.48	NUM	CD	NumForm=Digit|NumType=Frac	5	nummod	5:nummod	_
-5	pm	p.m.	NOUN	NN	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
+3	-	-	PUNCT	,	_	4	punct	4:punct	_
+4	12.48	12.48	NUM	CD	NumForm=Digit|NumType=Frac	1	nmod:unmarked	1:nmod:unmarked	_
+5	pm	p.m.	NOUN	NN	Number=Sing	4	nmod:unmarked	4:nmod:unmarked	TemporalNPAdjunct=Yes
 6	-	-	PUNCT	,	_	8	punct	8:punct	_
 7	3	3	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
 8	lbs	lb	NOUN	NNS	Number=Plur	1	parataxis	1:parataxis	_
@@ -1010,7 +1010,7 @@
 9	or	or	CCONJ	CC	_	10	cc	10:cc	_
 10	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	conj	3:ccomp|6:conj:or	_
 11	anything	anything	PRON	NN	Number=Sing|PronType=Ind	10	obj	10:obj	_
-12	else	else	ADJ	JJ	Degree=Pos	11	amod	11:amod	SpaceAfter=No
+12	else	else	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 13	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent13_01-0070
@@ -1058,9 +1058,9 @@
 
 # sent_id = email-enronsent13_01-0076
 # text = Ms. Marquez:
-1	Ms.	Ms.	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	Marquez	Marquez	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No
-3	:	:	PUNCT	:	_	1	punct	1:punct	_
+1	Ms.	Ms.	PROPN	NNP	Number=Sing	2	nmod:desc	2:nmod:desc	_
+2	Marquez	Marquez	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
+3	:	:	PUNCT	:	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent13_01-0077
 # newpar id = email-enronsent13_01-p0041
@@ -1134,9 +1134,9 @@
 
 # sent_id = email-enronsent13_01-0081
 # text = Ms. Marquez:
-1	Ms.	Ms.	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	Marquez	Marquez	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No
-3	:	:	PUNCT	:	_	1	punct	1:punct	_
+1	Ms.	Ms.	PROPN	NNP	Number=Sing	2	nmod:desc	2:nmod:desc	_
+2	Marquez	Marquez	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
+3	:	:	PUNCT	:	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent13_01-0082
 # newpar id = email-enronsent13_01-p0043
@@ -1276,8 +1276,8 @@
 13	Schedule	schedule	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	_
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	Para.	para.	NOUN	NN	Number=Sing	10	conj	7:nsubj:pass|10:conj:and	_
-17	13	13	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	_
+16	Para.	para.	NOUN	NN	Number=Sing	10	conj	7:nsubj:pass|10:conj:and	FlatType=Enumerated
+17	13	13	NUM	CD	NumForm=Digit|NumType=Card	16	flat	16:flat	_
 18	relative	relative	ADV	RB	_	16	acl	16:acl	_
 19	to	to	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
@@ -1302,7 +1302,7 @@
 14	2	2	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
 15	Guaranties	guaranty	NOUN	NNS	Number=Plur	12	nsubj	12:nsubj	CxnElt=12:Existential-CopPred-ThereExpl.Pivot
 16	in	in	ADP	IN	_	17	case	17:case	_
-17	place	place	NOUN	NN	Number=Sing	15	nmod	15:nmod:in	_
+17	place	place	NOUN	NN	Number=Sing	12	obl	12:obl:in	_
 18	in	in	ADP	IN	_	20	case	20:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	sum	sum	NOUN	NN	Number=Sing	15	nmod	15:nmod:in	_
@@ -1310,7 +1310,7 @@
 22	$	$	SYM	$	_	20	nmod	20:nmod:of	SpaceAfter=No
 23	8	8	NUM	CD	NumForm=Digit|NumType=Card	24	compound	24:compound	SpaceAfter=No
 24	M	million	NUM	CD	Abbr=Yes|NumForm=Word|NumType=Card	22	nummod	22:nummod	_
-25	each	each	DET	DT	PronType=Tot	22	advmod	22:advmod	SpaceAfter=No
+25	each	each	DET	DT	PronType=Tot	22	nmod:unmarked	22:nmod:unmarked	SpaceAfter=No
 26	:	:	PUNCT	:	_	27	punct	27:punct	_
 27	one	one	NUM	CD	NumForm=Word|NumType=Card	15	appos	15:appos	_
 28	by	by	ADP	IN	_	32	case	32:case	_
@@ -1496,7 +1496,7 @@
 3	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	amod	4:amod	_
 4	file	file	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
 5	:	:	PUNCT	:	_	6	punct	6:punct	_
-6	ENRON	enron	X	GW	_	4	appos	4:appos	ExtPos=PROPN|FlatType=Filename
+6	ENRON	enron	X	GW	ExtPos=PROPN	4	appos	4:appos	FlatType=Filename
 7	-	-	X	GW	_	6	flat	6:flat	_
 8	SCHEDULE	schedule	X	GW	_	6	flat	6:flat	SpaceAfter=No
 9	(	(	X	GW	_	6	flat	6:flat	SpaceAfter=No
@@ -1509,7 +1509,7 @@
 16	attached	attach	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	17	amod	17:amod	_
 17	file	file	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No
 18	:	:	PUNCT	:	_	19	punct	19:punct	_
-19	ENRON	enron	X	GW	_	17	appos	17:appos	ExtPos=PROPN|FlatType=Filename
+19	ENRON	enron	X	GW	ExtPos=PROPN	17	appos	17:appos	FlatType=Filename
 20	-	-	X	GW	_	19	flat	19:flat	_
 21	Para13	Para13	X	GW	_	19	flat	19:flat	SpaceAfter=No
 22	(	(	X	GW	_	19	flat	19:flat	SpaceAfter=No
@@ -1521,7 +1521,7 @@
 # sent_id = email-enronsent13_01-0103
 # text = - ENRON - SCHEDULE(nmemdrft8-7-01).doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	ENRON	enron	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
+2	ENRON	enron	X	GW	ExtPos=PROPN	0	root	0:root	FlatType=Filename
 3	-	-	X	GW	_	2	flat	2:flat	_
 4	SCHEDULE	schedule	X	GW	_	2	flat	2:flat	SpaceAfter=No
 5	(	(	X	GW	_	2	flat	2:flat	SpaceAfter=No
@@ -1532,7 +1532,7 @@
 # sent_id = email-enronsent13_01-0104
 # text = - ENRON - Para13(nmemdrft8-7-01).doc
 1	-	-	PUNCT	NFP	_	2	punct	2:punct	_
-2	ENRON	enron	X	GW	_	0	root	0:root	ExtPos=PROPN|FlatType=Filename
+2	ENRON	enron	X	GW	ExtPos=PROPN	0	root	0:root	FlatType=Filename
 3	-	-	X	GW	_	2	flat	2:flat	_
 4	Para13	Para13	X	GW	_	2	flat	2:flat	SpaceAfter=No
 5	(	(	X	GW	_	2	flat	2:flat	SpaceAfter=No
@@ -1556,9 +1556,9 @@
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	find	find	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
 8	those	that	DET	DT	Number=Plur|PronType=Dem	9	det	9:det	_
-9	GTC's	gtc	NOUN	NNS	Number=Plur	7	obj	7:obj	_
+9	GTC's	GTC	NOUN	NNS	Number=Plur	7	obj	7:obj	_
 10	for	for	ADP	IN	_	11	case	11:case	_
-11	ENA	ena	NOUN	NN	Number=Sing	7	obl	7:obl:for|15:obj	_
+11	ENA	ENA	NOUN	NN	Number=Sing	7	obl	7:obl:for|15:obj	_
 12	that	that	PRON	WDT	PronType=Rel	15	obj	11:ref	_
 13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
 14	can	can	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
@@ -1605,8 +1605,8 @@
 11	,	,	PUNCT	,	_	14	punct	14:punct	_
 12	together	together	ADV	RB	_	14	advmod	14:advmod	_
 13	with	with	ADP	IN	_	14	case	14:case	_
-14	Paragraph	paragraph	NOUN	NN	Number=Sing	5	nmod	5:nmod:with	_
-15	13	13	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	_
+14	Paragraph	paragraph	NOUN	NN	Number=Sing	5	nmod	5:nmod:with	FlatType=Enumerated
+15	13	13	NUM	CD	NumForm=Digit|NumType=Card	14	flat	14:flat	_
 16	to	to	ADP	IN	_	21	case	21:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 18	ISDA	ISDA	PROPN	NNP	Number=Sing	20	compound	20:compound	_
@@ -1651,7 +1651,7 @@
 9	or	or	CCONJ	CC	_	10	cc	10:cc	_
 10	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	conj	3:ccomp|6:conj:or	_
 11	anything	anything	PRON	NN	Number=Sing|PronType=Ind	10	obj	10:obj	_
-12	else	else	ADJ	JJ	Degree=Pos	11	amod	11:amod	SpaceAfter=No
+12	else	else	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 13	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = email-enronsent13_01-0113

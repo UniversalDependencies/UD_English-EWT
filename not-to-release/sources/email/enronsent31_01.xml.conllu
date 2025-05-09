@@ -2,9 +2,9 @@
 # sent_id = email-enronsent31_01-0001
 # newpar id = email-enronsent31_01-p0001
 # text = Dr. Harris:
-1	Dr.	Dr.	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	Harris	Harris	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No
-3	:	:	PUNCT	:	_	1	punct	1:punct	_
+1	Dr.	Dr.	PROPN	NNP	Number=Sing	2	nmod:desc	2:nmod:desc	_
+2	Harris	Harris	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
+3	:	:	PUNCT	:	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent31_01-0002
 # text = I would like to thank you for personally taking the time to closely review my application.
@@ -42,7 +42,7 @@
 12	to	to	PART	TO	_	13	mark	13:mark	_
 13	attend	attend	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 14	The	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
-15	TEXAS	TEXAS	PROPN	NNP	Number=Sing	17	compound	17:compound	_
+15	TEXAS	Texas	PROPN	NNP	Number=Sing	17	compound	17:compound	_
 16	Graduate	Graduate	PROPN	NNP	Number=Sing	17	compound	17:compound	_
 17	School	School	PROPN	NNP	Number=Sing	13	obj	13:obj	_
 18	of	of	ADP	IN	_	19	case	19:case	_
@@ -92,15 +92,15 @@
 # text = After talking with Professors Titman, Ronn, Brown and Jemison, I was sure that the School was the right place to get the education I was looking for.
 1	After	after	SCONJ	IN	_	2	mark	2:mark	_
 2	talking	talk	VERB	VBG	Tense=Pres|VerbForm=Part	15	advcl	15:advcl:after	_
-3	with	with	ADP	IN	_	4	case	4:case	_
-4	Professors	Professor	PROPN	NNPS	Number=Plur	2	obl	2:obl:with	_
-5	Titman	Titman	PROPN	NNP	Number=Sing	4	flat	4:flat	SpaceAfter=No
+3	with	with	ADP	IN	_	5	case	5:case	_
+4	Professors	Professor	PROPN	NNPS	Number=Plur	5	nmod:desc	5:nmod:desc	_
+5	Titman	Titman	PROPN	NNP	Number=Sing	2	obl	2:obl:with	SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
-7	Ronn	Ronn	PROPN	NNP	Number=Sing	4	conj	2:obl:with|4:conj:and	SpaceAfter=No
+7	Ronn	Ronn	PROPN	NNP	Number=Sing	5	conj	2:obl:with|5:conj:and	SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	Brown	Brown	PROPN	NNP	Number=Sing	4	conj	2:obl:with|4:conj:and	_
+9	Brown	Brown	PROPN	NNP	Number=Sing	5	conj	2:obl:with|5:conj:and	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	Jemison	Jemison	PROPN	NNP	Number=Sing	4	conj	2:obl:with|4:conj:and	SpaceAfter=No
+11	Jemison	Jemison	PROPN	NNP	Number=Sing	5	conj	2:obl:with|5:conj:and	SpaceAfter=No
 12	,	,	PUNCT	,	_	2	punct	2:punct	_
 13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
@@ -246,7 +246,7 @@
 26	successful	successful	ADJ	JJ	Degree=Pos	18	ccomp	18:ccomp	_
 27	at	at	ADP	IN	_	31	case	31:case	_
 28	The	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
-29	TEXAS	TEXAS	PROPN	NNP	Number=Sing	31	compound	31:compound	_
+29	TEXAS	Texas	PROPN	NNP	Number=Sing	31	compound	31:compound	_
 30	Graduate	Graduate	PROPN	NNP	Number=Sing	31	compound	31:compound	_
 31	School	School	PROPN	NNP	Number=Sing	26	obl	26:obl:at	_
 32	of	of	ADP	IN	_	33	case	33:case	_
@@ -289,7 +289,7 @@
 3	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	21	advcl	21:advcl:if	CxnElt=21:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	anything	anything	PRON	NN	Number=Sing|PronType=Ind	3	obl	3:obl:of|9:obj	_
-6	else	else	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+6	else	else	ADV	RB	_	5	advmod	5:advmod	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 8	can	can	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 9	do	do	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obj
@@ -336,9 +336,9 @@
 
 # sent_id = email-enronsent31_01-0015
 # text = Professor Ronn:
-1	Professor	Professor	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	Ronn	Ronn	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No
-3	:	:	PUNCT	:	_	1	punct	1:punct	_
+1	Professor	Professor	PROPN	NNP	Number=Sing	2	nmod:desc	2:nmod:desc	_
+2	Ronn	Ronn	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
+3	:	:	PUNCT	:	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent31_01-0016
 # text = I would like to thank you for taking the time to recommend me to the MBA Program.
@@ -421,13 +421,13 @@
 2	talking	talk	VERB	VBG	Tense=Pres|VerbForm=Part	15	advcl	15:advcl:after	_
 3	with	with	ADP	IN	_	4	case	4:case	_
 4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	2	obl	2:obl:with	_
-5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	Professors	Professor	PROPN	NNPS	Number=Plur	4	conj	2:obl:with|4:conj:and	_
-7	Titman	Titman	PROPN	NNP	Number=Sing	6	flat	6:flat	SpaceAfter=No
+5	and	and	CCONJ	CC	_	7	cc	7:cc	_
+6	Professors	Professor	PROPN	NNPS	Number=Plur	7	nmod:desc	7:nmod:desc	_
+7	Titman	Titman	PROPN	NNP	Number=Sing	4	conj	2:obl:with|4:conj:and	SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	Brown	Brown	PROPN	NNP	Number=Sing	6	conj	6:conj:and	_
+9	Brown	Brown	PROPN	NNP	Number=Sing	7	conj	2:obl:with|4:conj:and|7:conj:and	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	Jemison	Jemison	PROPN	NNP	Number=Sing	6	conj	6:conj:and	SpaceAfter=No
+11	Jemison	Jemison	PROPN	NNP	Number=Sing	7	conj	2:obl:with|4:conj:and|7:conj:and	SpaceAfter=No
 12	,	,	PUNCT	,	_	2	punct	2:punct	_
 13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
@@ -633,7 +633,7 @@
 6	think	think	VERB	VB	VerbForm=Inf	24	advcl	24:advcl:if	CxnElt=24:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 7	of	of	ADP	IN	_	8	case	8:case	_
 8	anything	anything	PRON	NN	Number=Sing|PronType=Ind	6	obl	6:obl:of|12:obj	_
-9	else	else	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
+9	else	else	ADV	RB	_	8	advmod	8:advmod	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 11	can	can	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 12	do	do	VERB	VB	VerbForm=Inf	8	acl:relcl	8:acl:relcl	Cxn=rc-red-obj
@@ -680,9 +680,9 @@
 
 # sent_id = email-enronsent31_01-0030
 # text = Professor Titman:
-1	Professor	Professor	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	Titman	Titman	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No
-3	:	:	PUNCT	:	_	1	punct	1:punct	_
+1	Professor	Professor	PROPN	NNP	Number=Sing	2	nmod:desc	2:nmod:desc	_
+2	Titman	Titman	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
+3	:	:	PUNCT	:	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent31_01-0031
 # text = I would like to thank you for taking the time to recommend me to the MBA Program.
@@ -764,13 +764,13 @@
 2	talking	talk	VERB	VBG	Tense=Pres|VerbForm=Part	15	advcl	15:advcl:after	_
 3	with	with	ADP	IN	_	4	case	4:case	_
 4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	2	obl	2:obl:with	_
-5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	Professors	Professor	PROPN	NNPS	Number=Plur	4	conj	2:obl:with|4:conj:and	_
-7	Ronn	Ronn	PROPN	NNP	Number=Sing	6	flat	6:flat	SpaceAfter=No
+5	and	and	CCONJ	CC	_	7	cc	7:cc	_
+6	Professors	Professor	PROPN	NNPS	Number=Plur	7	nmod:desc	7:nmod:desc	_
+7	Ronn	Ronn	PROPN	NNP	Number=Sing	4	conj	2:obl:with|4:conj:and	SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	Brown	Brown	PROPN	NNP	Number=Sing	6	conj	6:conj:and	_
+9	Brown	Brown	PROPN	NNP	Number=Sing	7	conj	2:obl:with|4:conj:and|7:conj:and	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	Jemison	Jemison	PROPN	NNP	Number=Sing	6	conj	6:conj:and	SpaceAfter=No
+11	Jemison	Jemison	PROPN	NNP	Number=Sing	7	conj	2:obl:with|4:conj:and|7:conj:and	SpaceAfter=No
 12	,	,	PUNCT	,	_	2	punct	2:punct	_
 13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
@@ -1047,7 +1047,7 @@
 5	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	23	advcl	23:advcl:if	CxnElt=23:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 6	of	of	ADP	IN	_	7	case	7:case	_
 7	anything	anything	PRON	NN	Number=Sing|PronType=Ind	5	obl	5:obl:of|11:obj	_
-8	else	else	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
+8	else	else	ADV	RB	_	7	advmod	7:advmod	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 10	can	can	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 11	do	do	VERB	VB	VerbForm=Inf	7	acl:relcl	7:acl:relcl	Cxn=rc-red-obj
@@ -1454,7 +1454,7 @@
 # text = Thank you both very much for your time and help thus far.
 1	Thank	thank	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 2	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	obj	1:obj	_
-3	both	both	DET	DT	PronType=Tot	2	det	2:det	_
+3	both	both	DET	DT	PronType=Tot	2	nmod:unmarked	2:nmod:unmarked	_
 4	very	very	ADV	RB	_	5	advmod	5:advmod	_
 5	much	much	ADV	RB	_	1	advmod	1:advmod	_
 6	for	for	ADP	IN	_	8	case	8:case	_

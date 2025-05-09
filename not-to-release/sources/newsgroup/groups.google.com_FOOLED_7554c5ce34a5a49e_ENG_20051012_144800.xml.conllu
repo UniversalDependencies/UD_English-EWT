@@ -296,8 +296,8 @@
 # sent_id = newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0012
 # text = By MARK CARREAU
 1	By	by	ADP	IN	_	3	case	3:case	_
-2	MARK	MARK	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	CARREAU	CARREAU	PROPN	NNP	Number=Sing	0	root	0:root	_
+2	MARK	Mark	PROPN	NNP	Number=Sing	3	compound	3:compound	_
+3	CARREAU	Carreau	PROPN	NNP	Number=Sing	0	root	0:root	_
 
 # sent_id = newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0013
 # text = Copyright 2005 Houston Chronicle
@@ -315,8 +315,8 @@
 # text = China launched Shenzhou VI, its second manned spacecraft, early today in northwest China's Gansu Province.
 1	China	China	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
 2	launched	launch	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	Shenzhou	Shenzhou	PROPN	NNP	Number=Sing	2	obj	2:obj	_
-4	VI	VI	NUM	CD	NumForm=Roman|NumType=Card	3	nummod	3:nummod	SpaceAfter=No
+3	Shenzhou	Shenzhou	PROPN	NNP	Number=Sing	2	obj	2:obj	FlatType=Enumerated
+4	VI	VI	NUM	CD	NumForm=Roman|NumType=Card	3	flat	3:flat	SpaceAfter=No
 5	,	,	PUNCT	,	_	9	punct	9:punct	_
 6	its	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
 7	second	second	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	9	amod	9:amod	_
@@ -373,8 +373,8 @@
 2	crew	crew	NOUN	NN	Number=Sing	9	nsubj:pass	9:nsubj:pass	_
 3	of	of	ADP	IN	_	7	case	7:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-5	Shenzhou	Shenzhou	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-6	VI	VI	NUM	CD	NumForm=Roman|NumType=Card	5	nummod	5:nummod	_
+5	Shenzhou	Shenzhou	PROPN	NNP	Number=Sing	7	compound	7:compound	FlatType=Enumerated
+6	VI	VI	NUM	CD	NumForm=Roman|NumType=Card	5	flat	5:flat	_
 7	spacecraft	spacecraft	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	9:aux:pass	_
 9	identified	identify	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -422,7 +422,7 @@
 19	Liwei	Liwei	PROPN	NNP	Number=Sing	18	flat	18:flat	_
 20	in	in	ADP	IN	_	21	case	21:case	_
 21	October	October	PROPN	NNP	Number=Sing	16	nmod	16:nmod:in	_
-22	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nummod	SpaceAfter=No
+22	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	21	nmod:unmarked	21:nmod:unmarked	SpaceAfter=No
 23	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0019
@@ -510,8 +510,8 @@
 
 # sent_id = newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0022
 # text = President Bush has directed NASA to return to the moon by 2018 with a new generation of human explorers.
-1	President	President	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
-2	Bush	Bush	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+1	President	President	PROPN	NNP	Number=Sing	2	nmod:desc	2:nmod:desc	_
+2	Bush	Bush	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	directed	direct	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 5	NASA	NASA	PROPN	NNP	Number=Sing	4	obj	4:obj|7:nsubj:xsubj	_
@@ -782,7 +782,7 @@
 8	,	,	PUNCT	,	_	3	punct	3:punct	SpaceAfter=No
 9	"	"	PUNCT	''	_	3	punct	3:punct	_
 10	NASA	NASA	PROPN	NNP	Number=Sing	11	compound	11:compound	_
-11	spokesman	spokesman	NOUN	NN	Number=Sing	12	compound	12:compound	_
+11	spokesman	spokesman	NOUN	NN	Number=Sing	12	nmod:desc	12:nmod:desc	_
 12	Allard	Allard	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
 13	Beutel	Beutel	PROPN	NNP	Number=Sing	12	flat	12:flat	_
 14	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -1096,8 +1096,8 @@
 21	moon	moon	NOUN	NN	Number=Sing	19	obj	19:obj	_
 22	with	with	ADP	IN	_	26	case	26:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
-24	Apollo	Apollo	PROPN	NNP	Number=Sing	26	compound	26:compound	_
-25	8	8	NUM	NNP	NumForm=Digit|NumType=Card	24	nummod	24:nummod	_
+24	Apollo	Apollo	PROPN	NNP	Number=Sing	26	compound	26:compound	FlatType=Enumerated
+25	8	8	NUM	NNP	NumForm=Digit|NumType=Card	24	flat	24:flat	_
 26	crew	crew	NOUN	NN	Number=Sing	19	obl	19:obl:with	_
 27	over	over	ADP	IN	_	31	case	31:case	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
@@ -1202,8 +1202,8 @@
 17	,	,	PUNCT	,	_	20	punct	20:punct	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 19	Long	Long	ADJ	NNP	Degree=Pos	20	amod	20:amod	_
-20	March	March	PROPN	NNP	Number=Sing	16	appos	16:appos	_
-21	V	V	NUM	CD	NumForm=Roman|NumType=Card	20	nummod	20:nummod	SpaceAfter=No
+20	March	March	PROPN	NNP	Number=Sing	16	appos	16:appos	FlatType=Enumerated
+21	V	V	NUM	CD	NumForm=Roman|NumType=Card	20	flat	20:flat	SpaceAfter=No
 22	,	,	PUNCT	,	_	25	punct	25:punct	_
 23	and	and	CCONJ	CC	_	25	cc	25:cc	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
