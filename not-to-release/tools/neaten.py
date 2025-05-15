@@ -437,6 +437,10 @@ def validate_annos(tree):
                 if (nsubj := children[tok_num][child_funcs[tok_num].index("nsubj")]).lower() not in ("anyone", "anybody"):
                     print("WARN: verb "+tok+"/VB has an nsubj ('" + nsubj + "'); should it be finite? in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
+            # check PRON case in context
+            if featlist.get("Case")=="Nom" and func in ('obj','iobj','obl'):
+                print("WARN: " + func + " with Case=Nom" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+
             """
             Extraposition Construction
 
