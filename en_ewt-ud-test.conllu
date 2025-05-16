@@ -7446,15 +7446,15 @@
 
 # sent_id = email-enronsent32_02-0016
 # text = Holland & Hart, LLP; #432785 dated 4/14/00
-1	Holland	Holland	PROPN	NNP	Number=Sing	5	compound	5:compound	_
+1	Holland	Holland	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	&	&	CCONJ	CC	_	3	cc	3:cc	_
-3	Hart	Hart	PROPN	NNP	Number=Sing	1	conj	1:conj|5:compound	SpaceAfter=No
+3	Hart	Hart	PROPN	NNP	Number=Sing	1	conj	1:conj	SpaceAfter=No
 4	,	,	PUNCT	,	_	1	punct	1:punct	_
-5	LLP	LLP	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
+5	LLP	LLP	PROPN	NNP	Number=Sing	1	nmod:desc	1:nmod:desc	SpaceAfter=No
 6	;	;	PUNCT	,	_	7	punct	7:punct	_
-7	#	#	SYM	NN	Number=Sing	5	appos	5:appos	FlatType=Enumerated|SpaceAfter=No
+7	#	#	SYM	NN	Number=Sing	1	appos	1:appos	FlatType=Enumerated|SpaceAfter=No
 8	432785	432785	NUM	CD	NumForm=Digit|NumType=Card	7	flat	7:flat	_
-9	dated	date	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	acl	5:acl	_
+9	dated	date	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	1	acl	1:acl	_
 10	4/14/00	4/14/00	NUM	CD	NumForm=Digit|NumType=Card	9	obl:unmarked	9:obl:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = email-enronsent32_02-0017
@@ -7487,9 +7487,9 @@
 3	Stephens	Stephens	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 4	Litigation	litigation	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	Unit	unit	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
-6	,	,	PUNCT	,	_	8	punct	8:punct	_
-7	Enron	Enron	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	Corp.	Corp.	PROPN	NNP	Number=Sing	1	list	1:list	_
+6	,	,	PUNCT	,	_	7	punct	7:punct	_
+7	Enron	Enron	PROPN	NNP	Number=Sing	1	list	1:list	_
+8	Corp.	Corp.	PROPN	NNP	Number=Sing	7	nmod:desc	7:nmod:desc	_
 9	713/853-5025	713/853-5025	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 10	EB	EB	PROPN	NNP	Number=Sing	1	list	1:list	FlatType=Enumerated|SpaceAfter=No
 11	4809	4809	NUM	CD	NumForm=Digit|NumType=Card	10	flat	10:flat	_
@@ -8049,11 +8049,11 @@
 # sent_id = email-enronsent36_01-0030
 # text = First Union Securities, Inc.
 1	First	First	ADJ	NNP	Degree=Pos|NumForm=Word|NumType=Ord	2	amod	2:amod	_
-2	Union	Union	PROPN	NNP	Number=Sing	5	compound	5:compound	_
-3	Securities	Securities	PROPN	NNPS	Number=Plur	5	compound	5:compound	SpaceAfter=No
+2	Union	Union	PROPN	NNP	Number=Sing	3	compound	3:compound	_
+3	Securities	Securities	PROPN	NNPS	Number=Plur	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
-5	Inc	Inc	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
-6	.	.	PUNCT	.	_	5	punct	5:punct	_
+5	Inc	Inc	PROPN	NNP	Number=Sing	3	nmod:desc	3:nmod:desc	SpaceAfter=No
+6	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent36_01-0031
 # newpar id = email-enronsent36_01-p0013
@@ -8142,10 +8142,10 @@
 6	Equity	equity	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	Derivatives	derivative	NOUN	NNS	Number=Plur	1	list	1:list	_
 8	First	First	ADJ	NNP	Degree=Pos|NumForm=Word|NumType=Ord	9	amod	9:amod	_
-9	Union	Union	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-10	Securities	Security	PROPN	NNPS	Number=Plur	12	compound	12:compound	SpaceAfter=No
+9	Union	Union	PROPN	NNP	Number=Sing	10	compound	10:compound	_
+10	Securities	Security	PROPN	NNPS	Number=Plur	1	list	1:list	SpaceAfter=No
 11	,	,	PUNCT	,	_	10	punct	10:punct	_
-12	Inc.	Inc.	PROPN	NNP	Number=Sing	1	list	1:list	_
+12	Inc.	Inc.	PROPN	NNP	Number=Sing	10	nmod:desc	10:nmod:desc	_
 13	Telephone	telephone	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 14	:	:	PUNCT	:	_	16	punct	16:punct	_
 15	(	(	PUNCT	-LRB-	_	16	punct	16:punct	SpaceAfter=No
@@ -8959,11 +8959,11 @@
 1	Stacey	Stacey	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 2	Barclay	Barclay	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 3	Richardson	Richardson	PROPN	NNP	Number=Sing	0	root	0:root	_
-4	Enron	Enron	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-5	Net	Net	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-6	Works	Works	PROPN	NNPS	Number=Plur	8	compound	8:compound	SpaceAfter=No
+4	Enron	Enron	PROPN	NNP	Number=Sing	6	compound	6:compound	_
+5	Net	Net	PROPN	NNP	Number=Sing	6	compound	6:compound	_
+6	Works	Works	PROPN	NNPS	Number=Plur	3	list	3:list	SpaceAfter=No
 7	,	,	PUNCT	,	_	6	punct	6:punct	_
-8	LLC	LLC	PROPN	NNP	Number=Sing	3	list	3:list	_
+8	LLC	LLC	PROPN	NNP	Number=Sing	6	nmod:desc	6:nmod:desc	_
 9	-	-	PUNCT	,	_	11	punct	11:punct	_
 10	Global	global	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	Contracts	contract	NOUN	NNS	Number=Plur	3	list	3:list	_
@@ -10440,28 +10440,28 @@
 
 # sent_id = email-enronsent04_01-0024
 # text = Marvel Consultants, Inc. 28601 Chagrin Blvd. Cleveland, Ohio 44122 USA Email: recruiters@marvelconsultants.com <mailto:recruiters@marvelconsultants.com> Phone: 216-292-2855 Fax: 216-292-7207
-1	Marvel	Marvel	PROPN	NNP	Number=Sing	4	compound	4:compound	_
-2	Consultants	Consultant	PROPN	NNPS	Number=Plur	4	compound	4:compound	SpaceAfter=No
+1	Marvel	Marvel	PROPN	NNP	Number=Sing	2	compound	2:compound	_
+2	Consultants	Consultant	PROPN	NNPS	Number=Plur	0	root	0:root	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
-4	Inc.	Inc.	PROPN	NNP	Number=Sing	0	root	0:root	_
+4	Inc.	Inc.	PROPN	NNP	Number=Sing	2	nmod:desc	2:nmod:desc	_
 5	28601	28601	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
 6	Chagrin	Chagrin	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	Blvd.	Blvd.	PROPN	NNP	Number=Sing	4	list	4:list	_
+7	Blvd.	Blvd.	PROPN	NNP	Number=Sing	2	list	2:list	_
 8	Cleveland	Cleveland	PROPN	NNP	Number=Sing	7	appos	7:appos	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
 10	Ohio	Ohio	PROPN	NNP	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	_
 11	44122	44122	NUM	CD	NumForm=Digit|NumType=Card	7	nmod:unmarked	7:nmod:unmarked	_
 12	USA	USA	PROPN	NNP	Number=Sing	7	nmod:unmarked	7:nmod:unmarked	_
-13	Email	email	NOUN	NN	Number=Sing	4	list	4:list	SpaceAfter=No
+13	Email	email	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
 14	:	:	PUNCT	:	_	15	punct	15:punct	_
 15	recruiters@marvelconsultants.com	recruiters@marvelconsultants.com	PROPN	ADD	_	13	appos	13:appos	_
 16	<	<	PUNCT	-LRB-	_	17	punct	17:punct	SpaceAfter=No
 17	mailto:recruiters@marvelconsultants.com	mailto:recruiters@marvelconsultants.com	PROPN	ADD	_	15	appos	15:appos	SpaceAfter=No
 18	>	>	PUNCT	-RRB-	_	17	punct	17:punct	_
-19	Phone	phone	NOUN	NN	Number=Sing	4	list	4:list	SpaceAfter=No
+19	Phone	phone	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
 20	:	:	PUNCT	:	_	21	punct	21:punct	_
 21	216-292-2855	216-292-2855	NUM	CD	NumForm=Digit|NumType=Card	19	appos	19:appos	_
-22	Fax	fax	NOUN	NN	Number=Sing	4	list	4:list	SpaceAfter=No
+22	Fax	fax	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
 23	:	:	PUNCT	:	_	24	punct	24:punct	_
 24	216-292-7207	216-292-7207	NUM	CD	NumForm=Digit|NumType=Card	22	appos	22:appos	_
 
@@ -11375,10 +11375,10 @@
 9	Senior	senior	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 10	Regulatory	regulatory	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	Counsel	counsel	NOUN	NN	Number=Sing	8	list	8:list	_
-12	ISO	ISO	PROPN	NNP	Number=Sing	15	compound	15:compound	_
+12	ISO	ISO	PROPN	NNP	Number=Sing	14	compound	14:compound	_
 13	New	New	ADJ	NNP	Degree=Pos	14	amod	14:amod	_
-14	England	England	PROPN	NNP	Number=Sing	15	compound	15:compound	_
-15	Inc.	Inc.	PROPN	NNP	Number=Sing	8	list	8:list	CorrectSpaceAfter=Yes|SpaceAfter=No
+14	England	England	PROPN	NNP	Number=Sing	8	list	8:list	_
+15	Inc.	Inc.	PROPN	NNP	Number=Sing	14	nmod:desc	14:nmod:desc	CorrectSpaceAfter=Yes|SpaceAfter=No
 16	One	One	NUM	NNP	NumForm=Word|NumType=Card	17	nummod	17:nummod	_
 17	Sullivan	Sullivan	PROPN	NNP	Number=Sing	18	compound	18:compound	_
 18	Road	Road	PROPN	NNP	Number=Sing	8	list	8:list	_
@@ -16922,12 +16922,12 @@
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
 2	looks	look	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	like	like	SCONJ	IN	_	11	mark	11:mark	_
-4	The	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-5	Lunar	Lunar	ADJ	NNP	Degree=Pos	9	amod	9:amod	_
-6	Transportation	Transportation	PROPN	NNP	Number=Sing	9	compound	9:compound	_
-7	Systems	System	PROPN	NNPS	Number=Plur	9	compound	9:compound	SpaceAfter=No
+4	The	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
+5	Lunar	Lunar	ADJ	NNP	Degree=Pos	7	amod	7:amod	_
+6	Transportation	Transportation	PROPN	NNP	Number=Sing	7	compound	7:compound	_
+7	Systems	System	PROPN	NNPS	Number=Plur	11	nsubj	11:nsubj	SpaceAfter=No
 8	,	,	PUNCT	,	_	7	punct	7:punct	_
-9	Inc.	Inc.	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	_
+9	Inc.	Inc.	PROPN	NNP	Number=Sing	7	nmod:desc	7:nmod:desc	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
 11	visualizing	visualize	VERB	VBG	Tense=Pres|VerbForm=Part	2	advcl	2:advcl:like	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
@@ -29208,8 +29208,8 @@
 # sent_id = reviews-085009-0002
 # newpar id = reviews-085009-p0002
 # text = MFJ Inc transformed our run down back yard into a place of beauty.
-1	MFJ	MFJ	PROPN	NNP	Number=Sing	2	compound	2:compound	_
-2	Inc	Inc	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
+1	MFJ	MFJ	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
+2	Inc	Inc	PROPN	NNP	Number=Sing	1	nmod:desc	1:nmod:desc	_
 3	transformed	transform	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
 5	run	run	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	amod	8:amod	_
