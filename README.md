@@ -73,6 +73,45 @@ of the converter by Schuster and Manning (2016). These dependencies have **not**
 manually checked. Enhanced dependencies for *reduced* relative clauses were added in
 v2.14.
 
+# Idiosyncratic MISC Attributes
+
+The MISC column contains a few attributes that are not documented as part of the
+[general UD guidelines](https://universaldependencies.org/misc.html), but are
+experimental and specific to EWT. These are not necessarily systematically applied,
+and are subject to change in future versions:
+
+- `Exclamative=Yes`: Clause bearing exclamative syntax (to disambiguate from interrogatives).
+- `Depictive=Yes`: Indicates the secondary predicate is semantically depictive.
+- `FlatType`: Explains the use of [`flat`](https://universaldependencies.org/u/dep/flat) for a special kind of entity.
+  Marked on the first word of the flat expression. Current values:
+    * `Enumerated`: a [numbered entity](https://universaldependencies.org/en/dep/nmod-desc.html#numbered-entities),
+      e.g. _Chapter 1_
+    * `Filename`
+    * `Iconic`: e.g. spelled-out words
+    * `NumericLocator`: a complex section number in a text, e.g. _5.1 ( b )_
+    * `Postcode` e.g. _M5J 1S9_
+    * `Phone`: a telephone number
+- `Mentioned=Yes`: A metalinguistic mention (as opposed to a use) of a term.
+- `MissingWordAfter=Yes`: Indicates that an unspecified word would need to be inserted to make
+  the sentence grammatical.
+- `MissingWordsAfter`: Value is a specific word or words that can be inferred as having been
+  accidentally omitted.
+- `Promoted=Yes`: Makes explicit that a word has been promoted to the head of the phrase,
+  explaining its apparently anomalous context. NOTE: Applied in an ad hoc fashion; many cases
+  of promotion are not marked.
+- `Signature=Yes`: Indicates a trailing phrase within a sentence interpreted as the author's
+  signature. Only applied to 1 token.
+- `SpecialEncoding=Yes`: Indicates an unusual character encoding (see
+  [issue 83](https://github.com/UniversalDependencies/UD_English-EWT/issues/83)).
+- `Superlocation=Yes`: Indicates the `nmod:unmarked` phrase is a containing-location (or organization)
+  of a more specific place or subunit (see [issue 588](https://github.com/UniversalDependencies/UD_English-EWT/issues/588)).
+  Most commonly used for "CITY, STATE" combinations like _Dallas, **Texas**_.
+  Others include "HOUSE_NUMBER **STREET**", "ORGANIZATION **BRANCH_LOCATION**", and "JOB_TITLE, **ORGANIZATION**".
+  Note that major fields of full postal addresses sequenced into a "sentence" attach as `list`,
+  so they will not bear this attribute.
+- `TemporalNPAdjunct=Yes`: Indicates an adjunct previously annotated `obl:tmod` or `nmod:tmod`.
+  May become obsolete if entity annotations are introduced.
+
 # Known Issues
 
 The issue tracker at <https://github.com/UniversalDependencies/UD_English-EWT/issues>
