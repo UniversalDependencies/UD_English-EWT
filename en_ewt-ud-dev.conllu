@@ -3537,7 +3537,7 @@
 16	in	in	ADP	IN	_	17	case	17:case	_
 17	Midland	Midland	PROPN	NNP	Number=Sing	12	nmod	12:nmod:in	SpaceAfter=No
 18	,	,	PUNCT	,	_	19	punct	19:punct	_
-19	Texas	Texas	PROPN	NNP	Number=Sing	17	appos	17:appos	SpaceAfter=No
+19	Texas	Texas	PROPN	NNP	Number=Sing	17	nmod:unmarked	17:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = weblog-blogspot.com_tacitusproject_20040712123425_ENG_20040712_123425-0016
@@ -4065,7 +4065,7 @@
 22	Mountain	Mountain	PROPN	NNP	Number=Sing	23	compound	23:compound	_
 23	View	View	PROPN	NNP	Number=Sing	18	nmod	18:nmod:of	SpaceAfter=No
 24	,	,	PUNCT	,	_	25	punct	25:punct	_
-25	California	California	PROPN	NNP	Number=Sing	23	appos	23:appos	SpaceAfter=No
+25	California	California	PROPN	NNP	Number=Sing	23	nmod:unmarked	23:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 26	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = weblog-typepad.com_ripples_20050410122300_ENG_20050410_122300-0008
@@ -10323,15 +10323,15 @@
 10	CPS	CPS	PROPN	NNP	Number=Sing	5	appos	5:appos	SpaceAfter=No
 11	"	"	PUNCT	''	_	10	punct	10:punct	SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	10	punct	10:punct	_
-13	111	111	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
+13	111	111	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
 14	Market	Market	PROPN	NNP	Number=Sing	15	compound	15:compound	_
-15	Place	Place	PROPN	NNP	Number=Sing	2	list	2:list	_
+15	Place	Place	PROPN	NNP	Number=Sing	13	nmod:unmarked	13:nmod:unmarked	Superlocation=Yes
 16	Ste	ste	NOUN	NN	Number=Sing	2	list	2:list	FlatType=Enumerated
 17	500	500	NUM	CD	NumForm=Digit|NumType=Card	16	flat	16:flat	_
-18	Baltimore	Baltimore	PROPN	NNP	Number=Sing	16	appos	16:appos	SpaceAfter=No
+18	Baltimore	Baltimore	PROPN	NNP	Number=Sing	2	list	2:list	SpaceAfter=No
 19	,	,	PUNCT	,	_	20	punct	20:punct	SpaceAfter=No
-20	MD	MD	PROPN	NNP	Number=Sing	18	appos	18:appos	_
-21	21202	21202	NUM	CD	NumForm=Digit|NumType=Card	16	appos	16:appos	_
+20	MD	MD	PROPN	NNP	Number=Sing	18	nmod:unmarked	18:nmod:unmarked	Superlocation=Yes
+21	21202	21202	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
 22	Phone	phone	NOUN	NN	Number=Sing	2	list	2:list	_
 23	410-468-3798	410-468-3798	NUM	CD	NumForm=Digit|NumType=Card	22	appos	22:appos	_
 24	Fax	fax	NOUN	NN	Number=Sing	2	list	2:list	_
@@ -12517,7 +12517,7 @@
 7	in	in	ADP	IN	_	14	case	14:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 9	$	$	SYM	$	_	14	compound	14:compound	SpaceAfter=No
-10	3,	3000	NUM	CD	NumForm=Digit|NumType=Card|Typo=Yes	9	nummod	9:nummod	CorrectForm=3,000|MissingSpaceAfter=Yes|SpaceAfter=No
+10	3,	3000	NUM	CD	NumForm=Digit|NumType=Card|Typo=Yes	9	nummod	9:nummod	CorrectForm=3,000|SpaceAfter=No
 11	to	to	ADP	IN	_	12	case	12:case	_
 12	$	$	SYM	$	_	9	nmod	9:nmod:to	SpaceAfter=No
 13	5,000	5000	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
@@ -12680,16 +12680,16 @@
 3	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	2	iobj	2:iobj	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	promotional	promotional	NOUN	NN	Number=Sing	2	obj	2:obj	_
-6	on	on	ADP	IN	_	10	case	10:case	_
-7	10300	10300	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	_
+6	on	on	ADP	IN	_	7	case	7:case	_
+7	10300	10300	NUM	CD	NumForm=Digit|NumType=Card	5	nmod	5:nmod:on	_
 8	Heritage	Heritage	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 9	Office	Office	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	Building	Building	PROPN	NNP	Number=Sing	5	nmod	5:nmod:on	_
+10	Building	Building	PROPN	NNP	Number=Sing	7	nmod:unmarked	7:nmod:unmarked	Superlocation=Yes
 11	with	with	ADP	IN	_	15	case	15:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 13	Nimitz	Nimitz	PROPN	NNP	Number=Sing	15	compound	15:compound	_
 14	post	post	NOUN	NN	Number=Sing	15	compound	15:compound	_
-15	office	office	NOUN	NN	Number=Sing	10	nmod	10:nmod:with	SpaceAfter=No
+15	office	office	NOUN	NN	Number=Sing	7	nmod	7:nmod:with	SpaceAfter=No
 16	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = email-enronsent00_02-0048
@@ -18236,7 +18236,7 @@
 1	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	2	nsubj	2:nsubj	_
 2	mean	mean	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	miramar	Miramar	PROPN	NNP	Number=Sing	2	obj	2:obj	_
-4	florida	Florida	PROPN	NNP	Number=Sing	3	appos	3:appos	_
+4	florida	Florida	PROPN	NNP	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	Superlocation=Yes
 5	theyy	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs|Typo=Yes	6	nsubj	6:nsubj	CorrectForm=they
 6	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	_
 7	good	good	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
@@ -18695,7 +18695,7 @@
 7	to	to	ADP	IN	_	8	case	8:case	_
 8	Birmingham	Birmingham	PROPN	NNP	Number=Sing	6	nmod	6:nmod:to	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	UK	UK	PROPN	NNP	Number=Sing	8	appos	8:appos	SpaceAfter=No
+10	UK	UK	PROPN	NNP	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 11	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108092417AAt9bST_ans-0002
@@ -19354,7 +19354,7 @@
 10-11	Frisco's	_	_	_	_	_	_	_	_
 10	Frisco	Frisco	PROPN	NNP	Number=Sing	9	flat	9:flat	_
 11	's	's	PART	POS	_	9	case	9:case	_
-12	Philadelphia	Philadelphia	PROPN	NNP	Number=Sing	9	appos	9:appos	SpaceAfter=No
+12	Philadelphia	Philadelphia	PROPN	NNP	Number=Sing	9	nmod:unmarked	9:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 13	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111024210339AAIqPa3_ans-0002
@@ -19516,7 +19516,7 @@
 10-11	Frisco's	_	_	_	_	_	_	_	_
 10	Frisco	Frisco	PROPN	NNP	Number=Sing	9	flat	9:flat	_
 11	's	's	PART	POS	_	9	case	9:case	_
-12	Philadelphia	Philadelphia	PROPN	NNP	Number=Sing	9	appos	9:appos	SpaceAfter=No
+12	Philadelphia	Philadelphia	PROPN	NNP	Number=Sing	9	nmod:unmarked	9:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 13	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111024210025AAVtDL7_ans-0002
@@ -21587,13 +21587,13 @@
 19	to	to	ADP	IN	_	21	case	21:case	_
 20	orchestra	orchestra	NOUN	NN	Number=Sing	21	compound	21:compound	_
 21	hall	hall	NOUN	NN	Number=Sing	18	obl	18:obl:to	_
-22	(	(	PUNCT	-LRB-	_	26	punct	26:punct	SpaceAfter=No
-23	220	220	NUM	CD	NumForm=Digit|NumType=Card	26	nummod	26:nummod	_
+22	(	(	PUNCT	-LRB-	_	23	punct	23:punct	SpaceAfter=No
+23	220	220	NUM	CD	NumForm=Digit|NumType=Card	21	appos	21:appos	_
 24	South	South	PROPN	NNP	Number=Sing	26	compound	26:compound	_
 25	Michigan	Michigan	PROPN	NNP	Number=Sing	26	compound	26:compound	_
-26	Ave	Ave	PROPN	NNP	Number=Sing	21	appos	21:appos	SpaceAfter=No
-27	.	.	PUNCT	.	_	26	punct	26:punct	SpaceAfter=No
-28	)	)	PUNCT	-RRB-	_	26	punct	26:punct	_
+26	Ave	Ave	PROPN	NNP	Number=Sing	23	nmod:unmarked	23:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
+27	.	.	PUNCT	.	_	23	punct	23:punct	SpaceAfter=No
+28	)	)	PUNCT	-RRB-	_	23	punct	23:punct	_
 
 # sent_id = answers-20111107173110AA0lVuB_ans-0005
 # text = Does anyone have any ideas for restaurants within walking distance where I can't get lost?
@@ -22188,7 +22188,7 @@
 # sent_id = answers-20090717131757AAVh6rG_ans-0007
 # text = Miramar California is a bit north of San Diego.
 1	Miramar	Miramar	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
-2	California	California	PROPN	NNP	Number=Sing	1	appos	1:appos	_
+2	California	California	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	Superlocation=Yes
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 5	bit	bit	NOUN	NN	Number=Sing	6	obl:unmarked	6:obl:unmarked	_
@@ -23167,13 +23167,13 @@
 7	Oil	Oil	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 8	Building	Building	PROPN	NNP	Number=Sing	3	obl	3:obl:from	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	Sector	Sector	PROPN	NNP	Number=Sing	8	appos	8:appos	FlatType=Enumerated
+10	Sector	Sector	PROPN	NNP	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	FlatType=Enumerated|Superlocation=Yes
 11	-	-	PUNCT	HYPH	_	12	punct	12:punct	SpaceAfter=No
 12	37	37	NUM	CD	NumForm=Digit|NumType=Card	10	flat	10:flat	SpaceAfter=No
 13	,	,	PUNCT	,	_	16	punct	16:punct	_
 14	Taj	Taj	PROPN	NNP	Number=Sing	16	compound	16:compound	_
 15	Express	Express	ADJ	NNP	Degree=Pos	16	amod	16:amod	_
-16	Road	Road	PROPN	NNP	Number=Sing	8	appos	8:appos	SpaceAfter=No
+16	Road	Road	PROPN	NNP	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 17	(	(	PUNCT	-LRB-	_	19	punct	19:punct	_
 18	Bus	Bus	PROPN	NNP	Number=Sing	19	compound	19:compound	_
 19	Stops	Stop	PROPN	NNPS	Number=Plur	8	appos	8:appos	SpaceAfter=No
@@ -24783,7 +24783,7 @@
 6	man	man	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	from	from	ADP	IN	_	8	case	8:case	_
 8	brittany	Brittany	PROPN	NNP	Number=Sing	6	nmod	6:nmod:from	_
-9	france	France	PROPN	NNP	Number=Sing	8	appos	8:appos	_
+9	france	France	PROPN	NNP	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	Superlocation=Yes
 10	for	for	ADP	IN	_	12	case	12:case	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 12	couple	couple	NOUN	NN	Number=Sing	4	obl	4:obl:for	_
@@ -25593,7 +25593,7 @@
 5	in	in	ADP	IN	_	6	case	6:case	_
 6	Lawrence	Lawrence	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	KS	KS	PROPN	NNP	Number=Sing	6	appos	6:appos	_
+8	KS	KS	PROPN	NNP	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	Superlocation=Yes
 
 # newdoc id = reviews-186135
 # sent_id = reviews-186135-0001
@@ -26207,16 +26207,16 @@
 # text = HAS MOVED TO 4783 Bay Rd Saginaw, Michigan 48604 (989)755-1109
 1	HAS	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	aux	2:aux	_
 2	MOVED	move	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
-3	TO	to	ADP	IN	_	6	case	6:case	_
-4	4783	4783	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
+3	TO	to	ADP	IN	_	4	case	4:case	_
+4	4783	4783	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:to	_
 5	Bay	Bay	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	Rd	Rd	PROPN	NNP	Number=Sing	2	obl	2:obl:to	_
-7	Saginaw	Saginaw	PROPN	NNP	Number=Sing	6	appos	6:appos	SpaceAfter=No
+6	Rd	Rd	PROPN	NNP	Number=Sing	4	nmod:unmarked	4:nmod:unmarked	Superlocation=Yes
+7	Saginaw	Saginaw	PROPN	NNP	Number=Sing	4	list	4:list	SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	Michigan	Michigan	PROPN	NNP	Number=Sing	7	appos	7:appos	_
-10	48604	48604	NUM	CD	NumForm=Digit|NumType=Card	6	appos	6:appos	_
+9	Michigan	Michigan	PROPN	NNP	Number=Sing	7	nmod:unmarked	7:nmod:unmarked	Superlocation=Yes
+10	48604	48604	NUM	CD	NumForm=Digit|NumType=Card	4	list	4:list	_
 11	(	(	PUNCT	-LRB-	_	12	punct	12:punct	SpaceAfter=No
-12	989	989	NUM	CD	ExtPos=PROPN|NumForm=Digit|NumType=Card	6	list	6:list	FlatType=Phone|SpaceAfter=No
+12	989	989	NUM	CD	ExtPos=PROPN|NumForm=Digit|NumType=Card	4	list	4:list	FlatType=Phone|SpaceAfter=No
 13	)	)	PUNCT	-RRB-	_	12	punct	12:punct	SpaceAfter=No
 14	755-1109	755-1109	NUM	CD	NumForm=Digit|NumType=Card	12	flat	12:flat	_
 
@@ -28263,7 +28263,7 @@
 3	Barry	Barry	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	_
 4	s	's	PART	POS	Typo=Yes	3	case	3:case	CorrectForm='s
 5	Auto	Auto	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	Tech	Tech	PROPN	NNP	Number=Sing	2	appos	2:appos	SpaceAfter=No
+6	Tech	Tech	PROPN	NNP	Number=Sing	1	vocative	1:vocative	SpaceAfter=No
 7	!	!	PUNCT	.	_	1	punct	1:punct	_
 
 # newdoc id = reviews-205014
@@ -30622,11 +30622,11 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	owner	owner	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	SpaceAfter=No
 3	/	/	SYM	SYM	_	4	cc	4:cc	SpaceAfter=No
-4	baker	baker	NOUN	NN	Number=Sing	2	conj	2:conj|12:nsubj	SpaceAfter=No
+4	baker	baker	NOUN	NN	Number=Sing	2	conj	2:conj	SpaceAfter=No
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	"	"	PUNCT	``	_	8	punct	8:punct	SpaceAfter=No
 7	Pie	Pie	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	Guy	Guy	PROPN	NNP	Number=Sing	4	appos	4:appos	SpaceAfter=No
+8	Guy	Guy	PROPN	NNP	Number=Sing	2	appos	2:appos	SpaceAfter=No
 9	"	"	PUNCT	''	_	8	punct	8:punct	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_

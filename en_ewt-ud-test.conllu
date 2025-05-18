@@ -3452,7 +3452,7 @@
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	Mississauga	Mississauga	PROPN	NNP	Number=Sing	1	list	1:list	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	Ont.	Ont.	PROPN	NNP	Number=Sing	6	appos	6:appos	SpaceAfter=No
+8	Ont.	Ont.	PROPN	NNP	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 9	;	;	PUNCT	,	_	1	punct	1:punct	_
 
 # sent_id = weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0030
@@ -3499,7 +3499,7 @@
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	Kingston	Kingston	PROPN	NNP	Number=Sing	1	list	1:list	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	Ont.	Ont.	PROPN	NNP	Number=Sing	6	appos	6:appos	SpaceAfter=No
+8	Ont.	Ont.	PROPN	NNP	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 9	;	;	PUNCT	,	_	1	punct	1:punct	_
 
 # sent_id = weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0034
@@ -3576,7 +3576,7 @@
 7	Eclipse	Eclipse	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 8	Avenue	Avenue	PROPN	NNP	Number=Sing	1	nmod	1:nmod:of	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	Mississauga	Mississauga	PROPN	NNP	Number=Sing	8	appos	8:appos	SpaceAfter=No
+10	Mississauga	Mississauga	PROPN	NNP	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0040
@@ -7207,7 +7207,7 @@
 2	Van	Van	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Belle	Belle	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 4	Consultant	consultant	NOUN	NN	Number=Sing	1	list	1:list	_
-5	PHB	PHB	PROPN	NNP	Number=Sing	1	list	1:list	_
+5	PHB	PHB	PROPN	NNP	Number=Sing	11	compound	11:compound	_
 6	Hagler	Hagler	PROPN	NNP	Number=Sing	5	flat	5:flat	_
 7	Bailly	Bailly	PROPN	NNP	Number=Sing	5	flat	5:flat	_
 8	MANAGEMENT	Management	PROPN	NNP	Number=Sing	11	compound	11:compound	_
@@ -7218,18 +7218,18 @@
 13	Hagler	Hagler	PROPN	NNP	Number=Sing	12	flat	12:flat	_
 14	Bailly	Bailly	PROPN	NNP	Number=Sing	12	flat	12:flat	SpaceAfter=No
 15	,	,	PUNCT	,	_	16	punct	16:punct	_
-16	Inc.	Inc.	PROPN	NNP	Number=Sing	12	flat	12:flat	_
+16	Inc.	Inc.	PROPN	NNP	Number=Sing	12	nmod:desc	12:nmod:desc	_
 17	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
 18	202	202	NUM	CD	ExtPos=PROPN|NumForm=Digit|NumType=Card	1	list	1:list	FlatType=Phone|SpaceAfter=No
 19	)	)	PUNCT	-RRB-	_	18	punct	18:punct	_
 20	828-3933	828-3933	NUM	CD	NumForm=Digit|NumType=Card	18	flat	18:flat	_
 21	direct	direct	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 22	dial	dial	NOUN	NN	Number=Sing	18	appos	18:appos	_
-23	1776	1776	NUM	CD	NumForm=Digit|NumType=Card	27	nummod	27:nummod	_
-24	Eye	Eye	PROPN	NNP	Number=Sing	27	compound	27:compound	_
-25	Street	Street	PROPN	NNP	Number=Sing	27	compound	27:compound	SpaceAfter=No
-26	,	,	PUNCT	,	_	25	punct	25:punct	_
-27	N.W.	N.W.	PROPN	NNP	Number=Sing	1	list	1:list	_
+23	1776	1776	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+24	Eye	Eye	PROPN	NNP	Number=Sing	25	compound	25:compound	_
+25	Street	Street	PROPN	NNP	Number=Sing	23	nmod:unmarked	23:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
+26	,	,	PUNCT	,	_	27	punct	27:punct	_
+27	N.W.	N.W.	PROPN	NNP	Number=Sing	25	nmod:unmarked	25:nmod:unmarked	Superlocation=Yes
 28	(	(	PUNCT	-LRB-	_	29	punct	29:punct	SpaceAfter=No
 29	202	202	NUM	CD	ExtPos=PROPN|NumForm=Digit|NumType=Card	1	list	1:list	FlatType=Phone|SpaceAfter=No
 30	)	)	PUNCT	-RRB-	_	29	punct	29:punct	_
@@ -7237,8 +7237,8 @@
 32	facsimile	facsimile	NOUN	NN	Number=Sing	29	appos	29:appos	_
 33	Washington	Washington	PROPN	NNP	Number=Sing	1	list	1:list	SpaceAfter=No
 34	,	,	PUNCT	,	_	35	punct	35:punct	_
-35	D.C.	D.C.	PROPN	NNP	Number=Sing	33	appos	33:appos	_
-36	20006-3700	20006-3700	NUM	CD	NumForm=Digit|NumType=Card	33	appos	33:appos	_
+35	D.C.	D.C.	PROPN	NNP	Number=Sing	33	nmod:unmarked	33:nmod:unmarked	Superlocation=Yes
+36	20006-3700	20006-3700	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 37	mvanbell@haglerbailly.com	mvanbell@haglerbailly.com	PROPN	ADD	_	1	list	1:list	_
 38	e-mail	e-mail	NOUN	NN	Number=Sing	37	appos	37:appos	_
 
@@ -7860,16 +7860,16 @@
 3	Enron	Enron	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 4	Wholesale	wholesale	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	Services	service	NOUN	NNS	Number=Plur	1	list	1:list	_
-6	1400	1400	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
+6	1400	1400	NUM	CD	NumForm=Digit|NumType=Card	10	nmod:unmarked	10:nmod:unmarked	_
 7	Smith	Smith	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	Street	Street	PROPN	NNP	Number=Sing	1	list	1:list	SpaceAfter=No
+8	Street	Street	PROPN	NNP	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	EB	EB	PROPN	NNP	Number=Sing	8	appos	8:appos	SpaceAfter=No
+10	EB	EB	PROPN	NNP	Number=Sing	1	list	1:list	SpaceAfter=No
 11	3801a	3801a	PROPN	NNP	Number=Sing	10	flat	10:flat	_
-12	Houston	Houston	PROPN	NNP	Number=Sing	8	appos	8:appos	SpaceAfter=No
+12	Houston	Houston	PROPN	NNP	Number=Sing	1	list	1:list	SpaceAfter=No
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
-14	TX	TX	PROPN	NNP	Number=Sing	12	appos	12:appos	_
-15	77002	77002	NUM	CD	NumForm=Digit|NumType=Card	8	appos	8:appos	_
+14	TX	TX	PROPN	NNP	Number=Sing	12	nmod:unmarked	12:nmod:unmarked	Superlocation=Yes
+15	77002	77002	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 16	Ph	ph	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 17	:	:	PUNCT	:	_	19	punct	19:punct	_
 18	(	(	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
@@ -8726,14 +8726,14 @@
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	Abacus	Abacus	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	Technologies	Technology	PROPN	NNPS	Number=Plur	7	list	7:list	_
-11	17611	17611	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
-12	Loring	Loring	PROPN	NNP	Number=Sing	1	list	1:list	_
+11	17611	17611	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+12	Loring	Loring	PROPN	NNP	Number=Sing	11	nmod:unmarked	11:nmod:unmarked	Superlocation=Yes
 13	Lane	Lane	PROPN	NNP	Number=Sing	12	flat	12:flat	SpaceAfter=No
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
-15	Spring	Spring	PROPN	NNP	Number=Sing	12	appos	12:appos	SpaceAfter=No
+15	Spring	Spring	PROPN	NNP	Number=Sing	1	list	1:list	SpaceAfter=No
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
-17	TX	TX	PROPN	NNP	Number=Sing	15	appos	15:appos	_
-18	77388-5746	77388-5746	NUM	CD	NumForm=Digit|NumType=Card	15	appos	15:appos	_
+17	TX	TX	PROPN	NNP	Number=Sing	15	nmod:unmarked	15:nmod:unmarked	Superlocation=Yes
+18	77388-5746	77388-5746	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 19	(	(	PUNCT	-LRB-	_	20	punct	20:punct	SpaceAfter=No
 20	281	281	NUM	CD	ExtPos=PROPN|NumForm=Digit|NumType=Card	1	list	1:list	FlatType=Phone|SpaceAfter=No
 21	)	)	PUNCT	-RRB-	_	20	punct	20:punct	SpaceAfter=No
@@ -10319,8 +10319,8 @@
 2	:	:	PUNCT	:	_	3	punct	3:punct	_
 3	Houston	Houston	PROPN	NNP	Number=Sing	1	appos	1:appos	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
-5	Texas	Texas	PROPN	NNP	Number=Sing	3	appos	3:appos	_
-6	USA	USA	PROPN	NNP	Number=Sing	5	appos	5:appos	_
+5	Texas	Texas	PROPN	NNP	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	Superlocation=Yes
+6	USA	USA	PROPN	NNP	Number=Sing	5	nmod:unmarked	5:nmod:unmarked	Superlocation=Yes
 
 # sent_id = email-enronsent04_01-0016
 # text = Compensation: $60000 - 70000
@@ -10444,14 +10444,14 @@
 2	Consultants	Consultant	PROPN	NNPS	Number=Plur	0	root	0:root	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	Inc.	Inc.	PROPN	NNP	Number=Sing	2	nmod:desc	2:nmod:desc	_
-5	28601	28601	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
+5	28601	28601	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
 6	Chagrin	Chagrin	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	Blvd.	Blvd.	PROPN	NNP	Number=Sing	2	list	2:list	_
-8	Cleveland	Cleveland	PROPN	NNP	Number=Sing	7	appos	7:appos	SpaceAfter=No
+7	Blvd.	Blvd.	PROPN	NNP	Number=Sing	5	nmod:unmarked	5:nmod:unmarked	Superlocation=Yes
+8	Cleveland	Cleveland	PROPN	NNP	Number=Sing	2	list	2:list	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	Ohio	Ohio	PROPN	NNP	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	_
-11	44122	44122	NUM	CD	NumForm=Digit|NumType=Card	7	nmod:unmarked	7:nmod:unmarked	_
-12	USA	USA	PROPN	NNP	Number=Sing	7	nmod:unmarked	7:nmod:unmarked	_
+10	Ohio	Ohio	PROPN	NNP	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	Superlocation=Yes
+11	44122	44122	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
+12	USA	USA	PROPN	NNP	Number=Sing	2	list	2:list	_
 13	Email	email	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
 14	:	:	PUNCT	:	_	15	punct	15:punct	_
 15	recruiters@marvelconsultants.com	recruiters@marvelconsultants.com	PROPN	ADD	_	13	appos	13:appos	_
@@ -11379,13 +11379,13 @@
 13	New	New	ADJ	NNP	Degree=Pos	14	amod	14:amod	_
 14	England	England	PROPN	NNP	Number=Sing	8	list	8:list	_
 15	Inc.	Inc.	PROPN	NNP	Number=Sing	14	nmod:desc	14:nmod:desc	CorrectSpaceAfter=Yes|SpaceAfter=No
-16	One	One	NUM	NNP	NumForm=Word|NumType=Card	17	nummod	17:nummod	_
+16	One	One	NUM	NNP	NumForm=Word|NumType=Card	8	list	8:list	_
 17	Sullivan	Sullivan	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-18	Road	Road	PROPN	NNP	Number=Sing	8	list	8:list	_
-19	Holyoke	Holyoke	PROPN	NNP	Number=Sing	18	appos	18:appos	SpaceAfter=No
+18	Road	Road	PROPN	NNP	Number=Sing	16	nmod:unmarked	16:nmod:unmarked	Superlocation=Yes
+19	Holyoke	Holyoke	PROPN	NNP	Number=Sing	8	list	8:list	SpaceAfter=No
 20	,	,	PUNCT	,	_	21	punct	21:punct	_
-21	MA	MA	PROPN	NNP	Number=Sing	19	appos	19:appos	_
-22	01040-2841	01040-2841	NUM	CD	NumForm=Digit|NumType=Card	18	appos	18:appos	_
+21	MA	MA	PROPN	NNP	Number=Sing	19	nmod:unmarked	19:nmod:unmarked	Superlocation=Yes
+22	01040-2841	01040-2841	NUM	CD	NumForm=Digit|NumType=Card	8	list	8:list	_
 23	(	(	PUNCT	-LRB-	_	24	punct	24:punct	SpaceAfter=No
 24	413	413	NUM	CD	ExtPos=PROPN|NumForm=Digit|NumType=Card	8	list	8:list	FlatType=Phone|SpaceAfter=No
 25	)	)	PUNCT	-RRB-	_	24	punct	24:punct	_
@@ -11762,7 +11762,7 @@
 12	Texas	Texas	PROPN	NNP	Number=Sing	10	nmod	10:nmod:of	_
 13	Austin	Austin	PROPN	NNP	Number=Sing	2	list	2:list	SpaceAfter=No
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
-15	Texas	Texas	PROPN	NNP	Number=Sing	13	appos	13:appos	_
+15	Texas	Texas	PROPN	NNP	Number=Sing	13	nmod:unmarked	13:nmod:unmarked	Superlocation=Yes
 16	78712-1179	78712-1179	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
 17	512-232-2787	512-232-2787	NUM	CD	NumForm=Digit|NumType=Card	2	list	2:list	_
 18	(	(	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
@@ -12129,10 +12129,10 @@
 2	Duffie	Duffie	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	mail	mail	NOUN	NN	Number=Sing	1	list	1:list	_
 4	GSB	GSB	PROPN	NNP	Number=Sing	3	appos	3:appos	_
-5	Stanford	Stanford	PROPN	NNP	Number=Sing	4	appos	4:appos	_
-6	CA	CA	PROPN	NNP	Number=Sing	5	nmod:unmarked	5:nmod:unmarked	_
-7	94305-5015	94305-5015	NUM	CD	NumForm=Digit|NumType=Card	5	nmod:unmarked	5:nmod:unmarked	_
-8	USA	USA	PROPN	NNP	Number=Sing	5	nmod:unmarked	5:nmod:unmarked	_
+5	Stanford	Stanford	PROPN	NNP	Number=Sing	4	list	4:list	_
+6	CA	CA	PROPN	NNP	Number=Sing	5	nmod:unmarked	5:nmod:unmarked	Superlocation=Yes
+7	94305-5015	94305-5015	NUM	CD	NumForm=Digit|NumType=Card	4	list	4:list	_
+8	USA	USA	PROPN	NNP	Number=Sing	4	list	4:list	_
 9	phone	phone	NOUN	NN	Number=Sing	1	list	1:list	_
 10	650	650	NUM	CD	ExtPos=PROPN|NumForm=Digit|NumType=Card	9	appos	9:appos	FlatType=Phone
 11	723	723	NUM	CD	NumForm=Digit|NumType=Card	10	flat	10:flat	_
@@ -14771,7 +14771,7 @@
 1	*	*	PUNCT	NFP	_	2	punct	2:punct	SpaceAfter=No
 2	Washington	Washington	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
-4	D.C.	D.C.	PROPN	NNP	Number=Sing	2	appos	2:appos	SpaceAfter=No
+4	D.C.	D.C.	PROPN	NNP	Number=Sing	2	nmod:unmarked	2:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 5	-	-	PUNCT	NFP	_	2	punct	2:punct	SpaceAfter=No
 6	*	*	PUNCT	NFP	_	2	punct	2:punct	_
 
@@ -15778,12 +15778,12 @@
 5	Schmidt	Schmidt	PROPN	NNP	Number=Sing	4	flat	4:flat	_
 6	animalsr...@aol.com	animalsr...@aol.com	PROPN	ADD	_	3	list	3:list	_
 7	732-657-3416	732-657-3416	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	_
-8	1027	1027	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	_
+8	1027	1027	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	_
 9	Jolson	Jolson	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	Court	Court	PROPN	NNP	Number=Sing	3	list	3:list	_
+10	Court	Court	PROPN	NNP	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	Superlocation=Yes
 11	Manchester	Manchester	PROPN	NNP	Number=Sing	3	list	3:list	SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
-13	N.J.	N.J.	PROPN	NNP	Number=Sing	11	appos	11:appos	_
+13	N.J.	N.J.	PROPN	NNP	Number=Sing	11	nmod:unmarked	11:nmod:unmarked	Superlocation=Yes
 14	08759	08759	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	_
 
 # newdoc id = newsgroup-groups.google.com_fineart_0339fc0ed4e53c5a_ENG_20050930_025500
@@ -19378,7 +19378,7 @@
 6	food	food	NOUN	NN	Number=Sing	0	root	0:root	_
 7	in	in	ADP	IN	_	8	case	8:case	_
 8	phila	Phila	PROPN	NNP	Abbr=Yes|Number=Sing	6	nmod	6:nmod:in	_
-9	pa	PA	PROPN	NNP	Number=Sing	8	appos	8:appos	SpaceAfter=No
+9	pa	PA	PROPN	NNP	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 10	?	?	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111024202518AA18Sg7_ans-0002
@@ -19395,7 +19395,7 @@
 8	ave	ave	NOUN	NN	Number=Sing	4	nmod	4:nmod:at	_
 9	in	in	ADP	IN	_	10	case	10:case	_
 10	phila	Phila	PROPN	NNP	Abbr=Yes|Number=Sing	8	nmod	8:nmod:in	_
-11	pa	PA	PROPN	NNP	Number=Sing	10	appos	10:appos	_
+11	pa	PA	PROPN	NNP	Number=Sing	10	nmod:unmarked	10:nmod:unmarked	Superlocation=Yes
 12	really	really	ADV	RB	_	16	advmod	16:advmod	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 14	best	good	ADJ	JJS	Degree=Sup	16	amod	16:amod	_
@@ -20151,7 +20151,7 @@
 9	buy	buy	VERB	VB	VerbForm=Inf	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	philadelphia	Philadelphia	PROPN	NNP	Number=Sing	9	obl	9:obl:in	_
-12	pa	PA	PROPN	NNP	Number=Sing	11	appos	11:appos	SpaceAfter=No
+12	pa	PA	PROPN	NNP	Number=Sing	11	nmod:unmarked	11:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 13	?	?	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = answers-20111024111513AAAQhAO_ans-0003
@@ -20337,7 +20337,7 @@
 3	in	in	ADP	IN	_	4	case	4:case	_
 4	Auckland	Auckland	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	SpaceAfter=No
-6	NZ	NZ	PROPN	NNP	Number=Sing	4	appos	4:appos	SpaceAfter=No
+6	NZ	NZ	PROPN	NNP	Number=Sing	4	nmod:unmarked	4:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 7	?	?	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = answers-20111108071652AA8GAZw_ans-0002
@@ -20795,7 +20795,7 @@
 2	in	in	ADP	IN	_	3	case	3:case	_
 3	Quebec	Quebec	PROPN	NNP	Number=Sing	1	obl	1:obl:in	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	SpaceAfter=No
-5	Canada	Canada	PROPN	NNP	Number=Sing	3	appos	3:appos	SpaceAfter=No
+5	Canada	Canada	PROPN	NNP	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 6	?	?	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = answers-20111108100703AAo53QA_ans-0002
@@ -24555,7 +24555,7 @@
 18	from	from	ADP	IN	_	19	case	19:case	_
 19	Raleigh	Raleigh	PROPN	NNP	Number=Sing	17	obl	17:obl:from	SpaceAfter=No
 20	,	,	PUNCT	,	_	21	punct	21:punct	_
-21	NC	NC	PROPN	NNP	Number=Sing	19	appos	19:appos	_
+21	NC	NC	PROPN	NNP	Number=Sing	19	nmod:unmarked	19:nmod:unmarked	Superlocation=Yes
 22	(	(	PUNCT	-LRB-	_	24	punct	24:punct	SpaceAfter=No
 23	RDU	RDU	PROPN	NNP	Number=Sing	24	compound	24:compound	_
 24	Airport	Airport	PROPN	NNP	Number=Sing	19	appos	19:appos	SpaceAfter=No
@@ -24706,7 +24706,7 @@
 17	in	in	ADP	IN	_	18	case	18:case	_
 18	Seattle	Seattle	PROPN	NNP	Number=Sing	16	obl	16:obl:in	SpaceAfter=No
 19	,	,	PUNCT	,	_	20	punct	20:punct	_
-20	Wa	Wa	PROPN	NNP	Number=Sing	18	appos	18:appos	SpaceAfter=No
+20	Wa	Wa	PROPN	NNP	Number=Sing	18	nmod:unmarked	18:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 21	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = answers-20111108102205AArwNzY_ans-0011

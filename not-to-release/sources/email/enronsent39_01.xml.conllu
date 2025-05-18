@@ -112,7 +112,7 @@
 24	in	in	ADP	IN	_	25	case	25:case	_
 25	Washington	Washington	PROPN	NNP	Number=Sing	23	nmod	23:nmod:in	SpaceAfter=No
 26	,	,	PUNCT	,	_	27	punct	27:punct	_
-27	DC	DC	PROPN	NNP	Number=Sing	25	appos	25:appos	SpaceAfter=No
+27	DC	DC	PROPN	NNP	Number=Sing	25	nmod:unmarked	25:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 28	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = email-enronsent39_01-0009
@@ -389,13 +389,13 @@
 1	Grand	Grand	ADJ	NNP	Degree=Pos	3	amod	3:amod	_
 2	Hyatt	Hyatt	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 3	Hotel	Hotel	PROPN	NNP	Number=Sing	0	root	0:root	_
-4	1000	1000	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
-5	H	H	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-6	Street	Street	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	NW	NW	PROPN	NNP	Number=Sing	3	list	3:list	_
-8	Washington	Washington	PROPN	NNP	Number=Sing	7	appos	7:appos	_
-9	DC	DC	PROPN	NNP	Number=Sing	8	appos	8:appos	_
-10	20001	20001	NUM	CD	NumForm=Digit|NumType=Card	7	appos	7:appos	_
+4	1000	1000	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	_
+5	H	H	PROPN	NNP	Number=Sing	6	compound	6:compound	_
+6	Street	Street	PROPN	NNP	Number=Sing	4	nmod:unmarked	4:nmod:unmarked	Superlocation=Yes
+7	NW	NW	PROPN	NNP	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	Superlocation=Yes
+8	Washington	Washington	PROPN	NNP	Number=Sing	3	list	3:list	_
+9	DC	DC	PROPN	NNP	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	Superlocation=Yes
+10	20001	20001	NUM	CD	NumForm=Digit|NumType=Card	3	list	3:list	_
 11	Phone	phone	NOUN	NN	Number=Sing	3	list	3:list	SpaceAfter=No
 12	:	:	PUNCT	:	_	13	punct	13:punct	_
 13	202.582.1234	202.582.1234	NUM	CD	NumForm=Digit|NumType=Card	11	appos	11:appos	_
@@ -410,26 +410,26 @@
 
 # sent_id = email-enronsent39_01-0022
 # text = Wyndham Washington DC 1400 M Street NW Washington, DC 20005 Phone: 202.429.1700 or 1.877.999.3223 Fax: 202.785.0786 Website: http://www.wyndham.com/Washington_DC/default.cfm
-1	Wyndham	Wyndham	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-2	Washington	Washington	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	DC	DC	PROPN	NNP	Number=Sing	0	root	0:root	_
-4	1400	1400	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
-5	M	M	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-6	Street	Street	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	NW	NW	PROPN	NNP	Number=Sing	3	list	3:list	_
-8	Washington	Washington	PROPN	NNP	Number=Sing	7	appos	7:appos	SpaceAfter=No
+1	Wyndham	Wyndham	PROPN	NNP	Number=Sing	0	root	0:root	_
+2	Washington	Washington	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	Superlocation=Yes
+3	DC	DC	PROPN	NNP	Number=Sing	2	appos	2:appos	_
+4	1400	1400	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+5	M	M	PROPN	NNP	Number=Sing	6	compound	6:compound	_
+6	Street	Street	PROPN	NNP	Number=Sing	4	nmod:unmarked	4:nmod:unmarked	_
+7	NW	NW	PROPN	NNP	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	Superlocation=Yes
+8	Washington	Washington	PROPN	NNP	Number=Sing	1	list	1:list	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	DC	DC	PROPN	NNP	Number=Sing	8	appos	8:appos	_
-11	20005	20005	NUM	CD	NumForm=Digit|NumType=Card	7	appos	7:appos	_
-12	Phone	phone	NOUN	NN	Number=Sing	3	list	3:list	SpaceAfter=No
+10	DC	DC	PROPN	NNP	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	Superlocation=Yes
+11	20005	20005	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+12	Phone	phone	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 13	:	:	PUNCT	:	_	14	punct	14:punct	_
 14	202.429.1700	202.429.1700	NUM	CD	NumForm=Digit|NumType=Card	12	appos	12:appos	_
 15	or	or	CCONJ	CC	_	16	cc	16:cc	_
 16	1.877.999.3223	1.877.999.3223	NUM	CD	NumForm=Digit|NumType=Card	14	conj	12:appos|14:conj:or	_
-17	Fax	fax	NOUN	NN	Number=Sing	3	list	3:list	SpaceAfter=No
+17	Fax	fax	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 18	:	:	PUNCT	:	_	19	punct	19:punct	_
 19	202.785.0786	202.785.0786	NUM	CD	NumForm=Digit|NumType=Card	17	appos	17:appos	_
-20	Website	website	NOUN	NN	Number=Sing	3	list	3:list	SpaceAfter=No
+20	Website	website	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 21	:	:	PUNCT	:	_	22	punct	22:punct	_
 22	http://www.wyndham.com/Washington_DC/default.cfm	http://www.wyndham.com/Washington_DC/default.cfm	PROPN	ADD	_	20	appos	20:appos	_
 
@@ -563,19 +563,19 @@
 3	Federal	federal	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	Government	government	NOUN	NN	Number=Sing	5	compound	5:compound	_
 5	Affairs	affair	NOUN	NNS	Number=Plur	6	compound	6:compound	_
-6	Representative	representative	NOUN	NN	Number=Sing	1	appos	1:appos	_
+6	Representative	representative	NOUN	NN	Number=Sing	1	list	1:list	_
 7	Enron	Enron	PROPN	NNP	Number=Sing	1	list	1:list	_
-8	1775	1775	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	_
-9	Eye	Eye	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-10	Street	Street	PROPN	NNP	Number=Sing	12	compound	12:compound	SpaceAfter=No
-11	,	,	PUNCT	,	_	10	punct	10:punct	_
-12	NW	NW	PROPN	NNP	Number=Sing	1	list	1:list	_
+8	1775	1775	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+9	Eye	Eye	PROPN	NNP	Number=Sing	10	compound	10:compound	_
+10	Street	Street	PROPN	NNP	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
+11	,	,	PUNCT	,	_	12	punct	12:punct	_
+12	NW	NW	PROPN	NNP	Number=Sing	10	nmod:unmarked	10:nmod:unmarked	Superlocation=Yes
 13	Suite	suite	NOUN	NN	Number=Sing	1	list	1:list	FlatType=Enumerated
 14	800	800	NUM	CD	NumForm=Digit|NumType=Card	13	flat	13:flat	_
-15	Washington	Washington	PROPN	NNP	Number=Sing	12	appos	12:appos	SpaceAfter=No
+15	Washington	Washington	PROPN	NNP	Number=Sing	1	list	1:list	SpaceAfter=No
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
 17	DC	DC	PROPN	NNP	Number=Sing	15	appos	15:appos	_
-18	20006	20006	NUM	CD	NumForm=Digit|NumType=Card	12	appos	12:appos	_
+18	20006	20006	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 19	202-466-9142	202-466-9142	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 20	202-828-3372	202-828-3372	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 21	(	(	PUNCT	-LRB-	_	22	punct	22:punct	SpaceAfter=No
