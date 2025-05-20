@@ -1411,6 +1411,7 @@ PRONOUNS: dict[tuple[str,str],dict] = {
   # other
   ("one","PRP"):{"Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"one"},    # one/PRP is the generic individual use
   ("'s","PRP"):{"Case":"Acc","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
+  ("there","EX"):{"PronType":"Dem","LEMMA":"there"},
 }
 
 # add indefinite PRONs
