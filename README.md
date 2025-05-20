@@ -99,6 +99,7 @@ and are subject to change in future versions:
 - `Promoted=Yes`: Makes explicit that a word has been promoted to the head of the phrase,
   explaining its apparently anomalous context. NOTE: Applied in an ad hoc fashion; many cases
   of promotion are not marked.
+- `Resultative=Yes`: Indicates the secondary predicate is semantically resultative.
 - `Signature=Yes`: Indicates a trailing phrase within a sentence interpreted as the author's
   signature. Only applied to 1 token.
 - `SpecialEncoding=Yes`: Indicates an unusual character encoding (see
