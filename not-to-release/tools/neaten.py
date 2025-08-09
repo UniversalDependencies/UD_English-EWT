@@ -799,7 +799,14 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
 
     IN_not_like_lemma = ["vs", "vs.", "v", "ca", "that", "then", "a", "fro", "too", "til", "wether", "b/c"]  # incl. known typos
     if pos == "IN" and tok.lower() not in IN_not_like_lemma and lemma != tok.lower() and func != "goeswith" and "goeswith" not in child_funcs:
-        print("WARN: pos IN should have lemma identical to lower cased token" + inname)
+        if not (upos,tok.lower(),lemma) in [("SYM","@","at"), ("ADP","2","to"), ("ADP","t","to"), ("ADP","t.","to"),
+                                            ("ADP","f","for"), ("ADP","fo","for"), ("ADP","4","for"), ("SCONJ","4","for"),
+                                            ("ADP","ta","of"), ("ADP","w","with"), ("ADP","w/","with"), ("ADP","w/o","without"),
+                                            ("SCONJ","w/out","without"), ("ADP","o","out"), ("ADP","o","of"), ("ADP","thru","through"),
+                                            ("ADP","b/t","between"), ("ADP","btwn","between"),
+                                            ("SCONJ","bc","because"), ("SCONJ","cos","because"), ("SCONJ","coz","because"), ("SCONJ","cus","because"),
+                                            ("SCONJ","tho","though")]:
+            print("WARN: pos IN should have lemma identical to lower cased token (or an approved mapping for symbol)" + inname)
     if pos == "DT" and lemma == "an":
         print("WARN: lemma of 'an' should be 'a'" + inname)
 
