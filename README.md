@@ -80,8 +80,10 @@ The MISC column contains a few attributes that are not documented as part of the
 experimental and specific to EWT. These are not necessarily systematically applied,
 and are subject to change in future versions:
 
-- `Exclamative=Yes`: Clause bearing exclamative syntax (to disambiguate from interrogatives).
+- `Citation=Yes`: Indicates a parenthetical citation (see [docs issue 1145](https://github.com/UniversalDependencies/docs/issues/1145))
 - `Depictive=Yes`: Indicates the secondary predicate is semantically depictive.
+- `Exclamative=Yes`: Clause bearing exclamative syntax (to disambiguate from interrogatives).
+- `Footnote=Yes`: Indicates a reference to a footnote (see [docs issue 1145](https://github.com/UniversalDependencies/docs/issues/1145))
 - `FlatType`: Explains the use of [`flat`](https://universaldependencies.org/u/dep/flat) for a special kind of entity.
   Marked on the first word of the flat expression. Current values:
     * `Enumerated`: a [numbered entity](https://universaldependencies.org/en/dep/nmod-desc.html#numbered-entities),
@@ -91,6 +93,7 @@ and are subject to change in future versions:
     * `NumericLocator`: a complex section number in a text, e.g. _5.1 ( b )_
     * `Postcode` e.g. _M5J 1S9_
     * `Phone`: a telephone number
+- `ManuallyChecked`: A note for treebank maintainers
 - `Mentioned=Yes`: A metalinguistic mention (as opposed to a use) of a term.
 - `MissingWordAfter=Yes`: Indicates that an unspecified word would need to be inserted to make
   the sentence grammatical.
@@ -112,6 +115,7 @@ and are subject to change in future versions:
   so they will not bear this attribute.
 - `TemporalNPAdjunct=Yes`: Indicates an adjunct previously annotated `obl:tmod` or `nmod:tmod`.
   May become obsolete if entity annotations are introduced.
+- `TODO`: A note for treebank maintainers
 
 # Known Issues
 
