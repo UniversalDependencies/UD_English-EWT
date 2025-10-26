@@ -2,45 +2,45 @@
 # sent_id = reviews-202402-0001
 # newpar id = reviews-202402-p0001
 # text = SERVERS
-1	SERVERS	server	NOUN	NNS	Number=Plur	0	root	0:root	_
+1	SERVERS	server	NOUN	NNS	Number=Plur	0	root	0:root	Supersense=n.PERSON
 
 # sent_id = reviews-202402-0002
 # newpar id = reviews-202402-p0002
 # text = When my server crashed, Greg worked from 7 PM until 4 AM and had my company up and running the next morning.
 1	When	when	ADV	WRB	PronType=Int	4	advmod	4:advmod	_
-2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	server	server	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	crashed	crash	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	advcl	7:advcl:when	SpaceAfter=No
+2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	PRel[config]=possessive|PRel[gov]=3:server|Supersense=p.Possessor
+3	server	server	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.PERSON
+4	crashed	crash	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	advcl	7:advcl:when	SpaceAfter=No|Supersense=v.stative
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
-6	Greg	Greg	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj|15:nsubj	_
-7	worked	work	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-8	from	from	ADP	IN	_	9	case	9:case	_
+6	Greg	Greg	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj|15:nsubj	Supersense=n.PERSON
+7	worked	work	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.social
+8	from	from	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=7:work|PRel[obj]=9:7|Supersense=p.StartTime
 9	7	7	NUM	CD	NumForm=Digit|NumType=Card	7	obl	7:obl:from	_
-10	PM	p.m.	NOUN	NN	Number=Sing	9	nmod:unmarked	9:nmod:unmarked	_
-11	until	until	ADP	IN	_	12	case	12:case	_
+10	PM	p.m.	NOUN	NN	Number=Sing	9	nmod:unmarked	9:nmod:unmarked	Supersense=n.TIME
+11	until	until	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=7:work|PRel[obj]=12:4|Supersense=p.EndTime
 12	4	4	NUM	CD	NumForm=Digit|NumType=Card	7	obl	7:obl:until	_
-13	AM	a.m.	NOUN	NN	Number=Sing	12	nmod:unmarked	12:nmod:unmarked	_
+13	AM	a.m.	NOUN	NN	Number=Sing	12	nmod:unmarked	12:nmod:unmarked	Supersense=n.TIME
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	conj	7:conj:and	_
-16	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
-17	company	company	NOUN	NN	Number=Sing	15	obj	15:obj|18:nsubj:xsubj|20:nsubj:xsubj	_
-18	up	up	ADV	RB	_	15	xcomp	15:xcomp	_
+15	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	conj	7:conj:and	Supersense=v.stative
+16	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	PRel[config]=possessive|PRel[gov]=17:company|Supersense[coding]=p.Possessor|Supersense[scene]=p.OrgMember
+17	company	company	NOUN	NN	Number=Sing	15	obj	15:obj|18:nsubj:xsubj|20:nsubj:xsubj	Supersense=n.GROUP
+18	up	up	ADV	RB	_	15	xcomp	15:xcomp	MWECat=PP|MWELemma=up and run|MWELen=3|MWEString=up and running|PRel[config]=default|PRel[gov]=15:have|Supersense[coding]=p.Locus|Supersense[scene]=p.Characteristic
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
 20	running	run	VERB	VBG	VerbForm=Ger	18	conj	15:xcomp|18:conj:and	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
 22	next	next	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
-23	morning	morning	NOUN	NN	Number=Sing	15	obl:unmarked	15:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
+23	morning	morning	NOUN	NN	Number=Sing	15	obl:unmarked	15:obl:unmarked	SpaceAfter=No|Supersense=n.TIME|TemporalNPAdjunct=Yes
 24	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-202402-0003
 # text = That's what I call customer service!
 1-2	That's	_	_	_	_	_	_	_	_
 1	That	that	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	3:nsubj	_
-2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	Supersense=v.stative
 3	what	what	PRON	WP	PronType=Rel	0	root	0:root|5:obj	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
-5	call	call	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-free-obj
-6	customer	customer	NOUN	NN	Number=Sing	7	compound	7:compound	_
+5	call	call	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-free-obj|Supersense=v.communication
+6	customer	customer	NOUN	NN	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=customer service|MWELen=2|Supersense=n.ACT
 7	service	service	NOUN	NN	Number=Sing	5	xcomp	5:xcomp	SpaceAfter=No
 8	!	!	PUNCT	.	_	3	punct	3:punct	_
 

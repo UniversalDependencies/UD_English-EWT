@@ -2,8 +2,8 @@
 # sent_id = reviews-207629-0001
 # newpar id = reviews-207629-p0001
 # text = highly recommended.
-1	highly	highly	ADV	RB	_	2	advmod	2:advmod	_
-2	recommended	recommend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No
+1	highly	highly	ADV	RB	_	2	advmod	2:advmod	MWELemma[weak]=highly recommend|MWELen[weak]=2|MWEString[weak]=highly recommended
+2	recommended	recommend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No|Supersense=v.communication
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-207629-0002
@@ -12,21 +12,21 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|16:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	4	aux	4:aux	_
-4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
-5	to	to	ADP	IN	_	7	case	7:case	_
-6	Warner	Warner	PROPN	NNP	Number=Sing	7	compound	7:compound	_
+4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	MWELemma[weak]=go to|MWELen[weak]=2|MWEString[weak]=going to|Supersense=v.motion
+5	to	to	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:go|PRel[obj]=7:Family|Supersense=p.Goal
+6	Warner	Warner	PROPN	NNP	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=Warner Family|MWELen=2|Supersense=n.GROUP
 7	Family	Family	PROPN	NNP	Number=Sing	4	obl	4:obl:to	_
-8	for	for	ADP	IN	_	10	case	10:case	_
-9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
+8	for	for	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=4:go|PRel[obj]=10:number|Supersense=p.Duration
+9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	MWECat=N|MWELemma=a number|MWELen=2|Supersense=n.QUANTITY
 10	number	number	NOUN	NN	Number=Sing	4	obl	4:obl:for	_
-11	of	of	ADP	IN	_	12	case	12:case	_
-12	years	year	NOUN	NNS	Number=Plur	10	nmod	10:nmod:of	_
+11	of	of	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=10:number|PRel[obj]=12:year|Supersense=p.QuantityItem
+12	years	year	NOUN	NNS	Number=Plur	10	nmod	10:nmod:of	Supersense=n.TIME
 13	and	and	CCONJ	CC	_	16	cc	16:cc	_
 14	would	would	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 15	highly	highly	ADV	RB	_	16	advmod	16:advmod	_
-16	recommend	recommend	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
+16	recommend	recommend	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	Supersense=v.communication
 17	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	obj	16:obj	_
-18	to	to	ADP	IN	_	19	case	19:case	_
+18	to	to	ADP	IN	_	19	case	19:case	PRel[config]=default|PRel[gov]=16:recommend|PRel[obj]=19:anyone|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
 19	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	16	obl	16:obl:to	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -35,74 +35,74 @@
 1-2	I've	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|11:nsubj|13:nsubj:xsubj	_
 2	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	read	read	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+3	read	read	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Supersense=v.communication
 4	some	some	DET	DT	PronType=Ind	3	obj	3:obj	_
-5	of	of	ADP	IN	_	7	case	7:case	_
+5	of	of	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:some|PRel[obj]=7:review|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	reviews	review	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
-8	below	below	ADV	RB	_	7	advmod	7:advmod	_
+7	reviews	review	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	Supersense=n.COMMUNICATION
+8	below	below	ADV	RB	_	7	advmod	7:advmod	PRel[config]=default|PRel[gov]=7:review|Supersense=p.Locus
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
-10	would	would	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
+10	would	would	AUX	MD	VerbForm=Fin	11	aux	11:aux	MWECat=V.VID|MWELemma=would like|MWELen=2|Supersense=v.cognition
 11	like	like	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
-13	state	state	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
+13	state	state	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	Supersense=v.communication
 14	that	that	SCONJ	IN	_	24	mark	24:mark	_
 15	yes	yes	INTJ	UH	Polarity=Pos	24	discourse	24:discourse	SpaceAfter=No
 16	,	,	PUNCT	,	_	15	punct	15:punct	_
-17	like	like	ADP	IN	_	22	case	22:case	_
+17	like	like	ADP	IN	_	22	case	22:case	PRel[config]=default|PRel[gov]=24:be|PRel[obj]=22:office|Supersense=p.ComparisonRef
 18	any	any	DET	DT	PronType=Ind	22	det	22:det	_
 19	other	other	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
 20-21	doctors	_	_	_	_	_	_	_	_
-20	doctor	doctor	NOUN	NN	Number=Sing	22	nmod:poss	22:nmod:poss	_
-21	s	's	PART	POS	Typo=Yes	20	case	20:case	CorrectForm='s
-22	office	office	NOUN	NN	Number=Sing	24	obl	24:obl:like	_
+20	doctor	doctor	NOUN	NN	Number=Sing	22	nmod:poss	22:nmod:poss	Supersense=n.PERSON
+21	s	's	PART	POS	Typo=Yes	20	case	20:case	CorrectForm='s|PRel[config]=default|PRel[gov]=22:office|PRel[obj]=20:doctor|Supersense[coding]=p.Possessor|Supersense[scene]=p.OrgMember
+22	office	office	NOUN	NN	Number=Sing	24	obl	24:obl:like	Supersense=n.GROUP
 23	there	there	PRON	EX	PronType=Dem	24	expl	24:expl	_
-24	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	ccomp	13:ccomp	Cxn=Existential-CopPred-ThereExpl
+24	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	ccomp	13:ccomp	Cxn=Existential-CopPred-ThereExpl|Supersense=v.stative
 25	sometimes	sometimes	ADV	RB	PronType=Ind	24	advmod	24:advmod	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	_
-27	wait	wait	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	CxnElt=24:Existential-CopPred-ThereExpl.Pivot
+27	wait	wait	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	CxnElt=24:Existential-CopPred-ThereExpl.Pivot|Supersense=n.ACT
 28	(	(	PUNCT	-LRB-	_	36	punct	36:punct	SpaceAfter=No
-29	depending	depend	VERB	VBG	Tense=Pres|VerbForm=Part	36	mark	36:mark	_
-30	on	on	SCONJ	IN	_	36	mark	36:mark	_
+29	depending	depend	VERB	VBG	Tense=Pres|VerbForm=Part	36	mark	36:mark	MWELemma[weak]=depend on|MWELen[weak]=2|MWEString[weak]=depending on|Supersense=v.stative
+30	on	on	SCONJ	IN	_	36	mark	36:mark	PRel[config]=subordinating|PRel[gov]=24:be|PRel[obj]=36:see|Supersense=p.Circumstance
 31	what	what	PRON	WP	PronType=Int	36	obl	36:obl:for	_
 32	other	other	ADJ	JJ	Degree=Pos	33	amod	33:amod	_
-33	patients	patient	NOUN	NNS	Number=Plur	36	nsubj:pass	36:nsubj:pass	_
+33	patients	patient	NOUN	NNS	Number=Plur	36	nsubj:pass	36:nsubj:pass	MWECat=N|MWELemma=patient <2> see|MWELen=4|MWEString=patients <2> seen|Supersense=n.GROUP
 34	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	36	aux	36:aux	_
 35	being	be	AUX	VBG	Tense=Pres|VerbForm=Part	36	aux:pass	36:aux:pass	_
 36	seen	see	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	24	advcl	24:advcl:on	_
-37	for	for	ADP	IN	_	31	case	31:case	SpaceAfter=No
+37	for	for	ADP	IN	_	31	case	31:case	PRel[config]=stranded|PRel[gov]=36:see|PRel[obj]=31:what|SpaceAfter=No|Supersense=p.Purpose
 38	)	)	PUNCT	-RRB-	_	36	punct	36:punct	_
 39	and	and	CCONJ	CC	_	51	cc	51:cc	_
 40	some	some	DET	DT	PronType=Ind	51	nsubj	51:nsubj	_
-41	of	of	ADP	IN	_	43	case	43:case	_
+41	of	of	ADP	IN	_	43	case	43:case	PRel[config]=default|PRel[gov]=40:some|PRel[obj]=43:test|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
 42	the	the	DET	DT	Definite=Def|PronType=Art	43	det	43:det	_
-43	tests	test	NOUN	NNS	Number=Plur	40	nmod	40:nmod:of|48:nsubj:pass	_
+43	tests	test	NOUN	NNS	Number=Plur	40	nmod	40:nmod:of|48:nsubj:pass	Supersense=n.ACT
 44	and	and	CCONJ	CC	_	45	cc	45:cc	_
-45	procedures	procedure	NOUN	NNS	Number=Plur	43	conj	40:nmod:of|43:conj:and|48:nsubj:pass	_
+45	procedures	procedure	NOUN	NNS	Number=Plur	43	conj	40:nmod:of|43:conj:and|48:nsubj:pass	Supersense=n.ACT
 46	that	that	PRON	WDT	PronType=Rel	48	nsubj:pass	43:ref	_
 47	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	48	aux:pass	48:aux:pass	_
-48	ran	run	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	43	acl:relcl	43:acl:relcl	Cxn=rc-that-nsubj:pass
+48	ran	run	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	43	acl:relcl	43:acl:relcl	Cxn=rc-that-nsubj:pass|Supersense=v.social
 49	can	can	AUX	MD	VerbForm=Fin	51	aux	51:aux	_
-50	be	be	AUX	VB	VerbForm=Inf	51	cop	51:cop	_
+50	be	be	AUX	VB	VerbForm=Inf	51	cop	51:cop	Supersense=v.stative
 51	costly	costly	ADJ	JJ	Degree=Pos	24	conj	13:ccomp|24:conj:and	_
 52	(	(	PUNCT	-LRB-	_	57	punct	57:punct	SpaceAfter=No
-53	just	just	ADV	RB	_	57	advmod	57:advmod	_
-54	like	like	SCONJ	IN	_	57	mark	57:mark	_
+53	just	just	ADV	RB	_	57	advmod	57:advmod	MWELemma[weak]=just like|MWELen[weak]=2
+54	like	like	SCONJ	IN	_	57	mark	57:mark	PRel[config]=subordinating|PRel[gov]=51:costly|PRel[obj]=57:be|Supersense=p.ComparisonRef
 55	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	57	nsubj	57:nsubj	_
 56	would	would	AUX	MD	VerbForm=Fin	57	aux	57:aux	_
-57	be	be	AUX	VB	VerbForm=Inf	51	parataxis	51:parataxis	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=57:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|Promoted=Yes
-58	for	for	ADP	IN	_	62	case	62:case	_
+57	be	be	AUX	VB	VerbForm=Inf	51	parataxis	51:parataxis	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=57:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|Promoted=Yes|Supersense=v.stative
+58	for	for	ADP	IN	_	62	case	62:case	PRel[config]=default|PRel[gov]=57:be|PRel[obj]=62:test|Supersense=??
 59	any	any	DET	DT	PronType=Ind	62	det	62:det	_
 60	other	other	ADJ	JJ	Degree=Pos	62	amod	62:amod	_
 61	medical	medical	ADJ	JJ	Degree=Pos	62	amod	62:amod	_
-62	tests	test	NOUN	NNS	Number=Plur	57	obl	57:obl:for	_
+62	tests	test	NOUN	NNS	Number=Plur	57	obl	57:obl:for	Supersense=n.COGNITION
 63	elsewhere	elsewhere	ADV	RB	_	57	advmod	57:advmod	_
 64	if	if	SCONJ	IN	_	68	mark	68:mark	_
 65	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	68	nsubj	68:nsubj	_
 66	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	68	aux	68:aux	_
 67	not	not	PART	RB	Polarity=Neg	68	advmod	68:advmod	_
-68	have	have	VERB	VB	VerbForm=Inf	57	advcl	57:advcl:if	CxnElt=57:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
-69	insurance	insurance	NOUN	NN	Number=Sing	68	obj	68:obj	SpaceAfter=No
+68	have	have	VERB	VB	VerbForm=Inf	57	advcl	57:advcl:if	CxnElt=57:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|Supersense=v.stative
+69	insurance	insurance	NOUN	NN	Number=Sing	68	obj	68:obj	SpaceAfter=No|Supersense=n.POSSESSION
 70	)	)	PUNCT	-RRB-	_	57	punct	57:punct	SpaceAfter=No
 71	...	...	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
 
@@ -110,30 +110,30 @@
 # text = I have seen several of the providers from the office and have not once been shown anything but care and consideration.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|16:nsubj:pass	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+3	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Supersense=v.cognition
 4	several	several	ADJ	JJ	Degree=Pos	3	obj	3:obj	_
-5	of	of	ADP	IN	_	7	case	7:case	_
+5	of	of	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:several|PRel[obj]=7:provider|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	providers	provider	NOUN	NNS	Number=Plur	4	obl	4:obl:of	_
-8	from	from	ADP	IN	_	10	case	10:case	_
+7	providers	provider	NOUN	NNS	Number=Plur	4	obl	4:obl:of	Supersense=n.PERSON
+8	from	from	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=7:provider|PRel[obj]=10:office|Supersense[coding]=p.Source|Supersense[scene]=p.Org
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	office	office	NOUN	NN	Number=Sing	7	nmod	7:nmod:from	_
+10	office	office	NOUN	NN	Number=Sing	7	nmod	7:nmod:from	Supersense=n.GROUP
 11	and	and	CCONJ	CC	_	16	cc	16:cc	_
 12	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
 13	not	not	PART	RB	Polarity=Neg	16	advmod	16:advmod	_
 14	once	once	ADV	RB	NumForm=Word|NumType=Mult	16	advmod	16:advmod	_
 15	been	be	AUX	VBN	Tense=Past|VerbForm=Part	16	aux:pass	16:aux:pass	_
-16	shown	show	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	conj	3:conj:and	_
+16	shown	show	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	conj	3:conj:and	Supersense=v.social
 17	anything	anything	PRON	NN	Number=Sing|PronType=Ind	16	obj	16:obj	_
-18	but	but	ADP	IN	_	19	case	19:case	_
-19	care	care	NOUN	NN	Number=Sing	17	nmod	17:nmod:but	_
+18	but	but	ADP	IN	_	19	case	19:case	PRel[config]=default|PRel[gov]=17:anything|PRel[obj]=19:care|Supersense=p.PartPortion
+19	care	care	NOUN	NN	Number=Sing	17	nmod	17:nmod:but	Supersense=n.ACT
 20	and	and	CCONJ	CC	_	21	cc	21:cc	_
-21	consideration	consideration	NOUN	NN	Number=Sing	19	conj	17:nmod:but|19:conj:and	SpaceAfter=No
+21	consideration	consideration	NOUN	NN	Number=Sing	19	conj	17:nmod:but|19:conj:and	SpaceAfter=No|Supersense=n.FEELING
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-207629-0005
 # text = I cant speak for them but any tests or appointments they recommend are probably in the best interests of us (the patient) and you have the ability to decline anything that they suggest to you.
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	MWECat=DISC|MWELemma=I can not speak for|MWELen=5|MWEString=I ca nt speak for
 2-3	cant	_	_	_	_	_	_	_	_
 2	ca	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	nt	not	PART	RB	Polarity=Neg|Typo=Yes	4	advmod	4:advmod	CorrectForm=n't
@@ -142,35 +142,35 @@
 6	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	4	obl	4:obl:for	_
 7	but	but	CCONJ	CC	_	19	cc	19:cc	_
 8	any	any	DET	DT	PronType=Ind	9	det	9:det	_
-9	tests	test	NOUN	NNS	Number=Plur	19	nsubj	13:obj|19:nsubj	_
+9	tests	test	NOUN	NNS	Number=Plur	19	nsubj	13:obj|19:nsubj	Supersense=n.ACT
 10	or	or	CCONJ	CC	_	11	cc	11:cc	_
-11	appointments	appointment	NOUN	NNS	Number=Plur	9	conj	9:conj:or|19:nsubj	_
+11	appointments	appointment	NOUN	NNS	Number=Plur	9	conj	9:conj:or|19:nsubj	Supersense=n.EVENT
 12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
-13	recommend	recommend	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-red-obj
-14	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
+13	recommend	recommend	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-red-obj|Supersense=v.communication
+14	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	Supersense=v.stative
 15	probably	probably	ADV	RB	_	19	advmod	19:advmod	_
-16	in	in	ADP	IN	_	19	case	19:case	_
+16	in	in	ADP	IN	_	19	case	19:case	MWECat=PP|MWELemma=in <1> good interest|MWELen=4|MWEString=in <1> best interests|PRel[config]=predicative|PRel[gov]=9:test|PRel[obj]=19:interest|Supersense[coding]=p.Locus|Supersense[scene]=p.Manner
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 18	best	good	ADJ	JJS	Degree=Sup	19	amod	19:amod	_
 19	interests	interest	NOUN	NNS	Number=Plur	4	conj	4:conj:but	_
-20	of	of	ADP	IN	_	21	case	21:case	_
+20	of	of	ADP	IN	_	21	case	21:case	PRel[config]=default|PRel[gov]=19:interest|PRel[obj]=21:we|Supersense=p.Gestalt
 21	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	19	nmod	19:nmod:of	_
 22	(	(	PUNCT	-LRB-	_	24	punct	24:punct	SpaceAfter=No
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
-24	patient	patient	NOUN	NN	Number=Sing	21	appos	21:appos	SpaceAfter=No
+24	patient	patient	NOUN	NN	Number=Sing	21	appos	21:appos	SpaceAfter=No|Supersense=n.PERSON
 25	)	)	PUNCT	-RRB-	_	24	punct	24:punct	_
 26	and	and	CCONJ	CC	_	28	cc	28:cc	_
 27	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	28	nsubj	28:nsubj	_
-28	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	19	conj	19:conj:and	_
+28	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	19	conj	19:conj:and	Supersense=v.stative
 29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
-30	ability	ability	NOUN	NN	Number=Sing	28	obj	28:obj	_
+30	ability	ability	NOUN	NN	Number=Sing	28	obj	28:obj	Supersense=n.COGNITION
 31	to	to	PART	TO	_	32	mark	32:mark	_
-32	decline	decline	VERB	VB	VerbForm=Inf	30	acl	30:acl:to	_
+32	decline	decline	VERB	VB	VerbForm=Inf	30	acl	30:acl:to	Supersense=v.communication
 33	anything	anything	PRON	NN	Number=Sing|PronType=Ind	32	obj	32:obj|36:obj	_
 34	that	that	PRON	WDT	PronType=Rel	36	obj	33:ref	_
 35	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	36	nsubj	36:nsubj	_
-36	suggest	suggest	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	33	acl:relcl	33:acl:relcl	Cxn=rc-that-obj
-37	to	to	ADP	IN	_	38	case	38:case	_
+36	suggest	suggest	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	33	acl:relcl	33:acl:relcl	Cxn=rc-that-obj|Supersense=v.communication
+37	to	to	ADP	IN	_	38	case	38:case	PRel[config]=default|PRel[gov]=36:suggest|PRel[obj]=38:you|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
 38	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	36	obl	36:obl:to	SpaceAfter=No
 39	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -179,27 +179,27 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	personally	personally	ADV	RB	_	4	advmod	4:advmod	_
 3	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+4	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Supersense=v.stative
 5	wonderful	wonderful	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	service	service	NOUN	NN	Number=Sing	4	obj	4:obj	_
+6	service	service	NOUN	NN	Number=Sing	4	obj	4:obj	Supersense=n.ACT
 7	and	and	CCONJ	CC	_	22	cc	22:cc	_
 8	if	if	SCONJ	IN	_	12	mark	12:mark	_
 9-10	youre	_	_	_	_	_	_	_	_
 9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	_
 10	re	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|Typo=Yes|VerbForm=Fin	12	aux	12:aux	CorrectForm='re
 11	truely	truly	ADV	RB	Typo=Yes	12	advmod	12:advmod	CorrectForm=truly
-12	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	22	advcl	22:advcl:if	CxnElt=22:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
-13	for	for	ADP	IN	_	16	case	16:case	_
+12	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	22	advcl	22:advcl:if	CxnElt=22:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|Supersense=v.cognition
+13	for	for	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=12:look|PRel[obj]=16:practice|Supersense=p.Theme
 14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
-15	FAMILY	family	NOUN	NN	Number=Sing	16	compound	16:compound	_
+15	FAMILY	family	NOUN	NN	Number=Sing	16	compound	16:compound	MWECat=N|MWELemma=family practice|MWELen=2|Supersense=n.GROUP
 16	practice	practice	NOUN	NN	Number=Sing	12	obl	12:obl:for	SpaceAfter=No
 17	...	...	PUNCT	,	_	12	punct	12:punct	SpaceAfter=No
-18	Warner	Warner	PROPN	NNP	Number=Sing	19	compound	19:compound	_
+18	Warner	Warner	PROPN	NNP	Number=Sing	19	compound	19:compound	MWECat=N|MWELemma=Warner Family|MWELen=2|Supersense=n.GROUP
 19	Family	Family	PROPN	NNP	Number=Sing	22	nsubj	22:nsubj	_
-20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
+20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	Supersense=v.stative
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
-22	place	place	NOUN	NN	Number=Sing	4	conj	4:conj:and	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=22:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
-23	for	for	ADP	IN	_	24	case	24:case	_
+22	place	place	NOUN	NN	Number=Sing	4	conj	4:conj:and	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=22:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|Supersense=n.GROUP
+23	for	for	ADP	IN	_	24	case	24:case	PRel[config]=default|PRel[gov]=22:place|PRel[obj]=24:you|Supersense=p.Beneficiary
 24	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	22	nmod	22:nmod:for	SpaceAfter=No
 25	.	.	PUNCT	.	_	4	punct	4:punct	_
 

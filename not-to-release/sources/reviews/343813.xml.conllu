@@ -3,7 +3,7 @@
 # newpar id = reviews-343813-p0001
 # text = Bad Service
 1	Bad	bad	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	Service	service	NOUN	NN	Number=Sing	0	root	0:root	_
+2	Service	service	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.ACT
 
 # sent_id = reviews-343813-0002
 # newpar id = reviews-343813-p0002
@@ -13,42 +13,42 @@
 2	wo	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 3	n't	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 4	be	be	AUX	VB	VerbForm=Inf	5	aux	5:aux	_
-5	returning	return	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	SpaceAfter=No
+5	returning	return	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	SpaceAfter=No|Supersense=v.motion
 6	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-343813-0003
 # text = Travelled 40mins after calling to see if a product was in stock.
-1	Travelled	travel	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	Travelled	travel	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.motion
 2	40	40	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	SpaceAfter=No
-3	mins	minute	NOUN	NNS	Abbr=Yes|Number=Plur	1	obj	1:obj	_
-4	after	after	SCONJ	IN	_	5	mark	5:mark	_
-5	calling	call	VERB	VBG	Tense=Pres|VerbForm=Part	1	advcl	1:advcl:after	_
-6	to	to	PART	TO	_	7	mark	7:mark	_
-7	see	see	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:to	_
+3	mins	minute	NOUN	NNS	Abbr=Yes|Number=Plur	1	obj	1:obj	Supersense=n.TIME
+4	after	after	SCONJ	IN	_	5	mark	5:mark	PRel[config]=subordinating|PRel[gov]=1:travel|PRel[obj]=5:call|Supersense=p.Time
+5	calling	call	VERB	VBG	Tense=Pres|VerbForm=Part	1	advcl	1:advcl:after	Supersense=v.communication
+6	to	to	PART	TO	_	7	mark	7:mark	PRel[config]=subordinating|PRel[gov]=5:call|PRel[obj]=7:see|Supersense=p.Purpose
+7	see	see	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:to	Supersense=v.social
 8	if	if	SCONJ	IN	_	13	mark	13:mark	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	product	product	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
+10	product	product	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	Supersense=n.ARTIFACT
 11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	_
-12	in	in	ADP	IN	_	13	case	13:case	_
+12	in	in	ADP	IN	_	13	case	13:case	MWECat=PP|MWELemma=in stock|MWELen=2|PRel[config]=predicative|PRel[gov]=10:product|PRel[obj]=13:stock|Supersense[coding]=p.Locus|Supersense[scene]=p.Characteristic
 13	stock	stock	NOUN	NN	Number=Sing	7	ccomp	7:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=13:Interrogative-Polar-Indirect.Clause|SpaceAfter=No
 14	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-343813-0004
 # text = Told that they had plenty.
-1	Told	tell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+1	Told	tell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Supersense=v.communication
 2	that	that	SCONJ	IN	_	4	mark	4:mark	_
 3	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
-4	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	1	ccomp	1:ccomp	_
-5	plenty	plenty	NOUN	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No
+4	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	1	ccomp	1:ccomp	Supersense=v.stative
+5	plenty	plenty	NOUN	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No|Supersense=n.QUANTITY
 6	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-343813-0005
 # text = Get there and there was nothing.
-1	Get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.motion
 2	there	there	ADV	RB	PronType=Dem	1	advmod	1:advmod	_
 3	and	and	CCONJ	CC	_	5	cc	5:cc	_
 4	there	there	PRON	EX	PronType=Dem	5	expl	5:expl	_
-5	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	1:conj:and	Cxn=Existential-CopPred-ThereExpl
+5	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	1:conj:and	Cxn=Existential-CopPred-ThereExpl|Supersense=v.stative
 6	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	5	nsubj	5:nsubj	CxnElt=5:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
 7	.	.	PUNCT	.	_	1	punct	1:punct	_
 

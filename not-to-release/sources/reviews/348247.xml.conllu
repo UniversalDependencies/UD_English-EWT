@@ -3,14 +3,14 @@
 # newpar id = reviews-348247-p0001
 # text = happy customer
 1	happy	happy	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	customer	customer	NOUN	NN	Number=Sing	0	root	0:root	_
+2	customer	customer	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.PERSON
 
 # sent_id = reviews-348247-0002
 # newpar id = reviews-348247-p0002
 # text = Mr. Squeege is THE BEST.
-1	Mr.	Mr.	PROPN	NNP	Number=Sing	2	nmod:desc	2:nmod:desc	_
+1	Mr.	Mr.	PROPN	NNP	Number=Sing	2	nmod:desc	2:nmod:desc	MWECat=N|MWELemma=Mr. Squeege|MWELen=2|Supersense=n.GROUP
 2	Squeege	Squeege	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
 4	THE	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	BEST	good	ADJ	JJS	Degree=Sup	0	root	0:root	SpaceAfter=No
 6	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -20,19 +20,19 @@
 1	Prompt	prompt	ADJ	JJ	Degree=Pos	4	amod	4:amod	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	Clean	clean	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	Windows	window	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+4	Windows	window	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No|Supersense=n.ARTIFACT
 5	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-348247-0004
 # text = Affordable pricing.
 1	Affordable	affordable	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	pricing	pricing	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+2	pricing	pricing	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.POSSESSION
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-348247-0005
 # text = Friendly responses.
 1	Friendly	friendly	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	responses	response	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+2	responses	response	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No|Supersense=n.COMMUNICATION
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-348247-0006
@@ -42,47 +42,47 @@
 3	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 4	excellent	excellent	ADJ	JJ	Degree=Pos	6	nsubj:pass	6:nsubj:pass	_
 5	be	be	AUX	VB	VerbForm=Inf	6	aux:pass	6:aux:pass	_
-6	described	describe	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=6:Interrogative-WHInfo-Direct.Clause
-7	for	for	ADP	IN	_	9	case	9:case	_
+6	described	describe	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=6:Interrogative-WHInfo-Direct.Clause|Supersense=v.communication
+7	for	for	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:describe|PRel[obj]=9:business|Supersense=??
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
-9	business	business	NOUN	NN	Number=Sing	6	obl	6:obl:for	_
-10	of	of	ADP	IN	_	12	case	12:case	_
+9	business	business	NOUN	NN	Number=Sing	6	obl	6:obl:for	Supersense=n.GROUP
+10	of	of	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=9:business|PRel[obj]=12:sort|Supersense[coding]=p.Identity|Supersense[scene]=p.Characteristic
 11	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	12:det	_
-12	sort	sort	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	SpaceAfter=No
+12	sort	sort	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	SpaceAfter=No|Supersense=n.COGNITION
 13	?	?	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-348247-0007
 # text = They have been my only "go-to" resource since we first did business together.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
-3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	11	cop	11:cop	_
-4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	11	cop	11:cop	Supersense=v.stative
+4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	PRel[config]=possessive|PRel[gov]=11:resource|Supersense[coding]=p.Possessor|Supersense[scene]=p.Beneficiary
 5	only	only	ADV	RB	_	11	advmod	11:advmod	_
 6	"	"	PUNCT	``	_	7	punct	7:punct	SpaceAfter=No
-7	go	go	VERB	VB	VerbForm=Inf	11	compound	11:compound	SpaceAfter=No
+7	go	go	VERB	VB	VerbForm=Inf	11	compound	11:compound	MWECat=ADJ|MWELemma=go - to|MWELen=3|SpaceAfter=No
 8	-	-	PUNCT	HYPH	_	9	punct	9:punct	SpaceAfter=No
 9	to	to	ADP	IN	_	7	obl	7:obl	Promoted=Yes|SpaceAfter=No
 10	"	"	PUNCT	''	_	7	punct	7:punct	_
-11	resource	resource	NOUN	NN	Number=Sing	0	root	0:root	_
-12	since	since	SCONJ	IN	_	15	mark	15:mark	_
+11	resource	resource	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.COGNITION
+12	since	since	SCONJ	IN	_	15	mark	15:mark	PRel[config]=subordinating|PRel[gov]=11:resource|PRel[obj]=15:do|Supersense=p.StartTime
 13	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
 14	first	first	ADV	RB	NumForm=Word|NumType=Ord	15	advmod	15:advmod	_
-15	did	do	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:since	_
-16	business	business	NOUN	NN	Number=Sing	15	obj	15:obj	_
-17	together	together	ADV	RB	_	15	advmod	15:advmod	SpaceAfter=No
+15	did	do	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:since	MWELemma[weak]=do business|MWELen[weak]=2|MWEString[weak]=did business|Supersense=v.social
+16	business	business	NOUN	NN	Number=Sing	15	obj	15:obj	Supersense=n.ACT
+17	together	together	ADV	RB	_	15	advmod	15:advmod	PRel[config]=default|PRel[gov]=15:do|SpaceAfter=No|Supersense=p.Ancillary
 18	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = reviews-348247-0008
 # text = You will find the same to be true for you.
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.cognition
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	same	same	ADJ	JJ	Degree=Pos	3	obj	3:obj|8:nsubj:xsubj	_
 6	to	to	PART	TO	_	8	mark	8:mark	_
-7	be	be	AUX	VB	VerbForm=Inf	8	cop	8:cop	_
+7	be	be	AUX	VB	VerbForm=Inf	8	cop	8:cop	Supersense=v.stative
 8	true	true	ADJ	JJ	Degree=Pos	3	xcomp	3:xcomp	_
-9	for	for	ADP	IN	_	10	case	10:case	_
+9	for	for	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=8:true|PRel[obj]=10:you|Supersense=p.Beneficiary
 10	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	8	obl	8:obl:for	SpaceAfter=No
 11	.	.	PUNCT	.	_	3	punct	3:punct	_
 

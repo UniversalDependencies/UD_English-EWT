@@ -2,17 +2,17 @@
 # sent_id = reviews-206303-0001
 # newpar id = reviews-206303-p0001
 # text = Natasha
-1	Natasha	Natasha	PROPN	NNP	Number=Sing	0	root	0:root	_
+1	Natasha	Natasha	PROPN	NNP	Number=Sing	0	root	0:root	Supersense=n.PERSON
 
 # sent_id = reviews-206303-0002
 # newpar id = reviews-206303-p0002
 # text = A real pleasure training with Natasha.
 1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
 2	real	real	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	pleasure	pleasure	NOUN	NN	Number=Sing	0	root	0:root	_
-4	training	train	VERB	VBG	VerbForm=Ger	3	csubj	3:csubj	_
-5	with	with	ADP	IN	_	6	case	6:case	_
-6	Natasha	Natasha	PROPN	NNP	Number=Sing	4	obl	4:obl:with	SpaceAfter=No
+3	pleasure	pleasure	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.FEELING
+4	training	train	VERB	VBG	VerbForm=Ger	3	csubj	3:csubj	Supersense=v.social
+5	with	with	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:train|PRel[obj]=6:Natasha|Supersense[coding]=p.Ancillary|Supersense[scene]=p.SocialRel
+6	Natasha	Natasha	PROPN	NNP	Number=Sing	4	obl	4:obl:with	SpaceAfter=No|Supersense=n.PERSON
 7	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-206303-0003
@@ -22,10 +22,10 @@
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
 4	reliable	reliable	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	SpaceAfter=No
 5	,	,	PUNCT	,	_	9	punct	9:punct	_
-6	sessions	session	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj|12:nsubj	_
-7	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
-8	good	good	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	fun	fun	NOUN	NN	Number=Sing	2	parataxis	2:parataxis	_
+6	sessions	session	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj|12:nsubj	Supersense=n.EVENT
+7	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	Supersense=v.stative
+8	good	good	ADJ	JJ	Degree=Pos	9	amod	9:amod	MWELemma[weak]=good fun|MWELen[weak]=2
+9	fun	fun	NOUN	NN	Number=Sing	2	parataxis	2:parataxis	Supersense=n.FEELING
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	suitably	suitably	ADV	RB	_	12	advmod	12:advmod	_
 12	challenging	challenging	ADJ	JJ	Degree=Pos	9	conj	9:conj:and	SpaceAfter=No
@@ -35,34 +35,34 @@
 # text = She really listens to what it is you would like to achieve, and I am very happy with my results.
 1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
 2	really	really	ADV	RB	_	3	advmod	3:advmod	_
-3	listens	listen	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-4	to	to	ADP	IN	_	5	case	5:case	_
+3	listens	listen	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.perception
+4	to	to	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=3:listen|PRel[obj]=5:what|Supersense[coding]=p.Goal|Supersense[scene]=p.Stimulus
 5	what	what	PRON	WP	PronType=Rel	3	obl	3:obl:to|12:obj	_
 6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	expl	7:expl	_
-7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-free-pred-auxstrand|Promoted=Yes
+7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-free-pred-auxstrand|Promoted=Yes|Supersense=v.stative
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj|12:nsubj:xsubj	_
-9	would	would	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
+9	would	would	AUX	MD	VerbForm=Fin	10	aux	10:aux	MWECat=V.VID|MWELemma=would like|MWELen=2|Supersense=v.cognition
 10	like	like	VERB	VB	VerbForm=Inf	5	advcl:relcl	5:advcl:relcl	Cxn=rc-free-obj_xcomp
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	achieve	achieve	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	SpaceAfter=No
+12	achieve	achieve	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	SpaceAfter=No|Supersense=v.cognition
 13	,	,	PUNCT	,	_	18	punct	18:punct	_
 14	and	and	CCONJ	CC	_	18	cc	18:cc	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
-16	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
+16	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	18	cop	18:cop	Supersense=v.stative
 17	very	very	ADV	RB	_	18	advmod	18:advmod	_
 18	happy	happy	ADJ	JJ	Degree=Pos	3	conj	3:conj:and	_
-19	with	with	ADP	IN	_	21	case	21:case	_
-20	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	_
-21	results	result	NOUN	NNS	Number=Plur	18	obl	18:obl:with	SpaceAfter=No
+19	with	with	ADP	IN	_	21	case	21:case	PRel[config]=default|PRel[gov]=18:happy|PRel[obj]=21:result|Supersense[coding]=p.Topic|Supersense[scene]=p.Stimulus
+20	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	PRel[config]=possessive|PRel[gov]=21:result|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Experiencer
+21	results	result	NOUN	NNS	Number=Plur	18	obl	18:obl:with	SpaceAfter=No|Supersense=n.PHENOMENON
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-206303-0005
 # text = I would highly recommend her services.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
-3	highly	highly	ADV	RB	_	4	advmod	4:advmod	_
-4	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
-6	services	service	NOUN	NNS	Number=Plur	4	obj	4:obj	SpaceAfter=No
+3	highly	highly	ADV	RB	_	4	advmod	4:advmod	MWELemma[weak]=highly recommend|MWELen[weak]=2
+4	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
+5	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	PRel[config]=possessive|PRel[gov]=6:service|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Agent
+6	services	service	NOUN	NNS	Number=Plur	4	obj	4:obj	SpaceAfter=No|Supersense=n.ACT
 7	.	.	PUNCT	.	_	4	punct	4:punct	_
 

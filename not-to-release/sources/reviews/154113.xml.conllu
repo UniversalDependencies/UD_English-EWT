@@ -4,34 +4,34 @@
 # text = A good cut!
 1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
 2	good	good	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	cut	cut	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+3	cut	cut	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.BODY
 4	!	!	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-154113-0002
 # text = Cécile is a hairdresser and has just moved into the neighbourhood.
-1	Cécile	Cécile	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|8:nsubj	_
-2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+1	Cécile	Cécile	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|8:nsubj	Supersense=n.PERSON
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	hairdresser	hairdresser	NOUN	NN	Number=Sing	0	root	0:root	_
+4	hairdresser	hairdresser	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.PERSON
 5	and	and	CCONJ	CC	_	8	cc	8:cc	_
 6	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 7	just	just	ADV	RB	_	8	advmod	8:advmod	_
-8	moved	move	VERB	VBN	Tense=Past|VerbForm=Part	4	conj	4:conj:and	_
-9	into	into	ADP	IN	_	11	case	11:case	_
+8	moved	move	VERB	VBN	Tense=Past|VerbForm=Part	4	conj	4:conj:and	Supersense=v.motion
+9	into	into	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=8:move|PRel[obj]=11:neighbourhood|Supersense=p.Goal
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	neighbourhood	neighbourhood	NOUN	NN	Number=Sing	8	obl	8:obl:into	SpaceAfter=No
+11	neighbourhood	neighbourhood	NOUN	NN	Number=Sing	8	obl	8:obl:into	SpaceAfter=No|Supersense=n.LOCATION
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-154113-0003
 # text = I go to see her to have my hair cut.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	go	go	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	to	to	PART	TO	_	4	mark	4:mark	_
-4	see	see	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
+2	go	go	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.motion
+3	to	to	PART	TO	_	4	mark	4:mark	PRel[config]=subordinating|PRel[gov]=2:go|PRel[obj]=4:see|Supersense=p.Purpose
+4	see	see	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	Supersense=v.possession
 5	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj	_
-6	to	to	PART	TO	_	7	mark	7:mark	_
-7	have	have	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	_
-8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
+6	to	to	PART	TO	_	7	mark	7:mark	PRel[config]=subordinating|PRel[gov]=4:see|PRel[obj]=7:have|Supersense=p.Purpose
+7	have	have	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	MWECat=N|MWELemma=have <1> hair cut|MWELen=4|Supersense=n.ACT
+8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:hair|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
 9	hair	hair	NOUN	NN	Number=Sing	7	obj	7:obj|10:nsubj:xsubj	_
 10	cut	cut	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	xcomp	7:xcomp	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_

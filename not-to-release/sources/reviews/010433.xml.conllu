@@ -2,114 +2,114 @@
 # sent_id = reviews-010433-0001
 # newpar id = reviews-010433-p0001
 # text = Food good, service poor
-1	Food	food	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+1	Food	food	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	Supersense=n.FOOD
 2	good	good	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 3	,	,	PUNCT	,	_	5	punct	5:punct	_
-4	service	service	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+4	service	service	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Supersense=n.ACT
 5	poor	poor	ADJ	JJ	Degree=Pos	2	parataxis	2:parataxis	_
 
 # sent_id = reviews-010433-0002
 # newpar id = reviews-010433-p0002
 # text = No silverware, asked for a spoon for my sons mac and cheese ended up having to use my tea spoon.
 1	No	no	DET	DT	PronType=Neg	2	det	2:det	_
-2	silverware	silverware	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+2	silverware	silverware	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.ARTIFACT
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
-4	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	parataxis	2:parataxis	_
-5	for	for	ADP	IN	_	7	case	7:case	_
+4	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	parataxis	2:parataxis	MWELemma[weak]=ask for|MWELen[weak]=2|MWEString[weak]=asked for|Supersense=v.communication
+5	for	for	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:ask|PRel[obj]=7:spoon|Supersense=p.Theme
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
-7	spoon	spoon	NOUN	NN	Number=Sing	4	obl	4:obl:for	_
-8	for	for	ADP	IN	_	12	case	12:case	_
-9	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
+7	spoon	spoon	NOUN	NN	Number=Sing	4	obl	4:obl:for	Supersense=n.ARTIFACT
+8	for	for	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=7:spoon|PRel[obj]=12:mac|Supersense=p.Purpose
+9	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	PRel[config]=possessive|PRel[gov]=10:son|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
 10-11	sons	_	_	_	_	_	_	_	_
-10	son	son	NOUN	NN	Number=Sing	12	nmod:poss	12:nmod:poss	_
-11	s	's	PART	POS	Typo=Yes	10	case	10:case	CorrectForm='s
-12	mac	mac	NOUN	NN	Number=Sing	7	nmod	7:nmod:for	_
+10	son	son	NOUN	NN	Number=Sing	12	nmod:poss	12:nmod:poss	Supersense=n.PERSON
+11	s	's	PART	POS	Typo=Yes	10	case	10:case	CorrectForm='s|PRel[config]=default|PRel[gov]=12:mac|PRel[obj]=10:son|Supersense=p.Possessor
+12	mac	mac	NOUN	NN	Number=Sing	7	nmod	7:nmod:for	MWECat=N|MWELemma=mac and cheese|MWELen=3|Supersense=n.FOOD
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
 14	cheese	cheese	NOUN	NN	Number=Sing	12	conj	7:nmod:for|12:conj:and	_
-15	ended	end	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	_
+15	ended	end	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	MWECat=V.VPC.full|MWELemma=end up|MWELen=2|MWEString=ended up|Supersense=v.stative
 16	up	up	ADP	RP	_	15	compound:prt	15:compound:prt	_
-17	having	have	VERB	VBG	VerbForm=Ger	15	xcomp	15:xcomp	_
+17	having	have	VERB	VBG	VerbForm=Ger	15	xcomp	15:xcomp	MWECat=AUX|MWELemma=have to|MWELen=2|MWEString=having to
 18	to	to	PART	TO	_	19	mark	19:mark	_
-19	use	use	VERB	VB	VerbForm=Inf	17	xcomp	17:xcomp	_
-20	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
-21	tea	tea	NOUN	NN	Number=Sing	22	compound	22:compound	_
+19	use	use	VERB	VB	VerbForm=Inf	17	xcomp	17:xcomp	Supersense=v.stative
+20	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	PRel[config]=possessive|PRel[gov]=22:spoon|Supersense=p.Possessor
+21	tea	tea	NOUN	NN	Number=Sing	22	compound	22:compound	MWECat=N|MWELemma=tea spoon|MWELen=2|Supersense=n.ARTIFACT
 22	spoon	spoon	NOUN	NN	Number=Sing	19	obj	19:obj	SpaceAfter=No
 23	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-010433-0003
 # text = Asked for bar-b-que sauce never got it.
-1	Asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-2	for	for	ADP	IN	_	8	case	8:case	_
-3	bar	bar	NOUN	NN	Number=Sing	7	compound	7:compound	SpaceAfter=No
+1	Asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	MWELemma[weak]=ask for|MWELen[weak]=2|MWEString[weak]=Asked for|Supersense=v.communication
+2	for	for	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=1:ask|PRel[obj]=8:sauce|Supersense=p.Theme
+3	bar	bar	NOUN	NN	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=bar - b - que|MWELen=5|SpaceAfter=No|Supersense=n.FOOD
 4	-	-	PUNCT	HYPH	_	3	punct	3:punct	SpaceAfter=No
 5	b	b	NOUN	NN	Number=Sing	7	compound	7:compound	SpaceAfter=No
 6	-	-	PUNCT	HYPH	_	5	punct	5:punct	SpaceAfter=No
 7	que	que	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	sauce	sauce	NOUN	NN	Number=Sing	1	obl	1:obl:for	_
+8	sauce	sauce	NOUN	NN	Number=Sing	1	obl	1:obl:for	Supersense=n.FOOD
 9	never	never	ADV	RB	PronType=Neg	10	advmod	10:advmod	_
-10	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	1	parataxis	1:parataxis	_
+10	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	1	parataxis	1:parataxis	Supersense=v.possession
 11	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	obj	10:obj	SpaceAfter=No
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-010433-0004
 # text = Never checked back with us once we got our food.
 1	Never	never	ADV	RB	PronType=Neg	2	advmod	2:advmod	_
-2	checked	check	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	checked	check	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=V.VPC.semi|MWELemma=check back|MWELemma[weak]=check back with|MWELen=2|MWELen[weak]=3|MWEString=checked back|MWEString[weak]=checked back with|Supersense=v.social
 3	back	back	ADV	RB	_	2	advmod	2:advmod	_
-4	with	with	ADP	IN	_	5	case	5:case	_
+4	with	with	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=2:check|PRel[obj]=5:we|Supersense[coding]=p.Ancillary|Supersense[scene]=p.Recipient
 5	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	2	obl	2:obl:with	_
 6	once	once	SCONJ	IN	_	8	mark	8:mark	_
 7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
-8	got	get	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	2	advcl	2:advcl:once	_
-9	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	food	food	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No
+8	got	get	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	2	advcl	2:advcl:once	Supersense=v.stative
+9	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	PRel[config]=possessive|PRel[gov]=10:food|Supersense=p.Possessor
+10	food	food	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No|Supersense=n.FOOD
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-010433-0005
 # text = Had to go the the bus boys station ourselves to get napkins.
-1	Had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	Had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=AUX|MWELemma=have to|MWELen=2|MWEString=Had to
 2	to	to	PART	TO	_	3	mark	3:mark	_
-3	go	go	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
-4	the	to	ADP	IN	Typo=Yes	9	case	9:case	CorrectForm=to
+3	go	go	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	Supersense=v.motion
+4	the	to	ADP	IN	Typo=Yes	9	case	9:case	CorrectForm=to|PRel[config]=default|PRel[gov]=3:go|PRel[obj]=9:station|Supersense=p.Goal
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-6	bus	bus	NOUN	NN	Number=Sing	7	compound	7:compound	_
+6	bus	bus	NOUN	NN	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=bus boy|MWELen=2|Supersense=n.PERSON
 7-8	boys	_	_	_	_	_	_	_	_
 7	boy	boy	NOUN	NN	Number=Sing	9	nmod:poss	9:nmod:poss	_
-8	s	's	PART	POS	Typo=Yes	7	case	7:case	CorrectForm='s
-9	station	station	NOUN	NN	Number=Sing	3	obl	3:obl:to	_
+8	s	's	PART	POS	Typo=Yes	7	case	7:case	CorrectForm='s|PRel[config]=default|PRel[gov]=9:station|PRel[obj]=7:boy|Supersense[coding]=p.Possessor|Supersense[scene]=p.Beneficiary
+9	station	station	NOUN	NN	Number=Sing	3	obl	3:obl:to	Supersense=n.LOCATION
 10	ourselves	ourselves	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Emp|Reflex=Yes	3	obl:unmarked	3:obl:unmarked	_
-11	to	to	PART	TO	_	12	mark	12:mark	_
-12	get	get	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_
-13	napkins	napkin	NOUN	NNS	Number=Plur	12	obj	12:obj	SpaceAfter=No
+11	to	to	PART	TO	_	12	mark	12:mark	PRel[config]=subordinating|PRel[gov]=3:go|PRel[obj]=12:get|Supersense=p.Purpose
+12	get	get	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	Supersense=v.stative
+13	napkins	napkin	NOUN	NNS	Number=Plur	12	obj	12:obj	SpaceAfter=No|Supersense=n.ARTIFACT
 14	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-010433-0006
 # text = Only one server, too buys talking with others I guess.
 1	Only	only	ADV	RB	_	3	advmod	3:advmod	_
 2	one	one	NUM	CD	NumForm=Word|NumType=Card	3	nummod	3:nummod	_
-3	server	server	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+3	server	server	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.PERSON
 4	,	,	PUNCT	,	_	11	punct	11:punct	_
 5	too	too	ADV	RB	_	6	advmod	6:advmod	_
 6	buys	busy	ADJ	JJ	Degree=Pos|Typo=Yes	11	ccomp	11:ccomp	CorrectForm=busy
-7	talking	talk	VERB	VBG	Tense=Pres|VerbForm=Part	6	advcl	6:advcl	_
-8	with	with	ADP	IN	_	9	case	9:case	_
+7	talking	talk	VERB	VBG	Tense=Pres|VerbForm=Part	6	advcl	6:advcl	Supersense=v.communication
+8	with	with	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=7:talk|PRel[obj]=9:other|Supersense[coding]=p.Ancillary|Supersense[scene]=p.Agent
 9	others	other	NOUN	NNS	Number=Plur	7	obl	7:obl:with	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
-11	guess	guess	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	SpaceAfter=No
+11	guess	guess	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	SpaceAfter=No|Supersense=v.cognition
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-010433-0007
 # text = Food was good, but service means a lot to me.
-1	Food	food	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
+1	Food	food	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Supersense=n.FOOD
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	Supersense=v.stative
 3	good	good	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	but	but	CCONJ	CC	_	7	cc	7:cc	_
-6	service	service	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
-7	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:but	_
-8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
+6	service	service	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	Supersense=n.ACT
+7	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:but	Supersense=v.cognition
+8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	MWECat=DET|MWELemma=a lot|MWELen=2
 9	lot	lot	NOUN	NN	Number=Sing	7	obj	7:obj	_
-10	to	to	ADP	IN	_	11	case	11:case	_
+10	to	to	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=7:mean|PRel[obj]=11:I|Supersense[coding]=p.Goal|Supersense[scene]=p.Experiencer
 11	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	7	obl	7:obl:to	SpaceAfter=No
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
 

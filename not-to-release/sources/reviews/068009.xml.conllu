@@ -3,44 +3,44 @@
 # newpar id = reviews-068009-p0001
 # text = Criminal Attorney Dallas
 1	Criminal	criminal	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	Attorney	attorney	NOUN	NN	Number=Sing	0	root	0:root	_
-3	Dallas	Dallas	PROPN	NNP	Number=Sing	2	appos	2:appos	_
+2	Attorney	attorney	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.PERSON
+3	Dallas	Dallas	PROPN	NNP	Number=Sing	2	appos	2:appos	Supersense=n.LOCATION
 
 # sent_id = reviews-068009-0002
 # newpar id = reviews-068009-p0002
 # text = Dallas Criminal Attorney Peter Barrett is absolutely committed to vigorously supporting your rights and achieving a successful outcome.
-1	Dallas	Dallas	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-2	Criminal	criminal	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
+1	Dallas	Dallas	PROPN	NNP	Number=Sing	3	compound	3:compound	Supersense=n.LOCATION
+2	Criminal	criminal	ADJ	JJ	Degree=Pos	3	amod	3:amod	MWECat=N|MWELemma=criminal attorney|MWELen=2|Supersense=n.PERSON
 3	Attorney	attorney	NOUN	NN	Number=Sing	4	nmod:desc	4:nmod:desc	_
-4	Peter	Peter	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
+4	Peter	Peter	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	MWECat=N|MWELemma=Peter Barrett|MWELen=2|Supersense=n.PERSON
 5	Barrett	Barrett	PROPN	NNP	Number=Sing	4	flat	4:flat	_
-6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	Supersense=v.stative
 7	absolutely	absolutely	ADV	RB	_	8	advmod	8:advmod	_
 8	committed	committed	ADJ	JJ	Degree=Pos	0	root	0:root	_
-9	to	to	SCONJ	IN	_	11	mark	11:mark	_
+9	to	to	SCONJ	IN	_	11	mark	11:mark	PRel[config]=subordinating|PRel[gov]=8:committed|PRel[obj]=11:support|Supersense=p.Topic
 10	vigorously	vigorously	ADV	RB	_	11	advmod	11:advmod	_
-11	supporting	support	VERB	VBG	Tense=Pres|VerbForm=Part	8	advcl	8:advcl:to	_
-12	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
-13	rights	right	NOUN	NNS	Number=Plur	11	obj	11:obj	_
+11	supporting	support	VERB	VBG	Tense=Pres|VerbForm=Part	8	advcl	8:advcl:to	Supersense=v.social
+12	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	PRel[config]=possessive|PRel[gov]=13:right|Supersense=p.Gestalt
+13	rights	right	NOUN	NNS	Number=Plur	11	obj	11:obj	Supersense=n.COGNITION
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	achieving	achieve	VERB	VBG	Tense=Pres|VerbForm=Part	11	conj	8:advcl:to|11:conj:and	_
+15	achieving	achieve	VERB	VBG	Tense=Pres|VerbForm=Part	11	conj	8:advcl:to|11:conj:and	Supersense=v.cognition
 16	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 17	successful	successful	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	outcome	outcome	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No
+18	outcome	outcome	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No|Supersense=n.PHENOMENON
 19	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-068009-0003
 # text = As a qualified criminal defense attorney, he will work every possible legal "angle" (leaving no stone unturned) of your case to achieve the most favorable result possible.
-1	As	as	ADP	IN	_	6	case	6:case	_
+1	As	as	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=10:work|PRel[obj]=6:attorney|Supersense=p.Identity
 2	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 3	qualified	qualified	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-4	criminal	criminal	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+4	criminal	criminal	ADJ	JJ	Degree=Pos	5	amod	5:amod	MWECat=N|MWELemma=criminal defense attorney|MWELen=3|Supersense=n.PERSON
 5	defense	defense	NOUN	NN	Number=Sing	6	compound	6:compound	_
 6	attorney	attorney	NOUN	NN	Number=Sing	10	obl	10:obl:as	SpaceAfter=No
 7	,	,	PUNCT	,	_	6	punct	6:punct	_
 8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
 9	will	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
-10	work	work	VERB	VB	VerbForm=Inf	0	root	0:root	_
+10	work	work	VERB	VB	VerbForm=Inf	0	root	0:root	MWECat=V.VID|MWELemma=work every <3> angle|MWELen=6|Supersense=v.social
 11	every	every	DET	DT	PronType=Tot	15	det	15:det	_
 12	possible	possible	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 13	legal	legal	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
@@ -48,20 +48,20 @@
 15	angle	angle	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No
 16	"	"	PUNCT	''	_	15	punct	15:punct	_
 17	(	(	PUNCT	-LRB-	_	18	punct	18:punct	SpaceAfter=No
-18	leaving	leave	VERB	VBG	Tense=Pres|VerbForm=Part	10	advcl	10:advcl	_
+18	leaving	leave	VERB	VBG	Tense=Pres|VerbForm=Part	10	advcl	10:advcl	MWECat=V.VID|MWELemma=leave no stone unturned|MWELen=4|MWEString=leaving no stone unturned|Supersense=v.social
 19	no	no	DET	DT	PronType=Neg	20	det	20:det	_
 20	stone	stone	NOUN	NN	Number=Sing	18	obj	18:obj|21:nsubj:xsubj	_
 21	unturned	unturned	ADJ	JJ	Degree=Pos	18	xcomp	18:xcomp	SpaceAfter=No
 22	)	)	PUNCT	-RRB-	_	18	punct	18:punct	_
-23	of	of	ADP	IN	_	25	case	25:case	_
-24	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
-25	case	case	NOUN	NN	Number=Sing	15	nmod	15:nmod:of	_
-26	to	to	PART	TO	_	27	mark	27:mark	_
-27	achieve	achieve	VERB	VB	VerbForm=Inf	10	advcl	10:advcl:to	_
+23	of	of	ADP	IN	_	25	case	25:case	PRel[config]=default|PRel[gov]=15:angle|PRel[obj]=25:case|Supersense=p.Gestalt
+24	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	PRel[config]=possessive|PRel[gov]=25:case|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Beneficiary
+25	case	case	NOUN	NN	Number=Sing	15	nmod	15:nmod:of	Supersense=n.COGNITION
+26	to	to	PART	TO	_	27	mark	27:mark	PRel[config]=subordinating|PRel[gov]=10:work|PRel[obj]=27:achieve|Supersense=p.Purpose
+27	achieve	achieve	VERB	VB	VerbForm=Inf	10	advcl	10:advcl:to	Supersense=v.cognition
 28	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
 29	most	most	ADV	RBS	Degree=Sup	30	advmod	30:advmod	_
 30	favorable	favorable	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
-31	result	result	NOUN	NN	Number=Sing	27	obj	27:obj	_
+31	result	result	NOUN	NN	Number=Sing	27	obj	27:obj	Supersense=n.PHENOMENON
 32	possible	possible	ADJ	JJ	Degree=Pos	31	amod	31:amod	SpaceAfter=No
 33	.	.	PUNCT	.	_	10	punct	10:punct	_
 

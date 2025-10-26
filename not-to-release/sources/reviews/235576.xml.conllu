@@ -4,100 +4,100 @@
 # text = The Best Breakfast in Solana Beach!
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	Best	good	ADJ	JJS	Degree=Sup	3	amod	3:amod	_
-3	Breakfast	breakfast	NOUN	NN	Number=Sing	0	root	0:root	_
-4	in	in	ADP	IN	_	6	case	6:case	_
-5	Solana	Solana	PROPN	NNP	Number=Sing	6	compound	6:compound	_
+3	Breakfast	breakfast	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.FOOD
+4	in	in	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=3:breakfast|PRel[obj]=6:Beach|Supersense=p.Locus
+5	Solana	Solana	PROPN	NNP	Number=Sing	6	compound	6:compound	MWECat=N|MWELemma=Solana Beach|MWELen=2|Supersense=n.LOCATION
 6	Beach	Beach	PROPN	NNP	Number=Sing	3	nmod	3:nmod:in	SpaceAfter=No
 7	!	!	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-235576-0002
 # text = We love T's Cafe!
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	love	love	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	love	love	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.emotion
 3-4	T's	_	_	_	_	_	_	_	_
-3	T	T	PROPN	NNP	Number=Sing	5	nmod:poss	5:nmod:poss	_
+3	T	T	PROPN	NNP	Number=Sing	5	nmod:poss	5:nmod:poss	MWECat=N|MWELemma=T 's Cafe|MWELen=3|Supersense=n.GROUP
 4	's	's	PART	POS	_	3	case	3:case	_
 5	Cafe	Cafe	PROPN	NNP	Number=Sing	2	obj	2:obj	SpaceAfter=No
 6	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-235576-0003
 # text = Without a doubt the best place to grab a tall bloody mary and some eggs benedict.
-1	Without	without	ADP	IN	_	3	case	3:case	_
+1	Without	without	ADP	IN	_	3	case	3:case	MWECat=DISC|MWELemma=without a doubt|MWELen=3
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	_
 3	doubt	doubt	NOUN	NN	Number=Sing	6	nmod	6:nmod:without	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	best	good	ADJ	JJS	Degree=Sup	6	amod	6:amod	_
-6	place	place	NOUN	NN	Number=Sing	0	root	0:root	_
-7	to	to	PART	TO	_	8	mark	8:mark	_
-8	grab	grab	VERB	VB	VerbForm=Inf	6	acl	6:acl:to	_
+6	place	place	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.GROUP
+7	to	to	PART	TO	_	8	mark	8:mark	PRel[config]=subordinating|PRel[gov]=6:place|PRel[obj]=8:grab|Supersense=p.Purpose
+8	grab	grab	VERB	VB	VerbForm=Inf	6	acl	6:acl:to	Supersense=v.possession
 9	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 10	tall	tall	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-11	bloody	bloody	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
+11	bloody	bloody	ADJ	JJ	Degree=Pos	12	amod	12:amod	MWECat=N|MWELemma=bloody mary|MWELen=2|Supersense=n.FOOD
 12	mary	mary	NOUN	NN	Number=Sing	8	obj	8:obj	_
 13	and	and	CCONJ	CC	_	16	cc	16:cc	_
 14	some	some	DET	DT	PronType=Ind	16	det	16:det	_
-15	eggs	egg	NOUN	NNS	Number=Plur	16	compound	16:compound	_
+15	eggs	egg	NOUN	NNS	Number=Plur	16	compound	16:compound	MWECat=N|MWELemma=egg benedict|MWELen=2|MWEString=eggs benedict|Supersense=n.FOOD
 16	benedict	benedict	NOUN	NN	Number=Sing	12	conj	8:obj|12:conj:and	SpaceAfter=No
 17	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-235576-0004
 # text = T's has been a North County landmark for thirty years and with good reason.
 1-2	T's	_	_	_	_	_	_	_	_
-1	T	T	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|15:nsubj	_
+1	T	T	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|15:nsubj	MWECat=N|MWELemma=T 's|MWELen=2|Supersense=n.GROUP
 2	's	's	PART	POS	_	1	case	1:case	_
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
-4	been	be	AUX	VBN	Tense=Past|VerbForm=Part	8	cop	8:cop	_
+4	been	be	AUX	VBN	Tense=Past|VerbForm=Part	8	cop	8:cop	Supersense=v.stative
 5	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-6	North	North	PROPN	NNP	Number=Sing	7	compound	7:compound	_
+6	North	North	PROPN	NNP	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=North County|MWELen=2|Supersense=n.LOCATION
 7	County	County	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	landmark	landmark	NOUN	NN	Number=Sing	0	root	0:root	_
-9	for	for	ADP	IN	_	11	case	11:case	_
+8	landmark	landmark	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.COGNITION
+9	for	for	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=8:landmark|PRel[obj]=11:year|Supersense=p.Duration
 10	thirty	thirty	NUM	CD	NumForm=Word|NumType=Card	11	nummod	11:nummod	_
-11	years	year	NOUN	NNS	Number=Plur	8	obl	8:obl:for	_
-12	and	and	CCONJ	CC	_	15	cc	15:cc	_
-13	with	with	ADP	IN	_	15	case	15:case	_
+11	years	year	NOUN	NNS	Number=Plur	8	obl	8:obl:for	Supersense=n.TIME
+12	and	and	CCONJ	CC	_	15	cc	15:cc	MWELemma[weak]=and with good reason|MWELen[weak]=4
+13	with	with	ADP	IN	_	15	case	15:case	MWECat=PP|MWELemma=with good reason|MWELen=3|PRel[config]=default|PRel[obj]=15:reason|Supersense=p.Explanation
 14	good	good	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	reason	reason	NOUN	NN	Number=Sing	8	conj	8:conj:and	SpaceAfter=No
 16	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-235576-0005
 # text = Family owned and operated makes sure the atmosphere is relaxed and the food home-cooked with style.
-1	Family	family	NOUN	NN	Number=Sing	2	compound	2:compound	_
-2	owned	own	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	nsubj	5:nsubj	_
+1	Family	family	NOUN	NN	Number=Sing	2	compound	2:compound	MWELemma[weak]=family own and operate|MWELen[weak]=4|MWEString[weak]=Family owned and operated|Supersense=n.GROUP
+2	owned	own	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	nsubj	5:nsubj	MWECat=V.VID|MWELemma=own and operate|MWELen=3|MWEString=owned and operated|Supersense=v.social
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
 4	operated	operate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	conj	1:compound|2:conj:and	_
-5	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+5	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	MWECat=V.VID|MWELemma=make sure|MWELen=2|MWEString=makes sure|Supersense=v.social
 6	sure	sure	ADJ	JJ	Degree=Pos	5	xcomp	5:xcomp	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	atmosphere	atmosphere	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
-9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
+8	atmosphere	atmosphere	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	Supersense=n.ATTRIBUTE
+9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	Supersense=v.stative
 10	relaxed	relaxed	ADJ	JJ	Degree=Pos	6	ccomp	6:ccomp	_
 11	and	and	CCONJ	CC	_	16	cc	16:cc	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	food	food	NOUN	NN	Number=Sing	16	nsubj:pass	16:nsubj:pass	_
+13	food	food	NOUN	NN	Number=Sing	16	nsubj:pass	16:nsubj:pass	Supersense=n.FOOD
 13.1	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	_	_	16:aux:pass	CopyOf=9
-14	home	home	NOUN	NN	Number=Sing	16	compound	16:compound	SpaceAfter=No
+14	home	home	NOUN	NN	Number=Sing	16	compound	16:compound	MWECat=V.VID|MWELemma=home - cook|MWELen=3|MWEString=home - cooked|SpaceAfter=No|Supersense=v.creation
 15	-	-	PUNCT	HYPH	_	14	punct	14:punct	SpaceAfter=No
 16	cooked	cook	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	conj	6:ccomp|10:conj:and	_
-17	with	with	ADP	IN	_	18	case	18:case	_
-18	style	style	NOUN	NN	Number=Sing	16	obl	16:obl:with	SpaceAfter=No
+17	with	with	ADP	IN	_	18	case	18:case	PRel[config]=default|PRel[gov]=16:cook|PRel[obj]=18:style|Supersense=p.Manner
+18	style	style	NOUN	NN	Number=Sing	16	obl	16:obl:with	SpaceAfter=No|Supersense=n.COGNITION
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-235576-0006
 # text = I highly recommend picking up a jug of their homemade bloody mary mix - definitely the best.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|4:nsubj:xsubj	_
-2	highly	highly	ADV	RB	_	3	advmod	3:advmod	_
-3	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-4	picking	pick	VERB	VBG	VerbForm=Ger	3	xcomp	3:xcomp	_
+2	highly	highly	ADV	RB	_	3	advmod	3:advmod	MWELemma[weak]=highly recommend|MWELen[weak]=2
+3	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.communication
+4	picking	pick	VERB	VBG	VerbForm=Ger	3	xcomp	3:xcomp	MWECat=V.VPC.full|MWELemma=pick up|MWELen=2|MWEString=picking up|Supersense=v.possession
 5	up	up	ADP	RP	_	4	compound:prt	4:compound:prt	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
-7	jug	jug	NOUN	NN	Number=Sing	4	obj	4:obj	_
-8	of	of	ADP	IN	_	13	case	13:case	_
-9	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
+7	jug	jug	NOUN	NN	Number=Sing	4	obj	4:obj	Supersense=n.ARTIFACT
+8	of	of	ADP	IN	_	13	case	13:case	PRel[config]=default|PRel[gov]=7:jug|PRel[obj]=13:mix|Supersense=p.QuantityItem
+9	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	PRel[config]=possessive|PRel[gov]=13:mix|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Originator
 10	homemade	homemade	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-11	bloody	bloody	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
+11	bloody	bloody	ADJ	JJ	Degree=Pos	12	amod	12:amod	MWECat=N|MWELemma=bloody mary|MWELemma[weak]=bloody mary mix|MWELen=2|MWELen[weak]=3|Supersense=n.FOOD
 12	mary	mary	NOUN	NN	Number=Sing	13	compound	13:compound	_
-13	mix	mix	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	_
+13	mix	mix	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	Supersense=n.FOOD
 14	-	-	PUNCT	:	_	17	punct	17:punct	_
 15	definitely	definitely	ADV	RB	_	17	advmod	17:advmod	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
@@ -110,20 +110,20 @@
 2-3	you've	_	_	_	_	_	_	_	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
 3	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
-4	been	be	AUX	VBN	Tense=Past|VerbForm=Part	7	cop	7:cop	_
+4	been	be	AUX	VBN	Tense=Past|VerbForm=Part	7	cop	7:cop	MWECat=V.IAV|MWELemma=be to|MWELen=2|MWEString=been to|Supersense=v.motion
 5	to	to	ADP	IN	_	7	case	7:case	_
-6	North	North	PROPN	NNP	Number=Sing	7	compound	7:compound	_
+6	North	North	PROPN	NNP	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=North County|MWELen=2|Supersense=n.LOCATION
 7	County	County	PROPN	NNP	Number=Sing	16	advcl	16:advcl:to	CxnElt=16:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 8	,	,	PUNCT	,	_	7	punct	7:punct	_
-9	chances	chance	NOUN	NNS	Number=Plur	16	nsubj:outer	16:nsubj:outer	_
+9	chances	chance	NOUN	NNS	Number=Plur	16	nsubj:outer	16:nsubj:outer	MWECat=ADV|MWELemma=chance be|MWELen=2|MWEString=chances are
 10	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
 11-12	it's	_	_	_	_	_	_	_	_
 11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
-12	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
-13	in	in	ADP	IN	_	16	case	16:case	_
-14	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
-15	favorites	favorite	NOUN	NNS	Number=Plur	16	compound	16:compound	_
-16	list	list	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=16:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
+12	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	Supersense=v.stative
+13	in	in	ADP	IN	_	16	case	16:case	PRel[config]=predicative|PRel[gov]=11:it|PRel[obj]=16:list|Supersense=p.Locus
+14	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	PRel[config]=possessive|PRel[gov]=16:list|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Experiencer
+15	favorites	favorite	NOUN	NNS	Number=Plur	16	compound	16:compound	Supersense=n.COGNITION
+16	list	list	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=16:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|Supersense=n.COMMUNICATION
 17	already	already	ADV	RB	_	16	advmod	16:advmod	SpaceAfter=No
 18	.	.	PUNCT	.	_	16	punct	16:punct	_
 

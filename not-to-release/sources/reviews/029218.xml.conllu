@@ -2,8 +2,8 @@
 # sent_id = reviews-029218-0001
 # newpar id = reviews-029218-p0001
 # text = Our Wedding 11/7/08
-1	Our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	Wedding	wedding	NOUN	NN	Number=Sing	0	root	0:root	_
+1	Our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	PRel[config]=possessive|PRel[gov]=2:wedding|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Agent
+2	Wedding	wedding	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.EVENT
 3	11/7/08	11/7/08	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:unmarked	2:nmod:unmarked	TemporalNPAdjunct=Yes
 
 # sent_id = reviews-029218-0002
@@ -11,39 +11,39 @@
 # text = We just had our wedding on 11/7/08 and was very impressed.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj|11:nsubj	_
 2	just	just	ADV	RB	_	3	advmod	3:advmod	_
-3	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-5	wedding	wedding	NOUN	NN	Number=Sing	3	obj	3:obj	_
-6	on	on	ADP	IN	_	7	case	7:case	_
+3	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.stative
+4	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	PRel[config]=possessive|PRel[gov]=5:wedding|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Agent
+5	wedding	wedding	NOUN	NN	Number=Sing	3	obj	3:obj	Supersense=n.EVENT
+6	on	on	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=3:have|PRel[obj]=7:11/7/08|Supersense=p.Time
 7	11/7/08	11/7/08	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:on	_
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
-9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
+9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	Supersense=v.stative
 10	very	very	ADV	RB	_	11	advmod	11:advmod	_
 11	impressed	impressed	ADJ	JJ	Degree=Pos	3	conj	3:conj:and	SpaceAfter=No
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-029218-0003
 # text = Cj and company did all that we ask and 10 times more.
-1	Cj	Cj	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
-2	and	and	CCONJ	CC	_	3	cc	3:cc	_
+1	Cj	Cj	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	MWELemma[weak]=Cj and company|MWELen[weak]=3|Supersense=n.PERSON
+2	and	and	CCONJ	CC	_	3	cc	3:cc	MWECat=N|MWELemma=and company|MWELen=2|Supersense=n.GROUP
 3	company	company	NOUN	NN	Number=Sing	1	conj	1:conj:and|4:nsubj	_
-4	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+4	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.social
 5	all	all	DET	DT	PronType=Tot	4	obj	4:obj|8:obj	_
 6	that	that	PRON	WDT	PronType=Rel	8	obj	5:ref	_
 7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
-8	ask	ask	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj
+8	ask	ask	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj|Supersense=v.communication
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10	10	10	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
-11	times	time	NOUN	NNS	Number=Plur	12	obl:unmarked	12:obl:unmarked	_
+11	times	time	NOUN	NNS	Number=Plur	12	obl:unmarked	12:obl:unmarked	Supersense=n.RELATION
 12	more	more	ADJ	JJR	Degree=Cmp	5	conj	4:obj|5:conj:and|8:obj	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-029218-0004
 # text = The food was out standing.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	food	food	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
-4	out	outstanding	ADJ	GW	Degree=Pos|Typo=Yes	0	root	0:root	_
+2	food	food	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.FOOD
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
+4	out	outstanding	ADJ	GW	Degree=Pos|Typo=Yes	0	root	0:root	MWECat=ADJ|MWELemma=outstanding|MWELen=2|MWEString=out standing
 5	standing	_	X	JJ	_	4	goeswith	4:goeswith	SpaceAfter=No
 6	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -51,33 +51,33 @@
 # text = If you need a cater that is affordable and easy to work with they are the ones.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl:if	CxnElt=17:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
+3	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl:if	CxnElt=17:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|Supersense=v.cognition
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-5	cater	cater	NOUN	NN	Number=Sing	3	obj	3:obj|8:nsubj|10:nsubj	_
+5	cater	cater	NOUN	NN	Number=Sing	3	obj	3:obj|8:nsubj|10:nsubj	Supersense=n.GROUP
 6	that	that	PRON	WDT	PronType=Rel	8	nsubj	5:ref	_
-7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
+7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	Supersense=v.stative
 8	affordable	affordable	ADJ	JJ	Degree=Pos	5	acl:relcl	5:acl:relcl	Cxn=rc-that-nsubj-pstrand
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	easy	easy	ADJ	JJ	Degree=Pos	8	conj	5:acl:relcl|8:conj:and	_
+10	easy	easy	ADJ	JJ	Degree=Pos	8	conj	5:acl:relcl|8:conj:and	MWELemma[weak]=easy to work with|MWELen[weak]=4
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	work	work	VERB	VB	VerbForm=Inf	10	ccomp	10:ccomp	_
-13	with	with	ADP	IN	_	12	obl	12:obl	Promoted=Yes
+12	work	work	VERB	VB	VerbForm=Inf	10	ccomp	10:ccomp	Supersense=v.social
+13	with	with	ADP	IN	_	12	obl	12:obl	PRel[config]=default|PRel[gov]=12:work|Promoted=Yes|Supersense[coding]=p.Ancillary|Supersense[scene]=p.Agent
 14	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
-15	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
+15	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	Supersense=v.stative
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 17	ones	one	NOUN	NNS	Number=Plur	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=17:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 18	.	.	PUNCT	.	_	17	punct	17:punct	_
 
 # sent_id = reviews-029218-0006
 # text = Thanks again Saucey's.
-1	Thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	_
+1	Thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	MWECat=DISC|MWELemma=thanks again|MWELen=2
 2	again	again	ADV	RB	_	1	advmod	1:advmod	_
 3-4	Saucey's	_	_	_	_	_	_	_	SpaceAfter=No
-3	Saucey	Saucey	PROPN	NNP	Number=Sing	1	vocative	1:vocative	_
+3	Saucey	Saucey	PROPN	NNP	Number=Sing	1	vocative	1:vocative	MWECat=N|MWELemma=Saucey 's|MWELen=2|Supersense=n.GROUP
 4	's	's	PART	POS	_	3	case	3:case	_
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-029218-0007
 # text = Mark
-1	Mark	Mark	PROPN	NNP	Number=Sing	0	root	0:root	_
+1	Mark	Mark	PROPN	NNP	Number=Sing	0	root	0:root	Supersense=n.PERSON
 

@@ -2,14 +2,14 @@
 # sent_id = reviews-016861-0001
 # newpar id = reviews-016861-p0001
 # text = Stayed in the Seaview room here in December 2009!
-1	Stayed	stay	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-2	in	in	ADP	IN	_	5	case	5:case	_
+1	Stayed	stay	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.stative
+2	in	in	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=1:stay|PRel[obj]=5:room|Supersense=p.Locus
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-4	Seaview	seaview	NOUN	NN	Number=Sing	5	compound	5:compound	_
-5	room	room	NOUN	NN	Number=Sing	1	obl	1:obl:in	_
+4	Seaview	seaview	NOUN	NN	Number=Sing	5	compound	5:compound	Supersense=n.LOCATION
+5	room	room	NOUN	NN	Number=Sing	1	obl	1:obl:in	Supersense=n.ARTIFACT
 6	here	here	ADV	RB	PronType=Dem	1	advmod	1:advmod	_
-7	in	in	ADP	IN	_	8	case	8:case	_
-8	December	December	PROPN	NNP	Number=Sing	1	obl	1:obl:in	_
+7	in	in	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=1:stay|PRel[obj]=8:December|Supersense=p.Time
+8	December	December	PROPN	NNP	Number=Sing	1	obl	1:obl:in	Supersense=n.TIME
 9	2009	2009	NUM	CD	NumForm=Digit|NumType=Card	8	nmod:unmarked	8:nmod:unmarked	SpaceAfter=No
 10	!	!	PUNCT	.	_	1	punct	1:punct	_
 
@@ -18,34 +18,34 @@
 1	WOW	wow	INTJ	UH	_	4	discourse	4:discourse	_
 2	what	what	DET	WDT	PronType=Int	4	det	4:det	_
 3	stunning	stunning	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	views	view	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+4	views	view	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No|Supersense=n.NATURALOBJECT
 5	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-016861-0003
 # text = The furnishing and finishes are great.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	furnishing	furnishing	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
+2	furnishing	furnishing	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	Supersense=n.ATTRIBUTE
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	finishes	finish	NOUN	NNS	Number=Plur	2	conj	2:conj:and|6:nsubj	_
-5	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
+4	finishes	finish	NOUN	NNS	Number=Plur	2	conj	2:conj:and|6:nsubj	Supersense=n.ATTRIBUTE
+5	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	Supersense=v.stative
 6	great	great	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 7	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-016861-0004
 # text = I highly recommend Bay View if you are looking for Accommodation in Camps Bay.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-2	highly	highly	ADV	RB	_	3	advmod	3:advmod	_
-3	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
-4	Bay	Bay	PROPN	NNP	Number=Sing	5	compound	5:compound	_
+2	highly	highly	ADV	RB	_	3	advmod	3:advmod	MWELemma[weak]=highly recommend|MWELen[weak]=2
+3	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|Supersense=v.communication
+4	Bay	Bay	PROPN	NNP	Number=Sing	5	compound	5:compound	MWECat=N|MWELemma=Bay View|MWELen=2|Supersense=n.GROUP
 5	View	View	PROPN	NNP	Number=Sing	3	obj	3:obj	_
 6	if	if	SCONJ	IN	_	9	mark	9:mark	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
 8	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
-9	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:if	CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
-10	for	for	ADP	IN	_	11	case	11:case	_
-11	Accommodation	accommodation	NOUN	NN	Number=Sing	9	obl	9:obl:for	_
-12	in	in	ADP	IN	_	14	case	14:case	_
-13	Camps	Camps	PROPN	NNPS	Number=Plur	14	compound	14:compound	_
+9	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:if	CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|Supersense=v.cognition
+10	for	for	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=9:look|PRel[obj]=11:accommodation|Supersense=p.Theme
+11	Accommodation	accommodation	NOUN	NN	Number=Sing	9	obl	9:obl:for	Supersense=n.POSSESSION
+12	in	in	ADP	IN	_	14	case	14:case	PRel[config]=default|PRel[gov]=11:accommodation|PRel[obj]=14:Bay|Supersense=p.Locus
+13	Camps	Camps	PROPN	NNPS	Number=Plur	14	compound	14:compound	MWECat=N|MWELemma=Camps Bay|MWELen=2|Supersense=n.LOCATION
 14	Bay	Bay	PROPN	NNP	Number=Sing	11	nmod	11:nmod:in	SpaceAfter=No
 15	.	.	PUNCT	.	_	3	punct	3:punct	_
 

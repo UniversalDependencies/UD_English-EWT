@@ -3,31 +3,31 @@
 # newpar id = reviews-288894-p0001
 # text = Wrong Information
 1	Wrong	wrong	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	Information	information	NOUN	NN	Number=Sing	0	root	0:root	_
+2	Information	information	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.COGNITION
 
 # sent_id = reviews-288894-0002
 # newpar id = reviews-288894-p0002
 # text = The address is for Noida Location not for Gurgaon Location.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	address	address	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|10:nsubj	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
-4	for	for	ADP	IN	_	6	case	6:case	_
-5	Noida	Noida	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	Location	location	NOUN	NN	Number=Sing	0	root	0:root	_
+2	address	address	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|10:nsubj	Supersense=n.LOCATION
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	Supersense=v.stative
+4	for	for	ADP	IN	_	6	case	6:case	PRel[config]=predicative|PRel[gov]=2:address|PRel[obj]=6:location|Supersense[coding]=p.Purpose|Supersense[scene]=p.Gestalt
+5	Noida	Noida	PROPN	NNP	Number=Sing	6	compound	6:compound	Supersense=n.LOCATION
+6	Location	location	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.LOCATION
 7	not	not	PART	RB	Polarity=Neg	10	advmod	10:advmod	_
-8	for	for	ADP	IN	_	10	case	10:case	_
-9	Gurgaon	Gurgaon	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	Location	location	NOUN	NN	Number=Sing	6	conj	6:conj	SpaceAfter=No
+8	for	for	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[obj]=10:location|Supersense[coding]=p.Purpose|Supersense[scene]=p.Gestalt
+9	Gurgaon	Gurgaon	PROPN	NNP	Number=Sing	10	compound	10:compound	Supersense=n.LOCATION
+10	Location	location	NOUN	NN	Number=Sing	6	conj	6:conj	SpaceAfter=No|Supersense=n.LOCATION
 11	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-288894-0003
 # text = Please update this listing in you database.
 1	Please	please	INTJ	UH	_	2	discourse	2:discourse	_
-2	update	update	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+2	update	update	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Supersense=v.change
 3	this	this	DET	DT	Number=Sing|PronType=Dem	4	det	4:det	_
-4	listing	listing	NOUN	NN	Number=Sing	2	obj	2:obj	_
-5	in	in	ADP	IN	_	7	case	7:case	_
-6	you	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs|Typo=Yes	7	nmod:poss	7:nmod:poss	CorrectForm=your
-7	database	database	NOUN	NN	Number=Sing	2	obl	2:obl:in	SpaceAfter=No
+4	listing	listing	NOUN	NN	Number=Sing	2	obj	2:obj	Supersense=n.COMMUNICATION
+5	in	in	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=2:update|PRel[obj]=7:database|Supersense=p.Locus
+6	you	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs|Typo=Yes	7	nmod:poss	7:nmod:poss	CorrectForm=your|PRel[config]=possessive|PRel[gov]=7:database|Supersense=p.Possessor
+7	database	database	NOUN	NN	Number=Sing	2	obl	2:obl:in	SpaceAfter=No|Supersense=n.COGNITION
 8	.	.	PUNCT	.	_	2	punct	2:punct	_
 

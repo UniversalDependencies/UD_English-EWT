@@ -2,213 +2,213 @@
 # sent_id = reviews-216456-0001
 # newpar id = reviews-216456-p0001
 # text = My friend and I were to stay here for a girls night, catch up on our lives evening.
-1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	friend	friend	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	PRel[config]=possessive|PRel[gov]=2:friend|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+2	friend	friend	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	Supersense=n.PERSON
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	conj	2:conj:and|7:nsubj	_
-5	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	aux	7:aux	_
+5	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	aux	7:aux	Supersense=v.stative
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	stay	stay	VERB	VB	VerbForm=Inf	0	root	0:root	_
+7	stay	stay	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.motion
 8	here	here	ADV	RB	PronType=Dem	7	advmod	7:advmod	_
-9	for	for	ADP	IN	_	12	case	12:case	_
+9	for	for	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=7:stay|PRel[obj]=12:night|Supersense=p.Purpose
 10	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
-11	girls	girl	NOUN	NNS	Number=Plur	12	nmod:poss	12:nmod:poss	MissingWordsAfter='
+11	girls	girl	NOUN	NNS	Number=Plur	12	nmod:poss	12:nmod:poss	MWECat=N|MWELemma=girl night|MWELen=2|MWEString=girls night|MissingWordsAfter='|Supersense=n.EVENT
 12	night	night	NOUN	NN	Number=Sing	7	obl	7:obl:for	SpaceAfter=No
 13	,	,	PUNCT	,	_	19	punct	19:punct	_
-14	catch	catch	VERB	VB	VerbForm=Inf	19	acl	19:acl	_
+14	catch	catch	VERB	VB	VerbForm=Inf	19	acl	19:acl	MWECat=V.VPC.full|MWELemma=catch up|MWELen=2|Supersense=v.social
 15	up	up	ADP	RP	_	14	compound:prt	14:compound:prt	_
-16	on	on	ADP	IN	_	18	case	18:case	_
-17	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
-18	lives	life	NOUN	NNS	Number=Plur	14	obl	14:obl:on	_
-19	evening	evening	NOUN	NN	Number=Sing	12	conj	7:obl:for|12:conj	SpaceAfter=No
+16	on	on	ADP	IN	_	18	case	18:case	PRel[config]=default|PRel[gov]=14:catch|PRel[obj]=18:life|Supersense=p.Topic
+17	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	PRel[config]=possessive|PRel[gov]=18:life|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Theme
+18	lives	life	NOUN	NNS	Number=Plur	14	obl	14:obl:on	Supersense=n.TIME
+19	evening	evening	NOUN	NN	Number=Sing	12	conj	7:obl:for|12:conj	SpaceAfter=No|Supersense=n.TIME
 20	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-216456-0002
 # text = We live within 20 miles of the hotel and wanted to get away from our responsibilities for the night.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj|10:nsubj|12:nsubj:xsubj	_
-2	live	live	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	within	within	ADP	IN	_	5	case	5:case	_
+2	live	live	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.social
+3	within	within	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=2:live|PRel[obj]=5:mile|Supersense=p.Locus
 4	20	20	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
-5	miles	mile	NOUN	NNS	Number=Plur	2	obl	2:obl:within	_
-6	of	of	ADP	IN	_	8	case	8:case	_
+5	miles	mile	NOUN	NNS	Number=Plur	2	obl	2:obl:within	Supersense=n.QUANTITY
+6	of	of	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=5:mile|PRel[obj]=8:hotel|Supersense[coding]=p.Source|Supersense[scene]=p.Locus
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	hotel	hotel	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
+8	hotel	hotel	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	Supersense=n.LOCATION
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	wanted	want	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
+10	wanted	want	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	Supersense=v.cognition
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	get	get	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
+12	get	get	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	MWECat=V.VPC.full|MWELemma=get away|MWELen=2|Supersense=v.cognition
 13	away	away	ADV	RB	_	12	advmod	12:advmod	_
-14	from	from	ADP	IN	_	16	case	16:case	_
-15	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
-16	responsibilities	responsibility	NOUN	NNS	Number=Plur	13	obl	13:obl:from	_
-17	for	for	ADP	IN	_	19	case	19:case	_
+14	from	from	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=13:away|PRel[obj]=16:responsibility|Supersense=p.Source
+15	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	PRel[config]=possessive|PRel[gov]=16:responsibility|Supersense=p.Gestalt
+16	responsibilities	responsibility	NOUN	NNS	Number=Plur	13	obl	13:obl:from	Supersense=n.COGNITION
+17	for	for	ADP	IN	_	19	case	19:case	PRel[config]=default|PRel[gov]=12:get|PRel[obj]=19:night|Supersense=p.Duration
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
-19	night	night	NOUN	NN	Number=Sing	12	obl	12:obl:for	SpaceAfter=No
+19	night	night	NOUN	NN	Number=Sing	12	obl	12:obl:for	SpaceAfter=No|Supersense=n.TIME
 20	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-216456-0003
 # text = Unfortunalty my husband and I had to put our 13 year old lab down that morning and we were not expecting this.
 1	Unfortunalty	unfortunately	ADV	RB	Typo=Yes	6	advmod	6:advmod	CorrectForm=Unfortunately
-2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	husband	husband	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|8:nsubj:xsubj	_
+2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	PRel[config]=possessive|PRel[gov]=3:husband|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+3	husband	husband	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|8:nsubj:xsubj	Supersense=n.PERSON
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	conj	3:conj:and|6:nsubj|8:nsubj:xsubj	_
-6	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+6	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=AUX|MWELemma=have to|MWELen=2|MWEString=had to
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	put	put	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
-9	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
+8	put	put	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	MWECat=V.VPC.full|MWELemma=put <5> down|MWELen=7|Supersense=v.body
+9	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	PRel[config]=possessive|PRel[gov]=13:lab|Supersense=p.Possessor
 10	13	13	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	_
-11	year	year	NOUN	NN	Number=Sing	12	obl:unmarked	12:obl:unmarked	_
+11	year	year	NOUN	NN	Number=Sing	12	obl:unmarked	12:obl:unmarked	MWECat=ADJ|MWELemma=year old|MWELen=2
 12	old	old	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	lab	lab	NOUN	NN	Number=Sing	8	obj	8:obj	_
+13	lab	lab	NOUN	NN	Number=Sing	8	obj	8:obj	Supersense=n.ANIMAL
 14	down	down	ADP	RP	_	8	compound:prt	8:compound:prt	_
 15	that	that	DET	DT	Number=Sing|PronType=Dem	16	det	16:det	_
-16	morning	morning	NOUN	NN	Number=Sing	8	obl:unmarked	8:obl:unmarked	TemporalNPAdjunct=Yes
+16	morning	morning	NOUN	NN	Number=Sing	8	obl:unmarked	8:obl:unmarked	Supersense=n.TIME|TemporalNPAdjunct=Yes
 17	and	and	CCONJ	CC	_	21	cc	21:cc	_
 18	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	21	nsubj	21:nsubj	_
 19	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	21	aux	21:aux	_
 20	not	not	PART	RB	Polarity=Neg	21	advmod	21:advmod	_
-21	expecting	expect	VERB	VBG	Tense=Pres|VerbForm=Part	6	conj	6:conj:and	_
+21	expecting	expect	VERB	VBG	Tense=Pres|VerbForm=Part	6	conj	6:conj:and	Supersense=v.cognition
 22	this	this	PRON	DT	Number=Sing|PronType=Dem	21	obj	21:obj	SpaceAfter=No
 23	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-216456-0004
 # text = My friend called the hotel to cancel our room as soon as I called her.
-1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	friend	friend	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-3	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	PRel[config]=possessive|PRel[gov]=2:friend|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+2	friend	friend	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Supersense=n.PERSON
+3	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	hotel	hotel	NOUN	NN	Number=Sing	3	obj	3:obj	_
-6	to	to	PART	TO	_	7	mark	7:mark	_
-7	cancel	cancel	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_
-8	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	room	room	NOUN	NN	Number=Sing	7	obj	7:obj	_
-10	as	as	ADV	RB	_	11	advmod	11:advmod	_
+5	hotel	hotel	NOUN	NN	Number=Sing	3	obj	3:obj	Supersense=n.GROUP
+6	to	to	PART	TO	_	7	mark	7:mark	PRel[config]=subordinating|PRel[gov]=3:call|PRel[obj]=7:cancel|Supersense=p.Purpose
+7	cancel	cancel	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	Supersense=v.change
+8	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:room|Supersense=p.Possessor
+9	room	room	NOUN	NN	Number=Sing	7	obj	7:obj	Supersense=n.COGNITION
+10	as	as	ADV	RB	_	11	advmod	11:advmod	MWECat=P|MWELemma=as soon as|MWELen=3|PRel[config]=default|PRel[gov]=3:call|PRel[obj]=11:soon|Supersense=p.Time
 11	soon	soon	ADV	RB	Degree=Pos	3	advmod	3:advmod	_
 12	as	as	SCONJ	IN	_	14	mark	14:mark	_
 13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
-14	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:as	_
+14	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:as	Supersense=v.communication
 15	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	14	obj	14:obj	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-216456-0005
 # text = They said that we were to be charged for this room regardless because we did not cancel within the 72 hours.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	said	say	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	said	say	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 3	that	that	SCONJ	IN	_	8	mark	8:mark	_
 4	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj:pass	8:nsubj:pass	_
-5	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	8	aux	8:aux	_
+5	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	8	aux	8:aux	Supersense=v.stative
 6	to	to	PART	TO	_	8	mark	8:mark	_
 7	be	be	AUX	VB	VerbForm=Inf	8	aux:pass	8:aux:pass	_
-8	charged	charge	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	ccomp	2:ccomp	_
-9	for	for	ADP	IN	_	11	case	11:case	_
+8	charged	charge	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	ccomp	2:ccomp	Supersense=v.possession
+9	for	for	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=8:charge|PRel[obj]=11:room|Supersense[coding]=p.Theme|Supersense[scene]=p.Possession
 10	this	this	DET	DT	Number=Sing|PronType=Dem	11	det	11:det	_
-11	room	room	NOUN	NN	Number=Sing	8	obl	8:obl:for	_
+11	room	room	NOUN	NN	Number=Sing	8	obl	8:obl:for	Supersense=n.COGNITION
 12	regardless	regardless	ADV	RB	_	8	advmod	8:advmod	_
 13	because	because	SCONJ	IN	_	17	mark	17:mark	_
 14	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
 15	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	17	aux	17:aux	_
 16	not	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
-17	cancel	cancel	VERB	VB	VerbForm=Inf	8	advcl	8:advcl:because	_
-18	within	within	ADP	IN	_	21	case	21:case	_
+17	cancel	cancel	VERB	VB	VerbForm=Inf	8	advcl	8:advcl:because	Supersense=v.change
+18	within	within	ADP	IN	_	21	case	21:case	PRel[config]=default|PRel[gov]=17:cancel|PRel[obj]=21:hour|Supersense=p.Time
 19	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 20	72	72	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nummod	_
-21	hours	hour	NOUN	NNS	Number=Plur	17	obl	17:obl:within	SpaceAfter=No
+21	hours	hour	NOUN	NNS	Number=Plur	17	obl	17:obl:within	SpaceAfter=No|Supersense=n.TIME
 22	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-216456-0006
 # text = I called them back a few hours after putting my Bodhi down and they still wouldn't budge.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=V.VPC.semi|MWELemma=call <1> back|MWELen=3|MWEString=called <1> back|Supersense=v.communication
 3	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	2	obj	2:obj	_
 4	back	back	ADV	RB	_	2	advmod	2:advmod	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	few	few	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	hours	hour	NOUN	NNS	Number=Plur	9	obl:unmarked	9:obl:unmarked	_
-8	after	after	SCONJ	IN	_	9	mark	9:mark	_
-9	putting	put	VERB	VBG	Tense=Pres|VerbForm=Part	2	advcl	2:advcl:after	_
-10	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-11	Bodhi	Bodhi	PROPN	NNP	Number=Sing	9	obj	9:obj	_
+7	hours	hour	NOUN	NNS	Number=Plur	9	obl:unmarked	9:obl:unmarked	Supersense=n.TIME
+8	after	after	SCONJ	IN	_	9	mark	9:mark	PRel[config]=subordinating|PRel[gov]=2:call|PRel[obj]=9:put|Supersense=p.Time
+9	putting	put	VERB	VBG	Tense=Pres|VerbForm=Part	2	advcl	2:advcl:after	MWECat=V.VPC.full|MWELemma=put <2> down|MWELen=4|MWEString=putting <2> down|Supersense=v.body
+10	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	PRel[config]=possessive|PRel[gov]=11:Bodhi|Supersense=p.Possessor
+11	Bodhi	Bodhi	PROPN	NNP	Number=Sing	9	obj	9:obj	Supersense=n.ANIMAL
 12	down	down	ADP	RP	_	9	compound:prt	9:compound:prt	_
 13	and	and	CCONJ	CC	_	18	cc	18:cc	_
 14	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
 15	still	still	ADV	RB	_	18	advmod	18:advmod	_
 16-17	wouldn't	_	_	_	_	_	_	_	_
 16	would	would	AUX	MD	VerbForm=Fin	18	aux	18:aux	_
-17	n't	not	PART	RB	Polarity=Neg	18	advmod	18:advmod	_
+17	n't	not	PART	RB	Polarity=Neg	18	advmod	18:advmod	MWECat=V.VID|MWELemma=not budge|MWELen=2|MWEString=n't budge|Supersense=v.change
 18	budge	budge	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	SpaceAfter=No
 19	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-216456-0007
 # text = Times are hard, I know, but they had no compassion.
-1	Times	time	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
-2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
+1	Times	time	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	Supersense=n.COGNITION
+2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	Supersense=v.stative
 3	hard	hard	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
-6	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	SpaceAfter=No
+6	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	SpaceAfter=No|Supersense=v.cognition
 7	,	,	PUNCT	,	_	10	punct	10:punct	_
 8	but	but	CCONJ	CC	_	10	cc	10:cc	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
-10	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:but	_
+10	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:but	Supersense=v.stative
 11	no	no	DET	DT	PronType=Neg	12	det	12:det	_
-12	compassion	compassion	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No
+12	compassion	compassion	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No|Supersense=n.ATTRIBUTE
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-216456-0008
 # text = I called 3 times to talked to a manager, never a call back.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 3	3	3	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
-4	times	time	NOUN	NNS	Number=Plur	2	obl:unmarked	2:obl:unmarked	TemporalNPAdjunct=Yes
-5	to	to	PART	TO	_	6	mark	6:mark	_
-6	talked	talk	VERB	VB	Typo=Yes|VerbForm=Inf	2	advcl	2:advcl:to	CorrectForm=talk
-7	to	to	ADP	IN	_	9	case	9:case	_
+4	times	time	NOUN	NNS	Number=Plur	2	obl:unmarked	2:obl:unmarked	Supersense=n.EVENT|TemporalNPAdjunct=Yes
+5	to	to	PART	TO	_	6	mark	6:mark	PRel[config]=subordinating|PRel[gov]=2:call|PRel[obj]=6:talk|Supersense=p.Purpose
+6	talked	talk	VERB	VB	Typo=Yes|VerbForm=Inf	2	advcl	2:advcl:to	CorrectForm=talk|Supersense=v.communication
+7	to	to	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:talk|PRel[obj]=9:manager|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
-9	manager	manager	NOUN	NN	Number=Sing	6	obl	6:obl:to	SpaceAfter=No
+9	manager	manager	NOUN	NN	Number=Sing	6	obl	6:obl:to	SpaceAfter=No|Supersense=n.PERSON
 10	,	,	PUNCT	,	_	13	punct	13:punct	_
 11	never	never	ADV	RB	PronType=Neg	13	advmod	13:advmod	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
-13	call	call	NOUN	NN	Number=Sing	2	parataxis	2:parataxis	_
+13	call	call	NOUN	NN	Number=Sing	2	parataxis	2:parataxis	MWECat=N|MWELemma=call back|MWELen=2|Supersense=n.ACT
 14	back	back	ADV	RB	_	13	advmod	13:advmod	SpaceAfter=No
 15	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = reviews-216456-0009
 # text = I emailed 4 times, never a response.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	emailed	email	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	emailed	email	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 3	4	4	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
-4	times	time	NOUN	NNS	Number=Plur	2	obl:unmarked	2:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
+4	times	time	NOUN	NNS	Number=Plur	2	obl:unmarked	2:obl:unmarked	SpaceAfter=No|Supersense=n.EVENT|TemporalNPAdjunct=Yes
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	never	never	ADV	RB	PronType=Neg	8	advmod	8:advmod	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	response	response	NOUN	NN	Number=Sing	2	parataxis	2:parataxis	SpaceAfter=No
+8	response	response	NOUN	NN	Number=Sing	2	parataxis	2:parataxis	SpaceAfter=No|Supersense=n.COMMUNICATION
 9	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-216456-0010
 # text = In one of the emails I attached the letter from the Vet's that expressed their sympathy, this hotel did nothing.
-1	In	in	ADP	IN	_	2	case	2:case	_
+1	In	in	ADP	IN	_	2	case	2:case	PRel[config]=default|PRel[gov]=7:attach|PRel[obj]=2:one|Supersense=p.Locus
 2	one	one	NUM	CD	NumForm=Word|NumType=Card	7	obl	7:obl:in	_
-3	of	of	ADP	IN	_	5	case	5:case	_
+3	of	of	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=2:one|PRel[obj]=5:email|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	emails	email	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	_
+5	emails	email	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	Supersense=n.COMMUNICATION
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
-7	attached	attach	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+7	attached	attach	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.contact
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	letter	letter	NOUN	NN	Number=Sing	7	obj	7:obj|15:nsubj	_
-10	from	from	ADP	IN	_	12	case	12:case	_
+9	letter	letter	NOUN	NN	Number=Sing	7	obj	7:obj|15:nsubj	Supersense=n.COMMUNICATION
+10	from	from	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=9:letter|PRel[obj]=12:vet|Supersense[coding]=p.Source|Supersense[scene]=p.Originator
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12-13	Vet's	_	_	_	_	_	_	_	_
-12	Vet	vet	NOUN	NN	Number=Sing	9	nmod	9:nmod:from	_
-13	's	's	PART	POS	_	12	case	12:case	_
+12	Vet	vet	NOUN	NN	Number=Sing	9	nmod	9:nmod:from	Supersense=n.PERSON
+13	's	's	PART	POS	_	12	case	12:case	PRel[config]=default|PRel[gov]=9:letter|PRel[obj]=12:vet|Supersense=`$
 14	that	that	PRON	WDT	PronType=Rel	15	nsubj	9:ref	_
-15	expressed	express	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-that-nsubj
-16	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
-17	sympathy	sympathy	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No
+15	expressed	express	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-that-nsubj|Supersense=v.communication
+16	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	PRel[config]=possessive|PRel[gov]=17:sympathy|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Experiencer
+17	sympathy	sympathy	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No|Supersense=n.FEELING
 18	,	,	PUNCT	,	_	21	punct	21:punct	_
 19	this	this	DET	DT	Number=Sing|PronType=Dem	20	det	20:det	_
-20	hotel	hotel	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	_
-21	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	parataxis	7:parataxis	_
+20	hotel	hotel	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	Supersense=n.GROUP
+21	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	parataxis	7:parataxis	Supersense=v.stative
 22	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	21	obj	21:obj	SpaceAfter=No
 23	.	.	PUNCT	.	_	7	punct	7:punct	_
 
@@ -216,8 +216,8 @@
 # text = I even emailed Mackinaw Tourist and nothing.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|7:nsubj	_
 2	even	even	ADV	RB	_	3	advmod	3:advmod	_
-3	emailed	email	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	Mackinaw	Mackinaw	PROPN	NNP	Number=Sing	5	compound	5:compound	_
+3	emailed	email	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
+4	Mackinaw	Mackinaw	PROPN	NNP	Number=Sing	5	compound	5:compound	MWECat=N|MWELemma=Mackinaw Tourist|MWELen=2|Supersense=n.GROUP
 5	Tourist	Tourist	PROPN	NNP	Number=Sing	3	iobj	3:iobj	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
 7	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	3	conj	3:conj:and	SpaceAfter=No
@@ -226,33 +226,33 @@
 # sent_id = reviews-216456-0012
 # text = I am sure this is a good place to stay from reading the other reviews, but if something unexpected happens in your life, they will not care.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
+2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	cop	3:cop	Supersense=v.stative
 3	sure	sure	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	this	this	PRON	DT	Number=Sing|PronType=Dem	8	nsubj	8:nsubj	_
-5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	Supersense=v.stative
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	good	good	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	place	place	NOUN	NN	Number=Sing	3	ccomp	3:ccomp	_
-9	to	to	PART	TO	_	10	mark	10:mark	_
-10	stay	stay	VERB	VB	VerbForm=Inf	8	acl	8:acl:to	_
-11	from	from	SCONJ	IN	_	12	mark	12:mark	_
-12	reading	read	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:from	_
+8	place	place	NOUN	NN	Number=Sing	3	ccomp	3:ccomp	Supersense=n.GROUP
+9	to	to	PART	TO	_	10	mark	10:mark	PRel[config]=subordinating|PRel[gov]=8:place|PRel[obj]=10:stay|Supersense=p.Purpose
+10	stay	stay	VERB	VB	VerbForm=Inf	8	acl	8:acl:to	Supersense=v.motion
+11	from	from	SCONJ	IN	_	12	mark	12:mark	PRel[config]=subordinating|PRel[gov]=3:sure|PRel[obj]=12:read|Supersense[coding]=p.Source|Supersense[scene]=p.Explanation
+12	reading	read	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:from	Supersense=v.communication
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	other	other	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	reviews	review	NOUN	NNS	Number=Plur	12	obj	12:obj	SpaceAfter=No
+15	reviews	review	NOUN	NNS	Number=Plur	12	obj	12:obj	SpaceAfter=No|Supersense=n.COMMUNICATION
 16	,	,	PUNCT	,	_	29	punct	29:punct	_
 17	but	but	CCONJ	CC	_	29	cc	29:cc	_
 18	if	if	SCONJ	IN	_	21	mark	21:mark	_
 19	something	something	PRON	NN	Number=Sing|PronType=Ind	21	nsubj	21:nsubj	_
 20	unexpected	unexpected	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-21	happens	happen	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	advcl	29:advcl:if	CxnElt=29:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
-22	in	in	ADP	IN	_	24	case	24:case	_
-23	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	_
-24	life	life	NOUN	NN	Number=Sing	21	obl	21:obl:in	SpaceAfter=No
+21	happens	happen	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	advcl	29:advcl:if	CxnElt=29:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|Supersense=v.stative
+22	in	in	ADP	IN	_	24	case	24:case	PRel[config]=default|PRel[gov]=21:happen|PRel[obj]=24:life|Supersense=p.Time
+23	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	PRel[config]=possessive|PRel[gov]=24:life|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Theme
+24	life	life	NOUN	NN	Number=Sing	21	obl	21:obl:in	SpaceAfter=No|Supersense=n.COGNITION
 25	,	,	PUNCT	,	_	21	punct	21:punct	_
 26	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	29	nsubj	29:nsubj	_
 27	will	will	AUX	MD	VerbForm=Fin	29	aux	29:aux	_
 28	not	not	PART	RB	Polarity=Neg	29	advmod	29:advmod	_
-29	care	care	VERB	VB	VerbForm=Inf	3	conj	3:conj:but	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=29:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
+29	care	care	VERB	VB	VerbForm=Inf	3	conj	3:conj:but	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=29:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No|Supersense=v.cognition
 30	.	.	PUNCT	.	_	3	punct	3:punct	_
 

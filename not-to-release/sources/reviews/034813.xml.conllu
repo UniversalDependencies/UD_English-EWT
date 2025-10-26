@@ -2,13 +2,13 @@
 # sent_id = reviews-034813-0001
 # newpar id = reviews-034813-p0001
 # text = Baffled by the one-star reviews
-1	Baffled	baffle	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
-2	by	by	ADP	IN	_	7	case	7:case	_
+1	Baffled	baffle	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Supersense=v.cognition
+2	by	by	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=1:baffle|PRel[obj]=7:review|Supersense[coding]=p.Force|Supersense[scene]=p.Stimulus
 3	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-4	one	one	NUM	CD	NumForm=Word|NumType=Card	6	nummod	6:nummod	SpaceAfter=No
+4	one	one	NUM	CD	NumForm=Word|NumType=Card	6	nummod	6:nummod	MWECat=N|MWELemma=one <1> star|MWELen=3|SpaceAfter=No|Supersense=n.COMMUNICATION
 5	-	-	PUNCT	HYPH	_	4	punct	4:punct	SpaceAfter=No
 6	star	star	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	reviews	review	NOUN	NNS	Number=Plur	1	obl:agent	1:obl:agent	_
+7	reviews	review	NOUN	NNS	Number=Plur	1	obl:agent	1:obl:agent	Supersense=n.COMMUNICATION
 
 # sent_id = reviews-034813-0002
 # newpar id = reviews-034813-p0002
@@ -17,36 +17,36 @@
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
-4	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	MWECat=V.VID|MWELemma=get it|MWELen=2|Supersense=v.cognition
 5	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj	SpaceAfter=No
 6	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-034813-0003
 # text = This place is awesome, with a great ambiance and cool décor, and the food is scrumptious (and especially their signature banana split).
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	2:det	_
-2	place	place	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+2	place	place	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.GROUP
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 4	awesome	awesome	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 5	,	,	PUNCT	,	_	9	punct	9:punct	_
-6	with	with	ADP	IN	_	9	case	9:case	_
+6	with	with	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=4:awesome|PRel[obj]=9:ambiance|Supersense=p.Characteristic
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	great	great	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	ambiance	ambiance	NOUN	NN	Number=Sing	4	obl	4:obl:with	_
+9	ambiance	ambiance	NOUN	NN	Number=Sing	4	obl	4:obl:with	Supersense=n.ATTRIBUTE
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	cool	cool	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	décor	décor	NOUN	NN	Number=Sing	9	conj	4:obl:with|9:conj:and	SpaceAfter=No
+12	décor	décor	NOUN	NN	Number=Sing	9	conj	4:obl:with|9:conj:and	SpaceAfter=No|Supersense=n.ATTRIBUTE
 13	,	,	PUNCT	,	_	18	punct	18:punct	_
 14	and	and	CCONJ	CC	_	18	cc	18:cc	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	food	food	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	_
-17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
+16	food	food	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	Supersense=n.FOOD
+17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	Supersense=v.stative
 18	scrumptious	scrumptious	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	_
 19	(	(	PUNCT	-LRB-	_	25	punct	25:punct	SpaceAfter=No
 20	and	and	CCONJ	CC	_	25	cc	25:cc	_
 21	especially	especially	ADV	RB	_	25	advmod	25:advmod	_
-22	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	_
-23	signature	signature	NOUN	NN	Number=Sing	25	compound	25:compound	_
-24	banana	banana	NOUN	NN	Number=Sing	25	compound	25:compound	_
+22	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	PRel[config]=possessive|PRel[gov]=25:split|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Originator
+23	signature	signature	NOUN	NN	Number=Sing	25	compound	25:compound	Supersense=n.ATTRIBUTE
+24	banana	banana	NOUN	NN	Number=Sing	25	compound	25:compound	MWECat=N|MWELemma=banana split|MWELen=2|Supersense=n.FOOD
 25	split	split	NOUN	NN	Number=Sing	16	conj	16:conj:and|18:nsubj	SpaceAfter=No
 26	)	)	PUNCT	-RRB-	_	25	punct	25:punct	SpaceAfter=No
 27	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -56,26 +56,26 @@
 1	Sure	sure	INTJ	UH	_	8	discourse	8:discourse	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	some	some	DET	DT	PronType=Ind	4	det	4:det	_
-4	items	item	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj|11:nsubj	_
-5	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
-6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
+4	items	item	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj|11:nsubj	Supersense=n.FOOD
+5	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	Supersense=v.stative
+6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	MWECat=DET|MWELemma=a little|MWELen=2
 7	little	little	ADJ	JJ	Degree=Pos	8	obl:unmarked	8:obl:unmarked	_
 8	pricey	pricey	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	but	but	CCONJ	CC	_	11	cc	11:cc	_
 11-12	c'mon	_	_	_	_	_	_	_	SpaceAfter=No
-11	c'm	come	VERB	VB	Mood=Imp|Style=Vrnc|VerbForm=Fin	8	conj	8:conj:but	_
+11	c'm	come	VERB	VB	Mood=Imp|Style=Vrnc|VerbForm=Fin	8	conj	8:conj:but	MWECat=DISC|MWELemma=come on|MWELen=2|MWEString=c'm on
 12	on	on	ADV	RB	_	11	advmod	11:advmod	_
 13	...	...	PUNCT	,	_	18	punct	18:punct	_
 14	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
 15	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
 16	ever	ever	ADV	RB	PronType=Ind	18	advmod	18:advmod	_
-17	been	be	AUX	VBN	Tense=Past|VerbForm=Part	18	cop	18:cop	_
-18	out	out	ADV	RB	_	11	parataxis	11:parataxis	_
-19	to	to	PART	TO	_	20	mark	20:mark	_
+17	been	be	AUX	VBN	Tense=Past|VerbForm=Part	18	cop	18:cop	Supersense=v.motion
+18	out	out	ADV	RB	_	11	parataxis	11:parataxis	MWELemma[weak]=out to eat|MWELen[weak]=3|PRel[config]=predicative|PRel[gov]=15:you|Supersense=p.Locus
+19	to	to	PART	TO	_	20	mark	20:mark	MWECat=INF.P|MWELemma=to eat|MWELen=2|PRel[config]=subordinating|PRel[gov]=18:out|PRel[obj]=20:eat|Supersense=p.Purpose
 20	eat	eat	VERB	VB	VerbForm=Inf	18	advcl	18:advcl:to	_
-21	in	in	ADP	IN	_	22	case	22:case	_
-22	Seattle	Seattle	PROPN	NNP	Number=Sing	18	obl	18:obl:in	_
-23	before	before	ADV	RB	_	18	advmod	18:advmod	SpaceAfter=No
+21	in	in	ADP	IN	_	22	case	22:case	PRel[config]=default|PRel[gov]=18:out|PRel[obj]=22:Seattle|Supersense=p.Locus
+22	Seattle	Seattle	PROPN	NNP	Number=Sing	18	obl	18:obl:in	Supersense=n.LOCATION
+23	before	before	ADV	RB	_	18	advmod	18:advmod	PRel[config]=default|PRel[gov]=18:out|SpaceAfter=No|Supersense=p.Time
 24	?	?	PUNCT	.	_	8	punct	8:punct	_
 

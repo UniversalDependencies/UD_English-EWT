@@ -2,50 +2,50 @@
 # sent_id = reviews-162567-0001
 # newpar id = reviews-162567-p0001
 # text = Highly Recommend
-1	Highly	highly	ADV	RB	_	2	advmod	2:advmod	_
-2	Recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Highly	highly	ADV	RB	_	2	advmod	2:advmod	MWELemma[weak]=highly recommend|MWELen[weak]=2
+2	Recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 
 # sent_id = reviews-162567-0002
 # newpar id = reviews-162567-p0002
 # text = I have worked with Shannon as my massage therapist and intuitive bodyworker for years and have never been disappointed.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|19:nsubj:pass	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	worked	work	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
-4	with	with	ADP	IN	_	5	case	5:case	_
-5	Shannon	Shannon	PROPN	NNP	Number=Sing	3	obl	3:obl:with	_
-6	as	as	ADP	IN	_	9	case	9:case	_
-7	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-8	massage	massage	NOUN	NN	Number=Sing	9	compound	9:compound	_
+3	worked	work	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	MWELemma[weak]=work with|MWELen[weak]=2|MWEString[weak]=worked with|Supersense=v.social
+4	with	with	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=3:work|PRel[obj]=5:Shannon|Supersense[coding]=p.Ancillary|Supersense[scene]=p.SocialRel
+5	Shannon	Shannon	PROPN	NNP	Number=Sing	3	obl	3:obl:with	Supersense=n.PERSON
+6	as	as	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=5:Shannon|PRel[obj]=9:therapist|Supersense=p.Identity
+7	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:therapist|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+8	massage	massage	NOUN	NN	Number=Sing	9	compound	9:compound	MWECat=N|MWELemma=massage therapist|MWELen=2|Supersense=n.PERSON
 9	therapist	therapist	NOUN	NN	Number=Sing	5	nmod	5:nmod:as	_
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	intuitive	intuitive	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	bodyworker	bodyworker	NOUN	NN	Number=Sing	9	conj	5:nmod:as|9:conj:and	_
-13	for	for	ADP	IN	_	14	case	14:case	_
-14	years	year	NOUN	NNS	Number=Plur	3	obl	3:obl:for	_
+12	bodyworker	bodyworker	NOUN	NN	Number=Sing	9	conj	5:nmod:as|9:conj:and	Supersense=n.PERSON
+13	for	for	ADP	IN	_	14	case	14:case	PRel[config]=default|PRel[gov]=3:work|PRel[obj]=14:year|Supersense=p.Duration
+14	years	year	NOUN	NNS	Number=Plur	3	obl	3:obl:for	Supersense=n.TIME
 15	and	and	CCONJ	CC	_	19	cc	19:cc	_
 16	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
 17	never	never	ADV	RB	PronType=Neg	19	advmod	19:advmod	_
 18	been	be	AUX	VBN	Tense=Past|VerbForm=Part	19	aux:pass	19:aux:pass	_
-19	disappointed	disappoint	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	conj	3:conj:and	SpaceAfter=No
+19	disappointed	disappoint	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	conj	3:conj:and	SpaceAfter=No|Supersense=v.emotion
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-162567-0003
 # text = No matter what state I am in when I arrive, I always leave feeling better.
-1	No	no	DET	DT	PronType=Neg	2	det	2:det	_
+1	No	no	DET	DT	PronType=Neg	2	det	2:det	MWECat=ADV|MWELemma=no matter|MWELen=2
 2	matter	matter	NOUN	NN	Number=Sing	14	obl:unmarked	14:obl:unmarked	_
 3	what	what	DET	WDT	PronType=Int	4	det	4:det	_
-4	state	state	NOUN	NN	Number=Sing	2	acl	2:acl	_
+4	state	state	NOUN	NN	Number=Sing	2	acl	2:acl	Supersense=n.STATE
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-6	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
-7	in	in	ADP	IN	_	4	case	4:case	_
+6	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
+7	in	in	ADP	IN	_	4	case	4:case	PRel[config]=predicative+stranded|PRel[gov]=5:I|PRel[obj]=4:state|Supersense[coding]=p.Locus|Supersense[scene]=p.Characteristic
 8	when	when	ADV	WRB	PronType=Int	10	advmod	10:advmod	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
-10	arrive	arrive	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:when	SpaceAfter=No
+10	arrive	arrive	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:when	SpaceAfter=No|Supersense=v.motion
 11	,	,	PUNCT	,	_	2	punct	2:punct	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
 13	always	always	ADV	RB	PronType=Tot	14	advmod	14:advmod	_
-14	leave	leave	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-15	feeling	feel	VERB	VBG	Tense=Pres|VerbForm=Part	14	advcl	14:advcl	_
+14	leave	leave	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.motion
+15	feeling	feel	VERB	VBG	Tense=Pres|VerbForm=Part	14	advcl	14:advcl	Supersense=v.body
 16	better	good	ADJ	JJR	Degree=Cmp	15	xcomp	15:xcomp	SpaceAfter=No
 17	.	.	PUNCT	.	_	14	punct	14:punct	_
 
@@ -55,37 +55,37 @@
 2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 3	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 4	only	only	ADV	RB	_	5	advmod	5:advmod	_
-5	helped	help	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+5	helped	help	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	MWELemma[weak]=help <1> through|MWELen[weak]=3|MWEString[weak]=helped <1> through|Supersense=v.cognition
 6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	obj	5:obj	_
-7	through	through	ADP	IN	_	16	case	16:case	_
+7	through	through	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=5:help|PRel[obj]=16:injury|Supersense[coding]=p.Path|Supersense[scene]=p.Circumstance
 8	some	some	DET	DT	PronType=Ind	16	det	16:det	_
 9	challenging	challenging	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-10	computer	computer	NOUN	NN	Number=Sing	12	compound	12:compound	SpaceAfter=No
+10	computer	computer	NOUN	NN	Number=Sing	12	compound	12:compound	SpaceAfter=No|Supersense=n.ARTIFACT
 11	-	-	PUNCT	HYPH	_	10	punct	10:punct	SpaceAfter=No
-12	work	work	NOUN	NN	Number=Sing	15	compound	15:compound	_
+12	work	work	NOUN	NN	Number=Sing	15	compound	15:compound	Supersense=n.ACT
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	sports	sport	NOUN	NNS	Number=Plur	12	conj	12:conj:and|15:compound	_
-15	related	relate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	16	amod	16:amod	_
-16	injuries	injury	NOUN	NNS	Number=Plur	5	obl	5:obl:through	SpaceAfter=No
+14	sports	sport	NOUN	NNS	Number=Plur	12	conj	12:conj:and|15:compound	Supersense=n.COGNITION
+15	related	relate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	16	amod	16:amod	Supersense=v.cognition
+16	injuries	injury	NOUN	NNS	Number=Plur	5	obl	5:obl:through	SpaceAfter=No|Supersense=n.EVENT
 17	,	,	PUNCT	,	_	20	punct	20:punct	_
 18	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	20	nsubj	20:nsubj	_
-19	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	cop	20:cop	_
+19	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	cop	20:cop	Supersense=v.stative
 20	wonderful	wonderful	ADJ	JJ	Degree=Pos	5	conj	5:conj	_
 21	to	to	PART	TO	_	22	mark	22:mark	_
-22	work	work	VERB	VB	VerbForm=Inf	20	advcl	20:advcl:to	_
-23	with	with	ADP	IN	_	22	obl	22:obl	Promoted=Yes
-24	throughout	throughout	ADP	IN	_	26	case	26:case	_
-25	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
-26	pregnancy	pregnancy	NOUN	NN	Number=Sing	22	obl	22:obl:throughout	_
+22	work	work	VERB	VB	VerbForm=Inf	20	advcl	20:advcl:to	MWELemma[weak]=work with|MWELen[weak]=2|Supersense=v.social
+23	with	with	ADP	IN	_	22	obl	22:obl	PRel[config]=stranded|PRel[gov]=22:work|PRel[obj]=18:she|Promoted=Yes|Supersense[coding]=p.Ancillary|Supersense[scene]=p.SocialRel
+24	throughout	throughout	ADP	IN	_	26	case	26:case	PRel[config]=default|PRel[gov]=22:work|PRel[obj]=26:pregnancy|Supersense=p.Duration
+25	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	PRel[config]=possessive|PRel[gov]=26:pregnancy|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Theme
+26	pregnancy	pregnancy	NOUN	NN	Number=Sing	22	obl	22:obl:throughout	Supersense=n.PROCESS
 27	and	and	CCONJ	CC	_	28	cc	28:cc	_
-28	beyond	beyond	ADV	RB	_	26	conj	22:obl:throughout|26:conj:and	SpaceAfter=No
+28	beyond	beyond	ADV	RB	_	26	conj	22:obl:throughout|26:conj:and	PRel[config]=default|PRel[gov]=22:work|SpaceAfter=No|Supersense=p.Time
 29	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-162567-0005
 # text = I highly recommend her.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-2	highly	highly	ADV	RB	_	3	advmod	3:advmod	_
-3	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	highly	highly	ADV	RB	_	3	advmod	3:advmod	MWELemma[weak]=highly recommend|MWELen[weak]=2
+3	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 4	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	SpaceAfter=No
 5	.	.	PUNCT	.	_	3	punct	3:punct	_
 

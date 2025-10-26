@@ -5,7 +5,7 @@
 1-2	you'll	_	_	_	_	_	_	_	_
 1	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 2	'll	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	love	love	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	love	love	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.emotion
 4	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 
 # sent_id = reviews-229480-0002
@@ -13,45 +13,45 @@
 # text = I have had my back fused in 2 places.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
-4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-5	back	back	NOUN	NN	Number=Sing	3	obj	3:obj|6:nsubj:xsubj	_
-6	fused	fuse	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	xcomp	3:xcomp	_
-7	in	in	ADP	IN	_	9	case	9:case	_
+3	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Supersense=v.stative
+4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	PRel[config]=possessive|PRel[gov]=5:back|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
+5	back	back	NOUN	NN	Number=Sing	3	obj	3:obj|6:nsubj:xsubj	Supersense=n.BODY
+6	fused	fuse	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	xcomp	3:xcomp	Supersense=v.body
+7	in	in	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:fuse|PRel[obj]=9:place|Supersense=p.Locus
 8	2	2	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
-9	places	place	NOUN	NNS	Number=Plur	6	obl	6:obl:in	SpaceAfter=No
+9	places	place	NOUN	NNS	Number=Plur	6	obl	6:obl:in	SpaceAfter=No|Supersense=n.LOCATION
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-229480-0003
 # text = I wish that I hadn't done this.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	wish	wish	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	wish	wish	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.emotion
 3	that	that	SCONJ	IN	_	7	mark	7:mark	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 5-6	hadn't	_	_	_	_	_	_	_	_
 5	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	7	aux	7:aux	_
 6	n't	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
-7	done	do	VERB	VBN	Tense=Past|VerbForm=Part	2	ccomp	2:ccomp	_
+7	done	do	VERB	VBN	Tense=Past|VerbForm=Part	2	ccomp	2:ccomp	Supersense=v.stative
 8	this	this	PRON	DT	Number=Sing|PronType=Dem	7	obj	7:obj	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-229480-0004
 # text = With these fusions, chiropractric isn't as successful, but it still is very helpful.
-1	With	with	ADP	IN	_	3	case	3:case	_
+1	With	with	ADP	IN	_	3	case	3:case	PRel[config]=default|PRel[gov]=9:successful|PRel[obj]=3:fusion|Supersense=p.Circumstance
 2	these	this	DET	DT	Number=Plur|PronType=Dem	3	det	3:det	_
-3	fusions	fusion	NOUN	NNS	Number=Plur	9	obl	9:obl:with	SpaceAfter=No
+3	fusions	fusion	NOUN	NNS	Number=Plur	9	obl	9:obl:with	SpaceAfter=No|Supersense=n.ACT
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
-5	chiropractric	chiropractic	NOUN	NN	Number=Sing|Typo=Yes	9	nsubj	9:nsubj	CorrectForm=chiropractic
+5	chiropractric	chiropractic	NOUN	NN	Number=Sing|Typo=Yes	9	nsubj	9:nsubj	CorrectForm=chiropractic|Supersense=n.COGNITION
 6-7	isn't	_	_	_	_	_	_	_	_
-6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	Supersense=v.stative
 7	n't	not	PART	RB	Polarity=Neg	9	advmod	9:advmod	_
-8	as	as	ADV	RB	_	9	advmod	9:advmod	_
+8	as	as	ADV	RB	_	9	advmod	9:advmod	PRel[config]=predicative|PRel[gov]=5:chiropractic|PRel[obj]=9:successful|Supersense[coding]=p.Extent|Supersense[scene]=p.Characteristic
 9	successful	successful	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 10	,	,	PUNCT	,	_	16	punct	16:punct	_
 11	but	but	CCONJ	CC	_	16	cc	16:cc	_
 12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
 13	still	still	ADV	RB	_	16	advmod	16:advmod	_
-14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
+14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	Supersense=v.stative
 15	very	very	ADV	RB	_	16	advmod	16:advmod	_
 16	helpful	helpful	ADJ	JJ	Degree=Pos	9	conj	9:conj:but	SpaceAfter=No
 17	.	.	PUNCT	.	_	9	punct	9:punct	_
@@ -59,15 +59,15 @@
 # sent_id = reviews-229480-0005
 # text = Even after my fusions, my back continued to hurt, but now it doesn't hurt any more.
 1	Even	even	ADV	RB	_	4	advmod	4:advmod	_
-2	after	after	ADP	IN	_	4	case	4:case	_
-3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	fusions	fusion	NOUN	NNS	Number=Plur	8	obl	8:obl:after	SpaceAfter=No
+2	after	after	ADP	IN	_	4	case	4:case	PRel[config]=default|PRel[gov]=8:continue|PRel[obj]=4:fusion|Supersense=p.Time
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	PRel[config]=possessive|PRel[gov]=4:fusion|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Theme
+4	fusions	fusion	NOUN	NNS	Number=Plur	8	obl	8:obl:after	SpaceAfter=No|Supersense=n.ACT
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
-6	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
-7	back	back	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|10:nsubj:xsubj	_
-8	continued	continue	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+6	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	PRel[config]=possessive|PRel[gov]=7:back|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
+7	back	back	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|10:nsubj:xsubj	Supersense=n.BODY
+8	continued	continue	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.stative
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	hurt	hurt	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	SpaceAfter=No
+10	hurt	hurt	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	SpaceAfter=No|Supersense=v.perception
 11	,	,	PUNCT	,	_	17	punct	17:punct	_
 12	but	but	CCONJ	CC	_	17	cc	17:cc	_
 13	now	now	ADV	RB	PronType=Dem	17	advmod	17:advmod	_
@@ -75,8 +75,8 @@
 15-16	doesn't	_	_	_	_	_	_	_	_
 15	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
 16	n't	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
-17	hurt	hurt	VERB	VB	VerbForm=Inf	8	conj	8:conj:but	_
-18	any	any	ADV	RB	_	19	advmod	19:advmod	_
+17	hurt	hurt	VERB	VB	VerbForm=Inf	8	conj	8:conj:but	Supersense=v.perception
+18	any	any	ADV	RB	_	19	advmod	19:advmod	MWECat=ADV|MWELemma=any more|MWELen=2
 19	more	more	ADV	RBR	Degree=Cmp	17	advmod	17:advmod	SpaceAfter=No
 20	.	.	PUNCT	.	_	8	punct	8:punct	_
 
@@ -84,24 +84,24 @@
 # text = I would encourage anyone who is thinking of back surgery, to talk about different treatment options first with Dr. de Barros.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	encourage	encourage	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	encourage	encourage	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
 4	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	3	obj	3:obj|7:nsubj|13:nsubj:xsubj	_
 5	who	who	PRON	WP	PronType=Rel	7	nsubj	4:ref	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
-7	thinking	think	VERB	VBG	Tense=Pres|VerbForm=Part	4	acl:relcl	4:acl:relcl	Cxn=rc-wh-nsubj
-8	of	of	ADP	IN	_	10	case	10:case	_
-9	back	back	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	surgery	surgery	NOUN	NN	Number=Sing	7	obl	7:obl:of	SpaceAfter=No
+7	thinking	think	VERB	VBG	Tense=Pres|VerbForm=Part	4	acl:relcl	4:acl:relcl	Cxn=rc-wh-nsubj|Supersense=v.cognition
+8	of	of	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=7:think|PRel[obj]=10:surgery|Supersense=p.Topic
+9	back	back	NOUN	NN	Number=Sing	10	compound	10:compound	Supersense=n.BODY
+10	surgery	surgery	NOUN	NN	Number=Sing	7	obl	7:obl:of	SpaceAfter=No|Supersense=n.ACT
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
-13	talk	talk	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-14	about	about	ADP	IN	_	17	case	17:case	_
+13	talk	talk	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	Supersense=v.communication
+14	about	about	ADP	IN	_	17	case	17:case	PRel[config]=default|PRel[gov]=13:talk|PRel[obj]=17:option|Supersense=p.Topic
 15	different	different	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-16	treatment	treatment	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	options	option	NOUN	NNS	Number=Plur	13	obl	13:obl:about	_
+16	treatment	treatment	NOUN	NN	Number=Sing	17	compound	17:compound	Supersense=n.COGNITION
+17	options	option	NOUN	NNS	Number=Plur	13	obl	13:obl:about	Supersense=n.COGNITION
 18	first	first	ADV	RB	NumForm=Word|NumType=Ord	13	advmod	13:advmod	_
-19	with	with	ADP	IN	_	21	case	21:case	_
-20	Dr.	Dr.	PROPN	NNP	Number=Sing	21	nmod:desc	21:nmod:desc	_
+19	with	with	ADP	IN	_	21	case	21:case	PRel[config]=default|PRel[gov]=13:talk|PRel[obj]=21:de|Supersense[coding]=p.Ancillary|Supersense[scene]=p.Agent
+20	Dr.	Dr.	PROPN	NNP	Number=Sing	21	nmod:desc	21:nmod:desc	MWECat=N|MWELemma=Dr. de Barros|MWELen=3|Supersense=n.PERSON
 21	de	de	PROPN	NNP	Number=Sing	13	obl	13:obl:with	_
 22	Barros	Barros	PROPN	NNP	Number=Sing	21	flat	21:flat	SpaceAfter=No
 23	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -110,18 +110,18 @@
 # text = He really knows what he is talking about and will approach the different options fairly.
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|11:nsubj	_
 2	really	really	ADV	RB	_	3	advmod	3:advmod	_
-3	knows	know	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	knows	know	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
 4	what	what	PRON	WP	PronType=Int	7	obl	7:obl:about	CxnElt=7:Interrogative-WHInfo-Indirect.WHWord
 5	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
-7	talking	talk	VERB	VBG	Tense=Pres|VerbForm=Part	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=7:Interrogative-WHInfo-Indirect.Clause
-8	about	about	ADP	IN	_	4	case	4:case	_
+7	talking	talk	VERB	VBG	Tense=Pres|VerbForm=Part	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=7:Interrogative-WHInfo-Indirect.Clause|Supersense=v.communication
+8	about	about	ADP	IN	_	4	case	4:case	PRel[config]=stranded|PRel[gov]=7:talk|PRel[obj]=4:what|Supersense=p.Topic
 9	and	and	CCONJ	CC	_	11	cc	11:cc	_
 10	will	will	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
-11	approach	approach	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	_
+11	approach	approach	VERB	VB	VerbForm=Inf	3	conj	3:conj:and	Supersense=v.social
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	different	different	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	options	option	NOUN	NNS	Number=Plur	11	obj	11:obj	_
+14	options	option	NOUN	NNS	Number=Plur	11	obj	11:obj	Supersense=n.COGNITION
 15	fairly	fairly	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -129,30 +129,30 @@
 # text = You can see different treatments that a surgeon can't see, so that you can have several treatment options before you decide what to do.
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
 2	can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	see	see	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	see	see	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.perception
 4	different	different	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	treatments	treatment	NOUN	NNS	Number=Plur	3	obj	3:obj|11:obj	_
+5	treatments	treatment	NOUN	NNS	Number=Plur	3	obj	3:obj|11:obj	Supersense=n.COGNITION
 6	that	that	PRON	WDT	PronType=Rel	11	obj	5:ref	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	surgeon	surgeon	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
+8	surgeon	surgeon	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	Supersense=n.PERSON
 9-10	can't	_	_	_	_	_	_	_	_
 9	ca	can	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
 10	n't	not	PART	RB	Polarity=Neg	11	advmod	11:advmod	_
-11	see	see	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj|SpaceAfter=No
+11	see	see	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj|SpaceAfter=No|Supersense=v.perception
 12	,	,	PUNCT	,	_	17	punct	17:punct	_
-13	so	so	SCONJ	IN	ExtPos=SCONJ	17	mark	17:mark	_
+13	so	so	SCONJ	IN	ExtPos=SCONJ	17	mark	17:mark	MWECat=SCONJ|MWELemma=so that|MWELen=2
 14	that	that	SCONJ	IN	_	13	fixed	13:fixed	_
 15	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj	_
 16	can	can	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
-17	have	have	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:so_that	_
+17	have	have	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:so_that	MWECat=V.LVC.full|MWELemma=have <2> option|MWELen=4|MWEString=have <2> options|Supersense=v.cognition
 18	several	several	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-19	treatment	treatment	NOUN	NN	Number=Sing	20	compound	20:compound	_
+19	treatment	treatment	NOUN	NN	Number=Sing	20	compound	20:compound	Supersense=n.COGNITION
 20	options	option	NOUN	NNS	Number=Plur	17	obj	17:obj	_
-21	before	before	SCONJ	IN	_	23	mark	23:mark	_
+21	before	before	SCONJ	IN	_	23	mark	23:mark	PRel[config]=subordinating|PRel[gov]=17:have|PRel[obj]=23:decide|Supersense=p.Time
 22	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	23	nsubj	23:nsubj	_
-23	decide	decide	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl:before	_
+23	decide	decide	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	17	advcl	17:advcl:before	Supersense=v.cognition
 24	what	what	PRON	WP	PronType=Int	26	obj	26:obj	CxnElt=26:Interrogative-WHInfo-Indirect.WHWord
 25	to	to	PART	TO	_	26	mark	26:mark	_
-26	do	do	VERB	VB	VerbForm=Inf	23	ccomp	23:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=26:Interrogative-WHInfo-Indirect.Clause|SpaceAfter=No
+26	do	do	VERB	VB	VerbForm=Inf	23	ccomp	23:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=26:Interrogative-WHInfo-Indirect.Clause|SpaceAfter=No|Supersense=v.social
 27	.	.	PUNCT	.	_	3	punct	3:punct	_
 

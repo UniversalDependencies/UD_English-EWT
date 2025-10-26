@@ -3,26 +3,26 @@
 # newpar id = reviews-018562-p0001
 # text = Great Job
 1	Great	great	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	Job	job	NOUN	NN	Number=Sing	0	root	0:root	_
+2	Job	job	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.ACT
 
 # sent_id = reviews-018562-0002
 # newpar id = reviews-018562-p0002
 # text = I want to say that Mike did a great job for our family in our time of need.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj	_
-2	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
 3	to	to	PART	TO	_	4	mark	4:mark	_
-4	say	say	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
+4	say	say	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	Supersense=v.communication
 5	that	that	SCONJ	IN	_	7	mark	7:mark	_
-6	Mike	Mike	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
-7	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	ccomp	4:ccomp	_
+6	Mike	Mike	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Supersense=n.PERSON
+7	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	ccomp	4:ccomp	MWELemma[weak]=do a <1> job|MWELen[weak]=4|MWEString[weak]=did a <1> job|Supersense=v.change
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	great	great	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	job	job	NOUN	NN	Number=Sing	7	obj	7:obj	_
-11	for	for	ADP	IN	_	13	case	13:case	_
-12	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
-13	family	family	NOUN	NN	Number=Sing	7	obl	7:obl:for	_
-14	in	in	ADP	IN	_	16	case	16:case	_
-15	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
+10	job	job	NOUN	NN	Number=Sing	7	obj	7:obj	Supersense=n.ACT
+11	for	for	ADP	IN	_	13	case	13:case	PRel[config]=default|PRel[gov]=7:do|PRel[obj]=13:family|Supersense=p.Beneficiary
+12	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	PRel[config]=possessive|PRel[gov]=13:family|Supersense[coding]=p.Gestalt|Supersense[scene]=p.OrgMember
+13	family	family	NOUN	NN	Number=Sing	7	obl	7:obl:for	Supersense=n.GROUP
+14	in	in	ADP	IN	_	16	case	16:case	MWECat=PP|MWELemma=in <1> time of need|MWELen=5|PRel[config]=default|PRel[gov]=7:do|PRel[obj]=16:time|Supersense=p.Circumstance
+15	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	PRel[config]=possessive|PRel[gov]=16:time|Supersense=p.Possessor
 16	time	time	NOUN	NN	Number=Sing	7	obl	7:obl:in	_
 17	of	of	ADP	IN	_	18	case	18:case	_
 18	need	need	NOUN	NN	Number=Sing	16	nmod	16:nmod:of	SpaceAfter=No
@@ -31,16 +31,16 @@
 # sent_id = reviews-018562-0003
 # text = Both my grandparents passed away 4 months apart and Mike was very understanding.
 1	Both	both	DET	PDT	PronType=Tot	3	det:predet	3:det:predet	_
-2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	grandparents	grandparent	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
-4	passed	pass	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	PRel[config]=possessive|PRel[gov]=3:grandparent|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+3	grandparents	grandparent	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	Supersense=n.PERSON
+4	passed	pass	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=V.VID|MWELemma=pass away|MWELen=2|MWEString=passed away|Supersense=v.body
 5	away	away	ADV	RB	_	4	advmod	4:advmod	_
 6	4	4	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	_
-7	months	month	NOUN	NNS	Number=Plur	8	obl:unmarked	8:obl:unmarked	_
-8	apart	apart	ADV	RB	_	4	advmod	4:advmod	_
+7	months	month	NOUN	NNS	Number=Plur	8	obl:unmarked	8:obl:unmarked	Supersense=n.TIME
+8	apart	apart	ADV	RB	_	4	advmod	4:advmod	PRel[config]=default|PRel[gov]=4:pass|Supersense=p.Time
 9	and	and	CCONJ	CC	_	13	cc	13:cc	_
-10	Mike	Mike	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	_
-11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	_
+10	Mike	Mike	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	Supersense=n.PERSON
+11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	Supersense=v.stative
 12	very	very	ADV	RB	_	13	advmod	13:advmod	_
 13	understanding	understanding	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -48,59 +48,59 @@
 # sent_id = reviews-018562-0004
 # text = It was a very trying time for my family and myself yet Mike took the time to greet each and everyone one of us.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
-2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	_
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	Supersense=v.stative
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 4	very	very	ADV	RB	_	5	advmod	5:advmod	_
-5	trying	trying	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	time	time	NOUN	NN	Number=Sing	0	root	0:root	_
-7	for	for	ADP	IN	_	9	case	9:case	_
-8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	family	family	NOUN	NN	Number=Sing	6	nmod	6:nmod:for	_
+5	trying	trying	ADJ	JJ	Degree=Pos	6	amod	6:amod	MWELemma[weak]=trying time|MWELen[weak]=2
+6	time	time	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.EVENT
+7	for	for	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:time|PRel[obj]=9:family|Supersense[coding]=p.Beneficiary|Supersense[scene]=p.Experiencer
+8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:family|Supersense[coding]=p.Gestalt|Supersense[scene]=p.OrgMember
+9	family	family	NOUN	NN	Number=Sing	6	nmod	6:nmod:for	Supersense=n.GROUP
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
 11	myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs|Reflex=Yes	9	conj	6:nmod:for|9:conj:and	_
 12	yet	yet	CCONJ	CC	_	14	cc	14:cc	_
-13	Mike	Mike	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
-14	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	6:conj:yet	_
+13	Mike	Mike	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	Supersense=n.PERSON
+14	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	6:conj:yet	MWECat=V.VID|MWELemma=take the time|MWELen=3|MWEString=took the time|Supersense=v.social
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 16	time	time	NOUN	NN	Number=Sing	14	obj	14:obj	_
 17	to	to	PART	TO	_	18	mark	18:mark	_
-18	greet	greet	VERB	VB	VerbForm=Inf	16	acl	16:acl:to	_
-19	each	each	DET	DT	PronType=Tot	23	det	23:det	_
+18	greet	greet	VERB	VB	VerbForm=Inf	16	acl	16:acl:to	Supersense=v.communication
+19	each	each	DET	DT	PronType=Tot	23	det	23:det	MWECat=DET|MWELemma=each and every|MWELen=3
 20	and	and	CCONJ	CC	_	21	cc	21:cc	_
 21	every	every	DET	DT	PronType=Tot	19	conj	19:conj:and|23:det	SpaceAfter=No
 22	one	one	NOUN	NN	Number=Sing	23	reparandum	23:reparandum	_
 23	one	one	NOUN	NN	Number=Sing	18	obj	18:obj	_
-24	of	of	ADP	IN	_	25	case	25:case	_
+24	of	of	ADP	IN	_	25	case	25:case	PRel[config]=default|PRel[gov]=23:one|PRel[obj]=25:we|Supersense=p.Whole
 25	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	23	nmod	23:nmod:of	SpaceAfter=No
 26	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-018562-0005
 # text = He is very professional in his position as a director and yet he still made time to be compassionate for what we were all going through.
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
-2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 3	very	very	ADV	RB	_	4	advmod	4:advmod	_
 4	professional	professional	ADJ	JJ	Degree=Pos	0	root	0:root	_
-5	in	in	ADP	IN	_	7	case	7:case	_
-6	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
-7	position	position	NOUN	NN	Number=Sing	4	obl	4:obl:in	_
-8	as	as	ADP	IN	_	10	case	10:case	_
+5	in	in	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:professional|PRel[obj]=7:position|Supersense=p.Locus
+6	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	PRel[config]=possessive|PRel[gov]=7:position|Supersense=p.Gestalt
+7	position	position	NOUN	NN	Number=Sing	4	obl	4:obl:in	Supersense=n.COGNITION
+8	as	as	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=7:position|PRel[obj]=10:director|Supersense=p.Identity
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	director	director	NOUN	NN	Number=Sing	7	nmod	7:nmod:as	_
+10	director	director	NOUN	NN	Number=Sing	7	nmod	7:nmod:as	Supersense=n.PERSON
 11	and	and	CCONJ	CC	_	15	cc	15:cc	_
 12	yet	yet	ADV	RB	_	15	advmod	15:advmod	_
 13	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	_
 14	still	still	ADV	RB	_	15	advmod	15:advmod	_
-15	made	make	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:and_yet	_
+15	made	make	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:and_yet	MWECat=V.VID|MWELemma=make time|MWELen=2|MWEString=made time|Supersense=v.social
 16	time	time	NOUN	NN	Number=Sing	15	obj	15:obj	_
 17	to	to	PART	TO	_	19	mark	19:mark	_
-18	be	be	AUX	VB	VerbForm=Inf	19	cop	19:cop	_
+18	be	be	AUX	VB	VerbForm=Inf	19	cop	19:cop	Supersense=v.stative
 19	compassionate	compassionate	ADJ	JJ	Degree=Pos	16	acl	16:acl:to	_
-20	for	for	ADP	IN	_	21	case	21:case	_
+20	for	for	ADP	IN	_	21	case	21:case	PRel[config]=default|PRel[gov]=19:compassionate|PRel[obj]=21:what|Supersense[coding]=p.Beneficiary|Supersense[scene]=p.Stimulus
 21	what	what	PRON	WP	PronType=Rel	19	obl	19:obl:for|25:obl:through	_
 22	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
 23	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	25	aux	25:aux	_
 24	all	all	ADV	RB	_	25	advmod	25:advmod	_
-25	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	21	acl:relcl	21:acl:relcl	Cxn=rc-free-obl-pstrand
+25	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	21	acl:relcl	21:acl:relcl	Cxn=rc-free-obl-pstrand|MWECat=V.IAV|MWELemma=go through|MWELen=2|MWEString=going through|Supersense=v.stative
 26	through	through	ADP	IN	_	25	obl	21:case	Promoted=Yes|SpaceAfter=No
 27	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -108,76 +108,76 @@
 # text = I'm sure its not everyday that a funeral director sees the same family in such a short time.
 1-2	I'm	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
+2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	cop	3:cop	Supersense=v.stative
 3	sure	sure	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4-5	its	_	_	_	_	_	_	_	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	expl	8:expl	_
-5	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	8	cop	8:cop	CorrectForm='s
+5	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	8	cop	8:cop	CorrectForm='s|Supersense=v.stative
 6	not	not	PART	RB	Polarity=Neg	8	advmod	8:advmod	_
 7	every	every	DET	DT	PronType=Tot	8	det	8:det	CorrectSpaceAfter=Yes|SpaceAfter=No
-8	day	day	NOUN	NN	Number=Sing	3	ccomp	3:ccomp|13:obl:unmarked	_
+8	day	day	NOUN	NN	Number=Sing	3	ccomp	3:ccomp|13:obl:unmarked	Supersense=n.EVENT
 9	that	that	PRON	WDT	PronType=Rel	13	obl:unmarked	8:ref	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
-11	funeral	funeral	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	director	director	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
-13	sees	see	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	advcl:relcl	8:advcl:relcl	Cxn=rc-cleft.that-obl:unmarked
+11	funeral	funeral	NOUN	NN	Number=Sing	12	compound	12:compound	Supersense=n.EVENT
+12	director	director	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	Supersense=n.PERSON
+13	sees	see	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	advcl:relcl	8:advcl:relcl	Cxn=rc-cleft.that-obl:unmarked|Supersense=v.social
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
 15	same	same	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	family	family	NOUN	NN	Number=Sing	13	obj	13:obj	_
-17	in	in	ADP	IN	_	21	case	21:case	_
+16	family	family	NOUN	NN	Number=Sing	13	obj	13:obj	Supersense=n.GROUP
+17	in	in	ADP	IN	_	21	case	21:case	PRel[config]=default|PRel[gov]=13:see|PRel[obj]=21:time|Supersense[coding]=p.Interval|Supersense[scene]=p.Time
 18	such	such	DET	PDT	PronType=Ind	21	det:predet	21:det:predet	_
-19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
+19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	MWECat=N|MWELemma=a short time|MWELen=3|Supersense=n.TIME
 20	short	short	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 21	time	time	NOUN	NN	Number=Sing	13	obl	13:obl:in	SpaceAfter=No
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-018562-0007
 # text = My grandfather passed away silently in his sleep, and my grandmother passed away after a short struggle with cancer.
-1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	grandfather	grandfather	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-3	passed	pass	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	PRel[config]=possessive|PRel[gov]=2:grandfather|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+2	grandfather	grandfather	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Supersense=n.PERSON
+3	passed	pass	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=V.VID|MWELemma=pass away|MWELemma[weak]=pass away <1> in <1> sleep|MWELen=2|MWELen[weak]=6|MWEString=passed away|MWEString[weak]=passed away <1> in <1> sleep|Supersense=v.body
 4	away	away	ADV	RB	_	3	advmod	3:advmod	_
 5	silently	silently	ADV	RB	_	3	advmod	3:advmod	_
-6	in	in	ADP	IN	_	8	case	8:case	_
-7	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	sleep	sleep	NOUN	NN	Number=Sing	3	obl	3:obl:in	SpaceAfter=No
+6	in	in	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=3:pass|PRel[obj]=8:sleep|Supersense[coding]=p.Locus|Supersense[scene]=p.Characteristic
+7	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	PRel[config]=possessive|PRel[gov]=8:sleep|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Agent
+8	sleep	sleep	NOUN	NN	Number=Sing	3	obl	3:obl:in	SpaceAfter=No|Supersense=n.ACT
 9	,	,	PUNCT	,	_	13	punct	13:punct	_
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
-11	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
-12	grandmother	grandmother	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
-13	passed	pass	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
+11	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	PRel[config]=possessive|PRel[gov]=12:grandmother|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+12	grandmother	grandmother	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	Supersense=n.PERSON
+13	passed	pass	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	MWECat=V.VID|MWELemma=pass away|MWELen=2|MWEString=passed away|Supersense=v.body
 14	away	away	ADV	RB	_	13	advmod	13:advmod	_
-15	after	after	ADP	IN	_	18	case	18:case	_
+15	after	after	ADP	IN	_	18	case	18:case	PRel[config]=default|PRel[gov]=13:pass|PRel[obj]=18:struggle|Supersense=p.Time
 16	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
 17	short	short	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	struggle	struggle	NOUN	NN	Number=Sing	13	obl	13:obl:after	_
-19	with	with	ADP	IN	_	20	case	20:case	_
-20	cancer	cancer	NOUN	NN	Number=Sing	18	nmod	18:nmod:with	SpaceAfter=No
+18	struggle	struggle	NOUN	NN	Number=Sing	13	obl	13:obl:after	Supersense=n.ACT
+19	with	with	ADP	IN	_	20	case	20:case	PRel[config]=default|PRel[gov]=18:struggle|PRel[obj]=20:cancer|Supersense[coding]=p.Ancillary|Supersense[scene]=p.Agent
+20	cancer	cancer	NOUN	NN	Number=Sing	18	nmod	18:nmod:with	SpaceAfter=No|Supersense=n.STATE
 21	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-018562-0008
 # text = Both my grandparents looked as natural as could be expected.
 1	Both	both	DET	PDT	PronType=Tot	3	det:predet	3:det:predet	_
-2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	grandparents	grandparent	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj|6:nsubj:xsubj	_
-4	looked	look	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-5	as	as	ADV	RB	_	6	advmod	6:advmod	_
+2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	PRel[config]=possessive|PRel[gov]=3:grandparent|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+3	grandparents	grandparent	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj|6:nsubj:xsubj	Supersense=n.PERSON
+4	looked	look	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.perception
+5	as	as	ADV	RB	_	6	advmod	6:advmod	PRel[config]=default|PRel[gov]=4:look|PRel[obj]=6:natural|Supersense[coding]=p.Extent|Supersense[scene]=p.Characteristic
 6	natural	natural	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	_
-7	as	as	SCONJ	IN	_	10	mark	10:mark	_
+7	as	as	SCONJ	IN	_	10	mark	10:mark	PRel[config]=subordinating|PRel[gov]=6:natural|PRel[obj]=10:expect|Supersense=p.ComparisonRef
 8	could	could	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 9	be	be	AUX	VB	VerbForm=Inf	10	aux:pass	10:aux:pass	_
-10	expected	expect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	advcl	6:advcl:as	SpaceAfter=No
+10	expected	expect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	advcl	6:advcl:as	SpaceAfter=No|Supersense=v.cognition
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-018562-0009
 # text = Thank you Mike for all your help professionally and personally.
-1	Thank	thank	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Thank	thank	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	MWECat=DISC|MWELemma=thank you|MWELen=2
 2	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	obj	1:obj	_
-3	Mike	Mike	PROPN	NNP	Number=Sing	1	vocative	1:vocative	_
-4	for	for	ADP	IN	_	7	case	7:case	_
+3	Mike	Mike	PROPN	NNP	Number=Sing	1	vocative	1:vocative	Supersense=n.PERSON
+4	for	for	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=1:thank|PRel[obj]=7:help|Supersense=p.Explanation
 5	all	all	DET	PDT	PronType=Tot	7	det:predet	7:det:predet	_
-6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
-7	help	help	NOUN	NN	Number=Sing	1	obl	1:obl:for	_
+6	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	PRel[config]=possessive|PRel[gov]=7:help|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Agent
+7	help	help	NOUN	NN	Number=Sing	1	obl	1:obl:for	Supersense=n.ACT
 8	professionally	professionally	ADV	RB	_	1	advmod	1:advmod	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
 10	personally	personally	ADV	RB	_	8	conj	1:advmod|8:conj:and	SpaceAfter=No
@@ -186,6 +186,6 @@
 # sent_id = reviews-018562-0010
 # text = The Peterson Family
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-2	Peterson	Peterson	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Family	family	NOUN	NN	Number=Sing	0	root	0:root	_
+2	Peterson	Peterson	PROPN	NNP	Number=Sing	3	compound	3:compound	Supersense=n.PERSON
+3	Family	family	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.GROUP
 

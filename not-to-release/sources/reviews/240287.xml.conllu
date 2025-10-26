@@ -3,39 +3,39 @@
 # newpar id = reviews-240287-p0001
 # text = Excellent Service and Reasonable Prices
 1	Excellent	excellent	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	Service	service	NOUN	NN	Number=Sing	0	root	0:root	_
+2	Service	service	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.ACT
 3	and	and	CCONJ	CC	_	5	cc	5:cc	_
 4	Reasonable	reasonable	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	Prices	price	NOUN	NNS	Number=Plur	2	conj	2:conj:and	_
+5	Prices	price	NOUN	NNS	Number=Plur	2	conj	2:conj:and	Supersense=n.POSSESSION
 
 # sent_id = reviews-240287-0002
 # newpar id = reviews-240287-p0002
 # text = Boutique stores dealing in children's clothing/gifts are often outrageously priced (who wants to pay 40 dollars for a newborn onesie?)
-1	Boutique	boutique	NOUN	NN	Number=Sing	2	compound	2:compound	_
-2	stores	store	NOUN	NNS	Number=Plur	13	nsubj:pass	13:nsubj:pass	_
-3	dealing	deal	VERB	VBG	VerbForm=Ger	2	acl	2:acl	_
+1	Boutique	boutique	NOUN	NN	Number=Sing	2	compound	2:compound	Supersense=n.COGNITION
+2	stores	store	NOUN	NNS	Number=Plur	13	nsubj:pass	13:nsubj:pass	Supersense=n.GROUP
+3	dealing	deal	VERB	VBG	VerbForm=Ger	2	acl	2:acl	MWECat=V.IAV|MWELemma=deal in|MWELen=2|MWEString=dealing in|Supersense=v.possession
 4	in	in	ADP	IN	_	7	case	7:case	_
 5-6	children's	_	_	_	_	_	_	_	_
-5	children	child	NOUN	NNS	Number=Plur	7	nmod:poss	7:nmod:poss	_
-6	's	's	PART	POS	_	5	case	5:case	_
-7	clothing	clothing	NOUN	NN	Number=Sing	3	obl	3:obl:in	SpaceAfter=No
+5	children	child	NOUN	NNS	Number=Plur	7	nmod:poss	7:nmod:poss	Supersense=n.GROUP
+6	's	's	PART	POS	_	5	case	5:case	PRel[config]=default|PRel[gov]=7:clothing|PRel[obj]=5:child|Supersense[coding]=p.Possessor|Supersense[scene]=p.Beneficiary
+7	clothing	clothing	NOUN	NN	Number=Sing	3	obl	3:obl:in	SpaceAfter=No|Supersense=n.ARTIFACT
 8	/	/	SYM	,	_	9	cc	9:cc	SpaceAfter=No
-9	gifts	gift	NOUN	NNS	Number=Plur	7	conj	3:obl:in|7:conj	_
-10	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	aux:pass	13:aux:pass	_
+9	gifts	gift	NOUN	NNS	Number=Plur	7	conj	3:obl:in|7:conj	Supersense=n.ARTIFACT
+10	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	aux:pass	13:aux:pass	Supersense=v.stative
 11	often	often	ADV	RB	_	13	advmod	13:advmod	_
 12	outrageously	outrageously	ADV	RB	_	13	advmod	13:advmod	_
-13	priced	price	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+13	priced	price	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Supersense=`j
 14	(	(	PUNCT	-LRB-	_	16	punct	16:punct	SpaceAfter=No
 15	who	who	PRON	WP	PronType=Int	16	nsubj	16:nsubj|18:nsubj:xsubj	_
-16	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	parataxis	13:parataxis	_
+16	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	parataxis	13:parataxis	Supersense=v.cognition
 17	to	to	PART	TO	_	18	mark	18:mark	_
-18	pay	pay	VERB	VB	VerbForm=Inf	16	xcomp	16:xcomp	_
+18	pay	pay	VERB	VB	VerbForm=Inf	16	xcomp	16:xcomp	Supersense=v.possession
 19	40	40	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	_
-20	dollars	dollar	NOUN	NNS	Number=Plur	18	obj	18:obj	_
-21	for	for	ADP	IN	_	24	case	24:case	_
+20	dollars	dollar	NOUN	NNS	Number=Plur	18	obj	18:obj	Supersense=n.POSSESSION
+21	for	for	ADP	IN	_	24	case	24:case	PRel[config]=default|PRel[gov]=18:pay|PRel[obj]=24:onesie|Supersense[coding]=p.Theme|Supersense[scene]=p.Possession
 22	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
-23	newborn	newborn	NOUN	NN	Number=Sing	24	compound	24:compound	_
-24	onesie	onesie	NOUN	NN	Number=Sing	18	obl	18:obl:for	SpaceAfter=No
+23	newborn	newborn	NOUN	NN	Number=Sing	24	compound	24:compound	Supersense=n.PERSON
+24	onesie	onesie	NOUN	NN	Number=Sing	18	obl	18:obl:for	SpaceAfter=No|Supersense=n.ARTIFACT
 25	?	?	PUNCT	.	_	16	punct	16:punct	SpaceAfter=No
 26	)	)	PUNCT	-RRB-	_	16	punct	16:punct	_
 
@@ -43,34 +43,34 @@
 # text = but I was pleasantly surprised to find that the Purple Goose's prices are reasonable (for the SAME products found at other area boutiques, the prices were 20-25% cheaper).
 1	but	but	CCONJ	CC	_	5	cc	5:cc	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
-3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
 4	pleasantly	pleasantly	ADV	RB	_	5	advmod	5:advmod	_
 5	surprised	surprised	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	find	find	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:to	_
+7	find	find	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:to	Supersense=v.cognition
 8	that	that	SCONJ	IN	_	15	mark	15:mark	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-10	Purple	Purple	ADJ	NNP	Degree=Pos	11	amod	11:amod	_
+10	Purple	Purple	ADJ	NNP	Degree=Pos	11	amod	11:amod	MWECat=N|MWELemma=Purple Goose|MWELen=2|Supersense=n.GROUP
 11-12	Goose's	_	_	_	_	_	_	_	_
 11	Goose	Goose	PROPN	NNP	Number=Sing	13	nmod:poss	13:nmod:poss	_
-12	's	's	PART	POS	_	11	case	11:case	_
-13	prices	price	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj	_
-14	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
+12	's	's	PART	POS	_	11	case	11:case	PRel[config]=default|PRel[gov]=13:price|PRel[obj]=11:Goose|Supersense=p.Gestalt
+13	prices	price	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj	Supersense=n.POSSESSION
+14	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	Supersense=v.stative
 15	reasonable	reasonable	ADJ	JJ	Degree=Pos	7	ccomp	7:ccomp	_
 16	(	(	PUNCT	-LRB-	_	34	punct	34:punct	SpaceAfter=No
-17	for	for	ADP	IN	_	20	case	20:case	_
+17	for	for	ADP	IN	_	20	case	20:case	PRel[config]=default|PRel[gov]=34:cheap|PRel[obj]=20:product|Supersense[coding]=p.Theme|Supersense[scene]=p.Possession
 18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 19	SAME	same	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-20	products	product	NOUN	NNS	Number=Plur	34	obl	34:obl:for	_
-21	found	find	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	20	acl	20:acl	_
-22	at	at	ADP	IN	_	25	case	25:case	_
+20	products	product	NOUN	NNS	Number=Plur	34	obl	34:obl:for	Supersense=n.ARTIFACT
+21	found	find	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	20	acl	20:acl	Supersense=v.cognition
+22	at	at	ADP	IN	_	25	case	25:case	PRel[config]=default|PRel[gov]=21:find|PRel[obj]=25:boutique|Supersense=p.Locus
 23	other	other	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
-24	area	area	NOUN	NN	Number=Sing	25	compound	25:compound	_
-25	boutiques	boutique	NOUN	NNS	Number=Plur	21	obl	21:obl:at	SpaceAfter=No
+24	area	area	NOUN	NN	Number=Sing	25	compound	25:compound	Supersense=n.LOCATION
+25	boutiques	boutique	NOUN	NNS	Number=Plur	21	obl	21:obl:at	SpaceAfter=No|Supersense=n.GROUP
 26	,	,	PUNCT	,	_	20	punct	20:punct	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
-28	prices	price	NOUN	NNS	Number=Plur	34	nsubj	34:nsubj	_
-29	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	34	cop	34:cop	_
+28	prices	price	NOUN	NNS	Number=Plur	34	nsubj	34:nsubj	Supersense=n.POSSESSION
+29	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	34	cop	34:cop	Supersense=v.stative
 30	20	20	NUM	CD	NumForm=Digit|NumType=Card	33	nummod	33:nummod	SpaceAfter=No
 31	-	-	SYM	SYM	ExtPos=ADP	32	case	32:case	SpaceAfter=No
 32	25	25	NUM	CD	NumForm=Digit|NumType=Card	30	nmod	30:nmod	SpaceAfter=No
@@ -82,8 +82,8 @@
 # sent_id = reviews-240287-0004
 # text = The service was also excellent - friendly, helpful and informative without being overbearing.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	service	service	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
-3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
+2	service	service	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Supersense=n.ACT
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
 4	also	also	ADV	RB	_	5	advmod	5:advmod	_
 5	excellent	excellent	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	-	-	PUNCT	,	_	7	punct	7:punct	_
@@ -92,8 +92,8 @@
 9	helpful	helpful	ADJ	JJ	Degree=Pos	7	conj	5:appos|7:conj:and	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
 11	informative	informative	ADJ	JJ	Degree=Pos	7	conj	5:appos|7:conj:and	_
-12	without	without	SCONJ	IN	_	14	mark	14:mark	_
-13	being	be	AUX	VBG	Tense=Pres|VerbForm=Part	14	cop	14:cop	_
+12	without	without	SCONJ	IN	_	14	mark	14:mark	PRel[config]=subordinating|PRel[gov]=7:friendly|PRel[obj]=13:be|Supersense=p.Characteristic
+13	being	be	AUX	VBG	Tense=Pres|VerbForm=Part	14	cop	14:cop	Supersense=v.stative
 14	overbearing	overbearing	ADJ	JJ	Degree=Pos	7	advcl	7:advcl:without	SpaceAfter=No
 15	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -101,6 +101,6 @@
 # text = Will definitely return.
 1	Will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
 2	definitely	definitely	ADV	RB	_	3	advmod	3:advmod	_
-3	return	return	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+3	return	return	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No|Supersense=v.motion
 4	.	.	PUNCT	.	_	3	punct	3:punct	_
 

@@ -5,35 +5,35 @@
 1	Slowest	slow	ADJ	JJS	Degree=Sup	4	amod	4:amod	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	Unfriendly	unfriendly	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	Sstaff	staff	NOUN	NN	Number=Sing|Typo=Yes	0	root	0:root	CorrectForm=staff
-5	on	on	ADP	IN	_	6	case	6:case	_
-6	Weekends	weekend	NOUN	NNS	Number=Plur	4	nmod	4:nmod:on	_
+4	Sstaff	staff	NOUN	NN	Number=Sing|Typo=Yes	0	root	0:root	CorrectForm=staff|Supersense=n.GROUP
+5	on	on	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:staff|PRel[obj]=6:weekend|Supersense=p.Time
+6	Weekends	weekend	NOUN	NNS	Number=Plur	4	nmod	4:nmod:on	Supersense=n.TIME
 
 # sent_id = reviews-358702-0002
 # newpar id = reviews-358702-p0002
 # text = There are three Starbucks locations that I frequent.
 1	There	there	PRON	EX	PronType=Dem	2	expl	2:expl	_
-2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl|Supersense=v.stative
 3	three	three	NUM	CD	NumForm=Word|NumType=Card	5	nummod	5:nummod	_
-4	Starbucks	Starbucks	PROPN	NNP	Number=Sing	5	compound	5:compound	_
-5	locations	location	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj|8:obj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
+4	Starbucks	Starbucks	PROPN	NNP	Number=Sing	5	compound	5:compound	Supersense=n.GROUP
+5	locations	location	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj|8:obj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot|Supersense=n.GROUP
 6	that	that	PRON	WDT	PronType=Rel	8	obj	5:ref	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
-8	frequent	frequent	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj|SpaceAfter=No
+8	frequent	frequent	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj|SpaceAfter=No|Supersense=v.social
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-358702-0003
 # text = I have a bit of experience watching the usual assembly line.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
+2	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	MWECat=V.LVC.full|MWELemma=have <3> experience|MWELen=5|Supersense=v.cognition
+3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	MWECat=N|MWELemma=a bit|MWELen=2|Supersense=n.QUANTITY
 4	bit	bit	NOUN	NN	Number=Sing	2	obj	2:obj	_
-5	of	of	ADP	IN	_	6	case	6:case	_
+5	of	of	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:bit|PRel[obj]=6:experience|Supersense=p.QuantityItem
 6	experience	experience	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
-7	watching	watch	VERB	VBG	VerbForm=Ger	6	acl	6:acl	_
+7	watching	watch	VERB	VBG	VerbForm=Ger	6	acl	6:acl	Supersense=v.perception
 8	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 9	usual	usual	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-10	assembly	assembly	NOUN	NN	Number=Sing	11	compound	11:compound	_
+10	assembly	assembly	NOUN	NN	Number=Sing	11	compound	11:compound	MWECat=N|MWELemma=assembly line|MWELen=2|Supersense=n.PROCESS
 11	line	line	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -41,25 +41,25 @@
 # text = I also understand that weekend staffs are different than daytime staffs and not necessarily Starbucks A-team or even full-time.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	also	also	ADV	RB	_	3	advmod	3:advmod	_
-3	understand	understand	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	understand	understand	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
 4	that	that	SCONJ	IN	_	8	mark	8:mark	_
-5	weekend	weekend	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	staffs	staff	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj|18:nsubj	_
-7	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
+5	weekend	weekend	NOUN	NN	Number=Sing	6	compound	6:compound	Supersense=n.TIME
+6	staffs	staff	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj|18:nsubj	Supersense=n.GROUP
+7	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	Supersense=v.stative
 8	different	different	ADJ	JJ	Degree=Pos	3	ccomp	3:ccomp	_
-9	than	than	ADP	IN	_	11	case	11:case	_
-10	daytime	daytime	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	staffs	staff	NOUN	NNS	Number=Plur	8	obl	8:obl:than	_
+9	than	than	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=8:different|PRel[obj]=11:staff|Supersense=p.ComparisonRef
+10	daytime	daytime	NOUN	NN	Number=Sing	11	compound	11:compound	Supersense=n.TIME
+11	staffs	staff	NOUN	NNS	Number=Plur	8	obl	8:obl:than	Supersense=n.GROUP
 12	and	and	CCONJ	CC	_	18	cc	18:cc	_
 13	not	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
 14	necessarily	necessarily	ADV	RB	_	18	advmod	18:advmod	_
-15	Starbucks	Starbucks	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-16	A	A	NOUN	NN	Number=Sing	18	compound	18:compound	SpaceAfter=No
+15	Starbucks	Starbucks	PROPN	NNP	Number=Sing	18	compound	18:compound	Supersense=n.GROUP
+16	A	A	NOUN	NN	Number=Sing	18	compound	18:compound	MWECat=N|MWELemma=A - team|MWELen=3|SpaceAfter=No|Supersense=n.GROUP
 17	-	-	PUNCT	HYPH	_	16	punct	16:punct	SpaceAfter=No
 18	team	team	NOUN	NN	Number=Sing	8	conj	3:ccomp|8:conj:and	_
 19	or	or	CCONJ	CC	_	23	cc	23:cc	_
 20	even	even	ADV	RB	_	23	advmod	23:advmod	_
-21	full	full	ADJ	JJ	Degree=Pos	23	amod	23:amod	SpaceAfter=No
+21	full	full	ADJ	JJ	Degree=Pos	23	amod	23:amod	MWECat=ADJ|MWELemma=full - time|MWELen=3|SpaceAfter=No
 22	-	-	PUNCT	HYPH	_	21	punct	21:punct	SpaceAfter=No
 23	time	time	NOUN	NN	Number=Sing	18	conj	18:conj:or	SpaceAfter=No
 24	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -68,16 +68,16 @@
 # text = But this location has the worst weekend staff I've seen EVER.
 1	But	but	CCONJ	CC	_	4	cc	4:cc	_
 2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	_
-3	location	location	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	location	location	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.GROUP
+4	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.stative
 5	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 6	worst	bad	ADJ	JJS	Degree=Sup	8	amod	8:amod	_
-7	weekend	weekend	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	staff	staff	NOUN	NN	Number=Sing	4	obj	4:obj|11:obj	_
+7	weekend	weekend	NOUN	NN	Number=Sing	8	compound	8:compound	Supersense=n.TIME
+8	staff	staff	NOUN	NN	Number=Sing	4	obj	4:obj|11:obj	Supersense=n.GROUP
 9-10	I've	_	_	_	_	_	_	_	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 10	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
-11	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	8	acl:relcl	8:acl:relcl	Cxn=rc-red-obj
+11	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	8	acl:relcl	8:acl:relcl	Cxn=rc-red-obj|Supersense=v.social
 12	EVER	ever	ADV	RB	PronType=Ind	11	advmod	11:advmod	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 

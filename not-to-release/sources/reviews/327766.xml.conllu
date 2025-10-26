@@ -2,14 +2,14 @@
 # sent_id = reviews-327766-0001
 # newpar id = reviews-327766-p0001
 # text = Checked in real late, but staff was very kind and helpful.
-1	Checked	check	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	Checked	check	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=V.VPC.full|MWELemma=check in|MWELen=2|MWEString=Checked in|Supersense=v.social
 2	in	in	ADP	RP	_	1	compound:prt	1:compound:prt	_
 3	real	real	ADV	RB	_	4	advmod	4:advmod	_
 4	late	late	ADV	RB	Degree=Pos	1	advmod	1:advmod	SpaceAfter=No
 5	,	,	PUNCT	,	_	10	punct	10:punct	_
 6	but	but	CCONJ	CC	_	10	cc	10:cc	_
-7	staff	staff	NOUN	NN	Number=Sing	10	nsubj	10:nsubj|12:nsubj	_
-8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	10:cop	_
+7	staff	staff	NOUN	NN	Number=Sing	10	nsubj	10:nsubj|12:nsubj	Supersense=n.GROUP
+8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	10:cop	Supersense=v.stative
 9	very	very	ADV	RB	_	10	advmod	10:advmod	_
 10	kind	kind	ADJ	JJ	Degree=Pos	1	conj	1:conj:but	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
@@ -18,11 +18,11 @@
 
 # sent_id = reviews-327766-0002
 # text = Rooms very clean and smelled very fresh.
-1	Rooms	room	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj|5:nsubj|7:nsubj:xsubj	_
+1	Rooms	room	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj|5:nsubj|7:nsubj:xsubj	Supersense=n.ARTIFACT
 2	very	very	ADV	RB	_	3	advmod	3:advmod	_
 3	clean	clean	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
-5	smelled	smell	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
+5	smelled	smell	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	Supersense=v.perception
 6	very	very	ADV	RB	_	7	advmod	7:advmod	_
 7	fresh	fresh	ADJ	JJ	Degree=Pos	5	xcomp	5:xcomp	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -31,32 +31,32 @@
 # text = I would recommend this hotel to anyone.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
-5	hotel	hotel	NOUN	NN	Number=Sing	3	obj	3:obj	_
-6	to	to	ADP	IN	_	7	case	7:case	_
+5	hotel	hotel	NOUN	NN	Number=Sing	3	obj	3:obj	Supersense=n.GROUP
+6	to	to	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=3:recommend|PRel[obj]=7:anyone|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
 7	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	3	obl	3:obl:to	SpaceAfter=No
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-327766-0004
 # text = I loved my stay here and if ever back in the area, I will be staying here again.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	loved	love	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	stay	stay	NOUN	NN	Number=Sing	2	obj	2:obj	_
+2	loved	love	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.emotion
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	PRel[config]=possessive|PRel[gov]=4:stay|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Agent
+4	stay	stay	NOUN	NN	Number=Sing	2	obj	2:obj	Supersense=n.EVENT
 5	here	here	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 6	and	and	CCONJ	CC	_	17	cc	17:cc	_
 7	if	if	SCONJ	IN	_	9	mark	9:mark	_
 8	ever	ever	ADV	RB	PronType=Ind	9	advmod	9:advmod	_
-9	back	back	ADV	RB	_	17	advcl	17:advcl	CxnElt=17:Conditional-UnspecifiedEpistemic-Reduced.Protasis
-10	in	in	ADP	IN	_	12	case	12:case	_
+9	back	back	ADV	RB	_	17	advcl	17:advcl	CxnElt=17:Conditional-UnspecifiedEpistemic-Reduced.Protasis|PRel[config]=default|PRel[gov]=17:stay|Supersense=p.Direction
+10	in	in	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=17:stay|PRel[obj]=12:area|Supersense=p.Locus
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	area	area	NOUN	NN	Number=Sing	9	obl	9:obl:in	SpaceAfter=No
+12	area	area	NOUN	NN	Number=Sing	9	obl	9:obl:in	SpaceAfter=No|Supersense=n.LOCATION
 13	,	,	PUNCT	,	_	9	punct	9:punct	_
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
 15	will	will	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 16	be	be	AUX	VB	VerbForm=Inf	17	aux	17:aux	_
-17	staying	stay	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:and	Cxn=Conditional-UnspecifiedEpistemic-Reduced|CxnElt=17:Conditional-UnspecifiedEpistemic-Reduced.Apodosis
+17	staying	stay	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:and	Cxn=Conditional-UnspecifiedEpistemic-Reduced|CxnElt=17:Conditional-UnspecifiedEpistemic-Reduced.Apodosis|Supersense=v.social
 18	here	here	ADV	RB	PronType=Dem	17	advmod	17:advmod	_
 19	again	again	ADV	RB	_	17	advmod	17:advmod	SpaceAfter=No
 20	.	.	PUNCT	.	_	2	punct	2:punct	_

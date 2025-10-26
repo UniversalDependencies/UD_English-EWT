@@ -5,22 +5,22 @@
 1-2	I'll	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	'll	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	admit	admit	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	admit	admit	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 5-6	wasn't	_	_	_	_	_	_	_	_
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux	7:aux	_
 6	n't	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
-7	expecting	expect	VERB	VBG	Tense=Pres|VerbForm=Part	3	ccomp	3:ccomp	_
+7	expecting	expect	VERB	VBG	Tense=Pres|VerbForm=Part	3	ccomp	3:ccomp	Supersense=v.cognition
 8	much	much	ADJ	JJ	Degree=Pos	7	obj	7:obj	_
-9	from	from	ADP	IN	_	11	case	11:case	_
+9	from	from	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=7:expect|PRel[obj]=11:place|Supersense=p.Source
 10	this	this	DET	DT	Number=Sing|PronType=Dem	11	det	11:det	_
-11	place	place	NOUN	NN	Number=Sing	7	obl	7:obl:from	SpaceAfter=No
+11	place	place	NOUN	NN	Number=Sing	7	obl	7:obl:from	SpaceAfter=No|Supersense=n.GROUP
 12	,	,	PUNCT	,	_	17	punct	17:punct	_
 13	but	but	CCONJ	CC	_	17	cc	17:cc	_
 14	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
 15	really	really	ADV	RB	_	17	advmod	17:advmod	_
 16	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	17	aux	17:aux	_
-17	do	do	VERB	VB	VerbForm=Inf	3	conj	3:conj:but	_
+17	do	do	VERB	VB	VerbForm=Inf	3	conj	3:conj:but	MWECat=V.LVC.full|MWELemma=do <2> job|MWELen=4|Supersense=v.social
 18	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
 19	good	good	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
 20	job	job	NOUN	NN	Number=Sing	17	obj	17:obj	SpaceAfter=No
@@ -29,29 +29,29 @@
 # sent_id = reviews-217485-0002
 # text = The chicken cordon-blu was tasty and came in a huge portion size for the money.
 1	The	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-2	chicken	chicken	NOUN	NN	Number=Sing	5	compound	5:compound	_
+2	chicken	chicken	NOUN	NN	Number=Sing	5	compound	5:compound	MWECat=N|MWELemma=chicken cordon - bleu|MWELen=4|MWEString=chicken cordon - blu|Supersense=n.FOOD
 3	cordon	cordon	NOUN	NN	Number=Sing	5	compound	5:compound	SpaceAfter=No
 4	-	-	PUNCT	HYPH	_	3	punct	3:punct	SpaceAfter=No
 5	blu	bleu	NOUN	NN	Number=Sing|Typo=Yes	7	nsubj	7:nsubj|9:nsubj	CorrectForm=bleu
-6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	7:cop	_
+6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	7:cop	Supersense=v.stative
 7	tasty	tasty	ADJ	JJ	Degree=Pos	0	root	0:root	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	conj	7:conj:and	_
-10	in	in	ADP	IN	_	14	case	14:case	_
+9	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	conj	7:conj:and	Supersense=v.stative
+10	in	in	ADP	IN	_	14	case	14:case	PRel[config]=default|PRel[gov]=9:come|PRel[obj]=14:size|Supersense[coding]=p.Locus|Supersense[scene]=p.Manner
 11	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 12	huge	huge	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-13	portion	portion	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	size	size	NOUN	NN	Number=Sing	9	obl	9:obl:in	_
-15	for	for	ADP	IN	_	17	case	17:case	_
+13	portion	portion	NOUN	NN	Number=Sing	14	compound	14:compound	Supersense=n.RELATION
+14	size	size	NOUN	NN	Number=Sing	9	obl	9:obl:in	Supersense=n.RELATION
+15	for	for	ADP	IN	_	17	case	17:case	PRel[config]=default|PRel[gov]=14:size|PRel[obj]=17:money|Supersense=p.ComparisonRef
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
-17	money	money	NOUN	NN	Number=Sing	14	nmod	14:nmod:for	SpaceAfter=No
+17	money	money	NOUN	NN	Number=Sing	14	nmod	14:nmod:for	SpaceAfter=No|Supersense=n.POSSESSION
 18	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-217485-0003
 # text = Service was a touch slow, but friendly.
-1	Service	service	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|8:nsubj	_
-2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
-3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
+1	Service	service	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|8:nsubj	Supersense=n.ACT
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
+3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	MWECat=DET|MWELemma=a touch|MWELen=2
 4	touch	touch	NOUN	NN	Number=Sing	5	obl:unmarked	5:obl:unmarked	_
 5	slow	slow	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 6	,	,	PUNCT	,	_	8	punct	8:punct	_

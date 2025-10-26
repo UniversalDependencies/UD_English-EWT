@@ -3,45 +3,45 @@
 # newpar id = reviews-090390-p0001
 # text = wrong location
 1	wrong	wrong	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	location	location	NOUN	NN	Number=Sing	0	root	0:root	_
+2	location	location	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.LOCATION
 
 # sent_id = reviews-090390-0002
 # newpar id = reviews-090390-p0002
 # text = this is not where the Blue Water Bridge Duty Free is located.
 1	this	this	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	4:nsubj	_
-2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
 4	where	where	ADV	WRB	PronType=Rel	0	root	0:root|12:advmod	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-6	Blue	Blue	ADJ	NNP	Degree=Pos	7	amod	7:amod	_
+6	Blue	Blue	ADJ	NNP	Degree=Pos	7	amod	7:amod	MWECat=N|MWELemma=Blue Water Bridge Duty Free|MWELen=5|Supersense=n.GROUP
 7	Water	Water	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 8	Bridge	Bridge	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 9	Duty	Duty	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	Free	Free	PROPN	NNP	Number=Sing	12	nsubj:pass	12:nsubj:pass	_
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	aux:pass	12:aux:pass	_
-12	located	locate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	advcl:relcl	4:advcl:relcl	Cxn=rc-free-advmod|SpaceAfter=No
+12	located	locate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	advcl:relcl	4:advcl:relcl	Cxn=rc-free-advmod|SpaceAfter=No|Supersense=v.stative
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-090390-0003
 # text = It is, surprisingly, near the Blue Water Bridges, some miles to the west of this location.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
-2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	SpaceAfter=No
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	SpaceAfter=No|Supersense=v.stative
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	surprisingly	surprisingly	ADV	RB	_	10	advmod	10:advmod	SpaceAfter=No
 5	,	,	PUNCT	,	_	10	punct	10:punct	_
-6	near	near	ADP	IN	_	10	case	10:case	_
+6	near	near	ADP	IN	_	10	case	10:case	PRel[config]=predicative|PRel[gov]=1:it|PRel[obj]=10:Bridge|Supersense=p.Locus
 7	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-8	Blue	Blue	ADJ	NNP	Degree=Pos	9	amod	9:amod	_
+8	Blue	Blue	ADJ	NNP	Degree=Pos	9	amod	9:amod	MWECat=N|MWELemma=Blue Water Bridge|MWELen=3|MWEString=Blue Water Bridges|Supersense=n.GROUP
 9	Water	Water	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	Bridges	Bridge	PROPN	NNPS	Number=Plur	0	root	0:root	SpaceAfter=No
 11	,	,	PUNCT	,	_	16	punct	16:punct	_
 12	some	some	DET	DT	PronType=Ind	13	det	13:det	_
-13	miles	mile	NOUN	NNS	Number=Plur	16	nmod:unmarked	16:nmod:unmarked	_
-14	to	to	ADP	IN	_	16	case	16:case	_
+13	miles	mile	NOUN	NNS	Number=Plur	16	nmod:unmarked	16:nmod:unmarked	Supersense=n.QUANTITY
+14	to	to	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=10:Bridge|PRel[obj]=16:west|Supersense[coding]=p.Goal|Supersense[scene]=p.Locus
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	west	west	NOUN	NN	Number=Sing	10	nmod	10:nmod:to	_
-17	of	of	ADP	IN	_	19	case	19:case	_
+16	west	west	NOUN	NN	Number=Sing	10	nmod	10:nmod:to	Supersense=n.RELATION
+17	of	of	ADP	IN	_	19	case	19:case	PRel[config]=default|PRel[gov]=16:west|PRel[obj]=19:location|Supersense[coding]=p.Source|Supersense[scene]=p.Locus
 18	this	this	DET	DT	Number=Sing|PronType=Dem	19	det	19:det	_
-19	location	location	NOUN	NN	Number=Sing	16	nmod	16:nmod:of	SpaceAfter=No
+19	location	location	NOUN	NN	Number=Sing	16	nmod	16:nmod:of	SpaceAfter=No|Supersense=n.LOCATION
 20	.	.	PUNCT	.	_	10	punct	10:punct	_
 

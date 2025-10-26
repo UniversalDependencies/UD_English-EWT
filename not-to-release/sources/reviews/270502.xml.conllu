@@ -3,7 +3,7 @@
 # newpar id = reviews-270502-p0001
 # text = Great staff.
 1	Great	great	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	staff	staff	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+2	staff	staff	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No|Supersense=n.GROUP
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-270502-0002
@@ -15,99 +15,99 @@
 # sent_id = reviews-270502-0003
 # text = They interviewed me, gave me tests in the software I included on my resume, and placed me in a position that I kept for several years.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj|5:nsubj|18:nsubj	_
-2	interviewed	interview	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	interviewed	interview	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
-5	gave	give	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
+5	gave	give	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	MWECat=V.LVC.cause|MWELemma=give <1> test|MWELen=3|MWEString=gave <1> tests|Supersense=v.social
 6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	iobj	5:iobj	_
 7	tests	test	NOUN	NNS	Number=Plur	5	obj	5:obj	_
-8	in	in	ADP	IN	_	10	case	10:case	_
+8	in	in	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=7:test|PRel[obj]=10:software|Supersense=p.Topic
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	software	software	NOUN	NN	Number=Sing	7	nmod	7:nmod:in|12:obj	_
+10	software	software	NOUN	NN	Number=Sing	7	nmod	7:nmod:in|12:obj	Supersense=n.COMMUNICATION
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-12	included	include	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obj
-13	on	on	ADP	IN	_	15	case	15:case	_
-14	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
-15	resume	resume	NOUN	NN	Number=Sing	12	obl	12:obl:on	SpaceAfter=No
+12	included	include	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obj|Supersense=v.stative
+13	on	on	ADP	IN	_	15	case	15:case	PRel[config]=default|PRel[gov]=12:include|PRel[obj]=15:resume|Supersense=p.Locus
+14	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	PRel[config]=possessive|PRel[gov]=15:resume|Supersense=p.Gestalt
+15	resume	resume	NOUN	NN	Number=Sing	12	obl	12:obl:on	SpaceAfter=No|Supersense=n.COMMUNICATION
 16	,	,	PUNCT	,	_	18	punct	18:punct	_
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	placed	place	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
+18	placed	place	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	Supersense=v.stative
 19	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	18	obj	18:obj	_
-20	in	in	ADP	IN	_	22	case	22:case	_
+20	in	in	ADP	IN	_	22	case	22:case	PRel[config]=default|PRel[gov]=18:place|PRel[obj]=22:position|Supersense[coding]=p.Locus|Supersense[scene]=p.Goal
 21	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
-22	position	position	NOUN	NN	Number=Sing	18	obl	18:obl:in|25:obj	_
+22	position	position	NOUN	NN	Number=Sing	18	obl	18:obl:in|25:obj	Supersense=n.COGNITION
 23	that	that	PRON	WDT	PronType=Rel	25	obj	22:ref	_
 24	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
-25	kept	keep	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	22	acl:relcl	22:acl:relcl	Cxn=rc-that-obj
-26	for	for	ADP	IN	_	28	case	28:case	_
+25	kept	keep	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	22	acl:relcl	22:acl:relcl	Cxn=rc-that-obj|Supersense=v.stative
+26	for	for	ADP	IN	_	28	case	28:case	PRel[config]=default|PRel[gov]=25:keep|PRel[obj]=28:year|Supersense=p.Duration
 27	several	several	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
-28	years	year	NOUN	NNS	Number=Plur	25	obl	25:obl:for	SpaceAfter=No
+28	years	year	NOUN	NNS	Number=Plur	25	obl	25:obl:for	SpaceAfter=No|Supersense=n.TIME
 29	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-270502-0004
 # text = Re-interviewed and am going on interviews for a new job.
-1	Re-interviewed	re-interview	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	Re-interviewed	re-interview	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.social
 2	and	and	CCONJ	CC	_	4	cc	4:cc	_
 3	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	1	conj	1:conj:and	_
-5	on	on	ADP	IN	_	6	case	6:case	_
-6	interviews	interview	NOUN	NNS	Number=Plur	4	obl	4:obl:on	_
-7	for	for	ADP	IN	_	10	case	10:case	_
+4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	1	conj	1:conj:and	Supersense=v.social
+5	on	on	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:go|PRel[obj]=6:interview|Supersense[coding]=p.Locus|Supersense[scene]=p.Circumstance
+6	interviews	interview	NOUN	NNS	Number=Plur	4	obl	4:obl:on	MWELemma[weak]=interview for|MWELen[weak]=2|MWEString[weak]=interviews for|Supersense=n.EVENT
+7	for	for	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=6:interview|PRel[obj]=10:job|Supersense=p.Purpose
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	new	new	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	job	job	NOUN	NN	Number=Sing	6	nmod	6:nmod:for	SpaceAfter=No
+10	job	job	NOUN	NN	Number=Sing	6	nmod	6:nmod:for	SpaceAfter=No|Supersense=n.COGNITION
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-270502-0005
 # text = I'm really thankful for the folks at HR Office.
 1-2	I'm	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 3	really	really	ADV	RB	_	4	advmod	4:advmod	_
 4	thankful	thankful	ADJ	JJ	Degree=Pos	0	root	0:root	_
-5	for	for	ADP	IN	_	7	case	7:case	_
+5	for	for	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:thankful|PRel[obj]=7:folk|Supersense[coding]=p.Explanation|Supersense[scene]=p.Stimulus
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	folks	folk	NOUN	NNS	Number=Plur	4	obl	4:obl:for	_
-8	at	at	ADP	IN	_	10	case	10:case	_
-9	HR	HR	PROPN	NNP	Number=Sing	10	compound	10:compound	_
+7	folks	folk	NOUN	NNS	Number=Plur	4	obl	4:obl:for	Supersense=n.PERSON
+8	at	at	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=7:folk|PRel[obj]=10:Office|Supersense[coding]=p.Locus|Supersense[scene]=p.Org
+9	HR	HR	PROPN	NNP	Number=Sing	10	compound	10:compound	MWECat=N|MWELemma=HR Office|MWELen=2|Supersense=n.GROUP
 10	Office	Office	PROPN	NNP	Number=Sing	7	nmod	7:nmod:at	SpaceAfter=No
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-270502-0006
 # text = They are dependable, have great connections in the community, and are a great resource for finding a job.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj|5:nsubj|16:nsubj	_
-2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
+2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	Supersense=v.stative
 3	dependable	dependable	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
-5	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
+5	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	Supersense=v.stative
 6	great	great	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	connections	connection	NOUN	NNS	Number=Plur	5	obj	5:obj	_
-8	in	in	ADP	IN	_	10	case	10:case	_
+7	connections	connection	NOUN	NNS	Number=Plur	5	obj	5:obj	Supersense=n.COMMUNICATION
+8	in	in	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=7:connection|PRel[obj]=10:community|Supersense=p.Locus
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	community	community	NOUN	NN	Number=Sing	7	nmod	7:nmod:in	SpaceAfter=No
+10	community	community	NOUN	NN	Number=Sing	7	nmod	7:nmod:in	SpaceAfter=No|Supersense=n.GROUP
 11	,	,	PUNCT	,	_	16	punct	16:punct	_
 12	and	and	CCONJ	CC	_	16	cc	16:cc	_
-13	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
+13	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	Supersense=v.stative
 14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 15	great	great	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	resource	resource	NOUN	NN	Number=Sing	3	conj	3:conj:and	_
-17	for	for	SCONJ	IN	_	18	mark	18:mark	_
-18	finding	find	VERB	VBG	VerbForm=Ger	16	acl	16:acl:for	_
+16	resource	resource	NOUN	NN	Number=Sing	3	conj	3:conj:and	Supersense=n.COGNITION
+17	for	for	SCONJ	IN	_	18	mark	18:mark	PRel[config]=subordinating|PRel[gov]=16:resource|PRel[obj]=18:find|Supersense=p.Purpose
+18	finding	find	VERB	VBG	VerbForm=Ger	16	acl	16:acl:for	Supersense=v.cognition
 19	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
-20	job	job	NOUN	NN	Number=Sing	18	obj	18:obj	SpaceAfter=No
+20	job	job	NOUN	NN	Number=Sing	18	obj	18:obj	SpaceAfter=No|Supersense=n.COGNITION
 21	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-270502-0007
 # text = I highly recommend them to all of my friends!!!!!
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-2	highly	highly	ADV	RB	_	3	advmod	3:advmod	_
-3	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	highly	highly	ADV	RB	_	3	advmod	3:advmod	MWELemma[weak]=highly recommend|MWELen[weak]=2
+3	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 4	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	3	obj	3:obj	_
-5	to	to	ADP	IN	_	6	case	6:case	_
+5	to	to	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=3:recommend|PRel[obj]=6:all|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
 6	all	all	DET	DT	PronType=Tot	3	obl	3:obl:to	_
-7	of	of	ADP	IN	_	9	case	9:case	_
-8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	friends	friend	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	SpaceAfter=No
+7	of	of	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:all|PRel[obj]=9:friend|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
+8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:friend|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+9	friends	friend	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	SpaceAfter=No|Supersense=n.PERSON
 10	!!!!	!!!!	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
 11	!	!	PUNCT	.	_	3	punct	3:punct	_
 

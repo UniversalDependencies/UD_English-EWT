@@ -6,42 +6,42 @@
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
-4	seem	seem	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	seem	seem	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.cognition
 5	to	to	PART	TO	_	7	mark	7:mark	_
-6	be	be	AUX	VB	VerbForm=Inf	7	cop	7:cop	_
-7	interested	interested	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	_
-8	in	in	SCONJ	IN	_	9	mark	9:mark	_
-9	selling	sell	VERB	VBG	Tense=Pres|VerbForm=Part	7	advcl	7:advcl:in	_
-10	cars	car	NOUN	NNS	Number=Plur	9	obj	9:obj	SpaceAfter=No
+6	be	be	AUX	VB	VerbForm=Inf	7	cop	7:cop	Supersense=v.stative
+7	interested	interested	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	MWELemma[weak]=interested in|MWELen[weak]=2
+8	in	in	SCONJ	IN	_	9	mark	9:mark	PRel[config]=subordinating|PRel[gov]=7:interested|PRel[obj]=9:sell|Supersense=p.Topic
+9	selling	sell	VERB	VBG	Tense=Pres|VerbForm=Part	7	advcl	7:advcl:in	Supersense=v.possession
+10	cars	car	NOUN	NNS	Number=Plur	9	obj	9:obj	SpaceAfter=No|Supersense=n.ARTIFACT
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-083459-0002
 # newpar id = reviews-083459-p0002
 # text = Went there yesterday: we are trying to decide between two different Honda models, so we wanted to test-drive both back to back.
-1	Went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	Went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.motion
 2	there	there	ADV	RB	PronType=Dem	1	advmod	1:advmod	_
-3	yesterday	yesterday	NOUN	NN	Number=Sing	1	obl:unmarked	1:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
+3	yesterday	yesterday	NOUN	NN	Number=Sing	1	obl:unmarked	1:obl:unmarked	SpaceAfter=No|Supersense=n.TIME|TemporalNPAdjunct=Yes
 4	:	:	PUNCT	:	_	7	punct	7:punct	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	7	nsubj	7:nsubj|9:nsubj:xsubj	_
 6	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
-7	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	1	parataxis	1:parataxis	_
+7	trying	try	VERB	VBG	Tense=Pres|VerbForm=Part	1	parataxis	1:parataxis	Supersense=v.social
 8	to	to	PART	TO	_	9	mark	9:mark	_
-9	decide	decide	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
-10	between	between	ADP	IN	_	14	case	14:case	_
+9	decide	decide	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	Supersense=v.cognition
+10	between	between	ADP	IN	_	14	case	14:case	PRel[config]=default|PRel[gov]=9:decide|PRel[obj]=14:model|Supersense[coding]=p.Whole|Supersense[scene]=p.Theme
 11	two	two	NUM	CD	NumForm=Word|NumType=Card	14	nummod	14:nummod	_
 12	different	different	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-13	Honda	Honda	PROPN	NNP	Number=Sing	14	compound	14:compound	_
-14	models	model	NOUN	NNS	Number=Plur	9	obl	9:obl:between	SpaceAfter=No
+13	Honda	Honda	PROPN	NNP	Number=Sing	14	compound	14:compound	Supersense=n.GROUP
+14	models	model	NOUN	NNS	Number=Plur	9	obl	9:obl:between	SpaceAfter=No|Supersense=n.ARTIFACT
 15	,	,	PUNCT	,	_	18	punct	18:punct	_
 16	so	so	ADV	RB	_	18	advmod	18:advmod	_
 17	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	18	nsubj	18:nsubj|22:nsubj:xsubj	_
-18	wanted	want	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	7	parataxis	7:parataxis	_
+18	wanted	want	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	7	parataxis	7:parataxis	Supersense=v.cognition
 19	to	to	PART	TO	_	22	mark	22:mark	_
-20	test	test	NOUN	NN	Number=Sing	22	obl:unmarked	22:obl:unmarked	SpaceAfter=No
+20	test	test	NOUN	NN	Number=Sing	22	obl:unmarked	22:obl:unmarked	MWECat=N|MWELemma=test - drive|MWELen=3|SpaceAfter=No|Supersense=n.EVENT
 21	-	-	PUNCT	HYPH	_	20	punct	20:punct	SpaceAfter=No
 22	drive	drive	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
 23	both	both	DET	DT	PronType=Tot	22	obj	22:obj	_
-24	back	back	NOUN	NN	Number=Sing	22	obl:unmarked	22:obl:unmarked	Cxn=NPN|CxnElt=24:NPN.N1
+24	back	back	NOUN	NN	Number=Sing	22	obl:unmarked	22:obl:unmarked	Cxn=NPN|CxnElt=24:NPN.N1|MWECat=N|MWELemma=back to back|MWELen=3|Supersense=n.TIME
 25	to	to	ADP	IN	_	26	case	26:case	CxnElt=24:NPN.P
 26	back	back	NOUN	NN	Number=Sing	24	nmod	24:nmod:to	CxnElt=24:NPN.N2|SpaceAfter=No
 27	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -49,30 +49,30 @@
 # sent_id = reviews-083459-0003
 # text = The salesperson refused!
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	salesperson	salesperson	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-3	refused	refuse	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+2	salesperson	salesperson	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Supersense=n.PERSON
+3	refused	refuse	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No|Supersense=v.communication
 4	!	!	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-083459-0004
 # text = Claimed he was too busy for two test drives.
-1	Claimed	claim	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	Claimed	claim	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
-3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
 4	too	too	ADV	RB	_	5	advmod	5:advmod	_
 5	busy	busy	ADJ	JJ	Degree=Pos	1	ccomp	1:ccomp	_
-6	for	for	ADP	IN	_	9	case	9:case	_
+6	for	for	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=5:busy|PRel[obj]=9:drive|Supersense[coding]=p.Purpose|Supersense[scene]=p.ComparisonRef
 7	two	two	NUM	CD	NumForm=Word|NumType=Card	9	nummod	9:nummod	_
-8	test	test	NOUN	NN	Number=Sing	9	compound	9:compound	_
+8	test	test	NOUN	NN	Number=Sing	9	compound	9:compound	MWECat=N|MWELemma=test drive|MWELen=2|MWEString=test drives|Supersense=n.EVENT
 9	drives	drive	NOUN	NNS	Number=Plur	5	obl	5:obl:for	SpaceAfter=No
 10	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-083459-0005
 # text = We were the only customers there!
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
-2	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
+2	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	only	only	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	customers	customer	NOUN	NNS	Number=Plur	0	root	0:root	_
+5	customers	customer	NOUN	NNS	Number=Plur	0	root	0:root	Supersense=n.PERSON
 6	there	there	ADV	RB	PronType=Dem	5	advmod	5:advmod	SpaceAfter=No
 7	!	!	PUNCT	.	_	5	punct	5:punct	_
 
@@ -81,27 +81,27 @@
 1-2	Don't	_	_	_	_	_	_	_	_
 1	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	3	aux	3:aux	_
 2	n't	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
-3	waste	waste	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+3	waste	waste	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	MWECat=V.VID|MWELemma=waste time|MWELen=2|Supersense=v.social
 4	time	time	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	just	just	ADV	RB	_	7	advmod	7:advmod	_
-7	drive	drive	VERB	VB	Mood=Imp|VerbForm=Fin	3	parataxis	3:parataxis	_
+7	drive	drive	VERB	VB	Mood=Imp|VerbForm=Fin	3	parataxis	3:parataxis	Supersense=v.motion
 8	10	10	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
-9	minutes	minute	NOUN	NNS	Number=Plur	10	obl:unmarked	10:obl:unmarked	_
+9	minutes	minute	NOUN	NNS	Number=Plur	10	obl:unmarked	10:obl:unmarked	Supersense=n.TIME
 10	more	more	ADV	RBR	Degree=Cmp	7	advmod	7:advmod	_
-11	down	down	ADV	RB	_	7	advmod	7:advmod	_
-12	to	to	ADP	IN	_	14	case	14:case	_
-13	Stevens	Stevens	PROPN	NNP	Number=Sing	14	compound	14:compound	_
+11	down	down	ADV	RB	_	7	advmod	7:advmod	PRel[config]=default|PRel[gov]=7:drive|Supersense=p.Direction
+12	to	to	ADP	IN	_	14	case	14:case	PRel[config]=default|PRel[gov]=7:drive|PRel[obj]=14:Creek|Supersense=p.Goal
+13	Stevens	Stevens	PROPN	NNP	Number=Sing	14	compound	14:compound	MWECat=N|MWELemma=Stevens Creek|MWELen=2|Supersense=n.LOCATION
 14	Creek	Creek	PROPN	NNP	Number=Sing	11	obl	11:obl:to	SpaceAfter=No
 15	,	,	PUNCT	,	_	19	punct	19:punct	_
 16	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	19	nsubj	19:nsubj|21:nsubj:xsubj	_
 17	actually	actually	ADV	RB	_	19	parataxis	19:parataxis	_
 18	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
-19	try	try	VERB	VB	VerbForm=Inf	3	parataxis	3:parataxis	_
+19	try	try	VERB	VB	VerbForm=Inf	3	parataxis	3:parataxis	Supersense=v.cognition
 20	to	to	PART	TO	_	21	mark	21:mark	_
-21	help	help	VERB	VB	VerbForm=Inf	19	xcomp	19:xcomp	_
-22	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
-23	customers	customer	NOUN	NNS	Number=Plur	21	obj	21:obj	_
+21	help	help	VERB	VB	VerbForm=Inf	19	xcomp	19:xcomp	Supersense=v.social
+22	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	PRel[config]=possessive|PRel[gov]=23:customer|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+23	customers	customer	NOUN	NNS	Number=Plur	21	obj	21:obj	Supersense=n.PERSON
 24	there	there	ADV	RB	PronType=Dem	19	advmod	19:advmod	SpaceAfter=No
 25	!	!	PUNCT	.	_	3	punct	3:punct	_
 

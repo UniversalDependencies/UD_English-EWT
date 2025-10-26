@@ -2,20 +2,20 @@
 # sent_id = reviews-235462-0001
 # newpar id = reviews-235462-p0001
 # text = Hobbs on Mass.
-1	Hobbs	Hobbs	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	on	on	ADP	IN	_	3	case	3:case	_
-3	Mass	Mass	PROPN	NNP	Number=Sing	1	nmod	1:nmod:on	SpaceAfter=No
+1	Hobbs	Hobbs	PROPN	NNP	Number=Sing	0	root	0:root	Supersense=n.GROUP
+2	on	on	ADP	IN	_	3	case	3:case	PRel[config]=default|PRel[gov]=1:Hobbs|PRel[obj]=3:Mass|Supersense=p.Locus
+3	Mass	Mass	PROPN	NNP	Number=Sing	1	nmod	1:nmod:on	SpaceAfter=No|Supersense=n.LOCATION
 4	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-235462-0002
 # newpar id = reviews-235462-p0002
 # text = Absolutely my favorite store in Lawrence, KS
 1	Absolutely	absolutely	ADV	RB	_	4	advmod	4:advmod	_
-2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	PRel[config]=possessive|PRel[gov]=4:store|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Experiencer
 3	favorite	favorite	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	store	store	NOUN	NN	Number=Sing	0	root	0:root	_
-5	in	in	ADP	IN	_	6	case	6:case	_
-6	Lawrence	Lawrence	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	SpaceAfter=No
+4	store	store	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.GROUP
+5	in	in	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:store|PRel[obj]=6:Lawrence|Supersense=p.Locus
+6	Lawrence	Lawrence	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	MWELemma[weak]=Lawrence , KS|MWELen[weak]=3|SpaceAfter=No|Supersense=n.LOCATION
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	KS	KS	PROPN	NNP	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	Superlocation=Yes
+8	KS	KS	PROPN	NNP	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	Superlocation=Yes|Supersense=n.LOCATION
 

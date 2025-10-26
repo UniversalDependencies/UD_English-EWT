@@ -3,50 +3,50 @@
 # newpar id = reviews-042012-p0001
 # text = When in Scordia, Sicily
 1	When	when	ADV	WRB	PronType=Int	0	root	0:root	_
-2	in	in	ADP	IN	_	3	case	3:case	_
-3	Scordia	Scordia	PROPN	NNP	Number=Sing	1	obl	1:obl:in	SpaceAfter=No
+2	in	in	ADP	IN	_	3	case	3:case	PRel[config]=default|PRel[gov]=1:when|PRel[obj]=3:Scordia|Supersense=p.Locus
+3	Scordia	Scordia	PROPN	NNP	Number=Sing	1	obl	1:obl:in	MWELemma[weak]=Scordia , Sicily|MWELen[weak]=3|SpaceAfter=No|Supersense=n.LOCATION
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
-5	Sicily	Sicily	PROPN	NNP	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	Superlocation=Yes
+5	Sicily	Sicily	PROPN	NNP	Number=Sing	3	nmod:unmarked	3:nmod:unmarked	Superlocation=Yes|Supersense=n.LOCATION
 
 # sent_id = reviews-042012-0002
 # newpar id = reviews-042012-p0002
 # text = If ever in Sicily please take the time to visit Anna Maria Jose Mudo and her familia.
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	ever	ever	ADV	RB	PronType=Ind	4	advmod	4:advmod	_
-3	in	in	ADP	IN	_	4	case	4:case	_
-4	Sicily	Sicily	PROPN	NNP	Number=Sing	6	advcl	6:advcl:in	CxnElt=6:Conditional-UnspecifiedEpistemic-Reduced.Protasis
+3	in	in	ADP	IN	_	4	case	4:case	PRel[config]=default|PRel[gov]=6:take|PRel[obj]=4:Sicily|Supersense=p.Locus
+4	Sicily	Sicily	PROPN	NNP	Number=Sing	6	advcl	6:advcl:in	CxnElt=6:Conditional-UnspecifiedEpistemic-Reduced.Protasis|Supersense=n.LOCATION
 5	please	please	INTJ	UH	_	6	discourse	6:discourse	_
-6	take	take	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-Reduced|CxnElt=6:Conditional-UnspecifiedEpistemic-Reduced.Apodosis
+6	take	take	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-Reduced|CxnElt=6:Conditional-UnspecifiedEpistemic-Reduced.Apodosis|MWECat=V.VID|MWELemma=take the time|MWELen=3|Supersense=v.social
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
 8	time	time	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	visit	visit	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:to	_
-11	Anna	Anna	PROPN	NNP	Number=Sing	10	obj	10:obj	_
+10	visit	visit	VERB	VB	VerbForm=Inf	6	advcl	6:advcl:to	Supersense=v.social
+11	Anna	Anna	PROPN	NNP	Number=Sing	10	obj	10:obj	MWECat=N|MWELemma=Anna Maria Jose Mudo|MWELen=4|Supersense=n.PERSON
 12	Maria	Maria	PROPN	NNP	Number=Sing	11	flat	11:flat	_
 13	Jose	Jose	PROPN	NNP	Number=Sing	11	flat	11:flat	_
 14	Mudo	Mudo	PROPN	NNP	Number=Sing	11	flat	11:flat	_
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
-16	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
-17	familia	familia	NOUN	NN	Number=Sing	11	conj	10:obj|11:conj:and	SpaceAfter=No
+16	her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	PRel[config]=possessive|PRel[gov]=17:familia|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+17	familia	familia	NOUN	NN	Number=Sing	11	conj	10:obj|11:conj:and	SpaceAfter=No|Supersense=n.GROUP
 18	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-042012-0003
 # text = They are and always will be the nicest people in Sicily that you will meet.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
-2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
+2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	Supersense=v.stative
 3	and	and	CCONJ	CC	_	6	cc	6:cc	_
 4	always	always	ADV	RB	PronType=Tot	6	advmod	6:advmod	_
 5	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-6	be	be	AUX	VB	VerbForm=Inf	2	conj	2:conj:and	_
+6	be	be	AUX	VB	VerbForm=Inf	2	conj	2:conj:and	Supersense=v.stative
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
 8	nicest	nice	ADJ	JJS	Degree=Sup	9	amod	9:amod	_
-9	people	people	NOUN	NNS	Number=Plur	0	root	0:root|15:obj	_
-10	in	in	ADP	IN	_	11	case	11:case	_
-11	Sicily	Sicily	PROPN	NNP	Number=Sing	9	nmod	9:nmod:in	_
+9	people	people	NOUN	NNS	Number=Plur	0	root	0:root|15:obj	Supersense=n.GROUP
+10	in	in	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=9:people|PRel[obj]=11:Sicily|Supersense=p.Locus
+11	Sicily	Sicily	PROPN	NNP	Number=Sing	9	nmod	9:nmod:in	Supersense=n.LOCATION
 12	that	that	PRON	WDT	PronType=Rel	15	obj	9:ref	_
 13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	15:nsubj	_
 14	will	will	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-15	meet	meet	VERB	VB	VerbForm=Inf	9	acl:relcl	9:acl:relcl	Cxn=rc-that-obj|SpaceAfter=No
+15	meet	meet	VERB	VB	VerbForm=Inf	9	acl:relcl	9:acl:relcl	Cxn=rc-that-obj|SpaceAfter=No|Supersense=v.social
 16	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = reviews-042012-0004
@@ -54,14 +54,14 @@
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
-4	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	MWECat=N|MWELemma=have the pleasure|MWELen=3|Supersense=n.FEELING
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	pleasure	pleasure	NOUN	NN	Number=Sing	4	obj	4:obj	_
-7	of	of	SCONJ	IN	_	8	mark	8:mark	_
-8	learning	learn	VERB	VBG	VerbForm=Ger	6	acl	6:acl:of	_
+7	of	of	SCONJ	IN	_	8	mark	8:mark	PRel[config]=subordinating|PRel[gov]=6:pleasure|PRel[obj]=8:learn|Supersense=p.Identity
+8	learning	learn	VERB	VBG	VerbForm=Ger	6	acl	6:acl:of	Supersense=v.cognition
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-10	Italiano	Italiano	PROPN	NNP	Number=Sing	11	compound	11:compound	_
-11	language	language	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No
+10	Italiano	Italiano	PROPN	NNP	Number=Sing	11	compound	11:compound	Supersense=n.COMMUNICATION
+11	language	language	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No|Supersense=n.COMMUNICATION
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-042012-0005
@@ -69,23 +69,23 @@
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
-4	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	MWECat=V.LVC.full|MWELemma=have <1> experience|MWELen=3|Supersense=v.social
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	experience	experience	NOUN	NN	Number=Sing	4	obj	4:obj	_
-7	of	of	SCONJ	IN	_	8	mark	8:mark	_
-8	learning	learn	VERB	VBG	VerbForm=Ger	6	acl	6:acl:of	_
+7	of	of	SCONJ	IN	_	8	mark	8:mark	PRel[config]=subordinating|PRel[gov]=6:experience|PRel[obj]=8:learn|Supersense=p.Identity
+8	learning	learn	VERB	VBG	VerbForm=Ger	6	acl	6:acl:of	Supersense=v.cognition
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 10	bella	bella	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	Sicilian	Sicilian	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	culture	culture	NOUN	NN	Number=Sing	8	obj	8:obj|19:nmod:with	SpaceAfter=No
+12	culture	culture	NOUN	NN	Number=Sing	8	obj	8:obj|19:nmod:with	SpaceAfter=No|Supersense=n.COGNITION
 13	,	,	PUNCT	,	_	17	punct	17:punct	_
 14	that	that	PRON	WDT	PronType=Rel	19	nmod	12:ref	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj|19:nsubj	_
 16	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
-17	fallen	fall	VERB	VBN	Tense=Past|VerbForm=Part	12	acl:relcl	12:acl:relcl	Cxn=rc-that-nmod_xcomp-pstrand
-18	in	in	ADP	IN	_	19	case	19:case	_
+17	fallen	fall	VERB	VBN	Tense=Past|VerbForm=Part	12	acl:relcl	12:acl:relcl	Cxn=rc-that-nmod_xcomp-pstrand|MWELemma[weak]=fall in love|MWELen[weak]=3|MWEString[weak]=fallen in luv|Supersense=v.emotion
+18	in	in	ADP	IN	_	19	case	19:case	MWECat=PP|MWELemma=in love|MWELen=2|MWEString=in luv|PRel[config]=default|PRel[gov]=17:fall|PRel[obj]=19:love|Supersense[coding]=p.Locus|Supersense[scene]=p.Characteristic
 19	luv	love	NOUN	NN	Abbr=Yes|Number=Sing	17	xcomp	17:xcomp	_
-20	with	with	ADP	IN	_	14	case	14:case	SpaceAfter=No
+20	with	with	ADP	IN	_	14	case	14:case	PRel[config]=stranded|PRel[gov]=19:love|PRel[obj]=14:that|SpaceAfter=No|Supersense[coding]=p.Topic|Supersense[scene]=p.Stimulus
 21	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-042012-0006
@@ -93,32 +93,32 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 3	4-ever	forever	ADV	RB	Abbr=Yes	6	advmod	6:advmod	CorrectForm=forever
-4	be	be	AUX	VB	VerbForm=Inf	6	cop	6:cop	_
-5	eternally	eternally	ADV	RB	_	6	advmod	6:advmod	_
+4	be	be	AUX	VB	VerbForm=Inf	6	cop	6:cop	Supersense=v.stative
+5	eternally	eternally	ADV	RB	_	6	advmod	6:advmod	MWELemma[weak]=eternally grateful|MWELen[weak]=2
 6	grateful	grateful	ADJ	JJ	Degree=Pos	0	root	0:root	_
-7	for	for	ADP	IN	_	9	case	9:case	_
-8	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	hospitality	hospitality	NOUN	NN	Number=Sing	6	obl	6:obl:for|16:obj	_
+7	for	for	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:grateful|PRel[obj]=9:hospitality|Supersense[coding]=p.Explanation|Supersense[scene]=p.Stimulus
+8	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:hospitality|Supersense=p.Gestalt
+9	hospitality	hospitality	NOUN	NN	Number=Sing	6	obl	6:obl:for|16:obj	Supersense=n.ATTRIBUTE
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	luv	love	NOUN	NN	Abbr=Yes|Number=Sing	9	conj	6:obl:for|9:conj:and|16:obj	_
+11	luv	love	NOUN	NN	Abbr=Yes|Number=Sing	9	conj	6:obl:for|9:conj:and|16:obj	MWECat=V.LVC.full|MWELemma=love <4> show|MWELen=6|MWEString=luv <4> showed|Supersense=v.emotion
 12	that	that	PRON	WDT	PronType=Rel	16	obj	9:ref	_
-13	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
+13	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	PRel[config]=possessive|PRel[gov]=15:family|Supersense[coding]=p.Gestalt|Supersense[scene]=p.OrgMember
 14	Sicilian	Sicilian	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	family	family	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	_
+15	family	family	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	Supersense=n.GROUP
 16	showed	show	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-that-obj
 17	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	16	iobj	16:iobj	_
 18	when	when	ADV	WRB	PronType=Int	21	advmod	21:advmod	_
 19	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	21	nsubj	21:nsubj	_
-20	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	cop	21:cop	_
+20	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	cop	21:cop	Supersense=v.stative
 21	there	there	ADV	RB	PronType=Dem	16	advcl	16:advcl:when	_
-22	for	for	ADP	IN	_	24	case	24:case	_
+22	for	for	ADP	IN	_	24	case	24:case	PRel[config]=default|PRel[gov]=21:there|PRel[obj]=24:year|Supersense=p.Duration
 23	3	3	NUM	CD	NumForm=Digit|NumType=Card	24	nummod	24:nummod	_
-24	years	year	NOUN	NNS	Number=Plur	21	obl	21:obl:for	SpaceAfter=No
+24	years	year	NOUN	NNS	Number=Plur	21	obl	21:obl:for	SpaceAfter=No|Supersense=n.TIME
 25	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-042012-0007
 # text = Luv always..
-1	Luv	love	NOUN	NN	Abbr=Yes|Number=Sing	0	root	0:root	_
+1	Luv	love	NOUN	NN	Abbr=Yes|Number=Sing	0	root	0:root	MWECat=DISC|MWELemma=love always|MWELen=2|MWEString=Luv always
 2	always	always	ADV	RB	PronType=Tot	1	advmod	1:advmod	SpaceAfter=No
 3	..	..	PUNCT	.	_	1	punct	1:punct	_
 

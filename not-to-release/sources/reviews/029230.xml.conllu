@@ -3,9 +3,9 @@
 # newpar id = reviews-029230-p0001
 # text = Best Store In Boothbay Harbor
 1	Best	good	ADJ	JJS	Degree=Sup	2	amod	2:amod	_
-2	Store	store	NOUN	NN	Number=Sing	0	root	0:root	_
-3	In	in	ADP	IN	_	5	case	5:case	_
-4	Boothbay	Boothbay	PROPN	NNP	Number=Sing	5	compound	5:compound	_
+2	Store	store	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.GROUP
+3	In	in	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=2:store|PRel[obj]=5:Harbor|Supersense=p.Locus
+4	Boothbay	Boothbay	PROPN	NNP	Number=Sing	5	compound	5:compound	MWECat=N|MWELemma=Boothbay Harbor|MWELen=2|Supersense=n.LOCATION
 5	Harbor	Harbor	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	_
 
 # sent_id = reviews-029230-0002
@@ -14,81 +14,81 @@
 1	What	what	DET	WDT	PronType=Int	4	det:predet	4:det:predet	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 3	fantastic	fantastic	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	store	store	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+4	store	store	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.GROUP
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
-7	love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	parataxis	4:parataxis	_
+7	love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	parataxis	4:parataxis	Supersense=v.emotion
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
-9	place	place	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
+9	place	place	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No|Supersense=n.LOCATION
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-029230-0003
 # text = Not the same old stuff that all the other stores have.
 1	Not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-3	same	same	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+3	same	same	ADJ	JJ	Degree=Pos	5	amod	5:amod	MWECat=ADJ|MWELemma=same old|MWELen=2
 4	old	old	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	stuff	stuff	NOUN	NN	Number=Sing	0	root	0:root|11:obj	_
+5	stuff	stuff	NOUN	NN	Number=Sing	0	root	0:root|11:obj	Supersense=n.ARTIFACT
 6	that	that	PRON	WDT	PronType=Rel	11	obj	5:ref	_
 7	all	all	DET	PDT	PronType=Tot	10	det:predet	10:det:predet	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	other	other	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	stores	store	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	_
-11	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj|SpaceAfter=No
+10	stores	store	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	Supersense=n.GROUP
+11	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj|SpaceAfter=No|Supersense=v.stative
 12	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-029230-0004
 # text = Their items are very unique, great quality, great prices.
-1	Their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	items	item	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|8:nsubj|11:nsubj	_
-3	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+1	Their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	PRel[config]=possessive|PRel[gov]=2:item|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Originator
+2	items	item	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|8:nsubj|11:nsubj	Supersense=n.ARTIFACT
+3	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
 4	very	very	ADV	RB	_	5	advmod	5:advmod	_
 5	unique	unique	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
 7	great	great	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	quality	quality	NOUN	NN	Number=Sing	5	conj	5:conj	SpaceAfter=No
+8	quality	quality	NOUN	NN	Number=Sing	5	conj	5:conj	SpaceAfter=No|Supersense=n.ATTRIBUTE
 9	,	,	PUNCT	,	_	8	punct	8:punct	_
 10	great	great	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	prices	price	NOUN	NNS	Number=Plur	5	conj	5:conj	SpaceAfter=No
+11	prices	price	NOUN	NNS	Number=Plur	5	conj	5:conj	SpaceAfter=No|Supersense=n.POSSESSION
 12	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-029230-0005
 # text = They also have the best tea I ever had, not at all like the junk you get at the grocery stores, I stock up when ever there because they are closed in the winter.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
 2	also	also	ADV	RB	_	3	advmod	3:advmod	_
-3	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.stative
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	best	good	ADJ	JJS	Degree=Sup	6	amod	6:amod	_
-6	tea	tea	NOUN	NN	Number=Sing	3	obj	3:obj|9:obj	_
+6	tea	tea	NOUN	NN	Number=Sing	3	obj	3:obj|9:obj	Supersense=n.FOOD
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 8	ever	ever	ADV	RB	PronType=Ind	9	advmod	9:advmod	_
-9	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No
+9	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj|SpaceAfter=No|Supersense=v.consumption
 10	,	,	PUNCT	,	_	16	punct	16:punct	_
 11	not	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
-12	at	at	ADP	IN	_	13	case	13:case	_
+12	at	at	ADP	IN	_	13	case	13:case	MWECat=PP|MWELemma=at all|MWELen=2|PRel[config]=default|PRel[gov]=16:junk|PRel[obj]=13:all|Supersense=p.Extent
 13	all	all	DET	DT	PronType=Tot	16	nmod	16:nmod:at	_
-14	like	like	ADP	IN	_	16	case	16:case	_
+14	like	like	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=3:have|PRel[obj]=16:junk|Supersense=p.ComparisonRef
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	junk	junk	NOUN	NN	Number=Sing	3	obl	3:obl:like|18:obj	_
+16	junk	junk	NOUN	NN	Number=Sing	3	obl	3:obl:like|18:obj	Supersense=n.ARTIFACT
 17	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	_
-18	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	16	acl:relcl	16:acl:relcl	Cxn=rc-red-obj
-19	at	at	ADP	IN	_	22	case	22:case	_
+18	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	16	acl:relcl	16:acl:relcl	Cxn=rc-red-obj|Supersense=v.stative
+19	at	at	ADP	IN	_	22	case	22:case	PRel[config]=default|PRel[gov]=18:get|PRel[obj]=22:store|Supersense=p.Locus
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
-21	grocery	grocery	NOUN	NN	Number=Sing	22	compound	22:compound	_
+21	grocery	grocery	NOUN	NN	Number=Sing	22	compound	22:compound	MWECat=N|MWELemma=grocery store|MWELen=2|MWEString=grocery stores|Supersense=n.LOCATION
 22	stores	store	NOUN	NNS	Number=Plur	18	obl	18:obl:at	SpaceAfter=No
 23	,	,	PUNCT	,	_	25	punct	25:punct	_
 24	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
-25	stock	stock	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	_
+25	stock	stock	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	MWECat=V.VPC.semi|MWELemma=stock up|MWELen=2|Supersense=v.stative
 26	up	up	ADP	RP	_	25	compound:prt	25:compound:prt	_
-27	when	whenever	ADV	GW	PronType=Rel|Typo=Yes	25	advmod	25:advmod|29:advmod	_
+27	when	whenever	ADV	GW	PronType=Rel|Typo=Yes	25	advmod	25:advmod|29:advmod	MWECat=SCONJ|MWELemma=whenever|MWELen=2|MWEString=when ever
 28	ever	_	X	WRB	_	27	goeswith	27:goeswith	_
 29	there	there	ADV	RB	PronType=Dem	27	advcl:relcl	27:advcl:relcl	Cxn=rc-free-advmod
 30	because	because	SCONJ	IN	_	33	mark	33:mark	_
 31	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	33	nsubj	33:nsubj	_
-32	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	33	cop	33:cop	_
+32	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	33	cop	33:cop	Supersense=v.stative
 33	closed	closed	ADJ	JJ	Degree=Pos	25	advcl	25:advcl:because	_
-34	in	in	ADP	IN	_	36	case	36:case	_
+34	in	in	ADP	IN	_	36	case	36:case	PRel[config]=default|PRel[gov]=33:closed|PRel[obj]=36:winter|Supersense=p.Time
 35	the	the	DET	DT	Definite=Def|PronType=Art	36	det	36:det	_
-36	winter	winter	NOUN	NN	Number=Sing	33	obl	33:obl:in	SpaceAfter=No
+36	winter	winter	NOUN	NN	Number=Sing	33	obl	33:obl:in	SpaceAfter=No|Supersense=n.TIME
 37	.	.	PUNCT	.	_	3	punct	3:punct	_
 
