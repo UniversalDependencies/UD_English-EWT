@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.15 -- 2024-11-15
+Universal Dependencies English Web Treebank v2.17 -- 2025-11-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
 
@@ -20,7 +20,8 @@ hand-corrected to Universal Dependencies. All the basic dependency annotations h
 been single-annotated, a limited portion of them have been double-annotated,
 and subsequent correction has been done to improve consistency. Other aspects
 of the treebank, such as Universal POS, features and enhanced dependencies, has
-mainly been done automatically, with very limited hand-correction.
+mainly been done automatically, with very limited hand-correction initially
+(but substantial cleanup over the years).
 
 
 # License/Copyright
@@ -73,9 +74,34 @@ of the converter by Schuster and Manning (2016). These dependencies have **not**
 manually checked. Enhanced dependencies for *reduced* relative clauses were added in
 v2.14.
 
-# Idiosyncratic MISC Attributes
+# MISC Annotations
 
-The MISC column contains a few attributes that are not documented as part of the
+[MISC](https://universaldependencies.org/misc.html), the 10th column of the .conllu format,
+allows for extension beyond the components generally adopted in UD treebanks.
+EWT contains three categories of MISC annotation beyond the core UD standard:
+UCxn (construction) annotations, STREUSLE (lexical semantic) annotations, and
+idiosyncratic attributes.
+
+## Construction Annotations
+
+The `Cxn` attribute allows for description of constructions that go beyond the words
+and relations described by the UD standard. For the most part, the `Cxn` annotations
+follow the parameters of the [UCxn project](https://github.com/LeonieWeissweiler/UCxn/).
+EWT also includes relative clause subtype annotations in this field.
+See the [changelog](#changelog) entry for v2.14.
+
+## Lexical Semantic Annotations
+
+The [STREUSLE corpus](https://github.com/nert-nlp/streusle/) provides gold-standard
+annotations for multiword expressions and supersenses in the Reviews portion of EWT
+(3814 sentences). In v2.17 these were incorporated in the MISC column via the attributes
+`MWECat`, `MWELemma`, `MWELen`, `MWEString`, `Supersense`, and `PRel`.
+Refer to the [STREUSLE docs](https://github.com/nert-nlp/streusle/blob/master/FORMAT.md)
+for details.
+
+## Idiosyncratic MISC Attributes
+
+These are not documented as part of UCxn, STREUSLE, or the
 [general UD guidelines](https://universaldependencies.org/misc.html), but are
 experimental and specific to EWT. These are not necessarily systematically applied,
 and are subject to change in future versions:
@@ -125,6 +151,12 @@ documents many yet-to-be-resolved analysis challenges. Significant among these:
  - Many free relatives are incorrectly analyzed as interrogative.
 
 # Changelog
+
+**2025-11-15 v2.17**
+
+Highlights:
+
+  - **In the Reviews sentences, incorporate gold-standard lexical semantic annotations from STREUSLE** ([#606](https://github.com/UniversalDependencies/UD_English-EWT/issues/606))
 
 **2025-05-15 v2.16**
 
