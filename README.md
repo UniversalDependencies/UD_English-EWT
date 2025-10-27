@@ -157,12 +157,23 @@ documents many yet-to-be-resolved analysis challenges. Significant among these:
 Highlights:
 
   - **In the Reviews sentences, incorporate gold-standard lexical semantic annotations from STREUSLE** ([#606](https://github.com/UniversalDependencies/UD_English-EWT/issues/606))
+  - **Implement new guidelines for several classes of nominal expressions**
+    * `flat` for location names like "Mount Fuji", "Fort Worth" ([#595](https://github.com/UniversalDependencies/UD_English-EWT/issues/595))
+    * `nmod:unmarked` + `Superlocation=Yes` for CITY, STATE and postal addresses ([#588](https://github.com/UniversalDependencies/UD_English-EWT/issues/588))
+    * `nmod:unmarked` for "degrees Fahrenheit/Celsius" ([#574](https://github.com/UniversalDependencies/UD_English-EWT/issues/574))
+    * `nmod:desc` for "Inc." and similar business suffixes ([#587](https://github.com/UniversalDependencies/UD_English-EWT/issues/587))
+  - Implement `PronType=Dem` for expletive "there" ([docs#517](https://github.com/UniversalDependencies/docs/issues/517))
+  - Hundreds of "it" and "you" tokens had `Case=Nom` where `Case=Acc` is correct ([#589](https://github.com/UniversalDependencies/UD_English-EWT/issues/589))
+  - "@": at/SYM/ExtPos=ADP ([#599](https://github.com/UniversalDependencies/UD_English-EWT/issues/599))
+  - Correct `appos` to `nmod:unmarked` for "you guys" etc. ([#436](https://github.com/UniversalDependencies/UD_English-EWT/issues/436))
+  - Temporal premodifiers of nouns should attach as `compound` not `nmod:unmarked` ([#593](https://github.com/UniversalDependencies/UD_English-EWT/issues/593))
+  - Document [`MISC` annotations](#misc-annotations)
 
 **2025-05-15 v2.16**
 
 Highlights:
 
-  - **Implement new [`nmod:desc`](https://universaldependencies.org/en/dep/nmod-desc.html) subtype for prefixes/suffixes/embellishments in names ([#561](https://github.com/UniversalDependencies/UD_English-EWT/issues/561), [#559](https://github.com/UniversalDependencies/UD_English-EWT/issues/559), [#59](https://github.com/UniversalDependencies/UD_English-EWT/issues/59))**
+  - **Implement new [`nmod:desc`](https://universaldependencies.org/en/dep/nmod-desc.html) subtype for prefixes/suffixes/embellishments in names** ([#561](https://github.com/UniversalDependencies/UD_English-EWT/issues/561), [#559](https://github.com/UniversalDependencies/UD_English-EWT/issues/559), [#59](https://github.com/UniversalDependencies/UD_English-EWT/issues/59))
   - **Implement new [guidelines for dates](https://universaldependencies.org/en/dep/nmod-unmarked.html#dates)** ([#575](https://github.com/UniversalDependencies/UD_English-EWT/issues/575))
   - **Implement new [guidelines for numbered entities](https://universaldependencies.org/en/dep/nmod-desc.html#numbered-entities) like "Chapter 1"** ([#558](https://github.com/UniversalDependencies/UD_English-EWT/issues/558))
   - New policy for "you guys" and similar ([#436](https://github.com/UniversalDependencies/UD_English-EWT/issues/436))
