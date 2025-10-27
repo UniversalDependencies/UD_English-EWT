@@ -12,30 +12,30 @@
 1	Not	not	PART	RB	Polarity=Neg	2	advmod	2:advmod	_
 2	worth	worth	ADJ	JJ	Degree=Pos	0	root	0:root	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	money	money	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
+4	money	money	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No|Supersense=n.POSSESSION
 5	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-341750-0003
 # text = Bland and over cooked.
 1	Bland	bland	ADJ	JJ	Degree=Pos	0	root	0:root	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	over	overcooked	ADJ	AFX	Degree=Pos|Typo=Yes	1	conj	1:conj:and	_
+3	over	overcooked	ADJ	AFX	Degree=Pos|Typo=Yes	1	conj	1:conj:and	MWECat=ADJ|MWELemma=overcooked|MWELen=2|MWEString=over cooked
 4	cooked	_	X	JJ	_	3	goeswith	3:goeswith	SpaceAfter=No
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-341750-0004
 # text = I felt as if I was in an over priced Olive Garden.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	felt	feel	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=2:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
-3	as	as	SCONJ	IN	_	12	mark	12:mark	_
+2	felt	feel	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=2:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|Supersense=v.cognition
+3	as	as	SCONJ	IN	_	12	mark	12:mark	MWECat=P|MWELemma=as if|MWELen=2|PRel[config]=subordinating|PRel[gov]=2:feel|PRel[obj]=6:be|Supersense=p.ComparisonRef
 4	if	if	SCONJ	IN	_	12	mark	12:mark	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	_
-7	in	in	ADP	IN	_	12	case	12:case	_
+6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	Supersense=v.stative
+7	in	in	ADP	IN	_	12	case	12:case	PRel[config]=predicative|PRel[gov]=5:I|PRel[obj]=12:Garden|Supersense=p.Locus
 8	an	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
-9	over	overpriced	ADJ	AFX	Degree=Pos|Typo=Yes	12	amod	12:amod	_
+9	over	overpriced	ADJ	AFX	Degree=Pos|Typo=Yes	12	amod	12:amod	MWECat=ADJ|MWELemma=overpriced|MWELen=2|MWEString=over priced
 10	priced	_	X	JJ	_	9	goeswith	9:goeswith	_
-11	Olive	Olive	PROPN	NNP	Number=Sing	12	compound	12:compound	_
+11	Olive	Olive	PROPN	NNP	Number=Sing	12	compound	12:compound	MWECat=N|MWELemma=Olive Garden|MWELen=2|Supersense=n.GROUP
 12	Garden	Garden	PROPN	NNP	Number=Sing	2	advcl	2:advcl:in	CxnElt=2:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -43,15 +43,15 @@
 # text = I was hoping to have found a regular place to eat.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|6:nsubj:xsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	3:aux	_
-3	hoping	hope	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+3	hoping	hope	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Supersense=v.cognition
 4	to	to	PART	TO	_	6	mark	6:mark	_
 5	have	have	AUX	VB	VerbForm=Inf	6	aux	6:aux	_
-6	found	find	VERB	VBN	Tense=Past|VerbForm=Part	3	xcomp	3:xcomp	_
+6	found	find	VERB	VBN	Tense=Past|VerbForm=Part	3	xcomp	3:xcomp	Supersense=v.cognition
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	regular	regular	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	place	place	NOUN	NN	Number=Sing	6	obj	6:obj	_
-10	to	to	PART	TO	_	11	mark	11:mark	_
-11	eat	eat	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	SpaceAfter=No
+9	place	place	NOUN	NN	Number=Sing	6	obj	6:obj	Supersense=n.GROUP
+10	to	to	PART	TO	_	11	mark	11:mark	PRel[config]=subordinating|PRel[gov]=9:place|PRel[obj]=11:eat|Supersense=p.Purpose
+11	eat	eat	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	SpaceAfter=No|Supersense=v.consumption
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-341750-0006

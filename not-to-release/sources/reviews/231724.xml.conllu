@@ -2,8 +2,8 @@
 # sent_id = reviews-231724-0001
 # newpar id = reviews-231724-p0001
 # text = Rooms were outdated, dirty, and small.
-1	Rooms	room	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj|5:nsubj|8:nsubj	_
-2	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
+1	Rooms	room	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj|5:nsubj|8:nsubj	Supersense=n.ARTIFACT
+2	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	Supersense=v.stative
 3	outdated	outdated	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	dirty	dirty	ADJ	JJ	Degree=Pos	3	conj	3:conj:and	SpaceAfter=No
@@ -14,19 +14,19 @@
 
 # sent_id = reviews-231724-0002
 # text = Service was horrible.
-1	Service	service	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
+1	Service	service	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Supersense=n.ACT
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	Supersense=v.stative
 3	horrible	horrible	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 4	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-231724-0003
 # text = Go down 1 block to Super 8.
-1	Go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	down	down	ADV	RB	_	1	advmod	1:advmod	_
+1	Go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Supersense=v.motion
+2	down	down	ADV	RB	_	1	advmod	1:advmod	PRel[config]=default|PRel[gov]=1:go|Supersense=p.Direction
 3	1	1	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
-4	block	block	NOUN	NN	Number=Sing	1	obl:unmarked	1:obl:unmarked	_
-5	to	to	ADP	IN	_	6	case	6:case	_
-6	Super	Super	ADJ	NNP	Degree=Pos	1	obl	1:obl:to	FlatType=Enumerated
+4	block	block	NOUN	NN	Number=Sing	1	obl:unmarked	1:obl:unmarked	Supersense=n.RELATION
+5	to	to	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=1:go|PRel[obj]=6:Super|Supersense=p.Goal
+6	Super	Super	ADJ	NNP	Degree=Pos	1	obl	1:obl:to	FlatType=Enumerated|MWECat=N|MWELemma=Super 8|MWELen=2|Supersense=n.GROUP
 7	8	8	NUM	NNP	NumForm=Digit|NumType=Card	6	flat	6:flat	SpaceAfter=No
 8	.	.	PUNCT	.	_	1	punct	1:punct	_
 

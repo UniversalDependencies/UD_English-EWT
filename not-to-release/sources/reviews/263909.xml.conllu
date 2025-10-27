@@ -3,54 +3,54 @@
 # newpar id = reviews-263909-p0001
 # text = Great Service Great People
 1	Great	great	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	Service	service	NOUN	NN	Number=Sing	0	root	0:root	_
+2	Service	service	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.ACT
 3	Great	great	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	People	people	NOUN	NNS	Number=Plur	2	parataxis	2:parataxis	_
+4	People	people	NOUN	NNS	Number=Plur	2	parataxis	2:parataxis	Supersense=n.PERSON
 
 # sent_id = reviews-263909-0002
 # newpar id = reviews-263909-p0002
 # text = Bisconti wanted over $300 to fix my laptop and these guys fixed it for $90!
-1	Bisconti	Bisconti	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
-2	wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	over	over	ADV	RB	_	4	advmod	4:advmod	_
+1	Bisconti	Bisconti	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Supersense=n.GROUP
+2	wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
+3	over	over	ADV	RB	_	4	advmod	4:advmod	PRel[config]=default|PRel[obj]=4:$|Supersense=p.Approximator
 4	$	$	SYM	$	_	2	obj	2:obj|7:nsubj:xsubj	SpaceAfter=No
 5	300	300	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
-6	to	to	PART	TO	_	7	mark	7:mark	_
-7	fix	fix	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	laptop	laptop	NOUN	NN	Number=Sing	7	obj	7:obj	_
+6	to	to	PART	TO	_	7	mark	7:mark	PRel[config]=subordinating|PRel[gov]=2:want|PRel[obj]=7:fix|Supersense[coding]=p.Purpose|Supersense[scene]=p.Theme
+7	fix	fix	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	Supersense=v.change
+8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:laptop|Supersense=p.Possessor
+9	laptop	laptop	NOUN	NN	Number=Sing	7	obj	7:obj	Supersense=n.ARTIFACT
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
 11	these	this	DET	DT	Number=Plur|PronType=Dem	12	det	12:det	_
-12	guys	guy	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
-13	fixed	fix	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
+12	guys	guy	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	Supersense=n.PERSON
+13	fixed	fix	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	Supersense=v.change
 14	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	13	obj	13:obj	_
-15	for	for	ADP	IN	_	16	case	16:case	_
+15	for	for	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=13:fix|PRel[obj]=16:$|Supersense=p.Cost
 16	$	$	SYM	$	_	13	obl	13:obl:for	SpaceAfter=No
 17	90	90	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	SpaceAfter=No
 18	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-263909-0003
 # text = Call them today!
-1	Call	call	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+1	Call	call	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 2	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	1	obj	1:obj	_
-3	today	today	NOUN	NN	Number=Sing	1	obl:unmarked	1:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
+3	today	today	NOUN	NN	Number=Sing	1	obl:unmarked	1:obl:unmarked	SpaceAfter=No|Supersense=n.TIME|TemporalNPAdjunct=Yes
 4	!	!	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-263909-0004
 # text = Had it fixed within a few days (had to order a part).
-1	Had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	Had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.stative
 2	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	1	obj	1:obj|3:nsubj:xsubj	_
-3	fixed	fix	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	1	xcomp	1:xcomp	_
-4	within	within	ADP	IN	_	7	case	7:case	_
-5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
+3	fixed	fix	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	1	xcomp	1:xcomp	Supersense=v.change
+4	within	within	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=3:fix|PRel[obj]=7:day|Supersense=p.Duration
+5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	MWECat=DET|MWELemma=a few|MWELen=2
 6	few	few	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	days	day	NOUN	NNS	Number=Plur	3	obl	3:obl:within	_
+7	days	day	NOUN	NNS	Number=Plur	3	obl	3:obl:within	Supersense=n.TIME
 8	(	(	PUNCT	-LRB-	_	9	punct	9:punct	SpaceAfter=No
-9	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	1	parataxis	1:parataxis	_
+9	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	1	parataxis	1:parataxis	MWECat=AUX|MWELemma=have to|MWELen=2|MWEString=had to
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	order	order	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
+11	order	order	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	Supersense=v.communication
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
-13	part	part	NOUN	NN	Number=Sing	11	obj	11:obj	SpaceAfter=No
+13	part	part	NOUN	NN	Number=Sing	11	obj	11:obj	SpaceAfter=No|Supersense=n.ARTIFACT
 14	)	)	PUNCT	-RRB-	_	9	punct	9:punct	SpaceAfter=No
 15	.	.	PUNCT	.	_	1	punct	1:punct	_
 

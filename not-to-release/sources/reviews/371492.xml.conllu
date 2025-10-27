@@ -3,26 +3,26 @@
 # newpar id = reviews-371492-p0001
 # text = Excellent service!
 1	Excellent	excellent	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	service	service	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+2	service	service	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.ACT
 3	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-371492-0002
 # newpar id = reviews-371492-p0002
 # text = I am so glad that we now have a good nail shop on San Mateo Avenue!
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 3	so	so	ADV	RB	_	4	advmod	4:advmod	_
 4	glad	glad	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	that	that	SCONJ	IN	_	8	mark	8:mark	_
 6	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
 7	now	now	ADV	RB	PronType=Dem	8	advmod	8:advmod	_
-8	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
+8	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	Supersense=v.stative
 9	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 10	good	good	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-11	nail	nail	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	shop	shop	NOUN	NN	Number=Sing	8	obj	8:obj	_
-13	on	on	ADP	IN	_	16	case	16:case	_
-14	San	San	PROPN	NNP	Number=Sing	16	compound	16:compound	_
+11	nail	nail	NOUN	NN	Number=Sing	12	compound	12:compound	Supersense=n.BODY
+12	shop	shop	NOUN	NN	Number=Sing	8	obj	8:obj	Supersense=n.GROUP
+13	on	on	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=12:shop|PRel[obj]=16:Avenue|Supersense=p.Locus
+14	San	San	PROPN	NNP	Number=Sing	16	compound	16:compound	MWECat=N|MWELemma=San Mateo Avenue|MWELen=3|Supersense=n.LOCATION
 15	Mateo	Mateo	PROPN	NNP	Number=Sing	14	flat	14:flat	_
 16	Avenue	Avenue	PROPN	NNP	Number=Sing	12	nmod	12:nmod:on	SpaceAfter=No
 17	!	!	PUNCT	.	_	4	punct	4:punct	_
@@ -31,26 +31,26 @@
 # text = No more having to drive to San Francisco for a great mani pedi.
 1	No	no	ADV	RB	_	2	advmod	2:advmod	_
 2	more	more	ADV	RBR	Degree=Cmp	3	advmod	3:advmod	_
-3	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+3	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	MWECat=AUX|MWELemma=have to|MWELen=2|MWEString=having to
 4	to	to	PART	TO	_	5	mark	5:mark	_
-5	drive	drive	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-6	to	to	ADP	IN	_	7	case	7:case	_
-7	San	San	PROPN	NNP	Number=Sing	5	obl	5:obl:to	_
+5	drive	drive	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	Supersense=v.motion
+6	to	to	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=5:drive|PRel[obj]=7:San|Supersense=p.Goal
+7	San	San	PROPN	NNP	Number=Sing	5	obl	5:obl:to	MWECat=N|MWELemma=San Francisco|MWELen=2|Supersense=n.LOCATION
 8	Francisco	Francisco	PROPN	NNP	Number=Sing	7	flat	7:flat	_
-9	for	for	ADP	IN	_	13	case	13:case	_
+9	for	for	ADP	IN	_	13	case	13:case	PRel[config]=default|PRel[gov]=5:drive|PRel[obj]=13:pedi|Supersense=p.Purpose
 10	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 11	great	great	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-12	mani	mani	NOUN	NN	Number=Sing	13	compound	13:compound	_
+12	mani	mani	NOUN	NN	Number=Sing	13	compound	13:compound	MWECat=N|MWELemma=mani pedi|MWELen=2|Supersense=n.ACT
 13	pedi	pedi	NOUN	NN	Number=Sing	5	obl	5:obl:for	SpaceAfter=No
 14	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-371492-0004
 # text = Both Tina and Vicky are excellent.
 1	Both	both	CCONJ	CC	_	2	cc:preconj	2:cc:preconj	_
-2	Tina	Tina	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
+2	Tina	Tina	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	Supersense=n.PERSON
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	Vicky	Vicky	PROPN	NNP	Number=Sing	2	conj	2:conj:and|6:nsubj	_
-5	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
+4	Vicky	Vicky	PROPN	NNP	Number=Sing	2	conj	2:conj:and|6:nsubj	Supersense=n.PERSON
+5	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	Supersense=v.stative
 6	excellent	excellent	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 7	.	.	PUNCT	.	_	6	punct	6:punct	_
 
@@ -59,10 +59,10 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	definitely	definitely	ADV	RB	_	4	advmod	4:advmod	_
-4	refer	refer	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
-6	friends	friend	NOUN	NNS	Number=Plur	4	obj	4:obj	_
+4	refer	refer	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
+5	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	PRel[config]=possessive|PRel[gov]=6:friend|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+6	friends	friend	NOUN	NNS	Number=Plur	4	obj	4:obj	Supersense=n.PERSON
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	family	family	NOUN	NN	Number=Sing	6	conj	4:obj|6:conj:and	SpaceAfter=No
+8	family	family	NOUN	NN	Number=Sing	6	conj	4:obj|6:conj:and	SpaceAfter=No|Supersense=n.GROUP
 9	:)	:)	SYM	NFP	_	4	discourse	4:discourse	_
 

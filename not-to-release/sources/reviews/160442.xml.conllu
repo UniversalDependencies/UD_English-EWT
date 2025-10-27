@@ -4,7 +4,7 @@
 # text = Extremely bad customer service
 1	Extremely	extremely	ADV	RB	_	2	advmod	2:advmod	_
 2	bad	bad	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-3	customer	customer	NOUN	NN	Number=Sing	4	compound	4:compound	_
+3	customer	customer	NOUN	NN	Number=Sing	4	compound	4:compound	MWECat=N|MWELemma=customer service|MWELen=2|Supersense=n.ACT
 4	service	service	NOUN	NN	Number=Sing	0	root	0:root	_
 
 # sent_id = reviews-160442-0002
@@ -12,53 +12,53 @@
 # text = Do not go to this salon, especially if you have to get your hair straightened.
 1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 2	not	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
-3	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
-4	to	to	ADP	IN	_	6	case	6:case	_
+3	go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|Supersense=v.motion
+4	to	to	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=3:go|PRel[obj]=6:salon|Supersense=p.Goal
 5	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	_
-6	salon	salon	NOUN	NN	Number=Sing	3	obl	3:obl:to	SpaceAfter=No
+6	salon	salon	NOUN	NN	Number=Sing	3	obl	3:obl:to	SpaceAfter=No|Supersense=n.GROUP
 7	,	,	PUNCT	,	_	11	punct	11:punct	_
 8	especially	especially	ADV	RB	_	11	advmod	11:advmod	_
 9	if	if	SCONJ	IN	_	11	mark	11:mark	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj|13:nsubj:xsubj	_
-11	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:if	CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
+11	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:if	CxnElt=3:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|MWECat=AUX|MWELemma=have to|MWELen=2
 12	to	to	PART	TO	_	13	mark	13:mark	_
-13	get	get	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
-14	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
-15	hair	hair	NOUN	NN	Number=Sing	13	obj	13:obj|16:nsubj:xsubj	_
-16	straightened	straighten	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	13	xcomp	13:xcomp	SpaceAfter=No
+13	get	get	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	Supersense=v.social
+14	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	PRel[config]=possessive|PRel[gov]=15:hair|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
+15	hair	hair	NOUN	NN	Number=Sing	13	obj	13:obj|16:nsubj:xsubj	Supersense=n.BODY
+16	straightened	straighten	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	13	xcomp	13:xcomp	SpaceAfter=No|Supersense=v.body
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-160442-0003
 # text = They did a very bad job with my hair and were extremely rude when I went back to ask them why it didn't work for my hair.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj|13:nsubj	_
-2	did	do	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	did	do	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=V.LVC.full|MWELemma=do a <2> job|MWELen=5|MWEString=did a <2> job|Supersense=v.body
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 4	very	very	ADV	RB	_	5	advmod	5:advmod	_
 5	bad	bad	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	job	job	NOUN	NN	Number=Sing	2	obj	2:obj	_
-7	with	with	ADP	IN	_	9	case	9:case	_
-8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	hair	hair	NOUN	NN	Number=Sing	2	obl	2:obl:with	_
+7	with	with	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=2:do|PRel[obj]=9:hair|Supersense=p.Theme
+8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:hair|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
+9	hair	hair	NOUN	NN	Number=Sing	2	obl	2:obl:with	Supersense=n.BODY
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
-11	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	_
+11	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	Supersense=v.stative
 12	extremely	extremely	ADV	RB	_	13	advmod	13:advmod	_
 13	rude	rude	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	_
 14	when	when	ADV	WRB	PronType=Int	16	advmod	16:advmod	_
 15	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
-16	went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	13	advcl	13:advcl:when	_
-17	back	back	ADV	RB	_	16	advmod	16:advmod	_
-18	to	to	PART	TO	_	19	mark	19:mark	_
-19	ask	ask	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:to	_
+16	went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	13	advcl	13:advcl:when	Supersense=v.motion
+17	back	back	ADV	RB	_	16	advmod	16:advmod	PRel[config]=default|PRel[gov]=16:go|Supersense=p.Direction
+18	to	to	PART	TO	_	19	mark	19:mark	PRel[config]=subordinating|PRel[gov]=16:go|PRel[obj]=19:ask|Supersense=p.Purpose
+19	ask	ask	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:to	Supersense=v.communication
 20	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	19	iobj	19:iobj	_
 21	why	why	ADV	WRB	PronType=Int	25	advmod	25:advmod	_
 22	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	25	nsubj	25:nsubj	_
 23-24	didn't	_	_	_	_	_	_	_	_
 23	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	25	aux	25:aux	_
 24	n't	not	PART	RB	Polarity=Neg	25	advmod	25:advmod	_
-25	work	work	VERB	VB	VerbForm=Inf	19	advcl	19:advcl	_
-26	for	for	ADP	IN	_	28	case	28:case	_
-27	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	28	nmod:poss	28:nmod:poss	_
-28	hair	hair	NOUN	NN	Number=Sing	25	obl	25:obl:for	SpaceAfter=No
+25	work	work	VERB	VB	VerbForm=Inf	19	advcl	19:advcl	Supersense=v.stative
+26	for	for	ADP	IN	_	28	case	28:case	PRel[config]=default|PRel[gov]=25:work|PRel[obj]=28:hair|Supersense=p.Theme
+27	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	28	nmod:poss	28:nmod:poss	PRel[config]=possessive|PRel[gov]=28:hair|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
+28	hair	hair	NOUN	NN	Number=Sing	25	obl	25:obl:for	SpaceAfter=No|Supersense=n.BODY
 29	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-160442-0004
@@ -68,6 +68,6 @@
 3	insensitive	insensitive	ADJ	JJ	Degree=Pos	6	amod	6:amod	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	discourteous	discourteous	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	people	people	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+6	people	people	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No|Supersense=n.PERSON
 7	!!!!!	!!!!!	PUNCT	.	_	6	punct	6:punct	_
 

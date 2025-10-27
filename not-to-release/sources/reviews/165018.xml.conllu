@@ -2,7 +2,7 @@
 # sent_id = reviews-165018-0001
 # newpar id = reviews-165018-p0001
 # text = Run for the hills ... you'll be much better off!
-1	Run	run	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+1	Run	run	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	MWECat=V.VID|MWELemma=run for the hill|MWELen=4|MWEString=Run for the hills|Supersense=v.motion
 2	for	for	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
 4	hills	hill	NOUN	NNS	Number=Plur	1	obl	1:obl:for	_
@@ -10,9 +10,9 @@
 6-7	you'll	_	_	_	_	_	_	_	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
 7	'll	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
-8	be	be	AUX	VB	VerbForm=Inf	10	cop	10:cop	_
+8	be	be	AUX	VB	VerbForm=Inf	10	cop	10:cop	Supersense=v.stative
 9	much	much	ADV	RB	_	10	advmod	10:advmod	_
-10	better	good	ADJ	JJR	Degree=Cmp	1	parataxis	1:parataxis	_
+10	better	good	ADJ	JJR	Degree=Cmp	1	parataxis	1:parataxis	MWECat=ADJ|MWELemma=good off|MWELen=2|MWEString=better off
 11	off	off	ADP	RP	_	10	compound:prt	10:compound:prt	SpaceAfter=No
 12	!	!	PUNCT	.	_	1	punct	1:punct	_
 
@@ -20,29 +20,29 @@
 # newpar id = reviews-165018-p0002
 # text = One night was too much.
 1	One	one	NUM	CD	NumForm=Word|NumType=Card	2	nummod	2:nummod	_
-2	night	night	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
-3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
-4	too	too	ADV	RB	_	5	advmod	5:advmod	_
+2	night	night	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Supersense=n.EVENT
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
+4	too	too	ADV	RB	_	5	advmod	5:advmod	MWECat=ADJ|MWELemma=too much|MWELen=2
 5	much	much	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 6	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-165018-0003
 # text = First room had used tissues next to the bed and I requested it be rectified.
 1	First	first	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	2	amod	2:amod	_
-2	room	room	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-3	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	amod	5:amod	_
-5	tissues	tissue	NOUN	NNS	Number=Plur	3	obj	3:obj	_
-6	next	next	ADV	RB	ExtPos=ADP	9	case	9:case	_
+2	room	room	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Supersense=n.ARTIFACT
+3	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.stative
+4	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	amod	5:amod	Supersense=`j
+5	tissues	tissue	NOUN	NNS	Number=Plur	3	obj	3:obj	Supersense=n.ARTIFACT
+6	next	next	ADV	RB	ExtPos=ADP	9	case	9:case	MWECat=P|MWELemma=next to|MWELen=2|PRel[config]=default|PRel[gov]=5:tissue|PRel[obj]=9:bed|Supersense=p.Locus
 7	to	to	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	bed	bed	NOUN	NN	Number=Sing	5	nmod	5:nmod:to	_
+9	bed	bed	NOUN	NN	Number=Sing	5	nmod	5:nmod:to	Supersense=n.ARTIFACT
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-12	requested	request	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
+12	requested	request	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	Supersense=v.communication
 13	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj:pass	15:nsubj:pass	_
 14	be	be	AUX	VB	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	aux:pass	15:aux:pass	_
-15	rectified	rectify	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	ccomp	12:ccomp	SpaceAfter=No
+15	rectified	rectify	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	ccomp	12:ccomp	SpaceAfter=No|Supersense=v.change
 16	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-165018-0004
@@ -50,102 +50,102 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj:pass	4:nsubj:pass	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 3	then	then	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
-4	moved	move	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
-5	to	to	ADP	IN	_	7	case	7:case	_
+4	moved	move	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Supersense=v.motion
+5	to	to	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:move|PRel[obj]=7:room|Supersense=p.Goal
 6	another	another	DET	DT	PronType=Ind	7	det	7:det	_
-7	room	room	NOUN	NN	Number=Sing	4	obl	4:obl:to|15:obl|20:obl|33:obl|40:obl	_
-8	around	around	ADP	IN	_	10	case	10:case	_
+7	room	room	NOUN	NN	Number=Sing	4	obl	4:obl:to|15:obl|20:obl|33:obl|40:obl	Supersense=n.LOCATION
+8	around	around	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=7:room|PRel[obj]=10:back|Supersense[coding]=p.Direction|Supersense[scene]=p.Locus
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	back	back	NOUN	NN	Number=Sing	7	nmod	7:nmod:around	_
+10	back	back	NOUN	NN	Number=Sing	7	nmod	7:nmod:around	Supersense=n.LOCATION
 11	where	where	ADV	WRB	PronType=Rel	15	advmod	7:ref	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	room	room	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
-14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
+13	room	room	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	Supersense=n.ARTIFACT
+14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	15:cop	Supersense=v.stative
 15	dirty	dirty	ADJ	JJ	Degree=Pos	7	acl:relcl	7:acl:relcl	Cxn=rc-wh-obl|SpaceAfter=No
 16	,	,	PUNCT	,	_	20	punct	20:punct	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	shower	shower	NOUN	NN	Number=Sing	20	nsubj	20:nsubj	_
-19	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	cop	20:cop	_
+18	shower	shower	NOUN	NN	Number=Sing	20	nsubj	20:nsubj	Supersense=n.ARTIFACT
+19	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	cop	20:cop	Supersense=v.stative
 20	dirty	dirty	ADJ	JJ	Degree=Pos	15	conj	7:acl:relcl|15:conj:and	_
-21	with	with	SCONJ	IN	_	27	mark	27:mark	_
+21	with	with	SCONJ	IN	_	27	mark	27:mark	PRel[config]=subordinating|PRel[gov]=20:dirty|PRel[obj]=27:it|Supersense=p.Characteristic
 22	other	other	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
 23-24	peoples	_	_	_	_	_	_	_	_
-23	people	people	NOUN	NNS	Number=Plur	25	nmod:poss	25:nmod:poss	_
-24	s	's	PART	POS	Typo=Yes	23	case	23:case	CorrectForm='s
-25	hair	hair	NOUN	NN	Number=Sing	27	nsubj	27:nsubj	_
-26	in	in	ADP	IN	_	27	case	27:case	_
+23	people	people	NOUN	NNS	Number=Plur	25	nmod:poss	25:nmod:poss	Supersense=n.PERSON
+24	s	's	PART	POS	Typo=Yes	23	case	23:case	CorrectForm='s|PRel[config]=default|PRel[gov]=25:hair|PRel[obj]=23:people|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
+25	hair	hair	NOUN	NN	Number=Sing	27	nsubj	27:nsubj	Supersense=n.BODY
+26	in	in	ADP	IN	_	27	case	27:case	PRel[config]=default|PRel[gov]=20:dirty|PRel[obj]=27:it|Supersense=p.Locus
 27	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	advcl	20:advcl:with	SpaceAfter=No
 28	,	,	PUNCT	,	_	33	punct	33:punct	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
-30	toilet	toilet	NOUN	NN	Number=Sing	31	compound	31:compound	_
+30	toilet	toilet	NOUN	NN	Number=Sing	31	compound	31:compound	MWECat=N|MWELemma=toilet seat|MWELen=2|Supersense=n.ARTIFACT
 31	seat	seat	NOUN	NN	Number=Sing	33	nsubj	33:nsubj|35:nsubj	_
 32	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	33	aux	33:aux	_
-33	peeling	peel	VERB	VBG	Tense=Pres|VerbForm=Part	15	conj	7:acl:relcl|15:conj:and	_
+33	peeling	peel	VERB	VBG	Tense=Pres|VerbForm=Part	15	conj	7:acl:relcl|15:conj:and	Supersense=v.stative
 34	and	and	CCONJ	CC	_	35	cc	35:cc	_
 35	rough	rough	ADJ	JJ	Degree=Pos	33	conj	33:conj:and	_
 36	and	and	CCONJ	CC	_	40	cc	40:cc	_
 37	the	the	DET	DT	Definite=Def|PronType=Art	38	det	38:det	_
-38	bathroom	bathroom	NOUN	NN	Number=Sing	40	nsubj	40:nsubj	_
-39	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	40	cop	40:cop	_
+38	bathroom	bathroom	NOUN	NN	Number=Sing	40	nsubj	40:nsubj	Supersense=n.ARTIFACT
+39	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	40	cop	40:cop	Supersense=v.stative
 40	full	full	ADJ	JJ	Degree=Pos	15	conj	7:acl:relcl|15:conj:and	_
-41	of	of	ADP	IN	_	42	case	42:case	_
-42	mould	mould	NOUN	NN	Number=Sing	40	obl	40:obl:of	SpaceAfter=No
+41	of	of	ADP	IN	_	42	case	42:case	PRel[config]=default|PRel[gov]=40:full|PRel[obj]=42:mould|Supersense=p.Theme
+42	mould	mould	NOUN	NN	Number=Sing	40	obl	40:obl:of	SpaceAfter=No|Supersense=n.NATURALOBJECT
 43	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-165018-0005
 # text = I called reception to ask if they knew the state the room was in and was told "This is a Days Inn, not the Hilton" and the receptionist then hung up on me.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|17:nsubj:pass	_
-2	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	reception	reception	NOUN	NN	Number=Sing	2	obj	2:obj	_
-4	to	to	PART	TO	_	5	mark	5:mark	_
-5	ask	ask	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
+2	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
+3	reception	reception	NOUN	NN	Number=Sing	2	obj	2:obj	Supersense=n.PERSON
+4	to	to	PART	TO	_	5	mark	5:mark	PRel[config]=subordinating|PRel[gov]=2:call|PRel[obj]=5:ask|Supersense=p.Purpose
+5	ask	ask	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	Supersense=v.communication
 6	if	if	SCONJ	IN	_	8	mark	8:mark	_
 7	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj	_
-8	knew	know	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	ccomp	5:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=8:Interrogative-Polar-Indirect.Clause
+8	knew	know	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	ccomp	5:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=8:Interrogative-Polar-Indirect.Clause|Supersense=v.cognition
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	state	state	NOUN	NN	Number=Sing	8	obj	8:obj|14:obl	_
+10	state	state	NOUN	NN	Number=Sing	8	obj	8:obj|14:obl	Supersense=n.STATE
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	room	room	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	_
-13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
-14	in	in	ADP	IN	_	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obl-pstrand|Promoted=Yes
+12	room	room	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	Supersense=n.ARTIFACT
+13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	Supersense=v.stative
+14	in	in	ADP	IN	_	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obl-pstrand|PRel[config]=predicative+stranded|PRel[gov]=12:room|PRel[obj]=10:state|Promoted=Yes|Supersense[coding]=p.Locus|Supersense[scene]=p.Characteristic
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
 16	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	17	aux:pass	17:aux:pass	_
-17	told	tell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	conj	2:conj:and	_
+17	told	tell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	conj	2:conj:and	Supersense=v.communication
 18	"	"	PUNCT	``	_	23	punct	23:punct	SpaceAfter=No
 19	This	this	PRON	DT	Number=Sing|PronType=Dem	23	nsubj	23:nsubj|27:nsubj	_
-20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	cop	23:cop	_
+20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	cop	23:cop	Supersense=v.stative
 21	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
-22	Days	Day	PROPN	NNPS	Number=Plur	23	compound	23:compound	_
+22	Days	Day	PROPN	NNPS	Number=Plur	23	compound	23:compound	MWECat=N|MWELemma=Day Inn|MWELen=2|MWEString=Days Inn|Supersense=n.GROUP
 23	Inn	Inn	PROPN	NNP	Number=Sing	17	ccomp	17:ccomp	SpaceAfter=No
 24	,	,	PUNCT	,	_	27	punct	27:punct	_
 25	not	not	PART	RB	Polarity=Neg	27	advmod	27:advmod	_
-26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
+26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	MWECat=N|MWELemma=the Hilton|MWELen=2|Supersense=n.GROUP
 27	Hilton	Hilton	PROPN	NNP	Number=Sing	23	conj	17:ccomp|23:conj	SpaceAfter=No
 28	"	"	PUNCT	''	_	23	punct	23:punct	_
 29	and	and	CCONJ	CC	_	33	cc	33:cc	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	_
-31	receptionist	receptionist	NOUN	NN	Number=Sing	33	nsubj	33:nsubj	_
+31	receptionist	receptionist	NOUN	NN	Number=Sing	33	nsubj	33:nsubj	Supersense=n.PERSON
 32	then	then	ADV	RB	PronType=Dem	33	advmod	33:advmod	_
-33	hung	hang	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
+33	hung	hang	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	MWECat=V.VPC.full|MWELemma=hang up|MWELemma[weak]=hang up on|MWELen=2|MWELen[weak]=3|MWEString=hung up|MWEString[weak]=hung up on|Supersense=v.communication
 34	up	up	ADP	RP	_	33	compound:prt	33:compound:prt	_
-35	on	on	ADP	IN	_	36	case	36:case	_
+35	on	on	ADP	IN	_	36	case	36:case	PRel[config]=default|PRel[gov]=33:hang|PRel[obj]=36:I|Supersense=p.Beneficiary
 36	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	33	obl	33:obl:on	SpaceAfter=No
 37	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-165018-0006
 # text = To warn you to stay away from this place just isn't enough.
 1	To	to	PART	TO	_	2	mark	2:mark	_
-2	warn	warn	VERB	VB	VerbForm=Inf	13	csubj	13:csubj	_
+2	warn	warn	VERB	VB	VerbForm=Inf	13	csubj	13:csubj	Supersense=v.communication
 3	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	2	iobj	2:iobj|5:nsubj:xsubj	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
-5	stay	stay	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-6	away	away	ADV	RB	_	5	advmod	5:advmod	_
-7	from	from	ADP	IN	_	9	case	9:case	_
+5	stay	stay	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	MWELemma[weak]=stay away from|MWELen[weak]=3|Supersense=v.stative
+6	away	away	ADV	RB	_	5	advmod	5:advmod	PRel[config]=default|PRel[gov]=5:stay|Supersense=p.Locus
+7	from	from	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=5:stay|PRel[obj]=9:place|Supersense=p.Source
 8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	_
-9	place	place	NOUN	NN	Number=Sing	6	obl	6:obl:from	_
+9	place	place	NOUN	NN	Number=Sing	6	obl	6:obl:from	Supersense=n.GROUP
 10	just	just	ADV	RB	_	13	advmod	13:advmod	_
 11-12	isn't	_	_	_	_	_	_	_	_
-11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
+11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	Supersense=v.stative
 12	n't	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
 13	enough	enough	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 14	.	.	PUNCT	.	_	13	punct	13:punct	_
@@ -153,26 +153,26 @@
 # sent_id = reviews-165018-0007
 # text = There was not one ounce of caring involved and anyone I can warn about the complete lack of service will be warned.
 1	There	there	PRON	EX	PronType=Dem	2	expl	2:expl	_
-2	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+2	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl|Supersense=v.stative
 3	not	not	PART	RB	Polarity=Neg	2	advmod	2:advmod	_
 4	one	one	NUM	CD	NumForm=Word|NumType=Card	5	nummod	5:nummod	_
-5	ounce	ounce	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
-6	of	of	ADP	IN	_	7	case	7:case	_
-7	caring	caring	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
+5	ounce	ounce	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot|Supersense=n.QUANTITY
+6	of	of	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=5:ounce|PRel[obj]=7:caring|Supersense=p.QuantityItem
+7	caring	caring	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	Supersense=n.FEELING
 8	involved	involved	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 9	and	and	CCONJ	CC	_	22	cc	22:cc	_
 10	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	22	nsubj:pass	13:obj|22:nsubj:pass	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 12	can	can	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
-13	warn	warn	VERB	VB	VerbForm=Inf	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obj
-14	about	about	ADP	IN	_	17	case	17:case	_
+13	warn	warn	VERB	VB	VerbForm=Inf	10	acl:relcl	10:acl:relcl	Cxn=rc-red-obj|Supersense=v.communication
+14	about	about	ADP	IN	_	17	case	17:case	PRel[config]=default|PRel[gov]=13:warn|PRel[obj]=17:lack|Supersense=p.Topic
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	complete	complete	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	lack	lack	NOUN	NN	Number=Sing	13	obl	13:obl:about	_
-18	of	of	ADP	IN	_	19	case	19:case	_
-19	service	service	NOUN	NN	Number=Sing	17	nmod	17:nmod:of	_
+17	lack	lack	NOUN	NN	Number=Sing	13	obl	13:obl:about	Supersense=n.STATE
+18	of	of	ADP	IN	_	19	case	19:case	PRel[config]=default|PRel[gov]=17:lack|PRel[obj]=19:service|Supersense=p.Gestalt
+19	service	service	NOUN	NN	Number=Sing	17	nmod	17:nmod:of	Supersense=n.ACT
 20	will	will	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
 21	be	be	AUX	VB	VerbForm=Inf	22	aux:pass	22:aux:pass	_
-22	warned	warn	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	conj	2:conj:and	SpaceAfter=No
+22	warned	warn	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	conj	2:conj:and	SpaceAfter=No|Supersense=v.communication
 23	.	.	PUNCT	.	_	2	punct	2:punct	_
 

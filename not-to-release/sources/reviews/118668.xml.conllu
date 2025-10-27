@@ -3,74 +3,74 @@
 # newpar id = reviews-118668-p0001
 # text = Hidden Treasure.
 1	Hidden	hidden	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	Treasure	treasure	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+2	Treasure	treasure	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.COGNITION
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-118668-0002
 # text = Strip mall asian it is not!
-1	Strip	strip	NOUN	NN	Number=Sing	2	compound	2:compound	_
+1	Strip	strip	NOUN	NN	Number=Sing	2	compound	2:compound	MWECat=N|MWELemma=strip mall|MWELen=2|Supersense=n.GROUP
 2	mall	mall	NOUN	NN	Number=Sing	0	root	0:root	_
 3	asian	Asian	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	cop	2:cop	_
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	cop	2:cop	Supersense=v.stative
 6	not	not	PART	RB	Polarity=Neg	2	advmod	2:advmod	SpaceAfter=No
 7	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-118668-0003
 # text = Go in and you will not think you are in Chesapeake.
-1	Go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	in	in	ADV	RB	_	1	advmod	1:advmod	_
+1	Go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Supersense=v.motion
+2	in	in	ADV	RB	_	1	advmod	1:advmod	PRel[config]=default|PRel[gov]=1:go|Supersense=p.Direction
 3	and	and	CCONJ	CC	_	7	cc	7:cc	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
 5	will	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 6	not	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
-7	think	think	VERB	VB	VerbForm=Inf	1	conj	1:conj:and	_
+7	think	think	VERB	VB	VerbForm=Inf	1	conj	1:conj:and	Supersense=v.cognition
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
-9	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
-10	in	in	ADP	IN	_	11	case	11:case	_
-11	Chesapeake	Chesapeake	PROPN	NNP	Number=Sing	7	ccomp	7:ccomp	SpaceAfter=No
+9	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	11	cop	11:cop	Supersense=v.stative
+10	in	in	ADP	IN	_	11	case	11:case	PRel[config]=predicative|PRel[gov]=8:you|PRel[obj]=11:Chesapeake|Supersense=p.Locus
+11	Chesapeake	Chesapeake	PROPN	NNP	Number=Sing	7	ccomp	7:ccomp	SpaceAfter=No|Supersense=n.LOCATION
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-118668-0004
 # text = The setting feels like a Sushi bar in NYC; small, cozy, but with flair.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	setting	setting	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-3	feels	feel	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-4	like	like	ADP	IN	_	7	case	7:case	_
+2	setting	setting	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Supersense=n.ATTRIBUTE
+3	feels	feel	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
+4	like	like	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=3:feel|PRel[obj]=7:bar|Supersense[coding]=p.ComparisonRef|Supersense[scene]=p.Manner
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
-6	Sushi	sushi	NOUN	NN	Number=Sing	7	compound	7:compound	_
+6	Sushi	sushi	NOUN	NN	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=sushi bar|MWELen=2|Supersense=n.GROUP
 7	bar	bar	NOUN	NN	Number=Sing	3	obl	3:obl:like	_
-8	in	in	ADP	IN	_	9	case	9:case	_
-9	NYC	NYC	PROPN	NNP	Number=Sing	7	nmod	7:nmod:in	SpaceAfter=No
+8	in	in	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=7:bar|PRel[obj]=9:NYC|Supersense=p.Locus
+9	NYC	NYC	PROPN	NNP	Number=Sing	7	nmod	7:nmod:in	SpaceAfter=No|Supersense=n.LOCATION
 10	;	;	PUNCT	,	_	11	punct	11:punct	_
 11	small	small	ADJ	JJ	Degree=Pos	3	parataxis	3:parataxis	SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
 13	cozy	cozy	ADJ	JJ	Degree=Pos	11	conj	11:conj:but	SpaceAfter=No
 14	,	,	PUNCT	,	_	17	punct	17:punct	_
 15	but	but	CCONJ	CC	_	17	cc	17:cc	_
-16	with	with	ADP	IN	_	17	case	17:case	_
-17	flair	flair	NOUN	NN	Number=Sing	11	conj	11:conj:but	SpaceAfter=No
+16	with	with	ADP	IN	_	17	case	17:case	PRel[config]=default|PRel[obj]=17:flair|Supersense=p.Characteristic
+17	flair	flair	NOUN	NN	Number=Sing	11	conj	11:conj:but	SpaceAfter=No|Supersense=n.COGNITION
 18	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = reviews-118668-0005
 # text = Get great service, fantastic menu, and relax.
-1	Get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	MWELemma[weak]=get <1> service|MWELen[weak]=3|Supersense=v.social
 2	great	great	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	service	service	NOUN	NN	Number=Sing	1	obj	1:obj	SpaceAfter=No
+3	service	service	NOUN	NN	Number=Sing	1	obj	1:obj	SpaceAfter=No|Supersense=n.ACT
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	fantastic	fantastic	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	menu	menu	NOUN	NN	Number=Sing	3	conj	1:obj|3:conj	SpaceAfter=No
+6	menu	menu	NOUN	NN	Number=Sing	3	conj	1:obj|3:conj	SpaceAfter=No|Supersense=n.COMMUNICATION
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	relax	relax	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	conj	1:conj:and	SpaceAfter=No
+9	relax	relax	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	conj	1:conj:and	SpaceAfter=No|Supersense=v.emotion
 10	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-118668-0006
 # text = Best in HR so far!
 1	Best	good	ADJ	JJS	Degree=Sup	0	root	0:root	_
-2	in	in	ADP	IN	_	3	case	3:case	_
-3	HR	HR	PROPN	NNP	Number=Sing	1	obl	1:obl:in	_
-4	so	so	ADV	RB	_	5	advmod	5:advmod	_
+2	in	in	ADP	IN	_	3	case	3:case	PRel[config]=default|PRel[gov]=1:good|PRel[obj]=3:HR|Supersense[coding]=p.Locus|Supersense[scene]=p.Whole
+3	HR	HR	PROPN	NNP	Number=Sing	1	obl	1:obl:in	Supersense=n.LOCATION
+4	so	so	ADV	RB	_	5	advmod	5:advmod	MWECat=ADV|MWELemma=so far|MWELen=2
 5	far	far	ADV	RB	Degree=Pos	1	advmod	1:advmod	SpaceAfter=No
 6	!	!	PUNCT	.	_	1	punct	1:punct	_
 

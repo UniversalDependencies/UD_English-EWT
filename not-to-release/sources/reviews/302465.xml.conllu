@@ -3,34 +3,34 @@
 # newpar id = reviews-302465-p0001
 # text = Great place
 1	Great	great	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	place	place	NOUN	NN	Number=Sing	0	root	0:root	_
+2	place	place	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.GROUP
 
 # sent_id = reviews-302465-0002
 # newpar id = reviews-302465-p0002
 # text = Really great service and kind staff.
 1	Really	really	ADV	RB	_	2	advmod	2:advmod	_
 2	great	great	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	service	service	NOUN	NN	Number=Sing	0	root	0:root	_
+3	service	service	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.ACT
 4	and	and	CCONJ	CC	_	6	cc	6:cc	_
 5	kind	kind	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	staff	staff	NOUN	NN	Number=Sing	3	conj	3:conj:and	SpaceAfter=No
+6	staff	staff	NOUN	NN	Number=Sing	3	conj	3:conj:and	SpaceAfter=No|Supersense=n.GROUP
 7	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-302465-0003
 # text = The haircut was inexpensive and so were the salon services (eyebrows were cheap!).
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	haircut	haircut	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
+2	haircut	haircut	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.ACT
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 4	inexpensive	inexpensive	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
 6	so	so	ADV	RB	_	4	conj	4:conj:and	_
-7	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	_
+7	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	Supersense=v.stative
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-9	salon	salon	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	services	service	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
+9	salon	salon	NOUN	NN	Number=Sing	10	compound	10:compound	Supersense=n.GROUP
+10	services	service	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	Supersense=n.ACT
 11	(	(	PUNCT	-LRB-	_	14	punct	14:punct	SpaceAfter=No
-12	eyebrows	eyebrow	NOUN	NNS	Number=Plur	14	nsubj	14:nsubj	_
-13	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
+12	eyebrows	eyebrow	NOUN	NNS	Number=Plur	14	nsubj	14:nsubj	Supersense=n.BODY
+13	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	Supersense=v.stative
 14	cheap	cheap	ADJ	JJ	Degree=Pos	4	parataxis	4:parataxis	SpaceAfter=No
 15	!	!	PUNCT	.	_	14	punct	14:punct	SpaceAfter=No
 16	)	)	PUNCT	-RRB-	_	14	punct	14:punct	SpaceAfter=No
@@ -40,26 +40,26 @@
 # text = It's a nice, relaxed place to get stuff done and relax.
 1-2	It's	_	_	_	_	_	_	_	_
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
-2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	Supersense=v.stative
 3	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 4	nice	nice	ADJ	JJ	Degree=Pos	7	amod	7:amod	SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	relaxed	relaxed	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	place	place	NOUN	NN	Number=Sing	0	root	0:root	_
-8	to	to	PART	TO	_	9	mark	9:mark	_
-9	get	get	VERB	VB	VerbForm=Inf	7	acl	7:acl:to	_
-10	stuff	stuff	NOUN	NN	Number=Sing	9	obj	9:obj|11:nsubj:xsubj	_
+7	place	place	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.GROUP
+8	to	to	PART	TO	_	9	mark	9:mark	PRel[config]=subordinating|PRel[gov]=7:place|PRel[obj]=9:get|Supersense=p.Purpose
+9	get	get	VERB	VB	VerbForm=Inf	7	acl	7:acl:to	MWECat=V.VID|MWELemma=get <1> do|MWELen=3|MWEString=get <1> done|Supersense=v.social
+10	stuff	stuff	NOUN	NN	Number=Sing	9	obj	9:obj|11:nsubj:xsubj	Supersense=n.OTHER
 11	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	xcomp	9:xcomp	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	relax	relax	VERB	VB	VerbForm=Inf	9	conj	7:acl:to|9:conj:and	SpaceAfter=No
+13	relax	relax	VERB	VB	VerbForm=Inf	9	conj	7:acl:to|9:conj:and	SpaceAfter=No|Supersense=v.emotion
 14	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-302465-0005
 # text = I plan on going again.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	plan	plan	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	on	on	SCONJ	IN	_	4	mark	4:mark	_
-4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	2	advcl	2:advcl:on	_
+2	plan	plan	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	MWELemma[weak]=plan on|MWELen[weak]=2|Supersense=v.cognition
+3	on	on	SCONJ	IN	_	4	mark	4:mark	PRel[config]=subordinating|PRel[gov]=2:plan|PRel[obj]=4:go|Supersense=p.Topic
+4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	2	advcl	2:advcl:on	Supersense=v.motion
 5	again	again	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 

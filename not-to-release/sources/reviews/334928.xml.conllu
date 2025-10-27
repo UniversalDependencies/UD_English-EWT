@@ -3,31 +3,31 @@
 # newpar id = reviews-334928-p0001
 # text = One of the better vegetarian sandwiches I've had in Seattle.
 1	One	one	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	_
-2	of	of	ADP	IN	_	6	case	6:case	_
+2	of	of	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=1:one|PRel[obj]=6:sandwich|Supersense=p.Whole
 3	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 4	better	good	ADJ	JJR	Degree=Cmp	6	amod	6:amod	_
 5	vegetarian	vegetarian	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	sandwiches	sandwich	NOUN	NNS	Number=Plur	1	nmod	1:nmod:of|9:obj	_
+6	sandwiches	sandwich	NOUN	NNS	Number=Plur	1	nmod	1:nmod:of|9:obj	Supersense=n.FOOD
 7-8	I've	_	_	_	_	_	_	_	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 8	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
-9	had	have	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj
-10	in	in	ADP	IN	_	11	case	11:case	_
-11	Seattle	Seattle	PROPN	NNP	Number=Sing	9	obl	9:obl:in	SpaceAfter=No
+9	had	have	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj|Supersense=v.consumption
+10	in	in	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=9:have|PRel[obj]=11:Seattle|Supersense=p.Locus
+11	Seattle	Seattle	PROPN	NNP	Number=Sing	9	obl	9:obl:in	SpaceAfter=No|Supersense=n.LOCATION
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-334928-0002
 # text = And from a place that specializes in high quality meat, too.
 1	And	and	CCONJ	CC	_	4	cc	4:cc	_
-2	from	from	ADP	IN	_	4	case	4:case	_
+2	from	from	ADP	IN	_	4	case	4:case	PRel[config]=default|PRel[obj]=4:place|Supersense[coding]=p.Source|Supersense[scene]=p.Originator
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-4	place	place	NOUN	NN	Number=Sing	0	root	0:root|6:nsubj	_
+4	place	place	NOUN	NN	Number=Sing	0	root	0:root|6:nsubj	Supersense=n.LOCATION
 5	that	that	PRON	WDT	PronType=Rel	6	nsubj	4:ref	_
-6	specializes	specialize	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-that-nsubj
-7	in	in	ADP	IN	_	10	case	10:case	_
+6	specializes	specialize	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-that-nsubj|MWELemma[weak]=specialize in|MWELen[weak]=2|MWEString[weak]=specializes in|Supersense=v.stative
+7	in	in	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=6:specialize|PRel[obj]=10:meat|Supersense=p.Topic
 8	high	high	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	quality	quality	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	meat	meat	NOUN	NN	Number=Sing	6	obl	6:obl:in	SpaceAfter=No
+9	quality	quality	NOUN	NN	Number=Sing	10	compound	10:compound	Supersense=n.ATTRIBUTE
+10	meat	meat	NOUN	NN	Number=Sing	6	obl	6:obl:in	SpaceAfter=No|Supersense=n.FOOD
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
 12	too	too	ADV	RB	_	6	advmod	6:advmod	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_

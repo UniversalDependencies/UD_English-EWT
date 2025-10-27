@@ -2,114 +2,114 @@
 # sent_id = reviews-128168-0001
 # newpar id = reviews-128168-p0001
 # text = Lovely Nails on Cayuga St. in Lewiston, NY
-1	Lovely	Lovely	ADJ	NNP	Degree=Pos	2	amod	2:amod	_
+1	Lovely	Lovely	ADJ	NNP	Degree=Pos	2	amod	2:amod	MWECat=N|MWELemma=Lovely Nails|MWELen=2|Supersense=n.GROUP
 2	Nails	Nails	PROPN	NNP	Number=Sing	0	root	0:root	_
-3	on	on	ADP	IN	_	5	case	5:case	_
-4	Cayuga	Cayuga	PROPN	NNP	Number=Sing	5	compound	5:compound	_
+3	on	on	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=2:Nails|PRel[obj]=5:St.|Supersense=p.Locus
+4	Cayuga	Cayuga	PROPN	NNP	Number=Sing	5	compound	5:compound	MWECat=N|MWELemma=Cayuga St.|MWELen=2|Supersense=n.LOCATION
 5	St.	St.	PROPN	NNP	Number=Sing	2	nmod	2:nmod:on	_
-6	in	in	ADP	IN	_	7	case	7:case	_
-7	Lewiston	Lewiston	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	SpaceAfter=No
+6	in	in	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=2:Nails|PRel[obj]=7:Lewiston|Supersense=p.Locus
+7	Lewiston	Lewiston	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	MWELemma[weak]=Lewiston , NY|MWELen[weak]=3|SpaceAfter=No|Supersense=n.LOCATION
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	NY	NY	PROPN	NNP	Number=Sing	7	nmod:unmarked	7:nmod:unmarked	Superlocation=Yes
+9	NY	NY	PROPN	NNP	Number=Sing	7	nmod:unmarked	7:nmod:unmarked	Superlocation=Yes|Supersense=n.LOCATION
 
 # sent_id = reviews-128168-0002
 # newpar id = reviews-128168-p0002
 # text = First let me start out by saying, that I have had very nice pedicures at Lovely Nails on Military Road.
 1	First	first	ADV	RB	NumForm=Word|NumType=Ord	2	advmod	2:advmod	_
-2	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+2	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Supersense=v.social
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj|4:nsubj:xsubj	_
-4	start	start	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
+4	start	start	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	MWECat=V.VPC.semi|MWELemma=start out|MWELen=2|Supersense=v.communication
 5	out	out	ADP	RP	_	4	compound:prt	4:compound:prt	_
-6	by	by	SCONJ	IN	_	7	mark	7:mark	_
-7	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl:by	SpaceAfter=No
+6	by	by	SCONJ	IN	_	7	mark	7:mark	PRel[config]=subordinating|PRel[gov]=4:start|PRel[obj]=7:say|Supersense=p.Means
+7	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	4	advcl	4:advcl:by	SpaceAfter=No|Supersense=v.communication
 8	,	,	PUNCT	,	_	12	punct	12:punct	_
 9	that	that	SCONJ	IN	_	12	mark	12:mark	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 11	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
-12	had	have	VERB	VBN	Tense=Past|VerbForm=Part	7	ccomp	7:ccomp	_
+12	had	have	VERB	VBN	Tense=Past|VerbForm=Part	7	ccomp	7:ccomp	MWECat=V.LVC.full|MWELemma=have <2> pedicure|MWELen=4|MWEString=had <2> pedicures|Supersense=v.body
 13	very	very	ADV	RB	_	14	advmod	14:advmod	_
 14	nice	nice	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	pedicures	pedicure	NOUN	NNS	Number=Plur	12	obj	12:obj	_
-16	at	at	ADP	IN	_	18	case	18:case	_
-17	Lovely	Lovely	ADJ	NNP	Degree=Pos	18	amod	18:amod	_
+16	at	at	ADP	IN	_	18	case	18:case	PRel[config]=default|PRel[gov]=12:have|PRel[obj]=18:Nails|Supersense=p.Locus
+17	Lovely	Lovely	ADJ	NNP	Degree=Pos	18	amod	18:amod	MWECat=N|MWELemma=Lovely Nails|MWELen=2|Supersense=n.GROUP
 18	Nails	Nails	PROPN	NNP	Number=Sing	12	obl	12:obl:at	_
-19	on	on	ADP	IN	_	21	case	21:case	_
-20	Military	Military	ADJ	NNP	Degree=Pos	21	amod	21:amod	_
+19	on	on	ADP	IN	_	21	case	21:case	PRel[config]=default|PRel[gov]=18:Nails|PRel[obj]=21:Road|Supersense=p.Locus
+20	Military	Military	ADJ	NNP	Degree=Pos	21	amod	21:amod	MWECat=N|MWELemma=Military Road|MWELen=2|Supersense=n.LOCATION
 21	Road	Road	PROPN	NNP	Number=Sing	18	nmod	18:nmod:on	SpaceAfter=No
 22	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-128168-0003
 # text = I was very excited that a salon was opening in Lewiston, as I live in Youngstown.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 3	very	very	ADV	RB	_	4	advmod	4:advmod	_
 4	excited	excited	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	that	that	SCONJ	IN	_	9	mark	9:mark	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
-7	salon	salon	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
+7	salon	salon	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	Supersense=n.GROUP
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	aux	9:aux	_
-9	opening	open	VERB	VBG	Tense=Pres|VerbForm=Part	4	ccomp	4:ccomp	_
-10	in	in	ADP	IN	_	11	case	11:case	_
-11	Lewiston	Lewiston	PROPN	NNP	Number=Sing	9	obl	9:obl:in	SpaceAfter=No
+9	opening	open	VERB	VBG	Tense=Pres|VerbForm=Part	4	ccomp	4:ccomp	Supersense=v.creation
+10	in	in	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=9:open|PRel[obj]=11:Lewiston|Supersense=p.Locus
+11	Lewiston	Lewiston	PROPN	NNP	Number=Sing	9	obl	9:obl:in	SpaceAfter=No|Supersense=n.LOCATION
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
-13	as	as	SCONJ	IN	_	15	mark	15:mark	_
+13	as	as	SCONJ	IN	_	15	mark	15:mark	PRel[config]=subordinating|PRel[gov]=4:excited|PRel[obj]=15:live|Supersense=p.Explanation
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
-15	live	live	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:as	_
-16	in	in	ADP	IN	_	17	case	17:case	_
-17	Youngstown	Youngstown	PROPN	NNP	Number=Sing	15	obl	15:obl:in	SpaceAfter=No
+15	live	live	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:as	Supersense=v.stative
+16	in	in	ADP	IN	_	17	case	17:case	PRel[config]=default|PRel[gov]=15:live|PRel[obj]=17:Youngstown|Supersense=p.Locus
+17	Youngstown	Youngstown	PROPN	NNP	Number=Sing	15	obl	15:obl:in	SpaceAfter=No|Supersense=n.LOCATION
 18	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-128168-0004
 # text = I was in two weeks ago and had the worst pedicure that I have had in my life.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj|8:nsubj	_
-2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
-3	in	in	ADV	RB	_	0	root	0:root	_
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	Supersense=v.stative
+3	in	in	ADV	RB	_	0	root	0:root	PRel[config]=predicative|PRel[gov]=1:I|Supersense=p.Locus
 4	two	two	NUM	CD	NumForm=Word|NumType=Card	5	nummod	5:nummod	_
-5	weeks	week	NOUN	NNS	Number=Plur	6	obl:unmarked	6:obl:unmarked	_
-6	ago	ago	ADV	RB	_	3	advmod	3:advmod	_
+5	weeks	week	NOUN	NNS	Number=Plur	6	obl:unmarked	6:obl:unmarked	Supersense=n.TIME
+6	ago	ago	ADV	RB	_	3	advmod	3:advmod	PRel[config]=default|PRel[gov]=3:in|Supersense[coding]=p.Interval|Supersense[scene]=p.Time
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
+8	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	MWECat=V.LVC.full|MWELemma=have <2> pedicure|MWELen=4|MWEString=had <2> pedicure|Supersense=v.body
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	worst	bad	ADJ	JJS	Degree=Sup	11	amod	11:amod	_
 11	pedicure	pedicure	NOUN	NN	Number=Sing	8	obj	8:obj|15:obj	_
 12	that	that	PRON	WDT	PronType=Rel	15	obj	11:ref	_
 13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
 14	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
-15	had	have	VERB	VBN	Tense=Past|VerbForm=Part	11	acl:relcl	11:acl:relcl	Cxn=rc-that-obj
-16	in	in	ADP	IN	_	18	case	18:case	_
-17	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
-18	life	life	NOUN	NN	Number=Sing	15	obl	15:obl:in	SpaceAfter=No
+15	had	have	VERB	VBN	Tense=Past|VerbForm=Part	11	acl:relcl	11:acl:relcl	Cxn=rc-that-obj|Supersense=v.body
+16	in	in	ADP	IN	_	18	case	18:case	PRel[config]=default|PRel[gov]=15:have|PRel[obj]=18:life|Supersense=p.Time
+17	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	PRel[config]=possessive|PRel[gov]=18:life|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Theme
+18	life	life	NOUN	NN	Number=Sing	15	obl	15:obl:in	SpaceAfter=No|Supersense=n.PHENOMENON
 19	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-128168-0005
 # text = There were four of us and I was taken first by a gentleman.
 1	There	there	PRON	EX	PronType=Dem	2	expl	2:expl	_
-2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl|Supersense=v.stative
 3	four	four	NUM	CD	NumForm=Word|NumType=Card	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
-4	of	of	ADP	IN	_	5	case	5:case	_
+4	of	of	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=3:four|PRel[obj]=5:we|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
 5	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	3	nmod	3:nmod:of	_
 6	and	and	CCONJ	CC	_	9	cc	9:cc	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj:pass	9:nsubj:pass	_
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	9	aux:pass	9:aux:pass	_
-9	taken	take	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	conj	2:conj:and	_
+9	taken	take	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	conj	2:conj:and	Supersense=v.motion
 10	first	first	ADV	RB	NumForm=Word|NumType=Ord	9	advmod	9:advmod	_
-11	by	by	ADP	IN	_	13	case	13:case	_
+11	by	by	ADP	IN	_	13	case	13:case	PRel[config]=default|PRel[gov]=9:take|PRel[obj]=13:gentleman|Supersense=p.Agent
 12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
-13	gentleman	gentleman	NOUN	NN	Number=Sing	9	obl:agent	9:obl:agent	SpaceAfter=No
+13	gentleman	gentleman	NOUN	NN	Number=Sing	9	obl:agent	9:obl:agent	SpaceAfter=No|Supersense=n.PERSON
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-128168-0006
 # text = I put my foot in the water and it was cool.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	put	put	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	foot	foot	NOUN	NN	Number=Sing	2	obj	2:obj	_
-5	in	in	ADP	IN	_	7	case	7:case	_
+2	put	put	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.motion
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	PRel[config]=possessive|PRel[gov]=4:foot|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
+4	foot	foot	NOUN	NN	Number=Sing	2	obj	2:obj	Supersense=n.BODY
+5	in	in	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=2:put|PRel[obj]=7:water|Supersense[coding]=p.Locus|Supersense[scene]=p.Goal
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	water	water	NOUN	NN	Number=Sing	2	obl	2:obl:in	_
+7	water	water	NOUN	NN	Number=Sing	2	obl	2:obl:in	Supersense=n.NATURALOBJECT
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
-10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
+10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	Supersense=v.stative
 11	cool	cool	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -117,7 +117,7 @@
 # text = He did warm it up.
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
 2	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	3:aux	_
-3	warm	warm	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	warm	warm	VERB	VB	VerbForm=Inf	0	root	0:root	MWECat=V.VPC.semi|MWELemma=warm <1> up|MWELen=3|Supersense=v.change
 4	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 5	up	up	ADP	RP	_	3	compound:prt	3:compound:prt	SpaceAfter=No
 6	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -126,28 +126,28 @@
 # text = He also hurt my toes will pushing my cuticles back.
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
 2	also	also	ADV	RB	_	3	advmod	3:advmod	_
-3	hurt	hurt	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-5	toes	toe	NOUN	NNS	Number=Plur	3	obj	3:obj	_
+3	hurt	hurt	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.body
+4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	PRel[config]=possessive|PRel[gov]=5:toe|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
+5	toes	toe	NOUN	NNS	Number=Plur	3	obj	3:obj	Supersense=n.BODY
 6	will	while	SCONJ	IN	Typo=Yes	7	mark	7:mark	CorrectForm=while
-7	pushing	push	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:while	_
-8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	cuticles	cuticle	NOUN	NNS	Number=Plur	7	obj	7:obj	_
-10	back	back	ADV	RB	_	7	advmod	7:advmod	SpaceAfter=No
+7	pushing	push	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:while	Supersense=v.contact
+8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:cuticle|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
+9	cuticles	cuticle	NOUN	NNS	Number=Plur	7	obj	7:obj	Supersense=n.BODY
+10	back	back	ADV	RB	_	7	advmod	7:advmod	PRel[config]=default|PRel[gov]=7:push|SpaceAfter=No|Supersense=p.Direction
 11	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-128168-0009
 # text = If the pedicure lasted 20 mins., that was a stretch.
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	pedicure	pedicure	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	lasted	last	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:if	CxnElt=11:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
+3	pedicure	pedicure	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.ACT
+4	lasted	last	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:if	CxnElt=11:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|Supersense=v.stative
 5	20	20	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
-6	mins.	min.	NOUN	NNS	Number=Plur	4	obl:unmarked	4:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
+6	mins.	min.	NOUN	NNS	Number=Plur	4	obl:unmarked	4:obl:unmarked	SpaceAfter=No|Supersense=n.TIME|TemporalNPAdjunct=Yes
 7	,	,	PUNCT	,	_	4	punct	4:punct	_
 8	that	that	PRON	DT	Number=Sing|PronType=Dem	11	nsubj	11:nsubj	_
-9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
-10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
+9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	Supersense=v.stative
+10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	MWECat=N|MWELemma=a stretch|MWELen=2|Supersense=n.ATTRIBUTE
 11	stretch	stretch	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=11:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 12	.	.	PUNCT	.	_	11	punct	11:punct	_
 
@@ -155,38 +155,38 @@
 # text = The other ladies had a similar experience, both had nail polish on a couple of toes.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	other	other	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	ladies	lady	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
-4	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+3	ladies	lady	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	Supersense=n.PERSON
+4	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=V.LVC.full|MWELemma=have <2> experience|MWELen=4|MWEString=had <2> experience|Supersense=v.stative
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	similar	similar	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	experience	experience	NOUN	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	both	both	DET	DT	PronType=Tot	10	nsubj	10:nsubj	_
-10	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	_
-11	nail	nail	NOUN	NN	Number=Sing	12	compound	12:compound	_
+10	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	Supersense=v.stative
+11	nail	nail	NOUN	NN	Number=Sing	12	compound	12:compound	MWECat=N|MWELemma=nail polish|MWELen=2|Supersense=n.SUBSTANCE
 12	polish	polish	NOUN	NN	Number=Sing	10	obj	10:obj	_
-13	on	on	ADP	IN	_	15	case	15:case	_
-14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
+13	on	on	ADP	IN	_	15	case	15:case	PRel[config]=default|PRel[gov]=10:have|PRel[obj]=15:couple|Supersense[coding]=p.Locus|Supersense[scene]=p.Gestalt
+14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	MWECat=DET|MWELemma=a couple|MWELen=2
 15	couple	couple	NOUN	NN	Number=Sing	10	obl	10:obl:on	_
-16	of	of	ADP	IN	_	17	case	17:case	_
-17	toes	toe	NOUN	NNS	Number=Plur	15	nmod	15:nmod:of	SpaceAfter=No
+16	of	of	ADP	IN	_	17	case	17:case	PRel[config]=default|PRel[gov]=15:couple|PRel[obj]=17:toe|Supersense=p.QuantityItem
+17	toes	toe	NOUN	NNS	Number=Plur	15	nmod	15:nmod:of	SpaceAfter=No|Supersense=n.BODY
 18	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-128168-0011
 # text = None of us will be using their services again, which is a shame.
 1	None	none	PRON	NN	PronType=Neg	6	nsubj	6:nsubj	_
-2	of	of	ADP	IN	_	3	case	3:case	_
+2	of	of	ADP	IN	_	3	case	3:case	PRel[config]=default|PRel[gov]=1:none|PRel[obj]=3:we|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
 3	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	1	nmod	1:nmod:of	_
 4	will	will	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 5	be	be	AUX	VB	VerbForm=Inf	6	aux	6:aux	_
-6	using	use	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root|14:csubj	_
-7	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	services	service	NOUN	NNS	Number=Plur	6	obj	6:obj	_
+6	using	use	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root|14:csubj	MWELemma[weak]=use <1> service|MWELen[weak]=3|MWEString[weak]=using <1> services|Supersense=v.possession
+7	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	PRel[config]=possessive|PRel[gov]=8:service|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Agent
+8	services	service	NOUN	NNS	Number=Plur	6	obj	6:obj	Supersense=n.ACT
 9	again	again	ADV	RB	_	6	advmod	6:advmod	SpaceAfter=No
 10	,	,	PUNCT	,	_	14	punct	14:punct	_
 11	which	which	PRON	WDT	PronType=Rel	14	nsubj	6:ref	_
-12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
-13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
+12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	Supersense=v.stative
+13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	MWECat=N|MWELemma=a shame|MWELen=2|Supersense=n.ATTRIBUTE
 14	shame	shame	NOUN	NN	Number=Sing	6	advcl:relcl	6:advcl:relcl	Cxn=rc-wh-csubj|SpaceAfter=No
 15	.	.	PUNCT	.	_	6	punct	6:punct	_
 

@@ -3,18 +3,18 @@
 # newpar id = reviews-288163-p0001
 # text = Amazing Experience!
 1	Amazing	amazing	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	Experience	experience	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+2	Experience	experience	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.EVENT
 3	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-288163-0002
 # newpar id = reviews-288163-p0002
 # text = My experience was amazing at Providence Aesthetics and Medical Spa.
-1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	experience	experience	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	PRel[config]=possessive|PRel[gov]=2:experience|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Experiencer
+2	experience	experience	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.EVENT
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 4	amazing	amazing	ADJ	JJ	Degree=Pos	0	root	0:root	_
-5	at	at	ADP	IN	_	7	case	7:case	_
-6	Providence	Providence	PROPN	NNP	Number=Sing	7	compound	7:compound	_
+5	at	at	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:amazing|PRel[obj]=7:Aesthetics|Supersense=p.Locus
+6	Providence	Providence	PROPN	NNP	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=Providence Aesthetics and Medical Spa|MWELen=5|Supersense=n.GROUP
 7	Aesthetics	Aesthetics	PROPN	NNPS	Number=Plur	4	obl	4:obl:at	_
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	Medical	Medical	ADJ	NNP	Degree=Pos	10	amod	10:amod	_
@@ -23,10 +23,10 @@
 
 # sent_id = reviews-288163-0003
 # text = Jana Kueck was nothing but professional.
-1	Jana	Jana	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
+1	Jana	Jana	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	MWECat=N|MWELemma=Jana Kueck|MWELen=2|Supersense=n.PERSON
 2	Kueck	Kueck	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
-4	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	0	root	0:root	_
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
+4	nothing	nothing	PRON	NN	Number=Sing|PronType=Neg	0	root	0:root	MWECat=P|MWELemma=nothing but|MWELen=2|PRel[config]=predicative|PRel[gov]=1:Jana|PRel[obj]=6:professional|Supersense=p.PartPortion
 5	but	but	ADP	IN	_	6	case	6:case	_
 6	professional	professional	ADJ	JJ	Degree=Pos	4	nmod	4:nmod:but	SpaceAfter=No
 7	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -34,56 +34,56 @@
 # sent_id = reviews-288163-0004
 # text = She makes you feel like you are the most important person in the world.
 1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
 3	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	2	obj	2:obj|4:nsubj:xsubj	_
-4	feel	feel	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-5	like	like	SCONJ	IN	_	11	mark	11:mark	_
+4	feel	feel	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	Supersense=v.cognition
+5	like	like	SCONJ	IN	_	11	mark	11:mark	PRel[config]=subordinating|PRel[gov]=4:feel|PRel[obj]=7:be|Supersense[coding]=p.ComparisonRef|Supersense[scene]=p.Manner
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
-7	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
+7	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	11	cop	11:cop	Supersense=v.stative
 8	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 9	most	most	ADV	RBS	Degree=Sup	10	advmod	10:advmod	_
 10	important	important	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	person	person	NOUN	NN	Number=Sing	4	advcl	4:advcl:like	_
-12	in	in	ADP	IN	_	14	case	14:case	_
+11	person	person	NOUN	NN	Number=Sing	4	advcl	4:advcl:like	Supersense=n.PERSON
+12	in	in	ADP	IN	_	14	case	14:case	MWELemma[weak]=in the world|MWELen[weak]=3|PRel[config]=default|PRel[gov]=11:person|PRel[obj]=14:world|Supersense=p.Locus
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	world	world	NOUN	NN	Number=Sing	11	nmod	11:nmod:in	SpaceAfter=No
+14	world	world	NOUN	NN	Number=Sing	11	nmod	11:nmod:in	SpaceAfter=No|Supersense=n.COGNITION
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-288163-0005
 # text = Jana made me feel very comfortable.
-1	Jana	Jana	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
-2	made	make	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	Jana	Jana	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Supersense=n.PERSON
+2	made	make	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj|4:nsubj:xsubj|6:nsubj:xsubj	_
-4	feel	feel	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
+4	feel	feel	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	Supersense=v.cognition
 5	very	very	ADV	RB	_	6	advmod	6:advmod	_
 6	comfortable	comfortable	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	SpaceAfter=No
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-288163-0006
 # text = Provided me with warm blanket and has soft music playing.
-1	Provided	provide	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	Provided	provide	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	MWELemma[weak]=provide <1> with|MWELen[weak]=3|MWEString[weak]=Provided <1> with|Supersense=v.social
 2	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	obj	1:obj	_
-3	with	with	ADP	IN	_	5	case	5:case	_
+3	with	with	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=1:provide|PRel[obj]=5:blanket|Supersense[coding]=p.Theme|Supersense[scene]=p.Possession
 4	warm	warm	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	blanket	blanket	NOUN	NN	Number=Sing	1	obl	1:obl:with	_
+5	blanket	blanket	NOUN	NN	Number=Sing	1	obl	1:obl:with	Supersense=n.ARTIFACT
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	conj	1:conj:and	_
+7	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	conj	1:conj:and	Supersense=v.stative
 8	soft	soft	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	music	music	NOUN	NN	Number=Sing	7	obj	7:obj	_
-10	playing	play	VERB	VBG	VerbForm=Ger	9	acl	9:acl	SpaceAfter=No
+9	music	music	NOUN	NN	Number=Sing	7	obj	7:obj	Supersense=n.COGNITION
+10	playing	play	VERB	VBG	VerbForm=Ger	9	acl	9:acl	SpaceAfter=No|Supersense=v.creation
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-288163-0007
 # text = Walking in the door you are made to feel happy and relaxed.
-1	Walking	walk	VERB	VBG	Tense=Pres|VerbForm=Part	7	advcl	7:advcl	_
-2	in	in	ADP	IN	_	4	case	4:case	_
+1	Walking	walk	VERB	VBG	Tense=Pres|VerbForm=Part	7	advcl	7:advcl	Supersense=v.motion
+2	in	in	ADP	IN	_	4	case	4:case	PRel[config]=default|PRel[gov]=1:walk|PRel[obj]=4:door|Supersense[coding]=p.Locus|Supersense[scene]=p.Path
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	door	door	NOUN	NN	Number=Sing	1	obl	1:obl:in	_
+4	door	door	NOUN	NN	Number=Sing	1	obl	1:obl:in	Supersense=n.ARTIFACT
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj:pass	7:nsubj:pass|9:nsubj:xsubj|10:nsubj:xsubj|12:nsubj:xsubj	_
 6	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	7	aux:pass	7:aux:pass	_
-7	made	make	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+7	made	make	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Supersense=v.social
 8	to	to	PART	TO	_	9	mark	9:mark	_
-9	feel	feel	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
+9	feel	feel	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	Supersense=v.cognition
 10	happy	happy	ADJ	JJ	Degree=Pos	9	xcomp	9:xcomp	_
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
 12	relaxed	relaxed	ADJ	JJ	Degree=Pos	10	conj	9:xcomp|10:conj:and	SpaceAfter=No
@@ -91,9 +91,9 @@
 
 # sent_id = reviews-288163-0008
 # text = Equipment is state of the art.
-1	Equipment	equipment	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
-3	state	state	NOUN	NN	Number=Sing	0	root	0:root	_
+1	Equipment	equipment	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Supersense=n.ARTIFACT
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	Supersense=v.stative
+3	state	state	NOUN	NN	Number=Sing	0	root	0:root	MWECat=N|MWELemma=state of the art|MWELen=4|Supersense=n.COGNITION
 4	of	of	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	art	art	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	SpaceAfter=No
@@ -103,25 +103,25 @@
 # text = I would reccomend anyone to go see Jana Kueck and Robin Talley to see all the many procedures they have to offer.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	reccomend	recommend	VERB	VB	Typo=Yes|VerbForm=Inf	0	root	0:root	CorrectForm=recommend
+3	reccomend	recommend	VERB	VB	Typo=Yes|VerbForm=Inf	0	root	0:root	CorrectForm=recommend|Supersense=v.communication
 4	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	3	iobj	3:iobj|6:nsubj:xsubj|7:nsubj:xsubj	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
-6	go	go	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
-7	see	see	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
-8	Jana	Jana	PROPN	NNP	Number=Sing	7	obj	7:obj	_
+6	go	go	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	Supersense=v.motion
+7	see	see	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	Supersense=v.social
+8	Jana	Jana	PROPN	NNP	Number=Sing	7	obj	7:obj	MWECat=N|MWELemma=Jana Kueck|MWELen=2|Supersense=n.PERSON
 9	Kueck	Kueck	PROPN	NNP	Number=Sing	8	flat	8:flat	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	Robin	Robin	PROPN	NNP	Number=Sing	8	conj	7:obj|8:conj:and	_
+11	Robin	Robin	PROPN	NNP	Number=Sing	8	conj	7:obj|8:conj:and	MWECat=N|MWELemma=Robin Talley|MWELen=2|Supersense=n.PERSON
 12	Talley	Talley	PROPN	NNP	Number=Sing	11	flat	11:flat	_
-13	to	to	PART	TO	_	14	mark	14:mark	_
-14	see	see	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:to	_
+13	to	to	PART	TO	_	14	mark	14:mark	PRel[config]=subordinating|PRel[gov]=7:see|PRel[obj]=14:see|Supersense=p.Purpose
+14	see	see	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:to	Supersense=v.cognition
 15	all	all	DET	PDT	PronType=Tot	18	det:predet	18:det:predet	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	many	many	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	procedures	procedure	NOUN	NNS	Number=Plur	14	obj	14:obj|20:obj	_
+18	procedures	procedure	NOUN	NNS	Number=Plur	14	obj	14:obj|20:obj	Supersense=n.ACT
 19	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	20	nsubj	20:nsubj	_
-20	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	18	acl:relcl	18:acl:relcl	Cxn=rc-red-obj
+20	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	18	acl:relcl	18:acl:relcl	Cxn=rc-red-obj|MWELemma[weak]=have to offer|MWELen[weak]=3|Supersense=v.stative
 21	to	to	PART	TO	_	22	mark	22:mark	_
-22	offer	offer	VERB	VB	VerbForm=Inf	18	acl	18:acl:to	SpaceAfter=No
+22	offer	offer	VERB	VB	VerbForm=Inf	18	acl	18:acl:to	SpaceAfter=No|Supersense=v.possession
 23	.	.	PUNCT	.	_	3	punct	3:punct	_
 

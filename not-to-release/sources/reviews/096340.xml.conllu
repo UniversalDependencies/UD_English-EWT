@@ -3,7 +3,7 @@
 # newpar id = reviews-096340-p0001
 # text = ONe of a few.
 1	ONe	one	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	_
-2	of	of	ADP	IN	_	4	case	4:case	_
+2	of	of	ADP	IN	_	4	case	4:case	PRel[config]=default|PRel[gov]=1:one|PRel[obj]=4:few|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 4	few	few	ADJ	JJ	Degree=Pos	1	nmod	1:nmod:of	SpaceAfter=No
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -11,52 +11,52 @@
 # sent_id = reviews-096340-0002
 # text = Hancocks is one of four fabric stores in Fort Smith.
 1-2	Hancocks	_	_	_	_	_	_	_	_
-1	Hancock	Hancock	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
+1	Hancock	Hancock	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	MWECat=N|MWELemma=Hancock 's|MWELen=2|MWEString=Hancock s|Supersense=n.GROUP
 2	s	's	PART	POS	Typo=Yes	1	case	1:case	CorrectForm='s
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 4	one	one	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	_
-5	of	of	ADP	IN	_	8	case	8:case	_
+5	of	of	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=4:one|PRel[obj]=8:store|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
 6	four	four	NUM	CD	NumForm=Word|NumType=Card	8	nummod	8:nummod	_
-7	fabric	fabric	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	stores	store	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
-9	in	in	ADP	IN	_	10	case	10:case	_
-10	Fort	Fort	PROPN	NNP	Number=Sing	8	nmod	8:nmod:in	_
+7	fabric	fabric	NOUN	NN	Number=Sing	8	compound	8:compound	Supersense=n.SUBSTANCE
+8	stores	store	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	Supersense=n.GROUP
+9	in	in	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=8:store|PRel[obj]=10:Fort|Supersense=p.Locus
+10	Fort	Fort	PROPN	NNP	Number=Sing	8	nmod	8:nmod:in	MWECat=N|MWELemma=Fort Smith|MWELen=2|Supersense=n.LOCATION
 11	Smith	Smith	PROPN	NNP	Number=Sing	10	flat	10:flat	SpaceAfter=No
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-096340-0003
 # text = We have Hobby Lobby, Just for Fun Fabrics, Walmart, and Interior Mall just inside Barling.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	Hobby	Hobby	PROPN	NNP	Number=Sing	4	compound	4:compound	_
+2	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.stative
+3	Hobby	Hobby	PROPN	NNP	Number=Sing	4	compound	4:compound	MWECat=N|MWELemma=Hobby Lobby|MWELen=2|Supersense=n.GROUP
 4	Lobby	Lobby	PROPN	NNP	Number=Sing	2	obj	2:obj	SpaceAfter=No
 5	,	,	PUNCT	,	_	9	punct	9:punct	_
-6	Just	just	ADV	RB	_	8	advmod	8:advmod	_
+6	Just	just	ADV	RB	_	8	advmod	8:advmod	MWECat=N|MWELemma=just for Fun Fabric|MWELen=4|MWEString=Just for Fun Fabrics|Supersense=n.GROUP
 7	for	for	ADP	IN	_	8	case	8:case	_
 8	Fun	Fun	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 9	Fabrics	Fabric	PROPN	NNPS	Number=Plur	4	conj	2:obj|4:conj:and	SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
-11	Walmart	Walmart	PROPN	NNP	Number=Sing	4	conj	2:obj|4:conj:and	SpaceAfter=No
+11	Walmart	Walmart	PROPN	NNP	Number=Sing	4	conj	2:obj|4:conj:and	SpaceAfter=No|Supersense=n.GROUP
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
-14	Interior	Interior	PROPN	NNP	Number=Sing	15	compound	15:compound	_
+14	Interior	Interior	PROPN	NNP	Number=Sing	15	compound	15:compound	MWECat=N|MWELemma=Interior Mall|MWELen=2|Supersense=n.GROUP
 15	Mall	Mall	PROPN	NNP	Number=Sing	4	conj	2:obj|4:conj:and	_
 16	just	just	ADV	RB	_	18	advmod	18:advmod	_
-17	inside	inside	ADP	IN	_	18	case	18:case	_
-18	Barling	Barling	PROPN	NNP	Number=Sing	2	obl	2:obl:inside	SpaceAfter=No
+17	inside	inside	ADP	IN	_	18	case	18:case	PRel[config]=default|PRel[gov]=2:have|PRel[obj]=18:Barling|Supersense=p.Locus
+18	Barling	Barling	PROPN	NNP	Number=Sing	2	obl	2:obl:inside	SpaceAfter=No|Supersense=n.LOCATION
 19	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-096340-0004
 # text = They do have a good selection of fabric and notions.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.stative
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	good	good	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	selection	selection	NOUN	NN	Number=Sing	3	obj	3:obj	_
-7	of	of	ADP	IN	_	8	case	8:case	_
-8	fabric	fabric	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	_
+6	selection	selection	NOUN	NN	Number=Sing	3	obj	3:obj	Supersense=n.COGNITION
+7	of	of	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=6:selection|PRel[obj]=8:fabric|Supersense=p.Species
+8	fabric	fabric	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	Supersense=n.ARTIFACT
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	notions	notion	NOUN	NNS	Number=Plur	8	conj	6:nmod:of|8:conj:and	SpaceAfter=No
+10	notions	notion	NOUN	NNS	Number=Plur	8	conj	6:nmod:of|8:conj:and	SpaceAfter=No|Supersense=n.COGNITION
 11	.	.	PUNCT	.	_	3	punct	3:punct	_
 

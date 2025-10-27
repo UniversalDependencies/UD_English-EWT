@@ -2,67 +2,67 @@
 # sent_id = reviews-211933-0001
 # newpar id = reviews-211933-p0001
 # text = Deep tissue massage helps with pain in neck and shoulders
-1	Deep	deep	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
+1	Deep	deep	ADJ	JJ	Degree=Pos	3	amod	3:amod	MWECat=N|MWELemma=deep tissue|MWELen=2|Supersense=n.BODY
 2	tissue	tissue	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	massage	massage	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	helps	help	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-5	with	with	ADP	IN	_	6	case	6:case	_
-6	pain	pain	NOUN	NN	Number=Sing	4	obl	4:obl:with	_
-7	in	in	ADP	IN	_	8	case	8:case	_
-8	neck	neck	NOUN	NN	Number=Sing	6	nmod	6:nmod:in	_
+3	massage	massage	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.ACT
+4	helps	help	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.body
+5	with	with	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:help|PRel[obj]=6:pain|Supersense=p.Theme
+6	pain	pain	NOUN	NN	Number=Sing	4	obl	4:obl:with	Supersense=n.STATE
+7	in	in	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=6:pain|PRel[obj]=8:neck|Supersense=p.Locus
+8	neck	neck	NOUN	NN	Number=Sing	6	nmod	6:nmod:in	Supersense=n.BODY
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	shoulders	shoulder	NOUN	NNS	Number=Plur	8	conj	6:nmod:in|8:conj:and	_
+10	shoulders	shoulder	NOUN	NNS	Number=Plur	8	conj	6:nmod:in|8:conj:and	Supersense=n.BODY
 
 # sent_id = reviews-211933-0002
 # newpar id = reviews-211933-p0002
 # text = Seth provides deep tissue massage which has significantly reduced the pain in my neck and shoulders and added flexibility and movement back to the area.
-1	Seth	Seth	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
-2	provides	provide	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	deep	deep	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+1	Seth	Seth	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Supersense=n.PERSON
+2	provides	provide	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.social
+3	deep	deep	ADJ	JJ	Degree=Pos	5	amod	5:amod	MWECat=N|MWELemma=deep tissue|MWELen=2|Supersense=n.BODY
 4	tissue	tissue	NOUN	NN	Number=Sing	5	compound	5:compound	_
-5	massage	massage	NOUN	NN	Number=Sing	2	obj	2:obj|9:nsubj|18:nsubj	_
+5	massage	massage	NOUN	NN	Number=Sing	2	obj	2:obj|9:nsubj|18:nsubj	Supersense=n.ACT
 6	which	which	PRON	WDT	PronType=Rel	9	nsubj	5:ref	_
 7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
 8	significantly	significantly	ADV	RB	_	9	advmod	9:advmod	_
-9	reduced	reduce	VERB	VBN	Tense=Past|VerbForm=Part	5	acl:relcl	5:acl:relcl	Cxn=rc-wh-nsubj
+9	reduced	reduce	VERB	VBN	Tense=Past|VerbForm=Part	5	acl:relcl	5:acl:relcl	Cxn=rc-wh-nsubj|Supersense=v.change
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	pain	pain	NOUN	NN	Number=Sing	9	obj	9:obj	_
-12	in	in	ADP	IN	_	14	case	14:case	_
-13	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_
-14	neck	neck	NOUN	NN	Number=Sing	11	nmod	11:nmod:in	_
+11	pain	pain	NOUN	NN	Number=Sing	9	obj	9:obj	Supersense=n.STATE
+12	in	in	ADP	IN	_	14	case	14:case	PRel[config]=default|PRel[gov]=11:pain|PRel[obj]=14:neck|Supersense=p.Locus
+13	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	PRel[config]=possessive|PRel[gov]=14:neck|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
+14	neck	neck	NOUN	NN	Number=Sing	11	nmod	11:nmod:in	Supersense=n.BODY
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	shoulders	shoulder	NOUN	NNS	Number=Plur	14	conj	11:nmod:in|14:conj:and	_
+16	shoulders	shoulder	NOUN	NNS	Number=Plur	14	conj	11:nmod:in|14:conj:and	Supersense=n.BODY
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	added	add	VERB	VBN	Tense=Past|VerbForm=Part	9	conj	5:acl:relcl|9:conj:and	_
-19	flexibility	flexibility	NOUN	NN	Number=Sing	18	obj	18:obj	_
+18	added	add	VERB	VBN	Tense=Past|VerbForm=Part	9	conj	5:acl:relcl|9:conj:and	Supersense=v.change
+19	flexibility	flexibility	NOUN	NN	Number=Sing	18	obj	18:obj	Supersense=n.ATTRIBUTE
 20	and	and	CCONJ	CC	_	21	cc	21:cc	_
-21	movement	movement	NOUN	NN	Number=Sing	19	conj	18:obj|19:conj:and	_
-22	back	back	ADV	RB	_	18	advmod	18:advmod	_
-23	to	to	ADP	IN	_	25	case	25:case	_
+21	movement	movement	NOUN	NN	Number=Sing	19	conj	18:obj|19:conj:and	Supersense=n.ACT
+22	back	back	ADV	RB	_	18	advmod	18:advmod	PRel[config]=default|PRel[gov]=18:add|Supersense=p.Direction
+23	to	to	ADP	IN	_	25	case	25:case	PRel[config]=default|PRel[gov]=18:add|PRel[obj]=25:area|Supersense=p.Goal
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
-25	area	area	NOUN	NN	Number=Sing	22	obl	22:obl:to	SpaceAfter=No
+25	area	area	NOUN	NN	Number=Sing	22	obl	22:obl:to	SpaceAfter=No|Supersense=n.LOCATION
 26	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-211933-0003
 # text = He listens and is excellent in diagnosing, addressing and explaining the specific issues and suggesting exercises to use.
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj|5:nsubj	_
-2	listens	listen	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	listens	listen	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 3	and	and	CCONJ	CC	_	5	cc	5:cc	_
-4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
 5	excellent	excellent	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	_
-6	in	in	SCONJ	IN	_	7	mark	7:mark	_
-7	diagnosing	diagnose	VERB	VBG	Tense=Pres|VerbForm=Part	5	advcl	5:advcl:in	SpaceAfter=No
+6	in	in	SCONJ	IN	_	7	mark	7:mark	PRel[config]=subordinating|PRel[gov]=5:excellent|PRel[obj]=7:diagnose|Supersense=p.Topic
+7	diagnosing	diagnose	VERB	VBG	Tense=Pres|VerbForm=Part	5	advcl	5:advcl:in	SpaceAfter=No|Supersense=v.cognition
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	addressing	address	VERB	VBG	Tense=Pres|VerbForm=Part	7	conj	5:advcl:in|7:conj:and	_
+9	addressing	address	VERB	VBG	Tense=Pres|VerbForm=Part	7	conj	5:advcl:in|7:conj:and	Supersense=v.cognition
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	explaining	explain	VERB	VBG	Tense=Pres|VerbForm=Part	7	conj	5:advcl:in|7:conj:and	_
+11	explaining	explain	VERB	VBG	Tense=Pres|VerbForm=Part	7	conj	5:advcl:in|7:conj:and	Supersense=v.communication
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	specific	specific	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	issues	issue	NOUN	NNS	Number=Plur	7	obj	7:obj|9:obj|11:obj	_
+14	issues	issue	NOUN	NNS	Number=Plur	7	obj	7:obj|9:obj|11:obj	Supersense=n.COGNITION
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	suggesting	suggest	VERB	VBG	Tense=Pres|VerbForm=Part	7	conj	5:advcl:in|7:conj:and	_
-17	exercises	exercise	NOUN	NNS	Number=Plur	16	obj	16:obj	_
-18	to	to	PART	TO	_	19	mark	19:mark	_
-19	use	use	VERB	VB	VerbForm=Inf	17	acl	17:acl:to	SpaceAfter=No
+16	suggesting	suggest	VERB	VBG	Tense=Pres|VerbForm=Part	7	conj	5:advcl:in|7:conj:and	Supersense=v.communication
+17	exercises	exercise	NOUN	NNS	Number=Plur	16	obj	16:obj	Supersense=n.ACT
+18	to	to	PART	TO	_	19	mark	19:mark	PRel[config]=subordinating|PRel[gov]=17:exercise|PRel[obj]=19:use|Supersense=p.Purpose
+19	use	use	VERB	VB	VerbForm=Inf	17	acl	17:acl:to	SpaceAfter=No|Supersense=v.stative
 20	.	.	PUNCT	.	_	2	punct	2:punct	_
 

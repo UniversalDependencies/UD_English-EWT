@@ -2,7 +2,7 @@
 # sent_id = reviews-015573-0001
 # newpar id = reviews-015573-p0001
 # text = Buyer beware
-1	Buyer	buyer	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+1	Buyer	buyer	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	MWECat=DISC|MWELemma=buyer beware|MWELen=2
 2	beware	beware	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 
 # sent_id = reviews-015573-0002
@@ -10,9 +10,9 @@
 # text = Do not use these guys.
 1	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	3	aux	3:aux	_
 2	not	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
-3	use	use	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-4	these	this	DET	DT	Number=Plur|PronType=Dem	5	det	5:det	_
-5	guys	guy	NOUN	NNS	Number=Plur	3	obj	3:obj	SpaceAfter=No
+3	use	use	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Supersense=v.possession
+4	these	this	DET	DT	Number=Plur|PronType=Dem	5	det	5:det	MWELemma[weak]=this guy|MWELen[weak]=2|MWEString[weak]=these guys
+5	guys	guy	NOUN	NNS	Number=Plur	3	obj	3:obj	SpaceAfter=No|Supersense=n.GROUP
 6	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-015573-0003
@@ -20,33 +20,33 @@
 1-2	They'll	_	_	_	_	_	_	_	_
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj|11:nsubj	_
 2	'll	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	tell	tell	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	tell	tell	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
 4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	iobj	3:iobj	_
 5	one	one	NUM	CD	NumForm=Word|NumType=Card	6	nummod	6:nummod	_
-6	thing	thing	NOUN	NN	Number=Sing	3	obj	3:obj	_
+6	thing	thing	NOUN	NN	Number=Sing	3	obj	3:obj	Supersense=n.OTHER
 7	then	then	ADV	RB	PronType=Dem	11	advmod	11:advmod	_
 8	$	$	SYM	$	_	10	obl:unmarked	10:obl:unmarked	SpaceAfter=No
 9	5,000	5000	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
 10	later	late	ADV	RBR	Degree=Cmp	11	advmod	11:advmod	_
-11	do	do	VERB	VB	VerbForm=Inf	3	conj	3:conj	_
+11	do	do	VERB	VB	VerbForm=Inf	3	conj	3:conj	Supersense=v.stative
 12	another	another	DET	DT	PronType=Ind	11	obj	11:obj	SpaceAfter=No
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-015573-0004
 # text = Lied right to my face then denied it.
-1	Lied	lie	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	Lied	lie	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	MWELemma[weak]=lie <1> to <1> face|MWELen[weak]=5|MWEString[weak]=Lied <1> to <1> face|Supersense=v.communication
 2	right	right	ADV	RB	_	5	advmod	5:advmod	_
-3	to	to	ADP	IN	_	5	case	5:case	_
-4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
+3	to	to	ADP	IN	_	5	case	5:case	MWECat=PP|MWELemma=to <1> face|MWELen=3|PRel[config]=default|PRel[gov]=1:lie|PRel[obj]=5:face|Supersense=p.Goal
+4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	PRel[config]=possessive|PRel[gov]=5:face|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
 5	face	face	NOUN	NN	Number=Sing	1	obl	1:obl:to	_
 6	then	then	ADV	RB	PronType=Dem	7	advmod	7:advmod	_
-7	denied	deny	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	parataxis	1:parataxis	_
+7	denied	deny	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	parataxis	1:parataxis	Supersense=v.communication
 8	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	obj	7:obj	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-015573-0005
 # text = Run away.
-1	Run	run	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	away	away	ADV	RB	_	1	advmod	1:advmod	SpaceAfter=No
+1	Run	run	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Supersense=v.motion
+2	away	away	ADV	RB	_	1	advmod	1:advmod	PRel[config]=default|PRel[gov]=1:run|SpaceAfter=No|Supersense=p.Direction
 3	.	.	PUNCT	.	_	1	punct	1:punct	_
 

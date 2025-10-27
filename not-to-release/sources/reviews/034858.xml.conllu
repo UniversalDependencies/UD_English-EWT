@@ -2,19 +2,19 @@
 # sent_id = reviews-034858-0001
 # newpar id = reviews-034858-p0001
 # text = Thank you for fixing the leak on my bathroom!
-1	Thank	thank	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Thank	thank	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	MWECat=DISC|MWELemma=thank you|MWELen=2
 2	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	obj	1:obj	_
-3	for	for	SCONJ	IN	_	4	mark	4:mark	_
-4	fixing	fix	VERB	VBG	Tense=Pres|VerbForm=Part	1	advcl	1:advcl:for	_
+3	for	for	SCONJ	IN	_	4	mark	4:mark	PRel[config]=subordinating|PRel[gov]=1:thank|PRel[obj]=4:fix|Supersense=p.Explanation
+4	fixing	fix	VERB	VBG	Tense=Pres|VerbForm=Part	1	advcl	1:advcl:for	Supersense=v.change
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	leak	leak	NOUN	NN	Number=Sing	4	obj	4:obj	_
-7	on	on	ADP	IN	_	9	case	9:case	_
-8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	bathroom	bathroom	NOUN	NN	Number=Sing	6	nmod	6:nmod:on	SpaceAfter=No
+6	leak	leak	NOUN	NN	Number=Sing	4	obj	4:obj	Supersense=n.PHENOMENON
+7	on	on	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:leak|PRel[obj]=9:bathroom|Supersense=p.Locus
+8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:bathroom|Supersense=p.Possessor
+9	bathroom	bathroom	NOUN	NN	Number=Sing	6	nmod	6:nmod:on	SpaceAfter=No|Supersense=n.LOCATION
 10	!	!	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-034858-0002
 # text = Thanks!
-1	Thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+1	Thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=`d
 2	!	!	PUNCT	.	_	1	punct	1:punct	_
 

@@ -9,53 +9,53 @@
 # sent_id = reviews-288930-0002
 # text = you get a really good view of the city and there is also attractions like simulator, short movies.
 1	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	2	nsubj	2:nsubj	_
-2	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.stative
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 4	really	really	ADV	RB	_	5	advmod	5:advmod	_
 5	good	good	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	view	view	NOUN	NN	Number=Sing	2	obj	2:obj	_
-7	of	of	ADP	IN	_	9	case	9:case	_
+6	view	view	NOUN	NN	Number=Sing	2	obj	2:obj	Supersense=n.COGNITION
+7	of	of	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:view|PRel[obj]=9:city|Supersense[coding]=p.Theme|Supersense[scene]=p.Stimulus
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	city	city	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	_
+9	city	city	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	Supersense=n.LOCATION
 10	and	and	CCONJ	CC	_	12	cc	12:cc	_
 11	there	there	PRON	EX	PronType=Dem	12	expl	12:expl	_
-12	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	Cxn=Existential-CopPred-ThereExpl
+12	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	Cxn=Existential-CopPred-ThereExpl|Supersense=v.stative
 13	also	also	ADV	RB	_	12	advmod	12:advmod	_
-14	attractions	attraction	NOUN	NNS	Number=Plur	12	nsubj	12:nsubj	CxnElt=12:Existential-CopPred-ThereExpl.Pivot
-15	like	like	ADP	IN	_	16	case	16:case	_
-16	simulator	simulator	NOUN	NN	Number=Sing	14	nmod	14:nmod:like	SpaceAfter=No
+14	attractions	attraction	NOUN	NNS	Number=Plur	12	nsubj	12:nsubj	CxnElt=12:Existential-CopPred-ThereExpl.Pivot|Supersense=n.ARTIFACT
+15	like	like	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=14:attraction|PRel[obj]=16:simulator|Supersense[coding]=p.ComparisonRef|Supersense[scene]=p.PartPortion
+16	simulator	simulator	NOUN	NN	Number=Sing	14	nmod	14:nmod:like	SpaceAfter=No|Supersense=n.ARTIFACT
 17	,	,	PUNCT	,	_	19	punct	19:punct	_
 18	short	short	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-19	movies	movie	NOUN	NNS	Number=Plur	16	conj	14:nmod:like|16:conj	SpaceAfter=No
+19	movies	movie	NOUN	NNS	Number=Plur	16	conj	14:nmod:like|16:conj	SpaceAfter=No|Supersense=n.COMMUNICATION
 20	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-288930-0003
 # text = Try the 360 restraunt u spin in the cn tower with a beautiful view the sky pod elevator is about an hour line up in the summer
-1	Try	try	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+1	Try	try	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Supersense=v.social
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-3	360	360	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
+3	360	360	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	MWECat=N|MWELemma=360 restaurant|MWELen=2|MWEString=360 restraunt|Supersense=n.GROUP
 4	restraunt	restaurant	NOUN	NN	Number=Sing|Typo=Yes	1	obj	1:obj	CorrectForm=restaurant
 5	u	you	PRON	PRP	Abbr=Yes|Case=Nom|Person=2|PronType=Prs	6	nsubj	6:nsubj	CorrectForm=you
-6	spin	spin	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	1	parataxis	1:parataxis	_
-7	in	in	ADP	IN	_	10	case	10:case	_
+6	spin	spin	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	1	parataxis	1:parataxis	Supersense=v.motion
+7	in	in	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=6:spin|PRel[obj]=10:Tower|Supersense=p.Locus
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-9	cn	CN	PROPN	NNP	Number=Sing	10	compound	10:compound	_
+9	cn	CN	PROPN	NNP	Number=Sing	10	compound	10:compound	MWECat=N|MWELemma=CN Tower|MWELen=2|Supersense=n.LOCATION
 10	tower	Tower	PROPN	NNP	Number=Sing	6	obl	6:obl:in	_
-11	with	with	ADP	IN	_	14	case	14:case	_
+11	with	with	ADP	IN	_	14	case	14:case	PRel[config]=default|PRel[gov]=6:spin|PRel[obj]=14:view|Supersense=p.Characteristic
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 13	beautiful	beautiful	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	view	view	NOUN	NN	Number=Sing	6	obl	6:obl:with	_
+14	view	view	NOUN	NN	Number=Sing	6	obl	6:obl:with	Supersense=n.ATTRIBUTE
 15	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-16	sky	sky	NOUN	NN	Number=Sing	17	compound	17:compound	_
+16	sky	sky	NOUN	NN	Number=Sing	17	compound	17:compound	MWECat=N|MWELemma=sky pod|MWELemma[weak]=sky pod elevator|MWELen=2|MWELen[weak]=3|Supersense=n.ARTIFACT
 17	pod	pod	NOUN	NN	Number=Sing	18	compound	18:compound	_
-18	elevator	elevator	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	_
-19	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	_
-20	about	about	ADV	RB	_	22	advmod	22:advmod	_
+18	elevator	elevator	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	Supersense=n.ARTIFACT
+19	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	Supersense=v.stative
+20	about	about	ADV	RB	_	22	advmod	22:advmod	PRel[config]=default|PRel[obj]=22:hour|Supersense=p.Approximator
 21	an	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	_
-22	hour	hour	NOUN	NN	Number=Sing	24	compound	24:compound	_
-23	line	line	NOUN	NN	Number=Sing	24	compound	24:compound	_
+22	hour	hour	NOUN	NN	Number=Sing	24	compound	24:compound	Supersense=n.TIME
+23	line	line	NOUN	NN	Number=Sing	24	compound	24:compound	MWECat=N|MWELemma=line up|MWELen=2|Supersense=n.ACT
 24	up	up	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
-25	in	in	ADP	IN	_	27	case	27:case	_
+25	in	in	ADP	IN	_	27	case	27:case	PRel[config]=default|PRel[gov]=24:up|PRel[obj]=27:summer|Supersense=p.Time
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
-27	summer	summer	NOUN	NN	Number=Sing	24	obl	24:obl:in	_
+27	summer	summer	NOUN	NN	Number=Sing	24	obl	24:obl:in	Supersense=n.TIME
 

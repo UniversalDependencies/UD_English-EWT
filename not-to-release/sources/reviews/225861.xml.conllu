@@ -2,68 +2,68 @@
 # sent_id = reviews-225861-0001
 # newpar id = reviews-225861-p0001
 # text = My favorite place...
-1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	PRel[config]=possessive|PRel[gov]=3:place|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Experiencer
 2	favorite	favorite	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	place	place	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+3	place	place	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.GROUP
 4	...	...	PUNCT	,	_	3	punct	3:punct	_
 
 # sent_id = reviews-225861-0002
 # newpar id = reviews-225861-p0002
 # text = My daughter and I stayed here again from the 7th to the 14th of December.
-1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	daughter	daughter	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	PRel[config]=possessive|PRel[gov]=2:daughter|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+2	daughter	daughter	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Supersense=n.PERSON
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	conj	2:conj:and|5:nsubj	_
-5	stayed	stay	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+5	stayed	stay	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.social
 6	here	here	ADV	RB	PronType=Dem	5	advmod	5:advmod	_
 7	again	again	ADV	RB	_	5	advmod	5:advmod	_
-8	from	from	ADP	IN	_	10	case	10:case	_
+8	from	from	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=5:stay|PRel[obj]=10:7th|Supersense=p.StartTime
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	7th	7th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	5	obl	5:obl:from	_
-11	to	to	ADP	IN	_	13	case	13:case	_
+10	7th	7th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	5	obl	5:obl:from	Supersense=n.EVENT
+11	to	to	ADP	IN	_	13	case	13:case	PRel[config]=default|PRel[gov]=5:stay|PRel[obj]=13:14th|Supersense=p.EndTime
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
-13	14th	14th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	5	obl	5:obl:to	_
-14	of	of	ADP	IN	_	15	case	15:case	_
-15	December	December	PROPN	NNP	Number=Sing	13	nmod	13:nmod:of	SpaceAfter=No
+13	14th	14th	NOUN	NN	Number=Sing|NumForm=Combi|NumType=Ord	5	obl	5:obl:to	Supersense=n.EVENT
+14	of	of	ADP	IN	_	15	case	15:case	PRel[config]=default|PRel[gov]=13:14th|PRel[obj]=15:December|Supersense[coding]=p.Whole|Supersense[scene]=p.Time
+15	December	December	PROPN	NNP	Number=Sing	13	nmod	13:nmod:of	SpaceAfter=No|Supersense=n.TIME
 16	.	.	PUNCT	.	_	5	punct	5:punct	SpaceAfter=No
 
 # sent_id = reviews-225861-0003
 # text = yet again it was a great stay from begiinning to end.
-1	yet	yet	ADV	RB	_	2	advmod	2:advmod	_
+1	yet	yet	ADV	RB	_	2	advmod	2:advmod	MWECat=ADV|MWELemma=yet again|MWELen=2
 2	again	again	ADV	RB	_	7	advmod	7:advmod	_
 3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
-4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	7:cop	_
+4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	7:cop	Supersense=v.stative
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 6	great	great	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	stay	stay	NOUN	NN	Number=Sing	0	root	0:root	_
-8	from	from	ADP	IN	_	9	case	9:case	_
-9	begiinning	beginning	NOUN	NN	Number=Sing|Typo=Yes	7	obl	7:obl:from	CorrectForm=beginning
-10	to	to	ADP	IN	_	11	case	11:case	_
-11	end	end	NOUN	NN	Number=Sing	7	obl	7:obl:to	SpaceAfter=No
+7	stay	stay	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.EVENT
+8	from	from	ADP	IN	_	9	case	9:case	MWELemma[weak]=from beginning to end|MWELen[weak]=4|MWEString[weak]=from begiinning to end|PRel[config]=default|PRel[gov]=7:stay|PRel[obj]=9:beginning|Supersense=p.StartTime
+9	begiinning	beginning	NOUN	NN	Number=Sing|Typo=Yes	7	obl	7:obl:from	CorrectForm=beginning|Supersense=n.TIME
+10	to	to	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=7:stay|PRel[obj]=11:end|Supersense=p.EndTime
+11	end	end	NOUN	NN	Number=Sing	7	obl	7:obl:to	SpaceAfter=No|Supersense=n.TIME
 12	.	.	PUNCT	.	_	7	punct	7:punct	SpaceAfter=No
 
 # sent_id = reviews-225861-0004
 # text = Okay our room was at times noisy but we were in a mega busy city at an extremely busy time of year.
 1	Okay	okay	INTJ	UH	_	7	discourse	7:discourse	_
-2	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	room	room	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
-4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	7:cop	_
-5	at	at	ADP	IN	_	6	case	6:case	_
-6	times	time	NOUN	NNS	Number=Plur	7	obl	7:obl:at	_
+2	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	PRel[config]=possessive|PRel[gov]=3:room|Supersense=p.Possessor
+3	room	room	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	Supersense=n.ARTIFACT
+4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	7:cop	Supersense=v.stative
+5	at	at	ADP	IN	_	6	case	6:case	MWELemma[weak]=at time|MWELen[weak]=2|MWEString[weak]=at times|PRel[config]=default|PRel[gov]=7:noisy|PRel[obj]=6:time|Supersense=p.Time
+6	times	time	NOUN	NNS	Number=Plur	7	obl	7:obl:at	Supersense=n.TIME
 7	noisy	noisy	ADJ	JJ	Degree=Pos	0	root	0:root	_
 8	but	but	CCONJ	CC	_	15	cc	15:cc	_
 9	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
-10	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	15	cop	15:cop	_
-11	in	in	ADP	IN	_	15	case	15:case	_
+10	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	15	cop	15:cop	Supersense=v.stative
+11	in	in	ADP	IN	_	15	case	15:case	PRel[config]=predicative|PRel[gov]=9:we|PRel[obj]=15:city|Supersense=p.Locus
 12	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	_
 13	mega	mega	ADV	AFX	_	14	advmod	14:advmod	_
 14	busy	busy	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	city	city	NOUN	NN	Number=Sing	7	conj	7:conj:but	_
-16	at	at	ADP	IN	_	20	case	20:case	_
+15	city	city	NOUN	NN	Number=Sing	7	conj	7:conj:but	Supersense=n.LOCATION
+16	at	at	ADP	IN	_	20	case	20:case	PRel[config]=default|PRel[gov]=15:city|PRel[obj]=20:time|Supersense=p.Time
 17	an	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
 18	extremely	extremely	ADV	RB	_	19	advmod	19:advmod	_
 19	busy	busy	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-20	time	time	NOUN	NN	Number=Sing	15	obl	15:obl:at	_
+20	time	time	NOUN	NN	Number=Sing	15	obl	15:obl:at	MWECat=N|MWELemma=time of year|MWELen=3|Supersense=n.TIME
 21	of	of	ADP	IN	_	22	case	22:case	_
 22	year	year	NOUN	NN	Number=Sing	20	nmod	20:nmod:of	SpaceAfter=No
 23	.	.	PUNCT	.	_	7	punct	7:punct	_

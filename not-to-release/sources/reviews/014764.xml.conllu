@@ -2,12 +2,12 @@
 # sent_id = reviews-014764-0001
 # newpar id = reviews-014764-p0001
 # text = Daniel and his assistant both did a great job.
-1	Daniel	Daniel	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
+1	Daniel	Daniel	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	Supersense=n.PERSON
 2	and	and	CCONJ	CC	_	4	cc	4:cc	_
-3	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	assistant	assistant	NOUN	NN	Number=Sing	1	conj	1:conj:and|6:nsubj	_
+3	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	PRel[config]=possessive|PRel[gov]=4:assistant|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+4	assistant	assistant	NOUN	NN	Number=Sing	1	conj	1:conj:and|6:nsubj	Supersense=n.PERSON
 5	both	both	ADV	RB	Degree=Pos	6	advmod	6:advmod	_
-6	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+6	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=V.LVC.full|MWELemma=do a <1> job|MWELen=4|MWEString=did a <1> job|Supersense=v.social
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	great	great	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	job	job	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
@@ -19,20 +19,20 @@
 2	professional	professional	ADJ	JJ	Degree=Pos	0	root	0:root	_
 3	and	and	CCONJ	CC	_	5	cc	5:cc	_
 4	great	great	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	results	result	NOUN	NNS	Number=Plur	2	conj	2:conj:and	SpaceAfter=No
+5	results	result	NOUN	NNS	Number=Plur	2	conj	2:conj:and	SpaceAfter=No|Supersense=n.PHENOMENON
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-014764-0003
 # text = Many thanks from myself and all of our wedding guests!
-1	Many	many	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	thanks	thanks	NOUN	NNS	Number=Ptan	0	root	0:root	_
-3	from	from	ADP	IN	_	4	case	4:case	_
+1	Many	many	ADJ	JJ	Degree=Pos	2	amod	2:amod	MWELemma[weak]=many thanks|MWELen[weak]=2
+2	thanks	thanks	NOUN	NNS	Number=Ptan	0	root	0:root	Supersense=n.COMMUNICATION
+3	from	from	ADP	IN	_	4	case	4:case	PRel[config]=default|PRel[gov]=2:thanks|PRel[obj]=4:myself|Supersense[coding]=p.Source|Supersense[scene]=p.Originator
 4	myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs|Reflex=Yes	2	nmod	2:nmod:from	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
 6	all	all	DET	DT	PronType=Tot	4	conj	2:nmod:from|4:conj:and	_
-7	of	of	ADP	IN	_	10	case	10:case	_
-8	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-9	wedding	wedding	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	guests	guest	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	SpaceAfter=No
+7	of	of	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=6:all|PRel[obj]=10:guest|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
+8	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	PRel[config]=possessive|PRel[gov]=10:guest|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+9	wedding	wedding	NOUN	NN	Number=Sing	10	compound	10:compound	Supersense=n.EVENT
+10	guests	guest	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	SpaceAfter=No|Supersense=n.PERSON
 11	!	!	PUNCT	.	_	2	punct	2:punct	_
 

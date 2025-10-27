@@ -3,32 +3,32 @@
 # newpar id = reviews-073356-p0001
 # text = Beautiful hotel!
 1	Beautiful	beautiful	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	hotel	hotel	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+2	hotel	hotel	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.GROUP
 3	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-073356-0002
 # text = Great service- high class!
 1	Great	great	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	service	service	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+2	service	service	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.ACT
 3	-	-	PUNCT	,	_	5	punct	5:punct	_
-4	high	high	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+4	high	high	ADJ	JJ	Degree=Pos	5	amod	5:amod	MWECat=N|MWELemma=high class|MWELen=2|Supersense=n.ATTRIBUTE
 5	class	class	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
 6	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-073356-0003
 # text = Shuttle available to a private beach area with food/drinks/towels.
-1	Shuttle	shuttle	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	_
+1	Shuttle	shuttle	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	Supersense=n.ARTIFACT
 2	available	available	ADJ	JJ	Degree=Pos	0	root	0:root	_
-3	to	to	ADP	IN	_	7	case	7:case	_
+3	to	to	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=2:available|PRel[obj]=7:area|Supersense=p.Goal
 4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 5	private	private	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-6	beach	beach	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	area	area	NOUN	NN	Number=Sing	2	obl	2:obl:to	_
-8	with	with	ADP	IN	_	9	case	9:case	_
-9	food	food	NOUN	NN	Number=Sing	7	nmod	7:nmod:with	SpaceAfter=No
+6	beach	beach	NOUN	NN	Number=Sing	7	compound	7:compound	Supersense=n.NATURALOBJECT
+7	area	area	NOUN	NN	Number=Sing	2	obl	2:obl:to	Supersense=n.LOCATION
+8	with	with	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=7:area|PRel[obj]=9:food|Supersense=p.Characteristic
+9	food	food	NOUN	NN	Number=Sing	7	nmod	7:nmod:with	SpaceAfter=No|Supersense=n.FOOD
 10	/	/	SYM	,	_	11	cc	11:cc	SpaceAfter=No
-11	drinks	drink	NOUN	NNS	Number=Plur	9	conj	7:nmod:with|9:conj	SpaceAfter=No
+11	drinks	drink	NOUN	NNS	Number=Plur	9	conj	7:nmod:with|9:conj	SpaceAfter=No|Supersense=n.FOOD
 12	/	/	SYM	,	_	13	cc	13:cc	SpaceAfter=No
-13	towels	towel	NOUN	NNS	Number=Plur	9	conj	7:nmod:with|9:conj	SpaceAfter=No
+13	towels	towel	NOUN	NNS	Number=Plur	9	conj	7:nmod:with|9:conj	SpaceAfter=No|Supersense=n.ARTIFACT
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 

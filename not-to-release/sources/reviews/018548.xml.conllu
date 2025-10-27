@@ -2,7 +2,7 @@
 # sent_id = reviews-018548-0001
 # newpar id = reviews-018548-p0001
 # text = Mezza Luna FTW!
-1	Mezza	mezza	NOUN	NN	Number=Sing	2	compound	2:compound	_
+1	Mezza	mezza	NOUN	NN	Number=Sing	2	compound	2:compound	MWECat=N|MWELemma=mezza luna|MWELen=2|Supersense=n.FOOD
 2	Luna	luna	NOUN	NN	Number=Sing	0	root	0:root	_
 3	FTW	ftw	ADV	RB	_	2	discourse	2:discourse	SpaceAfter=No
 4	!	!	PUNCT	.	_	2	punct	2:punct	_
@@ -10,15 +10,15 @@
 # sent_id = reviews-018548-0002
 # newpar id = reviews-018548-p0002
 # text = their mezza luna's are deffly better than the pizza rolls.
-1	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-2	mezza	mezza	NOUN	NN	Number=Sing	3	compound	3:compound	_
+1	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	PRel[config]=possessive|PRel[gov]=3:luna|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Originator
+2	mezza	mezza	NOUN	NN	Number=Sing	3	compound	3:compound	MWECat=N|MWELemma=mezza luna|MWELen=2|MWEString=mezza luna's|Supersense=n.FOOD
 3	luna's	luna	NOUN	NNS	Number=Plur|Typo=Yes	6	nsubj	6:nsubj	CorrectForm=lunas
-4	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
+4	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	Supersense=v.stative
 5	deffly	definitely	ADV	RB	Abbr=Yes|Style=Slng	6	advmod	6:advmod	CorrectForm=definitely
 6	better	good	ADJ	JJR	Degree=Cmp	0	root	0:root	_
-7	than	than	ADP	IN	_	10	case	10:case	_
+7	than	than	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=6:good|PRel[obj]=10:roll|Supersense=p.ComparisonRef
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-9	pizza	pizza	NOUN	NN	Number=Sing	10	compound	10:compound	_
+9	pizza	pizza	NOUN	NN	Number=Sing	10	compound	10:compound	MWECat=N|MWELemma=pizza roll|MWELen=2|MWEString=pizza rolls|Supersense=n.FOOD
 10	rolls	roll	NOUN	NNS	Number=Plur	6	obl	6:obl:than	SpaceAfter=No
 11	.	.	PUNCT	.	_	6	punct	6:punct	_
 
@@ -26,37 +26,37 @@
 # text = its like a pizza roll, but they just toss ham and cheese inside.
 1-2	its	_	_	_	_	_	_	_	_
 1	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
-2	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	6	cop	6:cop	CorrectForm='s
-3	like	like	ADP	IN	_	6	case	6:case	_
+2	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	6	cop	6:cop	CorrectForm='s|Supersense=v.stative
+3	like	like	ADP	IN	_	6	case	6:case	PRel[config]=predicative|PRel[gov]=1:it|PRel[obj]=6:roll|Supersense=p.ComparisonRef
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
-5	pizza	pizza	NOUN	NN	Number=Sing	6	compound	6:compound	_
+5	pizza	pizza	NOUN	NN	Number=Sing	6	compound	6:compound	MWECat=N|MWELemma=pizza roll|MWELen=2|Supersense=n.FOOD
 6	roll	roll	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 7	,	,	PUNCT	,	_	11	punct	11:punct	_
 8	but	but	CCONJ	CC	_	11	cc	11:cc	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 10	just	just	ADV	RB	_	11	advmod	11:advmod	_
-11	toss	toss	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:but	_
-12	ham	ham	NOUN	NN	Number=Sing	11	obj	11:obj	_
+11	toss	toss	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:but	Supersense=v.contact
+12	ham	ham	NOUN	NN	Number=Sing	11	obj	11:obj	Supersense=n.FOOD
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	cheese	cheese	NOUN	NN	Number=Sing	12	conj	11:obj|12:conj:and	_
-15	inside	inside	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
+14	cheese	cheese	NOUN	NN	Number=Sing	12	conj	11:obj|12:conj:and	Supersense=n.FOOD
+15	inside	inside	ADV	RB	_	11	advmod	11:advmod	PRel[config]=default|PRel[gov]=11:toss|SpaceAfter=No|Supersense[coding]=p.Locus|Supersense[scene]=p.Goal
 16	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-018548-0004
 # text = it seems like its healthier too, but its prolly not.
 1	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	expl	2:expl	_
-2	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	like	like	SCONJ	IN	_	6	mark	6:mark	_
+2	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
+3	like	like	SCONJ	IN	_	6	mark	6:mark	PRel[config]=subordinating|PRel[gov]=2:seem|PRel[obj]=5:be|Supersense[coding]=p.ComparisonRef|Supersense[scene]=p.Theme
 4-5	its	_	_	_	_	_	_	_	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
-5	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	6	cop	6:cop	CorrectForm='s
+5	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	6	cop	6:cop	CorrectForm='s|Supersense=v.stative
 6	healthier	healthy	ADJ	JJR	Degree=Cmp	2	advcl	2:advcl:like	_
 7	too	too	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	but	but	CCONJ	CC	_	11	cc	11:cc	_
 10-11	its	_	_	_	_	_	_	_	_
 10	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
-11	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	2	conj	2:conj:but	CorrectForm='s
+11	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	2	conj	2:conj:but	CorrectForm='s|Supersense=v.stative
 12	prolly	probably	ADV	RB	Abbr=Yes|Style=Slng	11	advmod	11:advmod	CorrectForm=probably
 13	not	not	PART	RB	Polarity=Neg	11	advmod	11:advmod	SpaceAfter=No
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -67,91 +67,91 @@
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	5:nsubj|13:nsubj|21:nsubj	_
 4	can	can	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
-5	call	call	VERB	VB	VerbForm=Inf	0	root	0:root	_
+5	call	call	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
 6	em	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs|Style=Coll|Typo=Yes	5	obj	5:obj	CorrectForm='em
-7	ahead	ahead	ADV	RB	_	5	advmod	5:advmod	_
+7	ahead	ahead	ADV	RB	_	5	advmod	5:advmod	MWECat=PP|MWELemma=ahead of time|MWELen=3|PRel[config]=default|PRel[gov]=5:call|Supersense=p.Time
 8	of	of	ADP	IN	_	9	case	9:case	_
 9	time	time	NOUN	NN	Number=Sing	7	obl	7:obl:of	SpaceAfter=No
 10	,	,	PUNCT	,	_	13	punct	13:punct	_
 11	and	and	CCONJ	CC	_	13	cc	13:cc	_
 12	then	then	ADV	RB	PronType=Dem	13	advmod	13:advmod	_
-13	go	go	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	_
-14	to	to	PART	TO	_	15	mark	15:mark	_
-15	pick	pick	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:to	_
+13	go	go	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	Supersense=v.motion
+14	to	to	PART	TO	_	15	mark	15:mark	PRel[config]=subordinating|PRel[gov]=13:go|PRel[obj]=15:pick|Supersense=p.Purpose
+15	pick	pick	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:to	MWECat=V.VPC.full|MWELemma=pick up|MWELen=2|Supersense=v.possession
 16	up	up	ADP	RP	_	15	compound:prt	15:compound:prt	_
-17	ur	your	PRON	PRP$	Abbr=Yes|Case=Gen|Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	CorrectForm=your
-18	food	food	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No
+17	ur	your	PRON	PRP$	Abbr=Yes|Case=Gen|Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	CorrectForm=your|PRel[config]=possessive|PRel[gov]=18:food|Supersense=p.Possessor
+18	food	food	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No|Supersense=n.FOOD
 19	,	,	PUNCT	,	_	21	punct	21:punct	_
 20	or	or	CCONJ	CC	_	21	cc	21:cc	_
-21	have	have	VERB	VB	VerbForm=Inf	13	conj	13:conj:or	_
+21	have	have	VERB	VB	VerbForm=Inf	13	conj	13:conj:or	Supersense=v.change
 22	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	21	obj	21:obj|23:nsubj:xsubj	_
-23	delivered	deliver	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	21	xcomp	21:xcomp	SpaceAfter=No
+23	delivered	deliver	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	21	xcomp	21:xcomp	SpaceAfter=No|Supersense=v.motion
 24	**	**	PUNCT	NFP	_	5	punct	5:punct	SpaceAfter=No
 25	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-018548-0006
 # text = that cuts down on teh wait time, cus u can do other stuff while ur waiting.
 1	that	that	PRON	DT	Number=Sing|PronType=Dem	2	nsubj	2:nsubj	_
-2	cuts	cut	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	cuts	cut	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	MWECat=V.IAV|MWELemma=cut down on|MWELen=3|MWEString=cuts down on|Supersense=v.change
 3	down	down	ADP	RP	_	2	compound:prt	2:compound:prt	_
 4	on	on	ADP	IN	_	7	case	7:case	_
 5	teh	the	DET	DT	Definite=Def|PronType=Art|Typo=Yes	7	det	7:det	CorrectForm=the
-6	wait	wait	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	time	time	NOUN	NN	Number=Sing	2	obl	2:obl:on	SpaceAfter=No
+6	wait	wait	NOUN	NN	Number=Sing	7	compound	7:compound	Supersense=n.ACT
+7	time	time	NOUN	NN	Number=Sing	2	obl	2:obl:on	SpaceAfter=No|Supersense=n.TIME
 8	,	,	PUNCT	,	_	12	punct	12:punct	_
 9	cus	because	SCONJ	IN	Abbr=Yes|Style=Vrnc	12	mark	12:mark	_
 10	u	you	PRON	PRP	Abbr=Yes|Case=Nom|Person=2|PronType=Prs	12	nsubj	12:nsubj	CorrectForm=you
 11	can	can	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
-12	do	do	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:cause	_
+12	do	do	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:cause	Supersense=v.stative
 13	other	other	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	stuff	stuff	NOUN	NN	Number=Sing	12	obj	12:obj	_
+14	stuff	stuff	NOUN	NN	Number=Sing	12	obj	12:obj	Supersense=n.OTHER
 15	while	while	SCONJ	IN	_	18	mark	18:mark	_
 16-17	ur	_	_	_	_	_	_	_	_
 16	u	you	PRON	PRP	Abbr=Yes|Case=Nom|Person=2|PronType=Prs	18	nsubj	18:nsubj	CorrectForm=you
 17	r	be	AUX	VBP	Abbr=Yes|Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	18	aux	18:aux	CorrectForm='re
-18	waiting	wait	VERB	VBG	Tense=Pres|VerbForm=Part	12	advcl	12:advcl:while	SpaceAfter=No
+18	waiting	wait	VERB	VBG	Tense=Pres|VerbForm=Part	12	advcl	12:advcl:while	SpaceAfter=No|Supersense=v.cognition
 19	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-018548-0007
 # text = it usually takes 20mins for a mezza luna, as they have to add pure delicious extract to the mix.
 1	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	expl	3:expl	_
 2	usually	usually	ADV	RB	_	3	advmod	3:advmod	_
-3	takes	take	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	takes	take	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.stative
 4	20	20	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	SpaceAfter=No
-5	mins	minute	NOUN	NNS	Abbr=Yes|Number=Plur	3	nsubj	3:nsubj	_
-6	for	for	ADP	IN	_	9	case	9:case	_
+5	mins	minute	NOUN	NNS	Abbr=Yes|Number=Plur	3	nsubj	3:nsubj	Supersense=n.TIME
+6	for	for	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=3:take|PRel[obj]=9:luna|Supersense=p.Purpose
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
-8	mezza	mezza	NOUN	NN	Number=Sing	9	compound	9:compound	_
+8	mezza	mezza	NOUN	NN	Number=Sing	9	compound	9:compound	MWECat=N|MWELemma=mezza luna|MWELen=2|Supersense=n.FOOD
 9	luna	luna	NOUN	NN	Number=Sing	3	obl	3:obl:for	SpaceAfter=No
 10	,	,	PUNCT	,	_	13	punct	13:punct	_
-11	as	as	SCONJ	IN	_	13	mark	13:mark	_
+11	as	as	SCONJ	IN	_	13	mark	13:mark	PRel[config]=subordinating|PRel[gov]=3:take|PRel[obj]=13:have|Supersense=p.Explanation
 12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	13	nsubj	13:nsubj|15:nsubj:xsubj	_
-13	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:as	_
+13	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:as	MWECat=AUX|MWELemma=have to|MWELen=2
 14	to	to	PART	TO	_	15	mark	15:mark	_
-15	add	add	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
+15	add	add	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	Supersense=v.change
 16	pure	pure	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 17	delicious	delicious	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	extract	extract	NOUN	NN	Number=Sing	15	obj	15:obj	_
-19	to	to	ADP	IN	_	21	case	21:case	_
+18	extract	extract	NOUN	NN	Number=Sing	15	obj	15:obj	Supersense=n.FOOD
+19	to	to	ADP	IN	_	21	case	21:case	PRel[config]=default|PRel[gov]=15:add|PRel[obj]=21:mix|Supersense=p.Goal
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	mix	mix	NOUN	NN	Number=Sing	15	obl	15:obl:to	SpaceAfter=No
+21	mix	mix	NOUN	NN	Number=Sing	15	obl	15:obl:to	SpaceAfter=No|Supersense=n.FOOD
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-018548-0008
 # text = their pizza was a little salty for me, but its still good.
-1	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	pizza	pizza	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
-3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	_
-4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
+1	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	PRel[config]=possessive|PRel[gov]=2:pizza|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Originator
+2	pizza	pizza	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	Supersense=n.FOOD
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	Supersense=v.stative
+4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	MWECat=DET|MWELemma=a little|MWELen=2
 5	little	little	ADJ	JJ	Degree=Pos	6	obl:unmarked	6:obl:unmarked	_
 6	salty	salty	ADJ	JJ	Degree=Pos	0	root	0:root	_
-7	for	for	ADP	IN	_	8	case	8:case	_
+7	for	for	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=6:salty|PRel[obj]=8:I|Supersense[coding]=p.Beneficiary|Supersense[scene]=p.Experiencer
 8	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	obl	6:obl:for	SpaceAfter=No
 9	,	,	PUNCT	,	_	14	punct	14:punct	_
 10	but	but	CCONJ	CC	_	14	cc	14:cc	_
 11-12	its	_	_	_	_	_	_	_	_
 11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
-12	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	14	cop	14:cop	CorrectForm='s
+12	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	14	cop	14:cop	CorrectForm='s|Supersense=v.stative
 13	still	still	ADV	RB	_	14	advmod	14:advmod	_
 14	good	good	ADJ	JJ	Degree=Pos	6	conj	6:conj:but	SpaceAfter=No
 15	.	.	PUNCT	.	_	6	punct	6:punct	_
@@ -159,20 +159,20 @@
 # sent_id = reviews-018548-0009
 # text = they do that whole thing where you sandwich the pepperoni between layers of cheese for +32 delicious.
 1	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	do	do	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	do	do	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.stative
 3	that	that	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
 4	whole	whole	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	thing	thing	NOUN	NN	Number=Sing	2	obj	2:obj|8:obl	_
+5	thing	thing	NOUN	NN	Number=Sing	2	obj	2:obj|8:obl	Supersense=n.OTHER
 6	where	where	ADV	WRB	PronType=Rel	8	advmod	5:ref	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
-8	sandwich	sandwich	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-wh-obl
+8	sandwich	sandwich	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-wh-obl|Supersense=v.contact
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	pepperoni	pepperoni	NOUN	NN	Number=Sing	8	obj	8:obj	_
-11	between	between	ADP	IN	_	12	case	12:case	_
-12	layers	layer	NOUN	NNS	Number=Plur	8	obl	8:obl:between	_
-13	of	of	ADP	IN	_	14	case	14:case	_
-14	cheese	cheese	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	_
-15	for	for	ADP	IN	_	17	case	17:case	_
+10	pepperoni	pepperoni	NOUN	NN	Number=Sing	8	obj	8:obj	Supersense=n.FOOD
+11	between	between	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=8:sandwich|PRel[obj]=12:layer|Supersense[coding]=p.Locus|Supersense[scene]=p.Goal
+12	layers	layer	NOUN	NNS	Number=Plur	8	obl	8:obl:between	Supersense=n.COGNITION
+13	of	of	ADP	IN	_	14	case	14:case	PRel[config]=default|PRel[gov]=12:layer|PRel[obj]=14:cheese|Supersense=p.Stuff
+14	cheese	cheese	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	Supersense=n.FOOD
+15	for	for	ADP	IN	_	17	case	17:case	PRel[config]=default|PRel[gov]=8:sandwich|PRel[obj]=17:32|Supersense=p.Purpose
 16	+	+	SYM	SYM	_	17	advmod	17:advmod	SpaceAfter=No
 17	32	32	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:for	_
 18	delicious	delicious	ADJ	JJ	Degree=Pos	17	amod	17:amod	SpaceAfter=No
@@ -183,58 +183,58 @@
 1	anyways	anyways	INTJ	UH	_	5	discourse	5:discourse	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-4	mezza	mezza	NOUN	NN	Number=Sing	5	compound	5:compound	_
+4	mezza	mezza	NOUN	NN	Number=Sing	5	compound	5:compound	MWECat=N|MWELemma=mezza luna|MWELen=2|Supersense=n.FOOD
 5	luna	luna	NOUN	NN	Number=Sing	9	dislocated	9:dislocated	SpaceAfter=No
 6	:	:	PUNCT	:	_	5	punct	5:punct	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
 8	should	should	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	try	try	VERB	VB	VerbForm=Inf	0	root	0:root	_
+9	try	try	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.consumption
 10	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj	SpaceAfter=No
 11	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = reviews-018548-0011
 # text = it runs you about 4 bucks and it deals crushing blows to hunger.
 1	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	runs	run	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	runs	run	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.possession
 3	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	2	iobj	2:iobj	_
-4	about	about	ADV	RB	_	5	advmod	5:advmod	_
+4	about	about	ADV	RB	_	5	advmod	5:advmod	PRel[config]=default|PRel[obj]=5:4|Supersense=p.Approximator
 5	4	4	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
-6	bucks	buck	NOUN	NNS	Number=Plur	2	obj	2:obj	_
+6	bucks	buck	NOUN	NNS	Number=Plur	2	obj	2:obj	Supersense=n.POSSESSION
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_
 8	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
-9	deals	deal	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
-10	crushing	crush	VERB	VBG	VerbForm=Ger	11	amod	11:amod	_
-11	blows	blow	NOUN	NNS	Number=Plur	9	obj	9:obj	_
-12	to	to	ADP	IN	_	13	case	13:case	_
-13	hunger	hunger	NOUN	NN	Number=Sing	9	obl	9:obl:to	SpaceAfter=No
+9	deals	deal	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	MWELemma[weak]=deal <1> blow|MWELen[weak]=3|MWEString[weak]=deals <1> blows|Supersense=v.stative
+10	crushing	crush	VERB	VBG	VerbForm=Ger	11	amod	11:amod	Supersense=v.contact
+11	blows	blow	NOUN	NNS	Number=Plur	9	obj	9:obj	Supersense=n.ACT
+12	to	to	ADP	IN	_	13	case	13:case	PRel[config]=default|PRel[gov]=9:deal|PRel[obj]=13:hunger|Supersense[coding]=p.Goal|Supersense[scene]=p.Theme
+13	hunger	hunger	NOUN	NN	Number=Sing	9	obl	9:obl:to	SpaceAfter=No|Supersense=n.FEELING
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-018548-0012
 # text = **Edit: Living on campus at Clarkson University, I have had food delivered before.
 1	**	**	PUNCT	NFP	_	2	punct	2:punct	SpaceAfter=No
-2	Edit	edit	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+2	Edit	edit	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=`d
 3	:	:	PUNCT	:	_	13	punct	13:punct	_
-4	Living	live	VERB	VBG	Tense=Pres|VerbForm=Part	13	advcl	13:advcl	_
-5	on	on	ADP	IN	_	6	case	6:case	_
-6	campus	campus	NOUN	NN	Number=Sing	4	obl	4:obl:on	_
-7	at	at	ADP	IN	_	9	case	9:case	_
-8	Clarkson	Clarkson	PROPN	NNP	Number=Sing	9	compound	9:compound	_
+4	Living	live	VERB	VBG	Tense=Pres|VerbForm=Part	13	advcl	13:advcl	Supersense=v.social
+5	on	on	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:live|PRel[obj]=6:campus|Supersense=p.Locus
+6	campus	campus	NOUN	NN	Number=Sing	4	obl	4:obl:on	Supersense=n.LOCATION
+7	at	at	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=4:live|PRel[obj]=9:University|Supersense=p.Locus
+8	Clarkson	Clarkson	PROPN	NNP	Number=Sing	9	compound	9:compound	MWECat=N|MWELemma=Clarkson University|MWELen=2|Supersense=n.LOCATION
 9	University	University	PROPN	NNP	Number=Sing	4	obl	4:obl:at	SpaceAfter=No
 10	,	,	PUNCT	,	_	4	punct	4:punct	_
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 12	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
-13	had	have	VERB	VBN	Tense=Past|VerbForm=Part	2	parataxis	2:parataxis	_
-14	food	food	NOUN	NN	Number=Sing	13	obj	13:obj|15:nsubj:xsubj	_
-15	delivered	deliver	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	13	xcomp	13:xcomp	_
-16	before	before	ADV	RB	_	13	advmod	13:advmod	SpaceAfter=No
+13	had	have	VERB	VBN	Tense=Past|VerbForm=Part	2	parataxis	2:parataxis	Supersense=v.stative
+14	food	food	NOUN	NN	Number=Sing	13	obj	13:obj|15:nsubj:xsubj	Supersense=n.FOOD
+15	delivered	deliver	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	13	xcomp	13:xcomp	Supersense=v.motion
+16	before	before	ADV	RB	_	13	advmod	13:advmod	PRel[config]=default|PRel[gov]=13:have|SpaceAfter=No|Supersense=p.Time
 17	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-018548-0013
 # text = This was back between '05 and '09 and I don't remember how many times we've had it delivered.
 1	This	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj|7:nsubj	_
-2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
-3	back	back	ADV	RB	_	5	advmod	5:advmod	_
-4	between	between	ADP	IN	_	5	case	5:case	_
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
+3	back	back	ADV	RB	_	5	advmod	5:advmod	PRel[config]=predicative|PRel[gov]=1:this|Supersense=p.Interval
+4	between	between	ADP	IN	_	5	case	5:case	PRel[config]=predicative|PRel[gov]=1:this|PRel[obj]=5:'05|Supersense[coding]=p.Whole|Supersense[scene]=p.Time
 5	'05	'05	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
 7	'09	'09	NUM	CD	NumForm=Digit|NumType=Card	5	conj	5:conj:and	_
@@ -243,16 +243,16 @@
 10-11	don't	_	_	_	_	_	_	_	_
 10	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
 11	n't	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
-12	remember	remember	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	_
+12	remember	remember	VERB	VB	VerbForm=Inf	5	conj	5:conj:and	Supersense=v.cognition
 13	how	how	ADV	WRB	PronType=Int	14	advmod	14:advmod	CxnElt=18:Interrogative-WHInfo-Indirect.WHWord
 14	many	many	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	times	time	NOUN	NNS	Number=Plur	18	obl:unmarked	18:obl:unmarked	TemporalNPAdjunct=Yes
+15	times	time	NOUN	NNS	Number=Plur	18	obl:unmarked	18:obl:unmarked	Supersense=n.EVENT|TemporalNPAdjunct=Yes
 16-17	we've	_	_	_	_	_	_	_	_
 16	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
 17	've	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
-18	had	have	VERB	VBN	Tense=Past|VerbForm=Part	12	ccomp	12:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=18:Interrogative-WHInfo-Indirect.Clause
+18	had	have	VERB	VBN	Tense=Past|VerbForm=Part	12	ccomp	12:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=18:Interrogative-WHInfo-Indirect.Clause|Supersense=v.stative
 19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj|20:nsubj:xsubj	_
-20	delivered	deliver	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	18	xcomp	18:xcomp	SpaceAfter=No
+20	delivered	deliver	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	18	xcomp	18:xcomp	SpaceAfter=No|Supersense=v.motion
 21	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-018548-0014
@@ -262,19 +262,19 @@
 3-4	don't	_	_	_	_	_	_	_	_
 3	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 4	n't	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
-5	deliver	deliver	VERB	VB	VerbForm=Inf	0	root	0:root	_
+5	deliver	deliver	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.motion
 6	anymore	anymore	ADV	RB	_	5	advmod	5:advmod	SpaceAfter=No
 7	,	,	PUNCT	,	_	16	punct	16:punct	_
 8	but	but	CCONJ	CC	_	16	cc	16:cc	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	deliciousness	deliciousness	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	_
-11	of	of	ADP	IN	_	14	case	14:case	_
+10	deliciousness	deliciousness	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	Supersense=n.ATTRIBUTE
+11	of	of	ADP	IN	_	14	case	14:case	PRel[config]=default|PRel[gov]=10:deliciousness|PRel[obj]=14:luna|Supersense=p.Gestalt
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
-13	mezza	mezza	NOUN	NN	Number=Sing	14	compound	14:compound	_
+13	mezza	mezza	NOUN	NN	Number=Sing	14	compound	14:compound	MWECat=N|MWELemma=mezza luna|MWELen=2|Supersense=n.FOOD
 14	luna	luna	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	_
 15	certainly	certainly	ADV	RB	_	16	advmod	16:advmod	_
-16	warrants	warrant	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	conj	5:conj:but	_
+16	warrants	warrant	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	conj	5:conj:but	Supersense=v.cognition
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
-18	pickup	pickup	NOUN	NN	Number=Sing	16	obj	16:obj	SpaceAfter=No
+18	pickup	pickup	NOUN	NN	Number=Sing	16	obj	16:obj	SpaceAfter=No|Supersense=n.ACT
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 

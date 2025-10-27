@@ -7,20 +7,20 @@
 3	VERYYY	very	ADV	RB	Style=Expr	5	advmod	5:advmod	CorrectForm=very|SpaceAfter=No
 4	!!	!!	PUNCT	.	_	3	punct	3:punct	_
 5	Good	good	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-6	auto	auto	NOUN	NN	Number=Sing	7	compound	7:compound	_
+6	auto	auto	NOUN	NN	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=auto repair|MWELen=2|Supersense=n.ACT
 7	repair	repair	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	men	man	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+8	men	man	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No|Supersense=n.PERSON
 9	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-379701-0002
 # text = Do the job honest and quickly as possible.
-1	Do	do	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Do	do	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	MWELemma[weak]=do <1> job|MWELen[weak]=3|Supersense=v.social
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	job	job	NOUN	NN	Number=Sing	1	obj	1:obj	_
+3	job	job	NOUN	NN	Number=Sing	1	obj	1:obj	Supersense=n.ACT
 4	honest	honest	ADV	RB	_	1	advmod	1:advmod	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
 6	quickly	quickly	ADV	RB	_	4	conj	1:advmod|4:conj:and	_
-7	as	as	SCONJ	IN	_	8	mark	8:mark	_
+7	as	as	SCONJ	IN	_	8	mark	8:mark	MWELemma[weak]=as possible|MWELen[weak]=2|PRel[config]=subordinating|PRel[gov]=6:quickly|PRel[obj]=8:possible|Supersense=p.ComparisonRef
 8	possible	possible	ADJ	JJ	Degree=Pos	6	advcl	6:advcl:as	SpaceAfter=No
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -28,22 +28,22 @@
 # text = Would 100% recomend to others for a great service.
 1	Would	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 2	100	100	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	SpaceAfter=No
-3	%	%	SYM	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	_
-4	recomend	recommend	VERB	VB	Typo=Yes|VerbForm=Inf	0	root	0:root	CorrectForm=recommend
-5	to	to	ADP	IN	_	6	case	6:case	_
-6	others	other	NOUN	NNS	Number=Plur	4	obl	4:obl:to	_
-7	for	for	ADP	IN	_	10	case	10:case	_
+3	%	%	SYM	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	Supersense=n.QUANTITY
+4	recomend	recommend	VERB	VB	Typo=Yes|VerbForm=Inf	0	root	0:root	CorrectForm=recommend|Supersense=v.communication
+5	to	to	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:recommend|PRel[obj]=6:other|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
+6	others	other	NOUN	NNS	Number=Plur	4	obl	4:obl:to	Supersense=n.PERSON
+7	for	for	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=4:recommend|PRel[obj]=10:service|Supersense=p.Purpose
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	great	great	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	service	service	NOUN	NN	Number=Sing	4	obl	4:obl:for	SpaceAfter=No
+10	service	service	NOUN	NN	Number=Sing	4	obl	4:obl:for	SpaceAfter=No|Supersense=n.ACT
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-379701-0004
 # text = Thank You Barrys Auto Tech!
-1	Thank	thank	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Thank	thank	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	MWECat=DISC|MWELemma=thank you|MWELen=2
 2	You	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	obj	1:obj	_
 3-4	Barrys	_	_	_	_	_	_	_	_
-3	Barry	Barry	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	_
+3	Barry	Barry	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	MWECat=N|MWELemma=Barry 's Auto Tech|MWELen=4|MWEString=Barry s Auto Tech|Supersense=n.GROUP
 4	s	's	PART	POS	Typo=Yes	3	case	3:case	CorrectForm='s
 5	Auto	Auto	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 6	Tech	Tech	PROPN	NNP	Number=Sing	1	vocative	1:vocative	SpaceAfter=No

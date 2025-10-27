@@ -3,61 +3,61 @@
 # newpar id = reviews-130795-p0001
 # text = They Suck
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	Suck	suck	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	Suck	suck	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.stative
 
 # sent_id = reviews-130795-0002
 # newpar id = reviews-130795-p0002
 # text = Go somewhere else...
-1	Go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+1	Go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Supersense=v.motion
 2	somewhere	somewhere	ADV	RB	PronType=Ind	1	advmod	1:advmod	_
 3	else	else	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
 4	...	...	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-130795-0003
 # text = Wanted to buy a Rhino 700 and a Grizzly 700.
-1	Wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	Wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
 2	to	to	PART	TO	_	3	mark	3:mark	_
-3	buy	buy	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	_
+3	buy	buy	VERB	VB	VerbForm=Inf	1	xcomp	1:xcomp	Supersense=v.possession
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-5	Rhino	Rhino	PROPN	NNP	Number=Sing	3	obj	3:obj	FlatType=Enumerated
+5	Rhino	Rhino	PROPN	NNP	Number=Sing	3	obj	3:obj	FlatType=Enumerated|MWECat=N|MWELemma=Rhino 700|MWELen=2|Supersense=n.ARTIFACT
 6	700	700	NUM	NNP	NumForm=Digit|NumType=Card	5	flat	5:flat	_
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
-9	Grizzly	Grizzly	PROPN	NNP	Number=Sing	5	conj	3:obj|5:conj:and	FlatType=Enumerated
+9	Grizzly	Grizzly	PROPN	NNP	Number=Sing	5	conj	3:obj|5:conj:and	FlatType=Enumerated|MWECat=N|MWELemma=Grizzly 700|MWELen=2|Supersense=n.ARTIFACT
 10	700	700	NUM	NNP	NumForm=Digit|NumType=Card	9	flat	9:flat	SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-130795-0004
 # text = After searching high and low for a salesman, I was treated like dirt, and we left.
-1	After	after	SCONJ	IN	_	2	mark	2:mark	_
-2	searching	search	VERB	VBG	Tense=Pres|VerbForm=Part	12	advcl	12:advcl:after	_
+1	After	after	SCONJ	IN	_	2	mark	2:mark	PRel[config]=subordinating|PRel[gov]=12:treat|PRel[obj]=2:search|Supersense=p.Time
+2	searching	search	VERB	VBG	Tense=Pres|VerbForm=Part	12	advcl	12:advcl:after	MWECat=V.VID|MWELemma=search high and low|MWELen=4|MWEString=searching high and low|Supersense=v.cognition
 3	high	high	ADV	RB	Degree=Pos	2	advmod	2:advmod	_
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
 5	low	low	ADV	RB	Degree=Pos	3	conj	2:advmod|3:conj:and	_
-6	for	for	ADP	IN	_	8	case	8:case	_
+6	for	for	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=2:search|PRel[obj]=8:salesman|Supersense=p.Theme
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	salesman	salesman	NOUN	NN	Number=Sing	2	obl	2:obl:for	SpaceAfter=No
+8	salesman	salesman	NOUN	NN	Number=Sing	2	obl	2:obl:for	SpaceAfter=No|Supersense=n.PERSON
 9	,	,	PUNCT	,	_	2	punct	2:punct	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj:pass	12:nsubj:pass	_
 11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux:pass	12:aux:pass	_
-12	treated	treat	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+12	treated	treat	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	MWECat=V.VID|MWELemma=treat like dirt|MWELen=3|MWEString=treated like dirt|Supersense=v.social
 13	like	like	ADP	IN	_	14	case	14:case	_
 14	dirt	dirt	NOUN	NN	Number=Sing	12	obl	12:obl:like	SpaceAfter=No
 15	,	,	PUNCT	,	_	18	punct	18:punct	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
-18	left	leave	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	12	conj	12:conj:and	SpaceAfter=No
+18	left	leave	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	12	conj	12:conj:and	SpaceAfter=No|Supersense=v.motion
 19	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = reviews-130795-0005
 # text = Parts department blows, Service department is even worse.
-1	Parts	part	NOUN	NNS	Number=Plur	2	compound	2:compound	_
-2	department	department	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-3	blows	blow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+1	Parts	part	NOUN	NNS	Number=Plur	2	compound	2:compound	Supersense=n.ARTIFACT
+2	department	department	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Supersense=n.GROUP
+3	blows	blow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No|Supersense=v.stative
 4	,	,	PUNCT	,	_	9	punct	9:punct	_
-5	Service	service	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	department	department	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
-7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
+5	Service	service	NOUN	NN	Number=Sing	6	compound	6:compound	Supersense=n.ACT
+6	department	department	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	Supersense=n.GROUP
+7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	Supersense=v.stative
 8	even	even	ADV	RB	_	9	advmod	9:advmod	_
 9	worse	bad	ADJ	JJR	Degree=Cmp	3	parataxis	3:parataxis	SpaceAfter=No
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -65,36 +65,36 @@
 # sent_id = reviews-130795-0006
 # text = I live 10 minutes from Cycle City, but I Drove 50 mile south to Peachstate Powersports in LaGrange, dealt with the owner, Levi, and was well taken care of.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	live	live	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	live	live	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.social
 3	10	10	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
-4	minutes	minute	NOUN	NNS	Number=Plur	7	nmod:unmarked	7:nmod:unmarked	_
-5	from	from	ADP	IN	_	7	case	7:case	_
-6	Cycle	Cycle	PROPN	NNP	Number=Sing	7	compound	7:compound	_
+4	minutes	minute	NOUN	NNS	Number=Plur	7	nmod:unmarked	7:nmod:unmarked	Supersense=n.TIME
+5	from	from	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=2:live|PRel[obj]=7:City|Supersense[coding]=p.Source|Supersense[scene]=p.Locus
+6	Cycle	Cycle	PROPN	NNP	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=Cycle City|MWELen=2|Supersense=n.GROUP
 7	City	City	PROPN	NNP	Number=Sing	2	obl	2:obl:from	SpaceAfter=No
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	but	but	CCONJ	CC	_	11	cc	11:cc	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj|21:nsubj|31:nsubj:pass	_
-11	Drove	drive	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:but	_
+11	Drove	drive	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:but	Supersense=v.motion
 12	50	50	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
-13	mile	mile	NOUN	NN	Number=Sing	14	obl:unmarked	14:obl:unmarked	_
+13	mile	mile	NOUN	NN	Number=Sing	14	obl:unmarked	14:obl:unmarked	Supersense=n.QUANTITY
 14	south	south	ADV	RB	_	11	advmod	11:advmod	_
-15	to	to	ADP	IN	_	17	case	17:case	_
-16	Peachstate	Peachstate	PROPN	NNP	Number=Sing	17	compound	17:compound	_
+15	to	to	ADP	IN	_	17	case	17:case	PRel[config]=default|PRel[gov]=11:drive|PRel[obj]=17:Powersport|Supersense=p.Goal
+16	Peachstate	Peachstate	PROPN	NNP	Number=Sing	17	compound	17:compound	MWECat=N|MWELemma=Peachstate Powersport|MWELen=2|MWEString=Peachstate Powersports|Supersense=n.GROUP
 17	Powersports	Powersport	PROPN	NNPS	Number=Plur	11	obl	11:obl:to	_
-18	in	in	ADP	IN	_	19	case	19:case	_
-19	LaGrange	LaGrange	PROPN	NNP	Number=Sing	17	nmod	17:nmod:in	SpaceAfter=No
+18	in	in	ADP	IN	_	19	case	19:case	PRel[config]=default|PRel[gov]=17:Powersport|PRel[obj]=19:LaGrange|Supersense=p.Locus
+19	LaGrange	LaGrange	PROPN	NNP	Number=Sing	17	nmod	17:nmod:in	SpaceAfter=No|Supersense=n.LOCATION
 20	,	,	PUNCT	,	_	21	punct	21:punct	_
-21	dealt	deal	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	11	conj	11:conj:and	_
+21	dealt	deal	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	11	conj	11:conj:and	MWECat=V.IAV|MWELemma=deal with|MWELen=2|MWEString=dealt with|Supersense=v.social
 22	with	with	ADP	IN	_	24	case	24:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
-24	owner	owner	NOUN	NN	Number=Sing	21	obl	21:obl:with	SpaceAfter=No
+24	owner	owner	NOUN	NN	Number=Sing	21	obl	21:obl:with	SpaceAfter=No|Supersense=n.PERSON
 25	,	,	PUNCT	,	_	26	punct	26:punct	_
-26	Levi	Levi	PROPN	NNP	Number=Sing	24	appos	24:appos	SpaceAfter=No
+26	Levi	Levi	PROPN	NNP	Number=Sing	24	appos	24:appos	SpaceAfter=No|Supersense=n.PERSON
 27	,	,	PUNCT	,	_	31	punct	31:punct	_
 28	and	and	CCONJ	CC	_	31	cc	31:cc	_
 29	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	31	aux:pass	31:aux:pass	_
 30	well	well	ADV	RB	Degree=Pos	31	advmod	31:advmod	_
-31	taken	take	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	11	conj	11:conj:and	_
+31	taken	take	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	11	conj	11:conj:and	MWECat=V.IAV|MWELemma=take care of|MWELen=3|MWEString=taken care of|Supersense=v.social
 32	care	care	NOUN	NN	Number=Sing	31	obj	31:obj	_
 33	of	of	ADP	IN	_	31	obl	31:obl	Promoted=Yes|SpaceAfter=No
 34	.	.	PUNCT	.	_	2	punct	2:punct	_

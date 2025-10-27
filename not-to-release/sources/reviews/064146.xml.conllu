@@ -3,12 +3,12 @@
 # newpar id = reviews-064146-p0001
 # text = Best Pizzas and Calzones in the City!
 1	Best	good	ADJ	JJS	Degree=Sup	2	amod	2:amod	_
-2	Pizzas	pizza	NOUN	NNS	Number=Plur	0	root	0:root	_
+2	Pizzas	pizza	NOUN	NNS	Number=Plur	0	root	0:root	Supersense=n.FOOD
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	Calzones	calzone	NOUN	NNS	Number=Plur	2	conj	2:conj:and	_
-5	in	in	ADP	IN	_	7	case	7:case	_
+4	Calzones	calzone	NOUN	NNS	Number=Plur	2	conj	2:conj:and	Supersense=n.FOOD
+5	in	in	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=2:pizza|PRel[obj]=7:city|Supersense=p.Locus
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	City	city	NOUN	NN	Number=Sing	2	nmod	2:nmod:in	SpaceAfter=No
+7	City	city	NOUN	NN	Number=Sing	2	nmod	2:nmod:in	SpaceAfter=No|Supersense=n.LOCATION
 8	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-064146-0002
@@ -16,20 +16,20 @@
 # text = What a hidden gem!
 1	What	what	DET	WDT	PronType=Int	4	det:predet	4:det:predet	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
-3	hidden	hidden	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	gem	gem	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+3	hidden	hidden	ADJ	JJ	Degree=Pos	4	amod	4:amod	MWELemma[weak]=hidden gem|MWELen[weak]=2
+4	gem	gem	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.GROUP
 5	!	!	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-064146-0003
 # text = The food is superb and they were delivered nice and hot!
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	food	food	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+2	food	food	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.FOOD
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 4	superb	superb	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	and	and	CCONJ	CC	_	8	cc	8:cc	_
 6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj:pass	8:nsubj:pass|9:nsubj|11:nsubj	_
 7	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	8:aux:pass	_
-8	delivered	deliver	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	conj	4:conj:and	_
+8	delivered	deliver	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	conj	4:conj:and	Supersense=v.motion
 9	nice	nice	ADJ	JJ	Degree=Pos	8	advcl	8:advcl	Depictive=Yes
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
 11	hot	hot	ADJ	JJ	Degree=Pos	9	conj	6:advcl|9:conj:and	SpaceAfter=No
@@ -38,9 +38,9 @@
 # sent_id = reviews-064146-0004
 # text = I highly recommend this place!
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-2	highly	highly	ADV	RB	_	3	advmod	3:advmod	_
-3	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	highly	highly	ADV	RB	_	3	advmod	3:advmod	MWELemma[weak]=highly recommend|MWELen[weak]=2
+3	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
-5	place	place	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
+5	place	place	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No|Supersense=n.GROUP
 6	!	!	PUNCT	.	_	3	punct	3:punct	_
 

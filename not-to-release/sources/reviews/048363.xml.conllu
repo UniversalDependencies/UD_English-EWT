@@ -3,38 +3,38 @@
 # newpar id = reviews-048363-p0001
 # text = Excellent Driving School
 1	Excellent	excellent	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-2	Driving	driving	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	School	school	NOUN	NN	Number=Sing	0	root	0:root	_
+2	Driving	driving	NOUN	NN	Number=Sing	3	compound	3:compound	Supersense=n.ACT
+3	School	school	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.GROUP
 
 # sent_id = reviews-048363-0002
 # newpar id = reviews-048363-p0002
 # text = I was involved in a car accident 20 years ago and since then I've been a nervous wreck and haven't been behind the wheel.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj:pass	3:nsubj:pass	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
-3	involved	involve	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
-4	in	in	ADP	IN	_	7	case	7:case	_
+3	involved	involve	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	MWELemma[weak]=involve in|MWELen[weak]=2|MWEString[weak]=involved in|Supersense=v.social
+4	in	in	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=3:involve|PRel[obj]=7:accident|Supersense=p.Circumstance
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
-6	car	car	NOUN	NN	Number=Sing	7	compound	7:compound	_
+6	car	car	NOUN	NN	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=car accident|MWELen=2|Supersense=n.EVENT
 7	accident	accident	NOUN	NN	Number=Sing	3	obl	3:obl:in	_
 8	20	20	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
-9	years	year	NOUN	NNS	Number=Plur	10	obl:unmarked	10:obl:unmarked	_
-10	ago	ago	ADV	RB	_	3	advmod	3:advmod	_
+9	years	year	NOUN	NNS	Number=Plur	10	obl:unmarked	10:obl:unmarked	Supersense=n.TIME
+10	ago	ago	ADV	RB	_	3	advmod	3:advmod	PRel[config]=default|PRel[gov]=3:involve|Supersense[coding]=p.Interval|Supersense[scene]=p.Time
 11	and	and	CCONJ	CC	_	19	cc	19:cc	_
-12	since	since	ADP	IN	_	13	case	13:case	_
+12	since	since	ADP	IN	_	13	case	13:case	PRel[config]=default|PRel[gov]=19:wreck|PRel[obj]=13:then|Supersense=p.StartTime
 13	then	then	ADV	RB	PronType=Dem	19	obl	19:obl:since	_
 14-15	I've	_	_	_	_	_	_	_	_
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj|26:nsubj	_
 15	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
-16	been	be	AUX	VBN	Tense=Past|VerbForm=Part	19	cop	19:cop	_
-17	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
+16	been	be	AUX	VBN	Tense=Past|VerbForm=Part	19	cop	19:cop	Supersense=v.stative
+17	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	MWECat=N|MWELemma=a nervous wreck|MWELen=3|Supersense=n.PERSON
 18	nervous	nervous	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
 19	wreck	wreck	NOUN	NN	Number=Sing	3	conj	3:conj:and	_
 20	and	and	CCONJ	CC	_	26	cc	26:cc	_
 21-22	haven't	_	_	_	_	_	_	_	_
 21	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	26	aux	26:aux	_
 22	n't	not	PART	RB	Polarity=Neg	26	advmod	26:advmod	_
-23	been	be	AUX	VBN	Tense=Past|VerbForm=Part	26	cop	26:cop	_
-24	behind	behind	ADP	IN	_	26	case	26:case	_
+23	been	be	AUX	VBN	Tense=Past|VerbForm=Part	26	cop	26:cop	Supersense=v.stative
+24	behind	behind	ADP	IN	_	26	case	26:case	MWECat=PP|MWELemma=behind the wheel|MWELen=3|PRel[config]=predicative|PRel[obj]=26:wheel|Supersense=p.Locus
 25	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	_
 26	wheel	wheel	NOUN	NN	Number=Sing	19	conj	19:conj:and	SpaceAfter=No
 27	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -44,14 +44,14 @@
 1	Unfortunately	unfortunately	ADV	RB	_	6	advmod	6:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-4	family	family	NOUN	NN	Number=Sing	5	compound	5:compound	_
+4	family	family	NOUN	NN	Number=Sing	5	compound	5:compound	MWECat=N|MWELemma=family emergency|MWELen=2|Supersense=n.EVENT
 5	emergency	emergency	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
-6	required	require	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+6	required	require	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
 7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	obj	6:obj|9:nsubj:xsubj	_
 8	to	to	PART	TO	_	9	mark	9:mark	_
-9	conquer	conquer	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
+9	conquer	conquer	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	Supersense=v.competition
 10	this	this	DET	DT	Number=Sing|PronType=Dem	11	det	11:det	_
-11	fear	fear	NOUN	NN	Number=Sing	9	obj	9:obj	SpaceAfter=No
+11	fear	fear	NOUN	NN	Number=Sing	9	obj	9:obj	SpaceAfter=No|Supersense=n.COGNITION
 12	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-048363-0004
@@ -59,47 +59,47 @@
 1	A	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 2	very	very	ADV	RB	_	3	advmod	3:advmod	_
 3	good	good	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	friend	friend	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
-5	of	of	ADP	IN	_	6	case	6:case	_
+4	friend	friend	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	Supersense=n.PERSON
+5	of	of	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:friend|PRel[obj]=6:my|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
 6	mine	my	PRON	PRP	Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod	4:nmod:of	_
-7	highly	highly	ADV	RB	_	8	advmod	8:advmod	_
-8	recommended	recommend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+7	highly	highly	ADV	RB	_	8	advmod	8:advmod	MWELemma[weak]=highly recommend|MWELen[weak]=2|MWEString[weak]=highly recommended
+8	recommended	recommend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-10	Professional	Professional	ADJ	NNP	Degree=Pos	12	amod	12:amod	_
+10	Professional	Professional	ADJ	NNP	Degree=Pos	12	amod	12:amod	MWECat=N|MWELemma=Professional Driving School|MWELen=3|Supersense=n.GROUP
 11	Driving	Driving	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 12	School	School	PROPN	NNP	Number=Sing	8	obj	8:obj	_
 13	and	and	CCONJ	CC	_	16	cc	16:cc	_
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj:pass	16:nsubj:pass|19:nsubj:xsubj	_
 15	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	16	aux:pass	16:aux:pass	_
-16	told	tell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	conj	8:conj:and	_
+16	told	tell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	conj	8:conj:and	Supersense=v.communication
 17	to	to	PART	TO	_	19	mark	19:mark	_
 18	specifically	specifically	ADV	RB	_	19	advmod	19:advmod	_
-19	ask	ask	VERB	VB	VerbForm=Inf	16	xcomp	16:xcomp	_
-20	for	for	ADP	IN	_	21	case	21:case	_
-21	Gerry	Gerry	PROPN	NNP	Number=Sing	19	obl	19:obl:for	SpaceAfter=No
+19	ask	ask	VERB	VB	VerbForm=Inf	16	xcomp	16:xcomp	MWELemma[weak]=ask for|MWELen[weak]=2|Supersense=v.communication
+20	for	for	ADP	IN	_	21	case	21:case	PRel[config]=default|PRel[gov]=19:ask|PRel[obj]=21:Gerry|Supersense=p.Theme
+21	Gerry	Gerry	PROPN	NNP	Number=Sing	19	obl	19:obl:for	SpaceAfter=No|Supersense=n.PERSON
 22	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-048363-0005
 # text = She highly recommended him and described him as the "Saintly Instructor and Simply the Best Instructor there is ....very calm, pleasant and very detailed in giving instructions".
 1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|6:nsubj	_
-2	highly	highly	ADV	RB	_	3	advmod	3:advmod	_
-3	recommended	recommend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	highly	highly	ADV	RB	_	3	advmod	3:advmod	MWELemma[weak]=highly recommend|MWELen[weak]=2|MWEString[weak]=highly recommended
+3	recommended	recommend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 4	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	obj	3:obj	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	described	describe	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
+6	described	describe	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	Supersense=v.communication
 7	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	obj	6:obj	_
-8	as	as	ADP	IN	_	12	case	12:case	_
+8	as	as	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=6:describe|PRel[obj]=12:instructor|Supersense=p.Identity
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 10	"	"	PUNCT	``	_	12	punct	12:punct	SpaceAfter=No
 11	Saintly	saintly	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	Instructor	instructor	NOUN	NN	Number=Sing	6	obl	6:obl:as	_
+12	Instructor	instructor	NOUN	NN	Number=Sing	6	obl	6:obl:as	Supersense=n.PERSON
 13	and	and	CCONJ	CC	_	17	cc	17:cc	_
 14	Simply	simply	ADV	RB	_	17	advmod	17:advmod	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
 16	Best	good	ADJ	JJS	Degree=Sup	17	amod	17:amod	_
-17	Instructor	instructor	NOUN	NN	Number=Sing	12	conj	6:obl:as|12:conj:and|19:obl	_
+17	Instructor	instructor	NOUN	NN	Number=Sing	12	conj	6:obl:as|12:conj:and|19:obl	Supersense=n.PERSON
 18	there	there	PRON	EX	PronType=Dem	19	expl	19:expl	_
-19	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	acl:relcl	17:acl:relcl	Cxn=rc-red-obl
+19	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	acl:relcl	17:acl:relcl	Cxn=rc-red-obl|Supersense=v.stative
 20	....	....	PUNCT	,	_	22	punct	22:punct	SpaceAfter=No
 21	very	very	ADV	RB	_	22	advmod	22:advmod	_
 22	calm	calm	ADJ	JJ	Degree=Pos	3	parataxis	3:parataxis	SpaceAfter=No
@@ -108,8 +108,8 @@
 25	and	and	CCONJ	CC	_	27	cc	27:cc	_
 26	very	very	ADV	RB	_	27	advmod	27:advmod	_
 27	detailed	detailed	ADJ	JJ	Degree=Pos	22	conj	22:conj:and	_
-28	in	in	SCONJ	IN	_	29	mark	29:mark	_
-29	giving	give	VERB	VBG	Tense=Pres|VerbForm=Part	27	advcl	27:advcl:in	_
+28	in	in	SCONJ	IN	_	29	mark	29:mark	PRel[config]=subordinating|PRel[gov]=27:detailed|PRel[obj]=29:give|Supersense=p.Circumstance
+29	giving	give	VERB	VBG	Tense=Pres|VerbForm=Part	27	advcl	27:advcl:in	MWECat=V.LVC.full|MWELemma=give instruction|MWELen=2|MWEString=giving instructions|Supersense=v.communication
 30	instructions	instruction	NOUN	NNS	Number=Plur	29	obj	29:obj	SpaceAfter=No
 31	"	"	PUNCT	''	_	22	punct	22:punct	SpaceAfter=No
 32	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -117,149 +117,149 @@
 # sent_id = reviews-048363-0006
 # text = I called the school most probably 10 times before I finally enrolled in a 20 hour package.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	school	school	NOUN	NN	Number=Sing	2	obj	2:obj	_
+4	school	school	NOUN	NN	Number=Sing	2	obj	2:obj	Supersense=n.GROUP
 5	most	most	ADV	RBS	Degree=Sup	6	advmod	6:advmod	_
 6	probably	probably	ADV	RB	_	2	advmod	2:advmod	_
 7	10	10	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
-8	times	time	NOUN	NNS	Number=Plur	2	obl:unmarked	2:obl:unmarked	TemporalNPAdjunct=Yes
-9	before	before	SCONJ	IN	_	12	mark	12:mark	_
+8	times	time	NOUN	NNS	Number=Plur	2	obl:unmarked	2:obl:unmarked	Supersense=n.EVENT|TemporalNPAdjunct=Yes
+9	before	before	SCONJ	IN	_	12	mark	12:mark	PRel[config]=subordinating|PRel[gov]=2:call|PRel[obj]=12:enrol|Supersense=p.Time
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
 11	finally	finally	ADV	RB	_	12	advmod	12:advmod	_
-12	enrolled	enrol	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	advcl	2:advcl:before	_
-13	in	in	ADP	IN	_	17	case	17:case	_
+12	enrolled	enrol	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	advcl	2:advcl:before	MWELemma[weak]=enrol in|MWELen[weak]=2|MWEString[weak]=enrolled in|Supersense=v.social
+13	in	in	ADP	IN	_	17	case	17:case	PRel[config]=default|PRel[gov]=12:enrol|PRel[obj]=17:package|Supersense[coding]=p.Locus|Supersense[scene]=p.Goal
 14	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
 15	20	20	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	_
-16	hour	hour	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	package	package	NOUN	NN	Number=Sing	12	obl	12:obl:in	SpaceAfter=No
+16	hour	hour	NOUN	NN	Number=Sing	17	compound	17:compound	Supersense=n.TIME
+17	package	package	NOUN	NN	Number=Sing	12	obl	12:obl:in	SpaceAfter=No|Supersense=n.ARTIFACT
 18	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-048363-0007
 # text = I had to cancel my initial lesson 4 times and on the 5th attempt the management was quick enough to associate my cancellations with my fear and finally encouraged me into taking my initial lesson.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|4:nsubj:xsubj	_
-2	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=AUX|MWELemma=have to|MWELen=2|MWEString=had to
 3	to	to	PART	TO	_	4	mark	4:mark	_
-4	cancel	cancel	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-5	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+4	cancel	cancel	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	Supersense=v.change
+5	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	PRel[config]=possessive|PRel[gov]=7:lesson|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Recipient
 6	initial	initial	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	lesson	lesson	NOUN	NN	Number=Sing	4	obj	4:obj	_
+7	lesson	lesson	NOUN	NN	Number=Sing	4	obj	4:obj	Supersense=n.EVENT
 8	4	4	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	_
-9	times	time	NOUN	NNS	Number=Plur	4	obl:unmarked	4:obl:unmarked	TemporalNPAdjunct=Yes
+9	times	time	NOUN	NNS	Number=Plur	4	obl:unmarked	4:obl:unmarked	Supersense=n.EVENT|TemporalNPAdjunct=Yes
 10	and	and	CCONJ	CC	_	18	cc	18:cc	_
-11	on	on	ADP	IN	_	14	case	14:case	_
+11	on	on	ADP	IN	_	14	case	14:case	PRel[config]=default|PRel[gov]=18:quick|PRel[obj]=14:attempt|Supersense=p.Time
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	5th	5th	ADJ	JJ	Degree=Pos|NumForm=Combi|NumType=Ord	14	amod	14:amod	_
-14	attempt	attempt	NOUN	NN	Number=Sing	18	obl	18:obl:on	_
+14	attempt	attempt	NOUN	NN	Number=Sing	18	obl	18:obl:on	Supersense=n.ACT
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	management	management	NOUN	NN	Number=Sing	18	nsubj	18:nsubj|29:nsubj	_
-17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	18:cop	_
+16	management	management	NOUN	NN	Number=Sing	18	nsubj	18:nsubj|29:nsubj	Supersense=n.GROUP
+17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	18:cop	Supersense=v.stative
 18	quick	quick	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	_
 19	enough	enough	ADV	RB	_	18	advmod	18:advmod	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
-21	associate	associate	VERB	VB	VerbForm=Inf	18	advcl	18:advcl:to	_
-22	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	_
-23	cancellations	cancellation	NOUN	NNS	Number=Plur	21	obj	21:obj	_
-24	with	with	ADP	IN	_	26	case	26:case	_
-25	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
-26	fear	fear	NOUN	NN	Number=Sing	21	obl	21:obl:with	_
+21	associate	associate	VERB	VB	VerbForm=Inf	18	advcl	18:advcl:to	Supersense=v.cognition
+22	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	PRel[config]=possessive|PRel[gov]=23:cancellation|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Agent
+23	cancellations	cancellation	NOUN	NNS	Number=Plur	21	obj	21:obj	Supersense=n.ACT
+24	with	with	ADP	IN	_	26	case	26:case	PRel[config]=default|PRel[gov]=21:associate|PRel[obj]=26:fear|Supersense[coding]=p.Ancillary|Supersense[scene]=p.Theme
+25	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	PRel[config]=possessive|PRel[gov]=26:fear|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Experiencer
+26	fear	fear	NOUN	NN	Number=Sing	21	obl	21:obl:with	Supersense=n.ATTRIBUTE
 27	and	and	CCONJ	CC	_	29	cc	29:cc	_
 28	finally	finally	ADV	RB	_	29	advmod	29:advmod	_
-29	encouraged	encourage	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	conj	18:conj:and	_
+29	encouraged	encourage	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	conj	18:conj:and	Supersense=v.communication
 30	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	29	obj	29:obj	_
-31	into	into	SCONJ	IN	_	32	mark	32:mark	_
-32	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	29	advcl	29:advcl:into	_
-33	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	35	nmod:poss	35:nmod:poss	_
+31	into	into	SCONJ	IN	_	32	mark	32:mark	PRel[config]=subordinating|PRel[gov]=29:encourage|PRel[obj]=32:take|Supersense=p.Goal
+32	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	29	advcl	29:advcl:into	Supersense=v.social
+33	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	35	nmod:poss	35:nmod:poss	PRel[config]=possessive|PRel[gov]=35:lesson|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Recipient
 34	initial	initial	ADJ	JJ	Degree=Pos	35	amod	35:amod	_
-35	lesson	lesson	NOUN	NN	Number=Sing	32	obj	32:obj	SpaceAfter=No
+35	lesson	lesson	NOUN	NN	Number=Sing	32	obj	32:obj	SpaceAfter=No|Supersense=n.COGNITION
 36	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-048363-0008
 # text = Five minutes before my initial lesson, I got a call from Gerry advising me of his arrival and to come down as soon as I was ready.
 1	Five	five	NUM	CD	NumForm=Word|NumType=Card	2	nummod	2:nummod	_
-2	minutes	minute	NOUN	NNS	Number=Plur	6	nmod:unmarked	6:nmod:unmarked	_
-3	before	before	ADP	IN	_	6	case	6:case	_
-4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
+2	minutes	minute	NOUN	NNS	Number=Plur	6	nmod:unmarked	6:nmod:unmarked	Supersense=n.TIME
+3	before	before	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=9:get|PRel[obj]=6:lesson|Supersense=p.Time
+4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	PRel[config]=possessive|PRel[gov]=6:lesson|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Recipient
 5	initial	initial	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	lesson	lesson	NOUN	NN	Number=Sing	9	obl	9:obl:before	SpaceAfter=No
+6	lesson	lesson	NOUN	NN	Number=Sing	9	obl	9:obl:before	SpaceAfter=No|Supersense=n.COGNITION
 7	,	,	PUNCT	,	_	6	punct	6:punct	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-9	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+9	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=V.LVC.full|MWELemma=get <1> call|MWELen=3|MWEString=got <1> call|Supersense=v.communication
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 11	call	call	NOUN	NN	Number=Sing	9	obj	9:obj	_
-12	from	from	ADP	IN	_	13	case	13:case	_
-13	Gerry	Gerry	PROPN	NNP	Number=Sing	11	nmod	11:nmod:from	_
-14	advising	advise	VERB	VBG	VerbForm=Ger	11	acl	11:acl	_
+12	from	from	ADP	IN	_	13	case	13:case	PRel[config]=default|PRel[gov]=11:call|PRel[obj]=13:Gerry|Supersense[coding]=p.Source|Supersense[scene]=p.Originator
+13	Gerry	Gerry	PROPN	NNP	Number=Sing	11	nmod	11:nmod:from	Supersense=n.PERSON
+14	advising	advise	VERB	VBG	VerbForm=Ger	11	acl	11:acl	Supersense=v.communication
 15	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	14	iobj	14:iobj	_
-16	of	of	ADP	IN	_	18	case	18:case	_
-17	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
-18	arrival	arrival	NOUN	NN	Number=Sing	14	obl	14:obl:of	_
+16	of	of	ADP	IN	_	18	case	18:case	PRel[config]=default|PRel[gov]=14:advise|PRel[obj]=18:arrival|Supersense=p.Topic
+17	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	PRel[config]=possessive|PRel[gov]=18:arrival|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Agent
+18	arrival	arrival	NOUN	NN	Number=Sing	14	obl	14:obl:of	Supersense=n.EVENT
 19	and	and	CCONJ	CC	_	21	cc	21:cc	_
 20	to	to	PART	TO	_	21	mark	21:mark	_
-21	come	come	VERB	VB	VerbForm=Inf	14	conj	11:acl:to|14:conj:and	_
+21	come	come	VERB	VB	VerbForm=Inf	14	conj	11:acl:to|14:conj:and	MWECat=V.VPC.semi|MWELemma=come down|MWELen=2|Supersense=v.motion
 22	down	down	ADV	RB	_	21	advmod	21:advmod	_
-23	as	as	ADV	RB	_	24	advmod	24:advmod	_
+23	as	as	ADV	RB	_	24	advmod	24:advmod	MWECat=P|MWELemma=as soon as|MWELen=3|PRel[config]=default|PRel[gov]=21:come|PRel[obj]=24:soon|Supersense=p.Time
 24	soon	soon	ADV	RB	Degree=Pos	21	advmod	21:advmod	_
 25	as	as	SCONJ	IN	_	28	mark	28:mark	_
 26	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	28	nsubj	28:nsubj	_
-27	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	cop	28:cop	_
+27	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	cop	28:cop	Supersense=v.stative
 28	ready	ready	ADJ	JJ	Degree=Pos	24	advcl	24:advcl:as	SpaceAfter=No
 29	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = reviews-048363-0009
 # text = My heart pounded as I walked down and pounded even faster upon seeing Gerry in an SUV - Lexus!
-1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	heart	heart	NOUN	NN	Number=Sing	3	nsubj	3:nsubj|9:nsubj	_
-3	pounded	pound	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	as	as	SCONJ	IN	_	6	mark	6:mark	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	PRel[config]=possessive|PRel[gov]=2:heart|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
+2	heart	heart	NOUN	NN	Number=Sing	3	nsubj	3:nsubj|9:nsubj	MWELemma[weak]=heart pound|MWELen[weak]=2|MWEString[weak]=heart pounded|Supersense=n.BODY
+3	pounded	pound	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.body
+4	as	as	SCONJ	IN	_	6	mark	6:mark	PRel[config]=subordinating|PRel[gov]=3:pound|PRel[obj]=6:walk|Supersense=p.Circumstance
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
-6	walked	walk	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	advcl	3:advcl:as	_
-7	down	down	ADV	RB	_	6	advmod	6:advmod	_
+6	walked	walk	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	advcl	3:advcl:as	Supersense=v.motion
+7	down	down	ADV	RB	_	6	advmod	6:advmod	PRel[config]=default|PRel[gov]=6:walk|Supersense=p.Direction
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	pounded	pound	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
+9	pounded	pound	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	Supersense=v.body
 10	even	even	ADV	RB	_	11	advmod	11:advmod	_
 11	faster	fast	ADV	RBR	Degree=Cmp	9	advmod	9:advmod	_
-12	upon	upon	SCONJ	IN	_	13	mark	13:mark	_
-13	seeing	see	VERB	VBG	Tense=Pres|VerbForm=Part	9	advcl	9:advcl:upon	_
-14	Gerry	Gerry	PROPN	NNP	Number=Sing	13	obj	13:obj	_
-15	in	in	ADP	IN	_	17	case	17:case	_
+12	upon	upon	SCONJ	IN	_	13	mark	13:mark	PRel[config]=subordinating|PRel[gov]=9:pound|PRel[obj]=13:see|Supersense=p.Time
+13	seeing	see	VERB	VBG	Tense=Pres|VerbForm=Part	9	advcl	9:advcl:upon	Supersense=v.perception
+14	Gerry	Gerry	PROPN	NNP	Number=Sing	13	obj	13:obj	Supersense=n.PERSON
+15	in	in	ADP	IN	_	17	case	17:case	PRel[config]=default|PRel[gov]=13:see|PRel[obj]=17:SUV|Supersense=p.Locus
 16	an	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
-17	SUV	SUV	PROPN	NNP	Number=Sing	13	obl	13:obl:in	_
+17	SUV	SUV	PROPN	NNP	Number=Sing	13	obl	13:obl:in	Supersense=n.ARTIFACT
 18	-	-	PUNCT	,	_	19	punct	19:punct	_
-19	Lexus	Lexus	PROPN	NNP	Number=Sing	17	appos	17:appos	SpaceAfter=No
+19	Lexus	Lexus	PROPN	NNP	Number=Sing	17	appos	17:appos	SpaceAfter=No|Supersense=n.ARTIFACT
 20	!	!	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-048363-0010
 # text = I thought of canceling the lesson once again because I didn't feel comfortable driving an SUV.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	thought	think	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	of	of	SCONJ	IN	_	4	mark	4:mark	_
-4	canceling	cancel	VERB	VBG	Tense=Pres|VerbForm=Part	2	advcl	2:advcl:of	_
+2	thought	think	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	MWELemma[weak]=think of|MWELen[weak]=2|MWEString[weak]=thought of|Supersense=v.cognition
+3	of	of	SCONJ	IN	_	4	mark	4:mark	PRel[config]=subordinating|PRel[gov]=2:think|PRel[obj]=4:cancel|Supersense=p.Topic
+4	canceling	cancel	VERB	VBG	Tense=Pres|VerbForm=Part	2	advcl	2:advcl:of	Supersense=v.social
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	lesson	lesson	NOUN	NN	Number=Sing	4	obj	4:obj	_
-7	once	once	ADV	RB	NumForm=Word|NumType=Mult	8	advmod	8:advmod	_
+6	lesson	lesson	NOUN	NN	Number=Sing	4	obj	4:obj	Supersense=n.EVENT
+7	once	once	ADV	RB	NumForm=Word|NumType=Mult	8	advmod	8:advmod	MWECat=ADV|MWELemma=once again|MWELen=2
 8	again	again	ADV	RB	_	4	advmod	4:advmod	_
 9	because	because	SCONJ	IN	_	13	mark	13:mark	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj|14:nsubj:xsubj	_
 11-12	didn't	_	_	_	_	_	_	_	_
 11	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
 12	n't	not	PART	RB	Polarity=Neg	13	advmod	13:advmod	_
-13	feel	feel	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:because	_
+13	feel	feel	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:because	Supersense=v.cognition
 14	comfortable	comfortable	ADJ	JJ	Degree=Pos	13	xcomp	13:xcomp	_
-15	driving	drive	VERB	VBG	Tense=Pres|VerbForm=Part	14	advcl	14:advcl	_
+15	driving	drive	VERB	VBG	Tense=Pres|VerbForm=Part	14	advcl	14:advcl	Supersense=v.motion
 16	an	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	_
-17	SUV	suv	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No
+17	SUV	suv	NOUN	NN	Number=Sing	15	obj	15:obj	SpaceAfter=No|Supersense=n.ARTIFACT
 18	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-048363-0011
 # text = Gerry pleasantly said " since I am already here why don't we give it shot.
-1	Gerry	Gerry	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	_
+1	Gerry	Gerry	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Supersense=n.PERSON
 2	pleasantly	pleasantly	ADV	RB	_	3	advmod	3:advmod	_
-3	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+3	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 4	"	"	PUNCT	``	_	14	punct	14:punct	_
-5	since	since	SCONJ	IN	_	9	mark	9:mark	_
+5	since	since	SCONJ	IN	_	9	mark	9:mark	PRel[config]=subordinating|PRel[gov]=14:give|PRel[obj]=7:be|Supersense=p.Explanation
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-7	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
+7	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	9	cop	9:cop	Supersense=v.stative
 8	already	already	ADV	RB	_	9	advmod	9:advmod	_
 9	here	here	ADV	RB	PronType=Dem	14	advcl	14:advcl:since	_
 10	why	why	ADV	WRB	PronType=Int	14	advmod	14:advmod	CxnElt=14:Interrogative-WHInfo-Indirect.WHWord
@@ -267,7 +267,7 @@
 11	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
 12	n't	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
 13	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
-14	give	give	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=14:Interrogative-WHInfo-Indirect.Clause
+14	give	give	VERB	VB	VerbForm=Inf	3	ccomp	3:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=14:Interrogative-WHInfo-Indirect.Clause|MWECat=V.VID|MWELemma=give it shot|MWELen=3|Supersense=v.social
 15	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	iobj	14:iobj	_
 16	shot	shot	NOUN	NN	Number=Sing	14	obj	14:obj	SpaceAfter=No
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -275,40 +275,40 @@
 # sent_id = reviews-048363-0012
 # text = I trust you and believe that you'll be able to handle this and all you have to do is to reciprocate!
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|5:nsubj	_
-2	trust	trust	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	trust	trust	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
 3	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	2	iobj	2:iobj	_
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
-5	believe	believe	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
+5	believe	believe	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	Supersense=v.cognition
 6	that	that	SCONJ	IN	_	10	mark	10:mark	_
 7-8	you'll	_	_	_	_	_	_	_	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj|12:nsubj:xsubj	_
 8	'll	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
-9	be	be	AUX	VB	VerbForm=Inf	10	cop	10:cop	_
+9	be	be	AUX	VB	VerbForm=Inf	10	cop	10:cop	Supersense=v.stative
 10	able	able	ADJ	JJ	Degree=Pos	5	ccomp	5:ccomp	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	handle	handle	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
+12	handle	handle	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	Supersense=v.social
 13	this	this	PRON	DT	Number=Sing|PronType=Dem	12	obj	12:obj	_
 14	and	and	CCONJ	CC	_	22	cc	22:cc	_
-15	all	all	DET	DT	PronType=Tot	22	nsubj:outer	17:obj|22:nsubj:outer	_
+15	all	all	DET	DT	PronType=Tot	22	nsubj:outer	17:obj|22:nsubj:outer	MWELemma[weak]=all <1> have to do be|MWELen[weak]=6|MWEString[weak]=all <1> have to do is
 16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	17:nsubj|19:nsubj:xsubj	_
-17	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	acl:relcl	15:acl:relcl	Cxn=rc-red-obj
+17	have	have	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	acl:relcl	15:acl:relcl	Cxn=rc-red-obj|MWECat=AUX|MWELemma=have to|MWELen=2
 18	to	to	PART	TO	_	19	mark	19:mark	_
-19	do	do	VERB	VB	VerbForm=Inf	17	xcomp	17:xcomp	_
-20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
+19	do	do	VERB	VB	VerbForm=Inf	17	xcomp	17:xcomp	Supersense=v.change
+20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	Supersense=v.stative
 21	to	to	PART	TO	_	22	mark	22:mark	_
-22	reciprocate	reciprocate	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	SpaceAfter=No
+22	reciprocate	reciprocate	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	SpaceAfter=No|Supersense=v.social
 23	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-048363-0013
 # text = Trust me and most especially trust and believe in yourself.
-1	Trust	trust	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+1	Trust	trust	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	MWELemma[weak]=trust I|MWELen[weak]=2|MWEString[weak]=Trust me|Supersense=v.emotion
 2	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	iobj	1:iobj	_
 3	and	and	CCONJ	CC	_	6	cc	6:cc	_
 4	most	most	ADV	RBS	Degree=Sup	5	advmod	5:advmod	_
 5	especially	especially	ADV	RB	_	6	advmod	6:advmod	_
-6	trust	trust	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
+6	trust	trust	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	Supersense=v.emotion
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	believe	believe	VERB	VB	Mood=Imp|VerbForm=Fin	6	conj	6:conj:and	_
+8	believe	believe	VERB	VB	Mood=Imp|VerbForm=Fin	6	conj	6:conj:and	MWECat=V.IAV|MWELemma=believe in|MWELemma[weak]=believe in yourself|MWELen=2|MWELen[weak]=3|Supersense=v.emotion
 9	in	in	ADP	IN	_	8	obl	10:case	Promoted=Yes
 10	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	6	iobj	6:iobj|8:obl:in	SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -318,12 +318,12 @@
 1-2	Don't	_	_	_	_	_	_	_	_
 1	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	3	aux	3:aux	_
 2	n't	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
-3	worry	worry	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+3	worry	worry	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	SpaceAfter=No|Supersense=v.emotion
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5-6	I'll	_	_	_	_	_	_	_	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
 6	'll	will	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
-7	take	take	VERB	VB	VerbForm=Inf	3	parataxis	3:parataxis	_
+7	take	take	VERB	VB	VerbForm=Inf	3	parataxis	3:parataxis	MWECat=V.IAV|MWELemma=take care of|MWELen=3|Supersense=v.social
 8	care	care	NOUN	NN	Number=Sing	7	obj	7:obj	_
 9	of	of	ADP	IN	_	10	case	10:case	_
 10	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	7	obl	7:obl:of	SpaceAfter=No
@@ -333,7 +333,7 @@
 # sent_id = reviews-048363-0015
 # text = ....... the rest was history!
 1	.......	.......	PUNCT	,	_	5	punct	5:punct	_
-2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	MWECat=DISC|MWELemma=the rest be history|MWELen=4|MWEString=the rest was history
 3	rest	rest	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
 4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
 5	history	history	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
@@ -343,72 +343,72 @@
 # text = Here I am now driving confidently on my own.
 1	Here	here	ADV	RB	PronType=Dem	0	root	0:root	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	1	nsubj	1:nsubj	_
-3	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
+3	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	1	cop	1:cop	Supersense=v.stative
 4	now	now	ADV	RB	PronType=Dem	1	advmod	1:advmod	_
-5	driving	drive	VERB	VBG	Tense=Pres|VerbForm=Part	1	advcl	1:advcl	_
+5	driving	drive	VERB	VBG	Tense=Pres|VerbForm=Part	1	advcl	1:advcl	Supersense=v.motion
 6	confidently	confidently	ADV	RB	_	5	advmod	5:advmod	_
-7	on	on	ADP	IN	_	9	case	9:case	_
-8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
+7	on	on	ADP	IN	_	9	case	9:case	MWECat=PP|MWELemma=on <1> own|MWELen=3|PRel[config]=default|PRel[gov]=5:drive|PRel[obj]=9:own|Supersense=p.Manner
+8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:own|Supersense=`$
 9	own	own	ADJ	JJ	Degree=Pos	5	obl	5:obl:on	SpaceAfter=No
 10	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-048363-0017
 # text = Gerry, I can't thank you enough for helping me cope with my fear.
-1	Gerry	Gerry	PROPN	NNP	Number=Sing	6	vocative	6:vocative	SpaceAfter=No
+1	Gerry	Gerry	PROPN	NNP	Number=Sing	6	vocative	6:vocative	SpaceAfter=No|Supersense=n.PERSON
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
 4-5	can't	_	_	_	_	_	_	_	_
-4	ca	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
+4	ca	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	MWELemma[weak]=can not thank <1> enough|MWELen[weak]=5|MWEString[weak]=ca n't thank <1> enough
 5	n't	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	_
-6	thank	thank	VERB	VB	VerbForm=Inf	0	root	0:root	_
+6	thank	thank	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
 7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	obj	6:obj	_
 8	enough	enough	ADV	RB	_	6	advmod	6:advmod	_
-9	for	for	SCONJ	IN	_	10	mark	10:mark	_
-10	helping	help	VERB	VBG	Tense=Pres|VerbForm=Part	6	advcl	6:advcl:for	_
+9	for	for	SCONJ	IN	_	10	mark	10:mark	PRel[config]=subordinating|PRel[gov]=6:thank|PRel[obj]=10:help|Supersense=p.Explanation
+10	helping	help	VERB	VBG	Tense=Pres|VerbForm=Part	6	advcl	6:advcl:for	Supersense=v.social
 11	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	10	obj	10:obj|12:nsubj:xsubj	_
-12	cope	cope	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
-13	with	with	ADP	IN	_	15	case	15:case	_
-14	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
-15	fear	fear	NOUN	NN	Number=Sing	12	obl	12:obl:with	SpaceAfter=No
+12	cope	cope	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	MWELemma[weak]=cope with|MWELen[weak]=2|Supersense=v.emotion
+13	with	with	ADP	IN	_	15	case	15:case	PRel[config]=default|PRel[gov]=12:cope|PRel[obj]=15:fear|Supersense=p.Theme
+14	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	PRel[config]=possessive|PRel[gov]=15:fear|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Experiencer
+15	fear	fear	NOUN	NN	Number=Sing	12	obl	12:obl:with	SpaceAfter=No|Supersense=n.COGNITION
 16	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-048363-0018
 # text = To my friend, thank you for your recommendation... you were true to your words in saying Gerry is a "Saintly Instructor ...Absolutely Simple the Best Instructor and Best Driving school there is!
-1	To	to	ADP	IN	_	3	case	3:case	_
-2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	friend	friend	NOUN	NN	Number=Sing	5	obl	5:obl:to	SpaceAfter=No
+1	To	to	ADP	IN	_	3	case	3:case	PRel[config]=default|PRel[gov]=5:thank|PRel[obj]=3:friend|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
+2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	PRel[config]=possessive|PRel[gov]=3:friend|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+3	friend	friend	NOUN	NN	Number=Sing	5	obl	5:obl:to	SpaceAfter=No|Supersense=n.PERSON
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
-5	thank	thank	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+5	thank	thank	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	MWECat=DISC|MWELemma=thank you|MWELen=2
 6	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	5	obj	5:obj	_
-7	for	for	ADP	IN	_	9	case	9:case	_
-8	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	recommendation	recommendation	NOUN	NN	Number=Sing	5	obl	5:obl:for	SpaceAfter=No
+7	for	for	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=5:thank|PRel[obj]=9:recommendation|Supersense=p.Explanation
+8	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:recommendation|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Originator
+9	recommendation	recommendation	NOUN	NN	Number=Sing	5	obl	5:obl:for	SpaceAfter=No|Supersense=n.COGNITION
 10	...	...	PUNCT	,	_	13	punct	13:punct	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	13:nsubj	_
-12	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	13	cop	13:cop	_
-13	true	true	ADJ	JJ	Degree=Pos	9	parataxis	9:parataxis	_
+12	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	13	cop	13:cop	Supersense=v.stative
+13	true	true	ADJ	JJ	Degree=Pos	9	parataxis	9:parataxis	MWECat=ADJ|MWELemma=true to <1> word|MWELen=4|MWEString=true to <1> words
 14	to	to	ADP	IN	_	16	case	16:case	_
-15	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
+15	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	PRel[config]=possessive|PRel[gov]=16:word|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Originator
 16	words	word	NOUN	NNS	Number=Plur	13	obl	13:obl:to	_
-17	in	in	SCONJ	IN	_	18	mark	18:mark	_
-18	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	13	advcl	13:advcl:in	_
-19	Gerry	Gerry	PROPN	NNP	Number=Sing	24	nsubj	24:nsubj	_
-20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	_
+17	in	in	SCONJ	IN	_	18	mark	18:mark	PRel[config]=subordinating|PRel[gov]=13:true|PRel[obj]=18:say|Supersense=p.Circumstance
+18	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	13	advcl	13:advcl:in	Supersense=v.communication
+19	Gerry	Gerry	PROPN	NNP	Number=Sing	24	nsubj	24:nsubj	Supersense=n.PERSON
+20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	Supersense=v.stative
 21	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	24:det	_
 22	"	"	PUNCT	``	_	21	punct	21:punct	SpaceAfter=No
 23	Saintly	saintly	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-24	Instructor	instructor	NOUN	NN	Number=Sing	18	ccomp	18:ccomp	_
+24	Instructor	instructor	NOUN	NN	Number=Sing	18	ccomp	18:ccomp	Supersense=n.PERSON
 25	...	...	PUNCT	,	_	30	punct	30:punct	SpaceAfter=No
 26	Absolutely	absolutely	ADV	RB	_	27	advmod	27:advmod	_
 27	Simple	simply	ADV	RB	Typo=Yes	30	advmod	30:advmod	CorrectForm=simply
 28	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	_
 29	Best	good	ADJ	JJS	Degree=Sup	30	amod	30:amod	_
-30	Instructor	instructor	NOUN	NN	Number=Sing	5	parataxis	5:parataxis|36:obl	_
+30	Instructor	instructor	NOUN	NN	Number=Sing	5	parataxis	5:parataxis|36:obl	Supersense=n.PERSON
 31	and	and	CCONJ	CC	_	34	cc	34:cc	_
 32	Best	good	ADJ	JJS	Degree=Sup	34	amod	34:amod	_
-33	Driving	driving	NOUN	NN	Number=Sing	34	compound	34:compound	_
-34	school	school	NOUN	NN	Number=Sing	30	conj	30:conj:and	_
+33	Driving	driving	NOUN	NN	Number=Sing	34	compound	34:compound	Supersense=n.ACT
+34	school	school	NOUN	NN	Number=Sing	30	conj	30:conj:and	Supersense=n.GROUP
 35	there	there	PRON	EX	PronType=Dem	36	expl	36:expl	_
-36	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	acl:relcl	30:acl:relcl	Cxn=rc-red-obl|SpaceAfter=No
+36	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	acl:relcl	30:acl:relcl	Cxn=rc-red-obl|SpaceAfter=No|Supersense=v.stative
 37	!	!	PUNCT	.	_	30	punct	30:punct	_
 

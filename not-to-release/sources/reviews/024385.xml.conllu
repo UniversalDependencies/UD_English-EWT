@@ -4,8 +4,8 @@
 # text = Another great business bites the dust!
 1	Another	another	DET	DT	PronType=Ind	3	det	3:det	_
 2	great	great	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	business	business	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-4	bites	bite	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	business	business	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.GROUP
+4	bites	bite	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	MWECat=V.VID|MWELemma=bite the dust|MWELen=3|MWEString=bites the dust|Supersense=v.change
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 6	dust	dust	NOUN	NN	Number=Sing	4	obj	4:obj	SpaceAfter=No
 7	!	!	PUNCT	.	_	4	punct	4:punct	_
@@ -15,13 +15,13 @@
 # text = The best cakes EVER!
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
 2	best	good	ADJ	JJS	Degree=Sup	3	amod	3:amod	_
-3	cakes	cake	NOUN	NNS	Number=Plur	0	root	0:root	_
+3	cakes	cake	NOUN	NNS	Number=Plur	0	root	0:root	Supersense=n.FOOD
 4	EVER	ever	ADV	RB	PronType=Ind	3	advmod	3:advmod	SpaceAfter=No
 5	!	!	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-024385-0003
 # text = A bit pricey, so I didn't go very often, but it was always a treat when I did.
-1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	_
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	MWECat=DET|MWELemma=a bit|MWELen=2
 2	bit	bit	NOUN	NN	Number=Sing	0	root	0:root	_
 3	pricey	pricey	ADJ	JJ	Degree=Pos	2	amod	2:amod	SpaceAfter=No
 4	,	,	PUNCT	,	_	9	punct	9:punct	_
@@ -30,15 +30,15 @@
 7-8	didn't	_	_	_	_	_	_	_	_
 7	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	9	aux	9:aux	_
 8	n't	not	PART	RB	Polarity=Neg	9	advmod	9:advmod	_
-9	go	go	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	_
+9	go	go	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis	Supersense=v.motion
 10	very	very	ADV	RB	_	11	advmod	11:advmod	_
 11	often	often	ADV	RB	_	9	advmod	9:advmod	SpaceAfter=No
 12	,	,	PUNCT	,	_	18	punct	18:punct	_
 13	but	but	CCONJ	CC	_	18	cc	18:cc	_
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
-15	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	18:cop	_
+15	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	18:cop	Supersense=v.stative
 16	always	always	ADV	RB	PronType=Tot	18	advmod	18:advmod	_
-17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
+17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	MWECat=N|MWELemma=a treat|MWELen=2|Supersense=n.COGNITION
 18	treat	treat	NOUN	NN	Number=Sing	2	conj	2:conj:but	_
 19	when	when	ADV	WRB	PronType=Int	21	advmod	21:advmod	_
 20	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	21	nsubj	21:nsubj	_
@@ -48,12 +48,12 @@
 # sent_id = reviews-024385-0004
 # text = The prices were worth what I got.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	prices	price	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	_
-3	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
+2	prices	price	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	Supersense=n.POSSESSION
+3	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 4	worth	worth	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	what	what	PRON	WP	PronType=Rel	4	obj	4:obj|7:obj	_
 6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
-7	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-free-obj|SpaceAfter=No
+7	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-free-obj|SpaceAfter=No|Supersense=v.possession
 8	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-024385-0005
@@ -61,21 +61,21 @@
 1-2	I'm	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	assuming	assume	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+3	assuming	assume	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Supersense=v.cognition
 4	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
-5	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
+5	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	Supersense=v.stative
 6	completely	completely	ADV	RB	_	9	advmod	9:advmod	_
-7	out	out	ADP	IN	_	9	case	9:case	_
+7	out	out	ADP	IN	_	9	case	9:case	MWECat=PP|MWELemma=out of business|MWELen=3|PRel[config]=predicative|PRel[gov]=4:they|PRel[obj]=9:business|Supersense[coding]=p.Locus|Supersense[scene]=p.Characteristic
 8	of	of	ADP	IN	_	9	case	9:case	_
 9	business	business	NOUN	NN	Number=Sing	3	ccomp	3:ccomp	_
-10	since	since	SCONJ	IN	_	14	mark	14:mark	_
+10	since	since	SCONJ	IN	_	14	mark	14:mark	PRel[config]=subordinating|PRel[gov]=3:assume|PRel[obj]=14:find|Supersense=p.Explanation
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	14:nsubj	_
 12-13	can't	_	_	_	_	_	_	_	_
 12	ca	can	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
 13	n't	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
-14	find	find	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:since	_
+14	find	find	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:since	Supersense=v.cognition
 15	any	any	DET	DT	PronType=Ind	17	det	17:det	_
-16	contact	contact	NOUN	NN	Number=Sing	17	compound	17:compound	_
+16	contact	contact	NOUN	NN	Number=Sing	17	compound	17:compound	MWECat=N|MWELemma=contact information|MWELen=2|Supersense=n.COMMUNICATION
 17	information	information	NOUN	NN	Number=Sing	14	obj	14:obj	SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -84,31 +84,31 @@
 1-2	I'm	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	hoping	hope	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+3	hoping	hope	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Supersense=v.emotion
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	bakers	baker	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj|8:nsubj:xsubj	_
-6	continue	continue	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
+5	bakers	baker	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj|8:nsubj:xsubj	Supersense=n.PERSON
+6	continue	continue	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	Supersense=v.stative
 7	to	to	PART	TO	_	8	mark	8:mark	_
-8	do	do	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
-9	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	baking	baking	NOUN	NN	Number=Sing	8	obj	8:obj	_
-11	out	out	ADP	IN	_	14	case	14:case	_
+8	do	do	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	Supersense=v.stative
+9	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	PRel[config]=possessive|PRel[gov]=10:baking|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Agent
+10	baking	baking	NOUN	NN	Number=Sing	8	obj	8:obj	Supersense=n.ACT
+11	out	out	ADP	IN	_	14	case	14:case	MWECat=P|MWELemma=out of|MWELen=2|PRel[config]=default|PRel[gov]=8:do|PRel[obj]=14:place|Supersense[coding]=p.Source|Supersense[scene]=p.Locus
 12	of	of	ADP	IN	_	14	case	14:case	_
 13	another	another	DET	DT	PronType=Ind	14	det	14:det	_
-14	place	place	NOUN	NN	Number=Sing	8	obl	8:obl:of	SpaceAfter=No
+14	place	place	NOUN	NN	Number=Sing	8	obl	8:obl:of	SpaceAfter=No|Supersense=n.GROUP
 15	,	,	PUNCT	,	_	21	punct	21:punct	_
 16	because	because	SCONJ	IN	_	21	mark	21:mark	_
 17	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	21	expl	21:expl	_
 18	would	would	AUX	MD	VerbForm=Fin	21	aux	21:aux	_
-19	be	be	AUX	VB	VerbForm=Inf	21	cop	21:cop	_
-20	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	_
+19	be	be	AUX	VB	VerbForm=Inf	21	cop	21:cop	Supersense=v.stative
+20	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	MWECat=N|MWELemma=a shame|MWELen=2|Supersense=n.COGNITION
 21	shame	shame	NOUN	NN	Number=Sing	3	advcl	3:advcl:because	_
 22	not	not	PART	RB	Polarity=Neg	24	advmod	24:advmod	_
 23	to	to	PART	TO	_	24	mark	24:mark	_
-24	have	have	VERB	VB	VerbForm=Inf	21	csubj	21:csubj	_
+24	have	have	VERB	VB	VerbForm=Inf	21	csubj	21:csubj	Supersense=v.stative
 25	these	this	DET	DT	Number=Plur|PronType=Dem	26	det	26:det	_
-26	cakes	cake	NOUN	NNS	Number=Plur	24	obj	24:obj	_
-27	any	any	ADV	RB	_	28	advmod	28:advmod	_
+26	cakes	cake	NOUN	NNS	Number=Plur	24	obj	24:obj	Supersense=n.FOOD
+27	any	any	ADV	RB	_	28	advmod	28:advmod	MWECat=ADV|MWELemma=any long|MWELen=2|MWEString=any longer
 28	longer	long	ADV	RBR	Degree=Cmp	24	advmod	24:advmod	SpaceAfter=No
 29	.	.	PUNCT	.	_	3	punct	3:punct	_
 

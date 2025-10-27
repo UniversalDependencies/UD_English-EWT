@@ -3,46 +3,46 @@
 # newpar id = reviews-158740-p0001
 # text = awesome place!!!
 1	awesome	awesome	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	place	place	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+2	place	place	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.GROUP
 3	!!!	!!!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-158740-0002
 # text = it was worth of the ride more than an hour...
 1	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	Supersense=v.stative
 3	worth	worth	ADJ	JJ	Degree=Pos	0	root	0:root	_
-4	of	of	ADP	IN	_	6	case	6:case	_
+4	of	of	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=3:worth|PRel[obj]=6:ride|Supersense=??
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	ride	ride	NOUN	NN	Number=Sing	3	obl	3:obl:of	_
-7	more	more	ADJ	JJR	Degree=Cmp|ExtPos=ADV	6	advmod	6:advmod	_
+6	ride	ride	NOUN	NN	Number=Sing	3	obl	3:obl:of	Supersense=n.ACT
+7	more	more	ADJ	JJR	Degree=Cmp|ExtPos=ADV	6	advmod	6:advmod	MWECat=P|MWELemma=more than|MWELen=2|PRel[config]=default|PRel[gov]=6:ride|Supersense=p.Approximator
 8	than	than	ADP	IN	_	7	fixed	7:fixed	_
 9	an	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	hour	hour	NOUN	NN	Number=Sing	6	parataxis	6:parataxis	SpaceAfter=No
+10	hour	hour	NOUN	NN	Number=Sing	6	parataxis	6:parataxis	SpaceAfter=No|Supersense=n.TIME
 11	...	...	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
 
 # sent_id = reviews-158740-0003
 # text = I had so many strawberries right on the field...strongly recomend...dont forget to try their great ice cream
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.stative
 3	so	so	ADV	RB	_	4	advmod	4:advmod	_
 4	many	many	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	strawberries	strawberry	NOUN	NNS	Number=Plur	2	obj	2:obj	_
+5	strawberries	strawberry	NOUN	NNS	Number=Plur	2	obj	2:obj	Supersense=n.FOOD
 6	right	right	ADV	RB	_	9	advmod	9:advmod	_
-7	on	on	ADP	IN	_	9	case	9:case	_
+7	on	on	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=2:have|PRel[obj]=9:field|Supersense=p.Locus
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	field	field	NOUN	NN	Number=Sing	2	obl	2:obl:on	SpaceAfter=No
+9	field	field	NOUN	NN	Number=Sing	2	obl	2:obl:on	SpaceAfter=No|Supersense=n.LOCATION
 10	...	...	PUNCT	,	_	12	punct	12:punct	SpaceAfter=No
 11	strongly	strongly	ADV	RB	_	12	advmod	12:advmod	_
-12	recomend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|Typo=Yes|VerbForm=Fin	2	parataxis	2:parataxis	CorrectForm=recommend|SpaceAfter=No
+12	recomend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|Typo=Yes|VerbForm=Fin	2	parataxis	2:parataxis	CorrectForm=recommend|SpaceAfter=No|Supersense=v.communication
 13	...	...	PUNCT	,	_	16	punct	16:punct	SpaceAfter=No
 14-15	dont	_	_	_	_	_	_	_	_
 14	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	16	aux	16:aux	_
 15	nt	not	PART	RB	Polarity=Neg|Typo=Yes	16	advmod	16:advmod	CorrectForm=n't
-16	forget	forget	VERB	VB	Mood=Imp|VerbForm=Fin	2	parataxis	2:parataxis	_
+16	forget	forget	VERB	VB	Mood=Imp|VerbForm=Fin	2	parataxis	2:parataxis	Supersense=v.cognition
 17	to	to	PART	TO	_	18	mark	18:mark	_
-18	try	try	VERB	VB	VerbForm=Inf	16	xcomp	16:xcomp	_
-19	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
+18	try	try	VERB	VB	VerbForm=Inf	16	xcomp	16:xcomp	Supersense=v.consumption
+19	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	PRel[config]=possessive|PRel[gov]=22:cream|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Originator
 20	great	great	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-21	ice	ice	NOUN	NN	Number=Sing	22	compound	22:compound	_
+21	ice	ice	NOUN	NN	Number=Sing	22	compound	22:compound	MWECat=N|MWELemma=ice cream|MWELen=2|Supersense=n.FOOD
 22	cream	cream	NOUN	NN	Number=Sing	18	obj	18:obj	_
 

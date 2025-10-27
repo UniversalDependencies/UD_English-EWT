@@ -3,26 +3,26 @@
 # newpar id = reviews-148012-p0001
 # text = Great lunch specials.
 1	Great	great	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-2	lunch	lunch	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	specials	special	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+2	lunch	lunch	NOUN	NN	Number=Sing	3	compound	3:compound	Supersense=n.EVENT
+3	specials	special	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No|Supersense=n.COGNITION
 4	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-148012-0002
 # text = Delivery is lightning fast.
-1	Delivery	delivery	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
-3	lightning	lightning	NOUN	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	_
+1	Delivery	delivery	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.ACT
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
+3	lightning	lightning	NOUN	NN	Number=Sing	4	obl:unmarked	4:obl:unmarked	MWECat=ADJ|MWELemma=lightning fast|MWELen=2
 4	fast	fast	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 5	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-148012-0003
 # text = Perfect since I'm on a budget.
 1	Perfect	perfect	ADJ	JJ	Degree=Pos	0	root	0:root	_
-2	since	since	SCONJ	IN	_	7	mark	7:mark	_
+2	since	since	SCONJ	IN	_	7	mark	7:mark	PRel[config]=subordinating|PRel[gov]=1:perfect|PRel[obj]=4:be|Supersense=p.Explanation
 3-4	I'm	_	_	_	_	_	_	_	_
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
-4	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
-5	on	on	ADP	IN	_	7	case	7:case	_
+4	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	cop	7:cop	Supersense=v.stative
+5	on	on	ADP	IN	_	7	case	7:case	MWECat=PP|MWELemma=on a budget|MWELen=3|PRel[config]=predicative|PRel[gov]=3:I|PRel[obj]=7:budget|Supersense[coding]=p.Locus|Supersense[scene]=p.Characteristic
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
 7	budget	budget	NOUN	NN	Number=Sing	1	advcl	1:advcl:on	SpaceAfter=No
 8	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -34,26 +34,26 @@
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj|7:nsubj:xsubj	_
 5	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
-6	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	_
+6	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.cognition
 7	pricey	pricey	ADJ	JJ	Degree=Pos	6	xcomp	6:xcomp	_
-8	for	for	ADP	IN	_	9	case	9:case	_
+8	for	for	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:feel|PRel[obj]=9:what|Supersense=p.ComparisonRef
 9	what	what	PRON	WP	PronType=Rel	6	obl	6:obl:for|11:obj	_
 10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	11:nsubj	_
-11	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-free-obj|SpaceAfter=No
+11	get	get	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	Cxn=rc-free-obj|SpaceAfter=No|Supersense=v.stative
 12	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-148012-0005
 # text = Like the sushi, don't like the pad thai.
-1	Like	like	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Like	like	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.emotion
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	sushi	sushi	NOUN	NN	Number=Sing	1	obj	1:obj	SpaceAfter=No
+3	sushi	sushi	NOUN	NN	Number=Sing	1	obj	1:obj	SpaceAfter=No|Supersense=n.FOOD
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5-6	don't	_	_	_	_	_	_	_	_
 5	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 6	n't	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
-7	like	like	VERB	VB	VerbForm=Inf	1	conj	1:conj	_
+7	like	like	VERB	VB	VerbForm=Inf	1	conj	1:conj	Supersense=v.emotion
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-9	pad	pad	NOUN	NN	Number=Sing	10	compound	10:compound	_
+9	pad	pad	NOUN	NN	Number=Sing	10	compound	10:compound	MWECat=N|MWELemma=pad thai|MWELen=2|Supersense=n.FOOD
 10	thai	thai	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 

@@ -3,8 +3,8 @@
 # newpar id = reviews-125522-p0001
 # text = They are out of business.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
-2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-3	out	out	ADP	IN	_	5	case	5:case	_
+2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
+3	out	out	ADP	IN	_	5	case	5:case	MWECat=PP|MWELemma=out of business|MWELen=3|PRel[config]=predicative|PRel[gov]=1:they|PRel[obj]=5:business|Supersense[coding]=p.Locus|Supersense[scene]=p.Characteristic
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	business	business	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 6	.	.	PUNCT	.	_	5	punct	5:punct	_
@@ -12,24 +12,24 @@
 # sent_id = reviews-125522-0002
 # text = Nice people... I hear.
 1	Nice	nice	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	people	people	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+2	people	people	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No|Supersense=n.PERSON
 3	...	...	PUNCT	,	_	5	punct	5:punct	_
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
-5	hear	hear	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	SpaceAfter=No
+5	hear	hear	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	SpaceAfter=No|Supersense=v.communication
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-125522-0003
 # text = Calls are now forwarded to Malcolm Smith Motorsports down the road.
-1	Calls	call	NOUN	NNS	Number=Plur	4	nsubj:pass	4:nsubj:pass	_
+1	Calls	call	NOUN	NNS	Number=Plur	4	nsubj:pass	4:nsubj:pass	Supersense=n.COMMUNICATION
 2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 3	now	now	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
-4	forwarded	forward	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
-5	to	to	ADP	IN	_	6	case	6:case	_
-6	Malcolm	Malcolm	PROPN	NNP	Number=Sing	4	obl	4:obl:to	_
+4	forwarded	forward	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Supersense=v.communication
+5	to	to	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:forward|PRel[obj]=6:Malcolm|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
+6	Malcolm	Malcolm	PROPN	NNP	Number=Sing	4	obl	4:obl:to	MWECat=N|MWELemma=Malcolm Smith Motorsport|MWELen=3|MWEString=Malcolm Smith Motorsports|Supersense=n.GROUP
 7	Smith	Smith	PROPN	NNP	Number=Sing	6	flat	6:flat	_
 8	Motorsports	Motorsport	PROPN	NNPS	Number=Plur	6	flat	6:flat	_
-9	down	down	ADP	IN	_	11	case	11:case	_
+9	down	down	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=6:Malcolm|PRel[obj]=11:road|Supersense[coding]=p.Path|Supersense[scene]=p.Locus
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	road	road	NOUN	NN	Number=Sing	6	nmod	6:nmod:down	SpaceAfter=No
+11	road	road	NOUN	NN	Number=Sing	6	nmod	6:nmod:down	SpaceAfter=No|Supersense=n.ARTIFACT
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 

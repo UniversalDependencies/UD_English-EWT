@@ -3,10 +3,10 @@
 # newpar id = reviews-097507-p0001
 # text = Best meat pies in Canada
 1	Best	good	ADJ	JJS	Degree=Sup	3	amod	3:amod	_
-2	meat	meat	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	pies	pie	NOUN	NNS	Number=Plur	0	root	0:root	_
-4	in	in	ADP	IN	_	5	case	5:case	_
-5	Canada	Canada	PROPN	NNP	Number=Sing	3	nmod	3:nmod:in	_
+2	meat	meat	NOUN	NN	Number=Sing	3	compound	3:compound	Supersense=n.FOOD
+3	pies	pie	NOUN	NNS	Number=Plur	0	root	0:root	Supersense=n.FOOD
+4	in	in	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=3:pie|PRel[obj]=5:Canada|Supersense=p.Locus
+5	Canada	Canada	PROPN	NNP	Number=Sing	3	nmod	3:nmod:in	Supersense=n.LOCATION
 
 # sent_id = reviews-097507-0002
 # newpar id = reviews-097507-p0002
@@ -14,15 +14,15 @@
 1	If	if	SCONJ	IN	_	4	mark	4:mark	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
 3	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-4	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
-5	for	for	ADP	IN	_	9	case	9:case	_
+4	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	12	advcl	12:advcl:if	CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|MWELemma[weak]=look for|MWELen[weak]=2|MWEString[weak]=looking for|Supersense=v.cognition
+5	for	for	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=4:look|PRel[obj]=9:pie|Supersense=p.Theme
 6	authentic	authentic	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 7	British	British	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-8	meat	meat	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	pies	pie	NOUN	NNS	Number=Plur	4	obl	4:obl:for	SpaceAfter=No
+8	meat	meat	NOUN	NN	Number=Sing	9	compound	9:compound	Supersense=n.FOOD
+9	pies	pie	NOUN	NNS	Number=Plur	4	obl	4:obl:for	SpaceAfter=No|Supersense=n.FOOD
 10	,	,	PUNCT	,	_	4	punct	4:punct	_
 11	then	then	ADV	RB	PronType=Dem	12	advmod	12:advmod	_
-12	look	look	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
+12	look	look	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=12:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|MWECat=V.VID|MWELemma=look no far|MWELen=3|MWEString=look know further|Supersense=v.perception
 13	know	no	ADV	RB	Typo=Yes	14	advmod	14:advmod	CorrectForm=no
 14	further	far	ADV	RBR	Degree=Cmp	12	advmod	12:advmod	SpaceAfter=No
 15	.	.	PUNCT	.	_	12	punct	12:punct	_
@@ -31,41 +31,41 @@
 # text = I especially like the Chicken Curry pie.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	especially	especially	ADV	RB	_	3	advmod	3:advmod	_
-3	like	like	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	like	like	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.emotion
 4	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-5	Chicken	chicken	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	Curry	curry	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	pie	pie	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
+5	Chicken	chicken	NOUN	NN	Number=Sing	6	compound	6:compound	Supersense=n.FOOD
+6	Curry	curry	NOUN	NN	Number=Sing	7	compound	7:compound	Supersense=n.FOOD
+7	pie	pie	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No|Supersense=n.FOOD
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-097507-0004
 # text = Good Food.
 1	Good	good	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	Food	food	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+2	Food	food	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.FOOD
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-097507-0005
 # text = The owner/baker, "Pie Guy" is a hoot to deal with as well.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	owner	owner	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	SpaceAfter=No
+2	owner	owner	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	SpaceAfter=No|Supersense=n.PERSON
 3	/	/	SYM	SYM	_	4	cc	4:cc	SpaceAfter=No
-4	baker	baker	NOUN	NN	Number=Sing	2	conj	2:conj	SpaceAfter=No
+4	baker	baker	NOUN	NN	Number=Sing	2	conj	2:conj	SpaceAfter=No|Supersense=n.PERSON
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	"	"	PUNCT	``	_	8	punct	8:punct	SpaceAfter=No
-7	Pie	Pie	PROPN	NNP	Number=Sing	8	compound	8:compound	_
+7	Pie	Pie	PROPN	NNP	Number=Sing	8	compound	8:compound	MWECat=N|MWELemma=Pie Guy|MWELen=2|Supersense=n.PERSON
 8	Guy	Guy	PROPN	NNP	Number=Sing	2	appos	2:appos	SpaceAfter=No
 9	"	"	PUNCT	''	_	8	punct	8:punct	_
-10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
-11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
+10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	Supersense=v.stative
+11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	MWECat=N|MWELemma=a hoot|MWELen=2|Supersense=n.COGNITION
 12	hoot	hoot	NOUN	NN	Number=Sing	0	root	0:root	_
 13	to	to	PART	TO	_	14	mark	14:mark	_
-14	deal	deal	VERB	VB	VerbForm=Inf	12	acl	12:acl:to	_
+14	deal	deal	VERB	VB	VerbForm=Inf	12	acl	12:acl:to	MWECat=V.IAV|MWELemma=deal with|MWELen=2|Supersense=v.social
 15	with	with	ADP	IN	_	14	obl	14:obl	Promoted=Yes
-16	as	as	ADV	RB	ExtPos=ADV	12	advmod	12:advmod	_
+16	as	as	ADV	RB	ExtPos=ADV	12	advmod	12:advmod	MWECat=DISC|MWELemma=as well|MWELen=2
 17	well	well	ADV	RB	Degree=Pos	16	fixed	16:fixed	SpaceAfter=No
 18	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = reviews-097507-0006
 # text = Mo
-1	Mo	Mo	PROPN	NNP	Number=Sing	0	root	0:root	_
+1	Mo	Mo	PROPN	NNP	Number=Sing	0	root	0:root	Supersense=n.PERSON
 
