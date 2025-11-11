@@ -1,11 +1,15 @@
 Running the following version of UD tools:
-commit ecbbdff44b15c9b6de4a691e3499c1286459ab2e
+commit 26e6c87a2f518322d15901a351199b6be6569062
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Fri May 9 21:07:42 2025 +0200
+Date:   Fri Nov 7 15:39:58 2025 +0100
 Evaluating the following revision of UD_English-EWT:
-commit a50d943c115e0f97909960168e3da0e8386e4a7d
-Merge: f84b2212 4c89b583
+commit 31a8e9f228977c76a0e7f86e2729fa7cdceb49a5
+Merge: 15d613d8 c5baffde
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
+CoNLL-U data file regular expression = '(.+)-ud-(train|dev|test)\.conllu'
+Language-treebank code (from CoNLL-U file name) = 'en_ewt'
+Language code (from CoNLL-U file name) = 'en'
+Found the following data files: en_ewt-ud-dev.conllu, en_ewt-ud-test.conllu, en_ewt-ud-train.conllu
 Size: counted 254818 of 254818 words (nodes).
 Size: min(0, log((N/1000)**2)) = 11.0810991296899.
 Size: maximum value 13.815511 is for 1000000 words or more.
@@ -15,32 +19,61 @@ Split: Found at least 10000 test words.
 Lemmas: source of annotation (from README) factor is 0.5.
 Universal POS tags: 17 out of 17 found in the corpus.
 Universal POS tags: source of annotation (from README) factor is 0.9.
-Features: 174718 out of 254818 total words have one or more features.
+Features: 175332 out of 254818 total words have one or more features.
 Features: source of annotation (from README) factor is 0.9.
 Universal relations: 36 out of 37 found in the corpus.
 Universal relations: source of annotation (from README) factor is 1.
-Udapi:
-               TOTAL       4599
-Udapi: found 4599 bugs.
-Udapi: worst expected case (threshold) is one bug per 10 words. There are 254818 words.
 Genres: found 5 out of 18 known.
 /net/work/people/zeman/unidep/tools/validate.py --lang en --max-err=10 UD_English-EWT/en_ewt-ud-dev.conllu
+[Line 131 Sent weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000-0002]: [L3 Warning verbform-fin-without-mood] Finite verb 'could' lacks the 'Mood' feature
+[Line 195 Sent weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000-0004]: [L3 Warning verbform-fin-without-mood] Finite verb 'will' lacks the 'Mood' feature
+[Line 484 Sent weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500-0003]: [L3 Warning verbform-fin-without-mood] Finite verb 'will' lacks the 'Mood' feature
+[Line 509 Sent weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500-0004]: [L3 Warning verbform-fin-without-mood] Finite verb ''d' lacks the 'Mood' feature
+[Line 690 Sent weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0005]: [L3 Warning verbform-fin-without-mood] Finite verb 'will' lacks the 'Mood' feature
+[Line 727 Sent weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0007]: [L3 Warning verbform-fin-without-mood] Finite verb 'can' lacks the 'Mood' feature
+[Line 743 Sent weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0007]: [L3 Warning verbform-fin-without-mood] Finite verb 'may' lacks the 'Mood' feature
+[Line 800 Sent weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0009]: [L3 Warning verbform-fin-without-mood] Finite verb 'would' lacks the 'Mood' feature
+[Line 809 Sent weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0009]: [L3 Warning verbform-fin-without-mood] Finite verb 'could' lacks the 'Mood' feature
+[Line 1018 Sent weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0008]: [L3 Warning verbform-fin-without-mood] Finite verb 'would' lacks the 'Mood' feature
+...suppressing further errors regarding Warning
+Warnings: 358
 *** PASSED ***
 /net/work/people/zeman/unidep/tools/validate.py --lang en --max-err=10 UD_English-EWT/en_ewt-ud-test.conllu
+[Line 94 Sent weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0002]: [L3 Warning verbform-fin-without-mood] Finite verb 'might' lacks the 'Mood' feature
+[Line 196 Sent weblog-blogspot.com_floppingaces_20041126180010_ENG_20041126_180010-0001]: [L3 Warning verbform-fin-without-mood] Finite verb 'would' lacks the 'Mood' feature
+[Line 317 Sent weblog-blogspot.com_floppingaces_20041126180010_ENG_20041126_180010-0009]: [L3 Warning verbform-fin-without-mood] Finite verb 'my' lacks the 'Mood' feature
+[Line 374 Sent weblog-blogspot.com_marketview_20050224181500_ENG_20050224_181500-0001]: [L3 Warning verbform-fin-without-mood] Finite verb 'could' lacks the 'Mood' feature
+[Line 417 Sent weblog-blogspot.com_marketview_20050224181500_ENG_20050224_181500-0003]: [L3 Warning verbform-fin-without-mood] Finite verb 'can' lacks the 'Mood' feature
+[Line 454 Sent weblog-blogspot.com_marketview_20050224181500_ENG_20050224_181500-0003]: [L3 Warning verbform-fin-without-mood] Finite verb 'might' lacks the 'Mood' feature
+[Line 460 Sent weblog-blogspot.com_marketview_20050224181500_ENG_20050224_181500-0003]: [L3 Warning verbform-fin-without-mood] Finite verb 'would' lacks the 'Mood' feature
+[Line 467 Sent weblog-blogspot.com_marketview_20050224181500_ENG_20050224_181500-0003]: [L3 Warning verbform-fin-without-mood] Finite verb 'would' lacks the 'Mood' feature
+[Line 549 Sent weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0003]: [L3 Warning verbform-fin-without-mood] Finite verb 'can' lacks the 'Mood' feature
+[Line 623 Sent weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0007]: [L3 Warning verbform-fin-without-mood] Finite verb 'would' lacks the 'Mood' feature
+...suppressing further errors regarding Warning
+Warnings: 400
 *** PASSED ***
 /net/work/people/zeman/unidep/tools/validate.py --lang en --max-err=10 UD_English-EWT/en_ewt-ud-train.conllu
-[Line 166708 Sent answers-20111104175256AAL21Ha_ans-0008 Node 25]: [L3 Warning fixed-gap] Gaps in fixed expression [25, 27] 'due * to'
-Warnings: 1
+[Line 44 Sent weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0002]: [L3 Warning verbform-fin-without-mood] Finite verb 'will' lacks the 'Mood' feature
+[Line 110 Sent weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0005]: [L3 Warning verbform-fin-without-mood] Finite verb 'would' lacks the 'Mood' feature
+[Line 338 Sent weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0014]: [L3 Warning verbform-fin-without-mood] Finite verb 'could' lacks the 'Mood' feature
+[Line 804 Sent weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0032]: [L3 Warning verbform-fin-without-mood] Finite verb 'wo' lacks the 'Mood' feature
+[Line 837 Sent weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0033]: [L3 Warning verbform-fin-without-mood] Finite verb 'would' lacks the 'Mood' feature
+[Line 842 Sent weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0033]: [L3 Warning verbform-fin-without-mood] Finite verb 'could' lacks the 'Mood' feature
+[Line 907 Sent weblog-juancole.com_juancole_20051126063000_ENG_20051126_063000-0037]: [L3 Warning verbform-fin-without-mood] Finite verb 'should' lacks the 'Mood' feature
+[Line 1016 Sent weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0002]: [L3 Warning verbform-fin-without-mood] Finite verb 'might' lacks the 'Mood' feature
+[Line 1031 Sent weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0003]: [L3 Warning verbform-fin-without-mood] Finite verb 'might' lacks the 'Mood' feature
+[Line 1166 Sent weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0008]: [L3 Warning verbform-fin-without-mood] Finite verb 'can' lacks the 'Mood' feature
+...suppressing further errors regarding Warning
+Warnings: 3293
 *** PASSED ***
 Validity: 1
-(weight=0.0769230769230769) * (score{features}=0.9) = 0.0692307692307692
-(weight=0.0769230769230769) * (score{genres}=0.277777777777778) = 0.0213675213675214
-(weight=0.0769230769230769) * (score{lemmas}=0.5) = 0.0384615384615385
-(weight=0.256410256410256) * (score{size}=0.802076700907873) = 0.20566069254048
-(weight=0.0512820512820513) * (score{split}=1) = 0.0512820512820513
-(weight=0.0769230769230769) * (score{tags}=0.9) = 0.0692307692307692
-(weight=0.307692307692308) * (score{udapi}=0.819518244394038) = 0.25215945981355
-(weight=0.0769230769230769) * (score{udeprels}=0.972972972972973) = 0.0748440748440748
-(TOTAL score=0.782236876770755) * (availability=1) * (validity=1) = 0.782236876770755
+(weight=0.111111111111111) * (score{features}=0.9) = 0.1
+(weight=0.111111111111111) * (score{genres}=0.277777777777778) = 0.0308641975308642
+(weight=0.111111111111111) * (score{lemmas}=0.5) = 0.0555555555555556
+(weight=0.37037037037037) * (score{size}=0.802076700907873) = 0.297065444780694
+(weight=0.0740740740740741) * (score{split}=1) = 0.0740740740740741
+(weight=0.111111111111111) * (score{tags}=0.9) = 0.1
+(weight=0.111111111111111) * (score{udeprels}=0.972972972972973) = 0.108108108108108
+(TOTAL score=0.765667380049296) * (availability=1) * (validity=1) = 0.765667380049296
 STARS = 4
-UD_English-EWT	0.782236876770755	4
+UD_English-EWT	0.765667380049296	4
