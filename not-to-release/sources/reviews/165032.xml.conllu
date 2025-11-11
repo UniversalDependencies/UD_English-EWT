@@ -2,65 +2,65 @@
 # sent_id = reviews-165032-0001
 # newpar id = reviews-165032-p0001
 # text = Michael helped shoot the majority of my firm's website and we could not have been happier.
-1	Michael	Michael	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|3:nsubj:xsubj	_
-2	helped	help	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	shoot	shoot	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
+1	Michael	Michael	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|3:nsubj:xsubj	Supersense=n.PERSON
+2	helped	help	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.social
+3	shoot	shoot	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	Supersense=v.social
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	majority	majority	NOUN	NN	Number=Sing	3	obj	3:obj	_
-6	of	of	ADP	IN	_	10	case	10:case	_
-7	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+5	majority	majority	NOUN	NN	Number=Sing	3	obj	3:obj	Supersense=n.QUANTITY
+6	of	of	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=5:majority|PRel[obj]=10:website|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
+7	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	PRel[config]=possessive|PRel[gov]=8:firm|Supersense[coding]=p.Possessor|Supersense[scene]=p.OrgMember
 8-9	firm's	_	_	_	_	_	_	_	_
-8	firm	firm	NOUN	NN	Number=Sing	10	nmod:poss	10:nmod:poss	_
-9	's	's	PART	POS	_	8	case	8:case	_
-10	website	website	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	_
+8	firm	firm	NOUN	NN	Number=Sing	10	nmod:poss	10:nmod:poss	Supersense=n.GROUP
+9	's	's	PART	POS	_	8	case	8:case	PRel[config]=default|PRel[gov]=10:website|PRel[obj]=8:firm|Supersense=p.Possessor
+10	website	website	NOUN	NN	Number=Sing	5	nmod	5:nmod:of	Supersense=n.COMMUNICATION
 11	and	and	CCONJ	CC	_	17	cc	17:cc	_
 12	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
 13	could	could	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 14	not	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
 15	have	have	AUX	VB	VerbForm=Inf	17	aux	17:aux	_
-16	been	be	AUX	VBN	Tense=Past|VerbForm=Part	17	cop	17:cop	_
+16	been	be	AUX	VBN	Tense=Past|VerbForm=Part	17	cop	17:cop	Supersense=v.stative
 17	happier	happy	ADJ	JJR	Degree=Cmp	2	conj	2:conj:and	SpaceAfter=No
 18	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-165032-0002
 # text = We went through six photographers to find the right photographers that would represent our firm in the light we wished to and Michael and his team made that happen.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	went	go	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	went	go	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=V.IAV|MWELemma=go through|MWELen=2|MWEString=went through|Supersense=v.social
 3	through	through	ADP	IN	_	5	case	5:case	_
 4	six	six	NUM	CD	NumForm=Word|NumType=Card	5	nummod	5:nummod	_
-5	photographers	photographer	NOUN	NNS	Number=Plur	2	obl	2:obl:through	_
-6	to	to	PART	TO	_	7	mark	7:mark	_
-7	find	find	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
+5	photographers	photographer	NOUN	NNS	Number=Plur	2	obl	2:obl:through	Supersense=n.PERSON
+6	to	to	PART	TO	_	7	mark	7:mark	PRel[config]=subordinating|PRel[gov]=2:go|PRel[obj]=7:find|Supersense=p.Purpose
+7	find	find	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	Supersense=v.cognition
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	right	right	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	photographers	photographer	NOUN	NNS	Number=Plur	7	obj	7:obj|13:nsubj	_
+10	photographers	photographer	NOUN	NNS	Number=Plur	7	obj	7:obj|13:nsubj	Supersense=n.PERSON
 11	that	that	PRON	WDT	PronType=Rel	13	nsubj	10:ref	_
 12	would	would	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
-13	represent	represent	VERB	VB	VerbForm=Inf	10	acl:relcl	10:acl:relcl	Cxn=rc-that-nsubj-auxstrand
-14	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	_
-15	firm	firm	NOUN	NN	Number=Sing	13	obj	13:obj	_
-16	in	in	ADP	IN	_	18	case	18:case	_
+13	represent	represent	VERB	VB	VerbForm=Inf	10	acl:relcl	10:acl:relcl	Cxn=rc-that-nsubj-auxstrand|Supersense=v.social
+14	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	PRel[config]=possessive|PRel[gov]=15:firm|Supersense[coding]=p.Possessor|Supersense[scene]=p.OrgMember
+15	firm	firm	NOUN	NN	Number=Sing	13	obj	13:obj	Supersense=n.GROUP
+16	in	in	ADP	IN	_	18	case	18:case	PRel[config]=default|PRel[gov]=13:represent|PRel[obj]=18:light|Supersense=p.Manner
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	light	light	NOUN	NN	Number=Sing	13	obl	13:obl:in|20:obl	_
+18	light	light	NOUN	NN	Number=Sing	13	obl	13:obl:in|20:obl	Supersense=n.ATTRIBUTE
 19	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	20	nsubj	20:nsubj	_
-20	wished	wish	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	18	acl:relcl	18:acl:relcl	Cxn=rc-red-obl-auxstrand
+20	wished	wish	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	18	acl:relcl	18:acl:relcl	Cxn=rc-red-obl-auxstrand|Supersense=v.cognition
 21	to	to	PART	TO	_	20	xcomp	20:xcomp	Promoted=Yes
 22	and	and	CCONJ	CC	_	27	cc	27:cc	_
-23	Michael	Michael	PROPN	NNP	Number=Sing	27	nsubj	27:nsubj	_
+23	Michael	Michael	PROPN	NNP	Number=Sing	27	nsubj	27:nsubj	Supersense=n.PERSON
 24	and	and	CCONJ	CC	_	26	cc	26:cc	_
-25	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
-26	team	team	NOUN	NN	Number=Sing	23	conj	23:conj:and|27:nsubj	_
-27	made	make	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
+25	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	PRel[config]=possessive|PRel[gov]=26:team|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+26	team	team	NOUN	NN	Number=Sing	23	conj	23:conj:and|27:nsubj	Supersense=n.GROUP
+27	made	make	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	Supersense=v.stative
 28	that	that	PRON	DT	Number=Sing|PronType=Dem	27	obj	27:obj|29:nsubj:xsubj	_
-29	happen	happen	VERB	VB	VerbForm=Inf	27	xcomp	27:xcomp	SpaceAfter=No
+29	happen	happen	VERB	VB	VerbForm=Inf	27	xcomp	27:xcomp	SpaceAfter=No|Supersense=v.stative
 30	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-165032-0003
 # text = He's worth every penny.
 1-2	He's	_	_	_	_	_	_	_	_
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
-3	worth	worth	ADJ	JJ	Degree=Pos	0	root	0:root	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	Supersense=v.stative
+3	worth	worth	ADJ	JJ	Degree=Pos	0	root	0:root	MWECat=ADJ|MWELemma=worth every penny|MWELen=3
 4	every	every	DET	DT	PronType=Tot	5	det	5:det	_
 5	penny	penny	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
 6	.	.	PUNCT	.	_	3	punct	3:punct	_

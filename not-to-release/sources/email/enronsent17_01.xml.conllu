@@ -38,7 +38,7 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	recently	recently	ADV	RB	_	3	advmod	3:advmod	_
 3	asked	ask	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	iobj	3:iobj|6:nsubj:xsubj	_
+4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	iobj	3:iobj|6:nsubj:xsubj	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	create	create	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 7	an	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
@@ -229,12 +229,12 @@
 3	Alan	Alan	PROPN	NNP	Number=Sing	0	root	0:root	_
 4	Greenspan	Greenspan	PROPN	NNP	Number=Sing	3	flat	3:flat	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	Chairman	Chairman	PROPN	NNP	Number=Sing	3	flat	3:flat	SpaceAfter=No
+6	Chairman	Chairman	PROPN	NNP	Number=Sing	3	appos	3:appos	SpaceAfter=No
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	Federal	Federal	ADJ	NNP	Degree=Pos	9	amod	9:amod	_
-9	Reserve	Reserve	PROPN	NNP	Number=Sing	3	list	3:list	SpaceAfter=No
+9	Reserve	Reserve	PROPN	NNP	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
-11	U.S.A	U.S.A	PROPN	NNP	Number=Sing	3	list	3:list	SpaceAfter=No
+11	U.S.A	U.S.A	PROPN	NNP	Number=Sing	9	nmod:unmarked	9:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent17_01-0018
@@ -341,7 +341,7 @@
 # sent_id = email-enronsent17_01-0024
 # newpar id = email-enronsent17_01-p0005
 # text = There were plenty of internal speakers requested, as well.
-1	There	there	PRON	EX	_	2	expl	2:expl	_
+1	There	there	PRON	EX	PronType=Dem	2	expl	2:expl	_
 2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
 3	plenty	plenty	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
 4	of	of	ADP	IN	_	6	case	6:case	_
@@ -1214,7 +1214,7 @@
 19	seasonal	seasonal	ADJ	JJ	Degree=Pos	17	amod	17:amod	SpaceAfter=No
 20	,	,	PUNCT	,	_	21	punct	21:punct	_
 21	6	6	NUM	CD	NumForm=Digit|NumType=Card	19	conj	17:amod|19:conj:and	SpaceAfter=No
-22	-	-	SYM	SYM	_	23	case	23:case	SpaceAfter=No
+22	-	-	SYM	SYM	ExtPos=ADP	23	case	23:case	SpaceAfter=No
 23	10	10	NUM	CD	NumForm=Digit|NumType=Card	21	nmod	21:nmod	SpaceAfter=No
 24	,	,	PUNCT	,	_	26	punct	26:punct	_
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_

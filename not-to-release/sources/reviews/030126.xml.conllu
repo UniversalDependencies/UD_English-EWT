@@ -8,8 +8,8 @@
 # newpar id = reviews-030126-p0002
 # text = This school is the worst one i've ever been to.
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	2:det	_
-2	school	school	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
+2	school	school	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	Supersense=n.GROUP
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	Supersense=v.stative
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 5	worst	bad	ADJ	JJS	Degree=Sup	6	amod	6:amod	_
 6	one	one	NOUN	NN	Number=Sing	0	root	0:root|11:obl	_
@@ -17,116 +17,116 @@
 7	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
 8	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	11	aux	11:aux	_
 9	ever	ever	ADV	RB	PronType=Ind	11	advmod	11:advmod	_
-10	been	be	AUX	VBN	Tense=Past|VerbForm=Part	11	cop	11:cop	_
+10	been	be	AUX	VBN	Tense=Past|VerbForm=Part	11	cop	11:cop	MWECat=V.IAV|MWELemma=be to|MWELen=2|MWEString=been to|Supersense=v.motion
 11	to	to	ADP	IN	_	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obl-pstrand|Promoted=Yes|SpaceAfter=No
 12	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-030126-0003
 # text = I attended it for 2 years, and that was enough.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	attended	attend	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obj	2:obj	_
-4	for	for	ADP	IN	_	6	case	6:case	_
+2	attended	attend	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.motion
+3	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obj	2:obj	_
+4	for	for	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=2:attend|PRel[obj]=6:year|Supersense=p.Duration
 5	2	2	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
-6	years	year	NOUN	NNS	Number=Plur	2	obl	2:obl:for	SpaceAfter=No
+6	years	year	NOUN	NNS	Number=Plur	2	obl	2:obl:for	SpaceAfter=No|Supersense=n.TIME
 7	,	,	PUNCT	,	_	11	punct	11:punct	_
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
 9	that	that	PRON	DT	Number=Sing|PronType=Dem	11	nsubj	11:nsubj	_
-10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
+10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	Supersense=v.stative
 11	enough	enough	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-030126-0004
 # text = There's holes everywhere in the ceiling, sewage constantly leaks through the ceiling, and the whole condition of the school is horrible.
 1-2	There's	_	_	_	_	_	_	_	_
-1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
-3	holes	hole	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
+1	There	there	PRON	EX	PronType=Dem	2	expl	2:expl	_
+2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl|Supersense=v.stative
+3	holes	hole	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot|Supersense=n.NATURALOBJECT
 4	everywhere	everywhere	ADV	RB	PronType=Tot	2	advmod	2:advmod	_
-5	in	in	ADP	IN	_	7	case	7:case	_
+5	in	in	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:everywhere|PRel[obj]=7:ceiling|Supersense=p.Locus
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	ceiling	ceiling	NOUN	NN	Number=Sing	4	nmod	4:nmod:in	SpaceAfter=No
+7	ceiling	ceiling	NOUN	NN	Number=Sing	4	nmod	4:nmod:in	SpaceAfter=No|Supersense=n.ARTIFACT
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
-9	sewage	sewage	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
+9	sewage	sewage	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	Supersense=n.SUBSTANCE
 10	constantly	constantly	ADV	RB	_	11	advmod	11:advmod	_
-11	leaks	leak	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	_
-12	through	through	ADP	IN	_	14	case	14:case	_
+11	leaks	leak	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	Supersense=v.stative
+12	through	through	ADP	IN	_	14	case	14:case	PRel[config]=default|PRel[gov]=11:leak|PRel[obj]=14:ceiling|Supersense=p.Path
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	ceiling	ceiling	NOUN	NN	Number=Sing	11	obl	11:obl:through	SpaceAfter=No
+14	ceiling	ceiling	NOUN	NN	Number=Sing	11	obl	11:obl:through	SpaceAfter=No|Supersense=n.ARTIFACT
 15	,	,	PUNCT	,	_	24	punct	24:punct	_
 16	and	and	CCONJ	CC	_	24	cc	24:cc	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 18	whole	whole	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
-19	condition	condition	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	_
-20	of	of	ADP	IN	_	22	case	22:case	_
+19	condition	condition	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	Supersense=n.ATTRIBUTE
+20	of	of	ADP	IN	_	22	case	22:case	PRel[config]=default|PRel[gov]=19:condition|PRel[obj]=22:school|Supersense=p.Gestalt
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
-22	school	school	NOUN	NN	Number=Sing	19	nmod	19:nmod:of	_
-23	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	_
+22	school	school	NOUN	NN	Number=Sing	19	nmod	19:nmod:of	Supersense=n.GROUP
+23	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	Supersense=v.stative
 24	horrible	horrible	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	SpaceAfter=No
 25	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-030126-0005
 # text = The staff and the Principal are rediculous, they don't listen to any input, and they make up rediculous rules ( They banned backpacks, because a teacher TRIPPED OVER a student's).
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	staff	staff	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
+2	staff	staff	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	Supersense=n.GROUP
 3	and	and	CCONJ	CC	_	5	cc	5:cc	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	Principal	principal	NOUN	NN	Number=Sing	2	conj	2:conj:and|7:nsubj	_
-6	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
+5	Principal	principal	NOUN	NN	Number=Sing	2	conj	2:conj:and|7:nsubj	Supersense=n.PERSON
+6	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	Supersense=v.stative
 7	rediculous	ridiculous	ADJ	JJ	Degree=Pos|Typo=Yes	0	root	0:root	CorrectForm=ridiculous|SpaceAfter=No
 8	,	,	PUNCT	,	_	12	punct	12:punct	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 10-11	don't	_	_	_	_	_	_	_	_
 10	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	aux	12:aux	_
 11	n't	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
-12	listen	listen	VERB	VB	VerbForm=Inf	7	conj	7:conj:and	_
-13	to	to	ADP	IN	_	15	case	15:case	_
+12	listen	listen	VERB	VB	VerbForm=Inf	7	conj	7:conj:and	MWELemma[weak]=listen to|MWELen[weak]=2|Supersense=v.communication
+13	to	to	ADP	IN	_	15	case	15:case	PRel[config]=default|PRel[gov]=12:listen|PRel[obj]=15:input|Supersense[coding]=p.Goal|Supersense[scene]=p.Stimulus
 14	any	any	DET	DT	PronType=Ind	15	det	15:det	_
-15	input	input	NOUN	NN	Number=Sing	12	obl	12:obl:to	SpaceAfter=No
+15	input	input	NOUN	NN	Number=Sing	12	obl	12:obl:to	SpaceAfter=No|Supersense=n.COGNITION
 16	,	,	PUNCT	,	_	19	punct	19:punct	_
 17	and	and	CCONJ	CC	_	19	cc	19:cc	_
 18	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	19	nsubj	19:nsubj	_
-19	make	make	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	conj	7:conj:and	_
+19	make	make	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	conj	7:conj:and	MWECat=V.VPC.semi|MWELemma=make up|MWELen=2|Supersense=v.cognition
 20	up	up	ADP	RP	_	19	compound:prt	19:compound:prt	_
 21	rediculous	ridiculous	ADJ	JJ	Degree=Pos|Typo=Yes	22	amod	22:amod	CorrectForm=ridiculous
-22	rules	rule	NOUN	NNS	Number=Plur	19	obj	19:obj	_
+22	rules	rule	NOUN	NNS	Number=Plur	19	obj	19:obj	Supersense=n.COGNITION
 23	(	(	PUNCT	-LRB-	_	25	punct	25:punct	_
 24	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	25	nsubj	25:nsubj	_
-25	banned	ban	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	19	parataxis	19:parataxis	_
-26	backpacks	backpack	NOUN	NNS	Number=Plur	25	obj	25:obj	SpaceAfter=No
+25	banned	ban	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	19	parataxis	19:parataxis	Supersense=v.stative
+26	backpacks	backpack	NOUN	NNS	Number=Plur	25	obj	25:obj	SpaceAfter=No|Supersense=n.ARTIFACT
 27	,	,	PUNCT	,	_	31	punct	31:punct	_
 28	because	because	SCONJ	IN	_	31	mark	31:mark	_
 29	a	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	_
-30	teacher	teacher	NOUN	NN	Number=Sing	31	nsubj	31:nsubj	_
-31	TRIPPED	trip	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	25	advcl	25:advcl:because	_
-32	OVER	over	ADP	IN	_	34	case	34:case	_
+30	teacher	teacher	NOUN	NN	Number=Sing	31	nsubj	31:nsubj	Supersense=n.PERSON
+31	TRIPPED	trip	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	25	advcl	25:advcl:because	Supersense=v.contact
+32	OVER	over	ADP	IN	_	34	case	34:case	PRel[config]=default|PRel[gov]=31:trip|PRel[obj]=34:student|Supersense=p.Path
 33	a	a	DET	DT	Definite=Ind|PronType=Art	34	det	34:det	_
 34-35	student's	_	_	_	_	_	_	_	SpaceAfter=No
-34	student	student	NOUN	NN	Number=Sing	31	obl	31:obl:over	_
-35	's	's	PART	POS	_	34	case	34:case	_
+34	student	student	NOUN	NN	Number=Sing	31	obl	31:obl:over	Supersense=n.PERSON
+35	's	's	PART	POS	_	34	case	34:case	PRel[config]=default|PRel[gov]=31:trip|PRel[obj]=34:student|Supersense=p.Possessor
 36	)	)	PUNCT	-RRB-	_	25	punct	25:punct	SpaceAfter=No
 37	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-030126-0006
 # text = The education is horrible at best, do society a favor, and do NOT send your student here.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	education	education	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+2	education	education	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.COGNITION
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 4	horrible	horrible	ADJ	JJ	Degree=Pos	0	root	0:root	_
-5	at	at	ADP	IN	_	6	case	6:case	_
+5	at	at	ADP	IN	_	6	case	6:case	MWECat=PP|MWELemma=at well|MWELen=2|MWEString=at best|PRel[config]=default|PRel[gov]=4:horrible|PRel[obj]=6:well|Supersense=p.Extent
 6	best	well	ADV	RBS	Degree=Sup	4	obl	4:obl:at	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	do	do	VERB	VB	Mood=Imp|VerbForm=Fin	4	parataxis	4:parataxis	_
-9	society	society	NOUN	NN	Number=Sing	8	iobj	8:iobj	_
+8	do	do	VERB	VB	Mood=Imp|VerbForm=Fin	4	parataxis	4:parataxis	MWECat=V.LVC.full|MWELemma=do <1> a favor|MWELen=4|Supersense=v.social
+9	society	society	NOUN	NN	Number=Sing	8	iobj	8:iobj	Supersense=n.GROUP
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
 11	favor	favor	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No
 12	,	,	PUNCT	,	_	16	punct	16:punct	_
 13	and	and	CCONJ	CC	_	16	cc	16:cc	_
 14	do	do	AUX	VB	Mood=Imp|VerbForm=Fin	16	aux	16:aux	_
 15	NOT	not	PART	RB	Polarity=Neg	16	advmod	16:advmod	_
-16	send	send	VERB	VB	Mood=Imp|VerbForm=Fin	8	conj	8:conj:and	_
-17	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
-18	student	student	NOUN	NN	Number=Sing	16	obj	16:obj	_
+16	send	send	VERB	VB	Mood=Imp|VerbForm=Fin	8	conj	8:conj:and	Supersense=v.social
+17	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	PRel[config]=possessive|PRel[gov]=18:student|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+18	student	student	NOUN	NN	Number=Sing	16	obj	16:obj	Supersense=n.PERSON
 19	here	here	ADV	RB	PronType=Dem	16	advmod	16:advmod	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
 

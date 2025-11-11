@@ -4,25 +4,25 @@
 # text = We have stayed at Tanglewood for many years now.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	stayed	stay	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
-4	at	at	ADP	IN	_	5	case	5:case	_
-5	Tanglewood	Tanglewood	PROPN	NNP	Number=Sing	3	obl	3:obl:at	_
-6	for	for	ADP	IN	_	8	case	8:case	_
+3	stayed	stay	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Supersense=v.social
+4	at	at	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=3:stay|PRel[obj]=5:Tanglewood|Supersense=p.Locus
+5	Tanglewood	Tanglewood	PROPN	NNP	Number=Sing	3	obl	3:obl:at	Supersense=n.GROUP
+6	for	for	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=3:stay|PRel[obj]=8:year|Supersense=p.Duration
 7	many	many	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	years	year	NOUN	NNS	Number=Plur	3	obl	3:obl:for	_
+8	years	year	NOUN	NNS	Number=Plur	3	obl	3:obl:for	Supersense=n.TIME
 9	now	now	ADV	RB	PronType=Dem	8	advmod	8:advmod	SpaceAfter=No
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-210019-0002
 # text = We go over about 5 times a year.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	go	go	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	over	over	ADV	RB	_	2	advmod	2:advmod	_
-4	about	about	ADV	RB	_	5	advmod	5:advmod	_
+2	go	go	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.motion
+3	over	over	ADV	RB	_	2	advmod	2:advmod	PRel[config]=default|PRel[gov]=2:go|Supersense=p.Direction
+4	about	about	ADV	RB	_	5	advmod	5:advmod	PRel[config]=default|PRel[obj]=5:5|Supersense=p.Approximator
 5	5	5	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
-6	times	time	NOUN	NNS	Number=Plur	2	obl:unmarked	2:obl:unmarked	TemporalNPAdjunct=Yes
+6	times	time	NOUN	NNS	Number=Plur	2	obl:unmarked	2:obl:unmarked	Supersense=n.EVENT|TemporalNPAdjunct=Yes
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	year	year	NOUN	NN	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
+8	year	year	NOUN	NN	Number=Sing	6	nmod:unmarked	6:nmod:unmarked	SpaceAfter=No|Supersense=n.TIME|TemporalNPAdjunct=Yes
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-210019-0003
@@ -30,18 +30,18 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	never	never	ADV	RB	PronType=Neg	4	advmod	4:advmod	_
-4	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+4	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	MWECat=V.LVC.full|MWELemma=have <1> problem|MWELen=3|MWEString=had <1> problem|Supersense=v.cognition
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	problem	problem	NOUN	NN	Number=Sing	4	obj	4:obj	_
-7	with	with	ADP	IN	_	9	case	9:case	_
+7	with	with	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:problem|PRel[obj]=9:cabin|Supersense=p.Topic
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	cabins	cabin	NOUN	NNS	Number=Plur	6	nmod	6:nmod:with	SpaceAfter=No
+9	cabins	cabin	NOUN	NNS	Number=Plur	6	nmod	6:nmod:with	SpaceAfter=No|Supersense=n.ARTIFACT
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-210019-0004
 # text = They are always so helpful.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
-2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
 3	always	always	ADV	RB	PronType=Tot	5	advmod	5:advmod	_
 4	so	so	ADV	RB	_	5	advmod	5:advmod	_
 5	helpful	helpful	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
@@ -50,31 +50,31 @@
 # sent_id = reviews-210019-0005
 # text = The cabins have always been clean.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	cabins	cabin	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
+2	cabins	cabin	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	Supersense=n.ARTIFACT
 3	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
 4	always	always	ADV	RB	PronType=Tot	6	advmod	6:advmod	_
-5	been	be	AUX	VBN	Tense=Past|VerbForm=Part	6	cop	6:cop	_
+5	been	be	AUX	VBN	Tense=Past|VerbForm=Part	6	cop	6:cop	Supersense=v.stative
 6	clean	clean	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 7	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-210019-0006
 # text = Helen is a wonderful place to take you family.
-1	Helen	Helen	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
-2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+1	Helen	Helen	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Supersense=n.PERSON
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
 4	wonderful	wonderful	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	place	place	NOUN	NN	Number=Sing	0	root	0:root	_
-6	to	to	PART	TO	_	7	mark	7:mark	_
-7	take	take	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
-8	you	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs|Typo=Yes	9	nmod:poss	9:nmod:poss	CorrectForm=your
-9	family	family	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No
+5	place	place	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.GROUP
+6	to	to	PART	TO	_	7	mark	7:mark	PRel[config]=subordinating|PRel[gov]=5:place|PRel[obj]=7:take|Supersense=p.Purpose
+7	take	take	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	Supersense=v.motion
+8	you	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs|Typo=Yes	9	nmod:poss	9:nmod:poss	CorrectForm=your|PRel[config]=possessive|PRel[gov]=9:family|Supersense[coding]=p.Gestalt|Supersense[scene]=p.OrgMember
+9	family	family	NOUN	NN	Number=Sing	7	obj	7:obj	SpaceAfter=No|Supersense=n.GROUP
 10	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-210019-0007
 # text = We recommend these cabins!
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	recommend	recommend	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	recommend	recommend	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 3	these	this	DET	DT	Number=Plur|PronType=Dem	4	det	4:det	_
-4	cabins	cabin	NOUN	NNS	Number=Plur	2	obj	2:obj	SpaceAfter=No
+4	cabins	cabin	NOUN	NNS	Number=Plur	2	obj	2:obj	SpaceAfter=No|Supersense=n.ARTIFACT
 5	!	!	PUNCT	.	_	2	punct	2:punct	_
 

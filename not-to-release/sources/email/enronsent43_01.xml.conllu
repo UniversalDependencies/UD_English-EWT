@@ -22,7 +22,7 @@
 # text = I wanted you all to have a look at what we believe is the final draft.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
 2	wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	2	obj	2:obj|6:nsubj:xsubj	_
+3	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	2	obj	2:obj|6:nsubj:xsubj	_
 4	all	all	DET	DT	PronType=Tot	3	nmod:unmarked	3:nmod:unmarked	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	have	have	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
@@ -462,9 +462,9 @@
 10	ROW	row	NOUN	NN	Number=Sing	5	conj	3:appos|5:conj:or	SpaceAfter=No
 11	,	,	PUNCT	,	_	3	punct	3:punct	_
 12	been	be	AUX	VBN	Tense=Past|VerbForm=Part	13	aux:pass	13:aux:pass	_
-13	settled	settle	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Cxn=Interrogative-WHInfo-Direct|CxnElt=13:Interrogative-WHInfo-Direct.Clause
+13	settled	settle	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=13:Interrogative-Polar-Direct.Clause
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	when	when	ADV	WRB	PronType=Int	13	conj	13:conj:and	CxnElt=13:Interrogative-WHInfo-Direct.WHWord
+15	when	when	ADV	WRB	PronType=Int	13	conj	13:conj:and	Cxn=Interrogative-WHInfo-Direct|CxnElt=15:Interrogative-WHInfo-Direct.Clause,15:Interrogative-WHInfo-Direct.WHWord
 16	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 18	required	require	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	22	amod	22:amod	_
@@ -1661,7 +1661,7 @@
 4	at	at	ADP	IN	_	5	case	5:case	_
 5	x36709	x36709	NOUN	NN	Number=Sing	2	obl	2:obl:at	_
 6	if	if	SCONJ	IN	_	8	mark	8:mark	_
-7	there	there	PRON	EX	_	8	expl	8:expl	_
+7	there	there	PRON	EX	PronType=Dem	8	expl	8:expl	_
 8	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	advcl	2:advcl:if	Cxn=Existential-CopPred-ThereExpl|CxnElt=2:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 9	questions	question	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	CxnElt=8:Existential-CopPred-ThereExpl.Pivot
 
@@ -1853,17 +1853,17 @@
 10	Health	Health	PROPN	NNP	Number=Sing	11	compound	11:compound	_
 11	Care	Care	PROPN	NNP	Number=Sing	12	compound	12:compound	_
 12	System	System	PROPN	NNP	Number=Sing	1	list	1:list	_
-13	6565	6565	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
+13	6565	6565	NUM	CD	NumForm=Digit|NumType=Card	17	nmod:unmarked	17:nmod:unmarked	Superlocation=Yes
 14	Fannin	Fannin	PROPN	NNP	Number=Sing	15	compound	15:compound	_
-15	Street	Street	PROPN	NNP	Number=Sing	1	list	1:list	SpaceAfter=No
-16	,	,	PUNCT	,	_	17	punct	17:punct	_
-17	D	D	NOUN	NN	Number=Sing	13	appos	13:appos	FlatType=Enumerated|SpaceAfter=No
+15	Street	Street	PROPN	NNP	Number=Sing	13	nmod:unmarked	13:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
+16	,	,	PUNCT	,	_	15	punct	15:punct	_
+17	D	D	NOUN	NN	Number=Sing	1	list	1:list	FlatType=Enumerated|SpaceAfter=No
 18	-	-	PUNCT	,	_	19	punct	19:punct	SpaceAfter=No
 19	200	200	NUM	CD	NumForm=Digit|NumType=Card	17	flat	17:flat	_
-20	Houston	Houston	PROPN	NNP	Number=Sing	15	appos	15:appos	SpaceAfter=No
+20	Houston	Houston	PROPN	NNP	Number=Sing	1	list	1:list	SpaceAfter=No
 21	,	,	PUNCT	,	_	22	punct	22:punct	_
-22	Texas	Texas	PROPN	NNP	Number=Sing	20	appos	20:appos	_
-23	77030-2707	77030-2707	NUM	CD	NumForm=Digit|NumType=Card	13	appos	13:appos	_
+22	Texas	Texas	PROPN	NNP	Number=Sing	20	nmod:unmarked	20:nmod:unmarked	Superlocation=Yes
+23	77030-2707	77030-2707	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 24	Office	office	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 25	:	:	PUNCT	:	_	26	punct	26:punct	_
 26	713-793-1429	713-793-1429	NUM	CD	NumForm=Digit|NumType=Card	24	appos	24:appos	_

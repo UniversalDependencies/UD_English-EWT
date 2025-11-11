@@ -4,32 +4,32 @@
 # text = $9.62 excluding tip with water to drink for the buffet.
 1	$	$	SYM	$	_	0	root	0:root	SpaceAfter=No
 2	9.62	9.62	NUM	CD	NumForm=Digit|NumType=Frac	1	nummod	1:nummod	_
-3	excluding	exclude	VERB	VBG	Tense=Pres|VerbForm=Part	4	case	4:case	_
-4	tip	tip	NOUN	NN	Number=Sing	1	nmod	1:nmod:excluding	_
-5	with	with	ADP	IN	_	6	case	6:case	_
-6	water	water	NOUN	NN	Number=Sing	1	nmod	1:nmod:with	_
-7	to	to	PART	TO	_	8	mark	8:mark	_
-8	drink	drink	VERB	VB	VerbForm=Inf	6	acl	6:acl:to	_
-9	for	for	ADP	IN	_	11	case	11:case	_
+3	excluding	exclude	VERB	VBG	Tense=Pres|VerbForm=Part	4	case	4:case	Supersense=v.stative
+4	tip	tip	NOUN	NN	Number=Sing	1	nmod	1:nmod:excluding	Supersense=n.POSSESSION
+5	with	with	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=1:$|PRel[obj]=6:water|Supersense=p.Characteristic
+6	water	water	NOUN	NN	Number=Sing	1	nmod	1:nmod:with	Supersense=n.FOOD
+7	to	to	PART	TO	_	8	mark	8:mark	PRel[config]=subordinating|PRel[gov]=6:water|PRel[obj]=8:drink|Supersense=p.Purpose
+8	drink	drink	VERB	VB	VerbForm=Inf	6	acl	6:acl:to	Supersense=v.consumption
+9	for	for	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=1:$|PRel[obj]=11:buffet|Supersense[coding]=p.Purpose|Supersense[scene]=p.Theme
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	buffet	buffet	NOUN	NN	Number=Sing	1	nmod	1:nmod:for	SpaceAfter=No
+11	buffet	buffet	NOUN	NN	Number=Sing	1	nmod	1:nmod:for	SpaceAfter=No|Supersense=n.FOOD
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-307250-0002
 # text = Worst buffet period by far.
 1	Worst	bad	ADJ	JJS	Degree=Sup	3	amod	3:amod	_
-2	buffet	buffet	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	period	period	NOUN	NN	Number=Sing	0	root	0:root	_
-4	by	by	ADP	IN	_	5	case	5:case	_
+2	buffet	buffet	NOUN	NN	Number=Sing	3	compound	3:compound	Supersense=n.FOOD
+3	period	period	NOUN	NN	Number=Sing	0	root	0:root	Supersense=`d
+4	by	by	ADP	IN	_	5	case	5:case	MWECat=PP|MWELemma=by far|MWELen=2|PRel[config]=default|PRel[gov]=3:period|PRel[obj]=5:far|Supersense=p.Extent
 5	far	far	ADV	RB	Degree=Pos	3	nmod	3:nmod:by	SpaceAfter=No
 6	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-307250-0003
 # text = I want my money back!
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	money	money	NOUN	NN	Number=Sing	2	obj	2:obj	_
-5	back	back	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
+2	want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	PRel[config]=possessive|PRel[gov]=4:money|Supersense=p.Possessor
+4	money	money	NOUN	NN	Number=Sing	2	obj	2:obj	MWELemma[weak]=money back|MWELen[weak]=2|Supersense=n.POSSESSION
+5	back	back	ADV	RB	_	2	advmod	2:advmod	PRel[config]=default|PRel[gov]=2:want|SpaceAfter=No|Supersense=p.Direction
 6	!	!	PUNCT	.	_	2	punct	2:punct	_
 

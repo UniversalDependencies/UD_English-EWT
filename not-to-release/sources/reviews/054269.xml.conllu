@@ -3,41 +3,41 @@
 # newpar id = reviews-054269-p0001
 # text = Excellent energy efficiency
 1	Excellent	excellent	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-2	energy	energy	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	efficiency	efficiency	NOUN	NN	Number=Sing	0	root	0:root	_
+2	energy	energy	NOUN	NN	Number=Sing	3	compound	3:compound	Supersense=n.ATTRIBUTE
+3	efficiency	efficiency	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.ATTRIBUTE
 
 # sent_id = reviews-054269-0002
 # newpar id = reviews-054269-p0002
 # text = Compact's Corona dryers remove at least twice as much water as the previous dryers, allowing a production increase of over 10% and a significant energy saving.
 1-2	Compact's	_	_	_	_	_	_	_	_
-1	Compact	Compact	PROPN	NNP	Number=Sing	4	nmod:poss	4:nmod:poss	_
+1	Compact	Compact	PROPN	NNP	Number=Sing	4	nmod:poss	4:nmod:poss	MWECat=N|MWELemma=Compact 's|MWELen=2|Supersense=n.GROUP
 2	's	's	PART	POS	_	1	case	1:case	_
-3	Corona	Corona	PROPN	NNP	Number=Sing	4	compound	4:compound	_
+3	Corona	Corona	PROPN	NNP	Number=Sing	4	compound	4:compound	MWECat=N|MWELemma=Corona dryer|MWELen=2|MWEString=Corona dryers|Supersense=n.ARTIFACT
 4	dryers	dryer	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
-5	remove	remove	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-6	at	at	ADP	IN	_	7	case	7:case	_
+5	remove	remove	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.change
+6	at	at	ADP	IN	_	7	case	7:case	MWECat=PP|MWELemma=at least|MWELen=2|PRel[config]=default|PRel[gov]=8:twice|PRel[obj]=7:least|Supersense=p.Approximator
 7	least	least	ADJ	JJS	Degree=Sup	8	obl	8:obl:at	_
 8	twice	twice	ADV	RB	NumForm=Word|NumType=Mult	9	advmod	9:advmod	_
-9	as	as	ADV	RB	_	10	advmod	10:advmod	_
+9	as	as	ADV	RB	_	10	advmod	10:advmod	PRel[config]=default|PRel[gov]=11:water|PRel[obj]=10:much|Supersense[coding]=p.Extent|Supersense[scene]=p.Approximator
 10	much	much	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	water	water	NOUN	NN	Number=Sing	5	obj	5:obj	_
-12	as	as	ADP	IN	_	15	case	15:case	_
+11	water	water	NOUN	NN	Number=Sing	5	obj	5:obj	Supersense=n.NATURALOBJECT
+12	as	as	ADP	IN	_	15	case	15:case	PRel[config]=default|PRel[gov]=10:much|PRel[obj]=15:dryer|Supersense=p.ComparisonRef
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 14	previous	previous	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	dryers	dryer	NOUN	NNS	Number=Plur	10	obl	10:obl:as	SpaceAfter=No
+15	dryers	dryer	NOUN	NNS	Number=Plur	10	obl	10:obl:as	SpaceAfter=No|Supersense=n.ARTIFACT
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
-17	allowing	allow	VERB	VBG	Tense=Pres|VerbForm=Part	5	advcl	5:advcl	_
+17	allowing	allow	VERB	VBG	Tense=Pres|VerbForm=Part	5	advcl	5:advcl	Supersense=v.stative
 18	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
-19	production	production	NOUN	NN	Number=Sing	20	compound	20:compound	_
-20	increase	increase	NOUN	NN	Number=Sing	17	obj	17:obj	_
-21	of	of	ADP	IN	_	24	case	24:case	_
-22	over	over	ADV	RB	_	23	advmod	23:advmod	_
+19	production	production	NOUN	NN	Number=Sing	20	compound	20:compound	Supersense=n.ACT
+20	increase	increase	NOUN	NN	Number=Sing	17	obj	17:obj	Supersense=n.RELATION
+21	of	of	ADP	IN	_	24	case	24:case	PRel[config]=default|PRel[gov]=20:increase|PRel[obj]=24:%|Supersense[coding]=p.Identity|Supersense[scene]=p.Extent
+22	over	over	ADV	RB	_	23	advmod	23:advmod	PRel[config]=default|PRel[obj]=23:10|Supersense=p.Approximator
 23	10	10	NUM	CD	NumForm=Digit|NumType=Card	24	nummod	24:nummod	SpaceAfter=No
 24	%	%	SYM	NN	Number=Sing	20	nmod	20:nmod:of	_
 25	and	and	CCONJ	CC	_	29	cc	29:cc	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	29:det	_
 27	significant	significant	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
-28	energy	energy	NOUN	NN	Number=Sing	29	compound	29:compound	_
-29	saving	saving	NOUN	NN	Number=Sing	20	conj	17:obj|20:conj:and	SpaceAfter=No
+28	energy	energy	NOUN	NN	Number=Sing	29	compound	29:compound	MWELemma[weak]=energy saving|MWELen[weak]=2|Supersense=n.ARTIFACT
+29	saving	saving	NOUN	NN	Number=Sing	20	conj	17:obj|20:conj:and	SpaceAfter=No|Supersense=n.POSSESSION
 30	.	.	PUNCT	.	_	5	punct	5:punct	_
 

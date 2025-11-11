@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.15 -- 2024-11-15
+Universal Dependencies English Web Treebank v2.17 -- 2025-11-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
 
@@ -20,7 +20,8 @@ hand-corrected to Universal Dependencies. All the basic dependency annotations h
 been single-annotated, a limited portion of them have been double-annotated,
 and subsequent correction has been done to improve consistency. Other aspects
 of the treebank, such as Universal POS, features and enhanced dependencies, has
-mainly been done automatically, with very limited hand-correction.
+mainly been done automatically, with very limited hand-correction initially
+(but substantial cleanup over the years).
 
 
 # License/Copyright
@@ -73,6 +74,75 @@ of the converter by Schuster and Manning (2016). These dependencies have **not**
 manually checked. Enhanced dependencies for *reduced* relative clauses were added in
 v2.14.
 
+# MISC Annotations
+
+[MISC](https://universaldependencies.org/misc.html), the 10th column of the .conllu format,
+allows for extension beyond the components generally adopted in UD treebanks.
+EWT contains three categories of MISC annotation beyond the core UD standard:
+UCxn (construction) annotations, STREUSLE (lexical semantic) annotations, and
+idiosyncratic attributes.
+
+## Construction Annotations
+
+The `Cxn` attribute allows for description of constructions that go beyond the words
+and relations described by the UD standard. For the most part, the `Cxn` annotations
+follow the parameters of the [UCxn project](https://github.com/LeonieWeissweiler/UCxn/).
+EWT also includes relative clause subtype annotations in this field.
+See the [changelog](#changelog) entry for v2.14.
+
+## Lexical Semantic Annotations
+
+The [STREUSLE corpus](https://github.com/nert-nlp/streusle/) provides gold-standard
+annotations for multiword expressions and supersenses in the Reviews portion of EWT
+(3814 sentences). In v2.17 these were incorporated in the MISC column via the attributes
+`MWECat`, `MWELemma`, `MWELen`, `MWEString`, `Supersense`, and `PRel`.
+Refer to the [STREUSLE docs](https://github.com/nert-nlp/streusle/blob/master/FORMAT.md)
+for details.
+
+## Idiosyncratic MISC Attributes
+
+These are not documented as part of UCxn, STREUSLE, or the
+[general UD guidelines](https://universaldependencies.org/misc.html), but are
+experimental and specific to EWT. These are not necessarily systematically applied,
+and are subject to change in future versions:
+
+- `Citation=Yes`: Indicates a parenthetical citation (see [docs issue 1145](https://github.com/UniversalDependencies/docs/issues/1145))
+- `Depictive=Yes`: Indicates the secondary predicate is semantically depictive.
+- `Exclamative=Yes`: Clause bearing exclamative syntax (to disambiguate from interrogatives).
+- `Footnote=Yes`: Indicates a reference to a footnote (see [docs issue 1145](https://github.com/UniversalDependencies/docs/issues/1145))
+- `FlatType`: Explains the use of [`flat`](https://universaldependencies.org/u/dep/flat) for a special kind of entity.
+  Marked on the first word of the flat expression. Current values:
+    * `Enumerated`: a [numbered entity](https://universaldependencies.org/en/dep/nmod-desc.html#numbered-entities),
+      e.g. _Chapter 1_
+    * `Filename`
+    * `Iconic`: e.g. spelled-out words
+    * `NumericLocator`: a complex section number in a text, e.g. _5.1 ( b )_
+    * `Postcode` e.g. _M5J 1S9_
+    * `Phone`: a telephone number
+- `ManuallyChecked`: A note for treebank maintainers
+- `Mentioned=Yes`: A metalinguistic mention (as opposed to a use) of a term.
+- `MissingWordAfter=Yes`: Indicates that an unspecified word would need to be inserted to make
+  the sentence grammatical.
+- `MissingWordsAfter`: Value is a specific word or words that can be inferred as having been
+  accidentally omitted.
+- `Promoted=Yes`: Makes explicit that a word has been promoted to the head of the phrase,
+  explaining its apparently anomalous context. NOTE: Applied in an ad hoc fashion; many cases
+  of promotion are not marked.
+- `Resultative=Yes`: Indicates the secondary predicate is semantically resultative.
+- `Signature=Yes`: Indicates a trailing phrase within a sentence interpreted as the author's
+  signature. Only applied to 1 token.
+- `SpecialEncoding=Yes`: Indicates an unusual character encoding (see
+  [issue 83](https://github.com/UniversalDependencies/UD_English-EWT/issues/83)).
+- `Superlocation=Yes`: Indicates the `nmod:unmarked` phrase is a containing-location (or organization)
+  of a more specific place or subunit (see [issue 588](https://github.com/UniversalDependencies/UD_English-EWT/issues/588)).
+  Most commonly used for "CITY, STATE" combinations like _Dallas, **Texas**_.
+  Others include "HOUSE_NUMBER **STREET**", "ORGANIZATION **BRANCH_LOCATION**", and "JOB_TITLE, **ORGANIZATION**".
+  Note that major fields of full postal addresses sequenced into a "sentence" attach as `list`,
+  so they will not bear this attribute.
+- `TemporalNPAdjunct=Yes`: Indicates an adjunct previously annotated `obl:tmod` or `nmod:tmod`.
+  May become obsolete if entity annotations are introduced.
+- `TODO`: A note for treebank maintainers
+
 # Known Issues
 
 The issue tracker at <https://github.com/UniversalDependencies/UD_English-EWT/issues>
@@ -82,11 +152,28 @@ documents many yet-to-be-resolved analysis challenges. Significant among these:
 
 # Changelog
 
+**2025-11-15 v2.17**
+
+Highlights:
+
+  - **In the Reviews sentences, incorporate gold-standard lexical semantic annotations from STREUSLE** ([#606](https://github.com/UniversalDependencies/UD_English-EWT/issues/606))
+  - **Implement new guidelines for several classes of nominal expressions**
+    * `flat` for location names like "Mount Fuji", "Fort Worth" ([#595](https://github.com/UniversalDependencies/UD_English-EWT/issues/595))
+    * `nmod:unmarked` + `Superlocation=Yes` for CITY, STATE and postal addresses ([#588](https://github.com/UniversalDependencies/UD_English-EWT/issues/588))
+    * `nmod:unmarked` for "degrees Fahrenheit/Celsius" ([#574](https://github.com/UniversalDependencies/UD_English-EWT/issues/574))
+    * `nmod:desc` for "Inc." and similar business suffixes ([#587](https://github.com/UniversalDependencies/UD_English-EWT/issues/587))
+  - Implement `PronType=Dem` for expletive "there" ([docs#517](https://github.com/UniversalDependencies/docs/issues/517))
+  - Hundreds of "it" and "you" tokens had `Case=Nom` where `Case=Acc` is correct ([#589](https://github.com/UniversalDependencies/UD_English-EWT/issues/589))
+  - "@": at/SYM/ExtPos=ADP ([#599](https://github.com/UniversalDependencies/UD_English-EWT/issues/599))
+  - Correct `appos` to `nmod:unmarked` for "you guys" etc. ([#436](https://github.com/UniversalDependencies/UD_English-EWT/issues/436))
+  - Temporal premodifiers of nouns should attach as `compound` not `nmod:unmarked` ([#593](https://github.com/UniversalDependencies/UD_English-EWT/issues/593))
+  - Document [`MISC` annotations](#misc-annotations)
+
 **2025-05-15 v2.16**
 
 Highlights:
 
-  - **Implement new [`nmod:desc`](https://universaldependencies.org/en/dep/nmod-desc.html) subtype for prefixes/suffixes/embellishments in names ([#561](https://github.com/UniversalDependencies/UD_English-EWT/issues/561), [#559](https://github.com/UniversalDependencies/UD_English-EWT/issues/559), [#59](https://github.com/UniversalDependencies/UD_English-EWT/issues/59))**
+  - **Implement new [`nmod:desc`](https://universaldependencies.org/en/dep/nmod-desc.html) subtype for prefixes/suffixes/embellishments in names** ([#561](https://github.com/UniversalDependencies/UD_English-EWT/issues/561), [#559](https://github.com/UniversalDependencies/UD_English-EWT/issues/559), [#59](https://github.com/UniversalDependencies/UD_English-EWT/issues/59))
   - **Implement new [guidelines for dates](https://universaldependencies.org/en/dep/nmod-unmarked.html#dates)** ([#575](https://github.com/UniversalDependencies/UD_English-EWT/issues/575))
   - **Implement new [guidelines for numbered entities](https://universaldependencies.org/en/dep/nmod-desc.html#numbered-entities) like "Chapter 1"** ([#558](https://github.com/UniversalDependencies/UD_English-EWT/issues/558))
   - New policy for "you guys" and similar ([#436](https://github.com/UniversalDependencies/UD_English-EWT/issues/436))
@@ -339,6 +426,7 @@ English Web Treebank:
 Data available since: UD v1.0
 License: CC BY-SA 4.0
 Includes text: yes
+Parallel: no
 Genre: blog social reviews email web
 Lemmas: automatic with corrections
 UPOS: converted with corrections

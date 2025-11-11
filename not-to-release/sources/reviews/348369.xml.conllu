@@ -9,22 +9,22 @@
 # newpar id = reviews-348369-p0002
 # text = Yes my G1 screen is back working.
 1	Yes	yes	INTJ	UH	Polarity=Pos	8	discourse	8:discourse	_
-2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-3	G	G	NOUN	NN	Number=Sing	5	compound	5:compound	FlatType=Enumerated|SpaceAfter=No
+2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	PRel[config]=possessive|PRel[gov]=5:screen|Supersense=p.Possessor
+3	G	G	NOUN	NN	Number=Sing	5	compound	5:compound	FlatType=Enumerated|MWECat=N|MWELemma=G 1|MWELen=2|SpaceAfter=No|Supersense=n.ARTIFACT
 4	1	1	NUM	CD	NumForm=Digit|NumType=Card	3	flat	3:flat	_
-5	screen	screen	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
+5	screen	screen	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	Supersense=n.ARTIFACT
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 7	back	back	ADV	RB	_	8	advmod	8:advmod	_
-8	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	SpaceAfter=No
+8	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	SpaceAfter=No|Supersense=v.stative
 9	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-348369-0003
 # text = They was about to Charge me $129...
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj|5:nsubj:xsubj	_
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
-3	about	about	ADJ	JJ	Degree=Pos	0	root	0:root	_
+3	about	about	ADJ	JJ	Degree=Pos	0	root	0:root	MWECat=AUX|MWELemma=about to|MWELen=2
 4	to	to	PART	TO	_	5	mark	5:mark	_
-5	Charge	charge	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
+5	Charge	charge	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	Supersense=v.possession
 6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	5	iobj	5:iobj	_
 7	$	$	SYM	$	_	5	obj	5:obj	SpaceAfter=No
 8	129	129	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	SpaceAfter=No
@@ -34,7 +34,7 @@
 # text = But i paid $100.
 1	But	but	CCONJ	CC	_	3	cc	3:cc	_
 2	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	paid	pay	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+3	paid	pay	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.possession
 4	$	$	SYM	$	_	3	obj	3:obj	SpaceAfter=No
 5	100	100	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	SpaceAfter=No
 6	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -42,33 +42,33 @@
 # sent_id = reviews-348369-0005
 # text = they save me from having to deal with Tmobile...
 1	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	save	save	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|Typo=Yes|VerbForm=Fin	0	root	0:root	CorrectForm=saved
+2	save	save	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|Typo=Yes|VerbForm=Fin	0	root	0:root	CorrectForm=saved|MWELemma[weak]=save <1> from|MWELen[weak]=3|Supersense=v.stative
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj	_
-4	from	from	SCONJ	IN	_	5	mark	5:mark	_
-5	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	2	advcl	2:advcl:from	_
+4	from	from	SCONJ	IN	_	5	mark	5:mark	PRel[config]=subordinating|PRel[gov]=2:save|PRel[obj]=5:have|Supersense[coding]=p.Source|Supersense[scene]=p.Theme
+5	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	2	advcl	2:advcl:from	MWECat=AUX|MWELemma=have to|MWELen=2|MWEString=having to
 6	to	to	PART	TO	_	7	mark	7:mark	_
-7	deal	deal	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	_
+7	deal	deal	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	MWECat=V.IAV|MWELemma=deal with|MWELen=2|Supersense=v.social
 8	with	with	ADP	IN	_	9	case	9:case	_
-9	Tmobile	Tmobile	PROPN	NNP	Number=Sing	7	obl	7:obl:with	SpaceAfter=No
+9	Tmobile	Tmobile	PROPN	NNP	Number=Sing	7	obl	7:obl:with	SpaceAfter=No|Supersense=n.GROUP
 10	...	...	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-348369-0006
 # text = Tmobile want to Send of my phone and i didn't want to go thru that...
-1	Tmobile	Tmobile	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|4:nsubj:xsubj	_
-2	want	want	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	CorrectForm=wanted|CorrectNumber=Sing|CorrectTense=Past
+1	Tmobile	Tmobile	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|4:nsubj:xsubj	Supersense=n.GROUP
+2	want	want	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	CorrectForm=wanted|CorrectNumber=Sing|CorrectTense=Past|Supersense=v.cognition
 3	to	to	PART	TO	_	4	mark	4:mark	_
-4	Send	send	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-5	of	off	ADP	RP	Typo=Yes	4	compound:prt	4:compound:prt	CorrectForm=off
-6	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
-7	phone	phone	NOUN	NN	Number=Sing	4	obj	4:obj	_
+4	Send	send	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	Supersense=v.motion
+5	of	off	ADP	RP	Typo=Yes	4	compound:prt	4:compound:prt	CorrectForm=off|PRel[config]=default|PRel[gov]=4:send|Supersense=p.Direction
+6	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	PRel[config]=possessive|PRel[gov]=7:phone|Supersense=p.Possessor
+7	phone	phone	NOUN	NN	Number=Sing	4	obj	4:obj	Supersense=n.ARTIFACT
 8	and	and	CCONJ	CC	_	12	cc	12:cc	_
 9	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj|14:nsubj:xsubj	_
 10-11	didn't	_	_	_	_	_	_	_	_
 10	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	12	aux	12:aux	_
 11	n't	not	PART	RB	Polarity=Neg	12	advmod	12:advmod	_
-12	want	want	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	_
+12	want	want	VERB	VB	VerbForm=Inf	2	conj	2:conj:and	Supersense=v.cognition
 13	to	to	PART	TO	_	14	mark	14:mark	_
-14	go	go	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
+14	go	go	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	MWECat=V.IAV|MWELemma=go through|MWELen=2|MWEString=go thru|Supersense=v.social
 15	thru	through	ADP	IN	Abbr=Yes	16	case	16:case	_
 16	that	that	PRON	DT	Number=Sing|PronType=Dem	14	obl	14:obl:through	SpaceAfter=No
 17	...	...	PUNCT	.	_	2	punct	2:punct	_
@@ -76,8 +76,8 @@
 # sent_id = reviews-348369-0007
 # text = 3 Days For get that...
 1	3	3	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	_
-2	Days	day	NOUN	NNS	Number=Plur	0	root	0:root	_
-3	For	forget	VERB	GW	Mood=Imp|Typo=Yes|VerbForm=Fin	2	parataxis	2:parataxis	_
+2	Days	day	NOUN	NNS	Number=Plur	0	root	0:root	Supersense=n.TIME
+3	For	forget	VERB	GW	Mood=Imp|Typo=Yes|VerbForm=Fin	2	parataxis	2:parataxis	MWECat=V.VID|MWELemma=forget that|MWELen=3|MWEString=For get that|Supersense=v.cognition
 4	get	_	X	VB	_	3	goeswith	3:goeswith	_
 5	that	that	PRON	DT	Number=Sing|PronType=Dem	3	obj	3:obj	SpaceAfter=No
 6	...	...	PUNCT	.	_	2	punct	2:punct	_
@@ -85,16 +85,16 @@
 # sent_id = reviews-348369-0008
 # text = Great service.
 1	Great	great	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	service	service	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+2	service	service	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.ACT
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-348369-0009
 # text = I would recommend them to anyone..
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
 4	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	3	obj	3:obj	_
-5	to	to	ADP	IN	_	6	case	6:case	_
+5	to	to	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=3:recommend|PRel[obj]=6:anyone|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
 6	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	3	obl	3:obl:to	SpaceAfter=No
 7	..	..	PUNCT	.	_	3	punct	3:punct	_
 

@@ -2,57 +2,57 @@
 # sent_id = reviews-315763-0001
 # newpar id = reviews-315763-p0001
 # text = Love my home at Creekside
-1	Love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	home	home	NOUN	NN	Number=Sing	1	obj	1:obj	_
-4	at	at	ADP	IN	_	5	case	5:case	_
-5	Creekside	Creekside	PROPN	NNP	Number=Sing	3	nmod	3:nmod:at	_
+1	Love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.emotion
+2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	PRel[config]=possessive|PRel[gov]=3:home|Supersense=p.Possessor
+3	home	home	NOUN	NN	Number=Sing	1	obj	1:obj	Supersense=n.ARTIFACT
+4	at	at	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=3:home|PRel[obj]=5:Creekside|Supersense=p.Locus
+5	Creekside	Creekside	PROPN	NNP	Number=Sing	3	nmod	3:nmod:at	Supersense=n.LOCATION
 
 # sent_id = reviews-315763-0002
 # newpar id = reviews-315763-p0002
 # text = I moved to Creekside Apartments in August 2008 with a 6-month lease and have just extended it for another 13 months!
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|18:nsubj	_
-2	moved	move	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	to	to	ADP	IN	_	5	case	5:case	_
-4	Creekside	Creekside	PROPN	NNP	Number=Sing	5	compound	5:compound	_
+2	moved	move	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.motion
+3	to	to	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=2:move|PRel[obj]=5:Apartment|Supersense=p.Goal
+4	Creekside	Creekside	PROPN	NNP	Number=Sing	5	compound	5:compound	MWECat=N|MWELemma=Creekside Apartment|MWELen=2|MWEString=Creekside Apartments|Supersense=n.GROUP
 5	Apartments	Apartment	PROPN	NNPS	Number=Plur	2	obl	2:obl:to	_
-6	in	in	ADP	IN	_	7	case	7:case	_
-7	August	August	PROPN	NNP	Number=Sing	2	obl	2:obl:in	_
+6	in	in	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=2:move|PRel[obj]=7:August|Supersense=p.Time
+7	August	August	PROPN	NNP	Number=Sing	2	obl	2:obl:in	Supersense=n.TIME
 8	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	7	nmod:unmarked	7:nmod:unmarked	_
-9	with	with	ADP	IN	_	14	case	14:case	_
+9	with	with	ADP	IN	_	14	case	14:case	PRel[config]=default|PRel[gov]=2:move|PRel[obj]=14:lease|Supersense[coding]=p.Ancillary|Supersense[scene]=p.Possession
 10	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	_
 11	6	6	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	SpaceAfter=No
 12	-	-	PUNCT	HYPH	_	11	punct	11:punct	SpaceAfter=No
-13	month	month	NOUN	NN	Number=Sing	14	compound	14:compound	_
-14	lease	lease	NOUN	NN	Number=Sing	2	obl	2:obl:with	_
+13	month	month	NOUN	NN	Number=Sing	14	compound	14:compound	Supersense=n.TIME
+14	lease	lease	NOUN	NN	Number=Sing	2	obl	2:obl:with	Supersense=n.POSSESSION
 15	and	and	CCONJ	CC	_	18	cc	18:cc	_
 16	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
 17	just	just	ADV	RB	_	18	advmod	18:advmod	_
-18	extended	extend	VERB	VBN	Tense=Past|VerbForm=Part	2	conj	2:conj:and	_
-19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	_
-20	for	for	ADP	IN	_	23	case	23:case	_
+18	extended	extend	VERB	VBN	Tense=Past|VerbForm=Part	2	conj	2:conj:and	Supersense=v.change
+19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	_
+20	for	for	ADP	IN	_	23	case	23:case	PRel[config]=default|PRel[gov]=18:extend|PRel[obj]=23:month|Supersense=p.Duration
 21	another	another	DET	DT	PronType=Ind	23	det	23:det	_
 22	13	13	NUM	CD	NumForm=Digit|NumType=Card	23	nummod	23:nummod	_
-23	months	month	NOUN	NNS	Number=Plur	18	obl	18:obl:for	SpaceAfter=No
+23	months	month	NOUN	NNS	Number=Plur	18	obl	18:obl:for	SpaceAfter=No|Supersense=n.TIME
 24	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-315763-0003
 # text = The management from Julie and Janice to the work staff, esp. Edwin, are just wonderful.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	management	management	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
-3	from	from	ADP	IN	_	4	case	4:case	_
-4	Julie	Julie	PROPN	NNP	Number=Sing	2	nmod	2:nmod:from	_
+2	management	management	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	Supersense=n.GROUP
+3	from	from	ADP	IN	_	4	case	4:case	PRel[config]=default|PRel[gov]=2:management|PRel[obj]=4:Julie|Supersense[coding]=p.Source|Supersense[scene]=p.PartPortion
+4	Julie	Julie	PROPN	NNP	Number=Sing	2	nmod	2:nmod:from	Supersense=n.PERSON
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
-6	Janice	Janice	PROPN	NNP	Number=Sing	4	conj	2:nmod:from|4:conj:and	_
-7	to	to	ADP	IN	_	10	case	10:case	_
+6	Janice	Janice	PROPN	NNP	Number=Sing	4	conj	2:nmod:from|4:conj:and	Supersense=n.PERSON
+7	to	to	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=2:management|PRel[obj]=10:staff|Supersense[coding]=p.Goal|Supersense[scene]=p.PartPortion
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-9	work	work	NOUN	NN	Number=Sing	10	compound	10:compound	_
+9	work	work	NOUN	NN	Number=Sing	10	compound	10:compound	MWECat=N|MWELemma=work staff|MWELen=2|Supersense=n.GROUP
 10	staff	staff	NOUN	NN	Number=Sing	2	nmod	2:nmod:to	SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	esp.	esp.	ADV	RB	_	13	advmod	13:advmod	_
-13	Edwin	Edwin	PROPN	NNP	Number=Sing	10	appos	10:appos	SpaceAfter=No
+13	Edwin	Edwin	PROPN	NNP	Number=Sing	10	appos	10:appos	SpaceAfter=No|Supersense=n.PERSON
 14	,	,	PUNCT	,	_	2	punct	2:punct	_
-15	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
+15	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	Supersense=v.stative
 16	just	just	ADV	RB	_	17	advmod	17:advmod	_
 17	wonderful	wonderful	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 18	.	.	PUNCT	.	_	17	punct	17:punct	_
@@ -61,37 +61,37 @@
 # text = They have been extremely helpful whenever I have asked for help.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	5	cop	5:cop	_
+3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	5	cop	5:cop	Supersense=v.stative
 4	extremely	extremely	ADV	RB	_	5	advmod	5:advmod	_
 5	helpful	helpful	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	whenever	whenever	ADV	WRB	PronType=Rel	5	advmod	5:advmod|9:advmod	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 8	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
-9	asked	ask	VERB	VBN	Tense=Past|VerbForm=Part	6	advcl:relcl	6:advcl:relcl	Cxn=rc-free-advmod
-10	for	for	ADP	IN	_	11	case	11:case	_
-11	help	help	NOUN	NN	Number=Sing	9	obl	9:obl:for	SpaceAfter=No
+9	asked	ask	VERB	VBN	Tense=Past|VerbForm=Part	6	advcl:relcl	6:advcl:relcl	Cxn=rc-free-advmod|MWELemma[weak]=ask for|MWELen[weak]=2|MWEString[weak]=asked for|Supersense=v.communication
+10	for	for	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=9:ask|PRel[obj]=11:help|Supersense=p.Theme
+11	help	help	NOUN	NN	Number=Sing	9	obl	9:obl:for	SpaceAfter=No|Supersense=n.ACT
 12	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-315763-0005
 # text = Although the apartments are facing Stokes Street and close to the Bascom Light Rail, the location is surprisingly quiet.
 1	Although	although	SCONJ	IN	_	5	mark	5:mark	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
-3	apartments	apartment	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|9:nsubj	_
+3	apartments	apartment	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|9:nsubj	Supersense=n.ARTIFACT
 4	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-5	facing	face	VERB	VBG	Tense=Pres|VerbForm=Part	20	advcl	20:advcl:although	_
-6	Stokes	Stokes	PROPN	NNP	Number=Sing	7	compound	7:compound	_
+5	facing	face	VERB	VBG	Tense=Pres|VerbForm=Part	20	advcl	20:advcl:although	Supersense=v.stative
+6	Stokes	Stokes	PROPN	NNP	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=Stokes Street|MWELen=2|Supersense=n.LOCATION
 7	Street	Street	PROPN	NNP	Number=Sing	5	obj	5:obj	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	close	close	ADJ	JJ	Degree=Pos	5	conj	5:conj:and|20:advcl:although	_
-10	to	to	ADP	IN	_	14	case	14:case	_
+9	close	close	ADJ	JJ	Degree=Pos	5	conj	5:conj:and|20:advcl:although	MWELemma[weak]=close to|MWELen[weak]=2
+10	to	to	ADP	IN	_	14	case	14:case	PRel[config]=default|PRel[gov]=9:close|PRel[obj]=14:Rail|Supersense[coding]=p.Goal|Supersense[scene]=p.Locus
 11	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-12	Bascom	Bascom	PROPN	NNP	Number=Sing	14	compound	14:compound	_
+12	Bascom	Bascom	PROPN	NNP	Number=Sing	14	compound	14:compound	MWECat=N|MWELemma=Bascom Light Rail|MWELen=3|Supersense=n.GROUP
 13	Light	Light	PROPN	NNP	Number=Sing	14	compound	14:compound	_
 14	Rail	Rail	PROPN	NNP	Number=Sing	9	obl	9:obl:to	SpaceAfter=No
 15	,	,	PUNCT	,	_	5	punct	5:punct	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
-17	location	location	NOUN	NN	Number=Sing	20	nsubj	20:nsubj	_
-18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	20:cop	_
+17	location	location	NOUN	NN	Number=Sing	20	nsubj	20:nsubj	Supersense=n.LOCATION
+18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	20:cop	Supersense=v.stative
 19	surprisingly	surprisingly	ADV	RB	_	20	advmod	20:advmod	_
 20	quiet	quiet	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 21	.	.	PUNCT	.	_	20	punct	20:punct	_
@@ -101,38 +101,38 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	never	never	ADV	RB	PronType=Neg	4	advmod	4:advmod	_
-4	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+4	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	MWECat=V.LVC.full|MWELemma=have <1> problem|MWELemma[weak]=have <1> problem with|MWELen=3|MWELen[weak]=4|MWEString=had <1> problems|MWEString[weak]=had <1> problems with|Supersense=v.social
 5	any	any	DET	DT	PronType=Ind	6	det	6:det	_
 6	problems	problem	NOUN	NNS	Number=Plur	4	obj	4:obj	_
-7	with	with	ADP	IN	_	9	case	9:case	_
+7	with	with	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:problem|PRel[obj]=9:neighbor|Supersense=p.Topic
 8	loud	loud	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	neighbors	neighbor	NOUN	NNS	Number=Plur	6	nmod	6:nmod:with	_
+9	neighbors	neighbor	NOUN	NNS	Number=Plur	6	nmod	6:nmod:with	Supersense=n.PERSON
 10	or	or	CCONJ	CC	_	11	cc	11:cc	_
-11	concerns	concern	NOUN	NNS	Number=Plur	9	conj	6:nmod:with|9:conj:or	_
-12	about	about	ADP	IN	_	13	case	13:case	_
-13	safety	safety	NOUN	NN	Number=Sing	11	nmod	11:nmod:about	SpaceAfter=No
+11	concerns	concern	NOUN	NNS	Number=Plur	9	conj	6:nmod:with|9:conj:or	Supersense=n.COGNITION
+12	about	about	ADP	IN	_	13	case	13:case	PRel[config]=default|PRel[gov]=11:concern|PRel[obj]=13:safety|Supersense[coding]=p.Topic|Supersense[scene]=p.Stimulus
+13	safety	safety	NOUN	NN	Number=Sing	11	nmod	11:nmod:about	SpaceAfter=No|Supersense=n.COGNITION
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-315763-0007
 # text = The apartments are within walking distance to Trader Joe's, Whole Foods, and other stores.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	apartments	apartment	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
-3	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
-4	within	within	ADP	IN	_	6	case	6:case	_
-5	walking	walking	NOUN	NN	Number=Sing	6	compound	6:compound	_
+2	apartments	apartment	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	Supersense=n.ARTIFACT
+3	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	Supersense=v.stative
+4	within	within	ADP	IN	_	6	case	6:case	MWELemma[weak]=within walking distance|MWELen[weak]=3|PRel[config]=predicative|PRel[gov]=2:apartment|PRel[obj]=6:distance|Supersense=p.Locus
+5	walking	walking	NOUN	NN	Number=Sing	6	compound	6:compound	MWECat=N|MWELemma=walking distance|MWELen=2|Supersense=n.RELATION
 6	distance	distance	NOUN	NN	Number=Sing	0	root	0:root	_
-7	to	to	ADP	IN	_	9	case	9:case	_
-8	Trader	Trader	PROPN	NNP	Number=Sing	9	compound	9:compound	_
+7	to	to	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:distance|PRel[obj]=9:Joe|Supersense[coding]=p.Goal|Supersense[scene]=p.Locus
+8	Trader	Trader	PROPN	NNP	Number=Sing	9	compound	9:compound	MWECat=N|MWELemma=Trader Joe 's|MWELen=3|Supersense=n.GROUP
 9-10	Joe's	_	_	_	_	_	_	_	SpaceAfter=No
 9	Joe	Joe	PROPN	NNP	Number=Sing	6	nmod	6:nmod:to	_
 10	's	's	PART	POS	_	9	case	9:case	_
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
-12	Whole	Whole	ADJ	NNP	Degree=Pos	13	amod	13:amod	_
+12	Whole	Whole	ADJ	NNP	Degree=Pos	13	amod	13:amod	MWECat=N|MWELemma=Whole Foods|MWELen=2|Supersense=n.GROUP
 13	Foods	Foods	PROPN	NNP	Number=Sing	9	conj	6:nmod:to|9:conj:and	SpaceAfter=No
 14	,	,	PUNCT	,	_	17	punct	17:punct	_
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
 16	other	other	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	stores	store	NOUN	NNS	Number=Plur	9	conj	6:nmod:to|9:conj:and	SpaceAfter=No
+17	stores	store	NOUN	NNS	Number=Plur	9	conj	6:nmod:to|9:conj:and	SpaceAfter=No|Supersense=n.GROUP
 18	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-315763-0008
@@ -140,11 +140,11 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 2	well	well	ADV	RB	Degree=Pos	4	compound	4:compound	SpaceAfter=No
 3	-	-	PUNCT	HYPH	_	2	punct	2:punct	SpaceAfter=No
-4	equipped	equip	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	amod	7:amod	SpaceAfter=No
+4	equipped	equip	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	amod	7:amod	SpaceAfter=No|Supersense=v.stative
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	clean	clean	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	gym	gym	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
-8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
+7	gym	gym	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	Supersense=n.GROUP
+8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	MWECat=V.VID|MWELemma=be a plus|MWELen=3|MWEString=is a plus|Supersense=v.stative
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	plus	plus	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 11	!	!	PUNCT	.	_	10	punct	10:punct	_
@@ -152,17 +152,17 @@
 # sent_id = reviews-315763-0009
 # text = Great place to live if you work in and around downtown San Jose!
 1	Great	great	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	place	place	NOUN	NN	Number=Sing	0	root	0:root	_
-3	to	to	PART	TO	_	4	mark	4:mark	_
-4	live	live	VERB	VB	VerbForm=Inf	2	acl	2:acl:to	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
+2	place	place	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.GROUP
+3	to	to	PART	TO	_	4	mark	4:mark	PRel[config]=subordinating|PRel[gov]=2:place|PRel[obj]=4:live|Supersense=p.Purpose
+4	live	live	VERB	VB	VerbForm=Inf	2	acl	2:acl:to	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|Supersense=v.social
 5	if	if	SCONJ	IN	_	7	mark	7:mark	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	7:nsubj	_
-7	work	work	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:if	CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
-8	in	in	ADP	IN	_	12	case	12:case	_
+7	work	work	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:if	CxnElt=4:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|Supersense=v.social
+8	in	in	ADP	IN	_	12	case	12:case	MWELemma[weak]=in and around|MWELen[weak]=3|PRel[config]=default|PRel[gov]=7:work|PRel[obj]=12:San|Supersense=p.Locus
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	around	around	ADP	IN	_	8	conj	8:conj:and|12:case	_
+10	around	around	ADP	IN	_	8	conj	8:conj:and|12:case	PRel[config]=default|PRel[gov]=7:work|PRel[obj]=12:San|Supersense=p.Locus
 11	downtown	downtown	ADV	RB	_	12	advmod	12:advmod	_
-12	San	San	PROPN	NNP	Number=Sing	7	obl	7:obl:around	_
+12	San	San	PROPN	NNP	Number=Sing	7	obl	7:obl:around	MWECat=N|MWELemma=San Jose|MWELen=2|Supersense=n.LOCATION
 13	Jose	Jose	PROPN	NNP	Number=Sing	12	flat	12:flat	SpaceAfter=No
 14	!	!	PUNCT	.	_	2	punct	2:punct	_
 

@@ -2,23 +2,23 @@
 # sent_id = reviews-024132-0001
 # newpar id = reviews-024132-p0001
 # text = Range Rover Sport Window Tints
-1	Range	Range	PROPN	NNP	Number=Sing	2	compound	2:compound	_
+1	Range	Range	PROPN	NNP	Number=Sing	2	compound	2:compound	MWECat=N|MWELemma=Range Rover Sport|MWELen=3|Supersense=n.ARTIFACT
 2	Rover	Rover	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 3	Sport	Sport	PROPN	NNP	Number=Sing	0	root	0:root	_
-4	Window	window	NOUN	NN	Number=Sing	5	compound	5:compound	_
-5	Tints	tint	NOUN	NNS	Number=Plur	3	parataxis	3:parataxis	_
+4	Window	window	NOUN	NN	Number=Sing	5	compound	5:compound	Supersense=n.ARTIFACT
+5	Tints	tint	NOUN	NNS	Number=Plur	3	parataxis	3:parataxis	Supersense=n.ATTRIBUTE
 
 # sent_id = reviews-024132-0002
 # newpar id = reviews-024132-p0002
 # text = Mark at Tintman Nationwidetints Ltd, did a very Professional job very quick, no fuss, deliverd the car to me and I drove him back home,Great arrangement Great price!!
-1	Mark	Mark	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
-2	at	at	ADP	IN	_	6	case	6:case	_
-3	Tintman	Tintman	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-4	Nationwide	Nationwide	ADJ	NNP	Degree=Pos	6	amod	6:amod	CorrectSpaceAfter=Yes|SpaceAfter=No
-5	tints	tint	PROPN	NNPS	Number=Plur	6	compound	6:compound	_
-6	Ltd	Ltd	PROPN	NNP	Number=Sing	1	nmod	1:nmod:at	SpaceAfter=No
+1	Mark	Mark	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	Supersense=n.PERSON
+2	at	at	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=1:Mark|PRel[obj]=5:tint|Supersense[coding]=p.Locus|Supersense[scene]=p.Org
+3	Tintman	Tintman	PROPN	NNP	Number=Sing	5	compound	5:compound	MWECat=N|MWELemma=Tintman Nationwide tint Ltd|MWELen=4|MWEString=Tintman Nationwide tints Ltd|Supersense=n.GROUP
+4	Nationwide	Nationwide	ADJ	NNP	Degree=Pos	5	amod	5:amod	CorrectSpaceAfter=Yes|SpaceAfter=No
+5	tints	tint	PROPN	NNPS	Number=Plur	1	nmod	1:nmod:at	_
+6	Ltd	Ltd	PROPN	NNP	Number=Sing	5	nmod:desc	5:nmod:desc	SpaceAfter=No
 7	,	,	PUNCT	,	_	1	punct	1:punct	_
-8	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+8	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=V.LVC.full|MWELemma=do a <2> job|MWELen=5|MWEString=did a <2> job|Supersense=v.social
 9	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
 10	very	very	ADV	RB	_	11	advmod	11:advmod	_
 11	Professional	professional	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
@@ -27,50 +27,50 @@
 14	quick	quick	ADV	RB	_	8	advmod	8:advmod	SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	no	no	DET	DT	PronType=Neg	17	det	17:det	_
-17	fuss	fuss	NOUN	NN	Number=Sing	8	obl:unmarked	8:obl:unmarked	SpaceAfter=No
+17	fuss	fuss	NOUN	NN	Number=Sing	8	obl:unmarked	8:obl:unmarked	SpaceAfter=No|Supersense=n.COMMUNICATION
 18	,	,	PUNCT	,	_	17	punct	17:punct	_
-19	deliverd	deliver	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|Typo=Yes|VerbForm=Fin	8	parataxis	8:parataxis	CorrectForm=delivered
+19	deliverd	deliver	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|Typo=Yes|VerbForm=Fin	8	parataxis	8:parataxis	CorrectForm=delivered|Supersense=v.motion
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	car	car	NOUN	NN	Number=Sing	19	obj	19:obj	_
-22	to	to	ADP	IN	_	23	case	23:case	_
+21	car	car	NOUN	NN	Number=Sing	19	obj	19:obj	Supersense=n.ARTIFACT
+22	to	to	ADP	IN	_	23	case	23:case	PRel[config]=default|PRel[gov]=19:deliver|PRel[obj]=23:I|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
 23	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	19	obl	19:obl:to	_
 24	and	and	CCONJ	CC	_	26	cc	26:cc	_
 25	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	26	nsubj	26:nsubj	_
-26	drove	drive	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	19	conj	19:conj:and	_
+26	drove	drive	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	19	conj	19:conj:and	Supersense=v.motion
 27	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	26	obj	26:obj	_
-28	back	back	ADV	RB	_	29	advmod	29:advmod	_
+28	back	back	ADV	RB	_	29	advmod	29:advmod	PRel[config]=default|PRel[gov]=26:drive|Supersense=p.Direction
 29	home	home	ADV	RB	_	26	advmod	26:advmod	SpaceAfter=No
 30	,	,	PUNCT	,	_	32	punct	32:punct	SpaceAfter=No
 31	Great	great	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
-32	arrangement	arrangement	NOUN	NN	Number=Sing	8	parataxis	8:parataxis	_
+32	arrangement	arrangement	NOUN	NN	Number=Sing	8	parataxis	8:parataxis	Supersense=n.COMMUNICATION
 33	Great	great	ADJ	JJ	Degree=Pos	34	amod	34:amod	_
-34	price	price	NOUN	NN	Number=Sing	32	conj	8:parataxis|32:conj	SpaceAfter=No
+34	price	price	NOUN	NN	Number=Sing	32	conj	8:parataxis|32:conj	SpaceAfter=No|Supersense=n.POSSESSION
 35	!!	!!	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = reviews-024132-0003
 # text = Highly recommended!!
-1	Highly	highly	ADV	RB	_	2	advmod	2:advmod	_
-2	recommended	recommend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No
+1	Highly	highly	ADV	RB	_	2	advmod	2:advmod	MWELemma[weak]=highly recommend|MWELen[weak]=2|MWEString[weak]=Highly recommended
+2	recommended	recommend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No|Supersense=v.communication
 3	!!	!!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-024132-0004
 # text = Thanks Mark.
-1	Thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	_
-2	Mark	Mark	PROPN	NNP	Number=Sing	1	vocative	1:vocative	SpaceAfter=No
+1	Thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	Supersense=`d
+2	Mark	Mark	PROPN	NNP	Number=Sing	1	vocative	1:vocative	SpaceAfter=No|Supersense=n.PERSON
 3	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-024132-0005
 # text = Steve.... proud Range Rover Sport owner (with rear tints)
-1	Steve	Steve	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
+1	Steve	Steve	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.PERSON
 2	....	....	PUNCT	,	_	7	punct	7:punct	_
 3	proud	proud	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-4	Range	Range	PROPN	NNP	Number=Sing	5	compound	5:compound	_
+4	Range	Range	PROPN	NNP	Number=Sing	5	compound	5:compound	MWECat=N|MWELemma=Range Rover Sport|MWELen=3|Supersense=n.ARTIFACT
 5	Rover	Rover	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 6	Sport	Sport	PROPN	NNP	Number=Sing	7	compound	7:compound	_
-7	owner	owner	NOUN	NN	Number=Sing	1	appos	1:appos	_
+7	owner	owner	NOUN	NN	Number=Sing	1	appos	1:appos	Supersense=n.PERSON
 8	(	(	PUNCT	-LRB-	_	11	punct	11:punct	SpaceAfter=No
-9	with	with	ADP	IN	_	11	case	11:case	_
+9	with	with	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=7:owner|PRel[obj]=11:tint|Supersense=p.Characteristic
 10	rear	rear	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	tints	tint	NOUN	NNS	Number=Plur	7	nmod	7:nmod:with	SpaceAfter=No
+11	tints	tint	NOUN	NNS	Number=Plur	7	nmod	7:nmod:with	SpaceAfter=No|Supersense=n.ATTRIBUTE
 12	)	)	PUNCT	-RRB-	_	11	punct	11:punct	_
 

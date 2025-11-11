@@ -3,25 +3,25 @@
 # newpar id = reviews-363873-p0001
 # text = Worst Apartments EVER
 1	Worst	bad	ADJ	JJS	Degree=Sup	2	amod	2:amod	_
-2	Apartments	apartment	NOUN	NNS	Number=Plur	0	root	0:root	_
+2	Apartments	apartment	NOUN	NNS	Number=Plur	0	root	0:root	Supersense=n.ARTIFACT
 3	EVER	ever	ADV	RB	PronType=Ind	2	advmod	2:advmod	_
 
 # sent_id = reviews-363873-0002
 # newpar id = reviews-363873-p0002
 # text = We lived here for 2 years, the first year or so was okay.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	lived	live	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	lived	live	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.social
 3	here	here	ADV	RB	PronType=Dem	2	advmod	2:advmod	_
-4	for	for	ADP	IN	_	6	case	6:case	_
+4	for	for	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=2:live|PRel[obj]=6:year|Supersense=p.Duration
 5	2	2	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	_
-6	years	year	NOUN	NNS	Number=Plur	2	obl	2:obl:for	SpaceAfter=No
+6	years	year	NOUN	NNS	Number=Plur	2	obl	2:obl:for	SpaceAfter=No|Supersense=n.TIME
 7	,	,	PUNCT	,	_	14	punct	14:punct	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	first	first	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	10	amod	10:amod	_
-10	year	year	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	_
-11	or	or	CCONJ	CC	_	12	cc	12:cc	_
+10	year	year	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	Supersense=n.TIME
+11	or	or	CCONJ	CC	_	12	cc	12:cc	MWECat=ADV|MWELemma=or so|MWELen=2
 12	so	so	ADV	RB	_	10	conj	10:conj	_
-13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
+13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	Supersense=v.stative
 14	okay	okay	ADJ	JJ	Degree=Pos	2	parataxis	2:parataxis	SpaceAfter=No
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -31,17 +31,17 @@
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	more	more	ADJ	JJR	Degree=Cmp	5	amod	5:amod	_
-5	power	power	NOUN	NN	Number=Sing	7	obj	7:obj	_
+5	power	power	NOUN	NN	Number=Sing	7	obj	7:obj	Supersense=n.COGNITION
 6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj	7:nsubj	_
-7	gave	give	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	15	advcl	15:advcl:the	_
-8	to	to	ADP	IN	_	9	case	9:case	_
-9	Linda	Linda	PROPN	NNP	Number=Sing	7	obl	7:obl:to	SpaceAfter=No
+7	gave	give	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	15	advcl	15:advcl:the	Supersense=v.social
+8	to	to	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=7:give|PRel[obj]=9:Linda|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
+9	Linda	Linda	PROPN	NNP	Number=Sing	7	obl	7:obl:to	SpaceAfter=No|Supersense=n.PERSON
 10	,	,	PUNCT	,	_	7	punct	7:punct	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
 12	worse	bad	ADJ	JJR	Degree=Cmp	15	advmod	15:advmod	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	place	place	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
-15	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+14	place	place	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	Supersense=n.LOCATION
+15	got	get	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No|Supersense=v.stative
 16	.	.	PUNCT	.	_	15	punct	15:punct	_
 
 # sent_id = reviews-363873-0004
@@ -49,69 +49,69 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
 3	always	always	ADV	RB	PronType=Tot	4	advmod	4:advmod	_
-4	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
-5	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	_
-6	water	water	NOUN	NN	Number=Sing	4	obj	4:obj|7:nsubj:xsubj	_
-7	shut	shut	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	xcomp	4:xcomp	_
+4	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Supersense=v.stative
+5	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	6:nmod:poss	PRel[config]=possessive|PRel[gov]=6:water|Supersense=p.Possessor
+6	water	water	NOUN	NN	Number=Sing	4	obj	4:obj|7:nsubj:xsubj	Supersense=n.ARTIFACT
+7	shut	shut	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	xcomp	4:xcomp	MWECat=V.VPC.full|MWELemma=shut off|MWELen=2|Supersense=v.change
 8	off	off	ADP	RP	_	7	compound:prt	7:compound:prt	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
-10	there	there	PRON	EX	_	11	expl	11:expl	_
-11	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	Cxn=Existential-CopPred-ThereExpl
+10	there	there	PRON	EX	PronType=Dem	11	expl	11:expl	_
+11	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	Cxn=Existential-CopPred-ThereExpl|Supersense=v.stative
 12	always	always	ADV	RB	PronType=Tot	11	advmod	11:advmod	_
-13	people	people	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	CxnElt=11:Existential-CopPred-ThereExpl.Pivot
-14	having	have	VERB	VBG	VerbForm=Ger	13	acl	13:acl	_
-15	parties	party	NOUN	NNS	Number=Plur	14	obj	14:obj	_
-16	at	at	ADP	IN	_	18	case	18:case	_
+13	people	people	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	CxnElt=11:Existential-CopPred-ThereExpl.Pivot|Supersense=n.PERSON
+14	having	have	VERB	VBG	VerbForm=Ger	13	acl	13:acl	Supersense=v.social
+15	parties	party	NOUN	NNS	Number=Plur	14	obj	14:obj	Supersense=n.EVENT
+16	at	at	ADP	IN	_	18	case	18:case	PRel[config]=default|PRel[gov]=15:party|PRel[obj]=18:pool|Supersense=p.Locus
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	pool	pool	NOUN	NN	Number=Sing	15	nmod	15:nmod:at	SpaceAfter=No
+18	pool	pool	NOUN	NN	Number=Sing	15	nmod	15:nmod:at	SpaceAfter=No|Supersense=n.LOCATION
 19	,	,	PUNCT	,	_	24	punct	24:punct	_
 20	even	even	ADV	RB	_	24	advmod	24:advmod	_
-21	after	after	SCONJ	IN	_	24	mark	24:mark	_
+21	after	after	SCONJ	IN	_	24	mark	24:mark	PRel[config]=subordinating|PRel[gov]=14:have|PRel[obj]=24:suppose|Supersense=p.Time
 22	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	24	nsubj:pass	24:nsubj:pass|27:nsubj:xsubj	_
-23	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	24	aux:pass	24:aux:pass	_
+23	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	24	aux:pass	24:aux:pass	MWECat=AUX|MWELemma=be suppose to|MWELen=3|MWEString=was supposed to
 24	supposed	suppose	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	advcl	14:advcl:after	_
 25	to	to	PART	TO	_	27	mark	27:mark	_
-26	be	be	AUX	VB	VerbForm=Inf	27	aux:pass	27:aux:pass	_
-27	closed	close	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	24	xcomp	24:xcomp	SpaceAfter=No
+26	be	be	AUX	VB	VerbForm=Inf	27	aux:pass	27:aux:pass	Supersense=v.stative
+27	closed	close	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	24	xcomp	24:xcomp	SpaceAfter=No|Supersense=`j
 28	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-363873-0005
 # text = The pool was supposed to close at 10 and they would have people down there until 11:45 yelling, playing music and do who-knows-what in the dark corners of the pool.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	pool	pool	NOUN	NN	Number=Sing	4	nsubj:pass	4:nsubj:pass|6:nsubj:xsubj	_
-3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
+2	pool	pool	NOUN	NN	Number=Sing	4	nsubj:pass	4:nsubj:pass|6:nsubj:xsubj	Supersense=n.LOCATION
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	MWECat=AUX|MWELemma=be suppose to|MWELen=3|MWEString=was supposed to
 4	supposed	suppose	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	to	to	PART	TO	_	6	mark	6:mark	_
-6	close	close	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
-7	at	at	ADP	IN	_	8	case	8:case	_
+6	close	close	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	Supersense=v.change
+7	at	at	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=6:close|PRel[obj]=8:10|Supersense=p.Time
 8	10	10	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:at	_
 9	and	and	CCONJ	CC	_	12	cc	12:cc	_
 10	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 11	would	would	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
-12	have	have	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
-13	people	people	NOUN	NNS	Number=Plur	12	obj	12:obj	_
-14	down	down	ADV	RB	_	15	advmod	15:advmod	_
+12	have	have	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	Supersense=v.stative
+13	people	people	NOUN	NNS	Number=Plur	12	obj	12:obj	Supersense=n.PERSON
+14	down	down	ADV	RB	_	15	advmod	15:advmod	PRel[config]=default|PRel[gov]=12:have|Supersense[coding]=p.Direction|Supersense[scene]=p.Locus
 15	there	there	ADV	RB	PronType=Dem	12	advmod	12:advmod	_
-16	until	until	ADP	IN	_	17	case	17:case	_
+16	until	until	ADP	IN	_	17	case	17:case	PRel[config]=default|PRel[gov]=12:have|PRel[obj]=17:11:45|Supersense=p.EndTime
 17	11:45	11:45	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:until	_
-18	yelling	yell	VERB	VBG	VerbForm=Ger	12	advcl	12:advcl	Depictive=Yes|SpaceAfter=No
+18	yelling	yell	VERB	VBG	VerbForm=Ger	12	advcl	12:advcl	Depictive=Yes|SpaceAfter=No|Supersense=v.communication
 19	,	,	PUNCT	,	_	20	punct	20:punct	_
-20	playing	play	VERB	VBG	VerbForm=Ger	18	conj	12:advcl|18:conj:and	_
-21	music	music	NOUN	NN	Number=Sing	20	obj	20:obj	_
+20	playing	play	VERB	VBG	VerbForm=Ger	18	conj	12:advcl|18:conj:and	MWELemma[weak]=play music|MWELen[weak]=2|MWEString[weak]=playing music|Supersense=v.social
+21	music	music	NOUN	NN	Number=Sing	20	obj	20:obj	Supersense=n.COMMUNICATION
 22	and	and	CCONJ	CC	_	23	cc	23:cc	_
-23	do	do	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	18	conj	12:advcl|18:conj:and	_
-24	who	who	PRON	WP	PronType=Int	26	nsubj	26:nsubj	CxnElt=26:Interrogative-WHInfo-Indirect.WHWord|SpaceAfter=No
+23	do	do	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	18	conj	12:advcl|18:conj:and	Supersense=v.social
+24	who	who	PRON	WP	PronType=Int	26	nsubj	26:nsubj	CxnElt=26:Interrogative-WHInfo-Indirect.WHWord|MWECat=V.VID|MWELemma=who - know - what|MWELen=5|MWEString=who - knows - what|SpaceAfter=No|Supersense=v.social
 25	-	-	PUNCT	HYPH	_	24	punct	24:punct	SpaceAfter=No
 26	knows	know	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	ccomp	23:ccomp	Cxn=Interrogative-WHInfo-Indirect,Interrogative-WHInfo-Indirect#2|CxnElt=26:Interrogative-WHInfo-Indirect.Clause,26:Interrogative-WHInfo-Indirect#2.Clause|SpaceAfter=No
 27	-	-	PUNCT	HYPH	_	28	punct	28:punct	SpaceAfter=No
 28	what	what	PRON	WP	PronType=Int	26	obj	26:obj	CxnElt=26:Interrogative-WHInfo-Indirect#2.WHWord
-29	in	in	ADP	IN	_	32	case	32:case	_
+29	in	in	ADP	IN	_	32	case	32:case	PRel[config]=default|PRel[gov]=23:do|PRel[obj]=32:corner|Supersense=p.Locus
 30	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	_
 31	dark	dark	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
-32	corners	corner	NOUN	NNS	Number=Plur	23	obl	23:obl:in	_
-33	of	of	ADP	IN	_	35	case	35:case	_
+32	corners	corner	NOUN	NNS	Number=Plur	23	obl	23:obl:in	Supersense=n.LOCATION
+33	of	of	ADP	IN	_	35	case	35:case	PRel[config]=default|PRel[gov]=32:corner|PRel[obj]=35:pool|Supersense=p.Whole
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
-35	pool	pool	NOUN	NN	Number=Sing	32	nmod	32:nmod:of	SpaceAfter=No
+35	pool	pool	NOUN	NN	Number=Sing	32	nmod	32:nmod:of	SpaceAfter=No|Supersense=n.LOCATION
 36	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-363873-0006
@@ -120,84 +120,84 @@
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	when	when	ADV	WRB	PronType=Int	5	advmod	5:advmod	_
 4	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
-5	moved	move	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	9	advcl	9:advcl:when	_
+5	moved	move	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	9	advcl	9:advcl:when	MWECat=V.VPC.semi|MWELemma=move out|MWELen=2|MWEString=moved out|Supersense=v.motion
 6	out	out	ADP	RP	_	5	compound:prt	5:compound:prt	SpaceAfter=No
 7	,	,	PUNCT	,	_	5	punct	5:punct	_
 8	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-9	cleaned	clean	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+9	cleaned	clean	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.change
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-11	apartment	apartment	NOUN	NN	Number=Sing	9	obj	9:obj	_
-12	top	top	NOUN	NN	Number=Sing	9	obl:unmarked	9:obl:unmarked	_
+11	apartment	apartment	NOUN	NN	Number=Sing	9	obj	9:obj	Supersense=n.ARTIFACT
+12	top	top	NOUN	NN	Number=Sing	9	obl:unmarked	9:obl:unmarked	MWECat=N|MWELemma=top to bottom|MWELen=3|Supersense=n.LOCATION
 13	to	to	ADP	IN	_	14	case	14:case	_
 14	bottom	bottom	NOUN	NN	Number=Sing	12	nmod	12:nmod:to	SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	17	nsubj	17:nsubj|20:nsubj|22:nsubj:xsubj	_
-17	came	come	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	parataxis	9:parataxis	_
-18	back	back	ADV	RB	_	17	advmod	17:advmod	_
+17	came	come	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	parataxis	9:parataxis	Supersense=v.motion
+18	back	back	ADV	RB	_	17	advmod	17:advmod	PRel[config]=default|PRel[gov]=17:come|Supersense=p.Direction
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	tried	try	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	17	conj	17:conj:and	_
+20	tried	try	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	17	conj	17:conj:and	Supersense=v.cognition
 21	to	to	PART	TO	_	22	mark	22:mark	_
-22	charge	charge	VERB	VB	VerbForm=Inf	20	xcomp	20:xcomp	_
+22	charge	charge	VERB	VB	VerbForm=Inf	20	xcomp	20:xcomp	Supersense=v.possession
 23	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	22	iobj	22:iobj	_
-24	for	for	ADP	IN	_	27	case	27:case	_
+24	for	for	ADP	IN	_	27	case	27:case	PRel[config]=default|PRel[gov]=22:charge|PRel[obj]=27:fee|Supersense[coding]=p.Theme|Supersense[scene]=p.Possession
 25	two	two	NUM	CD	NumForm=Word|NumType=Card	27	nummod	27:nummod	_
-26	cleaning	cleaning	NOUN	NN	Number=Sing	27	compound	27:compound	_
-27	fees	fee	NOUN	NNS	Number=Plur	22	obl	22:obl:for	_
+26	cleaning	cleaning	NOUN	NN	Number=Sing	27	compound	27:compound	Supersense=n.ACT
+27	fees	fee	NOUN	NNS	Number=Plur	22	obl	22:obl:for	Supersense=n.POSSESSION
 28	(	(	PUNCT	-LRB-	_	32	punct	32:punct	SpaceAfter=No
 29	and	and	CCONJ	CC	_	32	cc	32:cc	_
 30	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	32	nsubj	32:nsubj	_
 31	never	never	ADV	RB	PronType=Neg	32	advmod	32:advmod	_
-32	got	get	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	27	conj	27:conj	_
-33	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	34	nmod:poss	34:nmod:poss	_
-34	deposit	deposit	NOUN	NN	Number=Sing	32	obj	32:obj	_
-35	back	back	ADV	RB	_	32	advmod	32:advmod	SpaceAfter=No
+32	got	get	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	27	conj	27:conj	Supersense=v.possession
+33	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	34	nmod:poss	34:nmod:poss	PRel[config]=possessive|PRel[gov]=34:deposit|Supersense=p.Possessor
+34	deposit	deposit	NOUN	NN	Number=Sing	32	obj	32:obj	Supersense=n.POSSESSION
+35	back	back	ADV	RB	_	32	advmod	32:advmod	PRel[config]=default|PRel[gov]=32:get|SpaceAfter=No|Supersense=p.Direction
 36	)	)	PUNCT	-RRB-	_	32	punct	32:punct	_
 37	and	and	CCONJ	CC	_	39	cc	39:cc	_
 38	past	past	ADJ	JJ	Degree=Pos	39	amod	39:amod	_
-39	utilities	utility	NOUN	NNS	Number=Plur	27	conj	22:obl:for|27:conj:and|44:nsubj:pass	_
+39	utilities	utility	NOUN	NNS	Number=Plur	27	conj	22:obl:for|27:conj:and|44:nsubj:pass	Supersense=n.COGNITION
 40	(	(	PUNCT	-LRB-	_	44	punct	44:punct	SpaceAfter=No
 41	that	that	PRON	WDT	PronType=Rel	44	nsubj:pass	39:ref	_
 42	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	44	aux:pass	44:aux:pass	_
 43	already	already	ADV	RB	_	44	advmod	44:advmod	_
-44	paid	pay	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	39	acl:relcl	39:acl:relcl	Cxn=rc-that-nsubj:pass|SpaceAfter=No
+44	paid	pay	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	39	acl:relcl	39:acl:relcl	Cxn=rc-that-nsubj:pass|SpaceAfter=No|Supersense=v.possession
 45	,	,	PUNCT	,	_	47	punct	47:punct	_
 46	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	47	nsubj	47:nsubj	_
-47	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	32	parataxis	32:parataxis	_
-48	check	check	NOUN	NN	Number=Sing	49	compound	49:compound	_
-49	numbers	number	NOUN	NNS	Number=Plur	47	obj	47:obj	_
+47	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	32	parataxis	32:parataxis	Supersense=v.stative
+48	check	check	NOUN	NN	Number=Sing	49	compound	49:compound	Supersense=n.POSSESSION
+49	numbers	number	NOUN	NNS	Number=Plur	47	obj	47:obj	Supersense=n.COMMUNICATION
 50	and	and	CCONJ	CC	_	51	cc	51:cc	_
-51	records	record	NOUN	NNS	Number=Plur	49	conj	47:obj|49:conj:and	_
-52	of	of	ADP	IN	_	53	case	53:case	_
+51	records	record	NOUN	NNS	Number=Plur	49	conj	47:obj|49:conj:and	Supersense=n.COMMUNICATION
+52	of	of	ADP	IN	_	53	case	53:case	PRel[config]=default|PRel[gov]=49:number|PRel[obj]=53:this|Supersense=p.Topic
 53	this	this	PRON	DT	Number=Sing|PronType=Dem	49	nmod	49:nmod:of	SpaceAfter=No
 54	)	)	PUNCT	-RRB-	_	47	punct	47:punct	SpaceAfter=No
 55	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = reviews-363873-0007
 # text = Linda is the rudest person you will ever talk to and she sticks up for all of the trashy, rude people that live there, not the nice ones that actually give a crap about respecting others.
-1	Linda	Linda	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
-2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+1	Linda	Linda	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Supersense=n.PERSON
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 4	rudest	rude	ADJ	JJS	Degree=Sup	5	amod	5:amod	_
-5	person	person	NOUN	NN	Number=Sing	0	root	0:root|9:obl	_
+5	person	person	NOUN	NN	Number=Sing	0	root	0:root|9:obl	Supersense=n.PERSON
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	9:nsubj	_
 7	will	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
 8	ever	ever	ADV	RB	PronType=Ind	9	advmod	9:advmod	_
-9	talk	talk	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl-pstrand
-10	to	to	ADP	IN	_	9	obl	9:obl	Promoted=Yes
+9	talk	talk	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	Cxn=rc-red-obl-pstrand|Supersense=v.communication
+10	to	to	ADP	IN	_	9	obl	9:obl	PRel[config]=stranded|PRel[gov]=9:talk|PRel[obj]=5:person|Promoted=Yes|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
 11	and	and	CCONJ	CC	_	13	cc	13:cc	_
 12	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	_
-13	sticks	stick	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	_
+13	sticks	stick	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	conj	5:conj:and	MWECat=V.VPC.full|MWELemma=stick up|MWELen=2|MWEString=sticks up|Supersense=v.social
 14	up	up	ADP	RP	_	13	compound:prt	13:compound:prt	_
-15	for	for	ADP	IN	_	16	case	16:case	_
+15	for	for	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=13:stick|PRel[obj]=16:all|Supersense=p.Beneficiary
 16	all	all	DET	DT	PronType=Tot	13	obl	13:obl:for	_
-17	of	of	ADP	IN	_	22	case	22:case	_
+17	of	of	ADP	IN	_	22	case	22:case	PRel[config]=default|PRel[gov]=16:all|PRel[obj]=22:people|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
 18	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	_
 19	trashy	trashy	ADJ	JJ	Degree=Pos	22	amod	22:amod	SpaceAfter=No
 20	,	,	PUNCT	,	_	19	punct	19:punct	_
 21	rude	rude	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	people	people	NOUN	NNS	Number=Plur	16	nmod	16:nmod:of|24:nsubj	_
+22	people	people	NOUN	NNS	Number=Plur	16	nmod	16:nmod:of|24:nsubj	Supersense=n.PERSON
 23	that	that	PRON	WDT	PronType=Rel	24	nsubj	22:ref	_
-24	live	live	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	22	acl:relcl	22:acl:relcl	Cxn=rc-that-nsubj
+24	live	live	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	22	acl:relcl	22:acl:relcl	Cxn=rc-that-nsubj|Supersense=v.social
 25	there	there	ADV	RB	PronType=Dem	24	advmod	24:advmod	SpaceAfter=No
 26	,	,	PUNCT	,	_	30	punct	30:punct	_
 27	not	not	PART	RB	Polarity=Neg	30	advmod	30:advmod	_
@@ -206,11 +206,11 @@
 30	ones	one	NOUN	NNS	Number=Plur	22	conj	22:conj|33:nsubj	_
 31	that	that	PRON	WDT	PronType=Rel	33	nsubj	30:ref	_
 32	actually	actually	ADV	RB	_	33	advmod	33:advmod	_
-33	give	give	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	30	acl:relcl	30:acl:relcl	Cxn=rc-that-nsubj
+33	give	give	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	30	acl:relcl	30:acl:relcl	Cxn=rc-that-nsubj|MWECat=V.VID|MWELemma=give a crap|MWELemma[weak]=give a crap about|MWELen=3|MWELen[weak]=4|Supersense=v.emotion
 34	a	a	DET	DT	Definite=Ind|PronType=Art	35	det	35:det	_
 35	crap	crap	NOUN	NN	Number=Sing	33	obj	33:obj	_
-36	about	about	SCONJ	IN	_	37	mark	37:mark	_
-37	respecting	respect	VERB	VBG	Tense=Pres|VerbForm=Part	33	advcl	33:advcl:about	_
+36	about	about	SCONJ	IN	_	37	mark	37:mark	PRel[config]=subordinating|PRel[gov]=33:give|PRel[obj]=37:respect|Supersense[coding]=p.Topic|Supersense[scene]=p.Stimulus
+37	respecting	respect	VERB	VBG	Tense=Pres|VerbForm=Part	33	advcl	33:advcl:about	Supersense=v.social
 38	others	other	NOUN	NNS	Number=Plur	37	obj	37:obj	SpaceAfter=No
 39	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -218,12 +218,12 @@
 # text = Do not live here, you will regret it!
 1	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	3	aux	3:aux	_
 2	not	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
-3	live	live	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+3	live	live	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Supersense=v.social
 4	here	here	ADV	RB	PronType=Dem	3	advmod	3:advmod	SpaceAfter=No
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 7	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	regret	regret	VERB	VB	VerbForm=Inf	3	parataxis	3:parataxis	_
+8	regret	regret	VERB	VB	VerbForm=Inf	3	parataxis	3:parataxis	Supersense=v.emotion
 9	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	obj	8:obj	SpaceAfter=No
 10	!	!	PUNCT	.	_	3	punct	3:punct	_
 

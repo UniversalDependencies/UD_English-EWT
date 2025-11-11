@@ -3,8 +3,8 @@
 # newpar id = reviews-063690-p0001
 # text = This office is awesome!
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	2:det	_
-2	office	office	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+2	office	office	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.GROUP
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 4	awesome	awesome	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 5	!	!	PUNCT	.	_	4	punct	4:punct	_
 
@@ -12,7 +12,7 @@
 # text = everyone here is super friendly and efficient!
 1	everyone	everyone	PRON	NN	Number=Sing|PronType=Tot	5	nsubj	5:nsubj|7:nsubj	_
 2	here	here	ADV	RB	PronType=Dem	1	advmod	1:advmod	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
 4	super	super	ADV	RB	_	5	advmod	5:advmod	_
 5	friendly	friendly	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
@@ -23,25 +23,25 @@
 # text = its great to know you can get great service, great product, and for the best price all in one!
 1-2	its	_	_	_	_	_	_	_	_
 1	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	expl	3:expl	_
-2	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	3	cop	3:cop	CorrectForm='s
+2	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	3	cop	3:cop	CorrectForm='s|Supersense=v.stative
 3	great	great	ADJ	JJ	Degree=Pos	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
-5	know	know	VERB	VB	VerbForm=Inf	3	csubj	3:csubj	_
+5	know	know	VERB	VB	VerbForm=Inf	3	csubj	3:csubj	Supersense=v.cognition
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj	_
 7	can	can	AUX	MD	VerbForm=Fin	8	aux	8:aux	_
-8	get	get	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	_
+8	get	get	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	Supersense=v.social
 9	great	great	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	service	service	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No
+10	service	service	NOUN	NN	Number=Sing	8	obj	8:obj	SpaceAfter=No|Supersense=n.ACT
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	great	great	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	product	product	NOUN	NN	Number=Sing	10	conj	8:obj|10:conj:and	SpaceAfter=No
+13	product	product	NOUN	NN	Number=Sing	10	conj	8:obj|10:conj:and	SpaceAfter=No|Supersense=n.ARTIFACT
 14	,	,	PUNCT	,	_	19	punct	19:punct	_
 15	and	and	CCONJ	CC	_	19	cc	19:cc	_
-16	for	for	ADP	IN	_	19	case	19:case	_
+16	for	for	ADP	IN	_	19	case	19:case	PRel[config]=default|PRel[gov]=8:get|PRel[obj]=19:price|Supersense=p.Cost
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 18	best	good	ADJ	JJS	Degree=Sup	19	amod	19:amod	_
-19	price	price	NOUN	NN	Number=Sing	10	conj	8:obj|10:conj:and	_
-20	all	all	DET	DT	PronType=Tot	10	appos	10:appos	_
+19	price	price	NOUN	NN	Number=Sing	10	conj	8:obj|10:conj:and	Supersense=n.POSSESSION
+20	all	all	DET	DT	PronType=Tot	10	appos	10:appos	MWECat=ADJ|MWELemma=all in one|MWELen=3
 21	in	in	ADP	IN	_	22	case	22:case	_
 22	one	one	NUM	CD	NumForm=Word|NumType=Card	20	nmod	20:nmod:in	SpaceAfter=No
 23	!	!	PUNCT	.	_	3	punct	3:punct	_
@@ -51,18 +51,18 @@
 1-2	I've	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	referred	refer	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+3	referred	refer	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Supersense=v.communication
 4	everyone	everyone	PRON	NN	Number=Sing|PronType=Tot	3	obj	3:obj|6:obj	_
 5	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	_
-6	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-red-obj
+6	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Cxn=rc-red-obj|Supersense=v.cognition
 7	here	here	ADV	RB	PronType=Dem	3	advmod	3:advmod	_
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
 9	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
 10	all	all	DET	DT	PronType=Tot	11	advmod	11:advmod	_
-11	feel	feel	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	_
+11	feel	feel	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:and	Supersense=v.cognition
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
 13	same	same	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	way	way	NOUN	NN	Number=Sing	11	obj	11:obj	SpaceAfter=No
+14	way	way	NOUN	NN	Number=Sing	11	obj	11:obj	SpaceAfter=No|Supersense=n.COGNITION
 15	!!	!!	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-063690-0005
@@ -71,10 +71,10 @@
 1	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	'll	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	be	be	AUX	VB	VerbForm=Inf	4	aux	4:aux	_
-4	coming	come	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
-5	back	back	ADV	RB	_	4	advmod	4:advmod	_
-6	for	for	ADP	IN	_	7	case	7:case	_
-7	years	year	NOUN	NNS	Number=Plur	4	obl	4:obl:for	_
+4	coming	come	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Supersense=v.motion
+5	back	back	ADV	RB	_	4	advmod	4:advmod	PRel[config]=default|PRel[gov]=4:come|Supersense=p.Direction
+6	for	for	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:come|PRel[obj]=7:year|Supersense=p.Duration
+7	years	year	NOUN	NNS	Number=Plur	4	obl	4:obl:for	MWECat=N|MWELemma=year to come|MWELen=3|MWEString=years to come|Supersense=n.TIME
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	come	come	VERB	VB	VerbForm=Inf	7	acl	7:acl:to	SpaceAfter=No
 10	!	!	PUNCT	.	_	4	punct	4:punct	_

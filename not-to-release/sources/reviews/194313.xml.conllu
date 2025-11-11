@@ -3,7 +3,7 @@
 # newpar id = reviews-194313-p0001
 # text = Excellent Pizza!!
 1	Excellent	excellent	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	Pizza	pizza	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+2	Pizza	pizza	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.FOOD
 3	!!	!!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-194313-0002
@@ -11,15 +11,15 @@
 # text = Its the only pizza place I recommend in Woodland Hills.
 1-2	Its	_	_	_	_	_	_	_	_
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
-2	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	6	cop	6:cop	CorrectForm='s
+2	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	6	cop	6:cop	CorrectForm='s|Supersense=v.stative
 3	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
 4	only	only	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-5	pizza	pizza	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	place	place	NOUN	NN	Number=Sing	0	root	0:root|8:obj	_
+5	pizza	pizza	NOUN	NN	Number=Sing	6	compound	6:compound	Supersense=n.FOOD
+6	place	place	NOUN	NN	Number=Sing	0	root	0:root|8:obj	Supersense=n.GROUP
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	8:nsubj	_
-8	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj
-9	in	in	ADP	IN	_	11	case	11:case	_
-10	Woodland	Woodland	PROPN	NNP	Number=Sing	11	compound	11:compound	_
+8	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	Cxn=rc-red-obj|Supersense=v.communication
+9	in	in	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=6:place|PRel[obj]=11:Hill|Supersense=p.Locus
+10	Woodland	Woodland	PROPN	NNP	Number=Sing	11	compound	11:compound	MWECat=N|MWELemma=Woodland Hill|MWELen=2|MWEString=Woodland Hills|Supersense=n.LOCATION
 11	Hills	Hill	PROPN	NNPS	Number=Plur	6	obl	6:obl:in	SpaceAfter=No
 12	.	.	PUNCT	.	_	6	punct	6:punct	_
 
@@ -30,12 +30,12 @@
 
 # sent_id = reviews-194313-0004
 # text = My wife and kids can't get enough.
-1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	wife	wife	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	PRel[config]=possessive|PRel[gov]=2:wife|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+2	wife	wife	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	MWECat=N|MWELemma=wife and kid|MWELen=3|MWEString=wife and kids|Supersense=n.GROUP
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
 4	kids	kid	NOUN	NNS	Number=Plur	2	conj	2:conj:and|7:nsubj	_
 5-6	can't	_	_	_	_	_	_	_	_
-5	ca	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
+5	ca	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	MWECat=V.VID|MWELemma=can not get enough|MWELen=4|MWEString=ca n't get enough|Supersense=v.stative
 6	n't	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
 7	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
 8	enough	enough	ADJ	JJ	Degree=Pos	7	obj	7:obj	SpaceAfter=No
@@ -43,7 +43,7 @@
 
 # sent_id = reviews-194313-0005
 # text = Highly recommended.
-1	Highly	highly	ADV	RB	_	2	advmod	2:advmod	_
-2	recommended	recommend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No
+1	Highly	highly	ADV	RB	_	2	advmod	2:advmod	MWELemma[weak]=highly recommend|MWELen[weak]=2|MWEString[weak]=Highly recommended
+2	recommended	recommend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No|Supersense=v.communication
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 

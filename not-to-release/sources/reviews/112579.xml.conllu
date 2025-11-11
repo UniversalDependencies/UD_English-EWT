@@ -2,12 +2,12 @@
 # sent_id = reviews-112579-0001
 # newpar id = reviews-112579-p0001
 # text = My favorite cuban cafe in Orlando
-1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-2	favorite	favorite	NOUN	NN	Number=Sing	4	compound	4:compound	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	PRel[config]=possessive|PRel[gov]=4:cafe|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Experiencer
+2	favorite	favorite	NOUN	NN	Number=Sing	4	compound	4:compound	Supersense=n.COGNITION
 3	cuban	Cuban	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	cafe	cafe	NOUN	NN	Number=Sing	0	root	0:root	_
-5	in	in	ADP	IN	_	6	case	6:case	_
-6	Orlando	Orlando	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	_
+4	cafe	cafe	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.GROUP
+5	in	in	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:cafe|PRel[obj]=6:Orlando|Supersense=p.Locus
+6	Orlando	Orlando	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	Supersense=n.LOCATION
 
 # sent_id = reviews-112579-0002
 # newpar id = reviews-112579-p0002
@@ -15,73 +15,73 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	4	aux	4:aux	_
-4	eating	eat	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+4	eating	eat	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Supersense=v.consumption
 5	Cuban	Cuban	ADJ	JJ	Degree=Pos	4	obj	4:obj	_
-6	for	for	ADP	IN	_	9	case	9:case	_
+6	for	for	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=4:eat|PRel[obj]=9:time|Supersense=p.Duration
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
 8	long	long	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	time	time	NOUN	NN	Number=Sing	4	obl	4:obl:for	SpaceAfter=No
+9	time	time	NOUN	NN	Number=Sing	4	obl	4:obl:for	SpaceAfter=No|Supersense=n.TIME
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
-11	sandwiches	sandwich	NOUN	NNS	Number=Plur	4	parataxis	4:parataxis	_
+11	sandwiches	sandwich	NOUN	NNS	Number=Plur	4	parataxis	4:parataxis	Supersense=n.FOOD
 12	mainly	mainly	ADV	RB	_	11	advmod	11:advmod	_
-13	along	along	ADP	IN	_	16	case	16:case	_
+13	along	along	ADP	IN	_	16	case	16:case	MWECat=P|MWELemma=along with|MWELen=2|PRel[config]=default|PRel[gov]=11:sandwich|PRel[obj]=16:dish|Supersense[coding]=p.Ancillary|Supersense[scene]=p.Ensemble
 14	with	with	ADP	IN	_	16	case	16:case	_
 15	other	other	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	dishes	dish	NOUN	NNS	Number=Plur	11	nmod	11:nmod:with	SpaceAfter=No
+16	dishes	dish	NOUN	NNS	Number=Plur	11	nmod	11:nmod:with	SpaceAfter=No|Supersense=n.FOOD
 17	..	..	PUNCT	.	_	11	punct	11:punct	SpaceAfter=No
 
 # sent_id = reviews-112579-0003
 # text = I love Cuban coffee, colada... mmmm anyways I found this place and can't stop going there, I stop in at least once a week and anytime I'm in the area for a Cuban coffee or snack.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	Cuban	Cuban	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
+2	love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.emotion
+3	Cuban	Cuban	ADJ	JJ	Degree=Pos	4	amod	4:amod	MWECat=N|MWELemma=Cuban coffee|MWELen=2|Supersense=n.FOOD
 4	coffee	coffee	NOUN	NN	Number=Sing	2	obj	2:obj	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	colada	colada	NOUN	NN	Number=Sing	4	appos	4:appos	SpaceAfter=No
+6	colada	colada	NOUN	NN	Number=Sing	4	appos	4:appos	SpaceAfter=No|Supersense=n.FOOD
 7	...	...	PUNCT	,	_	8	punct	8:punct	_
 8	mmmm	mmmm	INTJ	UH	_	2	discourse	2:discourse	_
 9	anyways	anyways	INTJ	UH	_	11	discourse	11:discourse	_
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj|17:nsubj|18:nsubj:xsubj	_
-11	found	find	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	parataxis	2:parataxis	_
+11	found	find	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	parataxis	2:parataxis	Supersense=v.cognition
 12	this	this	DET	DT	Number=Sing|PronType=Dem	13	det	13:det	_
-13	place	place	NOUN	NN	Number=Sing	11	obj	11:obj	_
+13	place	place	NOUN	NN	Number=Sing	11	obj	11:obj	Supersense=n.GROUP
 14	and	and	CCONJ	CC	_	17	cc	17:cc	_
 15-16	can't	_	_	_	_	_	_	_	_
 15	ca	can	AUX	MD	VerbForm=Fin	17	aux	17:aux	_
 16	n't	not	PART	RB	Polarity=Neg	17	advmod	17:advmod	_
-17	stop	stop	VERB	VB	VerbForm=Inf	11	conj	11:conj:and	_
-18	going	go	VERB	VBG	VerbForm=Ger	17	xcomp	17:xcomp	_
+17	stop	stop	VERB	VB	VerbForm=Inf	11	conj	11:conj:and	Supersense=v.change
+18	going	go	VERB	VBG	VerbForm=Ger	17	xcomp	17:xcomp	Supersense=v.social
 19	there	there	ADV	RB	PronType=Dem	18	advmod	18:advmod	SpaceAfter=No
 20	,	,	PUNCT	,	_	22	punct	22:punct	_
 21	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	22	nsubj	22:nsubj	_
-22	stop	stop	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	_
+22	stop	stop	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	MWECat=V.VPC.full|MWELemma=stop in|MWELen=2|Supersense=v.social
 23	in	in	ADV	RB	_	22	advmod	22:advmod	_
-24	at	at	ADP	IN	_	25	case	25:case	_
+24	at	at	ADP	IN	_	25	case	25:case	MWECat=PP|MWELemma=at least|MWELen=2|PRel[config]=default|PRel[gov]=26:once|PRel[obj]=25:least|Supersense=p.Approximator
 25	least	least	ADJ	JJS	Degree=Sup	26	obl	26:obl:at	_
 26	once	once	ADV	RB	NumForm=Word|NumType=Mult	22	advmod	22:advmod	_
 27	a	a	DET	DT	Definite=Ind|PronType=Art	28	det	28:det	_
-28	week	week	NOUN	NN	Number=Sing	26	obl:unmarked	26:obl:unmarked	TemporalNPAdjunct=Yes
+28	week	week	NOUN	NN	Number=Sing	26	obl:unmarked	26:obl:unmarked	Supersense=n.TIME|TemporalNPAdjunct=Yes
 29	and	and	CCONJ	CC	_	30	cc	30:cc	_
 30	anytime	anytime	ADV	RB	PronType=Ind	26	conj	22:advmod|26:conj:and|35:obl	_
 31-32	I'm	_	_	_	_	_	_	_	_
 31	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	35	nsubj	35:nsubj	_
-32	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	35	cop	35:cop	_
-33	in	in	ADP	IN	_	35	case	35:case	_
+32	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	35	cop	35:cop	Supersense=v.stative
+33	in	in	ADP	IN	_	35	case	35:case	PRel[config]=predicative|PRel[gov]=31:I|PRel[obj]=35:area|Supersense=p.Locus
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
-35	area	area	NOUN	NN	Number=Sing	30	advcl:relcl	30:advcl:relcl	Cxn=rc-red-obl
-36	for	for	ADP	IN	_	39	case	39:case	_
+35	area	area	NOUN	NN	Number=Sing	30	advcl:relcl	30:advcl:relcl	Cxn=rc-red-obl|Supersense=n.LOCATION
+36	for	for	ADP	IN	_	39	case	39:case	PRel[config]=default|PRel[gov]=22:stop|PRel[obj]=39:coffee|Supersense=p.Purpose
 37	a	a	DET	DT	Definite=Ind|PronType=Art	39	det	39:det	_
-38	Cuban	Cuban	ADJ	JJ	Degree=Pos	39	amod	39:amod	_
+38	Cuban	Cuban	ADJ	JJ	Degree=Pos	39	amod	39:amod	MWECat=N|MWELemma=Cuban coffee|MWELen=2|Supersense=n.FOOD
 39	coffee	coffee	NOUN	NN	Number=Sing	22	obl	22:obl:for	_
 40	or	or	CCONJ	CC	_	41	cc	41:cc	_
-41	snack	snack	NOUN	NN	Number=Sing	39	conj	22:obl:for|39:conj:or	SpaceAfter=No
+41	snack	snack	NOUN	NN	Number=Sing	39	conj	22:obl:for|39:conj:or	SpaceAfter=No|Supersense=n.FOOD
 42	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-112579-0004
 # text = The place is chill and comfortable.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	place	place	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+2	place	place	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj	Supersense=n.GROUP
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 4	chill	chill	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
 6	comfortable	comfortable	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
@@ -93,22 +93,22 @@
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
-4	speak	speak	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	speak	speak	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	best	good	ADJ	JJS	Degree=Sup	7	amod	7:amod	_
-7	English	English	PROPN	NNP	Number=Sing	4	obj	4:obj	_
+7	English	English	PROPN	NNP	Number=Sing	4	obj	4:obj	Supersense=n.COMMUNICATION
 8	but	but	CCONJ	CC	_	9	cc	9:cc	_
 9	enough	enough	ADJ	JJ	Degree=Pos	4	conj	4:conj:but	_
-10	to	to	PART	TO	_	11	mark	11:mark	_
-11	get	get	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
+10	to	to	PART	TO	_	11	mark	11:mark	PRel[config]=subordinating|PRel[gov]=9:enough|PRel[obj]=11:get|Supersense[coding]=p.Purpose|Supersense[scene]=p.ComparisonRef
+11	get	get	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	MWECat=V.VPC.full|MWELemma=get by|MWELen=2|Supersense=v.social
 12	by	by	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-112579-0006
 # text = They bake bread fresh daily, they don't press their sandwiches which is the way I like it, and the meat is always fresh.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	bake	bake	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	bread	bread	NOUN	NN	Number=Sing	2	obj	2:obj	_
+2	bake	bake	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.creation
+3	bread	bread	NOUN	NN	Number=Sing	2	obj	2:obj	Supersense=n.FOOD
 4	fresh	fresh	ADV	RB	_	2	advmod	2:advmod	_
 5	daily	daily	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
 6	,	,	PUNCT	,	_	10	punct	10:punct	_
@@ -116,21 +116,21 @@
 8-9	don't	_	_	_	_	_	_	_	_
 8	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
 9	n't	not	PART	RB	Polarity=Neg	10	advmod	10:advmod	_
-10	press	press	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis|16:csubj	_
-11	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
-12	sandwiches	sandwich	NOUN	NNS	Number=Plur	10	obj	10:obj	_
+10	press	press	VERB	VB	VerbForm=Inf	2	parataxis	2:parataxis|16:csubj	Supersense=v.contact
+11	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	PRel[config]=possessive|PRel[gov]=12:sandwich|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Originator
+12	sandwiches	sandwich	NOUN	NNS	Number=Plur	10	obj	10:obj	Supersense=n.FOOD
 13	which	which	PRON	WDT	PronType=Rel	16	nsubj	10:ref	_
-14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
+14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	Supersense=v.stative
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	way	way	NOUN	NN	Number=Sing	10	advcl:relcl	10:advcl:relcl|18:obl	Cxn=rc-wh-csubj
+16	way	way	NOUN	NN	Number=Sing	10	advcl:relcl	10:advcl:relcl|18:obl	Cxn=rc-wh-csubj|Supersense=n.COGNITION
 17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	18:nsubj	_
-18	like	like	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	16	acl:relcl	16:acl:relcl	Cxn=rc-red-obl
+18	like	like	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	16	acl:relcl	16:acl:relcl	Cxn=rc-red-obl|Supersense=v.emotion
 19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	SpaceAfter=No
 20	,	,	PUNCT	,	_	26	punct	26:punct	_
 21	and	and	CCONJ	CC	_	26	cc	26:cc	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	_
-23	meat	meat	NOUN	NN	Number=Sing	26	nsubj	26:nsubj	_
-24	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	cop	26:cop	_
+23	meat	meat	NOUN	NN	Number=Sing	26	nsubj	26:nsubj	Supersense=n.FOOD
+24	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	cop	26:cop	Supersense=v.stative
 25	always	always	ADV	RB	PronType=Tot	26	advmod	26:advmod	_
 26	fresh	fresh	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	SpaceAfter=No
 27	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -138,39 +138,39 @@
 # sent_id = reviews-112579-0007
 # text = They have a great lunch special with your choice of meat, chicken, steak, or pork and rice and black beans and fried plantains.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
-2	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.stative
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 4	great	great	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-5	lunch	lunch	NOUN	NN	Number=Sing	6	compound	6:compound	_
-6	special	special	NOUN	NN	Number=Sing	2	obj	2:obj	_
-7	with	with	ADP	IN	_	9	case	9:case	_
-8	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
-9	choice	choice	NOUN	NN	Number=Sing	6	nmod	6:nmod:with	_
-10	of	of	ADP	IN	_	11	case	11:case	_
-11	meat	meat	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	SpaceAfter=No
+5	lunch	lunch	NOUN	NN	Number=Sing	6	compound	6:compound	Supersense=n.FOOD
+6	special	special	NOUN	NN	Number=Sing	2	obj	2:obj	Supersense=n.FOOD
+7	with	with	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:special|PRel[obj]=9:choice|Supersense=p.PartPortion
+8	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:choice|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Agent
+9	choice	choice	NOUN	NN	Number=Sing	6	nmod	6:nmod:with	Supersense=n.COGNITION
+10	of	of	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=9:choice|PRel[obj]=11:meat|Supersense=p.Topic
+11	meat	meat	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	SpaceAfter=No|Supersense=n.FOOD
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
-13	chicken	chicken	NOUN	NN	Number=Sing	11	conj	9:nmod:of|11:conj:or	SpaceAfter=No
+13	chicken	chicken	NOUN	NN	Number=Sing	11	conj	9:nmod:of|11:conj:or	SpaceAfter=No|Supersense=n.FOOD
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
-15	steak	steak	NOUN	NN	Number=Sing	11	conj	9:nmod:of|11:conj:or	SpaceAfter=No
+15	steak	steak	NOUN	NN	Number=Sing	11	conj	9:nmod:of|11:conj:or	SpaceAfter=No|Supersense=n.FOOD
 16	,	,	PUNCT	,	_	18	punct	18:punct	_
 17	or	or	CCONJ	CC	_	18	cc	18:cc	_
-18	pork	pork	NOUN	NN	Number=Sing	11	conj	9:nmod:of|11:conj:or	_
+18	pork	pork	NOUN	NN	Number=Sing	11	conj	9:nmod:of|11:conj:or	MWELemma[weak]=pork and rice|MWELen[weak]=3|Supersense=n.FOOD
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	rice	rice	NOUN	NN	Number=Sing	9	conj	6:nmod:with|9:conj:and	_
+20	rice	rice	NOUN	NN	Number=Sing	9	conj	6:nmod:with|9:conj:and	Supersense=n.FOOD
 21	and	and	CCONJ	CC	_	23	cc	23:cc	_
-22	black	black	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
+22	black	black	ADJ	JJ	Degree=Pos	23	amod	23:amod	MWECat=N|MWELemma=black bean|MWELen=2|MWEString=black beans|Supersense=n.FOOD
 23	beans	bean	NOUN	NNS	Number=Plur	9	conj	6:nmod:with|9:conj:and	_
 24	and	and	CCONJ	CC	_	26	cc	26:cc	_
-25	fried	fry	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	26	amod	26:amod	_
+25	fried	fry	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	26	amod	26:amod	MWECat=N|MWELemma=fry plantain|MWELen=2|MWEString=fried plantains|Supersense=n.FOOD
 26	plantains	plantain	NOUN	NNS	Number=Plur	9	conj	6:nmod:with|9:conj:and	SpaceAfter=No
 27	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-112579-0008
 # text = And their breakfast is awesome!!
 1	And	and	CCONJ	CC	_	5	cc	5:cc	_
-2	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	breakfast	breakfast	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
-4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+2	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	PRel[config]=possessive|PRel[gov]=3:breakfast|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Originator
+3	breakfast	breakfast	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Supersense=n.FOOD
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
 5	awesome	awesome	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 6	!!	!!	PUNCT	.	_	5	punct	5:punct	_
 
@@ -180,49 +180,49 @@
 2-3	cannot	_	_	_	_	_	_	_	_
 2	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
-4	describe	describe	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	describe	describe	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
 5	how	how	ADV	WRB	PronType=Int	6	advmod	6:advmod	CxnElt=6:Interrogative-WHInfo-Indirect.WHWord
 6	delicious	delicious	ADJ	JJ	Degree=Pos	4	ccomp	4:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=6:Interrogative-WHInfo-Indirect.Clause
 7	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-8	mango	mango	NOUN	NN	Number=Sing	11	compound	11:compound	_
+8	mango	mango	NOUN	NN	Number=Sing	11	compound	11:compound	Supersense=n.FOOD
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	cheese	cheese	NOUN	NN	Number=Sing	8	conj	8:conj:and|11:compound	_
-11	pastries	pastry	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj|17:nsubj	_
+10	cheese	cheese	NOUN	NN	Number=Sing	8	conj	8:conj:and|11:compound	Supersense=n.FOOD
+11	pastries	pastry	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj|17:nsubj	Supersense=n.FOOD
 12	and	and	CCONJ	CC	_	17	cc	17:cc	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	_
-14	omelets	omelet	NOUN	NNS	Number=Plur	17	nsubj:outer	17:nsubj:outer	_
-15	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	_
-16	to	to	PART	TO	_	17	mark	17:mark	_
+14	omelets	omelet	NOUN	NNS	Number=Plur	17	nsubj:outer	17:nsubj:outer	Supersense=n.FOOD
+15	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	cop	17:cop	Supersense=v.stative
+16	to	to	PART	TO	_	17	mark	17:mark	MWECat=ADJ|MWELemma=to die for|MWELen=3
 17	die	die	VERB	VB	VerbForm=Inf	4	conj	4:conj:and	_
 18	for	for	ADP	IN	_	17	obl	17:obl	Promoted=Yes|SpaceAfter=No
 19	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-112579-0010
 # text = Stop in and have a bite you won't regret it.
-1	Stop	stop	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+1	Stop	stop	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	MWECat=V.VPC.full|MWELemma=stop in|MWELen=2|Supersense=v.social
 2	in	in	ADV	RB	_	1	advmod	1:advmod	_
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	have	have	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	_
+4	have	have	VERB	VB	Mood=Imp|VerbForm=Fin	1	conj	1:conj:and	MWECat=V.VID|MWELemma=have a bite|MWELen=3|Supersense=v.consumption
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 6	bite	bite	NOUN	NN	Number=Sing	4	obj	4:obj	_
 7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	10:nsubj	_
 8-9	won't	_	_	_	_	_	_	_	_
 8	wo	will	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 9	n't	not	PART	RB	Polarity=Neg	10	advmod	10:advmod	_
-10	regret	regret	VERB	VB	VerbForm=Inf	1	parataxis	1:parataxis	_
+10	regret	regret	VERB	VB	VerbForm=Inf	1	parataxis	1:parataxis	Supersense=v.emotion
 11	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	obj	10:obj	SpaceAfter=No
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-112579-0011
 # text = A slice of heaven in winter park off forsyth!
-1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	_
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	MWECat=N|MWELemma=a slice of heaven|MWELen=4|Supersense=n.COGNITION
 2	slice	slice	NOUN	NN	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	4	case	4:case	_
 4	heaven	heaven	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	_
-5	in	in	ADP	IN	_	7	case	7:case	_
-6	winter	winter	PROPN	NNP	Number=Sing	7	compound	7:compound	_
+5	in	in	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=2:slice|PRel[obj]=7:park|Supersense=p.Locus
+6	winter	winter	PROPN	NNP	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=winter park|MWELen=2|Supersense=n.LOCATION
 7	park	park	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	_
-8	off	off	ADP	IN	_	9	case	9:case	_
-9	forsyth	forsyth	PROPN	NNP	Number=Sing	2	nmod	2:nmod:off	SpaceAfter=No
+8	off	off	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=2:slice|PRel[obj]=9:forsyth|Supersense[coding]=p.Source|Supersense[scene]=p.Locus
+9	forsyth	forsyth	PROPN	NNP	Number=Sing	2	nmod	2:nmod:off	SpaceAfter=No|Supersense=n.LOCATION
 10	!	!	PUNCT	.	_	2	punct	2:punct	_
 

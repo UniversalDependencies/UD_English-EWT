@@ -2,78 +2,78 @@
 # sent_id = reviews-007403-0001
 # newpar id = reviews-007403-p0001
 # text = My counseling practice
-1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-2	counseling	counseling	NOUN	NN	Number=Sing	3	compound	3:compound	_
-3	practice	practice	NOUN	NN	Number=Sing	0	root	0:root	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	PRel[config]=possessive|PRel[gov]=3:practice|Supersense[coding]=p.Possessor|Supersense[scene]=p.OrgMember
+2	counseling	counseling	NOUN	NN	Number=Sing	3	compound	3:compound	Supersense=n.ACT
+3	practice	practice	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.GROUP
 
 # sent_id = reviews-007403-0002
 # newpar id = reviews-007403-p0002
 # text = Hello my name is Vera and I'm writing a review about my own counseling practice in Bellevue, WA. and in Renton WA.
 1	Hello	hello	INTJ	UH	_	5	discourse	5:discourse	_
-2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
-3	name	name	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
-4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
-5	Vera	Vera	PROPN	NNP	Number=Sing	0	root	0:root	_
+2	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	PRel[config]=possessive|PRel[gov]=3:name|Supersense=p.Gestalt
+3	name	name	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Supersense=n.COMMUNICATION
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
+5	Vera	Vera	PROPN	NNP	Number=Sing	0	root	0:root	Supersense=n.PERSON
 6	and	and	CCONJ	CC	_	9	cc	9:cc	_
 7-8	I'm	_	_	_	_	_	_	_	_
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 8	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
-9	writing	write	VERB	VBG	Tense=Pres|VerbForm=Part	5	conj	5:conj:and	_
+9	writing	write	VERB	VBG	Tense=Pres|VerbForm=Part	5	conj	5:conj:and	Supersense=v.communication
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
-11	review	review	NOUN	NN	Number=Sing	9	obj	9:obj	_
-12	about	about	ADP	IN	_	16	case	16:case	_
-13	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	_
+11	review	review	NOUN	NN	Number=Sing	9	obj	9:obj	Supersense=n.COMMUNICATION
+12	about	about	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=11:review|PRel[obj]=16:practice|Supersense=p.Topic
+13	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	PRel[config]=possessive|PRel[gov]=16:practice|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
 14	own	own	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-15	counseling	counseling	NOUN	NN	Number=Sing	16	compound	16:compound	_
-16	practice	practice	NOUN	NN	Number=Sing	11	nmod	11:nmod:about	_
-17	in	in	ADP	IN	_	18	case	18:case	_
-18	Bellevue	Bellevue	PROPN	NNP	Number=Sing	16	nmod	16:nmod:in	SpaceAfter=No
+15	counseling	counseling	NOUN	NN	Number=Sing	16	compound	16:compound	Supersense=n.ACT
+16	practice	practice	NOUN	NN	Number=Sing	11	nmod	11:nmod:about	Supersense=n.GROUP
+17	in	in	ADP	IN	_	18	case	18:case	PRel[config]=default|PRel[gov]=16:practice|PRel[obj]=18:Bellevue|Supersense=p.Locus
+18	Bellevue	Bellevue	PROPN	NNP	Number=Sing	16	nmod	16:nmod:in	MWELemma[weak]=Bellevue , WA.|MWELen[weak]=3|SpaceAfter=No|Supersense=n.LOCATION
 19	,	,	PUNCT	,	_	20	punct	20:punct	_
-20	WA.	WA.	PROPN	NNP	Number=Sing	18	appos	18:appos	_
+20	WA.	WA.	PROPN	NNP	Number=Sing	18	nmod:unmarked	18:nmod:unmarked	Superlocation=Yes|Supersense=n.LOCATION
 21	and	and	CCONJ	CC	_	23	cc	23:cc	_
-22	in	in	ADP	IN	_	23	case	23:case	_
-23	Renton	Renton	PROPN	NNP	Number=Sing	18	conj	16:nmod:in|18:conj:and	_
-24	WA	WA	PROPN	NNP	Number=Sing	23	appos	23:appos	SpaceAfter=No
+22	in	in	ADP	IN	_	23	case	23:case	PRel[config]=default|PRel[gov]=16:practice|PRel[obj]=23:Renton|Supersense=p.Locus
+23	Renton	Renton	PROPN	NNP	Number=Sing	18	conj	16:nmod:in|18:conj:and	MWELemma[weak]=Renton WA|MWELen[weak]=2|Supersense=n.LOCATION
+24	WA	WA	PROPN	NNP	Number=Sing	23	nmod:unmarked	23:nmod:unmarked	SpaceAfter=No|Superlocation=Yes|Supersense=n.LOCATION
 25	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-007403-0003
 # text = I am a licensed mental health counselor and I work with variety of mental health problems.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	7:nsubj	_
-2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
+2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	cop	7:cop	Supersense=v.stative
 3	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
-4	licensed	license	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	amod	7:amod	_
-5	mental	mental	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
+4	licensed	license	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	amod	7:amod	Supersense=v.stative
+5	mental	mental	ADJ	JJ	Degree=Pos	6	amod	6:amod	MWECat=N|MWELemma=mental health|MWELen=2|Supersense=n.COGNITION
 6	health	health	NOUN	NN	Number=Sing	7	compound	7:compound	_
-7	counselor	counselor	NOUN	NN	Number=Sing	0	root	0:root	_
+7	counselor	counselor	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.PERSON
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
-10	work	work	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	conj	7:conj:and	_
-11	with	with	ADP	IN	_	12	case	12:case	_
-12	variety	variety	NOUN	NN	Number=Sing	10	obl	10:obl:with	_
-13	of	of	ADP	IN	_	16	case	16:case	_
-14	mental	mental	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
+10	work	work	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	conj	7:conj:and	MWELemma[weak]=work with|MWELen[weak]=2|Supersense=v.social
+11	with	with	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=10:work|PRel[obj]=12:variety|Supersense=p.Theme
+12	variety	variety	NOUN	NN	Number=Sing	10	obl	10:obl:with	Supersense=n.COGNITION
+13	of	of	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=12:variety|PRel[obj]=16:problem|Supersense=p.Species
+14	mental	mental	ADJ	JJ	Degree=Pos	15	amod	15:amod	MWECat=N|MWELemma=mental health|MWELen=2|Supersense=n.COGNITION
 15	health	health	NOUN	NN	Number=Sing	16	compound	16:compound	_
-16	problems	problem	NOUN	NNS	Number=Plur	12	nmod	12:nmod:of	SpaceAfter=No
+16	problems	problem	NOUN	NNS	Number=Plur	12	nmod	12:nmod:of	SpaceAfter=No|Supersense=n.COGNITION
 17	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-007403-0004
 # text = I offer compassionate, approachable and personalized counseling services.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	offer	offer	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	offer	offer	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.social
 3	compassionate	compassionate	ADJ	JJ	Degree=Pos	9	amod	9:amod	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	approachable	approachable	ADJ	JJ	Degree=Pos	3	conj	3:conj:and|9:amod	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	personalized	personalize	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	conj	3:conj:and|9:amod	_
-8	counseling	counseling	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	services	service	NOUN	NNS	Number=Plur	2	obj	2:obj	SpaceAfter=No
+7	personalized	personalize	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	conj	3:conj:and|9:amod	Supersense=v.social
+8	counseling	counseling	NOUN	NN	Number=Sing	9	compound	9:compound	Supersense=n.ACT
+9	services	service	NOUN	NNS	Number=Plur	2	obj	2:obj	SpaceAfter=No|Supersense=n.ACT
 10	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-007403-0005
 # text = My style is compassionate, nonjudgmental, and caring.
-1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	style	style	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj|9:nsubj	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	PRel[config]=possessive|PRel[gov]=2:style|Supersense=p.Gestalt
+2	style	style	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj|9:nsubj	Supersense=n.COGNITION
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 4	compassionate	compassionate	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	nonjudgmental	nonjudgmental	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
@@ -85,17 +85,17 @@
 # sent_id = reviews-007403-0006
 # text = Please visit my website to learn more about my practice at www.veraakulov.com.
 1	Please	please	INTJ	UH	_	2	discourse	2:discourse	_
-2	visit	visit	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	website	website	NOUN	NN	Number=Sing	2	obj	2:obj	_
-5	to	to	PART	TO	_	6	mark	6:mark	_
-6	learn	learn	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
+2	visit	visit	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Supersense=v.communication
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	PRel[config]=possessive|PRel[gov]=4:website|Supersense=p.Possessor
+4	website	website	NOUN	NN	Number=Sing	2	obj	2:obj	Supersense=n.COMMUNICATION
+5	to	to	PART	TO	_	6	mark	6:mark	PRel[config]=subordinating|PRel[gov]=2:visit|PRel[obj]=6:learn|Supersense=p.Purpose
+6	learn	learn	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	Supersense=v.cognition
 7	more	more	ADJ	JJR	Degree=Cmp	6	obj	6:obj	_
-8	about	about	ADP	IN	_	10	case	10:case	_
-9	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	_
-10	practice	practice	NOUN	NN	Number=Sing	7	obl	7:obl:about	_
-11	at	at	ADP	IN	_	12	case	12:case	_
-12	www.veraakulov.com	www.veraakulov.com	PROPN	ADD	_	2	obl	2:obl:at	SpaceAfter=No
+8	about	about	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=7:more|PRel[obj]=10:practice|Supersense=p.Topic
+9	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	PRel[config]=possessive|PRel[gov]=10:practice|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+10	practice	practice	NOUN	NN	Number=Sing	7	obl	7:obl:about	Supersense=n.GROUP
+11	at	at	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=2:visit|PRel[obj]=12:www.veraakulov.com|Supersense=p.Locus
+12	www.veraakulov.com	www.veraakulov.com	PROPN	ADD	_	2	obl	2:obl:at	SpaceAfter=No|Supersense=n.COMMUNICATION
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-007403-0007
@@ -103,20 +103,20 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
-4	preferred	prefer	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	amod	5:amod	_
-5	provider	provider	NOUN	NN	Number=Sing	0	root	0:root	_
-6	with	with	ADP	IN	_	9	case	9:case	_
+4	preferred	prefer	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	amod	5:amod	Supersense=v.social
+5	provider	provider	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.PERSON
+6	with	with	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=5:provider|PRel[obj]=9:company|Supersense[coding]=p.Ancillary|Supersense[scene]=p.Org
 7	most	most	ADJ	JJS	Degree=Sup	9	amod	9:amod	_
-8	insurance	insurance	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	companies	company	NOUN	NNS	Number=Plur	5	nmod	5:nmod:with	SpaceAfter=No
+8	insurance	insurance	NOUN	NN	Number=Sing	9	compound	9:compound	Supersense=n.POSSESSION
+9	companies	company	NOUN	NNS	Number=Plur	5	nmod	5:nmod:with	SpaceAfter=No|Supersense=n.GROUP
 10	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-007403-0008
 # text = Schedule your first appointment online!
-1	Schedule	schedule	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
-2	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
+1	Schedule	schedule	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Supersense=v.social
+2	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	PRel[config]=possessive|PRel[gov]=4:appointment|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Agent
 3	first	first	ADJ	JJ	Degree=Pos|NumForm=Word|NumType=Ord	4	amod	4:amod	_
-4	appointment	appointment	NOUN	NN	Number=Sing	1	obj	1:obj	_
+4	appointment	appointment	NOUN	NN	Number=Sing	1	obj	1:obj	Supersense=n.EVENT
 5	online	online	ADV	RB	_	1	advmod	1:advmod	SpaceAfter=No
 6	!	!	PUNCT	.	_	1	punct	1:punct	_
 
@@ -124,20 +124,20 @@
 # text = I would appreciate reviews from anyone who has worked with me before in the mental health setting.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	appreciate	appreciate	VERB	VB	VerbForm=Inf	0	root	0:root	_
-4	reviews	review	NOUN	NNS	Number=Plur	3	obj	3:obj	_
-5	from	from	ADP	IN	_	6	case	6:case	_
+3	appreciate	appreciate	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.emotion
+4	reviews	review	NOUN	NNS	Number=Plur	3	obj	3:obj	Supersense=n.COMMUNICATION
+5	from	from	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:review|PRel[obj]=6:anyone|Supersense[coding]=p.Source|Supersense[scene]=p.Originator
 6	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	4	nmod	4:nmod:from|9:nsubj	_
 7	who	who	PRON	WP	PronType=Rel	9	nsubj	6:ref	_
 8	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
-9	worked	work	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	Cxn=rc-wh-nsubj
-10	with	with	ADP	IN	_	11	case	11:case	_
+9	worked	work	VERB	VBN	Tense=Past|VerbForm=Part	6	acl:relcl	6:acl:relcl	Cxn=rc-wh-nsubj|Supersense=v.social
+10	with	with	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=9:work|PRel[obj]=11:I|Supersense[coding]=p.Ancillary|Supersense[scene]=p.SocialRel
 11	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	9	obl	9:obl:with	_
-12	before	before	ADV	RB	_	9	advmod	9:advmod	_
-13	in	in	ADP	IN	_	17	case	17:case	_
+12	before	before	ADV	RB	_	9	advmod	9:advmod	PRel[config]=default|PRel[gov]=9:work|Supersense=p.Time
+13	in	in	ADP	IN	_	17	case	17:case	PRel[config]=default|PRel[gov]=9:work|PRel[obj]=17:setting|Supersense[coding]=p.Locus|Supersense[scene]=p.Circumstance
 14	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
-15	mental	mental	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
+15	mental	mental	ADJ	JJ	Degree=Pos	16	amod	16:amod	MWECat=N|MWELemma=mental health|MWELen=2|Supersense=n.COGNITION
 16	health	health	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	setting	setting	NOUN	NN	Number=Sing	9	obl	9:obl:in	SpaceAfter=No
+17	setting	setting	NOUN	NN	Number=Sing	9	obl	9:obl:in	SpaceAfter=No|Supersense=n.COGNITION
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
 

@@ -10,7 +10,7 @@
 6	,	,	PUNCT	,	_	10	punct	10:punct	_
 7	overall	overall	ADV	RB	_	8	advmod	8:advmod	_
 8	poor	poor	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-9	customer	customer	NOUN	NN	Number=Sing	10	compound	10:compound	_
+9	customer	customer	NOUN	NN	Number=Sing	10	compound	10:compound	MWECat=N|MWELemma=customer service|MWELen=2|Supersense=n.ACT
 10	service	service	NOUN	NN	Number=Sing	2	conj	2:conj	SpaceAfter=No
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -18,12 +18,12 @@
 # text = Definitely not going to purchase a car from here.
 1	Definitely	definitely	ADV	RB	_	3	advmod	3:advmod	_
 2	not	not	PART	RB	Polarity=Neg	3	advmod	3:advmod	_
-3	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+3	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	MWECat=AUX|MWELemma=go to|MWELen=2|MWEString=going to
 4	to	to	PART	TO	_	5	mark	5:mark	_
-5	purchase	purchase	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
+5	purchase	purchase	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	Supersense=v.possession
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
-7	car	car	NOUN	NN	Number=Sing	5	obj	5:obj	_
-8	from	from	ADP	IN	_	9	case	9:case	_
+7	car	car	NOUN	NN	Number=Sing	5	obj	5:obj	Supersense=n.ARTIFACT
+8	from	from	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=5:purchase|PRel[obj]=9:here|Supersense[coding]=p.Source|Supersense[scene]=p.Originator
 9	here	here	ADV	RB	PronType=Dem	5	obl	5:obl:from	SpaceAfter=No
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
 

@@ -134,8 +134,8 @@
 1	Kriste	Kriste	PROPN	NNP	Number=Sing	0	root	0:root	_
 2	K.	K.	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Sullivan	Sullivan	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-4	Enron	Enron	PROPN	NNP	Number=Sing	5	compound	5:compound	_
-5	Corp.	Corp.	PROPN	NNP	Number=Sing	1	list	1:list	_
+4	Enron	Enron	PROPN	NNP	Number=Sing	1	list	1:list	_
+5	Corp.	Corp.	PROPN	NNP	Number=Sing	4	nmod:desc	4:nmod:desc	_
 6	-	-	PUNCT	,	_	8	punct	8:punct	_
 7	Legal	legal	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	EB	EB	PROPN	NNP	Number=Sing	1	list	1:list	FlatType=Enumerated
@@ -182,7 +182,7 @@
 8	2001	2001	NUM	CD	NumForm=Digit|NumType=Card	6	nmod:unmarked	6:nmod:unmarked	TemporalNPAdjunct=Yes
 9	10:30	10:30	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:unmarked	3:nmod:unmarked	_
 10	AM	a.m.	NOUN	NN	Number=Sing	9	nmod:unmarked	9:nmod:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
-11	-	-	SYM	SYM	_	12	case	12:case	SpaceAfter=No
+11	-	-	SYM	SYM	ExtPos=ADP	12	case	12:case	SpaceAfter=No
 12	11:30	11:30	NUM	CD	NumForm=Digit|NumType=Card	9	nmod	9:nmod	_
 13	AM	a.m.	NOUN	NN	Number=Sing	12	nmod:unmarked	12:nmod:unmarked	_
 14	(	(	PUNCT	-LRB-	_	15	punct	15:punct	SpaceAfter=No
@@ -217,7 +217,7 @@
 # newpar id = email-enronsent03_01-p0009
 # text = 10:30-11:30 PST
 1	10:30	10:30	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	SpaceAfter=No
-2	-	-	SYM	SYM	_	3	case	3:case	SpaceAfter=No
+2	-	-	SYM	SYM	ExtPos=ADP	3	case	3:case	SpaceAfter=No
 3	11:30	11:30	NUM	CD	NumForm=Digit|NumType=Card	1	nmod	1:nmod	_
 4	PST	PST	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	_
 
@@ -545,7 +545,7 @@
 # sent_id = email-enronsent03_01-0048
 # text = Should there be a (groan) meeting on this?
 1	Should	should	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-2	there	there	PRON	EX	_	3	expl	3:expl	_
+2	there	there	PRON	EX	PronType=Dem	3	expl	3:expl	_
 3	be	be	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
 4	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 5	(	(	PUNCT	-LRB-	_	6	punct	6:punct	SpaceAfter=No
@@ -991,7 +991,7 @@
 4	August	August	PROPN	NNP	Number=Sing	1	nmod:unmarked	1:nmod:unmarked	TemporalNPAdjunct=Yes
 5	3.30	3.30	NUM	CD	NumForm=Digit|NumType=Frac	1	nmod:unmarked	1:nmod:unmarked	_
 6	pm	p.m.	NOUN	NN	Number=Sing	5	nmod:unmarked	5:nmod:unmarked	TemporalNPAdjunct=Yes
-7	-	-	SYM	SYM	_	8	case	8:case	_
+7	-	-	SYM	SYM	ExtPos=ADP	8	case	8:case	_
 8	5.30	5.30	NUM	CD	NumForm=Digit|NumType=Frac	5	nmod	5:nmod	_
 9	pm	p.m.	NOUN	NN	Number=Sing	8	nmod:unmarked	8:nmod:unmarked	_
 10	(	(	PUNCT	-LRB-	_	11	punct	11:punct	SpaceAfter=No
@@ -1445,7 +1445,7 @@
 2	wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
 4	let	let	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
-5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	obj	4:obj|6:nsubj:xsubj	_
+5	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	4	obj	4:obj|6:nsubj:xsubj	_
 6	know	know	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
 7	about	about	ADP	IN	_	8	case	8:case	_
 8	this	this	PRON	DT	Number=Sing|PronType=Dem	6	obl	6:obl:about	_
@@ -1694,10 +1694,10 @@
 10	to	to	PART	TO	_	11	mark	11:mark	_
 11	picket	picket	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
-13	Lake	Lake	PROPN	NNP	Number=Sing	14	compound	14:compound	_
-14	Worth	Worth	PROPN	NNP	Number=Sing	17	compound	17:compound	SpaceAfter=No
+13	Lake	Lake	PROPN	NNP	Number=Sing	17	compound	17:compound	_
+14	Worth	Worth	PROPN	NNP	Number=Sing	13	flat	13:flat	SpaceAfter=No
 15	,	,	PUNCT	,	_	16	punct	16:punct	_
-16	Florida	Florida	PROPN	NNP	Number=Sing	14	appos	14:appos	_
+16	Florida	Florida	PROPN	NNP	Number=Sing	13	nmod:unmarked	13:nmod:unmarked	Superlocation=Yes
 17	project	project	NOUN	NN	Number=Sing	11	obj	11:obj	_
 18	as	as	ADV	RB	ExtPos=ADV	11	advmod	11:advmod	_
 19	well	well	ADV	RB	Degree=Pos	18	fixed	18:fixed	SpaceAfter=No
@@ -1851,9 +1851,9 @@
 17	visiting	visit	VERB	VBG	Tense=Pres|VerbForm=Part	33	advcl	33:advcl:while	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
 19	City	City	PROPN	NNP	Number=Sing	27	compound	27:compound	_
-20	of	of	ADP	IN	_	22	case	22:case	_
-21	Lake	Lake	PROPN	NNP	Number=Sing	22	compound	22:compound	_
-22	Worth	Worth	PROPN	NNP	Number=Sing	19	nmod	19:nmod:of	_
+20	of	of	ADP	IN	_	21	case	21:case	_
+21	Lake	Lake	PROPN	NNP	Number=Sing	19	nmod	19:nmod:of	_
+22	Worth	Worth	PROPN	NNP	Number=Sing	21	flat	21:flat	_
 23	Building	Building	PROPN	NNP	Number=Sing	24	compound	24:compound	_
 24	Planning	Planning	PROPN	NNP	Number=Sing	27	compound	27:compound	_
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_
@@ -1990,16 +1990,16 @@
 10	(	(	PUNCT	-LRB-	_	11	punct	11:punct	SpaceAfter=No
 11	NEPCO	NEPCO	PROPN	NNP	Number=Sing	9	appos	9:appos	SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	11	punct	11:punct	_
-13	11831	11831	NUM	CD	NumForm=Digit|NumType=Card	16	nummod	16:nummod	_
+13	11831	11831	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
 14	North	North	PROPN	NNP	Number=Sing	16	compound	16:compound	_
 15	Creek	Creek	PROPN	NNP	Number=Sing	16	compound	16:compound	_
-16	Parkway	Parkway	PROPN	NNP	Number=Sing	1	appos	1:appos	_
+16	Parkway	Parkway	PROPN	NNP	Number=Sing	13	nmod:unmarked	13:nmod:unmarked	Superlocation=Yes
 17	North	North	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-18	Bothell	Bothell	PROPN	NNP	Number=Sing	1	appos	1:appos	SpaceAfter=No
+18	Bothell	Bothell	PROPN	NNP	Number=Sing	1	list	1:list	SpaceAfter=No
 19	,	,	PUNCT	,	_	20	punct	20:punct	_
-20	WA	WA	PROPN	NNP	Number=Sing	18	appos	18:appos	_
-21	98011	98011	NUM	CD	NumForm=Digit|NumType=Card	18	appos	18:appos	_
-22	USA	USA	PROPN	NNP	Number=Sing	18	appos	18:appos	_
+20	WA	WA	PROPN	NNP	Number=Sing	18	nmod:unmarked	18:nmod:unmarked	Superlocation=Yes
+21	98011	98011	NUM	CD	NumForm=Digit|NumType=Card	1	list	1:list	_
+22	USA	USA	PROPN	NNP	Number=Sing	1	list	1:list	_
 23	Tel	tel	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
 24	:	:	PUNCT	:	_	25	punct	25:punct	_
 25	425-415-3052	425-415-3052	NUM	CD	NumForm=Digit|NumType=Card	23	appos	23:appos	_

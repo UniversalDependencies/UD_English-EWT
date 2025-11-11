@@ -2,14 +2,14 @@
 # sent_id = reviews-057644-0001
 # newpar id = reviews-057644-p0001
 # text = find another place
-1	find	find	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+1	find	find	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
 2	another	another	DET	DT	PronType=Ind	3	det	3:det	_
-3	place	place	NOUN	NN	Number=Sing	1	obj	1:obj	_
+3	place	place	NOUN	NN	Number=Sing	1	obj	1:obj	Supersense=n.GROUP
 
 # sent_id = reviews-057644-0002
 # newpar id = reviews-057644-p0002
 # text = Run down.
-1	Run	run	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+1	Run	run	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	MWECat=ADJ|MWELemma=run down|MWELen=2
 2	down	down	ADP	RP	_	1	compound:prt	1:compound:prt	SpaceAfter=No
 3	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -18,18 +18,18 @@
 1	Dark	dark	ADJ	JJ	Degree=Pos	5	amod	5:amod	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	dark	dark	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-4	main	main	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+4	main	main	ADJ	JJ	Degree=Pos	5	amod	5:amod	MWECat=N|MWELemma=main room|MWELen=2|Supersense=n.ARTIFACT
 5	room	room	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 6	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-057644-0004
 # text = No way to read/relax.
 1	No	no	DET	DT	PronType=Neg	2	det	2:det	_
-2	way	way	NOUN	NN	Number=Sing	0	root	0:root	_
+2	way	way	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.COGNITION
 3	to	to	PART	TO	_	4	mark	4:mark	_
-4	read	read	VERB	VB	VerbForm=Inf	2	acl	2:acl:to	SpaceAfter=No
+4	read	read	VERB	VB	VerbForm=Inf	2	acl	2:acl:to	SpaceAfter=No|Supersense=v.communication
 5	/	/	SYM	SYM	_	6	cc	6:cc	SpaceAfter=No
-6	relax	relax	VERB	VB	VerbForm=Inf	4	conj	2:acl:to|4:conj	SpaceAfter=No
+6	relax	relax	VERB	VB	VerbForm=Inf	4	conj	2:acl:to|4:conj	SpaceAfter=No|Supersense=v.cognition
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-057644-0005
@@ -37,13 +37,13 @@
 1	'	'	PUNCT	``	_	2	punct	2:punct	SpaceAfter=No
 2	Electric	electric	ADJ	JJ	Degree=Pos	4	amod	4:amod	SpaceAfter=No
 3	'	'	PUNCT	''	_	2	punct	2:punct	_
-4	blanket	blanket	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
-5	on	on	ADP	IN	_	7	case	7:case	_
+4	blanket	blanket	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	Supersense=n.ARTIFACT
+5	on	on	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:blanket|PRel[obj]=7:bed|Supersense=p.Locus
 6	one	one	NUM	CD	NumForm=Word|NumType=Card	7	nummod	7:nummod	_
-7	bed	bed	NOUN	NN	Number=Sing	4	nmod	4:nmod:on	_
+7	bed	bed	NOUN	NN	Number=Sing	4	nmod	4:nmod:on	Supersense=n.ARTIFACT
 8	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux	10:aux	_
 9	not	not	PART	RB	Polarity=Neg	10	advmod	10:advmod	_
-10	heat	heat	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+10	heat	heat	VERB	VB	VerbForm=Inf	0	root	0:root	SpaceAfter=No|Supersense=v.change
 11	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = reviews-057644-0006
@@ -54,20 +54,20 @@
 
 # sent_id = reviews-057644-0007
 # text = Removing 90% of 'sit-abouts' in main room would look cleaner.
-1	Removing	remove	VERB	VBG	VerbForm=Ger	14	csubj	14:csubj	_
+1	Removing	remove	VERB	VBG	VerbForm=Ger	14	csubj	14:csubj	Supersense=v.change
 2	90	90	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	SpaceAfter=No
-3	%	%	SYM	NN	Number=Sing	1	obj	1:obj	_
-4	of	of	ADP	IN	_	8	case	8:case	_
+3	%	%	SYM	NN	Number=Sing	1	obj	1:obj	Supersense=n.QUANTITY
+4	of	of	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=3:%|PRel[obj]=8:about|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
 5	'	'	PUNCT	``	_	8	punct	8:punct	SpaceAfter=No
-6	sit	sit	NOUN	NN	Number=Sing	8	compound	8:compound	SpaceAfter=No
+6	sit	sit	NOUN	NN	Number=Sing	8	compound	8:compound	MWECat=N|MWELemma=sit - about|MWELen=3|MWEString=sit - abouts|SpaceAfter=No|Supersense=n.PERSON
 7	-	-	PUNCT	HYPH	_	6	punct	6:punct	SpaceAfter=No
 8	abouts	about	NOUN	NNS	Number=Plur	3	nmod	3:nmod:of	SpaceAfter=No
 9	'	'	PUNCT	''	_	8	punct	8:punct	_
-10	in	in	ADP	IN	_	12	case	12:case	_
-11	main	main	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
+10	in	in	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=8:about|PRel[obj]=12:room|Supersense=p.Locus
+11	main	main	ADJ	JJ	Degree=Pos	12	amod	12:amod	MWECat=N|MWELemma=main room|MWELen=2|Supersense=n.ARTIFACT
 12	room	room	NOUN	NN	Number=Sing	8	nmod	8:nmod:in	_
 13	would	would	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
-14	look	look	VERB	VB	VerbForm=Inf	0	root	0:root	_
+14	look	look	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.perception
 15	cleaner	clean	ADJ	JJR	Degree=Cmp	14	xcomp	14:xcomp	SpaceAfter=No
 16	.	.	PUNCT	.	_	14	punct	14:punct	_
 

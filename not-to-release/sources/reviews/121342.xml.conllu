@@ -4,27 +4,27 @@
 # text = We were expecting a great experience, when we recieved a friendly greeting by the hosts.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	3	aux	3:aux	_
-3	expecting	expect	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+3	expecting	expect	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Supersense=v.cognition
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 5	great	great	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	experience	experience	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No
+6	experience	experience	NOUN	NN	Number=Sing	3	obj	3:obj	SpaceAfter=No|Supersense=n.EVENT
 7	,	,	PUNCT	,	_	10	punct	10:punct	_
 8	when	when	ADV	WRB	PronType=Int	10	advmod	10:advmod	_
 9	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
-10	recieved	receive	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|Typo=Yes|VerbForm=Fin	3	advcl	3:advcl:when	CorrectForm=received
+10	recieved	receive	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|Typo=Yes|VerbForm=Fin	3	advcl	3:advcl:when	CorrectForm=received|Supersense=v.stative
 11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	_
 12	friendly	friendly	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	greeting	greeting	NOUN	NN	Number=Sing	10	obj	10:obj	_
-14	by	by	ADP	IN	_	16	case	16:case	_
+13	greeting	greeting	NOUN	NN	Number=Sing	10	obj	10:obj	Supersense=n.COMMUNICATION
+14	by	by	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=13:greeting|PRel[obj]=16:host|Supersense=p.Agent
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	_
-16	hosts	host	NOUN	NNS	Number=Plur	13	nmod	13:nmod:by	SpaceAfter=No
+16	hosts	host	NOUN	NNS	Number=Plur	13	nmod	13:nmod:by	SpaceAfter=No|Supersense=n.PERSON
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-121342-0002
 # text = The atmosphere was nice and very clean.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	atmosphere	atmosphere	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|7:nsubj	_
-3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
+2	atmosphere	atmosphere	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|7:nsubj	Supersense=n.ATTRIBUTE
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 4	nice	nice	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
 6	very	very	ADV	RB	_	7	advmod	7:advmod	_
@@ -34,53 +34,53 @@
 # sent_id = reviews-121342-0003
 # text = The menu had plenty of options even for picky eaters.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	menu	menu	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	_
-3	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	plenty	plenty	NOUN	NN	Number=Sing	3	obj	3:obj	_
-5	of	of	ADP	IN	_	6	case	6:case	_
-6	options	option	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
+2	menu	menu	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Supersense=n.COMMUNICATION
+3	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.stative
+4	plenty	plenty	NOUN	NN	Number=Sing	3	obj	3:obj	Supersense=n.QUANTITY
+5	of	of	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:plenty|PRel[obj]=6:option|Supersense=p.QuantityItem
+6	options	option	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	Supersense=n.FOOD
 7	even	even	ADV	RB	_	10	advmod	10:advmod	_
-8	for	for	ADP	IN	_	10	case	10:case	_
-9	picky	picky	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	eaters	eater	NOUN	NNS	Number=Plur	3	obl	3:obl:for	SpaceAfter=No
+8	for	for	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=3:have|PRel[obj]=10:eater|Supersense=p.Beneficiary
+9	picky	picky	ADJ	JJ	Degree=Pos	10	amod	10:amod	MWELemma[weak]=picky eater|MWELen[weak]=2|MWEString[weak]=picky eaters
+10	eaters	eater	NOUN	NNS	Number=Plur	3	obl	3:obl:for	SpaceAfter=No|Supersense=n.PERSON
 11	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-121342-0004
 # text = The service was ok, our waitress kept forgetting our drinks even though we reminded her several times.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	service	service	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
+2	service	service	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.ACT
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 4	ok	ok	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
-6	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
-7	waitress	waitress	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|9:nsubj:xsubj	_
-8	kept	keep	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	_
-9	forgetting	forget	VERB	VBG	VerbForm=Ger	8	xcomp	8:xcomp	_
-10	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
-11	drinks	drink	NOUN	NNS	Number=Plur	9	obj	9:obj	_
+6	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	PRel[config]=possessive|PRel[gov]=7:waitress|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+7	waitress	waitress	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|9:nsubj:xsubj	Supersense=n.PERSON
+8	kept	keep	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	Supersense=v.stative
+9	forgetting	forget	VERB	VBG	VerbForm=Ger	8	xcomp	8:xcomp	Supersense=v.cognition
+10	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	PRel[config]=possessive|PRel[gov]=11:drink|Supersense=p.Possessor
+11	drinks	drink	NOUN	NNS	Number=Plur	9	obj	9:obj	Supersense=n.FOOD
 12	even	even	ADV	RB	_	15	advmod	15:advmod	_
 13	though	though	SCONJ	IN	_	15	mark	15:mark	_
 14	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
-15	reminded	remind	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	9	advcl	9:advcl:though	_
+15	reminded	remind	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	9	advcl	9:advcl:though	Supersense=v.communication
 16	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	15	iobj	15:iobj	_
 17	several	several	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	times	time	NOUN	NNS	Number=Plur	15	obl:unmarked	15:obl:unmarked	SpaceAfter=No|TemporalNPAdjunct=Yes
+18	times	time	NOUN	NNS	Number=Plur	15	obl:unmarked	15:obl:unmarked	SpaceAfter=No|Supersense=n.EVENT|TemporalNPAdjunct=Yes
 19	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-121342-0005
 # text = To start we tried the guacamole and salsa verde, it was completly flavorless.
 1	To	to	PART	TO	_	2	mark	2:mark	_
-2	start	start	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	_
+2	start	start	VERB	VB	VerbForm=Inf	4	advcl	4:advcl:to	Supersense=v.stative
 3	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-4	tried	try	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+4	tried	try	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.consumption
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	guacamole	guacamole	NOUN	NN	Number=Sing	4	obj	4:obj	_
+6	guacamole	guacamole	NOUN	NN	Number=Sing	4	obj	4:obj	Supersense=n.FOOD
 7	and	and	CCONJ	CC	_	9	cc	9:cc	_
-8	salsa	salsa	NOUN	NN	Number=Sing	9	compound	9:compound	_
+8	salsa	salsa	NOUN	NN	Number=Sing	9	compound	9:compound	MWECat=N|MWELemma=salsa verde|MWELen=2|Supersense=n.FOOD
 9	verde	verde	NOUN	NN	Number=Sing	6	conj	4:obj|6:conj:and	SpaceAfter=No
 10	,	,	PUNCT	,	_	14	punct	14:punct	_
 11	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
-12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
+12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	Supersense=v.stative
 13	completly	completely	ADV	RB	Typo=Yes	14	advmod	14:advmod	CorrectForm=completely
 14	flavorless	flavorless	ADJ	JJ	Degree=Pos	4	parataxis	4:parataxis	SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -90,40 +90,40 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	should	should	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	have	have	AUX	VB	VerbForm=Inf	4	aux	4:aux	_
-4	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+4	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Supersense=v.motion
 5	then	then	ADV	RB	PronType=Dem	4	advmod	4:advmod	SpaceAfter=No
 6	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-121342-0007
 # text = We orderd our meals anyway, chimichangas,jalapeno borritos, and quesadillas.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	orderd	order	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|Typo=Yes|VerbForm=Fin	0	root	0:root	CorrectForm=ordered
-3	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	meals	meal	NOUN	NNS	Number=Plur	2	obj	2:obj	_
+2	orderd	order	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|Typo=Yes|VerbForm=Fin	0	root	0:root	CorrectForm=ordered|Supersense=v.communication
+3	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	PRel[config]=possessive|PRel[gov]=4:meal|Supersense=p.Possessor
+4	meals	meal	NOUN	NNS	Number=Plur	2	obj	2:obj	Supersense=n.FOOD
 5	anyway	anyway	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
-7	chimichangas	chimichanga	NOUN	NNS	Number=Plur	2	parataxis	2:parataxis	SpaceAfter=No
+7	chimichangas	chimichanga	NOUN	NNS	Number=Plur	2	parataxis	2:parataxis	SpaceAfter=No|Supersense=n.FOOD
 8	,	,	PUNCT	,	_	10	punct	10:punct	SpaceAfter=No
-9	jalapeno	jalapeno	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	borritos	burrito	NOUN	NNS	Number=Plur|Typo=Yes	7	conj	7:conj:and	CorrectForm=burritos|SpaceAfter=No
+9	jalapeno	jalapeno	NOUN	NN	Number=Sing	10	compound	10:compound	Supersense=n.FOOD
+10	borritos	burrito	NOUN	NNS	Number=Plur|Typo=Yes	7	conj	7:conj:and	CorrectForm=burritos|SpaceAfter=No|Supersense=n.FOOD
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	quesadillas	quesadilla	NOUN	NNS	Number=Plur	7	conj	7:conj:and	SpaceAfter=No
+13	quesadillas	quesadilla	NOUN	NNS	Number=Plur	7	conj	7:conj:and	SpaceAfter=No|Supersense=n.FOOD
 14	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-121342-0008
 # text = Everything was bland, completely void of any spice or flavor.
 1	Everything	everything	PRON	NN	Number=Sing|PronType=Tot	3	nsubj	3:nsubj|6:nsubj	_
-2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	Supersense=v.stative
 3	bland	bland	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	completely	completely	ADV	RB	_	6	advmod	6:advmod	_
-6	void	void	ADJ	JJ	Degree=Pos	3	conj	3:conj	_
+6	void	void	ADJ	JJ	Degree=Pos	3	conj	3:conj	MWECat=ADJ|MWELemma=void of|MWELen=2
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	any	any	DET	DT	PronType=Ind	9	det	9:det	_
-9	spice	spice	NOUN	NN	Number=Sing	6	obl	6:obl:of	_
+9	spice	spice	NOUN	NN	Number=Sing	6	obl	6:obl:of	Supersense=n.ATTRIBUTE
 10	or	or	CCONJ	CC	_	11	cc	11:cc	_
-11	flavor	flavor	NOUN	NN	Number=Sing	9	conj	6:obl:of|9:conj:or	SpaceAfter=No
+11	flavor	flavor	NOUN	NN	Number=Sing	9	conj	6:obl:of|9:conj:or	SpaceAfter=No|Supersense=n.ATTRIBUTE
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-121342-0009
@@ -131,14 +131,14 @@
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	never	never	ADV	RB	PronType=Neg	4	advmod	4:advmod	_
-4	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+4	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Supersense=v.consumption
 5	mexican	Mexican	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	food	food	NOUN	NN	Number=Sing	4	obj	4:obj	_
+6	food	food	NOUN	NN	Number=Sing	4	obj	4:obj	Supersense=n.FOOD
 7	this	this	ADV	RB	_	8	advmod	8:advmod	_
 8	bad	bad	ADJ	JJ	Degree=Pos	6	amod	6:amod	SpaceAfter=No
 9	,	,	PUNCT	,	_	14	punct	14:punct	_
 10	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj	14:nsubj	_
-11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
+11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	Supersense=v.stative
 12	just	just	ADV	RB	_	14	advmod	14:advmod	_
 13	simply	simply	ADV	RB	_	14	advmod	14:advmod	_
 14	gross	gross	ADJ	JJ	Degree=Pos	4	parataxis	4:parataxis	SpaceAfter=No
@@ -148,16 +148,16 @@
 # text = Hopefully they spice things up or they wont be in business long.
 1	Hopefully	hopefully	ADV	RB	_	3	advmod	3:advmod	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	spice	spice	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-4	things	thing	NOUN	NNS	Number=Plur	3	obj	3:obj	_
+3	spice	spice	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	MWECat=V.VPC.full|MWELemma=spice <1> up|MWELen=3|Supersense=v.change
+4	things	thing	NOUN	NNS	Number=Plur	3	obj	3:obj	Supersense=n.OTHER
 5	up	up	ADP	RP	_	3	compound:prt	3:compound:prt	_
 6	or	or	CCONJ	CC	_	12	cc	12:cc	_
 7	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	12	nsubj	12:nsubj	_
 8-9	wont	_	_	_	_	_	_	_	_
 8	wo	will	AUX	MD	VerbForm=Fin	12	aux	12:aux	_
 9	nt	not	PART	RB	Polarity=Neg|Typo=Yes	12	advmod	12:advmod	CorrectForm=n't
-10	be	be	AUX	VB	VerbForm=Inf	12	cop	12:cop	_
-11	in	in	ADP	IN	_	12	case	12:case	_
+10	be	be	AUX	VB	VerbForm=Inf	12	cop	12:cop	Supersense=v.stative
+11	in	in	ADP	IN	_	12	case	12:case	MWECat=PP|MWELemma=in business|MWELen=2|PRel[config]=predicative|PRel[gov]=7:they|PRel[obj]=12:business|Supersense[coding]=p.Locus|Supersense[scene]=p.Characteristic
 12	business	business	NOUN	NN	Number=Sing	3	conj	3:conj:or	_
 13	long	long	ADV	RB	Degree=Pos	12	advmod	12:advmod	SpaceAfter=No
 14	.	.	PUNCT	.	_	3	punct	3:punct	_
@@ -165,7 +165,7 @@
 # sent_id = reviews-121342-0011
 # text = I recommend La Hacienda
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	La	La	PROPN	NNP	Number=Sing	2	obj	2:obj	_
+2	recommend	recommend	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.communication
+3	La	La	PROPN	NNP	Number=Sing	2	obj	2:obj	MWECat=N|MWELemma=La Hacienda|MWELen=2|Supersense=n.GROUP
 4	Hacienda	Hacienda	PROPN	NNP	Number=Sing	3	flat	3:flat	_
 

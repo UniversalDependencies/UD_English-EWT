@@ -3,26 +3,26 @@
 # newpar id = reviews-149922-p0001
 # text = Clean rooms, great for the price and cheapest on the exit.
 1	Clean	clean	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	rooms	room	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
+2	rooms	room	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No|Supersense=n.ARTIFACT
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	great	great	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	_
-5	for	for	ADP	IN	_	7	case	7:case	_
+5	for	for	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:great|PRel[obj]=7:price|Supersense=p.ComparisonRef
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	price	price	NOUN	NN	Number=Sing	4	obl	4:obl:for	_
+7	price	price	NOUN	NN	Number=Sing	4	obl	4:obl:for	Supersense=n.POSSESSION
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
 9	cheapest	cheap	ADJ	JJS	Degree=Sup	2	conj	2:conj:and	_
-10	on	on	ADP	IN	_	12	case	12:case	_
+10	on	on	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=9:cheap|PRel[obj]=12:exit|Supersense=p.Locus
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	exit	exit	NOUN	NN	Number=Sing	9	obl	9:obl:on	SpaceAfter=No
+12	exit	exit	NOUN	NN	Number=Sing	9	obl	9:obl:on	SpaceAfter=No|Supersense=n.LOCATION
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-149922-0002
 # text = The front desk staff was very pleasant and efficient.
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-2	front	front	NOUN	NN	Number=Sing	3	compound	3:compound	_
+2	front	front	NOUN	NN	Number=Sing	3	compound	3:compound	MWECat=N|MWELemma=front desk|MWELen=2|Supersense=n.LOCATION
 3	desk	desk	NOUN	NN	Number=Sing	4	compound	4:compound	_
-4	staff	staff	NOUN	NN	Number=Sing	7	nsubj	7:nsubj|9:nsubj	_
-5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	7:cop	_
+4	staff	staff	NOUN	NN	Number=Sing	7	nsubj	7:nsubj|9:nsubj	Supersense=n.GROUP
+5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	7:cop	Supersense=v.stative
 6	very	very	ADV	RB	_	7	advmod	7:advmod	_
 7	pleasant	pleasant	ADJ	JJ	Degree=Pos	0	root	0:root	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
@@ -31,8 +31,8 @@
 
 # sent_id = reviews-149922-0003
 # text = Serves FREE breakfast !
-1	Serves	serve	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+1	Serves	serve	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.social
 2	FREE	free	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	breakfast	breakfast	NOUN	NN	Number=Sing	1	obj	1:obj	_
+3	breakfast	breakfast	NOUN	NN	Number=Sing	1	obj	1:obj	Supersense=n.FOOD
 4	!	!	PUNCT	.	_	1	punct	1:punct	_
 

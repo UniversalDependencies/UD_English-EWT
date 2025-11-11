@@ -3,15 +3,15 @@
 # newpar id = reviews-100592-p0001
 # text = Top range of bike, cheap prices, excellent a+++
 1	Top	top	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	range	range	NOUN	NN	Number=Sing	0	root	0:root	_
-3	of	of	ADP	IN	_	4	case	4:case	_
-4	bike	bike	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	SpaceAfter=No
+2	range	range	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.COGNITION
+3	of	of	ADP	IN	_	4	case	4:case	PRel[config]=default|PRel[gov]=2:range|PRel[obj]=4:bike|Supersense=p.Species
+4	bike	bike	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	SpaceAfter=No|Supersense=n.ARTIFACT
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	cheap	cheap	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	prices	price	NOUN	NNS	Number=Plur	2	list	2:list	SpaceAfter=No
+7	prices	price	NOUN	NNS	Number=Plur	2	list	2:list	SpaceAfter=No|Supersense=n.POSSESSION
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
 9	excellent	excellent	ADJ	JJ	Degree=Pos	2	list	2:list	_
-10	a	a	NOUN	NN	Number=Sing	2	list	2:list	SpaceAfter=No
+10	a	a	NOUN	NN	Number=Sing	2	list	2:list	MWECat=N|MWELemma=a +++|MWELen=2|SpaceAfter=No|Supersense=n.COMMUNICATION
 11	+++	+++	SYM	SYM	_	10	compound	10:compound	_
 
 # sent_id = reviews-100592-0002
@@ -19,12 +19,12 @@
 # text = yep they fixeded my thumpstar in 1 day.
 1	yep	yep	INTJ	UH	_	3	discourse	3:discourse	_
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	fixeded	fix	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|Typo=Yes|VerbForm=Fin	0	root	0:root	CorrectForm=fixed
-4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	_
-5	thumpstar	thumpstar	PROPN	NNP	Number=Sing	3	obj	3:obj	_
-6	in	in	ADP	IN	_	8	case	8:case	_
+3	fixeded	fix	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|Typo=Yes|VerbForm=Fin	0	root	0:root	CorrectForm=fixed|Supersense=v.change
+4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	PRel[config]=possessive|PRel[gov]=5:thumpstar|Supersense=p.Possessor
+5	thumpstar	thumpstar	PROPN	NNP	Number=Sing	3	obj	3:obj	Supersense=n.ARTIFACT
+6	in	in	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=3:fix|PRel[obj]=8:day|Supersense=p.Duration
 7	1	1	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	_
-8	day	day	NOUN	NN	Number=Sing	3	obl	3:obl:in	SpaceAfter=No
+8	day	day	NOUN	NN	Number=Sing	3	obl	3:obl:in	SpaceAfter=No|Supersense=n.TIME
 9	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-100592-0003
@@ -33,11 +33,11 @@
 2-3	wasent	_	_	_	_	_	_	_	_
 2	wase	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|Typo=Yes|VerbForm=Fin	4	aux	4:aux	CorrectForm=was
 3	nt	not	PART	RB	Polarity=Neg|Typo=Yes	4	advmod	4:advmod	CorrectForm=n't
-4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Supersense=v.stative
 5	an	and	CCONJ	CC	Typo=Yes	6	cc	6:cc	CorrectForm=and
-6	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	_
+6	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	MWECat=V.LVC.full|MWELemma=have <3> problem|MWELen=5|MWEString=had <3> problem|Supersense=v.stative
 7	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-8	gear	gear	NOUN	NN	Number=Sing	9	compound	9:compound	_
+8	gear	gear	NOUN	NN	Number=Sing	9	compound	9:compound	MWECat=N|MWELemma=gear box|MWELen=2|Supersense=n.ARTIFACT
 9	box	box	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	problem	problem	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
 11	....	....	PUNCT	.	_	4	punct	4:punct	_
@@ -48,40 +48,40 @@
 2-3	coldn't	_	_	_	_	_	_	_	_
 2	cold	could	AUX	MD	Typo=Yes|VerbForm=Fin	4	aux	4:aux	CorrectForm=could
 3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
-4	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	find	find	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.cognition
 5	anywere	anywhere	ADV	RB	PronType=Ind|Typo=Yes	4	obj	4:obj	CorrectForm=anywhere
 6	else	else	ADV	RB	_	5	advmod	5:advmod	_
 7	local	local	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-8	to	to	PART	TO	_	9	mark	9:mark	_
-9	fix	fix	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:to	_
-10	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj	_
+8	to	to	PART	TO	_	9	mark	9:mark	PRel[config]=subordinating|PRel[gov]=5:anywhere|PRel[obj]=9:fix|Supersense=p.Purpose
+9	fix	fix	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:to	Supersense=v.change
+10	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	obj	9:obj	_
 11	so	so	ADV	RB	_	13	advmod	13:advmod	_
 12	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
-13	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	_
-14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	13	obj	13:obj	_
+13	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	parataxis	4:parataxis	Supersense=v.motion
+14	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	13	obj	13:obj	_
 15	there	there	ADV	RB	PronType=Dem	13	advmod	13:advmod	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	18	nsubj	18:nsubj	_
-18	fixed	fix	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	13	conj	4:advcl|13:conj:and	_
-19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	_
-20	for	for	ADP	IN	_	21	case	21:case	_
+18	fixed	fix	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	13	conj	4:advcl|13:conj:and	Supersense=v.change
+19	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	18	obj	18:obj	_
+20	for	for	ADP	IN	_	21	case	21:case	PRel[config]=default|PRel[gov]=18:fix|PRel[obj]=21:$|Supersense=p.Cost
 21	$	$	SYM	$	_	18	obl	18:obl:for	SpaceAfter=No
 22	150	150	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nummod	SpaceAfter=No
 23	...	...	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-100592-0005
 # text = thanks guys goes really well and thaks 4 the cheap price..
-1	thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	_
-2	guys	guy	NOUN	NNS	Number=Plur	1	vocative	1:vocative	_
-3	goes	go	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	parataxis	1:parataxis	_
+1	thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	Supersense=`d
+2	guys	guy	NOUN	NNS	Number=Plur	1	vocative	1:vocative	Supersense=n.PERSON
+3	goes	go	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	parataxis	1:parataxis	Supersense=v.stative
 4	really	really	ADV	RB	_	5	advmod	5:advmod	_
 5	well	well	ADV	RB	Degree=Pos	3	advmod	3:advmod	_
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	thaks	thanks	NOUN	NN	Number=Sing|Typo=Yes	1	conj	1:conj:and	CorrectForm=thanks
-8	4	for	ADP	IN	Abbr=Yes	11	case	11:case	_
+7	thaks	thanks	NOUN	NN	Number=Sing|Typo=Yes	1	conj	1:conj:and	CorrectForm=thanks|Supersense=`d
+8	4	for	ADP	IN	Abbr=Yes	11	case	11:case	PRel[config]=default|PRel[gov]=7:thanks|PRel[obj]=11:price|Supersense=p.Explanation
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
 10	cheap	cheap	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	price	price	NOUN	NN	Number=Sing	7	nmod	7:nmod:for	SpaceAfter=No
+11	price	price	NOUN	NN	Number=Sing	7	nmod	7:nmod:for	SpaceAfter=No|Supersense=n.POSSESSION
 12	..	..	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-100592-0006
@@ -89,11 +89,11 @@
 1	excellent	excellent	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
 3	top	top	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	guys	guy	NOUN	NNS	Number=Plur	1	list	1:list	_
-5	a	a	NOUN	NN	Number=Sing	1	list	1:list	SpaceAfter=No
+4	guys	guy	NOUN	NNS	Number=Plur	1	list	1:list	Supersense=n.PERSON
+5	a	a	NOUN	NN	Number=Sing	1	list	1:list	MWECat=N|MWELemma=a +++++|MWELen=2|SpaceAfter=No|Supersense=n.COMMUNICATION
 6	+++++	+++++	SYM	SYM	_	5	compound	5:compound	_
-7	reccommend	recommend	VERB	VB	Typo=Yes|VerbForm=Inf	1	list	1:list	CorrectForm=recommend
-8	to	to	ADP	IN	_	9	case	9:case	_
+7	reccommend	recommend	VERB	VB	Typo=Yes|VerbForm=Inf	1	list	1:list	CorrectForm=recommend|MWELemma[weak]=recommend to|MWELen[weak]=2|MWEString[weak]=reccommend to|Supersense=v.communication
+8	to	to	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=7:recommend|PRel[obj]=9:anyone|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
 9	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	7	obl	7:obl:to	SpaceAfter=No
 10	!!!!!!!!!!	!!!!!!!!!!	PUNCT	.	_	1	punct	1:punct	_
 

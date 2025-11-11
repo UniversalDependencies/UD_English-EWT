@@ -2,27 +2,27 @@
 # sent_id = reviews-225632-0001
 # newpar id = reviews-225632-p0001
 # text = FHS is a good high school -- c/o 1998
-1	FHS	FHS	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
-2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
+1	FHS	FHS	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	Supersense=n.GROUP
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	Supersense=v.stative
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
 4	good	good	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-5	high	high	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
+5	high	high	ADJ	JJ	Degree=Pos	6	amod	6:amod	MWECat=N|MWELemma=high school|MWELen=2|Supersense=n.GROUP
 6	school	school	NOUN	NN	Number=Sing	0	root	0:root	_
 7	--	--	PUNCT	,	_	8	punct	8:punct	_
-8	c	class	NOUN	NN	Abbr=Yes|Number=Sing	6	obl:unmarked	6:obl:unmarked	SpaceAfter=No
+8	c	class	NOUN	NN	Abbr=Yes|Number=Sing	6	obl:unmarked	6:obl:unmarked	MWELemma[weak]=class <1> of|MWELen[weak]=3|MWEString[weak]=c <1> o|SpaceAfter=No|Supersense=n.GROUP
 9	/	/	PUNCT	SYM	_	11	punct	11:punct	SpaceAfter=No
-10	o	of	ADP	IN	Abbr=Yes	11	case	11:case	_
+10	o	of	ADP	IN	Abbr=Yes	11	case	11:case	PRel[config]=default|PRel[gov]=8:class|PRel[obj]=11:1998|Supersense=p.Source
 11	1998	1998	NUM	CD	NumForm=Digit|NumType=Card	8	nmod	8:nmod:of	_
 
 # sent_id = reviews-225632-0002
 # newpar id = reviews-225632-p0002
 # text = I enjoyed my time at Franklin High School.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	enjoyed	enjoy	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	_
-4	time	time	NOUN	NN	Number=Sing	2	obj	2:obj	_
-5	at	at	ADP	IN	_	8	case	8:case	_
-6	Franklin	Franklin	PROPN	NNP	Number=Sing	8	compound	8:compound	_
+2	enjoyed	enjoy	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.emotion
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	PRel[config]=possessive|PRel[gov]=4:time|Supersense=p.Possessor
+4	time	time	NOUN	NN	Number=Sing	2	obj	2:obj	Supersense=n.TIME
+5	at	at	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=4:time|PRel[obj]=8:School|Supersense=p.Locus
+6	Franklin	Franklin	PROPN	NNP	Number=Sing	8	compound	8:compound	MWECat=N|MWELemma=Franklin High School|MWELen=3|Supersense=n.GROUP
 7	High	High	ADJ	NNP	Degree=Pos	8	amod	8:amod	_
 8	School	School	PROPN	NNP	Number=Sing	4	nmod	4:nmod:at	SpaceAfter=No
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -30,44 +30,44 @@
 # sent_id = reviews-225632-0003
 # text = We had relatively good facilities at the time -- decent science labs, with multiple hoods and access to good equipment; nice gymnasiums, and a well-funded music department (I was in the guitar ensemble).
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.stative
 3	relatively	relatively	ADV	RB	_	4	advmod	4:advmod	_
 4	good	good	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	facilities	facility	NOUN	NNS	Number=Plur	2	obj	2:obj	_
-6	at	at	ADP	IN	_	8	case	8:case	_
+5	facilities	facility	NOUN	NNS	Number=Plur	2	obj	2:obj	Supersense=n.ARTIFACT
+6	at	at	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=2:have|PRel[obj]=8:time|Supersense=p.Time
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-8	time	time	NOUN	NN	Number=Sing	2	obl	2:obl:at	_
+8	time	time	NOUN	NN	Number=Sing	2	obl	2:obl:at	Supersense=n.TIME
 9	--	--	PUNCT	,	_	12	punct	12:punct	_
 10	decent	decent	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-11	science	science	NOUN	NN	Number=Sing	12	compound	12:compound	_
-12	labs	lab	NOUN	NNS	Number=Plur	5	appos	5:appos	SpaceAfter=No
+11	science	science	NOUN	NN	Number=Sing	12	compound	12:compound	Supersense=n.COGNITION
+12	labs	lab	NOUN	NNS	Number=Plur	5	appos	5:appos	SpaceAfter=No|Supersense=n.ARTIFACT
 13	,	,	PUNCT	,	_	16	punct	16:punct	_
-14	with	with	ADP	IN	_	16	case	16:case	_
+14	with	with	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=12:lab|PRel[obj]=16:hood|Supersense=p.Characteristic
 15	multiple	multiple	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	hoods	hood	NOUN	NNS	Number=Plur	12	nmod	12:nmod:with	_
+16	hoods	hood	NOUN	NNS	Number=Plur	12	nmod	12:nmod:with	Supersense=n.ARTIFACT
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	access	access	NOUN	NN	Number=Sing	16	conj	12:nmod:with|16:conj:and	_
-19	to	to	ADP	IN	_	21	case	21:case	_
+18	access	access	NOUN	NN	Number=Sing	16	conj	12:nmod:with|16:conj:and	Supersense=n.ATTRIBUTE
+19	to	to	ADP	IN	_	21	case	21:case	PRel[config]=default|PRel[gov]=18:access|PRel[obj]=21:equipment|Supersense=p.Goal
 20	good	good	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
-21	equipment	equipment	NOUN	NN	Number=Sing	18	nmod	18:nmod:to	SpaceAfter=No
+21	equipment	equipment	NOUN	NN	Number=Sing	18	nmod	18:nmod:to	SpaceAfter=No|Supersense=n.ARTIFACT
 22	;	;	PUNCT	,	_	24	punct	24:punct	_
 23	nice	nice	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
-24	gymnasiums	gymnasium	NOUN	NNS	Number=Plur	12	conj	5:appos|12:conj:and	SpaceAfter=No
+24	gymnasiums	gymnasium	NOUN	NNS	Number=Plur	12	conj	5:appos|12:conj:and	SpaceAfter=No|Supersense=n.ARTIFACT
 25	,	,	PUNCT	,	_	32	punct	32:punct	_
 26	and	and	CCONJ	CC	_	32	cc	32:cc	_
 27	a	a	DET	DT	Definite=Ind|PronType=Art	32	det	32:det	_
 28	well	well	ADV	RB	Degree=Pos	30	advmod	30:advmod	SpaceAfter=No
 29	-	-	PUNCT	HYPH	_	28	punct	28:punct	SpaceAfter=No
-30	funded	fund	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	32	amod	32:amod	_
-31	music	music	NOUN	NN	Number=Sing	32	compound	32:compound	_
-32	department	department	NOUN	NN	Number=Sing	12	conj	5:appos|12:conj:and	_
+30	funded	fund	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	32	amod	32:amod	Supersense=v.possession
+31	music	music	NOUN	NN	Number=Sing	32	compound	32:compound	Supersense=n.COGNITION
+32	department	department	NOUN	NN	Number=Sing	12	conj	5:appos|12:conj:and	Supersense=n.GROUP
 33	(	(	PUNCT	-LRB-	_	39	punct	39:punct	SpaceAfter=No
 34	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	39	nsubj	39:nsubj	_
-35	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	39	cop	39:cop	_
-36	in	in	ADP	IN	_	39	case	39:case	_
+35	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	39	cop	39:cop	Supersense=v.stative
+36	in	in	ADP	IN	_	39	case	39:case	PRel[config]=predicative|PRel[gov]=34:I|PRel[obj]=39:ensemble|Supersense[coding]=p.Locus|Supersense[scene]=p.Whole
 37	the	the	DET	DT	Definite=Def|PronType=Art	39	det	39:det	_
-38	guitar	guitar	NOUN	NN	Number=Sing	39	compound	39:compound	_
-39	ensemble	ensemble	NOUN	NN	Number=Sing	2	parataxis	2:parataxis	SpaceAfter=No
+38	guitar	guitar	NOUN	NN	Number=Sing	39	compound	39:compound	Supersense=n.ARTIFACT
+39	ensemble	ensemble	NOUN	NN	Number=Sing	2	parataxis	2:parataxis	SpaceAfter=No|Supersense=n.GROUP
 40	)	)	PUNCT	-RRB-	_	39	punct	39:punct	SpaceAfter=No
 41	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -75,62 +75,62 @@
 # text = Now, of course, there's a new building, with presumably better facilities.
 1	Now	now	ADV	RB	PronType=Dem	7	advmod	7:advmod	SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
-3	of	of	ADP	IN	ExtPos=ADV	7	advmod	7:advmod	_
+3	of	of	ADP	IN	ExtPos=ADV	7	advmod	7:advmod	MWECat=DISC|MWELemma=of course|MWELen=2
 4	course	course	NOUN	NN	Number=Sing	3	fixed	3:fixed	SpaceAfter=No
 5	,	,	PUNCT	,	_	3	punct	3:punct	_
 6-7	there's	_	_	_	_	_	_	_	_
-6	there	there	PRON	EX	_	7	expl	7:expl	_
-7	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+6	there	there	PRON	EX	PronType=Dem	7	expl	7:expl	_
+7	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl|Supersense=v.stative
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	new	new	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	building	building	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	CxnElt=7:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No
+10	building	building	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	CxnElt=7:Existential-CopPred-ThereExpl.Pivot|SpaceAfter=No|Supersense=n.ARTIFACT
 11	,	,	PUNCT	,	_	15	punct	15:punct	_
-12	with	with	ADP	IN	_	15	case	15:case	_
+12	with	with	ADP	IN	_	15	case	15:case	PRel[config]=default|PRel[gov]=10:building|PRel[obj]=15:facility|Supersense=p.PartPortion
 13	presumably	presumably	ADV	RB	_	14	advmod	14:advmod	_
 14	better	good	ADJ	JJR	Degree=Cmp	15	amod	15:amod	_
-15	facilities	facility	NOUN	NNS	Number=Plur	10	nmod	10:nmod:with	SpaceAfter=No
+15	facilities	facility	NOUN	NNS	Number=Plur	10	nmod	10:nmod:with	SpaceAfter=No|Supersense=n.ARTIFACT
 16	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = reviews-225632-0005
 # text = All to the good.
 1	All	all	DET	DT	PronType=Tot	0	root	0:root	_
-2	to	to	ADP	IN	_	4	case	4:case	_
+2	to	to	ADP	IN	_	4	case	4:case	PRel[config]=default|PRel[gov]=1:all|PRel[obj]=4:good|Supersense=??
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	good	good	NOUN	NN	Number=Sing	1	nmod	1:nmod:to	SpaceAfter=No
+4	good	good	NOUN	NN	Number=Sing	1	nmod	1:nmod:to	SpaceAfter=No|Supersense=n.ATTRIBUTE
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-225632-0006
 # text = For those who care, a good proportion of the my class went on to 4-year colleges, many of them ranked in the top 50 of US News.
-1	For	for	ADP	IN	_	2	case	2:case	_
+1	For	for	ADP	IN	_	2	case	2:case	PRel[config]=default|PRel[gov]=13:go|PRel[obj]=2:that|Supersense[coding]=p.Direction|Supersense[scene]=p.Recipient
 2	those	that	PRON	DT	Number=Plur|PronType=Dem	13	obl	4:nsubj|13:obl:for	_
 3	who	who	PRON	WP	PronType=Rel	4	nsubj	2:ref	_
-4	care	care	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	Cxn=rc-wh-nsubj|SpaceAfter=No
+4	care	care	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	Cxn=rc-wh-nsubj|SpaceAfter=No|Supersense=v.emotion
 5	,	,	PUNCT	,	_	2	punct	2:punct	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	good	good	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	proportion	proportion	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
-9	of	of	ADP	IN	_	12	case	12:case	_
+8	proportion	proportion	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	Supersense=n.QUANTITY
+9	of	of	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=8:proportion|PRel[obj]=12:class|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	reparandum	12:reparandum	_
-11	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	_
-12	class	class	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	_
-13	went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+11	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	PRel[config]=possessive|PRel[gov]=12:class|Supersense[coding]=p.Gestalt|Supersense[scene]=p.SocialRel
+12	class	class	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	Supersense=n.GROUP
+13	went	go	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	MWECat=V.VPC.full|MWELemma=go on|MWELen=2|MWEString=went on|Supersense=v.stative
 14	on	on	ADV	RB	_	13	advmod	13:advmod	_
-15	to	to	ADP	IN	_	19	case	19:case	_
-16	4	4	NUM	CD	NumForm=Digit|NumType=Card	18	nummod	18:nummod	SpaceAfter=No
+15	to	to	ADP	IN	_	19	case	19:case	PRel[config]=default|PRel[gov]=13:go|PRel[obj]=19:college|Supersense=p.Goal
+16	4	4	NUM	CD	NumForm=Digit|NumType=Card	18	nummod	18:nummod	MWECat=N|MWELemma=4 - year college|MWELen=4|MWEString=4 - year colleges|SpaceAfter=No|Supersense=n.GROUP
 17	-	-	PUNCT	HYPH	_	16	punct	16:punct	SpaceAfter=No
 18	year	year	NOUN	NN	Number=Sing	19	compound	19:compound	_
 19	colleges	college	NOUN	NNS	Number=Plur	13	obl	13:obl:to	SpaceAfter=No
 20	,	,	PUNCT	,	_	24	punct	24:punct	_
 21	many	many	ADJ	JJ	Degree=Pos	24	nsubj:pass	24:nsubj:pass	_
-22	of	of	ADP	IN	_	23	case	23:case	_
+22	of	of	ADP	IN	_	23	case	23:case	PRel[config]=default|PRel[gov]=21:many|PRel[obj]=23:they|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
 23	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	21	nmod	21:nmod:of	_
-24	ranked	rank	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	19	acl	19:acl	_
-25	in	in	ADP	IN	_	28	case	28:case	_
+24	ranked	rank	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	19	acl	19:acl	Supersense=v.cognition
+25	in	in	ADP	IN	_	28	case	28:case	PRel[config]=default|PRel[gov]=24:rank|PRel[obj]=28:50|Supersense[coding]=p.Locus|Supersense[scene]=p.Whole
 26	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
 27	top	top	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
 28	50	50	NUM	CD	NumForm=Digit|NumType=Card	24	obl	24:obl:in	_
-29	of	of	ADP	IN	_	31	case	31:case	_
-30	US	US	PROPN	NNP	Number=Sing	31	compound	31:compound	_
+29	of	of	ADP	IN	_	31	case	31:case	PRel[config]=default|PRel[gov]=28:50|PRel[obj]=31:News|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
+30	US	US	PROPN	NNP	Number=Sing	31	compound	31:compound	MWECat=N|MWELemma=US News|MWELen=2|Supersense=n.GROUP
 31	News	News	PROPN	NNP	Number=Sing	28	nmod	28:nmod:of	SpaceAfter=No
 32	.	.	PUNCT	.	_	13	punct	13:punct	_
 
@@ -138,77 +138,77 @@
 # text = If I remember, students went to Dartmouth, U.Penn, Duke, BU, William and Mary, Vassar, Howard, and Carnegie Mellon, among others.
 1	If	if	SCONJ	IN	_	3	mark	3:mark	_
 2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
-3	remember	remember	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	advcl	6:advcl:if	CxnElt=6:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No
+3	remember	remember	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	advcl	6:advcl:if	CxnElt=6:Conditional-UnspecifiedEpistemic-NoInversion.Protasis|SpaceAfter=No|Supersense=v.cognition
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
-5	students	student	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
-6	went	go	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=6:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis
-7	to	to	ADP	IN	_	8	case	8:case	_
-8	Dartmouth	Dartmouth	PROPN	NNP	Number=Sing	6	obl	6:obl:to	SpaceAfter=No
+5	students	student	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	Supersense=n.PERSON
+6	went	go	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=6:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|MWELemma[weak]=go to|MWELen[weak]=2|MWEString[weak]=went to|Supersense=v.stative
+7	to	to	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=6:go|PRel[obj]=8:Dartmouth|Supersense[coding]=p.Goal|Supersense[scene]=p.Org
+8	Dartmouth	Dartmouth	PROPN	NNP	Number=Sing	6	obl	6:obl:to	SpaceAfter=No|Supersense=n.GROUP
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
-10	U.	U.	PROPN	NNP	Number=Sing	11	compound	11:compound	CorrectSpaceAfter=Yes|SpaceAfter=No
+10	U.	U.	PROPN	NNP	Number=Sing	11	compound	11:compound	CorrectSpaceAfter=Yes|MWECat=N|MWELemma=U. Penn|MWELen=2|SpaceAfter=No|Supersense=n.GROUP
 11	Penn	Penn	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
-13	Duke	Duke	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	SpaceAfter=No
+13	Duke	Duke	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	SpaceAfter=No|Supersense=n.GROUP
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
-15	BU	BU	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	SpaceAfter=No
+15	BU	BU	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	SpaceAfter=No|Supersense=n.GROUP
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
-17	William	William	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	_
+17	William	William	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	MWECat=N|MWELemma=William and Mary|MWELen=3|Supersense=n.GROUP
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
 19	Mary	Mary	PROPN	NNP	Number=Sing	17	conj	17:conj:and	SpaceAfter=No
 20	,	,	PUNCT	,	_	21	punct	21:punct	_
-21	Vassar	Vassar	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	SpaceAfter=No
+21	Vassar	Vassar	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	SpaceAfter=No|Supersense=n.GROUP
 22	,	,	PUNCT	,	_	23	punct	23:punct	_
-23	Howard	Howard	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	SpaceAfter=No
+23	Howard	Howard	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	SpaceAfter=No|Supersense=n.GROUP
 24	,	,	PUNCT	,	_	27	punct	27:punct	_
 25	and	and	CCONJ	CC	_	27	cc	27:cc	_
-26	Carnegie	Carnegie	PROPN	NNP	Number=Sing	27	compound	27:compound	_
+26	Carnegie	Carnegie	PROPN	NNP	Number=Sing	27	compound	27:compound	MWECat=N|MWELemma=Carnegie Mellon|MWELen=2|Supersense=n.GROUP
 27	Mellon	Mellon	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	SpaceAfter=No
 28	,	,	PUNCT	,	_	30	punct	30:punct	_
-29	among	among	ADP	IN	_	30	case	30:case	_
+29	among	among	ADP	IN	_	30	case	30:case	MWECat=PP|MWELemma=among other|MWELen=2|MWEString=among others|PRel[config]=default|PRel[gov]=8:Dartmouth|PRel[obj]=30:other|Supersense=p.Whole
 30	others	other	NOUN	NNS	Number=Plur	8	nmod	8:nmod:among	SpaceAfter=No
 31	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-225632-0008
 # text = Many students went to Rutgers, including their top-ranked pharmacy program.
 1	Many	many	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	students	student	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	_
-3	went	go	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	to	to	ADP	IN	_	5	case	5:case	_
-5	Rutgers	Rutgers	PROPN	NNP	Number=Sing	3	obl	3:obl:to	SpaceAfter=No
+2	students	student	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	Supersense=n.PERSON
+3	went	go	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.stative
+4	to	to	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=3:go|PRel[obj]=5:Rutgers|Supersense[coding]=p.Goal|Supersense[scene]=p.Org
+5	Rutgers	Rutgers	PROPN	NNP	Number=Sing	3	obl	3:obl:to	SpaceAfter=No|Supersense=n.GROUP
 6	,	,	PUNCT	,	_	13	punct	13:punct	_
-7	including	include	VERB	VBG	Tense=Pres|VerbForm=Part	13	case	13:case	_
-8	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
-9	top	top	NOUN	NN	Number=Sing	11	compound	11:compound	SpaceAfter=No
+7	including	include	VERB	VBG	Tense=Pres|VerbForm=Part	13	case	13:case	Supersense=v.stative
+8	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	PRel[config]=possessive|PRel[gov]=13:program|Supersense=p.Gestalt
+9	top	top	NOUN	NN	Number=Sing	11	compound	11:compound	MWECat=ADJ|MWELemma=top - rank|MWELen=3|MWEString=top - ranked|SpaceAfter=No
 10	-	-	PUNCT	HYPH	_	9	punct	9:punct	SpaceAfter=No
 11	ranked	rank	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	13	amod	13:amod	_
-12	pharmacy	pharmacy	NOUN	NN	Number=Sing	13	compound	13:compound	_
-13	program	program	NOUN	NN	Number=Sing	5	nmod	5:nmod:including	SpaceAfter=No
+12	pharmacy	pharmacy	NOUN	NN	Number=Sing	13	compound	13:compound	Supersense=n.ARTIFACT
+13	program	program	NOUN	NN	Number=Sing	5	nmod	5:nmod:including	SpaceAfter=No|Supersense=n.GROUP
 14	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-225632-0009
 # text = The point is -- FHS gives you the opportunity to make it to a good college, but you need to work hard.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	point	point	NOUN	NN	Number=Sing	6	nsubj:outer	6:nsubj:outer	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
+2	point	point	NOUN	NN	Number=Sing	6	nsubj:outer	6:nsubj:outer	Supersense=n.COMMUNICATION
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	Supersense=v.stative
 4	--	--	PUNCT	,	_	3	punct	3:punct	_
-5	FHS	FHS	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
-6	gives	give	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+5	FHS	FHS	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	Supersense=n.GROUP
+6	gives	give	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.stative
 7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	iobj	6:iobj	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	opportunity	opportunity	NOUN	NN	Number=Sing	6	obj	6:obj	_
+9	opportunity	opportunity	NOUN	NN	Number=Sing	6	obj	6:obj	Supersense=n.COGNITION
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	make	make	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	_
+11	make	make	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	MWECat=V.VID|MWELemma=make it|MWELen=2|Supersense=v.stative
 12	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obj	11:obj	_
-13	to	to	ADP	IN	_	16	case	16:case	_
+13	to	to	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=11:make|PRel[obj]=16:college|Supersense=p.Goal
 14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_
 15	good	good	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	college	college	NOUN	NN	Number=Sing	11	obl	11:obl:to	SpaceAfter=No
+16	college	college	NOUN	NN	Number=Sing	11	obl	11:obl:to	SpaceAfter=No|Supersense=n.GROUP
 17	,	,	PUNCT	,	_	20	punct	20:punct	_
 18	but	but	CCONJ	CC	_	20	cc	20:cc	_
 19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	20:nsubj|22:nsubj:xsubj	_
-20	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	conj	6:conj:but	_
+20	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	6	conj	6:conj:but	Supersense=v.cognition
 21	to	to	PART	TO	_	22	mark	22:mark	_
-22	work	work	VERB	VB	VerbForm=Inf	20	xcomp	20:xcomp	_
+22	work	work	VERB	VB	VerbForm=Inf	20	xcomp	20:xcomp	Supersense=v.social
 23	hard	hard	ADV	RB	Degree=Pos	22	advmod	22:advmod	SpaceAfter=No
 24	.	.	PUNCT	.	_	6	punct	6:punct	_
 

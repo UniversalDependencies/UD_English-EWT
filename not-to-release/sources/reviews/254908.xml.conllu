@@ -3,61 +3,61 @@
 # newpar id = reviews-254908-p0001
 # text = I hired this company to unlock my car.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	hired	hire	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	hired	hire	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.social
 3	this	this	DET	DT	Number=Sing|PronType=Dem	4	det	4:det	_
-4	company	company	NOUN	NN	Number=Sing	2	obj	2:obj	_
-5	to	to	PART	TO	_	6	mark	6:mark	_
-6	unlock	unlock	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
-7	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
-8	car	car	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No
+4	company	company	NOUN	NN	Number=Sing	2	obj	2:obj	Supersense=n.GROUP
+5	to	to	PART	TO	_	6	mark	6:mark	PRel[config]=subordinating|PRel[gov]=2:hire|PRel[obj]=6:unlock|Supersense[coding]=p.Purpose|Supersense[scene]=p.Theme
+6	unlock	unlock	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	Supersense=v.change
+7	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	PRel[config]=possessive|PRel[gov]=8:car|Supersense=p.Possessor
+8	car	car	NOUN	NN	Number=Sing	6	obj	6:obj	SpaceAfter=No|Supersense=n.ARTIFACT
 9	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-254908-0002
 # text = The price they gave was good so I said hey this seems great.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	price	price	NOUN	NN	Number=Sing	6	nsubj	4:obj|6:nsubj	_
+2	price	price	NOUN	NN	Number=Sing	6	nsubj	4:obj|6:nsubj	MWELemma[weak]=price <1> give|MWELen[weak]=3|MWEString[weak]=price <1> gave|Supersense=n.POSSESSION
 3	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	_
-4	gave	give	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	2:acl:relcl	Cxn=rc-red-obj
-5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	_
+4	gave	give	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	2:acl:relcl	Cxn=rc-red-obj|Supersense=v.communication
+5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	Supersense=v.stative
 6	good	good	ADJ	JJ	Degree=Pos	0	root	0:root	_
 7	so	so	ADV	RB	_	9	mark	9:mark	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-9	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:so	_
+9	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:so	Supersense=v.communication
 10	hey	hey	INTJ	UH	_	12	discourse	12:discourse	_
 11	this	this	PRON	DT	Number=Sing|PronType=Dem	12	nsubj	12:nsubj|13:nsubj:xsubj	_
-12	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	ccomp	9:ccomp	_
+12	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	ccomp	9:ccomp	Supersense=v.cognition
 13	great	great	ADJ	JJ	Degree=Pos	12	xcomp	12:xcomp	SpaceAfter=No
 14	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-254908-0003
 # text = After they showed up there was a little trouble to get my car unlocked, it took quite a bit of time but the job was well done.
-1	After	after	SCONJ	IN	_	3	mark	3:mark	_
+1	After	after	SCONJ	IN	_	3	mark	3:mark	PRel[config]=subordinating|PRel[gov]=6:be|PRel[obj]=3:show|Supersense=p.Time
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
-3	showed	show	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:after	_
+3	showed	show	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:after	MWECat=V.VPC.full|MWELemma=show up|MWELen=2|MWEString=showed up|Supersense=v.social
 4	up	up	ADP	RP	_	3	compound:prt	3:compound:prt	_
-5	there	there	PRON	EX	_	6	expl	6:expl	_
-6	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
-7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
+5	there	there	PRON	EX	PronType=Dem	6	expl	6:expl	_
+6	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl|Supersense=v.stative
+7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	MWECat=DET|MWELemma=a little|MWELen=2
 8	little	little	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	trouble	trouble	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	CxnElt=6:Existential-CopPred-ThereExpl.Pivot
+9	trouble	trouble	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	CxnElt=6:Existential-CopPred-ThereExpl.Pivot|Supersense=n.COGNITION
 10	to	to	PART	TO	_	11	mark	11:mark	_
-11	get	get	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	_
-12	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
-13	car	car	NOUN	NN	Number=Sing	11	obj	11:obj|14:nsubj:xsubj	_
+11	get	get	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	MWECat=V.VID|MWELemma=get <2> unlock|MWELen=4|MWEString=get <2> unlocked|Supersense=v.change
+12	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	PRel[config]=possessive|PRel[gov]=13:car|Supersense=p.Possessor
+13	car	car	NOUN	NN	Number=Sing	11	obj	11:obj|14:nsubj:xsubj	Supersense=n.ARTIFACT
 14	unlocked	unlock	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	11	xcomp	11:xcomp	SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	_
-17	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	6:conj:but	_
-18	quite	quite	DET	PDT	PronType=Ind	20	det:predet	20:det:predet	_
-19	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
+17	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	6:conj:but	MWECat=V.VID|MWELemma=take <4> time|MWELen=6|MWEString=took <4> time|Supersense=v.stative
+18	quite	quite	DET	PDT	PronType=Ind	20	det:predet	20:det:predet	MWELemma[weak]=quite a bit|MWELen[weak]=3
+19	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	MWECat=N|MWELemma=a bit|MWELen=2|Supersense=n.QUANTITY
 20	bit	bit	NOUN	NN	Number=Sing	17	obj	17:obj	_
-21	of	of	ADP	IN	_	22	case	22:case	_
+21	of	of	ADP	IN	_	22	case	22:case	PRel[config]=default|PRel[gov]=20:bit|PRel[obj]=22:time|Supersense=p.QuantityItem
 22	time	time	NOUN	NN	Number=Sing	20	nmod	20:nmod:of	_
 23	but	but	CCONJ	CC	_	28	cc	28:cc	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	_
-25	job	job	NOUN	NN	Number=Sing	28	nsubj:pass	28:nsubj:pass	_
+25	job	job	NOUN	NN	Number=Sing	28	nsubj:pass	28:nsubj:pass	MWELemma[weak]=job <1> well do|MWELen[weak]=4|MWEString[weak]=job <1> well done|Supersense=n.ACT
 26	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	aux:pass	28:aux:pass	_
 27	well	well	ADV	RB	Degree=Pos	28	advmod	28:advmod	_
-28	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	conj	6:conj:but	SpaceAfter=No
+28	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	conj	6:conj:but	SpaceAfter=No|Supersense=v.social
 29	.	.	PUNCT	.	_	6	punct	6:punct	_
 

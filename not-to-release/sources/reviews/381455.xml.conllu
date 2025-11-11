@@ -2,9 +2,9 @@
 # sent_id = reviews-381455-0001
 # newpar id = reviews-381455-p0001
 # text = Are you kidding me?
-1	Are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
+1	Are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	3:aux	MWELemma[weak]=be you kid I|MWELen[weak]=4|MWEString[weak]=Are you kidding me
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	3:nsubj	_
-3	kidding	kid	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause
+3	kidding	kid	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Cxn=Interrogative-Polar-Direct|CxnElt=3:Interrogative-Polar-Direct.Clause|Supersense=v.communication
 4	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	obj	3:obj	SpaceAfter=No
 5	?	?	PUNCT	.	_	3	punct	3:punct	_
 
@@ -15,8 +15,8 @@
 2-3	don't	_	_	_	_	_	_	_	_
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
-4	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj	SpaceAfter=No
+4	get	get	VERB	VB	VerbForm=Inf	0	root	0:root	MWECat=V.VID|MWELemma=get it|MWELen=2|Supersense=v.cognition
+5	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	obj	4:obj	SpaceAfter=No
 6	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-381455-0003
@@ -24,50 +24,50 @@
 1	Spongy	spongy	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
 3	sweet	sweet	ADJ	JJ	Degree=Pos	1	conj	1:conj:and|4:amod	_
-4	bread	bread	NOUN	NN	Number=Sing	0	root	0:root	_
+4	bread	bread	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.FOOD
 5	(	(	PUNCT	-LRB-	_	6	punct	6:punct	SpaceAfter=No
-6	microwaved	microwave	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	amod	4:amod	SpaceAfter=No
+6	microwaved	microwave	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	amod	4:amod	SpaceAfter=No|Supersense=v.stative
 7	?	?	PUNCT	.	_	6	punct	6:punct	SpaceAfter=No
 8	)	)	PUNCT	-RRB-	_	6	punct	6:punct	SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	heartless	heartless	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
-11	salsa	salsa	NOUN	NN	Number=Sing	4	conj	4:conj	SpaceAfter=No
+11	salsa	salsa	NOUN	NN	Number=Sing	4	conj	4:conj	SpaceAfter=No|Supersense=n.FOOD
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
 13	tiny	tiny	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	dogs	dog	NOUN	NNS	Number=Plur	4	conj	4:conj	SpaceAfter=No
+14	dogs	dog	NOUN	NNS	Number=Plur	4	conj	4:conj	SpaceAfter=No|Supersense=n.FOOD
 15	...	...	PUNCT	.	_	4	punct	4:punct	SpaceAfter=No
 
 # sent_id = reviews-381455-0004
 # text = You order at the counter and there is a space for tip on your credit card receipt.
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	2	nsubj	2:nsubj	_
-2	order	order	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-3	at	at	ADP	IN	_	5	case	5:case	_
+2	order	order	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.communication
+3	at	at	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=2:order|PRel[obj]=5:counter|Supersense=p.Locus
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	counter	counter	NOUN	NN	Number=Sing	2	obl	2:obl:at	_
+5	counter	counter	NOUN	NN	Number=Sing	2	obl	2:obl:at	Supersense=n.LOCATION
 6	and	and	CCONJ	CC	_	8	cc	8:cc	_
-7	there	there	PRON	EX	_	8	expl	8:expl	_
-8	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	Cxn=Existential-CopPred-ThereExpl
+7	there	there	PRON	EX	PronType=Dem	8	expl	8:expl	_
+8	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:and	Cxn=Existential-CopPred-ThereExpl|Supersense=v.stative
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-10	space	space	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	CxnElt=8:Existential-CopPred-ThereExpl.Pivot
-11	for	for	ADP	IN	_	12	case	12:case	_
-12	tip	tip	NOUN	NN	Number=Sing	10	nmod	10:nmod:for	_
-13	on	on	ADP	IN	_	17	case	17:case	_
-14	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	_
-15	credit	credit	NOUN	NN	Number=Sing	16	compound	16:compound	_
+10	space	space	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	CxnElt=8:Existential-CopPred-ThereExpl.Pivot|Supersense=n.COGNITION
+11	for	for	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=10:space|PRel[obj]=12:tip|Supersense=p.Purpose
+12	tip	tip	NOUN	NN	Number=Sing	10	nmod	10:nmod:for	Supersense=n.POSSESSION
+13	on	on	ADP	IN	_	17	case	17:case	PRel[config]=default|PRel[gov]=8:be|PRel[obj]=17:receipt|Supersense=p.Locus
+14	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	PRel[config]=possessive|PRel[gov]=17:receipt|Supersense=p.Possessor
+15	credit	credit	NOUN	NN	Number=Sing	16	compound	16:compound	MWECat=N|MWELemma=credit card|MWELen=2|Supersense=n.POSSESSION
 16	card	card	NOUN	NN	Number=Sing	17	compound	17:compound	_
-17	receipt	receipt	NOUN	NN	Number=Sing	8	obl	8:obl:on	SpaceAfter=No
+17	receipt	receipt	NOUN	NN	Number=Sing	8	obl	8:obl:on	SpaceAfter=No|Supersense=n.POSSESSION
 18	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-381455-0005
 # text = The dude who grills the retarded dogs is rude.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	dude	dude	NOUN	NN	Number=Sing	9	nsubj	4:nsubj|9:nsubj	_
+2	dude	dude	NOUN	NN	Number=Sing	9	nsubj	4:nsubj|9:nsubj	Supersense=n.PERSON
 3	who	who	PRON	WP	PronType=Rel	4	nsubj	2:ref	_
-4	grills	grill	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	Cxn=rc-wh-nsubj
+4	grills	grill	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	acl:relcl	2:acl:relcl	Cxn=rc-wh-nsubj|Supersense=v.creation
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
 6	retarded	retarded	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	dogs	dogs	NOUN	NN	Number=Sing	4	obj	4:obj	_
-8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
+7	dogs	dogs	NOUN	NN	Number=Sing	4	obj	4:obj	Supersense=n.FOOD
+8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	Supersense=v.stative
 9	rude	rude	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
 10	.	.	PUNCT	.	_	9	punct	9:punct	_
 
@@ -75,19 +75,19 @@
 # text = If this is the best that Tucson has to offer, I am outta here...
 1	If	if	SCONJ	IN	_	5	mark	5:mark	_
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	Supersense=v.stative
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
 5	best	good	ADJ	JJS	Degree=Sup	16	advcl	10:obj|16:advcl:if	CxnElt=16:Conditional-UnspecifiedEpistemic-NoInversion.Protasis
 6	that	that	PRON	WDT	PronType=Rel	10	obj	5:ref	_
-7	Tucson	Tucson	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	_
-8	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj_advcl
+7	Tucson	Tucson	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	Supersense=n.LOCATION
+8	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	Cxn=rc-that-obj_advcl|MWELemma[weak]=have to offer|MWELen[weak]=3|MWEString[weak]=has to offer|Supersense=v.stative
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	offer	offer	VERB	VB	VerbForm=Inf	8	advcl	8:advcl:to	SpaceAfter=No
+10	offer	offer	VERB	VB	VerbForm=Inf	8	advcl	8:advcl:to	SpaceAfter=No|Supersense=v.stative
 11	,	,	PUNCT	,	_	5	punct	5:punct	_
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
-13	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
+13	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	16	cop	16:cop	Supersense=v.stative
 14-15	outta	_	_	_	_	_	_	_	_
-14	out	out	ADP	IN	_	16	case	16:case	_
+14	out	out	ADP	IN	_	16	case	16:case	MWECat=P|MWELemma=out of|MWELen=2|MWEString=out ta|PRel[config]=predicative|PRel[gov]=12:I|PRel[obj]=16:here|Supersense=p.Source
 15	ta	of	ADP	IN	Abbr=Yes	16	case	16:case	_
 16	here	here	ADV	RB	PronType=Dem	0	root	0:root	Cxn=Conditional-UnspecifiedEpistemic-NoInversion|CxnElt=16:Conditional-UnspecifiedEpistemic-NoInversion.Apodosis|SpaceAfter=No
 17	...	...	PUNCT	.	_	16	punct	16:punct	_

@@ -4,9 +4,9 @@
 # text = The best in the area!
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
 2	best	good	ADJ	JJS	Degree=Sup	0	root	0:root	_
-3	in	in	ADP	IN	_	5	case	5:case	_
+3	in	in	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=2:good|PRel[obj]=5:area|Supersense=p.Locus
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	_
-5	area	area	NOUN	NN	Number=Sing	2	obl	2:obl:in	SpaceAfter=No
+5	area	area	NOUN	NN	Number=Sing	2	obl	2:obl:in	SpaceAfter=No|Supersense=n.LOCATION
 6	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-022461-0002
@@ -15,21 +15,21 @@
 1-2	I've	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
 2	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
-3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	9	cop	9:cop	_
+3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	9	cop	9:cop	MWECat=V.IAV|MWELemma=be to|MWELen=2|MWEString=been to|Supersense=v.motion
 4	to	to	ADP	IN	_	9	case	9:case	_
-5	quite	quite	DET	PDT	PronType=Ind	9	det:predet	9:det:predet	_
-6	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	_
+5	quite	quite	DET	PDT	PronType=Ind	9	det:predet	9:det:predet	MWELemma[weak]=quite a few|MWELen[weak]=3
+6	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	MWECat=DET|MWELemma=a few|MWELen=2
 7	few	few	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-8	tattoo	tattoo	NOUN	NN	Number=Sing	9	compound	9:compound	_
-9	shops	shop	NOUN	NNS	Number=Plur	0	root	0:root	_
-10	around	around	ADP	IN	_	12	case	12:case	_
+8	tattoo	tattoo	NOUN	NN	Number=Sing	9	compound	9:compound	Supersense=n.ARTIFACT
+9	shops	shop	NOUN	NNS	Number=Plur	0	root	0:root	Supersense=n.GROUP
+10	around	around	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=9:shop|PRel[obj]=12:area|Supersense=p.Locus
 11	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	12:det	_
-12	area	area	NOUN	NN	Number=Sing	9	nmod	9:nmod:around	_
+12	area	area	NOUN	NN	Number=Sing	9	nmod	9:nmod:around	Supersense=n.LOCATION
 13	and	and	CCONJ	CC	_	20	cc	20:cc	_
-14	Stainless	Stainless	PROPN	NNP	Number=Sing	15	compound	15:compound	_
+14	Stainless	Stainless	PROPN	NNP	Number=Sing	15	compound	15:compound	MWECat=N|MWELemma=Stainless Steel|MWELen=2|Supersense=n.GROUP
 15	Steel	Steel	PROPN	NNP	Number=Sing	20	nsubj	20:nsubj	_
-16	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	20:cop	_
-17	by	by	ADP	IN	_	18	case	18:case	_
+16	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	20:cop	Supersense=v.stative
+17	by	by	ADP	IN	_	18	case	18:case	MWECat=PP|MWELemma=by far|MWELen=2|PRel[config]=default|PRel[gov]=20:good|PRel[obj]=18:far|Supersense=p.Extent
 18	far	far	ADV	RB	Degree=Pos	20	obl	20:obl:by	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	best	good	ADJ	JJS	Degree=Sup	9	conj	9:conj:and	SpaceAfter=No
@@ -38,29 +38,29 @@
 # sent_id = reviews-022461-0003
 # text = I am very pleased with the tattoos that I revived from them.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
-2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 3	very	very	ADV	RB	_	4	advmod	4:advmod	_
 4	pleased	pleased	ADJ	JJ	Degree=Pos	0	root	0:root	_
-5	with	with	ADP	IN	_	7	case	7:case	_
+5	with	with	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:pleased|PRel[obj]=7:tattoo|Supersense[coding]=p.Topic|Supersense[scene]=p.Stimulus
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	tattoos	tattoo	NOUN	NNS	Number=Plur	4	obl	4:obl:with|10:obj	_
+7	tattoos	tattoo	NOUN	NNS	Number=Plur	4	obl	4:obl:with|10:obj	Supersense=n.ARTIFACT
 8	that	that	PRON	WDT	PronType=Rel	10	obj	7:ref	_
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	10:nsubj	_
-10	revived	revive	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	Cxn=rc-that-obj
-11	from	from	ADP	IN	_	12	case	12:case	_
+10	revived	revive	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	Cxn=rc-that-obj|Supersense=v.possession
+11	from	from	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=10:revive|PRel[obj]=12:they|Supersense[coding]=p.Source|Supersense[scene]=p.Originator
 12	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	10	obl	10:obl:from	SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-022461-0004
 # text = The artwork is excellent and the prices are very reasonable.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	_
-2	artwork	artwork	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+2	artwork	artwork	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Supersense=n.ARTIFACT
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 4	excellent	excellent	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	and	and	CCONJ	CC	_	10	cc	10:cc	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	prices	price	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
-8	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
+7	prices	price	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	Supersense=n.POSSESSION
+8	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	Supersense=v.stative
 9	very	very	ADV	RB	_	10	advmod	10:advmod	_
 10	reasonable	reasonable	ADJ	JJ	Degree=Pos	4	conj	4:conj:and	SpaceAfter=No
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -69,15 +69,15 @@
 # text = I would recommend this shop to anyone looking to get a tattoo.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
 4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	5:det	_
-5	shop	shop	NOUN	NN	Number=Sing	3	obj	3:obj	_
-6	to	to	ADP	IN	_	7	case	7:case	_
+5	shop	shop	NOUN	NN	Number=Sing	3	obj	3:obj	Supersense=n.GROUP
+6	to	to	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=3:recommend|PRel[obj]=7:anyone|Supersense[coding]=p.Goal|Supersense[scene]=p.Recipient
 7	anyone	anyone	PRON	NN	Number=Sing|PronType=Ind	3	obl	3:obl:to	_
-8	looking	look	VERB	VBG	VerbForm=Ger	7	acl	7:acl	_
+8	looking	look	VERB	VBG	VerbForm=Ger	7	acl	7:acl	MWECat=V.IAV|MWELemma=look to|MWELen=2|MWEString=looking to|Supersense=v.cognition
 9	to	to	PART	TO	_	10	mark	10:mark	_
-10	get	get	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
+10	get	get	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	MWELemma[weak]=get <1> tattoo|MWELen[weak]=3|Supersense=v.possession
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	_
-12	tattoo	tattoo	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No
+12	tattoo	tattoo	NOUN	NN	Number=Sing	10	obj	10:obj	SpaceAfter=No|Supersense=n.ARTIFACT
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 

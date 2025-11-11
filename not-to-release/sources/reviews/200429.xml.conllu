@@ -3,88 +3,88 @@
 # newpar id = reviews-200429-p0001
 # text = Horrible Service!
 1	Horrible	horrible	ADJ	JJ	Degree=Pos	2	amod	2:amod	_
-2	Service	service	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
+2	Service	service	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.ACT
 3	!	!	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-200429-0002
 # text = I got yelled at, literally yelled at because i asked if i could pick up my car 5-10 minutes late.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj:pass	3:nsubj:pass	_
 2	got	get	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
-3	yelled	yell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
-4	at	at	ADP	IN	_	3	obl	3:obl	Promoted=Yes|SpaceAfter=No
+3	yelled	yell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Supersense=v.communication
+4	at	at	ADP	IN	_	3	obl	3:obl	PRel[config]=default|PRel[gov]=3:yell|Promoted=Yes|SpaceAfter=No|Supersense[coding]=p.Direction|Supersense[scene]=p.Recipient
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	literally	literally	ADV	RB	_	7	advmod	7:advmod	_
-7	yelled	yell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	advcl	3:advcl	_
-8	at	at	ADP	IN	_	7	obl	7:obl	Promoted=Yes
+7	yelled	yell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	advcl	3:advcl	Supersense=v.communication
+8	at	at	ADP	IN	_	7	obl	7:obl	PRel[config]=stranded|PRel[gov]=7:yell|PRel[obj]=1:I|Promoted=Yes|Supersense[coding]=p.Direction|Supersense[scene]=p.Recipient
 9	because	because	SCONJ	IN	_	11	mark	11:mark	_
 10	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
-11	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	7	advcl	7:advcl	_
+11	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	7	advcl	7:advcl	Supersense=v.communication
 12	if	if	SCONJ	IN	_	15	mark	15:mark	_
 13	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj	_
 14	could	could	AUX	MD	VerbForm=Fin	15	aux	15:aux	_
-15	pick	pick	VERB	VB	VerbForm=Inf	11	ccomp	11:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=15:Interrogative-Polar-Indirect.Clause
+15	pick	pick	VERB	VB	VerbForm=Inf	11	ccomp	11:ccomp	Cxn=Interrogative-Polar-Indirect|CxnElt=15:Interrogative-Polar-Indirect.Clause|MWECat=V.VPC.full|MWELemma=pick up|MWELen=2|Supersense=v.possession
 16	up	up	ADP	RP	_	15	compound:prt	15:compound:prt	_
-17	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	_
-18	car	car	NOUN	NN	Number=Sing	15	obj	15:obj	_
+17	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	PRel[config]=possessive|PRel[gov]=18:car|Supersense=p.Possessor
+18	car	car	NOUN	NN	Number=Sing	15	obj	15:obj	Supersense=n.ARTIFACT
 19	5	5	NUM	CD	NumForm=Digit|NumType=Card	22	nummod	22:nummod	SpaceAfter=No
-20	-	-	SYM	SYM	_	21	case	21:case	SpaceAfter=No
+20	-	-	SYM	SYM	ExtPos=ADP	21	case	21:case	SpaceAfter=No
 21	10	10	NUM	CD	NumForm=Digit|NumType=Card	19	nmod	19:nmod	_
-22	minutes	minute	NOUN	NNS	Number=Plur	23	obl:unmarked	23:obl:unmarked	_
+22	minutes	minute	NOUN	NNS	Number=Plur	23	obl:unmarked	23:obl:unmarked	Supersense=n.TIME
 23	late	late	ADV	RB	Degree=Pos	15	advmod	15:advmod	SpaceAfter=No
 24	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-200429-0003
 # text = I explained that i was already on my way and i would rush to get there as soon as i could because i needed my car for work at 5am, but the guy was arguing with me saying he was gonna lock the doors right at 5:30.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	explained	explain	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	explained	explain	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 3	that	that	SCONJ	IN	_	9	mark	9:mark	_
 4	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	9:cop	_
+5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	9:cop	Supersense=v.stative
 6	already	already	ADV	RB	_	9	advmod	9:advmod	_
-7	on	on	ADP	IN	_	9	case	9:case	_
-8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	_
+7	on	on	ADP	IN	_	9	case	9:case	MWECat=PP|MWELemma=on <1> way|MWELen=3|PRel[config]=predicative|PRel[gov]=4:I|PRel[obj]=9:way|Supersense[coding]=p.Locus|Supersense[scene]=p.Manner
+8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	9:nmod:poss	PRel[config]=possessive|PRel[gov]=9:way|Supersense=`$
 9	way	way	NOUN	NN	Number=Sing	2	ccomp	2:ccomp	_
 10	and	and	CCONJ	CC	_	13	cc	13:cc	_
 11	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	_
 12	would	would	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
-13	rush	rush	VERB	VB	VerbForm=Inf	9	conj	2:ccomp|9:conj:and	_
-14	to	to	PART	TO	_	15	mark	15:mark	_
-15	get	get	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:to	_
+13	rush	rush	VERB	VB	VerbForm=Inf	9	conj	2:ccomp|9:conj:and	Supersense=v.motion
+14	to	to	PART	TO	_	15	mark	15:mark	PRel[config]=subordinating|PRel[gov]=13:rush|PRel[obj]=15:get|Supersense=p.Purpose
+15	get	get	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:to	Supersense=v.motion
 16	there	there	ADV	RB	PronType=Dem	15	advmod	15:advmod	_
-17	as	as	ADV	RB	_	18	advmod	18:advmod	_
+17	as	as	ADV	RB	_	18	advmod	18:advmod	PRel[config]=default|PRel[gov]=15:get|PRel[obj]=18:soon|Supersense[coding]=p.Extent|Supersense[scene]=p.Time
 18	soon	soon	ADV	RB	Degree=Pos	15	advmod	15:advmod	_
-19	as	as	SCONJ	IN	_	21	mark	21:mark	_
+19	as	as	SCONJ	IN	_	21	mark	21:mark	PRel[config]=subordinating|PRel[gov]=18:soon|PRel[obj]=21:could|Supersense=p.ComparisonRef
 20	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	21	nsubj	21:nsubj	_
 21	could	could	AUX	MD	VerbForm=Fin	18	advcl	18:advcl:as	_
 22	because	because	SCONJ	IN	_	24	mark	24:mark	_
 23	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	24	nsubj	24:nsubj	_
-24	needed	need	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	15	advcl	15:advcl:because	_
-25	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	_
-26	car	car	NOUN	NN	Number=Sing	24	obj	24:obj	_
-27	for	for	ADP	IN	_	28	case	28:case	_
-28	work	work	NOUN	NN	Number=Sing	24	obl	24:obl:for	_
-29	at	at	ADP	IN	_	30	case	30:case	_
+24	needed	need	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	15	advcl	15:advcl:because	Supersense=v.cognition
+25	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	PRel[config]=possessive|PRel[gov]=26:car|Supersense=p.Possessor
+26	car	car	NOUN	NN	Number=Sing	24	obj	24:obj	Supersense=n.ARTIFACT
+27	for	for	ADP	IN	_	28	case	28:case	PRel[config]=default|PRel[gov]=24:need|PRel[obj]=28:work|Supersense=p.Purpose
+28	work	work	NOUN	NN	Number=Sing	24	obl	24:obl:for	Supersense=n.ACT
+29	at	at	ADP	IN	_	30	case	30:case	PRel[config]=default|PRel[gov]=24:need|PRel[obj]=30:5|Supersense=p.Time
 30	5	5	NUM	CD	NumForm=Digit|NumType=Card	24	obl	24:obl:at	SpaceAfter=No
-31	am	a.m.	NOUN	NN	Number=Sing	30	nmod:unmarked	30:nmod:unmarked	SpaceAfter=No
+31	am	a.m.	NOUN	NN	Number=Sing	30	nmod:unmarked	30:nmod:unmarked	SpaceAfter=No|Supersense=n.TIME
 32	,	,	PUNCT	,	_	37	punct	37:punct	_
 33	but	but	CCONJ	CC	_	37	cc	37:cc	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	_
-35	guy	guy	NOUN	NN	Number=Sing	37	nsubj	37:nsubj	_
+35	guy	guy	NOUN	NN	Number=Sing	37	nsubj	37:nsubj	Supersense=n.PERSON
 36	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	37	aux	37:aux	_
-37	arguing	argue	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:but	_
-38	with	with	ADP	IN	_	39	case	39:case	_
+37	arguing	argue	VERB	VBG	Tense=Pres|VerbForm=Part	2	conj	2:conj:but	Supersense=v.communication
+38	with	with	ADP	IN	_	39	case	39:case	PRel[config]=default|PRel[gov]=37:argue|PRel[obj]=39:I|Supersense[coding]=p.Ancillary|Supersense[scene]=p.Agent
 39	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	37	obl	37:obl:with	_
-40	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	37	advcl	37:advcl	_
+40	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	37	advcl	37:advcl	Supersense=v.communication
 41	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	43	nsubj	43:nsubj|45:nsubj:xsubj	_
 42	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	43	aux	43:aux	_
 43-44	gonna	_	_	_	_	_	_	_	_
-43	gon	go	VERB	VBG	Abbr=Yes|Tense=Pres|VerbForm=Part	40	ccomp	40:ccomp	_
+43	gon	go	VERB	VBG	Abbr=Yes|Tense=Pres|VerbForm=Part	40	ccomp	40:ccomp	MWECat=AUX|MWELemma=go to|MWELen=2|MWEString=gon na
 44	na	to	PART	TO	Abbr=Yes	45	mark	45:mark	_
-45	lock	lock	VERB	VB	VerbForm=Inf	43	xcomp	43:xcomp	_
+45	lock	lock	VERB	VB	VerbForm=Inf	43	xcomp	43:xcomp	Supersense=v.change
 46	the	the	DET	DT	Definite=Def|PronType=Art	47	det	47:det	_
-47	doors	door	NOUN	NNS	Number=Plur	45	obj	45:obj	_
+47	doors	door	NOUN	NNS	Number=Plur	45	obj	45:obj	Supersense=n.ARTIFACT
 48	right	right	ADV	RB	_	50	advmod	50:advmod	_
-49	at	at	ADP	IN	_	50	case	50:case	_
+49	at	at	ADP	IN	_	50	case	50:case	PRel[config]=default|PRel[gov]=45:lock|PRel[obj]=50:5:30|Supersense=p.Time
 50	5:30	5:30	NUM	CD	NumForm=Digit|NumType=Card	45	obl	45:obl:at	SpaceAfter=No
 51	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -95,46 +95,46 @@
 3	unprofessional	unprofessional	ADJ	JJ	Degree=Pos	1	list	1:list	SpaceAfter=No
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	just	just	ADV	RB	_	6	advmod	6:advmod	_
-6	jerks	jerk	NOUN	NNS	Number=Plur	1	list	1:list	SpaceAfter=No
+6	jerks	jerk	NOUN	NNS	Number=Plur	1	list	1:list	SpaceAfter=No|Supersense=n.PERSON
 7	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = reviews-200429-0005
 # text = Seems like all they care about is the money and getting home on time, NO care for the customers AT ALL!!!
-1	Seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-2	like	like	SCONJ	IN	_	9	mark	9:mark	_
+1	Seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
+2	like	like	SCONJ	IN	_	9	mark	9:mark	PRel[config]=subordinating|PRel[gov]=1:seem|PRel[obj]=7:be|Supersense[coding]=p.ComparisonRef|Supersense[scene]=p.Theme
 3	all	all	DET	DT	PronType=Tot	9	nsubj	5:obl:about|9:nsubj|11:nsubj	_
 4	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
-5	care	care	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obl-pstrand
-6	about	about	ADP	IN	_	5	obl	3:case	Promoted=Yes
-7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
+5	care	care	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	Cxn=rc-red-obl-pstrand|Supersense=v.cognition
+6	about	about	ADP	IN	_	5	obl	3:case	PRel[config]=stranded|PRel[gov]=5:care|PRel[obj]=3:all|Promoted=Yes|Supersense[coding]=p.Topic|Supersense[scene]=p.Stimulus
+7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	Supersense=v.stative
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	money	money	NOUN	NN	Number=Sing	1	advcl	1:advcl:like	_
+9	money	money	NOUN	NN	Number=Sing	1	advcl	1:advcl:like	Supersense=n.POSSESSION
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	getting	get	VERB	VBG	Tense=Pres|VerbForm=Part	9	conj	1:advcl:like|9:conj:and	_
-12	home	home	NOUN	NN	Number=Sing	11	obj	11:obj	_
-13	on	on	ADP	IN	_	14	case	14:case	_
+11	getting	get	VERB	VBG	Tense=Pres|VerbForm=Part	9	conj	1:advcl:like|9:conj:and	Supersense=v.motion
+12	home	home	NOUN	NN	Number=Sing	11	obj	11:obj	Supersense=n.LOCATION
+13	on	on	ADP	IN	_	14	case	14:case	MWECat=PP|MWELemma=on time|MWELen=2|PRel[config]=default|PRel[gov]=11:get|PRel[obj]=14:time|Supersense[coding]=p.Locus|Supersense[scene]=p.Manner
 14	time	time	NOUN	NN	Number=Sing	11	obl	11:obl:on	SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	NO	no	DET	DT	PronType=Neg	17	det	17:det	_
-17	care	care	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
-18	for	for	ADP	IN	_	20	case	20:case	_
+17	care	care	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	Supersense=n.ACT
+18	for	for	ADP	IN	_	20	case	20:case	PRel[config]=default|PRel[gov]=17:care|PRel[obj]=20:customer|Supersense=p.Beneficiary
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
-20	customers	customer	NOUN	NNS	Number=Plur	17	nmod	17:nmod:for	_
-21	AT	at	ADP	IN	_	22	case	22:case	_
+20	customers	customer	NOUN	NNS	Number=Plur	17	nmod	17:nmod:for	Supersense=n.GROUP
+21	AT	at	ADP	IN	_	22	case	22:case	MWECat=PP|MWELemma=at all|MWELen=2|PRel[config]=default|PRel[gov]=17:care|PRel[obj]=22:all|Supersense=p.Extent
 22	ALL	all	DET	DT	PronType=Tot	17	nmod	17:nmod:at	SpaceAfter=No
 23	!!!	!!!	PUNCT	.	_	17	punct	17:punct	_
 
 # sent_id = reviews-200429-0006
 # text = Missed a whole day of work because i am now carless.
-1	Missed	miss	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+1	Missed	miss	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.stative
 2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 3	whole	whole	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	day	day	NOUN	NN	Number=Sing	1	obj	1:obj	_
-5	of	of	ADP	IN	_	6	case	6:case	_
-6	work	work	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
+4	day	day	NOUN	NN	Number=Sing	1	obj	1:obj	Supersense=n.TIME
+5	of	of	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:day|PRel[obj]=6:work|Supersense=p.QuantityItem
+6	work	work	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	Supersense=n.ACT
 7	because	because	SCONJ	IN	_	11	mark	11:mark	_
 8	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj	_
-9	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
+9	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	11	cop	11:cop	Supersense=v.stative
 10	now	now	ADV	RB	PronType=Dem	11	advmod	11:advmod	_
 11	carless	carless	ADJ	JJ	Degree=Pos	1	advcl	1:advcl:because	SpaceAfter=No
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -144,10 +144,10 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	NEEEEEEEEEVERRRR	never	ADV	RB	PronType=Neg|Style=Expr	4	advmod	4:advmod	CorrectForm=never
-4	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	to	to	ADP	IN	_	7	case	7:case	_
+4	go	go	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.motion
+5	to	to	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:go|PRel[obj]=7:place|Supersense=p.Goal
 6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	7:det	_
-7	place	place	NOUN	NN	Number=Sing	4	obl	4:obl:to	_
+7	place	place	NOUN	NN	Number=Sing	4	obl	4:obl:to	Supersense=n.GROUP
 8	again	again	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
 

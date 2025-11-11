@@ -2,11 +2,11 @@
 # sent_id = reviews-047762-0001
 # newpar id = reviews-047762-p0001
 # text = My Favorite place at Wildwood
-1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	PRel[config]=possessive|PRel[gov]=3:place|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Experiencer
 2	Favorite	favorite	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	place	place	NOUN	NN	Number=Sing	0	root	0:root	_
-4	at	at	ADP	IN	_	5	case	5:case	_
-5	Wildwood	Wildwood	PROPN	NNP	Number=Sing	3	nmod	3:nmod:at	_
+3	place	place	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.GROUP
+4	at	at	ADP	IN	_	5	case	5:case	PRel[config]=default|PRel[gov]=3:place|PRel[obj]=5:Wildwood|Supersense=p.Locus
+5	Wildwood	Wildwood	PROPN	NNP	Number=Sing	3	nmod	3:nmod:at	Supersense=n.LOCATION
 
 # sent_id = reviews-047762-0002
 # newpar id = reviews-047762-p0002
@@ -14,33 +14,33 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj|19:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	4	aux	4:aux	_
-4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
-5	to	to	ADP	IN	_	7	case	7:case	_
+4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Supersense=v.motion
+5	to	to	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=4:go|PRel[obj]=7:Wildwood|Supersense=p.Goal
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	Wildwood	Wildwood	PROPN	NNP	Number=Sing	4	obl	4:obl:to	SpaceAfter=No
+7	Wildwood	Wildwood	PROPN	NNP	Number=Sing	4	obl	4:obl:to	MWECat=N|MWELemma=Wildwood , NJ|MWELen=3|SpaceAfter=No|Supersense=n.LOCATION
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	NJ	NJ	PROPN	NNP	Number=Sing	7	appos	7:appos	_
-10	for	for	ADP	IN	_	13	case	13:case	_
-11	over	over	ADP	IN	_	13	case	13:case	_
+9	NJ	NJ	PROPN	NNP	Number=Sing	7	nmod:unmarked	7:nmod:unmarked	Superlocation=Yes
+10	for	for	ADP	IN	_	13	case	13:case	PRel[config]=default|PRel[gov]=4:go|PRel[obj]=13:year|Supersense=p.Duration
+11	over	over	ADP	IN	_	13	case	13:case	PRel[config]=default|PRel[gov]=4:go|PRel[obj]=13:year|Supersense=p.Approximator
 12	30	30	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
-13	years	year	NOUN	NNS	Number=Plur	4	obl	4:obl:over	_
-14	for	for	ADP	IN	_	16	case	16:case	_
-15	summer	summer	NOUN	NN	Number=Sing	16	compound	16:compound	_
-16	vacations	vacation	NOUN	NNS	Number=Plur	4	obl	4:obl:for	_
+13	years	year	NOUN	NNS	Number=Plur	4	obl	4:obl:over	Supersense=n.TIME
+14	for	for	ADP	IN	_	16	case	16:case	PRel[config]=default|PRel[gov]=4:go|PRel[obj]=16:vacation|Supersense=p.Purpose
+15	summer	summer	NOUN	NN	Number=Sing	16	compound	16:compound	MWELemma[weak]=summer vacation|MWELen[weak]=2|MWEString[weak]=summer vacations|Supersense=n.TIME
+16	vacations	vacation	NOUN	NNS	Number=Plur	4	obl	4:obl:for	Supersense=n.EVENT
 17	and	and	CCONJ	CC	_	19	cc	19:cc	_
 18	always	always	ADV	RB	PronType=Tot	19	advmod	19:advmod	_
-19	call	call	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	_
+19	call	call	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	Supersense=v.communication
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	Madrid	Madrid	PROPN	NNP	Number=Sing	19	obj	19:obj	_
+21	Madrid	Madrid	PROPN	NNP	Number=Sing	19	obj	19:obj	Supersense=n.GROUP
 22	first	first	ADV	RB	NumForm=Word|NumType=Ord	19	advmod	19:advmod	SpaceAfter=No
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-047762-0003
 # text = I rated it 5 stars.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	rated	rate	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obj	2:obj|5:nsubj:xsubj	_
-4	5	5	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	_
+2	rated	rate	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.communication
+3	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obj	2:obj|5:nsubj:xsubj	_
+4	5	5	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	MWECat=N|MWELemma=5 star|MWELen=2|MWEString=5 stars|Supersense=n.COMMUNICATION
 5	stars	star	NOUN	NNS	Number=Plur	2	xcomp	2:xcomp	SpaceAfter=No
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -49,78 +49,78 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
-4	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+4	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Supersense=v.communication
 5	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	_
-6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	Supersense=v.stative
 7	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-8	5	5	NUM	CD	NumForm=Digit|NumType=Card	9	compound	9:compound	_
+8	5	5	NUM	CD	NumForm=Digit|NumType=Card	9	compound	9:compound	MWECat=N|MWELemma=5 star|MWELen=2|Supersense=n.COMMUNICATION
 9	star	star	NOUN	NN	Number=Sing	10	compound	10:compound	_
-10	hotel	hotel	NOUN	NN	Number=Sing	4	ccomp	4:ccomp	SpaceAfter=No
+10	hotel	hotel	NOUN	NN	Number=Sing	4	ccomp	4:ccomp	SpaceAfter=No|Supersense=n.GROUP
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-047762-0005
 # text = I am saying when comparing all other hotels in Wildwood, this hotel has everything that we are looking for.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
-3	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
+3	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	Supersense=v.communication
 4	when	when	ADV	WRB	PronType=Int	5	advmod	5:advmod	_
-5	comparing	compare	VERB	VBG	Tense=Pres|VerbForm=Part	14	advcl	14:advcl:when	_
+5	comparing	compare	VERB	VBG	Tense=Pres|VerbForm=Part	14	advcl	14:advcl:when	Supersense=v.cognition
 6	all	all	DET	DT	PronType=Tot	8	det	8:det	_
 7	other	other	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	hotels	hotel	NOUN	NNS	Number=Plur	5	obj	5:obj	_
-9	in	in	ADP	IN	_	10	case	10:case	_
-10	Wildwood	Wildwood	PROPN	NNP	Number=Sing	8	nmod	8:nmod:in	SpaceAfter=No
+8	hotels	hotel	NOUN	NNS	Number=Plur	5	obj	5:obj	Supersense=n.GROUP
+9	in	in	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=8:hotel|PRel[obj]=10:Wildwood|Supersense=p.Locus
+10	Wildwood	Wildwood	PROPN	NNP	Number=Sing	8	nmod	8:nmod:in	SpaceAfter=No|Supersense=n.LOCATION
 11	,	,	PUNCT	,	_	5	punct	5:punct	_
 12	this	this	DET	DT	Number=Sing|PronType=Dem	13	det	13:det	_
-13	hotel	hotel	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	_
-14	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
+13	hotel	hotel	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	Supersense=n.GROUP
+14	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	Supersense=v.stative
 15	everything	everything	PRON	NN	Number=Sing|PronType=Tot	14	obj	14:obj|19:obl	_
 16	that	that	PRON	WDT	PronType=Rel	19	obl	15:ref	_
 17	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	19	nsubj	19:nsubj	_
 18	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	19	aux	19:aux	_
-19	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	15	acl:relcl	15:acl:relcl	Cxn=rc-that-obl-pstrand
-20	for	for	ADP	IN	_	16	case	16:case	SpaceAfter=No
+19	looking	look	VERB	VBG	Tense=Pres|VerbForm=Part	15	acl:relcl	15:acl:relcl	Cxn=rc-that-obl-pstrand|MWELemma[weak]=look for|MWELen[weak]=2|MWEString[weak]=looking for|Supersense=v.cognition
+20	for	for	ADP	IN	_	16	case	16:case	PRel[config]=stranded|PRel[gov]=19:look|PRel[obj]=16:that|SpaceAfter=No|Supersense=p.Theme
 21	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-047762-0006
 # text = It is the hospitality from Tom and staff, that makes it feel like a 5 star hotel in the middle of the beach.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	expl	4:expl	_
-2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Supersense=v.stative
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	hospitality	hospitality	NOUN	NN	Number=Sing	0	root	0:root|11:nsubj	_
-5	from	from	ADP	IN	_	6	case	6:case	_
-6	Tom	Tom	PROPN	NNP	Number=Sing	4	nmod	4:nmod:from	_
+4	hospitality	hospitality	NOUN	NN	Number=Sing	0	root	0:root|11:nsubj	Supersense=n.ACT
+5	from	from	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:hospitality|PRel[obj]=6:Tom|Supersense[coding]=p.Source|Supersense[scene]=p.Agent
+6	Tom	Tom	PROPN	NNP	Number=Sing	4	nmod	4:nmod:from	Supersense=n.PERSON
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	staff	staff	NOUN	NN	Number=Sing	6	conj	4:nmod:from|6:conj:and	SpaceAfter=No
+8	staff	staff	NOUN	NN	Number=Sing	6	conj	4:nmod:from|6:conj:and	SpaceAfter=No|Supersense=n.GROUP
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	that	that	PRON	WDT	PronType=Rel	11	nsubj	4:ref	_
-11	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	advcl:relcl	4:advcl:relcl	Cxn=rc-cleft.that-nsubj
+11	makes	make	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	advcl:relcl	4:advcl:relcl	Cxn=rc-cleft.that-nsubj|Supersense=v.stative
 12	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obj	11:obj|13:nsubj:xsubj	_
-13	feel	feel	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
-14	like	like	ADP	IN	_	18	case	18:case	_
+13	feel	feel	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	Supersense=v.cognition
+14	like	like	ADP	IN	_	18	case	18:case	PRel[config]=default|PRel[gov]=13:feel|PRel[obj]=18:hotel|Supersense[coding]=p.ComparisonRef|Supersense[scene]=p.Manner
 15	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	_
-16	5	5	NUM	CD	NumForm=Digit|NumType=Card	17	compound	17:compound	_
+16	5	5	NUM	CD	NumForm=Digit|NumType=Card	17	compound	17:compound	MWECat=N|MWELemma=5 star|MWELen=2|Supersense=n.COMMUNICATION
 17	star	star	NOUN	NN	Number=Sing	18	compound	18:compound	_
-18	hotel	hotel	NOUN	NN	Number=Sing	13	obl	13:obl:like	_
-19	in	in	ADP	IN	_	21	case	21:case	_
+18	hotel	hotel	NOUN	NN	Number=Sing	13	obl	13:obl:like	Supersense=n.GROUP
+19	in	in	ADP	IN	_	21	case	21:case	PRel[config]=default|PRel[gov]=18:hotel|PRel[obj]=21:middle|Supersense=p.Locus
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	middle	middle	NOUN	NN	Number=Sing	18	nmod	18:nmod:in	_
-22	of	of	ADP	IN	_	24	case	24:case	_
+21	middle	middle	NOUN	NN	Number=Sing	18	nmod	18:nmod:in	Supersense=n.LOCATION
+22	of	of	ADP	IN	_	24	case	24:case	PRel[config]=default|PRel[gov]=21:middle|PRel[obj]=24:beach|Supersense=p.Whole
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
-24	beach	beach	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	SpaceAfter=No
+24	beach	beach	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	SpaceAfter=No|Supersense=n.NATURALOBJECT
 25	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-047762-0007
 # text = We prefer the layout of rooms and it is always clean.
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	prefer	prefer	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	prefer	prefer	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.cognition
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
-4	layout	layout	NOUN	NN	Number=Sing	2	obj	2:obj	_
-5	of	of	ADP	IN	_	6	case	6:case	_
-6	rooms	room	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
+4	layout	layout	NOUN	NN	Number=Sing	2	obj	2:obj	Supersense=n.ATTRIBUTE
+5	of	of	ADP	IN	_	6	case	6:case	PRel[config]=default|PRel[gov]=4:layout|PRel[obj]=6:room|Supersense=p.Gestalt
+6	rooms	room	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	Supersense=n.ARTIFACT
 7	and	and	CCONJ	CC	_	11	cc	11:cc	_
 8	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj	_
-9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
+9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	Supersense=v.stative
 10	always	always	ADV	RB	PronType=Tot	11	advmod	11:advmod	_
 11	clean	clean	ADJ	JJ	Degree=Pos	2	conj	2:conj:and	SpaceAfter=No
 12	.	.	PUNCT	.	_	2	punct	2:punct	_

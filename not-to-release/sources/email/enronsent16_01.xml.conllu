@@ -240,7 +240,7 @@
 1-2	I'm	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	_
 2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
-3	@	@	ADP	IN	_	4	case	4:case	_
+3	@	at	SYM	IN	Abbr=Yes|ExtPos=ADP	4	case	4:case	_
 4	X37047	X37047	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 5	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -664,7 +664,7 @@
 3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	2:obj|4:nsubj:xsubj	_
 4	know	know	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 5	if	if	SCONJ	IN	_	7	mark	7:mark	_
-6	there	there	PRON	EX	_	7	expl	7:expl	_
+6	there	there	PRON	EX	PronType=Dem	7	expl	7:expl	_
 7	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	Cxn=Existential-CopPred-ThereExpl,Interrogative-Polar-Indirect|CxnElt=7:Interrogative-Polar-Indirect.Clause
 8	any	any	DET	DT	PronType=Ind	9	det	9:det	_
 9	changes	change	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	CxnElt=7:Existential-CopPred-ThereExpl.Pivot
@@ -854,9 +854,9 @@
 19	in	in	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
 21	Heights	Height	PROPN	NNPS	Number=Plur	18	nmod	18:nmod:in	_
-22	at	at	ADP	IN	_	24	case	24:case	_
-23	3926	3926	NUM	CD	NumForm=Digit|NumType=Card	24	nummod	24:nummod	_
-24	Feagan	Feagan	PROPN	NNP	Number=Sing	18	nmod	18:nmod:at	SpaceAfter=No
+22	at	at	ADP	IN	_	23	case	23:case	_
+23	3926	3926	NUM	CD	NumForm=Digit|NumType=Card	18	nmod	18:nmod:at	_
+24	Feagan	Feagan	PROPN	NNP	Number=Sing	23	nmod:unmarked	23:nmod:unmarked	SpaceAfter=No|Superlocation=Yes
 25	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = email-enronsent16_01-0056
@@ -1032,10 +1032,10 @@
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
 9	Subscription	subscription	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	Agreement	agreement	NOUN	NN	Number=Sing	6	nmod	6:nmod:to	_
-11	with	with	ADP	IN	_	14	case	14:case	_
-12	WeatherTrade	WeatherTrade	PROPN	NNP	Number=Sing	14	compound	14:compound	SpaceAfter=No
+11	with	with	ADP	IN	_	12	case	12:case	_
+12	WeatherTrade	WeatherTrade	PROPN	NNP	Number=Sing	10	nmod	10:nmod:with	SpaceAfter=No
 13	,	,	PUNCT	,	_	12	punct	12:punct	_
-14	Inc.	Inc.	PROPN	NNP	Number=Sing	10	nmod	10:nmod:with	_
+14	Inc.	Inc.	PROPN	NNP	Number=Sing	12	nmod:desc	12:nmod:desc	_
 15	dated	date	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	acl	6:acl	_
 16	March	March	PROPN	NNP	Number=Sing	17	nmod:unmarked	17:nmod:unmarked	_
 17	2	2	NUM	CD	NumForm=Digit|NumType=Card	15	xcomp	15:xcomp	SpaceAfter=No

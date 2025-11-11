@@ -2,9 +2,9 @@
 # sent_id = reviews-049766-0001
 # newpar id = reviews-049766-p0001
 # text = WWW-Wonderful Wild Wildernest inn
-1	WWW	WWW	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
+1	WWW	WWW	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No|Supersense=n.COMMUNICATION
 2	-	-	PUNCT	:	_	6	punct	6:punct	SpaceAfter=No
-3	Wonderful	wonderful	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
+3	Wonderful	wonderful	ADJ	JJ	Degree=Pos	6	amod	6:amod	MWECat=N|MWELemma=wonderful wild Wildernest inn|MWELen=4|Supersense=n.COMMUNICATION
 4	Wild	wild	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 5	Wildernest	Wildernest	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 6	inn	inn	PROPN	NNP	Number=Sing	1	appos	1:appos	_
@@ -14,76 +14,76 @@
 # text = I would give the Wildernest inn ten stars of five!
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	would	would	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
-3	give	give	VERB	VB	VerbForm=Inf	0	root	0:root	_
+3	give	give	VERB	VB	VerbForm=Inf	0	root	0:root	MWELemma[weak]=give <3> ten star|MWELen[weak]=6|MWEString[weak]=give <3> ten stars|Supersense=v.cognition
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-5	Wildernest	Wildernest	PROPN	NNP	Number=Sing	6	compound	6:compound	_
+5	Wildernest	Wildernest	PROPN	NNP	Number=Sing	6	compound	6:compound	MWECat=N|MWELemma=Wildernest inn|MWELen=2|Supersense=n.GROUP
 6	inn	inn	PROPN	NNP	Number=Sing	3	iobj	3:iobj	_
-7	ten	ten	NUM	CD	NumForm=Word|NumType=Card	8	nummod	8:nummod	_
+7	ten	ten	NUM	CD	NumForm=Word|NumType=Card	8	nummod	8:nummod	MWECat=N|MWELemma=ten star|MWELen=2|MWEString=ten stars|Supersense=n.COMMUNICATION
 8	stars	star	NOUN	NNS	Number=Plur	3	obj	3:obj	_
-9	of	of	ADP	IN	_	10	case	10:case	_
+9	of	of	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=8:star|PRel[obj]=10:five|Supersense[coding]=p.Whole|Supersense[scene]=p.QuantityItem
 10	five	five	NUM	CD	NumForm=Word|NumType=Card	8	nmod	8:nmod:of	SpaceAfter=No
 11	!	!	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-049766-0003
 # text = Atop Spring Mountain, from the decks of the West porch, "one can see forever" a scene of unparalleled beauty and grandeur.
-1	Atop	atop	ADP	IN	_	3	case	3:case	_
-2	Spring	Spring	PROPN	NNP	Number=Sing	3	compound	3:compound	_
+1	Atop	atop	ADP	IN	_	3	case	3:case	PRel[config]=default|PRel[gov]=16:see|PRel[obj]=3:Mountain|Supersense=p.Locus
+2	Spring	Spring	PROPN	NNP	Number=Sing	3	compound	3:compound	MWECat=N|MWELemma=Spring Mountain|MWELen=2|Supersense=n.NATURALOBJECT
 3	Mountain	Mountain	PROPN	NNP	Number=Sing	16	obl	16:obl:atop	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
-5	from	from	ADP	IN	_	7	case	7:case	_
+5	from	from	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=16:see|PRel[obj]=7:deck|Supersense[coding]=p.Source|Supersense[scene]=p.Locus
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	decks	deck	NOUN	NNS	Number=Plur	16	obl	16:obl:from	_
-8	of	of	ADP	IN	_	11	case	11:case	_
+7	decks	deck	NOUN	NNS	Number=Plur	16	obl	16:obl:from	Supersense=n.ARTIFACT
+8	of	of	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=7:deck|PRel[obj]=11:porch|Supersense=p.Whole
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
-10	West	west	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	porch	porch	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	SpaceAfter=No
+10	West	west	NOUN	NN	Number=Sing	11	compound	11:compound	Supersense=n.RELATION
+11	porch	porch	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	SpaceAfter=No|Supersense=n.ARTIFACT
 12	,	,	PUNCT	,	_	7	punct	7:punct	_
 13	"	"	PUNCT	``	_	16	punct	16:punct	SpaceAfter=No
 14	one	one	PRON	PRP	Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	_
-15	can	can	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
-16	see	see	VERB	VB	VerbForm=Inf	0	root	0:root	_
+15	can	can	AUX	MD	VerbForm=Fin	16	aux	16:aux	MWELemma[weak]=can see forever|MWELen[weak]=3
+16	see	see	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.perception
 17	forever	forever	ADV	RB	_	16	advmod	16:advmod	SpaceAfter=No
 18	"	"	PUNCT	''	_	16	punct	16:punct	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	_
-20	scene	scene	NOUN	NN	Number=Sing	16	obj	16:obj	_
-21	of	of	ADP	IN	_	23	case	23:case	_
+20	scene	scene	NOUN	NN	Number=Sing	16	obj	16:obj	Supersense=n.NATURALOBJECT
+21	of	of	ADP	IN	_	23	case	23:case	PRel[config]=default|PRel[gov]=20:scene|PRel[obj]=23:beauty|Supersense=p.Identity
 22	unparalleled	unparalleled	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
-23	beauty	beauty	NOUN	NN	Number=Sing	20	nmod	20:nmod:of	_
+23	beauty	beauty	NOUN	NN	Number=Sing	20	nmod	20:nmod:of	Supersense=n.ATTRIBUTE
 24	and	and	CCONJ	CC	_	25	cc	25:cc	_
-25	grandeur	grandeur	NOUN	NN	Number=Sing	23	conj	20:nmod:of|23:conj:and	SpaceAfter=No
+25	grandeur	grandeur	NOUN	NN	Number=Sing	23	conj	20:nmod:of|23:conj:and	SpaceAfter=No|Supersense=n.ATTRIBUTE
 26	.	.	PUNCT	.	_	16	punct	16:punct	_
 
 # sent_id = reviews-049766-0004
 # text = I saw deer frequently, in fact a small herd were grazing near the lodge.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
-2	saw	see	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	deer	deer	NOUN	NNS	Number=Plur	2	obj	2:obj	_
+2	saw	see	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	Supersense=v.perception
+3	deer	deer	NOUN	NNS	Number=Plur	2	obj	2:obj	Supersense=n.ANIMAL
 4	frequently	frequently	ADV	RB	_	2	advmod	2:advmod	SpaceAfter=No
 5	,	,	PUNCT	,	_	12	punct	12:punct	_
-6	in	in	ADP	IN	_	7	case	7:case	_
+6	in	in	ADP	IN	_	7	case	7:case	MWECat=DISC|MWELemma=in fact|MWELen=2
 7	fact	fact	NOUN	NN	Number=Sing	12	obl	12:obl:in	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 9	small	small	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	herd	herd	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
+10	herd	herd	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	Supersense=n.GROUP
 11	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	12	aux	12:aux	_
-12	grazing	graze	VERB	VBG	Tense=Pres|VerbForm=Part	2	parataxis	2:parataxis	_
-13	near	near	ADP	IN	_	15	case	15:case	_
+12	grazing	graze	VERB	VBG	Tense=Pres|VerbForm=Part	2	parataxis	2:parataxis	Supersense=v.consumption
+13	near	near	ADP	IN	_	15	case	15:case	PRel[config]=default|PRel[gov]=12:graze|PRel[obj]=15:lodge|Supersense=p.Locus
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
-15	lodge	lodge	NOUN	NN	Number=Sing	12	obl	12:obl:near	SpaceAfter=No
+15	lodge	lodge	NOUN	NN	Number=Sing	12	obl	12:obl:near	SpaceAfter=No|Supersense=n.ARTIFACT
 16	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-049766-0005
 # text = There were occasional bears on the deck in the morning.
-1	There	there	PRON	EX	_	2	expl	2:expl	_
-2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl
+1	There	there	PRON	EX	PronType=Dem	2	expl	2:expl	_
+2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-CopPred-ThereExpl|Supersense=v.stative
 3	occasional	occasional	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	bears	bear	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot
-5	on	on	ADP	IN	_	7	case	7:case	_
+4	bears	bear	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	CxnElt=2:Existential-CopPred-ThereExpl.Pivot|Supersense=n.ANIMAL
+5	on	on	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=2:be|PRel[obj]=7:deck|Supersense=p.Locus
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
-7	deck	deck	NOUN	NN	Number=Sing	2	obl	2:obl:on	_
-8	in	in	ADP	IN	_	10	case	10:case	_
+7	deck	deck	NOUN	NN	Number=Sing	2	obl	2:obl:on	Supersense=n.ARTIFACT
+8	in	in	ADP	IN	_	10	case	10:case	PRel[config]=default|PRel[gov]=2:be|PRel[obj]=10:morning|Supersense=p.Time
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
-10	morning	morning	NOUN	NN	Number=Sing	2	obl	2:obl:in	SpaceAfter=No
+10	morning	morning	NOUN	NN	Number=Sing	2	obl	2:obl:in	SpaceAfter=No|Supersense=n.TIME
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = reviews-049766-0006
@@ -93,14 +93,14 @@
 3	correctly	correctly	ADV	RB	_	9	advmod	9:advmod	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	9	nsubj	9:nsubj	_
-6	visitors	visitor	NOUN	NNS	Number=Plur	5	appos	5:appos	_
+6	visitors	visitor	NOUN	NNS	Number=Plur	5	nmod:unmarked	5:nmod:unmarked	Supersense=n.PERSON
 7	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	9	aux	9:aux	_
 8	not	not	PART	RB	Polarity=Neg	9	advmod	9:advmod	_
-9	mingle	mingle	VERB	VB	VerbForm=Inf	0	root	0:root	_
-10	with	with	ADP	IN	_	13	case	13:case	_
+9	mingle	mingle	VERB	VB	VerbForm=Inf	0	root	0:root	MWELemma[weak]=mingle with|MWELen[weak]=2|Supersense=v.social
+10	with	with	ADP	IN	_	13	case	13:case	PRel[config]=default|PRel[gov]=9:mingle|PRel[obj]=13:wildlife|Supersense[coding]=p.Ancillary|Supersense[scene]=p.Agent
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 12	native	native	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	wildlife	wildlife	NOUN	NN	Number=Sing	9	obl	9:obl:with	SpaceAfter=No
+13	wildlife	wildlife	NOUN	NN	Number=Sing	9	obl	9:obl:with	SpaceAfter=No|Supersense=n.ANIMAL
 14	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = reviews-049766-0007
@@ -109,26 +109,26 @@
 2	would	would	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 3	have	have	AUX	VB	VerbForm=Inf	5	aux	5:aux	_
 4	been	be	AUX	VBN	Tense=Past|VerbForm=Part	5	cop	5:cop	_
-5	more	more	ADJ	JJR	Degree=Cmp	0	root	0:root	_
-6	than	than	SCONJ	IN	_	9	mark	9:mark	_
+5	more	more	ADJ	JJR	Degree=Cmp	0	root	0:root	MWELemma[weak]=more than <1> could bear|MWELen[weak]=5
+6	than	than	SCONJ	IN	_	9	mark	9:mark	PRel[config]=subordinating|PRel[gov]=5:more|PRel[obj]=9:bear|Supersense=p.ComparisonRef
 7	one	one	PRON	PRP	Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	_
 8	could	could	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	bear	bear	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:than	SpaceAfter=No
+9	bear	bear	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:than	SpaceAfter=No|Supersense=v.cognition
 10	!	!	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-049766-0008
 # text = Kathy and Stewart, the proprietors were the epitome of perfection.
-1	Kathy	Kathy	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
+1	Kathy	Kathy	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	Supersense=n.PERSON
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	Stewart	Stewart	PROPN	NNP	Number=Sing	1	conj	1:conj:and|9:nsubj	SpaceAfter=No
+3	Stewart	Stewart	PROPN	NNP	Number=Sing	1	conj	1:conj:and|9:nsubj	SpaceAfter=No|Supersense=n.PERSON
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
-6	proprietors	proprietor	NOUN	NNS	Number=Plur	1	appos	1:appos	_
-7	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	cop	9:cop	_
+6	proprietors	proprietor	NOUN	NNS	Number=Plur	1	appos	1:appos	Supersense=n.PERSON
+7	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	cop	9:cop	Supersense=v.stative
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	_
-9	epitome	epitome	NOUN	NN	Number=Sing	0	root	0:root	_
-10	of	of	ADP	IN	_	11	case	11:case	_
-11	perfection	perfection	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	SpaceAfter=No
+9	epitome	epitome	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.COGNITION
+10	of	of	ADP	IN	_	11	case	11:case	PRel[config]=default|PRel[gov]=9:epitome|PRel[obj]=11:perfection|Supersense=p.Species
+11	perfection	perfection	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	SpaceAfter=No|Supersense=n.COGNITION
 12	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = reviews-049766-0009
@@ -147,9 +147,9 @@
 # sent_id = reviews-049766-0010
 # text = I hope to be back!
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj|5:nsubj:xsubj	_
-2	hope	hope	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	hope	hope	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.emotion
 3	to	to	PART	TO	_	5	mark	5:mark	_
-4	be	be	AUX	VB	VerbForm=Inf	5	cop	5:cop	_
-5	back	back	ADV	RB	_	2	xcomp	2:xcomp	SpaceAfter=No
+4	be	be	AUX	VB	VerbForm=Inf	5	cop	5:cop	Supersense=v.stative
+5	back	back	ADV	RB	_	2	xcomp	2:xcomp	PRel[config]=predicative|SpaceAfter=No|Supersense=p.Locus
 6	!	!	PUNCT	.	_	2	punct	2:punct	_
 

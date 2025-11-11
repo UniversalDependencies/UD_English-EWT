@@ -4,12 +4,12 @@
 # text = Unbelievably huge experience for such a small salon!!!
 1	Unbelievably	unbelievably	ADV	RB	_	2	advmod	2:advmod	_
 2	huge	huge	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	experience	experience	NOUN	NN	Number=Sing	0	root	0:root	_
-4	for	for	ADP	IN	_	8	case	8:case	_
+3	experience	experience	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.EVENT
+4	for	for	ADP	IN	_	8	case	8:case	PRel[config]=default|PRel[gov]=3:experience|PRel[obj]=8:salon|Supersense=p.ComparisonRef
 5	such	such	DET	PDT	PronType=Ind	8	det:predet	8:det:predet	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
 7	small	small	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	salon	salon	NOUN	NN	Number=Sing	3	nmod	3:nmod:for	SpaceAfter=No
+8	salon	salon	NOUN	NN	Number=Sing	3	nmod	3:nmod:for	SpaceAfter=No|Supersense=n.GROUP
 9	!!!	!!!	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-156460-0002
@@ -17,16 +17,16 @@
 # text = I have been to Kim at Cheveux for more than five years.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
-3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	5	cop	5:cop	_
+3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	5	cop	5:cop	MWECat=V.IAV|MWELemma=be to|MWELen=2|MWEString=been to|Supersense=v.motion
 4	to	to	ADP	IN	_	5	case	5:case	_
-5	Kim	Kim	PROPN	NNP	Number=Sing	0	root	0:root	_
-6	at	at	ADP	IN	_	7	case	7:case	_
-7	Cheveux	Cheveux	PROPN	NNP	Number=Sing	5	nmod	5:nmod:at	_
-8	for	for	ADP	IN	_	12	case	12:case	_
-9	more	more	ADJ	JJR	Degree=Cmp|ExtPos=ADV	11	advmod	11:advmod	_
+5	Kim	Kim	PROPN	NNP	Number=Sing	0	root	0:root	Supersense=n.PERSON
+6	at	at	ADP	IN	_	7	case	7:case	PRel[config]=default|PRel[gov]=5:Kim|PRel[obj]=7:Cheveux|Supersense[coding]=p.Locus|Supersense[scene]=p.Org
+7	Cheveux	Cheveux	PROPN	NNP	Number=Sing	5	nmod	5:nmod:at	Supersense=n.GROUP
+8	for	for	ADP	IN	_	12	case	12:case	PRel[config]=default|PRel[gov]=5:Kim|PRel[obj]=12:year|Supersense=p.Duration
+9	more	more	ADJ	JJR	Degree=Cmp|ExtPos=ADV	11	advmod	11:advmod	MWECat=P|MWELemma=more than|MWELen=2|PRel[config]=default|PRel[obj]=11:five|Supersense=p.Approximator
 10	than	than	ADP	IN	_	9	fixed	9:fixed	_
 11	five	five	NUM	CD	NumForm=Word|NumType=Card	12	nummod	12:nummod	_
-12	years	year	NOUN	NNS	Number=Plur	5	obl	5:obl:for	SpaceAfter=No
+12	years	year	NOUN	NNS	Number=Plur	5	obl	5:obl:for	SpaceAfter=No|Supersense=n.TIME
 13	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = reviews-156460-0003
@@ -35,20 +35,20 @@
 2-3	cannot	_	_	_	_	_	_	_	_
 2	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
-4	tell	tell	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	iobj	4:iobj	_
+4	tell	tell	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
+5	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	4	iobj	4:iobj	_
 6	how	how	ADV	WRB	PronType=Int	7	advmod	7:advmod	CxnElt=10:Interrogative-WHInfo-Indirect.WHWord
 7	often	often	ADV	RB	_	10	advmod	10:advmod	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj:pass	10:nsubj:pass	_
 9	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	10	aux:pass	10:aux:pass	_
-10	complimented	compliment	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	ccomp	4:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=10:Interrogative-WHInfo-Indirect.Clause
-11	on	on	ADP	IN	_	13	case	13:case	_
-12	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	_
-13	hair	hair	NOUN	NN	Number=Sing	10	obl	10:obl:on	_
+10	complimented	compliment	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	ccomp	4:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=10:Interrogative-WHInfo-Indirect.Clause|MWELemma[weak]=compliment on|MWELen[weak]=2|MWEString[weak]=complimented on|Supersense=v.communication
+11	on	on	ADP	IN	_	13	case	13:case	PRel[config]=default|PRel[gov]=10:compliment|PRel[obj]=13:hair|Supersense=p.Topic
+12	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	PRel[config]=possessive|PRel[gov]=13:hair|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
+13	hair	hair	NOUN	NN	Number=Sing	10	obl	10:obl:on	Supersense=n.BODY
 14	(	(	PUNCT	-LRB-	_	15	punct	15:punct	SpaceAfter=No
-15	style	style	NOUN	NN	Number=Sing	13	appos	13:appos	_
+15	style	style	NOUN	NN	Number=Sing	13	appos	13:appos	Supersense=n.ATTRIBUTE
 16	AND	and	CCONJ	CC	_	17	cc	17:cc	_
-17	color	color	NOUN	NN	Number=Sing	15	conj	13:appos|15:conj:and	SpaceAfter=No
+17	color	color	NOUN	NN	Number=Sing	15	conj	13:appos|15:conj:and	SpaceAfter=No|Supersense=n.COGNITION
 18	)	)	PUNCT	-RRB-	_	15	punct	15:punct	SpaceAfter=No
 19	!	!	PUNCT	.	_	4	punct	4:punct	_
 
@@ -56,30 +56,30 @@
 # text = I regularly request Kim's business cards as I am often stopped on the street and asked "Who does your hair...I LOVE it!!!"
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	regularly	regularly	ADV	RB	_	3	advmod	3:advmod	_
-3	request	request	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	request	request	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	Supersense=v.communication
 4-5	Kim's	_	_	_	_	_	_	_	_
-4	Kim	Kim	PROPN	NNP	Number=Sing	7	nmod:poss	7:nmod:poss	_
-5	's	's	PART	POS	_	4	case	4:case	_
-6	business	business	NOUN	NN	Number=Sing	7	compound	7:compound	_
+4	Kim	Kim	PROPN	NNP	Number=Sing	7	nmod:poss	7:nmod:poss	Supersense=n.PERSON
+5	's	's	PART	POS	_	4	case	4:case	PRel[config]=default|PRel[gov]=7:card|PRel[obj]=4:Kim|Supersense=p.Possessor
+6	business	business	NOUN	NN	Number=Sing	7	compound	7:compound	MWECat=N|MWELemma=business card|MWELen=2|MWEString=business cards|Supersense=n.ARTIFACT
 7	cards	card	NOUN	NNS	Number=Plur	3	obj	3:obj	_
-8	as	as	SCONJ	IN	_	12	mark	12:mark	_
+8	as	as	SCONJ	IN	_	12	mark	12:mark	PRel[config]=subordinating|PRel[gov]=3:request|PRel[obj]=12:stop|Supersense=p.Explanation
 9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj:pass	12:nsubj:pass|17:nsubj:pass	_
 10	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	aux:pass	12:aux:pass	_
 11	often	often	ADV	RB	_	12	advmod	12:advmod	_
-12	stopped	stop	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	advcl	3:advcl:as	_
-13	on	on	ADP	IN	_	15	case	15:case	_
+12	stopped	stop	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	advcl	3:advcl:as	Supersense=v.motion
+13	on	on	ADP	IN	_	15	case	15:case	MWELemma[weak]=on the street|MWELen[weak]=3|PRel[config]=default|PRel[gov]=12:stop|PRel[obj]=15:street|Supersense=p.Locus
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
-15	street	street	NOUN	NN	Number=Sing	12	obl	12:obl:on	_
+15	street	street	NOUN	NN	Number=Sing	12	obl	12:obl:on	Supersense=n.LOCATION
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	asked	ask	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	conj	3:advcl:as|12:conj:and	_
+17	asked	ask	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	conj	3:advcl:as|12:conj:and	Supersense=v.communication
 18	"	"	PUNCT	``	_	20	punct	20:punct	SpaceAfter=No
 19	Who	who	PRON	WP	PronType=Int	20	nsubj	20:nsubj	CxnElt=20:Interrogative-WHInfo-Indirect.WHWord
-20	does	do	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	ccomp	17:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=20:Interrogative-WHInfo-Indirect.Clause
-21	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_
+20	does	do	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	ccomp	17:ccomp	Cxn=Interrogative-WHInfo-Indirect|CxnElt=20:Interrogative-WHInfo-Indirect.Clause|MWECat=V.VID|MWELemma=do <1> hair|MWELen=3|MWEString=does <1> hair|Supersense=v.body
+21	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	PRel[config]=possessive|PRel[gov]=22:hair|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
 22	hair	hair	NOUN	NN	Number=Sing	20	obj	20:obj	SpaceAfter=No
 23	...	...	PUNCT	,	_	25	punct	25:punct	SpaceAfter=No
 24	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	25:nsubj	_
-25	LOVE	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	20	parataxis	20:parataxis	_
+25	LOVE	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	20	parataxis	20:parataxis	Supersense=v.emotion
 26	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	25	obj	25:obj	SpaceAfter=No
 27	!!!	!!!	PUNCT	.	_	20	punct	20:punct	SpaceAfter=No
 28	"	"	PUNCT	''	_	20	punct	20:punct	_
@@ -91,48 +91,48 @@
 3	lovely	lovely	ADJ	JJ	Degree=Pos	6	amod	6:amod	SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	small	small	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	salon	salon	NOUN	NN	Number=Sing	0	root	0:root	_
-7	with	with	ADP	IN	_	9	case	9:case	_
+6	salon	salon	NOUN	NN	Number=Sing	0	root	0:root	Supersense=n.GROUP
+7	with	with	ADP	IN	_	9	case	9:case	PRel[config]=default|PRel[gov]=6:salon|PRel[obj]=9:personality|Supersense=p.Characteristic
 8	BIG	big	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	personality	personality	NOUN	NN	Number=Sing	6	nmod	6:nmod:with	SpaceAfter=No
+9	personality	personality	NOUN	NN	Number=Sing	6	nmod	6:nmod:with	SpaceAfter=No|Supersense=n.ATTRIBUTE
 10	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = reviews-156460-0006
 # text = I am made to feel special when I am in the chair and I have NEVER had a less than amazing cut or color experience.
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj:pass	3:nsubj:pass|5:nsubj:xsubj|6:nsubj:xsubj	_
-2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux:pass	3:aux:pass	_
+2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux:pass	3:aux:pass	MWECat=V.VID|MWELemma=be make to|MWELen=3|MWEString=am made to|Supersense=v.stative
 3	made	make	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	to	to	PART	TO	_	5	mark	5:mark	_
-5	feel	feel	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
+5	feel	feel	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	Supersense=v.emotion
 6	special	special	ADJ	JJ	Degree=Pos	5	xcomp	5:xcomp	_
 7	when	when	ADV	WRB	PronType=Int	12	advmod	12:advmod	_
 8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	12:nsubj	_
-9	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
-10	in	in	ADP	IN	_	12	case	12:case	_
+9	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	12	cop	12:cop	Supersense=v.stative
+10	in	in	ADP	IN	_	12	case	12:case	PRel[config]=predicative|PRel[gov]=8:I|PRel[obj]=12:chair|Supersense=p.Locus
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
-12	chair	chair	NOUN	NN	Number=Sing	3	advcl	3:advcl:in	_
+12	chair	chair	NOUN	NN	Number=Sing	3	advcl	3:advcl:in	Supersense=n.LOCATION
 13	and	and	CCONJ	CC	_	17	cc	17:cc	_
 14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	17:nsubj	_
 15	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
 16	NEVER	never	ADV	RB	PronType=Neg	17	advmod	17:advmod	_
-17	had	have	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj:and	_
+17	had	have	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	3:conj:and	MWECat=V.LVC.full|MWELemma=have <7> experience|MWELen=9|MWEString=had <7> experience|Supersense=v.stative
 18	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
-19	less	less	ADJ	JJR	Degree=Cmp|ExtPos=ADV	21	advmod	21:advmod	_
+19	less	less	ADJ	JJR	Degree=Cmp|ExtPos=ADV	21	advmod	21:advmod	MWECat=P|MWELemma=less than|MWELen=2|PRel[config]=default|PRel[obj]=21:amazing|Supersense=p.Approximator
 20	than	than	ADP	IN	_	19	fixed	19:fixed	_
 21	amazing	amazing	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
-22	cut	cut	NOUN	NN	Number=Sing	25	compound	25:compound	_
+22	cut	cut	NOUN	NN	Number=Sing	25	compound	25:compound	Supersense=n.ACT
 23	or	or	CCONJ	CC	_	24	cc	24:cc	_
-24	color	color	NOUN	NN	Number=Sing	22	conj	22:conj:or|25:compound	_
+24	color	color	NOUN	NN	Number=Sing	22	conj	22:conj:or|25:compound	Supersense=n.ACT
 25	experience	experience	NOUN	NN	Number=Sing	17	obj	17:obj	SpaceAfter=No
 26	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = reviews-156460-0007
 # text = My hair has never felt this healthy, either.
-1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	_
-2	hair	hair	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|7:nsubj:xsubj	_
+1	My	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	PRel[config]=possessive|PRel[gov]=2:hair|Supersense[coding]=p.Gestalt|Supersense[scene]=p.Whole
+2	hair	hair	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|7:nsubj:xsubj	Supersense=n.BODY
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 4	never	never	ADV	RB	PronType=Neg	5	advmod	5:advmod	_
-5	felt	feel	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+5	felt	feel	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Supersense=v.perception
 6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	7:det	_
 7	healthy	healthy	ADJ	JJ	Degree=Pos	5	xcomp	5:xcomp	SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
@@ -145,15 +145,15 @@
 2-3	cannot	_	_	_	_	_	_	_	_
 2	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
-4	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	recommend	recommend	VERB	VB	VerbForm=Inf	0	root	0:root	Supersense=v.communication
 5	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	_
-6	salon	salon	NOUN	NN	Number=Sing	4	obj	4:obj	_
+6	salon	salon	NOUN	NN	Number=Sing	4	obj	4:obj	Supersense=n.GROUP
 7	enough	enough	ADV	RB	_	4	advmod	4:advmod	SpaceAfter=No
 8	!!!	!!!	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = reviews-156460-0009
 # text = Thanks Cheveux!
-1	Thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	_
-2	Cheveux	Cheveux	PROPN	NNP	Number=Sing	1	vocative	1:vocative	SpaceAfter=No
+1	Thanks	thanks	NOUN	NN	Number=Sing	0	root	0:root	Supersense=`d
+2	Cheveux	Cheveux	PROPN	NNP	Number=Sing	1	vocative	1:vocative	SpaceAfter=No|Supersense=n.GROUP
 3	!	!	PUNCT	.	_	1	punct	1:punct	_
 
