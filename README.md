@@ -1,5 +1,5 @@
 Universal Dependencies - English Dependency Treebank
-Universal Dependencies English Web Treebank v2.17 -- 2025-11-15
+Universal Dependencies English Web Treebank v2.18 -- 2026-05-15
 https://github.com/UniversalDependencies/UD_English-EWT
 
 
@@ -151,6 +151,12 @@ documents many yet-to-be-resolved analysis challenges. Significant among these:
  - Many free relatives are incorrectly analyzed as interrogative.
 
 # Changelog
+
+**2026-05-15 v2.18**
+
+Highlights:
+
+  - Mark about 200 tokens as typos.
 
 **2025-11-15 v2.17**
 
