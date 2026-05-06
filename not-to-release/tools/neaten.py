@@ -180,7 +180,7 @@ def validate_annos(tree):
             else:
                 parent_ids[tok_num] = 0
             tokens[tok_num] = tok
-            feats[tok_num] = line['feats']
+            feats[tok_num] = line['feats'] or {}
             if line['deps'] is not None:
                 all_edeps[tok_num] = line['deps']
             if line['misc'] is not None:
@@ -244,6 +244,7 @@ def validate_annos(tree):
             tok = (line.get('misc') or {}).get('CorrectForm') or line['form']   # in GUM, some explicit CorrectForm=_ which parses as None
             assert tok is not None,(docname, tree.metadata['filename'], tok_num, line)
             xpos, lemma = line['xpos'], line['lemma']
+            assert xpos,repr(line)
             pos = xpos
             upos = line['upos']
             func = line['deprel']
@@ -289,7 +290,7 @@ def validate_annos(tree):
             parent_func = funcs[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_pos = postags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_upos = upostags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
-            parent_feats = feats[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else {}
+            parent_feats = (feats[parent_ids[tok_num]] or {}) if parent_ids[tok_num] != 0 else {}
             parent_edeps = all_edeps[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else []
             is_parent_promoted = parent_ids[tok_num] != 0 and misc.get(parent_ids[tok_num],{}).get("Promoted")=="Yes"
             parent_child_funcs = child_funcs[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else []
@@ -398,10 +399,10 @@ def validate_annos(tree):
                 # Check PronType=Rel for free relative headed by the WDT/WP/WRB
                 # (won't catch cases where the relativizer is a dependent in a larger relative phrase)
                 if upos=="PRON" or (upos=="ADV" and (xpos=="WRB" or (xpos=="GW" and "PronType" in featlist))):
-                    if featlist["PronType"]=="Int":
+                    if featlist.get("PronType")=="Int":
                         print("WARN: Looks like a WH word as internal root of relative clause, should be PronType=Rel?" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
                 if parent_upos=="PRON" or (parent_upos=="ADV" and (parent_pos=="WRB" or (parent_pos=="GW" and "PronType" in parent_feats))):
-                    if parent_feats["PronType"]=="Int":
+                    if parent_feats.get("PronType")=="Int":
                         print("WARN: Looks like a WH word-headed free relative, should be PronType=Rel" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
 
             if func!='goeswith' and featlist.get("PronType")=="Rel" and edeps is not None:
