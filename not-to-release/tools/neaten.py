@@ -715,7 +715,6 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
             print("WARN: comparative or superlative "+tok+" with tag "+pos+" should have positive lemma not " + lemma + inname)
 
     if re.search(r"never|not|no|n't|n’t|’t|'t|nt|ne|pas|nit", tok, re.IGNORECASE) is None and func == "neg":
-        print(str(id) + docname)
         print("WARN: mistagged negative" + inname)
 
     if pos == "VBG" and func == "compound":
@@ -812,11 +811,9 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
         print("WARN: lemma of 'an' should be 'a'" + inname)
 
     if re.search(r"“|”|n’t|n`t|[’`](s|ve|d|ll|m|re|t)", lemma, re.IGNORECASE) is not None:
-        print(str(id) + docname)
         print("WARN: non-ASCII character in lemma" + inname)
 
     if pos == "POS" and lemma != "'s" and func != "goeswith":
-        print(str(id) + docname)
         print("WARN: tag POS must have lemma " +'"'+ "'s" + '"' + inname)
 
     if func == "goeswith" and lemma != "_":
@@ -873,7 +870,6 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
     if pos in ["VBG"] and "det" in child_funcs:
         # Exceptions for phrasal compound in GUM_reddit_card and nominalization in GUM_academic_exposure
         if tok != "prioritizing" and tok != "following":
-            print(str(id) + docname)
             print("WARN: tag "+pos+" should not have a determinder 'det'" + inname)
 
     if parent_lemma in ["let", "help"] and func=="ccomp":
@@ -923,7 +919,6 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
         print("WARN: a token cannot have both a *subj relation and obl:agent" + inname)
 
     if pos in ["VBD","VBD","VBP"] and "aux" in child_funcs and "nsubj:outer" not in child_funcs:
-        print(str(id) + docname)
         print("WARN: tag "+pos+" should not have auxiliaries 'aux'" + inname)
 
     if lemma == "not" and func not in ["advmod","root","ccomp","amod","parataxis","reparandum","advcl","conj","orphan","fixed"]:
