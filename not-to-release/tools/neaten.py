@@ -23,12 +23,51 @@ import re
 import sys
 import traceback
 import conllu
+from io import TextIOWrapper
 
 NNS_warnings = Counter()
 
 def isRegularNode(line):
     idS = str(line['id'])
     return not ('-' in idS or '.' in idS)
+
+def parse_with_token_line_numbers(inF: TextIOWrapper):
+    # produced with Gemini
+
+    lines_buffer = []
+
+    # enumerate gives us an automatic, 1-indexed line counter
+    for current_line_num, line in enumerate(inF, start=1):
+        if line.strip():
+            # Store a tuple of (text, file_line_number)
+            lines_buffer.append((line, current_line_num))
+        else:
+            # Tree is complete; process if buffer isn't empty
+            if lines_buffer:
+                yield _process_buffer(lines_buffer)
+                lines_buffer = []
+
+    # Catch the last tree if the file doesn't end with a blank newline
+    if lines_buffer:
+        yield _process_buffer(lines_buffer)
+
+def _process_buffer(lines_buffer):
+    # produced with Gemini
+    # 1. Reconstruct the raw text block for the parser
+    text_block = "".join([line_data[0] for line_data in lines_buffer])
+    tokenlist = conllu.parse(text_block)[0]
+
+    # 2. Extract line numbers for the token lines only (ignore metadata comments)
+    token_line_numbers = [
+        line_data[1] for line_data in lines_buffer if not line_data[0].startswith("#")
+    ]
+
+    # 3. Zip the line numbers directly to the parsed tokens
+    # The number of token lines perfectly matches the tokens in the TokenList
+    for token, file_line_num in zip(tokenlist, token_line_numbers):
+        token["lineno"] = file_line_num
+
+    return tokenlist
 
 def validate_src(infiles):
     tok_count = 0
@@ -38,7 +77,7 @@ def validate_src(infiles):
     for inFP in infiles:
         with open(inFP) as inF:
             doc = None
-            for tree in conllu.parse_incr(inF):
+            for tree in parse_with_token_line_numbers(inF):
                 if 'newdoc id' in tree.metadata:
                     doc = tree.metadata['newdoc id']
                 tree.metadata['docname'] = doc
@@ -50,7 +89,8 @@ def validate_src(infiles):
                     """ `dict(line)` e.g.:
                     {'id': 1, 'form': 'What', 'lemma': 'what', 'upos': 'PRON',
                     'xpos': 'WP', 'feats': {'PronType': 'Int'}, 'head': 0,
-                    'deprel': 'root', 'deps': [('root', 0)], 'misc': None}
+                    'deprel': 'root', 'deps': [('root', 0)], 'misc': None,
+                    'lineno': 5}
                     `line` is of type dict_items
                     """
                     if not isRegularNode(line):    # avoid e.g. ellipsis node
@@ -254,35 +294,40 @@ def validate_annos(tree):
             merged = 'merged' in line and line['merged']
             form = check_and_fix_form_typos(tok_num, line['form'], featlist, misclist, merged, docname)
 
+            filename = tree.metadata['filename']
+            lineno = line["lineno"]
+
+            inname = f" in {docname} @ token {tok_num} ({tok}) {filename}:{lineno}"
+
             if featlist and featlist.get("Voice")=="Pass":
                 passive_verbs.add(tok_num)
 
             if upos not in tagset_combos.keys():
-                print("WARN: invalid UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                print("WARN: invalid UPOS tag " + upos + inname)
             if pos not in tagset:
-                print("WARN: invalid POS tag " + pos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                print("WARN: invalid POS tag " + pos + inname)
             if upos in tagset_combos and pos not in tagset_combos[upos]:
                 if pos=="CD" and upos=="PRON":
                     if featlist.get("PronType")!="Rcp":
-                        print("WARN: CD/PRON combination requires PronType=Rcp ('one another') in " + docname)
+                        print("WARN: CD/PRON combination requires PronType=Rcp ('one another')" + inname)
                 elif pos=="FW" and upos=="NOUN" and lemma=="etc.":
                     pass    # this is an exception to the usual mapping of FW
                 else:
-                    print("WARN: invalid POS tag " + pos + " for UPOS " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    print("WARN: invalid POS tag " + pos + " for UPOS " + upos + inname)
 
             if upos=="DET" and lemma.lower()=="them":
                 # vernacular substitute for 'those'
                 assert pos=="DT"
                 assert featlist["Style"]=="Vrnc"
             elif lemma.lower() in non_lemmas:
-                print("WARN: invalid lemma " + lemma + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                print("WARN: invalid lemma " + lemma + inname)
             elif lemma in non_cap_lemmas:
-                print("WARN: invalid lemma " + lemma + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                print("WARN: invalid lemma " + lemma + inname)
             elif (pos,lemma.lower()) in non_lemma_combos:
-                print("WARN: invalid lemma " + lemma + " for POS "+pos+" in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                print("WARN: invalid lemma " + lemma + " for POS "+pos+inname)
             elif lemma in lemma_pos_combos:
                 if pos != lemma_pos_combos[lemma]:
-                    print("WARN: invalid pos " + pos + " for lemma "+lemma+" in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    print("WARN: invalid pos " + pos + " for lemma "+lemma+inname)
 
             parent_string = parents[tok_num]
             parent_id = parent_ids[tok_num]
@@ -297,7 +342,6 @@ def validate_annos(tree):
             edge_direction = ""
             if parent_ids[tok_num] != 0:
                 edge_direction = "R" if parent_ids[tok_num] < tok_num else "L"
-            filename = tree.metadata['filename']
             assert parent_pos is not None,(tok_num,parent_ids[tok_num],postags,filename)
             S_TYPE_PLACEHOLDER = None
             assert parent_string is not None,(tok_num,docname,filename)
@@ -308,37 +352,37 @@ def validate_annos(tree):
                               children[tok_num], child_funcs[tok_num], child_pos[tok_num], S_TYPE_PLACEHOLDER, docname,
                               prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_positions[tok_num],
                               parent_func, parent_pos, parent_upos, parent_child_funcs,
-                              edge_direction, filename)
-            flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, misclist, docname)
+                              edge_direction, filename, lineno)
+            flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, misclist, docname, filename, lineno)
 
             if func!='goeswith':
                 if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
                     # check for PronType=Rcp
-                    flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, prev_misc, prev_tok, docname)
+                    flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, prev_misc, prev_tok, docname, filename, lineno)
                 elif upos == "PRON" or (upos == "DET" and featlist.get("ExtPos")!="PRON") or upos == "ADV" and lemma in ADV_ENTRIES:  # ExtPos exception for "each other"
                     if lemma == "however" and "advcl:relcl" not in child_funcs[tok_num] and not (
                             func == "advmod" and parent_upos in ("ADJ", "ADV") and not is_parent_copular
                         ):  # don't assign PronType to discourse connective use of "however"
                         if pos == "WRB":
-                            print(f"WARN: should however/{pos} be tagged RB? in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                            print(f"WARN: should however/{pos} be tagged RB?" + inname)
                     elif lemma == "however" and pos == "RB":
-                        print(f"WARN: should however/{pos} be tagged WRB? in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                        print(f"WARN: should however/{pos} be tagged WRB?" + inname)
                     else:
                         # Pass FORM to detect abbreviations, etc.
                         _featlist = dict(featlist)
                         if lemma in ("all","that") and _featlist.get("ExtPos")=="ADV":  # "all of" (quantity), "that is"
                             del _featlist["ExtPos"] # prevent complaint about ExtPos=ADV
-                        flag_pronoun_warnings(tok_num, form, pos, upos, lemma, _featlist, misclist, prev_tok, docname)
+                        flag_pronoun_warnings(tok_num, form, pos, upos, lemma, _featlist, misclist, prev_tok, docname, filename, lineno)
                 elif lemma in PRON_LEMMAS:
                     if not ((lemma=="one" and upos in ("NOUN","NUM"))
                             or (lemma=="I" and upos=="NUM") # Roman numeral
                             or (lemma=="he" and upos=="INTJ") # laughter
                             or upos=="DET"):
-                        print("WARN: invalid pronoun UPOS tag " + upos + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                        print("WARN: invalid pronoun UPOS tag " + upos + inname)
                         # This warns about a few that are arguably correct, e.g. "oh my/INTJ", "I/PROPN - 24"
                 elif upos == "NUM":
                     if "NumForm" not in featlist or "NumType" not in featlist:
-                        print("WARN: NUM should have NumForm and NumType in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                        print("WARN: NUM should have NumForm and NumType" + inname)
 
             extpos_funcs: dict[str,str] = {
                 "ADP": "case",
@@ -378,41 +422,41 @@ def validate_annos(tree):
 
             if func == "fixed":
                 if (parent_lemma.lower(), lemma.lower()) not in mwe_pairs:
-                    print("WARN: unlisted fixed expression" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    print("WARN: unlisted fixed expression" + inname)
             elif "fixed" in child_funcs[tok_num]:
                 fixedChild = children[tok_num][child_funcs[tok_num].index("fixed")]
                 fixedChild = {"a": "of", "is": "be", "opposed": "oppose", "t": "to"}.get(fixedChild, fixedChild)
                 expectedExtPos = mwe_pairs.get((lemma.lower(), fixedChild.lower()))
                 if not expectedExtPos:
-                    print(f"WARN: fixed expression missing entry: {(lemma.lower(), fixedChild.lower())}" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    print(f"WARN: fixed expression missing entry: {(lemma.lower(), fixedChild.lower())}" + inname)
                 elif "ExtPos" not in featlist:
-                    print("WARN: fixed head missing ExtPos" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    print("WARN: fixed head missing ExtPos" + inname)
                 elif (extpos := featlist["ExtPos"]) not in expectedExtPos:
-                    print(f"WARN: fixed head ExtPos={extpos} but one of {expectedExtPos} expected" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    print(f"WARN: fixed head ExtPos={extpos} but one of {expectedExtPos} expected" + inname)
                 elif func!='conj' and func not in extpos_funcs[extpos]:
                     if extpos=="SCONJ" and func=='ccomp' and misclist["Promoted"]=="Yes":
                         pass
                     else:
-                        print(f"WARN: fixed head ExtPos={extpos} in unexpected function {func}" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                        print(f"WARN: fixed head ExtPos={extpos} in unexpected function {func}" + inname)
 
             if func.endswith(':relcl'):
                 # Check PronType=Rel for free relative headed by the WDT/WP/WRB
                 # (won't catch cases where the relativizer is a dependent in a larger relative phrase)
                 if upos=="PRON" or (upos=="ADV" and (xpos=="WRB" or (xpos=="GW" and "PronType" in featlist))):
                     if featlist.get("PronType")=="Int":
-                        print("WARN: Looks like a WH word as internal root of relative clause, should be PronType=Rel?" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                        print("WARN: Looks like a WH word as internal root of relative clause, should be PronType=Rel?" + inname)
                 if parent_upos=="PRON" or (parent_upos=="ADV" and (parent_pos=="WRB" or (parent_pos=="GW" and "PronType" in parent_feats))):
                     if parent_feats.get("PronType")=="Int":
-                        print("WARN: Looks like a WH word-headed free relative, should be PronType=Rel" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                        print("WARN: Looks like a WH word-headed free relative, should be PronType=Rel" + inname)
 
             if func!='goeswith' and featlist.get("PronType")=="Rel" and edeps is not None:
                 if len(edeps)!=1 or edeps[0][0]!="ref":
                     if "acl:relcl" not in child_funcs[tok_num] and "advcl:relcl" not in child_funcs[tok_num]: # not free relative
                         if tok_num>1 and docname!="weblog-blogspot.com_tacitusproject_20040712123425_ENG_20040712_123425-0032":   # sentence fragment may begin with "Which"
-                            print("WARN: PronType=Rel should have `ref` as its sole enhanced dependency" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                            print("WARN: PronType=Rel should have `ref` as its sole enhanced dependency" + inname)
                 elif not {"acl:relcl","advcl:relcl"} & set(child_funcs[edeps[0][1]]):
                     # the ref antecedent doesn't head the RC
-                    print("WARN: `ref` antecedent lacks :relcl dependent" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    print("WARN: `ref` antecedent lacks :relcl dependent" + inname)
 
             # Ensure that most basic deps are duplicated in edeps
             if edeps[0][0]!="ref" and not (parent_edeps and parent_edeps[0][0]=="ref"):
@@ -422,13 +466,13 @@ def validate_annos(tree):
                     elif func in ("obl","case") and any(e[0]=="case" for e in edeps):
                         pass    # preposition stranding: without relativizer -> promotion to obl; with relativizer -> different head in edeps
                     else:
-                        print(f"WARN: dependency `{parent_id}:{func}` appears in basic tree but not enhanced graph" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                        print(f"WARN: dependency `{parent_id}:{func}` appears in basic tree but not enhanced graph" + inname)
 
             if upos!="PROPN" and "flat" in child_funcs[tok_num] and "Foreign" not in featlist:
                 # non-PROPN-headed flat structure
                 if "FlatType" not in misclist:
                     if not (upos=="SYM" and lemma=="#" or upos=="NOUN" and lemma in ("number","no.") or upos=="ADJ" and lemma=="Sri"):    # e.g. "# 1" "Sri/ADJ Lankan/ADJ"
-                        print("WARN: non-PROPN non-Foreign flat expression lacks FlatType" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                        print("WARN: non-PROPN non-Foreign flat expression lacks FlatType" + inname)
 
             # check for spurious VB/VerbForm=Inf
             if featlist.get("VerbForm")=="Inf" and "nsubj" in child_funcs[tok_num] and not (set(child_funcs[tok_num]) & {"mark","aux","aux:pass","cop"}):
@@ -436,7 +480,7 @@ def validate_annos(tree):
                 # looks like it should be a finite verb (of course there are exceptions)
                 # TODO: "better X" cxn e.g. "you better believe". Valid VerbForm=Inf?
                 if (nsubj := children[tok_num][child_funcs[tok_num].index("nsubj")]).lower() not in ("anyone", "anybody"):
-                    print("WARN: verb "+tok+"/VB has an nsubj ('" + nsubj + "'); should it be finite? in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    print("WARN: verb "+tok+"/VB has an nsubj ('" + nsubj + "'); should it be finite?" + inname)
             elif pos=="VB" and featlist.get("Mood")!="Sub" and "nsubj" in child_funcs[tok_num] and not (set(child_funcs[tok_num]) & {"aux","aux:pass"}):
                 if prev_tok=="to" and prev_upos=="PART":
                     continue
@@ -444,11 +488,11 @@ def validate_annos(tree):
                 # will catch (i) imperative (Mood=Imp) subjects that should be vocatives,
                 #            (ii) should be Mood=Sub with that/mark
                 if (nsubj := children[tok_num][child_funcs[tok_num].index("nsubj")]).lower() not in ("anyone", "anybody"):
-                    print("WARN: verb "+tok+"/VB has an nsubj ('" + nsubj + "'); should it be finite? in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                    print("WARN: verb "+tok+"/VB has an nsubj ('" + nsubj + "'); should it be finite?" + inname)
 
             # check PRON case in context
             if featlist.get("Case")=="Nom" and func in ('obj','iobj','obl'):
-                print("WARN: " + func + " with Case=Nom" + " in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                print("WARN: " + func + " with Case=Nom" + inname)
 
             """
             Extraposition Construction
@@ -462,7 +506,7 @@ def validate_annos(tree):
                     for j in parent_ids:
                         if parent_ids[j]==tok_num and j>tok_num and funcs[j]=='csubj':
                             if not (func=='root' and tok in ('pleasure','joy','move')):
-                                print("WARN: suspicious post-head `csubj` in " + docname + " @ line " + str(i) + " (token: " + tok + ")")
+                                print("WARN: suspicious post-head `csubj`" + inname)
 
 
             if ':pass' in func:
@@ -495,35 +539,35 @@ def validate_annos(tree):
         """
         for v in passive_verbs:
             if feats[v].get("Voice") != "Pass":
-                print("WARN: Passive verb with lemma '" + lemmas[v] + "' should have Voice=Pass in " + docname)
+                print("WARN: Passive verb with lemma '" + lemmas[v] + "' should have Voice=Pass" + inname)
             if postags[v] not in ["VBN", "MD"]:
-                print("WARN: Passive verb with lemma '" + lemmas[v] + "' should be VBN in " + docname)
+                print("WARN: Passive verb with lemma '" + lemmas[v] + "' should be VBN" + inname)
             dependents = {j: funcs[j] for j,i in parent_ids.items() if i==v}
             aux_dependents = sorted([(j,f) for j,f in dependents.items() if f.startswith('aux')])
             if aux_dependents and (not all(f=='aux' for j,f in aux_dependents[:-1]) or aux_dependents[-1][1]!='aux:pass'):
                 if docname!="answers-20111106035951AADq0Qg_ans-0012":    # sentence has missing 'be' aux:pass
-                    print("WARN: Passive verb with lemma '" + lemmas[v] + "' has suspicious aux(:pass) dependents (only the last should be aux:pass) in " + docname)
+                    print("WARN: Passive verb with lemma '" + lemmas[v] + "' has suspicious aux(:pass) dependents (only the last should be aux:pass)" + inname)
             subj_dependents = {f for f in dependents.values() if 'subj' in f}
             if not subj_dependents < {'nsubj:pass','csubj:pass','nsubj:outer','csubj:outer'}:
-                print("WARN: Passive verb with lemma '" + lemmas[v] + "' has subject dependents " + repr(sorted(subj_dependents)).replace('[','{').replace(']','}') + " in " + docname)
+                print("WARN: Passive verb with lemma '" + lemmas[v] + "' has subject dependents " + repr(sorted(subj_dependents)).replace('[','{').replace(']','}') + inname)
             if 'cop' in dependents.values():
                 if 'aux:pass' in dependents.values() and any(':outer' in d for d in dependents.values()):
                     pass
                 else:
-                    print("WARN: Passive verb with lemma '" + lemmas[v] + "' has cop dependent in " + docname)
+                    print("WARN: Passive verb with lemma '" + lemmas[v] + "' has cop dependent" + inname)
         for i,f in funcs.items():
             if f=='obl:agent':
                 if (feats[parent_ids[i]] or {}).get("Voice") != "Pass":
-                    print("WARN: Voice=Pass missing from verb that heads obl:agent (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ") in " + docname)
+                    print("WARN: Voice=Pass missing from verb that heads obl:agent (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ")" + inname)
                 if not any(k==i and lemmas[j]=='by' and funcs[j]=='case' for j,k in parent_ids.items()):
-                    print("WARN: obl:agent without 'by' (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ") in " + docname)
+                    print("WARN: obl:agent without 'by' (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ")" + inname)
         # If a VBN has no *:pass, obl:agent, or aux dependents, it should be Voice=Pass
         for v,p in postags.items():
             if p=='VBN':
                 isVoicePass = (feats[v] or {}).get("Voice") == "Pass"
                 if funcs[v] in ['aux', 'aux:pass', 'cop']:
                     if isVoicePass:
-                        print("WARN: Voice=Pass prohibited on verbs functioning as auxiliaries in " + docname)
+                        print("WARN: Voice=Pass prohibited on verbs functioning as auxiliaries" + inname)
                 elif lemmas[v]=='suppose' and not isVoicePass:  # (be) supposed (to)
                     print("WARN: 'supposed (to)' missing Voice=Pass? " + docname)
                 else:
@@ -539,9 +583,9 @@ def validate_annos(tree):
                         elif docname in ["reviews-122564-0003", "answers-20111108104724AAuBUR7_ans-0001"]:
                             pass    # hardcode two exceptions interpreted as perfect
                         else:
-                            print("WARN: Voice=Pass missing from VBN verb with no aux dependent in " + docname)
+                            print("WARN: Voice=Pass missing from VBN verb with no aux dependent" + inname)
                     elif isVoicePass and not pass_marking_dependents and other_dependents:
-                        print("WARN: VBN with aux but no aux:pass dependent incompatible with Voice=Pass in " + docname)
+                        print("WARN: VBN with aux but no aux:pass dependent incompatible with Voice=Pass" + inname)
 
 NNS_PTAN_LEMMAS = ["aesthetics", "arrears", "auspices", "barracks", "billiards", "clothes", "confines", "contents",
                    "dynamics", "earnings", "eatables", "economics", "electronics", "energetics", "environs", "ergonomics",
@@ -562,26 +606,26 @@ NNPS_PTAN_LEMMAS = ["Netherlands", "Analytics", "Olympics", "Commons", "Paralymp
 
 SING_AND_PLUR_S_LEMMAS = ["series", "species"]
 
-def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular, is_parent_promoted,
+def flag_dep_warnings(tokid, tok, pos, upos, extpos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular, is_parent_promoted,
                       children: List[str], child_funcs: List[str], child_pos: List[str], s_type,
                       docname, prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_position,
                       parent_func, parent_pos, parent_upos, parent_child_funcs: List[str],
-                      edge_direction: Literal["","L","R"], filename):
+                      edge_direction: Literal["","L","R"], filename, lineno):
     # Shorthand for printing errors
-    inname = " in " + docname + " @ token " + str(id) + " (" + parent + " -> " + tok + ") " + filename
+    inname = f" in {docname} @ token {tokid} ({parent} -> {tok}) {filename}:{lineno}"
 
     if func == "amod" and pos in ["VBD"]:
-        print("WARN: finite past verb labeled amod " + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+        print("WARN: finite past verb labeled amod " + inname)
 
     if func in ["amod", "det"] and parent_lemma == "one" and parent_pos == "CD":
-        print("WARN: 'one' with " + func + " dependent should be NN/NOUN not CD/NUM in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+        print("WARN: 'one' with " + func + " dependent should be NN/NOUN not CD/NUM" + inname)
 
     if func in ["det", "det:predet"] and lemma in ["this", "that"] and not (pos == "DT" and upos == "DET"):
-        print("WARN: '" + tok + "' attaching as " + func + " should be DT/DET not " + pos + "/" + upos + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+        print("WARN: '" + tok + "' attaching as " + func + " should be DT/DET not " + pos + "/" + upos + inname)
     elif func not in ["det", "det:predet"] and lemma in ["that", "which"] and pos == "WDT" and upos != "PRON":
-        print("WARN: '" + tok + "' attaching as " + func + " should be WDT/PRON not " + pos + "/" + upos + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+        print("WARN: '" + tok + "' attaching as " + func + " should be WDT/PRON not " + pos + "/" + upos + inname)
     elif func not in ["det", "det:predet"] and lemma in ["this", "that"] and pos not in ["IN", "RB", "WDT"] and not (pos == "DT" and upos == "PRON"):
-        print("WARN: '" + tok + "' attaching as " + func + " should be DT/PRON not " + pos + "/" + upos + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+        print("WARN: '" + tok + "' attaching as " + func + " should be DT/PRON not " + pos + "/" + upos + inname)
 
     if func == "amod" and parent_upos not in ["NOUN", "PRON", "PROPN", "NUM", "SYM", "ADJ"] and parent_pos != "ADD":    # see issue #438
         if parent_upos == "ADV" and parent_lemma in ["somewhere","anywhere","someplace","somehow","sometime"]:
@@ -591,7 +635,7 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
         elif parent_upos == "VERB" and parent_pos in ["VBN","VBG"] and parent_lemma in ["bear","train","range","look"]:
             pass    # compounds - for now special-case things like "French-born" and "wide-ranging"
         else:
-            print("WARN: " + parent_upos + " shouldn't have amod dependent in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+            print("WARN: " + parent_upos + " shouldn't have amod dependent" + inname)
 
     if func.split(':')[0] == "acl" and parent_upos not in ["NOUN", "PRON", "PROPN", "NUM", "SYM"]:  # see issue #439 for plain acl
         if func == "acl" and parent_lemma in ["much", "more", "enough"]:
@@ -605,7 +649,7 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
         elif docname == "reviews-093655-0007":
             pass    # special case: "the last/ADJ to get/acl my food"
         else:
-            print("WARN: " + parent_upos + " shouldn't have " + func + " dependent in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+            print("WARN: " + parent_upos + " shouldn't have " + func + " dependent" + inname)
 
     if func == "appos" and parent_upos not in ["NOUN", "PRON", "PROPN", "NUM", "SYM", "ADJ", "DET"] and parent_pos != "ADD":    # see issue #437 for VERB heads
         if parent_func == "root":
@@ -613,17 +657,17 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
         elif parent_upos == "ADV" and parent_lemma == "here":
             pass    # "here (California)"
         else:
-            print("WARN: " + parent_upos + " shouldn't have appos dependent in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+            print("WARN: " + parent_upos + " shouldn't have appos dependent" + inname)
 
-    if func in ['fixed','goeswith','flat', 'conj'] and id < parent_id:
-        print("WARN: back-pointing func " + func + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+    if func in ['fixed','goeswith','flat', 'conj'] and tokid < parent_id:
+        print("WARN: back-pointing func " + func + inname)
 
     if func == "flat" and parent_upos == "PROPN" and upos == "NOUN":
-        print("WARN: PROPN-[flat]->NOUN - should be compound? " + func + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+        print("WARN: PROPN-[flat]->NOUN - should be compound? " + inname)
 
-    if func in ['cc:preconj','cc','nmod:poss'] and id > parent_id:
+    if func in ['cc:preconj','cc','nmod:poss'] and tokid > parent_id:
         if tok not in ["mia"]:
-            print("WARN: forward-pointing func " + func + " in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+            print("WARN: forward-pointing func " + func + inname)
 
     if func == "aux:pass" and lemma != "be" and lemma != "get":
         print("WARN: aux:pass must be 'be' or 'get'" + inname)
@@ -786,7 +830,7 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
             print("WARN: xcomp verb should be non-finite, not tag " + pos + inname)
 
     if parent_pos is None:
-        assert False,(id,docname)
+        assert False,(tokid,docname)
 
     if func == "xcomp" and pos in ["VB"] and parent_pos.startswith("N"):
         print("WARN: infinitive child of a noun should be acl not xcomp" + inname)
@@ -872,7 +916,7 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
 
     if ("acl:relcl" in child_funcs or "advcl:relcl" in child_funcs) and edeps is not None:  # relativized element
         # should (in most cases) have an enhanced dependency out of the relative clause
-        if len(edeps)<=1 or not any(rel.startswith(('nsubj','csubj','obj','obl','nmod','advmod','ccomp','xcomp')) and isinstance(h,int) and h>id for (rel,h) in edeps):
+        if len(edeps)<=1 or not any(rel.startswith(('nsubj','csubj','obj','obl','nmod','advmod','ccomp','xcomp')) and isinstance(h,int) and h>tokid for (rel,h) in edeps):
             print("WARN: relativized word should have enhanced dependency within the relative clause" + inname)
 
     if pos in ["VBG"] and "det" in child_funcs:
@@ -945,29 +989,29 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
     if child_funcs.count("ccomp") + child_funcs.count("xcomp") > 1 and "expl" not in child_funcs:
         print("WARN: token has multiple (c|x)comp dependents (usually an error if not extraposition)" + inname)
 
-    if func == "acl" and (pos.endswith("G") or pos.endswith("N")) and parent_id == id + 1:  # premodifier V.G/N should be amod not acl
-        print("WARN: back-pointing " + func + " for adjacent premodifier (should be amod?) in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+    if func == "acl" and (pos.endswith("G") or pos.endswith("N")) and parent_id == tokid + 1:  # premodifier V.G/N should be amod not acl
+        print("WARN: back-pointing " + func + " for adjacent premodifier (should be amod?)" + inname)
 
     if func == "advcl" and upos=="VERB" and (pos.endswith("G") or pos.endswith("N")) and parent_upos in ["NUM","SYM","NOUN","PRON","PROPN","DET"] and not is_parent_copular and parent_func!="root":
-        print("WARN: non-predicate non-root nominal should not have advcl dependent (should be acl?) in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+        print("WARN: non-predicate non-root nominal should not have advcl dependent (should be acl?)" + inname)
 
     if func.endswith("unmarked") and pos.startswith("RB"):
         print("WARN: adverbs should not be unmarked" + inname)
 
-    if func == "case" and lemma in ["back", "down", "over", "out", "up"] and parent_lemma in ["here","there"] and id+1==parent_id:
+    if func == "case" and lemma in ["back", "down", "over", "out", "up"] and parent_lemma in ["here","there"] and tokid+1==parent_id:
         # adjacency check because "out of there" is OK
         print("WARN: '"+lemma+" "+parent_lemma+"' should probably be advmod not case" + inname)
 
     if func == "case" and upos == "SCONJ" and "fixed" not in child_funcs:
-        print("WARN: SCONJ/case combination is invalid in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+        print("WARN: SCONJ/case combination is invalid" + inname)
     
     # indefinites of time and place
     if lemma in ["anytime", "anyplace", "anywhere", "sometime", "someplace", "somewhere", "nowhere"]:
         if (pos != "RB" or upos != "ADV"):
             # https://github.com/UniversalDependencies/UD_English-EWT/issues/132
-            print(f"WARN: indefinite time or place pro-form tagging {upos}/{pos} is invalid, should be ADV/RB in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+            print(f"WARN: indefinite time or place pro-form tagging {upos}/{pos} is invalid, should be ADV/RB" + inname)
         if func.startswith("obl:"):
-            print(f"WARN: indefinite time or place pro-form tagging {upos}/{pos} is invalid, should be ADV/RB in " + docname + " @ token " + str(id) + " (" + tok + " <- " + parent + ")")
+            print(f"WARN: indefinite time or place pro-form tagging {upos}/{pos} is invalid, should be ADV/RB" + inname)
 
     """
     Existential construction
@@ -1132,12 +1176,14 @@ def flag_dep_warnings(id, tok, pos, upos, extpos, lemma, func, edeps, parent, pa
             print("WARN: structure of 'and/or' should be conj(and/CC/CCONJ, cc(or/CC/CCONJ, '/'/SYM/SYM)) and E:conj(and, or) and E:cc(*, or)" + inname)
             traceback.print_tb(ex.__traceback__, limit=1, file=sys.stdout)
 
-def flag_feats_warnings(id, tok, pos, upos, lemma, feats, misc, docname):
+def flag_feats_warnings(tokid, tok, pos, upos, lemma, feats, misc, docname, filename, lineno):
     """
     Check compatibility of tags and features.
 
     @author: Reece H. Dunn (@rhdunn)
     """
+
+    inname = f" in {docname} @ token {tokid} ({tok}) {filename}:{lineno}"
 
     degree = feats["Degree"] if "Degree" in feats else None
     number = feats["Number"] if "Number" in feats else None
@@ -1152,171 +1198,171 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, misc, docname):
     if upos == "ADJ" and ((pos == "JJ") != (degree == "Pos")):
         # ADJ+NNP occurs in proper noun phrases per PTB guidelines
         if pos != "NNP" and pos != "AFX":   # TODO: map all AFX to X instead (#152)? if so remove the 2nd condition
-            print("WARN: ADJ+JJ should correspond with Degree=Pos in " + docname + " @ token " + str(id))
+            print("WARN: ADJ+JJ should correspond with Degree=Pos" + inname)
 
     # (ADJ+JJR | ADV+RBR) <=> [Degree=Cmp]
     if (upos == "ADJ" and pos == "JJR" or upos == "ADV" and pos == "RBR") != (degree == "Cmp"):
         # ADJ+NNP occurs in proper noun phrases per PTB guidelines
         if pos != "NNP":
-            print("WARN: ADJ+JJR or ADV+RBR should correspond with Degree=Cmp in " + docname + " @ token " + str(id))
+            print("WARN: ADJ+JJR or ADV+RBR should correspond with Degree=Cmp" + inname)
 
     # (ADJ+JJS | ADV+RBS) <=> [Degree=Sup]
     if (upos == "ADJ" and pos == "JJS" or upos == "ADV" and pos == "RBS") != (degree == "Sup"):
         # ADJ+NNP occurs in proper noun phrases per PTB guidelines
         if pos != "NNP":
-            print("WARN: ADJ+JJS or ADV+RBS should correspond with Degree=Sup in " + docname + " @ token " + str(id))
+            print("WARN: ADJ+JJS or ADV+RBS should correspond with Degree=Sup" + inname)
 
     if degree and upos not in ("ADJ", "ADV"):
-        print("WARN: Degree should only apply to ADJ or ADV in " + docname + " @ token " + str(id))
+        print("WARN: Degree should only apply to ADJ or ADV" + inname)
 
     if upos == "ADJ" and not degree:
-        print("WARN: ADJ should have Degree in " + docname + " @ token " + str(id))
+        print("WARN: ADJ should have Degree" + inname)
 
     if number and upos not in ("NOUN", "PRON", "PROPN", "SYM", "AUX", "DET", "VERB"):
-        print("WARN: Number should not apply to " + upos + " in " + docname + " @ token " + str(id))
+        print("WARN: Number should not apply to " + upos + "" + inname)
 
     # NUM+CD => NUM[NumType=Card]
     if upos == "NUM" and pos == "CD" and not (numType in ["Card","Frac"]):
         # NumType=Frac applied to decimals modeled after GUM (discussed at https://github.com/UniversalDependencies/UD_English-PUD/issues/22)
-        print("WARN: NUM+CD should correspond with NumType=Card or NumType=Frac in " + docname + " @ token " + str(id))
+        print("WARN: NUM+CD should correspond with NumType=Card or NumType=Frac" + inname)
 
     if pos == "LS" and upos != "NUM" and re.search(r'\w', lemma):
-        print("WARN: alphanumeric LS should be NUM in " + docname + " @ token " + str(id))
+        print("WARN: alphanumeric LS should be NUM" + inname)
 
     # NOUN+NN <=> NOUN[Number=Sing]
     if upos == "NOUN" and ((pos == "NN") != (number == "Sing")):
         # NOUN+GW can also have an optional Number=Sing feature
         if pos != "GW":
-            print("WARN: NOUN+NN should correspond with Number=Sing in " + docname + " @ token " + str(id))
+            print("WARN: NOUN+NN should correspond with Number=Sing" + inname)
 
     # etc. <=> NOUN+FW <=> Number=Plur; otherwise NOUN+NNS <=> NOUN[Number=Plur]
     if lemma == "etc.":
         if pos != "FW" or upos != "NOUN" or number != "Plur" or not feats.get("Abbr") == "Yes":
-            print("WARN: 'etc.' should correspond with NOUN+FW, Abbr=Yes|Number=Plur in " + docname + " @ token " + str(id))
+            print("WARN: 'etc.' should correspond with NOUN+FW, Abbr=Yes|Number=Plur" + inname)
     elif upos == "NOUN" and ((pos == "NNS") + (lemma in NNS_PTAN_LEMMAS or re.search(r"[0-9]+'?s$",lemma) is not None) + (number == "Ptan")) == 2:
-        print("WARN: pluralia tantum should have NNS, Number=Ptan: " + lemma + " in " + docname + " @ token " + str(id))
+        print("WARN: pluralia tantum should have NNS, Number=Ptan: " + lemma + "" + inname)
     elif upos == "NOUN" and ((pos == "NNS") != (number == "Plur")) and lemma not in NNS_PTAN_LEMMAS and re.search(r"[0-9]+'?s$",lemma) is None:
-        print("WARN: NOUN+NNS should correspond with Number=Plur in " + docname + " @ token " + str(id))
+        print("WARN: NOUN+NNS should correspond with Number=Plur" + inname)
 
     # pluralized years
     if number == "Ptan" and re.search(r"[0-9]+'?s$",lemma) is not None:
         if numType != "Card" or feats["NumForm"] != "Combi":
-            print("WARN: pluralized decimal year expecting NumForm=Combi|NumType=Card in " + docname + " @ token " + str(id))
+            print("WARN: pluralized decimal year expecting NumForm=Combi|NumType=Card" + inname)
         if not lemma.endswith("s") or ("'" in lemma and not lemma.startswith("'")):
-            print("WARN: pluralized year expecting simplified lemma instead of: " + lemma + " in " + docname + " @ token " + str(id))
+            print("WARN: pluralized year expecting simplified lemma instead of: " + lemma + "" + inname)
     elif number == "Ptan" and lemma.rsplit("-",1)[-1] in ["twenties", "thirties", "forties", "fifties", "sixties", "seventies", "eighties", "nineties"]:
         if numType != "Card" or feats["NumForm"] != "Word":
-            print("WARN: pluralized spelled-out year expecting NumForm=Word|NumType=Card in " + docname + " @ token " + str(id))
+            print("WARN: pluralized spelled-out year expecting NumForm=Word|NumType=Card" + inname)
 
     if (upos == "PART" and lemma == "not" or upos == "INTJ" and lemma == "no" or upos == "CCONJ" and lemma in ("nor", "neither")) != (feats.get("Polarity")=="Neg"):
-        print("WARN: not/PART and no/INTJ should correspond with Polarity=Neg in " + docname + " @ token " + str(id))
+        print("WARN: not/PART and no/INTJ should correspond with Polarity=Neg" + inname)
 
     if (upos == "INTJ" and lemma == "yes") != (feats.get("Polarity")=="Pos"):
-        print("WARN: yes/INTJ should correspond with Polarity=Pos in " + docname + " @ token " + str(id))
+        print("WARN: yes/INTJ should correspond with Polarity=Pos" + inname)
 
     # PRON+WP$ <=> PRON[Poss=Yes,PronType=Int,Rel]
     if upos == "PRON" and ((pos == "WP$") != (poss == "Yes" and pronType in ["Int","Rel"])):
-        print("WARN: PRON+WP$ should correspond with Poss=Yes|PronType=Int,Rel in " + docname + " @ token " + str(id))
+        print("WARN: PRON+WP$ should correspond with Poss=Yes|PronType=Int,Rel" + inname)
 
     # [PronType=Int,Rel] => WDT|WP|WRB
     # (upos=="X" for goeswith)
     if upos!="X" and pos not in ["WDT","WP","WRB"] and (poss is None and pronType in ["Int","Rel"]):
-        print("WARN: PronType=Int,Rel and not poss implies WP|WDT|WRB in " + docname + " @ token " + str(id))
+        print("WARN: PronType=Int,Rel and not poss implies WP|WDT|WRB" + inname)
     # WDT|WP|WRB => [PronType=Dem,Int,Rel]
     # (upos=="X" for goeswith)
     elif upos!="X" and (pos in ["WDT","WP","WRB"]) and not (poss is None and pronType in ["Dem","Int","Rel"]):
-        print("WARN: WP|WDT|WRB implies not poss and PronType=Dem,Int,Rel in " + docname + " @ token " + str(id))
+        print("WARN: WP|WDT|WRB implies not poss and PronType=Dem,Int,Rel" + inname)
 
     # PROPN+NNP <=> PROPN[Number=Sing]
     if upos == "PROPN" and ((pos == "NNP") != (number == "Sing")):
-        print("WARN: PROPN+NNP should correspond with Number=Sing in " + docname + " @ token " + str(id))
+        print("WARN: PROPN+NNP should correspond with Number=Sing" + inname)
 
     # PROPN+NNPS <=> PROPN[Number=Plur]
     if upos == "PROPN" and ((pos == "NNPS") != (number == "Plur")) and lemma not in NNPS_PTAN_LEMMAS:
-        print("WARN: PROPN+NNPS should correspond with Number=Plur in " + docname + " @ token " + str(id))
+        print("WARN: PROPN+NNPS should correspond with Number=Plur" + inname)
 
     # VB feats (subjunctive, imperative, or infinitive)
     if pos == "VB" and "VerbForm" not in feats:
-        print("WARN: VB should have VerbForm in " + docname + " @ token " + str(id))
+        print("WARN: VB should have VerbForm" + inname)
     elif pos == "VB" and verbForm == "Fin" and feats["Mood"] == "Sub":
         if not all(f in feats for f in ["Number","Person","Tense"]) or tense != "Pres":
-            print("WARN: VB/Mood=Sub should have Number, Person, and Tense=Pres in " + docname + " @ token " + str(id))
+            print("WARN: VB/Mood=Sub should have Number, Person, and Tense=Pres" + inname)
     elif pos == "VB" and any(f in feats for f in ["Number","Person","Tense"]):
-        print("WARN: non-subjunctive VB should not have Number, Person, or Tense in " + docname + " @ token " + str(id))
+        print("WARN: non-subjunctive VB should not have Number, Person, or Tense" + inname)
     elif pos == "VB" and verbForm == "Inf":
         if "Mood" in feats:
-            print("WARN: VB/VerbForm=Inf should not have Mood in " + docname + " @ token " + str(id))
+            print("WARN: VB/VerbForm=Inf should not have Mood" + inname)
     elif pos == "VB" and not (verbForm == "Fin" and feats["Mood"] == "Imp"):
-        print("WARN: non-inf VB should correspond with Mood=Imp, VerbForm=Fin in " + docname + " @ token " + str(id))
+        print("WARN: non-inf VB should correspond with Mood=Imp, VerbForm=Fin" + inname)
     elif pos == "VB" and any(f in feats for f in ["Voice"]):
-        print("WARN: VB should not have Voice in " + docname + " @ token " + str(id))
+        print("WARN: VB should not have Voice" + inname)
 
     # VBD => Tense=Past, VerbForm=Fin, Mood=Ind, ...
     if pos == "VBD" and verbForm != "Fin":
-        print("WARN: VBD should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
+        print("WARN: VBD should correspond with VerbForm=Fin" + inname)
     if pos == "VBD" and not all(f in feats for f in ["Number","Person","Tense","Mood"]):
-        print("WARN: VBD should have Number, Person, Tense, and Mood in " + docname + " @ token " + str(id))
+        print("WARN: VBD should have Number, Person, Tense, and Mood" + inname)
     elif pos == "VBD" and (tense != "Past" or feats["Mood"] != "Ind"):
         if not (lemma=="be" and tense=="Past" and feats["Mood"]=="Sub"):
-            print("WARN: VBD should correspond with Tense=Past and Mood=Ind (or Mood=Sub for 'were') in " + docname + " @ token " + str(id))
+            print("WARN: VBD should correspond with Tense=Past and Mood=Ind (or Mood=Sub for 'were')" + inname)
     if pos == "VBD" and any(f in feats for f in ["Voice"]):
-        print("WARN: VBD should not have Voice in " + docname + " @ token " + str(id))
+        print("WARN: VBD should not have Voice" + inname)
 
     # {VBP,VBZ} => Tense=Pres, VerbForm=Fin, Mood=Ind, ...
     # VBZ => Person=3, Number=Sing
     if pos in ("VBP","VBZ") and verbForm != "Fin":
-        print("WARN: " + pos + " should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
+        print("WARN: " + pos + " should correspond with VerbForm=Fin" + inname)
     if pos in ("VBP","VBZ") and not all(f in feats for f in ["Number","Person","Tense","Mood"]):
-        print("WARN: " + pos + " should have Number, Person, Tense, and Mood in " + docname + " @ token " + str(id))
+        print("WARN: " + pos + " should have Number, Person, Tense, and Mood" + inname)
     elif pos in ("VBP","VBZ") and (tense != "Pres" or feats["Mood"] != "Ind"):
-        print("WARN: " + pos + " should correspond with Mood=Ind, Tense=Pres in " + docname + " @ token " + str(id))
+        print("WARN: " + pos + " should correspond with Mood=Ind, Tense=Pres" + inname)
     elif pos == "VBZ" and (number != "Sing" or person != "3"):
-        print("WARN: VBZ should have Number=Sing, Person=3 in " + docname + " @ token " + str(id))
+        print("WARN: VBZ should have Number=Sing, Person=3" + inname)
     if pos in ("VBP","VBZ") and any(f in feats for f in ["Voice"]):
-        print("WARN: " + pos + " should not have Voice in " + docname + " @ token " + str(id))
+        print("WARN: " + pos + " should not have Voice" + inname)
 
 
     # VBG => VerbForm=Ger,Part
     if pos == "VBG" and verbForm == "Part":
         # VBG => Tense=Pres | VerbForm=Part
         if pos == "VBG" and not (tense == "Pres"):
-            print("WARN: VBG should correspond with Tense=Pres in " + docname + " @ token " + str(id))
+            print("WARN: VBG should correspond with Tense=Pres" + inname)
     elif pos == "VBG" and not (verbForm == "Ger"):
         # AUX+VBG | VERB+VBG => VerbForm=Ger
         if upos in ["AUX","VERB"]:
-            print("WARN: " + upos + "+VBG should correspond with VerbForm=Ger,Part in " + docname + " @ token " + str(id))
+            print("WARN: " + upos + "+VBG should correspond with VerbForm=Ger,Part" + inname)
         # ADJ+VBG => Degree=Poss
         elif upos == "ADJ" and not (degree == "Pos"):
-            print("WARN: ADJ+VBG should correspond with Degree=Pos in " + docname + " @ token " + str(id))
+            print("WARN: ADJ+VBG should correspond with Degree=Pos" + inname)
 
     # VBN => Tense=Past | VerbForm=Part
     if pos == "VBN" and not (verbForm == "Part"):
-        print("WARN: VBN should correspond with VerbForm=Part in " + docname + " @ token " + str(id))
+        print("WARN: VBN should correspond with VerbForm=Part" + inname)
     if pos == "VBN" and not (tense == "Past"):
-        print("WARN: VBN should correspond with Tense=Past in " + docname + " @ token " + str(id))
+        print("WARN: VBN should correspond with Tense=Past" + inname)
 
     # VBZ => Number=Sing | Person=3 | Tense=Pres | VerbForm=Fin
     if pos == "VBZ" and not (number == "Sing"):
-        print("WARN: VBZ should correspond with Number=Sing in " + docname + " @ token " + str(id))
+        print("WARN: VBZ should correspond with Number=Sing" + inname)
     if pos == "VBZ" and not (person == "3"):
-        print("WARN: VBZ should correspond with Person=3 in " + docname + " @ token " + str(id))
+        print("WARN: VBZ should correspond with Person=3" + inname)
     if pos == "VBZ" and not (tense == "Pres"):
-        print("WARN: VBZ should correspond with Tense=Pres in " + docname + " @ token " + str(id))
+        print("WARN: VBZ should correspond with Tense=Pres" + inname)
     if pos == "VBZ" and not (verbForm == "Fin"):
-        print("WARN: VBZ should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
+        print("WARN: VBZ should correspond with VerbForm=Fin" + inname)
 
     # VBP => Number=Sing | Person!=3 | Tense=Pres | VerbForm=Fin
     if pos == "VBP":
         if not (number == "Sing" or number == "Plur"):
-            print("WARN: VBP should correspond with Number=Sing|Plur in " + docname + " @ token " + str(id))
+            print("WARN: VBP should correspond with Number=Sing|Plur" + inname)
         elif number == "Sing" and not (person == "1" or person == "2") and not misc.get("CorrectNumber")=="Sing":
-            print("WARN: singular VBP should correspond with Person=1|2 in " + docname + " @ token " + str(id))
+            print("WARN: singular VBP should correspond with Person=1|2" + inname)
         elif person not in {"1", "2", "3"}:
-            print("WARN: plural VBP should correspond with Person=1|2|3 in " + docname + " @ token " + str(id))
+            print("WARN: plural VBP should correspond with Person=1|2|3" + inname)
     if pos == "VBP" and not (tense == "Pres"):
-        print("WARN: VBP should correspond with Tense=Pres in " + docname + " @ token " + str(id))
+        print("WARN: VBP should correspond with Tense=Pres" + inname)
     if pos == "VBP" and not (verbForm == "Fin"):
-        print("WARN: VBP should correspond with VerbForm=Fin in " + docname + " @ token " + str(id))
+        print("WARN: VBP should correspond with VerbForm=Fin" + inname)
 
     if lemma == "be":
         t = tok.lower()
@@ -1324,45 +1370,45 @@ def flag_feats_warnings(id, tok, pos, upos, lemma, feats, misc, docname):
             if upos=="NOUN" and docname=="newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0025":
                 pass    # "the be all end all"
             elif pos!="VB" or not (verbForm=="Inf" or (verbForm=="Fin" and tense=="Pres" and feats["Mood"]=="Sub") or (verbForm=="Fin" and feats["Mood"]=="Imp")):
-                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "'" + inname)
         elif t == "am" or t == "'m" or t == "’m":
             if pos!="VBP" or verbForm!="Fin" or tense!="Pres" or feats["Mood"]!="Ind" or person!="1" or number!="Sing":
-                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "'" + inname)
         elif t == "are":    # can be 1st person in negation: "aren't I"
             if pos!="VBP" or verbForm!="Fin" or tense!="Pres" or feats["Mood"]!="Ind" or not ((number=="Plur" and person in {"1","2","3"}) or (number=="Sing" and person in {"1","2"})):
-                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "'" + inname)
         elif t == "is" or t == "'s" or t == "’s":
             if (pos!="VBZ" and "CorrectNumber" not in misc) or verbForm!="Fin" or tense!="Pres" or feats["Mood"]!="Ind" or person!="3" or misc.get("CorrectNumber",number)!="Sing":
-                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "'" + inname)
         elif t == "art":    # thou art
             if pos!="VBP" or verbForm!="Fin" or tense!="Pres" or feats["Mood"]!="Ind" or not (number=="Sing" and person=="2") or feats["Style"]!="Arch":
-                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "'" + inname)
         elif t == "ai": # ain't = am/are/is + not (mainly)
             if pos not in {"VBP","VBZ"} or verbForm!="Fin" or tense!="Pres" or feats["Mood"]!="Ind" or feats["Style"]!="Vrnc":
-                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "'" + inname)
         elif t == "was":
             if pos!="VBD" or verbForm!="Fin" or tense!="Past" or feats["Mood"]!="Ind" or number!="Sing":
-                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "'" + inname)
         elif t == "were":
             if pos!="VBD" or verbForm!="Fin" or tense!="Past" or not ((feats["Mood"]=="Ind" and (number=="Plur" or person=="2")) or (feats["Mood"]=="Sub" and number=="Sing")):
-                print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+                print("WARN: unexpected morphology for 'be' verb: '" + t + "'" + inname)
         elif t == "'re" or t == "’re":  # indicative were or are
             if pos!="VBD" and pos!="VBP":
-                print("WARN: unexpected XPOS for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+                print("WARN: unexpected XPOS for 'be' verb: '" + t + "'" + inname)
             elif pos=="VBD":
                 if verbForm!="Fin" or tense!="Past" or not (feats["Mood"]=="Ind" and (number=="Plur" or person=="2")):
-                    print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+                    print("WARN: unexpected morphology for 'be' verb: '" + t + "'" + inname)
             elif pos=="VBP":
                 if verbForm!="Fin" or tense!="Pres" or feats["Mood"]!="Ind" or not ((number=="Plur" and person in {"1","2","3"}) or (number=="Sing" and person in {"1","2"})):
-                    print("WARN: unexpected morphology for 'be' verb: '" + t + "' in " + docname + " @ token " + str(id))
+                    print("WARN: unexpected morphology for 'be' verb: '" + t + "'" + inname)
         elif t == "been":
             if pos != "VBN":
-                print("WARN: 'been' should be VBN in " + docname + " @ token " + str(id))
+                print("WARN: 'been' should be VBN" + inname)
         elif t == "being":
             if pos != "VBG":
-                print("WARN: 'being' should be VBG in " + docname + " @ token " + str(id))
+                print("WARN: 'being' should be VBG" + inname)
         else:
-            print("WARN: unknown 'be' form: " + t + " in " + docname + " @ token " + str(id))
+            print("WARN: unknown 'be' form: " + t + "" + inname)
 
 # See https://universaldependencies.org/en/pos/PRON.html
 PRONOUNS: dict[tuple[str,str],dict] = {
@@ -1520,12 +1566,12 @@ ADV_ENTRIES = {f for (f,p),v in ADVS.items()}
 
 
 # See https://universaldependencies.org/en/pos/PRON.html
-def flag_pronoun_warnings(id, form, pos, upos, lemma, feats, misc, prev_tok, docname):
+def flag_pronoun_warnings(tokid, form, pos, upos, lemma, feats, misc, prev_tok, docname, filename, lineno):
     form = form.replace("’", "'") # Normalize apostrophe characters.
 
     # Shorthand for printing errors
     tokname = "FORM '" + form + "'"
-    inname = " in " + docname + " @ token " + str(id)
+    inname = f" in {docname} @ token {tokid} {filename}:{lineno}"
 
     # Look up the correct features/lemma for the pronoun from the PRONOUNS lexicon
     if upos=='PRON' or form.lower() in ('these','those'):
