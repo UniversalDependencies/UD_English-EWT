@@ -606,6 +606,8 @@ NNPS_PTAN_LEMMAS = ["Netherlands", "Analytics", "Olympics", "Commons", "Paralymp
 
 SING_AND_PLUR_S_LEMMAS = ["series", "species"]
 
+TIMEZONES = ['CDT', 'CST', 'CT', 'EDT', 'EST', 'ET', 'GMT', 'MDT', 'MST', 'MT', 'PDT', 'PST', 'PT', 'UTC']
+
 def flag_dep_warnings(tokid, tok, pos, upos, extpos, lemma, func, edeps, parent, parent_lemma, parent_id, is_parent_copular, is_parent_promoted,
                       children: List[str], child_funcs: List[str], child_pos: List[str], s_type,
                       docname, prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_position,
@@ -701,6 +703,9 @@ def flag_dep_warnings(tokid, tok, pos, upos, extpos, lemma, func, edeps, parent,
         if tok not in ["Netherlands","Analytics","Olympics","Commons","Paralympics","Vans",
                        "Andes","Forties","Philippines"]:
             print("WARN: tag "+pos+" should have lemma distinct from word form" + inname)
+
+    if pos != "NNP" and lemma in TIMEZONES:
+        print("WARN: time zone " + lemma + " is tagged "+pos+", should be NNP?" + inname)
 
     if pos == "NNS" and tok.lower() == lemma.lower() and lemma.endswith("s") and func != "goeswith":
         if lemma not in NNS_PTAN_LEMMAS + NNPS_PTAN_LEMMAS + SING_AND_PLUR_S_LEMMAS:
