@@ -185,7 +185,8 @@ def validate_annos(tree):
         sent_positions[tok_num] = "last"
 
         # Dictionaries to hold token annotations from conllu data
-        funcs = {}
+        linenos: Dict[int,int] = {}
+        funcs: Dict[int,str] = {}
         feats: Dict[int,Dict[str,str]] = {}
         all_edeps: Dict[int,Dict[str,str]] = {}
         misc: Dict[int,Dict[str,str]] = {}
@@ -208,6 +209,7 @@ def validate_annos(tree):
 
             tok_num += 1
             tok = (line.get('misc') or {}).get('CorrectForm') or line['form']   # in GUM, some explicit CorrectForm=_ which parses as None
+            linenos[tok_num] = line['lineno']
             funcs[tok_num] = line['deprel']
             if head!=0:  # Root token
                 if head == "_" or head == '' or head is None:
@@ -267,7 +269,7 @@ def validate_annos(tree):
         lemma_pos_combos = {"which":"WDT"}
         non_cap_lemmas = ["There","How","Why","Where","When"]
 
-        passive_verbs = set()
+        passive_verbs: set[int] = set()
 
         prev_tok = ""
         prev_pos = ""
@@ -538,6 +540,7 @@ def validate_annos(tree):
         Discussion: https://github.com/UniversalDependencies/UD_English-EWT/issues/290
         """
         for v in passive_verbs:
+            inname = f" in {docname} @ token {v} ({tokens[v]}) {filename}:{linenos[v]}"
             if feats[v].get("Voice") != "Pass":
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' should have Voice=Pass" + inname)
             if postags[v] not in ["VBN", "MD"]:
@@ -557,12 +560,14 @@ def validate_annos(tree):
                     print("WARN: Passive verb with lemma '" + lemmas[v] + "' has cop dependent" + inname)
         for i,f in funcs.items():
             if f=='obl:agent':
+                inname = f" in {docname} @ token {parent_ids[i]} ({tokens[parent_ids[i]]}) {filename}:{linenos[parent_ids[i]]}"
                 if (feats[parent_ids[i]] or {}).get("Voice") != "Pass":
                     print("WARN: Voice=Pass missing from verb that heads obl:agent (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ")" + inname)
                 if not any(k==i and lemmas[j]=='by' and funcs[j]=='case' for j,k in parent_ids.items()):
                     print("WARN: obl:agent without 'by' (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ")" + inname)
         # If a VBN has no *:pass, obl:agent, or aux dependents, it should be Voice=Pass
         for v,p in postags.items():
+            inname = f" in {docname} @ token {v} ({tokens[v]}) {filename}:{linenos[v]}"
             if p=='VBN':
                 isVoicePass = (feats[v] or {}).get("Voice") == "Pass"
                 if funcs[v] in ['aux', 'aux:pass', 'cop']:
