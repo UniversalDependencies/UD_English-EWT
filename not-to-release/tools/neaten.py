@@ -1615,6 +1615,7 @@ def flag_pronoun_warnings(tokid, form, pos, upos, lemma, feats, misc, prev_tok, 
     check_has_feature("Person", feats, data, tokname, inname)
     check_has_feature("Poss", feats, data, tokname, inname)
     check_has_feature("PronType", feats, data, tokname, inname)
+    check_has_feature("Reflex", feats, data, tokname, inname)
     check_has_feature("Style", feats, data, tokname, inname)
     check_has_feature("ExtPos", feats, data, tokname, inname)
     # ensure pronominal uses of 'one' do NOT have these features
