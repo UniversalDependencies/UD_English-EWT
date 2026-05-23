@@ -8,6 +8,13 @@ UD validator (https://github.com/UniversalDependencies/tools/)
 Parts are adapted from the GUM validator,
 https://raw.githubusercontent.com/amir-zeldes/gum/master/_build/utils/validate.py
 
+Usage: python neaten.py [--no-morph] [FILES]
+
+If no files are provided, it will default to the 3 main .conllu files at the root of this repo.
+
+Options:
+    --no-morph    Skip warnings related to features
+
 To get an overview of the distribution of error types:
 
 $ python neaten.py | sort | cut -c1-30 | uniq -c
@@ -69,7 +76,7 @@ def _process_buffer(lines_buffer):
 
     return tokenlist
 
-def validate_src(infiles):
+def validate_src(infiles, no_morph=False):
     tok_count = 0
     lemma_dict = defaultdict(lambda : defaultdict(int))  # collects tok+pos -> lemmas -> count  for consistency checks
     lemma_docs = defaultdict(set)
@@ -136,7 +143,7 @@ def validate_src(infiles):
                             line1['xpos'] = line2['xpos']
                     line2 = line1
 
-                validate_annos(tree)
+                validate_annos(tree, no_morph=no_morph)
 
     validate_lemmas(lemma_dict,lemma_docs)
     if NNS_warnings:
@@ -165,7 +172,7 @@ def validate_lemmas(lemma_dict, lemma_docs):
         sys.stderr.write("! "+str(suspicious_types) + " suspicious lemma types detected\n")
 
 
-def validate_annos(tree):
+def validate_annos(tree, no_morph=False):
         docname = tree.metadata['sent_id']
 
         tok_num = 0
@@ -361,12 +368,13 @@ def validate_annos(tree):
                               prev_tok, prev_pos, prev_upos, prev_func, prev_parent_lemma, sent_positions[tok_num],
                               parent_func, parent_pos, parent_upos, parent_child_funcs,
                               edge_direction, filename, lineno)
-            flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, misclist, docname, filename, lineno)
+            if not no_morph:
+                flag_feats_warnings(tok_num, tok, pos, upos, lemma, featlist, misclist, docname, filename, lineno)
 
             if func!='goeswith':
                 if (prev_tok.lower(),lemma) in {("one","another"),("each","other")}:    # note that "each" is DET, not PRON
                     # check for PronType=Rcp
-                    flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, prev_misc, prev_tok, docname, filename, lineno)
+                    flag_pronoun_warnings(tok_num, form, prev_pos, upos, lemma, prev_feats, prev_misc, prev_tok, docname, filename, lineno, no_morph=no_morph)
                 elif upos == "PRON" or (upos == "DET" and featlist.get("ExtPos")!="PRON") or upos == "ADV" and lemma in ADV_ENTRIES:  # ExtPos exception for "each other"
                     if lemma == "however" and "advcl:relcl" not in child_funcs[tok_num] and not (
                             func == "advmod" and parent_upos in ("ADJ", "ADV") and not is_parent_copular
@@ -380,7 +388,7 @@ def validate_annos(tree):
                         _featlist = dict(featlist)
                         if lemma in ("all","that") and _featlist.get("ExtPos")=="ADV":  # "all of" (quantity), "that is"
                             del _featlist["ExtPos"] # prevent complaint about ExtPos=ADV
-                        flag_pronoun_warnings(tok_num, form, pos, upos, lemma, _featlist, misclist, prev_tok, docname, filename, lineno)
+                        flag_pronoun_warnings(tok_num, form, pos, upos, lemma, _featlist, misclist, prev_tok, docname, filename, lineno, no_morph=no_morph)
                 elif lemma in PRON_LEMMAS:
                     if not ((lemma=="one" and upos in ("NOUN","NUM"))
                             or (lemma=="I" and upos=="NUM") # Roman numeral
@@ -389,7 +397,7 @@ def validate_annos(tree):
                         print("WARN: invalid pronoun UPOS tag " + upos + inname)
                         # This warns about a few that are arguably correct, e.g. "oh my/INTJ", "I/PROPN - 24"
                 elif upos == "NUM":
-                    if "NumForm" not in featlist or "NumType" not in featlist:
+                    if not no_morph and "NumForm" not in featlist or "NumType" not in featlist:
                         print("WARN: NUM should have NumForm and NumType" + inname)
 
             extpos_funcs: dict[str,str] = {
@@ -548,7 +556,8 @@ def validate_annos(tree):
         for v in passive_verbs:
             inname = f" in {docname} @ token {v} ({tokens[v]}) {filename}:{linenos[v]}"
             if feats[v].get("Voice") != "Pass":
-                print("WARN: Passive verb with lemma '" + lemmas[v] + "' should have Voice=Pass" + inname)
+                if not no_morph:
+                    print("WARN: Passive verb with lemma '" + lemmas[v] + "' should have Voice=Pass" + inname)
             if postags[v] not in ["VBN", "MD"]:
                 print("WARN: Passive verb with lemma '" + lemmas[v] + "' should be VBN" + inname)
             dependents = {j: funcs[j] for j,i in parent_ids.items() if i==v}
@@ -568,7 +577,8 @@ def validate_annos(tree):
             if f=='obl:agent':
                 inname = f" in {docname} @ token {parent_ids[i]} ({tokens[parent_ids[i]]}) {filename}:{linenos[parent_ids[i]]}"
                 if (feats[parent_ids[i]] or {}).get("Voice") != "Pass":
-                    print("WARN: Voice=Pass missing from verb that heads obl:agent (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ")" + inname)
+                    if not no_morph:
+                        print("WARN: Voice=Pass missing from verb that heads obl:agent (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ")" + inname)
                 if not any(k==i and lemmas[j]=='by' and funcs[j]=='case' for j,k in parent_ids.items()):
                     print("WARN: obl:agent without 'by' (lemmas: " + lemmas[i] + " <- " + lemmas[parent_ids[i]] + ")" + inname)
         # If a VBN has no *:pass, obl:agent, or aux dependents, it should be Voice=Pass
@@ -594,7 +604,8 @@ def validate_annos(tree):
                         elif docname in ["reviews-122564-0003", "answers-20111108104724AAuBUR7_ans-0001"]:
                             pass    # hardcode two exceptions interpreted as perfect
                         else:
-                            print("WARN: Voice=Pass missing from VBN verb with no aux dependent" + inname)
+                            if not no_morph:
+                                print("WARN: Voice=Pass missing from VBN verb with no aux dependent" + inname)
                     elif isVoicePass and not pass_marking_dependents and other_dependents:
                         print("WARN: VBN with aux but no aux:pass dependent incompatible with Voice=Pass" + inname)
 
@@ -1579,7 +1590,7 @@ ADV_ENTRIES = {f for (f,p),v in ADVS.items()}
 
 
 # See https://universaldependencies.org/en/pos/PRON.html
-def flag_pronoun_warnings(tokid, form, pos, upos, lemma, feats, misc, prev_tok, docname, filename, lineno):
+def flag_pronoun_warnings(tokid, form, pos, upos, lemma, feats, misc, prev_tok, docname, filename, lineno, no_morph=False):
     form = form.replace("’", "'") # Normalize apostrophe characters.
 
     # Shorthand for printing errors
@@ -1606,6 +1617,9 @@ def flag_pronoun_warnings(tokid, form, pos, upos, lemma, feats, misc, prev_tok, 
 
     if not lemma == data["LEMMA"]:
         print("WARN: FORM '" + form + "' should correspond with LEMMA=" + data["LEMMA"] + inname)
+
+    if no_morph:
+        return
 
     # Check whether the correct features for the lexical item (data) match
     # the observed features on the token (feats)
@@ -1670,4 +1684,9 @@ def check_has_feature(name, feats, data, tokname, inname):
 
 
 if __name__=='__main__':
-    validate_src(sys.argv[1:] or glob.glob('../../en_ewt-ud-*.conllu'))
+    args = sys.argv[1:]
+    no_morph = False
+    if args and args[0]=='--no-morph':
+        no_morph = True
+        args.pop(0)
+    validate_src(args[1:] or glob.glob('../../en_ewt-ud-*.conllu'), no_morph=no_morph)
