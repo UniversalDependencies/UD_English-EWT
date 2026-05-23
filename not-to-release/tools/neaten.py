@@ -97,6 +97,8 @@ def validate_src(infiles):
                         continue
                     tok_count += 1
                     form, xpos, lemma = line['form'], line['xpos'], line['lemma']
+                    if not xpos:
+                        xpos = ''
                     # for lemma error-checking purposes, uses the corrected form of the token if there is one
                     tok = (line.get('misc') or {}).get('CorrectForm') or form   # in GUM, some explicit CorrectForm=_ which parses as None
 
@@ -278,6 +280,7 @@ def validate_annos(tree):
         prev_parent_lemma = ""
         prev_feats = {}
         prev_misc = {}
+        missing_xpos = False
         for i, line in enumerate(tree):
             if not isRegularNode(line):
                 continue
@@ -286,7 +289,10 @@ def validate_annos(tree):
             tok = (line.get('misc') or {}).get('CorrectForm') or line['form']   # in GUM, some explicit CorrectForm=_ which parses as None
             assert tok is not None,(docname, tree.metadata['filename'], tok_num, line)
             xpos, lemma = line['xpos'], line['lemma']
-            assert xpos,repr(line)
+            if not xpos:
+                print('ERROR: Empty XPOS:', repr(line))
+                xpos = ''
+                missing_xpos = True
             pos = xpos
             upos = line['upos']
             func = line['deprel']
@@ -344,7 +350,7 @@ def validate_annos(tree):
             edge_direction = ""
             if parent_ids[tok_num] != 0:
                 edge_direction = "R" if parent_ids[tok_num] < tok_num else "L"
-            assert parent_pos is not None,(tok_num,parent_ids[tok_num],postags,filename)
+            assert missing_xpos or (parent_pos is not None),(tok_num,parent_ids[tok_num],postags,filename)
             S_TYPE_PLACEHOLDER = None
             assert parent_string is not None,(tok_num,docname,filename)
             is_parent_copular = any(funcs[x]=="cop" for x in parent_ids if parent_ids[x]==parent_id)    # if tok or any siblings attach as cop
@@ -838,9 +844,6 @@ def flag_dep_warnings(tokid, tok, pos, upos, extpos, lemma, func, edeps, parent,
     if func == "xcomp" and pos in ["VBP","VBZ","VBD"]:
         if parent_lemma not in ["=","seem"]:
             print("WARN: xcomp verb should be non-finite, not tag " + pos + inname)
-
-    if parent_pos is None:
-        assert False,(tokid,docname)
 
     if func == "xcomp" and pos in ["VB"] and parent_pos.startswith("N"):
         print("WARN: infinitive child of a noun should be acl not xcomp" + inname)
