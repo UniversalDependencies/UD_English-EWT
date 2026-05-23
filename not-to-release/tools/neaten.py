@@ -147,8 +147,8 @@ def validate_src(infiles, no_morph=False):
 
     validate_lemmas(lemma_dict,lemma_docs)
     if NNS_warnings:
-        sys.stderr.write("!suspicious NNS lemmas: "+' '.join(k for k,v in NNS_warnings.most_common()) + '\n')
-    sys.stdout.write("\r" + " "*70)
+        print("!suspicious NNS lemmas: "+' '.join(k for k,v in NNS_warnings.most_common()) + '\n', file=sys.stderr)
+    # sys.stdout.write("\r" + " "*70)
 
 def validate_lemmas(lemma_dict, lemma_docs):
     exceptions = [("Democratic","JJ","Democratic"),("Water","NNP","Waters"),("Sun","NNP","Sunday"),("a","IN","of"),
@@ -505,6 +505,10 @@ def validate_annos(tree, no_morph=False):
                 #            (ii) should be Mood=Sub with that/mark
                 if (nsubj := children[tok_num][child_funcs[tok_num].index("nsubj")]).lower() not in ("anyone", "anybody"):
                     print("WARN: verb "+tok+"/VB has an nsubj ('" + nsubj + "'); should it be finite?" + inname)
+
+            # check for spurious VerbForm=Ger
+            if featlist.get("VerbForm")=="Ger" and func in ["aux", "aux:pass", "cop"]:
+                print("WARN: " + func + " with VerbForm=Ger" + inname)
 
             # check PRON case in context
             if featlist.get("Case")=="Nom" and func in ('obj','iobj','obl'):
@@ -1689,4 +1693,4 @@ if __name__=='__main__':
     if args and args[0]=='--no-morph':
         no_morph = True
         args.pop(0)
-    validate_src(args[1:] or glob.glob('../../en_ewt-ud-*.conllu'), no_morph=no_morph)
+    validate_src(args or glob.glob('../../en_ewt-ud-*.conllu'), no_morph=no_morph)
