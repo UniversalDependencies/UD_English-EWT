@@ -510,6 +510,10 @@ def validate_annos(tree, no_morph=False):
             if featlist.get("VerbForm")=="Ger" and func in ["aux", "aux:pass", "cop"]:
                 print("WARN: " + func + " with VerbForm=Ger" + inname)
 
+            # check for spurious Mood on main verb with auxes
+            if featlist.get("Mood") and (cfx := set(child_funcs[tok_num])) & {"aux", "aux:pass"} and not cfx & {"nsubj:outer", "csubj:outer"}:
+                print("WARN: Mood on word with aux(:pass) dependent and no outer subject" + inname)
+
             # check PRON case in context
             if featlist.get("Case")=="Nom" and func in ('obj','iobj','obl'):
                 print("WARN: " + func + " with Case=Nom" + inname)
