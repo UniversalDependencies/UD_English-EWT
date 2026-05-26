@@ -1287,7 +1287,8 @@ def flag_feats_warnings(tokid, tok, pos, upos, lemma, feats, misc, docname, file
             print("WARN: pluralized spelled-out year expecting NumForm=Word|NumType=Card" + inname)
 
     if (upos == "PART" and lemma == "not" or upos == "INTJ" and lemma == "no" or upos == "CCONJ" and lemma in ("nor", "neither")) != (feats.get("Polarity")=="Neg"):
-        print("WARN: not/PART and no/INTJ should correspond with Polarity=Neg" + inname)
+        has_polarity_neg = feats.get("Polarity") == "Neg"
+        print("WARN: not/PART and no/INTJ should correspond with Polarity=Neg (currently %s/%s, Polarity=Neg %s)" % (lemma, upos, has_polarity_neg) + inname)
 
     if (upos == "INTJ" and lemma == "yes") != (feats.get("Polarity")=="Pos"):
         print("WARN: yes/INTJ should correspond with Polarity=Pos" + inname)
