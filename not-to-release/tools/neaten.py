@@ -351,6 +351,7 @@ def validate_annos(tree, no_morph=False):
             parent_pos = postags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_upos = upostags[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else ""
             parent_feats = (feats[parent_ids[tok_num]] or {}) if parent_ids[tok_num] != 0 else {}
+            parent_misc = (misc.get(parent_ids[tok_num]) or {}) if parent_ids[tok_num] != 0 else {}
             parent_edeps = all_edeps[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else []
             is_parent_promoted = parent_ids[tok_num] != 0 and misc.get(parent_ids[tok_num],{}).get("Promoted")=="Yes"
             parent_child_funcs = child_funcs[parent_ids[tok_num]] if parent_ids[tok_num] != 0 else []
@@ -393,6 +394,8 @@ def validate_annos(tree, no_morph=False):
                     if not ((lemma=="one" and upos in ("NOUN","NUM"))
                             or (lemma=="I" and upos=="NUM") # Roman numeral
                             or (lemma=="he" and upos=="INTJ") # laughter
+                            or (lemma=="that" and upos=="SCONJ")
+                            or (lemma=="that" and upos=="ADV") # sense of 'so'
                             or upos=="DET"):
                         print("WARN: invalid pronoun UPOS tag " + upos + inname)
                         # This warns about a few that are arguably correct, e.g. "oh my/INTJ", "I/PROPN - 24"
@@ -515,8 +518,36 @@ def validate_annos(tree, no_morph=False):
                 print("WARN: Mood on word with aux(:pass) dependent and no outer subject" + inname)
 
             # check PRON case in context
-            if featlist.get("Case")=="Nom" and func in ('obj','iobj','obl'):
+            if featlist.get("Case")=="Nom" and (func in ('obj','iobj','obl','nmod') or func.startswith(('obl','nmod'))):
                 print("WARN: " + func + " with Case=Nom" + inname)
+            elif featlist.get("Case")=="Acc" and func not in ('obj','iobj','obl','nmod','reparandum','expl','goeswith','root') and not func.startswith(('obl','nmod')):
+                if parent_feats.get("VerbForm")=="Inf" and prev_tok.lower()=="for":
+                    pass    # e.g. for us/nsubj to V
+                elif parent_feats.get("VerbForm")=="Part" and "aux" not in parent_child_funcs:
+                    pass    # e.g. me signing a contract
+                elif "cop" in parent_child_funcs and child_pos[parent_id][parent_child_funcs.index("cop")]=="VBG":
+                    pass    # e.g. me being stupid
+                elif parent_feats.get("VerbForm")=="Ger":
+                    pass
+                elif prev_func=="mark" and prev_tok=="with":
+                    pass    # e.g. with me in it
+                elif func=="conj" and (parent_feats.get("Case")=="Acc" or parent_feats.get("Case") is None and parent_func in ('obj','iobj','obl','nmod')):
+                    pass
+                elif "case" in (cfx := child_funcs[tok_num]) and ("cop" in cfx or "nsubj" in cfx or func=="xcomp"):
+                    pass    # predicate PP, e.g. "have it *in you*"
+                elif "cop" in cfx and xpos=="PRP":
+                    pass    # personal pronoun as predicate, e.g. "it is me"
+                elif func=="conj" and tok.lower() in ("me", "myself"):
+                    pass    # (nonstandard) John and me went..., John and myself went...
+                elif "conj" in cfx or "nmod:unmarked" in cfx:
+                    pass    # (nonstandard) neither me nor my son; us visitors did not...
+                # note: vocative - I assume "you", "y'all" is Nom in the vocative because "whoever you are"
+                # can be vocative (?whomever you are)
+                elif misclist.get("CorrectCase")=="Nom":
+                    pass    # typo
+                else:
+                    print("WARN: " + func + " with Case=Acc" + inname)
+
 
             """
             Extraposition Construction
@@ -1497,10 +1528,23 @@ PRONOUNS: dict[tuple[str,str],dict] = {
   ("ya","PRP"):{"Case":["Acc","Nom"],"Person":"2","PronType":"Prs","LEMMA":"you","Style":"Coll"},
   ("'em","PRP"):{"Case":"Acc","Number":"Plur","Person":"3","PronType":"Prs","LEMMA":"they","Style":"Coll"},
   ("yo","PRP$"):{"Case":"Gen","Person":"2","Poss":"Yes","PronType":"Prs","LEMMA":"your","Style":"Slng"},
-  ("y'all","PRP"):{"Case":"Acc","Number":"Plur","Person":"2","PronType":"Prs","LEMMA":"y'all","Style":"Vrnc"},
+  ("y'all","PRP"):{"Case":["Acc","Nom"],"Number":"Plur","Person":"2","PronType":"Prs","LEMMA":"y'all","Style":"Vrnc"},
   # other
   ("one","PRP"):{"Number":"Sing","Person":"3","PronType":"Prs","LEMMA":"one"},    # one/PRP is the generic individual use
   ("'s","PRP"):{"Case":"Acc","Number":"Plur","Person":"1","PronType":"Prs","LEMMA":"we"},
+  ("what","WP"):{"PronType":["Int","Rel"],"LEMMA":"what"},
+  ("whatever","WP"):{"PronType":["Int","Rel"],"LEMMA":"whatever"},
+  ("wtf","WP"):{"PronType":["Int","Rel"],"Style":"Expr","LEMMA":"wtf"},
+  ("which","WDT"):{"PronType":["Int","Rel"],"LEMMA":"which"},
+  ("whichever","WDT"):{"PronType":["Int","Rel"],"LEMMA":"whichever"},
+  ("who","WP"):{"Case":["Nom","Acc"],"PronType":["Int","Rel"],"LEMMA":"who"},
+  ("whoever","WP"):{"Case":["Nom","Acc"],"PronType":["Int","Rel"],"LEMMA":"whoever"},
+  ("whosoever","WP"):{"Case":"Nom","PronType":["Int","Rel"],"Style":"Form","LEMMA":"whosoever"},
+  ("whom","WP"):{"Case":"Acc","PronType":["Int","Rel"],"LEMMA":"who"},
+  ("whomever","WP"):{"Case":"Acc","PronType":["Int","Rel"],"LEMMA":"whoever"},
+  ("whose","WP$"):{"Case":"Gen","Poss":"Yes","PronType":["Int","Rel"],"LEMMA":"whose"},
+  ("whosever","WP$"):{"Case":["Nom","Acc"],"Poss":"Yes","PronType":["Int","Rel"],"LEMMA":"whosever"},
+  ("that","WDT"):{"PronType":"Rel","LEMMA":"that"},
   ("there","EX"):{"PronType":"Dem","LEMMA":"there"},
 }
 
@@ -1639,7 +1683,8 @@ def flag_pronoun_warnings(tokid, form, pos, upos, lemma, feats, misc, prev_tok, 
         # CorrectForm for Typo=Yes has already been handled.
         if not ("Typo" in feats and feats["Typo"] == "Yes"):
             check_has_feature("CorrectForm", misc, data, tokname, inname)
-    check_has_feature("Case", feats, data, tokname, inname)
+    if "CorrectCase" not in misc:
+        check_has_feature("Case", feats, data, tokname, inname)
     check_has_feature("Definite", feats, data, tokname, inname)
     check_has_feature("Gender", feats, data, tokname, inname)
     check_has_feature("Number", feats, data, tokname, inname)
