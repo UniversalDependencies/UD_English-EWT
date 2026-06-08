@@ -152,6 +152,12 @@ documents many yet-to-be-resolved analysis challenges. Significant among these:
 
 # Changelog
 
+**2026-11-15 v2.19**
+
+Highlights:
+
+  - Add `Case` feature for _who(m)(ever)_ and _whose_ ([#622](https://github.com/UniversalDependencies/UD_English-EWT/issues/622))
+
 **2026-05-15 v2.18**
 
 Highlights:
