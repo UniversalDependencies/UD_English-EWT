@@ -845,7 +845,9 @@ def flag_dep_warnings(tokid, tok, pos, upos, extpos, lemma, func, edeps, parent,
         print("WARN: \"'s got\" clitic lemma should be \"have\" not \"be\"? " + inname)
 
     if upos=="VERB" and func.split(':')[0] in ["obj","nsubj","iobj","nmod","obl","expl"]:
-        if not (pos == "VBG" and tok == "following") and not (pos == "VBN" and tok == "attached"):  # Exception: nominalized "the following/attached"
+        if extpos=="PROPN":   # exception for predicates used as names
+            pass
+        elif not (pos == "VBG" and tok == "following") and not (pos == "VBN" and tok == "attached"):  # Exception: nominalized "the following/attached"
             print("WARN: verb should not have nominal argument structure function " + func + inname)
 
     if pos.startswith("NN") and not pos.startswith("NNP") and func=="amod":
