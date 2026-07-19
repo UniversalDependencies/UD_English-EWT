@@ -1340,8 +1340,8 @@ def flag_feats_warnings(tokid, tok, pos, upos, lemma, feats, misc, docname, file
         print("WARN: WP|WDT|WRB implies not poss and PronType=Dem,Int,Rel" + inname)
 
     # PROPN+NNP <=> PROPN[Number=Sing]
-    if upos == "PROPN" and ((pos == "NNP") != (number == "Sing")):
-        print("WARN: PROPN+NNP should correspond with Number=Sing" + inname)
+    if upos == "PROPN" and ((pos == "NNP" or pos == "ADD") != (number == "Sing")):
+        print("WARN: PROPN+{NNP,ADD} should correspond with Number=Sing" + inname)
 
     # PROPN+NNPS <=> PROPN[Number=Plur]
     if upos == "PROPN" and ((pos == "NNPS") != (number == "Plur")) and lemma not in NNPS_PTAN_LEMMAS:
