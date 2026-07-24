@@ -1639,7 +1639,8 @@ ADVS = {
     ("sometimes", "RB"):{"PronType":"Ind","LEMMA":"sometimes"},
     ("somewhere", "RB"):{"PronType":"Ind","LEMMA":"somewhere"},
     ("ever", "RB"):{"PronType":"Ind","LEMMA":"ever"},
-    ("either", "RB"):{"PronType":"Ind","LEMMA":"either"}
+    ("either", "RB"):{"PronType":"Ind","LEMMA":"either"},
+    ("no", "RB"):{"PronType":"Neg","LEMMA":"no"}
 }
 ADV_ENTRIES = {f for (f,p),v in ADVS.items()}
 
