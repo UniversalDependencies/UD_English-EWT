@@ -157,6 +157,9 @@ documents many yet-to-be-resolved analysis challenges. Significant among these:
 Highlights:
 
   - Add `Case` feature for _who(m)(ever)_ and _whose_ ([#622](https://github.com/UniversalDependencies/UD_English-EWT/issues/622))
+  - `Number=Sing` for web addresses (PROPN/ADD)
+  - Tag and feature corrections for _do_ imperatives ([#623](https://github.com/UniversalDependencies/UD_English-EWT/issues/623))
+  - Fix cases where a VB had a subject and shouldn't (many are actually vocatives) ([#617](https://github.com/UniversalDependencies/UD_English-EWT/issues/617))
 
 **2026-05-15 v2.18**
 
